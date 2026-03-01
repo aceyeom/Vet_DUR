@@ -3,6 +3,7 @@
 Clean dog_drugs_filtered.jsonl by removing problematic entries.
 
 Removes:
+- Products marked as 수출용 (export-only, not permitted for domestic use in Korea)
 - Products with no active ingredients (empty 원료약품 section)
 - Non-pharmaceutical topicals (shampoos, creams, sprays)
 - Products with unclear/procedural dosing only
@@ -27,6 +28,10 @@ def analyze_entry(data):
     """
     product_name = data.get('product_name', '')
     raw_content = data.get('raw_content', '')
+
+    # Check 0: Is it an export-only product? (수출용 = not permitted for domestic use in Korea)
+    if '수출용' in product_name:
+        return False, 'export_only_product'
 
     # Check 1: Is it marked as 의약외품 (quasi-drug)?
     if '동물용의약외품' in raw_content:
