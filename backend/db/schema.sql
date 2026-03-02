@@ -28,7 +28,8 @@ CREATE TABLE drug_elimination (
 drug_id TEXT PRIMARY KEY REFERENCES drugs(id),
 renal_percent INTEGER,
 hepatic_percent INTEGER,
-half_life_dog_hr FLOAT
+half_life_dog_hr FLOAT,
+half_life_cat_hr FLOAT
 );
 
 CREATE TABLE drug_dosing (

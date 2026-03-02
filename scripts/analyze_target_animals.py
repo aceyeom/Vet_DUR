@@ -9,29 +9,14 @@ import re
 from collections import Counter
 from pathlib import Path
 
-# Animal type patterns
+# Animal type patterns — dogs and cats only
 ANIMAL_KEYWORDS = {
     "개": "Dog",
     "고양이": "Cat",
-    "소": "Cattle",
-    "돼지": "Pig",
-    "말": "Horse",
-    "양": "Sheep",
-    "닭": "Chicken",
-    "오리": "Duck",
-    "칠면조": "Turkey",
-    "송아지": "Calf",
-    "자돈": "Piglet",
-    "자돈": "Piglet",
-    "망아지": "Foal",
-    "염소": "Goat",
-    "명금": "Mink",
-    "사슴": "Deer",
-    "토끼": "Rabbit",
-    "애완견": "Pet dog",
+    "애완견": "Dog",
     "애완동물": "Pet",
     "애견": "Dog",
-    "견": "Dog/Canine",
+    "견": "Dog",
 }
 
 def extract_target_animals(raw_content: str) -> set:
@@ -72,8 +57,6 @@ def extract_target_animals(raw_content: str) -> set:
                 animals.add("Dog")
             if "고양이" in raw_content:
                 animals.add("Cat")
-            if "소" in raw_content:
-                animals.add("Cattle")
     
     return animals
 
@@ -128,7 +111,7 @@ def print_animal_analysis(analysis: dict):
     """Print formatted animal analysis report."""
     
     print("\n" + "=" * 80)
-    print("TARGET ANIMAL ANALYSIS - PRESCRIPTION DOGS DRUGS")
+    print("TARGET ANIMAL ANALYSIS - DOGS & CATS ONLY")
     print("=" * 80)
     
     print(f"\nTotal Prescription Drugs Analyzed: {analysis['total_drugs']:,}")

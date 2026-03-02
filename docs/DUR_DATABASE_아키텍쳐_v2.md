@@ -66,10 +66,11 @@ The DUR system uses a hierarchical relationship between products, variants, and 
 │                                                                  │
 │  Engine 1: cyp_profiles, pk_parameters, pd_risk_flags,          │
 │            transporter_profiles, ddi_pairs                       │
-│  Engine 2: dosing_rules, renal_dose_adjustments                 │
+│  Engine 2: dosing_rules, renal_dose_adjustments,                │
+│            breed_dosing_modifiers, lab_test_interactions         │
 │  Engine 3: allergy_class_members, class_cross_reactivity         │
 │  Engine 4: contraindications, breed_pharmacogenomics,           │
-│            condition_synonyms                                    │
+│            breed_dosing_modifiers, condition_synonyms            │
 │  Engine 5: therapeutic_classes                                   │
 └──────────────────────────────────────────────────────────────────┘
 
@@ -85,7 +86,7 @@ Supporting layers:
 
 ## 3. Complete Table Index
 
-30 tables total. Every table listed with its purpose and primary data source.
+32 tables total. Every table listed with its purpose and primary data source.
 
 | Layer | Table | Purpose | Primary Source |
 |-------|-------|---------|---------------|
@@ -97,15 +98,17 @@ Supporting layers:
 | 2 | `substance_synonyms` | All name variants KO/EN/LA | Korean Vet DB + manual |
 | 3 | `cyp_profiles` | CYP isoform metabolism — route-independent | PMC |
 | 3 | `pk_parameters` | PK data per species per route | PMC |
-| 3 | `pd_risk_flags` | Toxicity risk profile — route-independent | PMC |
+| 3 | `pd_risk_flags` | Toxicity risk profile, species-specific adverse effects, overdose data, Papich reproductive class — route-independent | PMC + Plumb's |
 | 3 | `transporter_profiles` | P-gp / MDR1 data — route-independent | PMC |
 | 3 | `ddi_pairs` | Explicitly documented drug-drug interactions — route-independent | PMC + manual |
-| 3 | `dosing_rules` | Species + route specific dosing | Korean Vet DB + Plumb's |
+| 3 | `dosing_rules` | Species + route specific dosing, monitoring requirements, administration timing | Korean Vet DB + Plumb's |
 | 3 | `renal_dose_adjustments` | Dose reduction for renal failure | PMC + Plumb's |
 | 3 | `allergy_class_members` | Substance → allergy class membership (normalized) | PMC |
 | 3 | `class_cross_reactivity` | Class-to-class cross-reactivity rules (normalized) | PMC |
 | 3 | `contraindications` | Disease-drug contraindications — route-independent | PMC + Plumb's |
-| 3 | `breed_pharmacogenomics` | Breed-specific drug sensitivity — cross-engine modifier | PMC |
+| 3 | `breed_pharmacogenomics` | Genetic mutation breed sensitivity (MDR1, CYP2D15, etc.) — cross-engine modifier | PMC |
+| 3 | `breed_dosing_modifiers` | Non-mutation breed PK/PD variability (sighthound, giant breed, terrier) — Engines 2 & 4 | Plumb's |
+| 3 | `lab_test_interactions` | Drugs that falsely alter lab readings — informational advisory | Plumb's |
 | 3 | `condition_synonyms` | Free-text condition normalisation (KO + EN) | Manual |
 | 3 | `therapeutic_classes` | Drug class for Engine 5 duplication check | Korean Vet DB + manual |
 | 4 | `literature_chunks` | RAG vector store (pgvector) | PMC |
@@ -220,9 +223,6 @@ One row per Korean DB entry of the same product. Stores the physical SKU details
 | `storage_conditions` | TEXT | Storage instructions | `실온 (25℃ 이하)` |
 | `shelf_life_months` | INT | From manufacturing date | `36` |
 | `split_shelf_life_days` | INT | Shelf life after tablet splitting | `3` |
-| `withdrawal_period_cattle_days` | INT | Cattle — null if not applicable | `null` |
-| `withdrawal_period_pig_days` | INT | Pig | `null` |
-| `withdrawal_period_milk_days` | INT | Milk | `null` |
 | `source_type` | VARCHAR | `korean_db`, `imported`, `human_label`, `compounded` | `korean_db` |
 
 ---
@@ -355,7 +355,7 @@ One row per substance per species per route. Route = 'all' for route-independent
 |--------|------|-------------|---------|
 | `id` | UUID PK | | |
 | `substance_id` | UUID FK → substances | | |
-| `species` | VARCHAR | `dog`, `cat`, `horse`, `cattle`, `pig` | `dog` |
+| `species` | VARCHAR | `dog`, `cat` | `dog` |
 | `route` | VARCHAR | `all` for route-independent data, specific route otherwise | `oral` |
 | `half_life_hr` | DECIMAL | Elimination half-life | `9.0` |
 | `bioavailability_pct` | DECIMAL | 0.0–1.0 — route-specific | `0.23` |
@@ -399,6 +399,16 @@ One row per substance. Route-independent.
 | `electrolyte_ca` | VARCHAR | `deplete`, `elevate`, `none` | `none` |
 | `absorption_affected_by_ph` | BOOLEAN | Antacids/PPIs significantly alter absorption | `false` |
 | `chelation_risk` | BOOLEAN | Binds divalent metals | `false` |
+| `adverse_effects_dog` | TEXT | Species-specific adverse effects narrative for dogs — from Plumb's "Adverse Effects" section | `"Diarrhea and weight loss; dose-dependent"` |
+| `adverse_effects_cat` | TEXT | Species-specific adverse effects narrative for cats — from Plumb's "Adverse Effects" section | `"Flatulence, soft stools, diarrhea"` |
+| `reproductive_safety_class_papich` | VARCHAR | Papich 1989 veterinary pregnancy classification (dogs/cats): `A`=safe, `B`=safe if cautious, `C`=risk vs benefit, `D`=documented fetal risk — null if not evaluated. Distinct from FDA human categories. | `B` |
+| `reproductive_safety_note` | TEXT | Free-text from Plumb's Reproductive/Nursing Safety section — captures nuances beyond the Papich class | `"Safe for use if used cautiously. May have some risk near term."` |
+| `overdose_ld50_mg_per_kg` | DECIMAL | LD50 in mg/kg from Plumb's Overdosage section — null if not established | `61.0` |
+| `overdose_ld50_species` | VARCHAR | Species the LD50 value applies to | `mouse` |
+| `overdose_ld50_route` | VARCHAR | Route for LD50 value (`IV`, `oral`, `SC`, `IM`) | `IV` |
+| `overdose_toxic_dose_mg_per_kg` | DECIMAL | Lowest observed toxic dose in target species (dog/cat) — null if unknown | `null` |
+| `overdose_signs` | TEXT | Clinical signs of overdose from Plumb's — free text | `"Hypotension, bradycardia, cardiovascular collapse"` |
+| `overdose_treatment` | TEXT | Overdose treatment summary from Plumb's — free text | `"Supportive care; IV fluids for hypotension; do not use epinephrine"` |
 | `pd_confidence` | VARCHAR | `high`, `medium`, `low` | `medium` |
 | `data_source_id` | UUID FK → data_sources | | |
 
@@ -502,7 +512,7 @@ One row per substance per species per route. Always filter on BOTH species AND r
 |--------|------|-------------|---------|
 | `id` | UUID PK | | |
 | `substance_id` | UUID FK → substances | | `oclacitinib uuid` |
-| `species` | VARCHAR | `dog`, `cat`, `horse`, `cattle`, `pig` | `dog` |
+| `species` | VARCHAR | `dog`, `cat` | `dog` |
 | `indication` | VARCHAR | What condition | `Atopic Dermatitis` |
 | `route` | VARCHAR | `oral`, `IV`, `IM`, `SC`, `topical` | `oral` |
 | `route_approved` | BOOLEAN | FALSE = alert "route not approved" without dose comparison | `true` |
@@ -522,6 +532,9 @@ One row per substance per species per route. Always filter on BOTH species AND r
 | `pediatric_min_age_months` | INT | Minimum age | `12` |
 | `pediatric_min_weight_kg` | DECIMAL | Minimum weight | `3.0` |
 | `geriatric_adjustment_pct` | DECIMAL | Reduction for geriatric patients | `null` |
+| `administration_timing` | VARCHAR | When to give relative to food — `with_meal`, `before_meal`, `after_meal`, `regardless_of_food` — from Plumb's "Client Information" section | `with_meal` |
+| `food_interaction_note` | TEXT | Free-text food or administration timing note from Plumb's (e.g. "Give immediately prior to feeding for best results") | `null` |
+| `monitoring_required` | TEXT[] | Clinical/lab parameters to monitor during treatment — from Plumb's "Monitoring" section | `{serum_glucose,adverse_effects_diarrhea}` |
 | `evidence_level` | VARCHAR | `A`, `B`, `C`, `D` — evidence grade; applies score modifier to Engine 2 alerts (see modifier table below) | `A` |
 | `data_source_id` | UUID FK → data_sources | | |
 
@@ -672,6 +685,44 @@ One row per substance-mutation pair. Affects Engines 1, 2, and 4 simultaneously.
 
 ---
 
+### `breed_dosing_modifiers` — Engines 2 & 4
+
+Non-mutation breed pharmacokinetic/pharmacodynamic variability. Distinct from `breed_pharmacogenomics` which covers genetic mutations (MDR1, CYP2D15, etc.). This table covers breed-level population differences in drug handling that are NOT genetic mutation-based — e.g. sighthound sensitivity to acepromazine from low body fat, giant breed sensitivity from altered volume of distribution, terrier resistance. Sources: Plumb's breed-specific warnings in the Contraindications/Precautions section.
+
+| Column | Type | Description | Example |
+|--------|------|-------------|---------|
+| `id` | UUID PK | | |
+| `substance_id` | UUID FK → substances | | `acepromazine uuid` |
+| `species` | VARCHAR | `dog`, `cat` | `dog` |
+| `affected_breeds` | TEXT[] | Specific breed list | `{Greyhound,Whippet,Italian Greyhound,Borzoi,Saluki}` |
+| `breed_group` | VARCHAR | Functional grouping — `sighthound`, `giant_breed`, `terrier`, `herding`, `brachycephalic`, `other` | `sighthound` |
+| `sensitivity_direction` | VARCHAR | `increased_sensitivity`, `decreased_sensitivity` | `increased_sensitivity` |
+| `effect` | TEXT | Clinical manifestation of the breed difference | `Prolonged and deeper CNS depression; prolonged recovery` |
+| `mechanism` | TEXT | PK/PD explanation | `Low body fat % → high volume of distribution for lipophilic drugs; pronounced CNS penetration` |
+| `dose_adjustment_recommendation` | TEXT | Clinical recommendation from Plumb's | `Reduce initial dose by 25–30%; give lowest effective dose` |
+| `affects_engine` | INT[] | Which engines apply this modifier | `{2,4}` |
+| `evidence_level` | VARCHAR | `A`, `B`, `C`, `D` | `C` |
+| `data_source_id` | UUID FK → data_sources | | |
+
+---
+
+### `lab_test_interactions` — Informational Advisory
+
+Maps substances to laboratory tests they interfere with. Sourced from Plumb's "Laboratory Considerations" section. These are not DDIs — they are artifacts where the drug causes false/misleading lab readings. The DUR system surfaces these as `info`-level advisories alongside Engine 2 outputs when the patient has a relevant lab value on record.
+
+| Column | Type | Description | Example |
+|--------|------|-------------|---------|
+| `id` | UUID PK | | |
+| `substance_id` | UUID FK → substances | | `cephalexin uuid` |
+| `lab_test` | VARCHAR | Standardised lab test name: `serum_creatinine`, `ALT`, `AST`, `glucose`, `BUN`, `bilirubin`, `urinary_glucose`, `urinary_protein`, `CBC_neutrophils` | `serum_creatinine` |
+| `effect_direction` | VARCHAR | `falsely_elevate`, `falsely_decrease`, `method_interference` | `falsely_elevate` |
+| `mechanism` | TEXT | Why the interference occurs | `Cephalosporins interfere with Jaffé colorimetric creatinine assay, producing falsely elevated readings` |
+| `clinical_significance` | VARCHAR | `high` — may alter clinical decision; `moderate` — worth noting; `low` — minimal impact | `moderate` |
+| `species` | TEXT[] | null = all species | `null` |
+| `data_source_id` | UUID FK → data_sources | | |
+
+---
+
 ### `condition_synonyms` — Engine 4
 
 Normalises free-text patient history to canonical condition names.
@@ -730,7 +781,7 @@ Each row is one ~500-token chunk from a scientific paper. Uses pgvector for simi
 |--------|------|-------------|
 | `id` | UUID PK | |
 | `name` | VARCHAR | Animal name |
-| `species` | VARCHAR | `dog`, `cat`, `horse` |
+| `species` | VARCHAR | `dog`, `cat` |
 | `breed` | VARCHAR | Checked against `breed_pharmacogenomics` |
 | `weight_kg` | DECIMAL | Current weight for dose calculation |
 | `age_months` | INT | Age in months |
@@ -1045,7 +1096,6 @@ contraindications     ← same regardless of route
 ```
 덱사주 (Dexamethasone injection):
   개/고양이: 1~2ml 피하 또는 근육주사        (SC or IM)
-  소/돼지: 2~5ml 근육 또는 정맥주사         (IM or IV)
 ```
 
 **Solution**: The `products` table has ONE row per substance+route combination. For multi-route products:
@@ -1065,8 +1115,8 @@ dosing_rules:
   (dexamethasone, dog, SC, 0.5-1.0 mg/kg)
   (dexamethasone, dog, IM, 0.5-1.5 mg/kg)
   (dexamethasone, dog, IV, 0.5-1.0 mg/kg)
-  (dexamethasone, cattle, IM, 1.0-2.0 mg/kg)
-  (dexamethasone, cattle, IV, 1.0-2.0 mg/kg)
+  (dexamethasone, cat, SC, 0.125-0.5 mg/kg)
+  (dexamethasone, cat, IM, 0.125-0.5 mg/kg)
 ```
 
 ### Variable Dosing Formats (35% of Dataset)
@@ -1107,7 +1157,7 @@ dosing_rules: (DHPP_vaccine, dog, IM, dosing_type='iU_based',
                dose_unit='dose', min_dose=1, max_dose=1)
 
 -- Feed supplement (excluded)
-dosing_rules: (immune_guardian, cattle, oral, dosing_type='feed_based',
+dosing_rules: (immune_guardian, dog, oral, dosing_type='feed_based',
                dose_unit='kg/ton_feed', is_feed_additive=true, per_ton_feed_kg=2.0)
 ```
 
@@ -1213,6 +1263,8 @@ The `formulary_status` field handles scope gracefully:
 | `class_cross_reactivity` | PMC | Manual | ~15–20 class pairs initially |
 | `contraindications` | Korean DB + PMC | Plumb's | 70–80% |
 | `breed_pharmacogenomics` | PMC | VCPL (WSU) | 85–90% (MDR1 well documented) |
+| `breed_dosing_modifiers` | Plumb's | Manual | 60–75% (well covered for dogs; sighthound/giant breed data is good) |
+| `lab_test_interactions` | Plumb's | PMC | 40–60% (only drugs with known lab interference) |
 | `condition_synonyms` | Manual curation | — | 100% (small table) |
 | `therapeutic_classes` | Korean DB + manual | — | ~100% |
 
@@ -1279,6 +1331,10 @@ Step 4 — All engines run concurrently:
     → dosing_rules (filtered: substance + species + route — ALL THREE)
     → renal_dose_adjustments (if patient.lab_creatinine elevated)
     → breed_pharmacogenomics.risk_multiplier (if patient.breed affected)
+    → breed_dosing_modifiers (if patient.breed in affected_breeds AND applies_to_drug=true)
+        → surface dose_adjustment_recommendation as `info` or `moderate` advisory
+    → lab_test_interactions (if patient has lab values on record AND substance has known interference)
+        → fire `info`-level advisory: "[drug] may falsely [elevate/decrease] [lab_test] readings"
 
   Engine 3 (Allergy — 20%):
     → allergy_class_members (resolve prescribed substance → allergy class)
@@ -1341,7 +1397,7 @@ Based on analysis of Korean Veterinary Drug Database (`dog_drugs_cleaned.jsonl` 
 
 | Metric | Estimate |
 |--------|----------|
-| Total tables | 30 (includes `product_multi_routes`, `ddi_inference_log`, `allergy_class_members`, `class_cross_reactivity`, `dur_alert_events`, `unmatched_drug_log`) |
+| Total tables | 32 (includes `product_multi_routes`, `ddi_inference_log`, `allergy_class_members`, `class_cross_reactivity`, `dur_alert_events`, `unmatched_drug_log`, `breed_dosing_modifiers`, `lab_test_interactions`) |
 | Products | ~900–1,000 rows (multi-route expansion from ~742 raw entries) |
 | Product variants | ~2,000–2,600 rows (multiple strengths per product) |
 | Product multi-routes mappings | ~500–650 rows (45.7% of products have 2+ routes) |
@@ -1357,6 +1413,8 @@ Based on analysis of Korean Veterinary Drug Database (`dog_drugs_cleaned.jsonl` 
 | contraindications rows | ~1,200–1,800 |
 | condition_synonyms rows | ~300–500 |
 | therapeutic_classes rows | ~580–630 |
+| breed_dosing_modifiers rows | ~80–150 (breed group × substance; sighthound/giant breed/terrier patterns) |
+| lab_test_interactions rows | ~100–250 (subset of ~580 substances with documented lab test interference) |
 | ddi_inference_log rows | ~50–200 per scan; purge/archive after 90 days |
 | unmatched_drug_log rows | ~1–5% of prescription items; permanent record |
 | dur_alert_events rows | ~3–15 per scan; permanent audit record |
@@ -1366,7 +1424,7 @@ Based on analysis of Korean Veterinary Drug Database (`dog_drugs_cleaned.jsonl` 
 | DUR scan query time | <200ms all engines |
 
 **Data Coverage Notes**:
-- 58.5% products cover dogs, 58.6% cover cattle
+- Product scope: dogs and cats only
 - 45.7% of products have multiple approved routes (IM, SC, IV, oral)
 - 63.2% of products have ml/concentration dosing information
 - 35.1% of dataset excluded from DUR (feed-based supplements, topical procedures)
