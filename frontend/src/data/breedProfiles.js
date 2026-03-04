@@ -1,0 +1,203 @@
+/**
+ * Demo patient profiles by species + breed.
+ * Each profile represents a realistic clinical case with
+ * pre-filled EMR data that the user can modify.
+ */
+
+export const BREED_DATA = {
+  dog: [
+    {
+      id: 'golden_retriever',
+      breed: 'Golden Retriever',
+      profile: {
+        name: 'Buddy',
+        age: '7y 4m',
+        sex: 'Male Neutered',
+        weight: 32.5,
+        bodyCondition: '6/9',
+        temperature: '38.8 °C',
+        heartRate: '96 bpm',
+        respRate: '22 breaths/min',
+        allergies: [],
+        conditions: ['Hip Dysplasia', 'Seasonal Allergies'],
+        history: 'Chronic bilateral hip dysplasia managed with NSAIDs. Seasonal allergic dermatitis — flares in spring/fall. Annual bloodwork WNL. Current on heartworm/flea prevention.',
+        labResults: {
+          creatinine: { value: '1.1', unit: 'mg/dL', status: 'normal' },
+          bun: { value: '18', unit: 'mg/dL', status: 'normal' },
+          alt: { value: '42', unit: 'U/L', status: 'normal' },
+          alp: { value: '68', unit: 'U/L', status: 'normal' },
+          glucose: { value: '95', unit: 'mg/dL', status: 'normal' },
+          hct: { value: '48', unit: '%', status: 'normal' },
+        },
+        defaultDrugs: ['meloxicam', 'gabapentin', 'omeprazole'],
+      },
+    },
+    {
+      id: 'sheltie',
+      breed: 'Shetland Sheepdog',
+      profile: {
+        name: 'Max',
+        age: '4y 2m',
+        sex: 'Male Neutered',
+        weight: 5.2,
+        bodyCondition: '5/9',
+        temperature: '38.5 °C',
+        heartRate: '102 bpm',
+        respRate: '18 breaths/min',
+        allergies: ['Penicillin', 'Sulfonamides'],
+        conditions: ['Early Stage Renal Failure', 'MDR1 Deficient'],
+        history: 'Patient carries ABCB1-1Δ (MDR1) mutation — confirmed by genetic testing. Chronic renal monitoring after CKD IRIS Stage 2 diagnosis. Recent lethargy.',
+        labResults: {
+          creatinine: { value: '1.8', unit: 'mg/dL', status: 'high' },
+          bun: { value: '32', unit: 'mg/dL', status: 'high' },
+          alt: { value: '45', unit: 'U/L', status: 'normal' },
+          alp: { value: '55', unit: 'U/L', status: 'normal' },
+          glucose: { value: '88', unit: 'mg/dL', status: 'normal' },
+          hct: { value: '38', unit: '%', status: 'low' },
+        },
+        defaultDrugs: ['prednisolone', 'metronidazole', 'enalapril'],
+      },
+    },
+    {
+      id: 'french_bulldog',
+      breed: 'French Bulldog',
+      profile: {
+        name: 'Coco',
+        age: '3y 8m',
+        sex: 'Female Spayed',
+        weight: 11.8,
+        bodyCondition: '7/9',
+        temperature: '39.0 °C',
+        heartRate: '110 bpm',
+        respRate: '28 breaths/min',
+        allergies: [],
+        conditions: ['Brachycephalic Syndrome', 'Atopic Dermatitis'],
+        history: 'Chronic atopic dermatitis with secondary bacterial pyoderma. Brachycephalic obstructive airway syndrome — mild. Owner reports worsening pruritus over 2 weeks.',
+        labResults: {
+          creatinine: { value: '0.9', unit: 'mg/dL', status: 'normal' },
+          bun: { value: '16', unit: 'mg/dL', status: 'normal' },
+          alt: { value: '38', unit: 'U/L', status: 'normal' },
+          alp: { value: '72', unit: 'U/L', status: 'normal' },
+          glucose: { value: '101', unit: 'mg/dL', status: 'normal' },
+          hct: { value: '46', unit: '%', status: 'normal' },
+        },
+        defaultDrugs: ['prednisolone', 'amoxicillin', 'ketoconazole'],
+      },
+    },
+    {
+      id: 'dachshund',
+      breed: 'Dachshund',
+      profile: {
+        name: 'Oscar',
+        age: '9y 1m',
+        sex: 'Male Intact',
+        weight: 9.4,
+        bodyCondition: '7/9',
+        temperature: '38.6 °C',
+        heartRate: '88 bpm',
+        respRate: '20 breaths/min',
+        allergies: [],
+        conditions: ['IVDD — Intervertebral Disc Disease', 'Chronic Pain'],
+        history: 'History of T12-L1 disc herniation 2 years ago. Conservative management. Currently on multimodal pain protocol. Periodic flare-ups of back pain with reluctance to jump.',
+        labResults: {
+          creatinine: { value: '1.0', unit: 'mg/dL', status: 'normal' },
+          bun: { value: '20', unit: 'mg/dL', status: 'normal' },
+          alt: { value: '52', unit: 'U/L', status: 'normal' },
+          alp: { value: '85', unit: 'U/L', status: 'normal' },
+          glucose: { value: '92', unit: 'mg/dL', status: 'normal' },
+          hct: { value: '44', unit: '%', status: 'normal' },
+        },
+        defaultDrugs: ['meloxicam', 'gabapentin', 'tramadol'],
+      },
+    },
+  ],
+  cat: [
+    {
+      id: 'domestic_sh',
+      breed: 'Domestic Shorthair',
+      profile: {
+        name: 'Mochi',
+        age: '11y 6m',
+        sex: 'Female Spayed',
+        weight: 4.8,
+        bodyCondition: '5/9',
+        temperature: '38.4 °C',
+        heartRate: '180 bpm',
+        respRate: '24 breaths/min',
+        allergies: [],
+        conditions: ['Hyperthyroidism', 'Early CKD (IRIS Stage 2)'],
+        history: 'Hyperthyroidism diagnosed 6 months ago — on methimazole. Concurrent early CKD. Weight loss stabilized. Periodic vomiting.',
+        labResults: {
+          creatinine: { value: '2.1', unit: 'mg/dL', status: 'high' },
+          bun: { value: '38', unit: 'mg/dL', status: 'high' },
+          alt: { value: '65', unit: 'U/L', status: 'normal' },
+          alp: { value: '48', unit: 'U/L', status: 'normal' },
+          t4: { value: '3.2', unit: 'μg/dL', status: 'normal' },
+          hct: { value: '32', unit: '%', status: 'low' },
+        },
+        defaultDrugs: ['methimazole', 'amlodipine', 'maropitant'],
+      },
+    },
+    {
+      id: 'persian',
+      breed: 'Persian',
+      profile: {
+        name: 'Luna',
+        age: '6y 0m',
+        sex: 'Female Spayed',
+        weight: 3.9,
+        bodyCondition: '5/9',
+        temperature: '38.6 °C',
+        heartRate: '200 bpm',
+        respRate: '26 breaths/min',
+        allergies: [],
+        conditions: ['Hypertrophic Cardiomyopathy (HCM)'],
+        history: 'HCM diagnosed on echocardiogram — moderate concentric hypertrophy. No CHF at this time. Monitoring with serial echocardiograms every 6 months.',
+        labResults: {
+          creatinine: { value: '1.4', unit: 'mg/dL', status: 'normal' },
+          bun: { value: '22', unit: 'mg/dL', status: 'normal' },
+          alt: { value: '34', unit: 'U/L', status: 'normal' },
+          alp: { value: '38', unit: 'U/L', status: 'normal' },
+          glucose: { value: '105', unit: 'mg/dL', status: 'normal' },
+          hct: { value: '40', unit: '%', status: 'normal' },
+        },
+        defaultDrugs: ['enalapril', 'furosemide', 'pimobendan'],
+      },
+    },
+    {
+      id: 'siamese',
+      breed: 'Siamese',
+      profile: {
+        name: 'Nabi',
+        age: '8y 3m',
+        sex: 'Male Neutered',
+        weight: 4.2,
+        bodyCondition: '4/9',
+        temperature: '38.3 °C',
+        heartRate: '190 bpm',
+        respRate: '22 breaths/min',
+        allergies: [],
+        conditions: ['Feline Lower Urinary Tract Disease', 'Anxiety'],
+        history: 'Recurrent FLUTD episodes — stress-related. Recently switched to urinary diet. Environmental enrichment recommended. Owner reports overgrooming and hiding behavior.',
+        labResults: {
+          creatinine: { value: '1.3', unit: 'mg/dL', status: 'normal' },
+          bun: { value: '24', unit: 'mg/dL', status: 'normal' },
+          alt: { value: '40', unit: 'U/L', status: 'normal' },
+          alp: { value: '35', unit: 'U/L', status: 'normal' },
+          glucose: { value: '115', unit: 'mg/dL', status: 'normal' },
+          hct: { value: '42', unit: '%', status: 'normal' },
+        },
+        defaultDrugs: ['gabapentin', 'trazodone', 'meloxicam'],
+      },
+    },
+  ],
+};
+
+export function getBreedsForSpecies(species) {
+  return BREED_DATA[species] || [];
+}
+
+export function getBreedProfile(species, breedId) {
+  const breeds = BREED_DATA[species] || [];
+  return breeds.find(b => b.id === breedId) || null;
+}
