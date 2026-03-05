@@ -55,6 +55,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP2C9'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'moderate', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'high', giUlcer: 'high' },
     renalElimination: 0.15,
+    pk: { halfLife: 24, timeToPeak: 7.5, bioavailability: 0.89, proteinBinding: 0.97, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Standard NSAID for canine use. Monitor renal function.',
       cat: 'Use with extreme caution. Single dose only unless chronic low-dose protocol. Cats have limited glucuronidation capacity.'
@@ -76,6 +77,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'moderate', hepatotoxic: 'moderate', qtProlongation: 'none', bleedingRisk: 'high', giUlcer: 'high' },
     renalElimination: 0.10,
+    pk: { halfLife: 8, timeToPeak: 3, bioavailability: 0.90, proteinBinding: 0.99, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Well-tolerated NSAID in dogs. Periodic hepatic monitoring recommended.',
       cat: 'Not recommended for cats. Limited safety data.'
@@ -97,6 +99,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'moderate', giUlcer: 'moderate' },
     renalElimination: 0.20,
+    pk: { halfLife: 3, timeToPeak: 1.5, bioavailability: 0.82, proteinBinding: 0.90, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Widely used anti-inflammatory/immunosuppressive. Taper dose gradually.',
       cat: 'Preferred over prednisone in cats due to limited hepatic conversion.'
@@ -118,6 +121,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: ['CYP2C9'], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'moderate', qtProlongation: 'none', bleedingRisk: 'low', giUlcer: 'low' },
     renalElimination: 0.20,
+    pk: { halfLife: 4.5, timeToPeak: 1, bioavailability: 0.80, proteinBinding: 0.20, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Effective against anaerobic infections and Giardia. Neurotoxicity at high doses.',
       cat: 'Use lower doses in cats. Risk of neurotoxicity — monitor for ataxia, nystagmus.'
@@ -139,6 +143,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'none', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'low' },
     renalElimination: 0.60,
+    pk: { halfLife: 1.2, timeToPeak: 1, bioavailability: 0.80, proteinBinding: 0.17, primaryElimination: 'renal' },
     speciesNotes: {
       dog: 'Broad-spectrum beta-lactam. Adjust dose in renal impairment.',
       cat: 'Well tolerated. Common choice for upper respiratory infections.'
@@ -161,6 +166,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP1A2'], inhibitor: ['CYP1A2'], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'low', qtProlongation: 'moderate', bleedingRisk: 'none', giUlcer: 'low' },
     renalElimination: 0.30,
+    pk: { halfLife: 4, timeToPeak: 2, bioavailability: 0.80, proteinBinding: 0.27, primaryElimination: 'mixed' },
     speciesNotes: {
       dog: 'Fluoroquinolone antibiotic. Avoid in growing animals — cartilage damage risk.',
       cat: 'Do NOT exceed 5 mg/kg/day in cats — risk of acute retinal degeneration and blindness.'
@@ -182,6 +188,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.02,
+    pk: { halfLife: 25, timeToPeak: 4, bioavailability: 0.95, proteinBinding: 0.93, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'CRITICAL: Contraindicated in MDR1-mutant breeds (Collies, Shelties, Australian Shepherds). Use selamectin instead.',
       cat: 'Use with caution. Narrow margin of safety in cats.'
@@ -204,6 +211,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'none', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.01,
+    pk: { halfLife: 264, timeToPeak: 72, bioavailability: 0.62, proteinBinding: 0.98, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Safe alternative for MDR1-mutant breeds. Broad-spectrum parasite coverage.',
       cat: 'Well-tolerated topical parasiticide for cats.'
@@ -225,6 +233,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: ['CYP3A4'], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'high', qtProlongation: 'moderate', bleedingRisk: 'none', giUlcer: 'moderate' },
     renalElimination: 0.10,
+    pk: { halfLife: 6, timeToPeak: 2, bioavailability: 0.50, proteinBinding: 0.99, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Potent CYP3A4 inhibitor. Monitor hepatic enzymes monthly.',
       cat: 'Use with caution in cats. Higher risk of hepatotoxicity.'
@@ -246,6 +255,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'moderate', hepatotoxic: 'none', qtProlongation: 'low', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.80,
+    pk: { halfLife: 1.5, timeToPeak: 1, bioavailability: 0.77, proteinBinding: 0.91, primaryElimination: 'renal' },
     electrolyteEffect: 'k_depleting',
     speciesNotes: {
       dog: 'Loop diuretic for CHF and edema. Monitor electrolytes and hydration.',
@@ -268,6 +278,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'low', qtProlongation: 'high', bleedingRisk: 'none', giUlcer: 'low' },
     renalElimination: 0.70,
+    pk: { halfLife: 27, timeToPeak: 2, bioavailability: 0.60, proteinBinding: 0.25, primaryElimination: 'renal' },
     speciesNotes: {
       dog: 'Narrow therapeutic index. Therapeutic drug monitoring essential. Toxicity risk with hypokalemia.',
       cat: 'Rarely used in cats. Very narrow margin of safety.'
@@ -289,6 +300,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'none', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.60,
+    pk: { halfLife: 11, timeToPeak: 4, bioavailability: 0.60, proteinBinding: 0.50, primaryElimination: 'renal' },
     speciesNotes: {
       dog: 'First-line for canine CHF and proteinuria. Monitor renal values.',
       cat: 'Used for feline hypertension and cardiac disease.'
@@ -310,6 +322,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'none', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.80,
+    pk: { halfLife: 3.5, timeToPeak: 2, bioavailability: 0.80, proteinBinding: 0.03, primaryElimination: 'renal' },
     speciesNotes: {
       dog: 'Adjunct analgesic for neuropathic pain. Sedation common at higher doses.',
       cat: 'Effective anxiolytic and analgesic. Commonly used pre-visit. Adjust dose in renal impairment.'
@@ -331,6 +344,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP2D6', 'CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'low', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.30,
+    pk: { halfLife: 1.8, timeToPeak: 1.5, bioavailability: 0.65, proteinBinding: 0.20, primaryElimination: 'hepatic' },
     serotoninSyndromeRisk: true,
     speciesNotes: {
       dog: 'Weak opioid analgesic. Dogs poorly metabolize to active M1 metabolite — limited efficacy.',
@@ -353,6 +367,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4', 'CYP2D6'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.10,
+    pk: { halfLife: 7.5, timeToPeak: 2, bioavailability: 0.37, proteinBinding: 0.99, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'NK1 receptor antagonist. Effective for motion sickness and chemotherapy-induced vomiting.',
       cat: 'Approved for cats. Effective antiemetic for various causes.'
@@ -374,6 +389,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP2C19', 'CYP3A4'], inhibitor: ['CYP2C19'], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.20,
+    pk: { halfLife: 1, timeToPeak: 0.5, bioavailability: 0.50, proteinBinding: 0.95, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Proton pump inhibitor. Effective gastroprotection when using NSAIDs.',
       cat: 'Effective in cats. Give 30 min before food for optimal absorption.'
@@ -398,6 +414,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'moderate', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.10,
+    pk: { halfLife: 7, timeToPeak: 1.5, bioavailability: 0.65, proteinBinding: 0.92, primaryElimination: 'hepatic' },
     serotoninSyndromeRisk: true,
     speciesNotes: {
       dog: 'Off-label sedative. Effective for anxiety and post-surgical rest. Serotonin syndrome risk with tramadol.',
@@ -421,6 +438,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'low', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.10,
+    pk: { halfLife: 30, timeToPeak: 6, bioavailability: 0.88, proteinBinding: 0.93, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Off-label for systemic hypertension. Less commonly used in dogs.',
       cat: 'First-line antihypertensive for cats. Effective and well-tolerated.'
@@ -443,6 +461,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP2D6'], inhibitor: ['CYP2D6', 'CYP3A4'], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'low', bleedingRisk: 'low', giUlcer: 'none' },
     renalElimination: 0.15,
+    pk: { halfLife: 48, timeToPeak: 6, bioavailability: 0.72, proteinBinding: 0.95, primaryElimination: 'hepatic' },
     serotoninSyndromeRisk: true,
     speciesNotes: {
       dog: 'Off-label for separation anxiety, compulsive disorders. Takes 4-6 weeks for full effect.',
@@ -466,6 +485,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'moderate', qtProlongation: 'none', bleedingRisk: 'low', giUlcer: 'moderate' },
     renalElimination: 0.50,
+    pk: { halfLife: 5, timeToPeak: 1, bioavailability: 0.93, proteinBinding: 0.0, primaryElimination: 'mixed' },
     speciesNotes: {
       dog: 'Not typically used in dogs.',
       cat: 'Standard therapy for feline hyperthyroidism. Monitor CBC and liver enzymes biweekly initially.'
@@ -488,6 +508,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'moderate', hepatotoxic: 'moderate', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'moderate' },
     renalElimination: 0.05,
+    pk: { halfLife: 18, timeToPeak: 2, bioavailability: 0.35, proteinBinding: 0.98, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Off-label for atopic dermatitis and IMHA. GI side effects common initially. Ketoconazole often co-administered to reduce dose.',
       cat: 'Off-label for feline allergic dermatitis and stomatitis. Test for FeLV/FIV before use.'
@@ -512,6 +533,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP2C9'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'moderate', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'moderate', giUlcer: 'moderate' },
     renalElimination: 0.15,
+    pk: { halfLife: 7.8, timeToPeak: 1.5, bioavailability: 0.37, proteinBinding: 0.96, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'COX-2 selective NSAID. Lower GI risk than non-selective NSAIDs.',
       cat: 'Not approved for cats. Insufficient safety data.'
@@ -534,6 +556,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'moderate', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.05,
+    pk: { halfLife: 0.5, timeToPeak: 1, bioavailability: 0.60, proteinBinding: 0.93, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Inodilator for CHF. Administer on empty stomach, 1 hour before food.',
       cat: 'Increasingly used in feline HCM with CHF. Limited data but promising.'
@@ -556,6 +579,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'low' },
     renalElimination: 0.30,
+    pk: { halfLife: 4.1, timeToPeak: 1, bioavailability: 0.89, proteinBinding: 0.70, primaryElimination: 'mixed' },
     speciesNotes: {
       dog: 'JAK inhibitor for allergic pruritus. Do not use in dogs <12 months or with serious infections.',
       cat: 'Not approved for cats. Limited safety data.'
@@ -577,6 +601,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP2C19'], inhibitor: [], inducer: ['CYP3A4', 'CYP2C9'] },
     riskFlags: { nephrotoxic: 'none', hepatotoxic: 'high', qtProlongation: 'none', bleedingRisk: 'none', giUlcer: 'none' },
     renalElimination: 0.25,
+    pk: { halfLife: 52, timeToPeak: 4, bioavailability: 0.86, proteinBinding: 0.45, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'First-line anticonvulsant. Therapeutic drug monitoring required. Monitor liver enzymes.',
       cat: 'Effective in cats but shorter half-life — may need higher frequency.'
@@ -598,6 +623,7 @@ export const DRUG_DATABASE = [
     cypProfile: { substrate: ['CYP3A4'], inhibitor: [], inducer: ['CYP3A4'] },
     riskFlags: { nephrotoxic: 'low', hepatotoxic: 'low', qtProlongation: 'none', bleedingRisk: 'moderate', giUlcer: 'high' },
     renalElimination: 0.10,
+    pk: { halfLife: 2, timeToPeak: 1, bioavailability: 0.78, proteinBinding: 0.77, primaryElimination: 'hepatic' },
     speciesNotes: {
       dog: 'Potent glucocorticoid (7x prednisolone). Short-term use preferred. GI ulceration risk.',
       cat: 'Effective but immunosuppressive. Risk of diabetes with chronic use.'
@@ -648,6 +674,7 @@ export function createUnknownDrug(name, activeIngredient = null) {
     cypProfile: { substrate: [], inhibitor: [], inducer: [] },
     riskFlags: { nephrotoxic: 'unknown', hepatotoxic: 'unknown', qtProlongation: 'unknown', bleedingRisk: 'unknown', giUlcer: 'unknown' },
     renalElimination: null,
+    pk: null,
     speciesNotes: {
       dog: 'No veterinary data available for this drug.',
       cat: 'No veterinary data available for this drug.'

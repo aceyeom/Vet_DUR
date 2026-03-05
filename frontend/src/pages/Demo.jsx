@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Shield, ArrowLeft, ArrowRight, Zap, ChevronRight,
+  Shield, ArrowLeft, ArrowRight, Zap, ChevronRight, ChevronDown, ChevronUp,
   Heart, Thermometer, Weight, Calendar, AlertCircle,
   Plus, X, Search, Pencil, FileText, Activity
 } from 'lucide-react';
@@ -11,6 +11,20 @@ import { ResultsDisplay } from '../components/ResultsDisplay';
 import { getDrugById } from '../data/drugDatabase';
 import { getBreedsForSpecies, getBreedProfile } from '../data/breedProfiles';
 import { runFullDURAnalysis } from '../utils/durEngine';
+
+// ── Common veterinary conditions for autocomplete ───────────────
+const COMMON_CONDITIONS = [
+  'Hip Dysplasia', 'Elbow Dysplasia', 'Osteoarthritis', 'Chronic Pain',
+  'Seasonal Allergies', 'Atopic Dermatitis', 'Food Allergy',
+  'Diabetes mellitus', 'Hypothyroidism', 'Hyperthyroidism', 'Cushing\'s Disease',
+  'CKD (Chronic Kidney Disease)', 'Early Stage Renal Failure', 'Hepatic Disease',
+  'Congestive Heart Failure', 'Hypertrophic Cardiomyopathy (HCM)', 'Dilated Cardiomyopathy',
+  'Epilepsy', 'Seizure Disorder', 'IVDD — Intervertebral Disc Disease',
+  'Pancreatitis', 'Inflammatory Bowel Disease', 'Urinary Tract Infection',
+  'Feline Lower Urinary Tract Disease', 'Anxiety', 'Separation Anxiety',
+  'Brachycephalic Syndrome', 'MDR1 Deficient', 'Immune-Mediated Hemolytic Anemia',
+  'Lymphoma', 'Mast Cell Tumor', 'Heartworm Disease',
+];
 
 // ── Step indicator ──────────────────────────────────────────────
 function StepIndicator({ current, steps }) {
@@ -43,22 +57,27 @@ function SpeciesStep({ onSelect }) {
 
       <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
         {[
-          { id: 'dog', label: 'Canine', sub: '4 sample breeds' },
-          { id: 'cat', label: 'Feline', sub: '3 sample breeds' },
+          { id: 'dog', label: 'Canine', sub: '4 sample breeds', img: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop&q=80' },
+          { id: 'cat', label: 'Feline', sub: '3 sample breeds', img: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop&q=80' },
         ].map((sp) => (
           <button
             key={sp.id}
             onClick={() => onSelect(sp.id)}
             onMouseEnter={() => setHovered(sp.id)}
             onMouseLeave={() => setHovered(null)}
-            className={`relative flex flex-col items-center gap-3 p-6 sm:p-8 rounded-xl border-2 transition-all duration-300 ${
+            className={`relative flex flex-col items-center gap-3 p-4 sm:p-6 rounded-xl border-2 transition-all duration-300 overflow-hidden ${
               hovered === sp.id
                 ? 'border-slate-900 bg-slate-50 shadow-md scale-[1.02]'
                 : 'border-slate-200 bg-white hover:border-slate-300'
             }`}
           >
-            <div className="text-4xl sm:text-5xl mb-1">
-              {sp.id === 'dog' ? '🐕' : '🐈'}
+            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden bg-slate-100 mb-1">
+              <img
+                src={sp.img}
+                alt={sp.label}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
             <div>
               <p className="text-sm font-semibold text-slate-900">{sp.label}</p>
@@ -103,6 +122,11 @@ function BreedStep({ species, onSelect, onBack }) {
                 <p className="text-xs text-slate-400 mt-0.5 truncate">
                   {breed.profile.name} · {breed.profile.age} · {breed.profile.conditions.join(', ')}
                 </p>
+                {breed.demonstrates && (
+                  <p className="text-[10px] text-slate-400 mt-1 italic">
+                    Demonstrates: {breed.demonstrates}
+                  </p>
+                )}
               </div>
               <ChevronRight size={16} className="text-slate-300 group-hover:text-slate-500 transition-colors shrink-0" />
             </button>
@@ -113,9 +137,10 @@ function BreedStep({ species, onSelect, onBack }) {
   );
 }
 
-// ── Step 3: Patient EMR Profile ─────────────────────────────────
-function PatientProfileStep({ profile, species, onUpdateProfile, onContinue, onBack }) {
+// ── Step 3: Patient EMR Profile (Collapsed Summary) ─────────────
+function PatientProfileStep({ profile, breed, species, onUpdateProfile, onContinue, onBack }) {
   const p = profile;
+  const [expanded, setExpanded] = useState(false);
 
   // Editable fields
   const [editingWeight, setEditingWeight] = useState(false);
@@ -124,11 +149,38 @@ function PatientProfileStep({ profile, species, onUpdateProfile, onContinue, onB
   const [newCondition, setNewCondition] = useState('');
   const [showAddAllergy, setShowAddAllergy] = useState(false);
   const [showAddCondition, setShowAddCondition] = useState(false);
+  const [conditionSuggestions, setConditionSuggestions] = useState([]);
 
   const statusColor = (s) => {
     if (s === 'high') return 'text-red-600 bg-red-50';
     if (s === 'low') return 'text-amber-600 bg-amber-50';
     return 'text-slate-600 bg-slate-50';
+  };
+
+  // Get abnormal labs automatically
+  const abnormalLabs = Object.entries(p.labResults)
+    .filter(([, lab]) => lab.status !== 'normal')
+    .map(([key, lab]) => ({ key, ...lab }));
+
+  // Condition autocomplete
+  const handleConditionInput = (value) => {
+    setNewCondition(value);
+    if (value.trim().length >= 2) {
+      const matches = COMMON_CONDITIONS.filter(c =>
+        c.toLowerCase().includes(value.toLowerCase()) &&
+        !p.conditions.includes(c)
+      ).slice(0, 5);
+      setConditionSuggestions(matches);
+    } else {
+      setConditionSuggestions([]);
+    }
+  };
+
+  const addCondition = (cond) => {
+    onUpdateProfile({ ...p, conditions: [...p.conditions, cond] });
+    setNewCondition('');
+    setConditionSuggestions([]);
+    setShowAddCondition(false);
   };
 
   return (
@@ -141,10 +193,10 @@ function PatientProfileStep({ profile, species, onUpdateProfile, onContinue, onB
         <div>
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Step 3</p>
           <h2 className="text-xl font-bold text-slate-900 mb-1">Patient Chart</h2>
-          <p className="text-sm text-slate-500">Review and modify the patient profile before prescribing.</p>
+          <p className="text-sm text-slate-500">Review the patient profile before prescribing.</p>
         </div>
 
-        {/* Patient header card */}
+        {/* ── Summary Card (always visible) ── */}
         <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
           <div className="px-4 py-3.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -153,7 +205,7 @@ function PatientProfileStep({ profile, species, onUpdateProfile, onContinue, onB
               </div>
               <div>
                 <h3 className="text-sm font-bold text-slate-900">{p.name}</h3>
-                <p className="text-xs text-slate-400">{species === 'dog' ? 'Canine' : 'Feline'} · {p.sex}</p>
+                <p className="text-xs text-slate-400">{breed} · {species === 'dog' ? 'Canine' : 'Feline'} · {p.sex}</p>
               </div>
             </div>
             <span className="text-xs px-2 py-1 bg-slate-200/60 text-slate-500 rounded-full font-medium">
@@ -161,223 +213,260 @@ function PatientProfileStep({ profile, species, onUpdateProfile, onContinue, onB
             </span>
           </div>
 
-          {/* Vitals grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-slate-100">
-            {[
-              { icon: Calendar, label: 'Age', value: p.age },
-              {
-                icon: Weight, label: 'Weight',
-                value: editingWeight ? null : `${p.weight} kg`,
-                editable: true,
-              },
-              { icon: Heart, label: 'Heart Rate', value: p.heartRate },
-              { icon: Thermometer, label: 'Temp', value: p.temperature },
-            ].map((v, i) => (
-              <div key={i} className="px-3 py-3 text-center">
-                <v.icon size={13} className="text-slate-400 mx-auto mb-1" />
-                <p className="text-xs text-slate-400 mb-0.5">{v.label}</p>
-                {v.editable && editingWeight ? (
-                  <input
-                    type="number"
-                    value={tempWeight}
-                    onChange={(e) => setTempWeight(parseFloat(e.target.value) || 0)}
-                    onBlur={() => {
-                      onUpdateProfile({ ...p, weight: tempWeight });
-                      setEditingWeight(false);
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') {
-                        onUpdateProfile({ ...p, weight: tempWeight });
-                        setEditingWeight(false);
-                      }
-                    }}
-                    className="w-16 text-center text-sm font-semibold text-slate-900 border border-slate-300 rounded px-1 py-0.5 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-                    autoFocus
-                  />
-                ) : (
+          {/* Key facts row */}
+          <div className="px-4 py-3 grid grid-cols-3 gap-3">
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase">Age</p>
+              <p className="text-sm font-semibold text-slate-900">{p.age}</p>
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase">Weight</p>
+              {editingWeight ? (
+                <input
+                  type="number"
+                  value={tempWeight}
+                  onChange={(e) => setTempWeight(parseFloat(e.target.value) || 0)}
+                  onBlur={() => { onUpdateProfile({ ...p, weight: tempWeight }); setEditingWeight(false); }}
+                  onKeyDown={(e) => { if (e.key === 'Enter') { onUpdateProfile({ ...p, weight: tempWeight }); setEditingWeight(false); } }}
+                  className="w-16 text-sm font-semibold text-slate-900 border border-slate-300 rounded px-1 py-0.5 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+                  autoFocus
+                />
+              ) : (
+                <button
+                  onClick={() => setEditingWeight(true)}
+                  className="text-sm font-semibold text-slate-900 hover:text-slate-600 inline-flex items-center gap-1 group"
+                >
+                  {p.weight} kg
+                  <Pencil size={9} className="text-slate-300 group-hover:text-slate-500 transition-colors" />
+                </button>
+              )}
+            </div>
+            <div>
+              <p className="text-[10px] text-slate-400 uppercase">BCS</p>
+              <p className="text-sm font-semibold text-slate-900">{p.bodyCondition}</p>
+            </div>
+          </div>
+
+          {/* Active conditions */}
+          <div className="px-4 pb-3">
+            <p className="text-[10px] text-slate-400 uppercase mb-1.5">Active Conditions</p>
+            <div className="flex flex-wrap gap-1.5">
+              {p.conditions.map((cond, i) => (
+                <span key={i} className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50 text-amber-700 text-xs font-medium rounded-full border border-amber-100">
+                  {cond}
                   <button
-                    onClick={v.editable ? () => setEditingWeight(true) : undefined}
-                    className={`text-sm font-semibold text-slate-900 ${v.editable ? 'hover:text-slate-600 cursor-pointer group inline-flex items-center gap-1' : ''}`}
+                    onClick={() => onUpdateProfile({ ...p, conditions: p.conditions.filter((_, j) => j !== i) })}
+                    className="text-amber-400 hover:text-amber-600"
                   >
-                    {v.value}
-                    {v.editable && <Pencil size={9} className="text-slate-300 group-hover:text-slate-500 transition-colors" />}
+                    <X size={10} />
                   </button>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Body Condition */}
-        <div className="bg-white border border-slate-200 rounded-xl px-4 py-3 flex items-center justify-between">
-          <div>
-            <p className="text-xs text-slate-400 mb-0.5">Body Condition Score</p>
-            <p className="text-sm font-semibold text-slate-900">{p.bodyCondition}</p>
-          </div>
-          <div>
-            <p className="text-xs text-slate-400 mb-0.5">Resp Rate</p>
-            <p className="text-sm font-semibold text-slate-900">{p.respRate}</p>
-          </div>
-        </div>
-
-        {/* Conditions */}
-        <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-          <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Active Conditions</span>
-            <button
-              onClick={() => setShowAddCondition(true)}
-              className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1 transition-colors"
-            >
-              <Plus size={12} /> Add
-            </button>
-          </div>
-          <div className="px-4 py-3">
-            {p.conditions.length === 0 ? (
-              <p className="text-xs text-slate-400 italic">No active conditions</p>
-            ) : (
-              <div className="flex flex-wrap gap-2">
-                {p.conditions.map((cond, i) => (
-                  <span key={i} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-50 text-amber-700 text-xs font-medium rounded-full border border-amber-100">
-                    {cond}
-                    <button
-                      onClick={() => onUpdateProfile({ ...p, conditions: p.conditions.filter((_, j) => j !== i) })}
-                      className="text-amber-400 hover:text-amber-600"
-                    >
-                      <X size={11} />
-                    </button>
-                  </span>
-                ))}
-              </div>
-            )}
+                </span>
+              ))}
+              <button
+                onClick={() => setShowAddCondition(true)}
+                className="inline-flex items-center gap-0.5 px-2 py-0.5 text-xs text-slate-400 hover:text-slate-600 border border-dashed border-slate-200 rounded-full"
+              >
+                <Plus size={10} /> Add
+              </button>
+            </div>
             {showAddCondition && (
-              <div className="flex gap-2 mt-2 animate-fade-in">
+              <div className="relative mt-2 animate-fade-in">
                 <input
                   type="text"
                   value={newCondition}
-                  onChange={(e) => setNewCondition(e.target.value)}
-                  placeholder="e.g., Diabetes mellitus"
-                  className="flex-1 px-2.5 py-1.5 text-xs border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+                  onChange={(e) => handleConditionInput(e.target.value)}
+                  placeholder="Type to search conditions..."
+                  className="w-full px-2.5 py-1.5 text-xs border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10"
                   autoFocus
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && newCondition.trim()) {
-                      onUpdateProfile({ ...p, conditions: [...p.conditions, newCondition.trim()] });
-                      setNewCondition('');
+                      addCondition(newCondition.trim());
+                    }
+                    if (e.key === 'Escape') {
                       setShowAddCondition(false);
+                      setNewCondition('');
+                      setConditionSuggestions([]);
                     }
                   }}
                 />
-                <button
-                  onClick={() => {
-                    if (newCondition.trim()) {
-                      onUpdateProfile({ ...p, conditions: [...p.conditions, newCondition.trim()] });
-                      setNewCondition('');
-                    }
-                    setShowAddCondition(false);
-                  }}
-                  className="px-2.5 py-1.5 bg-slate-900 text-white text-xs rounded-lg hover:bg-slate-800"
-                >
-                  Add
-                </button>
+                {conditionSuggestions.length > 0 && (
+                  <div className="absolute z-20 top-full mt-1 w-full bg-white border border-slate-200 rounded-lg shadow-lg max-h-40 overflow-y-auto">
+                    {conditionSuggestions.map((sug, i) => (
+                      <button
+                        key={i}
+                        onClick={() => addCondition(sug)}
+                        className="w-full text-left px-3 py-2 text-xs text-slate-700 hover:bg-slate-50 border-b border-slate-100 last:border-0"
+                      >
+                        {sug}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
           </div>
-        </div>
 
-        {/* Allergies */}
-        <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-          <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Known Allergies</span>
-            <button
-              onClick={() => setShowAddAllergy(true)}
-              className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1 transition-colors"
-            >
-              <Plus size={12} /> Add
-            </button>
-          </div>
-          <div className="px-4 py-3">
-            {p.allergies.length === 0 ? (
-              <p className="text-xs text-slate-400 italic">No known allergies (NKDA)</p>
-            ) : (
+          {/* Abnormal labs auto-surfaced */}
+          {abnormalLabs.length > 0 && (
+            <div className="px-4 pb-3">
+              <p className="text-[10px] text-slate-400 uppercase mb-1.5">Flagged Lab Values</p>
               <div className="flex flex-wrap gap-2">
-                {p.allergies.map((allergy, i) => (
-                  <span key={i} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full border border-red-100">
-                    {allergy}
-                    <button
-                      onClick={() => onUpdateProfile({ ...p, allergies: p.allergies.filter((_, j) => j !== i) })}
-                      className="text-red-400 hover:text-red-600"
-                    >
-                      <X size={11} />
-                    </button>
+                {abnormalLabs.map((lab, i) => (
+                  <span
+                    key={i}
+                    className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                      lab.status === 'high' ? 'bg-red-50 text-red-600 border border-red-100' : 'bg-amber-50 text-amber-600 border border-amber-100'
+                    }`}
+                  >
+                    {lab.key.toUpperCase()}: {lab.value} {lab.unit} {lab.status === 'high' ? '↑' : '↓'}
                   </span>
                 ))}
               </div>
-            )}
-            {showAddAllergy && (
-              <div className="flex gap-2 mt-2 animate-fade-in">
-                <input
-                  type="text"
-                  value={newAllergy}
-                  onChange={(e) => setNewAllergy(e.target.value)}
-                  placeholder="e.g., Penicillin"
-                  className="flex-1 px-2.5 py-1.5 text-xs border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-                  autoFocus
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && newAllergy.trim()) {
-                      onUpdateProfile({ ...p, allergies: [...p.allergies, newAllergy.trim()] });
-                      setNewAllergy('');
-                      setShowAddAllergy(false);
-                    }
-                  }}
-                />
+            </div>
+          )}
+        </div>
+
+        {/* ── Edit Details Expand ── */}
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="w-full flex items-center justify-center gap-1.5 text-xs text-slate-400 hover:text-slate-600 transition-colors py-1"
+        >
+          {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+          {expanded ? 'Hide details' : 'Edit details'}
+        </button>
+
+        {expanded && (
+          <div className="space-y-5 animate-fade-in">
+            {/* Vitals grid */}
+            <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100">
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Vitals</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-slate-100">
+                {[
+                  { icon: Calendar, label: 'Age', value: p.age },
+                  { icon: Weight, label: 'Weight', value: `${p.weight} kg` },
+                  { icon: Heart, label: 'Heart Rate', value: p.heartRate },
+                  { icon: Thermometer, label: 'Temp', value: p.temperature },
+                ].map((v, i) => (
+                  <div key={i} className="px-3 py-3 text-center">
+                    <v.icon size={13} className="text-slate-400 mx-auto mb-1" />
+                    <p className="text-xs text-slate-400 mb-0.5">{v.label}</p>
+                    <p className="text-sm font-semibold text-slate-900">{v.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Body Condition */}
+            <div className="bg-white border border-slate-200 rounded-xl px-4 py-3 flex items-center justify-between">
+              <div>
+                <p className="text-xs text-slate-400 mb-0.5">Body Condition Score</p>
+                <p className="text-sm font-semibold text-slate-900">{p.bodyCondition}</p>
+              </div>
+              <div>
+                <p className="text-xs text-slate-400 mb-0.5">Resp Rate</p>
+                <p className="text-sm font-semibold text-slate-900">{p.respRate}</p>
+              </div>
+            </div>
+
+            {/* Allergies */}
+            <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Known Allergies</span>
                 <button
-                  onClick={() => {
-                    if (newAllergy.trim()) {
-                      onUpdateProfile({ ...p, allergies: [...p.allergies, newAllergy.trim()] });
-                      setNewAllergy('');
-                    }
-                    setShowAddAllergy(false);
-                  }}
-                  className="px-2.5 py-1.5 bg-slate-900 text-white text-xs rounded-lg hover:bg-slate-800"
+                  onClick={() => setShowAddAllergy(true)}
+                  className="text-xs text-slate-400 hover:text-slate-600 flex items-center gap-1 transition-colors"
                 >
-                  Add
+                  <Plus size={12} /> Add
                 </button>
               </div>
-            )}
-          </div>
-        </div>
-
-        {/* Lab Results */}
-        <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-          <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100">
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Recent Lab Results</span>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 divide-x divide-y divide-slate-100">
-            {Object.entries(p.labResults).map(([key, lab]) => (
-              <div key={key} className="px-3 py-2.5">
-                <p className="text-xs text-slate-400 uppercase mb-0.5">{key}</p>
-                <p className={`text-sm font-semibold ${lab.status === 'high' ? 'text-red-600' : lab.status === 'low' ? 'text-amber-600' : 'text-slate-900'}`}>
-                  {lab.value}
-                  <span className="text-xs font-normal text-slate-400 ml-1">{lab.unit}</span>
-                </p>
-                {lab.status !== 'normal' && (
-                  <span className={`text-xs font-medium ${lab.status === 'high' ? 'text-red-500' : 'text-amber-500'}`}>
-                    {lab.status === 'high' ? '↑ High' : '↓ Low'}
-                  </span>
+              <div className="px-4 py-3">
+                {p.allergies.length === 0 ? (
+                  <p className="text-xs text-slate-400 italic">No known allergies (NKDA)</p>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {p.allergies.map((allergy, i) => (
+                      <span key={i} className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full border border-red-100">
+                        {allergy}
+                        <button
+                          onClick={() => onUpdateProfile({ ...p, allergies: p.allergies.filter((_, j) => j !== i) })}
+                          className="text-red-400 hover:text-red-600"
+                        >
+                          <X size={11} />
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {showAddAllergy && (
+                  <div className="flex gap-2 mt-2 animate-fade-in">
+                    <input
+                      type="text"
+                      value={newAllergy}
+                      onChange={(e) => setNewAllergy(e.target.value)}
+                      placeholder="e.g., Penicillin"
+                      className="flex-1 px-2.5 py-1.5 text-xs border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+                      autoFocus
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && newAllergy.trim()) {
+                          onUpdateProfile({ ...p, allergies: [...p.allergies, newAllergy.trim()] });
+                          setNewAllergy('');
+                          setShowAddAllergy(false);
+                        }
+                      }}
+                    />
+                    <button
+                      onClick={() => {
+                        if (newAllergy.trim()) {
+                          onUpdateProfile({ ...p, allergies: [...p.allergies, newAllergy.trim()] });
+                          setNewAllergy('');
+                        }
+                        setShowAddAllergy(false);
+                      }}
+                      className="px-2.5 py-1.5 bg-slate-900 text-white text-xs rounded-lg hover:bg-slate-800"
+                    >
+                      Add
+                    </button>
+                  </div>
                 )}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        {/* Clinical History */}
-        <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-          <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100">
-            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Clinical History</span>
+            {/* Lab Results */}
+            <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100">
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">All Lab Results</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 divide-x divide-y divide-slate-100">
+                {Object.entries(p.labResults).map(([key, lab]) => (
+                  <div key={key} className="px-3 py-2.5">
+                    <p className="text-xs text-slate-400 uppercase mb-0.5">{key}</p>
+                    <p className={`text-sm font-semibold ${lab.status === 'high' ? 'text-red-600' : lab.status === 'low' ? 'text-amber-600' : 'text-slate-900'}`}>
+                      {lab.value}
+                      <span className="text-xs font-normal text-slate-400 ml-1">{lab.unit}</span>
+                    </p>
+                    {lab.status !== 'normal' && (
+                      <span className={`text-xs font-medium ${lab.status === 'high' ? 'text-red-500' : 'text-amber-500'}`}>
+                        {lab.status === 'high' ? '↑ High' : '↓ Low'}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Clinical History */}
+            <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+              <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100">
+                <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Clinical History</span>
+              </div>
+              <div className="px-4 py-3">
+                <p className="text-xs text-slate-600 leading-relaxed">{p.history}</p>
+              </div>
+            </div>
           </div>
-          <div className="px-4 py-3">
-            <p className="text-xs text-slate-600 leading-relaxed">{p.history}</p>
-          </div>
-        </div>
+        )}
 
         {/* Continue button */}
         <button
@@ -451,6 +540,7 @@ export default function Demo() {
   const [step, setStep] = useState('species');
   const [species, setSpecies] = useState(null);
   const [breedId, setBreedId] = useState(null);
+  const [breedName, setBreedName] = useState('');
   const [profile, setProfile] = useState(null);
   const [drugs, setDrugs] = useState([]);
   const [results, setResults] = useState(null);
@@ -467,6 +557,7 @@ export default function Demo() {
     const breed = getBreedProfile(species, id);
     if (breed) {
       setProfile({ ...breed.profile });
+      setBreedName(breed.breed);
       // Load default drugs
       const defaultDrugs = breed.profile.defaultDrugs
         .map(drugId => getDrugById(drugId))
@@ -507,6 +598,7 @@ export default function Demo() {
     setStep('species');
     setSpecies(null);
     setBreedId(null);
+    setBreedName('');
     setProfile(null);
     setDrugs([]);
     setResults(null);
@@ -563,6 +655,7 @@ export default function Demo() {
       {step === 'profile' && profile && (
         <PatientProfileStep
           profile={profile}
+          breed={breedName}
           species={species}
           onUpdateProfile={handleUpdateProfile}
           onContinue={() => setStep('medications')}
@@ -596,6 +689,7 @@ export default function Demo() {
             results={results}
             onBack={handleBackToMeds}
             onNewAnalysis={handleNewAnalysis}
+            patientInfo={{ name: profile?.name, species }}
           />
         </main>
       )}

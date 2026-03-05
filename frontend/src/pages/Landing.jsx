@@ -223,24 +223,34 @@ export default function Landing() {
 
       {/* ─── Hero ───────────────────────────────────────────────── */}
       <section className="relative overflow-hidden">
-        {/* Subtle grid background */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
+        {/* Background image — subtle, atmospheric */}
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&h=1080&fit=crop&q=60"
+            alt=""
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-white/92" />
+        </div>
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
           backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)',
           backgroundSize: '24px 24px'
         }} />
 
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-12 sm:pb-20">
+        <div className="relative max-w-5xl mx-auto px-5 sm:px-8 pt-16 sm:pt-24 pb-12 sm:pb-20">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left — text */}
             <div className={`transition-all duration-1000 ease-out ${heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-xs text-slate-500 mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 border border-slate-200 rounded-full text-xs text-slate-500 mb-6 backdrop-blur-sm">
                 <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
                 Veterinary Drug Utilization Review
               </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15] mb-5">
-                Real-time drug interaction screening for
-                <span className="text-slate-400"> companion animals</span>
+                Every prescription reviewed.
+                <span className="text-slate-400"> Every interaction caught.</span>
               </h1>
 
               <p className="text-base sm:text-lg text-slate-500 leading-relaxed mb-8 max-w-lg">

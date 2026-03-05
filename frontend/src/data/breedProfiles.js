@@ -9,6 +9,7 @@ export const BREED_DATA = {
     {
       id: 'golden_retriever',
       breed: 'Golden Retriever',
+      demonstrates: 'NSAID gastroprotection in chronic pain management',
       profile: {
         name: 'Buddy',
         age: '7y 4m',
@@ -35,6 +36,7 @@ export const BREED_DATA = {
     {
       id: 'sheltie',
       breed: 'Shetland Sheepdog',
+      demonstrates: 'MDR1 mutation + renal compromise drug safety',
       profile: {
         name: 'Max',
         age: '4y 2m',
@@ -61,6 +63,7 @@ export const BREED_DATA = {
     {
       id: 'french_bulldog',
       breed: 'French Bulldog',
+      demonstrates: 'Corticosteroid + antifungal CYP3A4 interaction',
       profile: {
         name: 'Coco',
         age: '3y 8m',
@@ -87,6 +90,7 @@ export const BREED_DATA = {
     {
       id: 'dachshund',
       breed: 'Dachshund',
+      demonstrates: 'Serotonin syndrome risk in multimodal pain therapy',
       profile: {
         name: 'Oscar',
         age: '9y 1m',
@@ -115,6 +119,7 @@ export const BREED_DATA = {
     {
       id: 'domestic_sh',
       breed: 'Domestic Shorthair',
+      demonstrates: 'Thyroid + renal drug management in senior cats',
       profile: {
         name: 'Mochi',
         age: '11y 6m',
@@ -141,6 +146,7 @@ export const BREED_DATA = {
     {
       id: 'persian',
       breed: 'Persian',
+      demonstrates: 'Cardiac polypharmacy with electrolyte risk',
       profile: {
         name: 'Luna',
         age: '6y 0m',
@@ -167,6 +173,7 @@ export const BREED_DATA = {
     {
       id: 'siamese',
       breed: 'Siamese',
+      demonstrates: 'Serotonin risk + NSAID use in anxious cats',
       profile: {
         name: 'Nabi',
         age: '8y 3m',
