@@ -215,6 +215,7 @@ export default function FullSystem() {
               onAddDrug={handleAddDrug}
               onRemoveDrug={handleRemoveDrug}
               species={species}
+              weight={weight}
             />
           </div>
 
@@ -251,6 +252,9 @@ export default function FullSystem() {
             onBack={handleBackToInput}
             onNewAnalysis={handleNewAnalysis}
             isFullSystem={true}
+            drugs={drugs}
+            species={species}
+            patientInfo={{ species, weight }}
           />
         </main>
       )}

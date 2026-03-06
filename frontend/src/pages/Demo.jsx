@@ -534,6 +534,7 @@ function MedicationStep({ drugs, species, patientName, onAddDrug, onRemoveDrug, 
             onAddDrug={onAddDrug}
             onRemoveDrug={onRemoveDrug}
             species={species}
+            weight={profile?.weight || 10}
             demoMode
           />
         </div>
@@ -736,6 +737,8 @@ export default function Demo() {
             onBack={handleBackToMeds}
             onNewAnalysis={handleNewAnalysis}
             patientInfo={patientInfo}
+            drugs={drugs}
+            species={species}
           />
         </main>
       )}

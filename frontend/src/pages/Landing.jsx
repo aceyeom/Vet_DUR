@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight, Lock, ChevronDown, Database, Dna, ShieldCheck,
-  FlaskConical, Globe, AlertTriangle, CheckCircle, BookOpen, Zap, Layers
+  FlaskConical, Globe, AlertTriangle, CheckCircle, BookOpen, Zap, Layers,
+  Activity, Calculator, Ban, BarChart2, Download
 } from 'lucide-react';
 import { NuvovetLogo, NuvovetWordmark } from '../components/NuvovetLogo';
 import { MolecularBackground } from '../components/MolecularBackground';
@@ -81,6 +82,35 @@ function PipelineItem({ number, label, sublabel, delay = 0 }) {
         <p className="text-sm font-medium text-slate-800">{label}</p>
         <p className="text-xs text-slate-400 mt-0.5">{sublabel}</p>
       </div>
+    </div>
+  );
+}
+
+// ── New feature highlight card ───────────────────────────────────
+function NewFeatureCard({ icon: Icon, title, description, preview, iconColor = 'text-slate-600', delay = 0 }) {
+  const [ref, visible] = useReveal();
+  return (
+    <div
+      ref={ref}
+      className={`bg-white border border-slate-200/80 rounded-xl p-5 sm:p-6 transition-all duration-600 ease-out flex flex-col gap-3 ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+      }`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      <div className="flex items-start gap-3">
+        <div className={`w-9 h-9 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 ${iconColor}`}>
+          <Icon size={18} />
+        </div>
+        <div>
+          <h3 className="text-sm font-semibold text-slate-900 mb-1">{title}</h3>
+          <p className="text-xs text-slate-500 leading-relaxed">{description}</p>
+        </div>
+      </div>
+      {preview && (
+        <div className="bg-slate-50 border border-slate-100 rounded-lg px-3 py-2.5 font-mono text-[10px] text-slate-600 leading-relaxed">
+          {preview}
+        </div>
+      )}
     </div>
   );
 }
@@ -357,6 +387,111 @@ export default function Landing() {
             title={t.landing.featureUnknown}
             description={t.landing.featureUnknownDesc}
             iconColor="text-slate-500"
+            delay={500}
+          />
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ─── Advanced Clinical Intelligence ─────────────────────── */}
+      <section className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+        <RevealSection>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-900 rounded-full text-xs text-white mb-4">
+              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+              New Features
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3">
+              Advanced clinical intelligence
+            </h2>
+            <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
+              Five new capabilities that turn data you already have into decisions you can act on immediately at the point of prescribing.
+            </p>
+          </div>
+        </RevealSection>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <NewFeatureCard
+            icon={Activity}
+            title="Cumulative Organ Load Score"
+            description="Sums renal and hepatic elimination burden across all drugs simultaneously. A single indicator flags when combined clearance routes are overloaded — critical when creatinine is already elevated."
+            preview={
+              <span>
+                Meloxicam 15% · Amoxicillin 60%<br/>
+                Prednisolone 20% · Tramadol 30%<br/>
+                <span className="text-red-600 font-semibold">Renal burden: 125% ⚠ High</span><br/>
+                <span className="text-amber-600">Hepatic burden: 110% Moderate</span>
+              </span>
+            }
+            iconColor="text-red-500"
+            delay={0}
+          />
+          <NewFeatureCard
+            icon={Calculator}
+            title="Dose Weight Calculator"
+            description="Every dosing recommendation is in mg/kg. Your patient's weight is already in the chart. The system multiplies and converts to actual tablets or ml — preventing decimal point errors at the point of prescribing."
+            preview={
+              <span>
+                Carprofen 2–4 mg/kg · 28 kg<br/>
+                → <span className="font-semibold text-slate-800">56–112 mg per dose</span><br/>
+                → <span className="font-semibold text-slate-900">1–2 tablets (50mg)</span>
+              </span>
+            }
+            iconColor="text-blue-600"
+            delay={100}
+          />
+          <NewFeatureCard
+            icon={Ban}
+            title="Species Toxicity Hardstops"
+            description="Acetaminophen for cats. Permethrin for cats. These aren't interactions — they're absolute contraindications. They fire inline on the drug card the moment a toxic drug is entered, before the scan even runs."
+            preview={
+              <span>
+                <span className="text-red-600 font-semibold">⛔ Species Contraindication</span><br/>
+                Acetaminophen is acutely fatal in cats.<br/>
+                Cats lack glucuronyl transferase<br/>
+                and cannot metabolise it.
+              </span>
+            }
+            iconColor="text-red-600"
+            delay={200}
+          />
+          <NewFeatureCard
+            icon={BarChart2}
+            title="Confidence Provenance"
+            description="One tap on the confidence score expands a per-drug breakdown — source quality, species data completeness, PK availability. A vet who understands why confidence is 74% trusts the system far more than one who just sees the number."
+            preview={
+              <span>
+                Overall confidence: 74%<br/>
+                Metronidazole  ████████████ 94%  Korean DB<br/>
+                Cyclosporine   ████████░░░░ 71%  Off-label<br/>
+                Trazodone      █████░░░░░░░ 52%  Limited lit.
+              </span>
+            }
+            iconColor="text-amber-600"
+            delay={300}
+          />
+          <NewFeatureCard
+            icon={Download}
+            title="Scan Export to PDF"
+            description="A formatted single-page PDF — patient name, date, drugs, interactions, pharmacist acknowledgment box. Goes in the patient file. In the Korean regulatory context, every exported scan is a documented clinical use event for the MFDS retrospective dataset."
+            preview={
+              <span>
+                NUVOVET DUR Report<br/>
+                Patient: Buddy · 28kg Canine<br/>
+                Scan date: 2026-03-06<br/>
+                3 interactions · Confidence 92%<br/>
+                <span className="text-slate-400">[ Signature block ]</span>
+              </span>
+            }
+            iconColor="text-emerald-600"
+            delay={400}
+          />
+          <NewFeatureCard
+            icon={ShieldCheck}
+            title="Pre-Scan Safety Layer"
+            description="Species hardstops run before the interaction engine — not after. The architectural separation is intentional: bright-line toxicity errors are hierarchically and visually distinct from interaction warnings."
+            iconColor="text-slate-600"
             delay={500}
           />
         </div>
