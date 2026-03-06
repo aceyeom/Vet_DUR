@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Download, X, Printer, CheckCircle, AlertTriangle, FileText } from 'lucide-react';
+import { useI18n } from '../i18n';
 
 /**
  * Scan Export to PDF
@@ -239,7 +240,7 @@ function buildPrintHTML({ results, patientInfo, drugs, species }) {
 }
 
 export function ScanExportButton({ results, patientInfo, drugs, species }) {
-  const [showPreview, setShowPreview] = useState(false);
+  const { t, lang } = useI18n();
 
   const handleExport = () => {
     const html = buildPrintHTML({ results, patientInfo, drugs, species });
@@ -260,10 +261,10 @@ export function ScanExportButton({ results, patientInfo, drugs, species }) {
   return (
     <button
       onClick={handleExport}
-      className="flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white text-[12px] font-medium rounded-lg hover:bg-slate-800 transition-colors"
+      className="flex items-center justify-center gap-1.5 px-4 py-2.5 w-full bg-slate-700 text-white text-[13px] font-medium rounded-lg hover:bg-slate-600 transition-colors"
     >
-      <Download size={13} />
-      Export PDF
+      <Download size={14} />
+      {lang === 'ko' ? 'PDF 내보내기' : 'Export PDF'}
     </button>
   );
 }

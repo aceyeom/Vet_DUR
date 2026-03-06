@@ -87,6 +87,22 @@ const en = {
     ctaTitle: 'Ready for your clinic?',
     ctaDesc: 'Request full access to the complete DUR system with your entire drug database, patient records integration, and audit trails.',
     footerDisclaimer: 'For veterinary professional use only. Not a substitute for clinical judgment.',
+    // New features section
+    newFeaturesLabel: 'New Features',
+    newFeaturesTitle: 'Advanced Clinical Intelligence',
+    newFeaturesDesc: 'Six capabilities that turn the data you already have into prescribing decisions you can act on immediately.',
+    featureOrganLoad: 'Cumulative Organ Load Score',
+    featureOrganLoadDesc: 'Sums renal and hepatic elimination burden across all drugs simultaneously. Flags when combined clearance routes are overloaded — critical when creatinine is already elevated.',
+    featureDoseCalc: 'Dose Weight Calculator',
+    featureDoseCalcDesc: 'Every recommendation is in mg/kg. Your patient\'s weight is already in the chart. Drag the slider to see the exact tablet count — prevents decimal-point errors at the point of prescribing.',
+    featureHardstops: 'Species Toxicity Hardstops',
+    featureHardstopsDesc: 'Acetaminophen for cats. Permethrin for cats. These aren\'t interactions — they\'re absolute contraindications. They fire inline on the drug card the moment a toxic drug is entered.',
+    featureConfidence: 'Confidence Provenance',
+    featureConfidenceDesc: 'One tap expands a per-drug confidence breakdown — source quality, species data completeness, PK availability. Understand exactly why a score is 74%, not just see the number.',
+    featurePDF: 'Scan Export to PDF',
+    featurePDFDesc: 'A formatted single-page PDF — patient name, date, drugs, interactions, pharmacist acknowledgment box. Goes in the patient file. Compatible with MFDS retrospective dataset requirements.',
+    featureSafetyLayer: 'Pre-Scan Safety Layer',
+    featureSafetyLayerDesc: 'Species hardstops run before the interaction engine — not after. The architectural separation is intentional: bright-line toxicity errors are hierarchically distinct from interaction warnings.',
   },
 
   // ── Demo Flow ──────────────────────────────────────────────────

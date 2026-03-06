@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight, Lock, ChevronDown, Database, Dna, ShieldCheck,
   FlaskConical, Globe, AlertTriangle, CheckCircle, BookOpen, Zap, Layers,
-  Activity, Calculator, Ban, BarChart2, Download
+  Activity, Calculator, Ban, BarChart2, Download, FileText, Printer
 } from 'lucide-react';
 import { NuvovetLogo, NuvovetWordmark } from '../components/NuvovetLogo';
 import { MolecularBackground } from '../components/MolecularBackground';
@@ -86,13 +86,262 @@ function PipelineItem({ number, label, sublabel, delay = 0 }) {
   );
 }
 
-// ── New feature highlight card ───────────────────────────────────
-function NewFeatureCard({ icon: Icon, title, description, preview, iconColor = 'text-slate-600', delay = 0 }) {
-  const [ref, visible] = useReveal();
+// ── New feature visual cards ─────────────────────────────────────
+
+// Organ Load — animated bar chart
+function OrganLoadVisual({ visible }) {
+  const drugs = [
+    { name: 'Meloxicam', renal: 15, hepatic: 60 },
+    { name: 'Amoxicillin', renal: 60, hepatic: 10 },
+    { name: 'Prednisolone', renal: 20, hepatic: 55 },
+    { name: 'Tramadol', renal: 30, hepatic: 45 },
+  ];
+  const totalRenal = drugs.reduce((s, d) => s + d.renal, 0); // 125
+  const totalHepatic = drugs.reduce((s, d) => s + d.hepatic, 0); // 170
+
+  return (
+    <div className="bg-slate-900 rounded-lg p-3 text-[10px] space-y-2">
+      <div className="flex items-center justify-between mb-1">
+        <span className="text-slate-400 font-medium uppercase tracking-wide text-[9px]">Organ Burden</span>
+        <span className="text-red-400 text-[9px] font-semibold animate-pulse">RENAL HIGH ⚠</span>
+      </div>
+      <div>
+        <div className="flex justify-between text-[9px] mb-0.5">
+          <span className="text-slate-400">Renal</span>
+          <span className="text-red-400 font-bold">{totalRenal}%</span>
+        </div>
+        <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-red-500 rounded-full transition-all duration-1000"
+            style={{ width: visible ? `${Math.min(totalRenal / 2, 100)}%` : '0%' }}
+          />
+        </div>
+      </div>
+      <div>
+        <div className="flex justify-between text-[9px] mb-0.5">
+          <span className="text-slate-400">Hepatic</span>
+          <span className="text-amber-400 font-semibold">{totalHepatic}%</span>
+        </div>
+        <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-amber-400 rounded-full transition-all duration-1000 delay-200"
+            style={{ width: visible ? `${Math.min(totalHepatic / 2, 100)}%` : '0%' }}
+          />
+        </div>
+      </div>
+      <div className="pt-1 border-t border-slate-700 grid grid-cols-2 gap-1">
+        {drugs.map((d, i) => (
+          <div key={i} className="flex items-center gap-1">
+            <div className="w-1 h-1 rounded-full bg-slate-500 shrink-0" />
+            <span className="text-slate-500 truncate">{d.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Dose Calculator — interactive slider-like visual
+function DoseCalcVisual({ visible }) {
+  const [position, setPosition] = useState(50);
+  const weight = 28;
+  const minMg = +(2.2 * weight).toFixed(0); // 61.6
+  const maxMg = +(4.4 * weight).toFixed(0); // 123.2
+  const calcMg = Math.round(minMg + (position / 100) * (maxMg - minMg));
+  const tablets = Math.round((calcMg / 50) * 10) / 10;
+
+  return (
+    <div className="bg-slate-900 rounded-lg p-3 space-y-2.5">
+      <div className="flex justify-between text-[9px]">
+        <span className="text-slate-400">Carprofen · {weight} kg patient</span>
+        <span className="text-blue-400 font-mono">2.2–4.4 mg/kg</span>
+      </div>
+      {/* Slider track */}
+      <div className="relative">
+        <div className="h-3 bg-slate-700 rounded-full relative overflow-hidden">
+          <div
+            className="absolute inset-y-0 left-0 bg-blue-500 rounded-full transition-all duration-100"
+            style={{ width: `${position}%` }}
+          />
+        </div>
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={position}
+          onChange={e => setPosition(Number(e.target.value))}
+          className="absolute inset-0 w-full opacity-0 cursor-pointer h-3"
+          style={{ top: 0 }}
+        />
+        {/* Thumb indicator */}
+        <div
+          className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-blue-500 rounded-full shadow pointer-events-none transition-all duration-100"
+          style={{ left: `calc(${position}% - 8px)`, top: '50%' }}
+        />
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-[9px] text-slate-500">{minMg} mg min</span>
+        <div className="text-center">
+          <div className="text-[14px] font-bold text-white font-mono">{calcMg} mg</div>
+          <div className="text-[9px] text-blue-400">{tablets} tablets (50mg)</div>
+        </div>
+        <span className="text-[9px] text-slate-500">{maxMg} mg max</span>
+      </div>
+    </div>
+  );
+}
+
+// Species Hardstop — animated alert card
+function HardstopVisual({ visible }) {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    if (!visible) return;
+    const t = setTimeout(() => setShow(true), 600);
+    return () => clearTimeout(t);
+  }, [visible]);
+
+  return (
+    <div className="bg-slate-900 rounded-lg p-3 space-y-2">
+      {/* Drug being entered */}
+      <div className="flex items-center gap-2 bg-slate-800 rounded-md px-2.5 py-1.5">
+        <span className="text-[9px] text-slate-400">Drug entry</span>
+        <span className="text-[11px] text-white font-mono ml-auto">Acetaminophen</span>
+        <span className="text-[9px] bg-violet-900 text-violet-300 px-1 py-0.5 rounded">🐈 Cat</span>
+      </div>
+      {/* Alert */}
+      <div className={`transition-all duration-500 ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+        <div className="bg-red-950 border border-red-500/50 rounded-md px-2.5 py-2 flex items-start gap-2">
+          <Ban size={12} className="text-red-400 shrink-0 mt-0.5" />
+          <div>
+            <p className="text-[9px] font-bold text-red-400 uppercase tracking-wide mb-0.5">Species Contraindication</p>
+            <p className="text-[9px] text-red-300 leading-relaxed">Acetaminophen is acutely fatal in cats. Cats lack glucuronyl transferase.</p>
+          </div>
+        </div>
+      </div>
+      <div className={`transition-all duration-500 delay-300 ${show ? 'opacity-100' : 'opacity-0'}`}>
+        <div className="text-[9px] text-slate-500 text-center">⚡ Fires before the scan — not after</div>
+      </div>
+    </div>
+  );
+}
+
+// Confidence Provenance — animated bar breakdown
+function ConfidenceVisual({ visible }) {
+  const drugs = [
+    { name: 'Metronidazole', score: 94, source: 'Korean DB', color: 'bg-emerald-500' },
+    { name: 'Cyclosporine', score: 71, source: 'Off-label', color: 'bg-amber-400' },
+    { name: 'Trazodone', score: 52, source: 'Limited lit.', color: 'bg-red-400' },
+  ];
+  const blocks = 10;
+
+  return (
+    <div className="bg-slate-900 rounded-lg p-3 space-y-2">
+      <div className="flex justify-between text-[9px] mb-1">
+        <span className="text-slate-400 uppercase tracking-wide font-medium">Confidence Provenance</span>
+        <span className="text-slate-300 font-bold">74%</span>
+      </div>
+      {drugs.map((d, i) => (
+        <div key={i} className={`transition-all duration-700`} style={{ transitionDelay: `${i * 200}ms` }}>
+          <div className="flex justify-between text-[9px] mb-0.5">
+            <span className="text-slate-400">{d.name}</span>
+            <div className="flex items-center gap-1.5">
+              <span className="text-[8px] text-slate-600">{d.source}</span>
+              <span className="text-slate-300 font-mono">{d.score}%</span>
+            </div>
+          </div>
+          <div className="flex gap-0.5">
+            {Array.from({ length: blocks }).map((_, bi) => (
+              <div
+                key={bi}
+                className={`flex-1 h-2 rounded-sm transition-all duration-500 ${bi < Math.round((d.score / 100) * blocks) ? d.color : 'bg-slate-700'}`}
+                style={{ transitionDelay: visible ? `${i * 150 + bi * 40}ms` : '0ms', opacity: visible ? 1 : 0 }}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// PDF Export — document preview
+function PDFExportVisual({ visible }) {
+  return (
+    <div className="bg-slate-900 rounded-lg p-3">
+      {/* Mini document */}
+      <div className={`bg-white rounded-md p-2.5 shadow-lg transition-all duration-700 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+        <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-slate-100">
+          <div className="flex items-center gap-1">
+            <div className="w-2 h-2 bg-slate-900 rounded-sm" />
+            <span className="text-[8px] font-bold text-slate-900 uppercase tracking-wide">NUVOVET</span>
+          </div>
+          <span className="text-[7px] text-slate-400">DUR Report</span>
+        </div>
+        <div className="space-y-1.5">
+          <div className="grid grid-cols-2 gap-1 text-[7px]">
+            <div><span className="text-slate-400">Patient: </span><span className="font-semibold text-slate-700">Buddy · 28kg</span></div>
+            <div><span className="text-slate-400">Date: </span><span className="text-slate-600">2026-03-06</span></div>
+          </div>
+          <div className="bg-red-50 border-l-2 border-red-500 px-1.5 py-1 rounded-r">
+            <span className="text-[7px] text-red-700 font-semibold">Critical: Meloxicam + Prednisolone</span>
+          </div>
+          <div className="bg-amber-50 border-l-2 border-amber-400 px-1.5 py-1 rounded-r">
+            <span className="text-[7px] text-amber-700">Moderate: Metronidazole + Ketoconazole</span>
+          </div>
+          <div className="h-4 border border-dashed border-slate-200 rounded flex items-center justify-center">
+            <span className="text-[6px] text-slate-400">[ Pharmacist signature ]</span>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center gap-1 mt-2">
+        <Printer size={9} className="text-slate-500" />
+        <span className="text-[9px] text-slate-500">Print-to-PDF · Goes in patient file</span>
+      </div>
+    </div>
+  );
+}
+
+// Pre-Scan Safety Flow
+function SafetyLayerVisual({ visible }) {
+  const steps = [
+    { label: 'Drug entered', color: 'bg-slate-600', delay: 0 },
+    { label: 'Hardstop check', color: 'bg-red-500', delay: 200, alert: true },
+    { label: 'DDI engine', color: 'bg-amber-500', delay: 400 },
+    { label: 'Results', color: 'bg-emerald-500', delay: 600 },
+  ];
+
+  return (
+    <div className="bg-slate-900 rounded-lg p-3">
+      <div className="text-[9px] text-slate-400 mb-3 uppercase tracking-wide font-medium">Pre-Scan Architecture</div>
+      <div className="flex items-center gap-1">
+        {steps.map((step, i) => (
+          <React.Fragment key={i}>
+            <div
+              className={`flex-1 rounded px-1 py-1.5 text-center transition-all duration-500 ${step.color}`}
+              style={{ transitionDelay: visible ? `${step.delay}ms` : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(4px)' }}
+            >
+              <div className="text-[7px] font-medium text-white leading-tight">{step.label}</div>
+              {step.alert && <div className="text-[6px] text-red-200 mt-0.5">⛔ blocks</div>}
+            </div>
+            {i < steps.length - 1 && (
+              <div className={`text-slate-600 text-[8px] shrink-0 transition-opacity duration-300`} style={{ transitionDelay: `${step.delay + 150}ms`, opacity: visible ? 1 : 0 }}>→</div>
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+      <div className={`mt-2 text-[8px] text-slate-500 text-center transition-opacity duration-500 delay-700`} style={{ opacity: visible ? 1 : 0 }}>
+        Bright-line toxicity errors are <span className="text-red-400 font-semibold">architecturally separate</span> from interaction warnings
+      </div>
+    </div>
+  );
+}
+
+function NewFeatureCard({ icon: Icon, title, description, visual: Visual, iconColor = 'text-slate-600', delay = 0 }) {
+  const [ref, visible] = useReveal(0.1);
   return (
     <div
       ref={ref}
-      className={`bg-white border border-slate-200/80 rounded-xl p-5 sm:p-6 transition-all duration-600 ease-out flex flex-col gap-3 ${
+      className={`bg-white border border-slate-200/80 rounded-xl p-5 flex flex-col gap-3 transition-all duration-600 ease-out ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
@@ -106,11 +355,7 @@ function NewFeatureCard({ icon: Icon, title, description, preview, iconColor = '
           <p className="text-xs text-slate-500 leading-relaxed">{description}</p>
         </div>
       </div>
-      {preview && (
-        <div className="bg-slate-50 border border-slate-100 rounded-lg px-3 py-2.5 font-mono text-[10px] text-slate-600 leading-relaxed">
-          {preview}
-        </div>
-      )}
+      {Visual && <Visual visible={visible} />}
     </div>
   );
 }
@@ -400,13 +645,13 @@ export default function Landing() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-900 rounded-full text-xs text-white mb-4">
               <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              New Features
+              {t.landing.newFeaturesLabel}
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-              Advanced clinical intelligence
+              {t.landing.newFeaturesTitle}
             </h2>
             <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-              Five new capabilities that turn data you already have into decisions you can act on immediately at the point of prescribing.
+              {t.landing.newFeaturesDesc}
             </p>
           </div>
         </RevealSection>
@@ -414,83 +659,49 @@ export default function Landing() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <NewFeatureCard
             icon={Activity}
-            title="Cumulative Organ Load Score"
-            description="Sums renal and hepatic elimination burden across all drugs simultaneously. A single indicator flags when combined clearance routes are overloaded — critical when creatinine is already elevated."
-            preview={
-              <span>
-                Meloxicam 15% · Amoxicillin 60%<br/>
-                Prednisolone 20% · Tramadol 30%<br/>
-                <span className="text-red-600 font-semibold">Renal burden: 125% ⚠ High</span><br/>
-                <span className="text-amber-600">Hepatic burden: 110% Moderate</span>
-              </span>
-            }
+            title={t.landing.featureOrganLoad}
+            description={t.landing.featureOrganLoadDesc}
+            visual={OrganLoadVisual}
             iconColor="text-red-500"
             delay={0}
           />
           <NewFeatureCard
             icon={Calculator}
-            title="Dose Weight Calculator"
-            description="Every dosing recommendation is in mg/kg. Your patient's weight is already in the chart. The system multiplies and converts to actual tablets or ml — preventing decimal point errors at the point of prescribing."
-            preview={
-              <span>
-                Carprofen 2–4 mg/kg · 28 kg<br/>
-                → <span className="font-semibold text-slate-800">56–112 mg per dose</span><br/>
-                → <span className="font-semibold text-slate-900">1–2 tablets (50mg)</span>
-              </span>
-            }
+            title={t.landing.featureDoseCalc}
+            description={t.landing.featureDoseCalcDesc}
+            visual={DoseCalcVisual}
             iconColor="text-blue-600"
             delay={100}
           />
           <NewFeatureCard
             icon={Ban}
-            title="Species Toxicity Hardstops"
-            description="Acetaminophen for cats. Permethrin for cats. These aren't interactions — they're absolute contraindications. They fire inline on the drug card the moment a toxic drug is entered, before the scan even runs."
-            preview={
-              <span>
-                <span className="text-red-600 font-semibold">⛔ Species Contraindication</span><br/>
-                Acetaminophen is acutely fatal in cats.<br/>
-                Cats lack glucuronyl transferase<br/>
-                and cannot metabolise it.
-              </span>
-            }
+            title={t.landing.featureHardstops}
+            description={t.landing.featureHardstopsDesc}
+            visual={HardstopVisual}
             iconColor="text-red-600"
             delay={200}
           />
           <NewFeatureCard
             icon={BarChart2}
-            title="Confidence Provenance"
-            description="One tap on the confidence score expands a per-drug breakdown — source quality, species data completeness, PK availability. A vet who understands why confidence is 74% trusts the system far more than one who just sees the number."
-            preview={
-              <span>
-                Overall confidence: 74%<br/>
-                Metronidazole  ████████████ 94%  Korean DB<br/>
-                Cyclosporine   ████████░░░░ 71%  Off-label<br/>
-                Trazodone      █████░░░░░░░ 52%  Limited lit.
-              </span>
-            }
+            title={t.landing.featureConfidence}
+            description={t.landing.featureConfidenceDesc}
+            visual={ConfidenceVisual}
             iconColor="text-amber-600"
             delay={300}
           />
           <NewFeatureCard
-            icon={Download}
-            title="Scan Export to PDF"
-            description="A formatted single-page PDF — patient name, date, drugs, interactions, pharmacist acknowledgment box. Goes in the patient file. In the Korean regulatory context, every exported scan is a documented clinical use event for the MFDS retrospective dataset."
-            preview={
-              <span>
-                NUVOVET DUR Report<br/>
-                Patient: Buddy · 28kg Canine<br/>
-                Scan date: 2026-03-06<br/>
-                3 interactions · Confidence 92%<br/>
-                <span className="text-slate-400">[ Signature block ]</span>
-              </span>
-            }
+            icon={FileText}
+            title={t.landing.featurePDF}
+            description={t.landing.featurePDFDesc}
+            visual={PDFExportVisual}
             iconColor="text-emerald-600"
             delay={400}
           />
           <NewFeatureCard
             icon={ShieldCheck}
-            title="Pre-Scan Safety Layer"
-            description="Species hardstops run before the interaction engine — not after. The architectural separation is intentional: bright-line toxicity errors are hierarchically and visually distinct from interaction warnings."
+            title={t.landing.featureSafetyLayer}
+            description={t.landing.featureSafetyLayerDesc}
+            visual={SafetyLayerVisual}
             iconColor="text-slate-600"
             delay={500}
           />

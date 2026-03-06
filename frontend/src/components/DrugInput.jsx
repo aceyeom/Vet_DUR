@@ -83,7 +83,7 @@ function parseStrengthMg(selectedVariant) {
   return val; // mg or ml → treat as mg equivalent
 }
 
-function DoseCalculator({ drug, species, weight }) {
+function DoseCalculator({ drug, species, weight, lang }) {
   if (!weight || weight <= 0) return null;
 
   const range = DOSE_RANGES[drug.id]?.[species];
@@ -98,6 +98,7 @@ function DoseCalculator({ drug, species, weight }) {
 
   const minMg = +(minDose * weight).toFixed(1);
   const maxMg = maxDose !== minDose ? +(maxDose * weight).toFixed(1) : null;
+  const midMg = maxMg ? +(minMg + (maxMg - minMg) / 2).toFixed(1) : minMg;
 
   const strengthMg = parseStrengthMg(drug.selectedVariant);
 
@@ -118,26 +119,61 @@ function DoseCalculator({ drug, species, weight }) {
 
   const rangeLabel = maxDose !== minDose ? `${minDose}–${maxDose}` : `${minDose}`;
 
+  // For the visual track: show the full range and mark the calculated zone
+  const hasRange = maxMg !== null && maxMg !== minMg;
+
   return (
-    <div className="mt-1.5 px-2 py-1.5 bg-slate-50 border border-slate-100 rounded-lg">
-      <div className="flex items-start gap-1.5">
-        <Calculator size={10} className="text-slate-400 mt-0.5 shrink-0" />
-        <div className="text-[10px] text-slate-500 leading-relaxed">
-          <span className="font-mono">{rangeLabel} mg/kg</span>
-          <span className="text-slate-300 mx-1">·</span>
-          <span>{weight} kg</span>
-          <span className="mx-1 text-slate-300">→</span>
-          <span className="font-semibold text-slate-700 font-mono">{doseLabel} per dose</span>
-          {tabletLabel && (
-            <>
-              <span className="text-slate-300 mx-1">·</span>
-              <span className="font-semibold text-slate-900">{tabletLabel}</span>
-              {drug.selectedVariant && (
-                <span className="text-slate-400 ml-0.5">({drug.selectedVariant})</span>
-              )}
-            </>
-          )}
+    <div className="mt-2 px-2.5 py-2 bg-blue-50/60 border border-blue-100 rounded-lg">
+      {/* Header row */}
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-1">
+          <Calculator size={10} className="text-blue-500 shrink-0" />
+          <span className="text-[10px] font-semibold text-blue-700 uppercase tracking-wide">
+            {lang === 'ko' ? `${weight} kg 투여 용량` : `Dose for ${weight} kg`}
+          </span>
         </div>
+        <span className="text-[10px] font-mono text-slate-500">{rangeLabel} mg/kg</span>
+      </div>
+
+      {/* Visual range bar */}
+      <div className="relative h-4 mb-2">
+        {/* Track */}
+        <div className="absolute inset-y-[5px] left-0 right-0 bg-slate-200 rounded-full" />
+        {/* Active range fill */}
+        {hasRange ? (
+          <div
+            className="absolute inset-y-[5px] bg-blue-400 rounded-full"
+            style={{ left: '5%', right: '5%' }}
+          />
+        ) : (
+          <div
+            className="absolute inset-y-[5px] bg-blue-400 rounded-full"
+            style={{ left: '5%', width: '90%' }}
+          />
+        )}
+        {/* Calculated dose marker — center of range or fixed value */}
+        <div
+          className="absolute top-0 w-4 h-4 bg-white border-2 border-blue-600 rounded-full shadow-sm -translate-x-1/2 transition-all"
+          style={{ left: hasRange ? '50%' : '50%' }}
+          title={`${midMg} mg`}
+        />
+        {/* Min label */}
+        <span className="absolute left-0 -bottom-4 text-[9px] text-slate-400 font-mono">{minMg}mg</span>
+        {/* Max label */}
+        {maxMg && <span className="absolute right-0 -bottom-4 text-[9px] text-slate-400 font-mono">{maxMg}mg</span>}
+      </div>
+
+      {/* Result row */}
+      <div className="mt-5 flex items-center justify-between">
+        <span className="text-[11px] font-semibold text-slate-800">{doseLabel} / dose</span>
+        {tabletLabel && (
+          <span className="text-[11px] font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded-full">
+            {tabletLabel}
+            {drug.selectedVariant && (
+              <span className="font-normal text-blue-600 ml-1">({drug.selectedVariant})</span>
+            )}
+          </span>
+        )}
       </div>
     </div>
   );
@@ -249,7 +285,9 @@ function DrugCard({ drug, index, onRemove, species, weight, t, lang }) {
         <div className="mt-2 ml-6 flex items-start gap-1.5 px-2.5 py-2 bg-red-100 border border-red-200 rounded-lg">
           <AlertTriangle size={11} className="text-red-600 shrink-0 mt-0.5" />
           <p className="text-[11px] text-red-700 leading-relaxed font-medium">
-            <span className="uppercase tracking-wide text-[10px] block mb-0.5">Species Contraindication</span>
+            <span className="uppercase tracking-wide text-[10px] block mb-0.5">
+              {lang === 'ko' ? '종별 금기' : 'Species Contraindication'}
+            </span>
             {hardstopReason}
           </p>
         </div>
@@ -258,7 +296,7 @@ function DrugCard({ drug, index, onRemove, species, weight, t, lang }) {
       {/* ── Dose Weight Calculator ── */}
       {!hardstopReason && (
         <div className="ml-6">
-          <DoseCalculator drug={drug} species={species} weight={weight} />
+          <DoseCalculator drug={drug} species={species} weight={weight} lang={lang} />
         </div>
       )}
     </div>
