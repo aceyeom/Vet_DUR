@@ -1,165 +1,170 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
-// Generate a stable network of nodes and edges for the molecular background
-function generateNetwork(seed = 42) {
-  const nodes = [];
-  const edges = [];
+// ──────────────────────────────────────────────────────────────────
+// Analytical PK-chart background — three pharmacokinetic curves
+// on chart-paper grid lines, with frame marks and a slow scan bar.
+//
+// Key behaviours:
+//  • The wrapper starts at opacity:0 and CSS-fades to opacity:1 over
+//    1.8 s — prevents any dark flash on initial render before SMIL
+//    animations kick in.
+//  • Every SVG element carries an explicit presentational opacity
+//    matching its animation start value, so the first animation frame
+//    is always correct (no jump from default opacity:1).
+//  • Left-side mask extends to 48 % — keeps the text column clean.
+// ──────────────────────────────────────────────────────────────────
 
-  // Grid-based placement with jitter for organic feel
-  const cols = 12;
-  const rows = 10;
-  const spacingX = 100 / cols;
-  const spacingY = 100 / rows;
+const GRID_Y = [22, 36, 50, 64, 78];
 
-  // Simple seeded random
-  let s = seed;
-  const rand = () => {
-    s = (s * 16807) % 2147483647;
-    return (s - 1) / 2147483646;
-  };
-
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      const jitterX = (rand() - 0.5) * spacingX * 0.6;
-      const jitterY = (rand() - 0.5) * spacingY * 0.6;
-      nodes.push({
-        x: spacingX * (c + 0.5) + jitterX,
-        y: spacingY * (r + 0.5) + jitterY,
-        r: 1 + rand() * 2,
-        delay: rand() * 4,
-        duration: 2 + rand() * 3,
-      });
-    }
-  }
-
-  // Connect nearby nodes
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const dx = nodes[i].x - nodes[j].x;
-      const dy = nodes[i].y - nodes[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < spacingX * 1.6 && rand() > 0.35) {
-        edges.push({
-          x1: nodes[i].x,
-          y1: nodes[i].y,
-          x2: nodes[j].x,
-          y2: nodes[j].y,
-          delay: rand() * 3,
-          duration: 1.5 + rand() * 2,
-        });
-      }
-    }
-  }
-
-  // Add some hexagonal structures
-  const hexCenters = [
-    { cx: 25, cy: 30 }, { cx: 60, cy: 20 }, { cx: 80, cy: 60 },
-    { cx: 35, cy: 70 }, { cx: 15, cy: 55 }, { cx: 70, cy: 85 },
-    { cx: 50, cy: 50 }, { cx: 90, cy: 35 },
-  ];
-
-  hexCenters.forEach(({ cx, cy }) => {
-    const hexR = 4 + rand() * 3;
-    const hexNodes = [];
-    for (let k = 0; k < 6; k++) {
-      const angle = (Math.PI / 3) * k - Math.PI / 6;
-      hexNodes.push({
-        x: cx + hexR * Math.cos(angle),
-        y: cy + hexR * Math.sin(angle),
-        r: 1.2,
-        delay: rand() * 4,
-        duration: 2 + rand() * 2,
-      });
-    }
-    nodes.push(...hexNodes);
-    for (let k = 0; k < 6; k++) {
-      const next = (k + 1) % 6;
-      edges.push({
-        x1: hexNodes[k].x,
-        y1: hexNodes[k].y,
-        x2: hexNodes[next].x,
-        y2: hexNodes[next].y,
-        delay: rand() * 2,
-        duration: 1.5 + rand() * 2,
-      });
-    }
-  });
-
-  return { nodes, edges };
-}
-
-export function MolecularBackground() {
-  const { nodes, edges } = useMemo(() => generateNetwork(), []);
-
+export function MolecularBackground({ className = '' }) {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div
+      className={`absolute inset-0 overflow-hidden pointer-events-none select-none ${className}`}
+      style={{ animation: 'mbFadeIn 1.8s ease-out forwards', opacity: 0 }}
+    >
       <svg
-        viewBox="0 0 100 100"
+        viewBox="0 0 200 100"
         preserveAspectRatio="xMidYMid slice"
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          <style>{`
-            @keyframes nodePulse {
-              0%, 100% { opacity: 0.15; r: var(--base-r); }
-              50% { opacity: 0.4; r: calc(var(--base-r) + 0.5px); }
-            }
-            @keyframes edgeDraw {
-              0%, 100% { opacity: 0.06; }
-              50% { opacity: 0.18; }
-            }
-          `}</style>
+          {/* CSS keyframe lives here so it doesn't pollute the global sheet */}
+          <style>{`@keyframes mbFadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
+
+          {/* Mask: invisible on the left (text column), solid on the right */}
+          <linearGradient id="mbFade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stopColor="white" stopOpacity="0"    />
+            <stop offset="48%"  stopColor="white" stopOpacity="0.55" />
+            <stop offset="80%"  stopColor="white" stopOpacity="0.97" />
+            <stop offset="100%" stopColor="white" stopOpacity="1"    />
+          </linearGradient>
+          <mask id="mbMask">
+            <rect x="0" y="0" width="200" height="100" fill="url(#mbFade)" />
+          </mask>
         </defs>
 
-        {/* Edges */}
-        {edges.map((e, i) => (
-          <line
-            key={`e${i}`}
-            x1={e.x1}
-            y1={e.y1}
-            x2={e.x2}
-            y2={e.y2}
-            stroke="#0f172a"
-            strokeWidth="0.15"
-            opacity="0.1"
+        <g mask="url(#mbMask)">
+
+          {/* ── Chart-paper horizontal grid lines ─────────────── */}
+          {GRID_Y.map((y, i) => (
+            <line
+              key={`g${i}`}
+              x1="0" y1={y} x2="198" y2={y}
+              stroke="#0f172a" strokeWidth="0.18"
+              opacity="0.04"
+            >
+              <animate
+                attributeName="opacity"
+                values="0.04;0.08;0.04"
+                dur={`${5.5 + i * 0.9}s`}
+                begin={`${i * 0.5}s`}
+                repeatCount="indefinite"
+              />
+            </line>
+          ))}
+
+          {/* ── Y-axis bar + tick marks ───────────────────────── */}
+          <line x1="13" y1="15" x2="13" y2="85"
+            stroke="#0f172a" strokeWidth="0.22" opacity="0.07" />
+          {GRID_Y.map((y, i) => (
+            <line key={`t${i}`}
+              x1="11" y1={y} x2="15" y2={y}
+              stroke="#0f172a" strokeWidth="0.22" opacity="0.08" />
+          ))}
+
+          {/* ── Drug A — fast absorb, high peak ─────────────────── */}
+          <path
+            d="M 13,80 C 22,80 30,19 42,19 C 58,19 78,74 198,77"
+            fill="none" stroke="#0f172a" strokeWidth="0.28" strokeLinecap="round"
+            opacity="0.10"
           >
+            <animate attributeName="opacity"
+              values="0.10;0.17;0.10" dur="7s" begin="0s" repeatCount="indefinite" />
+          </path>
+          <line x1="42" y1="20" x2="42" y2="80"
+            stroke="#0f172a" strokeWidth="0.15"
+            strokeDasharray="0.7 0.9" opacity="0.05" />
+          <circle cx="42" cy="19" r="1.2" fill="#0f172a" opacity="0.15">
+            <animate attributeName="opacity"
+              values="0.15;0.36;0.15" dur="4s" begin="0.2s" repeatCount="indefinite" />
+            <animate attributeName="r"
+              values="1.0;1.52;1.0" dur="4s" begin="0.2s" repeatCount="indefinite" />
+          </circle>
+
+          {/* ── Drug B — medium absorb, moderate peak ───────────── */}
+          <path
+            d="M 13,80 C 28,80 48,34 62,34 C 82,34 118,70 198,74"
+            fill="none" stroke="#0f172a" strokeWidth="0.28" strokeLinecap="round"
+            opacity="0.08"
+          >
+            <animate attributeName="opacity"
+              values="0.08;0.14;0.08" dur="8.5s" begin="1.2s" repeatCount="indefinite" />
+          </path>
+          <line x1="62" y1="35" x2="62" y2="80"
+            stroke="#0f172a" strokeWidth="0.15"
+            strokeDasharray="0.7 0.9" opacity="0.04" />
+          <circle cx="62" cy="34" r="1.2" fill="#0f172a" opacity="0.13">
+            <animate attributeName="opacity"
+              values="0.13;0.30;0.13" dur="5s" begin="1.4s" repeatCount="indefinite" />
+            <animate attributeName="r"
+              values="1.0;1.46;1.0" dur="5s" begin="1.4s" repeatCount="indefinite" />
+          </circle>
+
+          {/* ── Drug C — slow absorb, broad peak ────────────────── */}
+          <path
+            d="M 13,80 C 40,80 68,41 88,41 C 115,41 152,66 198,70"
+            fill="none" stroke="#0f172a" strokeWidth="0.28" strokeLinecap="round"
+            opacity="0.07"
+          >
+            <animate attributeName="opacity"
+              values="0.07;0.12;0.07" dur="10s" begin="0.6s" repeatCount="indefinite" />
+          </path>
+          <line x1="88" y1="42" x2="88" y2="80"
+            stroke="#0f172a" strokeWidth="0.15"
+            strokeDasharray="0.7 0.9" opacity="0.04" />
+          <circle cx="88" cy="41" r="1.2" fill="#0f172a" opacity="0.11">
+            <animate attributeName="opacity"
+              values="0.11;0.27;0.11" dur="6s" begin="0.8s" repeatCount="indefinite" />
+            <animate attributeName="r"
+              values="0.9;1.40;0.9" dur="6s" begin="0.8s" repeatCount="indefinite" />
+          </circle>
+
+          {/* ── Scan bar — sweeps left → right, starts at opacity 0 ─ */}
+          <line x1="0" y1="14" x2="0" y2="86"
+            stroke="#0f172a" strokeWidth="0.25" opacity="0">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              from="0 0"
+              to="200 0"
+              dur="12s"
+              repeatCount="indefinite"
+            />
             <animate
               attributeName="opacity"
-              values="0.06;0.18;0.06"
-              dur={`${e.duration}s`}
-              begin={`${e.delay}s`}
+              values="0;0.13;0.13;0"
+              keyTimes="0;0.04;0.92;1"
+              dur="12s"
               repeatCount="indefinite"
             />
           </line>
-        ))}
 
-        {/* Nodes */}
-        {nodes.map((n, i) => (
-          <circle
-            key={`n${i}`}
-            cx={n.x}
-            cy={n.y}
-            r={n.r}
-            fill="#0f172a"
-            opacity="0.2"
-          >
-            <animate
-              attributeName="opacity"
-              values="0.12;0.35;0.12"
-              dur={`${n.duration}s`}
-              begin={`${n.delay}s`}
-              repeatCount="indefinite"
-            />
-            <animate
-              attributeName="r"
-              values={`${n.r};${n.r + 0.4};${n.r}`}
-              dur={`${n.duration}s`}
-              begin={`${n.delay}s`}
-              repeatCount="indefinite"
-            />
-          </circle>
-        ))}
+          {/* ── Corner frame marks ───────────────────────────────── */}
+          <path d="M 3,11 L 3,5 L 9,5"
+            stroke="#0f172a" strokeWidth="0.32" fill="none"
+            opacity="0.07" strokeLinecap="square" />
+          <path d="M 191,5 L 197,5 L 197,11"
+            stroke="#0f172a" strokeWidth="0.32" fill="none"
+            opacity="0.07" strokeLinecap="square" />
+          <path d="M 3,89 L 3,95 L 9,95"
+            stroke="#0f172a" strokeWidth="0.32" fill="none"
+            opacity="0.07" strokeLinecap="square" />
+          <path d="M 191,95 L 197,95 L 197,89"
+            stroke="#0f172a" strokeWidth="0.32" fill="none"
+            opacity="0.07" strokeLinecap="square" />
+
+        </g>
       </svg>
     </div>
   );

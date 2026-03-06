@@ -167,7 +167,7 @@ export default function FullSystem() {
             <NuvovetLogo size={28} className="text-slate-900" />
             <div>
               <NuvovetWordmark />
-              <span className="hidden sm:inline text-xs text-slate-400 ml-2">{t.fullSystem}</span>
+              <span className="hidden sm:inline text-xs text-slate-400 ml-2">{t.fullSystemLabel}</span>
             </div>
           </div>
         </div>

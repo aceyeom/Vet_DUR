@@ -7,7 +7,7 @@ const ko = {
   appName: 'NUVOVET',
   appTagline: '수의약품 처방점검 시스템',
   demoLabel: '데모',
-  fullSystem: '전체 시스템',
+  fullSystemLabel: '전체 시스템',
   connected: '연결됨',
   demoPatient: '데모 환자',
   back: '뒤로',

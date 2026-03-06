@@ -6,7 +6,7 @@ const en = {
   appName: 'NUVOVET',
   appTagline: 'Veterinary Drug Utilization Review',
   demoLabel: 'Demo',
-  fullSystem: 'Full System',
+  fullSystemLabel: 'Full System',
   connected: 'Connected',
   demoPatient: 'Demo Patient',
   back: 'Back',
