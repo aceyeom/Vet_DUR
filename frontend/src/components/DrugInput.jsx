@@ -1,11 +1,147 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import {
   Search, X, Plus, AlertTriangle, Globe, FlaskConical, HelpCircle,
-  Pill, Syringe, ChevronDown, Filter, Tag
+  Pill, Syringe, ChevronDown, Filter, Tag, Ban, Calculator
 } from 'lucide-react';
 import { searchDrugs, DRUG_SOURCE, DRUG_CLASS, createUnknownDrug } from '../data/drugDatabase';
 import { searchDrugCatalog, DRUG_SEARCH_CATALOG } from '../data/drugSearchData';
 import { useI18n } from '../i18n';
+
+// ── Species-Specific Toxicity Hardstops ─────────────────────────
+// These are absolute species contraindications — separate from the
+// interaction engine.  They fire *immediately* on drug entry, before
+// the scan button is clicked.
+const SPECIES_HARDSTOPS = {
+  cat: {
+    // Substance name fragments (lowercase) → human-readable reason
+    acetaminophen: 'Acetaminophen (paracetamol) is acutely fatal in cats. Cats lack glucuronyl transferase and cannot metabolise it.',
+    paracetamol:   'Paracetamol is acutely fatal in cats. Cats lack glucuronyl transferase and cannot metabolise it.',
+    permethrin:    'Permethrin is a potent feline neurotoxin. Even small topical exposures cause seizures and death.',
+    ibuprofen:     'Ibuprofen is highly toxic to cats causing acute renal failure and GI perforation.',
+    naproxen:      'Naproxen is toxic to cats with a very narrow safety margin — do not use.',
+    benzocaine:    'Benzocaine causes methaemoglobinaemia in cats and can be fatal.',
+    'tea tree':    'Tea tree oil (melaleuca) is neurotoxic to cats even at low topical doses.',
+    melaleuca:     'Melaleuca (tea tree) oil is neurotoxic to cats even at low topical doses.',
+    xylitol:       'Xylitol causes hypoglycaemia and acute hepatic failure in cats.',
+    aspirin:       'Aspirin has a 44‑hour half-life in cats due to limited glucuronidation — chronic use is toxic.',
+  },
+  dog: {
+    xylitol: 'Xylitol causes severe hypoglycaemia and acute hepatic necrosis in dogs.',
+  },
+};
+
+function getHardstop(drug, species) {
+  const stops = SPECIES_HARDSTOPS[species] ?? {};
+  const haystack = [
+    drug.name,
+    drug.nameKr,
+    drug.activeSubstance,
+    drug.id,
+  ]
+    .filter(Boolean)
+    .map((s) => s.toLowerCase())
+    .join(' ');
+
+  for (const [fragment, reason] of Object.entries(stops)) {
+    if (haystack.includes(fragment)) return reason;
+  }
+  return null;
+}
+
+// ── Dose Range Lookup ────────────────────────────────────────────
+// Clinical dose *ranges* (min / max mg/kg) for common drugs.
+// The database stores a single defaultDose; ranges come from
+// published veterinary formulary references.
+const DOSE_RANGES = {
+  carprofen:      { dog: [2.2, 4.4], cat: null },
+  meloxicam:      { dog: [0.1, 0.2], cat: [0.05, 0.05] },
+  prednisolone:   { dog: [0.5, 2.0], cat: [0.5, 2.0] },
+  metronidazole:  { dog: [10, 25],   cat: [8, 15] },
+  amoxicillin:    { dog: [10, 20],   cat: [10, 20] },
+  enrofloxacin:   { dog: [5, 10],    cat: [5, 5] },
+  gabapentin:     { dog: [5, 10],    cat: [5, 10] },
+  tramadol:       { dog: [2, 5],     cat: [2, 4] },
+  phenobarbital:  { dog: [2, 5],     cat: [2, 4] },
+  cyclosporine:   { dog: [5, 10],    cat: [5, 7.5] },
+  atenolol:       { dog: [0.25, 1],  cat: [6.25, 12.5] },  // cat: flat mg
+  furosemide:     { dog: [1, 4],     cat: [1, 2] },
+  doxycycline:    { dog: [5, 10],    cat: [5, 10] },
+  ketoconazole:   { dog: [5, 10],    cat: [5, 10] },
+  maropitant:     { dog: [1, 2],     cat: [1, 1] },
+  omeprazole:     { dog: [0.7, 1],   cat: [0.7, 1] },
+  trazodone:      { dog: [2, 10],    cat: null },
+};
+
+function parseStrengthMg(selectedVariant) {
+  if (!selectedVariant) return null;
+  const m = selectedVariant.match(/^([\d.]+)\s*(mg|mcg|g|ml)/i);
+  if (!m) return null;
+  const val = parseFloat(m[1]);
+  const unit = m[2].toLowerCase();
+  if (unit === 'g') return val * 1000;
+  if (unit === 'mcg') return val / 1000;
+  return val; // mg or ml → treat as mg equivalent
+}
+
+function DoseCalculator({ drug, species, weight }) {
+  if (!weight || weight <= 0) return null;
+
+  const range = DOSE_RANGES[drug.id]?.[species];
+  const fallback = drug.defaultDose?.[species];
+
+  if (!range && fallback == null) return null;
+
+  const minDose = range ? range[0] : fallback;
+  const maxDose = range ? range[1] : fallback;
+
+  if (minDose == null) return null;
+
+  const minMg = +(minDose * weight).toFixed(1);
+  const maxMg = maxDose !== minDose ? +(maxDose * weight).toFixed(1) : null;
+
+  const strengthMg = parseStrengthMg(drug.selectedVariant);
+
+  let tabletsMin = null;
+  let tabletsMax = null;
+  if (strengthMg && strengthMg > 0) {
+    tabletsMin = Math.round((minMg / strengthMg) * 10) / 10;
+    tabletsMax = maxMg ? Math.round((maxMg / strengthMg) * 10) / 10 : null;
+  }
+
+  const doseLabel = maxMg ? `${minMg}–${maxMg} mg` : `${minMg} mg`;
+  const tabletLabel =
+    tabletsMin != null
+      ? tabletsMax && tabletsMax !== tabletsMin
+        ? `${tabletsMin}–${tabletsMax} tabs`
+        : `${tabletsMin} tab${tabletsMin !== 1 ? 's' : ''}`
+      : null;
+
+  const rangeLabel = maxDose !== minDose ? `${minDose}–${maxDose}` : `${minDose}`;
+
+  return (
+    <div className="mt-1.5 px-2 py-1.5 bg-slate-50 border border-slate-100 rounded-lg">
+      <div className="flex items-start gap-1.5">
+        <Calculator size={10} className="text-slate-400 mt-0.5 shrink-0" />
+        <div className="text-[10px] text-slate-500 leading-relaxed">
+          <span className="font-mono">{rangeLabel} mg/kg</span>
+          <span className="text-slate-300 mx-1">·</span>
+          <span>{weight} kg</span>
+          <span className="mx-1 text-slate-300">→</span>
+          <span className="font-semibold text-slate-700 font-mono">{doseLabel} per dose</span>
+          {tabletLabel && (
+            <>
+              <span className="text-slate-300 mx-1">·</span>
+              <span className="font-semibold text-slate-900">{tabletLabel}</span>
+              {drug.selectedVariant && (
+                <span className="text-slate-400 ml-0.5">({drug.selectedVariant})</span>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // ── Drug class filter groups for doctor workflow ─────────────────
 const CLASS_GROUPS = [
@@ -42,65 +178,95 @@ function RouteIcon({ route }) {
 }
 
 // ── Drug Card (selected drug in list) ────────────────────────────
-function DrugCard({ drug, index, onRemove, species, t, lang }) {
+function DrugCard({ drug, index, onRemove, species, weight, t, lang }) {
   const isMdr1Risk = drug.mdr1Sensitive && species === 'dog';
   const isNti = drug.narrowTherapeuticIndex;
   const isOffLabel = drug.source === DRUG_SOURCE.HUMAN_OFFLABEL;
+  const hardstopReason = getHardstop(drug, species);
 
   return (
-    <div className="flex items-start justify-between px-3 py-2.5 bg-white border border-slate-200 rounded-lg group transition-all hover:border-slate-300 hover:shadow-sm">
-      <div className="flex items-start gap-2.5 min-w-0 flex-1">
-        <span className="text-[10px] text-slate-400 font-mono w-4 shrink-0 mt-1">{index + 1}</span>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <SourceIcon source={drug.source} t={t} />
-            <span className="typo-drug-name text-[14px] truncate">
-              {lang === 'ko' && drug.nameKr ? drug.nameKr : drug.name}
-            </span>
-            {drug.activeSubstance && drug.activeSubstance !== drug.name && drug.activeSubstance !== 'Unknown' && (
-              <span className="text-[11px] text-slate-400">({drug.activeSubstance})</span>
-            )}
-          </div>
-          <div className="flex items-center gap-2 mt-1 flex-wrap">
-            {drug.selectedVariant && (
-              <span className="text-[10px] font-medium text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded">
-                {drug.selectedVariant}
+    <div
+      className={`flex flex-col px-3 py-2.5 border rounded-lg group transition-all ${
+        hardstopReason
+          ? 'bg-red-50 border-red-300 shadow-sm'
+          : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-sm'
+      }`}
+    >
+      <div className="flex items-start justify-between">
+        <div className="flex items-start gap-2.5 min-w-0 flex-1">
+          <span className="text-[10px] text-slate-400 font-mono w-4 shrink-0 mt-1">{index + 1}</span>
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {hardstopReason
+                ? <Ban size={11} className="text-red-500 shrink-0" />
+                : <SourceIcon source={drug.source} t={t} />
+              }
+              <span className={`typo-drug-name text-[14px] truncate ${hardstopReason ? 'text-red-700' : ''}`}>
+                {lang === 'ko' && drug.nameKr ? drug.nameKr : drug.name}
               </span>
-            )}
-            <div className="flex items-center gap-1">
-              <RouteIcon route={drug.route} />
-              <span className="text-[10px] text-slate-400">
-                {lang === 'ko' ? (t.routes[drug.route] || drug.route) : drug.route}
-              </span>
+              {drug.activeSubstance && drug.activeSubstance !== drug.name && drug.activeSubstance !== 'Unknown' && (
+                <span className="text-[11px] text-slate-400">({drug.activeSubstance})</span>
+              )}
             </div>
-            <span className="text-[10px] text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded">
-              {lang === 'ko' ? (t.drugClasses[drug.class?.toLowerCase()?.replace(/ /g, '_')] || drug.class) : drug.class}
-            </span>
-            {isOffLabel && (
-              <span className="text-[10px] font-medium text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-100">{t.drugInput.offLabel}</span>
-            )}
-            {isNti && (
-              <span className="text-[10px] font-medium text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-100">{t.drugInput.nti}</span>
-            )}
-            {isMdr1Risk && (
-              <span className="text-[10px] font-medium text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded border border-orange-100">{t.drugInput.mdr1} ⚠</span>
-            )}
+            <div className="flex items-center gap-2 mt-1 flex-wrap">
+              {drug.selectedVariant && (
+                <span className="text-[10px] font-medium text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded">
+                  {drug.selectedVariant}
+                </span>
+              )}
+              <div className="flex items-center gap-1">
+                <RouteIcon route={drug.route} />
+                <span className="text-[10px] text-slate-400">
+                  {lang === 'ko' ? (t.routes[drug.route] || drug.route) : drug.route}
+                </span>
+              </div>
+              <span className="text-[10px] text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded">
+                {lang === 'ko' ? (t.drugClasses[drug.class?.toLowerCase()?.replace(/ /g, '_')] || drug.class) : drug.class}
+              </span>
+              {isOffLabel && (
+                <span className="text-[10px] font-medium text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-100">{t.drugInput.offLabel}</span>
+              )}
+              {isNti && (
+                <span className="text-[10px] font-medium text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-100">{t.drugInput.nti}</span>
+              )}
+              {isMdr1Risk && (
+                <span className="text-[10px] font-medium text-orange-600 bg-orange-50 px-1.5 py-0.5 rounded border border-orange-100">{t.drugInput.mdr1} ⚠</span>
+              )}
+            </div>
           </div>
         </div>
+        <button
+          onClick={() => onRemove(drug.id)}
+          className="p-1 text-slate-300 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all shrink-0 mt-0.5"
+          title={t.remove}
+        >
+          <X size={14} />
+        </button>
       </div>
-      <button
-        onClick={() => onRemove(drug.id)}
-        className="p-1 text-slate-300 hover:text-red-500 opacity-0 group-hover:opacity-100 transition-all shrink-0 mt-0.5"
-        title={t.remove}
-      >
-        <X size={14} />
-      </button>
+
+      {/* ── Species hardstop alert ── */}
+      {hardstopReason && (
+        <div className="mt-2 ml-6 flex items-start gap-1.5 px-2.5 py-2 bg-red-100 border border-red-200 rounded-lg">
+          <AlertTriangle size={11} className="text-red-600 shrink-0 mt-0.5" />
+          <p className="text-[11px] text-red-700 leading-relaxed font-medium">
+            <span className="uppercase tracking-wide text-[10px] block mb-0.5">Species Contraindication</span>
+            {hardstopReason}
+          </p>
+        </div>
+      )}
+
+      {/* ── Dose Weight Calculator ── */}
+      {!hardstopReason && (
+        <div className="ml-6">
+          <DoseCalculator drug={drug} species={species} weight={weight} />
+        </div>
+      )}
     </div>
   );
 }
 
 // ── Main DrugInput Component ─────────────────────────────────────
-export function DrugInput({ drugs, onAddDrug, onRemoveDrug, species, demoMode = false }) {
+export function DrugInput({ drugs, onAddDrug, onRemoveDrug, species, weight = 10, demoMode = false }) {
   const { t, lang } = useI18n();
   const [showSearch, setShowSearch] = useState(false);
   const [query, setQuery] = useState('');
@@ -266,7 +432,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, species, demoMode = 
       {drugs.length > 0 && (
         <div className="space-y-2">
           {drugs.map((drug, idx) => (
-            <DrugCard key={drug.id || idx} drug={drug} index={idx} onRemove={onRemoveDrug} species={species} t={t} lang={lang} />
+            <DrugCard key={drug.id || idx} drug={drug} index={idx} onRemove={onRemoveDrug} species={species} weight={weight} t={t} lang={lang} />
           ))}
         </div>
       )}

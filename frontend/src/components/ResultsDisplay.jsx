@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import {
   AlertTriangle, AlertCircle, Info, CheckCircle, ChevronDown, ChevronUp,
   BookOpen, FlaskConical, Globe, HelpCircle, Dna, ArrowLeft,
-  Check, Lightbulb, FileText, Clock, Pill, Flag, Printer
+  Check, Lightbulb, FileText, Clock, Pill, Flag, Printer, Download
 } from 'lucide-react';
 import { SeverityBadge } from './SeverityBadge';
 import { DRUG_SOURCE } from '../data/drugDatabase';
 import { DrugTimeline } from './DrugTimeline';
 import { NuvovetLogo } from './NuvovetLogo';
+import { OrganLoadIndicator } from './OrganLoadIndicator';
+import { ConfidenceProvenance } from './ConfidenceProvenance';
+import { ScanExportButton } from './ScanExportPDF';
 import { useI18n } from '../i18n';
 
 // ── Patient Summary Panel (left panel) ────────────────────────
-function PatientSummaryPanel({ results, patientInfo }) {
+function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog' }) {
   const { t, lang } = useI18n();
   const { interactions, drugFlags, confidenceScore } = results;
   const criticalCount = interactions.filter(i => i.severity.label === 'Critical').length;
@@ -83,18 +86,18 @@ function PatientSummaryPanel({ results, patientInfo }) {
               {interactions.length === 0 && <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">{t.results.noInteractions}</span>}
             </div>
           </div>
-          <div className="border-t border-slate-100 pt-2">
-            <div className="flex items-center justify-between mb-1.5">
-              <span className="typo-label">{t.results.confidence}</span>
-              <span className={`typo-score font-medium ${conf.text}`}>{confidenceScore}%</span>
-            </div>
-            <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
-              <div className={`h-full ${conf.bar} rounded-full transition-all duration-1000`} style={{ width: `${confidenceScore}%` }} />
-            </div>
-            <span className={`text-[10px] ${conf.text} mt-0.5 block`}>{conf.label} confidence</span>
-          </div>
         </div>
       </div>
+
+      {/* Confidence Provenance */}
+      <ConfidenceProvenance
+        confidenceScore={confidenceScore}
+        drugs={drugs}
+        species={species}
+      />
+
+      {/* Cumulative Organ Load */}
+      <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} />
 
       <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
         <h3 className="typo-section-header mb-3">{t.results.engineScores}</h3>
@@ -322,7 +325,7 @@ function DrugFlagCard({ drugFlag, species }) {
 }
 
 // ── Main Results Display ────────────────────────────────────────
-export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, isFullSystem = false }) {
+export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, isFullSystem = false, drugs = [], species = 'dog' }) {
   const { t, lang } = useI18n();
   if (!results) return null;
 
@@ -377,7 +380,7 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-[320px] lg:shrink-0">
             <div className="lg:sticky lg:top-20">
-              <PatientSummaryPanel results={results} patientInfo={patientInfo} />
+              <PatientSummaryPanel results={results} patientInfo={patientInfo} drugs={drugs} species={species} />
             </div>
           </div>
 
@@ -468,10 +471,18 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
                   {t.results.scanComplete} · {new Date().toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US')} · {drugFlags.length} {lang === 'ko' ? '종 약물' : 'drugs'} · {interactions.length} {t.results.interactionsFound}
                 </span>
               </div>
-              <button onClick={() => window.print()} className="flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white text-[12px] font-medium rounded-lg hover:bg-slate-800 transition-colors">
-                <Printer size={13} />
-                {t.results.exportSummary}
-              </button>
+              <div className="flex items-center gap-2">
+                <button onClick={() => window.print()} className="flex items-center gap-1.5 px-3 py-2 bg-white text-slate-700 text-[12px] font-medium rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors">
+                  <Printer size={13} />
+                  {t.results.exportSummary}
+                </button>
+                <ScanExportButton
+                  results={results}
+                  patientInfo={patientInfo}
+                  drugs={drugs}
+                  species={species}
+                />
+              </div>
             </div>
           </div>
         </div>
