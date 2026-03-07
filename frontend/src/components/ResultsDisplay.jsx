@@ -62,12 +62,12 @@ function SeverityBanner({ results, drugs = [] }) {
           <div className="flex items-center flex-wrap gap-x-4 gap-y-1">
             <span className="text-[13px] text-slate-600">
               <span className="font-semibold text-slate-900">{drugFlags.length}</span>{' '}
-              {lang === 'ko' ? '종 약물 검사' : 'drugs screened'}
+              {t.results.drugsScreenedInline}
             </span>
             <span className="text-slate-300">·</span>
             <span className="text-[13px] text-slate-600">
               <span className="font-semibold text-slate-900">{interactions.length}</span>{' '}
-              {lang === 'ko' ? '건 상호작용' : 'interactions'}
+              {t.results.interactionsInline}
             </span>
             {criticalCount > 0 && (
               <>
@@ -118,14 +118,6 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
   const moderateCount = interactions.filter(i => i.severity.label === 'Moderate').length;
   const minorCount = interactions.filter(i => i.severity.label === 'Minor' || i.severity.label === 'Unknown').length;
 
-  const engines = [
-    { id: 'E1', name: 'DDI Pairwise', weight: 35, score: criticalCount > 0 ? 95 : moderateCount > 0 ? 60 : 20 },
-    { id: 'E2', name: 'CYP Profile', weight: 25, score: interactions.some(i => i.rule?.includes('CYP')) ? 75 : 15 },
-    { id: 'E3', name: 'Species Safety', weight: 20, score: drugFlags.some(f => f.hasSpeciesWarning) ? 80 : 10 },
-    { id: 'E4', name: 'Dose Range', weight: 10, score: 25 },
-    { id: 'E5', name: 'Allergy Cross', weight: 10, score: 5 },
-  ];
-
   return (
     <div className="space-y-3">
       {patientInfo?.name && (
@@ -138,7 +130,7 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
             </div>
             {patientInfo.species && (
               <div className="flex justify-between items-baseline gap-2">
-                <span className="typo-label shrink-0">{lang === 'ko' ? '종' : 'Species'}</span>
+                <span className="typo-label shrink-0">{t.results.species}</span>
                 <span className="text-[13px] font-medium text-slate-700 text-right">{patientInfo.species === 'dog' ? t.species.dog : t.species.cat}</span>
               </div>
             )}
@@ -212,29 +204,6 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
 
       {/* Cumulative Organ Load */}
       <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} />
-
-      <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
-        <h3 className="typo-section-header mb-3">{t.results.engineScores}</h3>
-        <div className="space-y-2.5">
-          {engines.map((eng) => (
-            <div key={eng.id}>
-              <div className="flex items-center justify-between mb-1">
-                <div className="flex items-center gap-1.5">
-                  <span className="typo-score text-[11px] text-slate-500">{eng.id}</span>
-                  <span className="text-[11px] font-medium text-slate-600">{eng.name}</span>
-                </div>
-                <span className="typo-score text-[11px] text-slate-400">{eng.weight}%</span>
-              </div>
-              <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                <div
-                  className={`h-full rounded-full transition-all duration-700 ${eng.score > 60 ? 'bg-red-400' : eng.score > 30 ? 'bg-amber-400' : 'bg-emerald-400'}`}
-                  style={{ width: `${eng.score}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
@@ -459,7 +428,7 @@ function ResultsActionBar({ results, patientInfo, drugs, species, lang, t }) {
         </span>
         <span className="text-[12px] text-slate-400 ml-auto">
           {new Date().toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US')}
-          {' · '}{drugFlags.length} {lang === 'ko' ? '종 약물' : 'drugs'}
+          {' · '}{drugFlags.length} {t.results.drugCountLabel}
           {' · '}{interactions.length} {t.results.interactionsFound}
         </span>
       </div>
@@ -481,16 +450,22 @@ function ResultsActionBar({ results, patientInfo, drugs, species, lang, t }) {
         </div>
         <button
           onClick={() => {
-            const subject = encodeURIComponent(`NUVOVET DUR Report — ${patientInfo?.name || 'Patient'}`);
+            const subject = encodeURIComponent(
+              lang === 'ko'
+                ? `NUVOVET DUR 보고서 — ${patientInfo?.name || '환자'}`
+                : `NUVOVET DUR Report — ${patientInfo?.name || 'Patient'}`
+            );
             const body = encodeURIComponent(
-              `DUR Analysis Report\n\nPatient: ${patientInfo?.name || '—'}\nDate: ${new Date().toLocaleDateString()}\nDrugs screened: ${drugFlags.length}\nInteractions found: ${interactions.length}\n\nPlease print the full report for details.`
+              lang === 'ko'
+                ? `DUR 분석 보고서\n\n환자: ${patientInfo?.name || '—'}\n날짜: ${new Date().toLocaleDateString('ko-KR')}\n검사 약물 수: ${drugFlags.length}\n발견된 상호작용: ${interactions.length}\n\n상세 내용은 전체 보고서를 출력하여 확인해 주세요.`
+                : `DUR Analysis Report\n\nPatient: ${patientInfo?.name || '—'}\nDate: ${new Date().toLocaleDateString()}\nDrugs screened: ${drugFlags.length}\nInteractions found: ${interactions.length}\n\nPlease print the full report for details.`
             );
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
           }}
           className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-900 text-white text-[13px] font-medium rounded-lg hover:bg-slate-800 transition-all"
         >
           <Mail size={14} />
-          {lang === 'ko' ? '이메일 전송' : 'Send via Email'}
+          {t.results.sendViaEmail}
         </button>
       </div>
     </div>
@@ -586,7 +561,7 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
                 <CheckCircle size={32} className="text-emerald-500 mx-auto mb-3" />
                 <p className="typo-drug-name text-emerald-800 mb-1">{t.results.noInteractions}</p>
                 <p className="typo-body text-emerald-600">
-                  {lang === 'ko' ? '모든 약물 쌍 검사 완료. 금기사항 없음.' : 'All drug pairs screened. No contraindications detected.'}
+                  {t.results.noContraindicationsDetail}
                 </p>
               </div>
             )}
@@ -630,7 +605,7 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
             </div>
 
             <p className="text-[11px] text-slate-400 text-center leading-relaxed pt-1">
-              {lang === 'ko' ? '본 분석은 NUVOVET 상호작용 데이터베이스를 기반으로 생성되었으며, 임상적 판단을 대체하지 않습니다.' : 'This analysis is generated from the NUVOVET interaction database and is not a substitute for clinical judgment.'}
+              {t.results.disclaimer}
             </p>
           </div>
         </div>
@@ -644,7 +619,7 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
               <div className="flex items-center gap-2 min-w-0">
                 <CheckCircle size={16} className="text-emerald-500 shrink-0" />
                 <span className="text-[13px] font-medium text-slate-700 truncate">
-                  {t.results.allReviewed} · {drugFlags.length} {lang === 'ko' ? '종 약물' : 'drugs'} · {interactions.length} {t.results.interactionsFound}
+                  {t.results.allReviewed} · {drugFlags.length} {t.results.drugCountLabel} · {interactions.length} {t.results.interactionsFound}
                 </span>
               </div>
               <div className="flex items-center gap-2 shrink-0">

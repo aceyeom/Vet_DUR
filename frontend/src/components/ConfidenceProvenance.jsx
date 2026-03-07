@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { useI18n } from '../i18n';
 
 /**
  * Confidence Provenance
@@ -18,43 +19,43 @@ function getDrugConfidence(drug, species) {
   switch (drug.source) {
     case 'kr_vet':
       score = 94;
-      reasons.push('Korean DB verified');
+      reasons.push('koreanDbVerified');
       break;
     case 'human_offlabel':
       score = 68;
-      reasons.push('Human off-label, PK extrapolated');
+      reasons.push('humanOffLabelPkExtrapolated');
       break;
     case 'foreign':
       score = 76;
-      reasons.push('Foreign formulary data');
+      reasons.push('foreignFormularyData');
       break;
     default:
       score = 42;
-      reasons.push('Limited veterinary literature');
+      reasons.push('limitedVeterinaryLiterature');
   }
 
   // Deduct for missing species-specific data
   if (species === 'cat' && !drug.speciesNotes?.cat) {
     score -= 14;
-    reasons.push('Cat PK data incomplete');
+    reasons.push('catPkDataIncomplete');
   }
 
   // Deduct for incomplete PK parameters
   if (!drug.pk?.halfLife) {
     score -= 10;
-    reasons.push('PK parameters incomplete');
+    reasons.push('pkParametersIncomplete');
   }
 
   // Deduct for NTI drugs (more uncertainty)
   if (drug.narrowTherapeuticIndex) {
     score -= 4;
-    reasons.push('Narrow therapeutic index');
+    reasons.push('narrowTherapeuticIndex');
   }
 
   // Deduct for unknown active substance
   if (!drug.activeSubstance || drug.activeSubstance === 'Unknown') {
     score -= 22;
-    reasons.push('Active ingredient unconfirmed');
+    reasons.push('activeIngredientUnconfirmed');
   }
 
   return { score: Math.max(score, 15), reasons };
@@ -78,6 +79,7 @@ function getScoreColor(score) {
 }
 
 export function ConfidenceProvenance({ confidenceScore, drugs = [], species = 'dog' }) {
+  const { t } = useI18n();
   const [expanded, setExpanded] = useState(false);
 
   const overallColor = getScoreColor(confidenceScore);
@@ -97,7 +99,7 @@ export function ConfidenceProvenance({ confidenceScore, drugs = [], species = 'd
         <div className="flex items-center gap-2">
           <Info size={13} className="text-slate-400" />
           <span className="text-[12px] font-semibold text-slate-500 uppercase tracking-wider">
-            Analysis Confidence
+            {t.results.analysisConfidence}
           </span>
         </div>
         <div className="flex items-center gap-2">
@@ -122,14 +124,18 @@ export function ConfidenceProvenance({ confidenceScore, drugs = [], species = 'd
         </div>
         <div className="flex items-center justify-between mt-1">
           <p className={`text-[10px] ${overallColor.text}`}>
-            {confidenceScore >= 85 ? 'High confidence' : confidenceScore >= 60 ? 'Moderate confidence' : 'Low confidence'}
+            {confidenceScore >= 85
+              ? t.results.confidenceHigh
+              : confidenceScore >= 60
+              ? t.results.confidenceModerate
+              : t.results.confidenceLow}
           </p>
           {!expanded && drugs.length > 0 && (
             <button
               onClick={() => setExpanded(true)}
               className="text-[10px] text-slate-400 hover:text-slate-600 transition-colors underline"
             >
-              Why this score?
+              {t.results.whyThisScore}
             </button>
           )}
         </div>
@@ -139,11 +145,11 @@ export function ConfidenceProvenance({ confidenceScore, drugs = [], species = 'd
       {expanded && (
         <div className="border-t border-slate-100 px-4 py-3 space-y-3 animate-fade-in">
           <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-            Per-drug data quality
+            {t.results.perDrugDataQuality}
           </p>
 
           {perDrug.length === 0 && (
-            <p className="text-[12px] text-slate-400 italic">No drug data available.</p>
+            <p className="text-[12px] text-slate-400 italic">{t.results.noDrugDataAvailable}</p>
           )}
 
           {perDrug.map(({ drug, score, reasons }, i) => {
@@ -170,7 +176,7 @@ export function ConfidenceProvenance({ confidenceScore, drugs = [], species = 'd
                           key={j}
                           className="text-[10px] text-slate-500 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100"
                         >
-                          {r}
+                          {t.results.confidenceReasons[r] || r}
                         </span>
                       ))}
                     </div>
@@ -182,10 +188,7 @@ export function ConfidenceProvenance({ confidenceScore, drugs = [], species = 'd
           })}
 
           <p className="text-[10px] text-slate-400 leading-relaxed pt-1 border-t border-slate-50">
-            Overall confidence is the weighted average across all drug scores.
-            Korean-approved veterinary drugs carry the highest confidence.
-            Off-label and foreign drugs are adjusted downward based on evidence
-            extrapolation.
+            {t.results.confidenceFootnote}
           </p>
         </div>
       )}

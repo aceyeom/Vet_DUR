@@ -1,4 +1,5 @@
 import React from 'react';
+import { useI18n } from '../i18n';
 
 const SEVERITY_STYLES = {
   Critical: 'bg-red-50 text-red-700 border-red-200',
@@ -17,9 +18,22 @@ const SEVERITY_DOT = {
 };
 
 export function SeverityBadge({ severity, size = 'sm' }) {
+  const { t } = useI18n();
   const label = severity?.label || severity || 'Unknown';
   const style = SEVERITY_STYLES[label] || SEVERITY_STYLES.Unknown;
   const dot = SEVERITY_DOT[label] || SEVERITY_DOT.Unknown;
+  const translatedLabel =
+    label === 'Critical'
+      ? t.results.critical
+      : label === 'Moderate'
+      ? t.results.moderate
+      : label === 'Minor'
+      ? t.results.minor
+      : label === 'None'
+      ? t.results.none
+      : label === 'Unknown'
+      ? t.results.unknown
+      : label;
 
   const sizeClasses = size === 'lg'
     ? 'px-3 py-1.5 text-sm'
@@ -28,7 +42,7 @@ export function SeverityBadge({ severity, size = 'sm' }) {
   return (
     <span className={`inline-flex items-center gap-1.5 font-medium border rounded-full ${style} ${sizeClasses}`}>
       <span className={`w-1.5 h-1.5 rounded-full ${dot}`} />
-      {label}
+      {translatedLabel}
     </span>
   );
 }

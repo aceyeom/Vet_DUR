@@ -507,7 +507,7 @@ function PatientProfileStep({ profile, breed, breedId, species, onUpdateProfile,
 }
 
 // ── Step 4: Medication Review ───────────────────────────────────
-function MedicationStep({ drugs, species, patientName, onAddDrug, onRemoveDrug, onRunAnalysis, onBack }) {
+function MedicationStep({ drugs, species, patientName, weight, onAddDrug, onRemoveDrug, onRunAnalysis, onBack }) {
   const { t } = useI18n();
   return (
     <div className="flex-1 flex flex-col px-5 py-6 animate-slide-in">
@@ -534,7 +534,7 @@ function MedicationStep({ drugs, species, patientName, onAddDrug, onRemoveDrug, 
             onAddDrug={onAddDrug}
             onRemoveDrug={onRemoveDrug}
             species={species}
-            weight={profile?.weight || 10}
+            weight={weight || 10}
             demoMode
           />
         </div>
@@ -715,6 +715,7 @@ export default function Demo() {
           drugs={drugs}
           species={species}
           patientName={profile?.name}
+          weight={profile?.weight}
           onAddDrug={handleAddDrug}
           onRemoveDrug={handleRemoveDrug}
           onRunAnalysis={handleRunAnalysis}

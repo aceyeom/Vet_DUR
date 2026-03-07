@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Activity, ChevronDown, ChevronUp, AlertTriangle } from 'lucide-react';
+import { useI18n } from '../i18n';
 
 /**
  * Cumulative Organ Load Score
@@ -77,6 +78,7 @@ function OrganBar({ label, pct, barColor, textColor, labelRight }) {
 }
 
 export function OrganLoadIndicator({ drugs = [], patientInfo }) {
+  const { t } = useI18n();
   const [expanded, setExpanded] = useState(false);
 
   if (drugs.length === 0) return null;
@@ -103,18 +105,18 @@ export function OrganLoadIndicator({ drugs = [], patientInfo }) {
         <div className="flex items-center gap-2">
           <Activity size={14} className={renalRisk.text} />
           <span className="text-[12px] font-semibold text-slate-700 uppercase tracking-wider">
-            Cumulative Organ Load
+            {t.results.cumulativeOrganLoad}
           </span>
           {isCritical && (
             <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-red-700 bg-red-100 px-2 py-0.5 rounded-full border border-red-200">
               <AlertTriangle size={9} />
-              Compromised Kidney
+              {t.results.compromisedKidney}
             </span>
           )}
         </div>
         <div className="flex items-center gap-2">
           <span className={`text-[12px] font-mono font-semibold ${renalRisk.text}`}>
-            {renal}% renal
+            {renal}% {t.results.renalShort}
           </span>
           {expanded ? <ChevronUp size={13} className="text-slate-400" /> : <ChevronDown size={13} className="text-slate-400" />}
         </div>
@@ -125,8 +127,7 @@ export function OrganLoadIndicator({ drugs = [], patientInfo }) {
         <div className="mx-4 mb-2 px-3 py-2 bg-red-100 border border-red-200 rounded-lg flex items-start gap-2">
           <AlertTriangle size={13} className="text-red-600 shrink-0 mt-0.5" />
           <p className="text-[11px] text-red-700 leading-relaxed">
-            This prescription places <strong>{renal}%</strong> cumulative load on the renal pathway.
-            With elevated creatinine already flagged, this combination requires dose reduction or drug substitution before dispensing.
+            {t.results.organLoadCriticalPrefix} <strong>{renal}%</strong> {t.results.organLoadCriticalBody}
           </p>
         </div>
       )}
@@ -134,18 +135,18 @@ export function OrganLoadIndicator({ drugs = [], patientInfo }) {
       {/* Bars (always visible) */}
       <div className="px-4 pb-3 space-y-2.5">
         <OrganBar
-          label="Renal elimination burden"
+          label={t.results.renalEliminationBurden}
           pct={renal}
           barColor={renalRisk.bar}
           textColor={renalRisk.text}
-          labelRight={renalRisk.label}
+          labelRight={t.results.riskLevel[renalRisk.level] || renalRisk.label}
         />
         <OrganBar
-          label="Hepatic elimination burden"
+          label={t.results.hepaticEliminationBurden}
           pct={hepatic}
           barColor={hepaticRisk.bar}
           textColor={hepaticRisk.text}
-          labelRight={hepaticRisk.label}
+          labelRight={t.results.riskLevel[hepaticRisk.level] || hepaticRisk.label}
         />
       </div>
 
@@ -153,7 +154,7 @@ export function OrganLoadIndicator({ drugs = [], patientInfo }) {
       {expanded && (
         <div className="px-4 pb-3 border-t border-slate-100 pt-3 animate-fade-in">
           <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">
-            Per-drug contribution
+            {t.results.perDrugContribution}
           </p>
           <div className="space-y-1.5">
             {drugs.map((drug, i) => {
@@ -170,19 +171,18 @@ export function OrganLoadIndicator({ drugs = [], patientInfo }) {
                 <div key={i} className="flex items-center gap-2 text-[11px]">
                   <span className="font-medium text-slate-700 w-32 truncate shrink-0">{drug.name}</span>
                   <span className="text-slate-400 font-mono">
-                    Renal <span className="text-slate-600 font-semibold">{r}%</span>
+                    {t.results.renalShort} <span className="text-slate-600 font-semibold">{r}%</span>
                   </span>
                   <span className="text-slate-300">·</span>
                   <span className="text-slate-400 font-mono">
-                    Hepatic <span className="text-slate-600 font-semibold">{h}%</span>
+                    {t.results.hepaticShort} <span className="text-slate-600 font-semibold">{h}%</span>
                   </span>
                 </div>
               );
             })}
           </div>
           <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">
-            Values represent each drug's primary elimination fraction. Cumulative stacking
-            indicates total organ demand — not organ capacity.
+            {t.results.organLoadFootnote}
           </p>
         </div>
       )}

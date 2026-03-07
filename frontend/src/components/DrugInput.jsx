@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import {
   Search, X, Plus, AlertTriangle, Globe, FlaskConical, HelpCircle,
-  Pill, Syringe, ChevronDown, Filter, Tag, Ban, Calculator
+  Pill, Syringe, ChevronDown, Filter, Tag, Ban
 } from 'lucide-react';
 import { searchDrugs, DRUG_SOURCE, DRUG_CLASS, createUnknownDrug } from '../data/drugDatabase';
 import { searchDrugCatalog, DRUG_SEARCH_CATALOG } from '../data/drugSearchData';
@@ -123,57 +123,23 @@ function DoseCalculator({ drug, species, weight, lang }) {
   const hasRange = maxMg !== null && maxMg !== minMg;
 
   return (
-    <div className="mt-2 px-2.5 py-2 bg-blue-50/60 border border-blue-100 rounded-lg">
-      {/* Header row */}
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-1">
-          <Calculator size={10} className="text-blue-500 shrink-0" />
-          <span className="text-[10px] font-semibold text-blue-700 uppercase tracking-wide">
-            {lang === 'ko' ? `${weight} kg 투여 용량` : `Dose for ${weight} kg`}
-          </span>
-        </div>
-        <span className="text-[10px] font-mono text-slate-500">{rangeLabel} mg/kg</span>
+    <div className="mt-1.5 pt-2 border-t border-slate-100 space-y-0.5">
+      {/* Row 1: context label + calculated dose */}
+      <div className="flex items-baseline justify-between">
+        <span className="text-[10px] text-slate-400">Calculated for {weight} kg</span>
+        <span className="text-[11px] font-semibold text-slate-800 tabular-nums font-mono">{doseLabel}</span>
       </div>
-
-      {/* Visual range bar */}
-      <div className="relative h-4 mb-2">
-        {/* Track */}
-        <div className="absolute inset-y-[5px] left-0 right-0 bg-slate-200 rounded-full" />
-        {/* Active range fill */}
-        {hasRange ? (
-          <div
-            className="absolute inset-y-[5px] bg-blue-400 rounded-full"
-            style={{ left: '5%', right: '5%' }}
-          />
-        ) : (
-          <div
-            className="absolute inset-y-[5px] bg-blue-400 rounded-full"
-            style={{ left: '5%', width: '90%' }}
-          />
-        )}
-        {/* Calculated dose marker — center of range or fixed value */}
-        <div
-          className="absolute top-0 w-4 h-4 bg-white border-2 border-blue-600 rounded-full shadow-sm -translate-x-1/2 transition-all"
-          style={{ left: hasRange ? '50%' : '50%' }}
-          title={`${midMg} mg`}
-        />
-        {/* Min label */}
-        <span className="absolute left-0 -bottom-4 text-[9px] text-slate-400 font-mono">{minMg}mg</span>
-        {/* Max label */}
-        {maxMg && <span className="absolute right-0 -bottom-4 text-[9px] text-slate-400 font-mono">{maxMg}mg</span>}
-      </div>
-
-      {/* Result row */}
-      <div className="mt-5 flex items-center justify-between">
-        <span className="text-[11px] font-semibold text-slate-800">{doseLabel} / dose</span>
-        {tabletLabel && (
-          <span className="text-[11px] font-bold text-blue-800 bg-blue-100 px-2 py-0.5 rounded-full">
-            {tabletLabel}
+      {/* Row 2: per-kg rate + tablet count */}
+      <div className="flex items-baseline justify-between">
+        <span className="text-[10px] text-slate-400 font-mono">{rangeLabel} mg/kg</span>
+        {tabletLabel ? (
+          <span className="text-[10px] text-slate-500">
+            ≈ {tabletLabel}
             {drug.selectedVariant && (
-              <span className="font-normal text-blue-600 ml-1">({drug.selectedVariant})</span>
+              <span className="text-slate-400"> · {drug.selectedVariant}</span>
             )}
           </span>
-        )}
+        ) : <span />}
       </div>
     </div>
   );
