@@ -62,7 +62,7 @@ def parse_sse_response(raw) -> str:
 INPUT_DIR = Path("plumbs_output")
 OUTPUT_DIR = Path("backend/data/converted")
 ERROR_LOG = Path("conversion_errors.log")
-MODEL = "claude-3-5-sonnet"  # GitHub Models 모델명 (https://github.com/marketplace/models 에서 확인)
+MODEL = "gpt-5"  # GitHub Models 모델명 (https://github.com/marketplace/models 에서 확인)
 MAX_CONCURRENT = 5
 MAX_RETRIES = 3
 
@@ -330,7 +330,10 @@ async def convert_one(client: AsyncOpenAI, drug: dict, semaphore: asyncio.Semaph
                         {"role": "user", "content": user_prompt},
                     ],
                 )
-                raw_text = response.choices[0].message.content.strip()
+                content = response.choices[0].message.content
+                if not content:
+                    raise ValueError("Empty response content")
+                raw_text = content.strip()
 
                 # JSON 파싱 (마크다운 블록 제거)
                 if raw_text.startswith("```"):
@@ -352,9 +355,9 @@ async def convert_one(client: AsyncOpenAI, drug: dict, semaphore: asyncio.Semaph
                 log(f"  [OK] {ingredient}")
                 return (ingredient, True, "converted")
 
-            except json.JSONDecodeError as e:
+            except (json.JSONDecodeError, ValueError) as e:
                 if attempt == MAX_RETRIES:
-                    return (ingredient, False, f"JSON parse error: {e}")
+                    return (ingredient, False, f"Parse error: {e}")
                 log(f"  [RETRY] {ingredient}: JSON parse error, attempt {attempt}/{MAX_RETRIES}")
                 await asyncio.sleep(5 * attempt)
 
