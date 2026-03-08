@@ -62,9 +62,10 @@ def parse_sse_response(raw) -> str:
 INPUT_DIR = Path("plumbs_output")
 OUTPUT_DIR = Path("backend/data/converted")
 ERROR_LOG = Path("conversion_errors.log")
-MODEL = "gpt-5"  # GitHub Models 모델명 (https://github.com/marketplace/models 에서 확인)
-MAX_CONCURRENT = 5
-MAX_RETRIES = 3
+MODEL = "gpt-4.1"  # GitHub Models 모델명 (https://github.com/marketplace/models 에서 확인)
+MAX_CONCURRENT = 1   # GitHub Models 무료 티어 rate limit 대응
+MAX_RETRIES = 7
+REQUEST_DELAY = 8    # 요청 간 최소 대기(초)
 
 # ─── few-shot 예시 (Acepromazine) ───────────────────────
 EXAMPLE_OUTPUT = """{
@@ -322,6 +323,7 @@ async def convert_one(client: AsyncOpenAI, drug: dict, semaphore: asyncio.Semaph
     async with semaphore:
         for attempt in range(1, MAX_RETRIES + 1):
             try:
+                await asyncio.sleep(REQUEST_DELAY)  # rate limit 방지 딜레이
                 response = await client.chat.completions.create(
                     model=MODEL,
                     max_tokens=16384,
@@ -362,8 +364,8 @@ async def convert_one(client: AsyncOpenAI, drug: dict, semaphore: asyncio.Semaph
                 await asyncio.sleep(5 * attempt)
 
             except openai.RateLimitError:
-                wait = 2 ** attempt * 5
-                log(f"  [RATE] {ingredient}: rate limited, waiting {wait}s...")
+                wait = min(2 ** attempt * 10, 300)  # 최대 5분
+                log(f"  [RATE] {ingredient}: rate limited, waiting {wait}s... (attempt {attempt}/{MAX_RETRIES})")
                 await asyncio.sleep(wait)
 
             except openai.APIError as e:
