@@ -2,19 +2,19 @@
 """
 plumbs_output/*.jsonl → backend/data/converted/{drug}.jsonl 변환 스크립트
 
-Anthropic Claude API를 사용하여 raw monograph 텍스트를 structured JSON schema로 변환.
+OpenAI API를 사용하여 raw monograph 텍스트를 structured JSON schema로 변환.
 Usage:
-  python3 실험실.py --test 10    # 테스트: 처음 10개만
-  python3 실험실.py              # 전체 변환
+  python3 실험실.py --api-key <OPENAI_API_KEY> --test 10
+  python3 실험실.py --api-key <OPENAI_API_KEY>
 """
 
 import json
 import re
 import asyncio
 import argparse
-import sys
 import time
 from pathlib import Path
+from getpass import getpass
 
 import os
 import openai
@@ -62,8 +62,8 @@ def parse_sse_response(raw) -> str:
 INPUT_DIR = Path("plumbs_output")
 OUTPUT_DIR = Path("backend/data/converted")
 ERROR_LOG = Path("conversion_errors.log")
-MODEL = "gpt-4.1"  # GitHub Models 모델명 (https://github.com/marketplace/models 에서 확인)
-MAX_CONCURRENT = 1   # GitHub Models 무료 티어 rate limit 대응
+MODEL = "gpt-5.4"
+MAX_CONCURRENT = 1   # API rate limit 대응
 MAX_RETRIES = 7
 REQUEST_DELAY = 8    # 요청 간 최소 대기(초)
 
@@ -508,7 +508,22 @@ async def convert_one(client: AsyncOpenAI, drug: dict, semaphore: asyncio.Semaph
     return (ingredient, False, "max retries exceeded")
 
 
-async def main(test_count: int | None = None):
+def resolve_api_key(cli_api_key: str | None) -> str:
+    """CLI 인자 우선, 없으면 환경변수, 둘 다 없으면 프롬프트에서 입력받는다."""
+    if cli_api_key:
+        return cli_api_key.strip()
+
+    env_api_key = os.environ.get("OPENAI_API_KEY")
+    if env_api_key:
+        return env_api_key.strip()
+
+    entered_api_key = getpass("OpenAI API key: ").strip()
+    if not entered_api_key:
+        raise ValueError("OpenAI API key가 필요합니다. --api-key 인자 또는 OPENAI_API_KEY 환경변수를 사용하세요.")
+    return entered_api_key
+
+
+async def main(api_key: str, model: str, test_count: int | None = None):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     log("소스 데이터 로드 중...")
@@ -519,10 +534,10 @@ async def main(test_count: int | None = None):
         drugs = drugs[:test_count]
         log(f"테스트 모드: 처음 {test_count}개만 변환\n")
 
-    client = AsyncOpenAI(
-        base_url="https://models.inference.ai.azure.com",
-        api_key=os.environ["GITHUB_TOKEN"],
-    )
+    global MODEL
+    MODEL = model
+
+    client = AsyncOpenAI(api_key=api_key)
     semaphore = asyncio.Semaphore(MAX_CONCURRENT)
 
     start_time = time.time()
@@ -554,6 +569,10 @@ async def main(test_count: int | None = None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--api-key", type=str, default=None, help="OpenAI API key")
+    parser.add_argument("--model", type=str, default=MODEL, help=f"사용할 모델명 (기본값: {MODEL})")
     parser.add_argument("--test", type=int, default=None, help="테스트할 약물 수 (예: --test 10)")
     args = parser.parse_args()
-    asyncio.run(main(test_count=args.test))
+
+    api_key = resolve_api_key(args.api_key)
+    asyncio.run(main(api_key=api_key, model=args.model, test_count=args.test))
