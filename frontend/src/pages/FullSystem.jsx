@@ -31,16 +31,17 @@ function PasswordGate({ onAuthenticate }) {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      <header className="px-6 py-4 flex items-center gap-3 border-b border-gray-100">
-        <button
-          onClick={() => navigate('/')}
-          className="p-1.5 -ml-1.5 text-slate-400 hover:text-slate-600 transition-colors"
-        >
-          <ArrowLeft size={18} />
-        </button>
-        <div className="flex items-center gap-2">
-          <NuvovetLogo size={28} className="text-slate-900" />
-          <NuvovetWordmark />
+      <header className="bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(15,23,42,0.07),0_3px_10px_rgba(15,23,42,0.04)]">
+        <div className="max-w-5xl mx-auto px-6 h-[62px] flex items-center gap-3">
+          <button
+            onClick={() => navigate('/')}
+            className="p-2 -ml-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-white transition-colors"
+          >
+            <ArrowLeft size={18} />
+          </button>
+          <div className="flex items-center gap-3">
+            <NuvovetWordmark />
+          </div>
         </div>
       </header>
 
@@ -159,37 +160,38 @@ export default function FullSystem() {
   return (
     <div className="min-h-screen bg-gray-50/50 flex flex-col">
       {/* Header */}
-      <header className="bg-white px-4 sm:px-6 py-3 flex items-center justify-between border-b border-slate-200 sticky top-0 z-20">
-        <div className="flex items-center gap-3">
-          <button
-            onClick={() => navigate('/')}
-            className="p-1.5 -ml-1.5 text-slate-400 hover:text-slate-600 transition-colors"
-          >
-            <ArrowLeft size={18} />
-          </button>
-          <div className="flex items-center gap-2">
-            <NuvovetLogo size={28} className="text-slate-900" />
-            <div>
-              <NuvovetWordmark />
-              <span className="hidden sm:inline text-xs text-slate-400 ml-2">{t.fullSystemLabel}</span>
+      <header className="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(15,23,42,0.07),0_3px_10px_rgba(15,23,42,0.04)]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-[62px] flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => navigate('/')}
+              className="p-2 -ml-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-white transition-colors"
+            >
+              <ArrowLeft size={18} />
+            </button>
+            <div className="flex items-center gap-3">
+              <div>
+                <NuvovetWordmark />
+                <span className="hidden sm:inline text-xs text-slate-400 ml-2">{t.fullSystemLabel}</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <LangToggle />
-          {step === 'input' && drugs.length > 0 && (
-            <button
-              onClick={handleReset}
-              className="p-2 text-slate-400 hover:text-slate-600 transition-colors"
-              title={t.reset}
-            >
-              <RotateCcw size={15} />
-            </button>
-          )}
-          <span className="text-xs px-2 py-1 bg-emerald-50 text-emerald-600 rounded-full font-medium flex items-center gap-1">
-            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
-            {t.connected}
-          </span>
+          <div className="flex items-center gap-2">
+            <LangToggle />
+            {step === 'input' && drugs.length > 0 && (
+              <button
+                onClick={handleReset}
+                className="p-2 text-slate-400 hover:text-slate-600 transition-colors"
+                title={t.reset}
+              >
+                <RotateCcw size={15} />
+              </button>
+            )}
+            <span className="text-xs px-2 py-1 bg-emerald-50 text-emerald-600 rounded-full font-medium flex items-center gap-1">
+              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
+              {t.connected}
+            </span>
+          </div>
         </div>
       </header>
 

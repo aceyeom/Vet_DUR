@@ -487,24 +487,23 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       {/* ─── Sticky Nav ─────────────────────────────────────────── */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 py-3.5 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <NuvovetLogo size={28} className="text-slate-900" />
+      <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(15,23,42,0.07),0_3px_10px_rgba(15,23,42,0.04)]">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 h-[62px] flex items-center justify-between">
+          <div className="flex items-center gap-3">
             <NuvovetWordmark />
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
             <LangToggle />
             <button
               onClick={() => navigate('/system')}
-              className="hidden sm:flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 transition-colors"
+              className="hidden sm:flex items-center gap-1.5 text-xs font-medium text-slate-400 hover:text-slate-700 transition-colors"
             >
               <Lock size={11} />
               {t.fullSystemLabel}
             </button>
             <button
               onClick={() => navigate('/demo')}
-              className="px-4 py-2 bg-slate-900 text-white text-xs font-medium rounded-lg hover:bg-slate-800 transition-all"
+              className="px-4 py-2.5 bg-slate-900 text-white text-[11px] font-bold rounded-lg hover:bg-slate-800 transition-all tracking-wide"
             >
               {t.nav.tryDemo}
             </button>
@@ -525,12 +524,12 @@ export default function Landing() {
                 {t.landing.heroBadge}
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15] mb-5">
-                {t.landing.heroTitle}
-                <span className="text-slate-400">{t.landing.heroTitleAccent}</span>
+              <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-5 ${lang === 'ko' ? 'leading-[1.35]' : 'leading-[1.15]'}`}>
+                <span className={lang === 'ko' ? 'block' : 'inline'}>{t.landing.heroTitle}</span>
+                <span className={`text-slate-400 ${lang === 'ko' ? 'block mt-1' : 'inline'}`}>{t.landing.heroTitleAccent}</span>
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-500 leading-relaxed mb-8 max-w-lg">
+              <p className={`text-base sm:text-lg text-slate-500 mb-8 max-w-lg ${lang === 'ko' ? 'leading-[1.9]' : 'leading-relaxed'}`}>
                 {t.landing.heroDesc}
               </p>
 

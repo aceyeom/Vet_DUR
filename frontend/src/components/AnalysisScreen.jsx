@@ -53,9 +53,9 @@ export function AnalysisScreen({ onComplete, drugCount, species }) {
         {/* Logo */}
         <div className="flex items-center justify-center mb-8">
           <div className="relative">
-            <NuvovetLogo size={56} className="text-slate-900" />
+            <NuvovetLogo size={96} className="" />
             <div className="absolute inset-0 animate-ping opacity-20">
-              <NuvovetLogo size={56} className="text-slate-900" />
+              <NuvovetLogo size={96} className="" />
             </div>
           </div>
         </div>
