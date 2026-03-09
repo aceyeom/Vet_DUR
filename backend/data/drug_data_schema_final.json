@@ -1,62 +1,95 @@
 {
+  "_schema_meta": {
+    "version": "2.1.0",
+    "last_updated": "2026-03-09",
+    "notes": [
+      "v2.1.0: dosage_form changed from pipe-string to array; available_strengths unit enum expanded;",
+      "        timing_profile fields made nullable; drug_interactions note object removed to _ddi_note;",
+      "        additive_risk_severity object added alongside boolean additive_risks;",
+      "        riskFlags (graduated severity) added to align with backend engine & frontend DUR;",
+      "        brand_names, allergy_class, formulary_status, active_ingredient added to drug_identity;",
+      "        washout_period_days typed as float; pmc_rag added to ddi_source enum;",
+      "        _extraction_metadata section added for two-pass pipeline provenance tracking;",
+      "        organ_burden_logic now requires keyword-weight registry reference.",
+      "Fields marked // TODO: null cannot be sourced from Plumb's alone — require PMC/PubMed RAG pass."
+    ]
+  },
+
   "id": "string — unique slug, snake_case e.g. 'meloxicam'",
 
   "drug_identity": {
     "name_ko": "string — Korean INN name e.g. '멜록시캄'",
     "name_en": "string — English INN name e.g. 'Meloxicam'",
-    "class": "string — enum: NSAID | Corticosteroid | Antibiotic | Antiparasitic | Antifungal | Analgesic | Cardiac | Diuretic | Sedative | Antiemetic | GI Protectant | Anticonvulsant | Antidepressant | ACE Inhibitor | Bronchodilator | Immunosuppressant | Thyroid | Hormone | Antineoplastic Agent | Antiretroviral",
+    "active_ingredient": "string — canonical active ingredient INN (may differ from brand name_en)",
+    "brand_names": ["string — known brand names e.g. 'Metacam', 'Previcox'"],
+    "allergy_class": "string | null — cross-reactivity class e.g. 'beta-lactam' | 'sulfonamide' | null",
+    "class": "string — enum: NSAID | Corticosteroid | Antibiotic | Antiparasitic | Antifungal | Analgesic | Cardiac | Diuretic | Sedative | Antiemetic | GI Protectant | Anticonvulsant | Antidepressant | ACE Inhibitor | Bronchodilator | Immunosuppressant | Thyroid | Hormone | Antineoplastic Agent | Antiretroviral | Opioid | Muscle Relaxant | Reversal Agent | Unknown",
     "source": "string — enum: kr_vet | human_offlabel | foreign | unknown",
+    "formulary_status": "string — enum: active | discontinued | restricted | unknown",
     "has_reversal": "boolean",
+    "reversal_agent": "string | null — name of reversal agent if has_reversal is true",
     "reversal_evidence": "string | null",
     "off_label_note": "string | null — only for human_offlabel source",
-    "dosage_form": "string — enum: Tab | Inj | Cap | Susp | Drop | Oint | Topical | Ophthalmic",
+    "dosage_form": [
+      "string — array of applicable forms, each from enum: Tab | Inj | Cap | Susp | Drop | Oint | Topical | Ophthalmic | Patch | Oral Liquid | Chewable"
+    ],
     "available_strengths": [
-      { "value": "float", "unit": "string — e.g. mg | mg/kg | IU/kg | mcg/kg | EA" }
+      {
+        "value": "float",
+        "unit": "string — enum: mg | mcg | IU | mg/mL | mcg/mL | IU/mL | mg/kg | mcg/kg | IU/kg | ml/kg | % | EA"
+      }
     ]
   },
 
   "metabolism_and_clearance": {
     "primary_metabolic_organ": "string — enum: Liver | Kidney | Mixed | Unknown",
-    "clearance_organ": "string — enum: Kidney | Liver | Biliary | Mixed",
-    "renal_elimination_fraction": "float 0–1 — e.g. 0.15 means 15% renally eliminated",
+    "clearance_organ": "string — enum: Kidney | Liver | Biliary | Mixed | Unknown",
+    "renal_elimination_fraction": "float 0–1 | null — e.g. 0.15 means 15% renally eliminated. null if unquantified in source.",
     "cyp_profile": {
-      "substrates": ["string — CYP enzyme e.g. 'CYP2C9'"],
-      "inhibitors": ["string — CYP enzyme this drug inhibits"],
-      "inducers": ["string — CYP enzyme this drug induces"],
-      "pathway_evidence": "string | null — note on metabolic pathway"
+      "substrates": [
+        "string | null — CYP enzyme this drug is metabolized by, e.g. 'CYP2C9'. Empty array if not in Plumb's. // TODO: null — requires PMC/DrugBank RAG pass for most drugs."
+      ],
+      "inhibitors": [
+        "string | null — CYP enzyme this drug inhibits. Empty array if not in Plumb's. // TODO: null — requires PMC/DrugBank RAG pass."
+      ],
+      "inducers": [
+        "string | null — CYP enzyme this drug induces. Empty array if not in Plumb's. // TODO: null — requires PMC/DrugBank RAG pass."
+      ],
+      "pathway_evidence": "string | null — note on metabolic pathway from source"
     },
-    "extra_information": "string | add dog & cats specific information in here"
+    "extra_information": "string | null — dog & cat specific PK notes or caveats from Plumb's"
   },
 
   "organ_burden_logic": {
-    "note": "string — scoring methodology e.g. 'Score = sum of weights from triggered_keywords'",
+    "_methodology": "Score = sum of weights assigned to triggered_keywords. Keyword-to-weight mapping MUST reference the shared keyword_weights registry (organ_burden_keyword_weights.json). Scores not backed by that registry are invalid. Scores derived purely from human data should be flagged in evidence.",
+    "note": "string — per-entry scoring note e.g. 'Based on human data only; no veterinary PK studies available'",
     "dog": {
       "brain": {
-        "calculated_score": "integer 0–100",
-        "triggered_keywords": ["string — Paper's keyword that set this score"],
-        "index": "integer — Paper's section index, -1 if not directly cited",
+        "calculated_score": "integer 0–100 | null — null if no data",
+        "triggered_keywords": ["string — keyword from keyword_weights registry that set this score"],
+        "index": "integer — Plumb's section index, -1 if not directly cited",
         "evidence": "string — Korean or English evidence note"
       },
       "blood": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "kidney": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "liver": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "heart": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
@@ -64,31 +97,31 @@
     },
     "cat": {
       "brain": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "blood": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "kidney": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "liver": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
       },
       "heart": {
-        "calculated_score": "integer 0–100",
+        "calculated_score": "integer 0–100 | null",
         "triggered_keywords": ["string"],
         "index": "integer",
         "evidence": "string"
@@ -97,62 +130,73 @@
   },
 
   "timing_profile": {
-    "onset_min": "integer — minutes to onset",
-    "t_max_hr": "float — hours to peak plasma concentration",
-    "half_life_hr": "float — elimination half-life in hours",
-    "f_percent": "integer 0–100 — oral bioavailability %",
-    "protein_binding_percent": "integer 0–100",
-    "evidence": "string | null"
+    "onset_min": "integer | null — minutes to onset of effect. null if not reported in Plumb's. // TODO: null for most drugs — requires PMC RAG or manufacturer SPC.",
+    "t_max_hr": "float | null — hours to peak plasma concentration",
+    "half_life_hr": {
+      "_note": "Store as object to capture reported ranges. Use mean only when range is unavailable.",
+      "min": "float | null — lower end of reported range (hours)",
+      "max": "float | null — upper end of reported range (hours)",
+      "mean": "float | null — mean or midpoint; use when only a single value is reported",
+      "species": "string — enum: dog | cat | human | unknown — species these values apply to"
+    },
+    "f_percent": "integer 0–100 | null — oral bioavailability %. null if not reported.",
+    "protein_binding_percent": "integer 0–100 | null — null if not reported.",
+    "evidence": "string | null — source citation or note on data origin"
   },
 
+  "_ddi_note": "string | null — methodology note for drug_interactions list e.g. 'Extracted from Plumb's Drug Interactions section. Severity mapped: contraindicated→3, major→3, moderate→2, minor→1.'",
+
   "drug_interactions": [
-    {"note": "append more drug interactions as needed, each with drug name, severity (minor/moderate/major), mechanism keywords, and evidence note"},
     {
       "drug": "string — interacting drug name or class e.g. 'Corticosteroids'",
       "severity": "integer — 1=minor | 2=moderate | 3=critical/avoid",
       "keywords": ["string — mechanism keyword e.g. 'GI ulceration'"],
-      "evidence": "string — English evidence note"
-    },
-    {
-      "drug": "string — interacting drug name or class e.g. 'Corticosteroids'",
-      "severity": "integer — 1=minor | 2=moderate | 3=critical/avoid",
-      "keywords": ["string — mechanism keyword e.g. 'GI ulceration'"],
-      "evidence": "string — English evidence note"
-    } 
-    
+      "evidence": "string — English evidence note (English preferred for engine consistency)"
+    }
   ],
 
   "additive_risks": {
+    "_note": "Boolean flags for rapid rule-engine matching. Use riskFlags for graduated severity display.",
     "nephrotoxic": "boolean — additive renal load (triple whammy etc.)",
     "hepatotoxic": "boolean — additive hepatic load",
     "gi_ulcer": "boolean — additive GI ulceration risk",
     "bleeding": "boolean — additive bleeding risk",
-    "sedation": "boolean — additive CNS sedation",
+    "sedation": "boolean — additive CNS sedation (set true if somnolence/sedation is a reported adverse effect)",
     "qt_prolongation": "boolean — additive QT interval risk"
   },
 
+  "risk_flags": {
+    "_note": "Graduated severity levels for frontend DUR display and backend rule scoring. Must be consistent with additive_risks booleans: if additive_risks.nephrotoxic=true then risk_flags.nephrotoxic must be 'moderate' or 'high'.",
+    "nephrotoxic": "string — enum: none | low | moderate | high",
+    "hepatotoxic": "string — enum: none | low | moderate | high",
+    "qi_ulcer": "string — enum: none | low | moderate | high",
+    "bleeding": "string — enum: none | low | moderate | high",
+    "qt_prolongation": "string — enum: none | low | moderate | high"
+  },
+
   "species_flags": {
-    "species_contraindicated": ["string — e.g. 'cat_breed','dog_breed"],
+    "species_contraindicated": ["string — e.g. 'cat_all' | 'dog_collie' | 'cat_bengal'"],
     "mdr1_sensitive": "boolean — P-gp substrate, dangerous in MDR1-mutant breeds",
     "serotonin_syndrome_risk": "boolean",
-    "electrolyte_effect": "string | null — e.g. 'k_depleting' | 'k_sparing'",
+    "electrolyte_effect": "string | null — e.g. 'k_depleting' | 'k_sparing' | null",
     "narrow_therapeutic_index": "boolean — TDM required",
-    "washout_period_days": "integer — minimum days before switching (5 × half-life rule)"
+    "washout_period_days": "float | null — minimum days before switching (5 × half_life_hr / 24). Compute from half_life_hr.mean if available. null if half_life unknown."
   },
 
   "dosage_and_kinetics": {
     "dog": {
-      "is_approved": "boolean — species-level regulatory approval",
+      "is_approved": "boolean — species-level regulatory approval in Korean or country-of-origin market",
       "dosage_list": [
         {
-          "logic_type": "string — enum: linear | weight_band | fixed | max_capped",
+          "logic_type": "string — enum: linear | weight_band | fixed | max_capped | tiered",
           "context": "string — clinical indication e.g. 'Anti-inflammatory dose'",
           "value": "string — dose as string to support ranges e.g. '0.1 - 0.2'",
           "unit": "string — enum: mg/kg | mcg/kg | IU/kg | ml/kg | mg | EA",
-          "route": "string — enum: PO | IV | SC | IM | Eye | Ear | Top | Inh",
-          "frequency": "string — enum: SID | BID | TID | QID | q8h | q12h | Monthly | PRN",
+          "route": "string — enum: PO | IV | SC | IM | Eye | Ear | Top | Inh | CRI",
+          "frequency": "string — enum: SID | BID | TID | QID | q8h | q12h | q24h | q48h | Monthly | PRN | Once",
           "max_dose_mg_kg": "float | null — safety ceiling",
-          "evidence": "string | null <reference>"
+          "duration_note": "string | null — e.g. 'max 5 days' | 'taper after 7 days'",
+          "evidence": "string | null — reference e.g. 'Plumb\\'s 10th Ed, p.1234'"
         }
       ]
     },
@@ -167,6 +211,7 @@
           "route": "string",
           "frequency": "string",
           "max_dose_mg_kg": "float | null",
+          "duration_note": "string | null",
           "evidence": "string | null"
         }
       ]
@@ -174,43 +219,44 @@
   },
 
   "renal_dose_adjustment": {
-    "creatinine_threshold_dog_mg_dL": "float | null — trigger creatinine for dogs",
-    "creatinine_threshold_cat_mg_dL": "float | null — trigger creatinine for cats",
-    "adjustment_type": "string — enum: reduce_dose | extend_interval | avoid | none",
+    "creatinine_threshold_dog_mg_dL": "float | null — trigger creatinine for dogs (IRIS Stage 2 ≈ 1.4–2.0)",
+    "creatinine_threshold_cat_mg_dL": "float | null — trigger creatinine for cats (IRIS Stage 2 ≈ 1.6–2.8)",
+    "adjustment_type": "string — enum: reduce_dose | extend_interval | avoid | none | unknown",
     "adjustment_factor": "float 0–1 | null — multiplier e.g. 0.5 = half normal dose",
     "note": "string | null"
   },
 
   "hepatic_dose_adjustment": {
-    "applies": "boolean — true only for NTI drugs with primary hepatic elimination",
+    "applies": "boolean — true only for NTI drugs or drugs with primary hepatic elimination",
     "alt_threshold_multiplier": "float | null — e.g. 3.0 = ALT > 3× upper normal triggers this",
-    "adjustment_type": "string — enum: reduce_dose | monitor | avoid | none",
+    "adjustment_type": "string — enum: reduce_dose | monitor | avoid | none | unknown",
     "note": "string | null"
   },
 
   "contraindications": [
     {
       "condition": "string — condition name e.g. 'Renal disease'",
-      "match_terms": ["string — EMR condition strings that auto-trigger this e.g. 'CKD'", "string — 'IRIS Stage'"],
+      "match_terms": ["string — EMR condition strings that auto-trigger this e.g. 'CKD'"],
       "severity": "string — enum: absolute | relative | caution",
       "action": "string — enum: contraindicated | reduce_dose | monitor | avoid",
       "lab_trigger": {
-        "marker": "string | null — e.g. 'creatinine' | 'alt' | 'alp' | 'bun' | 'hct'",
+        "marker": "string | null — e.g. 'creatinine' | 'alt' | 'alp' | 'bun' | 'hct' | 'plt'",
         "threshold": "float | null",
-        "unit": "string | null — e.g. 'mg/dL' | 'U/L' | '%'"
+        "unit": "string | null — e.g. 'mg/dL' | 'U/L' | '%' | 'x10^3/uL'"
       }
     }
   ],
 
   "genetic_sensitivity": {
     "has_genetic_risk": "boolean",
-    "affected_breeds": ["string — e.g. 'Shetland Sheepdog'"],
+    "affected_breeds": ["string — e.g. 'Shetland Sheepdog' | 'Australian Shepherd'"],
+    "gene": "string | null — e.g. 'ABCB1 (MDR1)' | 'CYP2D6'",
     "evidence": "string | null"
   },
 
   "effects_and_mechanisms": {
     "common_mechanism": "string — pharmacological mechanism of action",
-    "common_extra_effects": ["string — known adverse effects"],
+    "common_extra_effects": ["string — known adverse effects (English or Korean OK)"],
     "dog_mechanism": "string | null — dog-specific mechanism notes",
     "dog_extra_effects": ["string — dog-specific adverse effects"],
     "cat_mechanism": "string | null — cat-specific mechanism notes",
@@ -224,31 +270,43 @@
 
   "precautions": {
     "dog": {
-      "status": "integer — 1=use with caution | 2=contraindicated",
+      "status": "integer — 1=use with caution | 2=contraindicated | 0=no special precaution",
       "evidence": "string"
     },
     "cat": {
-      "status": "integer — 1=use with caution | 2=contraindicated",
+      "status": "integer — 1=use with caution | 2=contraindicated | 0=no special precaution",
       "evidence": "string"
     }
   },
 
   "storage_and_forms": {
-    "storage": "string — storage conditions",
-    "forms": ["string — available formulations"]
+    "storage": "string | null — storage conditions",
+    "forms": ["string — available formulations with strengths"]
   },
 
   "section_1_2_10": {
     "highlights": "string — key clinical highlights (Korean preferred for EMR display)",
     "indications": "string — approved and off-label indications",
-    "client_info": "string — owner-facing communication note"
+    "client_info": "string — owner-facing communication note (Korean preferred)"
   },
 
   "_data_quality": {
-    "overall_confidence": "integer 0–100",
-    "renal_adjustment_confidence": "string — enum: high | medium | low | none",
-    "hepatic_adjustment_confidence": "string — enum: high | medium | low | none",
-    "organ_burden_confidence": "string — enum: high | medium | low | none",
-    "ddi_source": "string — enum: plumbs_direct | additive_class | cyp_derived | unknown"
+    "overall_confidence": "integer 0–100 — composite confidence; weight: dosage 40%, DDI 30%, PK 20%, organ_burden 10%",
+    "renal_adjustment_confidence": "string — enum: high | medium | low | none. 'high' only if source explicitly states dose adjustment recommendation.",
+    "hepatic_adjustment_confidence": "string — enum: high | medium | low | none. 'high' only if source explicitly states dose adjustment recommendation.",
+    "organ_burden_confidence": "string — enum: high | medium | low | none. 'high' requires veterinary species-specific data.",
+    "ddi_source": "string — enum: plumbs_direct | additive_class | cyp_derived | pmc_rag | unknown",
+    "plumbs_sections_found": ["string — list of Plumb's section keys that were populated e.g. 'Pharmacokinetics'"],
+    "missing_sections": ["string — Plumb's sections that were absent or empty e.g. 'Pharmacokinetics'"],
+    "requires_pmc_rag": "boolean — true if any critical field is null/unknown and needs a PMC RAG pass",
+    "pmc_rag_fields": ["string — list of field paths that need PMC RAG e.g. 'cyp_profile.substrates' | 'timing_profile.onset_min'"]
+  },
+
+  "_extraction_metadata": {
+    "model_used": "string — e.g. 'claude-sonnet-4-6' | 'claude-haiku-4-5'",
+    "extraction_pass": "integer — 1 = Plumb's pass | 2 = PMC RAG pass",
+    "source_file": "string — source JSONL file path e.g. 'plumbs_output/5.jsonl'",
+    "extracted_at": "string — ISO 8601 timestamp",
+    "reviewer": "string | null — pharmacist reviewer ID if manually reviewed"
   }
 }
