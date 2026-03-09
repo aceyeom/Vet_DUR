@@ -31,8 +31,8 @@ jobs:
 
       - name: Run conversion script
         env:
-          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Prefer secret; fallback to repository variable if configured there.
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY || vars.CLAUDE_API_KEY }}
         run: python 실험실.py
 
       - name: Commit and push results

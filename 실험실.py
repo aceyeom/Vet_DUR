@@ -15,6 +15,7 @@ import re
 import asyncio
 import argparse
 import time
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from getpass import getpass
@@ -528,9 +529,20 @@ def resolve_api_key(cli_api_key: str | None) -> str:
     if cli_api_key:
         return cli_api_key.strip()
 
-    env_api_key = os.environ.get("CLAUDE_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+    env_api_key = (
+        os.environ.get("CLAUDE_API_KEY")
+        or os.environ.get("ANTHROPIC_API_KEY")
+        or os.environ.get("INPUT_CLAUDE_API_KEY")
+    )
     if env_api_key:
         return env_api_key.strip()
+
+    # CI 환경에서는 대화형 입력을 기다리지 않고 즉시 명확한 에러를 낸다.
+    if os.environ.get("GITHUB_ACTIONS") == "true" or not sys.stdin.isatty():
+        raise ValueError(
+            "Anthropic API key가 필요합니다. GitHub Actions에서는 secrets.CLAUDE_API_KEY 또는 vars.CLAUDE_API_KEY를 설정하세요. "
+            "로컬에서는 --api-key 인자 또는 CLAUDE_API_KEY/ANTHROPIC_API_KEY 환경변수를 사용하세요."
+        )
 
     entered_api_key = getpass("Anthropic API key: ").strip()
     if not entered_api_key:
