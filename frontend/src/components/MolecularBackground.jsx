@@ -75,17 +75,17 @@ export function MolecularBackground({ className = '' }) {
 
           {/* ── Drug A — fast absorb, high peak ─────────────────── */}
           <path
-            d="M 13,80 C 22,80 30,19 42,19 C 58,19 78,74 198,77"
+            d="M 13,80 C 55,80 105,18 150,18 C 168,18 188,66 198,70"
             fill="none" stroke="#0f172a" strokeWidth="0.28" strokeLinecap="round"
             opacity="0.10"
           >
             <animate attributeName="opacity"
               values="0.10;0.17;0.10" dur="7s" begin="0s" repeatCount="indefinite" />
           </path>
-          <line x1="42" y1="20" x2="42" y2="80"
+          <line x1="150" y1="19" x2="150" y2="80"
             stroke="#0f172a" strokeWidth="0.15"
             strokeDasharray="0.7 0.9" opacity="0.05" />
-          <circle cx="42" cy="19" r="1.2" fill="#0f172a" opacity="0.15">
+          <circle cx="150" cy="18" r="1.2" fill="#0f172a" opacity="0.15">
             <animate attributeName="opacity"
               values="0.15;0.36;0.15" dur="4s" begin="0.2s" repeatCount="indefinite" />
             <animate attributeName="r"
@@ -94,17 +94,17 @@ export function MolecularBackground({ className = '' }) {
 
           {/* ── Drug B — medium absorb, moderate peak ───────────── */}
           <path
-            d="M 13,80 C 28,80 48,34 62,34 C 82,34 118,70 198,74"
+            d="M 13,80 C 62,80 118,33 160,33 C 176,33 190,63 198,67"
             fill="none" stroke="#0f172a" strokeWidth="0.28" strokeLinecap="round"
             opacity="0.08"
           >
             <animate attributeName="opacity"
               values="0.08;0.14;0.08" dur="8.5s" begin="1.2s" repeatCount="indefinite" />
           </path>
-          <line x1="62" y1="35" x2="62" y2="80"
+          <line x1="160" y1="34" x2="160" y2="80"
             stroke="#0f172a" strokeWidth="0.15"
             strokeDasharray="0.7 0.9" opacity="0.04" />
-          <circle cx="62" cy="34" r="1.2" fill="#0f172a" opacity="0.13">
+          <circle cx="160" cy="33" r="1.2" fill="#0f172a" opacity="0.13">
             <animate attributeName="opacity"
               values="0.13;0.30;0.13" dur="5s" begin="1.4s" repeatCount="indefinite" />
             <animate attributeName="r"
@@ -113,17 +113,17 @@ export function MolecularBackground({ className = '' }) {
 
           {/* ── Drug C — slow absorb, broad peak ────────────────── */}
           <path
-            d="M 13,80 C 40,80 68,41 88,41 C 115,41 152,66 198,70"
+            d="M 13,80 C 72,80 132,41 170,41 C 183,41 192,61 198,65"
             fill="none" stroke="#0f172a" strokeWidth="0.28" strokeLinecap="round"
             opacity="0.07"
           >
             <animate attributeName="opacity"
               values="0.07;0.12;0.07" dur="10s" begin="0.6s" repeatCount="indefinite" />
           </path>
-          <line x1="88" y1="42" x2="88" y2="80"
+          <line x1="170" y1="42" x2="170" y2="80"
             stroke="#0f172a" strokeWidth="0.15"
             strokeDasharray="0.7 0.9" opacity="0.04" />
-          <circle cx="88" cy="41" r="1.2" fill="#0f172a" opacity="0.11">
+          <circle cx="170" cy="41" r="1.2" fill="#0f172a" opacity="0.11">
             <animate attributeName="opacity"
               values="0.11;0.27;0.11" dur="6s" begin="0.8s" repeatCount="indefinite" />
             <animate attributeName="r"

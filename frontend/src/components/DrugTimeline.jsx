@@ -228,9 +228,9 @@ export function DrugTimeline({ drugA, drugB }) {
 
   // Frequency label
   const freqLabel = (interval) => {
-    if (interval <= 8) return lang === 'ko' ? 'TID (1일 3회)' : 'TID (q8h)';
-    if (interval <= 12) return lang === 'ko' ? 'BID (1일 2회)' : 'BID (q12h)';
-    return lang === 'ko' ? 'SID (1일 1회)' : 'SID (q24h)';
+    if (interval <= 8) return t.pk.freqTID;
+    if (interval <= 12) return t.pk.freqBID;
+    return t.pk.freqSID;
   };
 
   return (
@@ -286,7 +286,7 @@ export function DrugTimeline({ drugA, drugB }) {
             transform={`rotate(-90, 8, ${padT + usableH / 2})`}
             style={{ fontSize: '7px', fontFamily: '"DM Sans"', fill: '#94a3b8', letterSpacing: '0.02em' }}
           >
-            {lang === 'ko' ? 'Cp (상대 농도)' : 'Cp (relative)'}
+            {t.pk.concentrationRelative}
           </text>
 
           {/* ── X-axis gridlines + labels ── */}
@@ -408,7 +408,7 @@ export function DrugTimeline({ drugA, drugB }) {
             <text x={svgW - padR - 2} y={toSvg(0, (therapMinA + therapMaxA) / 2).sy + 3}
               textAnchor="end"
               style={{ fontSize: '6px', fontFamily: '"DM Sans"', fill: '#10b981', fontWeight: 500 }}>
-              {lang === 'ko' ? '치료역' : 'Therapeutic'}
+              {t.pk.therapeuticBand}
             </text>
           )}
 
@@ -472,11 +472,11 @@ export function DrugTimeline({ drugA, drugB }) {
           <table className="w-full text-[10px]">
             <thead>
               <tr className="text-left text-slate-400 uppercase tracking-wider">
-                <th className="py-1 font-semibold">{lang === 'ko' ? '약물' : 'Drug'}</th>
+                <th className="py-1 font-semibold">{t.pk.drugColumn}</th>
                 <th className="py-1 font-semibold text-center">t½</th>
                 <th className="py-1 font-semibold text-center">Tmax</th>
-                <th className="py-1 font-semibold text-center">{lang === 'ko' ? '생체이용률' : 'F%'}</th>
-                <th className="py-1 font-semibold text-center">{lang === 'ko' ? '투여' : 'Dosing'}</th>
+                <th className="py-1 font-semibold text-center">{t.pk.bioavailColumn}</th>
+                <th className="py-1 font-semibold text-center">{t.pk.dosingColumn}</th>
               </tr>
             </thead>
             <tbody className="font-mono text-slate-700">
@@ -506,10 +506,7 @@ export function DrugTimeline({ drugA, drugB }) {
         {(hasA !== hasB) && (
           <div className="px-3 py-1.5 border-t border-slate-100 bg-amber-50/50">
             <p className="text-[10px] text-amber-600 italic">
-              {lang === 'ko'
-                ? `${!hasA ? drugA?.name : drugB?.name}의 약동학 데이터를 사용할 수 없습니다 — 단일 약물 프로필만 표시합니다`
-                : `PK data unavailable for ${!hasA ? drugA?.name : drugB?.name} — showing single drug profile only`
-              }
+              {t.pk.pkDataUnavailable.replace('{name}', !hasA ? drugA?.name : drugB?.name)}
             </p>
           </div>
         )}

@@ -582,18 +582,12 @@ function MedicationStep({ drugs, species, patientName, weight, onAddDrug, onRemo
         {/* Run button */}
         <button
           onClick={onRunAnalysis}
-          disabled={drugs.length < 2}
+          disabled={drugs.length === 0}
           className="w-full flex items-center justify-center gap-2 px-4 py-3.5 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
         >
           <Zap size={15} />
           {t.fullSystem.runScan}
         </button>
-
-        {drugs.length < 2 && (
-          <p className="typo-label text-center">
-            {t.demo.addAtLeast2}
-          </p>
-        )}
       </div>
     </div>
   );
@@ -652,7 +646,7 @@ export default function Demo() {
   };
 
   const handleRunAnalysis = () => {
-    if (drugs.length < 2) return;
+    if (drugs.length < 1) return;
     setStep('analyzing');
   };
 
@@ -696,7 +690,8 @@ export default function Demo() {
       <div className="fixed inset-0 bg-dot-grid pointer-events-none" />
 
       {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm px-4 sm:px-6 py-3 flex items-center justify-between border-b border-slate-200 sticky top-0 z-20">
+      <header className="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-[0_1px_3px_rgba(15,23,42,0.07),0_3px_10px_rgba(15,23,42,0.04)]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-[62px] flex items-center justify-between">
         <div className="flex items-center gap-3">
           <button
             onClick={() => {
@@ -707,12 +702,11 @@ export default function Demo() {
               else if (step === 'results') setStep('medications');
               else navigate('/');
             }}
-            className="p-1.5 -ml-1.5 text-slate-400 hover:text-slate-600 transition-colors"
+            className="p-2 -ml-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-white transition-colors"
           >
             <ArrowLeft size={18} />
           </button>
-          <div className="flex items-center gap-2">
-            <NuvovetLogo size={28} className="text-slate-900" />
+          <div className="flex items-center gap-3">
             <NuvovetWordmark />
           </div>
         </div>
@@ -721,6 +715,7 @@ export default function Demo() {
           <span className="typo-label px-2.5 py-1 bg-slate-100 text-slate-500 rounded-full">
             {t.demoLabel}
           </span>
+        </div>
         </div>
       </header>
 

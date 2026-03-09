@@ -91,6 +91,7 @@ function parseStrengthMg(selectedVariant) {
 }
 
 function DoseCalculator({ drug, species, weight, lang }) {
+  const { t } = useI18n();
   if (!weight || weight <= 0) return null;
 
   const range = DOSE_RANGES[drug.id]?.[species];
@@ -133,7 +134,7 @@ function DoseCalculator({ drug, species, weight, lang }) {
     <div className="mt-1.5 pt-2 border-t border-slate-100 space-y-0.5">
       {/* Row 1: context label + calculated dose */}
       <div className="flex items-baseline justify-between">
-        <span className="text-[10px] text-slate-400">Calculated for {weight} kg</span>
+        <span className="text-[10px] text-slate-400">{t.drugInput.calculatedFor} {weight} kg</span>
         <span className="text-[11px] font-semibold text-slate-800 tabular-nums font-mono">{doseLabel}</span>
       </div>
       {/* Row 2: per-kg rate + tablet count */}
@@ -279,7 +280,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
           <AlertTriangle size={11} className="text-red-600 shrink-0 mt-0.5" />
           <p className="text-[11px] text-red-700 leading-relaxed font-medium">
             <span className="uppercase tracking-wide text-[10px] block mb-0.5">
-              {lang === 'ko' ? '종별 금기' : 'Species Contraindication'}
+              {t.drugInput.speciesContraindication}
             </span>
             {hardstopReason}
           </p>
@@ -319,7 +320,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
             </label>
 
             <label className="flex flex-col gap-1">
-              <span className="text-slate-400">Dy</span>
+              <span className="text-slate-400">{t.drugInput.fieldDays}</span>
               <input
                 type="number"
                 min="1"
@@ -331,7 +332,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
             </label>
 
             <label className="flex flex-col gap-1">
-              <span className="text-slate-400">Tt</span>
+              <span className="text-slate-400">{t.drugInput.fieldTimesPerDay}</span>
               <input
                 type="number"
                 min="1"
@@ -345,7 +346,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
 
           <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px]">
             <label className="flex flex-col gap-1">
-              <span className="text-slate-400">Rt</span>
+              <span className="text-slate-400">{t.drugInput.route}</span>
               <select
                 value={lineItem.route}
                 onChange={(e) => handleLineChange('route', e.target.value)}
@@ -407,7 +408,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
                 onChange={(e) => handleLineChange('vatApplicable', e.target.checked)}
                 className="rounded border-slate-300"
               />
-              VAT
+              {t.drugInput.vat}
             </label>
           </div>
         </div>
@@ -568,7 +569,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   // ── Class filter label ─────────────────────────────────────────
   const classLabel = (key) => {
     if (key === 'all') return t.drugInput.allDrugs;
-    if (key === 'other') return lang === 'ko' ? '기타' : 'Other';
+    if (key === 'other') return t.drugInput.otherClass;
     return t.drugClasses[key] || key;
   };
 
@@ -693,8 +694,8 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
             <div className="px-3 pb-3 border-t border-slate-100 pt-2 animate-fade-in">
               <p className="text-[11px] text-slate-400 mb-2">
                 {lang === 'ko'
-                  ? <>{selectedProduct.catalog.korean_name_base}의 <span className="font-medium text-slate-600">{t.drugInput.strength}</span>을 선택하세요</>
-                  : <>Select strength for <span className="font-medium text-slate-600">{selectedProduct.catalog.english_name_base}</span></>
+                  ? `${selectedProduct.catalog.korean_name_base}${t.drugInput.selectStrengthFor}`
+                  : `${t.drugInput.selectStrengthFor} ${selectedProduct.catalog.english_name_base}`
                 }
               </p>
               <div className="flex flex-wrap gap-2">
@@ -778,10 +779,10 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
                     <AlertTriangle size={14} className="text-amber-500" />
                     <div>
                       <div className="text-[13px] font-medium">
-                        {lang === 'ko' ? `"${query.trim()}" 직접 입력` : `Add "${query.trim()}" as unknown drug`}
+                        {t.drugInput.addUnknownDrug.replace('{name}', query.trim())}
                       </div>
                       <div className="text-[11px] text-slate-400">
-                        {lang === 'ko' ? '데이터베이스에 없음 — 유효성분을 입력하세요' : 'Not in database — specify active ingredient'}
+                        {t.drugInput.notInDatabase}
                       </div>
                     </div>
                   </div>
@@ -791,14 +792,14 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
               {showIngredientInput && (
                 <div className="px-3 py-3 border-t border-slate-100 bg-slate-50">
                   <p className="text-[11px] text-slate-500 mb-2">
-                    {lang === 'ko' ? '선택사항: 더 정확한 분석을 위해 유효성분을 입력하세요' : 'Optional: enter active ingredient for better analysis'}
+                    {t.drugInput.optionalIngredient}
                   </p>
                   <div className="flex gap-2">
                     <input
                       type="text"
                       value={unknownIngredient}
                       onChange={(e) => setUnknownIngredient(e.target.value)}
-                      placeholder={lang === 'ko' ? '예: 아세트아미노펜' : 'e.g., acetaminophen'}
+                      placeholder={t.drugInput.ingredientPlaceholder}
                       className="flex-1 px-2.5 py-2 text-[13px] border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10"
                       autoFocus
                     />
@@ -807,7 +808,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
                     </button>
                   </div>
                   <button onClick={handleConfirmUnknown} className="mt-1.5 text-[11px] text-slate-400 hover:text-slate-600">
-                    {lang === 'ko' ? '건너뛰기 — 성분 없이 추가' : 'Skip — add without ingredient'}
+                    {t.drugInput.skipWithoutIngredient}
                   </button>
                 </div>
               )}
@@ -822,8 +823,8 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
                   <div className="px-3 pt-2 pb-1">
                     <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
                       {activeClassFilter !== 'all' || activeRouteFilter !== 'all'
-                        ? (lang === 'ko' ? '필터 결과' : 'Filtered Results')
-                        : (lang === 'ko' ? '전체 의약품 목록' : 'All Available Drugs')
+                        ? t.drugInput.filteredResults
+                        : t.drugInput.allAvailableDrugs
                       }
                       <span className="ml-1 text-slate-300">({browseDrugs.length})</span>
                     </span>
