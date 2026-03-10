@@ -1,0 +1,513 @@
+{
+  "id": "norepinephrine",
+  "drug_identity": {
+    "name_ko": "노르에피네프린",
+    "name_en": "Norepinephrine",
+    "active_ingredient": "Norepinephrine",
+    "brand_names": [
+      "Levophed"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 인체용 제품(Levophed®)을 개, 고양이, 말 등에 extra-label로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "교감신경 말단에 흡수된 후 COMT(catechol-O-methyltransferase) 및 MAO(monoamine oxidase)에 의해 신속히 비활성 대사산물로 대사됨."
+    },
+    "extra_information": "IV 투여 시 작용 발현은 1~2분 이내이며, 투여 중단 후 1~2분간 효과가 지속됨. SC 투여 시 혈관수축 효과로 흡수 불량. 경구 투여 시 위장관에서 파괴되어 흡수되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 관류 감소, 부정맥, 심근 산소 요구량 증가 등 텍스트 내 언급된 장기 영향을 반영함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cerebral artery perfusion",
+          "dizziness"
+        ],
+        "index": 1,
+        "evidence": "뇌동맥 관류 유지 목적으로 사용되나, 과용량 시 뇌 관류 감소 가능성 언급됨."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "vasoconstriction",
+          "arrhythmias",
+          "increased peripheral resistance",
+          "reflex bradycardia"
+        ],
+        "index": 2,
+        "evidence": "말초 혈관 저항 증가, 부정맥, 반사성 서맥 등 혈관 및 혈액 순환에 대한 직접적 영향이 명시됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "decreased renal perfusion",
+          "decreased urine output"
+        ],
+        "index": 3,
+        "evidence": "혈량 보충 없이 사용 시 신장 관류 감소 및 소변량 감소가 명시적으로 언급됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "visceral vasoconstriction"
+        ],
+        "index": 1,
+        "evidence": "내장 혈관 수축으로 간 관류 감소 가능성이 간접적으로 언급됨."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "arrhythmias",
+          "cardiac ischemia",
+          "increased myocardial oxygen demand",
+          "inotropic"
+        ],
+        "index": 4,
+        "evidence": "심근 산소 요구량 증가, 부정맥, 심장 허혈 위험이 명시됨. 과용량 시 심박출량 감소 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cerebral artery perfusion"
+        ],
+        "index": 1,
+        "evidence": "개와 동일한 기전 적용. 고양이에서 별도 뇌 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "vasoconstriction",
+          "arrhythmias",
+          "more susceptible to adverse effects"
+        ],
+        "index": 2,
+        "evidence": "고양이는 이상반응에 더 취약하다고 명시됨. 혈관수축 및 부정맥 위험 포함."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "decreased renal perfusion",
+          "decreased urine output",
+          "more susceptible"
+        ],
+        "index": 3,
+        "evidence": "고양이는 이상반응에 더 취약하다고 명시되어 신장 관류 감소 위험이 개보다 높게 평가됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "visceral vasoconstriction"
+        ],
+        "index": 1,
+        "evidence": "내장 혈관 수축으로 간 관류 감소 가능성. 고양이 특이 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "arrhythmias",
+          "cardiac ischemia",
+          "increased myocardial oxygen demand",
+          "more susceptible"
+        ],
+        "index": 4,
+        "evidence": "고양이는 이상반응에 더 취약하다고 명시됨. 심근 산소 요구량 증가 및 부정맥 위험."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.033,
+      "species": "unknown"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 시 1~2분 이내 작용 발현, 투여 중단 후 1~2분간 효과 지속. 경구 투여 시 위장관에서 파괴되어 생체이용률 0%. 반감기는 효과 지속 시간(약 2분)으로부터 추정."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-2-Adrenergic Agonists (detomidine, dexmedetomidine, medetomidine, xylazine)",
+      "severity": 3,
+      "keywords": [
+        "alpha-agonist overlap",
+        "cardiac effects",
+        "contraindicated for alpha-2 reversal"
+      ],
+      "evidence": "NE has alpha-agonist effects and should NOT be used to treat cardiac effects caused by alpha-2-adrenergic agonists."
+    },
+    {
+      "drug": "Alpha-Adrenergic Antagonists (phenoxybenzamine, phentolamine, prazosin)",
+      "severity": 2,
+      "keywords": [
+        "alpha-1 blockade",
+        "pressor reversal"
+      ],
+      "evidence": "May reverse the pressor effects of NE due to alpha-1 blockade."
+    },
+    {
+      "drug": "Antihistamines (chlorpheniramine, diphenhydramine)",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "enhanced pressor effect"
+      ],
+      "evidence": "Certain antihistamines may potentiate the effects of NE."
+    },
+    {
+      "drug": "Atropine",
+      "severity": 2,
+      "keywords": [
+        "reflex bradycardia blockade",
+        "enhanced pressor response"
+      ],
+      "evidence": "Atropine may block the reflex bradycardia caused by NE and enhance the pressor response."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, esmolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "beta-2 antagonism",
+        "increased blood pressure",
+        "cardiac stimulation antagonism"
+      ],
+      "evidence": "May result in higher blood pressures by antagonizing beta-2 receptors. Can antagonize cardiac stimulating effects. Propranolol may be used to treat NE-induced cardiac arrhythmias."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia risk"
+      ],
+      "evidence": "Increased risk for arrhythmias when used concurrently with digoxin."
+    },
+    {
+      "drug": "Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "decreased arterial responsiveness"
+      ],
+      "evidence": "Diuretics may decrease arterial responsiveness to NE."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "MAO inhibition",
+        "catecholamine accumulation"
+      ],
+      "evidence": "Hypertension can result when NE is used with MAOIs."
+    },
+    {
+      "drug": "Nitrates (nitroglycerin)",
+      "severity": 2,
+      "keywords": [
+        "pressor reversal",
+        "vasodilation"
+      ],
+      "evidence": "Nitrates may reverse the pressor effects of NE."
+    },
+    {
+      "drug": "Oxytocin",
+      "severity": 2,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Hypertension may result if NE is used with oxytocic agents."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "alpha-1 blockade",
+        "pressor reversal"
+      ],
+      "evidence": "Phenothiazines may reverse the pressor effects of NE due to alpha-1 blockade."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "cardiac arrhythmias",
+        "tachycardia"
+      ],
+      "evidence": "Hypertension, cardiac arrhythmias, and tachycardia can result when used concurrently with TCAs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.007
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "지속적인 심각한 저혈압 (적절한 수액 보충 후) - extra-label",
+          "value": "0.05 - 0.1",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.002,
+          "duration_note": "원하는 효과까지 적정; 최대 1~2 µg/kg/분 IV CRI",
+          "evidence": "초기 용량 0.05~0.1 µg/kg/분 IV CRI, 원하는 효과까지 증량. 도파민, 도부타민, 바소프레신과 병용 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "이소플루란 유발 저혈압 - extra-label",
+          "value": "0.1 - 2",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.002,
+          "duration_note": "평균 유효 용량 0.44 µg/kg/분 (건강한 비글 12마리 연구)",
+          "evidence": "이소플루란 유발 저혈압 연구에서 0.1~2 µg/kg/분 IV CRI 범위 사용, 평균 유효 용량 0.44 µg/kg/분."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "지속적인 심각한 저혈압 (적절한 수액 보충 후) - extra-label",
+          "value": "0.05 - 0.1",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.002,
+          "duration_note": "원하는 효과까지 적정; 최대 1~2 µg/kg/분 IV CRI",
+          "evidence": "개/고양이 동일 용량 권고. 고양이는 이상반응에 더 취약할 수 있으므로 주의 깊은 모니터링 필요."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 관류 감소 및 소변량 감소가 이상반응으로 명시됨. 신장 기능 모니터링 필수. 명시적 용량 조정 권고는 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 기능에 따른 용량 조정에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "저혈량성 저혈압",
+      "match_terms": [
+        "hypovolemia",
+        "volume depletion",
+        "hemorrhagic shock"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 말초 혈관 수축",
+      "match_terms": [
+        "severe peripheral vasoconstriction",
+        "peripheral vascular disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 혈관 혈전증",
+      "match_terms": [
+        "vascular thrombosis",
+        "thromboembolism"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부정맥",
+      "match_terms": [
+        "arrhythmia",
+        "cardiac arrhythmia"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "강력한 알파-1 및 알파-2 아드레날린 수용체 작용제이자 중등도 베타-1 작용제. 말초 혈관 수축(알파 작용), 심장 수축력 증가(베타-1 작용), 관상동맥 확장(베타 작용)을 통해 수축기 및 이완기 혈압을 상승시킴.",
+    "common_extra_effects": [
+      "심각한 말초 및 내장 혈관 수축",
+      "신장 관류 감소 및 소변량 감소",
+      "부정맥",
+      "심근 산소 요구량 증가",
+      "혈관 외 유출 시 조직 괴사",
+      "반사성 서맥",
+      "심장 허혈",
+      "두통, 허약감, 어지러움, 불안, 창백, 호흡 곤란, 폐부종 (인체 보고)"
+    ],
+    "dog_mechanism": "개에서 패혈성 쇼크 및 이소플루란 유발 저혈압 치료에 사용. 알파 및 베타 아드레날린 수용체 작용을 통해 혈압 상승.",
+    "dog_extra_effects": [
+      "고용량 시 부정맥",
+      "신장 관류 감소",
+      "혈관 외 유출 시 조직 손상"
+    ],
+    "cat_mechanism": "개와 동일한 기전. 고양이는 이상반응에 더 취약할 수 있음.",
+    "cat_extra_effects": [
+      "이상반응에 더 취약",
+      "심각한 혈관 수축",
+      "신장 관류 감소"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 패혈성 쇼크의 1차 선택 혈압 상승제로 사용. 초기 용량 0.05~0.1 µg/kg/분 IV CRI로 시작하여 원하는 효과까지 적정. 최대 1~2 µg/kg/분 권고. 도파민, 도부타민, 바소프레신과 병용 가능. 이소플루란 유발 저혈압에도 효과적. 반드시 ICU 환경에서 지속적 모니터링 하에 사용.",
+    "cat": "고양이에서 개와 동일한 용량 범위 사용. 고양이는 이상반응(혈관 수축, 신장 관류 감소 등)에 더 취약할 수 있으므로 더욱 주의 깊은 모니터링 필요. 반드시 ICU 환경에서 사용."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수액 보충 없이 사용 시 신장 관류 감소, 내장 혈관 수축, 전신 혈류 감소 위험. 고용량 시 부정맥 가능. ICU 환경에서 지속적 모니터링 필수. 갑작스러운 투여 중단 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 이상반응에 더 취약하다고 명시됨. 신장 관류 감소, 부정맥 등 위험. ICU 환경에서 지속적 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(25°C [77°F]) 보관. 15°C~30°C(59°F~86°F) 범위 허용. 빛으로부터 보호. 분홍색, 진한 노란색 이상의 변색 또는 침전물 발생 시 사용 금지.",
+    "forms": [
+      "Norepinephrine bitartrate for injection 1 mg/mL (4 mL vials) - 사용 전 희석 필요",
+      "희석 농도: 16 µg/mL (250 mL 백), 8 µg/mL (500 mL 백), 4 µg/mL (1 L 백)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "노르에피네프린은 패혈성 쇼크 및 심각한 저혈압 치료를 위한 1차 선택 혈압 상승제입니다. 반드시 IV CRI(지속 정맥 주입)로 투여하며, ICU 환경에서 지속적인 모니터링이 필수적입니다. 수액 보충 없이 단독 사용 시 신장 관류 감소 및 조직 허혈 위험이 있습니다. 혈관 외 유출 시 조직 괴사가 발생할 수 있으며, 이 경우 펜톨아민으로 즉시 처치해야 합니다. 고위험 약물(High Alert Medication)로 분류되어 이중 확인 등 특별한 안전 조치가 필요합니다.",
+    "indications": "수의학적 승인 제품 없음 (Extra-label 사용). 적응증: ① 수액 보충 후에도 지속되는 심각한 저혈압 (패혈성 쇼크 포함) - 개, 고양이, 말, 알파카, 양; ② 이소플루란 유발 저혈압 - 개, 말, 알파카; ③ 아세프로마진 유발 저혈압 - 말. 인체에서는 소생술 후 쇼크, 상부 위장관 출혈 치료에도 사용.",
+    "client_info": "이 약물은 반드시 동물병원 중환자실(ICU)에서 수의사의 직접 감독 하에만 사용할 수 있습니다. 가정에서의 사용은 불가능합니다. 투여 중에는 혈압, 심전도, 소변량을 지속적으로 모니터링합니다. 약물 투여를 갑자기 중단하면 안 됩니다. 주사 부위에서 약물이 혈관 밖으로 새어나오면 조직 손상이 발생할 수 있으므로 즉시 수의사에게 알려야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Veterinary-labeled products"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/29.jsonl",
+    "extracted_at": "2026-03-10T22:07:07.752728+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "id": "oclacitinib",
+  "drug_identity": {
+    "name_ko": "오클라시티닙",
+    "name_en": "Oclacitinib",
+    "active_ingredient": "Oclacitinib maleate",
+    "brand_names": [
+      "Apoquel"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Immunosuppressant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 3.6,
+        "unit": "mg"
+      },
+      {
+        "value": 5.4,
+        "unit": "mg"
+      },
+      {
+        "value": 16.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.04,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "오클라시티닙은 산화적 대사를 통해 여러 대사체로 전환되며, 산화형이 주요 대사체이다. 개에서 투여 후 24시간 이내 미변화체로 소변 배설은 4% 미만이다. 카나인 사이토크롬 P450에 대한 억제는 최소한이다."
+    },
+    "extra_information": "개: 경구 생체이용률 89%, Tmax 1시간 미만, 혈장 단백 결합률 66~69%, 분포용적(정상상태) 942 mL/kg, 총 체내 혈장 청소율 5.3 mL/min/kg, 반감기 3.5시간(IV)/4.1시간(PO). 고양이: 경구 생체이용률 87%, Tmax 35분, 소실 반감기 2.3시간, 분포용적(정상상태) 0.67 L/kg, 청소율 4.45 mL/min/kg(IV 투여 후)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학 데이터 존재. 신장: 단백뇨, 혈뇨, 저장뇨, 미세알부민뇨 보고. 간: 직접적 간독성 언급 없음. 혈액: 백혈구 감소, 림프구 증가 보고. 뇌: 기면 보고. 심장: 직접적 심독성 언급 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "기면(lethargy)이 개에서 보고된 이상반응 중 하나로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "leukocyte reduction",
+          "neutrophil",
+          "eosinophil",
+          "monocyte",
+          "lymphocyte increase",
+          "decreased serum globulin"
+        ],
+        "index": 2,
+        "evidence": "백혈구(호중구, 호산구, 단핵구) 감소, 일시적 림프구 증가, 혈청 글로불린 감소가 보고됨. 평균값은 정상 범위 내 유지."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "proteinuria",
+          "hematuria",
+          "hyposthenuria",
+          "microalbuminemia",
+          "UTI",
+          "cystitis"
+        ],
+        "index": 3,
+        "evidence": "단백뇨, 혈뇨, 저장뇨, 미세알부민뇨 보고. UTI/방광염 발생률 장기 연구에서 11.3% 보고."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "직접적인 간독성 또는 간 효소 상승에 대한 언급이 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급이 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 이상반응에 대한 직접적 언급 없음. 단기 연구에서 전반적으로 내약성 양호."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CBC parameters"
+        ],
+        "index": 1,
+        "evidence": "고양이 단기 연구에서 CBC 파라미터 변화 없음 보고. 면역억제로 인한 감염 위험(톡소플라즈마증 치명적 사례 1건) 보고."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "BUN increase",
+          "creatinine increase"
+        ],
+        "index": 2,
+        "evidence": "고양이 연구(0.7~1.2 mg/kg PO q12h)에서 14마리 중 4마리에서 BUN 및 크레아티닌 경미한 상승 보고."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 240,
+    "t_max_hr": 0.58,
+    "half_life_hr": {
+      "min": 3.5,
+      "max": 4.1,
+      "mean": 3.8,
+      "species": "dog"
+    },
+    "f_percent": 89,
+    "protein_binding_percent": 67,
+    "evidence": "개: 경구 투여 후 생체이용률 89%, Tmax 1시간 미만(약 35분으로 추정), 반감기 3.5시간(IV)~4.1시간(PO), 혈장 단백 결합률 66~69%. 첫 투여 후 4시간 이내 소양감 31% 감소. 고양이: 생체이용률 87%, Tmax 35분, 반감기 2.3시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 상대적 금기→2, 주의 사용→1. 오클라시티닙은 카나인 CYP450에 대한 억제가 최소하며 현재까지 유의한 약물 상호작용은 보고되지 않음.",
+  "drug_interactions": [
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "infection risk"
+      ],
+      "evidence": "Concurrent use of oclacitinib and cyclosporine appears safe for up to 3 weeks, but the combination is relatively contraindicated for long-term use, especially when infection is present, due to theoretical additive immunosuppression risk."
+    },
+    {
+      "drug": "Immunosuppressive Agents (azathioprine, glucocorticoids, mycophenolate)",
+      "severity": 2,
+      "keywords": [
+        "additive immunosuppression",
+        "infection risk"
+      ],
+      "evidence": "Concurrent use with systemic glucocorticoids or other systemic immunosuppressive agents has not been evaluated; may lead to additive immunosuppression and increased infection risk, especially with long-term administration."
+    },
+    {
+      "drug": "Tigilanol Tiglate",
+      "severity": 2,
+      "keywords": [
+        "prohibited combination",
+        "field study restriction"
+      ],
+      "evidence": "Use of oclacitinib 14 days prior to tigilanol tiglate was prohibited in field studies. Use together cautiously."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "알레르기성 피부염 및 아토피성 피부염 관련 소양감 조절 (초기 치료, FDA 승인)",
+          "value": "0.4 - 0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 14일",
+          "evidence": "FDA 승인 용량. 식이 여부와 무관하게 투여 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "알레르기성 피부염 및 아토피성 피부염 관련 소양감 조절 (유지 치료, FDA 승인)",
+          "value": "0.4 - 0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 유지 치료",
+          "evidence": "FDA 승인 유지 용량. 1일 2회 장기 투여는 권장되지 않음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "1일 1회 유지 치료 시 임상 증상 재발 시 (extra-label)",
+          "value": "0.4 - 0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 안전성 미확립",
+          "evidence": "Extra-label. 일화적으로 0.2~0.3 mg/kg q12h도 사용됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "허혈성 피부병증 (extra-label, 증례 시리즈)",
+          "value": "0.5 - 0.7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "프레드니솔론 병용 후 감량; 일부 개는 BID 유지 필요",
+          "evidence": "증례 시리즈(n=4), 경구 프레드니솔론 0.5~1 mg/kg/day 병용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "허혈성 피부병증 (extra-label, 증례 보고)",
+          "value": "0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "60일 후 q24h로 전환",
+          "evidence": "증례 보고 1건."
+        },
+        {
+          "logic_type": "linear",
+          "context": "옴(개선충증) 관련 소양감 완화 (extra-label)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 후 0.5 mg/kg q24h로 14일 추가 투여; 전신 항기생충 치료 병용",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "과각화성 다형홍반 (extra-label)",
+          "value": "0.6 - 0.9",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7~12주 내 완전 관해 보고",
+          "evidence": "증례 보고(n=2)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "귀 끝 궤양성 피부염 (extra-label)",
+          "value": "0.4 - 0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 14일 후 q24h 전환; 일부 개는 장기 q12h 필요",
+          "evidence": "Extra-label."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고양이 아토피성 피부 증후군(FASS) (extra-label)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "28일",
+          "evidence": "Extra-label. 고양이에서 FDA 미승인."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 아토피성 피부 증후군(FASS) (extra-label, BID)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "28일",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "과민반응, 피부염, 두경부 소양감 (extra-label)",
+          "value": "0.4 - 0.8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 후 q24h로 14일 추가 투여. 실용적으로 5.4 mg 정제의 1/2(2.7 mg/cat) 사용",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "천식 (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "28일",
+          "evidence": "Extra-label. 실험적 천식 연구에서 이상반응 없음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음. 고양이 일부 연구에서 BUN 및 크레아티닌 경미한 상승 보고. 신장 질환 환자에서 주의 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음. 간독성 관련 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "12개월 미만 개",
+      "match_terms": [
+        "age < 12 months",
+        "puppy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 감염",
+      "match_terms": [
+        "serious infection",
+        "pneumonia",
+        "severe infection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "번식견, 임신 또는 수유 중인 암컷",
+      "match_terms": [
+        "breeding",
+        "pregnant",
+        "lactating",
+        "pregnancy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 모낭충증",
+      "match_terms": [
+        "demodicosis",
+        "demodex"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 종양성 질환",
+      "match_terms": [
+        "neoplasia",
+        "cancer",
+        "tumor",
+        "malignancy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 면역결핍바이러스(FIV) 또는 고양이 백혈병바이러스(FeLV) 양성",
+      "match_terms": [
+        "FIV",
+        "FeLV",
+        "feline immunodeficiency virus",
+        "feline leukemia virus"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비선택적 JAK(Janus Kinase) 억제제로, 주로 JAK1 효소 활성을 억제하고 JAK2 및 JAK3도 일부 억제함. IL-31(소양증 유발 사이토카인), IL-2, IL-4, IL-6, IL-13 등 염증성 사이토카인을 억제하여 소양감 및 염증을 감소시킴.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "기면",
+      "다음증",
+      "림프절병증",
+      "다식증",
+      "공격성",
+      "체중 감소",
+      "감염 감수성 증가(폐렴, 모낭충증, 지간부 종기증, 농피증, 외이염)",
+      "단백뇨",
+      "혈뇨",
+      "저장뇨",
+      "미세알부민뇨",
+      "요로감염/방광염",
+      "양성 및 악성 종양성 병변 발생 또는 악화",
+      "백혈구(호중구, 호산구, 단핵구) 감소",
+      "일시적 림프구 증가",
+      "혈청 글로불린 감소"
+    ],
+    "dog_mechanism": "개에서 JAK1 억제를 통해 IL-31 매개 소양감을 억제. 승인 용량에서 조혈에 영향 없으나 고용량 또는 고빈도 투여 시 조혈 억제 가능.",
+    "dog_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "기면",
+      "다음증",
+      "림프절병증",
+      "다식증",
+      "공격성",
+      "체중 감소",
+      "모낭충증",
+      "지간부 종기증/피부염",
+      "농피증",
+      "외이염",
+      "폐렴",
+      "요로감염/방광염",
+      "단백뇨",
+      "혈뇨",
+      "저장뇨",
+      "미세알부민뇨",
+      "조직구종",
+      "유두종",
+      "양성 피부/피하 종괴",
+      "백혈구 감소",
+      "림프구 일시적 증가",
+      "혈청 글로불린 감소"
+    ],
+    "cat_mechanism": "고양이에서도 JAK1 억제를 통해 아토피성 피부 증후군 관련 소양감 및 임상 증상 개선. 혈장 농도와 임상 반응의 상관관계는 불명확.",
+    "cat_extra_effects": [
+      "구토(고용량 2 mg/kg q12h에서)",
+      "연변(고용량에서)",
+      "BUN 경미한 상승",
+      "크레아티닌 경미한 상승",
+      "치명적 톡소플라즈마증(FIV 양성 고양이 1건 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "오클라시티닙은 12개월 이상의 개에서 알레르기성 피부염 및 아토피성 피부염 관련 소양감 조절에 FDA 승인됨. 첫 투여 후 4시간 이내 소양감 감소 시작, 24시간 내 유의한 효과. 초기 2주간 q12h 투여 후 q24h 유지 치료로 전환. 장기 q12h 투여는 면역억제 위험 증가로 권장되지 않음. 감염, 모낭충증, 종양성 병변 발생 모니터링 필요. 반복 감염 병력이 있는 개에서 주의 사용.",
+    "cat": "고양이에서 FDA 미승인이나 extra-label로 사용 가능. 고양이 아토피성 피부 증후군(FASS)에서 효과 보고. 치료 반응은 1개월 이내 나타남. 단기 연구(최대 28일)에서 전반적으로 내약성 양호하나 고용량에서 위장관 이상반응 증가. FIV/FeLV 검사 후 사용 권장. FIV 양성 고양이에서 치명적 톡소플라즈마증 1건 보고. 장기 안전성 데이터 부족으로 다른 안전성이 확립된 약물 사용 불가 또는 효과 없을 때만 사용 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "반복 감염 병력, 모낭충증, 종양성 질환 기왕력이 있는 개에서 주의 사용. 12개월 미만, 번식견, 임신/수유 중인 암컷에서 사용 금지. 감염 및 종양성 병변 발생 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 FDA 미승인(extra-label 사용). FIV/FeLV 검사 후 사용 권장. 장기 안전성 데이터 부족. 고용량에서 위장관 이상반응 및 신장 지표 상승 보고. FIV 양성 고양이에서 치명적 톡소플라즈마증 1건 보고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C~25°C [68°F~77°F]) 보관. 15°C~40°C(59°F~104°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "오클라시티닙 경구 정제(scored): 3.6 mg, 5.4 mg, 16 mg; Apoquel® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "오클라시티닙(Apoquel®)은 JAK1 억제제로, 개의 알레르기성 피부염 및 아토피성 피부염 관련 소양감 조절에 FDA 승인된 약물입니다. 첫 투여 후 4시간 이내 소양감 감소가 시작되며, 24시간 내 유의한 효과를 보입니다. 초기 2주간 q12h 투여 후 q24h 유지 치료로 전환합니다. 면역억제 효과로 인해 감염, 모낭충증, 종양성 병변 발생 위험이 있으므로 모니터링이 필요합니다. 고양이에서는 extra-label로 사용 가능하나 장기 안전성 데이터가 부족합니다.",
+    "indications": "【승인 적응증(개)】 알레르기성 피부염(벼룩 알레르기 포함) 및 아토피성 피부염 관련 소양감 조절 (12개월 이상 개). 【Extra-label 적응증(개)】 허혈성 피부병증, 과각화성 다형홍반, 자가면역 표피하 수포성 피부증, 귀 끝 궤양성 피부염, 피부 상피친화성 T세포 림프종(부분 관해), 옴 관련 소양감 일시적 완화, 루푸스, 천포창. 【Extra-label 적응증(고양이)】 고양이 아토피성 피부 증후군(FASS), 피부 비만세포증, 천식, 두경부 소양감, 특발성 궤양성 피부염, 낙엽상 천포창.",
+    "client_info": "이 약은 개에서만 승인된 약물입니다(사람에게 사용 금지). 정제를 만진 후에는 즉시 손을 씻으세요. 눈에 닿은 경우 즉시 물이나 생리식염수로 15분 이상 세척 후 의사의 진료를 받으세요. 실수로 삼킨 경우 즉시 의사의 진료를 받으세요. 음식과 함께 또는 공복에 투여 가능합니다. 투여 후 구토나 불편함을 보이면 음식과 함께 투여해 보세요. 개선이 없으면 투약을 중단하고 수의사에게 연락하세요. 이 약은 면역 기능을 억제하여 감염(호흡기, 요로 등)에 취약해질 수 있습니다. 감염 의심 증상이 있으면 즉시 수의사에게 연락하세요. 피부에 이상한 변화, 새로운 종괴, 또는 기존 종괴의 변화가 관찰되면 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme substrate/inhibitor/inducer profile",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "Specific genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.onset_min",
+      "genetic_sensitivity.affected_breeds"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/29.jsonl",
+    "extracted_at": "2026-03-10T22:11:47.663691+00:00",
+    "reviewer": null
+  }
+}

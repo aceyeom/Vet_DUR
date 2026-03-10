@@ -1,0 +1,463 @@
+{
+  "id": "naltrexone",
+  "drug_identity": {
+    "name_ko": "날트렉손",
+    "name_en": "Naltrexone",
+    "active_ingredient": "Naltrexone hydrochloride",
+    "brand_names": [
+      "ReVia",
+      "Vivitrol"
+    ],
+    "allergy_class": null,
+    "class": "Reversal Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 인체용 제품(ReVia® 50mg 정)을 동물에 오프라벨로 사용하며, 조제 주사제 형태도 오피오이드 역전 목적으로 사용 가능.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 6-베타-날트렉솔(6-beta-naltrexol)로 대사되며, 대사산물은 주로 신장을 통해 배설됨(인체 데이터 기반)."
+    },
+    "extra_information": "인체에서 경구 흡수 후 초회통과효과가 현저하여 전신 생체이용률은 5~12%에 불과함. CSF 농도는 혈장 농도의 약 30%. 혈장 단백 결합률 약 20~30%. 개와 고양이에 대한 종 특이적 약동학 데이터는 Plumb's에 기재되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인체 데이터에 근거하며, 개·고양이 종 특이적 약동학 연구 자료는 부재함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CNS",
+          "opioid receptor binding",
+          "CSF penetration"
+        ],
+        "index": 1,
+        "evidence": "CNS 내 오피오이드 수용체에 경쟁적으로 결합하며, CSF 농도는 혈장의 약 30%에 달함."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "plasma protein binding"
+        ],
+        "index": 1,
+        "evidence": "혈장 단백 결합률 약 20~30%(인체 데이터)."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "metabolite excretion"
+        ],
+        "index": 1,
+        "evidence": "대사산물이 주로 신장을 통해 배설됨."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "first-pass effect",
+          "liver metabolism",
+          "hepatic failure contraindication"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위한 초회통과효과 및 6-베타-날트렉솔로 대사. 용량 의존적 간독성 보고. 간부전 및 급성 간염 시 금기."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac output",
+          "mean arterial pressure"
+        ],
+        "index": 0,
+        "evidence": "실험적 저혈량성 쇼크 모델에서 고용량 IV 투여 시 심박출량 및 평균동맥압 증가 보고(실험 데이터)."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CNS",
+          "opioid receptor binding",
+          "CSF penetration"
+        ],
+        "index": 1,
+        "evidence": "CNS 내 오피오이드 수용체에 경쟁적으로 결합. 고양이에서 remifentanil의 불쾌감 및 무통각 효과를 길항한 연구 있음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "plasma protein binding"
+        ],
+        "index": 1,
+        "evidence": "혈장 단백 결합률 약 20~30%(인체 데이터 외삽)."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "대사산물이 주로 신장을 통해 배설됨(인체 데이터 외삽)."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "first-pass effect",
+          "liver metabolism",
+          "hepatic failure contraindication"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위한 초회통과효과 및 대사. 용량 의존적 간독성 가능성. 간부전 시 금기."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 13.0,
+      "mean": 8.5,
+      "species": "human"
+    },
+    "f_percent": 12,
+    "protein_binding_percent": 25,
+    "evidence": "인체 데이터: 날트렉손 반감기 약 4시간, 활성 대사산물 6-베타-날트렉솔 반감기 약 13시간. 경구 생체이용률 5~12%. 혈장 단백 결합률 약 20~30%. 개·고양이 종 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Opioids (e.g., etorphine, fentanyl, thiafentanil)",
+      "severity": 2,
+      "keywords": [
+        "opioid antagonism",
+        "decreased opioid effectiveness",
+        "CNS depression reversal",
+        "respiratory depression reversal"
+      ],
+      "evidence": "날트렉손은 오피오이드 수용체를 경쟁적으로 차단하여 오피오이드 효과(진통, 진정, 호흡억제)를 감소시킴. 임상적으로 오피오이드 역전 목적으로 사용 가능하나, 오피오이드 의존 환자에서는 금단증상 유발 위험."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 2,
+      "keywords": [
+        "CNS effects potentiation",
+        "anxiety",
+        "tremors",
+        "cortisol elevation"
+      ],
+      "evidence": "날트렉손이 요힘빈의 CNS 효과(불안, 진전, 오심, 심계항진)를 증강시키고 혈장 코르티솔 농도를 상승시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애(예: 상동증) 보조 치료 (오프라벨)",
+          "value": "1.1 - 2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "근거 제한적. 상업용 정제(50mg) 사용 시 25mg 단위로 반올림. 정제는 쓴맛이 있음.",
+          "evidence": "오프라벨. Plumb's 기재 용량: 1.1–2.2 mg/kg PO q8–12h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 장애(예: 상동증) 보조 치료 (오프라벨, 1일 1회 또는 분할 투여)",
+          "value": "2 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 12시간마다 분할 투여. 근거 제한적.",
+          "evidence": "오프라벨. Plumb's 기재 대안 용량: 2–5 mg/kg PO SID 또는 q12h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "외과적 절제 후 유선암종 보조 치료 (오프라벨, 카보플라틴 병용)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "24주간 투여, 카보플라틴 화학요법과 병용.",
+          "evidence": "오프라벨. Plumb's 인용 연구(참고문헌 2) 기반."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "행동 장애(예: 상동증) 보조 치료 (오프라벨)",
+          "value": "25 - 50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg가 아닌 마리당(per cat) 고정 용량. 근거 제한적.",
+          "evidence": "오프라벨. Plumb's 기재 용량: 25–50 mg/cat PO q24h (참고문헌 6)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 대사산물이 신장으로 배설되므로 중증 신부전 시 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간부전 및 급성 간염 시 금기. 간기능 장애 환자에서는 위험-이익을 신중히 평가하여 사용. 고용량 장기 투여 시 간효소 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "오피오이드 신체 의존",
+      "match_terms": [
+        "opioid dependence",
+        "opioid physical dependence"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic failure",
+        "liver failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "급성 간염",
+      "match_terms": [
+        "acute hepatitis",
+        "hepatitis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "날트렉손 또는 날록손 알레르기 병력",
+      "match_terms": [
+        "naltrexone allergy",
+        "naloxone allergy",
+        "opioid antagonist hypersensitivity"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CNS 내 오피오이드 수용체(μ, κ, δ)에 경쟁적으로 결합하여 내인성 엔도르핀 및 외인성 오피오이드 작용제/작용-길항제의 수용체 점유를 차단하는 순수 오피오이드 길항제.",
+    "common_extra_effects": [
+      "복부 경련",
+      "오심 및 구토",
+      "신경과민",
+      "불면증",
+      "관절 또는 근육통",
+      "피부 발진",
+      "소양증",
+      "용량 의존적 간독성",
+      "신체 의존 환자에서 금단증상 유발"
+    ],
+    "dog_mechanism": "오피오이드 수용체 경쟁적 길항. 실험적 저혈량성 쇼크 모델에서 고용량 IV 투여 시 평균동맥압, 심박출량, 일회박출량, 좌심실 수축력 증가 보고.",
+    "dog_extra_effects": [
+      "오피오이드 진통 효과 차단",
+      "오피오이드 지사 효과 차단",
+      "오피오이드 진해 효과 차단"
+    ],
+    "cat_mechanism": "오피오이드 수용체 경쟁적 길항. 고용량 remifentanil의 불쾌감 및 무통각 효과를 시간당 600 µg/kg IV 투여로 길항한 연구 있음.",
+    "cat_extra_effects": [
+      "오피오이드 진통 효과 차단",
+      "오피오이드 불쾌감 효과 차단"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 행동 장애(상동증 등) 보조 치료 및 외과적 절제 유선암종 화학요법 보조 치료에 오프라벨로 사용됨. 상업용 50mg 정제 사용 시 25mg 단위로 반올림하며, 정제는 쓴맛이 있어 투약 순응도에 주의 필요. 근거 수준이 제한적이므로 사용 전 충분한 위험-이익 평가 필요. 고용량 장기 투여 시 간효소 모니터링 권장.",
+    "cat": "고양이에서 행동 장애 보조 치료에 오프라벨로 사용 시 mg/kg가 아닌 마리당 고정 용량(25–50 mg/cat)으로 투여. 고용량 remifentanil 역전 목적으로 600 µg/kg IV 시간당 투여 연구 있음. 수의과 허가 제품 없으며 근거 수준 제한적."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간기능 장애, 오피오이드 의존, 날트렉손/날록손 알레르기 병력 시 주의. 오피오이드 의존 환자에서 금단증상 유발 가능. 고용량 장기 투여 시 간독성 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간기능 장애, 오피오이드 의존 시 주의. 고양이에서의 안전성 데이터 제한적. 임신 중 사용 시 모체 이익이 태아 위험을 상회하는 경우에만 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C–30°C) 밀폐 용기에 보관.",
+    "forms": [
+      "날트렉손 HCl 경구정: 50 mg (ReVia®, 제네릭)",
+      "조제 주사제(오피오이드 역전 목적, 상업용 날록손 주사제 대체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "날트렉손은 경구 투여 가능한 순수 오피오이드 길항제로, 개·고양이의 행동 장애(상동증 등) 보조 치료 및 오피오이드 역전 목적으로 오프라벨 사용됨. 수의과 허가 제품 없음. 간부전·급성 간염·오피오이드 신체 의존 환자에서 금기. 용량 의존적 간독성 가능성이 있으므로 고용량 장기 투여 시 간효소 모니터링 필요. 날록손과 혼동 주의.",
+    "indications": "【오프라벨】개·고양이 행동 장애(상동증, 자해 행동, 꼬리 쫓기 등) 보조 치료; 개 외과적 절제 유선암종 화학요법 보조 치료(저용량); 상업용 날록손 주사제 부재 시 오피오이드 역전 대체제(조제 주사제); 야생동물·동물원 동물에서 강력 오피오이드(에토르핀, 티아펜타닐) 역전(재마취 최소화 목적).",
+    "client_info": "수의사의 지시에 따라 정확한 용량과 투여 간격을 지켜 투약하십시오. 이 약은 행동 문제 치료를 위한 보조제이며, 행동 교정 훈련 등 추가적인 행동 수정 요법이 병행되어야 효과적입니다. 정제는 쓴맛이 있을 수 있으므로 투약 시 주의하십시오. 오피오이드 계열 진통제를 함께 사용 중인 경우 반드시 수의사에게 알려주십시오. 간 기능 이상이 있는 동물에서는 정기적인 혈액 검사가 필요할 수 있습니다. 임신 중이거나 임신 가능성이 있는 경우 수의사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Renal dose adjustment guidance",
+      "Onset/T-max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/28.jsonl",
+    "extracted_at": "2026-03-10T21:50:07.481480+00:00",
+    "reviewer": null
+  }
+}
