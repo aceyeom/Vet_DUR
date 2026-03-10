@@ -1,0 +1,506 @@
+{
+  "id": "imepitoin",
+  "drug_identity": {
+    "name_ko": "이메피토인",
+    "name_en": "Imepitoin",
+    "active_ingredient": "Imepitoin",
+    "brand_names": [
+      "Pexion"
+    ],
+    "allergy_class": null,
+    "class": "Anticonvulsant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Flumazenil",
+    "reversal_evidence": "벤조디아제핀 길항제인 플루마제닐이 과량 투여 시 심각한 CNS 효과를 역전시키는 데 잠재적으로 사용될 수 있으나, 항경련 작용도 함께 소실될 수 있음.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 산화 기전을 통해 4가지 주요 비활성 대사체로 광범위하게 대사됨. 대부분의 용량은 분변 경로로 배설됨."
+    },
+    "extra_information": "개에서 치료 용량 범위 내에서 선형 동태를 보임. 경구 투여 후 서서히 흡수되며, 공복 시 생체이용률 약 92%. 음식과 함께 투여 시 총 AUC가 20% 감소할 수 있음. 분포용적 0.6~1.6 L/kg, 단백결합률 60~70%. 청소율 260~570 mL/hour/kg. 직장 투여 시 흡수가 느리고 불량하여 권장되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 대상 PK 데이터 존재. 고양이 데이터는 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "ataxia",
+          "somnolence",
+          "hyperactivity",
+          "loss of righting reflex",
+          "nystagmus",
+          "tremors",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "운동실조, 기면, 과활동, 진정/졸음 등 CNS 관련 이상반응이 다수 보고됨. 과량 투여 시 정위반사 소실, 안진, 진전 등 CNS 효과 관찰됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cholesterol elevation",
+          "creatinine elevation"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 가역적 QT 간격 연장 보고. 혈장 크레아티닌 및 콜레스테롤 경미한 상승 관찰되었으나 정상 참고 범위를 초과하지 않음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "polyuria",
+          "creatinine elevation",
+          "severe renal disease contraindicated"
+        ],
+        "index": 1,
+        "evidence": "다뇨 이상반응 보고. 혈장 크레아티닌 경미한 상승 관찰. 중증 신장 질환 시 금기."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "liver enzyme elevation",
+          "extensively metabolized in liver",
+          "severely impaired hepatic function contraindicated"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간 효소 상승 보고. 중증 간기능 장애 시 금기."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QT prolongation",
+          "severe cardiovascular disorders contraindicated"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 가역적 QT 간격 연장 보고. 중증 심혈관 질환 시 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "lethargy",
+          "hypersalivation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 기면 및 과다침흘림이 보고됨. 데이터 제한적."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 관련 이상반응 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 신장 관련 데이터 없음. 중증 신장 질환 금기는 개 기준."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "extensively metabolized in liver"
+        ],
+        "index": -1,
+        "evidence": "간에서 광범위하게 대사되므로 간 부담 가능성 있으나 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 이상반응 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 1.5,
+      "max": 2.0,
+      "mean": 1.75,
+      "species": "dog"
+    },
+    "f_percent": 92,
+    "protein_binding_percent": 65,
+    "evidence": "개에서 경구 투여 후 약 2시간에 최고 혈중 농도 도달. 공복 시 생체이용률 약 92%. 단백결합률 60~70% (중간값 65% 사용). 소실 반감기 약 1.5~2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 이메피토인은 약물 상호작용 가능성이 매우 낮으며, 고단백결합 약물 또는 효소 유도 약물과의 상호작용은 예상되지 않음.",
+  "drug_interactions": [
+    {
+      "drug": "Flumazenil",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "anticonvulsant reversal",
+        "anxiolytic reversal"
+      ],
+      "evidence": "Flumazenil may antagonize the anxiolytic and anticonvulsant effects of imepitoin by blocking benzodiazepine binding sites on the GABAA receptor."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 1,
+      "keywords": [
+        "combination use",
+        "no harmful interaction observed"
+      ],
+      "evidence": "UK product label states imepitoin has been used in combination with phenobarbital in a small number of cases with no harmful clinical interactions observed."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "소음 혐오증 (FDA 승인 용량)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "예상 소음 이벤트 2일 전부터 시작하여 소음 이벤트 종료 시까지 투여",
+          "evidence": "FDA 승인 라벨 용량. 새해 전날 불꽃놀이를 시험 소음 이벤트로 사용한 임상 현장 시험 결과에 근거."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "폭풍 불안 (허가 외)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "필요 시가 아닌 지속적으로 투여",
+          "evidence": "허가 외 사용. 폭풍 공포증에 효과적이나 경도~중등도 이상반응 발생률이 높음."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "특발성 간질에 의한 전신 발작 (허가 외)",
+          "value": "10 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "초기 10 mg/kg BID로 시작; 최소 1주 치료 후 발작 빈도가 충분히 감소하지 않으면 50~100% 증량하여 최대 30 mg/kg BID까지 증량 가능",
+          "evidence": "허가 외 사용 (EU/UK에서는 허가됨). 단계적 용량 증량 프로토콜."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "특발성 간질 (허가 외, 데이터 제한적)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "30일간 투여 시 내약성 양호 보고; 추가 연구 필요",
+          "evidence": "소규모 연구에서 30 mg/kg BID 30일 투여 시 심각한 이상반응 없이 내약성 양호. 예비적 효능 확인되었으나 추가 연구 필요."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 신장 질환 시 금기. 장기 사용 시 기저치 및 주기적 신장 지표 검사 권장. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간기능 장애 시 금기. 간에서 광범위하게 대사되므로 간기능 저하 시 주의 필요. 장기 사용 시 주기적 간 지표 검사 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "이메피토인 과민증",
+      "match_terms": [
+        "hypersensitivity to imepitoin",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간기능 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD",
+        "renal failure",
+        "kidney failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 심혈관 질환",
+      "match_terms": [
+        "severe cardiovascular disorder",
+        "heart failure",
+        "cardiac disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 2 kg 미만",
+      "match_terms": [
+        "body weight less than 2 kg",
+        "small breed",
+        "toy breed"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "5개월 미만 연령",
+      "match_terms": [
+        "age less than 5 months",
+        "puppy",
+        "young animal"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 및 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing",
+        "breeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "GABAA 수용체의 벤조디아제핀 결합 부위에서 저친화성 부분 효능제로 작용. 디아제팜보다 약 600배 낮은 친화성. GABAA 수용체 매개 억제 효과를 강화하여 발작을 예방. 신경 칼슘 채널의 약한 억제도 항경련 활성에 기여. 항불안 효과도 보유.",
+    "common_extra_effects": [
+      "운동실조 (ataxia)",
+      "식욕 증가",
+      "기면 (lethargy)",
+      "구토 (emesis)",
+      "과활동 (hyperactivity)",
+      "공격성 (aggression)",
+      "졸음 (somnolence)",
+      "과다침흘림 (hypersalivation)",
+      "다식증 (polyphagia)",
+      "식욕 감소",
+      "다뇨 (polyuria)",
+      "다음다갈증 (polydipsia)",
+      "무기력 (apathy)",
+      "설사 (diarrhea)",
+      "순막 탈출 (prolapsed nictitating membrane)",
+      "시력 감소",
+      "청각 민감도 감소",
+      "혈장 크레아티닌 경미한 상승",
+      "혈장 콜레스테롤 경미한 상승",
+      "간 효소 상승"
+    ],
+    "dog_mechanism": "개에서 치료 용량 범위 내 선형 동태. 경구 투여 후 서서히 흡수되며 약 2시간에 최고 혈중 농도 도달. 간에서 산화 기전으로 광범위하게 대사되어 4가지 주요 비활성 대사체 생성. 대부분 분변으로 배설.",
+    "dog_extra_effects": [
+      "운동실조 (최대 60% 발생)",
+      "식욕 증가",
+      "기면",
+      "구토",
+      "과활동",
+      "공격성",
+      "졸음",
+      "과다침흘림",
+      "다식증",
+      "다뇨",
+      "다음다갈증",
+      "무기력",
+      "설사",
+      "순막 탈출",
+      "시력 감소",
+      "청각 민감도 감소",
+      "피부 병변 (용량 증가 후 보고)",
+      "과량 투여 시: 정위반사 소실, 활동 감소, 안검 폐쇄, 유루증, 안구건조증, 진전, 안진, QT 간격 연장"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "구토 (emesis)",
+      "기면 (lethargy)",
+      "식욕 감소",
+      "과다침흘림 (고용량에서 흔함)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 소음 혐오증(FDA 승인)과 특발성 간질(EU/UK 승인, 미국 허가 외)에 사용됨. 운동실조가 최대 60%에서 발생할 수 있음. 발작 조절을 위해 사용 시 갑작스러운 투약 중단을 피하고 점진적으로 감량할 것. 권장 감량 일정: 20 mg/kg BID 1개월 → 10 mg/kg BID 1개월 → 10 mg/kg SID 1개월. 공포 기반 행동의 탈억제로 인한 공격성 변화 가능성에 주의. 수컷 번식견 및 임신/수유 중인 암컷에는 권장하지 않음.",
+    "cat": "고양이에서의 사용은 허가 외이며 데이터가 매우 제한적임. 소규모 연구에서 30 mg/kg BID 30일 투여 시 심각한 이상반응 없이 내약성 양호하였고 특발성 간질에 대한 예비적 효능이 확인되었으나 추가 연구가 필요함. 구토, 기면, 식욕 감소가 가장 흔한 이상반응이며 고용량에서 과다침흘림이 흔함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "체중 2 kg 미만 또는 5개월 미만 개에서 안전성 데이터 제한적. 신장, 간, 심장, 위장관 질환이 있는 개에서 안전성 미확인. 공포 기반 행동 탈억제로 인한 공격성 변화 가능성. 장기 사용 시 신장 및 간 지표 모니터링 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 사용은 허가 외이며 안전성 및 효능 데이터가 매우 제한적임. 추가 연구가 필요하며 사용 시 면밀한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C (68°F~77°F)에서 보관. 15°C~30°C (59°F~86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "이메피토인 경구 정제 (분할선 있음): 100 mg, 400 mg; Pexion® (처방전 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이메피토인은 GABAA 수용체 벤조디아제핀 결합 부위의 저친화성 부분 효능제로, 미국에서 개의 소음 혐오증 치료에 FDA 승인됨. EU/UK에서는 특발성 간질 및 소음 공포증 관련 불안·공포 감소에도 허가됨. 운동실조(최대 60%), 식욕 증가, 기면, 구토 등이 주요 이상반응. 중증 간기능 장애, 중증 신장 질환, 중증 심혈관 질환 시 금기. 반감기가 약 1.5~2시간으로 매우 짧아 하루 2회 투여 필요. 과량 투여 시 플루마제닐로 역전 가능하나 항경련 효과도 함께 소실됨.",
+    "indications": "승인 적응증: 개의 소음 혐오증 (미국 FDA 승인, 30 mg/kg PO q12h). EU/UK 승인: 개의 소음 공포증 관련 불안·공포 감소, 특발성 간질에 의한 전신 발작 초기 치료. 허가 외 사용: 개의 폭풍 불안 (30 mg/kg PO q12h 지속 투여), 개의 특발성 간질 (10~30 mg/kg PO BID), 고양이의 특발성 간질 (30 mg/kg PO q12h, 데이터 제한적).",
+    "client_info": "이 약은 공복 상태에서 약 12시간 간격으로 투여하는 것이 가장 좋습니다. 그러나 약을 먹은 후 구토를 한다면 음식과 함께 투여해 보세요. 효과를 위해 수의사의 지시에 따라 규칙적으로 투여해야 합니다. 개에서 나타날 수 있는 부작용으로는 비정상적인 걸음걸이, 식욕 및 갈증 증가, 배뇨 증가, 침 흘림 증가, 구토, 행동 또는 활동 수준의 변화가 있습니다. 이러한 증상이 심하거나 지속된다면 수의사에게 연락하세요. 이 약은 공포 기반 행동을 탈억제하여 공격성이 변할 수 있으므로 치료 중 반려동물을 주의 깊게 관찰하세요. 발작 조절을 위해 사용 중인 경우 수의사와 상담 없이 갑자기 투약을 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific interactions noted)",
+      "Compatibility/Compounding Considerations (no specific information noted)",
+      "Human-labeled products (none)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/2.jsonl",
+    "extracted_at": "2026-03-10T14:04:25.119648+00:00",
+    "reviewer": null
+  }
+}

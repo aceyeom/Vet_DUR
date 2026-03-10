@@ -1,0 +1,710 @@
+{
+  "id": "imidapril",
+  "drug_identity": {
+    "name_ko": "이미다프릴",
+    "name_en": "Imidapril",
+    "active_ingredient": "Imidapril",
+    "brand_names": [
+      "Prilium",
+      "Tanatril"
+    ],
+    "allergy_class": "ACE inhibitor",
+    "class": "ACE Inhibitor",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국에서는 승인되지 않은 약물로, 영국 및 일부 국가에서 수의용으로 허가되어 있음. 미국 내 사용은 extra-label에 해당함.",
+    "dosage_form": [
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.4,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "이미다프릴은 주로 간과 신장에서 가수분해되어 활성 대사체인 이미다프릴라트(imidaprilat)로 전환됨. 경구 투여 후 방사성 표지 이미다프릴의 약 40%는 소변으로, 약 60%는 대변으로 배설됨."
+    },
+    "extra_information": "개에서 경구 투여 후 이미다프릴은 빠르게 흡수되나 음식에 의해 생체이용률이 감소함. 이미다프릴의 최고 혈장 농도는 투여 후 1시간 이내에 도달하며 소실 반감기는 약 2시간임. 활성 대사체 이미다프릴라트의 최고 혈장 농도는 약 5시간 후에 도달하며 소실 반감기는 10시간 이상임. 이미다프릴과 이미다프릴라트의 단백 결합률은 각각 85% 및 53%임. 반복 투여 시 두 번째 투여 후 이미다프릴라트 혈장 농도가 첫 번째 투여 후보다 약 3배 높으나 이후 추가 증가는 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서의 수의학적 PK 데이터 일부 존재. 고양이 데이터는 매우 제한적(독성 연구 1건만 언급).",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "현기증",
+          "무기력",
+          "뇌혈관 기능부전 주의"
+        ],
+        "index": 1,
+        "evidence": "뇌혈관 기능부전 환자에서 주의 사용 권고. 과다복용 시 무기력(apathy) 및 운동실조(ataxia) 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈액학적 이상",
+          "호중구감소증",
+          "무과립구증",
+          "고칼륨혈증"
+        ],
+        "index": 2,
+        "evidence": "기존 혈액학적 이상 환자에서 주의 사용 권고. 고칼륨혈증 가능성 있음. 인간에서 호중구감소증 및 무과립구증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "급성 신부전",
+          "신기능 장애",
+          "신장 배설",
+          "사구체 여과",
+          "단백뇨"
+        ],
+        "index": 3,
+        "evidence": "급성 신부전은 절대 금기. 신기능 저하 환자에서 용량 감량 필요. 신장으로 약 40% 배설. 사구체 원심성 세동맥 저항 감소 효과 있음. 단백뇨 감소 효과 보고됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "간 대사",
+          "프로드럭",
+          "가수분해"
+        ],
+        "index": 2,
+        "evidence": "이미다프릴은 간(및 신장)에서 활성 대사체 이미다프릴라트로 가수분해되는 프로드럭임. 간 기능 저하 시 활성화 감소 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "심부전",
+          "심박출량 증가",
+          "혈관 저항 감소",
+          "저혈압"
+        ],
+        "index": 2,
+        "evidence": "울혈성 심부전 치료에 사용됨. 총 말초 혈관 저항, 폐혈관 저항, 평균 동맥압 감소 효과. 심박출량 및 박출량 증가. 저혈압 부작용 가능성 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌 관련 데이터 없음. 독성 연구(0.5 mg/kg/day PO, 3개월)에서 독성 징후 없음만 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "고칼륨혈증 가능성"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 혈액 관련 데이터 없음. ACE 억제제 계열 효과로 고칼륨혈증 가능성 추정."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "신기능 모니터링"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 0.5 mg/kg/day PO 3개월 투여 시 독성 징후 없음. 고양이 특이적 신장 PK 데이터 없음. ACE 억제제 계열 신장 영향 추정."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "프로드럭",
+          "간 대사"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 간 대사 데이터 없음. 프로드럭 특성상 간 대사 관여 추정."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "심혈관 효과"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 심혈관 관련 특이적 데이터 없음. ACE 억제제 계열 효과 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 10.0,
+      "mean": 10.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 85,
+    "evidence": "개에서 이미다프릴의 최고 혈장 농도는 투여 후 1시간 이내 도달, 소실 반감기 약 2시간. 활성 대사체 이미다프릴라트의 최고 혈장 농도는 약 5시간 후, 소실 반감기는 10시간 이상. 단백 결합률: 이미다프릴 85%, 이미다프릴라트 53%. 음식에 의해 생체이용률 감소."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anesthetic Agents (inhalant and injectable, e.g., alfaxalone, etomidate, isoflurane, propofol)",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "혈압 강하"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, or magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "흡수 감소",
+        "경구 생체이용률 저하"
+      ],
+      "evidence": "Reduced oral absorption of ACE inhibitors may occur if given concomitantly with antacids; separate dosing by at least two hours."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs, e.g., telmisartan)",
+      "severity": 3,
+      "keywords": [
+        "고칼륨혈증",
+        "저혈압",
+        "실신",
+        "급성 신손상",
+        "RAAS 이중 차단"
+      ],
+      "evidence": "Concurrent use of an ACE inhibitor with an ARB may cause additive effects on the renin-angiotensin system causing hyperkalemia, hypotension, syncope, and acute kidney injury."
+    },
+    {
+      "drug": "Antihypertensive Agents/Vasodilators (e.g., amlodipine, hydralazine, prazosin, sildenafil)",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "혈압 강하"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension and other adverse effects."
+    },
+    {
+      "drug": "Baclofen",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent administration may increase the risk for hypotension."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Cabergoline",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may lead to additive hypotension."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "신경학적 기능 장애"
+      ],
+      "evidence": "Concurrent use with ACE inhibitors has caused neurologic dysfunction in two human patients."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, fludrocortisone, prednis(ol)one)",
+      "severity": 2,
+      "keywords": [
+        "항고혈압 효과 감소"
+      ],
+      "evidence": "May decrease the antihypertensive effects of ACE inhibitors."
+    },
+    {
+      "drug": "Darbepoetin alfa / Epoetin alfa",
+      "severity": 2,
+      "keywords": [
+        "적혈구 생성 억제"
+      ],
+      "evidence": "ACE inhibitors may interfere with erythropoiesis."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "디곡신 혈중 농도 상승"
+      ],
+      "evidence": "Digoxin levels may increase 15–30% when an ACE inhibitor is added; monitor serum digoxin levels."
+    },
+    {
+      "drug": "Diphenhydramine",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Disopyramide",
+      "severity": 2,
+      "keywords": [
+        "저혈당 효과 증강"
+      ],
+      "evidence": "Hypoglycemic effects may be enhanced."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide, torsemide)",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "용량 조절 필요"
+      ],
+      "evidence": "Concomitant diuretics may cause hypotension if used with ACE inhibitors; titrate dosages carefully."
+    },
+    {
+      "drug": "Doxepin",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Glycerin (oral)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Heparin / Low Molecular Weight Heparins (e.g., dalteparin, enoxaparin)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Concurrent use may increase the risk for hyperkalemia."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "항고혈압 효과 감소",
+        "임상 효능 저하"
+      ],
+      "evidence": "May reduce the clinical efficacy of ACE inhibitors when used as an antihypertensive agent."
+    },
+    {
+      "drug": "Opioids (e.g., butorphanol, hydrocodone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Potassium or Potassium-Sparing Diuretics (e.g., spironolactone)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia may develop."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "신장 배설 감소",
+        "독성 증가"
+      ],
+      "evidence": "Can decrease renal excretion of ACE inhibitors and possibly enhance the clinical and toxic effects of the drug."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중등도~중증 심부전(승모판 역류 또는 확장성 심근병증) 보조 치료",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "영국 허가 용량(extra-label in US): 0.25 mg/kg PO 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심부전 - 용량 증량 시",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 1일 2회로 증량 가능",
+          "evidence": "용량을 0.25 mg/kg q12h로 증량할 수 있음"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량이 필요할 수 있음. 급성 신부전은 절대 금기. 치료 시작 시 및 정기적으로 신기능 지표(크레아티닌, BUN, 소변 단백:크레아티닌 비율)를 모니터링해야 함. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "이미다프릴은 간에서 활성 대사체로 전환되는 프로드럭임. 간 기능 저하 시 활성화가 감소할 수 있으나 구체적인 용량 조정 지침은 모노그래프에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "ACE 억제제 과민반응",
+      "match_terms": [
+        "ACE inhibitor hypersensitivity",
+        "약물 알레르기"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압",
+      "match_terms": [
+        "hypotension",
+        "저혈압"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 신부전",
+      "match_terms": [
+        "acute renal insufficiency",
+        "AKI",
+        "급성 신손상"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "선천성 심장 질환",
+      "match_terms": [
+        "congenital heart disease",
+        "선천성 심질환"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 비후성 심근병증",
+      "match_terms": [
+        "obstructive hypertrophic cardiomyopathy",
+        "HCM obstructive"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈역학적으로 유의한 협착(대동맥 협착, 승모판 협착, 폐동맥 협착)",
+      "match_terms": [
+        "aortic stenosis",
+        "mitral valve stenosis",
+        "pulmonic stenosis",
+        "hemodynamically relevant stenosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "만성 신장 질환"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "저나트륨혈증 / 나트륨 결핍",
+      "match_terms": [
+        "hyponatremia",
+        "sodium depletion",
+        "저나트륨혈증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증 / 탈수",
+      "match_terms": [
+        "hypovolemia",
+        "dehydration",
+        "탈수"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "관상동맥 또는 뇌혈관 기능부전",
+      "match_terms": [
+        "coronary insufficiency",
+        "cerebrovascular insufficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 혈액학적 이상",
+      "match_terms": [
+        "hematologic abnormalities",
+        "혈액학적 이상"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "콜라겐 혈관 질환 (예: SLE)",
+      "match_terms": [
+        "collagen vascular disease",
+        "SLE",
+        "systemic lupus erythematosus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 / 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "임신",
+        "수유"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "안지오텐신 전환 효소(ACE) 억제제. 이미다프릴은 프로드럭으로 간에서 활성 대사체 이미다프릴라트로 전환됨. 이미다프릴라트는 안지오텐신-I이 안지오텐신-II(강력한 혈관수축제)로 전환되는 것을 경쟁적으로 억제함. 이로 인해 알도스테론 분비 감소 및 혈장 레닌 활성 증가가 유발됨.",
+    "common_extra_effects": [
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "무기력(weakness/fatigue)",
+      "저혈압(hypotension)",
+      "신기능 장애(renal dysfunction)",
+      "고칼륨혈증(hyperkalemia)",
+      "현기증(dizziness)"
+    ],
+    "dog_mechanism": "개에서 이미다프릴은 경구 투여 후 빠르게 흡수되어 간과 신장에서 활성 대사체 이미다프릴라트로 전환됨. 심부전 환자에서 총 말초 혈관 저항, 폐혈관 저항, 평균 동맥압 감소 및 심박출량 증가 효과를 나타냄. 암로디핀의 RAAS 활성화를 부분적으로 차단함.",
+    "dog_extra_effects": [
+      "설사(diarrhea)",
+      "저혈압(hypotension)",
+      "피로(fatigue)",
+      "현기증(dizziness)",
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "운동실조(ataxia, 과다복용 시)"
+    ],
+    "cat_mechanism": "고양이에서의 작용 기전은 개와 유사할 것으로 추정되나 고양이 특이적 데이터는 제한적임.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "이미다프릴은 영국에서 승모판 역류 또는 확장성 심근병증으로 인한 중등도~중증 심부전 치료를 위해 개에서 허가된 ACE 억제제임. 미국에서는 허가되지 않음. 다른 ACE 억제제와 유사한 임상 효능 및 안전성 프로파일을 가짐. 단백뇨성 신병증 치료에도 유용할 수 있음. 공복 투여가 권장되나 위장 장애 시 소량의 음식과 함께 투여 가능. 치료 시작 시 및 정기적으로 신기능, 전해질, 혈압을 모니터링해야 함.",
+    "cat": "고양이에서 이미다프릴은 허가되지 않음. 독성 연구에서 0.5 mg/kg/day PO를 3개월간 투여 시 독성 징후가 관찰되지 않았으나, 고양이에서의 임상적 사용에 대한 데이터는 매우 제한적임. 클라이언트 정보에는 개와 고양이 모두에서 사용 가능하다고 언급되어 있으나 공식 허가 용량은 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 저혈량증, 탈수, 저나트륨혈증, 관상동맥/뇌혈관 기능부전, 혈액학적 이상, 콜라겐 혈관 질환 환자에서 주의 사용. 중증 CHF 환자는 치료 시작 시 면밀한 모니터링 필요. 임신 및 수유 중인 동물에서는 사용하지 않는 것이 권장됨."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 허가되지 않은 약물. 독성 연구에서 0.5 mg/kg/day PO 3개월 투여 시 독성 징후 없음. 임상 사용 데이터 부족으로 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "재구성 전: 25°C(77°F) 이하 보관. 재구성 후: 2°C~8°C(냉장) 보관, 77일 이내 사용.",
+    "forms": [
+      "경구 용액용 분말(Powder for Oral Solution): 2.5 mg/mL (75 mg/병)",
+      "경구 용액용 분말(Powder for Oral Solution): 5 mg/mL (150 mg/병)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이미다프릴(Imidapril)은 영국에서 개의 승모판 역류 또는 확장성 심근병증으로 인한 중등도~중증 심부전 치료에 허가된 ACE 억제제임. 미국에서는 허가되지 않음(extra-label 사용). 프로드럭으로 간과 신장에서 활성 대사체 이미다프릴라트로 전환됨. 급성 신부전, 저혈압, 선천성 심장 질환, 폐쇄성 비후성 심근병증, 혈역학적으로 유의한 협착은 절대 금기. 신기능, 전해질, 혈압의 정기적 모니터링이 필수적임.",
+    "indications": "【허가 적응증(개, 영국)】 승모판 역류 또는 확장성 심근병증으로 인한 중등도~중증 심부전 보조 치료. 【잠재적 off-label 적응증】 단백뇨성 신병증(protein-losing nephropathy) 치료. 【고양이】 허가 적응증 없음; 독성 연구에서 안전성 일부 확인.",
+    "client_info": "이미다프릴은 개의 심부전, 고혈압, 일부 신장 질환 치료에 사용됩니다. 대부분 잘 견디지만 구토와 설사가 발생할 수 있습니다. 공복에 투여하는 것이 좋으나, 공복 투여 후 구토, 식욕 저하, 또는 이상 증상이 나타나면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요. 발진이나 감염 징후(예: 발열)가 나타나면 즉시 수의사에게 연락하세요. 처방대로 정확히 투여하는 것이 매우 중요합니다. 수의사의 지시 없이 용량을 줄이거나 투여를 중단하지 마세요. 혈압 측정 및 혈액 검사를 정기적으로 받아야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Oral bioavailability percentage (exact)",
+      "Cat-specific dosing",
+      "Cat-specific pharmacokinetics",
+      "Renal dose adjustment thresholds (specific creatinine values)",
+      "Hepatic dose adjustment guidance"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/2.jsonl",
+    "extracted_at": "2026-03-10T14:08:03.474244+00:00",
+    "reviewer": null
+  }
+}

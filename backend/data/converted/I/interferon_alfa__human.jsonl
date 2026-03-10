@@ -1,0 +1,590 @@
+{
+  "id": "interferon_alfa_human_recombinant",
+  "drug_identity": {
+    "name_ko": "인터페론 알파 (인간 재조합)",
+    "name_en": "Interferon Alfa, Human Recombinant",
+    "active_ingredient": "Interferon alfa-2b",
+    "brand_names": [
+      "Intron-A"
+    ],
+    "allergy_class": null,
+    "class": "Immunosuppressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "모든 수의학적 용도는 허가 외(extra-label) 사용이며, 안전성 및 유효성에 대한 근거가 상대적으로 약함. 인터페론 알파-2a(Roferon-A)는 시판 중단됨.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 10000000,
+        "unit": "IU"
+      },
+      {
+        "value": 18000000,
+        "unit": "IU"
+      },
+      {
+        "value": 50000000,
+        "unit": "IU"
+      },
+      {
+        "value": 6000000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 10000000,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인터페론 알파는 사구체에서 자유롭게 여과된 후 신세뇨관에서 재흡수되어 리소좀의 brush border 효소에 의해 대사됨. 간 대사는 부차적임."
+    },
+    "extra_information": "경구 투여 시 단백질 분해효소에 의해 분해되어 흡수가 불량하며 전신 순환에서 측정 가능한 수준이 검출되지 않음. 상부 위장관 점막에서 일부 흡수 가능성 있음. 고양이에서 혈장 반감기는 2.9시간으로 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터가 제한적이며 주로 인간 및 고양이 데이터에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS 투과 불량"
+        ],
+        "index": -1,
+        "evidence": "CNS 투과가 불량하다고 명시되어 있으나 개에서의 직접적인 신경독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "myelotoxicity",
+          "bone marrow suppression",
+          "anemia",
+          "leukopenia",
+          "thrombocytopenia"
+        ],
+        "index": 1,
+        "evidence": "고용량 비경구 투여 시 골수억제, 빈혈, 백혈구감소증, 혈소판감소증이 보고됨(주로 인간 및 고양이 데이터)."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal tubule metabolism",
+          "glomerular filtration",
+          "brush border enzymes"
+        ],
+        "index": 2,
+        "evidence": "사구체 여과 및 신세뇨관 대사가 주요 제거 경로임. 신장이 주된 대사 및 제거 기관."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic metabolism minor"
+        ],
+        "index": 1,
+        "evidence": "간 대사는 부차적이나 인간에서 간독성이 보고됨. 중증 간질환 환자에서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "severe cardiac disease precaution",
+          "transient blood pressure changes"
+        ],
+        "index": -1,
+        "evidence": "중증 심장질환 환자에서 주의가 필요하다고 명시되어 있으나 직접적인 심장독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS 투과 불량"
+        ],
+        "index": -1,
+        "evidence": "CNS 투과가 불량하다고 명시되어 있으나 고양이에서의 직접적인 신경독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "myelotoxicity",
+          "bone marrow suppression",
+          "antibody development"
+        ],
+        "index": 1,
+        "evidence": "고용량 비경구 투여 시 골수독성 보고. 3~7주 치료 후 항체 형성으로 효능 소실 가능."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal tubule metabolism",
+          "glomerular filtration",
+          "half-life 2.9h cats"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 반감기 2.9시간으로 보고. 사구체 여과 및 신세뇨관 대사가 주요 제거 경로."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic metabolism minor"
+        ],
+        "index": 1,
+        "evidence": "간 대사는 부차적이나 인간에서 간독성이 보고됨. 중증 간질환 환자에서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "severe cardiac disease precaution"
+        ],
+        "index": -1,
+        "evidence": "중증 심장질환 환자에서 주의가 필요하다고 명시되어 있으나 고양이에서의 직접적인 심장독성 데이터는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 2.9,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 혈장 반감기 2.9시간으로 보고됨. 경구 투여 시 단백질 분해효소에 의해 분해되어 전신 흡수가 거의 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Zidovudine (AZT)",
+      "severity": 2,
+      "keywords": [
+        "additive antiviral",
+        "synergistic antiviral"
+      ],
+      "evidence": "Interferon alfa와 병용 시 상가적 또는 상승적 항바이러스 효과 가능. 수의학적 임상 의의는 불명확."
+    },
+    {
+      "drug": "Acyclovir",
+      "severity": 2,
+      "keywords": [
+        "additive antiviral",
+        "synergistic antiviral"
+      ],
+      "evidence": "Interferon alfa와 병용 시 상가적 또는 상승적 항바이러스 효과 가능. 수의학적 임상 의의는 불명확."
+    },
+    {
+      "drug": "Vidarabine",
+      "severity": 2,
+      "keywords": [
+        "increased toxicity"
+      ],
+      "evidence": "상가적 항바이러스 효과는 나타나지 않으나 독성이 증가할 수 있음. 수의학적 임상 의의는 불명확."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 2,
+      "keywords": [
+        "reduced interferon effectiveness"
+      ],
+      "evidence": "콜히친 병용 시 인터페론 효능 감소 보고."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "인간에서 테오필린 농도가 2배 증가한 것으로 보고됨. 수의학 환자에서도 모니터링 필요."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "피부 T세포 림프종 및 중증 구강/피부 유두종",
+          "value": "1500000 - 2000000",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 해소까지 격일 또는 주 3회 투여. 단위: units/m² (NOT units/kg)",
+          "evidence": "허가 외 사용. 단위는 units/m²임에 주의."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "피부 질환 보조 면역자극 (지간피부염, 유두종, 디지털 각화종 등)",
+          "value": "1000",
+          "unit": "IU/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 1000 units/mL 용액으로 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "개 전염성 성기 종양 (TVT) - 빈크리스틴과 병용",
+          "value": "1500000",
+          "unit": "IU/kg",
+          "route": "Inh",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회 병변 내 주사. 단위: units/dog (NOT units/kg). 빈크리스틴 0.025 mg/kg IV와 병용.",
+          "evidence": "허가 외 사용. 빈크리스틴 단독 대비 치료 기간 단축 효과 보고."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "FIV/FeLV 감염 고양이 - 저용량 경구 투여",
+          "value": "10",
+          "unit": "IU/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 개선 및 생존 연장 보고 (실험적 제품 사용).",
+          "evidence": "허가 외 사용. 실험적으로 제조된 인터페론 알파 제품 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "FIV/FeLV 감염 고양이 - 재조합 인간 인터페론 알파 경구/구강 점막 투여",
+          "value": "60",
+          "unit": "IU/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 투여 후 7일 휴약 반복. 단위: units/cat (NOT units/kg)",
+          "evidence": "허가 외 사용. 경구 또는 구강 점막(buccal) 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고양이 칼리시바이러스 또는 헤르페스바이러스-1 - 고용량 SC 투여",
+          "value": "10000",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 14일. 생리식염수에 희석하여 투여.",
+          "evidence": "허가 외 사용. 일부 고양이에서 임상적 해소 보고."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고양이 칼리시바이러스 또는 헤르페스바이러스-1 - 저용량 경구 투여",
+          "value": "50",
+          "unit": "IU/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "단위: units/cat (NOT units/kg)",
+          "evidence": "허가 외 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장이 주요 대사 및 제거 기관이나 모노그래프에 구체적인 신기능 저하 시 용량 조절 지침이 명시되어 있지 않음. 신기능 저하 환자에서 주의 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간질환 환자에서 비경구 투여 시 위험-이익을 고려하도록 명시되어 있으나 구체적인 용량 조절 지침은 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "자가면역 질환",
+      "match_terms": [
+        "autoimmune disease",
+        "immune-mediated disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심장 질환",
+      "match_terms": [
+        "severe cardiac disease",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 폐 질환",
+      "match_terms": [
+        "pulmonary disease",
+        "respiratory disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절 불량 당뇨병",
+      "match_terms": [
+        "brittle diabetes",
+        "uncontrolled diabetes mellitus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간 질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "헤르페스 감염",
+      "match_terms": [
+        "herpes infection",
+        "herpesvirus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to interferon"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 장애",
+      "match_terms": [
+        "CNS disorder",
+        "neurological disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "인터페론 알파는 항바이러스, 항증식, 면역조절 효과를 가짐. RNA, DNA 및 세포 단백질(종양유전자 포함) 합성에 영향을 미쳐 항바이러스 및 항증식 활성을 나타냄. 항종양 활성의 기전은 완전히 규명되지 않음.",
+    "common_extra_effects": [
+      "권태감(malaise)",
+      "발열",
+      "알레르기 반응",
+      "골수독성(myelotoxicity)",
+      "근육통(myalgia)",
+      "주사 부위 반응(불편감, 발적)",
+      "빈혈",
+      "백혈구감소증",
+      "혈소판감소증",
+      "간독성",
+      "신경독성",
+      "시력 손실",
+      "갑상선기능저하증",
+      "미각 변화",
+      "식욕부진",
+      "오심",
+      "구토",
+      "설사",
+      "어지러움",
+      "인플루엔자 유사 증상",
+      "일시적 혈압 변화",
+      "탈모",
+      "피부 발진",
+      "고중성지방혈증",
+      "구강 건조",
+      "우울증(인간)"
+    ],
+    "dog_mechanism": "개에서의 구체적인 기전 데이터는 제한적. 면역조절 및 항바이러스 효과로 추정.",
+    "dog_extra_effects": [
+      "골수억제(고용량 비경구 투여 시)",
+      "체중 감소(과용량 시)",
+      "혈관 누출(과용량 시)"
+    ],
+    "cat_mechanism": "고양이에서 경구 투여 시 상부 위장관 점막 흡수 및 국소 림프조직 자극을 통한 면역조절 효과 가능성. 비경구 투여 시 직접적인 항바이러스 효과.",
+    "cat_extra_effects": [
+      "권태감(고용량 비경구 투여 시)",
+      "발열(고용량 비경구 투여 시)",
+      "알레르기 반응(고용량 비경구 투여 시)",
+      "골수독성(고용량 비경구 투여 시)",
+      "근육통(고용량 비경구 투여 시)",
+      "항체 형성으로 인한 효능 소실(3~7주 비경구 치료 후)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 피부 T세포 림프종, 구강/피부 유두종, 지간피부염, 전염성 성기 종양 등에 허가 외 사용됨. 용량 단위에 주의(units/m² 또는 units/dog). 모든 사용에 대한 근거는 제한적임.",
+    "cat": "고양이에서 FIV, FeLV, 칼리시바이러스, 헤르페스바이러스-1 등 다양한 바이러스성 질환에 허가 외 사용됨. 경구 저용량 투여 시 부작용이 드물며 내약성이 양호함. 비경구 투여 시 3~7주 후 항체 형성으로 효능이 소실될 수 있음. 경구 투여 시 음식과 함께 투여하지 않는 것이 권장되나 구토 시 소량의 음식과 함께 투여 가능."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "모든 수의학적 용도는 허가 외 사용이며 안전성 및 유효성 근거가 제한적. 비경구 투여 시 자가면역 질환, 중증 심장/폐/간 질환, 조절 불량 당뇨병, 헤르페스 감염, CNS 장애 환자에서 위험-이익 평가 필요. 정기적인 CBC, 혈액화학 검사 모니터링 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "경구 저용량 투여 시 부작용이 드물어 내약성 양호. 비경구 고용량 투여 시 골수독성, 발열, 알레르기 반응 등 주의. 3~7주 비경구 치료 후 항체 형성으로 효능 소실 가능. 정기적인 CBC, 혈액화학 검사 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관(냉동 금지). 실온에 24시간 이상 노출 금지. 용액을 격렬하게 흔들지 말 것. 직사광선 노출 금지. 희석 후 냉동 시 수년간, 냉장 시 수개월간 활성 유지 가능(일부 보고). 가장 희석된 용액의 냉동은 알부민 등 단백질 첨가 없이는 활성 손실 가능.",
+    "forms": [
+      "Interferon Alfa-2b 분말 주사제: 10 million units/vial, 18 million units/vial, 50 million units/vial (희석액 포함) - Intron A®",
+      "Interferon Alfa-2b 주사액: 6 million units/mL (3.6 mL vial), 10 million units/mL (3.2 mL vial) - Intron A®"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "인터페론 알파(인간 재조합)는 고양이 및 개의 다양한 바이러스성 질환 치료에 허가 외로 사용되는 면역조절제입니다. 경구 저용량 투여 시 고양이에서 내약성이 양호하나 비경구 고용량 투여 시 골수독성, 발열 등의 부작용이 발생할 수 있습니다. 비경구 투여 3~7주 후 항체 형성으로 효능이 소실될 수 있습니다. 모든 수의학적 사용에 대한 안전성 및 유효성 근거는 제한적입니다.",
+    "indications": "고양이: FIV, FeLV 감염(저용량 경구), 고양이 칼리시바이러스, 헤르페스바이러스-1(고용량 SC 또는 저용량 경구). 개: 피부 T세포 림프종, 구강/피부 유두종(SC), 피부 질환 보조 면역자극(경구), 전염성 성기 종양(병변 내 주사). 모든 적응증은 허가 외 사용이며 근거 수준이 낮음.",
+    "client_info": "이 약물은 수의학적으로 허가된 약물이 아니며, 안전성과 효능이 완전히 입증되지 않은 실험적 치료임을 보호자에게 반드시 알려야 합니다. 경구 투여 시 희석된 액체를 입으로 또는 볼 안쪽(구강 점막)에 투여하며, 음식과 함께 투여하지 않는 것이 좋습니다. 빈 위에 투여 후 구토가 있으면 소량의 음식과 함께 투여해 보고, 구토가 지속되면 수의사에게 연락하십시오. 일반적으로 내약성이 양호합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "CYP enzyme profile",
+      "Oral bioavailability percentage",
+      "Protein binding percentage",
+      "Onset of action",
+      "Time to peak plasma concentration",
+      "Dog-specific pharmacokinetic data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/3.jsonl",
+    "extracted_at": "2026-03-10T14:28:21.806188+00:00",
+    "reviewer": null
+  }
+}

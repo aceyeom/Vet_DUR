@@ -1,0 +1,684 @@
+{
+  "id": "insulin_protamine_zinc",
+  "drug_identity": {
+    "name_ko": "프로타민 아연 재조합 인간 인슐린",
+    "name_en": "Insulin, Protamine Zinc Recombinant Human (rPZI)",
+    "active_ingredient": "Protamine Zinc Recombinant Human Insulin",
+    "brand_names": [
+      "ProZinc"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Dextrose (50% IV), Glucagon",
+    "reversal_evidence": "저혈당 발생 시 50% 덱스트로스 정맥 투여(0.5–1 mL/kg, 희석 후 천천히) 또는 글루카곤 사용 가능. 의식이 있는 경우 구강 내 포도당 시럽(Karo® 시럽) 도포.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 40,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인슐린은 주로 간과 신장에서 대사 및 제거됨. CYP 효소 관련 데이터는 본 모노그래프에 기술되지 않음."
+    },
+    "extra_information": "rPZI는 헥사머(hexamer) 형태의 인슐린 중합체로 구성되어 있으며, 피하 투여 후 인슐린 단량체 또는 이량체로 분해된 후 흡수됨. 개에서 SC 투여(0.8 units/kg) 후 작용 발현 중앙값 3.5시간(범위 0.5–10시간), 혈당 최저점 도달 시간 14시간(5–24시간), 지속 시간 16–24시간 미만. 고양이에서 작용 발현 0.5–1.5시간, 최대 효과 4–9시간, 지속 시간 7–18시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 인슐린은 주로 혈당 조절 호르몬으로, 과량 투여 시 저혈당으로 인한 뇌 손상 위험이 가장 높음. 저칼륨혈증으로 인한 심장 영향도 고려됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hypoglycemia",
+          "seizures",
+          "blindness",
+          "coma",
+          "permanent brain damage"
+        ],
+        "index": 1,
+        "evidence": "저혈당 과다 투여 시 발작, 실명, 혼수, 영구적 뇌 손상 가능성이 명시됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypokalemia",
+          "electrolyte disturbances",
+          "glucose nadir"
+        ],
+        "index": 2,
+        "evidence": "인슐린은 세포외 칼륨을 세포내로 이동시켜 저칼륨혈증 유발 가능. 혈당 조절에 직접적 영향."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음. 신장은 인슐린 제거 기관 중 하나이나 직접적 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "gluconeogenesis",
+          "glycogen"
+        ],
+        "index": -1,
+        "evidence": "간에서 포도당 저장 증가 및 당신생 억제 작용이 있으나 간독성 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "digoxin interaction"
+        ],
+        "index": 3,
+        "evidence": "저칼륨혈증으로 인한 심장 영향 가능성. 디곡신 병용 시 저칼륨혈증으로 인한 심장 독성 위험 증가 명시됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hypoglycemia",
+          "seizures",
+          "blindness",
+          "coma",
+          "permanent brain damage"
+        ],
+        "index": 1,
+        "evidence": "저혈당 과다 투여 시 발작, 실명, 혼수, 영구적 뇌 손상 가능성이 명시됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypokalemia",
+          "electrolyte disturbances",
+          "glucose nadir"
+        ],
+        "index": 2,
+        "evidence": "인슐린은 세포외 칼륨을 세포내로 이동시켜 저칼륨혈증 유발 가능. 혈당 조절에 직접적 영향."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "gluconeogenesis",
+          "glycogen"
+        ],
+        "index": -1,
+        "evidence": "간에서 포도당 저장 증가 및 당신생 억제 작용이 있으나 간독성 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "digoxin interaction"
+        ],
+        "index": 3,
+        "evidence": "저칼륨혈증으로 인한 심장 영향 가능성. 디곡신 병용 시 저칼륨혈증으로 인한 심장 독성 위험 증가 명시됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 14.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개(비당뇨): SC 0.8 units/kg 투여 후 작용 발현 중앙값 3.5시간(0.5–10시간), 혈당 최저점 14시간(5–24시간), 지속 16–24시간 미만. 고양이: 작용 발현 0.5–1.5시간, 최대 효과 4–9시간, 지속 7–18시간. 반감기는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 중증도 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia masking",
+        "glycemic control variability"
+      ],
+      "evidence": "베타 차단제는 혈당 조절에 가변적 영향을 미치며 저혈당 증상을 은폐할 수 있음."
+    },
+    {
+      "drug": "Clonidine",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia masking"
+      ],
+      "evidence": "클로니딘은 저혈당 관련 증상을 은폐할 수 있음."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "cardiac toxicity"
+      ],
+      "evidence": "인슐린으로 인한 혈청 칼륨 감소 시 디곡신 독성 위험 증가. 이뇨제 병용 시 위험 더욱 증가."
+    },
+    {
+      "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "이뇨제는 저칼륨혈증 위험을 증가시키며 인슐린의 혈당 강하 효과를 감소시킬 수 있음(인슐린 요구량 증가)."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia masking"
+      ],
+      "evidence": "레세르핀은 저혈당 관련 증상을 은폐할 수 있음."
+    },
+    {
+      "drug": "Anabolic Steroids (boldenone, stanozolol, testosterone)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia",
+        "decreased insulin requirements"
+      ],
+      "evidence": "동화 스테로이드는 인슐린의 혈당 강하 효과를 증강시켜 인슐린 요구량을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Angiotensin II Receptor Blockers (ARBs, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia",
+        "decreased insulin requirements"
+      ],
+      "evidence": "ARB는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia",
+        "decreased insulin requirements"
+      ],
+      "evidence": "ACE 억제제는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Disopyramide",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "디소피라미드는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Ethanol",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "에탄올은 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Fenofibrate",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "페노피브레이트는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "플루오로퀴놀론계 항생제는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "플루옥세틴은 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Oral Hypoglycemics (acarbose, glipizide, metformin)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia",
+        "additive hypoglycemic effect"
+      ],
+      "evidence": "경구 혈당강하제는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs, amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "potentiated hypoglycemia",
+        "MAOI interaction"
+      ],
+      "evidence": "MAOI는 인슐린의 혈당 강하 효과를 현저히 증강시킬 수 있음. 아미트라즈, 리네졸리드, 셀레길린 포함."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "펜톡시필린은 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Salicylates (aspirin, bismuth subsalicylate)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "살리실산염은 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Somatostatin Derivatives (octreotide)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "소마토스타틴 유도체는 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Sulfonamides (sulfadimethoxine, sulfamethoxazole)",
+      "severity": 2,
+      "keywords": [
+        "potentiated hypoglycemia"
+      ],
+      "evidence": "설폰아미드계 약물은 인슐린의 혈당 강하 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Alpha-2-Adrenergic Agonists (dexmedetomidine, medetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "decreased hypoglycemic activity",
+        "glycemic interference"
+      ],
+      "evidence": "알파-2 작용제는 고혈당을 유발하고 일시적으로 혈당 조절을 방해할 수 있어 인슐린 요구량을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Beta-Adrenergic Agonists (albuterol, terbutaline)",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity",
+        "increased insulin requirements"
+      ],
+      "evidence": "베타 작용제는 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity",
+        "increased insulin requirements"
+      ],
+      "evidence": "코르티코스테로이드는 인슐린의 혈당 강하 효과를 감소시켜 인슐린 요구량을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Danazol",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "다나졸은 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "디아족사이드는 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Estrogens (diethylstilbestrol, estriol)",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "에스트로겐은 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "이소니아지드는 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Niacin",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "나이아신은 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "페노티아진계 약물은 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Progestins (megestrol)",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity"
+      ],
+      "evidence": "프로게스틴은 인슐린의 혈당 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Thyroid Hormones",
+      "severity": 2,
+      "keywords": [
+        "decreased hypoglycemic activity",
+        "elevated glucose"
+      ],
+      "evidence": "갑상선 호르몬 치료 초기에 당뇨 환자에서 혈당 농도를 상승시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고혈당 및 고혈당 관련 임상 증상 감소 (FDA 승인 용량)",
+          "value": "0.5 - 1",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "식사와 동시 또는 직후 투여. 1일 1회 투여로 인슐린 작용 시간이 불충분한 경우 1일 2회 투여 고려. 2회 투여 시 각 용량은 1회 투여 시 적절한 혈당 최저점을 달성하는 용량보다 약 25% 감량.",
+          "evidence": "FDA 승인 라벨 용량. 현장 효능 연구에서 평균 성공 인슐린 용량은 1.4 units/kg/day."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비합병증 당뇨병 초기 인슐린 치료 (비라벨 용량)",
+          "value": "0.25 - 0.5",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 시작 용량으로 0.25 units/kg SC q12h 권장. 일부 개에서 1일 1회 투여 가능.",
+          "evidence": "비라벨(extra-label) 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고혈당 및 고혈당 관련 임상 증상 감소 (FDA 승인 용량)",
+          "value": "0.2 - 0.7",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "식사와 동시 또는 직후 투여.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비합병증 당뇨병 초기 인슐린 치료 (비라벨 용량)",
+          "value": "1 - 2",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 시작 용량은 고양이 체중에 관계없이 최대 2 units/cat(units/kg 아님)을 초과하지 않아야 함.",
+          "evidence": "비라벨(extra-label) 용량. 단위 주의: units/cat (NOT units/kg)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고사항 없음. 신장은 인슐린 제거 기관 중 하나이므로 신부전 환자에서 인슐린 요구량이 감소할 수 있어 주의 깊은 모니터링 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고사항 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "저혈당증 (Hypoglycemia)",
+      "match_terms": [
+        "hypoglycemia",
+        "low blood glucose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "인간 인슐린 과민반응 (Hypersensitivity to human insulin)",
+      "match_terms": [
+        "insulin hypersensitivity",
+        "insulin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 케톤산증, 식욕부진, 기력저하, 구토 (Severe ketoacidosis, anorexia, lethargy, vomiting)",
+      "match_terms": [
+        "diabetic ketoacidosis",
+        "DKA",
+        "ketoacidosis",
+        "anorexia",
+        "vomiting"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "비만 환자 (Obese patients)",
+      "match_terms": [
+        "obesity",
+        "overweight"
+      ],
+      "severity": "caution",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "인슐린의 주요 작용은 포도당 대사 조절. 말초 조직(특히 골격근 및 지방)에서 포도당 흡수를 증가시켜 혈당을 낮춤. 간에서 포도당 저장(글리코겐) 증가 및 당신생 억제. 지방산 및 단백질 합성 촉진, 지방분해 및 단백질 분해 억제.",
+    "common_extra_effects": [
+      "저혈당증 (Hypoglycemia)",
+      "저칼륨혈증 (Hypokalemia)",
+      "인슐린 유발 반동성 고혈당 (Somogyi effect)",
+      "인슐린 길항 및 저항성",
+      "빠른 인슐린 대사",
+      "주사 부위 국소 반응 또는 알레르기 반응",
+      "기력저하 (Lethargy)",
+      "식욕부진 (Anorexia)",
+      "구토 (Vomiting)",
+      "발작 (Seizures)",
+      "떨림 (Shaking)",
+      "설사 (Diarrhea)",
+      "운동실조 (Ataxia)"
+    ],
+    "dog_mechanism": "개에서 SC 투여(0.8 units/kg) 후 작용 발현 중앙값 3.5시간(0.5–10시간), 혈당 최저점 도달 시간 14시간(5–24시간), 지속 시간 16–24시간 미만.",
+    "dog_extra_effects": [
+      "기력저하",
+      "식욕부진",
+      "저혈당증",
+      "구토",
+      "발작",
+      "떨림",
+      "설사",
+      "운동실조",
+      "주사 부위 반응 (2.5%)"
+    ],
+    "cat_mechanism": "고양이에서 SC 투여 후 작용 발현 0.5–1.5시간, 최대 효과 4–9시간, 지속 시간 7–18시간.",
+    "cat_extra_effects": [
+      "저혈당증",
+      "저칼륨혈증",
+      "주사 부위 반응 (1.7%)",
+      "인슐린 유발 반동성 고혈당 (Somogyi effect)"
+    ]
+  },
+  "species_notes": {
+    "dog": "rPZI는 새로 진단된 당뇨병 개에서 1차 선택 인슐린 중 하나(중간 작용형 인슐린과 함께). FDA 승인 용량은 0.5–1 units/kg SC 1일 1회. 인슐린 미경험 개는 낮은 용량 범위에서 시작. 1일 1회 투여로 작용 시간이 불충분한 경우 1일 2회 투여 고려(각 용량 약 25% 감량). U40 인슐린 전용 주사기 사용 필수. 비만 환자는 이상 체중 기준으로 용량 계산.",
+    "cat": "rPZI는 새로 진단된 당뇨병 고양이에서 1차 선택 인슐린. FDA 승인 용량은 0.2–0.7 units/kg SC 12시간마다. 비라벨 초기 용량은 고양이 체중에 관계없이 최대 2 units/cat(units/kg 아님)을 초과하지 않아야 함. U40 인슐린 전용 주사기 사용 필수. '느슨한 조절(loose-control)' 접근법도 기술되어 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저혈당증 발생 시 절대 금기. 중증 케톤산증, 식욕부진, 기력저하, 구토 시 단기 작용 인슐린(레귤러 인슐린) 사용 권장. U40 전용 주사기 사용 필수. 비만 환자는 이상 체중 기준 용량 계산. 주사 부위 순환 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "저혈당증 발생 시 절대 금기. 초기 용량은 체중에 관계없이 최대 2 units/cat 초과 금지. U40 전용 주사기 사용 필수. 중증 케톤산증 시 단기 작용 인슐린 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미개봉 및 개봉된 rPZI 바이알은 2°C–8°C(36°F–46°F) 냉장 보관. 동결 금지(동결된 경우 폐기). 바이알은 직립 보관하고 빛으로부터 차단. 최초 사용 후 60일(10 mL 바이알) 또는 80일(20 mL 바이알) 이내 사용. 수의 내과 전문의는 신중하게 취급하고 냉장 보관하며 변색, 침전물, 농도 변화가 없는 경우 개봉 후 3–6개월까지 사용 가능하다고 권고.",
+    "forms": [
+      "Protamine Zinc (rDNA) Insulin Aqueous Suspension 40 units/mL, 10 mL vial",
+      "Protamine Zinc (rDNA) Insulin Aqueous Suspension 40 units/mL, 20 mL vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "rPZI(ProZinc®)는 개와 고양이의 당뇨병 초기 치료 및 장기 관리를 위한 FDA 승인 장기 작용형 인슐린입니다. U40 농도 전용 제품으로 반드시 U40 주사기를 사용해야 합니다. 저혈당증은 가장 중요한 부작용으로, 과다 투여 시 발작, 혼수, 영구적 뇌 손상 또는 사망을 초래할 수 있습니다. 저칼륨혈증 위험이 있으며 디곡신 또는 이뇨제 병용 시 주의가 필요합니다. 다수의 약물 상호작용이 존재하며 혈당 강하 효과를 증강 또는 감소시키는 약물이 많습니다.",
+    "indications": "개와 고양이의 당뇨병 초기 치료 및 장기 관리(FDA 승인). 고양이 당뇨병의 1차 선택 인슐린. 개 당뇨병의 1차 선택 인슐린 중 하나(중간 작용형 인슐린과 함께). 비라벨 적응증: 낙타과 동물의 중증 고지혈증, 조랑말의 고지혈증, 소의 케톤증 보조 치료.",
+    "client_info": "이 약은 수의사의 처방에 따라 정확하게 투여해야 합니다. 동물이 식사를 하지 않는 경우 인슐린을 투여하지 말고 수의사에게 연락하세요. 반드시 U40 인슐린 전용 주사기를 사용하세요. 투여 전 항상 주사기의 용량을 재확인하세요. 과다 투여는 치명적일 수 있습니다. 바이알을 부드럽게 굴려서 혼합하세요(흔들지 마세요). 혼합 후 흰색 혼탁한 현탁액이 되어야 합니다. 저혈당 증상(허약함, 비틀거림, 발작, 혼수 등)이 나타나면 즉시 수의사에게 연락하거나 응급 동물병원을 방문하세요. 의식이 있고 삼킬 수 있는 경우 옥수수 시럽(Karo®) 약 1 테이블스푼을 잇몸에 발라주세요. 인슐린은 냉장 보관하고 동결되지 않도록 하세요. 정기적인 추적 검사를 빠짐없이 받으세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Half-life data",
+      "Oral bioavailability",
+      "Protein binding"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/3.jsonl",
+    "extracted_at": "2026-03-10T14:26:18.024154+00:00",
+    "reviewer": null
+  }
+}
