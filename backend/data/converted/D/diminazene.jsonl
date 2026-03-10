@@ -1,0 +1,433 @@
+{
+  "id": "diminazene",
+  "drug_identity": {
+    "name_ko": "디미나젠",
+    "name_en": "Diminazene",
+    "active_ingredient": "Diminazene aceturate",
+    "brand_names": [
+      "Berenil RTU",
+      "Azidin",
+      "Dimesol",
+      "Demin",
+      "Diminicin RTU",
+      "Veriben",
+      "Veriben B12 LA"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국에서는 허가된 제품이 없으며, 전 세계 여러 국가에서 수의용으로 사용 가능. 개, 고양이, 말, 소, 양, 염소, 토끼 등에서 엑스트라라벨로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "디미나젠은 간에서 어느 정도 대사되는 것으로 보이나, 대사산물의 동정 및 항원충 활성 여부는 알려져 있지 않음."
+    },
+    "extra_information": "개에서 반감기는 5~30시간으로 광범위하게 보고되며 개체 간 변이가 크다. 고양이에서 반감기는 평균 약 1.7시간으로 짧다. 간과 신장에서 높은 농도가 발견되며, 뇌척수액(CSF)에도 분포하나 혈장 농도보다 현저히 낮다. 아프리카 트리파노소마증에 감염된 개에서는 수막 염증으로 인해 CSF 농도가 더 높다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간 및 신장에 고농도 분포 명시됨. 개와 고양이 모두 동일한 분포 특성 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CSF 분포",
+          "신경독성",
+          "운동실조",
+          "경련"
+        ],
+        "index": 1,
+        "evidence": "CSF에 분포하나 혈장보다 낮은 농도. 아프리카 트리파노소마증 감염 시 CSF 농도 증가. 과량 투여 시 신경계 독성(운동실조, 경련) 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "일시적 혈압 저하",
+          "CBC 모니터링"
+        ],
+        "index": 1,
+        "evidence": "치료 용량에서 일시적인 혈압 저하 보고. 중증 바베시아증에서 저칼륨혈증 및 BUN 상승 가능."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "신장 고농도 분포",
+          "BUN 상승"
+        ],
+        "index": 2,
+        "evidence": "신장에 고농도 분포. 중증 감염 시 BUN 상승 가능. 신장 부담 위험 중등도."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "간 고농도 분포",
+          "간 대사",
+          "간효소 상승"
+        ],
+        "index": 2,
+        "evidence": "간에 고농도 분포. 간에서 대사됨. 중증 바베시아증에서 간효소 상승 가능."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈압 저하"
+        ],
+        "index": 0,
+        "evidence": "치료 용량에서 일시적 혈압 저하 보고. 직접적인 심장 독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CSF 분포",
+          "신경독성"
+        ],
+        "index": 1,
+        "evidence": "CSF에 분포. 고양이에서 반감기가 매우 짧음(평균 1.7시간). 고용량 반복 투여 시 부작용 빈번 보고."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "부작용"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 직접적인 혈액 독성 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "신장 고농도 분포"
+        ],
+        "index": 1,
+        "evidence": "신장에 고농도 분포. 고양이에서 반감기가 짧아 축적 위험은 낮으나 분포 자체의 부담 존재."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "간 고농도 분포",
+          "간 대사"
+        ],
+        "index": 2,
+        "evidence": "간에 고농도 분포. 간에서 대사됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적인 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.7,
+      "max": 30.0,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 반감기 5~30시간(광범위한 개체 간 변이), 고양이에서 평균 약 1.7시간. 소에서는 200시간 이상 보고된 연구도 있음. IM 투여 후 빠르게 흡수 및 분포됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 유의한 약물 상호작용 없음으로 명시됨. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "camelid"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "바베시아증 (대형 또는 소형 Babesia spp) - 엑스트라라벨",
+          "value": "3.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 투여. CNS 징후가 심할 수 있으며 효능 및 독성 예측 불가.",
+          "evidence": "Large or small Babesia spp (extra-label): 3.5 mg/kg IM once."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Babesia gibsoni M121I 유전자 변이 바베시아증 - 클린다마이신/디미나젠/이미도카브 병용요법",
+          "value": "3.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "내원 당일 1회 투여. 클린다마이신 30 mg/kg PO q12h 및 이미도카브 디프로피오네이트 6 mg/kg SC(디미나젠 투여 다음날)와 병용.",
+          "evidence": "Prospective unmasked study: clindamycin 30 mg/kg PO q12h + diminazene aceturate 3.5 mg/kg IM once on day of presentation + imidocarb dipropionate 6 mg/kg SC day after diminazene."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아프리카 트리파노소마증 - 엑스트라라벨",
+          "value": "3.6 - 7",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 7.0,
+          "duration_note": "재발 또는 재감염 조절을 위해 2주마다 필요 시 반복.",
+          "evidence": "African trypanosomiasis (extra-label): 3.6–7 mg/kg IM every 2 weeks as needed."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "Cytauxzoon felis 만성 기생충혈증 - 연구 기반 (효능 미입증)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 간격으로 2회 투여. 위약 대비 기생충 부담 감소 효과 없음으로 보고됨.",
+          "evidence": "Study in naturally infected cats with chronic Cytauxzoon felis: diminazene 3 mg/kg IM, 2 doses 7 days apart — no difference in parasite burden vs placebo."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Cytauxzoon felis - 고용량 집중 치료 (효능 미입증, 부작용 빈번)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일 연속 투여. 기생충 부담 감소 실패 및 빈번한 부작용 동반.",
+          "evidence": "Dose-intensified treatment: diminazene 4 mg/kg IM once daily for 5 consecutive days — failed to reduce parasite burden, frequent side effects."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장에 고농도 분포하나 구체적인 신기능 저하 시 용량 조절 지침은 명시되지 않음. 중증 감염 시 BUN 상승 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간에 고농도 분포하고 간에서 대사되나, 간기능 저하 시 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "낙타과 동물 (카멜리드)",
+      "match_terms": [
+        "camel",
+        "camelid",
+        "llama",
+        "alpaca"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "6주 이내 디아미디딘 계열 약물 재투여",
+      "match_terms": [
+        "diminazene",
+        "diaminidine",
+        "pentamidine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중 동물 (위험-이익 평가 필요)",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "과량 투여 위험 (개: 10 mg/kg 이상 IM)",
+      "match_terms": [
+        "overdose",
+        "toxicity"
+      ],
+      "severity": "caution",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "정확한 작용 기전은 완전히 밝혀지지 않음. Babesia spp에 대해 호기성 해당과정(aerobic glycolysis) 및 DNA 합성 억제를 통해 항원충 효과를 나타내는 것으로 추정됨. 단일 투여 후 수 주간 임상 증상 억제 또는 예방 효과 지속 가능(느린 대사로 인함).",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "주사 부위 통증 및 부종",
+      "일시적 혈압 저하",
+      "운동실조 (드물게, <0.1%)",
+      "경련 (드물게, <0.1%)",
+      "사망 (매우 드물게, <0.1%)"
+    ],
+    "dog_mechanism": "Babesia spp 및 트리파노소마에 대한 항원충 효과. 누적 용량과 관련된 CNS 독성 위험 존재.",
+    "dog_extra_effects": [
+      "구토",
+      "설사",
+      "주사 부위 통증 및 부종",
+      "일시적 혈압 저하",
+      "운동실조",
+      "경련",
+      "사망 (드물게)"
+    ],
+    "cat_mechanism": "Cytauxzoon felis 및 바베시아에 대한 항원충 효과. 고양이에서 반감기가 매우 짧음(평균 1.7시간).",
+    "cat_extra_effects": [
+      "고용량 반복 투여 시 빈번한 부작용",
+      "기생충 부담 감소 효과 불확실"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 바베시아증 및 아프리카 트리파노소마증 치료에 사용됨. 반감기가 5~30시간으로 개체 간 변이가 크며, CNS 독성은 누적 용량과 관련됨. 6주 이내 디아미디딘 계열 약물 재투여 금지. 10 mg/kg 이상 IM 투여 시 심각한 GI, 호흡기, 신경계, 근골격계 독성 가능. 치료 후 60일 및 90일에 PCR 검사로 기생충 제거 확인 권장.",
+    "cat": "고양이에서 Cytauxzoon felis 및 바베시아 치료에 시도되었으나, 현재까지의 연구에서 위약 대비 기생충 부담 감소 효과가 입증되지 않음. 반감기가 평균 1.7시간으로 매우 짧음. 고용량 집중 치료(4 mg/kg IM 5일 연속)는 효능 없이 부작용만 빈번하게 발생함. 고양이에서의 사용은 매우 신중하게 고려해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "CNS 독성은 누적 용량과 관련됨. 6주 이내 재투여 금지. 10 mg/kg 이상 투여 시 심각한 독성 위험. 반복 투여 시 신중한 고려 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "현재까지의 연구에서 효능이 입증되지 않았으며, 고용량 반복 투여 시 빈번한 부작용 보고. 사용 시 위험-이익 평가 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "각 제품의 라벨 지침에 따라 보관. 분말, 과립, 또는 주사용 재구성 패킷은 직사광선을 피해 건조하고 서늘한 곳에 보관. 재구성 후 안정성: 냉장 시 최대 14일, 20°C(68°F)에서 최대 5일, 50°C(122°F) 이상에서는 24시간 이내 사용.",
+    "forms": [
+      "주사용 분말/과립 (재구성 후 주사)",
+      "Berenil RTU (즉시 사용 가능 주사제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디미나젠(디미나젠 아세투레이트)은 방향족 디아미딘 유도체 항원충제로, 개와 가축의 트리파노소마증, 개와 말의 바베시아증, 고양이의 사이토옥스주노시스 및 바베시아증 치료에 사용됨. 미국에서는 허가된 제품이 없으며 여러 국가에서 수의용으로 사용 가능. 통상 1회 투여하며, 반복 투여 시 독성(특히 CNS 독성) 위험 증가. 낙타과 동물에서는 금기. 개에서 반감기는 5~30시간으로 개체 간 변이가 크고, 고양이에서는 평균 1.7시간으로 짧음.",
+    "indications": "【허가 적응증】미국 내 허가 제품 없음. 【엑스트라라벨/해외 사용】개: 바베시아증(대형/소형 Babesia spp), 아프리카 트리파노소마증. 고양이: Cytauxzoon felis 기생충혈증, 바베시아증(효능 불확실). 말, 소, 양, 염소: 트리파노소마증, 바베시아증. 토끼: Trypanosoma evansi 감염.",
+    "client_info": "이 약은 주사로 투여되며, 보통 1회 투여합니다. 기생충이 완전히 제거되지 않을 수 있으며 재치료가 필요할 수 있습니다. 드물게 운동실조, 경련 등 신경계 부작용이 나타날 수 있으므로 투여 후 이상 증상이 관찰되면 즉시 수의사에게 연락하십시오. 구토, 설사, 주사 부위 통증 및 부종이 나타날 수 있습니다. 이 약은 미국에서 허가된 제품이 없으며, 수의사의 처방에 따라 엑스트라라벨로 사용됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP 대사 경로 상세 정보",
+      "신기능 저하 시 용량 조절 지침",
+      "간기능 저하 시 용량 조절 지침",
+      "경구 생체이용률",
+      "단백질 결합률",
+      "발현 시간(onset)",
+      "최고 혈중 농도 도달 시간(Tmax)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/14.jsonl",
+    "extracted_at": "2026-03-10T17:18:53.091986+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,456 @@
+{
+  "id": "edetate_calcium_disodium",
+  "drug_identity": {
+    "name_ko": "에데테이트 칼슘 이나트륨",
+    "name_en": "Edetate Calcium Disodium",
+    "active_ingredient": "Edetate Calcium Disodium",
+    "brand_names": [
+      "Calcium Disodium Versenate",
+      "Calcium Vitis",
+      "Calciumedetat-Heyl",
+      "Chelante",
+      "Chelintox",
+      "Ledclair"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음; 인체용 제품을 동물에 오프라벨로 사용. 납 및 아연 중독 치료에 사용되며, 현재는 경구 숙시머(succimer)가 개/고양이 납 중독 치료에 더 일반적으로 권장됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "CaEDTA는 대사되지 않고 신장을 통해 미변화체 또는 금속 킬레이트 복합체로 신속히 배설됨."
+    },
+    "extra_information": "CaEDTA는 적혈구 내로 침투하지 않으며 CNS에 유의미한 양이 도달하지 않음. 신기능 저하 시 축적되어 신독성 위험 증가. 소동물에서는 SC 경로 권장."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신독성(신세뇨관 괴사)이 주요 부작용으로 명시됨. 간독성은 인체에서 경미한 간효소 상승 보고. 뇌 관련: 납 뇌병증 환자에서 급속 IV 투여 시 두개내압 상승 위험. 개에서 우울증, 구토, 설사 보고.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "intracranial pressure",
+          "depression",
+          "CNS"
+        ],
+        "index": 1,
+        "evidence": "급속 IV 투여 시 두개내압 급격 상승 및 사망 위험(납 뇌병증 환자). 개에서 우울증 보고."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bone marrow depression",
+          "thrombophlebitis"
+        ],
+        "index": 1,
+        "evidence": "고용량 장기 투여 시 일시적 골수 억제 보고. IV 주입 후 혈전정맥염 가능."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "renal tubular necrosis",
+          "nephrotoxicity",
+          "glycosuria",
+          "proteinuria",
+          "hematuria",
+          "renal toxicity"
+        ],
+        "index": 0,
+        "evidence": "용량 의존적 신독성(신세뇨관 괴사)이 가장 심각한 부작용. 당뇨, 단백뇨, 현미경적 혈뇨 가능. 신기능 저하 시 축적 위험."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic enzymes"
+        ],
+        "index": 2,
+        "evidence": "인체에서 경미한 간효소 상승 보고. 개에서 간독성 직접 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "inverted T waves",
+          "ECG",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "ECG에서 역전된 T파 가능. 일시적 저혈압 보고(인체). IV 투여 시 심박수 및 리듬 모니터링 권장."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "intracranial pressure",
+          "CNS"
+        ],
+        "index": 1,
+        "evidence": "급속 IV 투여 시 두개내압 상승 위험. 고양이 특이적 CNS 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bone marrow depression"
+        ],
+        "index": 1,
+        "evidence": "고용량 장기 투여 시 일시적 골수 억제 가능. 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "renal tubular necrosis",
+          "nephrotoxicity",
+          "renal toxicity"
+        ],
+        "index": 0,
+        "evidence": "용량 의존적 신독성(신세뇨관 괴사)이 주요 부작용. 신기능 저하 시 축적 위험. 고양이에서도 동일한 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic enzymes"
+        ],
+        "index": 2,
+        "evidence": "인체에서 경미한 간효소 상승 보고. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "inverted T waves",
+          "ECG"
+        ],
+        "index": 2,
+        "evidence": "ECG에서 역전된 T파 가능. 고양이 특이적 심장 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.33,
+      "max": 1.0,
+      "mean": 0.67,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 정상 신기능 기준 IV 투여 후 평균 반감기 20~60분. 동물 특이적 PK 데이터 없음. GI 흡수 불량; IM 또는 SC 투여 후 잘 흡수됨. 주로 세포외액에 분포."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Glucocorticoids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "renal toxicity",
+        "nephrotoxicity"
+      ],
+      "evidence": "CaEDTA와 글루코코르티코이드 병용 시 신독성 위험 증가 가능."
+    },
+    {
+      "drug": "Insulin (zinc-containing, e.g., NPH, PZI)",
+      "severity": 2,
+      "keywords": [
+        "zinc chelation",
+        "insulin duration"
+      ],
+      "evidence": "CaEDTA가 아연을 킬레이트하여 아연 인슐린 제제(NPH, PZI)의 지속 작용을 감소시킴."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., aminoglycosides, amphotericin B)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "다른 신독성 약물과 병용 시 주의 필요; 신독성 위험 상가."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "renal toxicity",
+        "nephrotoxicity"
+      ],
+      "evidence": "CaEDTA와 NSAIDs 병용 시 신독성 위험 증가 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "납 및 아연 중독 치료 (오프라벨, SC 투여)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여; 1일 최대 2g/동물 초과 금지. 필요 시 반복 가능.",
+          "evidence": "5% 포도당으로 10 mg/mL 농도로 희석하여 SC 투여. 일부 문헌에서 1일 2g 초과 금지 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "납 중독 치료 (오프라벨, IV 투여)",
+          "value": "75",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 총 용량을 4회 균등 분할(6시간 간격)로 2~5일 투여. 증상 지속 시 2~3일 후 반복 가능. 1일 최대 2000 mg.",
+          "evidence": "0.9% 생리식염수 또는 5% 포도당에 5%(50 mg/mL) 용액으로 천천히 IV 투여. 총 1일 용량 2000 mg 초과 금지."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "납 및 아연 중독 치료 (오프라벨, SC 투여)",
+          "value": "27.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여; 필요 시 반복 가능.",
+          "evidence": "15 mL의 5% 포도당에 희석하여 6시간마다 SC 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량 필요. 무뇨증 환자에서는 금기. 신기능 저하 시 CaEDTA 축적으로 신독성 위험 증가. 구체적 용량 조정 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간기능 저하에 따른 용량 조정 관련 정보 없음. 주로 신장으로 배설되므로 간기능 저하의 영향은 제한적으로 예상됨."
+  },
+  "contraindications": [
+    {
+      "condition": "무뇨증 (Anuria)",
+      "match_terms": [
+        "anuria",
+        "무뇨"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신기능 저하 (Decreased renal function)",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal insufficiency",
+        "신부전"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "GI 내 납/아연 잔류",
+      "match_terms": [
+        "lead in GI tract",
+        "zinc in GI tract",
+        "GI decontamination needed"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "납 뇌병증 및 뇌부종",
+      "match_terms": [
+        "lead encephalopathy",
+        "cerebral edema",
+        "납 뇌병증"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CaEDTA의 칼슘이 2가 또는 3가 금속(납, 아연 등)으로 치환되어 안정적이고 수용성인 킬레이트 복합체를 형성하고, 이를 소변으로 배설시킴.",
+    "common_extra_effects": [
+      "신세뇨관 괴사 (용량 의존적)",
+      "당뇨 (glycosuria)",
+      "단백뇨 (proteinuria)",
+      "현미경적 혈뇨 (microscopic hematuria)",
+      "주사 부위 통증",
+      "혈전정맥염 (IV 주입 후)",
+      "일시적 저혈압",
+      "경미한 간효소 상승",
+      "진전 (tremor)",
+      "발진",
+      "고용량 장기 투여 시 일시적 골수 억제",
+      "피부 및 점막 병변",
+      "아연 결핍 (장기 치료 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "우울증 (depression)",
+      "구토 (vomiting)",
+      "설사 (diarrhea)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "소동물에서는 SC 경로 권장. 납 뇌병증 환자에서 급속 IV 투여 시 두개내압 급격 상승 및 사망 위험. 개에서 우울증, 구토, 설사 발생 가능하며 아연 보충으로 GI 증상 완화 가능. 1일 최대 용량 2000 mg 초과 금지. 경구 숙시머가 현재 더 일반적으로 권장됨.",
+    "cat": "소동물에서는 SC 경로 권장. 27.5 mg/kg을 15 mL 5% 포도당에 희석하여 6시간마다 SC 투여, 5일간. 경구 숙시머가 현재 더 일반적으로 권장됨. 고양이 특이적 부작용 데이터 제한적."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 극도의 주의 필요; 용량 감량 필수. 무뇨증 시 금기. GI 내 납/아연 제거 후 투여. 경구 투여 금지(GI 내 납 흡수 증가 위험). 충분한 수분 공급 유지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 극도의 주의 필요; 용량 감량 필수. 무뇨증 시 금기. GI 내 납/아연 제거 후 투여. 경구 투여 금지. 충분한 수분 공급 유지."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 보관; 15~30°C(59~86°F) 범위 허용. 생리식염수 또는 5% 포도당으로 희석.",
+    "forms": [
+      "Edetate Calcium Disodium Injection Solution 200 mg/mL (5 mL 앰플, 1 g/앰플)",
+      "컴파운딩 약국에서 제조 가능"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "CaEDTA는 납 및 아연 중독 치료에 사용되는 중금속 킬레이트제입니다. 수의학적으로 승인된 제품은 없으며 인체용 제품을 오프라벨로 사용합니다. 소동물에서는 SC 경로가 권장되며, 경구 투여는 절대 금지입니다. 가장 심각한 부작용은 용량 의존적 신독성(신세뇨관 괴사)이므로 신기능 모니터링이 필수적입니다. 무뇨증 환자에서는 금기이며, 신기능 저하 환자에서는 극도의 주의가 필요합니다. 현재 개/고양이 납 중독에는 경구 숙시머가 더 일반적으로 권장됩니다.",
+    "indications": "납 중독(개, 고양이, 말, 식용동물, 낙타류, 조류, 토끼) 및 아연 중독(개, 고양이, 조류) 치료. 모두 오프라벨 사용. 경구 치료가 불가능한 경우 CaEDTA를 고려할 수 있으며, 디메르카프롤(dimercaprol)과 병용 가능.",
+    "client_info": "이 약물은 중금속 중독 치료에 사용되는 전문 의약품으로, 반드시 수의사의 긴밀한 감독 하에 사용해야 합니다. 치료 중 신장 기능 검사와 소변 검사를 정기적으로 실시합니다. 납이나 아연의 노출원을 반드시 제거해야 합니다. 치료 중 충분한 수분 공급이 중요합니다. 장기 치료 시 아연 결핍이 발생할 수 있으므로 아연 보충을 고려할 수 있습니다. 이 약을 절대 경구로 투여하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies (dog/cat)",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability (F%)",
+      "Tmax data",
+      "Onset of action data",
+      "Hepatic dose adjustment specifics",
+      "Creatinine threshold for dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "half_life_hr (dog/cat specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/15.jsonl",
+    "extracted_at": "2026-03-10T17:46:38.225910+00:00",
+    "reviewer": null
+  }
+}

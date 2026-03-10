@@ -1,0 +1,402 @@
+{
+  "id": "docusate",
+  "drug_identity": {
+    "name_ko": "도큐세이트",
+    "name_en": "Docusate",
+    "active_ingredient": "Docusate sodium / Docusate calcium",
+    "brand_names": [
+      "Colace",
+      "Surfak",
+      "Dioctynate",
+      "Pet-Enema",
+      "Enema SA",
+      "Docu-Soft"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "소동물(개, 고양이)에서의 사용은 엑스트라라벨(extra-label) 사용이며, 수의용 FDA 승인 여부는 불명확함.",
+    "dosage_form": [
+      "Cap",
+      "Oral Liquid",
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 240,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "경구 투여 후 흡수량은 불명확하나, 일부가 소장에서 흡수된 후 담즙으로 배설되는 것으로 알려져 있음."
+    },
+    "extra_information": "개와 고양이에서의 구체적인 약동학 데이터는 보고되지 않음. 경구 투여 후 흡수 정도는 불명확하며, 소장에서 일부 흡수 후 담즙 배설로 추정됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 장관 점막 손상이 주요 독성이며, 과량 투여 시 탈수 및 전해질 이상이 보고됨. 수의 종별 PK 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "electrolyte abnormalities",
+          "dehydration"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 탈수 및 전해질 이상 가능성이 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "fluid/electrolyte abnormalities"
+        ],
+        "index": 1,
+        "evidence": "전해질 이상 환자에서 주의 사용 권고; 신독성 직접 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "bile excretion"
+        ],
+        "index": 1,
+        "evidence": "담즙 배설 경로가 언급되나 간독성 직접 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 영향에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "electrolyte abnormalities"
+        ],
+        "index": 1,
+        "evidence": "전해질 이상 환자에서 주의 사용 권고."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "fluid/electrolyte abnormalities"
+        ],
+        "index": 1,
+        "evidence": "전해질 이상 환자에서 주의 사용 권고; 신독성 직접 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "bile excretion"
+        ],
+        "index": 1,
+        "evidence": "담즙 배설 경로가 언급되나 간독성 직접 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 영향에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 흡수량 및 반감기에 대한 정량적 데이터가 모노그래프에 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Mineral Oil",
+      "severity": 2,
+      "keywords": [
+        "enhanced absorption",
+        "mineral oil absorption"
+      ],
+      "evidence": "Theoretically, concurrent use with docusate may enhance mineral oil absorption. Not considered clinically significant in large animals, but concurrent use in dogs or cats is not recommended. If necessary, separate doses by at least 2 hours."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "변비 완화 / 분변 연화 (Stool softener)",
+          "value": "25 - 100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "개의 크기에 따라 용량 조절; 대형견에서 최대 240~250 mg 1일 1회 투여 가능. mg/kg 기준 아님.",
+          "evidence": "Extra-label; Plumb's Veterinary Drug Handbook"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "변비 완화 / 분변 연화 (Stool softener) - 1일 2회 투여 옵션",
+          "value": "25 - 100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "개의 크기에 따라 용량 조절. mg/kg 기준 아님.",
+          "evidence": "Extra-label; Plumb's Veterinary Drug Handbook"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "변비 완화 / 분변 연화 (Stool softener)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 기준 아님; 고양이 1마리당 50 mg 1일 1회.",
+          "evidence": "Extra-label; Plumb's Veterinary Drug Handbook"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조절에 대한 구체적 권고사항이 없음. 전해질/수분 이상 환자에서 주의 사용 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 구체적 권고사항이 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "도큐세이트 과민반응",
+      "match_terms": [
+        "hypersensitivity to docusate",
+        "docusate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질/수분 이상",
+      "match_terms": [
+        "electrolyte imbalance",
+        "dehydration",
+        "fluid abnormality"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "흡인 위험 환자",
+      "match_terms": [
+        "aspiration risk",
+        "megaesophagus",
+        "dysphagia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "계면활성제로서 표면장력을 감소시켜 수분과 지방이 장내 내용물 및 형성된 분변에 침투하도록 하여 변을 연화시킴. 또한 결장 점막 세포의 cAMP 농도를 증가시켜 이온 분비 및 수분 투과성을 높임.",
+    "common_extra_effects": [
+      "복부 경련(cramping)",
+      "설사(diarrhea)",
+      "장 점막 손상(intestinal mucosal damage)",
+      "액상 제제 경구 투여 시 인후 자극",
+      "쓴맛(bitter taste) — 도큐세이트 나트륨"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 분변이 딱딱하거나 건조한 경우, 또는 항문직장 질환으로 인해 단단한 분변 배출이 고통스럽거나 해로울 때 사용. 용량은 mg/kg이 아닌 개체당 고정 용량(25~100 mg, 대형견 최대 240~250 mg)으로 투여. 미네랄 오일과의 병용은 권장되지 않음.",
+    "cat": "고양이에서 분변 연화 목적으로 사용 시 50 mg/마리 1일 1회 경구 투여. mg/kg 기준이 아님. 미네랄 오일과의 병용은 권장되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "전해질/수분 이상 환자 및 흡인 위험 환자에서 주의 사용. 일반적인 치료 용량에서 임상적으로 유의한 부작용은 드묾."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "전해질/수분 이상 환자 및 흡인 위험 환자에서 주의 사용. 일반적인 치료 용량에서 임상적으로 유의한 부작용은 드묾."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐은 밀폐 용기에 실온 보관. 30°C(86°F) 이상에서 연질 젤라틴 캡슐이 연화 또는 용융될 수 있음. 도큐세이트 나트륨 용액은 밀폐 용기에, 시럽은 밀폐 차광 용기에 보관.",
+    "forms": [
+      "Docusate Sodium Oral Tablets: 100 mg",
+      "Docusate Sodium Oral Capsules/Soft-gel Capsules: 50 mg, 100 mg, 250 mg",
+      "Docusate Sodium Oral Syrup/Liquid: 50 mg/5 mL (10 mg/mL)",
+      "Docusate Calcium Capsules: 240 mg",
+      "Docusate Sodium Bloat Preparation: 240 mg/30 mL",
+      "Docusate Sodium Enema 5% solution",
+      "Docusate Sodium Enema: 250 mg/12 mL syringes",
+      "Docusate Sodium Oral Liquid 5%"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "도큐세이트(DSS)는 계면활성제 계열의 변 연화제로, 딱딱하거나 건조한 분변의 배출을 용이하게 하기 위해 소동물에서 엑스트라라벨로 사용됨. 개에서는 25~100 mg/마리(대형견 최대 240~250 mg), 고양이에서는 50 mg/마리 1일 1회 경구 투여. 일반 치료 용량에서 부작용은 드물지만, 전해질/수분 이상 환자에서는 주의가 필요함. 말에서 과량 투여 시 치명적일 수 있음.",
+    "indications": "【승인 적응증】 수의용 제품이 시판되고 있으나 FDA 승인 여부 불명확. 【엑스트라라벨 적응증】 개·고양이: 딱딱하거나 건조한 분변으로 인한 변비, 항문직장 질환 시 분변 연화. 말: 대장 및 맹장 분변 매복(fecal impaction). 양: 부분적 탈원충(partial defaunation)을 통한 자발적 사료 섭취량 및 소화·흡수 증진.",
+    "client_info": "【보호자 안내】\n• 딱딱하거나 건조한 변으로 인한 변비 치료에 사용됩니다.\n• 일반적으로 부작용이 적고 잘 견디는 약물입니다.\n• 공복 상태(식사 1시간 전 또는 식사 2시간 후)에 투여하는 것이 좋습니다.\n• 도큐세이트는 처방전 없이 구입 가능한 일반의약품이지만, 반드시 수의사와 상담 후 투여하십시오. 임의로 다른 하제나 약물을 함께 투여하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP profile",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "Onset of action data",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/14.jsonl",
+    "extracted_at": "2026-03-10T17:27:56.121207+00:00",
+    "reviewer": null
+  }
+}

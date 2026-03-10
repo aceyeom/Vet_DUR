@@ -1,0 +1,685 @@
+{
+  "id": "doxorubicin",
+  "drug_identity": {
+    "name_ko": "독소루비신",
+    "name_en": "Doxorubicin",
+    "active_ingredient": "Doxorubicin hydrochloride",
+    "brand_names": [
+      "Adriamycin",
+      "Adriamycin RDF",
+      "Adriamycin PFS",
+      "Adriblastin",
+      "Adriblastina",
+      "Adriblastine",
+      "Adrim",
+      "Adrimedac",
+      "Biorrub",
+      "DOXO-cell",
+      "Doxolem",
+      "Doxorbin",
+      "Doxorubin",
+      "Doxotec",
+      "Doxtie",
+      "Farmiblastina",
+      "Fauldoxo",
+      "Flavicina",
+      "Ifadox",
+      "Neoxan",
+      "Ribodoxo-L",
+      "Rubex"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 모든 용법은 허가 외(extra-label) 사용이며, 수의 종양 전문의와의 상담이 강력히 권장됩니다.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.05,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간 및 기타 조직에서 aldo-keto reductase에 의해 광범위하게 대사되어 주로 활성 대사체인 doxorubicinol 및 기타 비활성 대사체를 형성함. 약물과 대사체는 주로 담즙 및 대변으로 배설되며, 투여 후 5일 이내 소변으로 배설되는 비율은 약 5%에 불과함."
+    },
+    "extra_information": "독소루비신은 3상(triphasic) 방식으로 제거됨. 1상 반감기 약 0.6시간(초기 대사), 2상 반감기 약 3.3시간, 3상(말기) 반감기 독소루비신 약 17시간, 대사체 약 32시간. 조직 단백질로부터의 서방성 방출로 인해 말기 반감기가 길어짐. 고양이에서 신독성이 보고되어 있으며, 신부전 고양이에서는 금기임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 독소루비신의 주요 독성 프로파일(심장독성, 골수억제, 신독성, 간대사)을 근거로 평가함. 수의 종 특이적 PK 데이터는 제한적이며, 인체 및 소동물 임상 데이터를 참조함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "CSF로의 유의미한 분포는 없다고 보고됨. 직접적인 뇌 독성 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "neutrophil nadir",
+          "platelet nadir"
+        ],
+        "index": 1,
+        "evidence": "골수억제가 주요 독성으로, 호중구 및 혈소판 최저점이 투여 후 7~10일에 관찰됨. AUC와 호중구 최저점 간 상관관계가 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal chemistry",
+          "BUN",
+          "creatinine"
+        ],
+        "index": 2,
+        "evidence": "개에서 신독성은 주요 독성이 아니나, 모니터링 권장. 고양이에서는 신독성이 주요 우려사항임."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "extensively metabolized in the liver",
+          "hepatic impairment",
+          "dosage reduction"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 중증 간기능 장애 시 용량 감량 필요. 간기능 저하 환자에서 주의 사용 권장."
+      },
+      "heart": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "cardiac toxicity",
+          "cardiomyopathy",
+          "cumulative dose",
+          "ECG changes",
+          "congestive heart failure",
+          "arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "심장독성은 급성 및 누적성으로 구분됨. 누적 용량 180~240 mg/m² 초과 시 심독성 위험 크게 증가. 확장성 심근병증 소인 견종(도베르만, 그레이트 데인, 로트와일러, 복서)에서 특히 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌 독성에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 골수억제가 발생할 수 있으나, 개에 비해 심장독성보다 신독성이 더 주요한 우려사항임."
+      },
+      "kidney": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "nephrotoxin",
+          "renal insufficiency",
+          "BUN",
+          "creatinine",
+          "contraindicated in cats with pre-existing renal insufficiency"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 독소루비신은 잠재적 신독소로, 기존 신부전 고양이에서 금기. 치료 전후 신장 수치(BUN, 크레아티닌) 모니터링 필수."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "extensively metabolized in the liver",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간기능 장애 시 주의 및 용량 조정 필요."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "cardiotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 심독성 발생률 및 용량 상한선은 알려져 있지 않음. 개에 비해 심독성 위험이 덜 명확하게 기술되어 있음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.6,
+      "max": 17.0,
+      "mean": 17.0,
+      "species": "unknown"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": null,
+    "evidence": "독소루비신은 IV 투여만 가능하며 경구 흡수되지 않음(생체이용률 0%). 조직 및 혈장 단백질에 고도로 결합됨. 3상 제거: 1상 t½ ≈0.6시간, 2상 t½ ≈3.3시간, 말기 t½ ≈17시간(독소루비신), 대사체 ≈32시간. 말기 반감기 17시간을 대표값으로 사용."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: contraindicated/avoid→3, major/significant→2, minor/theoretical→1.",
+  "drug_interactions": [
+    {
+      "drug": "Calcium Channel Blockers (diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity",
+        "cardiac toxicity"
+      ],
+      "evidence": "Potential increased risk for cardiotoxicity associated with doxorubicin."
+    },
+    {
+      "drug": "Cisplatin",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "additive toxicity"
+      ],
+      "evidence": "Increased risk for toxicity (e.g., myelosuppression); carefully weigh risks versus benefits."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "increased AUC",
+        "hematologic toxicity",
+        "coma",
+        "seizures"
+      ],
+      "evidence": "May increase doxorubicin blood concentrations (AUC) and prolong hematologic toxicity; coma and seizures reported in humans. Dog study did not find significant difference in toxicity prevalence."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 3,
+      "keywords": [
+        "increased doxorubicin concentration",
+        "increased doxorubicinol concentration",
+        "toxicity"
+      ],
+      "evidence": "Cyclosporine can increase doxorubicin and doxorubicinol (active metabolite) concentrations. Avoid use together."
+    },
+    {
+      "drug": "Glucosamine",
+      "severity": 1,
+      "keywords": [
+        "reduced efficacy"
+      ],
+      "evidence": "May reduce doxorubicin effectiveness; use together not recommended in humans."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 3,
+      "keywords": [
+        "increased doxorubicin concentration",
+        "increased doxorubicinol concentration",
+        "toxicity"
+      ],
+      "evidence": "Can increase doxorubicin and doxorubicinol (active metabolite) concentrations and lead to toxicity. Avoid use together."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 2,
+      "keywords": [
+        "additive hematologic toxicity"
+      ],
+      "evidence": "May have additive adverse hematologic toxicity."
+    },
+    {
+      "drug": "Morphine",
+      "severity": 1,
+      "keywords": [
+        "increased morphine exposure"
+      ],
+      "evidence": "Concurrent use may increase morphine exposure."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "increased elimination",
+        "reduced doxorubicin concentration"
+      ],
+      "evidence": "May increase elimination and reduce blood concentrations of doxorubicin, potentially reducing efficacy."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "increased doxorubicin exposure"
+      ],
+      "evidence": "Concurrent use may result in increased doxorubicin exposure."
+    },
+    {
+      "drug": "Spinosad",
+      "severity": 3,
+      "keywords": [
+        "increased doxorubicin concentration",
+        "increased doxorubicinol concentration",
+        "toxicity"
+      ],
+      "evidence": "Can increase doxorubicin and doxorubicinol (active metabolite) concentrations and lead to toxicity. Avoid use together."
+    },
+    {
+      "drug": "Streptozocin",
+      "severity": 2,
+      "keywords": [
+        "inhibited metabolism",
+        "increased doxorubicin exposure"
+      ],
+      "evidence": "May inhibit doxorubicin metabolism, potentially increasing exposure and toxicity."
+    },
+    {
+      "drug": "Live or live-attenuated vaccines",
+      "severity": 3,
+      "keywords": [
+        "active infection",
+        "immunosuppression"
+      ],
+      "evidence": "Live or live-attenuated vaccines may result in active infections in immunocompromised patients receiving doxorubicin."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased bleeding risk"
+      ],
+      "evidence": "Increased risk for bleeding when used concurrently with doxorubicin."
+    },
+    {
+      "drug": "Zidovudine",
+      "severity": 2,
+      "keywords": [
+        "neutropenia",
+        "additive hematologic toxicity"
+      ],
+      "evidence": "Increased risk for neutropenia with concurrent use."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_renal_insufficiency"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 3.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항암화학요법 (extra-label) — 표준 용량",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~3주 간격 투여. 최대 누적 용량 180~240 mg/m² (mg/kg 아님). 품종 및 위험인자에 따라 상한선 조정.",
+          "evidence": "30 mg/m² (NOT mg/kg) IV every 2 to 3 weeks. 단위는 mg/m²이며 mg/kg이 아님에 주의."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "항암화학요법 (extra-label) — 소형견 (체중 10~15 kg 미만)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "2~3주 간격 투여. 소형견(10~15 kg 미만)에 적용.",
+          "evidence": "Smaller patients (e.g., less than 10-15 kg) may be dosed at 1 mg/kg IV."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항암화학요법 (extra-label) — BSA 기반 용량",
+          "value": "20 - 25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주 간격 투여. 단위는 mg/m²이며 mg/kg이 아님에 주의. 신장 기능 모니터링 필수.",
+          "evidence": "20–25 mg/m² (NOT mg/kg) IV every 3 weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항암화학요법 (extra-label) — 체중 기반 용량",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "3주 간격 투여. 신장 기능 모니터링 필수.",
+          "evidence": "1 mg/kg IV every 3 weeks."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "고양이에서 기존 신부전이 있는 경우 독소루비신은 금기임. 개에서는 특정 크레아티닌 역치가 명시되어 있지 않으나, 치료 전 및 각 화학요법 전 BUN, 크레아티닌, 요비중 모니터링이 권장됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간기능 장애 환자에서 용량 감량이 필요함. 간기능 저하 또는 고요산혈증/고요산뇨증 환자에서 주의 사용 권장. 구체적인 ALT 역치나 감량 비율은 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (독소루비신 또는 안트라사이클린계)",
+      "match_terms": [
+        "anthracycline hypersensitivity",
+        "doxorubicin hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 골수억제",
+      "match_terms": [
+        "myelosuppression",
+        "neutropenia",
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 심기능 장애",
+      "match_terms": [
+        "cardiac dysfunction",
+        "cardiomyopathy",
+        "heart failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "최대 누적 용량 도달",
+      "match_terms": [
+        "cumulative dose exceeded",
+        "maximum cumulative dose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 — 기존 신부전",
+      "match_terms": [
+        "feline renal insufficiency",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "고요산혈증 / 고요산뇨증",
+      "match_terms": [
+        "hyperuricemia",
+        "hyperuricuria"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MDR1 돌연변이 동형접합 개 (mutant/mutant)",
+      "match_terms": [
+        "MDR1 mutation",
+        "ABCB1 mutation",
+        "collie",
+        "Australian shepherd",
+        "Shetland sheepdog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MDR1 돌연변이 이형접합 개 (mutant/normal)",
+      "match_terms": [
+        "MDR1 heterozygous",
+        "ABCB1 heterozygous"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Australian Shepherd",
+      "Shetland Sheepdog",
+      "Long-haired Whippet"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "독소루비신은 P-당단백질 펌프에 의해 능동 수송됨. MDR1(ABCB1) 유전자 돌연변이 감수성 견종에서 정상 용량에서도 골수억제(특히 호중구감소증) 및 위장관 독성 위험이 증가함. 동형접합 돌연변이(mutant/mutant) 개에서는 사용을 피해야 하며, 이형접합(mutant/normal) 개에서는 용량 감량이 필요함."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "DNA 합성, DNA 의존성 RNA 합성 및 단백질 합성 억제. DNA 및 RNA 중합효소 억제, 토포이소머라제 II 손상, 자유 라디칼 생성. DNA 염기쌍 삽입(intercalation)을 통한 전사 및 복제 방해. 세포 주기 전반에 걸쳐 작용하며 일부 면역억제 활성도 보유.",
+    "common_extra_effects": [
+      "골수억제 (호중구감소증, 혈소판감소증)",
+      "구역 및 구토 (투여 후 72시간 이내)",
+      "설사 (투여 후 4~5일)",
+      "구내염",
+      "탈모",
+      "즉각적 과민반응 (두드러기, 안면 부종, 구토, 부정맥, 저혈압)",
+      "혈관 외 유출 시 심각한 조직 궤양 및 괴사",
+      "최기형성 및 배아독성",
+      "소변 적색 변색 (투여 후 1~2일)"
+    ],
+    "dog_mechanism": "개에서 심장독성이 주요 우려사항으로, 독소루비신-철 복합체 자유 라디칼이 심근병증의 주요 원인으로 추정됨.",
+    "dog_extra_effects": [
+      "심장독성 (급성 및 누적성 심근병증)",
+      "ECG 변화 (T파 평탄화, ST 하강, 전압 감소, 부정맥)",
+      "확장성 심근병증 (누적 용량 초과 시)",
+      "즉각적 히스타민 매개 과민반응",
+      "MDR1 돌연변이 견종에서 골수억제 및 위장관 독성 증가",
+      "탈모 (수염 손실 포함)"
+    ],
+    "cat_mechanism": "고양이에서 신독성이 주요 독성으로, 신장 화학 수치 모니터링이 필수적임.",
+    "cat_extra_effects": [
+      "신독성 (BUN, 크레아티닌 상승)",
+      "수염 및 보호털 손실",
+      "골수억제",
+      "심독성 발생률 및 용량 상한선 불명확"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 독소루비신은 가장 널리 사용되는 항암제 중 하나임. 주요 독성은 골수억제와 심장독성임. 누적 용량 180~240 mg/m²를 초과하면 심독성 위험이 크게 증가하며, 확장성 심근병증 소인 견종(도베르만 핀셔, 그레이트 데인, 로트와일러, 복서)에서는 심초음파 모니터링이 권장됨. MDR1 돌연변이 견종에서는 용량 감량 또는 사용 회피가 필요함. 구토 예방을 위해 마로피탄트 2 mg/kg PO를 독소루비신 투여 직전 5일간 사용할 수 있음. 투여 전 디펜히드라민 1~2 mg/kg IM 또는 덱사메타손 0.1~0.2 mg/kg IV/IM 전처치로 과민반응을 예방할 수 있음.",
+    "cat": "고양이에서 독소루비신은 잠재적 신독소로, 기존 신부전이 있는 경우 절대 금기임. 치료 전 및 각 화학요법 전 BUN, 크레아티닌, 요비중을 반드시 모니터링해야 함. 심독성 발생률 및 용량 상한선은 알려져 있지 않음. 수염 및 보호털 손실이 발생할 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 심장독성, 골수억제, MDR1 돌연변이 관련 독성 위험으로 주의 사용 필요. 확장성 심근병증 소인 견종에서 심초음파 모니터링 권장. MDR1 동형접합 돌연변이 개에서는 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 신독성이 주요 우려사항. 기존 신부전 고양이에서는 절대 금기(status 2에 해당). 신장 기능 정상인 고양이에서도 치료 중 신장 수치 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "동결건조 분말: 직사광선 차단, 건조한 곳에 보관. 0.9% 생리식염수로 재구성 후 실온 24시간, 냉장 48시간 안정. 냉동(-20°C) 시 30일간 역가 손실 없음. 다회용 바이알: 실온 7일, 냉장 15일. 수용액 주사제: 냉장(2~8°C) 보관 시 18개월 안정. 광선 차단 필요. 동결 금지.",
+    "forms": [
+      "Lyophilized powder for injection: 10 mg vial, 150 mg vial (2 mg/mL로 재구성)",
+      "Aqueous injection solution: 2 mg/mL (5 mL, 10 mL, 25 mL, 100 mL vials)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "독소루비신은 소동물 종양학에서 가장 널리 사용되는 항암제로, 림프종, 백혈병, 암종, 육종 등 다양한 종양에 단독 또는 병용 프로토콜로 사용됨. 주요 독성은 골수억제(개, 고양이), 심장독성(개), 신독성(고양이)임. 누적 심독성을 방지하기 위해 최대 누적 용량(180~240 mg/m²)을 엄격히 준수해야 함. MDR1 돌연변이 견종에서 독성 위험이 증가하며, 동형접합 돌연변이 개에서는 사용을 피해야 함. 혈관 외 유출 시 심각한 조직 손상이 발생할 수 있으므로 IV 카테터 관리에 각별한 주의가 필요함. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비 착용이 필수임.",
+    "indications": "개와 고양이에서 림프종, 백혈병, 암종, 육종 등 다양한 종양의 치료에 단독 또는 병용 화학요법 프로토콜로 사용(모두 허가 외 사용). 수의 라벨 제품 없음; 인체용 제품을 허가 외로 사용함.",
+    "client_info": "독소루비신은 항암(항종양) 약물입니다. 약물과 그 부산물은 다른 동물과 사람에게 위험할 수 있습니다. 동물이 약물을 투여받은 날과 이후 약 72시간 동안, 모든 배설물(소변, 대변, 구토물 등)은 반드시 일회용 장갑을 착용하고 처리해야 합니다. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. 임산부는 이 약물을 투여받는 동안 배설물이나 관련 물품을 절대 취급하지 마십시오. 이 약물은 평생 투여할 수 있는 최대 총량이 정해져 있으며, 이를 초과하면 심장 손상 위험이 크게 증가합니다. 수의사가 투여량을 추적 관리합니다. 약물 투여 후 1~2일간 소변이 붉게 보일 수 있으며, 이는 정상입니다. 독소루비신 투여 중에는 생백신(또는 약독화 생백신)을 접종하지 마십시오. 비정상적인 출혈, 멍, 감염 징후, 발열, 위장관 이상, 주사 부위 자극 등의 독성 징후가 나타나면 즉시 수의사에게 연락하십시오. 치료 중 개를 반려견 공원이나 공공장소에 데려가지 마시고, 수의사의 허가가 있을 때까지 공공장소에서 배변하지 않도록 해주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific veterinary PK studies (dog/cat)",
+      "CYP enzyme profile",
+      "Protein binding percentage",
+      "Exact hepatic ALT threshold for dose adjustment",
+      "Exact renal creatinine threshold for dose adjustment in dogs",
+      "t_max_hr",
+      "onset_min"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "renal_dose_adjustment.adjustment_factor"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/15.jsonl",
+    "extracted_at": "2026-03-10T17:42:04.363876+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,585 @@
+{
+  "id": "dopamine",
+  "drug_identity": {
+    "name_ko": "도파민",
+    "name_en": "Dopamine",
+    "active_ingredient": "Dopamine hydrochloride",
+    "brand_names": [
+      "Intropin"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Phentolamine",
+    "reversal_evidence": "과량 투여 시 혈압 과상승이 지속될 경우 phentolamine 사용 가능 (Plumb's 기재)",
+    "off_label_note": "수의용 허가 제품 없음; 개와 고양이에서 중증 저혈압/쇼크 치료에 extra-label로 사용됨",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 80,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 160,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.6,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 3.2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "도파민은 신장, 간, 혈장에서 MAO(모노아민 산화효소) 및 COMT(카테콜-O-메틸트랜스퍼라제)에 의해 불활성 대사체로 대사됨. 투여량의 최대 25%는 아드레날린성 신경 말단에서 노르에피네프린으로 대사됨. 불활성 대사체는 신장으로 배설됨."
+    },
+    "extra_information": "경구 투여 시 위장관에서 빠르게 대사되어 전신 흡수가 되지 않으므로 반드시 IV CRI로만 투여. 혈장 반감기 약 2분. MAO 억제제 투여 환자에서는 작용 지속 시간이 최대 1시간까지 연장될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 도파민은 혈관 및 심장에 직접 작용하며, 신장·간에서 대사됨. 혈압 상승, 부정맥, 혈관수축 등의 이상반응 근거로 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈뇌장벽 통과 미미"
+        ],
+        "index": -1,
+        "evidence": "도파민은 혈뇌장벽을 유의미한 양으로 통과하지 않는다고 기재됨. 직접적인 CNS 부담은 낮음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "이소성 박동",
+          "빈맥",
+          "부정맥",
+          "혈압 상승",
+          "혈관수축"
+        ],
+        "index": 1,
+        "evidence": "이소성 박동, 빈맥, 저혈압, 고혈압, 혈관수축 등 심혈관계 이상반응이 주요 부작용으로 기재됨. 심장 수축력 증가 및 Bezold-Jarisch 반사 유발 가능."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "신장 대사",
+          "핍뇨성 급성 신부전",
+          "GFR 개선 미입증"
+        ],
+        "index": 2,
+        "evidence": "신장에서 MAO/COMT에 의해 대사됨. 개에서 GFR 증가 효과 미입증, 고양이에서 신장 혈관확장 효과 없음. 핍뇨성 급성 신부전 치료 목적 사용 비권장."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사"
+        ],
+        "index": 3,
+        "evidence": "간에서 MAO 및 COMT에 의해 대사됨. 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "양성 변력 효과",
+          "부정맥",
+          "빈맥",
+          "심실 부정맥",
+          "Bezold-Jarisch 반사"
+        ],
+        "index": 0,
+        "evidence": "도파민은 beta-1 수용체를 통해 심장 수축력·심박출량·심박수를 증가시킴. 고용량에서 alpha-1 효과 우세. 고양이 2마리에서 심실 부정맥 보고. 개에서 Bezold-Jarisch 반사에 의한 서맥·저혈압 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈뇌장벽 통과 미미"
+        ],
+        "index": -1,
+        "evidence": "도파민은 혈뇌장벽을 유의미한 양으로 통과하지 않음. 직접적인 CNS 부담 낮음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "심실 부정맥",
+          "빈맥",
+          "혈관수축",
+          "혈압 변화"
+        ],
+        "index": 1,
+        "evidence": "고양이 2마리에서 심실 부정맥 보고. 이소성 박동, 빈맥, 혈관수축 등 심혈관계 이상반응 기재."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "신장 혈관확장 효과 없음",
+          "핍뇨성 급성 신부전 치료 비권장",
+          "해로울 수 있음"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 저용량 도파민이 신장 혈관확장을 유발하지 않으며, 핍뇨성 급성 신부전 고양이에서 치료가 오히려 해로울 수 있다고 명시됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사"
+        ],
+        "index": 3,
+        "evidence": "간에서 MAO 및 COMT에 의해 대사됨. 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "심실 부정맥",
+          "양성 변력 효과",
+          "빈맥"
+        ],
+        "index": 0,
+        "evidence": "고양이 2마리에서 심실 부정맥 보고. beta-1 및 alpha-1 수용체 작용으로 심장에 직접적인 부담."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.033,
+      "species": "unknown"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 작용 발현은 보통 5분 이내. 주입 중단 후 10분 미만 지속. 혈장 반감기 약 2분(≈0.033시간). 경구 투여 시 위장관에서 빠르게 대사되어 전신 흡수 없음(생체이용률 0%)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 도파민 효과를 최대 90%까지 연장·강화하므로 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "도파민 효과 연장",
+        "도파민 효과 강화",
+        "용량 90% 감량 필요"
+      ],
+      "evidence": "MAOIs can significantly prolong and enhance the effects of dopamine. Reduce dopamine dose by up to 90%."
+    },
+    {
+      "drug": "Vasopressors/Vasoconstrictors",
+      "severity": 3,
+      "keywords": [
+        "중증 고혈압"
+      ],
+      "evidence": "Use with dopamine may cause severe hypertension."
+    },
+    {
+      "drug": "Oxytocin",
+      "severity": 3,
+      "keywords": [
+        "중증 고혈압"
+      ],
+      "evidence": "May cause severe hypertension when used with dopamine."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 3,
+      "keywords": [
+        "중증 고혈압",
+        "빈맥"
+      ],
+      "evidence": "Concurrent use may result in severe hypertension and tachycardia."
+    },
+    {
+      "drug": "Anesthetics, Inhalant (e.g., halothane, isoflurane)",
+      "severity": 2,
+      "keywords": [
+        "심실 부정맥 증가"
+      ],
+      "evidence": "Use of halothane with dopamine may result in increased incidences of ventricular arrhythmias."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "부정맥 위험 증가"
+      ],
+      "evidence": "Concurrent use may increase risk for arrhythmias."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "부정맥 유발 효과 강화",
+        "고혈압 효과 강화"
+      ],
+      "evidence": "May potentiate the arrhythmogenic and hypertensive effect of dopamine."
+    },
+    {
+      "drug": "Alpha-Adrenergic Receptor Antagonists (e.g., prazosin)",
+      "severity": 2,
+      "keywords": [
+        "혈관수축 효과 길항"
+      ],
+      "evidence": "May antagonize the vasoconstrictive properties of dopamine (high-dose)."
+    },
+    {
+      "drug": "Beta-Blockers (e.g., metoprolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "심장 효과 길항"
+      ],
+      "evidence": "May antagonize the cardiac effects of dopamine."
+    },
+    {
+      "drug": "Hypotensive Agents, Other (e.g., amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "혈관수축 효과 길항"
+      ],
+      "evidence": "May antagonize the vasoconstrictive properties of dopamine."
+    },
+    {
+      "drug": "Haloperidol",
+      "severity": 2,
+      "keywords": [
+        "도파민성 신장·장간막 혈관확장 억제"
+      ],
+      "evidence": "May inhibit dopaminergic renal and mesenteric vasodilation."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine, prochlorperazine)",
+      "severity": 2,
+      "keywords": [
+        "도파민성 신장·장간막 혈관확장 억제"
+      ],
+      "evidence": "May inhibit dopaminergic renal and mesenteric vasodilation."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.007
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "중증 저혈압/쇼크 (심장 수축력 저하 및/또는 말초 혈관확장으로 인한) — extra-label",
+          "value": "5 - 20",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 2.5–5 µg/kg/분으로 시작 후 효과에 따라 상향 적정. 충분한 수액 보충 후 사용. 중단 시 단계적 감량 권장.",
+          "evidence": "Plumb's Dosages 섹션, extra-label. 참고문헌 10."
+        },
+        {
+          "logic_type": "linear",
+          "context": "이소플루란 유발 저혈압",
+          "value": "7 - 10",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "마취 중 지속 주입; 효과 및 활력징후 모니터링 하에 사용.",
+          "evidence": "Plumb's Dosages 섹션. 참고문헌 11, 12."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "중증 저혈압/쇼크 (심장 수축력 저하 및/또는 말초 혈관확장으로 인한) — extra-label",
+          "value": "5 - 20",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 10 µg/kg/분 CRI로 시작 후 2.5–5 µg/kg/분 단위로 증량. 충분한 수액 보충 후 사용. 중단 시 단계적 감량 권장.",
+          "evidence": "Plumb's Dosages 섹션, extra-label. 고양이 연구 참고문헌 7."
+        },
+        {
+          "logic_type": "linear",
+          "context": "이소플루란 유발 저혈압",
+          "value": "7 - 10",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "마취 중 지속 주입; 효과 및 활력징후 모니터링 하에 사용.",
+          "evidence": "Plumb's Dosages 섹션. 참고문헌 11, 12."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 구체적인 용량 조정 기준은 명시되지 않음. 고양이 핍뇨성 급성 신부전에서 저용량 도파민 사용은 비권장(오히려 해로울 수 있음). 신장에서 대사되므로 중증 신부전 시 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간에서 MAO/COMT에 의해 대사되나, 간기능 저하 시 구체적인 용량 조정 권고사항은 Plumb's에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "갈색세포종 (Pheochromocytoma)",
+      "match_terms": [
+        "pheochromocytoma",
+        "갈색세포종"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심실세동 (Ventricular fibrillation)",
+      "match_terms": [
+        "ventricular fibrillation",
+        "심실세동",
+        "VF"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "교정되지 않은 빈맥성 부정맥 (Uncorrected tachyarrhythmia)",
+      "match_terms": [
+        "tachyarrhythmia",
+        "빈맥성 부정맥"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "허혈성 심장 질환 (Ischemic heart disease)",
+      "match_terms": [
+        "ischemic heart disease",
+        "허혈성 심장질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 혈관 질환 (Occlusive vascular disease)",
+      "match_terms": [
+        "occlusive vascular disease",
+        "폐쇄성 혈관질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수액/전해질/혈액제제 미보충 상태",
+      "match_terms": [
+        "hypovolemia",
+        "저혈량증",
+        "fluid deficit"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 핍뇨성 급성 신부전",
+      "match_terms": [
+        "oliguric acute kidney injury",
+        "핍뇨성 급성 신부전",
+        "AKI"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "도파민은 노르에피네프린의 전구체로, alpha 및 beta 수용체에 직접 작용하고 노르에피네프린 유리를 통해 간접적으로도 작용함. 말초 도파민성 효과도 있음. 저용량(5–10 µg/kg/분)에서 주로 beta-1 효과(심장 수축력·심박출량·심박수 증가), 고용량(10–15 µg/kg/분 이상)에서 alpha-1 효과(전신 및 폐혈관 저항 증가, 정맥 환류 증가) 우세.",
+    "common_extra_effects": [
+      "오심/구토",
+      "이소성 박동",
+      "빈맥",
+      "저혈압",
+      "고혈압",
+      "호흡곤란",
+      "혈관수축",
+      "혈관외 유출 시 조직 괴사 및 탈락",
+      "프로락틴 분비 억제",
+      "갑상선자극호르몬 분비 억제",
+      "성장호르몬 분비 억제"
+    ],
+    "dog_mechanism": "개에서 5–10 µg/kg/분 IV CRI 시 주로 beta-1 효과; 10–15 µg/kg/분에서 alpha-1 및 beta-1 효과 혼재. 이소플루란 마취 중 7 µg/kg/분 투여 시 Bezold-Jarisch 반사에 의한 서맥 및 저혈압 유발 가능.",
+    "dog_extra_effects": [
+      "Bezold-Jarisch 반사 유발 가능 (서맥, 저혈압)",
+      "심실 조기수축(PVC)"
+    ],
+    "cat_mechanism": "고양이에서 5–10 µg/kg/분 IV CRI 시 주로 beta-1 효과; 10–15 µg/kg/분에서 alpha-1 및 beta-1 효과 혼재. 저용량에서 신장 혈관확장 효과 없음.",
+    "cat_extra_effects": [
+      "심실 부정맥 (2마리 보고)",
+      "저용량에서 신장 혈관확장 효과 없음"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 도파민은 중증 저혈압/쇼크 및 마취 유발 저혈압 치료에 extra-label로 사용됨. GFR 증가 목적의 사용은 효과가 입증되지 않아 권장되지 않음. 이소플루란 마취 중 투여 시 Bezold-Jarisch 반사에 의한 심각한 서맥 및 저혈압이 보고된 바 있으므로 주의 필요. 반드시 집중치료 환경에서 지속적인 심전도 및 혈압 모니터링 하에 사용해야 함.",
+    "cat": "고양이에서 도파민은 중증 저혈압/쇼크 치료에 extra-label로 사용됨. 저용량 도파민은 고양이에서 신장 혈관확장을 유발하지 않으며, 핍뇨성 급성 신부전 고양이에서 치료가 오히려 해로울 수 있으므로 이 목적으로의 사용은 금기. 심실 부정맥이 보고된 바 있으므로 지속적인 심전도 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "허혈성 심장 질환, 폐쇄성 혈관 질환 환자에서 주의 사용. 부정맥(PVC 등) 발생 시 감량 또는 중단. 이소플루란 마취 중 Bezold-Jarisch 반사 유발 가능. 반드시 집중치료 환경에서 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심실 부정맥 보고 있음. 핍뇨성 급성 신부전에서 사용 비권장(오히려 해로울 수 있음). 반드시 집중치료 환경에서 지속 모니터링 하에 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛 차단 보관. 분홍색, 노란색, 갈색, 보라색으로 변색된 용액은 분해된 것이므로 폐기. 연한 노란색보다 짙은 용액은 사용 금지. 실온(20–25°C) 보관. 일반 IV 용액(5% 중탄산염 제외)에 희석 후 실온에서 최소 24시간 안정하나, 사용 직전 희석 권장. pH 6.4 미만에서 안정, pH 5 미만에서 가장 안정. 알칼리성 pH에서 산화됨.",
+    "forms": [
+      "Dopamine HCl 농축 주사액: 40 mg/mL, 80 mg/mL, 160 mg/mL (5 mL, 10 mL 바이알) — 투여 전 희석 필요",
+      "Dopamine HCl in 5% Dextrose 주사액: 200 mg/250 mL (0.8 mg/mL), 400 mg/500 mL (0.8 mg/mL), 400 mg/250 mL (1.6 mg/mL), 800 mg/500 mL (1.6 mg/mL), 800 mg/250 mL (3.2 mg/mL) — 단회용 프리믹스 용기"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "도파민은 IV CRI로만 투여하는 속효성 양성 변력제로, 개와 고양이의 중증 저혈압/쇼크 및 마취 유발 저혈압 치료에 사용됨. 혈장 반감기 약 2분으로 매우 짧음. 갈색세포종, 심실세동, 교정되지 않은 빈맥성 부정맥에는 절대 금기. MAOI 병용 시 도파민 용량을 최대 90% 감량해야 함. 고양이 핍뇨성 급성 신부전에서 GFR 증가 목적 사용은 비권장(오히려 해로울 수 있음). 반드시 집중치료 환경에서 지속적인 심전도·혈압 모니터링 하에 사용해야 함. 수의용 허가 제품 없음(extra-label 사용).",
+    "indications": "승인 적응증: 없음(수의용 허가 제품 없음). Extra-label 적응증: 수액 보충 후에도 지속되는 심박출량 저하 관련 저혈압/쇼크(개, 고양이), 전신마취 중 저혈압(개, 고양이). 급성 울혈성 심부전의 보조 치료. 주의: 핍뇨성 급성 신부전에서 GFR 증가 목적 사용은 개·고양이 모두 비권장.",
+    "client_info": "도파민은 반드시 동물병원 집중치료실에서만 사용할 수 있는 주사제입니다. 투여 중에는 심전도와 혈압을 지속적으로 모니터링해야 합니다. 이 약은 매우 짧은 시간 동안만 작용하므로, 투여를 중단하면 효과가 빠르게 사라집니다. 고양이의 급성 신부전 치료에는 사용하지 않는 것이 권장됩니다. 임신 중인 동물에서는 태아에 대한 위험성이 있을 수 있으므로 수의사와 충분히 상담 후 결정해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies (t_max, protein binding)",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (species-specific veterinary data)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/14.jsonl",
+    "extracted_at": "2026-03-10T17:33:42.545989+00:00",
+    "reviewer": null
+  }
+}

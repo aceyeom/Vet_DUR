@@ -1,0 +1,506 @@
+{
+  "id": "dobutamine",
+  "drug_identity": {
+    "name_ko": "도부타민",
+    "name_en": "Dobutamine",
+    "active_ingredient": "Dobutamine hydrochloride",
+    "brand_names": [
+      "Dobutrex"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 인체용 제제를 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 12.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "도부타민은 간 및 기타 조직에서 빠르게 대사됨. 경구 투여 시 위장관에서 빠르게 대사되어 전신 흡수가 이루어지지 않음."
+    },
+    "extra_information": "개와 고양이에 대한 약동학 데이터는 이용 불가. 인체에서 혈장 반감기는 약 2분으로 매우 짧음. IV CRI 중단 후 약효가 빠르게 소실됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 약동학 데이터 없음; 인체 데이터 및 임상 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizures",
+          "facial twitching",
+          "tremors"
+        ],
+        "index": 1,
+        "evidence": "개에서 안면 경련 및 발작이 부작용으로 보고됨. 고용량(>20 µg/kg/min)에서 CNS 영향 가능."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "tachyphylaxis",
+          "hypokalemia"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 부정맥, 저칼륨혈증이 보고됨. 48~72시간 내 빠른 내성(tachyphylaxis) 발생 가능."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urine output",
+          "renal parameters"
+        ],
+        "index": 1,
+        "evidence": "모니터링 항목으로 신장 지표(BUN, 크레아티닌) 및 소변량 포함. 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간 및 기타 조직에서 빠르게 대사됨. 직접적 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "increased cardiac output",
+          "myocardial oxygen demand",
+          "AV conduction"
+        ],
+        "index": 1,
+        "evidence": "심근 수축력 증가, 심박출량 증가, 심근 산소 요구량 증가. 빈맥 및 부정맥 위험. 심방세동 환자에서 AV 전도 촉진 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "seizures",
+          "tremors",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 5 µg/kg/min 초과 시 떨림 또는 발작 등 CNS 부작용 보고. 마취 회복 전 투여 중단 권고."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "빈맥 및 부정맥 위험. 고양이에서 용량 제한 필요."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urine output",
+          "renal parameters"
+        ],
+        "index": 1,
+        "evidence": "모니터링 항목으로 신장 지표 포함. 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간 및 기타 조직에서 빠르게 대사됨. 직접적 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased cardiac output",
+          "myocardial oxygen demand"
+        ],
+        "index": 1,
+        "evidence": "심근 수축력 증가 및 심박출량 증가. 빈맥 위험. 고양이에서 저용량 사용 권고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": 0.17,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.033,
+      "species": "human"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 약 2분 내 작용 발현, 10분 내 최고 효과 도달. 인체에서 혈장 반감기 약 2분. 경구 투여 시 위장관에서 대사되어 전신 흡수 없음. 동물에서의 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergics (atropine, butylscopolamine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "tachyarrhythmia",
+        "ileus"
+      ],
+      "evidence": "말에서 빈맥성 부정맥 및 장폐색 위험 증가. 주의하여 병용."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (atenolol, metoprolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "alpha-adrenergic predominance",
+        "increased peripheral resistance"
+      ],
+      "evidence": "도부타민의 심장 효과를 길항하여 알파 아드레날린 효과 우세 및 총 말초 저항 증가 초래 가능."
+    },
+    {
+      "drug": "Nitroprusside",
+      "severity": 1,
+      "keywords": [
+        "synergism",
+        "increased cardiac output",
+        "reduced wedge pressure"
+      ],
+      "evidence": "도부타민과 병용 시 심박출량 증가 및 폐모세혈관쐐기압 감소의 상승 효과 발생 가능. 후부하 감소 목적으로 병용 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "단기 저심박출량 및 급성 울혈성 심부전 치료 (오프라벨)",
+          "value": "2 - 15",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "일반적으로 72시간 미만 사용. 저용량에서 시작하여 상향 적정.",
+          "evidence": "대부분의 권고안은 2–15 µg/kg/min 범위이나, 1–5 µg/kg/min 하한 및 최대 40 µg/kg/min 상한 권고도 존재함."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "점액종성 승모판 질환(MMVD) 관련 CHF - Stage C 급성 관리 (오프라벨)",
+          "value": "2.5 - 10",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "2.5 µg/kg/min에서 시작하여 필요 시 최대 10 µg/kg/min까지 증량.",
+          "evidence": "이뇨제, 피모벤단, 진정, 산소, 안위 치료에 반응 불충분한 환자에서 추가 사용."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "점액종성 승모판 질환(MMVD) 관련 CHF - Stage D 급성 관리 (오프라벨)",
+          "value": "1 - 15",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "1 µg/kg/min에서 시작, 15–30분마다 최대 약 10–15 µg/kg/min까지 상향 적정. 12–48시간 사용.",
+          "evidence": "혈역학 개선 및 불응성 심인성 폐부종 치료 목적. 니트로프루시드와 병용하여 후부하 감소 가능."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 중 저혈압 - 프로포폴 마취 (오프라벨)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "프로포폴 마취 중 저혈압 치료."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 중 저혈압 - 이소플루란 마취 (오프라벨)",
+          "value": "2 - 12",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "이소플루란 마취 중 저혈압 치료."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "단기 저심박출량 및 급성 울혈성 심부전 치료 (오프라벨)",
+          "value": "1 - 5",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "일반적으로 72시간 미만. 5 µg/kg/min 초과 시 발작 위험. 저용량에서 시작하여 상향 적정.",
+          "evidence": "고양이에서 용량 권고는 개보다 낮음. 5 µg/kg/min 초과 시 CNS 부작용(떨림, 발작) 보고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 중 저혈압 (오프라벨)",
+          "value": "2 - 20",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "마취 회복 전 투여 중단 필요.",
+          "evidence": "고양이 전신마취 중 저혈압 치료. 마취 하에서 투여 가능하나 회복 전 중단."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 신장 지표(BUN, 크레아티닌) 및 소변량 모니터링 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 간에서 빠르게 대사되나 간질환 시 조정 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 또는 보존제(sodium bisulfite)에 대한 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "sodium bisulfite allergy",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "특발성 비후성 대동맥하 협착증(IHSS)",
+      "match_terms": [
+        "IHSS",
+        "idiopathic hypertrophic subaortic stenosis",
+        "HOCM"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증(교정되지 않은)",
+      "match_terms": [
+        "hypovolemia",
+        "volume depletion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심실 빈맥성 부정맥",
+      "match_terms": [
+        "ventricular tachyarrhythmia",
+        "VT"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심방세동(디지털리스 전처치 없이)",
+      "match_terms": [
+        "atrial fibrillation",
+        "AF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "직접 베타-1 아드레날린 수용체 작용제. 치료 용량에서 경미한 베타-2 및 알파-1 효과도 있으나 상호 균형을 이룸. 노르에피네프린 유리를 유발하지 않음. 심근 수축력 및 일회박출량 증가로 심박출량 향상.",
+    "common_extra_effects": [
+      "빈맥",
+      "부정맥",
+      "혈압 상승",
+      "심근 산소 요구량 증가",
+      "저칼륨혈증",
+      "오심/구토",
+      "주사 부위 정맥염"
+    ],
+    "dog_mechanism": "베타-1 아드레날린 수용체 직접 자극으로 심근 수축력 및 심박출량 증가.",
+    "dog_extra_effects": [
+      "안면 경련(facial twitching)",
+      "빈맥",
+      "발작",
+      "빠른 내성(tachyphylaxis) - 48~72시간 내 발생 가능",
+      "서맥(드물게 보고됨)"
+    ],
+    "cat_mechanism": "베타-1 아드레날린 수용체 직접 자극으로 심근 수축력 및 심박출량 증가.",
+    "cat_extra_effects": [
+      "CNS 부작용(떨림, 발작) - 5 µg/kg/min 초과 시",
+      "빈맥"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 IV CRI로만 투여. 일반적으로 2–15 µg/kg/min 범위에서 사용하며 저용량에서 시작하여 상향 적정. 20 µg/kg/min 초과 시 빈맥 위험 증가. 48–72시간 내 빠른 내성 발생 가능. 심방세동 환자에서는 디곡신 전처치 필요. 지속적인 혈압, ECG, 심박출량 모니터링 필수.",
+    "cat": "고양이에서 용량 권고는 개보다 낮음(1–5 µg/kg/min). 5 µg/kg/min 초과 시 떨림 또는 발작 등 CNS 부작용 위험. 전신마취 하에서 투여 가능하나 마취 회복 전 반드시 중단. 지속적인 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 안면 경련, 빈맥, 발작 보고. 고용량(>20 µg/kg/min)에서 빈맥 위험 증가. 48–72시간 내 빠른 내성 발생 가능. 심방세동 환자에서 디곡신 전처치 필요. 중환자 모니터링 환경에서만 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 5 µg/kg/min 초과 시 CNS 부작용(떨림, 발작) 위험. 마취 회복 전 투여 중단 필요. 저용량 사용 및 면밀한 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20–25°C, 68–77°F) 보관. 희석 후 24시간 이내 사용.",
+    "forms": [
+      "Dobutamine HCl 주사 농축액: 12.5 mg/mL, 20 mL 및 40 mL 단회용 바이알",
+      "Dobutamine HCl 주사액: 250 mg/250 mL (1 mg/mL), 500 mg/250 mL (2 mg/mL), 1000 mg/250 mL (4 mg/mL) - 5% 포도당 용액 (보존제 없음)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "도부타민은 급성 울혈성 심부전 및 저혈압 치료에 사용되는 속효성 양성 변력제입니다. IV CRI로만 투여하며, 중환자 모니터링 환경에서만 사용해야 합니다. 개에서 안면 경련 및 빠른 내성이 나타날 수 있으며, 고양이에서는 5 µg/kg/min 초과 시 발작 위험이 있습니다. 수의학적으로 승인된 제품은 없으며 오프라벨로 사용됩니다.",
+    "indications": "급성 울혈성 심부전의 단기 보조 치료(일반적으로 72시간 미만), 수액 치료만으로 혈압 및 심박출량 회복이 불충분한 쇼크 환자, 전신마취 중 심근 수축력 저하로 인한 저혈압 치료. 모든 적응증이 오프라벨임.",
+    "client_info": "도부타민은 반드시 동물병원 중환자실에서 전문 의료진의 감독 하에 정맥 주사로만 투여되는 약물입니다. 집에서 투여할 수 없으며, 투여 중에는 심전도, 혈압, 심박수를 지속적으로 모니터링해야 합니다. 치료 기간은 일반적으로 72시간 미만으로 단기간 사용됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (veterinary species)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/14.jsonl",
+    "extracted_at": "2026-03-10T17:26:34.533858+00:00",
+    "reviewer": null
+  }
+}

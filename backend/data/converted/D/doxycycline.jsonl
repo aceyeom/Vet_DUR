@@ -1,0 +1,820 @@
+{
+  "id": "doxycycline",
+  "drug_identity": {
+    "name_ko": "독시사이클린",
+    "name_en": "Doxycycline",
+    "active_ingredient": "Doxycycline",
+    "brand_names": [
+      "Vibramycin",
+      "Doxy 100",
+      "Periostat",
+      "Alodox",
+      "Vibra-Tabs",
+      "Oraxyl",
+      "Doryx",
+      "Oracea",
+      "Monodox",
+      "Adoxa",
+      "Atridox",
+      "Vibravenos"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의용 전신 투여 제품은 FDA 승인이 없으나, 소동물에서 테트라사이클린 계열 항생제가 필요한 경우 약동학적 특성 및 안전성 면에서 선호되는 약물로 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Inj",
+      "Oral Liquid",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.25,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "독시사이클린은 주로 비담즙성 경로를 통해 대변으로 배설되며, 장내에서 킬레이트 형성에 의해 부분적으로 불활성화된다. 개에서 약 75%가 이 경로로 처리되며, 신장 배설은 약 25%, 담즙 배설은 5% 미만이다. CYP 효소 관련 정보는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개에서 정상 상태 분포 용적은 약 1.5 L/kg이며, 혈장 단백 결합률은 75~86%이다. 고양이는 개보다 혈장 단백 결합률이 높다. 신부전 환자에서 독시사이클린은 축적되지 않으므로 신기능 저하 환자에서도 사용 가능하다. 개에서 청소율은 약 1.7 mL/kg/분이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 특이적 수의학 데이터와 Plumb's 본문에서 언급된 이상반응, 약동학 정보를 근거로 함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS penetration",
+          "CSF"
+        ],
+        "index": 1,
+        "evidence": "독시사이클린은 지용성이 높아 CSF를 포함한 체내 조직 및 체액에 잘 분포하나, CSF 농도는 대부분의 세균 감염 치료에 충분하지 않을 수 있음. 직접적인 뇌 독성은 보고되지 않음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "ALT",
+          "ALP"
+        ],
+        "index": 1,
+        "evidence": "인간에서 혈액 이상(혈액 이상증)이 드물게 보고됨. 개에서 ALT 및 ALP 상승이 최대 40%에서 보고되었으나 임상적으로 유의하지 않은 것으로 보임."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal excretion"
+        ],
+        "index": 1,
+        "evidence": "신장 배설은 약 25%에 불과하며, 신부전 환자에서 축적되지 않음. 신독성은 보고되지 않음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "ALT",
+          "ALP",
+          "hepatotoxicity",
+          "hepatic dysfunction"
+        ],
+        "index": 2,
+        "evidence": "개에서 독시사이클린 치료 후 ALT 및 ALP 상승이 최대 40%에서 보고됨. 유의한 간기능 장애가 있는 개에서는 주의하여 사용해야 함. 인간에서 드물게 간독성 보고."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 독성은 보고되지 않음. 말에서 IV 투여 시 심장 부정맥이 보고되었으나 개에서는 해당 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS penetration",
+          "CSF"
+        ],
+        "index": 1,
+        "evidence": "독시사이클린은 지용성이 높아 CSF를 포함한 체내 조직에 잘 분포하나, 고양이에서 직접적인 뇌 독성은 보고되지 않음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ALT",
+          "ALP"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 ALT 및 ALP 상승이 최대 19%에서 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal excretion"
+        ],
+        "index": 1,
+        "evidence": "신장 배설은 약 25%에 불과하며, 신부전 환자에서 축적되지 않음. 고양이에서 신독성은 보고되지 않음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "ALT",
+          "ALP"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 ALT 및 ALP 상승이 최대 19%에서 보고됨. 임상적 유의성은 불명확."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성은 일반적으로 보고되지 않음. 급속 IV 투여 시 일시적 허탈이 보고된 바 있으나 임상적 IV 사용은 권장되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 10.0,
+      "max": 12.0,
+      "mean": 11.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 80,
+    "evidence": "인간에서 경구 생체이용률 90~100%. 개에서 혈청 반감기 약 10~12시간, 청소율 약 1.7 mL/kg/분. 개에서 혈장 단백 결합률 75~86%. 고양이는 개보다 혈장 단백 결합률이 높음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aluminum, Calcium, and Magnesium-Containing Oral Products (antacids)",
+      "severity": 2,
+      "keywords": [
+        "chelation",
+        "decreased absorption"
+      ],
+      "evidence": "경구 투여 시 2가 또는 3가 양이온과 킬레이트를 형성하여 독시사이클린 흡수를 감소시킴. 독시사이클린은 칼슘 이온에 대한 친화성이 상대적으로 낮으나, 모든 경구 테트라사이클린은 양이온 함유 제품 투여 전후 최소 1~2시간 간격을 두도록 권장됨."
+    },
+    {
+      "drug": "Ascorbic Acid (Vitamin C)",
+      "severity": 1,
+      "keywords": [
+        "decreased efficacy"
+      ],
+      "evidence": "독시사이클린의 효능을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Avermectins (doramectin, ivermectin)",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "blood-brain barrier"
+      ],
+      "evidence": "독시사이클린이 알파카의 혈액-뇌 장벽 실험 모델에서 P-당단백질을 억제함. 수막 기생충 치료 시 임상적 관련성이 있을 수 있음."
+    },
+    {
+      "drug": "Bismuth Subsalicylate",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "테트라사이클린 흡수를 감소시킬 수 있음. 경구 테트라사이클린은 비스무트 서브살리실레이트 투여 전후 최소 1~2시간 간격을 두도록 권장됨."
+    },
+    {
+      "drug": "Enrofloxacin",
+      "severity": 1,
+      "keywords": [
+        "pharmacodynamic interaction",
+        "delayed bactericidal activity"
+      ],
+      "evidence": "병용 독시사이클린 사용이 대장균에 대한 엔로플록사신의 시험관 내 활성을 감소 및 지연시킴. 12시간 간격 투여보다 동시 투여 시 살균 효과가 더 우수함."
+    },
+    {
+      "drug": "Iron (oral)",
+      "severity": 2,
+      "keywords": [
+        "chelation",
+        "decreased absorption"
+      ],
+      "evidence": "경구 철분 제품은 테트라사이클린 흡수를 감소시킴. 철분 염은 테트라사이클린 투여 3시간 전 또는 2시간 후에 투여하도록 권장됨."
+    },
+    {
+      "drug": "Kaolin/Pectin",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "테트라사이클린 흡수를 감소시킬 수 있음. 경구 테트라사이클린은 카올린/펙틴 투여 전후 최소 1~2시간 간격을 두도록 권장됨."
+    },
+    {
+      "drug": "Penicillins",
+      "severity": 1,
+      "keywords": [
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "정균 약물(테트라사이클린)이 페니실린, 세팔로스포린, 아미노글리코사이드의 살균 활성을 방해할 수 있음. 이 상호작용의 실제 임상적 유의성은 과장된 것으로 보임."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased half-life",
+        "reduced plasma concentration"
+      ],
+      "evidence": "페노바르비탈이 독시사이클린의 반감기를 감소시키고 혈중 농도를 낮출 수 있음."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased oral bioavailability"
+      ],
+      "evidence": "양성자 펌프 억제제가 독시사이클린의 경구 생체이용률을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "decreased peak concentration",
+        "decreased AUC"
+      ],
+      "evidence": "병용 수크랄페이트 투여는 개에서 독시사이클린의 최고 혈중 농도 및 전체 노출을 유의하게 감소시킴. 독시사이클린 투여 2시간 후 수크랄페이트를 투여하면 상호작용이 발생하지 않음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased prothrombin activity",
+        "anticoagulant potentiation"
+      ],
+      "evidence": "테트라사이클린이 혈장 프로트롬빈 활성을 억제할 수 있으며, 항응고제(와파린) 치료 중인 환자는 용량 조정이 필요할 수 있음."
+    },
+    {
+      "drug": "Zinc (oral)",
+      "severity": 1,
+      "keywords": [
+        "chelation",
+        "decreased absorption"
+      ],
+      "evidence": "경구 투여 시 아연과 킬레이트를 형성하여 테트라사이클린 또는 아연 함유 제품의 흡수를 감소시킬 수 있음. 경구 테트라사이클린은 아연 함유 제품 투여 전후 최소 1~2시간 간격을 두도록 권장됨."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (일반)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "7~14일 권장",
+          "evidence": "extra-label: 5–10 mg/kg PO every 12 to 24 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 호흡기 감염",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "7~10일",
+          "evidence": "extra-label: 5 mg/kg PO every 12 hours; treat for 7 to 10 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 호흡기 감염 (1일 1회 요법)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "7~10일",
+          "evidence": "extra-label: 10 mg/kg PO every 24 hours; treat for 7 to 10 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 보조 치료 (Wolbachia 제거)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "4주 (미국 심장사상충학회 프로토콜 1~28일)",
+          "evidence": "extra-label: doxycycline 10 mg/kg PO every 12 hours for 4 weeks"
+        },
+        {
+          "logic_type": "linear",
+          "context": "렙토스피라증",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "2주",
+          "evidence": "extra-label: 5 mg/kg PO or IV every 12 hours for 2 weeks"
+        },
+        {
+          "logic_type": "linear",
+          "context": "렙토스피라증 (IV 투여, 경구 불가 시)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "2주; 서서히 IV 주입",
+          "evidence": "extra-label: 5 mg/kg IV every 12 hours for 2 weeks; slow IV infusion"
+        },
+        {
+          "logic_type": "linear",
+          "context": "과립구성 아나플라즈마증 (Anaplasma phagocytophilum)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "14일",
+          "evidence": "extra-label: 5 mg/kg PO every 12 hours for 14 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "보렐리아증 (라임병)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "30일",
+          "evidence": "extra-label: 10 mg/kg PO every 12 to 24 hours for 30 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에를리히증",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "28일",
+          "evidence": "extra-label: 10 mg/kg PO every 24 hours for 28 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "리케차 감염 (록키산 홍반열 등)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": null,
+          "evidence": "extra-label: 5 mg/kg PO every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바베시아증 (Babesia gibsoni) 대체 치료 (클린다마이신, 메트로니다졸 병용)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "30~90일",
+          "evidence": "extra-label: doxycycline 5 mg/kg PO once daily with clindamycin 25 mg/kg PO BID and metronidazole 15 mg/kg PO BID for 30 to 90 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "치주염 (항균 이하 용량, 비항균 목적)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "주의: 항균 이하 용량의 전신 항생제 사용은 권장되지 않음",
+          "evidence": "extra-label: 2 mg/kg PO once daily; NOTE: systemic use at subantimicrobial doses is discouraged"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (일반)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "경구 투여 후 최소 5 mL 물 또는 음식 섭취 필수",
+          "evidence": "extra-label: 5 mg/kg PO twice daily"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (1일 1회 요법)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "경구 투여 후 최소 5 mL 물 또는 음식 섭취 필수",
+          "evidence": "extra-label: 10 mg/kg PO once daily"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 호흡기 감염",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "7~10일",
+          "evidence": "extra-label: 5 mg/kg PO every 12 hours; treat for 7 to 10 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Mycoplasma felis 상부 호흡기 감염",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "7일 또는 14일 (14일 코스가 미생물학적으로 우수)",
+          "evidence": "extra-label: 10 mg/kg PO (as oral liquid) once daily for 7 or 14 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Mycoplasma haemofelis (혈액 기생 마이코플라즈마증)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "2~4주",
+          "evidence": "extra-label: 10 mg/kg PO once daily or 5 mg/kg PO every 12 hours for 2 to 4 weeks"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에를리히증 또는 아나플라즈마증",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "21일",
+          "evidence": "extra-label: 5–10 mg/kg PO every 12 hours for 21 days"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바르토넬라증",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "extra-label: 10 mg/kg PO every 12 to 24 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "임상적 톡소플라즈마증",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "4주",
+          "evidence": "extra-label: 5–10 mg/kg PO every 12 hours for 4 weeks"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마이코박테리아, L형, 마이코플라즈마 감염",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "extra-label: 5–10 mg/kg PO every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "노카르디아 감염 (아목시실린 병용)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "아목시실린 20 mg/kg PO BID 병용; 클라리스로마이신 62.5~125 mg/cat PO BID 추가 가능",
+          "evidence": "extra-label: doxycycline 5 mg/kg or higher PO twice daily with amoxicillin 20 mg/kg PO twice daily"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 클라미디아 감염 (Chlamydia felis)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "최소 3~4주",
+          "evidence": "extra-label: 10 mg/kg PO every 24 hours for a minimum of 3 to 4 weeks"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "독시사이클린은 신부전 환자에서 축적되지 않으므로 신기능 저하 환자에서도 용량 조정 없이 사용 가능함. 이는 테트라사이클린 또는 옥시테트라사이클린과 구별되는 특성임."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "유의한 간기능 장애가 있는 개에서는 주의하여 사용해야 함. 독시사이클린 치료 후 일부 개에서 간효소 상승이 문서화되어 있음. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (독시사이클린)",
+      "match_terms": [
+        "doxycycline hypersensitivity",
+        "tetracycline allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 초기)",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소아/성장기 동물 (치아 및 골격 발달)",
+      "match_terms": [
+        "pediatric",
+        "young animal",
+        "puppy",
+        "kitten"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "말 (IV 투여)",
+      "match_terms": [
+        "horse",
+        "equine",
+        "IV injection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식도 질환 (고양이)",
+      "match_terms": [
+        "esophageal stricture",
+        "esophagitis",
+        "dysphagia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "독시사이클린은 P-당단백질 기질이나, Washington State University 임상약리학 연구소에 따르면 MDR1(ABCB1) 유전자 돌연변이 개에서 독시사이클린에 대한 민감성 증가가 보고되지 않았으며, 이 개들에서 용량 조정은 권장되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 가역적으로 결합하여 아미노아실-tRNA의 리보솜 결합을 방해함으로써 단백질 합성을 억제하는 시간 의존성 정균 항생제. 감수성 균주의 세포막 투과성도 변화시킴.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "ALT/ALP 상승",
+      "식도염 및 식도 협착 (특히 고양이)",
+      "광과민성",
+      "중복 감염 (비감수성 세균 또는 진균)",
+      "태아 골격 발달 지연",
+      "유치 변색 및 법랑질 형성 부전"
+    ],
+    "dog_mechanism": "개에서 독시사이클린은 30S 리보솜 소단위 억제를 통한 정균 작용을 나타내며, 기질 금속단백분해효소(MMP) 억제 특성도 있음.",
+    "dog_extra_effects": [
+      "구토, 설사, 식욕부진 (가장 흔한 이상반응)",
+      "ALT/ALP 상승 (최대 40%에서 보고, 임상적으로 유의하지 않은 것으로 보임)",
+      "광과민성"
+    ],
+    "cat_mechanism": "고양이에서 독시사이클린은 30S 리보솜 소단위 억제를 통한 정균 작용을 나타냄. 고양이는 개보다 혈장 단백 결합률이 높음.",
+    "cat_extra_effects": [
+      "구토, 설사, 식욕부진",
+      "식도염 및 식도 협착 (건식 투약 시 위험 증가)",
+      "ALT/ALP 상승 (최대 19%에서 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 독시사이클린은 아조혈증 환자를 포함한 신기능 저하 환자에서도 안전하게 사용할 수 있는 선호되는 테트라사이클린 계열 항생제임. 음식과 함께 투여하면 흡수를 크게 감소시키지 않으면서 위장관 이상반응을 완화할 수 있음. 심장사상충 치료 프로토콜의 보조 요법으로 사용됨. MDR1 돌연변이 개에서 용량 조정 불필요.",
+    "cat": "고양이에서 경구 독시사이클린 투여 시 식도염 및 식도 협착 위험이 있으므로, 반드시 최소 5 mL의 물 또는 음식을 함께 투여해야 함. 건식 투약(dry pilling)은 절대 금지. 독시사이클린 모노하이드레이트 염이 하이클레이트 염보다 식도염 위험이 낮을 수 있으나, 모든 경구 제형에서 물 또는 음식 섭취를 권장함. 고양이는 개보다 혈장 단백 결합률이 높음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "유의한 간기능 장애가 있는 개에서 주의 사용. 장기 사용 시 신장 및 간기능 모니터링 권장. 임신 및 성장기 동물에서 위험-이익 평가 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "식도염 및 식도 협착 위험으로 인해 경구 투여 후 반드시 충분한 수분 또는 음식 섭취 필요. 건식 투약 금지. 장기 사용 시 신장 및 간기능 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "독시사이클린 하이클레이트 정제 및 캡슐: 밀폐된 차광 용기에 30°C 이하 보관. 모노하이드레이트 경구 현탁액: 재구성 후 실온에서 14일간 안정. 주사용 하이클레이트: 적절한 희석액으로 재구성 후 냉장 보관 시 72시간 안정; 냉장고에서 꺼낸 후 12시간 이내 주입 완료. 냉동 재구성액(-20°C): 최소 8주 안정, 해동 후 재냉동 금지.",
+    "forms": [
+      "독시사이클린 하이클레이트 정제/캡슐: 20 mg, 50 mg, 100 mg",
+      "독시사이클린 하이클레이트 서방형 정제/캡슐: 75 mg, 100 mg, 150 mg, 40 mg",
+      "독시사이클린 모노하이드레이트 정제/캡슐: 50 mg, 75 mg, 100 mg, 150 mg",
+      "독시사이클린 모노하이드레이트 경구 현탁액 분말: 재구성 후 5 mg/mL",
+      "독시사이클린 칼슘염 경구 시럽: 10 mg/mL",
+      "독시사이클린 주사제 (하이클레이트): 42.5 mg/vial",
+      "독시사이클린 동결건조 주사용 분말: 100 mg, 200 mg/vial",
+      "독시사이클린 겔 (Doxirobe®): 치주낭 내 적용 (개 FDA 승인)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "독시사이클린은 소동물에서 테트라사이클린 계열 항생제가 필요한 경우 선호되는 약물로, 긴 반감기, 넓은 분포 용적, 높은 CNS 침투성, 신기능 저하 환자에서의 안전한 사용이 장점임. 수의용 전신 투여 제품은 FDA 승인이 없으나 광범위하게 사용됨. 고양이에서 식도염/식도 협착 위험이 있으므로 경구 투여 후 반드시 수분 또는 음식 섭취 필요. 간효소 상승이 개의 최대 40%, 고양이의 최대 19%에서 보고됨.",
+    "indications": "보렐리아증(라임병), 렙토스피라증, 리케차 감염, 아나플라즈마증, 에를리히증, 클라미디아증, 마이코플라즈마증, 바르토넬라증, 보르데텔라증 등 다양한 세균 감염. 심장사상충 치료 보조 요법(Wolbachia 제거). 고양이 혈액 기생 마이코플라즈마증, 톡소플라즈마증, 노카르디아 감염. 조류 클라미디아증. 말 보렐리아증, 아나플라즈마증, Rhodococcus equi 기관지폐렴(폐렴 치료 보조). 치주염(항균 이하 용량, 비항균 목적 - 권장되지 않음).",
+    "client_info": "이 약은 반드시 촉촉한 간식이나 소량의 액체와 함께 투여해야 하며, 특히 고양이에서 중요합니다. 독시사이클린이 위에 도달하기 전에 식도에 걸리면 궤양을 유발할 수 있습니다. 동물이 이 약을 복용하는 동안 삼키기 어려워하거나 식욕이 없으면 즉시 수의사에게 연락하십시오. 이 약은 위장 장애를 일으킬 수 있으므로 철분이나 유제품이 없는 소량의 음식과 함께 투여하십시오. 독시사이클린 투여 2시간 전후에는 종합비타민, 칼슘 보충제, 제산제, 완하제를 투여하지 마십시오. 이 약은 동물의 피부를 햇빛에 더 민감하게 만들 수 있으므로 코, 눈꺼풀, 귀 주변 등 털이 없는 부위의 피부가 붉어지면 수의사에게 알려주십시오. 수의사의 별도 지시가 없는 한 처방된 전체 치료 과정을 완료하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (veterinary-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/15.jsonl",
+    "extracted_at": "2026-03-10T17:44:57.583009+00:00",
+    "reviewer": null
+  }
+}

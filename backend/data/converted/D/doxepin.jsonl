@@ -1,0 +1,664 @@
+{
+  "id": "doxepin",
+  "drug_identity": {
+    "name_ko": "독세핀",
+    "name_en": "Doxepin",
+    "active_ingredient": "Doxepin",
+    "brand_names": [
+      "Sinequan",
+      "Adapin",
+      "Anten",
+      "Aponal",
+      "Deptran",
+      "Desidoxepin",
+      "Doneurin",
+      "Doxal",
+      "Doxepia",
+      "Gilex",
+      "Mareen",
+      "Quitaxon",
+      "Silenor",
+      "Triadapin",
+      "Xepin",
+      "Zonalon"
+    ],
+    "allergy_class": "tricyclic antidepressant",
+    "class": "Antidepressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 허가된 제품 없음. 개와 고양이에서 소양증, 정신성 피부질환 등에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Cap",
+      "Tab",
+      "Oral Liquid",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체에서 경구 투여 후 잘 흡수되며 간에서 광범위하게 대사됨. N-탈메틸화 활성 대사체 생성. 수의학적 PK 데이터 없음."
+    },
+    "extra_information": "수의학 종에서의 약동학 정보 부재. 인체 데이터에 의하면 경구 흡수 양호, 간에서 광범위 대사. 활성 대사체(N-demethyldoxepin)가 모유로 분비됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학 종별 PK 연구 없음; 인체 데이터 및 약리학적 특성에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "lethargy",
+          "hyperexcitability",
+          "seizure threshold",
+          "serotonin reuptake inhibition",
+          "norepinephrine reuptake inhibition"
+        ],
+        "index": 1,
+        "evidence": "개에서 과흥분, 기면 보고됨. 세로토닌/노르에피네프린 재흡수 억제 기전으로 CNS 영향 있음. 발작 역치 저하 가능성."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "antiplatelet",
+          "bleeding risk"
+        ],
+        "index": 2,
+        "evidence": "인체에서 혈액 이상(blood dyscrasias) 보고. 항혈소판제와 병용 시 출혈 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary retention"
+        ],
+        "index": 3,
+        "evidence": "항콜린 작용으로 인한 요저류 가능성. 직접적 신독성 근거 없음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "hepatic metabolism",
+          "cimetidine inhibits metabolism"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 시메티딘에 의한 대사 억제로 독성 위험 증가 가능."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "ventricular arrhythmias",
+          "QT prolongation",
+          "tachycardia",
+          "hypotension",
+          "cardiorespiratory collapse"
+        ],
+        "index": 5,
+        "evidence": "과량 투여 시 심실 부정맥 가능. QT 연장 위험. 인체에서 빈맥, 저혈압 보고. 심혈관 질환 환자에서 주의 또는 회피 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "profound sedation",
+          "ataxia",
+          "CNS depression",
+          "serotonin reuptake inhibition"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 고용량 시 심한 진정 및 운동실조 보고. CNS 영향이 개보다 더 현저할 수 있음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "bleeding risk"
+        ],
+        "index": 2,
+        "evidence": "인체 데이터 기반. 고양이 특이적 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary retention"
+        ],
+        "index": 3,
+        "evidence": "항콜린 작용으로 인한 요저류 가능성. 직접적 신독성 근거 없음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "ventricular arrhythmias",
+          "QT prolongation",
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "과량 투여 시 심실 부정맥 가능. QT 연장 위험. 고양이 특이적 심장 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "수의학 종에서의 약동학 정보 없음. 인체에서 경구 흡수 양호하다고 기술되어 있으나 구체적 수치 미제공."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI와의 상호작용은 세로토닌 증후군 위험으로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "contraindicated",
+        "14-day washout"
+      ],
+      "evidence": "Concomitant use within 14 days is generally contraindicated due to risk for serotonin syndrome. MAOIs must be discontinued at least 14 days prior to starting doxepin."
+    },
+    {
+      "drug": "Serotonergic Agents (e.g., buspirone, fluoxetine, mirtazapine, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome when used concurrently with serotonergic agents."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome. Listed separately in Plumb's as a distinct interaction."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "QT Prolongation Agents (e.g., amiodarone, chlorpromazine, cisapride, fluconazole, fluoxetine, ketoconazole, methadone, ondansetron, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "May increase risk for QT prolongation when used concurrently."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., albuterol, phenylpropanolamine)",
+      "severity": 3,
+      "keywords": [
+        "arrhythmia",
+        "hypertension",
+        "hyperpyrexia",
+        "cardiac effects"
+      ],
+      "evidence": "Use in combination with tricyclic agents may increase the risk for cardiac effects including arrhythmias, hypertension, and hyperpyrexia."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, morphine, meperidine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "anticholinergic",
+        "serotonin syndrome"
+      ],
+      "evidence": "Additive CNS depression and anticholinergic effects may occur. Risk for serotonin syndrome may be increased with opioids with greater serotonergic activity (e.g., meperidine, tramadol)."
+    },
+    {
+      "drug": "Anticholinergic Agents (e.g., atropine, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic effects",
+        "urinary retention",
+        "dry mouth"
+      ],
+      "evidence": "Additive anticholinergic effects due to doxepin's inherent anticholinergic properties."
+    },
+    {
+      "drug": "Antihistamines (e.g., diphenhydramine, hydroxyzine, meclizine)",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "Potential for increased sedation when used concurrently."
+    },
+    {
+      "drug": "Antiplatelet Agents (e.g., aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Increased risk for bleeding when used concurrently with antiplatelet agents."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Increased risk for bleeding when used concurrently with NSAIDs."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Additive CNS depression is possible."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "inhibits TCA metabolism",
+        "increased toxicity risk"
+      ],
+      "evidence": "Cimetidine may inhibit tricyclic antidepressant metabolism and increase the risk for toxicity."
+    },
+    {
+      "drug": "Hypotensive Agents (e.g., amlodipine, enalapril, prazosin, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension",
+        "blood pressure reduction"
+      ],
+      "evidence": "Additive blood pressure reduction is possible due to doxepin's alpha-1-adrenergic blocking properties."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced doxepin concentration",
+        "enzyme induction"
+      ],
+      "evidence": "Phenobarbital may reduce doxepin plasma concentration, potentially reducing efficacy."
+    },
+    {
+      "drug": "Prokinetic Agents (e.g., bethanechol, cisapride, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "reduced prokinetic effect",
+        "anticholinergic antagonism"
+      ],
+      "evidence": "Doxepin may decrease the prokinetic effects of these agents due to anticholinergic activity."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "아토피성 피부염 관련 소양증 (항히스타민 효과, 오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "반응 확인 후 정신성 피부질환 용량까지 상향 적정 가능. 용량 권고를 뒷받침하는 근거 부족.",
+          "evidence": "오프라벨. 근거 부족."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "정신성 피부질환 (오프라벨)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "최대 용량 50 mg/dog (mg/kg 아님). 낮은 용량에서 시작하여 2주마다 1 mg/kg씩 증량. 4주 후 효과 없으면 2주마다 1 mg/kg씩 감량 후 중단.",
+          "evidence": "오프라벨. 최대 용량 50 mg/dog (NOT mg/kg). 근거 부족."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "아토피성 피부염 국소 치료 (오프라벨)",
+          "value": "5",
+          "unit": "%",
+          "route": "Top",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 최대 4회 환부에 도포.",
+          "evidence": "오프라벨. 독세핀 5% 크림 국소 적용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "정신성 피부질환 및 알레르기 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이가 내약성을 보이면 천천히 상향 적정 가능. 고용량에서 심한 진정 및 운동실조 발생 가능. q24h로도 투여 가능.",
+          "evidence": "오프라벨. 근거 부족. 많은 고양이에서 고용량 시 심한 진정 및 운동실조 발생."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 용량 조절에 대한 명시적 권고 없음. 항콜린 작용으로 인한 요저류 위험으로 신장 질환 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 광범위하게 대사되므로 간 기능 저하 시 약물 축적 가능성 있음. 명시적 용량 조절 권고는 없으나 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "삼환계 항우울제(TCA) 과민반응 기왕력",
+      "match_terms": [
+        "TCA hypersensitivity",
+        "tricyclic antidepressant allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAO 억제제 병용 (14일 이내)",
+      "match_terms": [
+        "MAOI",
+        "monoamine oxidase inhibitor",
+        "amitraz",
+        "selegiline",
+        "linezolid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요저류",
+      "match_terms": [
+        "urinary retention",
+        "urethral obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "heart disease",
+        "arrhythmia",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 기왕력",
+      "match_terms": [
+        "seizure history",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "삼환계 항우울제로서 시냅스 전 신경막에서 노르에피네프린 및 세로토닌(5-HT) 재흡수를 억제하여 시냅스 내 농도를 증가시킴. 항콜린, 알파-1 아드레날린 차단, 강력한 항히스타민(H1, H2) 효과도 보유.",
+    "common_extra_effects": [
+      "과흥분(hyperexcitability)",
+      "위장관 장애(GI distress)",
+      "변비(constipation)",
+      "요저류(urinary retention)",
+      "기면(lethargy)",
+      "심실 부정맥(ventricular arrhythmias, 과량 투여 시)",
+      "CNS 억제(CNS depression)",
+      "진전(tremor)",
+      "근력 저하(weakness)",
+      "시야 흐림(blurred vision)",
+      "안구 건조(dry eyes)",
+      "저혈압(hypotension)",
+      "빈맥(tachycardia)",
+      "혈액 이상(blood dyscrasias)"
+    ],
+    "dog_mechanism": "노르에피네프린 및 세로토닌 재흡수 억제, 항콜린, 알파-1 차단, 항히스타민(H1, H2) 효과를 통해 소양증 및 정신성 피부질환에 작용.",
+    "dog_extra_effects": [
+      "과흥분(hyperexcitability)",
+      "위장관 장애(GI distress)",
+      "변비(constipation)",
+      "요저류(urinary retention)",
+      "기면(lethargy)",
+      "심실 부정맥(ventricular arrhythmias, 과량 투여 시)"
+    ],
+    "cat_mechanism": "개와 동일한 기전. 고양이는 고용량에서 심한 진정 및 운동실조에 더 민감할 수 있음.",
+    "cat_extra_effects": [
+      "심한 진정(profound sedation)",
+      "운동실조(ataxia)",
+      "위장관 장애(GI distress)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아토피성 피부염 관련 소양증 및 정신성 피부질환(꼬리 물기, 옆구리 빨기, 항문 핥기, 말단 핥기 피부염, 과도한 그루밍 등)에 보조 치료로 사용됨. 항히스타민 효과의 근거는 제한적이나 경미한 소양증의 급성 악화 예방 및 행동 이상 동반 시 유익할 수 있음. 최대 용량은 50 mg/dog (mg/kg 아님)임에 주의. 장기 투여 후 중단 시 서서히 감량 필요.",
+    "cat": "고양이에서 정신성 피부질환 및 알레르기에 오프라벨로 사용됨. 많은 고양이에서 고용량 시 심한 진정 및 운동실조가 발생하므로 낮은 용량에서 시작하여 내약성 확인 후 천천히 증량해야 함. 용량 권고를 뒷받침하는 근거 부족."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "요저류, 녹내장, 심혈관 질환, 발작 기왕력 환자에서 주의 또는 회피 필요. 장기 투여 후 서서히 감량 권장. 과량 투여 시 생명을 위협하는 부정맥, 저혈압, 심폐 허탈, 발작, 혼수 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 고용량에서 심한 진정 및 운동실조에 더 민감함. 낮은 용량에서 시작하여 내약성 확인 후 천천히 증량 필요. 요저류, 녹내장, 심혈관 질환 환자에서 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "직사광선을 피하고 밀폐된 차광 용기에 실온(20°C-25°C [68°F-77°F]) 보관.",
+    "forms": [
+      "Doxepin Capsules: 10 mg, 25 mg, 50 mg, 75 mg, 100 mg, 150 mg (generic, Rx)",
+      "Doxepin Tablets: 3 mg, 6 mg (Silenor®, Rx)",
+      "Doxepin Oral Solution Concentrate: 10 mg/mL in 120 mL (generic, Rx)",
+      "Doxepin Hydrochloride 5% Cream: 45 g (generic, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "독세핀은 삼환계 항우울제(TCA)로, 수의학에서는 아토피성 피부염 관련 소양증 및 정신성 피부질환(특히 불안 요소 동반)의 보조 치료에 주로 사용됩니다. 항콜린, 알파-1 차단, 강력한 항히스타민(H1, H2) 효과를 보유합니다. 수의학적 허가 제품은 없으며 모든 사용은 오프라벨입니다. MAOI와의 병용은 절대 금기이며, 14일 이상의 휴약 기간이 필요합니다. 개에서 최대 용량은 50 mg/dog (mg/kg 아님)임에 주의하십시오. 과량 투여 시 생명을 위협하는 심독성이 발생할 수 있습니다.",
+    "indications": "【허가 적응증】 없음 (수의학적 허가 제품 없음)\n【오프라벨 적응증】\n- 개: 아토피성 피부염 관련 소양증, 정신성 피부질환(꼬리 물기, 옆구리 빨기, 항문 핥기, 말단 핥기 피부염, 과도한 그루밍, 정신성 탈모)\n- 고양이: 정신성 피부질환, 알레르기, 정신성 탈모, 깃털 뽑기(조류)\n- 말: 항히스타민 효과\n- 조류: 불안, 소양증으로 인한 깃털 뽑기",
+    "client_info": "【보호자 안내사항】\n• 항히스타민 목적으로 사용 시, 알레르겐(예: 꽃가루) 노출 전에 규칙적으로 투여하면 더 효과적입니다.\n• 행동 교정 목적으로 사용 시, 효과가 나타나기까지 수일에서 수 주가 걸릴 수 있습니다.\n• 공복에 투여 후 구토나 불편함을 보이면 다음 투여부터 소량의 음식과 함께 주십시오.\n• 흔한 부작용: 졸음, 구강 건조, 변비. 신선한 물을 충분히 제공하십시오.\n• 즉시 수의사에게 연락해야 하는 심각한 부작용: 비정상적 출혈, 발열, 발작, 허탈, 심한 졸음.\n• 과량 투여는 동물과 사람 모두에게 매우 위험합니다. 어린이와 동물의 손이 닿지 않는 곳에 보관하십시오.\n• 이 약을 투여하는 동안 특정 벼룩·진드기 목걸이(아미트라즈 함유)를 사용하지 마십시오. 최근 2주 이내에 벼룩·진드기 목걸이를 착용한 경우 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics (species-specific PK data)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/15.jsonl",
+    "extracted_at": "2026-03-10T17:39:37.750195+00:00",
+    "reviewer": null
+  }
+}

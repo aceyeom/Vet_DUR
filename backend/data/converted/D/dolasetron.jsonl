@@ -1,0 +1,534 @@
+{
+  "id": "dolasetron",
+  "drug_identity": {
+    "name_ko": "돌라세트론",
+    "name_en": "Dolasetron",
+    "active_ingredient": "Dolasetron mesylate",
+    "brand_names": [
+      "Anzemet",
+      "Anemet",
+      "Zamanon"
+    ],
+    "allergy_class": null,
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이에서 항구토제로 오프라벨 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.55,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "돌라세트론은 카르보닐 환원효소에 의해 빠르게 하이드로돌라세트론으로 환원되며, 이 활성 대사체가 주된 약리 효과를 나타낸다. 인간에서 50~60%가 신장을 통해 미변화체로 배설된다."
+    },
+    "extra_information": "개에서 IV 투여 후 돌라세트론의 반감기는 수 분에 불과하며, 하이드로돌라세트론의 분포용적은 8.5 L/kg, 총 체내 청소율은 25 mL/min/kg, 반감기는 약 4시간이다. 경구 생체이용률은 7%로 낮다. 고양이에서의 PK 데이터는 보고되지 않았다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 하이드로돌라세트론의 PK 데이터 일부 존재; 고양이는 데이터 부족으로 인간 데이터 참조.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS chemoreceptor trigger zone",
+          "5-HT3 receptor antagonist"
+        ],
+        "index": 1,
+        "evidence": "5-HT3 수용체가 CNS 화학수용체 유발대에 존재하며 약물이 이를 차단함."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "QT prolongation",
+          "PR interval",
+          "QRS widening",
+          "ECG changes"
+        ],
+        "index": 2,
+        "evidence": "용량 의존적 ECG 변화(PR, QT 연장, QRS 확장)가 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "50-60% excreted unchanged urine",
+          "renal impairment clearance reduced"
+        ],
+        "index": 3,
+        "evidence": "인간에서 50~60%가 신장으로 미변화 배설; 중증 신장애 시 청소율 감소 가능."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "partially metabolized in the liver",
+          "hepatic impairment"
+        ],
+        "index": 2,
+        "evidence": "간에서 부분적으로 대사되며, 중증 간장애 시 청소율 감소 가능."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "QT prolongation",
+          "atrioventricular block",
+          "cardiotoxicity",
+          "ECG interval prolongation"
+        ],
+        "index": 4,
+        "evidence": "QT 연장, 방실 차단 금기, 항부정맥제와 병용 시 심독성 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS chemoreceptor trigger zone",
+          "5-HT3 receptor antagonist"
+        ],
+        "index": 1,
+        "evidence": "5-HT3 수용체가 CNS 화학수용체 유발대에 존재하며 약물이 이를 차단함. 고양이 특이 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation",
+          "ECG changes"
+        ],
+        "index": 1,
+        "evidence": "인간 데이터 기반; 고양이에서 ECG 변화 가능성 있음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal impairment"
+        ],
+        "index": 2,
+        "evidence": "인간 데이터 기반 신장 배설 비율 참조; 고양이 특이 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "간 대사 관여; 고양이 특이 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiotoxicity",
+          "ECG interval prolongation"
+        ],
+        "index": 3,
+        "evidence": "QT 연장 위험; 고양이에서도 심전도 모니터링 권장."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 4.0,
+      "species": "dog"
+    },
+    "f_percent": 7,
+    "protein_binding_percent": null,
+    "evidence": "개에서 하이드로돌라세트론의 반감기 약 4시간, 경구 생체이용률 7%. 인간에서 하이드로돌라세트론 반감기 7~8시간, 경구 생체이용률 약 75%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Apomorphine",
+      "severity": 2,
+      "keywords": [
+        "pharmacodynamic antagonism",
+        "hypotension"
+      ],
+      "evidence": "Emetics and antiemetics counteract each other. 5-HT3 antagonists may enhance the hypotensive effect of apomorphine. Combination should be avoided in humans."
+    },
+    {
+      "drug": "Atenolol",
+      "severity": 2,
+      "keywords": [
+        "reduced clearance",
+        "increased blood levels"
+      ],
+      "evidence": "May reduce the clearance and increase blood levels of hydrodolasetron."
+    },
+    {
+      "drug": "Azole antifungals (ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "reduced clearance",
+        "increased blood levels"
+      ],
+      "evidence": "May reduce the clearance and increase blood levels of hydrodolasetron."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Fluoroquinolone Antibiotics (ciprofloxacin, moxifloxacin)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Macrolide Antibiotics (erythromycin, clarithromycin)",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "reduced blood levels"
+      ],
+      "evidence": "Can reduce hydrodolasetron blood levels."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (오프라벨) - 예방 및 치료",
+          "value": "0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": null,
+          "evidence": "오프라벨: 0.6 mg/kg PO 1일 1회. 일부 임상의는 활성 구토 치료 시 최대 1 mg/kg까지 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (오프라벨) - 예방 및 치료; 경구 투여 시 조제 필요",
+          "value": "0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "고양이에서 경구 투여 시 반드시 조제(10 mg/mL 현탁액 등)가 필요함.",
+          "evidence": "오프라벨: 0.6 mg/kg PO 1일 1회. 일부 임상의는 활성 구토 치료 시 최대 1 mg/kg까지 권장. 자일라진 유발 구토 예방에는 효과 없음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "인간에서 중증 신장애 시 청소율 감소 가능성이 언급됨. 수의학적 구체적 용량 조정 지침은 없으나 신장애 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "인간에서 중증 간장애 시 청소율 감소 가능성이 언급됨. 수의학적 구체적 용량 조정 지침은 없으나 간장애 환자에서 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to dolasetron"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "2도 또는 3도 방실 차단",
+      "match_terms": [
+        "second-degree AV block",
+        "third-degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "현저한 QT 간격 연장",
+      "match_terms": [
+        "QT prolongation",
+        "long QT syndrome",
+        "congenital QT syndrome"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼륨혈증",
+      "match_terms": [
+        "hypokalemia",
+        "low potassium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저마그네슘혈증",
+      "match_terms": [
+        "hypomagnesemia",
+        "low magnesium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고용량 안트라사이클린 화학요법",
+      "match_terms": [
+        "anthracycline",
+        "doxorubicin",
+        "cumulative cardiotoxicity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5-HT3(5-하이드록시트립타민3) 수용체를 선택적으로 차단하여 항구토 효과를 나타냄. CNS 화학수용체 유발대, 미주신경 말단, 장신경계의 5-HT3 수용체에 작용함.",
+    "common_extra_effects": [
+      "용량 의존적 ECG 변화 (PR, QT 간격 연장, QRS 확장)",
+      "두통 (인간)",
+      "어지러움 (인간)",
+      "식욕 증가 (인간)"
+    ],
+    "dog_mechanism": "돌라세트론은 IV 투여 후 카르보닐 환원효소에 의해 빠르게 하이드로돌라세트론으로 전환되며, 이 활성 대사체가 5-HT3 수용체를 차단하여 항구토 효과를 나타냄.",
+    "dog_extra_effects": [
+      "ECG 변화 가능성",
+      "위험 환자에서 심전도 모니터링 필요"
+    ],
+    "cat_mechanism": "개와 동일한 기전으로 추정되나 고양이 특이 데이터 부족. 자일라진 유발 구토에는 효과 없음.",
+    "cat_extra_effects": [
+      "자일라진 유발 구토 예방 효과 없음",
+      "경구 투여 시 조제 필요 (정제 용량이 너무 큼)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 하이드로돌라세트론의 반감기는 약 4시간으로 1일 1회 투여가 가능하며, 화학요법 유발 구토 예방에 유용하다. 경구 생체이용률이 7%로 낮으나 임상적으로 효과적인 것으로 보고됨. 심장 위험 환자에서는 ECG 모니터링이 권장됨.",
+    "cat": "고양이에서 상업용 정제(50 mg, 100 mg)는 용량이 너무 커서 직접 투여가 불가능하므로 반드시 조제(예: 10 mg/mL 경구 현탁액)가 필요하다. 자일라진 유발 구토에는 효과가 없는 것으로 확인됨. 화학요법 유발 구토에 오프라벨로 사용 가능."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 전도 간격 연장 위험이 있는 환자, 저칼륨혈증, 저마그네슘혈증, 항부정맥제 또는 전해질에 영향을 미치는 이뇨제 병용 환자에서 주의 필요. 위험 환자에서 ECG 모니터링 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "경구 투여 시 반드시 조제 필요. 자일라진 유발 구토에 효과 없음. 심장 위험 환자에서 ECG 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 보관, 빛 차단 필요. 조제된 10 mg/mL 경구 현탁액(Ora-Plus®:Ora-Sweet® 1:1 혼합)은 실온 또는 냉장 보관 시 최소 90일간 안정.",
+    "forms": [
+      "Dolasetron Tablets 50 mg (Anzemet®)",
+      "조제 경구 현탁액 10 mg/mL (Ora-Plus®:Ora-Sweet® 1:1)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "돌라세트론은 5-HT3 수용체 길항제 항구토제로, 특히 화학요법 유발 구토 치료에 유용하다. 1일 1회 투여로 편리하며, 소동물에서 일반적으로 잘 내약된다. 용량 의존적 ECG 변화(QT 연장 등)에 주의가 필요하며, 심장 위험 환자에서는 ECG 모니터링이 권장된다. 수의학적 허가 제품이 없으며, 고양이에서 경구 투여 시 반드시 조제가 필요하다.",
+    "indications": "개와 고양이에서 심한 구역 및 구토, 특히 화학요법 유발 구토의 예방 및 치료(오프라벨). 자일라진 유발 구토에는 효과 없음.",
+    "client_info": "이 약은 항암 치료로 인한 구역질과 구토를 예방하거나 치료하기 위해 사용됩니다. 하루에 한 번 투여하면 됩니다. 부작용은 드물지만, 심장 리듬에 영향을 줄 수 있으므로 수의사의 지시에 따라 정기적인 검진이 필요할 수 있습니다. 고양이의 경우 시판 정제를 그대로 사용할 수 없어 특별히 조제된 형태로 제공됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK for cats",
+      "Protein binding data",
+      "Onset of action data",
+      "T_max data",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths",
+      "dosage_and_kinetics.cat.dosage_list[0].route"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/14.jsonl",
+    "extracted_at": "2026-03-10T17:29:32.071559+00:00",
+    "reviewer": null
+  }
+}
