@@ -1,0 +1,518 @@
+{
+  "id": "pyrantel",
+  "drug_identity": {
+    "name_ko": "피란텔",
+    "name_en": "Pyrantel",
+    "active_ingredient": "Pyrantel pamoate",
+    "brand_names": [
+      "Strongid T",
+      "Nemex",
+      "Nemex-2",
+      "Strongid Paste",
+      "Exodus Paste",
+      "Strongid C",
+      "Strongid C 2X",
+      "Heartgard Plus",
+      "Tri-Heart Plus",
+      "Iverhart Plus",
+      "Iverhart Max",
+      "Simparica Trio",
+      "Drontal Plus",
+      "Drontal",
+      "Virbantel",
+      "Pin-X",
+      "Vermisol"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Oral Liquid",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 22.7,
+        "unit": "mg"
+      },
+      {
+        "value": 113.5,
+        "unit": "mg"
+      },
+      {
+        "value": 2.27,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4.54,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "흡수된 약물은 빠르게 대사되어 소변과 대변으로 배설됨. 구체적인 CYP 경로는 출처에 명시되지 않음."
+    },
+    "extra_information": "피란텔 파모에이트는 위장관에서 흡수가 불량하여 항기생충 효과가 하부 위장관에 국한됨. 피란텔 타르트레이트는 파모에이트 염보다 흡수가 더 잘 됨. 개와 돼지에서 피란텔 타르트레이트 투여 후 2~3시간에 최고 혈장 농도 도달. 고양이에서 반감기 1.4시간, 말에서 13.4시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 피란텔은 위장관 내 흡수가 매우 불량하여 전신 노출이 최소화됨. 고양이 및 개 특이적 수의학 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "cholinergic",
+          "ataxia (overdose)"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 콜린성 효과(운동실조 등) 보고됨. 권장 용량에서는 CNS 영향 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "poor absorption"
+        ],
+        "index": 0,
+        "evidence": "위장관 흡수 불량으로 전신 혈중 농도 매우 낮음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "excreted into urine"
+        ],
+        "index": 1,
+        "evidence": "흡수된 소량의 약물이 소변으로 배설됨. 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "rapidly metabolized",
+          "hepatic disease caution"
+        ],
+        "index": 1,
+        "evidence": "흡수된 약물은 간에서 빠르게 대사됨. 인체에서 간질환 시 주의 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "cholinergic"
+        ],
+        "index": 0,
+        "evidence": "콜린성 작용제로서 과량 투여 시 이론적 CNS 영향 가능. 권장 용량에서는 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "poor absorption"
+        ],
+        "index": 0,
+        "evidence": "위장관 흡수 불량으로 전신 혈중 농도 매우 낮음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "excreted into urine"
+        ],
+        "index": 1,
+        "evidence": "흡수된 소량의 약물이 소변으로 배설됨. 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "rapidly metabolized",
+          "hepatic disease caution"
+        ],
+        "index": 1,
+        "evidence": "흡수된 약물은 간에서 빠르게 대사됨. 인체에서 간질환 시 주의 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.5,
+    "half_life_hr": {
+      "min": 1.4,
+      "max": 13.4,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개와 돼지에서 피란텔 타르트레이트 투여 후 2~3시간에 최고 혈장 농도 도달(t_max 평균 2.5시간으로 추정). 반감기: 고양이 1.4시간, 말 13.4시간. 개의 반감기는 출처에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Levamisole",
+      "severity": 3,
+      "keywords": [
+        "similar mechanism",
+        "neuromuscular blockade",
+        "cholinergic toxicity"
+      ],
+      "evidence": "Similar mechanism of action (nicotinic receptor agonism) and toxicity profile; concurrent use contraindicated."
+    },
+    {
+      "drug": "Morantel",
+      "severity": 3,
+      "keywords": [
+        "similar mechanism",
+        "neuromuscular blockade",
+        "cholinergic toxicity"
+      ],
+      "evidence": "Similar mechanism of action and toxicity profile; concurrent use contraindicated."
+    },
+    {
+      "drug": "Organophosphates",
+      "severity": 2,
+      "keywords": [
+        "cholinesterase inhibition",
+        "additive toxicity"
+      ],
+      "evidence": "Pyrantel inhibits cholinesterase; concurrent use with organophosphates increases risk of adverse cholinergic effects."
+    },
+    {
+      "drug": "Piperazine",
+      "severity": 3,
+      "keywords": [
+        "antagonistic mechanism",
+        "reduced efficacy"
+      ],
+      "evidence": "Pyrantel (depolarizing neuromuscular blocker) and piperazine (hyperpolarizing agent) have antagonistic mechanisms of action; concurrent use contraindicated."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "회충 및 구충 구제 (FDA 승인, 체중 2.3 kg 미만)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "강아지: 2, 3, 4, 6, 8, 10주령에 투여. 수유 중인 암컷: 분만 후 2~3주에 투여. 성견(오염 환경): 월 1회 반복 가능.",
+          "evidence": "FDA 승인 라벨 용량 (피란텔 베이스 기준, 체중 2.3 kg 미만)"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "회충 및 구충 구제 (FDA 승인, 체중 2.3 kg 이상)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "강아지: 2, 3, 4, 6, 8, 10주령에 투여. 수유 중인 암컷: 분만 후 2~3주에 투여. 성견(오염 환경): 월 1회 반복 가능.",
+          "evidence": "FDA 승인 라벨 용량 (피란텔 베이스 기준, 체중 2.3 kg 이상)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구충 또는 회충 (비라벨 외용)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "식후 투여; 7~10일 후 반복",
+          "evidence": "피란텔 파모에이트 5 mg/kg PO, 식후 1회; 7~10일 후 반복 (비라벨)"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "강아지 환경 오염 예방 (비라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 2.3 kg 미만 강아지: 2, 4, 6, 8주령에 투여 후 월간 심장사상충 예방약으로 전환",
+          "evidence": "비라벨: 체중 2.3 kg 미만 강아지 10 mg/kg"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "강아지 환경 오염 예방 (비라벨, 체중 2.3 kg 이상)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 2.3 kg 이상 강아지: 2, 4, 6, 8주령에 투여 후 월간 심장사상충 예방약으로 전환",
+          "evidence": "비라벨: 체중 2.3 kg 이상 강아지 5 mg/kg"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Physaloptera spp 선충 (비라벨, 단회)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "피란텔 파모에이트 5 mg/kg PO 1회 (비라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Physaloptera spp 선충 (비라벨, 반복)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 간격으로 최소 3회 투여",
+          "evidence": "피란텔 파모에이트 20 mg/kg PO, 2주 간격, 최소 3회 (비라벨)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "회충 및 구충 구제 (비라벨)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 반복",
+          "evidence": "피란텔 파모에이트 20 mg/kg PO; 필요 시 반복 (비라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "새끼 고양이 회충 및 구충 구제 (비라벨)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "생후 2~3주부터 투여 가능; 최소 12주령까지 2~3주 간격으로 반복",
+          "evidence": "새끼 고양이: 5~10 mg/kg PO, 2~3주 간격, 최소 12주령까지 (비라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Physaloptera spp 선충 (비라벨)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 간격으로 최소 3회 투여",
+          "evidence": "피란텔 파모에이트 20 mg/kg PO, 2주 간격, 최소 3회 (비라벨)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "출처에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 위장관 흡수가 불량하여 전신 노출이 최소화되므로 신독성 위험은 낮을 것으로 추정됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "인체에서 간질환 환자에게 주의하여 사용하도록 권고됨. 수의학적 용량 조절 지침은 출처에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "피란텔 과민증",
+      "match_terms": [
+        "hypersensitivity to pyrantel",
+        "pyrantel allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 쇠약 상태",
+      "match_terms": [
+        "severely debilitated",
+        "cachexia",
+        "critical illness"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "피란텔은 콜린성 작용제로서 감수성 기생충의 니코틴성 수용체에 결합하여 탈분극을 유발하고 신경근 차단제로 작용하여 기생충을 마비시킴. 또한 콜린에스테라제를 억제함.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 회충(Toxocara canis, Toxascaris leonina) 및 구충(Ancylostoma caninum, Uncinaria stenocephala) 구제제. 피란텔에 대한 A. caninum 내성이 보고됨. 권장 용량에서 부작용은 드물며, 구토 및 설사가 가끔 발생할 수 있음. 과량 투여(50 mg/kg/일 이상, 3개월) 시 콜린성 독성 증상(호흡수 증가, 운동실조 등) 발생 가능.",
+    "cat": "고양이에서 FDA 단독 승인 제품은 없으나 개와 유사한 내부 기생충 치료에 안전하게 사용 가능한 것으로 간주됨. 비라벨 사용. 피란텔 파모에이트 20 mg/kg PO 권장. 새끼 고양이는 생후 2~3주부터 투여 가능. 반감기 1.4시간으로 개보다 짧음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심한 쇠약 동물에서 주의 사용. 권장 용량에서 부작용 드물지만 구토, 설사 가능. 피란텔 내성 구충 증가 추세에 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "FDA 승인 단독 제품 없음(비라벨 사용). 심한 쇠약 동물에서 주의 사용. 구토, 설사 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 실온(15°C-30°C)에서 보관. 직사광선 노출 금지.",
+    "forms": [
+      "피란텔 파모에이트 정제: 22.7 mg, 113.5 mg (베이스 기준)",
+      "피란텔 파모에이트 경구 현탁액: 2.27 mg/mL, 4.54 mg/mL (베이스 기준, 개용)",
+      "피란텔 파모에이트 경구 현탁액: 50 mg/mL (베이스 기준, 말용)",
+      "피란텔 파모에이트 경구 페이스트: 43.9% w/w (말용)",
+      "피란텔 타르트레이트 1.06% 탑드레스 (말용)",
+      "피란텔 타르트레이트 2.12% 탑드레스 (말용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피란텔은 피리미딘계 구충제로 개(FDA 승인) 및 고양이(비라벨)의 회충 및 구충 치료에 사용됨. 위장관 흡수가 불량하여 전신 독성이 낮고 안전 마진이 넓음. 레바미솔, 모란텔과 병용 금지. 피페라진과 길항 작용으로 병용 금지. 피란텔 내성 구충 증가 추세에 주의 필요.",
+    "indications": "개(FDA 승인): 회충(Toxocara canis, Toxascaris leonina), 구충(Ancylostoma caninum, Uncinaria stenocephala) 구제. 고양이(비라벨): 유사 내부 기생충 치료. 말(FDA 승인): 대형 원충, 소형 원충, 요충, 대형 회충 구제. 기타 종(비라벨): 소, 양, 염소, 돼지, 조류, 라마, 토끼 등.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있으며, 음식에 섞어 줄 수도 있습니다. 대부분의 경우 부작용이 없으나, 드물게 구토가 발생할 수 있으며 이 경우 음식과 함께 투여하세요. 액체 현탁액을 사용하는 경우 매번 사용 전에 충분히 흔들고 직사광선을 피해 보관하세요. 수의사의 지시에 따라 정해진 간격으로 반복 투여하는 것이 기생충 관리에 중요합니다. 대부분의 장내 기생충은 치료 후 소화되므로 대변에서 기생충이 보이지 않는 것이 정상입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr.mean",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/31.jsonl",
+    "extracted_at": "2026-03-10T22:51:17.868492+00:00",
+    "reviewer": null
+  }
+}

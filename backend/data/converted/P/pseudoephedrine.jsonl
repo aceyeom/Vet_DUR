@@ -1,0 +1,545 @@
+{
+  "id": "pseudoephedrine",
+  "drug_identity": {
+    "name_ko": "슈도에페드린",
+    "name_en": "Pseudoephedrine",
+    "active_ingredient": "Pseudoephedrine",
+    "brand_names": [
+      "Equiphed",
+      "Sudafed",
+      "Zephrex D",
+      "Contac"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 적응증(요실금, 역행성 사정, 충혈 완화)은 모두 허가 외 사용이며, 수의학 라벨 제품은 없음.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "value": 240,
+        "unit": "mg"
+      },
+      {
+        "value": 3,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 6,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "슈도에페드린은 부분적으로만 대사되며, 대부분은 미변화체로 소변으로 배설된다. 소변 pH가 배설 속도에 영향을 미침(알칼리성 소변에서 반감기 연장, 산성 소변에서 단축)."
+    },
+    "extra_information": "소아에서 분포용적은 약 2.5 L/kg으로 보고됨. 개와 고양이에 대한 종 특이적 약동학 데이터는 Plumb's에 기재되어 있지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종 특이적 PK 데이터 없음; 인체 데이터 및 부작용 프로파일 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "restlessness",
+          "seizures",
+          "agitation",
+          "insomnia"
+        ],
+        "index": 1,
+        "evidence": "CNS 흥분, 불안, 불면, 과다활동, 발작 등 CNS 관련 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "hypertension",
+          "vasoconstriction"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 부정맥, 혈압 상승, 혈관 수축 등 심혈관계 부작용이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "urine pH"
+        ],
+        "index": 1,
+        "evidence": "대부분 미변화체로 신장 배설되며, 소변 pH가 배설에 영향을 미침. 직접적 신독성 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "partial metabolism"
+        ],
+        "index": 1,
+        "evidence": "부분적 간 대사가 언급되나 간독성에 대한 직접적 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "increased heart rate",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 부정맥, 심박수 증가, 혈압 상승이 부작용으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "restlessness"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 CNS 자극 부작용 가능성이 있으나 종 특이적 데이터는 제한적임."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "빈맥 및 혈압 상승 가능성이 있으나 고양이 특이적 데이터는 제한적임."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "신장 배설 경로이나 고양이에서 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "partial metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 간 대사 관련 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased heart rate"
+        ],
+        "index": 1,
+        "evidence": "빈맥 가능성이 있으나 고양이 특이적 심장 데이터는 제한적임."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "Plumb's 모노그래프에 반감기, Tmax, 생체이용률, 단백결합률에 대한 구체적 수치가 기재되어 있지 않음. 소아에서 분포용적 약 2.5 L/kg 언급."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs, e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "hypertensive crisis",
+        "serotonin syndrome",
+        "norepinephrine release"
+      ],
+      "evidence": "MAOI 투여 후 2주 이내에 슈도에페드린을 투여해서는 안 됨. 심각한 고혈압 위기 및 세로토닌 증후군 위험."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "sympathomimetic potentiation"
+      ],
+      "evidence": "병용 시 고혈압 위험 증가."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "additive toxicity",
+        "hypertension",
+        "tachycardia"
+      ],
+      "evidence": "다른 교감신경 흥분제와 병용 시 독성 위험 증가."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., clomipramine, amitriptyline)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "adrenergic potentiation"
+      ],
+      "evidence": "삼환계 항우울제와 병용 시 고혈압 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "요도 괄약근 긴장도 증가 (요실금 치료, 허가 외)",
+          "value": "1.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "야간 요실금의 경우 취침 전 1일 1회 투여로 관리 가능",
+          "evidence": "Plumb's 허가 외 용량. 5 mg/kg 이상에서 독성 부작용 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "역행성 사정 치료 (허가 외) - 지속 투여",
+          "value": "4 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "5 mg/kg 이상에서 심각한 독성 부작용 관련. 주의 요망.",
+          "evidence": "Plumb's 허가 외 용량. 독성 위험으로 인해 주의 필요."
+        },
+        {
+          "logic_type": "linear",
+          "context": "역행성 사정 치료 (허가 외) - 정액 채취 또는 교배 전 투여",
+          "value": "4 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "정액 채취 또는 교배 시도 1~3시간 전 투여",
+          "evidence": "Plumb's 허가 외 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "충혈 완화제 (허가 외)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's 허가 외 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "슈도에페드린은 주로 신장으로 미변화체 배설되므로 신기능 저하 시 축적 가능성이 있으나, Plumb's에 구체적인 용량 조절 지침이 명시되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's에 간기능 저하 시 용량 조절에 대한 구체적 지침이 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to pseudoephedrine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 고혈압",
+      "match_terms": [
+        "severe hypertension",
+        "hypertension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대증",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "BPH"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파 및 베타 아드레날린 수용체를 간접적으로 자극하여 노르에피네프린 유리를 촉진함. 혈관 수축, 심박수 증가, 관상동맥 혈류 증가, 혈압 상승, 경미한 CNS 자극, 비강 충혈 완화, 식욕 감소, 요도 괄약근 긴장도 증가 및 방광경부 폐쇄 효과를 나타냄.",
+    "common_extra_effects": [
+      "헐떡거림(panting)",
+      "식욕 감소",
+      "무기력",
+      "빈맥",
+      "CNS 흥분",
+      "불안/초조",
+      "불면",
+      "행동 변화",
+      "혈압 상승",
+      "부정맥"
+    ],
+    "dog_mechanism": "요도 괄약근 긴장도 증가 및 방광경부 폐쇄를 통해 요실금 치료에 사용됨.",
+    "dog_extra_effects": [
+      "과다활동/흥분",
+      "고체온",
+      "산동",
+      "빈맥",
+      "고혈압",
+      "구토",
+      "방향감각 상실",
+      "발작 (과량 투여 시)"
+    ],
+    "cat_mechanism": "교감신경 흥분 작용을 통한 충혈 완화 효과.",
+    "cat_extra_effects": [
+      "CNS 자극",
+      "빈맥",
+      "고혈압"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 슈도에페드린은 주로 요실금 치료를 위한 페닐프로판올아민(PPA)의 대체제로 사용되나, 치료 지수가 좁고 PPA보다 효과가 낮으며 부작용이 더 많다는 연구 결과가 있음. 5~6 mg/kg에서 부작용이 발생할 수 있으며, 10~12 mg/kg 이상에서 사망 사례가 보고됨. FDA 승인 대체제가 있으므로 일반적으로 권장되지 않음.",
+    "cat": "고양이에서는 충혈 완화제로 허가 외 사용될 수 있으나, 효능 및 안전성 데이터가 부족함. 1 mg/kg PO q8h 용량이 제시되어 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "치료 지수가 좁아 독성 위험이 있음. 녹내장, 전립선 비대증, 갑상선 기능 항진증, 당뇨병, 심혈관 질환, 고혈압 환자에서 주의 사용. 중증 고혈압 또는 과민반응 시 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 효능 및 안전성 데이터가 제한적임. 심혈관 및 CNS 부작용 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관, 밀폐 용기에 보관. 경구 액제는 빛과 동결로부터 보호.",
+    "forms": [
+      "슈도에페드린 HCl 정제 30 mg, 60 mg",
+      "슈도에페드린 HCl 캡슐 30 mg",
+      "슈도에페드린 HCl 서방정 120 mg, 240 mg",
+      "슈도에페드린 액제 3 mg/mL, 6 mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "슈도에페드린은 경구 교감신경 흥분제로, 주로 개의 요도 괄약근 저긴장증(요실금)에 페닐프로판올아민 대체제로 사용됨. 치료 지수가 좁아 독성 위험이 높으며, FDA 승인 대체제가 있어 일반적으로 권장되지 않음. 미국에서 DEA List I 화학물질로 규제됨. MAOI와의 병용은 절대 금기.",
+    "indications": "【허가 외】개: 요실금(요도 괄약근 긴장도 증가), 역행성 사정. 고양이: 충혈 완화. 수의학 라벨 제품 없음.",
+    "client_info": "이 약의 부작용으로 식욕 저하, 불안(안정을 못 찾음), 기력 저하, 빠른 심박수가 나타날 수 있습니다. 과량 투여는 심각한 결과를 초래할 수 있으므로 수의사의 지시대로만 투여하십시오. 이 약은 다른 동물과 어린이의 손이 닿지 않는 곳에 보관하십시오. 이 약은 마약류 전구물질로 규제되는 약품입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (half-life, Tmax, bioavailability)",
+      "Protein binding data",
+      "CYP enzyme profile",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "Species-specific organ burden data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.adjustment_type",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.adjustment_type",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/31.jsonl",
+    "extracted_at": "2026-03-10T22:48:11.642581+00:00",
+    "reviewer": null
+  }
+}

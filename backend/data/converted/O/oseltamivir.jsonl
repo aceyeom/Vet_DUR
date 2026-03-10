@@ -1,0 +1,375 @@
+{
+  "id": "oseltamivir",
+  "drug_identity": {
+    "name_ko": "오셀타미비르",
+    "name_en": "Oseltamivir",
+    "active_ingredient": "Oseltamivir phosphate",
+    "brand_names": [
+      "Tamiflu"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용이며, 개 파보바이러스 장염 보조치료 등에 제한적으로 사용됨. 닭, 칠면조, 오리에 대한 extra-label 사용은 FDA에 의해 금지됨.",
+    "dosage_form": [
+      "Cap",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 45,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 6,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "오셀타미비르 및 활성 대사체(오셀타미비르 카르복실레이트) 모두 CYP-450 동종효소의 기질 또는 억제제로 작용하지 않음. 주로 간 에스테라제에 의해 활성 대사체로 전환됨."
+    },
+    "extra_information": "개와 고양이에서의 약동학 정보는 없음. 말에서는 2 mg/kg NG 투여 후 1~2시간 내 최고 혈중 농도 도달, 오셀타미비르 반감기 약 2시간, 활성 대사체 반감기 약 2.5시간. 사람에서 오셀타미비르 카르복실레이트의 생체이용률은 약 75%이며 혈장 단백 결합은 최소. 신장(사구체 여과 및 세뇨관 분비)을 통해 주로 배설되며, 최대 20%는 대변으로 배설됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이에서의 수의학적 약동학 데이터 없음. 사람 및 말 데이터 참조. 신독성 관련 키워드: 신장 배설 주경로, 신기능 저하 시 용량 조절 필요.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "neonatal brain penetration"
+        ],
+        "index": 1,
+        "evidence": "신생 쥐 실험에서 오셀타미비르가 성체 대비 뇌에 1500배 높은 농도로 축적됨. 신생 강아지에서 유사한 신경독성 가능성 언급됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "white blood cell count"
+        ],
+        "index": 1,
+        "evidence": "파보바이러스 감염 개에서 백혈구 수치 유지에 통계적으로 유의한 차이가 관찰됨(소규모 연구)."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration",
+          "renal impairment dose adjustment"
+        ],
+        "index": 2,
+        "evidence": "활성 대사체는 주로 신장(사구체 여과 및 세뇨관 분비)을 통해 배설됨. 신기능 저하 시 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver esterases",
+          "prodrug conversion"
+        ],
+        "index": 1,
+        "evidence": "오셀타미비르 포스페이트는 주로 간 에스테라제에 의해 활성 대사체로 전환되는 프로드럭임."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 부작용 또는 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "neonatal brain penetration"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 신생 쥐 실험 결과를 바탕으로 신생 고양이에서도 유사한 신경독성 가능성을 배제할 수 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서의 혈액 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 사람 데이터 기반으로 신장 배설이 주경로임을 추정."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver esterases",
+          "prodrug conversion"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 사람 데이터 기반으로 간 에스테라제에 의한 대사를 추정."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 부작용 또는 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 10.0,
+      "mean": 8.0,
+      "species": "human"
+    },
+    "f_percent": 75,
+    "protein_binding_percent": null,
+    "evidence": "사람에서 오셀타미비르 카르복실레이트의 생체이용률 약 75%, 반감기 6~10시간(정상 신기능). 말에서 NG 투여 후 최고 혈중 농도 도달 시간 1~2시간, 오셀타미비르 반감기 약 2시간, 활성 대사체 반감기 약 2.5시간. 개/고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "tubular secretion inhibition",
+        "increased drug exposure"
+      ],
+      "evidence": "Probenecid may increase exposure to the active metabolite oseltamivir carboxylate approximately 2-fold by reducing renal tubular secretion. Could potentially allow dose reduction or extended dosing interval, but supporting data are limited."
+    },
+    {
+      "drug": "Influenza Vaccine (live)",
+      "severity": 2,
+      "keywords": [
+        "reduced immune response",
+        "live vaccine interaction"
+      ],
+      "evidence": "Oseltamivir may potentially reduce the immune response to live influenza virus vaccines. No apparent effect on inactivated (killed) vaccines."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased bleeding risk"
+      ],
+      "evidence": "Concurrent use with warfarin may increase the risk for bleeding. Mechanism not fully characterized in the source."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "chicken",
+      "turkey",
+      "duck"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "개 파보바이러스 장염 보조치료 (extra-label)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여. 소규모 연구에서 이환율 또는 사망률의 유의한 감소는 없었음.",
+          "evidence": "소규모 전향적 무작위 대조 임상시험(35마리)에서 사용된 용량. 이환율 및 사망률의 유의한 감소는 입증되지 않음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 조절이 필요할 수 있음. 활성 대사체는 주로 신장(사구체 여과 및 세뇨관 분비)을 통해 배설됨. 구체적인 수의학적 용량 조절 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 기능 저하에 따른 용량 조절에 대한 언급 없음. 간 에스테라제에 의해 활성 대사체로 전환되나, 간 기능 저하 시 용량 조절 권고는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (Hypersensitivity)",
+      "match_terms": [
+        "hypersensitivity",
+        "anaphylaxis",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하 (Renal impairment)",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "azotemia",
+        "elevated creatinine"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "오셀타미비르 포스페이트는 프로드럭으로, 흡수 후 활성형인 오셀타미비르 카르복실레이트로 가수분해됨. 활성 대사체는 인플루엔자 바이러스 뉴라미니다제를 경쟁적으로 억제하여 바이러스 복제, 감염 세포로부터의 바이러스 방출, 방출 후 바이러스 응집 형성 방지에 필요한 효소를 차단함.",
+    "common_extra_effects": [
+      "오심(nausea)",
+      "구토(vomiting)",
+      "중증 피부 반응(erythema multiforme, toxic epidermal necrolysis)",
+      "아나필락시스(anaphylaxis)"
+    ],
+    "dog_mechanism": "개 파보바이러스가 장 점막을 통과하여 장 음와 세포를 감염시키는 능력을 제한할 수 있다고 가정됨. GI 세균 집락화, 전위 및 독소 생성을 감소시킬 수 있음.",
+    "dog_extra_effects": [
+      "소규모 연구에서 주요 부작용 보고 없음"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서의 약동학 정보는 없음. 파보바이러스 장염 보조치료로 2 mg/kg PO q12h 5일 투여가 소규모 연구에서 사용되었으나, 이환율 및 사망률의 유의한 감소는 입증되지 않음. 신생 강아지에서는 뇌 내 약물 농도가 높아질 수 있어 신경독성 가능성에 주의 필요. 수의학적 사용은 논란이 있으며, 인플루엔자 치료 목적으로는 권장되지 않음.",
+    "cat": "고양이에서의 약동학 및 안전성 정보 없음. 용량 권고 없음. 사용 시 주의 요망."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서의 안전성 및 유효성 데이터 제한적. 신기능 저하 시 용량 조절 필요. 신생 강아지에서 신경독성 가능성. 치료는 임상 증상 발현 후 가능한 빨리 시작해야 함."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 약동학 및 안전성 정보 없음. 사용 시 모체의 이익이 잠재적 위험을 상회하는 경우에만 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐: 25°C(77°F) 보관, 15~30°C(59~86°F) 허용. 재조합 전 경구 분말: 15~30°C 보관. 재조합 후(55 mL 물): 실온(15~30°C) 10일 또는 냉장(2~8°C) 17일 보관 가능. 동결 금지. 조제 현탁액(6 mg/mL): 실온 5일, 냉장 5주 안정.",
+    "forms": [
+      "Oseltamivir Phosphate Oral Capsules: 30 mg, 45 mg, 75 mg (Tamiflu®)",
+      "Oseltamivir Phosphate Powder for Oral Suspension: 6 mg/mL (재조합 후, 60 mL 병) (Tamiflu®)",
+      "Extemporaneously compounded oral suspension: 6 mg/mL (cherry syrup, simple syrup, 또는 OraSweet® SF 사용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "오셀타미비르는 뉴라미니다제 억제제 계열의 항바이러스제로, 수의학에서는 주로 개 파보바이러스 장염 보조치료 목적으로 허가 외 사용됨. 그러나 소규모 임상 연구에서 이환율 및 사망률의 유의한 감소는 입증되지 않았음. 개와 고양이에서의 약동학 데이터가 없으며, 안전성 및 유효성 근거가 부족함. 인플루엔자 치료 목적의 수의학적 사용은 공중보건 우려(인간용 약물 공급 및 내성 발생)로 논란이 있음. 닭, 칠면조, 오리에 대한 extra-label 사용은 FDA에 의해 금지됨.",
+    "indications": "【허가 외 사용】개 파보바이러스 장염 보조치료(근거 제한적), 말 인플루엔자 A 치료 및 예방(소규모 실험적 연구). 이차 세균 감염이 동반된 기타 바이러스 감염의 보조치료 가능성 제시되나 근거 부족.",
+    "client_info": "이 약은 동물에서 일반적으로 사용되지 않는 약물입니다. 동물에서의 효과와 안전성이 충분히 확립되어 있지 않습니다. 부작용(구토, 오심 등)이 나타나거나 걱정되는 증상이 있으면 즉시 수의사에게 연락하십시오. 이 약은 가능한 한 증상 발현 초기에 투여해야 효과가 있습니다. 임신 중이거나 수유 중인 동물에게 투여할 경우 수의사와 반드시 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 35,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK (dog/cat)",
+      "Monitoring (detailed)",
+      "Laboratory Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.f_percent (dog/cat)",
+      "cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "dosage_and_kinetics.cat.dosage_list",
+      "organ_burden_logic.cat (veterinary data)",
+      "organ_burden_logic.dog (veterinary data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/30.jsonl",
+    "extracted_at": "2026-03-10T22:25:00.612637+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "id": "oxacillin",
+  "drug_identity": {
+    "name_ko": "옥사실린",
+    "name_en": "Oxacillin",
+    "active_ingredient": "Oxacillin sodium",
+    "brand_names": [
+      "Bactocill"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 인체용 주사제를 동물에 적용하는 오프라벨 사용임.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      },
+      {
+        "value": 10000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "옥사실린은 활성 및 비활성 대사체로 부분 대사되며, 모약물과 대사체는 사구체 여과 및 세뇨관 분비를 통해 신장으로 빠르게 배설된다. 소량은 담즙 배설을 통해 분변으로 배출된다."
+    },
+    "extra_information": "개에서 분포용적은 0.3 L/kg으로 보고됨. 개에서 소실 반감기는 20~30분. 인체에서 혈장 단백 결합률은 약 89~94%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학 종별 PK 데이터가 제한적이므로 인체 데이터 및 부작용 기술을 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성(개에서 운동실조) 보고됨. 신장 질환 환자에서 고용량 비경구 투여 시 CNS 영향 가능."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia",
+          "eosinophilia"
+        ],
+        "index": 2,
+        "evidence": "과민반응으로 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈, 호산구증가증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tubular secretion",
+          "glomerular filtration",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "주요 배설 경로가 신장(사구체 여과 + 세뇨관 분비)이므로 신기능 저하 시 약물 축적 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "partial metabolism"
+        ],
+        "index": 4,
+        "evidence": "간독성 약물로 분류되지 않으나 간효소 수치 상승이 보고됨. 부분적 간 대사 발생."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "개에서 빈맥이 부작용으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS effects"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신경독성 데이터 없음. 개 및 인체 데이터에서 고용량 시 CNS 영향 가능성 유추."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 혈액 독성 데이터 없음. 페니실린 계열 공통 부작용으로 혈액 이상 가능성."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tubular secretion",
+          "glomerular filtration",
+          "renal elimination"
+        ],
+        "index": -1,
+        "evidence": "주요 배설 경로가 신장이므로 고양이에서도 신기능 저하 시 축적 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "partial metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 간독성 데이터 없음. 간효소 상승 가능성은 페니실린 계열 공통 사항."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 부작용 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": 0.33,
+      "max": 0.5,
+      "mean": 0.42,
+      "species": "dog"
+    },
+    "f_percent": 33,
+    "protein_binding_percent": 92,
+    "evidence": "개에서 소실 반감기 20~30분(0.33~0.5시간). 인체에서 경구 생체이용률 30~35%, 혈장 단백 결합률 89~94%. 인체에서 IM 투여 후 30분 이내 최고 혈중 농도 도달."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "synergism",
+        "in vitro inactivation",
+        "do not mix"
+      ],
+      "evidence": "In vitro evidence of synergism against staphylococci; however, penicillins can inactivate aminoglycosides in vitro and must never be mixed in the same syringe or IV line."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "tubular secretion inhibition",
+        "increased oxacillin concentration"
+      ],
+      "evidence": "Probenecid may increase oxacillin concentrations by competitively inhibiting tubular secretion of oxacillin."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "bacteriostatic vs bactericidal"
+      ],
+      "evidence": "Theoretical antagonism between tetracyclines (bacteriostatic) and oxacillin (bactericidal); concurrent use typically not recommended."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased warfarin efficacy",
+        "anticoagulation"
+      ],
+      "evidence": "Oxacillin may cause decreased warfarin efficacy; monitor anticoagulation status."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염(피부, 골, 연조직 등) - 오프라벨",
+          "value": "22 - 40",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 22–40 mg/kg SC, IM, or IV every 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염(피부, 골, 연조직 등) - 오프라벨",
+          "value": "22 - 40",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 22–40 mg/kg SC, IM, or IV every 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염(피부, 골, 연조직 등) - 오프라벨",
+          "value": "22 - 40",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 22–40 mg/kg SC, IM, or IV every 8 hours (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 오프라벨 (개와 동일 용량 적용)",
+          "value": "22 - 40",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": null,
+          "evidence": "Plumb's: DOGS/CATS 22–40 mg/kg SC, IM, or IV every 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 오프라벨 (개와 동일 용량 적용)",
+          "value": "22 - 40",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": null,
+          "evidence": "Plumb's: DOGS/CATS 22–40 mg/kg SC, IM, or IV every 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 오프라벨 (개와 동일 용량 적용)",
+          "value": "22 - 40",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": null,
+          "evidence": "Plumb's: DOGS/CATS 22–40 mg/kg SC, IM, or IV every 8 hours (extra-label)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 본문에 신기능 저하 시 구체적 용량 조정 지침이 명시되어 있지 않음. 그러나 신장이 주요 배설 경로이며, 인체에서 신질환 환자에서 고용량 비경구 투여 시 CNS 독성이 보고되어 신기능 저하 환자에서 주의가 필요함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "Plumb's 본문에 간기능 저하 시 용량 조정 지침이 명시되어 있지 않음. 간독성 약물로 분류되지 않으나 간효소 상승이 보고됨."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응 병력",
+      "match_terms": [
+        "penicillin allergy",
+        "penicillin hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제(세팔로스포린, 카바페넴) 과민반응 병력",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "메티실린 내성 포도상구균(MRSA/MRSP) 감염",
+      "match_terms": [
+        "MRSA",
+        "MRSP",
+        "methicillin-resistant Staphylococcus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "페니실리나제 내성 페니실린으로, 세균 세포벽 합성에 필수적인 페니실린 결합 단백질(PBP)에 결합하여 세포벽 합성을 억제함으로써 살균 작용을 나타냄. 페니실리나제 생성 포도상구균에 효과적.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "과민반응(발진, 발열, 호산구증가증)",
+      "호중구감소증",
+      "무과립구증",
+      "혈소판감소증",
+      "백혈구감소증",
+      "빈혈",
+      "림프절병증",
+      "아나필락시스",
+      "항생제 관련 설사(장내 세균총 변화)",
+      "중복감염"
+    ],
+    "dog_mechanism": "개에서 페니실리나제 생성 포도상구균에 의한 피부, 골, 연조직 감염 치료에 사용됨.",
+    "dog_extra_effects": [
+      "빈호흡",
+      "호흡곤란",
+      "부종",
+      "빈맥",
+      "운동실조(고용량 또는 장기 사용 시 신경독성)"
+    ],
+    "cat_mechanism": "고양이에서 페니실리나제 생성 포도상구균 감염 치료에 사용 가능하나 수의학적 데이터 제한적.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 22~40 mg/kg을 8시간마다 SC/IM/IV로 투여하는 오프라벨 용법이 사용됨. 투여 빈도가 높고 경구 제형이 없어 실제 임상에서는 거의 사용되지 않음. 옥사실린 내성은 포도상구균에서 메티실린 내성의 지표임. 고용량 또는 장기 사용 시 운동실조 등 신경독성 주의.",
+    "cat": "고양이에서도 개와 동일한 용량(22~40 mg/kg q8h SC/IM/IV)이 오프라벨로 적용됨. 수의학적 고양이 특이 데이터는 제한적이며, 투여 빈도가 높고 경구 제형이 없어 임상 사용이 드묾."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "페니실린 또는 베타-락탐 과민반응 병력 시 주의. 고용량/장기 사용 시 신경독성(운동실조) 가능. 신기능 저하 시 약물 축적 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "페니실린 또는 베타-락탐 과민반응 병력 시 주의. 고양이 특이적 안전성 데이터 제한적이므로 모체 이익이 위험을 상회할 때만 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15~30°C) 보관. 멸균수로 167 mg/mL로 재조제 후 실온에서 3일, 냉장 시 7일 안정. IV 용액의 안정성은 희석액, 보관 온도, 최종 농도에 따라 다름; 제품 설명서 참조.",
+    "forms": [
+      "Oxacillin Sodium Powder for Injection 1 g",
+      "Oxacillin Sodium Powder for Injection 2 g",
+      "Oxacillin Sodium Powder for Injection 10 g"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "옥사실린은 페니실리나제 내성 페니실린으로, 페니실리나제 생성 포도상구균에 의한 피부·골·연조직 감염 치료에 사용됩니다. 미국 내 경구 제형이 없어 주사제만 사용 가능하며, 투여 빈도가 높아 임상에서 거의 사용되지 않습니다. 옥사실린 내성은 메티실린 내성의 지표이므로 MRSA/MRSP 감염에는 효과가 없습니다. 수의학적 허가 제품은 없으며 오프라벨로 사용됩니다.",
+    "indications": "페니실리나제 생성 포도상구균에 의한 감수성 감염(피부, 골, 연조직 등) 치료. 수의학에서 오프라벨 사용. 경구 치료가 필요한 경우 디클록사실린 캡슐로 대체 가능.",
+    "client_info": "이 약은 주사제로만 제공됩니다. 반드시 올바른 투여 방법을 숙지한 후 사용하십시오. 가장 흔한 부작용은 식욕 감소, 구토, 설사 등 경미한 소화기 증상입니다. 이상 증상이 나타나면 즉시 수의사에게 연락하십시오. 처방된 전체 치료 기간 동안 투약을 완료하는 것이 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies (cat)",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.onset_min (cat/dog specific)",
+      "timing_profile.t_max_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/30.jsonl",
+    "extracted_at": "2026-03-10T22:26:35.299252+00:00",
+    "reviewer": null
+  }
+}
