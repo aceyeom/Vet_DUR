@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   ArrowLeft, Lock, Eye, EyeOff, Zap, RotateCcw,
@@ -15,7 +15,7 @@ import { ResultsDisplay } from '../components/ResultsDisplay';
 import { runFullDURAnalysis } from '../utils/durEngine';
 import { SEX_ENUM, PATIENT_STATUS_ENUM } from '../data/emrSchema';
 import { BREED_DATA } from '../data/breedProfiles';
-import { searchDrugsApi } from '../lib/api';
+import { searchDrugsApi, isBackendAvailable } from '../lib/api';
 
 const SYSTEM_PASSWORD = 'vetdur2025';
 
@@ -829,6 +829,22 @@ export default function FullSystem() {
   const [drugs, setDrugs] = useState([]);
   const [step, setStep] = useState('input');
   const [results, setResults] = useState(null);
+  const [isConnected, setIsConnected] = useState(false);
+  const pollRef = useRef(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    const check = async () => {
+      const ok = await isBackendAvailable();
+      if (!cancelled) setIsConnected(ok);
+    };
+    check();
+    pollRef.current = setInterval(check, 30000);
+    return () => {
+      cancelled = true;
+      clearInterval(pollRef.current);
+    };
+  }, []);
 
   const handleAddDrug = useCallback((drug) => setDrugs(prev => [...prev, drug]), []);
   const handleRemoveDrug = useCallback((drugId) => setDrugs(prev => prev.filter(d => d.id !== drugId)), []);
@@ -896,10 +912,17 @@ export default function FullSystem() {
                 <RotateCcw size={14} />
               </button>
             )}
-            <span className="text-[11px] px-2.5 py-1 bg-emerald-50 text-emerald-600 rounded-full font-semibold flex items-center gap-1.5 border border-emerald-100">
-              <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse-subtle" />
-              {t.connected}
-            </span>
+            {isConnected ? (
+              <span className="text-[11px] px-2.5 py-1 bg-emerald-50 text-emerald-600 rounded-full font-semibold flex items-center gap-1.5 border border-emerald-100">
+                <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse-subtle" />
+                {t.connected}
+              </span>
+            ) : (
+              <span className="text-[11px] px-2.5 py-1 bg-red-50 text-red-600 rounded-full font-semibold flex items-center gap-1.5 border border-red-100">
+                <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
+                Offline
+              </span>
+            )}
           </div>
         </div>
       </header>

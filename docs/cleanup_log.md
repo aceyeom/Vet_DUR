@@ -71,3 +71,25 @@ All remaining files in `frontend/src/` have at least one active import from a pa
 ---
 
 *Cleanup performed: 2026-03-11*
+
+---
+
+## Integration Repair — 2026-03-11
+
+### Deleted Files
+
+| File | Reason |
+|------|--------|
+| `frontend/src/data/drugSearchData.js` | Removed as part of Task 3. `DrugInput.jsx` previously imported `searchDrugCatalog` and `DRUG_SEARCH_CATALOG` for browse mode and search augmentation. Both replaced by backend API calls (`GET /api/drugs` and `GET /api/drugs/search`). Zero remaining imports confirmed before deletion. |
+
+### Removed API Exports
+
+| Export | File | Reason |
+|--------|------|--------|
+| `analyzeDurApi` | `frontend/src/lib/api.js` | Removed as part of Task 7. The `/api/dur/analyze` backend endpoint was removed (Task 5, Option B decision). The client-side `runFullDURAnalysis()` in `durEngine.js` is the single DUR engine. Zero import references in the frontend. |
+
+### Removed Backend Code
+
+| Code | File | Reason |
+|------|------|--------|
+| `POST /api/dur/analyze` endpoint + helpers (`DrugInput`, `AnalyzeRequest`, `_check_interactions`, etc.) | `backend/main.py` | Removed as part of Task 5, Option B. Client engine is more complete (9 rules vs 8; CYP2D6, CYP induction, unknown drug fallback, richer per-drug flags). See `docs/engine_diff.md`. |

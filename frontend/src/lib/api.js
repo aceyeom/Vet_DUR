@@ -2,8 +2,7 @@
  * NuvoVet API Client
  *
  * All requests go to the FastAPI backend at VITE_API_URL.
- * Falls back gracefully when the backend is unreachable — callers
- * receive null / empty arrays so the UI can degrade to local data.
+ * Callers receive null / empty arrays when the backend is unreachable.
  *
  * Environment variable:
  *   VITE_API_URL  (default: http://localhost:8000)
@@ -70,33 +69,24 @@ export async function listDrugsApi({ drugClass, source, limit = 50, offset = 0 }
   return data ?? { results: [], total: 0 };
 }
 
-// ── DUR Analysis ─────────────────────────────────────────────────
-
-/**
- * Run server-side DUR analysis.
- * The client-side durEngine.js is the primary path; this is a
- * secondary/validation endpoint.
- *
- * @param {Array}  drugs       Array of Drug objects
- * @param {string} species     'dog' | 'cat'
- * @param {number} weightKg
- * @param {object} patientInfo Patient context (conditions, labs, etc.)
- * @returns {Promise<object|null>}
- */
-export async function analyzeDurApi(drugs, species, weightKg, patientInfo = {}) {
-  return apiFetch('/api/dur/analyze', {
-    method: 'POST',
-    body: JSON.stringify({ drugs, species, weightKg, patientInfo }),
-  });
-}
-
 // ── Health check ─────────────────────────────────────────────────
 
 /**
- * Check backend availability.
+ * Check backend availability with a 2-second timeout.
  * @returns {Promise<boolean>}
  */
 export async function isBackendAvailable() {
-  const data = await apiFetch('/api/health');
-  return data?.status === 'ok';
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 2000);
+  try {
+    const url = `${BASE_URL}/api/health`;
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+    if (!res.ok) return false;
+    const data = await res.json();
+    return data?.status === 'ok';
+  } catch {
+    clearTimeout(timeoutId);
+    return false;
+  }
 }
