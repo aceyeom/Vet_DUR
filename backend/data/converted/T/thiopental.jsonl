@@ -1,0 +1,738 @@
+{
+  "id": "thiopental",
+  "drug_identity": {
+    "name_ko": "티오펜탈",
+    "name_en": "Thiopental",
+    "active_ingredient": "Thiopental sodium",
+    "brand_names": [
+      "Pentothal",
+      "Anesthal",
+      "Bensulf",
+      "Farmotal",
+      "Hipnopento",
+      "Inductal",
+      "Intraval",
+      "Nesdonal",
+      "Pensodital",
+      "Sandothal",
+      "Sodipental",
+      "Thionembutal",
+      "Thiopentax",
+      "Tiobarbital",
+      "Trapanal"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "foreign",
+    "formulary_status": "discontinued",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "%"
+      },
+      {
+        "value": 5.0,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.003,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "티오펜탈은 간 마이크로솜 효소계에 의해 대사되며, 여러 대사산물이 분리되었다. 소변으로 미변화체 배설은 매우 적다(인간에서 0.3%)."
+    },
+    "extra_information": "개에서 소실 반감기는 약 7시간으로 보고되었으며, 양에서는 3~4시간이다. 그레이하운드 및 기타 시각하운드 품종은 체지방이 적고 티오바르비투레이트 대사 처리 방식의 차이로 인해 회복 시간이 더 길 수 있다. 마취 지속 시간은 짧지만(10~30분), 회복에는 수 시간이 걸릴 수 있다. 단백결합률은 75%이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이에 대한 수의학적 종별 PK 데이터가 제한적이며, 일부는 인간 데이터에서 추론함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "CNS depression",
+          "hypnosis",
+          "anesthesia",
+          "ventricular bigeminy",
+          "arrhythmia",
+          "redistribution to CNS"
+        ],
+        "index": 1,
+        "evidence": "티오펜탈은 높은 지질 용해도로 인해 CNS에 빠르게 분포하여 깊은 최면 및 마취를 유발함. GABA 억제 전달물질과 유사하게 CNS 뉴런에 직접 작용함."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "ventricular bigeminy",
+          "arrhythmia",
+          "cardiac output reduction",
+          "hypotension",
+          "vascular dilation"
+        ],
+        "index": 2,
+        "evidence": "개에서 심실 이단맥(bigeminy) 발생률 약 40%. 심박출량 감소 가능. 과도한 IV 투여 시 혈관 확장 및 저혈압 유발 가능."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal dysfunction sensitivity"
+        ],
+        "index": 3,
+        "evidence": "신장 기능 장애 환자에서 티오펜탈에 대한 감수성 증가 가능. 그러나 소변으로의 미변화체 배설이 매우 적어(0.3%) 만성 신부전 환자에서 용량 조절이 필요하지 않음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic microsomal metabolism",
+          "prolonged recovery in hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "간 마이크로솜 효소계에 의해 대사됨. 중증 간질환 환자에서 최면 효과가 연장될 수 있어 상대적 금기에 해당함."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "ventricular bigeminy",
+          "arrhythmia",
+          "cardiac output reduction",
+          "hypotension",
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "개에서 심실 이단맥이 가장 흔한 부정맥. 심박출량 감소 가능(심부전 환자에서 임상적으로 유의미). 용량 의존적 저혈압 발생 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "CNS depression",
+          "hypnosis",
+          "anesthesia",
+          "apnea"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 CNS에 빠르게 분포하여 마취 유도. 주사 후 무호흡 발생에 취약함."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "mild arterial hypotension",
+          "apnea"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 경미한 동맥 저혈압 발생 가능. 주사 후 무호흡 발생에 취약함."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal dysfunction sensitivity"
+        ],
+        "index": 3,
+        "evidence": "신장 기능 장애 환자에서 감수성 증가 가능. 만성 신부전에서 용량 조절 불필요(소변 배설 매우 적음)."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic microsomal metabolism",
+          "prolonged recovery in hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "간 마이크로솜 효소계에 의해 대사됨. 중증 간질환 시 회복 지연 가능."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "mild arterial hypotension",
+          "apnea"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 경미한 동맥 저혈압 발생 가능. 개에 비해 심장 부정맥 관련 언급은 적음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 7.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 75,
+    "evidence": "IV 투여 후 15~30초 이내(최대 1분)에 최면 및 마취 발생. 개에서 소실 반감기 약 7시간. 단기 작용 지속 시간(10~30분)은 빠른 대사가 아닌 CNS에서 근육 및 지방 조직으로의 재분포에 기인함. 단백결합률 75%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Clonidine",
+      "severity": 1,
+      "keywords": [
+        "dose reduction",
+        "thiopental requirement reduction"
+      ],
+      "evidence": "IV clonidine prior to induction may reduce thiopental dosage requirements by up to 37%."
+    },
+    {
+      "drug": "CNS Depressants (e.g., methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "additive"
+      ],
+      "evidence": "May enhance respiratory and CNS depressant effects when used with thiopental."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Potential for hypotension when used with thiopental."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "ventricular fibrillation",
+        "arrhythmia",
+        "catecholamine"
+      ],
+      "evidence": "The ventricular fibrillatory effects of epinephrine may be potentiated when used with thiobarbiturates and halothane. Catecholamines should not be used in overdose treatment."
+    },
+    {
+      "drug": "Norepinephrine",
+      "severity": 3,
+      "keywords": [
+        "ventricular fibrillation",
+        "arrhythmia",
+        "catecholamine"
+      ],
+      "evidence": "The ventricular fibrillatory effects of norepinephrine may be potentiated when used with thiobarbiturates and halothane."
+    },
+    {
+      "drug": "Ketoprofen",
+      "severity": 2,
+      "keywords": [
+        "prolonged recovery",
+        "anesthesia duration"
+      ],
+      "evidence": "Anesthesia recovery time was prolonged when ketoprofen was used with thiopental."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 1,
+      "keywords": [
+        "dose reduction",
+        "thiopental requirement reduction"
+      ],
+      "evidence": "Given prior to induction may reduce thiopental dosage requirements."
+    },
+    {
+      "drug": "Midazolam",
+      "severity": 2,
+      "keywords": [
+        "hypnotic potentiation",
+        "CNS depression"
+      ],
+      "evidence": "Midazolam may potentiate the hypnotic effects of thiopental."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, fentanyl, morphine, tramadol)",
+      "severity": 1,
+      "keywords": [
+        "dose reduction",
+        "thiopental requirement reduction",
+        "premedication"
+      ],
+      "evidence": "Given prior to induction may reduce thiopental dosage requirements."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "hypotension"
+      ],
+      "evidence": "Phenothiazines may potentiate thiopental effects; hypotension is possible."
+    },
+    {
+      "drug": "Xylazine",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia",
+        "ventricular bigeminy",
+        "catecholamine sensitization"
+      ],
+      "evidence": "Administration of xylazine may exacerbate the arrhythmogenic effects of thiobarbiturates."
+    },
+    {
+      "drug": "Halothane",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia",
+        "ventricular fibrillation",
+        "catecholamine sensitization"
+      ],
+      "evidence": "Administration of halothane may exacerbate the arrhythmogenic effects of thiobarbiturates; ventricular fibrillatory effects of catecholamines potentiated."
+    },
+    {
+      "drug": "Methoxyflurane",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia",
+        "arrhythmogenic"
+      ],
+      "evidence": "Administration of methoxyflurane may exacerbate the arrhythmogenic effects of thiobarbiturates."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 1,
+      "keywords": [
+        "antiarrhythmic",
+        "arrhythmia inhibition"
+      ],
+      "evidence": "Lidocaine may inhibit the arrhythmogenic effects of thiobarbiturates in dogs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (허가 용량, 현재 미국/캐나다 미판매)",
+          "value": "13.2 - 26.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 26.4,
+          "duration_note": "마취 지속 시간에 따라 용량 조절; 반복 투여 시 회복 지연",
+          "evidence": "Labeled dose (no longer marketed in the US): 13.2–26.4 mg/kg IV depending on duration of anesthesia required."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (비허가 용량, 일반 프로토콜)",
+          "value": "12 - 15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "1/3을 빠르게 투여 후 나머지는 효과에 따라 투여; 반복 투여 시 회복 지연",
+          "evidence": "Extra-label: Usually dosed at 12–15 mg/kg, with 1/3 administered rapidly and additional amount to effect."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (비허가 용량, 대안 프로토콜)",
+          "value": "15 - 17",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 17.0,
+          "duration_note": null,
+          "evidence": "Extra-label: Dogs: 15–17 mg/kg IV."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (허가 용량, 현재 미국/캐나다 미판매)",
+          "value": "13.2 - 26.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 26.4,
+          "duration_note": "마취 지속 시간에 따라 용량 조절; 반복 투여 시 회복 지연",
+          "evidence": "Labeled dose (no longer marketed in the US): 13.2–26.4 mg/kg IV depending on duration of anesthesia required (Dogs/Cats combined label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (비허가 용량, 일반 프로토콜)",
+          "value": "12 - 15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "1/3을 빠르게 투여 후 나머지는 효과에 따라 투여; 반복 투여 시 회복 지연",
+          "evidence": "Extra-label: Usually dosed at 12–15 mg/kg, with 1/3 administered rapidly and additional amount to effect (Dogs/Cats combined)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (비허가 용량, 대안 프로토콜)",
+          "value": "9 - 11",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 11.0,
+          "duration_note": null,
+          "evidence": "Extra-label: Cats: 9–11 mg/kg IV."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "소변으로의 미변화체 배설이 매우 적어(인간에서 0.3%) 만성 신부전 환자에서 용량 조절이 필요하지 않다고 명시됨. 단, 신기능 장애, 산혈증, 저단백혈증 환자에서 감수성 증가 가능하므로 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간질환은 상대적 금기에 해당하며, 최면 효과가 연장될 수 있음. 간질환 환자에서는 용량 조절 및 신중한 투여가 필요하다고 명시됨."
+  },
+  "contraindications": [
+    {
+      "condition": "정맥 접근 불가",
+      "match_terms": [
+        "no suitable veins",
+        "IV access unavailable"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "바르비투레이트 과민반응 병력",
+      "match_terms": [
+        "barbiturate hypersensitivity",
+        "drug allergy barbiturate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식 지속 상태 (Status asthmaticus)",
+      "match_terms": [
+        "status asthmaticus",
+        "severe asthma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심혈관 질환 또는 기존 심실 부정맥",
+      "match_terms": [
+        "severe cardiovascular disease",
+        "ventricular arrhythmia",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "쇼크 / 저혈압 / 저혈량증",
+      "match_terms": [
+        "shock",
+        "hypotension",
+        "hypovolemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두개내압 상승",
+      "match_terms": [
+        "increased intracranial pressure",
+        "ICP elevation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증근무력증",
+      "match_terms": [
+        "myasthenia gravis"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식",
+      "match_terms": [
+        "asthma",
+        "bronchospasm"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "liver failure",
+        "hepatic insufficiency"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "점액수종 (Myxedema)",
+      "match_terms": [
+        "myxedema",
+        "hypothyroidism severe"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 빈혈",
+      "match_terms": [
+        "severe anemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "과도한 전처치",
+      "match_terms": [
+        "excessive premedication"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애 / 산혈증 / 저단백혈증",
+      "match_terms": [
+        "renal dysfunction",
+        "acidemia",
+        "hypoproteinemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Greyhound",
+      "Whippet",
+      "Italian Greyhound",
+      "Saluki",
+      "Afghan Hound",
+      "Borzoi"
+    ],
+    "gene": null,
+    "evidence": "그레이하운드 및 기타 시각하운드 품종은 티오바르비투레이트를 다른 품종보다 훨씬 느리게 대사함. 이는 낮은 체지방 농도와 티오바르비투레이트 대사 처리 방식의 차이에 기인하는 것으로 추정됨. 이 품종들에서는 메토헥시탈 사용을 권장함. 특정 유전자 변이는 명시되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "높은 지질 용해도로 인해 CNS에 빠르게 분포하여 깊은 최면 및 마취를 유발함. 억제성 신경전달물질 GABA와 유사한 방식으로 CNS 뉴런에 직접 작용함.",
+    "common_extra_effects": [
+      "무호흡 (apnea)",
+      "저혈압 (hypotension)",
+      "혈관 확장 (vascular dilation)",
+      "심박출량 감소",
+      "조직 자극 및 괴사 (혈관 외 누출 시)",
+      "반복 투여 시 회복 지연"
+    ],
+    "dog_mechanism": "GABA 유사 기전으로 CNS 억제. 재분포에 의한 단기 작용.",
+    "dog_extra_effects": [
+      "심실 이단맥 (ventricular bigeminy) — 발생률 약 40%",
+      "용량 의존적 무호흡",
+      "용량 의존적 저혈압",
+      "심박출량 감소 (심부전 환자에서 임상적으로 유의미)"
+    ],
+    "cat_mechanism": "GABA 유사 기전으로 CNS 억제. 재분포에 의한 단기 작용.",
+    "cat_extra_effects": [
+      "주사 후 무호흡 발생에 취약",
+      "경미한 동맥 저혈압"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 심실 이단맥 발생률이 약 40%로 높으며, 대부분 일시적이고 산소 보충으로 호전됨. 카테콜아민, 자일라진, 할로탄, 메톡시플루란은 부정맥 유발 효과를 악화시킬 수 있으며, 리도카인은 억제 효과가 있음. 그레이하운드 등 시각하운드 품종에서는 회복 시간이 현저히 길어질 수 있으므로 메토헥시탈 사용을 권장함.",
+    "cat": "고양이는 주사 후 무호흡 발생에 취약하며 경미한 동맥 저혈압이 발생할 수 있음. 투여 시 호흡 모니터링이 필수적임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심실 이단맥 발생률 약 40%. 그레이하운드 등 시각하운드 품종에서 회복 지연. 신기능 장애, 산혈증, 저단백혈증 환자에서 감수성 증가. 반복 투여 시 회복 지연."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "주사 후 무호흡 발생에 취약. 경미한 동맥 저혈압 가능. 호흡 지원 준비 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "건조 분말 상태로 보관 시 무기한 안정. 재구성 후 실온에서 3일, 냉장 시 7일 안정. 방부제 미함유로 재구성 후 24시간 이내 사용 권장. 48시간 후 유리병 부식 보고 있음. 플라스틱 IV 튜브 및 백에 흡착 가능. 가시적 침전물이 있는 용액은 투여 금지.",
+    "forms": [
+      "주사용 분말 (재구성 필요)",
+      "2.5% 용액",
+      "5% 용액"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "티오펜탈은 초단시간 작용 티오바르비투레이트 마취제로, 빠른 마취 유도(15~30초)와 짧은 작용 지속 시간(10~30분)이 특징임. 현재 미국 및 캐나다에서는 판매되지 않으며, DEA Schedule IV 규제 약물임. 개에서 심실 이단맥 발생률이 약 40%로 높으므로 심장 모니터링이 필수적임. 그레이하운드 등 시각하운드 품종에서는 회복 지연이 현저하므로 메토헥시탈 사용을 권장함. 혈관 외 누출 시 조직 괴사 위험이 있으므로 반드시 IV 카테터를 통해 투여해야 함.",
+    "indications": "건강한 동물에서 전신마취 유도제(빠른 IV 볼루스) 또는 매우 짧은 시술을 위한 단독 마취제로 사용. 병약하거나 쇠약한 동물에서는 효과에 따라 천천히 IV 투여. 개, 고양이, 말, 소, 돼지, 양, 토끼, 설치류 등 다양한 동물종에서 비허가 용도로 사용됨.",
+    "client_info": "이 약물은 마취 전문 수의사만이 사용할 수 있으며, 적절한 호흡 보조 장비가 갖춰진 환경에서만 투여되어야 합니다. 투여 후 동물이 완전히 회복될 때까지 지속적인 모니터링이 필요합니다. 회복에는 수 시간이 걸릴 수 있으며, 이 기간 동안 동물을 혼자 두어서는 안 됩니다. 이 약물은 현재 미국 및 캐나다에서 판매되지 않는 규제 약물입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed cat-specific PK data",
+      "CYP enzyme profile",
+      "Specific t_max_hr data",
+      "Oral bioavailability (IV-only drug)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.gene"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/46.jsonl",
+    "extracted_at": "2026-03-11T03:31:07.786361+00:00",
+    "reviewer": null
+  }
+}

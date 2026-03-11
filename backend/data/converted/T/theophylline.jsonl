@@ -1,0 +1,843 @@
+{
+  "id": "theophylline",
+  "drug_identity": {
+    "name_ko": "테오필린",
+    "name_en": "Theophylline",
+    "active_ingredient": "Theophylline",
+    "brand_names": [
+      "Theo-24",
+      "Theochron",
+      "Elixophyllin"
+    ],
+    "allergy_class": "xanthine",
+    "class": "Bronchodilator",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의 라벨 제품 없음; 인간용 제품을 개 및 고양이에 오프라벨로 사용. 일부 수의 조제 약국에서 변형 방출 제형 이용 가능.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 450,
+        "unit": "mg"
+      },
+      {
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "value": 26.7,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "테오필린은 주로 간에서 대사되어 3-메틸잔틴으로 전환되며, 이 대사체는 약한 기관지확장 활성을 가짐. 신장 청소율은 전체 혈장 청소율의 약 10%에 불과함. 페노바르비탈 등 CYP 유도제가 개에서 테오필린 대사를 증가시킬 수 있음(고양이에서는 해당 없음)."
+    },
+    "extra_information": "개: 혈장 단백 결합률 약 10%, 분포용적 0.5–0.8 L/kg, 그레이하운드에서 정상상태 분포용적 0.72 L/kg, 청소율 0.935 mL/min/kg, 반감기 약 9시간. 생후 1주 강아지 청소율 1.2 mL/min/kg, 16주령에 7.1 mL/min/kg로 증가. 변형 방출 제형 투여 후 반감기 8.7–10.5시간, 최고 혈중 농도 도달 시간 7.1–8.9시간. 고양이: 아미노필린 투여 시 생체이용률 96%, 서방형 제형 약 80%, 분포용적 0.46 L/kg, 단백 결합률 12%, 반감기 약 8시간; 저녁(오후 8–9시) 투여 시 반감기 약 20시간으로 연장. 비만 환자는 제지방 체중 기준으로 용량 계산 필요."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학 데이터 일부 존재. 간 대사 주도, 신장 기여 10%. CNS 자극 및 심장 부작용 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "seizures",
+          "tremors",
+          "agitation",
+          "nervousness",
+          "restlessness",
+          "adenosine antagonism"
+        ],
+        "index": 1,
+        "evidence": "테오필린은 아데노신 길항 작용을 통해 CNS 자극 효과를 나타내며, 개에서 진전, 흥분, 불안, 불면 등의 CNS 부작용이 보고됨. 간질 병력 개에서 금기."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "hypokalemia"
+        ],
+        "index": 1,
+        "evidence": "고용량(40 mg/kg BID, 혈중 농도 >30 μg/mL)에서 빈맥 보고. 과다복용 시 저칼륨혈증 및 산-염기 장애 가능."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "diuresis",
+          "polyuria",
+          "renal disease caution"
+        ],
+        "index": 1,
+        "evidence": "테오필린은 이뇨 작용을 유발하며 다뇨가 부작용으로 보고됨. 신장 질환 환자에서 주의 사용 권고. 신장 청소율은 전체의 약 10%."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic disease",
+          "clearance reduced 50%",
+          "hepatic failure dose reduction"
+        ],
+        "index": 1,
+        "evidence": "테오필린은 주로 간에서 대사됨. 간 질환 또는 울혈성 심부전 시 청소율 약 50% 감소하며, 간부전 환자에서 50% 용량 감소 권고."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "chronotropic",
+          "inotropic",
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "테오필린은 약한 변시성 및 변력성 작용을 가지며, 빈맥 및 부정맥 유발 가능. 심장 빈맥성 부정맥 환자에서 주의 및 강화 모니터링 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "tremors",
+          "agitation",
+          "nervousness",
+          "insomnia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 CNS 자극 부작용(진전, 흥분, 불안, 불면) 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 빈맥 및 부정맥 가능성 있으나 개보다 데이터 제한적."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "diuresis",
+          "polyuria",
+          "renal disease caution"
+        ],
+        "index": 1,
+        "evidence": "이뇨 작용 및 다뇨 부작용 보고. 신장 질환 고양이에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic disease",
+          "clearance reduced"
+        ],
+        "index": 1,
+        "evidence": "간 대사 주도. 간 질환 시 청소율 감소 예상. 저녁 투여 시 반감기 약 20시간으로 연장되는 일주기 리듬 변화 보고."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "chronotropic",
+          "inotropic"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 빈맥 및 부정맥 가능성. 심장 질환 고양이에서 주의 사용 권고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 8.0,
+    "half_life_hr": {
+      "min": 8.7,
+      "max": 10.5,
+      "mean": 9.6,
+      "species": "dog"
+    },
+    "f_percent": 96,
+    "protein_binding_percent": 10,
+    "evidence": "개: 변형 방출 제형 생체이용률 약 96%, 최고 혈중 농도 도달 시간 7.1–8.9시간, 반감기 8.7–10.5시간. 그레이하운드 IV 투여 후 반감기 약 9시간. 고양이: 아미노필린 생체이용률 96%, 서방형 약 80%, 반감기 약 8시간(저녁 투여 시 약 20시간)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 테오필린 농도를 증가 또는 감소시키는 약물 및 상호작용 기전 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Ketamine",
+      "severity": 3,
+      "keywords": [
+        "seizures",
+        "cardiac arrhythmias"
+      ],
+      "evidence": "Theophylline combined with ketamine increases the incidence of seizures and cardiac arrhythmias."
+    },
+    {
+      "drug": "Sympathomimetics (beta agonists, ephedrine, isoproterenol, phenylpropanolamine)",
+      "severity": 3,
+      "keywords": [
+        "CNS stimulation",
+        "arrhythmias",
+        "toxic synergism"
+      ],
+      "evidence": "Toxic synergism (CNS stimulation, arrhythmias) can occur; concurrent use with beta-sympathomimetics is contraindicated."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin, marbofloxacin)",
+      "severity": 3,
+      "keywords": [
+        "increased theophylline concentration",
+        "reduced clearance",
+        "toxicity"
+      ],
+      "evidence": "Enrofloxacin reduced theophylline clearance by ~50% in healthy beagles. Consider reducing theophylline dose by 30–50% or extending dosing interval. Marbofloxacin may be clinically relevant in animals with renal impairment."
+    },
+    {
+      "drug": "Barbiturates (phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "decreased theophylline concentration",
+        "increased metabolism"
+      ],
+      "evidence": "Phenobarbital can induce CYP enzymes and increase theophylline metabolism in dogs (not cats), reducing theophylline concentrations."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Chloramphenicol increases theophylline concentrations; consider reducing theophylline dose by 30–50% or extending dosing interval."
+    },
+    {
+      "drug": "Macrolides (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Macrolides can increase theophylline concentrations. Theophylline may also decrease effects of macrolides (azithromycin, erythromycin)."
+    },
+    {
+      "drug": "Calcium Channel Blockers (diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Calcium channel blockers can increase theophylline concentrations."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Cimetidine increases theophylline concentrations."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Corticosteroids can increase theophylline concentrations."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs, fluoxetine)",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "SSRIs such as fluoxetine can increase theophylline concentrations."
+    },
+    {
+      "drug": "Allopurinol",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Allopurinol can increase theophylline concentrations."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists, Nonselective (propranolol)",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration",
+        "antagonized theophylline effects"
+      ],
+      "evidence": "Nonselective beta-blockers may increase theophylline concentrations and also antagonize theophylline's bronchodilatory effects."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Fluconazole can increase theophylline concentrations."
+    },
+    {
+      "drug": "Mexiletine",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Mexiletine can increase theophylline concentrations."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Methotrexate can increase theophylline concentrations."
+    },
+    {
+      "drug": "Interferon Alfa",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Interferon alfa can increase theophylline concentrations."
+    },
+    {
+      "drug": "Thyroid Hormones (in hypothyroid patients)",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Thyroid hormones in hypothyroid patients can increase theophylline concentrations."
+    },
+    {
+      "drug": "Estrogen",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Estrogen can increase theophylline concentrations."
+    },
+    {
+      "drug": "Thiabendazole",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Thiabendazole can increase theophylline concentrations."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline concentration"
+      ],
+      "evidence": "Rifampin can decrease theophylline concentrations."
+    },
+    {
+      "drug": "Albendazole",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline concentration"
+      ],
+      "evidence": "Albendazole can decrease theophylline concentrations."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline concentration"
+      ],
+      "evidence": "Ketoconazole can decrease theophylline concentrations."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide)",
+      "severity": 1,
+      "keywords": [
+        "altered theophylline concentration"
+      ],
+      "evidence": "Loop diuretics may increase or decrease theophylline concentrations."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 1,
+      "keywords": [
+        "altered theophylline concentration"
+      ],
+      "evidence": "Isoniazid may increase or decrease theophylline concentrations."
+    },
+    {
+      "drug": "Phosphate Binders (aluminum hydroxide, calcium carbonate)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "insoluble complex"
+      ],
+      "evidence": "Phosphate binders can form an insoluble complex in the GI tract and inhibit theophylline absorption; separate administration by 2 hours."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "insoluble complex"
+      ],
+      "evidence": "Sucralfate can form an insoluble complex in the GI tract and inhibit theophylline absorption; separate administration by 2 hours."
+    },
+    {
+      "drug": "Charcoal (activated)",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline absorption"
+      ],
+      "evidence": "Activated charcoal blocks theophylline absorption and decreases concentrations."
+    },
+    {
+      "drug": "Herbal Agents (fenugreek, garden cress)",
+      "severity": 1,
+      "keywords": [
+        "altered theophylline pharmacokinetics"
+      ],
+      "evidence": "Herbal medicines such as fenugreek and garden cress can alter theophylline pharmacokinetics in beagles."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine effect"
+      ],
+      "evidence": "Theophylline may decrease the effects of benzodiazepines."
+    },
+    {
+      "drug": "Pancuronium",
+      "severity": 2,
+      "keywords": [
+        "decreased neuromuscular blockade"
+      ],
+      "evidence": "Theophylline may decrease the effects of pancuronium."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 2,
+      "keywords": [
+        "decreased propofol effect"
+      ],
+      "evidence": "Theophylline may decrease the effects of propofol."
+    },
+    {
+      "drug": "Beta-2-Adrenergic Receptor Agonists (albuterol)",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline concentration"
+      ],
+      "evidence": "Beta-2 adrenergic receptor agonists can decrease theophylline concentrations."
+    },
+    {
+      "drug": "Isoproterenol",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline concentration",
+        "toxic synergism"
+      ],
+      "evidence": "Isoproterenol can decrease theophylline concentrations and may cause toxic synergism (arrhythmias)."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 2.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "기관지확장제 - 소기도 허탈/질환 (서방형 정제, 오프라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "초기 10 mg/kg q12h로 시작; 효능 및 내약성에 따라 5–20 mg/kg q12–24h로 조정",
+          "evidence": "서방형 정제 사용; 시판 제품 구입 어려울 수 있으므로 조제 약국 확인 권장"
+        },
+        {
+          "logic_type": "linear",
+          "context": "기관지확장제 - 소기도 질환 (속방형 정제, 오프라벨)",
+          "value": "9",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "속방형 정제 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "서맥성 부정맥 (병든 동방결절 증후군, AV 차단) - 서방형 정제 (오프라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "초기 20 mg/kg SID 사용 후 GI 부작용으로 10 mg/kg/day로 감량한 증례 보고",
+          "evidence": "병든 동방결절 증후군의 약물적 관리; 재발성 에피소드의 확정적 치료는 심박조율기 삽입"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "기관지확장제 - 고양이 천식 (서방형 정제/캡슐, 오프라벨)",
+          "value": "15 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "저녁에 1회 투여 권장 (100 mg 서방형 정제/캡슐 1개). 일부 고양이는 격일 투여로 충분할 수 있음.",
+          "evidence": "저녁 투여 시 반감기 약 20시간으로 연장되어 유리함"
+        },
+        {
+          "logic_type": "linear",
+          "context": "기관지확장제 - 고양이 천식 (속방형 정제, 오프라벨)",
+          "value": "4.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "아미노필린을 이용한 약동학 연구에서 도출된 용량"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 주의 사용 권고. 신장 청소율은 전체의 약 10%로 기여도 낮으나, 마보플록사신과 병용 시 신장 기능 저하 동물에서 임상적으로 유의한 상호작용 가능. 명시적 용량 조정 지침 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 질환 또는 울혈성 심부전 시 테오필린 청소율 약 50% 감소. 간부전 환자에서 50% 용량 감소 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "잔틴계 약물 과민증",
+      "match_terms": [
+        "xanthine hypersensitivity",
+        "aminophylline allergy",
+        "theobromine allergy",
+        "caffeine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질성 발작 병력 (개)",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder",
+        "epileptiform seizures"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심장 질환",
+      "match_terms": [
+        "severe cardiac disease",
+        "heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위궤양",
+      "match_terms": [
+        "gastric ulcer",
+        "peptic ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver failure",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 저산소증",
+      "match_terms": [
+        "severe hypoxia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 빈맥성 부정맥",
+      "match_terms": [
+        "cardiac tachyarrhythmia",
+        "tachyarrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "특정 유전적 감수성에 대한 정보 없음. 그레이하운드에서 약동학 데이터 존재하나 유전적 위험과 무관."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "포스포디에스테라제(PDE) III (및 PDE IV) 경쟁적 억제를 통해 cAMP 증가 → 내인성 에피네프린 방출 증가. 기관지 및 폐혈관 평활근 직접 이완. 아데노신 길항 작용으로 CNS 자극. 히스타민 및 SRS-A 방출 억제. 항염증 효과(호산구 등 염증세포 활성 감소).",
+    "common_extra_effects": [
+      "오심 및 구토",
+      "불면증",
+      "위산 분비 증가",
+      "설사",
+      "다식증",
+      "다음증",
+      "다뇨증",
+      "호흡곤란",
+      "진전",
+      "흥분",
+      "신경과민",
+      "불안",
+      "활동 증가",
+      "빈맥",
+      "부정맥",
+      "CNS 자극"
+    ],
+    "dog_mechanism": "PDE III/IV 억제를 통한 기관지확장 및 항염증 효과. 약한 변시성 및 변력성 작용. 서맥성 부정맥(병든 동방결절 증후군) 관리에도 사용.",
+    "dog_extra_effects": [
+      "빈맥 (40 mg/kg BID, 혈중 농도 >30 μg/mL에서 보고)",
+      "진전",
+      "흥분",
+      "구토",
+      "다뇨"
+    ],
+    "cat_mechanism": "기관지확장 및 항염증 효과. 저녁 투여 시 일주기 리듬에 의해 반감기 연장(약 20시간).",
+    "cat_extra_effects": [
+      "오심 및 구토",
+      "불면증",
+      "진전",
+      "흥분",
+      "다뇨"
+    ]
+  },
+  "species_notes": {
+    "dog": "개는 인간보다 높은 혈중 테오필린 농도(>20 μg/mL)를 더 잘 견디는 것으로 보임. 서방형 제형 사용 시 투여 후 4–6시간에 최고 혈중 농도 도달. 비만견은 제지방 체중 기준으로 용량 계산 필요. 간질 병력 개에서 금기. 페노바르비탈 병용 시 CYP 유도로 테오필린 대사 증가(고양이에서는 해당 없음). 플루오로퀴놀론(특히 엔로플록사신) 병용 시 테오필린 청소율 약 50% 감소하므로 용량 30–50% 감량 또는 투여 간격 연장 필요.",
+    "cat": "고양이 천식 치료에 주로 사용. 저녁(오후 8–9시) 투여 시 반감기가 약 20시간으로 연장되어 1일 1회 투여에 유리함. 서방형 제형 투여 후 8–12시간에 최고 혈중 농도 도달. 경피 젤 제형(PLO 또는 Lipoderm®)은 치료 농도 달성에 불충분하므로 권장하지 않음. 일부 고양이는 격일 투여로 충분할 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간질 병력 개에서 금기(절대적 금기). 심장 질환, 위궤양, 갑상선기능항진증, 신장/간 질환, 중증 저산소증, 고혈압 환자에서 주의 사용. 신생아 및 노령 환자에서 청소율 감소 및 독성 감수성 증가 가능. 비만견은 제지방 체중 기준 용량 계산 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심장 질환, 위궤양, 갑상선기능항진증, 신장/간 질환 환자에서 주의 사용. 경피 젤 제형은 치료 농도 달성 불충분. 저녁 투여 권장. 신생아 및 노령 고양이에서 청소율 감소 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제형은 밀폐 용기에 실온(15°C–30°C)에서 보관. 과도한 열 피할 것.",
+    "forms": [
+      "서방형 정제 (100 mg, 200 mg, 300 mg, 400 mg, 450 mg, 600 mg)",
+      "서방형 캡슐 (100 mg, 200 mg, 300 mg, 400 mg, 450 mg, 600 mg)",
+      "엘릭서 (80 mg/15 mL, 즉 26.7 mg/5 mL)",
+      "조제 변형 방출 제형 (수의 조제 약국)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "테오필린은 포스포디에스테라제 억제제 계열의 기관지확장제로, 개의 기침 및 고양이 천식 치료에 주로 사용됩니다. 좁은 치료 지수를 가지므로 용량 계산에 주의가 필요하며, 비만 동물은 제지방 체중 기준으로 용량을 계산해야 합니다. 플루오로퀴놀론(특히 엔로플록사신) 병용 시 테오필린 청소율이 약 50% 감소하므로 용량 조정이 필요합니다. 간 질환 또는 울혈성 심부전 시 청소율이 약 50% 감소하여 간부전 환자에서 50% 용량 감소가 권고됩니다. 수의 라벨 제품은 없으며, 시판 서방형 제품의 구입이 어려울 수 있어 조제 약국 확인이 필요합니다.",
+    "indications": "승인 적응증: 없음 (수의 라벨 제품 없음). 오프라벨 사용: 개의 소기도 허탈/만성 소기도 질환에서 기관지확장제, 고양이 천식에서 기관지확장제, 병든 동방결절 증후군 및 기타 서맥성 부정맥 관리(개), 말의 중증 천식(오프라벨).",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있으나, 음식과 함께 투여하면 위장 장애나 구토를 예방하는 데 도움이 될 수 있습니다. 매일 같은 방식(음식과 함께 또는 공복)으로, 같은 시간에 투여하도록 노력하세요. 서방형 제품은 분쇄하거나 동물이 씹지 않도록 주의하세요. 흥분, 떨림, 빠른 심박수 등의 증상이 나타나면 즉시 수의사에게 알리세요. 이 약은 어린이와 다른 동물의 손이 닿지 않는 곳에 보관하세요; 과다복용은 심각할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme substrate/inhibitor/inducer profile (veterinary-specific)",
+      "Specific renal dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (injection form mg/mL not confirmed)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/46.jsonl",
+    "extracted_at": "2026-03-11T03:27:24.852232+00:00",
+    "reviewer": null
+  }
+}

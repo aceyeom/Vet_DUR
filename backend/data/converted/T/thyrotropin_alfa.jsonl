@@ -1,0 +1,395 @@
+{
+  "id": "thyrotropin_alfa",
+  "drug_identity": {
+    "name_ko": "티로트로핀 알파",
+    "name_en": "Thyrotropin Alfa",
+    "active_ingredient": "Thyrotropin Alfa",
+    "brand_names": [
+      "Thyrogen",
+      "Tirogen"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 영역에서는 인간용 재조합 제품(rhTSH)을 개, 고양이 등에서 갑상선 기능 검사(TSH 자극 시험)에 오프라벨로 사용함. 수의용 라벨 제품은 현재 없음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.1,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "출처 문헌에 CYP 대사 경로에 대한 정보 없음. 당단백 호르몬으로 단백질 분해 경로로 제거될 것으로 추정됨."
+    },
+    "extra_information": "개와 고양이에서의 약동학 데이터 없음. 인간에서 투여 후 약 10시간에 최고 TSH 농도 도달, 소실 반감기 약 25시간. 개와 고양이에서는 IM 또는 IV 투여 후 약 4~8시간에 순환 T4의 최대 증가가 나타나는 것으로 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "장기 부담 점수는 보고된 이상반응 및 약리작용에 근거하여 산출. 수의과 종별 PK 데이터 없음. 인간 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신경계 독성에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypersensitivity"
+        ],
+        "index": 0,
+        "evidence": "과민반응(아나필락시스 포함) 가능성이 언급됨. 혈액 관련 직접 독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "coronary thrombosis",
+          "hyperthyroidism"
+        ],
+        "index": 1,
+        "evidence": "관상동맥 혈전증 환자에서 금기. 과량 투여 시 갑상선 중독증 유사 증상 발생 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신경계 독성에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypersensitivity"
+        ],
+        "index": 0,
+        "evidence": "과민반응 가능성 언급. 고양이에서 아나필락시스 보고는 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hyperthyroidism",
+          "thyroid storm"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 갑상선 중독증 유사 증상 발생 가능. 고양이 갑상선기능항진증에서 방사성 요오드 섭취 증가 효과 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 10.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 25.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 투여 후 약 10시간에 최고 TSH 농도 도달, 소실 반감기 약 25시간. 개와 고양이에서 IM 또는 IV 투여 후 약 4~8시간에 순환 T4 최대 증가. 수의과 종별 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 특정 약물 상호작용은 보고되지 않았으나, 레보티록신 병용 시 TSH 자극 시험 결과에 영향을 줄 수 있음. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "thyroid function test interference",
+        "thyroid atrophy",
+        "suppressed TSH response"
+      ],
+      "evidence": "Concurrent or prior levothyroxine supplementation can cause thyroid atrophy and suppress TSH stimulation test results. Levothyroxine should be discontinued 6–8 weeks before TSH stimulation testing."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 5.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "TSH 자극 시험 (갑상선 기능 평가, 오프라벨)",
+          "value": "75 - 150",
+          "unit": "mcg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전(0시간) 및 투여 후 6시간에 혈청 총 T4 측정. 용량은 μg/kg이 아닌 마리당 μg임. 동반 질환이 있거나 갑상선 기능을 억제하는 약물을 투여 중인 경우 150 μg/dog 권장.",
+          "evidence": "두 연구에서 75 μg/dog 또는 150 μg/dog IV 투여. 고용량(150 μg/dog)이 원발성 갑상선기능저하증과 비갑상선 질환 감별에 더 높은 판별력을 보임."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "TSH 자극 시험 (갑상선 기능 평가, 오프라벨)",
+          "value": "25",
+          "unit": "mcg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전(0시간) 및 투여 후 6시간에 혈청 총 T4 측정. 용량은 μg/kg이 아닌 마리당 μg임. 의인성 갑상선기능저하증과 비갑상선 질환 감별에 유용.",
+          "evidence": "25 μg/cat IV 투여 후 0시간 및 6시간 혈청 총 T4 측정."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "출처 문헌에 신장 기능 저하 시 용량 조정에 대한 구체적 언급 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "출처 문헌에 간 기능 저하 시 용량 조정에 대한 구체적 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "부신피질 기능부전 (Addison's disease)",
+      "match_terms": [
+        "adrenocortical insufficiency",
+        "Addison's disease",
+        "hypoadrenocorticism"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "관상동맥 혈전증",
+      "match_terms": [
+        "coronary thrombosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소 유래 티로트로핀 과민반응",
+      "match_terms": [
+        "hypersensitivity to bovine thyrotropin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "레보티록신 투여 중 (TSH 자극 시험 시)",
+      "match_terms": [
+        "levothyroxine supplementation"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중 (안전성 미확립)",
+      "match_terms": [
+        "pregnancy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "갑상선에서 요오드 섭취를 증가시키고 갑상선 호르몬(T3, T4) 및 티로글로불린의 생성과 분비를 촉진함. 장기 사용 시 갑상선 세포 과형성 유발 가능.",
+    "common_extra_effects": [
+      "과민반응 (반복 투여 시 특히 위험)",
+      "오심, 구토, 설사 (인간에서 보고)",
+      "피로 (인간에서 보고)",
+      "과량 투여 시 갑상선기능항진증 증상",
+      "대량 과량 투여 시 갑상선 중독증(thyroid storm) 유사 증상"
+    ],
+    "dog_mechanism": "재조합 인간 TSH(rhTSH)가 갑상선을 자극하여 T4 분비를 증가시킴. 투여 후 4~8시간에 최대 T4 증가 관찰.",
+    "dog_extra_effects": [
+      "과민반응 가능성 (인간 단백질 유래 제품)"
+    ],
+    "cat_mechanism": "재조합 인간 TSH(rhTSH)가 갑상선을 자극하여 T4 분비를 증가시킴. 갑상선기능항진증 고양이에서 방사성 요오드 섭취 증가 효과 확인됨.",
+    "cat_extra_effects": [
+      "과민반응 가능성 (인간 단백질 유래 제품)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 TSH 자극 시험 시 75~150 μg/dog(μg/kg 아님) IV 투여 후 0시간 및 6시간에 혈청 총 T4를 측정함. 동반 질환이 있거나 갑상선 기능 억제 약물을 투여 중인 경우 150 μg/dog 고용량 권장. 갑상선기능저하증은 전후 총 T4가 기저 참고범위(1.5 μg/dL 미만) 이하일 때 확인되며, 정상갑상선은 투여 후 T4가 2.5 μg/dL 초과이고 기저치의 1.5배 이상일 때 확인됨. 레보티록신 투여 중인 경우 TSH 자극 시험 전 6~8주 휴약 필요.",
+    "cat": "고양이에서 TSH 자극 시험 시 25 μg/cat(μg/kg 아님) IV 투여 후 0시간 및 6시간에 혈청 총 T4를 측정함. 의인성 갑상선기능저하증과 비갑상선 질환 감별에 유용함. 갑상선기능항진증 고양이에서 방사성 요오드 섭취 증가 효과가 보고됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "부신피질 기능부전, 갑상선기능항진증 환자에서 금기. 레보티록신 투여 중인 경우 TSH 자극 시험 전 6~8주 휴약 필요. 반복 투여 시 과민반응 위험 증가."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "갑상선기능항진증 환자에서 치료 목적 사용 금기. 진단 목적 사용 시 과민반응 모니터링 필요. 임신 중 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미재구성 제품: 2~8°C(36~46°F) 냉장 보관. 재구성 후: 2~8°C에서 최대 24시간 보관 가능. 냉장(2~8°C) 시 최대 4주, 냉동(-20°C) 시 최대 12주 안정. 빛 차단 보관.",
+    "forms": [
+      "동결건조 분말 주사제 (재구성용), 1.1 mg/바이알, Thyrogen® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "티로트로핀 알파(rhTSH)는 개와 고양이에서 갑상선 기능 평가를 위한 TSH 자극 시험에 오프라벨로 사용되는 재조합 인간 갑상선자극호르몬입니다. 수의용 라벨 제품은 현재 없으며, 인간용 제품(Thyrogen®)을 사용합니다. 개에서는 75~150 μg/dog IV, 고양이에서는 25 μg/cat IV로 투여하며, 투여 전후 6시간에 혈청 총 T4를 측정합니다. 부신피질 기능부전, 갑상선기능항진증, 관상동맥 혈전증 환자에서는 금기이며, 레보티록신 투여 중인 경우 시험 전 6~8주 휴약이 필요합니다.",
+    "indications": "【진단적 적응증】개, 고양이, 조류, 페럿, 기니피그 등에서 원발성 갑상선기능저하증 및 선천성 갑상선기능저하증 진단을 위한 TSH 자극 시험(오프라벨). 갑상선기능항진증 고양이에서 방사성 요오드 섭취 증가(오프라벨). 【과거 수의용 라벨 적응증(현재 제품 없음)】개에서 흑색극세포증(acanthosis nigricans) 치료 및 갑상선기능저하증의 일시적 보조 치료.",
+    "client_info": "이 약은 반려동물의 갑상선 기능을 검사하기 위해 사용하는 주사제입니다. 검사 전 수의사의 지시에 따라 갑상선 호르몬제(레보티록신)를 6~8주 전에 중단해야 할 수 있습니다. 주사 후 과민반응(두드러기, 호흡 곤란 등)이 나타날 수 있으므로 투여 후 주의 깊게 관찰하시고, 이상 증상 발생 시 즉시 수의사에게 연락하십시오. 이 약은 인간용 제품을 동물에게 오프라벨로 사용하는 것으로, 비용이 발생할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data (dog/cat)",
+      "CYP metabolism pathway",
+      "Renal/hepatic dose adjustment",
+      "Protein binding",
+      "Oral bioavailability",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.clearance_organ",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/46.jsonl",
+    "extracted_at": "2026-03-11T03:32:38.112386+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "id": "tobramycin_systemic",
+  "drug_identity": {
+    "name_ko": "토브라마이신",
+    "name_en": "Tobramycin",
+    "active_ingredient": "Tobramycin",
+    "brand_names": [
+      "Nebcin",
+      "Nebcine",
+      "Tobra",
+      "TOBI"
+    ],
+    "allergy_class": "aminoglycoside",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음; 인체용 제제를 동물에 적용하는 오프라벨 사용",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아미노글리코사이드계 항생제는 간 대사를 거치지 않으며, 사구체 여과를 통해 거의 전량 신장으로 배설된다."
+    },
+    "extra_information": "개: 반감기 약 56분, 분포용적 4.1 L/kg, 청소율 53.7 mL/kg/분. 고양이: 반감기 약 1.5시간, 분포용적 0.8 L/kg, 청소율 6.3 mL/kg/분. 신기능 저하 환자에서 반감기가 현저히 연장될 수 있다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신독성 및 이독성은 문헌에 명시됨. 간독성은 드물게 보고됨. 신장 축적이 주요 독성 기전임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ototoxicity",
+          "eighth cranial nerve",
+          "vestibular"
+        ],
+        "index": 1,
+        "evidence": "전정 독성(제8뇌신경 독성)이 보고되어 있으며, 청각 및 전정 증상이 나타날 수 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈액학적 이상이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular necrosis",
+          "azotemia",
+          "renal accumulation",
+          "creatinine clearance",
+          "proximal renal tubular cells"
+        ],
+        "index": 0,
+        "evidence": "신세뇨관 괴사, 아조테미아, 크레아티닌 청소율 감소 등 신독성이 주요 부작용으로 명시됨. 근위 세뇨관 세포 내 축적이 독성 기전."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 간 이상이 보고되었으나 주요 독성 기관은 아님."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "ototoxicity",
+          "vestibular effects",
+          "cats sensitive"
+        ],
+        "index": 0,
+        "evidence": "고양이는 아미노글리코사이드의 전정 독성에 더 민감한 것으로 알려져 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈액학적 이상이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular necrosis",
+          "azotemia",
+          "renal accumulation",
+          "proximal renal tubular cells"
+        ],
+        "index": 0,
+        "evidence": "신세뇨관 괴사, 아조테미아 등 신독성이 주요 부작용. 고양이는 독성 효과에 더 민감할 수 있음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 간 이상이 보고되었으나 주요 독성 기관은 아님."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.93,
+      "max": 1.5,
+      "mean": 1.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 20,
+    "evidence": "개: 반감기 약 56분(0.93시간). 고양이: 반감기 약 1.5시간. IM 또는 SC 투여 시 생체이용률 90% 이상. 아미노글리코사이드는 혈장 단백질에 20% 미만으로 결합."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "General Anesthetics (alfaxalone, isoflurane, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "potentiation"
+      ],
+      "evidence": "Concurrent use could potentiate neuromuscular blockade."
+    },
+    {
+      "drug": "Beta-Lactam Antibiotics (penicillins, cephalosporins)",
+      "severity": 2,
+      "keywords": [
+        "synergy",
+        "inactivation",
+        "nephrotoxicity",
+        "in vitro incompatibility"
+      ],
+      "evidence": "May have synergistic antibacterial effects; risk of aminoglycoside inactivation in vitro and in vivo (renal failure patients). Cephalosporins may cause additive nephrotoxicity."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide, torsemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "Concurrent use may increase the risk for nephrotoxicity and/or ototoxicity."
+    },
+    {
+      "drug": "Osmotic Diuretics (mannitol)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "Concurrent use may increase the nephrotoxic or ototoxic potential of aminoglycosides."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (amphotericin B, cisplatin, cyclosporine, polymyxin B, vancomycin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "Increased risk for nephrotoxicity with concurrent use of other nephrotoxic drugs."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (atracurium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "potentiation"
+      ],
+      "evidence": "Concurrent use could potentiate neuromuscular blockade."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "increased tobramycin concentration"
+      ],
+      "evidence": "NSAIDs may increase tobramycin plasma concentration."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "hare"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": "치료 기간 동안 신독성 모니터링 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs 9–14 mg/kg IV, IM, or SC once daily (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": "치료 기간 동안 신독성 모니터링 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs 9–14 mg/kg IV, IM, or SC once daily (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": "치료 기간 동안 신독성 모니터링 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs 9–14 mg/kg IV, IM, or SC once daily (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "고양이는 독성에 더 민감; 신독성 및 전정 독성 모니터링 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook: Cats 5–8 mg/kg IV, IM, or SC once daily (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "고양이는 독성에 더 민감; 신독성 및 전정 독성 모니터링 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook: Cats 5–8 mg/kg IV, IM, or SC once daily (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "고양이는 독성에 더 민감; 신독성 및 전정 독성 모니터링 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook: Cats 5–8 mg/kg IV, IM, or SC once daily (extra-label)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 반감기가 현저히 연장됨. IRIS 권고에 따라 혈청 크레아티닌이 IRIS 1단계와 2단계 경계 또는 2단계 이상인 경우 아미노글리코사이드 사용을 피하는 것을 고려해야 함. 기존 신질환 환자에서는 투여 간격 조정 및 혈중 농도 모니터링이 필수적임."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "토브라마이신은 간 대사를 거치지 않으므로 간기능 저하에 따른 용량 조정은 필요하지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "아미노글리코사이드 과민증",
+      "match_terms": [
+        "aminoglycoside hypersensitivity",
+        "tobramycin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신질환",
+      "match_terms": [
+        "CKD",
+        "renal disease",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신경근 장애 (중증근무력증 등)",
+      "match_terms": [
+        "myasthenia gravis",
+        "neuromuscular disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "토끼 및 산토끼",
+      "match_terms": [
+        "rabbit",
+        "hare",
+        "lagomorph"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 비가역적으로 결합하여 세균의 단백질 합성을 억제하는 농도 의존성 살균 항생제. 주로 그람음성 호기성 간균에 효과적.",
+    "common_extra_effects": [
+      "신독성 (세뇨관 괴사, 아조테미아)",
+      "이독성 (제8뇌신경 독성, 전정 및 청각 증상)",
+      "신경근 차단",
+      "안면 부종",
+      "주사 부위 통증 또는 염증",
+      "말초 신경병증",
+      "과민반응",
+      "드물게 GI 증상, 혈액학적 이상, 간 이상"
+    ],
+    "dog_mechanism": "개에서 농도 의존성 살균 효과를 나타내며, 1일 1회 투여 요법이 권장됨.",
+    "dog_extra_effects": [
+      "신독성",
+      "전정 독성",
+      "청각 독성 (청각 장애견에서 특히 주의)",
+      "신경근 차단"
+    ],
+    "cat_mechanism": "고양이에서도 농도 의존성 살균 효과를 나타내나, 독성 효과에 더 민감할 수 있음.",
+    "cat_extra_effects": [
+      "신독성",
+      "전정 독성 (고양이에서 특히 민감)",
+      "청각 독성",
+      "신경근 차단"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 토브라마이신은 9–14 mg/kg을 1일 1회 IV, IM, 또는 SC로 투여한다(오프라벨). 청각 장애 보조견(안내견, 경찰견 등)에서는 비가역적 이독성 위험으로 인해 특히 주의가 필요하다. 치료 전 및 치료 중 신기능 모니터링(혈청 크레아티닌, 요검사)이 필수적이며, 가능하면 혈중 약물 농도를 측정하여 다음 투여 전 1 mg/L 미만임을 확인해야 한다.",
+    "cat": "고양이는 아미노글리코사이드의 독성 효과, 특히 전정 독성에 더 민감하다. 용량은 5–8 mg/kg을 1일 1회 IV, IM, 또는 SC로 투여한다(오프라벨). 신독성 및 전정 독성 징후(구토, 식욕부진, 보행 이상, 두부 경사)를 면밀히 모니터링해야 한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 신질환, 탈수, 노령 또는 신생아, 발열, 패혈증 환자에서 신독성 위험 증가. 청각 장애 보조견에서 비가역적 이독성 위험. 신경근 장애 환자에서 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 아미노글리코사이드의 독성 효과에 더 민감하며, 특히 전정 독성 위험이 높음. 용량을 낮게 유지하고 면밀한 모니터링이 필요함."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15–30°C) 보관; 냉동 및 40°C 이상 온도 노출 금지. 변색된 제품 사용 금지. 재구성 후 냉장 보관 시 96시간, 실온 보관 시 24시간 이내 사용.",
+    "forms": [
+      "Tobramycin Sulfate Solution for Injection: 10 mg/mL (2 mL vial), 40 mg/mL (2 mL, 30 mL, 50 mL vial)",
+      "Tobramycin Sulfate Powder for Injection: 1.2 g (재구성 후 40 mg/mL), 보존제 무함유 30 mL bulk vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "토브라마이신은 그람음성 호기성 세균에 효과적인 아미노글리코사이드계 항생제로, 젠타마이신 내성균 감염 또는 아미카신을 사용할 수 없는 경우에 주로 사용된다. 신독성과 이독성이 주요 부작용이며, 고양이는 전정 독성에 더 민감하다. WHO 및 OIE에서 최우선 중요 항균제로 지정되어 있어 신중한 사용이 요구된다. 치료 전후 신기능 모니터링이 필수적이다.",
+    "indications": "그람음성 호기성 세균(E. coli, Klebsiella, Proteus, Pseudomonas, Salmonella, Enterobacter, Serratia, Shigella, Mycoplasma, Staphylococcus 등)에 의한 중증 감염. 특히 젠타마이신 내성균 감염 또는 다른 덜 독성적인 항생제에 내성을 보이는 경우. 모든 적응증은 오프라벨(수의학적 승인 제품 없음).",
+    "client_info": "토브라마이신은 심각한 감염 치료를 위해 반드시 주사로 투여해야 하며, 경구 투여 시 효과가 없습니다. 이 약물은 신경, 청력, 신장에 손상을 줄 수 있으므로 구토, 식욕 감소, 무기력, 보행 어려움 등의 증상이 나타나면 즉시 수의사에게 연락하십시오. 고양이는 청력 손상 위험이 더 높습니다. 치료 중 혈액 및 소변 검사를 위한 정기적인 내원이 매우 중요하며, 검진을 빠뜨리지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.half_life_hr (cat-specific separate object)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/47.jsonl",
+    "extracted_at": "2026-03-11T03:49:33.965514+00:00",
+    "reviewer": null
+  }
+}

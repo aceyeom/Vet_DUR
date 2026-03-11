@@ -1,0 +1,446 @@
+{
+  "id": "tilmicosin",
+  "drug_identity": {
+    "name_ko": "틸미코신",
+    "name_en": "Tilmicosin",
+    "active_ingredient": "Tilmicosin",
+    "brand_names": [
+      "Micotil",
+      "Pulmotil",
+      "Pulmotil AC",
+      "Tilmovet AC"
+    ],
+    "allergy_class": "macrolide",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 300,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "틸미코신은 폐 조직에 고농도로 집중되는 것으로 알려져 있다. 소에서 10 mg/kg SC 단회 투여 시 1시간 이내에 최고 혈청 농도에 도달하며, 3일 이후에도 혈청 내 검출 가능한 농도(0.07 µg/mL)가 유지된다. 투여 3일 후 폐:혈청 비율은 약 60:1이다. 고양이 및 개에 대한 PK 데이터는 모노그래프에 기재되어 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이에 대한 직접적인 PK 또는 독성 데이터가 없으며, 소·양·돼지·토끼 데이터에서 추론함. 심혈관계(심박수 증가, 수축력 감소)가 주요 독성 표적 장기임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "seizures (swine overdose)"
+        ],
+        "index": -1,
+        "evidence": "개에 대한 직접 데이터 없음. 돼지 과용량 시 경련이 보고되었으나 개에서의 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "negative inotropy"
+        ],
+        "index": -1,
+        "evidence": "심혈관계가 독성의 주요 표적으로 심박수 증가 및 수축력 감소가 보고됨. 개에 대한 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "decreased contractility",
+          "negative inotropy",
+          "death"
+        ],
+        "index": -1,
+        "evidence": "심혈관계가 독성의 주요 표적. 심박수 증가 및 음성 변력 효과가 보고됨. 개에 대한 직접 데이터는 없으나 계열 효과로 추론."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": -1,
+        "evidence": "고양이에 대한 직접 데이터 없음. 심혈관 독성은 계열 효과로 추론."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "tachycardia",
+          "decreased contractility",
+          "negative inotropy"
+        ],
+        "index": -1,
+        "evidence": "심혈관계가 독성의 주요 표적. 고양이에 대한 직접 데이터는 없으나 계열 효과로 추론."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "소에서 10 mg/kg SC 단회 투여 시 1시간 이내 최고 혈청 농도 도달. 반감기는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 에피네프린과의 상호작용은 돼지에서 사망률 증가가 보고됨. 에리스로마이신 모노그래프의 상호작용도 참고 권장.",
+  "drug_interactions": [
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "increased mortality",
+        "cardiovascular"
+      ],
+      "evidence": "In swine, epinephrine increased mortality associated with tilmicosin. Avoid concurrent use."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "swine_inj",
+      "horse_all",
+      "goat_inj",
+      "nonhuman_primate_inj"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고사항이 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고사항이 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "Intravenous administration in cattle or sheep",
+      "match_terms": [
+        "IV route",
+        "intravenous"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Any route of injection in swine",
+      "match_terms": [
+        "swine",
+        "pig",
+        "porcine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Any route of injection in horses or equines",
+      "match_terms": [
+        "horse",
+        "equine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Any route of injection in goats",
+      "match_terms": [
+        "goat",
+        "caprine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Any route of injection in nonhuman primates",
+      "match_terms": [
+        "primate",
+        "monkey"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Lactating dairy cattle (20 months or older)",
+      "match_terms": [
+        "lactating",
+        "dairy cattle",
+        "milk"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Veal calves",
+      "match_terms": [
+        "veal calf"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pregnancy or lactation (safety not established)",
+      "match_terms": [
+        "pregnant",
+        "lactating",
+        "breeding"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Camelids",
+      "match_terms": [
+        "camelid",
+        "llama",
+        "alpaca"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "마크로라이드계 항생제로서 주로 그람양성균에 작용하며, 일부 그람음성균 및 마이코플라스마에도 활성을 나타냄. 세균의 50S 리보솜 소단위에 결합하여 단백질 합성을 억제함. 폐 조직에 고농도로 집중되는 특성이 있음.",
+    "common_extra_effects": [
+      "주사 부위 부종 및 염증",
+      "파행",
+      "식욕 및 음수량 감소",
+      "심박수 증가(빈맥)",
+      "심근 수축력 감소(음성 변력 효과)",
+      "아나필락시스/아나필락시스양 반응",
+      "허탈",
+      "사망(과용량 또는 금기 경로 투여 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에 대한 승인된 적응증 또는 용량이 없음. 모노그래프에 개에서의 사용에 대한 데이터가 없으며, 심혈관 독성(빈맥, 음성 변력 효과)이 주요 우려 사항임. 사용을 권장하지 않음.",
+    "cat": "고양이에 대한 승인된 적응증 또는 용량이 없음. 모노그래프에 고양이에서의 사용에 대한 데이터가 없음. 토끼에서 SC 투여 시 국소 부종, 괴사, 허약, 창백, 빈호흡, 급사가 보고된 바 있어 소형 동물에서의 사용에 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 2,
+      "evidence": "개에 대한 승인 또는 안전성 데이터 없음. 심혈관 독성이 주요 우려 사항이며, 돼지·말·염소에서 치명적인 것으로 알려진 약물임. 사용 금기."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에 대한 승인 또는 안전성 데이터 없음. 토끼에서 급사가 보고된 바 있어 소형 동물에서의 사용은 금기에 준함."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제: 30°C(86°F) 이하 실온 보관. 직사광선 차단. 첫 개봉 후 28일 이내 사용(UK 라벨 기준). 경구 액제: 30°C(86°F) 이하 보관. 직사광선 차단. 개봉 후 3개월 이내 사용(UK 라벨 기준). 냉동 금지. 약물 혼합 음수는 24시간 이내 폐기. 약물 혼합 대용유는 6시간 이내 폐기.",
+    "forms": [
+      "Tilmicosin 300 mg/mL 주사액 (250 mL 다회용 바이알) - Micotil 300 Injection",
+      "Tilmicosin Phosphate 250 mg/mL 경구용 수용성 농축액 (960 mL 병) - Pulmotil AC, Tilmovet AC",
+      "틸미코신 사료 첨가용 제제 (돼지, 소용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "틸미코신은 마크로라이드계 반합성 항생제로, 소·양의 호흡기 질환(BRD, 만하이미아 헤몰리티카, 파스튜렐라 멀토시다, 히스토필루스 솜니) 치료에 FDA 승인된 주사제이며, 돼지 호흡기 질환 조절에는 경구 농축액이 승인되어 있다. 폐 조직에 고농도로 집중되는 특성이 있다. 인간에게 우발적으로 주사될 경우 치명적일 수 있으며, 돼지·말·염소·비인간 영장류에 주사 시 사망을 초래할 수 있다. 소·양에 IV 투여 시 사망 위험이 있으므로 반드시 SC 경로로만 투여해야 한다. 심혈관계(빈맥, 음성 변력 효과)가 주요 독성 표적 장기이다. WHO 및 OIE에서 최고 우선순위 항균제로 지정되어 있어 신중한 사용이 요구된다.",
+    "indications": "【승인 적응증】소: 만하이미아 헤몰리티카, 파스튜렐라 멀토시다, 히스토필루스 솜니 관련 소 호흡기 질환(BRD) 치료 및 고위험군 예방적 조절 (SC 주사). 양: 만하이미아 헤몰리티카 관련 양 호흡기 질환 치료 (SC 주사, 15 kg 초과). 돼지: 파스튜렐라 멀토시다 및 헤모필루스 파라수이스 관련 돼지 호흡기 질환(SRD) 조절, 마이코플라스마 하이오뉴모니에 및 PRRSV 관련 SRD 조절 (경구 음수 투여). 【비승인(오프라벨) 사용】토끼: 파스튜렐라증 (SC, 25 mg/kg 단회 또는 단계적 투여). 해외: 소 지간 괴사균증, 양 족부 부패병, 급성 양 유방염, 닭·칠면조 호흡기 질환.",
+    "client_info": "이 약물은 사람에게 우발적으로 주사될 경우 생명을 위협할 수 있습니다. 주사기에 바늘을 항상 부착한 채로 보관하지 마십시오. 주사 시에는 반드시 동물을 적절히 보정하고, 혼자 작업하지 마십시오. 눈에 접촉하지 않도록 주의하십시오. 우발적 주사 시 즉시 의사에게 연락하고 주사 부위에 얼음을 대십시오(응급 전화: 1-800-722-0987 또는 1-800-428-4441). 돼지, 말, 염소에는 절대 주사하지 마십시오. 소·양에는 반드시 피하(SC) 경로로만 투여하십시오. 경구 음수 투여 시 녹슨 용기를 사용하지 마시고, 말이 약물이 혼합된 물에 접근하지 못하도록 하십시오. 약물 혼합 음수는 24시간마다 교체하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (dog/cat specific)",
+      "CYP metabolism profile",
+      "Half-life data",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding",
+      "Oral bioavailability",
+      "Dog dosage",
+      "Cat dosage"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.primary_metabolic_organ",
+      "metabolism_and_clearance.clearance_organ",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment",
+      "hepatic_dose_adjustment",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/47.jsonl",
+    "extracted_at": "2026-03-11T03:43:07.968745+00:00",
+    "reviewer": null
+  }
+}

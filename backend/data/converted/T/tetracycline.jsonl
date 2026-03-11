@@ -1,0 +1,526 @@
+{
+  "id": "tetracycline",
+  "drug_identity": {
+    "name_ko": "테트라사이클린",
+    "name_en": "Tetracycline",
+    "active_ingredient": "Tetracycline hydrochloride",
+    "brand_names": [],
+    "allergy_class": "tetracycline",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "개와 고양이에서의 항균 사용은 모두 허가 외(extra-label) 사용이며, 수의 라벨 제품은 돼지, 소, 가금류에 대해 FDA 승인됨",
+    "dosage_form": [
+      "Cap",
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 324,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.6,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "테트라사이클린은 대사되지 않고 신장 사구체 여과 및 담즙/비담즙 경로를 통해 대변으로 변화 없이 배설됨. CYP 관련 대사 경로는 보고되지 않음."
+    },
+    "extra_information": "개와 고양이에서 반감기는 약 5~6시간. 분포용적은 소동물에서 약 1.2~1.3 L/kg. 혈장 단백 결합률은 약 20~67%. 신기능 저하 환자에서 반감기가 연장되고 약물이 축적될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 주경로, 신기능 저하 시 축적 및 간독성 위험 명시됨. 수의 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "CSF penetration limited"
+        ],
+        "index": -1,
+        "evidence": "CSF로의 분포는 소량에 불과하며 치료 농도 달성이 어려울 수 있음. 직접적인 뇌 독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "anti-nuclear antibodies",
+          "intravascular hemolysis"
+        ],
+        "index": 1,
+        "evidence": "혈액 이상(혈구 이상), 항핵항체 형성이 드물게 보고됨. 프로필렌글리콜 기반 제품의 급속 IV 투여 시 혈관 내 용혈 가능."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "glomerular filtration",
+          "renal insufficiency",
+          "nephrotoxicity",
+          "accumulation",
+          "azotemia"
+        ],
+        "index": 2,
+        "evidence": "신장 사구체 여과로 주로 배설되며, 신기능 저하 시 약물 축적 및 신독성 위험 증가. 장기 과다 투여 시 신독성 가능. 요로결석 형성 보고 있음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver toxicity",
+          "renal impairment increases hepatotoxicity risk"
+        ],
+        "index": 3,
+        "evidence": "드물게 간독성 보고됨. 신기능 또는 간기능 저하 시 간독성 위험 증가. 신기능 저하로 인한 약물 축적이 간독성으로 이어질 수 있음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "transient collapse",
+          "cardiodepressant"
+        ],
+        "index": -1,
+        "evidence": "급속 IV 투여 시 일시적 허탈 및 심장 부정맥 유발 가능(칼슘 킬레이션 기전). 프로필렌글리콜 기반 제품은 심장억제 효과 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "CSF penetration limited"
+        ],
+        "index": -1,
+        "evidence": "CSF로의 분포는 소량에 불과. 고양이에서 직접적인 뇌 독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "anti-nuclear antibodies"
+        ],
+        "index": 1,
+        "evidence": "혈액 이상 및 항핵항체 형성이 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "glomerular filtration",
+          "renal insufficiency",
+          "nephrotoxicity",
+          "accumulation"
+        ],
+        "index": 2,
+        "evidence": "신장 사구체 여과로 주로 배설. 신기능 저하 시 축적 및 신독성 위험. 고양이는 경구 테트라사이클린을 잘 견디지 못함."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver toxicity"
+        ],
+        "index": 3,
+        "evidence": "드물게 간독성 보고됨. 신기능 또는 간기능 저하 시 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "급속 IV 투여 시 심장 부정맥 가능성. 고양이 특이적 심장 데이터는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 5.0,
+      "max": 6.0,
+      "mean": 5.5,
+      "species": "dog"
+    },
+    "f_percent": 70,
+    "protein_binding_percent": 44,
+    "evidence": "공복 시 경구 생체이용률 약 60~80%. 음식 또는 유제품 존재 시 흡수 50% 이상 감소 가능. 혈장 단백 결합률 약 20~67%(중간값 약 44%). 개와 고양이에서 반감기 약 5~6시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Atovaquone",
+      "severity": 2,
+      "keywords": [
+        "decreased atovaquone concentrations",
+        "reduced efficacy"
+      ],
+      "evidence": "Tetracyclines have caused decreased atovaquone plasma concentrations, potentially reducing efficacy."
+    },
+    {
+      "drug": "Beta-Lactam Antibiotics",
+      "severity": 1,
+      "keywords": [
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "Bacteriostatic tetracyclines have been historically thought to interfere with bactericidal activity of penicillins and cephalosporins; clinical significance is unknown."
+    },
+    {
+      "drug": "Aminoglycoside Antibiotics",
+      "severity": 1,
+      "keywords": [
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "Bacteriostatic tetracyclines have been historically thought to interfere with bactericidal activity of aminoglycosides; clinical significance is unknown."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased bioavailability",
+        "digoxin toxicity"
+      ],
+      "evidence": "Tetracyclines have increased digoxin bioavailability in a small percentage of human patients, causing digoxin toxicity. Effects may persist for months after tetracycline discontinuation."
+    },
+    {
+      "drug": "Divalent or Trivalent Cations (antacids, calcium, iron, magnesium, zinc, bismuth, aluminum)",
+      "severity": 2,
+      "keywords": [
+        "chelation",
+        "decreased absorption"
+      ],
+      "evidence": "Oral tetracyclines chelate divalent/trivalent cations, decreasing absorption of tetracycline or the cation-containing product. Separate dosing by at least 1–2 hours."
+    },
+    {
+      "drug": "Methoxyflurane",
+      "severity": 3,
+      "keywords": [
+        "fatal nephrotoxicity"
+      ],
+      "evidence": "Fatal nephrotoxicity has occurred in humans when methoxyflurane was used concurrently with tetracycline."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents",
+      "severity": 2,
+      "keywords": [
+        "potentiation of neuromuscular blockade"
+      ],
+      "evidence": "Tetracyclines may potentiate neuromuscular blockade when used concurrently with neuromuscular blocking agents."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of tetracycline. Separate dosing by at least 2 hours to minimize this effect."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased prothrombin activity",
+        "anticoagulant potentiation",
+        "bleeding risk"
+      ],
+      "evidence": "Tetracyclines may depress plasma prothrombin activity; patients on anticoagulant therapy may need dosage adjustment."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "무균성 염증성/자가면역 피부질환 보조치료 (나이아신아마이드 병용, 체중 10 kg 이하) - 허가 외",
+          "value": "250",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과 확인 후 나이아신아마이드를 1일 2회로 감량 후 점진적 감량 가능. 효과 발현까지 1~2개월 소요 가능.",
+          "evidence": "체중 10 kg 이하 개: 테트라사이클린 250 mg/마리(mg/kg 아님) PO 1일 3회, 나이아신아마이드 250 mg/마리 병용"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "무균성 염증성/자가면역 피부질환 보조치료 (나이아신아마이드 병용, 체중 10 kg 초과) - 허가 외",
+          "value": "500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과 확인 후 나이아신아마이드를 1일 2회로 감량 후 점진적 감량 가능. 효과 발현까지 1~2개월 소요 가능.",
+          "evidence": "체중 10 kg 초과 개: 테트라사이클린 500 mg/마리(mg/kg 아님) PO 1일 3회, 나이아신아마이드 500 mg/마리 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 치료 - 허가 외",
+          "value": "22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14~28일",
+          "evidence": "22 mg/kg PO 8시간마다 14~28일간"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 치료 - 허가 외",
+          "value": "15 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 22.0,
+          "duration_note": "14~28일. 고양이는 경구 테트라사이클린을 잘 견디지 못하므로 독시사이클린 등 대체제 고려 권장.",
+          "evidence": "15~22 mg/kg PO 8시간마다 14~28일간. 고양이에서 내약성 불량 주의."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량 권장. 신기능 저하 시 반감기 연장 및 약물 축적 가능. 신독성 약물과의 병용 투여 회피. 장기 치료 시 혈청 테트라사이클린 농도 모니터링 고려."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 신기능 또는 간기능 저하 시 간독성 위험 증가. 명시적인 간기능 저하에 따른 용량 조절 지침은 제시되지 않았으나 주의 깊은 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "테트라사이클린 또는 다른 테트라사이클린계 약물에 과민반응",
+      "match_terms": [
+        "tetracycline hypersensitivity",
+        "tetracycline allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신 (특히 초기)",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "성장기 동물 (치아 및 골격 발달 중)",
+      "match_terms": [
+        "young animal",
+        "puppy",
+        "kitten",
+        "developing teeth"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 가역적으로 결합하여 아미노아실-tRNA의 리보솜 결합을 억제함으로써 단백질 합성을 저해하는 시간 의존성 정균 항생제. 고농도에서는 50S 리보솜 결합 및 세포막 투과성 변화도 유발. 항염증 및 면역조절 효과(항체 생성 억제, 호중구 화학주성 억제, 리파아제·콜라게나아제·프로스타글란딘 합성 억제, 보체 C3 활성화 억제)도 있음.",
+    "common_extra_effects": [
+      "오심, 구토, 식욕부진, 설사 등 위장관 장애",
+      "성장기 치아 착색(황색, 갈색, 회색)",
+      "골 성장 및 치유 지연",
+      "광과민성 반응",
+      "식도염, 식도 궤양(고형 제형 투여 시)",
+      "드물게 간독성",
+      "혈액 이상(혈구 이상)",
+      "항핵항체 형성",
+      "갑상선 과색소침착 및 갑상선 과형성",
+      "장기 사용 시 요로결석 형성(개)",
+      "비감수성 균 또는 진균의 과증식(중복감염)",
+      "급속 IV 투여 시 일시적 허탈 및 심장 부정맥"
+    ],
+    "dog_mechanism": "개에서 항균 및 항염증/면역조절 목적으로 사용. 나이아신아마이드와 병용 시 무균성 염증성 피부질환 조절에 활용.",
+    "dog_extra_effects": [
+      "장기 사용 시 요로결석 형성",
+      "갑상선 과색소침착 및 갑상선 과형성",
+      "식도 손상(고형 제형)"
+    ],
+    "cat_mechanism": "고양이에서 경구 테트라사이클린 내약성 불량. 감수성 감염에 허가 외 사용 가능하나 독시사이클린 등 대체제 선호.",
+    "cat_extra_effects": [
+      "복통(산통)",
+      "발열",
+      "탈모",
+      "우울증",
+      "경구 내약성 불량"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 항균 목적으로는 독시사이클린 또는 미노사이클린이 더 선호됨(투여 빈도 및 부작용 프로파일 우수). 테트라사이클린은 나이아신아마이드와 병용하여 원판상 홍반성 루푸스(DLE), 무균성 육아종/화농성 육아종 증후군, 무균성 결절성 지방층염, 피부 반응성 조직구증, 피부 수포성 루푸스, 천포창, 루포이드 조갑이영양증, 독일 셰퍼드 중족골 누공, 혈관염, 비강 인중 동맥염, 피지선염, 피부근염 등 다양한 무균성 염증성 피부질환 조절에 사용됨. 효과 발현까지 1~2개월 소요 가능. 장기 사용 시 요로결석 형성 보고 있음.",
+    "cat": "고양이는 경구 테트라사이클린을 잘 견디지 못하며, 복통, 발열, 탈모, 우울증 등의 임상 증상이 나타날 수 있음. 고양이에서는 독시사이클린 등 대체 테트라사이클린계 약물 사용이 강력히 권장됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 시 주의 및 용량 감량 필요. 성장기 동물에서 치아 착색 및 골 성장 지연 가능. 임신 중 극도의 주의 필요. 광과민성 반응 가능성으로 밝은 색 또는 얇은 털을 가진 개에서 햇빛 노출 제한 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 경구 테트라사이클린 내약성이 불량하여 복통, 발열, 탈모, 우울증 등이 나타날 수 있음. 가능하면 독시사이클린 등 대체제 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 정제 및 캡슐은 밀폐된 차광 용기에 실온(15~30°C)에서 보관. 수용액은 역가가 빠르게 소실되므로 하루 2~3회 신선하게 조제 필요.",
+    "forms": [
+      "Tetracycline HCl 캡슐: 250 mg, 500 mg (인체용, Rx)",
+      "Tetracycline HCl 수용성 분말: 324 g/lb, 5 lb 용기 (수의용, OTC, 돼지·소·가금류 FDA 승인)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "테트라사이클린은 원형 테트라사이클린계 항생제로, 현재 많은 세균이 내성을 보이나 Mycoplasma spp., Rickettsia, 스피로헤타, Chlamydia spp. 등에 여전히 유용함. 소동물에서 항균 목적으로는 독시사이클린 또는 미노사이클린이 선호됨. 개에서 나이아신아마이드와 병용하여 다양한 무균성 염증성 피부질환 조절에 사용됨. 신기능 저하 환자에서 주의 및 용량 감량 필요. 임신 중 극도의 주의 요망. 고양이는 경구 내약성 불량.",
+    "indications": "【허가 외】개: 감수성 세균 감염(22 mg/kg PO q8h, 14~28일), 나이아신아마이드 병용 무균성 염증성 피부질환(DLE, 무균성 육아종, 천포창, 혈관염 등). 【허가 외】고양이: 감수성 세균 감염(15~22 mg/kg PO q8h, 14~28일). 【FDA 승인】소(송아지), 돼지, 가금류: 감수성 세균성 장염, 폐렴, 만성 호흡기 질환 등. 【허가 외】소: 디지털 피부염(국소 도포).",
+    "client_info": "이 약은 공복에 투여하는 것이 가장 좋습니다. 우유나 유제품은 투여 전후 1~2시간 이내에 주지 마세요. 위장 장애가 생기면 소량의 음식과 함께 줄 수 있으나, 약물 흡수가 줄어들 수 있습니다. 고형 제형(정제, 캡슐) 투여 후에는 반드시 물을 충분히 먹여 식도 손상을 예방하세요. 성장기 동물에서는 치아 착색이 생길 수 있습니다. 털이 얇거나 밝은 색인 반려동물은 햇빛 노출을 줄여주세요. 고양이에서는 복통, 발열, 탈모, 무기력 등의 부작용이 나타날 수 있으니 이상 증상 발견 시 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific onset_min data",
+      "t_max_hr data",
+      "CYP enzyme profile",
+      "Exact renal creatinine threshold for dose adjustment",
+      "Exact hepatic ALT threshold for dose adjustment",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/46.jsonl",
+    "extracted_at": "2026-03-11T03:24:44.546870+00:00",
+    "reviewer": null
+  }
+}

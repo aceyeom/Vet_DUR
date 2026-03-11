@@ -1,0 +1,516 @@
+{
+  "id": "testosterone",
+  "drug_identity": {
+    "name_ko": "테스토스테론",
+    "name_en": "Testosterone",
+    "active_ingredient": "Testosterone",
+    "brand_names": [
+      "Depo-Testosterone",
+      "Aveed",
+      "Testopel",
+      "Component E-H",
+      "Synovex-H"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 FDA 승인된 테스토스테론 단독 제품은 없음. 인간용 제품(테스토스테론 사이피오네이트, 에난테이트)을 중성화 수컷 개/고양이의 테스토스테론 반응성 요실금 치료에 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "테스토스테론은 간에서 대사되며, 대사산물은 소변(약 90%)과 대변(약 6%)으로 배설됨. 경구 투여 시 위장관 점막 및 간에서 초회통과효과로 빠르게 대사됨."
+    },
+    "extra_information": "에스테르화 화합물(테스토스테론 사이피오네이트, 에난테이트)은 테스토스테론보다 극성이 낮아 IM 주사 후 지방 조직에서 서서히 흡수됨. 작용 지속 시간은 IM 주사 후 2~4주 지속될 수 있음. 테스토스테론 사이피오네이트의 혈장 반감기는 8일로 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인간 데이터 기반이며, 수의학 종별 PK 연구는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "behavior changes",
+          "aggression"
+        ],
+        "index": 1,
+        "evidence": "행동 변화(공격성)가 부작용으로 보고됨. 직접적인 뇌 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "polycythemia",
+          "erythropoietic stimulating",
+          "clotting factors"
+        ],
+        "index": 2,
+        "evidence": "적혈구 생성 자극, 다혈증, 응고인자(II, V, VII, X) 억제 가능성이 보고됨(주로 인간 고용량 데이터)."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "caution"
+        ],
+        "index": 1,
+        "evidence": "신장 기능 장애 환자에서 주의 사용 권고. 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatitis",
+          "hepatocellular carcinoma",
+          "first-pass",
+          "liver metabolism"
+        ],
+        "index": 3,
+        "evidence": "간에서 주로 대사됨. 인간 고용량 투여 시 간염, 간세포암 보고. 간 기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "edema",
+          "cardiac dysfunction",
+          "caution"
+        ],
+        "index": 1,
+        "evidence": "심장 기능 장애 환자에서 주의 사용 권고. 코르티코스테로이드와 병용 시 부종 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "behavioral changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 행동 변화가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "erythropoietic stimulating",
+          "clotting factors"
+        ],
+        "index": 1,
+        "evidence": "적혈구 생성 자극 및 응고인자 억제 가능성(주로 인간 데이터 외삽)."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "caution"
+        ],
+        "index": 1,
+        "evidence": "신장 기능 장애 환자에서 주의 사용 권고. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatitis",
+          "liver metabolism",
+          "first-pass"
+        ],
+        "index": 2,
+        "evidence": "간에서 주로 대사됨. 간 기능 장애 환자에서 주의 사용 권고. 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac dysfunction",
+          "caution"
+        ],
+        "index": 1,
+        "evidence": "심장 기능 장애 환자에서 주의 사용 권고. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.17,
+      "max": 1.67,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 98,
+    "evidence": "인간에서 테스토스테론의 혈장 반감기는 10~100분으로 보고됨. 테스토스테론 사이피오네이트의 반감기는 8일. 단백결합률은 인간에서 98%(테스토스테론-에스트라디올 글로불린). 경구 투여 시 초회통과효과로 생체이용률 매우 낮음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, fludrocortisone, prednis(ol)one)",
+      "severity": 2,
+      "keywords": [
+        "edema",
+        "fluid retention"
+      ],
+      "evidence": "안드로겐은 ACTH 또는 부신 스테로이드 치료와 관련된 부종을 악화시킬 수 있음."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "cyclosporine toxicity",
+        "increased exposure"
+      ],
+      "evidence": "사이클로스포린 독성 위험 증가."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "blood glucose lowering"
+      ],
+      "evidence": "혈청 포도당 수치를 감소시킬 수 있어 인슐린 요구량 변화 가능."
+    },
+    {
+      "drug": "Oral Antidiabetic Agents",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "blood glucose lowering"
+      ],
+      "evidence": "혈청 포도당 수치를 감소시킬 수 있어 경구 혈당강하제 효과 증강 가능."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 2,
+      "keywords": [
+        "increased clearance",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "테스토스테론 사이피오네이트가 프로프라놀롤의 청소율을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "항응고 효과를 증가시킬 수 있음. 출혈 위험 모니터링 필요."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "테스토스테론 반응성 요실금 치료 (중성화 수컷, 페닐프로판올아민과 병용 가능) - 오프라벨",
+          "value": "2.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "30~45일마다 1회 투여",
+          "evidence": "테스토스테론 사이피오네이트 2.2 mg/kg IM, 30~45일마다 1회 (오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "발정 억제 (암컷) - 오프라벨, 거의 권장되지 않음",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일마다 1회 투여",
+          "evidence": "테스토스테론 에난테이트(또는 사이피오네이트) 0.5 mg/kg IM, 5일마다 1회 (오프라벨, 거의 권장되지 않음)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "가성임신 시 유선 비대 감소 - 오프라벨, 거의 권장되지 않음",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 투여",
+          "evidence": "테스토스테론 에난테이트(또는 사이피오네이트) 0.5~1 mg/kg IM 1회 (오프라벨, 거의 권장되지 않음)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 장애 환자에서 주의 사용 권고되나, 구체적인 용량 조정 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 장애 환자에서 주의 사용 권고. 장기 투여 또는 고용량 사용 시 CBC 및 혈청 화학 검사 모니터링 권장. 구체적인 용량 조정 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to testosterone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 암종",
+      "match_terms": [
+        "prostate carcinoma",
+        "prostatic carcinoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "renal disease",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심장 기능 장애",
+      "match_terms": [
+        "cardiac dysfunction",
+        "heart disease",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "주요 내인성 안드로겐 스테로이드로서 남성 이차 성징 발달, 수컷 생식기관 성숙 및 성장, 성욕 증가를 담당함. 단백질 동화 작용, 질소·나트륨·칼륨·인 보유, 요중 칼슘 배설 감소, 적혈구 생성 자극인자 자극을 통한 적혈구 생성 촉진 효과를 가짐.",
+    "common_extra_effects": [
+      "항문주위 선종",
+      "회음부 탈장",
+      "전립선 질환",
+      "행동 변화(공격성)",
+      "음핵 비대(암컷)",
+      "남성화(암컷)",
+      "지속발기증(고용량)",
+      "정자감소증(고용량)",
+      "불임(고용량)",
+      "다혈증(인간 고용량)",
+      "간염(인간 고용량)",
+      "간세포암(인간 고용량)",
+      "응고인자 감소(인간 고용량)"
+    ],
+    "dog_mechanism": "수컷 개에서 정상적인 요도 근육 긴장도 유지 및 요도 점막 완전성 보존에 기여. 일부 피부병 예방에도 필요할 수 있음.",
+    "dog_extra_effects": [
+      "항문주위 선종",
+      "회음부 탈장",
+      "전립선 질환",
+      "행동 변화(공격성)",
+      "암컷에서 음핵 비대 및 남성화"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "행동 변화"
+    ]
+  },
+  "species_notes": {
+    "dog": "중성화 수컷 개의 테스토스테론 반응성 요실금 치료에 주로 사용됨(오프라벨). 테스토스테론 사이피오네이트 2.2 mg/kg IM을 30~45일마다 투여. 장기 투여 또는 고용량 사용 시 CBC 및 혈청 화학 검사 모니터링 권장. 암컷에서는 남성화 및 공격성 위험으로 거의 권장되지 않음.",
+    "cat": "고양이에서의 사용은 제한적이며, 행동 변화가 부작용으로 보고됨. 구체적인 용량 지침은 Plumb's에 제시되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장, 심장, 간 기능 장애 환자에서 주의 사용. 전립선 질환, 항문주위 선종, 행동 변화 가능성 모니터링 필요. DEA Schedule III 규제 약물."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 행동 변화 보고됨. 신장, 심장, 간 기능 장애 환자에서 주의 사용. 고양이 특이적 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C~25°C, 68°F~77°F) 보관. 냉동 또는 40°C(104°F) 이상 노출 금지. 저온 노출 시 침전물 형성 가능하나 진탕 및 재가온 시 재용해됨. DEA Schedule III 규제 약물로 견고하게 제작된 잠금 장치가 있는 장소에 보관.",
+    "forms": [
+      "테스토스테론 사이피오네이트 주사액 (오일 중) 100 mg/mL, 200 mg/mL",
+      "테스토스테론 에난테이트 주사액 (오일 중) 200 mg/mL",
+      "테스토스테론 운데카노에이트 주사액 250 mg/mL",
+      "테스토스테론 펠릿 이식제 75 mg",
+      "경피 패치, 국소 용액/겔, 경구 캡슐 (인간용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "테스토스테론은 주요 내인성 안드로겐으로, 수의학에서는 주로 중성화 수컷 개(및 고양이)의 테스토스테론 반응성 요실금 치료에 사용됨. FDA 승인 수의용 단독 제품은 없으며, 인간용 제품을 오프라벨로 사용. DEA Schedule III 규제 약물로 취급 시 적절한 개인보호장비(PPE) 착용 필요. 임신, 전립선 암종, 약물 과민반응 시 금기. 신장·심장·간 기능 장애 환자에서 주의 사용.",
+    "indications": "【승인 적응증】 없음 (수의용 FDA 승인 단독 제품 없음). 【오프라벨 적응증】 중성화 수컷 개/고양이의 테스토스테론 반응성 요실금; 중성화 수컷 개의 양측성 탈모를 동반한 피부염; 암컷 개의 발정 억제(거의 권장되지 않음); 가성임신 시 유선 비대 감소(거의 권장되지 않음). 【소 적응증】 발정 감지 동물(teaser) 생산 (오프라벨).",
+    "client_info": "이 약은 중성화된 수컷 반려동물의 요실금 치료를 위해 사용되는 호르몬 주사제입니다. 약 30~45일마다 1회 근육주사로 투여됩니다. 투여 후 공격성 증가, 전립선 문제, 항문 주변 종양 등의 부작용이 나타날 수 있으므로 이상 증상 발견 시 즉시 수의사에게 알려주세요. 이 약은 마약류(DEA Schedule III)로 분류되어 있어 처방전이 필요하며, 안전한 장소에 보관해야 합니다. 임신한 동물에게는 절대 사용하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific dosage",
+      "Veterinary species-specific PK data",
+      "CYP enzyme profile",
+      "Onset of action",
+      "Oral bioavailability (veterinary)",
+      "Renal dose adjustment specifics",
+      "Hepatic dose adjustment specifics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "species_flags.washout_period_days",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/46.jsonl",
+    "extracted_at": "2026-03-11T03:22:38.052539+00:00",
+    "reviewer": null
+  }
+}

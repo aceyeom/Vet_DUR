@@ -1,0 +1,550 @@
+{
+  "id": "tinidazole",
+  "drug_identity": {
+    "name_ko": "티니다졸",
+    "name_en": "Tinidazole",
+    "active_ingredient": "Tinidazole",
+    "brand_names": [
+      "Tindamax",
+      "Estovyn-T",
+      "Fasigyn",
+      "Tiniba",
+      "Tiniameb",
+      "Tinidazol"
+    ],
+    "allergy_class": "nitroimidazole",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 소동물에서 오프라벨로 사용. 식용 동물에서의 사용은 금지됨.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 67,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 대사됨. 구체적인 CYP 효소 경로는 Plumb's에 명시되지 않음. 시메티딘 및 케토코나졸이 대사를 억제하고, 페노바르비탈 및 리팜핀이 대사를 유도하는 것으로 알려져 있어 CYP 매개 대사가 관여할 가능성이 있음."
+    },
+    "extra_information": "개와 고양이에서 경구 투여 후 거의 완전히 흡수됨. 분포용적: 개 0.66 L/kg, 고양이 0.54 L/kg. 개는 고양이보다 약 2배 빠르게 약물을 제거함. 소실 반감기: 개 약 4.4시간, 고양이 약 8.4시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 임상 사용 경험이 제한적이며, 이상반응 프로파일이 충분히 기술되어 있지 않음. 주로 GI 이상반응 및 잠재적 신경독성이 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures",
+          "nystagmus",
+          "behavior changes"
+        ],
+        "index": 1,
+        "evidence": "다른 5-니트로이미다졸(메트로니다졸, 로니다졸)이 개에서 신경독성 징후와 관련됨. 인간에서 드물게 발작 보고. 행동 변화, 안구진탕, 보행 장애 등 신경독성 징후 주의 요망."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "myelosuppression",
+          "blood dyscrasias"
+        ],
+        "index": 1,
+        "evidence": "혈액 이상(혈액 이상증)이 있는 환자에서 주의 사용 권고. 인간에서 일시적 골수억제가 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 신장 부담은 낮은 것으로 추정됨."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic dysfunction",
+          "liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사됨. 간 기능 장애 환자에서 주의 사용 권고. 간 기능 이상 시 약물 축적 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures",
+          "nystagmus",
+          "behavior changes"
+        ],
+        "index": 1,
+        "evidence": "다른 5-니트로이미다졸(메트로니다졸, 로니다졸)이 고양이에서 신경독성 징후와 관련됨. 고양이는 개보다 반감기가 길어(8.4시간) 약물 축적 위험이 더 높을 수 있음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "myelosuppression",
+          "blood dyscrasias"
+        ],
+        "index": 1,
+        "evidence": "혈액 이상(혈액 이상증)이 있는 환자에서 주의 사용 권고. 인간에서 일시적 골수억제가 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 신장 부담은 낮은 것으로 추정됨."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic dysfunction",
+          "liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사됨. 간 기능 장애 환자에서 주의 사용 권고. 고양이는 반감기가 더 길어 간 부담이 더 클 수 있음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 4.4,
+      "max": 8.4,
+      "mean": null,
+      "species": "dog"
+    },
+    "f_percent": 99,
+    "protein_binding_percent": null,
+    "evidence": "개와 고양이에서 경구 투여 후 거의 완전히 흡수됨(실질적으로 100%). 소실 반감기: 개 약 4.4시간, 고양이 약 8.4시간. 개의 분포용적 0.66 L/kg, 고양이 0.54 L/kg."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 주로 메트로니다졸(관련 화합물)에서 보고되었거나 이론적으로 적용 가능한 상호작용 포함. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Busulfan",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "toxicity"
+      ],
+      "evidence": "Tinidazole may increase the serum concentration of busulfan, potentially increasing toxicity risk."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Cholestyramine may decrease metronidazole absorption; interaction may apply to tinidazole."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "increased side effects"
+      ],
+      "evidence": "Cimetidine may decrease the metabolism of tinidazole and increase the likelihood of dose-related side effects."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "increased serum concentration",
+        "contraindicated"
+      ],
+      "evidence": "Tinidazole may increase the serum concentration of cisapride; contraindicated in humans."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration"
+      ],
+      "evidence": "Tinidazole may increase the serum concentration of cyclosporine, requiring additional monitoring."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration"
+      ],
+      "evidence": "Tinidazole may increase the serum concentration of tacrolimus, requiring additional monitoring."
+    },
+    {
+      "drug": "Ethanol",
+      "severity": 2,
+      "keywords": [
+        "disulfiram-like reaction",
+        "nausea",
+        "vomiting",
+        "cramps"
+      ],
+      "evidence": "Ethanol may induce a disulfiram-like reaction (nausea, vomiting, cramps) when combined with tinidazole."
+    },
+    {
+      "drug": "Fluorouracil",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "toxicity"
+      ],
+      "evidence": "Tinidazole may increase the serum concentration of fluorouracil and increase the risk of toxicity."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "increased side effects"
+      ],
+      "evidence": "Ketoconazole may decrease the metabolism of tinidazole and increase the likelihood of dose-related side effects."
+    },
+    {
+      "drug": "Oxytetracycline",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "decreased efficacy"
+      ],
+      "evidence": "Oxytetracycline reportedly may antagonize the therapeutic effects of metronidazole; interaction may apply to tinidazole."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "increased metabolism",
+        "decreased blood concentration"
+      ],
+      "evidence": "Phenobarbital may increase the metabolism of tinidazole, thereby decreasing blood concentration and potentially reducing efficacy."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "increased metabolism",
+        "decreased blood concentration"
+      ],
+      "evidence": "Rifampin may increase the metabolism of tinidazole, thereby decreasing blood concentration and potentially reducing efficacy."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 3,
+      "keywords": [
+        "prolonged prothrombin time",
+        "anticoagulation",
+        "bleeding"
+      ],
+      "evidence": "Metronidazole (and potentially tinidazole) may prolong the prothrombin time (PT) in patients taking warfarin or other coumarin anticoagulants. Avoid concurrent use if possible; otherwise, intensify monitoring."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지아르디아증 (오프라벨)",
+          "value": "44",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~6일간 투여 (출처에 따라 다름)",
+          "evidence": "44 mg/kg PO every 24 hours for 6 days (일부 출처는 3일 치료). 트리코모나스증, 아메바증, 발란티디아증에도 잠재적으로 유용하나 동물에서의 효능 데이터 부족."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지아르디아증 (오프라벨)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7~10일간 투여 (일부 출처는 3일)",
+          "evidence": "30 mg/kg PO once daily for 7 to 10 days. 일부 출처는 동일 용량으로 3일 치료."
+        },
+        {
+          "logic_type": "linear",
+          "context": "Tritrichomonas foetus 감염 (오프라벨)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일간 투여",
+          "evidence": "30 mg/kg PO once daily for 14 days. 실험적으로 감염된 고양이의 50%에서 T. foetus 검출 감소. 구아검 코팅 위장관 저항성 캡슐 제형 사용 시 FIV 양성 고양이 5마리에서 감염 해소 및 임상 상태 개선 보고."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적인 권고사항이 Plumb's에 명시되어 있지 않음. 혈액투석으로 체내 약물의 약 43%가 6시간 세션에서 제거될 수 있음(인간 데이터)."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "티니다졸은 간에서 대사됨. 간 기능 장애 환자에서 주의하여 사용할 것을 권고하나, 구체적인 용량 조절 지침은 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "5-니트로이미다졸 과민반응",
+      "match_terms": [
+        "nitroimidazole hypersensitivity",
+        "metronidazole allergy",
+        "tinidazole allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 초기 (1삼분기)",
+      "match_terms": [
+        "pregnancy",
+        "first trimester"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "혈액 이상증",
+      "match_terms": [
+        "blood dyscrasia",
+        "myelosuppression",
+        "anemia",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "발작 소인",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "seizure history"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5-니트로이미다졸 계열 항원충/항균제. 혐기성 생물에 의해 흡수된 후 미확인 극성 화합물로 환원되어 세균의 DNA 및 핵산 합성을 방해함으로써 살균 작용을 나타냄. 트리코모나스 살멸 및 아메바 살멸 효과도 있음.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "신경독성 (다른 5-니트로이미다졸과 유사)",
+      "발작 (드물게)",
+      "일시적 골수억제 (드물게, 인간)",
+      "과민반응 (드물게, 인간)"
+    ],
+    "dog_mechanism": "혐기성 균 및 원충에 대한 살균/살원충 작용. 개에서 소실 반감기 약 4.4시간으로 고양이보다 빠르게 제거됨.",
+    "dog_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "신경독성 가능성 (다른 5-니트로이미다졸과 유사)"
+    ],
+    "cat_mechanism": "혐기성 균 및 원충에 대한 살균/살원충 작용. 고양이에서 소실 반감기 약 8.4시간으로 개보다 느리게 제거됨.",
+    "cat_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "신경독성 가능성 (다른 5-니트로이미다졸과 유사)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 지아르디아증 치료를 위한 대안적 치료제로 사용됨. 44 mg/kg PO q24h로 3~6일간 투여. 메트로니다졸보다 작용 지속 시간이 길며, 개에서 반감기는 약 4.4시간임. 구강 내 혐기성 감염(특히 치과 감염)에도 잠재적으로 유용할 수 있음. 신경독성 징후(행동 변화, 안구진탕, 보행 장애) 발생 시 즉시 수의사에게 연락해야 함.",
+    "cat": "고양이에서 지아르디아증 및 Tritrichomonas foetus 감염 치료에 사용됨. 30 mg/kg PO SID로 7~14일간 투여. 고양이의 반감기는 약 8.4시간으로 개보다 길어 약물 축적에 주의 필요. 위장관 저항성 캡슐 제형(구아검 코팅)이 T. foetus 감염 해소에 더 효과적일 수 있음. 수유 중인 어미에게 투여 시 모유 대체제 사용 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 기능 장애, 혈액 이상증, 발작 소인이 있는 개에서 주의 사용. 다른 5-니트로이미다졸과 유사한 신경독성 가능성 있음. 임신 동물에서 사용 시 위험-이익 평가 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간 기능 장애, 혈액 이상증, 발작 소인이 있는 고양이에서 주의 사용. 반감기가 개보다 길어 약물 축적 위험이 더 높을 수 있음. 수유 중인 어미에게 투여 시 모유 대체제 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C-25°C, 68°F-77°F)에서 빛을 차단하여 보관. 경구 현탁액은 실온에서 7일간 안정적.",
+    "forms": [
+      "Tinidazole Tablets (scored) 250 mg — Tindamax, generic (Rx)",
+      "Tinidazole Tablets (scored) 500 mg — Tindamax, generic (Rx)",
+      "경구 현탁액 67 mg/mL (조제 가능, 체리 시럽 사용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "티니다졸은 메트로니다졸과 유사한 5-니트로이미다졸 계열 항원충/항균제로, 주로 소동물의 지아르디아증 대안 치료제로 사용됨. 수의학적 허가 제품은 없으며 오프라벨로 사용됨. 개에서 반감기 약 4.4시간, 고양이에서 약 8.4시간으로 메트로니다졸보다 작용 지속 시간이 길음. 주요 이상반응은 GI 관련(구토, 식욕부진, 설사)이며, 다른 5-니트로이미다졸과 유사한 신경독성 가능성이 있음. 식용 동물에서의 사용은 금지됨.",
+    "indications": "【허가 외 사용】 ▸개: 지아르디아증 (44 mg/kg PO q24h, 3~6일) ▸고양이: 지아르디아증 (30 mg/kg PO SID, 7~10일), Tritrichomonas foetus 감염 (30 mg/kg PO SID, 14일) ▸잠재적 적응증: 혐기성 감염(특히 구강/치과 감염), 트리코모나스증, 아메바증, 발란티디아증 (동물에서 효능 데이터 부족) ▸인간 FDA 허가: 장외/장내 아메바증, 지아르디아증, 트리코모나스증",
+    "client_info": "【보호자 안내사항】 ① 이 약은 반드시 음식과 함께 투여하십시오. ② 이 약을 투여하는 동안 동물이 알코올에 접근하지 못하도록 하십시오. ③ 구토, 식욕 저하, 설사 등 소화기 증상이 심하거나 지속되면 수의사에게 연락하십시오. ④ 행동 변화, 눈이 좌우로 움직이는 증상(안구진탕), 경련, 걷거나 계단 오르기 어려움 등의 증상이 나타나면 즉시 수의사에게 연락하십시오. 이는 약물 독성의 징후일 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (detailed parameters)",
+      "Renal dose adjustment",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "T_max data",
+      "Onset of action data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr.mean",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/47.jsonl",
+    "extracted_at": "2026-03-11T03:46:17.841897+00:00",
+    "reviewer": null
+  }
+}
