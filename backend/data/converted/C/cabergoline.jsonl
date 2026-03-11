@@ -1,0 +1,580 @@
+{
+  "id": "cabergoline",
+  "drug_identity": {
+    "name_ko": "카베르골린",
+    "name_en": "Cabergoline",
+    "active_ingredient": "Cabergoline",
+    "brand_names": [
+      "Dostinex",
+      "Galastop",
+      "Cabaser",
+      "Actualene",
+      "Sostilar",
+      "Finilac",
+      "Kelactin"
+    ],
+    "allergy_class": "ergot derivative",
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 허가 제품 없음. 모든 동물 적응증은 extra-label 사용임. 유럽/영국에서는 수의용 경구 용액(50 µg/mL) 및 주사제(Galastop Injectable)가 일부 국가에서 허가됨.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.22,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 가수분해(hydrolysis)를 통해 광범위하게 대사됨. CYP 관련 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개와 고양이에서 일반적으로 사용되는 용량에 대한 약동학 데이터는 보고되지 않음. 인체 데이터: 경구 투여 후 흡수되나 절대 생체이용률 불명. 혈장 단백 결합률 약 40%. 분변(≈60%) 및 신장(≈22%) 경로로 배설. 중증 간부전 시 Cmax 및 AUC 현저히 증가. 신기능 장애는 배설 특성에 유의한 영향을 미치지 않는 것으로 보임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개/고양이 특이적 수의 PK 데이터 없음; 인체 데이터 및 임상 보고 기반. 간 대사 약물로 간 부담 높음. 신장 배설 22%로 신장 부담 낮음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "dopamine agonist",
+          "D2 receptor",
+          "lethargy",
+          "GnRH secretion"
+        ],
+        "index": 1,
+        "evidence": "도파민 D2 수용체 작용제로 중추신경계에 작용. 기면(lethargy) 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "postural hypotension"
+        ],
+        "index": 1,
+        "evidence": "저혈압 효과가 보고됨(주로 인체 데이터). 혈압 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal elimination 22%"
+        ],
+        "index": 1,
+        "evidence": "신장 배설 약 22%. 신기능 장애 시 배설 특성에 유의한 변화 없는 것으로 보고됨."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "hydrolysis",
+          "hepatic insufficiency",
+          "Cmax increased",
+          "AUC increased"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 중증 간부전 시 Cmax 및 AUC 현저히 증가. 간질환 환자에서 주의 사용 권장."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "syncope",
+          "cardiovascular monitoring"
+        ],
+        "index": 1,
+        "evidence": "저혈압 및 실신 가능성. 과다복용 시 심혈관 모니터링 권장."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "dopamine agonist",
+          "D2 receptor",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "도파민 D2 수용체 작용제로 중추신경계에 작용. 기면 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "저혈압 효과 가능성(주로 인체 데이터 기반)."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal elimination 22%"
+        ],
+        "index": 1,
+        "evidence": "신장 배설 약 22%. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "hydrolysis",
+          "hepatic insufficiency"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 중증 간부전 시 노출 증가. 간질환 고양이에서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "syncope"
+        ],
+        "index": 1,
+        "evidence": "저혈압 및 실신 가능성. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 60.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 40,
+    "evidence": "인체 데이터: 반감기 약 60시간으로 추정. 약리학적 작용 지속시간 48시간 이상. 절대 생체이용률 불명. 혈장 단백 결합률 40%. 개/고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: contraindicated/avoid→3, moderate→2, minor→1. 명시된 상호작용만 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Butyrophenones (e.g., azaperone, haloperidol)",
+      "severity": 3,
+      "keywords": [
+        "D2 antagonist",
+        "reduced efficacy",
+        "dopamine antagonism"
+      ],
+      "evidence": "Dopamine (D2) antagonists may reduce the efficacy of both drugs. Concomitant use should be avoided."
+    },
+    {
+      "drug": "Hypotensive Drugs (e.g., amlodipine, enalapril, telmisartan)",
+      "severity": 3,
+      "keywords": [
+        "additive hypotension",
+        "syncope"
+      ],
+      "evidence": "Cabergoline may have hypotensive effects; concomitant use with other hypotensive drugs may cause additive hypotension. Avoid concomitant use."
+    },
+    {
+      "drug": "Macrolide Antibiotics (e.g., clarithromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased cabergoline concentration",
+        "drug level elevation"
+      ],
+      "evidence": "Macrolide antibiotics may elevate cabergoline plasma concentrations. Monitor for increased adverse effects."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 3,
+      "keywords": [
+        "D2 antagonist",
+        "reduced efficacy",
+        "dopamine antagonism"
+      ],
+      "evidence": "Metoclopramide (dopamine antagonist) may reduce the efficacy of both drugs. Concomitant use should be avoided."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine, chlorpromazine)",
+      "severity": 3,
+      "keywords": [
+        "D2 antagonist",
+        "reduced efficacy",
+        "dopamine antagonism"
+      ],
+      "evidence": "Phenothiazines (dopamine D2 antagonists) may reduce the efficacy of both drugs. Concomitant use should be avoided."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "increased prolactin",
+        "reduced cabergoline efficacy"
+      ],
+      "evidence": "Reserpine may increase prolactin concentrations; cabergoline doses may need to be increased."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 12.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "발정 유도 (Estrus induction) - 일반적 권장",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "전발정기 시작 후 2~8일까지 또는 14~42일간 투여. 전발정기는 6~30일 내 발생.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, estrus induction, option a)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "발정 유도 (Estrus induction) - 저용량",
+          "value": "0.6",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "전발정기 첫 징후 후 2일째까지 또는 징후 없을 시 42일까지. 81%(27마리 중 22마리)에서 4~48일 사이 전발정기 발생.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, estrus induction, option b)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "가성임신/수유 억제 (Pseudocyesis/suppression of lactation)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 상태 중증도에 따라 4~6일 연속 투여. 증상 미해소 또는 재발 시 반복 가능.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, pseudocyesis, option a)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "자궁축농증 보조 치료 (Adjunctive treatment of pyometra) - cloprostenol 병용",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "cloprostenol 1 µg/kg SC와 병용, 7일간. 반응 없을 시 cloprostenol(카베르골린 없이) 추가 7일 지속.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, pyometra adjunctive)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "임신 중절 (Abortifacient) - 임신 35~45일",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임신 35~45일: 7일간 투여(cloprostenol 1 µg/kg SC 1일, 3일째 병용). 8일째까지 임신 미종결 시 12일까지 동일 용량 지속.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, abortifacient, option a)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "임신 중절 (Abortifacient) - 임신 22~23일",
+          "value": "10",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임신 22~23일: 10일간 투여.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, abortifacient, option b)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "유선 종양 수술 전 처치 (Presurgical treatment mammary tumors)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 5~7일 전 투여.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, presurgical mammary tumors)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "임신 중절 (Abortifacient) - cloprostenol 병용",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "교미 후 30일째: cloprostenol 5 µg/kg SC q48h와 병용, 7~13일간.",
+          "evidence": "Extra-label. Plumb's Dosages section (cat, abortifacient, option a)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "임신 중절 (Abortifacient) - alfaprostol 병용 또는 단독",
+          "value": "15",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임신 25~42일 시작. alfaprostol 10 µg/kg SC 격일 병용 또는 단독 투여.",
+          "evidence": "Extra-label. Plumb's Dosages section (cat, abortifacient, option b)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "가성임신/수유 억제 (Pseudocyesis/suppression of lactation)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label. Plumb's Dosages section (cat, pseudocyesis/lactation suppression)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "유선 종양 수술 전 처치 (Presurgical treatment mammary tumors)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 5~7일 전 투여.",
+          "evidence": "Extra-label. Plumb's Dosages section (cat, presurgical mammary tumors)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "신기능 장애는 카베르골린의 배설 특성에 유의한 영향을 미치지 않는 것으로 보고됨(인체 데이터). 수의 특이적 용량 조정 지침 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간부전 시 Cmax 및 AUC 현저히 증가. 간질환 환자에서 주의하여 사용. 구체적 용량 조정 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "에르고트 유도체 과민반응 (Hypersensitivity to ergot derivatives)",
+      "match_terms": [
+        "ergot allergy",
+        "bromocriptine hypersensitivity",
+        "ergot derivative sensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (Pregnancy) - 임신 유지 목적",
+      "match_terms": [
+        "pregnancy",
+        "gravid",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환 (Hepatic disease)",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic insufficiency",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "조절되지 않는 고혈압 (Uncontrolled hypertension)",
+      "match_terms": [
+        "hypertension",
+        "uncontrolled hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중 (Nursing dam)",
+      "match_terms": [
+        "lactation",
+        "nursing",
+        "breastfeeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "에르고트 알칼로이드 유래 도파민 D2 수용체 작용제. 뇌하수체 전엽에서 프로락틴 분비를 직접 억제. GnRH 분비에 대한 도파민 작용제 효과를 통해 발정 유도.",
+    "common_extra_effects": [
+      "기면(lethargy)",
+      "식욕 감소",
+      "구토(특히 초기 투여 시)",
+      "저혈압",
+      "프로락틴 억제로 인한 황체 퇴행(임신 중 자연 유산 가능)"
+    ],
+    "dog_mechanism": "도파민 D2 수용체 작용을 통해 프로락틴 분비 억제. 발정 유도, 가성임신 치료, 자궁축농증 보조 치료, 임신 중절에 사용.",
+    "dog_extra_effects": [
+      "구토(초기 투여 후 가장 흔함)",
+      "기면",
+      "식욕 감소",
+      "14일 이상 투여 시 털 색깔 또는 질감 변화(가역적)"
+    ],
+    "cat_mechanism": "도파민 D2 수용체 작용을 통해 프로락틴 분비 억제. 임신 중절, 가성임신 치료, 유선 종양 수술 전 처치에 사용.",
+    "cat_extra_effects": [
+      "구토",
+      "기면",
+      "식욕 감소"
+    ]
+  },
+  "species_notes": {
+    "dog": "미국 내 수의용 허가 제품 없음; 모든 적응증은 extra-label 사용. 소형견 및 고양이에서 정확한 용량 투여를 위해 조제가 필요할 수 있음. 브로모크립틴에 비해 D2 수용체 특이성이 높고 구토 발생 빈도가 낮음. 발정 유도 시 이전 발정 주기 후 최소 4개월 대기 권장(자궁 회복). 14일 이상 투여 시 털 변화 가능(가역적). 음식과 함께 투여 시 구토 감소.",
+    "cat": "미국 내 수의용 허가 제품 없음; 모든 적응증은 extra-label 사용. 정확한 용량 투여를 위해 조제 필요. 임신 중절 시 cloprostenol 또는 alfaprostol과 병용 사용. 수유 중인 어미에게 사용 금지(프로락틴 억제로 수유 중단). 음식과 함께 투여 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간질환 시 주의. 임신 유지 목적이 아닌 경우 임신 중 사용 금지. 항고혈압제 병용 시 저혈압 주의. 발정 유도 시 이전 주기 후 4개월 대기 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간질환 시 주의. 임신 유지 목적이 아닌 경우 임신 중 사용 금지. 수유 중 사용 금지. 정확한 용량 투여를 위한 조제 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "시판 정제: 실온(20°C-25°C [68°F-77°F]) 보관. 수의용 경구 용액(EU/UK): 25°C 이하, 차광 보관. 냉장 보관 금지. 개봉 후 28일 이내 사용. 수용성 현탁액은 불안정하므로 즉시 사용하거나 지질 기반 제제로 조제 권장.",
+    "forms": [
+      "경구 정제 0.5 mg (500 µg) - 인체용 (미국)",
+      "경구 용액 50 µg/mL - 수의용 (EU/UK)",
+      "주사제 Galastop Injectable - 일부 국가"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "카베르골린은 합성 에르고트 유도체 도파민 D2 수용체 작용제로, 프로락틴 분비를 억제합니다. 개와 고양이에서 발정 유도, 가성임신 치료, 자궁축농증 보조 치료, 임신 중절, 유선 종양 수술 전 처치 등에 extra-label로 사용됩니다. 미국 내 수의용 허가 제품이 없어 조제가 필요한 경우가 많습니다. 브로모크립틴에 비해 부작용이 적고 내약성이 우수합니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비 착용이 필요합니다.",
+    "indications": "개/고양이: 발정 유도 및 동기화, 원발성/속발성 무발정 치료, 가성임신 치료, 수유 억제, 자궁축농증 보조 치료, 유선 종양 수술 전 처치, 임신 중절(임신 후반기), 수술 후 공격성/불안 치료(황체기 중 수술 시). 조류(앵무류): 지속적 산란 보조 치료.",
+    "client_info": "이 약은 구토를 예방하기 위해 반드시 음식과 함께 투여하세요. 개와 고양이에서 일반적으로 잘 견디는 약물입니다. 이 약은 임신에 영향을 줄 수 있는 위험한 약물로 분류되어 있습니다. 임신 중이거나 임신을 계획 중인 여성, 수유 중인 여성은 이 약을 취급할 때 매우 주의해야 합니다. 약을 투여하거나 취급할 때는 반드시 일회용 장갑을 착용하고, 분쇄된 정제의 분진을 흡입하지 않도록 주의하세요. 이 약은 NIOSH(미국 산업안전보건연구원)에서 위험 약물로 지정하였습니다. 개인 보호 장비 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none stated)",
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability (absolute)",
+      "Onset of action (minutes)",
+      "T_max (hours)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.extra_information (dog/cat specific PK)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/51.jsonl",
+    "extracted_at": "2026-03-11T05:12:25.943672+00:00",
+    "reviewer": null
+  }
+}

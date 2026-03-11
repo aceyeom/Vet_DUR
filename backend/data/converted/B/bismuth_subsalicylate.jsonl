@@ -1,0 +1,589 @@
+{
+  "id": "bismuth_subsalicylate",
+  "drug_identity": {
+    "name_ko": "비스무트 서브살리실레이트",
+    "name_en": "Bismuth Subsalicylate",
+    "active_ingredient": "Bismuth Subsalicylate",
+    "brand_names": [
+      "Pepto-Bismol",
+      "Kaopectate",
+      "Bismu-kote",
+      "Bismukote",
+      "Bismupaste",
+      "Bismatrol",
+      "Bismed",
+      "Bismusal",
+      "Bismylate",
+      "Bisval",
+      "Corrective",
+      "Equi-Phar",
+      "Gastrocote",
+      "Jatrox",
+      "Kalbeten",
+      "Katulcin-R",
+      "Oral-Pro Biz-Cote",
+      "PalaBIS",
+      "Peptic Relief",
+      "Pink Biscoat",
+      "Pink Bismuth Rose",
+      "Ulcolind Wismut"
+    ],
+    "allergy_class": "salicylate",
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 사용되는 모든 용도는 엑스트라-라벨(허가 외 사용)이며, FDA 승인된 수의용 제품은 없음",
+    "dosage_form": [
+      "Susp",
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 17.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 262,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "살리실레이트 성분은 간에서 살리실산으로 대사됨. 비스무트 성분의 흡수는 무시할 수 있는 수준. 살리실산, 결합형 살리실레이트 대사체, 흡수된 비스무트는 모두 신장으로 배설됨."
+    },
+    "extra_information": "수의학 분야에서의 약동학 정보는 없음. 인체 데이터에 의하면 비스무트 흡수는 무시할 수 있는 수준이며, 살리실레이트 성분은 빠르고 완전하게 흡수됨. 살리실레이트는 혈장 단백질에 높은 비율로 결합됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학 종별 PK 데이터 없음; 인체 데이터 및 독성 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "weakness"
+        ],
+        "index": 1,
+        "evidence": "고용량 비스무트 제품은 신경독성을 유발할 수 있으며, 개에서 운동실조, 무기력, 쇠약이 보고됨"
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bleeding risk",
+          "antiplatelet",
+          "salicylate"
+        ],
+        "index": 1,
+        "evidence": "살리실레이트 성분으로 인한 출혈 위험 증가, 항혈소판 효과 가능"
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal pigmentation",
+          "nephrotoxic"
+        ],
+        "index": 1,
+        "evidence": "살리실산 및 비스무트는 신장으로 배설됨. 만성 사용 시 신장 색소침착 보고(붉은털원숭이 증례). ACE 억제제와 병용 시 신독성 증가 가능"
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "salicylate"
+        ],
+        "index": 1,
+        "evidence": "살리실레이트는 간에서 대사됨"
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음"
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "고용량 비스무트 제품은 신경독성을 유발할 수 있으며, 고양이에서 무기력이 보고됨"
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bleeding risk",
+          "salicylate sensitivity",
+          "antiplatelet"
+        ],
+        "index": 1,
+        "evidence": "고양이는 살리실레이트에 민감하여 출혈 위험이 더 높음. 주의하여 사용 권고"
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "salicylate toxicity",
+          "caution in cats"
+        ],
+        "index": 1,
+        "evidence": "고양이는 살리실레이트 대사 능력이 제한적이어서 신독성 위험이 더 높음. 3일 이상 사용 금지 권고"
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "salicylate",
+          "cat sensitivity"
+        ],
+        "index": 1,
+        "evidence": "고양이는 살리실레이트 글루쿠론산 포합 능력이 부족하여 간 대사 부담이 증가할 수 있음"
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음"
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "수의학 분야의 약동학 정보 없음. 인체 데이터에서 살리실레이트는 빠르고 완전하게 흡수되며 혈장 단백질에 높은 비율로 결합됨. 비스무트 흡수는 무시할 수 있는 수준."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "salicylate accumulation",
+        "GI ulceration"
+      ],
+      "evidence": "Bismuth subsalicylate contains salicylate; concomitant use with aspirin may increase salicylate serum concentrations and increase risk for adverse effects including GI ulceration."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "reduced efficacy"
+      ],
+      "evidence": "Salicylates may enhance the nephrotoxic effects and reduce the effectiveness of ACE inhibitors. Monitor appropriately."
+    },
+    {
+      "drug": "Anticoagulants (heparin, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Concomitant use may increase bleeding risk."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet",
+        "bleeding risk"
+      ],
+      "evidence": "May have additive antiplatelet effects, increasing bleeding risk."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "increased clearance",
+        "GI bleeding",
+        "reduced salicylate levels"
+      ],
+      "evidence": "Corticosteroids may increase the clearance of salicylates, decrease salicylate serum concentrations, and increase GI bleeding risk."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic effect",
+        "salicylate accumulation"
+      ],
+      "evidence": "Salicylates may decrease the diuretic effect of loop diuretics. Loop diuretics may increase serum salicylate concentrations."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "protein displacement",
+        "methotrexate toxicity"
+      ],
+      "evidence": "Aspirin/salicylates may displace methotrexate from plasma proteins, increasing the risk for methotrexate toxicity."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "GI ulceration"
+      ],
+      "evidence": "Concomitant administration with NSAIDs may increase the risk of bleeding."
+    },
+    {
+      "drug": "Tetracycline Antibiotics (doxycycline)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Bismuth-containing products can decrease the absorption of orally administered tetracycline products. Separate by at least 2 hours; administer tetracycline first, or give tetracycline 6 hours after bismuth."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 설사 또는 위장관 코팅제 (엑스트라-라벨)",
+          "value": "0.25 - 2",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 35.0,
+          "duration_note": "현탁액 17.5 mg/mL 기준; 하루 3~4회 투여",
+          "evidence": "Plumb's: 0.25–2 mL/kg (4.4–35 mg/kg) PO 하루 3~4회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중 요법 (엑스트라-라벨) - 프로토콜 a",
+          "value": "0.22",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간; 메트로니다졸 15.4 mg/kg + 아목시실린 11 mg/kg PO q8h 병용",
+          "evidence": "Plumb's: 0.22 mL/kg (3.85 mg/kg) PO q4~6h, 3주"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "헬리코박터 위염 삼중 요법 (엑스트라-라벨) - 프로토콜 b (262 mg 정제)",
+          "value": "0.25 - 2",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주간; 체중별: <5 kg=0.25정, 5~9.9 kg=0.5정, 10~24.9 kg=1정, >25 kg=2정; 메트로니다졸 10 mg/kg + 아목시실린 15 mg/kg PO q12h 병용",
+          "evidence": "Plumb's: 262 mg 정제 체중별 용량 q12h, 2주"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중 요법 (엑스트라-라벨) - 프로토콜 c",
+          "value": "0.22",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간; 메트로니다졸 11~15 mg/kg + 아목시실린 22 mg/kg PO q12h 병용",
+          "evidence": "Plumb's: 0.22 mL/kg (3.85 mg/kg) PO q6~8h, 3주"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "설사 (엑스트라-라벨)",
+          "value": "0.5 - 1",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 17.5,
+          "duration_note": "3일 이상 투여 금지; 고양이에서 주의하여 사용",
+          "evidence": "Plumb's: 0.5–1 mL/kg (8.8–17.5 mg/kg) PO q12h, 최대 3일"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중 요법 (엑스트라-라벨)",
+          "value": "0.22",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간; 메트로니다졸 11~15.4 mg/kg PO q8~12h + 아목시실린 11~22 mg/kg PO q8h 병용",
+          "evidence": "Plumb's: 0.22 mL/kg (3.85 mg/kg) PO q4~8h, 3주"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "헬리코박터 위염 사중 요법 (엑스트라-라벨) - 262 mg 정제",
+          "value": "0.25",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주간; ±H2 차단제(파모티딘) 또는 오메프라졸 + 메트로니다졸 10 mg/kg PO BID + 아목시실린 10~20 mg/kg PO TID 병용",
+          "evidence": "Plumb's: 1/4정/고양이 PO BID, 2주"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 살리실산 및 비스무트가 신장으로 배설되므로 신장 질환 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "살리실레이트/아스피린 과민증",
+      "match_terms": [
+        "aspirin hypersensitivity",
+        "salicylate allergy",
+        "NSAID allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 장애",
+      "match_terms": [
+        "bleeding disorder",
+        "coagulopathy",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "위장관 궤양",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "peptic ulcer"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이에서의 사용",
+      "match_terms": [
+        "feline",
+        "cat"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "소장에서 비스무트 카보네이트와 살리실레이트로 분해됨. 비스무트 성분은 위장관 보호, 항내독소, 약한 항균 작용을 가짐. 살리실레이트 성분은 프로스타글란딘 합성 억제를 통해 분비성 설사의 임상 증상을 감소시킴.",
+    "common_extra_effects": [
+      "변색(회흑색 또는 녹흑색 변)",
+      "변비/분변 매복",
+      "혀 변색",
+      "살리실레이트 독성(고용량)",
+      "신경독성(고용량 비스무트)",
+      "잠재적 최기형성(살리실레이트)"
+    ],
+    "dog_mechanism": "개에서 급성 설사 및 헬리코박터 위염 치료에 사용됨. 위장관 보호 및 약한 항균 효과.",
+    "dog_extra_effects": [
+      "설사",
+      "무기력",
+      "구토",
+      "운동실조",
+      "쇠약",
+      "헐떡임(과호흡)"
+    ],
+    "cat_mechanism": "고양이는 살리실레이트 대사 능력이 제한적이어서 독성 위험이 높음. 주의하여 사용하며 3일 이상 투여 금지.",
+    "cat_extra_effects": [
+      "설사",
+      "무기력",
+      "식욕부진",
+      "살리실레이트 독성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 급성 설사 및 헬리코박터 위염 삼중 요법의 구성 요소로 사용됨. 고용량에서 신경독성(운동실조, 쇠약, 헐떡임) 가능. 변이 회흑색 또는 녹흑색으로 변할 수 있으며 흑색변과 혼동하지 않도록 주의. 비스무트는 방사선 불투과성이므로 위장관 방사선 검사를 방해할 수 있음.",
+    "cat": "고양이는 살리실레이트에 민감하므로 매우 주의하여 사용해야 함. 3일 이상 투여하지 않도록 권고. 헬리코박터 위염 치료에 삼중 또는 사중 요법의 일부로 사용 가능. 살리실레이트 독성 징후(무기력, 식욕부진, 설사)를 면밀히 모니터링해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "고용량에서 살리실레이트 독성 및 신경독성 가능. 출혈 장애 또는 위장관 궤양이 있는 환자에서 주의. 변 색깔 변화(회흑색)는 정상적인 반응이나 흑색변과 구별 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 살리실레이트 대사 능력이 제한적이어서 독성 위험이 높음. 가능하면 사용을 피하거나 최소 용량으로 3일 이내만 사용. 살리실레이트 독성 징후를 면밀히 모니터링."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 보관. 실온(15°C-30°C) 보관; 냉동 금지. 냉장 보관 시 기호성 향상 가능.",
+    "forms": [
+      "비스무트 서브살리실레이트 페이스트: 5% (50 mg/mL), 10% (100 mg/mL), 20% (200 mg/mL)",
+      "비스무트 서브살리실레이트 경구 현탁액: 1.75% (17.5 mg/mL; 262 mg/15 mL)",
+      "비스무트 서브살리실레이트 정제: 262 mg/정",
+      "인체용 액제/현탁액: 87 mg/5 mL, 130 mg/15 mL, 262 mg/15 mL, 524 mg/15 mL, 525 mg/15 mL",
+      "인체용 정제 및 캡릿: 262 mg (일반형 및 씹는 정제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "비스무트 서브살리실레이트는 설사 치료, 위장관 보호제, 헬리코박터 위염 삼중/사중 요법의 구성 요소로 사용됨. 고용량에서 살리실레이트 독성 위험이 있으며, 고양이에서는 특히 주의가 필요함. 변이 회흑색 또는 녹흑색으로 변할 수 있으며, 비스무트는 방사선 불투과성이므로 위장관 방사선 검사를 방해할 수 있음. FDA 승인된 수의용 제품은 없으며 모든 수의학적 사용은 엑스트라-라벨임.",
+    "indications": "수의학적 적응증(모두 엑스트라-라벨): 개와 고양이의 급성 설사, 위장관 보호, 헬리코박터 위염 삼중/사중 요법(메트로니다졸, 아목시실린과 병용). 인체 적응증: 소화불량, 복통, 가스 통증, 여행자 설사 치료 및 예방.",
+    "client_info": "고양이에게는 살리실레이트(아스피린 유사 성분)에 민감할 수 있으므로 주의하여 사용하세요. 변비를 유발할 수 있습니다. 이 약을 투여한 후 2시간 이내에는 수의사의 지시 없이 다른 약을 투여하지 마세요. 현탁액은 잘 흔들어 사용하고, 기호성 향상을 위해 냉장 보관하세요. 우유와 혼합하지 마세요. 변이 회흑색 또는 녹흑색으로 변할 수 있으나 반드시 문제를 의미하지는 않습니다. 동물이 쉽게 피로해하거나 변이 끈적하고 검게 변하면 수의사에게 연락하세요. 혀 변색이 나타날 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "Renal dose adjustment recommendations",
+      "Hepatic dose adjustment recommendations",
+      "CYP enzyme interactions",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/50.jsonl",
+    "extracted_at": "2026-03-11T04:48:54.743215+00:00",
+    "reviewer": null
+  }
+}

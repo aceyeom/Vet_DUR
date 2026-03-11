@@ -1,0 +1,481 @@
+{
+  "id": "bleomycin",
+  "drug_identity": {
+    "name_ko": "블레오마이신",
+    "name_en": "Bleomycin",
+    "active_ingredient": "Bleomycin sulfate",
+    "brand_names": [
+      "Blenoxane",
+      "Bileco",
+      "Blanoxan",
+      "Blenamax",
+      "Bleo",
+      "Bleo-S",
+      "Bleo-cell",
+      "Bleocin",
+      "Bleolem",
+      "Blio",
+      "Blocamicina",
+      "Bonar",
+      "Oil Bleo",
+      "Tecnomicina"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이에서 항종양 목적으로 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 15,
+        "unit": "IU"
+      },
+      {
+        "value": 30,
+        "unit": "IU"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.65,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "블레오마이신은 주로 신장을 통해 활성 약물 형태로 배설된다(사람에서 60~70%). 블레오마이신 가수분해효소(bleomycin hydrolase)에 의해 불활성화된다. CYP 관련 대사 정보는 출처에 기재되지 않음."
+    },
+    "extra_information": "수의학 종에서의 약동학 정보는 확인되지 않음. 사람 데이터에 의하면 GI관에서 흡수가 거의 되지 않아 비경구 투여가 필요하며, 폐·신장·피부·림프계·복막에 주로 분포한다. IM 또는 SC 투여 후 30~60분 내 최고 혈중 농도에 도달하며, 정상 신기능 환자에서 반감기는 2~4시간이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학 종별 PK 데이터 없음; 사람 데이터 및 부작용 기술 기반. 폐 독성이 주요 지연 독성이나 폐는 스키마 장기 목록에 없어 관련 영향을 kidney/liver/blood 항목에 반영함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신경계 독성에 대한 직접적 언급 없음. 점수 최소값 부여."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "leukopenia",
+          "hemoglobin decrease"
+        ],
+        "index": 1,
+        "evidence": "혈소판감소증, 백혈구감소증, 헤모글로빈 경미한 감소가 가능하다고 기술됨. 골수독성은 다른 항종양제에 비해 드물지만 혈액 독성 가능성 있음."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal toxicity",
+          "60-70% excreted in urine",
+          "renal impairment dose reduction",
+          "nephrotoxic"
+        ],
+        "index": 2,
+        "evidence": "신독성 가능성 명시; 신기능 저하 시 용량 감량 권고; 사람에서 60~70%가 신장으로 배설됨; 신독성 약물과의 병용 시 신독성 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": 1,
+        "evidence": "간독성 가능성이 언급되었으나 주요 독성으로 강조되지는 않음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 독성에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "leukopenia",
+          "hemoglobin decrease"
+        ],
+        "index": 1,
+        "evidence": "혈소판감소증, 백혈구감소증, 헤모글로빈 경미한 감소 가능성. 고양이 특이 데이터 없으나 동일 약물 기전 적용."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal toxicity",
+          "60-70% excreted in urine",
+          "renal impairment dose reduction"
+        ],
+        "index": 2,
+        "evidence": "신독성 가능성 및 신기능 저하 시 용량 감량 권고. 고양이 특이 데이터 없으나 사람 데이터 기반 적용."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": 1,
+        "evidence": "간독성 가능성 언급. 고양이 특이 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 4.0,
+      "mean": 3.0,
+      "species": "human"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": null,
+    "evidence": "사람 데이터: IM/SC 투여 후 30~60분(0.5~1시간) 내 최고 혈중 농도 도달. 정상 신기능에서 반감기 2~4시간. GI관에서 흡수 거의 없음(경구 생체이용률 ≈0%). 수의학 종 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 모든 상호작용은 사람 또는 동물에서 보고되었거나 이론적으로 제시된 것임.",
+  "drug_interactions": [
+    {
+      "drug": "General Anesthetics",
+      "severity": 3,
+      "keywords": [
+        "pulmonary fibrosis",
+        "oxygen sensitization",
+        "pulmonary toxicity"
+      ],
+      "evidence": "Bleomycin sensitizes lung tissue to oxygen; use of general anesthetics in previously treated patients can cause rapid deterioration of pulmonary function and postoperative pulmonary fibrosis."
+    },
+    {
+      "drug": "Chemotherapy agents / Radiation Therapy / Immunosuppressants",
+      "severity": 2,
+      "keywords": [
+        "hematologic toxicity",
+        "mucosal toxicity",
+        "pulmonary toxicity"
+      ],
+      "evidence": "Prior or concomitant chemotherapy, radiation therapy, or immunosuppressants can lead to increased hematologic, mucosal, and pulmonary toxicities."
+    },
+    {
+      "drug": "Granulocyte Colony-Stimulating Factors (e.g., filgrastim)",
+      "severity": 2,
+      "keywords": [
+        "pulmonary toxicity"
+      ],
+      "evidence": "G-CSF agents can increase the risk for pulmonary toxicity when used with bleomycin."
+    },
+    {
+      "drug": "Nephrotoxic Agents (e.g., aminoglycosides, amphotericin B, cisplatin, iohexol)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concomitant use with nephrotoxic agents can increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Vaccines (Live and Inactivated)",
+      "severity": 2,
+      "keywords": [
+        "vaccine efficacy reduction",
+        "adverse vaccine effects"
+      ],
+      "evidence": "Bleomycin may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 체표면적 기준",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 누적 용량 125~200 mg/m²를 초과하지 않도록 함. 일부 프로토콜은 수일간 매일 투여 후 주 1회로 감량; 일부는 처음부터 주 1회 투여. 단위: 10 mg/m² (mg/kg 아님)",
+          "evidence": "Plumb's: 10 mg/m² (NOT mg/kg), IV, SC, or intralesionally. Extra-label use."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항종양제 (오프라벨) - 체중 기준",
+          "value": "0.3 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "총 누적 용량 125~200 mg/m²를 초과하지 않도록 함. 1 unit = 1 mg. 일부 프로토콜은 수일간 매일 투여 후 주 1회로 감량.",
+          "evidence": "Plumb's: 0.3–0.5 mg/kg IV, SC, or intralesionally. Extra-label use. At 0.5 units/kg in dogs, adverse effects were infrequent and mostly GI related."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 체표면적 기준",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 누적 용량 125~200 mg/m²를 초과하지 않도록 함. 단위: 10 mg/m² (mg/kg 아님). 소동물(개·고양이) 공통 용량으로 기재됨.",
+          "evidence": "Plumb's: Small animals (dogs and cats): 10 mg/m² (NOT mg/kg) OR 0.3–0.5 mg/kg, IV, SC, or intralesionally. Extra-label use."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항종양제 (오프라벨) - 체중 기준",
+          "value": "0.3 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "총 누적 용량 125~200 mg/m²를 초과하지 않도록 함. 1 unit = 1 mg.",
+          "evidence": "Plumb's: Small animals (dogs and cats): 0.3–0.5 mg/kg IV, SC, or intralesionally. Extra-label use."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "유의한 신기능 저하 환자에서 용량 감량이 필요할 수 있다고 명시됨. 구체적인 크레아티닌 역치나 감량 비율은 출처에 기재되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간독성 가능성이 언급되었으나 간기능 저하 시 구체적인 용량 조정 지침은 출처에 기재되지 않음. 정기적인 혈청 화학 검사 모니터링 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "이전 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "anaphylaxis",
+        "allergic reaction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 폐질환 또는 이전 치료로 인한 폐 부작용",
+      "match_terms": [
+        "pulmonary disease",
+        "pneumonitis",
+        "pulmonary fibrosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "총 누적 용량 초과 (125~200 mg/m²)",
+      "match_terms": [
+        "cumulative dose",
+        "total dose exceeded"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "블레오마이신은 DNA 결합 부위와 제1철(ferrous) 철 결합 부위를 모두 가진 항생제 항종양제이다. 제1철 이온에서 DNA 가닥의 산소 원자로 전자 수용체 역할을 함으로써 DNA를 절단하고 세포 자멸사(apoptosis)를 유발한다.",
+    "common_extra_effects": [
+      "발열 (급성)",
+      "식욕부진 (급성)",
+      "구토 (급성)",
+      "알레르기 반응/아나필락시스 (급성)",
+      "피부 홍반, 과색소침착, 발진, 압통 (지연성)",
+      "구내염 (지연성)",
+      "폐렴 (지연성)",
+      "폐섬유증 (지연성, 치명적 가능)",
+      "혈소판감소증",
+      "백혈구감소증",
+      "헤모글로빈 경미한 감소",
+      "신독성",
+      "간독성"
+    ],
+    "dog_mechanism": "사람과 동일한 기전으로 추정되나 개에서의 PK 데이터는 없음. 0.5 units/kg 투여 시 부작용은 드물고 대부분 위장관 관련이었음.",
+    "dog_extra_effects": [
+      "위장관 관련 부작용 (0.5 units/kg 투여 시 주로 관찰됨)"
+    ],
+    "cat_mechanism": "사람과 동일한 기전으로 추정되나 고양이에서의 PK 데이터는 없음.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 림프종, 구강 편평세포암종, 기형종, 비기능성 갑상선 종양 치료에 사용되어 왔으나, 최근 연구에서 개 림프종에 대한 단독 요법 효과는 매우 제한적임이 시사됨. 국소 종양(예: 극세포성 법랑모세포종)에 대한 병변 내 투여가 유망할 수 있음. 전신 투여 시 임상 모니터링 필수. 총 누적 용량 125~200 mg/m²를 초과하지 않도록 주의.",
+    "cat": "고양이에서 림프종, 구강 편평세포암종, 기형종, 비기능성 갑상선 종양 치료에 사용되어 왔음. 고양이 특이 PK 데이터 없음. 전신 투여 시 임상 모니터링 필수. 총 누적 용량 125~200 mg/m²를 초과하지 않도록 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "세포독성 약물로 치료 지수가 낮음. 폐독성, 신독성, 간독성, 혈액독성 모니터링 필요. 신기능 저하 시 용량 감량 고려. 임신 동물에서 최기형성 가능성. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "세포독성 약물로 치료 지수가 낮음. 폐독성, 신독성, 간독성, 혈액독성 모니터링 필요. 신기능 저하 시 용량 감량 고려. 임신 동물에서 최기형성 가능성. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미개봉 바이알은 2~8°C(36~46°F)에서 보관. 멸균 생리식염수, 멸균 증류수, 또는 보존제 함유 증류수로 재구성 후 24시간 안정. 5% 포도당 수액으로 희석 시 역가 손실 발생. 0.9% 염화나트륨과 호환 가능.",
+    "forms": [
+      "Bleomycin Sulfate 동결건조 분말 주사제 15 units/vial",
+      "Bleomycin Sulfate 동결건조 분말 주사제 30 units/vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "블레오마이신은 항생제 계열 항종양제로, 개와 고양이에서 림프종·구강 편평세포암종·기형종·비기능성 갑상선 종양 등에 오프라벨로 사용된다. 주요 독성은 급성(발열, 식욕부진, 구토, 알레르기 반응)과 지연성(피부 독성, 구내염, 폐렴, 폐섬유증)으로 구분된다. 폐섬유증은 치명적일 수 있으므로 총 누적 용량(125~200 mg/m²)을 반드시 준수해야 한다. 전신 마취 시 폐독성 위험이 증가하므로 주의가 필요하다. NIOSH 위험 약물로 분류되어 취급 시 적절한 PPE 착용이 필수적이다.",
+    "indications": "개·고양이에서 림프종, 구강 편평세포암종, 기형종, 비기능성 갑상선 종양(오프라벨). 국소 종양에 대한 병변 내 투여(전기천공법 병용 포함) 가능성 있음. 개 극세포성 법랑모세포종에 병변 내 투여 성공 사례 보고됨.",
+    "client_info": "블레오마이신은 항암 화학요법 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 동물이 이 약을 투여받은 날과 그 후 며칠 동안은 모든 체액(소변, 대변, 구토물)과 혈액을 일회용 장갑을 착용한 상태에서만 처리하십시오. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. 블레오마이신은 폐 손상을 포함한 심각한 부작용을 일으킬 수 있으며, 이는 사망으로 이어질 수 있습니다. 동물의 호흡 패턴이나 호흡의 질에 변화(예: 호흡 곤란, 천명음)가 나타나면 즉시 수의사에게 알리십시오. 이 약물은 NIOSH에서 위험 약물로 분류하고 있습니다. 이 약을 취급할 때 개인 보호 장비(PPE) 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "Laboratory Considerations (none stated)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.f_percent (veterinary)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog (veterinary PK data)",
+      "organ_burden_logic.cat (veterinary PK data)",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/50.jsonl",
+    "extracted_at": "2026-03-11T04:50:45.728831+00:00",
+    "reviewer": null
+  }
+}

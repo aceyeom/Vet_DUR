@@ -1,0 +1,980 @@
+{
+  "id": "butorphanol",
+  "drug_identity": {
+    "name_ko": "부토르파놀",
+    "name_en": "Butorphanol",
+    "active_ingredient": "Butorphanol",
+    "brand_names": [
+      "Stadol",
+      "Torbutrol",
+      "Torbugesic"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "kr_vet",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "부토르파놀의 효과는 날록손으로 역전 가능하다고 명시되어 있음. 과다복용 시 IV 날록손 즉시 투여 권장.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.95,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "부토르파놀은 간에서 주로 수산화(hydroxylation), N-탈알킬화(N-dealkylation), 포합(conjugation)에 의해 대사됨. CYP3A 억제제(예: 시메티딘, 에리스로마이신, 이트라코나졸)가 부토르파놀의 대사를 감소시켜 호흡억제 및 무호흡 위험을 증가시킬 수 있다고 명시됨."
+    },
+    "extra_information": "개: IM/SC 투여 후 반감기 약 2.6시간. 고양이: IM/OTM 투여 후 반감기 약 5~6시간. 대사산물은 주로 소변으로 배설(5%만 미변화체로 배설), 11~14%는 담즙을 통해 대변으로 배설됨. 경구 투여 시 완전 흡수되나 초회통과효과로 인해 약 1/6만 전신순환에 도달함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 간: 주요 대사 기관, 간질환 시 사용 금기 명시. 신장: 주요 배설 기관(95% 신장 배설), 신부전 시 주의 명시. 뇌: CNS 억제/흥분 부작용 명시. 심장: 서맥 부작용 명시. 혈액: 혈장단백결합 80%(인체 데이터).",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "excitement",
+          "disorientation",
+          "mydriasis",
+          "head trauma caution",
+          "increased intracranial pressure caution"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, 운동실조, 방향감각 상실, 동공산대 등 CNS 부작용이 보고됨. 두부외상 및 두개내압 상승 환자에서 주의 사용 명시."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "plasma protein binding 80%",
+          "bradycardia",
+          "blood pressure decrease"
+        ],
+        "index": 2,
+        "evidence": "인체 데이터에서 혈장단백결합 약 80%. 서맥 및 혈압 저하 부작용 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination 95%",
+          "renal insufficiency caution",
+          "urine excretion"
+        ],
+        "index": 3,
+        "evidence": "대사산물 및 모약물의 주요 배설 경로가 신장(95%). 심한 신부전 환자에서 주의 사용 명시."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hydroxylation",
+          "N-dealkylation",
+          "liver disease contraindication",
+          "highest concentrations in liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 주로 대사됨(수산화, N-탈알킬화, 포합). 간질환 병력 또는 심한 간기능 장애 시 사용 금기 명시. 간에서 모약물 및 대사산물 농도가 가장 높음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased heart rate",
+          "decreased cardiac output",
+          "parasympathetic tone"
+        ],
+        "index": 5,
+        "evidence": "부교감신경 긴장도 증가로 인한 심박수 감소 및 서맥 보고됨. 심혈관 질환 개에서 심박출량 감소 및 판막 역류 발생 주의."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "excitement",
+          "disorientation",
+          "mydriasis"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정, 운동실조, 방향감각 상실, 동공산대 등 CNS 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "plasma protein binding 80%",
+          "bradycardia"
+        ],
+        "index": 2,
+        "evidence": "인체 데이터에서 혈장단백결합 약 80%. 서맥 부작용 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination 95%",
+          "renal insufficiency caution"
+        ],
+        "index": 3,
+        "evidence": "주요 배설 경로가 신장. 심한 신부전 환자에서 주의 사용 명시."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hydroxylation",
+          "liver disease contraindication",
+          "highest concentrations in liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 주로 대사됨. 간질환 병력 또는 심한 간기능 장애 시 사용 금기 명시."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased heart rate",
+          "decreased blood pressure"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 서맥 및 혈압 저하 부작용 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.6,
+      "max": 6.0,
+      "mean": 2.6,
+      "species": "dog"
+    },
+    "f_percent": 17,
+    "protein_binding_percent": 80,
+    "evidence": "개: IM/SC 반감기 약 2.6시간. 고양이: IM/OTM 반감기 약 5~6시간. 경구 생체이용률 약 1/6(≈17%), 초회통과효과로 인함. 혈장단백결합 약 80%(인체 데이터). 말: IV 투여 후 작용 발현 약 3분, 최대 진통 효과 15~30분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 상호작용은 중증도 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-2 Receptor Agonists (dexmedetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "increased sedation"
+      ],
+      "evidence": "병용 시 서맥 위험 증가. 진통 및 진정 효과는 상승하나 심박수 감소 주의."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Anticholinergics (atropine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "urinary retention",
+        "constipation",
+        "ileus"
+      ],
+      "evidence": "병용 시 CNS 억제, 요저류, 변비, 장폐색 위험 증가."
+    },
+    {
+      "drug": "Antidiarrheals",
+      "severity": 2,
+      "keywords": [
+        "constipation",
+        "ileus"
+      ],
+      "evidence": "병용 시 심한 변비 및 장폐색 유발 가능."
+    },
+    {
+      "drug": "Apomorphine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "병용 시 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Beta-adrenergic Receptor Antagonists (atenolol, carvedilol)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 CNS 억제 및 호흡억제 증가."
+    },
+    {
+      "drug": "Calcium-Channel Blockers (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "병용 시 오피오이드의 CNS 억제 효과 강화 가능."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy"
+      ],
+      "evidence": "오피오이드 병용 시 클로피도그렐의 효능 감소 가능."
+    },
+    {
+      "drug": "CNS Depressants (anesthetics, antihistamines, anticonvulsants, benzodiazepines, phenothiazines, barbiturates, muscle relaxants, tranquilizers, opioids)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 CNS 또는 호흡억제 증가; 용량 감량 필요할 수 있음."
+    },
+    {
+      "drug": "CYP3A Inhibitors (cimetidine, erythromycin, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "respiratory depression",
+        "apnea"
+      ],
+      "evidence": "부토르파놀의 대사 감소로 호흡억제 및 무호흡 위험 증가."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia",
+        "water intoxication"
+      ],
+      "evidence": "병용 시 데스모프레신 농도 및 약리 활성 증가, 저나트륨혈증 및 수분 중독 위험."
+    },
+    {
+      "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Fenoldopam",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Hydromorphone",
+      "severity": 2,
+      "keywords": [
+        "reduced antinociception duration"
+      ],
+      "evidence": "고양이에서 하이드로모르폰 투여 30분 후 부토르파놀 투여 시 하이드로모르폰의 항통각 지속시간 감소."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "seizures",
+        "CNS depression"
+      ],
+      "evidence": "병용 시 이포스파미드의 신경독성(졸음, 혼란, 환각, 추체외로 증상, 경련, 정신병적 행동, 혼수) 위험 증가."
+    },
+    {
+      "drug": "Inhalant Anesthetics (isoflurane, sevoflurane)",
+      "severity": 2,
+      "keywords": [
+        "decreased MAC"
+      ],
+      "evidence": "오피오이드는 흡입마취제의 MAC 요구량을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Iohexol (intrathecal)",
+      "severity": 3,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "척수강내 이오헥솔 병용 시 경련 위험 증가. 가능하면 척수강내 이오헥솔 투여 48시간 전 및 24시간 후까지 부토르파놀 중단 권장."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "decreased prokinetic effect",
+        "CNS depression"
+      ],
+      "evidence": "메토클로프라미드의 위장관 운동 촉진 효과 감소 및 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Minocycline",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "미노사이클린이 오피오이드의 CNS 억제 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; furazolidone, methylene blue, selegiline, procarbazine)",
+      "severity": 3,
+      "keywords": [
+        "anxiety",
+        "confusion",
+        "respiratory depression",
+        "hypotension",
+        "cyanosis",
+        "coma",
+        "serotonin syndrome"
+      ],
+      "evidence": "병용 시 불안, 혼란, 호흡억제, 저혈압, 청색증, 혼수 위험 증가(기전 불명). 푸라졸리돈 중단 후 부토르파놀 시작까지 14일 휴약 필요."
+    },
+    {
+      "drug": "Opioids (fentanyl, hydrocodone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "withdrawal",
+        "reduced analgesia"
+      ],
+      "evidence": "부토르파놀이 순수 mu 작용제의 일부 진통 효과를 길항하고 진정 및 호흡억제 효과를 역전시킬 수 있음. 만성 오피오이드 치료 중인 환자에서 금단 증상 유발 가능."
+    },
+    {
+      "drug": "Pancuronium",
+      "severity": 1,
+      "keywords": [
+        "conjunctival changes"
+      ],
+      "evidence": "병용 시 결막 변화 증가 가능."
+    },
+    {
+      "drug": "Phenoxybenzamine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 상가 효과."
+    },
+    {
+      "drug": "Polyethylene Glycol",
+      "severity": 2,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "장 세척 제제 사용 관련 경련 위험 증가."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (fluoxetine, sertraline)",
+      "severity": 3,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "serotonin syndrome"
+      ],
+      "evidence": "병용 시 CNS 또는 호흡억제 및 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Tamsulosin",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism"
+      ],
+      "evidence": "테오필린이 부토르파놀의 대사를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "seizures",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 경련, CNS 억제, 호흡억제 위험 증가."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "constipation",
+        "urinary retention"
+      ],
+      "evidence": "병용 시 CNS 및 호흡억제, 변비, 요저류 위험 증가."
+    },
+    {
+      "drug": "Vasodilators (hydralazine, nitroglycerin, nitroprusside)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 상가 효과."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진해제 - 주사 (FDA 승인 라벨 용량)",
+          "value": "0.055",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.11,
+          "duration_note": "최대 7일 이내",
+          "evidence": "라벨 용량: 0.055 mg/kg SC q6~12h; 필요 시 0.11 mg/kg SC q6~12h로 증량 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진해제 - 경구 (FDA 승인 라벨 용량)",
+          "value": "0.55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.1,
+          "duration_note": "최대 7일 이내",
+          "evidence": "라벨 용량: 0.55 mg/kg PO q6~12h; 필요 시 1.1 mg/kg PO q6~12h로 증량 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (비라벨 사용)",
+          "value": "0.2 - 0.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "진통 지속시간 1시간 미만, 진정 지속시간 2~4시간",
+          "evidence": "가장 일반적인 범위 0.2~0.4 mg/kg IV/IM/SC; 0.1~0.5 mg/kg 범위도 사용 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (비라벨 사용)",
+          "value": "0.2 - 0.4",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "진통 지속시간 1시간 미만, 진정 지속시간 2~4시간",
+          "evidence": "가장 일반적인 범위 0.2~0.4 mg/kg IV/IM/SC."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (비라벨 사용)",
+          "value": "0.2 - 0.4",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "진통 지속시간 1시간 미만, 진정 지속시간 2~4시간",
+          "evidence": "가장 일반적인 범위 0.2~0.4 mg/kg IV/IM/SC."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지속정주(CRI) 진통 (비라벨 사용)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하용량 후 0.1~0.24 mg/kg/hour CRI; 최대 0.4 mg/kg/hour (진정 유발 가능)",
+          "evidence": "부하용량 0.2 mg/kg IV 후 CRI 0.1~0.24 mg/kg/hour."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 (비라벨 사용)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "발현 30분 이내, 지속시간 2~4시간; 보존제 없는 생리식염수 또는 국소마취제로 희석하여 총 0.2 mL/kg (최대 6 mL)로 요천추 경막외강 주입",
+          "evidence": "경막외 투여: 0.25 mg/kg, 주로 척수상부 효과."
+        },
+        {
+          "logic_type": "linear",
+          "context": "mu-오피오이드 작용제의 진정 및 호흡억제 역전 (비라벨 사용)",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "날록손 대비 장점: 진통 효과를 완전히 역전시키지 않음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통제 - 주요/경미한 외상 또는 수술 관련 통증 (FDA 승인 라벨 용량)",
+          "value": "0.4",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 2일",
+          "evidence": "라벨 용량: 0.4 mg/kg SC, 1일 최대 4회, 최대 2일."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (비라벨 사용)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "진통 지속시간 1~2시간 이하, 진정 지속시간 2~4시간",
+          "evidence": "0.1~0.5 mg/kg IV/IM/SC; 경도~중등도 진통."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (비라벨 사용)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "진통 지속시간 1~2시간 이하, 진정 지속시간 2~4시간",
+          "evidence": "0.1~0.5 mg/kg IV/IM/SC."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (비라벨 사용)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "진통 지속시간 1~2시간 이하, 진정 지속시간 2~4시간",
+          "evidence": "0.1~0.5 mg/kg IV/IM/SC."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 지속정주(CRI) 진통 - 경도~중등도 통증 (비라벨 사용)",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하용량 후 0.1~0.2 mg/kg/hour CRI; 케타민 병용 가능",
+          "evidence": "부하용량 0.1~0.2 mg/kg IV 후 CRI 0.1~0.2 mg/kg/hour."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 (비라벨 사용)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "발현 30분 이내, 지속시간 2~4시간; 보존제 없는 생리식염수 또는 국소마취제로 희석하여 총 0.2 mL/kg로 요천추 경막외강 주입",
+          "evidence": "경막외 투여: 0.25 mg/kg, 주로 척수상부 효과."
+        },
+        {
+          "logic_type": "linear",
+          "context": "덱스메데토미딘 유발 구토 예방 (비라벨 사용)",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "덱스메데토미딘과 동시 투여",
+          "evidence": "덱스메데토미딘과 동시 IM 투여 시 구토 예방 효과."
+        },
+        {
+          "logic_type": "linear",
+          "context": "mu-오피오이드 작용제의 진정 및 호흡억제 역전 (비라벨 사용)",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "날록손 대비 장점: 진통 효과를 완전히 역전시키지 않음. 단, 고양이에서 하이드로모르폰의 진통 지속시간을 감소시킬 수 있음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "심한 신부전 환자에서 주의 사용 명시. 제조사는 심한 신기능 장애 시 사용 금기를 권고하나 구체적인 용량 조절 지침은 제시되지 않음. 부토르파놀은 주로 신장으로 배설(95%)되므로 신기능 저하 시 축적 가능성 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "제조사는 간질환 병력이 있거나 심한 간기능 장애 환자에서 사용 금기를 권고함. 간이 주요 대사 기관이므로 간기능 저하 시 약물 축적 위험 있음. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "butorphanol hypersensitivity",
+        "opioid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환 / 심한 간기능 장애",
+      "match_terms": [
+        "liver disease",
+        "hepatic dysfunction",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심한 신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "갑상선기능저하증",
+      "match_terms": [
+        "hypothyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질기능저하증 (애디슨병)",
+      "match_terms": [
+        "Addison's disease",
+        "adrenocortical insufficiency",
+        "hypoadrenocorticism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부외상 / 두개내압 상승 / CNS 기능 장애",
+      "match_terms": [
+        "head trauma",
+        "increased intracranial pressure",
+        "CNS dysfunction",
+        "coma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 호흡기 질환",
+      "match_terms": [
+        "obstructive respiratory disease",
+        "lower respiratory tract disease with copious mucus"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중인 암컷 (개, 고양이)",
+      "match_terms": [
+        "pregnant",
+        "breeding female"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전갈에 쏘인 환자",
+      "match_terms": [
+        "scorpion envenomation",
+        "Centruroides sting"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장사상충 감염 개",
+      "match_terms": [
+        "heartworm disease",
+        "dirofilariasis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie",
+      "Old English Sheepdog",
+      "Silken Windhound"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 돌연변이 개에서 더 강하고 오래 지속되는 진정 효과 발생 가능. 이형접합(heterozygous) 돌연변이 개: 25% 감량 권장; 동형접합(homozygous mutant/mutant) 돌연변이 개: 30~50% 감량 권장 (WSU Veterinary Clinical Pharmacology Lab). 임상적으로 영향이 최소하고 효과가 역전 가능하므로 일반적으로 사용 회피는 불필요."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "카파(kappa) 및 시그마(sigma) 오피오이드 수용체 작용제이자 mu 오피오이드 수용체 부분 길항제. 변연계(피질하 및 척수 수준)의 진통 수용체에도 작용. 모르핀 대비 체중 기준 4~7배 강한 진통 효과를 가지나 고용량에서 천장 효과(ceiling effect) 존재. 코데인 또는 덱스트로메토르판 대비 15~20배 강한 경구 진해 효과.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "호흡억제(respiratory depression)",
+      "서맥(bradycardia)",
+      "혈압 저하",
+      "동공산대(mydriasis)",
+      "방향감각 상실(disorientation)",
+      "과타액분비(hypersalivation)",
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "설사(diarrhea, 드물게)",
+      "흥분(excitement, 특히 고용량 또는 말에서)"
+    ],
+    "dog_mechanism": "개에서 CNS 호흡 중추의 CO2 역치를 상승시키나 순수 mu 작용제와 달리 호흡 중추 민감도를 억제하지 않음. 히스타민 유리를 일으키지 않음. MDR1 돌연변이 개에서 더 강하고 오래 지속되는 진정 효과 발생 가능.",
+    "dog_extra_effects": [
+      "진정",
+      "흥분(고용량)",
+      "운동실조",
+      "동공산대",
+      "방향감각 상실",
+      "과타액분비",
+      "식욕부진",
+      "구토",
+      "설사(드물게)",
+      "서맥",
+      "눈물 분비 감소(덱스메데토미딘 병용 시)"
+    ],
+    "cat_mechanism": "고양이에서 진통 지속시간은 약 90분으로 개보다 길며, IM/OTM 투여 후 반감기 약 5~6시간.",
+    "cat_extra_effects": [
+      "진정",
+      "운동실조",
+      "동공산대",
+      "방향감각 상실",
+      "과타액분비",
+      "식욕부진",
+      "구토",
+      "설사(드물게)",
+      "서맥",
+      "눈물 분비 감소(덱스메데토미딘 병용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인 적응증은 상부 호흡기 염증성 질환(기관지염, 기관염, 편도염, 후두염, 인두염)과 관련된 만성 비생산적 기침의 완화임. 진통제로서의 효과는 다른 오피오이드에 비해 제한적(경도~중등도 통증, 지속시간 짧음). 주로 진정제로 사용되며 알파-2 작용제와 병용 시 진통 및 진정 효과 상승. MDR1 돌연변이 개에서 용량 감량 필요. 심혈관 질환 개에서 덱스메데토미딘과 병용 시 심박출량 감소 및 판막 역류 주의.",
+    "cat": "고양이에서 FDA 승인 적응증은 주요/경미한 외상 또는 수술 관련 통증 완화임. 진통 지속시간은 약 90분으로 개보다 길며 반감기도 더 김(5~6시간). 덱스메데토미딘 유발 구토 예방에 효과적. 알파-2 작용제, 알팍살론, 케타민, 미다졸람 등과 다양한 병용 프로토콜이 사용됨. 하이드로모르폰 투여 후 부토르파놀 투여 시 하이드로모르폰의 진통 지속시간이 감소할 수 있음에 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간질환, 심한 신부전, 갑상선기능저하증, 애디슨병, 두부외상, 두개내압 상승, CNS 기능 장애, 노령 또는 쇠약 환자에서 주의 사용. MDR1 돌연변이 개에서 용량 감량 필요. 심장사상충 감염 개에서 안전성 미확립. 임신 중인 암컷에서 사용 비권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간질환, 심한 신부전, 갑상선기능저하증, 애디슨병, 두부외상, 두개내압 상승, CNS 기능 장애, 노령 또는 쇠약 환자에서 주의 사용. 임신 중인 암컷에서 사용 비권장. 하이드로모르폰 병용 시 진통 지속시간 감소 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "별도 명시 없음. DEA Schedule IV (C-IV) 규제 약물로 적절한 보관 및 기록 관리 필요.",
+    "forms": [
+      "주사제 0.5 mg/mL (수의용)",
+      "주사제 2 mg/mL (수의용)",
+      "주사제 10 mg/mL (수의용)",
+      "경구정제 (수의용, Torbutrol)",
+      "주사제 (인체용, Stadol - 부토르파놀 타르트레이트)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "부토르파놀은 카파/시그마 오피오이드 수용체 작용제이자 mu 수용체 부분 길항제로, 개에서 진해제(FDA 승인), 고양이에서 진통제(FDA 승인), 말에서 산통 관련 통증 완화(FDA 승인)에 사용됨. 소동물에서 진통 효과는 경도~중등도이며 지속시간이 짧아(개 약 50분, 고양이 약 90분) 주로 진정제로 활용됨. 알파-2 작용제와 병용 시 진통 및 진정 효과 상승. MDR1 돌연변이 개에서 용량 감량 필요. DEA Schedule IV 규제 약물. 날록손으로 효과 역전 가능.",
+    "indications": "【FDA 승인】개: 상부 호흡기 염증성 질환 관련 만성 비생산적 기침 완화. 고양이: 주요/경미한 외상 또는 수술 관련 통증 완화. 말/연령마: 산통 관련 통증 완화. 【비라벨 사용】개/고양이: 마취 전 투약, 진통 보조, 지속정주(CRI), 경막외 진통, mu-오피오이드 작용제의 진정/호흡억제 역전. 소, 낙타과 동물, 소형 반추동물, 소형 포유류, 조류, 야생동물 등 다양한 종에서 진통/진정 목적으로 사용.",
+    "client_info": "이 약은 마약류(DEA Schedule IV)로 분류된 처방 의약품입니다. 수의사의 처방에 따라 정확한 용량과 투여 방법을 지켜주세요. 투여 후 반려동물이 졸리거나 비틀거릴 수 있으며, 이는 일반적인 반응입니다. 식욕 감소나 드물게 설사가 나타날 수 있습니다. 심한 졸음, 호흡 곤란, 극도의 흥분 등 이상 반응이 나타나면 즉시 동물병원에 연락하세요. 임신 중인 동물에게는 사용하지 않는 것이 권장됩니다. 이 약은 어린이의 손이 닿지 않는 곳에 보관하고, 남은 약은 수의사의 지시에 따라 적절히 폐기하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Specific CYP enzyme substrate identification beyond CYP3A class",
+      "Exact oral bioavailability percentage for dogs/cats",
+      "Specific renal/hepatic dose adjustment thresholds",
+      "t_max_hr for dogs and cats",
+      "onset_min for dogs and cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent (cat-specific)",
+      "cyp_profile.substrates (specific CYP isoform beyond CYP3A class)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction (veterinary-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/51.jsonl",
+    "extracted_at": "2026-03-11T05:09:11.064153+00:00",
+    "reviewer": null
+  }
+}

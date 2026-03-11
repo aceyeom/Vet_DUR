@@ -1,0 +1,831 @@
+{
+  "id": "buprenorphine",
+  "drug_identity": {
+    "name_ko": "부프레노르핀",
+    "name_en": "Buprenorphine",
+    "active_ingredient": "Buprenorphine",
+    "brand_names": [
+      "Buprenex",
+      "Simbadol",
+      "Zorbium",
+      "EthiqaXR",
+      "BupreLab-Rat",
+      "Animalgesics",
+      "Bupaq",
+      "Buprenodale",
+      "Suboxone",
+      "Subutex",
+      "Temgesic",
+      "Vetergesic"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "kr_vet",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "날록손은 부프레노르핀의 효과를 부분적으로 역전시킬 수 있으나, 뮤 수용체에 대한 높은 친화성으로 인해 고용량 및/또는 반복 투여가 필요할 수 있다. 독사프람도 급성 과다복용 시 보조적으로 사용될 수 있다.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj",
+      "Topical",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.3,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 20.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.3,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.27,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "대부분의 종에서 부프레노르핀은 장벽 및 간에서 CYP3A4를 통한 N-탈알킬화에 의해 대사되어 활성 대사체인 노르부프레노르핀을 형성한다. 부프레노르핀과 노르부프레노르핀은 글루쿠론산 포합 과정도 거치며, 대사체는 담즙 배설(약 70%)과 요 배설(약 27%)로 제거된다."
+    },
+    "extra_information": "고양이에서 IM 투여 시 빠르고 완전하게 흡수된다. SC 투여 후 최고 혈중 농도는 크게 변동할 수 있으며, 혈중 농도는 낮고 진통 효과와 상관관계가 없는 것으로 보인다. 분포 용적(VDss)은 약 3~8 L/kg, 청소율은 약 8~20 mL/kg/분, 소실 반감기는 약 6~7시간이다. 구강 점막(OTM) 투여 시 생체이용률은 낮고 변동이 크다(약 20~30%). 개에서 경구 생체이용률은 매우 낮으나(5%), OTM 투여 시 약 35~50% 흡수된다. 소실 반감기는 4~9시간이며 개체 간 변동이 크다. 그레이하운드에서 IV 투여 시 분포 용적 3.54 L/kg, 혈장 청소율 10.3 mL/분/kg, 말단 반감기 3.96시간이었다. 잡종견 6마리 연구에서 IV 투여 시 분포 용적 4.68 L/kg, 혈장 청소율 23.3 mL/분/kg, 말단 반감기 3.97시간이었으며, 서방형 SC 주사 시 말단 반감기는 12.74시간이었다. 약물은 간에 집중되며 뇌, 위장관, 태반에서도 발견된다. 혈장 단백질(알부민 아님)에 96% 결합한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 트리거 기반 점수 산정. 개와 고양이 모두 Plumb's 수의학 데이터 기반. 간 대사(CYP3A4), 담즙 배설 우세, 신장 배설 27%, 혈장 단백 결합 96% 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "miosis",
+          "agitation",
+          "ataxia",
+          "vocalization"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, 동공 축소, 흥분, 운동 실조, 발성 등 CNS 관련 이상반응이 보고되었다. 뮤 수용체에 대한 높은 친화성으로 CNS에 작용한다."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "protein binding 96%"
+        ],
+        "index": 1,
+        "evidence": "개에서 서맥, 저혈압이 보고되었다. 혈장 단백질에 96% 결합하여 혈액 내 분포가 높다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary excretion 27%",
+          "urine retention"
+        ],
+        "index": 1,
+        "evidence": "신장으로 약 27% 배설된다. 고용량 IV 또는 경막외 투여 시 소변 저류가 보고되었다."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CYP3A4 metabolism",
+          "hepatic metabolism",
+          "biliary excretion 70%",
+          "hepatic dysfunction"
+        ],
+        "index": 1,
+        "evidence": "간에서 CYP3A4를 통해 주로 대사되며, 대사체의 약 70%가 담즙으로 배설된다. 간 기능 장애 시 약물 청소율이 감소할 수 있다."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased blood pressure",
+          "decreased cardiac rate"
+        ],
+        "index": 1,
+        "evidence": "부프레노르핀의 심혈관 효과로 혈압 및 심박수 감소가 나타날 수 있다. 개에서 서맥이 보고되었다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "mydriasis",
+          "behavioral effects",
+          "sedation",
+          "excitement",
+          "disorientation",
+          "hyperactivity"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 동공 산대, 행동 변화(과도한 그루밍, 배회, 숨기), 진정, 흥분, 방향 감각 상실, 과잉 행동 등 CNS 관련 이상반응이 보고되었다."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "protein binding 96%"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 서맥 및 드물게 빈맥이 보고되었다. 혈장 단백질에 96% 결합한다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary excretion 27%"
+        ],
+        "index": 1,
+        "evidence": "신장으로 약 27% 배설된다. 고양이 특이적 신장 독성은 보고되지 않았다."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CYP3A4 metabolism",
+          "hepatic metabolism",
+          "biliary excretion 70%",
+          "hepatic dysfunction"
+        ],
+        "index": 1,
+        "evidence": "간에서 CYP3A4를 통해 주로 대사되며, 대사체의 약 70%가 담즙으로 배설된다. 간 기능 장애 시 약물 청소율이 감소할 수 있다."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased blood pressure",
+          "decreased cardiac rate"
+        ],
+        "index": 1,
+        "evidence": "부프레노르핀의 심혈관 효과로 혈압 및 심박수 감소가 나타날 수 있다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 9.0,
+      "mean": 6.5,
+      "species": "dog"
+    },
+    "f_percent": 5,
+    "protein_binding_percent": 96,
+    "evidence": "개에서 경구 생체이용률 5%, OTM 투여 시 약 35~50%. 고양이에서 OTM 투여 시 약 20~30%. 개에서 소실 반감기 4~9시간(평균 약 6.5시간). 고양이에서 소실 반감기 약 6~7시간. 개에서 진정 효과는 투여 후 15분 이내에 나타나며, 완전한 진통 효과는 투여 후 30분까지 발현되지 않을 수 있다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 상호작용은 세로토닌 증후군 위험으로 중증도 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Local Anesthetics (eg, mepivacaine, bupivacaine)",
+      "severity": 1,
+      "keywords": [
+        "potentiation",
+        "perineural analgesia"
+      ],
+      "evidence": "When buprenorphine and a local anesthetic are combined in the same syringe and injected perineurally, the anesthetic action may be potentiated (positive interaction)."
+    },
+    {
+      "drug": "Anticonvulsants (eg, phenobarbital, phenytoin)",
+      "severity": 2,
+      "keywords": [
+        "decreased plasma concentration",
+        "CYP induction"
+      ],
+      "evidence": "Anticonvulsants may decrease plasma buprenorphine concentrations, potentially reducing analgesic efficacy."
+    },
+    {
+      "drug": "Benzodiazepines (eg, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression",
+        "cardiovascular depression",
+        "CNS depression"
+      ],
+      "evidence": "Case reports in humans of respiratory, cardiovascular, and CNS depression when combined with buprenorphine; use with caution."
+    },
+    {
+      "drug": "CNS Depressant Agents (eg, anesthetic agents, antihistamines, barbiturates, phenothiazines, tranquilizers)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "cardiorespiratory depression"
+      ],
+      "evidence": "May cause increased CNS or cardiorespiratory depression when used with buprenorphine."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "Concurrent use of desmopressin and opioids may increase the risk for hyponatremia."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Erythromycin can increase plasma buprenorphine concentrations, potentially increasing effects and adverse reactions."
+    },
+    {
+      "drug": "Halothane",
+      "severity": 2,
+      "keywords": [
+        "reduced hepatic blood flow",
+        "increased buprenorphine effect"
+      ],
+      "evidence": "Reduced hepatic blood flow during halothane anesthesia can increase buprenorphine effects."
+    },
+    {
+      "drug": "Azole Antifungals (eg, ketoconazole, itraconazole, fluconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Ketoconazole, itraconazole, and fluconazole can increase plasma buprenorphine concentrations via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use of metoclopramide and buprenorphine may increase the risk for CNS depression."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; eg, selegiline, amitraz)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "CNS depression",
+        "additive effects"
+      ],
+      "evidence": "Possible additive effects or increased CNS depression; combination is not recommended in humans due to additional risk for serotonin syndrome."
+    },
+    {
+      "drug": "Naloxone",
+      "severity": 2,
+      "keywords": [
+        "reduced analgesia",
+        "partial reversal",
+        "high receptor affinity"
+      ],
+      "evidence": "Naloxone will reduce analgesia but is less effective at reversing buprenorphine effects compared with other opioids due to high receptor binding affinity."
+    },
+    {
+      "drug": "Pure Mu-Opioid Agonists (eg, fentanyl, hydromorphone)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "analgesic competition",
+        "partial agonist"
+      ],
+      "evidence": "Buprenorphine may potentially antagonize some analgesic effects of pure mu-agonists but may also reverse some sedative and respiratory depressant effects."
+    },
+    {
+      "drug": "Pancuronium",
+      "severity": 1,
+      "keywords": [
+        "conjunctival changes"
+      ],
+      "evidence": "If used with buprenorphine, pancuronium may cause increased conjunctival changes."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "decreased plasma concentration"
+      ],
+      "evidence": "Concurrent use may result in increased risk for CNS depression and/or decreased plasma concentrations of buprenorphine."
+    },
+    {
+      "drug": "QT Prolonging Agents (eg, cisapride, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Concurrent use can increase the risk for life-threatening arrhythmias in humans; significance in veterinary patients is unknown."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased plasma concentration",
+        "CYP induction"
+      ],
+      "evidence": "Rifampin potentially decreases plasma buprenorphine concentrations via CYP enzyme induction."
+    },
+    {
+      "drug": "Serotonergic Agents (eg, clomipramine, fluoxetine, mirtazapine, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "respiratory depression"
+      ],
+      "evidence": "Tramadol may increase the risk for serotonin syndrome and respiratory depression when combined with buprenorphine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통 - 일반 사용 (extra-label)",
+          "value": "0.005 - 0.03",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.03,
+          "duration_note": "경증 통증의 경우 8~12시간 간격으로 연장 가능. SC 투여는 흡수가 불규칙하여 임상적 진통 효과를 제공하지 않으므로 권장하지 않음.",
+          "evidence": "Plumb's 일반 사용 용량: 5~30 μg/kg IV 또는 IM, 4~6시간마다"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 - 일반 사용 (extra-label)",
+          "value": "0.005 - 0.03",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.03,
+          "duration_note": "경증 통증의 경우 8~12시간 간격으로 연장 가능.",
+          "evidence": "Plumb's 일반 사용 용량: 5~30 μg/kg IV 또는 IM, 4~6시간마다"
+        },
+        {
+          "logic_type": "linear",
+          "context": "지속 속도 주입 (CRI) - 부하 용량 (extra-label)",
+          "value": "0.005 - 0.01",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.01,
+          "duration_note": "부하 용량 후 2~4 μg/kg/시간 CRI 유지",
+          "evidence": "Plumb's CRI 용량: 부하 용량 5~10 μg/kg IV 후 2~4 μg/kg/시간 CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 진통 (extra-label)",
+          "value": "0.01 - 0.02",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.02,
+          "duration_note": "필요 시 3~4시간 후 10 μg/kg 또는 5~6시간마다 20 μg/kg 반복 투여 가능",
+          "evidence": "Plumb's 수술 후 진통 용량: 10~20 μg/kg IV 또는 IM"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 진통 (extra-label)",
+          "value": "0.01 - 0.02",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.02,
+          "duration_note": "필요 시 3~4시간 후 10 μg/kg 또는 5~6시간마다 20 μg/kg 반복 투여 가능",
+          "evidence": "Plumb's 수술 후 진통 용량: 10~20 μg/kg IV 또는 IM"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구강 점막 투여 (OTM) - 수술 후 진통 (extra-label)",
+          "value": "0.12",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.12,
+          "duration_note": "OHE 전 구강 투여; 생체이용률이 낮고 변동이 크므로 주의",
+          "evidence": "연구 결과에 따르면 0.12 mg/kg 구강 투여가 OHE 전 효과적인 진통제였음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 전 투약 (extra-label)",
+          "value": "0.02",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.02,
+          "duration_note": "아세프로마진 또는 덱스메데토미딘과 병용; 마취 유도 30~45분 전 투여",
+          "evidence": "Plumb's 마취 전 투약 연구: 부프레노르핀 20 μg/kg IM + 아세프로마진 또는 덱스메데토미딘"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 전 투약 - 덱스메데토미딘/케타민 병용 (extra-label)",
+          "value": "0.04",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.04,
+          "duration_note": "덱스메데토미딘 15 μg/kg + 케타민 3 mg/kg과 단일 IM 주사로 병용",
+          "evidence": "Plumb's 연구: 덱스메데토미딘 15 μg/kg, 케타민 3 mg/kg, 부프레노르핀 40 μg/kg 단일 IM 주사"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "수술 후 통증 조절 - 고농도 SC 주사 (Simbadol®, FDA 승인)",
+          "value": "0.24",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.24,
+          "duration_note": "최대 3일간 1일 1회. 수술 약 1시간 전 첫 번째 용량 투여. 고농도(1.8 mg/mL)로 인해 보호자 자가 투여 금지.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-434): Simbadol® 0.24 mg/kg SC, 최대 3일"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 - 경피 용액 (Zorbium®, FDA 승인) - 체중 1.2~3 kg",
+          "value": "0.4",
+          "unit": "ml/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 1~2시간 전 경추 배측 부위에 도포. 진통 지속 4일. 체중 1.2~3 kg(2.6~6.6 lb): 0.4 mL(8 mg)",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-547): Zorbium® 경피 용액, 체중 1.2~3 kg에 0.4 mL"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 - 경피 용액 (Zorbium®, FDA 승인) - 체중 3~7.5 kg",
+          "value": "1.0",
+          "unit": "ml/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 1~2시간 전 경추 배측 부위에 도포. 진통 지속 4일. 체중 3 kg 초과~7.5 kg(6.6~16.5 lb): 1 mL(20 mg)",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-547): Zorbium® 경피 용액, 체중 3~7.5 kg에 1 mL"
+        },
+        {
+          "logic_type": "linear",
+          "context": "일반 사용 및 수술 후 진통 - 표준 부프레노르핀 (extra-label)",
+          "value": "0.01 - 0.03",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.03,
+          "duration_note": "4~8시간마다. 더 심한 통증에는 용량 범위의 상한 필요. OTM 투여 시 0.05 mg/kg까지 사용 권장.",
+          "evidence": "Plumb's 일반 사용 용량: 10~30 μg/kg IM, IV, 또는 OTM, 4~8시간마다"
+        },
+        {
+          "logic_type": "linear",
+          "context": "일반 사용 및 수술 후 진통 - 표준 부프레노르핀 (extra-label)",
+          "value": "0.01 - 0.03",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.03,
+          "duration_note": "4~8시간마다. 더 심한 통증에는 용량 범위의 상한 필요.",
+          "evidence": "Plumb's 일반 사용 용량: 10~30 μg/kg IM, IV, 또는 OTM, 4~8시간마다"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고농도 부프레노르핀 (Simbadol®) OTM 투여 - 실험적 (extra-label)",
+          "value": "0.12 - 0.24",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 0.24,
+          "duration_note": "실험 조건에서 8~12시간 진통 지속 (SC 투여의 24시간과 다름)",
+          "evidence": "Plumb's: Simbadol® 0.12~0.24 mg/kg OTM은 실험 조건에서 8~12시간 진통 제공"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 전 투약 (extra-label)",
+          "value": "0.01 - 0.03",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.03,
+          "duration_note": "메데토미딘 0.1 mg/kg + 케타민 10 mg/kg과 병용; 수술 30분 전 또는 동시 투여",
+          "evidence": "Plumb's 마취 전 투약: 0.01~0.03 mg/kg IM + 메데토미딘 + 케타민"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에서 신장 기능 장애에 대한 구체적인 용량 조정 권고사항이 명시되지 않았다. 신장으로 약 27% 배설되므로 중증 신부전 환자에서 주의가 필요할 수 있다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간 기능 장애 환자는 정상 환자보다 약물을 더 느리게 제거할 수 있다. 간 기능 장애 환자에서 청소율 감소로 인한 과장되거나 연장된 효과의 가능성이 있으므로 주의하여 사용해야 한다. 구체적인 용량 조정 수치는 명시되지 않았다."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "buprenorphine hypersensitivity",
+        "opioid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "갑상선 기능 저하증",
+      "match_terms": [
+        "hypothyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질 기능 부전 (애디슨병)",
+      "match_terms": [
+        "adrenocortical insufficiency",
+        "Addison's disease",
+        "hypoadrenocorticism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐 기능 저하",
+      "match_terms": [
+        "compromised pulmonary function",
+        "respiratory disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부 외상 / 두개내압 상승",
+      "match_terms": [
+        "head trauma",
+        "increased intracranial pressure",
+        "increased CSF pressure",
+        "CNS dysfunction",
+        "coma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "담도 질환",
+      "match_terms": [
+        "biliary tract disease",
+        "cholestasis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전갈 독침 (Centruroides spp)",
+      "match_terms": [
+        "scorpion envenomation",
+        "Centruroides sting"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "제왕절개 수술 전 투여",
+      "match_terms": [
+        "cesarean section",
+        "C-section"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에서 특정 유전적 감수성 또는 MDR1 돌연변이와 관련된 위험이 명시되지 않았다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "뮤 수용체에서 부분 효현제 활성을 가지며 카파 수용체 길항제로 작용한다. 모르핀보다 약 30배 강력하며, CNS의 뮤 수용체에 대한 높은 친화성과 느린 해리로 인해 상대적으로 긴 작용 지속 시간을 나타낸다. 용량 의존적 진통 효과를 나타내나 고용량에서 진통 효과가 정체될 수 있다.",
+    "common_extra_effects": [
+      "호흡 억제 (드물지만 주요 이상반응)",
+      "진정",
+      "오심/구토",
+      "서맥",
+      "혈압 감소",
+      "심박수 감소",
+      "흥분 (주로 고양이와 말)",
+      "소변 저류 (고용량 IV 또는 경막외 투여 시)"
+    ],
+    "dog_mechanism": "개에서 뮤 수용체 부분 효현제로 작용하여 진통 효과를 나타낸다. 진정 효과는 투여 후 15분 이내에 나타나나 완전한 진통 효과는 투여 후 30분까지 발현되지 않을 수 있다.",
+    "dog_extra_effects": [
+      "타액 분비 증가",
+      "서맥",
+      "저체온증",
+      "흥분/초조",
+      "탈수",
+      "동공 축소",
+      "발성",
+      "운동 실조",
+      "과타액증",
+      "무기력",
+      "식욕 감소",
+      "헐떡임",
+      "낑낑거림"
+    ],
+    "cat_mechanism": "고양이에서 뮤 수용체 부분 효현제로 작용하여 진통 효과를 나타낸다. 고농도 제제(Simbadol®) SC 투여 시 72시간 진통 효과를 제공한다.",
+    "cat_extra_effects": [
+      "동공 산대",
+      "행동 변화 (과도한 그루밍, 배회, 숨기)",
+      "구토",
+      "타액 분비 증가",
+      "식욕 부진",
+      "고체온증 (수술 다음날 약 28%에서 관찰)",
+      "변비",
+      "과잉 행동",
+      "빈맥",
+      "방향 감각 상실",
+      "흥분"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 부프레노르핀은 경증에서 중등도 통증의 진통제 또는 마취 전 투약으로 주로 사용된다. SC 투여는 흡수가 불규칙하여 임상적 진통 효과를 제공하지 않으므로 권장하지 않는다. OTM 투여 시 생체이용률은 약 35~50%이나 변동이 크다. 순수 뮤 효현제(예: 모르핀, 하이드로모르폰)에 비해 진통 효과가 낮으며, 부토르파놀보다 진정 효과가 적다. 이소플루란 MAC 절약 효과가 IV 용량 0.01, 0.05, 0.1 mg/kg에서 나타난다.",
+    "cat": "고양이에서 부프레노르핀은 수술 후 통증 조절에 FDA 승인된 제제(Simbadol®, Zorbium®)가 있다. Simbadol® (1.8 mg/mL) SC 투여 시 72시간 진통 효과를 제공하며, Zorbium® 경피 용액은 4일간 진통 효과를 제공한다. OTM 투여는 실용적이고 효과적인 방법이 될 수 있으나 IV 또는 IM 투여에 비해 진통 효과가 낮고 치료 실패율이 높다. 고양이에서 개체 간 반응 변동성이 크며, 일부 고양이는 충분한 진통 효과를 받지 못할 수 있다. 수술 다음날 약 28%의 고양이에서 고체온증이 관찰되므로 체온 모니터링이 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 SC 투여는 흡수 불량으로 권장하지 않는다. 간 기능 장애, 갑상선 기능 저하증, 부신피질 기능 부전, 소아, 노령, 쇠약 환자에서 주의하여 사용해야 한다. 두부 외상, 두개내압 상승, 폐 기능 저하 환자에서도 주의가 필요하다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 표준 제제의 SC 투여는 흡수 불량으로 권장하지 않는다. 수술 후 고체온증 발생 가능성이 있으므로 체온 모니터링이 필요하다. 고농도 제제(Simbadol®)는 보호자 자가 투여 금지. 경피 용액(Zorbium®) 도포 후 약 30분간 건조 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "Simbadol® (1.8 mg/mL): 25°C 이하 보관, 빛과 과도한 열(40°C 초과)로부터 보호. 개봉 후 56일 사용 가능. Zorbium® 경피 용액: 25°C 이하 보관, 빛으로부터 보호. EthiqaXR® (서방형 주사 현탁액): 15~25°C 보관 또는 냉장 보관, 동결 금지, 개봉 후 28일 이내 사용. BupreLab-Rat® (서방형 주사 용액): 15~30°C 보관, 개봉 후 28일 이내 사용. 표준 주사제 (0.3 mg/mL): 20~25°C 보관, 빛으로부터 보호, 40°C 초과 또는 동결 금지. DEA 규정에 따라 견고하게 잠긴 장소에 보관 필요.",
+    "forms": [
+      "Buprenorphine Injection 1.8 mg/mL (Simbadol®) - 10 mL 다회 투여 바이알",
+      "Buprenorphine Transdermal Solution 20 mg/mL (Zorbium®) - 0.4 mL 또는 1 mL 어플리케이터 튜브",
+      "Buprenorphine Extended-Release Injectable Suspension 1.3 mg/mL (EthiqaXR®) - 1.6 mL 및 3 mL 다회 투여 바이알",
+      "Buprenorphine Extended-Release Injectable Solution 1 mg/mL (BupreLab-Rat®) - 5 mL 다회 투여 바이알",
+      "Buprenorphine HCl for Injection 0.3 mg/mL (Buprenex®) - 1 mL 앰플, 바이알, 주사기",
+      "Buprenorphine HCl Sublingual Tablets 2 mg, 8 mg (generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "부프레노르핀은 뮤 수용체 부분 효현제로, 주로 소동물에서 경증~중등도 통증의 진통제 또는 마취 전 투약으로 사용된다. 고양이에서 FDA 승인된 고농도 SC 제제(Simbadol®, 72시간 지속)와 경피 용액(Zorbium®, 4일 지속)이 있다. 뮤 수용체에 대한 높은 친화성으로 인해 표준 용량의 날록손으로 완전한 역전이 어려울 수 있다. DEA Schedule III 규제 약물이다. SC 투여(표준 제제)는 개와 고양이 모두에서 흡수 불량으로 권장하지 않는다.",
+    "indications": "개: 경증~중등도 통증의 진통(extra-label), 마취 전 투약, 수술 후 진통, 지속 속도 주입(CRI). 고양이: 수술 후 통증 조절(Simbadol® SC - FDA 승인, Zorbium® 경피 - FDA 승인), 일반 진통(extra-label), 마취 전 투약. 말: 신경이완진통(extra-label). 기타 종(양, 돼지, 페럿, 토끼, 기니피그, 마우스, 랫트)에서 extra-label 사용.",
+    "client_info": "부프레노르핀은 단기 통증 완화를 위해 사용되는 오피오이드 진통제입니다. 주사 또는 구강 점막(OTM) 투여로 사용됩니다. 고양이에게 OTM으로 투여할 때는 혀 아래 또는 볼 주머니에 부드럽게 투여하세요. 이 약물은 매우 강력하므로 수의사가 처방한 정확한 용량을 투여하는 것이 중요합니다. 가장 흔한 부작용은 진정(졸음)입니다. 이 약물은 DEA Schedule III 규제 약물로, 처방전 없이 재처방이 불가능하며, 처방받은 동물 또는 사람 이외에 사용하는 것은 불법입니다. 고농도 제제(Simbadol®)는 보호자가 집에서 투여해서는 안 됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted in source)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.onset_min (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "genetic_sensitivity.affected_breeds"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/51.jsonl",
+    "extracted_at": "2026-03-11T05:03:54.552615+00:00",
+    "reviewer": null
+  }
+}

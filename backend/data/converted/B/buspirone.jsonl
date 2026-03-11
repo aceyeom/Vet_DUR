@@ -1,0 +1,938 @@
+{
+  "id": "buspirone",
+  "drug_identity": {
+    "name_ko": "부스피론",
+    "name_en": "Buspirone",
+    "active_ingredient": "Buspirone hydrochloride",
+    "brand_names": [
+      "BuSpar"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 개와 고양이에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 7.5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 30,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "부스피론은 간에서 대사되어 활성 대사체(1-PP 포함)를 생성하며, 대사체는 주로 소변으로 배설된다. 인체에서 초회통과효과가 크며 경구 생체이용률은 약 5%이다."
+    },
+    "extra_information": "고양이에서 경구 투여 시 최고 혈중 농도 도달 시간은 약 1.4시간이나, 경구 생체이용률은 인체보다 유의하게 낮은 것으로 보고됨. 경피(PLO 기제) 투여 시 ELISA 방법으로 혈중 농도가 검출되지 않았으나, 경구 및 경피 투여 간 소변 마킹 감소 효과에는 유의한 차이가 없었다는 연구 결과도 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 인체 PK 데이터 및 Plumb's 기술 내용을 근거로 함. 수의학 종별 PK 연구 자료 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "anxiolytic",
+          "serotonin 5-HT1A partial agonist",
+          "dopamine D2 agonist/antagonist"
+        ],
+        "index": 1,
+        "evidence": "부스피론은 CNS에서 세로토닌(5-HT1A) 부분 효현제 및 도파민(D2) 효현제/길항제로 작용하며, 진정 효과가 가능하나 벤조디아제핀보다 낮음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "protein binding 95%",
+          "bradycardia",
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "혈장 단백 결합률이 95%로 매우 높음. 서맥 및 빈맥 등 심혈관계 이상반응이 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal disease caution",
+          "increased urinary volume",
+          "electrolyte loss"
+        ],
+        "index": 1,
+        "evidence": "대사체가 주로 소변으로 배설됨. 신장 질환 시 청소율 감소 가능. 개에서 IV 과용량 투여 시 소변량 증가 및 전해질 손실 보고."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass effect",
+          "hepatic disease caution",
+          "ALT increase"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사되며 초회통과효과가 큼. 간 질환 시 청소율 감소 가능. 트라조돈 병용 시 ALT 상승 위험."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "hypertension",
+          "increased peripheral resistance"
+        ],
+        "index": 1,
+        "evidence": "서맥, 빈맥, 고혈압, 말초혈관저항 증가가 과용량 또는 이상반응으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "anxiolytic",
+          "behavior changes",
+          "increased affection"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 행동 변화(친화성 증가, 자기주장 강화 등)가 보고됨. CNS 작용 기전에 의한 진정 가능."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "protein binding 95%",
+          "bradycardia"
+        ],
+        "index": 1,
+        "evidence": "혈장 단백 결합률 95%. 서맥 등 심혈관계 이상반응 가능."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal disease caution"
+        ],
+        "index": 1,
+        "evidence": "대사체가 주로 소변으로 배설됨. 신장 질환 시 청소율 감소 가능."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass effect",
+          "hepatic disease caution"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간 질환 시 청소율 감소 가능."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bradycardia"
+        ],
+        "index": 1,
+        "evidence": "서맥이 이상반응으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.4,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 4.0,
+      "mean": 3.0,
+      "species": "human"
+    },
+    "f_percent": 5,
+    "protein_binding_percent": 95,
+    "evidence": "인체 데이터: 경구 생체이용률 약 5%(초회통과효과 큼), 혈장 단백 결합률 95%, 반감기 2~4시간. 고양이: 경구 투여 후 Tmax 약 1.4시간, 생체이용률은 인체보다 유의하게 낮음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "dangerous hypertension",
+        "contraindicated"
+      ],
+      "evidence": "Concurrent buspirone use, or use within 14 days of discontinuing MAOI, is contraindicated; dangerous hypertension and serotonin syndrome may occur."
+    },
+    {
+      "drug": "Opioids (e.g., fentanyl, morphine)",
+      "severity": 3,
+      "keywords": [
+        "severe respiratory depression",
+        "coma",
+        "death"
+      ],
+      "evidence": "May increase risk for severe respiratory depression, coma, and death."
+    },
+    {
+      "drug": "Procarbazine",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "dangerous hypertension",
+        "metabolism inhibition"
+      ],
+      "evidence": "May inhibit metabolism of buspirone, increasing risk for serotonin syndrome and dangerous hypertension."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, paroxetine)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "decreased metabolism",
+        "psychiatric signs"
+      ],
+      "evidence": "May increase risk for serotonin syndrome. SSRIs may decrease metabolism of buspirone. Concurrent use may increase psychiatric signs. Dosage reductions may be necessary."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs; e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "May increase the risk for serotonin syndrome. Dosage reductions may be necessary to minimize adverse effects."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "May increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for serotonin syndrome and CNS and respiratory depression."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "ALT increase"
+      ],
+      "evidence": "Use with buspirone may cause increased ALT and increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Methylene Blue",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "May increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for serotonin syndrome and CNS and respiratory depression."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression and serotonin syndrome."
+    },
+    {
+      "drug": "Serotonin Antagonists (e.g., dolasetron, ondansetron)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "May increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., fluconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased buspirone concentration",
+        "metabolism inhibition"
+      ],
+      "evidence": "May slow metabolism of buspirone, thus potentially significantly increasing buspirone concentrations."
+    },
+    {
+      "drug": "Clarithromycin/Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "increased buspirone concentration",
+        "metabolism inhibition"
+      ],
+      "evidence": "May slow metabolism of buspirone, thus potentially significantly increasing buspirone concentrations."
+    },
+    {
+      "drug": "Danazol",
+      "severity": 2,
+      "keywords": [
+        "increased buspirone concentration",
+        "metabolism inhibition"
+      ],
+      "evidence": "May slow metabolism of buspirone, thus potentially significantly increasing buspirone concentrations."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis",
+        "increased buspirone concentration"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis. Diltiazem and verapamil may increase buspirone plasma concentrations and adverse effects."
+    },
+    {
+      "drug": "Alpha-2-Adrenergic Agonists (e.g., dexmedetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Anesthetic Agents (e.g., isoflurane, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Barbiturates (e.g., methohexital, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., alprazolam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "May increase risk for CNS depression."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "neuroleptic malignant syndrome"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression and neuroleptic malignant syndrome."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity"
+      ],
+      "evidence": "May increase neurotoxic effects of ifosfamide."
+    },
+    {
+      "drug": "Alpha-2-Adrenergic Antagonists (e.g., phenoxybenzamine, prazosin, tamsulosin)",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "ACE Inhibitors (e.g., enalapril)",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (e.g., telmisartan)",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Antihistamines (e.g., cetirizine, chlorpheniramine)",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Apomorphine",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "somnolence",
+        "dizziness"
+      ],
+      "evidence": "May increase risk for CNS depression, somnolence, and dizziness."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 1,
+      "keywords": [
+        "decreased buspirone concentration"
+      ],
+      "evidence": "May result in decreased buspirone concentrations."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 1,
+      "keywords": [
+        "increased buspirone concentration"
+      ],
+      "evidence": "May increase buspirone concentrations."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement"
+      ],
+      "evidence": "Buspirone may displace digoxin from protein binding sites. Clinical significance is uncertain."
+    },
+    {
+      "drug": "Diuretics (e.g., bumetanide, furosemide)",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Felbamate",
+      "severity": 1,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "May increase risk for CNS depression."
+    },
+    {
+      "drug": "Fenoldopam",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Flavoxate",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Gabapentin",
+      "severity": 1,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "May increase risk for CNS depression."
+    },
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 1,
+      "keywords": [
+        "increased buspirone concentration"
+      ],
+      "evidence": "May cause increased buspirone plasma concentrations and adverse effects."
+    },
+    {
+      "drug": "Glucocorticoids (e.g., dexamethasone, prednisolone)",
+      "severity": 1,
+      "keywords": [
+        "increased buspirone metabolism",
+        "decreased buspirone concentration"
+      ],
+      "evidence": "May increase metabolism of buspirone."
+    },
+    {
+      "drug": "Levetiracetam",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use of high doses of magnesium sulfate may increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Minocycline IV",
+      "severity": 1,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "May increase CNS depression due to magnesium content of the IV formulation."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 1,
+      "keywords": [
+        "decreased buspirone concentration"
+      ],
+      "evidence": "May decrease buspirone concentrations."
+    },
+    {
+      "drug": "Muscle Relaxants (e.g., baclofen, methocarbamol)",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Pergolide",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Phenylbutazone",
+      "severity": 1,
+      "keywords": [
+        "increased buspirone metabolism"
+      ],
+      "evidence": "May increase rate of buspirone metabolism."
+    },
+    {
+      "drug": "Pregabalin",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 1,
+      "keywords": [
+        "decreased buspirone concentration"
+      ],
+      "evidence": "May cause decreased buspirone plasma concentrations."
+    },
+    {
+      "drug": "Valproic Acid/Divalproex",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Vasodilators (e.g., hydralazine, nitroglycerin, nitroprusside)",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "May increase risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Zonisamide",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "저등급 불안 및 공포의 보조 치료 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 권고안에서 최대 용량 10~15 mg/dog(mg/kg 아님) q8~12h로 제한",
+          "evidence": "대부분의 권고안은 0.5~1 mg/kg PO q8~12h 범위이며, 일화적으로 2 mg/kg까지 보고됨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "저등급 불안 및 공포의 보조 치료 - 최대 용량 제한 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일부 권고안에서 mg/kg 기준이 아닌 개체당 10~15 mg q8~12h로 최대 용량 제한."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "저등급 불안 및 공포, 소변 스프레이, 과도한 그루밍의 보조 치료 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨 권고: 0.5~1 mg/kg PO q12h."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "저등급 불안 및 공포, 소변 스프레이, 과도한 그루밍의 보조 치료 - 실용적 용량 (오프라벨)",
+          "value": "2.5 - 7.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5 mg 정제 사용 시 실용적 용량: 2.5~7.5 mg/cat(mg/kg 아님) PO q12h",
+          "evidence": "5 mg 정제를 이용한 실용적 권고 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "심각한 신장 질환 시 부스피론 청소율이 감소하여 이상반응 위험이 증가할 수 있으므로 주의하여 사용. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "심각한 간 질환 시 부스피론 청소율이 감소하여 이상반응 위험이 증가할 수 있으므로 주의하여 사용. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "부스피론 과민증",
+      "match_terms": [
+        "buspirone hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심각한 간 질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "liver failure",
+        "hepatic insufficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "공격적 성향 동물",
+      "match_terms": [
+        "aggression",
+        "aggressive behavior"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "작업견 또는 서비스견",
+      "match_terms": [
+        "working dog",
+        "service dog"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세로토닌(5-HT1A) 수용체 부분 효현제 및 도파민(D2) 수용체 효현제/길항제로 작용. 벤조디아제핀 수용체 및 GABA 결합에는 유의한 친화성 없음. 항경련 또는 근이완 작용 없음.",
+    "common_extra_effects": [
+      "서맥(bradycardia)",
+      "위장관 장애(식욕부진, 구토)",
+      "상동행동(과도한 그루밍, 배회)",
+      "진정(sedation, 벤조디아제핀보다 낮음)",
+      "어지러움(dizziness)",
+      "두통(headache)",
+      "오심(nausea)",
+      "불안(restlessness)"
+    ],
+    "dog_mechanism": "세로토닌(5-HT1A) 부분 효현제 및 도파민(D2) 효현제/길항제로 작용하여 불안 완화.",
+    "dog_extra_effects": [
+      "서맥",
+      "위장관 장애(식욕부진, 구토)",
+      "상동행동",
+      "진정(가능하나 드묾)"
+    ],
+    "cat_mechanism": "세로토닌(5-HT1A) 부분 효현제 및 도파민(D2) 효현제/길항제로 작용하여 불안 완화 및 소변 마킹 감소.",
+    "cat_extra_effects": [
+      "친화성 증가(increased affection)",
+      "자기주장 강화(assertiveness)",
+      "서맥",
+      "위장관 장애(식욕부진, 구토)",
+      "상동행동"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 저등급 불안 및 공포 관련 행동 장애의 보조 치료에 오프라벨로 사용됨. 효과 발현까지 1주 이상 소요될 수 있으므로 급성 상황적 불안에는 적합하지 않음. 공격적 성향의 개에서는 주의하여 사용. 작업견 및 서비스견에서 각성 수준에 영향을 줄 수 있음.",
+    "cat": "고양이에서 소변 스프레이, 공포 관련 행동, 심인성 탈모 등에 오프라벨로 사용됨. 약 50%의 고양이에서 소변 마킹 감소 효과가 있으며, 다묘 가정에서 더 효과적일 수 있음. 경피(PLO 기제) 투여 시 혈중 농도가 검출되지 않았으나 임상적 효과는 경구 투여와 유사하다는 보고도 있음. 친화성 증가 등 행동 변화가 나타날 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심각한 신장 또는 간 질환 시 주의. 공격적 성향 동물 및 작업견/서비스견에서 주의하여 사용. 급성 상황적 불안의 단독 치료로는 부적합."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심각한 신장 또는 간 질환 시 주의. 행동 변화(친화성 증가, 자기주장 강화) 가능. 수유 중 사용 가능한 경우 가급적 피할 것."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 실온(20~25°C, 68~77°F) 보관.",
+    "forms": [
+      "Buspirone HCl 경구 정제: 5 mg, 7.5 mg, 10 mg, 15 mg, 30 mg (제네릭, 처방전 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "부스피론은 비벤조디아제핀계 항불안제로, 개와 고양이의 공포 관련 행동 장애 및 사회적 상호작용 관련 문제에 오프라벨로 사용됩니다. 효과 발현까지 1주 이상 소요되므로 급성 상황적 불안에는 적합하지 않습니다. 세로토닌 증후군 위험이 있는 약물(MAOIs, SSRIs, TCAs 등)과의 병용에 주의가 필요합니다. 수의학적 허가 제품은 없으며, 인체용 제품을 오프라벨로 사용합니다.",
+    "indications": "개와 고양이의 저등급 불안 및 공포 관련 행동 장애(오프라벨), 고양이의 소변 스프레이(오프라벨), 공포 관련 행동(오프라벨), 심인성 탈모(오프라벨). 행동 치료와 병행 시 효과적.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 주세요. 효과가 나타나기까지 몇 주가 걸릴 수 있으며, 행동 치료와 병행하는 것이 좋습니다. 이 약은 다른 약물과 상호작용이 많으므로, 비타민, 보조제, 허브 제품을 포함한 모든 약물을 수의사에게 알려주세요. 최근 2주 이내에 벼룩/진드기 목걸이를 사용한 경우 반드시 수의사에게 알리고, 새로운 벼룩/진드기 제품 사용 전에 상담하세요. 고양이에서 친화성 증가 등의 행동 변화가 나타날 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dose Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary species-specific PK studies (dog)",
+      "CYP enzyme profile",
+      "Renal elimination fraction (quantified)",
+      "Specific renal/hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/51.jsonl",
+    "extracted_at": "2026-03-11T05:06:08.084205+00:00",
+    "reviewer": null
+  }
+}
