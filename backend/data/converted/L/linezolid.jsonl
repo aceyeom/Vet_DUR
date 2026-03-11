@@ -1,0 +1,669 @@
+{
+  "id": "linezolid",
+  "drug_identity": {
+    "name_ko": "리네졸리드",
+    "name_en": "Linezolid",
+    "active_ingredient": "Linezolid",
+    "brand_names": [
+      "Zyvox"
+    ],
+    "allergy_class": "oxazolidinone",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 다제내성 그람양성균 감염에 한해 전문가 자문 후 사용. WHO 인체 필수 항생제(Critically Important, High Priority)로 분류되어 수의학적 사용은 극히 제한되어야 함.",
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "리네졸리드는 산화 반응에 의해 항균 활성이 없는 2개의 대사체로 대사됨. CYP 효소 관여는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개에서 경구 생체이용률 >95%로 IV와 유사한 약동학 프로파일. 단백결합률 <35%, 분포용적은 체내 총 수분량에 근접. Tmax 0.78–0.95시간, Cmax 26.8–28.2 µg/mL. IV 투여 후 반감기 3.91시간, 경구 투여 후 3.6시간. 신장으로 미변화체 30%, 대사체 50% 배설; 담즙으로 약 15% 배설(거의 대사체). 신기능 저하 시 대사체 농도 2–3배 상승 가능."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 대상 약동학 데이터 존재; 고양이는 증례 보고 수준. 신장: 주요 배설 경로(80%), 신기능 저하 시 대사체 축적 및 혈소판감소증 위험 증가. 간: 산화 대사 경로. 혈액: 골수억제(빈혈, 혈소판감소증, 백혈구감소증) 보고. 뇌: 세로토닌 증후군, 경련, 말초/시신경병증 보고. 심장: 고혈압 위험(MAO 억제 효과).",
+    "dog": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "seizures",
+          "serotonin syndrome",
+          "peripheral neuropathy",
+          "optic neuropathy",
+          "lactic acidosis"
+        ],
+        "index": 1,
+        "evidence": "개에서 직접적인 신경계 독성 데이터는 제한적이나, 인체에서 경련, 세로토닌 증후군, 말초 및 시신경병증이 보고됨. 개 증례에서 보상성 젖산산증 관찰됨."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression",
+          "thrombocytopenia",
+          "anemia",
+          "leukopenia",
+          "neutropenia",
+          "bone marrow hypoplasia"
+        ],
+        "index": 0,
+        "evidence": "개에서 경도 빈혈 및 혈소판감소증(치료 4, 7주차), 거대적혈구성 저색소성 재생성 빈혈(105일 투여 후), 반복 IV/경구 40 mg/kg/일 30일 투여 시 빈혈·백혈구감소증·혈소판감소증·골수저형성 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular reabsorption",
+          "metabolite accumulation",
+          "thrombocytopenia risk with renal impairment"
+        ],
+        "index": 2,
+        "evidence": "신장으로 총 80% 배설(미변화체 30% + 대사체 50%). 신기능 저하 시 대사체 농도 2–3배 상승 및 혈소판감소증 위험 증가. 신세뇨관 재흡수 발생."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "oxidative metabolism",
+          "biliary excretion"
+        ],
+        "index": 3,
+        "evidence": "산화 반응에 의한 간 대사 및 담즙으로 약 15% 배설(대사체). 직접적인 간독성 보고는 없으나 간이 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypertension",
+          "MAO inhibition",
+          "sympathomimetic interaction"
+        ],
+        "index": 4,
+        "evidence": "MAO 억제 효과로 인한 고혈압 위험. 교감신경흥분제와 병용 시 혈압 상승 위험. 직접적인 심장독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "serotonin syndrome",
+          "seizures",
+          "neuropathy"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 신경계 독성 데이터 없음. 인체 및 개 데이터 외삽."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "anemia"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 가역적 골수억제(호중구감소증, 혈소판감소증, 빈혈) 증례 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "metabolite accumulation"
+        ],
+        "index": 2,
+        "evidence": "고양이 특이적 신장 데이터 없음. 개 및 인체 데이터 외삽: 신장 주요 배설 경로, 신기능 저하 시 대사체 축적 가능."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "oxidative metabolism"
+        ],
+        "index": 3,
+        "evidence": "고양이 특이적 간 대사 데이터 없음. 산화 대사 경로 외삽."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypertension",
+          "MAO inhibition"
+        ],
+        "index": 4,
+        "evidence": "고양이 특이적 심장 데이터 없음. MAO 억제 효과로 인한 고혈압 위험 외삽."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.865,
+    "half_life_hr": {
+      "min": 3.6,
+      "max": 3.91,
+      "mean": 3.755,
+      "species": "dog"
+    },
+    "f_percent": 95,
+    "protein_binding_percent": 35,
+    "evidence": "개에서 경구 생체이용률 >95%, 단백결합 <35%. Tmax 0.78–0.95시간(평균 0.865시간), Cmax 26.8–28.2 µg/mL. IV 반감기 3.91시간, 경구 반감기 3.6시간. 24–48시간 후 측정 가능 농도 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/피해야 함→3, 주요→3, 중등도→2, 경미→1. 리네졸리드는 약한 비선택적 MAO 억제 효과를 가지므로 세로토닌성 약물과의 상호작용은 중증도 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "MAO inhibition",
+        "serotonin syndrome",
+        "additive serotonergic effect"
+      ],
+      "evidence": "Additive MAO inhibition may worsen serotonergic effects, resulting in serotonin syndrome. Avoid combination within 14 days of MAOI treatment."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, sertraline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "serotonergic effect"
+      ],
+      "evidence": "Concurrent use may increase risk for serotonin syndrome. Avoid combination."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "serotonergic effect"
+      ],
+      "evidence": "Concurrent use may increase risk for serotonin syndrome. Avoid combination."
+    },
+    {
+      "drug": "Serotonergic Agents (e.g., buspirone, dextromethorphan, metoclopramide, mirtazapine, ondansetron, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "additive serotonergic effect"
+      ],
+      "evidence": "Additive serotonergic effects increase the risk for serotonin syndrome. Avoid combination."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 3,
+      "keywords": [
+        "MAOI adverse effects",
+        "interaction"
+      ],
+      "evidence": "May worsen the adverse effects of monoamine oxidase inhibitors (MAOIs). Avoid combination within 14 days of treatment."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, fentanyl, hydrocodone, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "serotonergic effect",
+        "MAOI adverse effects"
+      ],
+      "evidence": "Concurrent use may worsen serotonergic effects and may worsen adverse effects of MAOIs. Consider therapy modification."
+    },
+    {
+      "drug": "Sympathomimetics (e.g., albuterol, dopamine, epinephrine, phenylephrine, phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "MAO inhibition"
+      ],
+      "evidence": "May worsen hypertensive effect. Reduce initial doses of sympathomimetics and monitor blood pressure closely."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "MAOI interaction",
+        "paradoxical excitation",
+        "hypertension"
+      ],
+      "evidence": "Use of MAOIs may worsen the adverse effects of reserpine. Addition of reserpine to linezolid therapy may cause paradoxical effects (e.g., excitation, hypertension). Consider therapy modification."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "reduced peak concentration",
+        "reduced AUC",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Reduced peak linezolid concentration and AUC may occur."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "additive bone marrow suppression"
+      ],
+      "evidence": "Potential for additive myelosuppression."
+    },
+    {
+      "drug": "Dipyrone",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "additive bone marrow suppression"
+      ],
+      "evidence": "Potential for additive myelosuppression."
+    },
+    {
+      "drug": "Blood Glucose Lowering Agents (e.g., insulin, sulfonylureas such as glipizide)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "exacerbated hypoglycemic effect"
+      ],
+      "evidence": "Linezolid may exacerbate hypoglycemic effects of blood glucose lowering agents."
+    },
+    {
+      "drug": "Tyramine-Containing Foods (e.g., aged cheese, cured meats, sauerkraut)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "tyramine",
+        "MAO inhibition"
+      ],
+      "evidence": "Food high in tyramine has caused unexpected and serious increases in blood pressure in humans taking MAOIs. Significance in veterinary medicine is unknown."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균 감염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 초과 시 골수억제 및 신경계 부작용 위험 증가; CBC 모니터링 필요",
+          "evidence": "Plumb's Dosages: 10 mg/kg PO every 8 to 12 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균 감염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 초과 시 골수억제 및 신경계 부작용 위험 증가; CBC 모니터링 필요",
+          "evidence": "Plumb's Dosages: 10 mg/kg PO every 8 to 12 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "표준 치료에 반응하지 않는 노카르디아증 (extra-label)",
+          "value": "8 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Dosages: 8–20 mg/kg PO every 12 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균 감염 - IV 투여 (extra-label, 경구와 동일 용량 적용 가능)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개에서 경구와 IV 약동학 프로파일 유사; 동일 용량 IV 투여 가능",
+          "evidence": "Plumb's NOTE: Based on pharmacokinetic information in dogs, linezolid could be given by the IV route at these same dosages."
+        },
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균 감염 - IV 투여 (extra-label, 경구와 동일 용량 적용 가능)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개에서 경구와 IV 약동학 프로파일 유사; 동일 용량 IV 투여 가능",
+          "evidence": "Plumb's NOTE: Based on pharmacokinetic information in dogs, linezolid could be given by the IV route at these same dosages."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균 감염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 초과 시 골수억제 위험 증가; CBC 모니터링 필요. 고양이에서 가역적 골수억제 증례 보고됨.",
+          "evidence": "Plumb's Dosages: 10 mg/kg PO every 8 to 12 hours (extra-label, dogs/cats combined dosing section)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균 감염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 초과 시 골수억제 위험 증가; CBC 모니터링 필요. 고양이에서 가역적 골수억제 증례 보고됨.",
+          "evidence": "Plumb's Dosages: 10 mg/kg PO every 8 to 12 hours (extra-label, dogs/cats combined dosing section)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "인체에서 신기능 저하 시 리네졸리드 혈청 농도는 변하지 않으나 대사체 농도가 2–3배 상승함. 신기능 저하 환자에서 혈소판감소증 위험 증가 보고. 구체적인 용량 조절 기준은 Plumb's에 명시되지 않음; 신기능 저하 환자에서 면밀한 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's에 간기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "옥사졸리디논 항생제 과민반응 병력",
+      "match_terms": [
+        "oxazolidinone hypersensitivity",
+        "linezolid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "최근 14일 이내 MAO 억제제 투여",
+      "match_terms": [
+        "MAOI use",
+        "selegiline",
+        "amitraz"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "diabetes"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 고혈압",
+      "match_terms": [
+        "uncontrolled hypertension",
+        "hypertension"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 갑상선기능항진증",
+      "match_terms": [
+        "uncontrolled hyperthyroidism",
+        "hyperthyroidism"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갈색세포종",
+      "match_terms": [
+        "pheochromocytoma"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "수유 중인 환자",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 50S 리보솜 소단위의 23S rRNA에 결합하여 단백질 합성 억제. 70S 개시 복합체 형성을 차단하여 세균 번역 과정을 억제. 장구균 및 포도상구균에 대해 정균 작용, 대부분의 연쇄상구균에 대해 살균 작용. 시간 의존적 항균 효과. 약한 비선택적 MAO 억제 효과.",
+    "common_extra_effects": [
+      "설사",
+      "오심",
+      "구토",
+      "두통",
+      "발진",
+      "어지러움",
+      "골수억제(백혈구감소증, 혈소판감소증, 빈혈)",
+      "세로토닌 증후군",
+      "젖산산증",
+      "말초신경병증",
+      "시신경병증",
+      "고혈압",
+      "경련",
+      "중복감염"
+    ],
+    "dog_mechanism": "개에서 경구 생체이용률 >95%로 IV와 유사한 약동학 프로파일. 시간 의존적 항균 효과.",
+    "dog_extra_effects": [
+      "경도 빈혈",
+      "혈소판감소증",
+      "보상성 젖산산증",
+      "구토",
+      "무기력",
+      "식욕부진",
+      "거대적혈구성 저색소성 재생성 빈혈(장기 투여 시)",
+      "골수저형성(고용량 반복 투여 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "가역적 골수억제(호중구감소증, 혈소판감소증, 빈혈)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률이 >95%로 매우 높아 IV와 동일한 용량으로 경구 투여 가능. 반감기 약 3.6–3.91시간. 장기 투여(>14일) 시 골수억제 위험 증가; 기저치 및 주기적 CBC 모니터링 필수. 23주간 투여한 증례에서 빈혈, 혈소판감소증, 젖산산증이 관찰되었으나 치료 14주차에 모두 회복됨. 13–14 mg/kg q12h 투여 시 구토, 무기력, 식욕부진이 나타났으며 50% 감량으로 해소됨. 감염병 전문가 자문 후 사용 권장.",
+    "cat": "고양이에서 가역적 골수억제(호중구감소증, 혈소판감소증, 빈혈) 증례 보고됨. 고양이 특이적 약동학 데이터는 없으며 개 및 인체 데이터를 외삽하여 사용. 14일 초과 투여 시 골수억제 위험 증가; 기저치 및 주기적 CBC 모니터링 필수. 감염병 전문가 자문 후 사용 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 골수억제, 젖산산증 증례 보고됨. 14일 초과 투여 시 부작용 위험 증가. 신기능 저하 시 혈소판감소증 위험 증가. MAO 억제 효과로 인한 다수의 약물 상호작용 가능. 감염병 전문가 자문 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 가역적 골수억제 증례 보고됨. 고양이 특이적 안전성 데이터 매우 제한적. 감염병 전문가 자문 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 재구성용 분말: 25°C(77°F) 보관, 빛과 습기 차단. 재구성 후 경구 현탁액: 실온 보관, 21일 후 폐기. 미개봉 IV 백: 25°C(77°F), 보호 외포장 내 보관(빛 및 동결 차단). IV 용액은 시간이 지남에 따라 황색으로 변할 수 있으나 효능에는 영향 없음. IV 백은 1회용.",
+    "forms": [
+      "Linezolid Tablets 600 mg (Zyvox®, generic)",
+      "Linezolid Powder for Oral Suspension 20 mg/mL after reconstitution in 150 mL bottles (Zyvox®, generic)",
+      "Linezolid IV Solution 2 mg/mL in 300 mL IV bag (generic)",
+      "Linezolid IV Solution (preservative free) 2 mg/mL in 100 mL and 300 mL IV bag (Zyvox®, generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "리네졸리드는 옥사졸리디논계 항생제로, 다제내성 그람양성균 감염(MRSA, MRSP, VRE 포함)에만 사용해야 하는 최후 수단 항생제입니다. WHO 인체 필수 항생제(Critically Important, High Priority)로 분류되어 수의학적 사용은 극히 제한되어야 하며, 반드시 감염병 전문가 자문 후 사용해야 합니다. 개에서 경구 생체이용률이 >95%로 매우 높습니다. 골수억제(빈혈, 혈소판감소증, 백혈구감소증)가 개와 고양이 모두에서 보고되었으며, 14일 초과 투여 시 위험이 증가합니다. 약한 MAO 억제 효과로 인해 세로토닌성 약물, MAOI, 교감신경흥분제 등과의 다수 약물 상호작용이 가능합니다.",
+    "indications": "다제내성 그람양성균 감염(MRSA, MRSP, VRE 등)으로 다른 모든 항생제에 내성이 확인되고 리네졸리드에 감수성이 있는 경우에만 사용(extra-label). 표준 치료에 반응하지 않는 노카르디아증(extra-label). 반드시 배양 및 감수성 검사로 내성 확인 후 사용.",
+    "client_info": "이 약은 처방된 대로 정확히 투여하고 전체 치료 과정을 완료하는 것이 매우 중요합니다. 동물이 나아 보여도 임의로 투약을 중단하지 마십시오. 가장 흔한 부작용은 위장관 장애(과도한 침 흘림, 구토, 설사, 식욕 저하)입니다. 음식과 함께 또는 공복에 투여할 수 있으나, 구역질이나 구토가 발생하면 음식과 함께 투여해 보십시오. 부작용이 지속되면 수의사에게 연락하십시오. 리네졸리드 투여 중에는 식이(간식 포함), 추가 약물, 벼룩/진드기 치료제(목걸이, 스팟온 제품 등) 변경 전 반드시 수의사와 상담하십시오. 이 약은 인체 의학에서 매우 중요한 항생제이므로 수의사의 지시에 따라 신중하게 사용해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none listed)",
+      "Cat-specific pharmacokinetics",
+      "Hepatic dose adjustment",
+      "Specific renal dose adjustment thresholds",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list (cat-specific PK/dosing data)",
+      "organ_burden_logic.cat (cat-specific organ burden data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/58.jsonl",
+    "extracted_at": "2026-03-11T07:26:44.850001+00:00",
+    "reviewer": null
+  }
+}

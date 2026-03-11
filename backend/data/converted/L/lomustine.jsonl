@@ -1,0 +1,514 @@
+{
+  "id": "lomustine",
+  "drug_identity": {
+    "name_ko": "로무스틴",
+    "name_en": "Lomustine",
+    "active_ingredient": "Lomustine",
+    "brand_names": [
+      "Gleostine",
+      "CeeNu"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품(Gleostine®)을 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위하게 대사되어 활성 및 비활성 대사체를 생성하며, 대사체는 주로 소변으로 배설됨. 특정 CYP 효소 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개에서 CBC 최저점은 투여 후 약 1~3주(최대 6주)에 발생. 고양이에서 호중구감소증 최저점은 보통 1~4주(최대 6주). 개에서 특발성 간세포 손상이 보고됨; 고양이에서는 간독성이 덜 흔함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 수의학적 임상 데이터 존재. 간독성(개에서 특발성 간세포 손상), 신독성(드물게), 골수억제(혈액독성), 폐독성 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS neoplasm",
+          "blood-brain barrier penetration"
+        ],
+        "index": 1,
+        "evidence": "혈액-뇌 장벽을 통과하여 CNS 종양 치료에 사용됨. 직접적인 CNS 독성은 명시되지 않음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "anemia",
+          "leukopenia",
+          "bone marrow depression"
+        ],
+        "index": 5,
+        "evidence": "골수억제가 가장 심각한 부작용으로, 호중구감소증(57%), 빈혈(34%), 혈소판감소증(14%) 보고됨. CBC 최저점은 투여 후 1~3주."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal toxicity",
+          "azotemia"
+        ],
+        "index": 3,
+        "evidence": "드물게 신독성 발생. 185마리 개 후향적 연구에서 질소혈증 12% 보고됨."
+      },
+      "liver": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "idiosyncratic hepatocellular injury",
+          "increased ALT",
+          "hepatic failure"
+        ],
+        "index": 4,
+        "evidence": "개에서 특발성 간세포 손상이 주요 부작용. ALT 상승 49%, 간부전 1.2% 보고됨. 알파-리포산 또는 SAMe+실리마린 병용 고려."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS neoplasm",
+          "blood-brain barrier penetration"
+        ],
+        "index": 1,
+        "evidence": "혈액-뇌 장벽을 통과하여 CNS 종양 치료에 사용됨. 직접적인 CNS 독성은 명시되지 않음."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "neutropenia",
+          "myelosuppression",
+          "dose-limiting"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 호중구감소증이 용량 제한 인자. 최저점은 보통 1~4주(최대 6주). 환자 간 내약성 변이가 큼."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal toxicity"
+        ],
+        "index": 3,
+        "evidence": "드물게 신독성 발생 가능. 고양이에서의 빈도는 명확히 기술되지 않음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 간독성은 개보다 덜 흔하다고 보고됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.17,
+      "max": 0.33,
+      "mean": 0.25,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 로무스틴 자체의 반감기는 약 15분(≈0.25시간)으로 매우 짧으나, 활성 대사체의 소실 반감기는 16~48시간으로 생물학적 활성이 더 오래 지속됨. 수의학적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "Other bone marrow depressant medications used concurrently may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "diminished vaccine efficacy",
+        "enhanced vaccine adverse effects",
+        "immunosuppression"
+      ],
+      "evidence": "Lomustine may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "high",
+    "gi_ulcer": "none",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "화학요법 적응증 (CNS 종양, 림프종, 비만세포종, 육종 등) — 펄스 요법",
+          "value": "50 - 90",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~6주마다 투여 (적응증 및 프로토콜에 따라 다름). 단위는 mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. 단위: mg/m² PO q2~6주. Plumb's Dosages 섹션."
+        },
+        {
+          "logic_type": "linear",
+          "context": "원발성 또는 전이성 종양에 대한 메트로노믹 화학요법",
+          "value": "1.8 - 3.8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "중앙값 2.84 mg/m²/일. 단위는 mg/m² (NOT mg/kg). 표준 치료 옵션이 없는 경우에 한함.",
+          "evidence": "오프라벨. 단위: mg/m² PO SID. Plumb's Dosages 섹션."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "화학요법 적응증 (림프종, 섬유육종 등) — 펄스 요법 (프로토콜 1)",
+          "value": "40 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~6주마다 투여 (적응증 및 프로토콜에 따라 다름). 단위는 mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. 단위: mg/m² PO q3~6주. Plumb's Dosages 섹션."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "화학요법 적응증 — 고정 용량 프로토콜 (프로토콜 2)",
+          "value": "10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주마다 투여 (적응증 및 프로토콜에 따라 다름). 고정 용량 10 mg/cat (NOT mg/kg)",
+          "evidence": "오프라벨. 10 mg/cat PO q3주. Plumb's Dosages 섹션."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의 사용 권고. 구체적인 용량 조절 기준은 명시되지 않음. 신독성(질소혈증) 발생 시 치료 중단 고려."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 환자에서 주의 사용 권고. 개에서 특발성 간독성 위험이 높으므로 각 치료 전 혈청 화학 검사 필수. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "로무스틴 과민증",
+      "match_terms": [
+        "hypersensitivity to lomustine",
+        "lomustine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수억제",
+      "match_terms": [
+        "myelosuppression",
+        "bone marrow suppression",
+        "pancytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 50000,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "빈혈",
+      "match_terms": [
+        "anemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "폐기능 장애",
+      "match_terms": [
+        "pulmonary function impairment",
+        "pulmonary disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "현재 감염",
+      "match_terms": [
+        "active infection",
+        "current infection"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatotoxicity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포 주기 비특이적 알킬화제(니트로소우레아 유도체). 알킬화 및 카르바모일화를 통해 DNA, RNA, 단백질 합성을 억제함. 혈액-뇌 장벽을 통과함.",
+    "common_extra_effects": [
+      "골수억제 (호중구감소증, 혈소판감소증, 빈혈, 백혈구감소증)",
+      "간독성 (특발성 간세포 손상)",
+      "신독성 (드물게)",
+      "폐 침윤 또는 섬유증 (드물게)",
+      "각막 탈상피화",
+      "식욕부진",
+      "구토",
+      "설사",
+      "구내염",
+      "탈모"
+    ],
+    "dog_mechanism": "개에서 특발성 간세포 손상 위험이 높음. 알킬화 및 카르바모일화를 통한 DNA/RNA/단백질 합성 억제.",
+    "dog_extra_effects": [
+      "호중구감소증 (57%)",
+      "ALT 상승 (49%)",
+      "위장관 독성 (38%; 주로 구토)",
+      "빈혈 (34%)",
+      "혈소판감소증 (14%)",
+      "질소혈증 (12%)",
+      "간부전 (1.2%)",
+      "CBC 최저점: 투여 후 1~3주 (최대 6주)"
+    ],
+    "cat_mechanism": "고양이에서 호중구감소증이 용량 제한 인자. 간독성은 개보다 덜 흔함.",
+    "cat_extra_effects": [
+      "호중구감소증 (용량 제한 인자; 최저점 1~4주, 최대 6주)",
+      "환자 간 내약성 변이 큼",
+      "간독성 (개보다 드묾)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 로무스틴은 CNS 종양, 림프종, 비만세포종, 조직구성 육종 치료에 사용됨. 특발성 간독성 위험이 높으므로 각 치료 전 혈청 화학 검사 필수. 알파-리포산(5 mg/kg PO q12h) 또는 SAMe+실리마린(Denamarin®) 병용으로 간독성 예방을 시도할 수 있음. 고용량 펄스 요법은 매일 투여 시 치명적 결과를 초래할 수 있으므로 클리닉 내에서만 투여 권장. CBC 최저점은 투여 후 1~3주.",
+    "cat": "고양이에서 림프종, 섬유육종 등에 사용됨. 호중구감소증이 용량 제한 인자이며 최저점은 1~4주(최대 6주). 환자 간 내약성 변이가 크므로 면밀한 모니터링 필요. 알파-리포산은 고양이에서 독성 우려로 권장되지 않음. 간독성은 개보다 덜 흔함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 특발성 간독성, 골수억제, 신독성, 폐독성 위험. 각 치료 전 CBC, 혈청 화학 검사, 소변 검사 필수. 고용량 펄스 요법의 매일 투여는 치명적일 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 호중구감소증이 용량 제한 인자. 환자 간 내약성 변이가 크므로 면밀한 모니터링 필요. 알파-리포산 사용 금지."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 실온(20~25°C, 68~77°F) 보관. 40°C(104°F) 이상 노출 금지.",
+    "forms": [
+      "Lomustine Capsules 5 mg (with mannitol) — Gleostine®",
+      "Lomustine Capsules 10 mg (with mannitol) — Gleostine®",
+      "Lomustine Capsules 40 mg (with mannitol) — Gleostine®",
+      "Lomustine Capsules 100 mg (with mannitol) — Gleostine®"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로무스틴(CCNU)은 니트로소우레아 계열 알킬화 항암제로, 개와 고양이의 CNS 종양, 림프종, 비만세포종, 조직구성 육종(개), 섬유육종(고양이) 치료에 오프라벨로 사용됨. 수의학적 승인 제품 없음. 주요 독성: 골수억제(개에서 CBC 최저점 1~3주), 특발성 간독성(개에서 빈번), 드물게 신독성 및 폐독성. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필수. 고용량 펄스 요법의 매일 투여는 치명적일 수 있으므로 클리닉 내 투여 권장.",
+    "indications": "▶ 개: CNS 종양, 림프종, 비만세포종, 조직구성 육종 (오프라벨) ▶ 고양이: 림프종, 섬유육종 (오프라벨) ▶ 구제 요법으로 림프종 프로토콜에 사용 ▶ 메트로노믹 화학요법 (개, 표준 치료 옵션 없는 경우)",
+    "client_info": "로무스틴은 항암(화학요법) 약물입니다. 약물과 그 부산물은 다른 동물과 사람에게 위험할 수 있습니다. 투여 당일과 이후 며칠간 모든 배설물(소변, 대변, 구토물 등)은 반드시 일회용 장갑을 착용하고 처리하고, 비닐봉지에 밀봉하여 일반 쓰레기통에 버리십시오. 골수 억제가 발생할 수 있으며, 치료 후 수 주 내에 가장 심하게 나타납니다. 혈액 검사를 위한 추적 방문을 빠지지 마십시오. 출혈, 멍, 발열(감염 징후), 또는 동물이 매우 쉽게 피로해지면 즉시 수의사에게 연락하십시오. 로무스틴은 간, 신장, 폐에 손상을 줄 수 있습니다. 비정상적인 출혈, 멍, 배뇨 이상, 우울, 감염, 호흡 곤란, 눈 흰자위·피부·잇몸의 황달 등 독성 징후가 나타나면 즉시 보고하십시오. 집에서 투여하는 경우 투여 일정을 정확히 이해하고 준수하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability (veterinary)",
+      "Protein binding",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Onset of action (minutes)",
+      "T-max (hours)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:36:18.172357+00:00",
+    "reviewer": null
+  }
+}

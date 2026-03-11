@@ -1,0 +1,643 @@
+{
+  "id": "lipid_emulsion_intravenous",
+  "drug_identity": {
+    "name_ko": "지질 에멀젼 (정맥주사용)",
+    "name_en": "Lipid Emulsion, Intravenous (ILE)",
+    "active_ingredient": "Soybean oil / Fish oil emulsion",
+    "brand_names": [
+      "Intralipid",
+      "Nutrilipid",
+      "SMOFlipid"
+    ],
+    "allergy_class": "egg yolk phospholipid",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 인체용 제품을 동물에게 허가 외 사용. 독성 치료 및 비경구 영양 공급 목적으로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "value": 20,
+        "unit": "%"
+      },
+      {
+        "value": 30,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "ILE는 킬로미크론과 유사한 속도로 혈류에서 제거되며, 제거를 위해서는 먼저 유리 지방산으로의 지방분해가 필요하다. 헤파린 활성화 지단백 분해효소에 의해 제거 속도가 증가한다."
+    },
+    "extra_information": "인체에서 소실 반감기는 약 30분이며, 5~6시간 내에 혈류에서 제거된다. 수의학 환자에서의 약동학 데이터는 보고되지 않았다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 약동학 연구 없음. 인체 데이터 및 증례 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "somnolence",
+          "neurotoxicity rescue"
+        ],
+        "index": 1,
+        "evidence": "졸음(somnolence)이 인체 이상반응으로 보고됨. 지용성 신경독소 치료에 사용됨."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hyperlipemia",
+          "hemolysis",
+          "thrombocytopenia",
+          "prolonged clotting times",
+          "lipid overload"
+        ],
+        "index": 1,
+        "evidence": "고지혈증, 용혈, 혈소판감소증, 응고시간 연장, 지질 과부하 증후군이 보고됨. 혈액 검사 수치(칼륨, 헤모글로빈, MCH, MCHC)에 위양성 간섭 발생 가능."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment caution"
+        ],
+        "index": 1,
+        "evidence": "인체에서 신장 장애 환자에게 주의 사용 권고. 수의학 환자에서의 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatomegaly",
+          "icterus",
+          "severe liver damage caution",
+          "increased liver metabolism"
+        ],
+        "index": 1,
+        "evidence": "지질 과부하 증후군에서 간비대 및 황달 보고. 중증 간 손상 환자에서 주의 사용 권고. 간에서의 독소 대사 증가 효과도 보고됨."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "cardiotoxicity rescue",
+          "cardiac output improvement",
+          "intracellular calcium"
+        ],
+        "index": 1,
+        "evidence": "심장독성 치료에 사용됨. 세포내 칼슘 증가 및 심근세포 에너지 기질 제공을 통해 심장 기능 개선 효과가 실험적으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "somnolence",
+          "neurotoxicity rescue"
+        ],
+        "index": 1,
+        "evidence": "졸음(somnolence)이 인체 이상반응으로 보고됨. 고양이에서 퍼메트린 등 지용성 신경독소 치료에 사용됨."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hyperlipemia",
+          "hemolysis",
+          "thrombocytopenia",
+          "prolonged clotting times",
+          "lipid overload"
+        ],
+        "index": 1,
+        "evidence": "고지혈증, 용혈, 혈소판감소증, 응고시간 연장이 보고됨. 수의학 증례에서 지속적 육안적 고지혈증(48시간 이상) 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment caution"
+        ],
+        "index": 1,
+        "evidence": "인체에서 신장 장애 환자에게 주의 사용 권고. 고양이에서의 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatomegaly",
+          "icterus",
+          "severe liver damage caution"
+        ],
+        "index": 1,
+        "evidence": "지질 과부하 증후군에서 간비대 및 황달 보고. 중증 간 손상 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "cardiotoxicity rescue",
+          "cardiac output improvement"
+        ],
+        "index": 1,
+        "evidence": "심장독성 치료에 사용됨. 심장 기능 개선 효과가 실험적으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.5,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체에서 소실 반감기 약 30분(0.5시간), 혈류에서 5~6시간 내 제거. 수의학 환자에서의 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Lipid-Soluble Drugs (general)",
+      "severity": 2,
+      "keywords": [
+        "lipid sink",
+        "altered pharmacokinetics",
+        "decreased drug efficacy"
+      ],
+      "evidence": "ILE is a lipid sink/shuttle for lipid-soluble drugs in circulation. When used as a nutritional agent concurrently with lipid-soluble drugs, decreased drug efficacy is possible. Clinical significance is currently unclear."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 - 초기 볼루스 (프로토콜 a)",
+          "value": "1.5 - 4",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1분에 걸쳐 투여. 반응 없을 시 최대 7 mL/kg 추가 볼루스 가능. 1.5 mL/kg을 4~6시간마다 최초 24시간 동안 간헐적 볼루스 투여 가능.",
+          "evidence": "허가 외 사용. 증례 보고 및 증례 시리즈 기반. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 - CRI 유지 (프로토콜 a)",
+          "value": "0.25",
+          "unit": "ml/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분당 0.25 mL/kg으로 30~60분간 투여. 후속 CRI는 0.05 mL/kg/시간으로 임상 증상 개선 시까지 지속 (24시간 초과 금지).",
+          "evidence": "허가 외 사용. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 - 초기 볼루스 (프로토콜 b)",
+          "value": "1.5",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~15분에 걸쳐 투여. 독성 증상 재발 시 수 시간 후 반복 가능. 반복 전 혈청 지혈증 여부 확인 필요.",
+          "evidence": "허가 외 사용. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 - CRI 유지 (프로토콜 b)",
+          "value": "0.25",
+          "unit": "ml/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분당 0.25 mL/kg으로 1~2시간 투여.",
+          "evidence": "허가 외 사용. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 - 초기 부하 용량 (프로토콜 c, PK/PD 모델 기반)",
+          "value": "2.25",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 부하 용량 후 0.025 mL/kg/분 CRI로 최대 6.5시간 투여.",
+          "evidence": "허가 외 사용. 약동학/약력학 모델링에서 도출. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 신경독성 치료 (퍼메트린, 이버멕틴 등) - 초기 볼루스 (프로토콜 d)",
+          "value": "1.5",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2분에 걸쳐 서서히 투여. 이후 0.25 mL/kg/분 CRI 30~60분. 용량 과부하 위험 시 0.07 mL/kg/분으로 4시간 투여. 최대 총 용량 16.5 mL/kg (60분 내). 혈청 지혈증 소실 및 용혈 없을 시 1~2회 반복 가능.",
+          "evidence": "허가 외 사용. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 심장독성 치료 (지용성 물질 IV 투여) - 초기 볼루스 (프로토콜 e)",
+          "value": "1.5",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1분에 걸쳐 서서히 투여 후 즉시 0.25 mL/kg/분 CRI 시작. 5분 후 평가. 필요 시 1.5 mL/kg 2차 볼루스 투여 가능. 5분 후 최종 볼루스 가능 (최대 총 3회 볼루스). CRI는 0.5 mL/kg/분으로 증량 가능. 심장 기능 회복 후 최소 10분 또는 최대 30분까지 CRI 지속. 최대 총 용량 10~12 mL/kg (30분 내).",
+          "evidence": "허가 외 사용. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비경구 영양 공급 - 지질 성분",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "전통적으로 비경구 영양 치료 시 2 g/kg/일 초과 권장하지 않음. 총 칼로리의 25~60% 범위에서 투여. 수의 영양사 상담 권장.",
+          "evidence": "허가 외 사용. 수의 영양 참고문헌 기반."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 (개와 동일 프로토콜 적용, 고양이 포함 언급)",
+          "value": "1.5 - 4",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "개와 동일한 프로토콜 적용. 고양이를 포함한 소동물에서 사용됨. ILE 20% 사용 권장. 독성 치료 시 동물 독성 센터 상담 강력 권장.",
+          "evidence": "허가 외 사용. 증례 보고 및 증례 시리즈 기반. 고양이에서 퍼메트린 독성 등에 사용됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지용성 약물 독성 구조 치료 - CRI 유지",
+          "value": "0.25",
+          "unit": "ml/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분당 0.25 mL/kg으로 30~60분간 투여. 개와 동일 프로토콜 적용.",
+          "evidence": "허가 외 사용. ILE 20% 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비경구 영양 공급 - 지질 성분",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "전통적으로 비경구 영양 치료 시 2 g/kg/일 초과 권장하지 않음. 수의 영양사 상담 권장.",
+          "evidence": "허가 외 사용. 수의 영양 참고문헌 기반."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "인체에서 신장 장애 환자에게 주의 사용 권고되나, 구체적인 용량 조절 지침은 제시되지 않음. 수의학 환자에서의 데이터 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "인체에서 중증 간 손상 환자에게 주의 사용 권고. 구체적인 용량 조절 지침은 제시되지 않음. 간 효소(ALT, AST, ALP) 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "중증 난황 알레르기",
+      "match_terms": [
+        "egg allergy",
+        "egg yolk hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "비정상적 지질 대사",
+      "match_terms": [
+        "abnormal lipid metabolism",
+        "lipid metabolism disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고지혈증",
+      "match_terms": [
+        "hyperlipemia",
+        "hyperlipidemia",
+        "hypertriglyceridemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 경향 증가",
+      "match_terms": [
+        "increased bleeding tendency",
+        "coagulopathy",
+        "bleeding disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "저칼륨혈증",
+      "match_terms": [
+        "hypokalemia",
+        "low potassium"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저인산혈증",
+      "match_terms": [
+        "hypophosphatemia",
+        "low phosphate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간 손상",
+      "match_terms": [
+        "severe liver damage",
+        "hepatic failure",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "폐 질환",
+      "match_terms": [
+        "pulmonary disease",
+        "respiratory disease",
+        "lung disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 장애",
+      "match_terms": [
+        "renal impairment",
+        "kidney disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "혈액 응고 장애",
+      "match_terms": [
+        "blood coagulation disorder",
+        "coagulopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "췌장염 감수성 견종 (셰틀랜드 쉽독, 미니어처 슈나우저, 요크셔 테리어, 비만 동물)",
+      "match_terms": [
+        "pancreatitis",
+        "Shetland Sheepdog",
+        "miniature schnauzer",
+        "Yorkshire terrier",
+        "obesity"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "정맥 내 지질 에멀젼(ILE)은 칼로리(20% 에멀젼 1 mL = 약 2 kcal) 및 필수 지방산을 공급한다. 독성학적 적응증에서는 지질 싱크(lipid sink) 또는 셔틀로 작용하여 지용성 화합물의 혈중 유리 농도를 감소시키는 것으로 추정된다. 또한 세포내 칼슘 증가 및 심근세포 에너지 기질 제공을 통한 심장 기능 개선, 미토콘드리아 지방산 대사 억제 극복 등의 기전이 제안된다.",
+    "common_extra_effects": [
+      "고지혈증(hyperlipemia)",
+      "지질 과부하 증후군(lipid overload syndrome)",
+      "췌장염(pancreatitis)",
+      "용혈(hemolysis)",
+      "혈소판감소증(thrombocytopenia)",
+      "응고시간 연장(prolonged clotting times)",
+      "패혈증(sepsis)",
+      "혈전정맥염(thrombophlebitis)",
+      "폐독성(pulmonary toxicity)",
+      "졸음(somnolence)",
+      "두통(headache)",
+      "홍조(flushing)",
+      "지질 색전(lipid emboli)",
+      "과응고성(hypercoagulability)",
+      "과민반응(hypersensitivity)",
+      "면역억제(immunosuppression)",
+      "용량 과부하(volume overload)"
+    ],
+    "dog_mechanism": "개에서 지용성 독소 치료 시 지질 싱크 기전으로 작용. 심장 기능 개선 효과 실험적으로 확인됨.",
+    "dog_extra_effects": [
+      "췌장염",
+      "고지혈증",
+      "일측성 안면 소양증",
+      "혈관 외 유출(통증 및 국소 부종)",
+      "지속적 육안적 고지혈증(48시간 이상)",
+      "용혈",
+      "의심 각막 지질증",
+      "급성 호흡곤란 증후군(ARDS) 의심 증례 보고"
+    ],
+    "cat_mechanism": "고양이에서 지용성 독소(퍼메트린 등) 치료 시 지질 싱크 기전으로 작용.",
+    "cat_extra_effects": [
+      "췌장염",
+      "고지혈증",
+      "용혈",
+      "지속적 육안적 고지혈증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 지용성 약물 독성(이버멕틴, 퍼메트린, 국소마취제, 칼슘채널차단제, 베타차단제, 항우울제 등) 치료에 사용됨. 췌장염 감수성 견종(셰틀랜드 쉽독, 미니어처 슈나우저, 요크셔 테리어)에서 고지혈증 발생 시 헤파린 사용 고려 가능. ILE 20%만 독성 치료에 사용 권장. 투여 전 혈액 샘플 채취 필수.",
+    "cat": "고양이에서 퍼메트린, 이버멕틴 등 지용성 독소 치료에 사용됨. 개와 동일한 프로토콜 적용. 독성 치료 시 동물 독성 센터 상담 강력 권장. ILE 20%만 독성 치료에 사용 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "췌장염 감수성 견종, 비만 동물에서 주의 필요. 용량 과부하, 고지혈증, 면역억제 위험. 독성 치료 시 표준 지지 치료의 대체제가 아님. 지질 대사 후 독소 재분포로 인한 지연 독성 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고지혈증, 용혈, 용량 과부하 위험. 독성 치료 시 표준 지지 치료의 대체제가 아님. 지질 대사 후 독소 재분포로 인한 지연 독성 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미개봉 제품은 실온(25°C 이하) 보관, 동결 금지. 동결된 경우 폐기. 부분 사용 후 잔여 제품은 냉장(2~8°C) 보관하고 개봉 후 24시간 내 폐기. 새 백/바이알은 24시간 내 사용.",
+    "forms": [
+      "Fat Emulsion (plant-based; soybean) IV 10%, 20%, 30% - Intralipid, Nutrilipid (100 mL, 250 mL, 500 mL, 1000 mL 병 또는 백)",
+      "Fat Emulsion (fish oil and plant-based) IV 20% - SMOFlipid (100 mL, 250 mL, 500 mL 백)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "정맥 지질 에멀젼(ILE)은 비경구 영양 공급 및 지용성 약물/독소 중독 구조 치료에 사용됩니다. 수의학에서 허가된 제품은 없으며, 인체용 제품을 허가 외로 사용합니다. 독성 치료 시 반드시 ILE 20%를 사용해야 하며, 표준 지지 치료의 대체제가 아닙니다. 지질 싱크 기전으로 지용성 독소의 혈중 유리 농도를 감소시킵니다. 고지혈증, 용혈, 췌장염, 용량 과부하 등 잠재적으로 심각한 이상반응이 발생할 수 있습니다. 독성 치료 시 24시간 동물 독성 센터 상담을 강력히 권장합니다.",
+    "indications": "1) 비경구 영양이 필요한 경우 칼로리 및 필수 지방산 공급원 (허가 외). 2) 전통적 치료가 효과적이지 않은 지용성 약물/독소 중독의 구조 치료 (허가 외). 적용 가능한 독소: 국소마취제(부피바카인, 메피바카인, 로피바카인, 리도카인), 마크로사이클릭 락톤(이버멕틴, 목시덱틴), 칼슘채널차단제(딜티아젬, 베라파밀, 암로디핀), 베타차단제(프로프라놀롤, 카르베딜롤), 항우울제(부프로피온, 독세핀, 서트랄린, 클로미프라민), 항정신병약(클로르프로마진, 퀘티아핀), 항경련제(카르바마제핀, 라모트리진), 대마초 및 합성 칸나비노이드, 근이완제(바클로펜, 사이클로벤자프린), 퍼메트린, 그라야노톡신, 로페라미드, NSAIDs, 코카인, 메탈데히드, 브로메탈린, 미녹시딜, 카르바메이트, 메스암페타민, 덱스트로암페타민 황산염, 진전유발 마이코톡신.",
+    "client_info": "이 약물은 반드시 전문 의료진이 적절한 환자 모니터링이 가능한 환경에서만 사용해야 합니다. 정맥 지질 에멀젼은 독성 치료 또는 영양 공급을 위해 정맥으로 투여되는 약물입니다. 투여 중 및 투여 후 고지혈증, 알레르기 반응, 용량 과부하 등의 이상반응이 발생할 수 있으므로 지속적인 모니터링이 필요합니다. 독성 치료 후에도 독소가 지질에서 다시 방출될 수 있으므로 치료 후 지속적인 관찰이 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "CYP enzyme interactions",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog.brain.index",
+      "organ_burden_logic.cat.brain.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:30:59.769611+00:00",
+    "reviewer": null
+  }
+}
