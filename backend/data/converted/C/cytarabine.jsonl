@@ -1,0 +1,655 @@
+{
+  "id": "cytarabine",
+  "drug_identity": {
+    "name_ko": "시타라빈",
+    "name_en": "Cytarabine",
+    "active_ingredient": "Cytarabine",
+    "brand_names": [
+      "Cytosar-U",
+      "DepoCyt",
+      "DepoCyte",
+      "ARA-cell",
+      "Alexan",
+      "Arabine",
+      "Aracytin",
+      "Aracytine",
+      "Citab",
+      "Citagenin",
+      "Citaloxan",
+      "Cylocide",
+      "Cytarbel",
+      "Cytarine",
+      "Erpalfa",
+      "Ifarab",
+      "Laracit",
+      "Medsara",
+      "Novutrax",
+      "Serotabir",
+      "Starasid",
+      "Tabine",
+      "Tarabine",
+      "Udicil"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 개와 고양이에서 림프종, 백혈병, 원인불명 뇌수막뇌척수염 치료에 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "시타라빈은 주로 간에서 시티딘 탈아미노효소(cytidine deaminase)에 의해 비활성 대사체인 ara-U(우라실 아라비노사이드)로 대사된다. 투여 후 24시간 이내에 약 80%가 소변으로 배설되며, 이 중 약 90%는 ara-U, 약 10%는 미변화 시타라빈이다(사람 데이터)."
+    },
+    "extra_information": "개에서 50 mg/m² SC 투여 시 분포용적(Vd) 0.67 L/kg, 소실 반감기 1.35시간(SC) 및 1.15시간(CRI). 별도 연구에서 50 mg/m² SC 투여 시 Vd 0.9 L/kg, t½ 1.1시간. SC 투여 후 흡수가 매우 빠르며 1시간 이내에 최고 혈중 농도 도달. SC 투여는 정상 상태 농도에 도달하지 못함. CRI는 세포독성 수준의 혈중 농도를 더 오래 유지할 수 있음. 사람에서 CSF 농도는 혈장 농도의 약 40%에 달하며, CSF에서의 소실 반감기는 혈청보다 유의하게 길다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 골수억제, 간독성(ALT 상승), GI 독성이 명시됨. 신장은 주요 배설 경로이나 직접적 신독성은 명시되지 않음. 심장 독성은 언급 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS lymphoma",
+          "blood-brain barrier crossing"
+        ],
+        "index": 1,
+        "evidence": "신경독성이 부작용으로 언급됨. 600 mg/m² IV 투여 시 혈액-뇌 장벽 통과 확인(건강한 비글). 뇌수막뇌척수염 치료에 사용됨."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "anemia",
+          "bone marrow depression"
+        ],
+        "index": 4,
+        "evidence": "골수억제(빈혈, 호중구감소증, 혈소판감소증)가 주요 부작용. IV CRI 후 호중구감소증 35%, 혈소판감소증 12% 보고. IV 투여 시 SC보다 골수억제 효과 더 현저함."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction caution"
+        ],
+        "index": 2,
+        "evidence": "약 80%가 신장으로 배설됨(사람 데이터). 신기능 장애 환자에서 주의 사용 권고. 직접적 신독성은 명시되지 않음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased ALT",
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "간독성이 부작용으로 언급됨. 한 연구에서 개의 15%에서 ALT 상승 보고. 간에서 주로 대사됨. 간기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "meningoencephalomyelitis treatment"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 원인불명 뇌수막뇌척수염 치료에 사용됨. 신경독성은 일반적 부작용으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "anemia",
+          "bone marrow depression"
+        ],
+        "index": 4,
+        "evidence": "골수억제가 주요 부작용으로 언급됨. 고양이 특이적 데이터는 제한적이나 개와 유사한 독성 프로파일 예상."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction caution"
+        ],
+        "index": 2,
+        "evidence": "약 80%가 신장으로 배설됨(사람 데이터). 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "간독성이 일반적 부작용으로 언급됨. 간에서 주로 대사됨. 고양이 특이적 ALT 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 1.1,
+      "max": 1.35,
+      "mean": 1.23,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 SC 투여 후 1시간 이내 최고 혈중 농도 도달. 소실 반감기: SC 1.35시간, CRI 1.15시간(50 mg/m² 투여 시). 별도 연구에서 t½ 1.1시간(50 mg/m² SC). 경구 투여 시 전신 생체이용률 매우 낮음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Flucytosine (5-FC)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "antifungal efficacy reduction"
+      ],
+      "evidence": "Cytarabine may antagonize the anti-infective activity of flucytosine."
+    },
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "Concurrent use with other bone marrow depressant medications may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Live and Inactivated Vaccines",
+      "severity": 2,
+      "keywords": [
+        "reduced vaccine efficacy",
+        "enhanced adverse effects"
+      ],
+      "evidence": "Cytarabine may diminish vaccine efficacy and enhance adverse effects of live vaccines."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - IV CRI (DMAC 프로토콜 등)",
+          "value": "300",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "300 mg/m² (NOT mg/kg); 4~72시간에 걸쳐 지속 IV 주입, 주 1회 또는 DMAC 프로토콜 day 1",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 17, 27, 28."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - IV CRI (600 mg/m² 분할)",
+          "value": "600",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "600 mg/m² (NOT mg/kg); 300 mg/m²씩 48시간에 걸쳐 지속 IV 주입",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 1."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - IV CRI (카보플라틴 병용)",
+          "value": "300 - 600",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "300~600 mg/m² (NOT mg/kg); 5~8시간에 걸쳐 지속 IV 주입, day 1, day 7, day 14",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 3."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - IV CRI (VCAA 기반 프로토콜)",
+          "value": "750",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "750 mg/m² (NOT mg/kg); 150 mg/m²씩 5일 연속 투여, GMCSF/EPO/ondansetron 병용",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 4."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (DMAC 프로토콜, 2회 분할)",
+          "value": "100",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "100 mg/m² (NOT mg/kg) SC 2회, 2시간 간격 투여 (총 200 mg/m²), DMAC 프로토콜",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 2."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (DMAC 프로토콜, 단회)",
+          "value": "300",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "300 mg/m² (NOT mg/kg) SC 단회, DMAC 프로토콜",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 27, 28."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (카보플라틴 병용, 분할)",
+          "value": "300 - 600",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "300~600 mg/m² (NOT mg/kg) SC, 3~4일에 걸쳐 3~4회 분할 투여, day 1부터 카보플라틴 병용",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 3."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (대과립 림프구 T세포 림프종)",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "150 mg/m² (NOT mg/kg) SC q12h, 48시간, L-asparaginase/CCNU/vincristine 병용",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 29."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (블레오마이신 병용)",
+          "value": "33",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "33 mg/m² (NOT mg/kg) SC q8h, 5일, 블레오마이신 병용",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 6."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "염증성 뇌질환(원인불명 뇌수막뇌척수염) - SC",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "50 mg/m² (NOT mg/kg) SC q12h, 48시간, 3주마다 반복, 글루코코르티코이드 병용",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 7, 8, 18, 30-32."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "염증성 뇌질환(원인불명 뇌수막뇌척수염) - IV CRI (100 mg/m²)",
+          "value": "100",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "100 mg/m² (NOT mg/kg) 24시간에 걸쳐 지속 IV 주입",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 33, 34."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "염증성 뇌질환(원인불명 뇌수막뇌척수염) - IV CRI (200 mg/m²)",
+          "value": "200",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "200 mg/m² (NOT mg/kg) 8~48시간에 걸쳐 지속 IV 주입",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 35, 36."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (저용량)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10 mg/m² (NOT mg/kg) SC q12h, 2~4일",
+          "evidence": "오프라벨. 데이터 제한적. 단위는 mg/m²임에 주의. 참고문헌 37."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (복합 프로토콜)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "50 mg/m² (NOT mg/kg) SC q12h, 48시간, 복합 항암 프로토콜",
+          "evidence": "오프라벨. 데이터 제한적. 단위는 mg/m²임에 주의. 참고문헌 38."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - SC (DMAC 구제 프로토콜)",
+          "value": "300",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "300 mg/m² (NOT mg/kg) SC 단회, DMAC 구제 프로토콜",
+          "evidence": "오프라벨. 데이터 제한적. 단위는 mg/m²임에 주의. 참고문헌 5."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - IV (복합 항암제 병용)",
+          "value": "100",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "100 mg/m² (NOT mg/kg) IV, 다른 항암제와 병용",
+          "evidence": "오프라벨. 데이터 제한적. 단위는 mg/m²임에 주의. 참고문헌 39."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "염증성 뇌질환(원인불명 뇌수막뇌척수염) - SC",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "50 mg/m² (NOT mg/kg) SC q12h, 48시간",
+          "evidence": "오프라벨. 단위는 mg/m²임에 주의. 참고문헌 11."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의 사용 권고되나 구체적인 용량 조절 기준은 명시되지 않음. 약 80%가 신장으로 배설되므로 신기능 저하 시 모니터링 강화 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 환자에서 주의 사용 권고되나 구체적인 용량 조절 기준은 명시되지 않음. 간에서 주로 대사되므로 간기능 저하 시 모니터링 강화 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "시타라빈 과민반응 기왕력",
+      "match_terms": [
+        "hypersensitivity to cytarabine",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수 억제",
+      "match_terms": [
+        "bone marrow depression",
+        "myelosuppression",
+        "pancytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "활동성 감염",
+      "match_terms": [
+        "active infection",
+        "sepsis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포 내에서 아라시티딘 삼인산(aracytidine triphosphate)으로 전환되어 데옥시시티딘 삼인산과 경쟁적으로 DNA 중합효소를 억제함으로써 DNA 합성을 저해. 세포 주기 S기 특이적으로 작용하며 G1기에서 S기로의 진행을 차단. 세포독성 및 약물 활성 모두 DNA 내 시타라빈 삽입에 기인.",
+    "common_extra_effects": [
+      "골수억제(빈혈, 호중구감소증, 혈소판감소증)",
+      "구역, 구토, 식욕부진, 설사",
+      "구강 궤양",
+      "간독성(ALT 상승)",
+      "신경독성",
+      "기면(lethargy)",
+      "발열",
+      "탈모",
+      "배뇨 부위 석회화 피부증(calcinosis cutis, SC 주사 부위)",
+      "침윤성 폐질환(드물게)"
+    ],
+    "dog_mechanism": "개에서 IV CRI 후 GI 독성(65%) 및 혈액학적 독성(호중구감소증 35%, 혈소판감소증 12%)이 가장 흔함. IV 투여 시 SC보다 골수억제 효과 더 현저. 뇌수막뇌척수염 치료 저용량에서는 경미한 빈혈이 1% 미만에서 발생.",
+    "dog_extra_effects": [
+      "호중구감소증(35%)",
+      "혈소판감소증(12%)",
+      "ALT 상승(15%)",
+      "탈모(지속 성장 모발 견종에서 더 현저: 푸들, 테리어, 아프간하운드, 올드잉글리시쉽독)",
+      "SC 주사 부위 석회화 피부증(prednisolone 병용 시)",
+      "침윤성 폐질환(1례 보고)"
+    ],
+    "cat_mechanism": "고양이에서의 데이터는 제한적. 개와 유사한 독성 프로파일 예상.",
+    "cat_extra_effects": [
+      "골수억제",
+      "GI 독성",
+      "간독성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 단독 사용 시 림프종에 대한 효능이 낮음. 복합 항암 프로토콜(DMAC 등) 또는 구제 요법의 일부로 사용 시 효과적. 뇌수막뇌척수염 치료 시 글루코코르티코이드와 병용. SC 투여 시 정상 상태 농도에 도달하지 못하므로 CRI가 더 지속적인 세포독성 농도 유지에 유리할 수 있음. 모든 투여 전 CBC 및 간·신기능 검사 필수. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필수.",
+    "cat": "고양이에서의 데이터는 매우 제한적. 림프종 및 백혈병 치료, 원인불명 뇌수막뇌척수염 치료에 오프라벨로 사용. 수의 종양 전문의와의 상담 및 최신 프로토콜 참조 강력 권장. SC 투여 시 흡수 및 소실이 빠름에 유의. 취급 시 NIOSH 지침에 따른 PPE 착용 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "골수 억제, 간·신기능 장애, 활동성 감염 환자에서 주의 사용. 충분한 모니터링 및 지지 요법이 가능한 환경에서만 사용. 임신 동물에서 태아 독성 위험. NIOSH 위험 약물."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 데이터 제한적. 골수 억제, 간·신기능 장애, 활동성 감염 환자에서 주의 사용. 수의 종양 전문의 상담 권장. NIOSH 위험 약물."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 분말: 빛 차단, 20~25°C(68~77°F) 보관. 용액 바이알: 15~30°C(59~86°F) 보관. 세균 억제수로 재구성 후 실온에서 48시간 안정(가능한 한 빨리 투여 권장).",
+    "forms": [
+      "Cytarabine Injection 20 mg/mL (5 mL, 25 mL, 50 mL 바이알)",
+      "Cytarabine Injection 100 mg/mL (20 mL 단회 투여 바이알)",
+      "Cytarabine Injection 리포솜 10 mg/mL (척수강 내 투여용, DepoCyt)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "시타라빈은 개와 고양이의 림프망상 종양(림프종), 골수증식성 질환(백혈병), CNS 림프종 및 원인불명 뇌수막뇌척수염 치료에 사용되는 비경구 항종양제/면역억제제입니다. 수의과 승인 제품은 없으며 사람용 제제를 오프라벨로 사용합니다. 주요 부작용은 GI 독성과 골수억제이며, 충분한 모니터링이 필수적입니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비(PPE) 착용이 필요합니다. 용량은 반드시 mg/m²(체표면적) 단위로 계산해야 하며 mg/kg과 혼동하지 않도록 주의해야 합니다.",
+    "indications": "【승인 적응증】없음(수의과 승인 제품 없음). 【오프라벨 적응증】개·고양이: 림프종(복합 항암 프로토콜 또는 구제 요법), 백혈병, CNS 림프종, 원인불명 뇌수막뇌척수염(글루코코르티코이드 병용). 말: 림프종(데이터 제한적, 개별 증례 보고 수준).",
+    "client_info": "시타라빈은 항암(화학요법) 약물입니다. 이 약물과 그 부산물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 투약 당일과 이후 며칠간 모든 체액(소변, 대변, 구토물 등)과 혈액은 반드시 일회용 장갑을 착용하고 처리하십시오. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. GI 독성(궤양, 설사, 구토)이 발생할 수 있습니다. 설사가 심하거나 지속되면 수의사에게 연락하십시오. 골수 억제가 발생할 수 있으며, 치료 후 수 주 이내에 가장 심하게 나타납니다. 출혈, 멍, 발열(감염 징후), 또는 동물이 매우 쉽게 피로해하면 즉시 수의사에게 연락하십시오. 비정상적인 출혈, 멍, 배뇨 이상, 우울, 감염, 호흡 곤란 등 독성 징후가 나타나면 즉시 보고하십시오. 개에서 탈모 및 면도 후 모발 재성장 지연이 보고되었으며, 지속적으로 자라는 모발을 가진 견종(푸들, 테리어, 아프간하운드, 올드잉글리시쉽독 등)에서 더 심한 탈모가 나타날 수 있습니다. 이 약물은 NIOSH에서 위험 약물로 분류합니다. 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability percentage",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Cat-specific pharmacokinetic data",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat (additional PK data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/37.jsonl",
+    "extracted_at": "2026-03-11T00:44:00.053026+00:00",
+    "reviewer": null
+  }
+}

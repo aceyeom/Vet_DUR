@@ -1,0 +1,497 @@
+{
+  "id": "dacarbazine",
+  "drug_identity": {
+    "name_ko": "다카르바진",
+    "name_en": "Dacarbazine",
+    "active_ingredient": "Dacarbazine",
+    "brand_names": [
+      "DTIC-Dome",
+      "Asercit",
+      "DTI",
+      "Dacarb",
+      "Dacarbaziba",
+      "Dacatic",
+      "Deticene",
+      "Detilem",
+      "Detimedac",
+      "Fauldetic",
+      "Ifadac",
+      "Oncocarbil"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 개에서 재발성 림프종, 연조직 육종, 흑색종 등에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.4,
+    "cyp_profile": {
+      "substrates": [
+        "CYP1A2"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간의 사이토크롬 P450 효소(CYP1A2)에 의해 활성 대사체인 MTIC(methyl-triazeno-imidazole-carboxamide)로 전환됨. 소변으로 세뇨관 분비를 통해 배설되며 약 40%는 미변화체로 배출됨."
+    },
+    "extra_information": "개에서의 약동학 데이터는 확인되지 않음. 인간 데이터에 기반: 혈장 단백 결합이 낮고, 간에 집중 분포하여 광범위하게 대사됨. 혈액-뇌 장벽 통과는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개에서의 수의학적 PK 데이터 없음; 인간 데이터 및 임상 이상반응 보고에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈액-뇌 장벽 통과 제한"
+        ],
+        "index": -1,
+        "evidence": "혈액-뇌 장벽 통과가 제한적이라고 명시되어 있어 뇌 부담은 낮음."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "골수억제",
+          "빈혈",
+          "호중구감소증",
+          "혈소판감소증",
+          "조혈독성"
+        ],
+        "index": 1,
+        "evidence": "골수독성(빈혈, 호중구감소증, 혈소판감소증)이 보고됨. 혈소판감소증이 가장 흔한 혈액학적 독성으로 치료 후 1~2주 내 발생. 드물게 치명적인 조혈독성 발생 가능."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "신장 손상",
+          "세뇨관 분비",
+          "신기능 이상"
+        ],
+        "index": 1,
+        "evidence": "지연성 독성으로 신장 손상이 드물게 보고됨. 약물의 40%가 신장을 통해 미변화체로 배설됨. 신기능 이상 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "간독성",
+          "간에서 광범위 대사",
+          "간기능 이상"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사되며 지연성 독성으로 간독성이 보고됨. 간기능 이상 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용 비권장. 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용 비권장. 고양이의 대사 능력이 불명확하여 사용 권장하지 않음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용 비권장. 관련 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용 비권장. 고양이가 다카르바진을 적절히 대사할 수 있는지 불명확함."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용 비권장. 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 5.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간 데이터: 소화관에서 흡수가 불량하여 반드시 IV 투여해야 함. 반감기 약 5시간(인간). 혈장 단백 결합은 낮음. 개에서의 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 병용 금지가 명시되지 않은 경우에도 임상적 모니터링 강화 권고.",
+  "drug_interactions": [
+    {
+      "drug": "CYP1A2 Inducers (e.g., phenobarbital, rifampin)",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 유도",
+        "대사 증가",
+        "약효 감소"
+      ],
+      "evidence": "CYP1A2 유도제는 다카르바진의 대사를 증가시킬 수 있음. 치료 효과 감소 가능성."
+    },
+    {
+      "drug": "CYP1A2 Inhibitors, Strong (e.g., ciprofloxacin, mexiletine)",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 억제",
+        "대사 감소",
+        "독성 증가"
+      ],
+      "evidence": "강력한 CYP1A2 억제제는 다카르바진의 대사를 감소시킬 수 있음. 치료 변경 고려 권고."
+    },
+    {
+      "drug": "Immunosuppressive Agents (e.g., cyclosporine, leflunomide, mycophenolate)",
+      "severity": 3,
+      "keywords": [
+        "골수억제 상가작용",
+        "면역억제"
+      ],
+      "evidence": "다른 골수억제제와 병용 시 골수억제가 상가적으로 증가할 수 있음. 가능한 병용 회피 권고."
+    },
+    {
+      "drug": "Myelosuppressive Agents (e.g., antineoplastics, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "골수억제 상가작용",
+        "조혈독성"
+      ],
+      "evidence": "다른 골수억제제와 병용 시 골수억제가 상가적으로 증가할 수 있음. 가능한 병용 회피 권고."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "백신 효능 감소",
+        "면역억제",
+        "이상반응 증가"
+      ],
+      "evidence": "백신 효능을 감소시키고 백신 이상반응을 증가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 프로토콜 A: 재발성 림프종, 연조직 육종, 흑색종 등",
+          "value": "600 - 1000",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~3주마다 반복. 용량 단위는 mg/m²(NOT mg/kg). 4~8시간에 걸쳐 투여.",
+          "evidence": "600–1000 mg/m² IV over 4 to 8 hours every 2 to 3 weeks (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 프로토콜 B: 재발성 림프종, 연조직 육종, 흑색종 등",
+          "value": "200 - 250",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일 연속 투여 후 3~4주마다 반복. 용량 단위는 mg/m²(NOT mg/kg). 자유 흐름 IV 용액에 볼루스로 투여.",
+          "evidence": "200–250 mg/m² once daily IV for 5 days, cycle repeated every 3 to 4 weeks (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신기능 이상 환자에서 주의 사용 권고. 약물의 약 40%가 신장을 통해 배설됨. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 이상 환자에서 주의 사용 권고. 간에서 광범위하게 대사되므로 간기능 저하 시 독성 증가 가능. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "dacarbazine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 골수 억제",
+      "match_terms": [
+        "bone marrow depression",
+        "myelosuppression",
+        "pancytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "간기능 이상",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "간질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신기능 이상",
+      "match_terms": [
+        "renal dysfunction",
+        "kidney disease",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "감염",
+      "match_terms": [
+        "active infection",
+        "감염"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (모든 고양이)",
+      "match_terms": [
+        "cat",
+        "feline",
+        "고양이"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "간의 CYP450 효소에 의해 활성 대사체 MTIC으로 전환됨. MTIC은 자발적으로 분해되어 메틸 다이아조늄을 방출하고, 이것이 구아닌의 O6 및 N7 위치를 메틸화하여 DNA 복제 연장을 중단시키고 DNA 이중 가닥 절단을 유발하는 알킬화제임.",
+    "common_extra_effects": [
+      "급성 구토 (투여 후 24시간 이내)",
+      "식욕부진",
+      "설사",
+      "골수억제 (빈혈, 호중구감소증, 혈소판감소증)",
+      "탈모",
+      "간독성",
+      "신장 손상",
+      "광과민반응",
+      "정맥 연축",
+      "정맥염",
+      "혈관외 유출 시 조직 손상"
+    ],
+    "dog_mechanism": "인간과 동일한 CYP450 매개 대사 경로로 추정되나 개에서의 PK 데이터는 없음.",
+    "dog_extra_effects": [
+      "GI 독성 (구토, 식욕부진, 설사) - 용량 제한 독성",
+      "혈소판감소증 (치료 후 1~2주 내 발생)",
+      "호중구감소증",
+      "빈혈",
+      "탈모 (특히 지속 성장 모발 견종)",
+      "간독성 (드물게)",
+      "신장 손상 (드물게)",
+      "광과민반응 (드물게)",
+      "주사 부위 통증 및 조직 손상"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 재발성 림프종, 연조직 육종, 조직구성 육종, 흑색종, 혈관육종 치료에 오프라벨로 사용됨. 고도의 구토 유발 약물로 마로피탄트, 온단세트론 등 항구토제 전처치가 필수적임. 혈소판감소증이 가장 흔한 혈액학적 독성으로 치료 후 1~2주 내 발생. 수의 종양 전문의와의 상담 및 최신 종양학 프로토콜 참조 강력 권고.",
+    "cat": "고양이에서 다카르바진이 적절히 대사될 수 있는지 불명확하여 사용을 권장하지 않음. 유사 항종양제인 테모졸로마이드는 고양이에서 동일한 활성 대사체(MTIC)로 대사될 수 있음이 알려져 있으나, 다카르바진 자체는 고양이에서 사용 금기."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 오프라벨로 사용 가능하나 심각한 독성 가능성이 있음. 적절한 모니터링 및 지지 치료가 가능한 환경에서만 사용. 혈액검사(CBC, 혈소판), 신장 및 간기능 검사 모니터링 필요. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필수."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 다카르바진의 대사 능력이 불명확하여 사용을 권장하지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 분말은 빛을 차단하고 2°C~8°C(36°F~46°F)에서 보관. 열에 노출 시 분말이 아이보리색에서 분홍색으로 변색될 수 있으며 이는 분해를 의미함. 멸균수로 재구성 후 실온에서 최대 8시간, 냉장 시 72시간 안정. 5% 포도당 또는 0.9% 생리식염수로 희석(최대 500mL) 시 냉장에서 24시간, 실온에서 8시간 안정.",
+    "forms": [
+      "Dacarbazine Powder for Injection 100 mg vial",
+      "Dacarbazine Powder for Injection 200 mg vial",
+      "Dacarbazine Powder for Injection 500 mg vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "다카르바진(DTIC)은 개에서 재발성 림프종, 연조직 육종, 흑색종 등에 사용되는 알킬화 항종양제입니다. 수의학적 승인 제품은 없으며 오프라벨로 사용됩니다. 고도의 구토 유발 약물로 항구토제 전처치가 필수적이며, 골수억제(특히 혈소판감소증)가 주요 독성입니다. 고양이에서는 사용을 권장하지 않습니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비(PPE) 착용이 필요합니다.",
+    "indications": "【개 - 오프라벨】재발성 림프종(단독 또는 독소루비신, 미톡산트론, 빈크리스틴, 로무스틴과 병용), 연조직 육종, 조직구성 육종, 흑색종, 혈관육종. 【고양이】사용 비권장.",
+    "client_info": "다카르바진은 항암(항종양) 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 반려동물이 약물을 투여받은 날과 그 후 며칠 동안, 모든 체액(소변, 대변, 구토물)과 혈액은 반드시 일회용 장갑을 착용하고 처리해야 합니다. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. 구토, 설사 등 위장관 독성이 발생할 수 있습니다. 설사가 심하거나 지속되면 수의사에게 연락하십시오. 골수 억제가 발생할 수 있어 감염 위험이 증가할 수 있습니다. 치료 후 수 주 내에 골수에 가장 큰 영향이 나타납니다. 출혈, 멍, 발열(감염 징후), 또는 쉽게 피로해지는 증상이 보이면 즉시 수의사에게 연락하십시오. 정기적인 혈액검사 추적 방문을 빠지지 마십시오. 이 약물은 NIOSH에서 위험 약물로 분류하고 있습니다. 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data (dog/cat)",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability (F%)",
+      "Protein binding percent",
+      "Onset time",
+      "T_max"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.extra_information (dog-specific PK)",
+      "organ_burden_logic.dog (veterinary-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/37.jsonl",
+    "extracted_at": "2026-03-11T00:45:50.702686+00:00",
+    "reviewer": null
+  }
+}

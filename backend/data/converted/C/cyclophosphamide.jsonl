@@ -1,0 +1,686 @@
+{
+  "id": "cyclophosphamide",
+  "drug_identity": {
+    "name_ko": "사이클로포스파미드",
+    "name_en": "Cyclophosphamide",
+    "active_ingredient": "Cyclophosphamide",
+    "brand_names": [
+      "Cytoxan",
+      "Neosar"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 extra-label이며, 인간용 제품만 존재함. 수의사 처방 및 종양 전문의 상담 권장.",
+    "dosage_form": [
+      "Cap",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사이클로포스파미드는 간에서 여러 대사체로 전환되며, 주요 활성 대사체는 4-hydroxycyclophosphamide(4-OHCP)임. 페노바르비탈 등 마이크로솜 효소 유도제에 의해 대사 속도가 증가할 수 있음. 구체적인 CYP 아이소폼은 Plumb's 본문에 명시되지 않음."
+    },
+    "extra_information": "개(림프종 환자): 경구 투여 후 사이클로포스파미드 및 4-OHCP의 최고 혈중 농도는 약 45분 후 도달. 반감기는 30~60분. 4-OHCP의 AUC는 경구 및 IV 투여 시 유사하여 두 경로를 상호 교환 가능. 고양이(건강한 개체): IP 투여 시 IV 대비 최고 농도 약 50% 낮고 노출량 약 20% 낮음. 경구 투여 시 최고 농도 및 노출량은 IV 대비 각각 약 80%, 50% 낮음. 4-OHCP의 최고 농도 및 노출량은 모든 투여 경로에서 유사. IV 및 IP 투여 후 사이클로포스파미드 및 4-OHCP의 말단 반감기는 각각 약 0.6시간 및 0.8시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 각 장기별 독성 언급 빈도 및 심각도를 반영. 수의학적 종별 데이터가 일부 존재하나 정량적 PK 데이터는 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "depression",
+          "seizures",
+          "tremors",
+          "nystagmus"
+        ],
+        "index": 1,
+        "evidence": "과다 투여 시 발작, 진전, 안진 등 신경계 증상이 보고됨. 일반 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "myelosuppression",
+          "leukopenia",
+          "neutropenia",
+          "anemia",
+          "thrombocytopenia",
+          "WBC",
+          "nadir"
+        ],
+        "index": 0,
+        "evidence": "골수억제가 주요 부작용으로, WBC 감소가 주로 나타나며 투여 후 5~14일에 최저점 도달. RBC 및 혈소판 생산에도 영향 가능."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sterile hemorrhagic cystitis",
+          "hematuria",
+          "renal toxicity",
+          "urinary"
+        ],
+        "index": 2,
+        "evidence": "무균성 출혈성 방광염이 장기 투여 시 최대 30%에서 발생. 신장 기능 저하 환자에서 주의 필요. 소변으로 주로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic toxicity",
+          "impaired hepatic function",
+          "metabolized in the liver"
+        ],
+        "index": 3,
+        "evidence": "간에서 대사되며, 간 기능 저하 시 주의 필요. 아자티오프린 병용 시 간독성 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "cardiac toxicity",
+          "myocarditis",
+          "pericardial effusion",
+          "CHF",
+          "arrhythmias"
+        ],
+        "index": 4,
+        "evidence": "심근염, 심낭삼출, 울혈성 심부전, 부정맥 등 심장 독성이 인간에서 보고됨. 동물에서도 가능성 언급."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "depression"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 신경계 독성에 대한 직접적 언급은 제한적. 우울증이 일반 부작용으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "anorexia"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 구토, 식욕부진, 호중구감소증이 가장 흔한 부작용으로 보고됨. 부작용 빈도는 낮고 경증이 많음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "cystitis",
+          "hematuria",
+          "dysuria"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 사이클로포스파미드 유발 방광염(CIC)은 드물지만 발생 가능. 혈뇨 및 배뇨통이 초기 증상."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic toxicity",
+          "metabolized in the liver"
+        ],
+        "index": 3,
+        "evidence": "간에서 대사되며 간 기능 저하 시 주의 필요. 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac toxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적 데이터는 없으나 일반 부작용으로 언급됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 1.0,
+      "mean": 0.75,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 20,
+    "evidence": "개(림프종): 경구 투여 후 Tmax 약 45분(0.75시간), 반감기 30~60분. 고양이: IV/IP 투여 후 사이클로포스파미드 반감기 약 0.6시간, 4-OHCP 반감기 약 0.8시간. 단백결합률 20%는 인간 데이터 기준."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: contraindicated→3, major→3, moderate→2, minor→1. MAOI 상호작용은 해당 없음.",
+  "drug_interactions": [
+    {
+      "drug": "Allopurinol",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Allopurinol may increase the risk for myelosuppression when used concurrently with cyclophosphamide."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "pulmonary toxicity"
+      ],
+      "evidence": "Concurrent use of amiodarone and cyclophosphamide may increase the risk for pulmonary toxicity."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "renal toxicity",
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use of amphotericin B may increase the risk for renal toxicity with cyclophosphamide."
+    },
+    {
+      "drug": "Azathioprine",
+      "severity": 2,
+      "keywords": [
+        "hepatic toxicity",
+        "hepatotoxicity"
+      ],
+      "evidence": "Concurrent use of azathioprine may increase the risk for hepatic toxicity with cyclophosphamide."
+    },
+    {
+      "drug": "Cardiotoxic Drugs (e.g., cytarabine, doxorubicin)",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity",
+        "cardiac toxicity"
+      ],
+      "evidence": "Concurrent use of cardiotoxic drugs such as cytarabine or doxorubicin may potentiate cardiotoxicity of cyclophosphamide."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "reduced cyclosporine concentration",
+        "immunosuppression"
+      ],
+      "evidence": "Cyclophosphamide may reduce cyclosporine concentrations; additive immunosuppressive effect may also occur."
+    },
+    {
+      "drug": "Dipyrone",
+      "severity": 3,
+      "keywords": [
+        "agranulocytosis",
+        "pancytopenia"
+      ],
+      "evidence": "Concurrent use of dipyrone with cyclophosphamide increases the risk for agranulocytosis and pancytopenia."
+    },
+    {
+      "drug": "Immunosuppressive Agents (e.g., leflunomide, tacrolimus)",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "additive immunosuppressive effect"
+      ],
+      "evidence": "Concurrent use of immunosuppressive agents may increase the immunosuppressive effect of cyclophosphamide."
+    },
+    {
+      "drug": "Myelosuppressive Agents (e.g., carboplatin, vincristine)",
+      "severity": 2,
+      "keywords": [
+        "neutropenia",
+        "myelosuppression",
+        "hematologic toxicity"
+      ],
+      "evidence": "Concurrent use of myelosuppressive agents may increase the risk for neutropenia or other hematologic effects."
+    },
+    {
+      "drug": "Thiazide Diuretics (e.g., hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "increased cyclophosphamide exposure",
+        "myelosuppression"
+      ],
+      "evidence": "Thiazide diuretics may result in increased cyclophosphamide systemic exposure and enhanced myelosuppression."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 2,
+      "keywords": [
+        "decreased cyclophosphamide exposure",
+        "reduced efficacy"
+      ],
+      "evidence": "Ondansetron may decrease cyclophosphamide systemic exposure, potentially reducing efficacy."
+    },
+    {
+      "drug": "Phenobarbital (or other barbiturates)",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "increased metabolism",
+        "increased toxicity"
+      ],
+      "evidence": "Chronic phenobarbital use may increase the rate of metabolism of cyclophosphamide to active metabolites via microsomal enzyme induction, increasing the likelihood of toxicity."
+    },
+    {
+      "drug": "Live Vaccines",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "reduced vaccine efficacy"
+      ],
+      "evidence": "Cyclophosphamide may diminish the efficacy of live vaccines due to its immunosuppressive properties."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "anticoagulation"
+      ],
+      "evidence": "Concurrent use of cyclophosphamide with warfarin may result in increased risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - 표준 용량 (체표면적 기준, 3~4주 간격)",
+          "value": "250",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "250 mg/m² (mg/kg 아님) 3~4주마다 1회. 체표면적(mg/m²) 기준 투여.",
+          "evidence": "Plumb's Dosages: Dogs, standard antineoplastic protocol. IV 및 PO 상호 교환 가능."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - 표준 용량 (체표면적 기준, 주 3~4일 투여)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "50 mg/m² (mg/kg 아님) 매주 3~4일 투여. 체표면적(mg/m²) 기준 투여.",
+          "evidence": "Plumb's Dosages: Dogs, standard antineoplastic protocol."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항종양제 - 메트로노믹(저용량 지속) 요법",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "10~15 mg/m² (mg/kg 아님) 매일 경구 투여. 25 mg/m² 격일 투여는 무균성 출혈성 방광염 발생률 32%로 높아 권장하지 않음.",
+          "evidence": "Plumb's Dosages: Dogs, metronomic therapy."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 - 다제 병용 프로토콜",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "다제 병용 프로토콜의 일부로 사용. 투여 간격은 프로토콜에 따라 다름.",
+          "evidence": "Plumb's Dosages: Cats, multi-agent antineoplastic protocol."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항종양제 - 다제 병용 프로토콜 (체표면적 기준)",
+          "value": "200 - 250",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "200~250 mg/m² (mg/kg 아님) IV 또는 PO. 체표면적(mg/m²) 기준 투여. 투여 간격은 프로토콜에 따라 다름.",
+          "evidence": "Plumb's Dosages: Cats, multi-agent antineoplastic protocol."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 환자에서 주의하여 사용하도록 명시되어 있으나, 구체적인 용량 조절 기준은 제시되지 않음. 신장 기능 모니터링 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 환자에서 주의하여 사용하도록 명시되어 있으나, 구체적인 용량 조절 기준은 제시되지 않음. 간 기능 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "Prior anaphylaxis to cyclophosphamide",
+      "match_terms": [
+        "anaphylaxis",
+        "hypersensitivity",
+        "allergic reaction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Sterile hemorrhagic cystitis (history or active)",
+      "match_terms": [
+        "sterile hemorrhagic cystitis",
+        "hemorrhagic cystitis",
+        "CIC"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Urinary obstruction",
+      "match_terms": [
+        "urinary obstruction",
+        "urethral obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Leukopenia",
+      "match_terms": [
+        "leukopenia",
+        "low WBC",
+        "neutropenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Thrombocytopenia",
+      "match_terms": [
+        "thrombocytopenia",
+        "low platelet"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "Impaired hepatic function",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "Impaired renal function",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "Active systemic infection / immunosuppression risk",
+      "match_terms": [
+        "systemic infection",
+        "immunosuppression",
+        "sepsis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pregnancy",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "gestation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Breeds at risk for transitional cell carcinoma (e.g., Scottish Terrier)",
+      "match_terms": [
+        "Scottish Terrier",
+        "transitional cell carcinoma",
+        "TCC"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [
+      "Poodle",
+      "Old English Sheepdog",
+      "Afghan Hound",
+      "Terrier"
+    ],
+    "gene": null,
+    "evidence": "유전적 감수성은 확인되지 않음. 단, 지속적으로 털이 자라는 품종(푸들, 올드 잉글리시 쉽독, 아프간 하운드, 테리어 등)에서 탈모가 더 심하게 나타날 수 있음. 스코티시 테리어는 방광이행세포암 위험 품종으로 주의 필요."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알킬화제(질소 머스타드 유도체)로서 프로드럭. 간에서 활성 대사체 4-hydroxycyclophosphamide(4-OHCP)로 전환 후 세포 내에서 phosphoramide mustard 및 acrolein으로 분해. DNA 복제 및 RNA 전사/복제를 방해하여 핵산 기능을 교란. 면역억제 효과도 있으며 WBC 및 항체 생산 감소를 유발.",
+    "common_extra_effects": [
+      "골수억제 (백혈구감소증, 호중구감소증, 빈혈, 혈소판감소증)",
+      "위장관 독성 (식욕부진, 오심, 구토, 설사)",
+      "무균성 출혈성 방광염",
+      "혈뇨",
+      "탈모",
+      "폐 침윤 및 섬유화",
+      "우울증",
+      "저나트륨혈증",
+      "심장 독성 (심근염, 심낭삼출, 울혈성 심부전, 부정맥)",
+      "간 독성",
+      "백혈병 (장기 사용 시)"
+    ],
+    "dog_mechanism": "개에서 경구 및 IV 투여 시 4-OHCP 노출량이 유사하여 두 경로 상호 교환 가능. 골수억제가 주요 독성으로 WBC 최저점은 투여 후 5~14일.",
+    "dog_extra_effects": [
+      "무균성 출혈성 방광염 (장기 투여 시 최대 30%)",
+      "털 코트 변화 (푸들, 테리어, 아프간 하운드, 올드 잉글리시 쉽독에서 심한 탈모)",
+      "호중구감소증 (투여 후 5~14일 최저점, 회복에 최대 4주 소요)"
+    ],
+    "cat_mechanism": "고양이에서 경구 투여 시 IV 대비 생체이용률이 낮음. 4-OHCP 노출량은 투여 경로에 관계없이 유사.",
+    "cat_extra_effects": [
+      "구토 (가장 흔한 부작용)",
+      "식욕부진/식욕감퇴",
+      "호중구감소증",
+      "사이클로포스파미드 유발 방광염(CIC) - 드물지만 발생 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 사이클로포스파미드는 주로 림프종 및 기타 종양의 다제 병용 화학요법(COP, CHOP 등)에 사용됨. 경구 및 IV 투여 시 활성 대사체 노출량이 유사하여 상호 교환 가능. 무균성 출혈성 방광염 예방을 위해 투여 중 충분한 이뇨 유지 및 빈번한 배뇨 유도 권장. 푸로세미드 병용이 방광염 발생률을 낮출 수 있음. 메트로노믹 요법(10~15 mg/m² 매일)은 일부 암에서 유망하며 고용량 대비 부작용이 적음. 면역억제 목적으로는 부작용 위험으로 인해 1차 선택약으로 권장되지 않음.",
+    "cat": "고양이에서 사이클로포스파미드는 다제 병용 항종양 프로토콜의 일부로 사용됨. 경구 투여 시 생체이용률이 IV 대비 낮으나 4-OHCP 노출량은 유사. 구토, 식욕부진, 호중구감소증이 가장 흔한 부작용이나 대부분 경증. 사이클로포스파미드 유발 방광염(CIC)은 드물지만 발생 시 혈뇨 및 배뇨통으로 나타남. 세균성 방광염과 감별 필요. 소형 고양이에서는 25 mg 미만의 소량 조제가 필요할 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장/간 기능 저하, 백혈구감소증, 혈소판감소증, 방사선 치료 병용, 면역억제가 위험한 상태(감염 등)에서 주의 필요. 무균성 출혈성 방광염 발생 시 즉시 투여 중단. 정기적인 CBC, 신장 기능, 요검사 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 부작용은 대부분 경증이나 정기적 모니터링 필요. 방광염 증상 발생 시 세균성 방광염과 감별 후 적절한 조치 필요. 소량 투여 시 조제 약국 이용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 분말: 25°C(77°F) 이하 보관, 과도한 열 노출 피할 것. 캡슐: 20~25°C(68~77°F) 보관, 15~30°C(59~86°F) 단기 보관 허용. 0.9% 또는 0.45% 생리식염수로 희석 후 실온 24시간, 냉장 6일 이내 사용. D5W 또는 D5/0.9% NaCl 희석 시 실온 24시간, 냉장 36시간 안정. 경구 용액(방향성 엘릭서 희석): 냉장 유리 용기에서 14일 안정.",
+    "forms": [
+      "Cyclophosphamide Capsules 25 mg (generic)",
+      "Cyclophosphamide Capsules 50 mg (generic)",
+      "Cyclophosphamide Powder for Injection 500 mg (Cytoxan, Neosar, generic)",
+      "Cyclophosphamide Powder for Injection 1 g (Cytoxan, Neosar, generic)",
+      "Cyclophosphamide Powder for Injection 2 g (Cytoxan, Neosar, generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "사이클로포스파미드는 개와 고양이에서 림프종, 조혈계 종양, 암종, 육종 등의 치료에 사용되는 알킬화 항종양제입니다. 모든 수의학적 사용은 extra-label이며, 수의 종양 전문의 상담이 강력히 권장됩니다. 주요 부작용으로 골수억제, 위장관 독성, 무균성 출혈성 방광염이 있으며, 투여 중 충분한 이뇨 유지가 중요합니다. NIOSH 분류 위험 약물로 취급 시 적절한 개인보호장비(PPE) 착용이 필요합니다. 메트로노믹 요법(저용량 지속 투여)은 일부 개 암종에서 유망하며 고용량 대비 부작용이 적습니다.",
+    "indications": "승인 적응증: 없음 (수의학적 사용 모두 extra-label). 주요 사용 적응증: 림프종, 조혈계 종양, 암종, 육종 등의 다제 병용 화학요법. 면역매개성 질환(IMHA, SLE, ITP, 천포창, 류마티스 관절염 등)에 대한 사용은 부작용 위험으로 인해 1차 선택약으로 권장되지 않으며, 아자티오프린, 사이클로스포린, 마이코페놀레이트 모페틸, 레플루노미드 등 대안 약물 우선 고려.",
+    "client_info": "사이클로포스파미드는 항암(항종양) 약물입니다. 이 약물은 다른 동물과 사람에게 위험할 수 있습니다. 동물이 약을 투여받은 날과 그 후 며칠 동안은 소변, 대변, 구토물 등 모든 체액을 처리할 때 반드시 일회용 장갑을 착용하고, 비닐봉지에 밀봉하여 일반 쓰레기통에 버리십시오. 구토나 위장관 불편감이 생길 수 있으며, 음식과 함께 투여하면 이러한 부작용을 줄일 수 있습니다. 출혈, 멍, 감염 징후, 발열, 소변에 혈액이 보이면 즉시 수의사에게 연락하십시오. 개의 경우 투여 후 자주 산책시켜 배뇨를 유도하여 방광 독성 위험을 줄이십시오. 공공장소에서의 배변은 수의사의 허가 전까지 삼가십시오. 정기적인 추적 검사와 혈액 검사를 빠짐없이 받으십시오. 수의사와 상담 없이 다른 백신을 접종하지 마십시오. 화학요법 치료 중에는 다른 동물과의 접촉을 최소화하여 감염 위험을 줄이십시오. 많은 개들이 털 변화(윤기 감소, 거칠어짐)를 경험하며, 지속적으로 털이 자라는 품종(푸들, 테리어, 아프간 하운드, 올드 잉글리시 쉽독 등)은 심한 탈모가 생길 수 있습니다. 이 약물은 NIOSH에서 위험 약물로 분류하므로 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme profile",
+      "Oral bioavailability percentage (dog/cat)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/37.jsonl",
+    "extracted_at": "2026-03-11T00:32:23.553106+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "id": "clopidogrel",
+  "drug_identity": {
+    "name_ko": "클로피도그렐",
+    "name_en": "Clopidogrel",
+    "active_ingredient": "Clopidogrel bisulfate",
+    "brand_names": [
+      "Plavix"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인간용 제품(Plavix®)을 개, 고양이, 말에서 허가 외(extra-label)로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C19",
+        "CYP2C8"
+      ],
+      "inhibitors": [
+        "CYP2C19",
+        "CYP2C8"
+      ],
+      "inducers": [],
+      "pathway_evidence": "클로피도그렐은 프로드럭으로 간에서 대사되어 활성 티올 화합물(CAM)을 형성함. 인간에서 CYP2C19의 기질 및 억제제이며 CYP2C8의 강력한 억제제임. 고양이에서 CYP2C 유전적 다형성이 CAM 형성의 개체 간 변이에 주요 원인으로 확인됨. 비활성 대사체(SR 26334)는 소변 및 대변으로 배설됨."
+    },
+    "extra_information": "개에서 비활성 대사체의 혈중 농도는 단회 경구 투여 후 1~2시간에 최고치에 도달함. 고양이에서 CAM의 최고 농도 도달 시간은 1.5~2시간이며 소실 반감기는 2.8~4.9시간임. 고양이에서 수컷은 CAM 형성이 감소하는 경향이 있음. 인간에서 경구 생체이용률은 약 50%이며 혈장 단백질에 고도로 결합됨. 투여량의 2%는 혈소판에 공유결합되어 약 11일의 소실 반감기를 가짐."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터가 제한적이므로 인간 데이터 및 약리학적 기전을 참고함. 점수 = 트리거된 키워드 가중치 합산.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 CNS 관련 이상반응 또는 뇌 부담에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "platelet aggregation inhibitor",
+          "irreversible platelet inhibition",
+          "bleeding",
+          "antiplatelet"
+        ],
+        "index": 0,
+        "evidence": "클로피도그렐은 혈소판 ADP 수용체(P2Y12)에 비가역적으로 결합하여 혈소판 수명 동안 기능을 억제함. 출혈 위험 증가, 혈소판 기능 억제가 주요 약리 작용임."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urine excretion"
+        ],
+        "index": -1,
+        "evidence": "비활성 대사체가 소변으로 배설되나 직접적인 신독성 보고 없음. 신장 부담은 낮은 수준으로 평가됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "prodrug",
+          "CYP2C"
+        ],
+        "index": 1,
+        "evidence": "클로피도그렐은 간에서 활성 대사체로 전환되는 프로드럭임. 간 기능 저하 시 활성 대사체 형성이 감소할 수 있음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "thromboembolism prevention",
+          "antiplatelet"
+        ],
+        "index": -1,
+        "evidence": "심장혈전색전증 예방 목적으로 사용되나 직접적인 심장 독성 보고 없음. 혈소판 억제를 통한 간접적 심혈관 영향 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 관련 이상반응 또는 뇌 부담에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "platelet aggregation inhibitor",
+          "irreversible platelet inhibition",
+          "bleeding",
+          "non-regenerative anemia",
+          "antiplatelet"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 혈소판 기능의 비가역적 억제가 주요 작용임. 장기 투여 시 비재생성 빈혈이 일부 고양이에서 보고됨. 출혈 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urine excretion"
+        ],
+        "index": -1,
+        "evidence": "비활성 대사체가 소변으로 배설되나 직접적인 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "prodrug",
+          "CYP2C genetic polymorphism"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 CYP2C 유전적 다형성이 CAM 형성에 영향을 미침. 간 대사 의존성이 높아 간 기능 저하 시 약효 변동 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiogenic arterial thromboembolism",
+          "antiplatelet"
+        ],
+        "index": -1,
+        "evidence": "심인성 동맥혈전색전증 예방 및 재발 감소 목적으로 사용됨. 직접적인 심장 독성 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 180,
+    "t_max_hr": 1.75,
+    "half_life_hr": {
+      "min": 2.8,
+      "max": 4.9,
+      "mean": 3.85,
+      "species": "cat"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 CAM 소실 반감기 2.8~4.9시간(파일럿 연구, n=2). 인간에서 경구 생체이용률 약 50%. 개에서 혈소판 억제 발현은 초회 경구 투여 후 3시간 이내(대부분). 인간에서 혈장 단백질 결합률은 높으나 정확한 수치 미기재."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 달리 명시되지 않는 한 병용이 절대 금기는 아니나 추가 모니터링 권장.",
+  "drug_interactions": [
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "antiplatelet combination"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding; however, simultaneous use in humans is common."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "CYP2C19 inhibition"
+      ],
+      "evidence": "Concurrent use may result in decreased efficacy of clopidogrel."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "thrombosis risk"
+      ],
+      "evidence": "Concurrent use may result in decreased efficacy of clopidogrel and increased risk for thrombosis."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy"
+      ],
+      "evidence": "Concurrent use may decrease efficacy of clopidogrel."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy"
+      ],
+      "evidence": "May decrease the effects of clopidogrel."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 1,
+      "keywords": [
+        "increased peak concentration",
+        "PK interaction"
+      ],
+      "evidence": "A study in dogs showed that cyclosporine can increase clopidogrel peak concentration, but drug exposure (AUC) was the same as compared with clopidogrel alone."
+    },
+    {
+      "drug": "Heparin / Low Molecular Weight Heparins (dalteparin, enoxaparin)",
+      "severity": 1,
+      "keywords": [
+        "safe combination",
+        "anticoagulant"
+      ],
+      "evidence": "Clopidogrel appears safe to use with heparin (both unfractionated and low molecular weight)."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "reduced active metabolite formation",
+        "decreased efficacy"
+      ],
+      "evidence": "Concurrent use may reduce formation of the clopidogrel active metabolite."
+    },
+    {
+      "drug": "NSAIDs (carprofen, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "NSAID metabolism interference"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding; clopidogrel may interfere with NSAID metabolism."
+    },
+    {
+      "drug": "Opioids (hydromorphone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "delayed absorption",
+        "reduced active metabolite",
+        "decreased antiplatelet effect"
+      ],
+      "evidence": "Opioid use may delay and reduce formation of the clopidogrel active metabolite and the drug's antiplatelet effect, possibly by reducing GI motility and drug absorption."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (esomeprazole, omeprazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "thrombosis risk",
+        "CYP2C19 inhibition"
+      ],
+      "evidence": "In humans, concurrent use of omeprazole and esomeprazole (but not other PPIs) may decrease the efficacy of clopidogrel and increase the risk for thrombosis; however, a study in dogs found omeprazole combined with clopidogrel did not alter antiplatelet effects in healthy dogs."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "increased active metabolite formation",
+        "CYP induction"
+      ],
+      "evidence": "May increase the effects of clopidogrel by increasing formation of the clopidogrel active metabolite."
+    },
+    {
+      "drug": "Rivaroxaban",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "anticoagulant combination"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding."
+    },
+    {
+      "drug": "SSRIs (fluoxetine, paroxetine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "serotonin-mediated platelet inhibition"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding."
+    },
+    {
+      "drug": "Torsemide",
+      "severity": 1,
+      "keywords": [
+        "metabolism interference"
+      ],
+      "evidence": "Clopidogrel may interfere with torsemide metabolism."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "warfarin metabolism interference"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding; clopidogrel may interfere with metabolism of warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항혈소판제 (허가 외 사용) - 유지 용량",
+          "value": "1 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": null,
+          "evidence": "Extra-label: 1–4 mg/kg PO once daily."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항혈소판제 (허가 외 사용) - 부하 용량",
+          "value": "4 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "치료 첫날 1회 투여 고려",
+          "evidence": "A loading dose of 4–10 mg/kg PO on the first day of treatment can be considered."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "대동맥혈전색전증 (허가 외 사용) - 부하 용량",
+          "value": "37.5 - 75",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "진단 후 1회 투여 (mg/cat, NOT mg/kg)",
+          "evidence": "Loading dose: 37.5–75 mg/cat (NOT mg/kg) PO once after diagnosis."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "대동맥혈전색전증 (허가 외 사용) - 유지 용량 / 혈전 예방",
+          "value": "18.75",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/cat 기준 투여 (NOT mg/kg)",
+          "evidence": "Maintenance dose: 18.75 mg/cat (NOT mg/kg) PO every 24 hours. Also used for thrombus prevention."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항혈소판제 - 실험적 저용량 (건강한 고양이)",
+          "value": "10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "18.75 mg/cat와 유사한 항혈소판 효과이나 발현까지 2일 소요 (mg/cat, NOT mg/kg)",
+          "evidence": "Experimentally in healthy cats, 10 mg/cat (NOT mg/kg) PO once daily had a similar antiplatelet effect as 18.75 mg/cat, although onset required 2 days vs 1 day."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 비활성 대사체가 소변으로 배설되나 신독성 보고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "클로피도그렐은 간에서 활성 대사체로 전환되는 프로드럭임. 간 기능 저하 시 활성 대사체(CAM) 형성이 감소하여 약효가 저하될 수 있음. 명시적 용량 조정 권고는 없으나 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to clopidogrel"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 병적 출혈",
+      "match_terms": [
+        "active bleeding",
+        "pathologic bleeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유전성 혈소판병증",
+      "match_terms": [
+        "inherited thrombocytopathia",
+        "platelet function disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈소판감소증",
+      "match_terms": [
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 30.0,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "응고병증",
+      "match_terms": [
+        "coagulopathy",
+        "coagulation disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수술 전 (선택적 수술, 저~중등도 혈전 위험)",
+      "match_terms": [
+        "elective surgery",
+        "pre-operative"
+      ],
+      "severity": "caution",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [],
+    "gene": "CYP2C (고양이), P2RY1",
+    "evidence": "고양이에서 CYP2C 유전적 다형성이 활성 대사체(CAM) 형성의 개체 간 변이의 주요 원인으로 확인됨. 수컷 고양이는 CAM 형성이 감소하는 경향. P2RY1 유전자 변이가 클로피도그렐의 약력학에 영향을 미칠 수 있음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "클로피도그렐은 프로드럭으로 간에서 대사되어 활성 티올 화합물(CAM)을 형성함. CAM은 혈소판 표면의 ADP 수용체(P2Y12)에 선택적으로 비가역적으로 결합하여 혈소판 수명 동안 ADP에 의한 혈소판 활성화를 억제하고 GPIIb/IIIa 복합체의 완전 활성화를 저해함.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "출혈",
+      "혈전성 혈소판감소성 자반증 (드물게, 인간)",
+      "재생불량성 빈혈 (드물게, 인간)"
+    ],
+    "dog_mechanism": "개에서 초회 경구 투여 후 3시간 이내에 대부분의 개에서 유의한 혈소판 기능 억제가 나타남. 억제 효과는 최소 24시간 지속됨. 투여 중단 후 정상 혈소판 기능은 약 7일 후 회복됨.",
+    "dog_extra_effects": [
+      "구토",
+      "출혈",
+      "GI 출혈 없음 (단독 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서 18.75 mg/cat 일 1회 경구 투여 시 1일 이내에 혈소판 기능 억제. 세로토닌 방출 억제를 통한 혈관 조절 효과로 골반 사지 순환 개선 가능. 투여 중단 후 3~7일간 혈소판 억제 지속.",
+    "cat_extra_effects": [
+      "구토",
+      "비재생성 빈혈 (장기 투여 시 일부 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 클로피도그렐은 면역매개성 용혈성 빈혈(IMHA) 등 과응고 상태에서 혈전 예방을 위해 사용됨. 혈소판 수 30,000/µL 미만의 심한 혈소판감소증이 없는 경우 아스피린보다 선호됨. 부하 용량(4~10 mg/kg) 투여 후 유지 용량(1~4 mg/kg SID)으로 전환 가능. 약의 극심한 쓴맛으로 인해 젤라틴 캡슐에 넣어 투여 권장. 구토 시 음식과 함께 투여.",
+    "cat": "고양이에서 심인성 동맥혈전색전증 재발 감소 및 사망률 감소 효과가 확인됨. 유지 용량은 18.75 mg/cat (mg/kg 아님)으로 고정 용량 사용. 부하 용량(37.5~75 mg/cat)은 진단 직후 1회 투여. CYP2C 유전적 다형성으로 인한 개체 간 반응 차이 주의. 장기 투여 시 비재생성 빈혈 모니터링 필요. 제네릭 클로피도그렐은 Plavix®와 동등한 항혈소판 효과 확인됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 수술 전 혈전 위험 대 출혈 위험 평가 필요. 고위험 혈전 환자는 수술 중에도 항혈소판 치료 유지 권장(단일 항응고제 사용 시). 저~중등도 위험 환자는 선택적 수술 5~7일 전 투여 중단 권장. 혈소판 기능은 투여 중단 후 약 7일 후 정상화됨."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 장기 투여 시 비재생성 빈혈 발생 가능. CYP2C 유전적 다형성으로 인한 약효 변동성 주의. 수술 전 혈전 위험 평가 후 투여 중단 여부 결정 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 보관, 15~30°C(59~86°F) 범위 내 단기 보관 허용. 조제 현탁액은 빛 차단 보관 필요; 5°C 및 25°C에서 60일간 90% 이상 역가 유지.",
+    "forms": [
+      "클로피도그렐 비설페이트 정제 75 mg (Plavix®, 제네릭)",
+      "클로피도그렐 비설페이트 정제 300 mg (Plavix®, 제네릭)",
+      "조제 경구 현탁액 5 mg/mL (Ora-Plus® + Ora-Sweet® 기반)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로피도그렐은 혈소판 ADP 수용체(P2Y12)에 비가역적으로 결합하는 항혈소판제로, 개·고양이·말에서 혈전색전증 예방 목적으로 허가 외 사용됨. 고양이 심인성 동맥혈전색전증 재발 감소 및 사망률 감소 효과가 임상적으로 확인됨. 수의학적 허가 제품 없음. 고양이 용량은 반드시 mg/cat(고정 용량)으로 투여해야 하며 mg/kg 기준이 아님. 약의 극심한 쓴맛으로 인해 젤라틴 캡슐 투여 권장.",
+    "indications": "【개】 과응고 상태에서의 동맥혈전색전증 예방 (허가 외); 면역매개성 용혈성 빈혈(IMHA)에서의 혈전 예방 (허가 외). 【고양이】 심인성 동맥혈전색전증 예방 및 재발 감소 (허가 외); 대동맥혈전색전증 치료 보조 (허가 외). 【말】 항혈소판 치료 (허가 외, 실험적).",
+    "client_info": "이 약은 혈액이 굳는 것(혈전)을 예방하기 위해 사용됩니다. 출혈 가능성은 낮지만 발생할 수 있습니다. 다음 증상이 나타나면 즉시 수의사에게 연락하세요: 멍이 드는 경우, 호흡 곤란, 구토물에 피가 섞이거나 커피 찌꺼기 같은 색깔인 경우, 소변에 피가 섞인 경우, 검고 끈적한 변. 구토가 발생하면 음식과 함께 투여하세요. 음식 유무에 관계없이 투여 가능합니다. 고양이의 경우 반드시 처방된 고정 용량(mg/cat)을 정확히 투여하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Renal dose adjustment (not explicitly stated)",
+      "Hepatic dose adjustment (not explicitly stated)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.protein_binding_percent",
+      "timing_profile.onset_min (dog, exact)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "half_life_hr (dog-specific)",
+      "organ_burden_logic.dog.kidney.index",
+      "organ_burden_logic.cat.kidney.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/36.jsonl",
+    "extracted_at": "2026-03-11T00:11:51.092870+00:00",
+    "reviewer": null
+  }
+}

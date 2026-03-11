@@ -1,0 +1,515 @@
+{
+  "id": "cortisone",
+  "drug_identity": {
+    "name_ko": "코르티손",
+    "name_en": "Cortisone",
+    "active_ingredient": "Cortisone acetate",
+    "brand_names": [],
+    "allergy_class": "corticosteroid",
+    "class": "Corticosteroid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 허가된 제품 없음. 인체용 코르티손 아세테이트 정제를 개의 부신피질기능저하증 치료에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "코르티손 아세테이트는 흡수 후 체내에서 코르티솔(하이드로코르티손)로 전환됨. 구체적인 CYP 효소 경로는 본 모노그래프에 명시되지 않음."
+    },
+    "extra_information": "코르티손 아세테이트의 약동학은 약력학적 활성과 상관관계가 없음. 경구 생체이용률은 인간에서 약 50%로 보고되나 개체 간 변동이 큼. 개 및 고양이에 대한 종 특이적 약동학 데이터는 본 모노그래프에 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 생리적 대체 용량에서는 부담이 낮으나, 초생리적 용량 사용 시 전신 코르티코스테로이드 부작용 프로파일 적용. 개 특이적 수의학 PK 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neuropsychiatric effects",
+          "CNS"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 신경정신과적 영향 가능성 언급. 생리적 대체 용량에서는 낮은 위험."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "neutrophilia",
+          "lymphopenia",
+          "cardiac arrhythmias"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증, 호중구증가증, 림프구감소증 가능. 과다복용 시 심장 부정맥 가능성 언급."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "electrolytes",
+          "mineralocorticoid",
+          "fluid retention"
+        ],
+        "index": 1,
+        "evidence": "미네랄코르티코이드 활성으로 인한 전해질 및 수분 균형 영향 가능. 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "converted to cortisol",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "코르티손은 간에서 코르티솔로 전환됨. 초생리적 용량에서 간 부담 가능성 있으나 직접적 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "CHF",
+          "cardiac enlargement"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 심장 부정맥 가능성. 암포테리신 B와 병용 시 CHF 및 심장 비대 보고 사례 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 특이적 데이터 없음. 모노그래프에 고양이 용량 또는 부작용 정보 미기재."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 8.0,
+      "max": 12.0,
+      "mean": 10.0,
+      "species": "unknown"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": null,
+    "evidence": "생물학적 반감기 8~12시간(단기 작용 코르티코스테로이드). 경구 생체이용률은 인간에서 약 50%로 보고되나 개체 간 변동 큼. 개 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "CHF",
+        "cardiac enlargement"
+      ],
+      "evidence": "Concomitant use may cause hypokalemia; cases of CHF and cardiac enlargement reported in humans when hydrocortisone used to treat amphotericin B adverse effects."
+    },
+    {
+      "drug": "Anticholinesterase Agents (pyridostigmine, neostigmine)",
+      "severity": 2,
+      "keywords": [
+        "muscle weakness",
+        "myasthenia gravis"
+      ],
+      "evidence": "In patients with myasthenia gravis, concomitant glucocorticoid and anticholinesterase agent administration may lead to profound muscle weakness."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "salicylate clearance"
+      ],
+      "evidence": "Corticosteroids may increase clearance of salicylates and decrease salicylate serum concentrations; increased risk for GI ulceration/bleeding."
+    },
+    {
+      "drug": "Diuretics, Potassium-Depleting (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concomitant administration with glucocorticoids may cause hypokalemia."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 1,
+      "keywords": [
+        "potentiation",
+        "glucocorticoid effect"
+      ],
+      "evidence": "Effects of hydrocortisone, and possibly other glucocorticoids, may be potentiated by concomitant administration with estrogens."
+    },
+    {
+      "drug": "Fluoroquinolones (enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "tendon rupture"
+      ],
+      "evidence": "Concurrent use may increase the risk for tendon rupture."
+    },
+    {
+      "drug": "Insulin; antidiabetic agents",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "insulin resistance"
+      ],
+      "evidence": "Insulin requirements may increase in patients receiving glucocorticoids."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "altered metabolism",
+        "adrenal insufficiency"
+      ],
+      "evidence": "Mitotane may alter the metabolism of corticosteroids; higher than usual doses of corticosteroids may be necessary to treat mitotane-induced adrenal insufficiency."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "ulcerogenic"
+      ],
+      "evidence": "Administration of ulcerogenic drugs with glucocorticoids may increase the risk for GI ulceration."
+    },
+    {
+      "drug": "Phenobarbital/Primidone",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "enzyme induction"
+      ],
+      "evidence": "Concurrent use may result in decreased cortisone efficacy."
+    },
+    {
+      "drug": "Vaccines, Live Attenuated",
+      "severity": 3,
+      "keywords": [
+        "immunosuppression",
+        "virus replication",
+        "diminished immune response"
+      ],
+      "evidence": "Patients receiving corticosteroids at immunosuppressive dosages should generally not receive live attenuated virus vaccines as virus replication may be augmented; diminished immune response may occur."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "PT alteration",
+        "coagulation"
+      ],
+      "evidence": "Hydrocortisone may affect PT; monitor."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "부신피질기능저하증 장기 치료 - 초기 용량 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "급성 부신 위기에서 회복 후, 경구 투약 가능 시 시작. 통상 플루드로코르티손과 병용.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 초기 0.5–1 mg/kg PO q12–24h. 오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신피질기능저하증 장기 치료 - 유지 용량 (오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 유지 요법. 최저 유효 용량 사용 권장.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 유지 0.5 mg/kg PO q12–24h. 오프라벨 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 부신피질기능저하증 치료 시 전해질 및 수분 균형 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "코르티손 과민반응",
+      "match_terms": [
+        "hypersensitivity to cortisone",
+        "corticosteroid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "fungal infection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (초기)",
+      "match_terms": [
+        "pregnancy",
+        "gestation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "hyperglycemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 궤양",
+      "match_terms": [
+        "GI ulcer",
+        "peptic ulcer",
+        "gastrointestinal ulceration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "코르티손 아세테이트는 체내에서 코르티솔(하이드로코르티손)로 전환되어 글루코코르티코이드 및 미네랄코르티코이드 수용체에 작용. 포유류의 거의 모든 세포 유형 및 시스템에 영향을 미침.",
+    "common_extra_effects": [
+      "식욕 증가",
+      "다음다뇨",
+      "위장관 장애 (구토, 식욕부진, 설사)",
+      "과민반응",
+      "저칼륨혈증",
+      "고혈당",
+      "호중구증가증",
+      "림프구감소증",
+      "체중 증가",
+      "수분 저류"
+    ],
+    "dog_mechanism": "생리적 대체 용량에서는 일반적으로 내약성이 좋음. 초생리적 용량에서는 프레드니솔론과 유사한 부작용 프로파일 가능.",
+    "dog_extra_effects": [
+      "위장관 궤양, 천공, 출혈 (초생리적 용량)",
+      "의인성 쿠싱 증후군 (장기 고용량 사용 시)",
+      "림프구감소증 (약물 중단 후 수 주간 지속 가능)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개의 부신피질기능저하증 치료에 프레드니솔론의 대안으로 사용 가능. 코르티손의 증가된 미네랄코르티코이드 활성이 임상적으로 유의미한지는 논란이 있으며, 일부 전문가는 프레드니솔론을 선호함. 통상 플루드로코르티손과 병용. ACTH 자극 검사는 코르티손 투여 전에 실시해야 함(교차반응 있음).",
+    "cat": "고양이에 대한 용량 정보 및 임상 데이터가 본 모노그래프에 없음. 고양이에서의 사용은 권장되지 않거나 데이터 부족으로 평가 불가."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "생리적 대체 용량에서는 일반적으로 내약성 양호. 초생리적 용량 사용 시 프레드니솔론과 동일한 주의사항 적용. 당뇨병, 위장관 궤양, 감염, 임신 시 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 특이적 안전성 데이터 없음. 사용 시 주의 요망."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 40°C(104°F) 미만, 가급적 15°C~30°C(59°F~86°F)에서 보관.",
+    "forms": [
+      "코르티손 아세테이트 경구 정제 25mg (인체용, 제네릭, 처방전 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "코르티손은 글루코코르티코이드 및 미네랄코르티코이드 효과를 모두 가진 단기 작용 코르티코스테로이드로, 개의 부신피질기능저하증 치료에 프레드니솔론의 대안으로 사용될 수 있습니다. 수의학에서 허가된 제품은 없으며 오프라벨 사용입니다. 생리적 대체 용량에서는 내약성이 좋으나, 초생리적 용량 사용 시 일반 코르티코스테로이드 부작용 프로파일이 적용됩니다. ACTH 자극 검사와 교차반응이 있으므로 투여 전 검사를 완료해야 합니다.",
+    "indications": "개의 부신피질기능저하증(애디슨병) 장기 치료 (오프라벨). 플루드로코르티손과 병용하여 글루코코르티코이드 보충 목적으로 사용. 코르티손 아세테이트는 체내에서 코르티솔로 전환되어 글루코코르티코이드 및 미네랄코르티코이드 결핍 모두에 대한 완전 대체 요법으로 기능할 수 있음.",
+    "client_info": "이 약은 음식과 함께 투여하세요. 치료 목표는 가능한 가장 낮은 용량을 가장 짧은 기간 동안 사용하는 것입니다. 수의사의 지시에 따라 투약하세요. 가장 흔한 부작용은 식욕 증가, 갈증 증가, 배뇨 증가입니다. 약을 복용하는 동안 항상 신선하고 깨끗한 물을 충분히 제공하고 물을 제한하지 마세요. 개에서 위장관 궤양, 천공, 출혈이 발생할 수 있습니다. 동물이 식욕을 잃거나 고열, 검고 끈적한 변, 혈성 구토(커피 찌꺼기 모양)가 나타나면 즉시 수의사에게 연락하세요. 수의사의 지도 없이 갑자기 투약을 중단하지 마세요. 비타민, 보충제, 한약재를 포함한 다른 모든 약물을 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosages",
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Onset time",
+      "T_max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type",
+      "dosage_and_kinetics.cat.dosage_list",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/36.jsonl",
+    "extracted_at": "2026-03-11T00:25:50.906213+00:00",
+    "reviewer": null
+  }
+}
