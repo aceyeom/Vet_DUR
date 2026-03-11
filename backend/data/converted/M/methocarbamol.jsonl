@@ -1,0 +1,640 @@
+{
+  "id": "methocarbamol",
+  "drug_identity": {
+    "name_ko": "메토카르바몰",
+    "name_en": "Methocarbamol",
+    "active_ingredient": "Methocarbamol",
+    "brand_names": [
+      "Robaxin",
+      "Robaxin-V",
+      "Robinax"
+    ],
+    "allergy_class": null,
+    "class": "Muscle Relaxant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.98,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "메토카르바몰과 그 대사체는 소변으로 배설되기 전에 광범위하게 포합(conjugation)된다. 대변으로의 배설은 약 2%로 제한적이며, 대부분은 24시간 이내에 제거된다. 인간에서 비활성 대사체가 소변 및 소량 대변으로 배설된다. CYP 관련 경로는 출처 문헌에 명시되지 않음."
+    },
+    "extra_information": "개에서 경구 투여 후 빠르게 흡수되며, 최고 혈중 농도는 2시간 후에 도달하고 반감기는 용량 의존적으로 0.6~2시간이다. 메토카르바몰과 그 대사체는 소변으로 배설 전 광범위하게 포합되며, 대부분 24시간 이내에 제거된다. 고양이에 대한 별도의 약동학 데이터는 출처에 명시되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이에 대한 수의학적 종별 PK 데이터가 제한적이며, 일부는 인간 데이터 및 약리학적 추론에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depressant",
+          "sedation",
+          "ataxia",
+          "loss of righting reflex",
+          "seizure risk",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "메토카르바몰은 중추신경계 억제제로, 진정, 운동실조, 기립반사 소실 등의 CNS 억제 효과가 보고됨. 경련 장애 환자에서 주의 요망."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "anaphylactic reactions"
+        ],
+        "index": -1,
+        "evidence": "인간에서 아나필락시스 반응이 보고되었으나, 개에서의 혈액 독성에 대한 직접적인 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal pathology contraindication",
+          "PEG 300",
+          "urea retention",
+          "reduced clearance with renal impairment"
+        ],
+        "index": 2,
+        "evidence": "주사제에 포함된 PEG 300으로 인해 신장 질환 환자에서 금기. 신장 기능 저하 시 약물 청소율 감소. 신장 질환 동물에서 주사제 사용 금기."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "reduced clearance with severe hepatic impairment"
+        ],
+        "index": 3,
+        "evidence": "중증 간 기능 저하 시 약물 청소율 감소 및 용량 감소 필요 가능성이 언급됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "PEG 300"
+        ],
+        "index": -1,
+        "evidence": "인간에서 PEG 300으로 인한 서맥 및 저혈압 위험이 IV 투여 속도 초과 시 보고됨. 개/고양이에서 직접적인 심장 독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depressant",
+          "sedation",
+          "ataxia",
+          "loss of righting reflex",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "개와 동일하게 CNS 억제 효과(진정, 운동실조, 기립반사 소실)가 고양이에서도 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "anaphylactic reactions"
+        ],
+        "index": -1,
+        "evidence": "인간에서 아나필락시스 반응이 보고되었으나, 고양이에서의 혈액 독성에 대한 직접적인 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal pathology contraindication",
+          "PEG 300",
+          "urea retention",
+          "reduced clearance with renal impairment"
+        ],
+        "index": 2,
+        "evidence": "주사제에 포함된 PEG 300으로 인해 신장 질환 고양이에서 주사제 사용 금기. 신장 기능 저하 시 약물 청소율 감소."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "reduced clearance with severe hepatic impairment"
+        ],
+        "index": 3,
+        "evidence": "중증 간 기능 저하 시 약물 청소율 감소 및 용량 감소 필요 가능성이 언급됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "PEG 300"
+        ],
+        "index": -1,
+        "evidence": "인간에서 PEG 300으로 인한 서맥 및 저혈압 위험이 IV 투여 속도 초과 시 보고됨. 고양이에서 직접적인 심장 독성 데이터는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 0.6,
+      "max": 2.0,
+      "mean": 1.3,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 50,
+    "evidence": "개에서 경구 투여 후 최고 혈중 농도는 2시간 후 도달, 반감기는 용량 의존적으로 0.6~2시간. 인간에서 경구 투여 후 작용 발현은 약 30분, 혈장 단백 결합률 약 50%, 혈청 반감기 약 1~2시간. 개에서의 경구 생체이용률은 출처에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 명시된 상호작용은 인간 또는 동물에서 보고되었거나 이론적인 것임.",
+  "drug_interactions": [
+    {
+      "drug": "Antihistamines (e.g., diphenhydramine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "항히스타민제와 병용 시 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "벤조디아제핀과 병용 시 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "enhanced CNS depressant effect"
+      ],
+      "evidence": "메토카르바몰이 부프레노르핀의 CNS 억제 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "CNS Depressants (e.g., acepromazine, baclofen, dexmedetomidine, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "다른 CNS 억제제와 병용 시 부가적 억제 효과 발생 가능."
+    },
+    {
+      "drug": "Gabapentin",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 호흡 억제 발생 가능."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "메토클로프라미드와 병용 시 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "enhanced CNS depressant effect"
+      ],
+      "evidence": "메토카르바몰이 미르타자핀의 CNS 억제 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "오피오이드와 병용 시 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression",
+        "additive CNS depression"
+      ],
+      "evidence": "페노바르비탈과 병용 시 부가적 호흡 억제 발생 가능."
+    },
+    {
+      "drug": "Pyridostigmine",
+      "severity": 2,
+      "keywords": [
+        "reduced therapeutic effect",
+        "antagonism"
+      ],
+      "evidence": "메토카르바몰이 피리도스티그민의 치료 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "SSRIs (e.g., fluoxetine, paroxetine)",
+      "severity": 2,
+      "keywords": [
+        "enhanced adverse effects",
+        "toxic effects"
+      ],
+      "evidence": "메토카르바몰이 SSRI의 부작용/독성 효과를 강화할 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "food_animals"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "중등도 근육 경련 완화 (FDA 승인 라벨 용량)",
+          "value": "44",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 330.0,
+          "duration_note": "IV 투여 속도는 2 mL/분을 초과하지 않도록 함. 누적 최대 용량 330 mg/kg.",
+          "evidence": "FDA 승인 라벨 용량. 중등도 상태에 대한 초기 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "스트리크닌 및 파상풍의 중증 효과 조절 (FDA 승인 라벨 용량)",
+          "value": "55 - 220",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 330.0,
+          "duration_note": "총 용량의 1/2을 신속히 투여 후 근육 이완 확인, 나머지 투여. 추가 용량 필요 시 가능. 누적 최대 용량 330 mg/kg. 투여 속도 2 mL/분 이하.",
+          "evidence": "FDA 승인 라벨 용량. 중증 상태(스트리크닌, 파상풍)에 대한 용량."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "급성 염증성 및 외상성 골격근 상태 경구 치료 (FDA 승인 라벨 용량)",
+          "value": "132",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일차: 132 mg/kg/일을 2~3회 분할 투여(q8~12h). 이후 66~132 mg/kg/일을 q8~12h 분할 투여. 5일 내 반응 없으면 중단.",
+          "evidence": "FDA 승인 라벨 경구 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "근육 떨림 관련 독성 보조 치료 - 초기 IV 볼루스 (비라벨 용량)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5분에 걸쳐 천천히 투여하여 임상 효과(증상 소실 또는 거의 소실)까지. 필요 시 반복 또는 CRI로 전환.",
+          "evidence": "비라벨(extra-label) 용량. 독성 관련 근육 떨림 치료."
+        },
+        {
+          "logic_type": "linear",
+          "context": "근육 떨림 관련 독성 보조 치료 - CRI (비라벨 용량)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 CRI 속도 10 mg/kg/시간. 임상 효과에 따라 볼루스 용량/빈도 또는 CRI 속도 조절. 필요 시 라벨 최대 용량(330 mg/kg/일) 초과 가능하나 심각한 CNS 억제, 경련, 저혈압 모니터링 필요.",
+          "evidence": "비라벨(extra-label) 용량. 피레스로이드 중독 3건의 증례 보고에서 8.8, 11.6, 12.2 mg/kg/시간 CRI 속도 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "추간판 질환 보조 근육 이완제 (비라벨 용량, 일화적)",
+          "value": "15 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "비라벨(extra-label) 일화적 용량. 추간판 질환 보조 치료."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "중등도 근육 경련 완화 (FDA 승인 라벨 용량)",
+          "value": "44",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 330.0,
+          "duration_note": "IV 투여 속도는 2 mL/분을 초과하지 않도록 함. 누적 최대 용량 330 mg/kg.",
+          "evidence": "FDA 승인 라벨 용량. 개와 고양이 모두에 적용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "스트리크닌 및 파상풍의 중증 효과 조절 (FDA 승인 라벨 용량)",
+          "value": "55 - 220",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 330.0,
+          "duration_note": "총 용량의 1/2을 신속히 투여 후 근육 이완 확인, 나머지 투여. 누적 최대 용량 330 mg/kg. 투여 속도 2 mL/분 이하.",
+          "evidence": "FDA 승인 라벨 용량. 개와 고양이 모두에 적용."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "급성 염증성 및 외상성 골격근 상태 경구 치료 (FDA 승인 라벨 용량)",
+          "value": "132",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일차: 132 mg/kg/일을 2~3회 분할 투여(q8~12h). 이후 66~132 mg/kg/일을 q8~12h 분할 투여. 5일 내 반응 없으면 중단.",
+          "evidence": "FDA 승인 라벨 경구 용량. 개와 고양이 모두에 적용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "근육 떨림 관련 독성 보조 치료 - 초기 IV 볼루스 (비라벨 용량)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5분에 걸쳐 천천히 투여. 필요 시 반복 또는 CRI로 전환. 퍼메트린 독성 후 메토카르바몰 투여 고양이에서 입원 기간 단축 보고.",
+          "evidence": "비라벨(extra-label) 용량. 고양이 퍼메트린 독성 후향적 연구에서 유용성 확인."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "주사제는 신장 질환(알려진 또는 의심되는 신장 병리)이 있는 동물에서 금기. PEG 300이 신장 기능 저하 환자에서 기존 산증 및 요소 저류를 악화시킬 수 있음. 중증 신장 기능 저하 시 약물 청소율 감소로 용량 감소가 필요할 수 있음. 경구제에 대한 구체적인 용량 조절 기준은 출처에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간 기능 저하 시 약물 청소율이 감소하여 용량 감소가 필요할 수 있음. 구체적인 용량 조절 기준은 출처에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "신장 질환 (주사제)",
+      "match_terms": [
+        "renal disease",
+        "renal pathology",
+        "CKD",
+        "AKI",
+        "renal impairment"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "메토카르바몰 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "anaphylaxis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식용 동물",
+      "match_terms": [
+        "food animal",
+        "livestock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간 기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver failure",
+        "severe hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "중추신경계 억제제로, 개재뉴런(internuncial neurons)에 중추적으로 작용하여 다시냅스 뉴런의 차단 효과를 연장함으로써 골격근 과활성을 감소시킴. 횡문근, 신경섬유, 운동종판에 대한 직접적인 이완 효과는 없음.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "침 흘림(salivation)",
+      "구토(emesis)",
+      "무기력(lethargy)",
+      "쇠약(weakness)",
+      "운동실조(ataxia)",
+      "기립반사 소실(loss of righting reflex)",
+      "소변 색 변화(dark or blue-green urine)"
+    ],
+    "dog_mechanism": "개재뉴런에 중추적으로 작용하여 다시냅스 뉴런의 차단 효과를 연장, 골격근 과활성 감소. 고용량에서 이차적 진정 효과 발생.",
+    "dog_extra_effects": [
+      "진정(sedation)",
+      "침 흘림(salivation)",
+      "구토(emesis)",
+      "무기력(lethargy)",
+      "쇠약(weakness)",
+      "기립반사 소실(loss of righting reflex)",
+      "운동실조(ataxia)"
+    ],
+    "cat_mechanism": "개와 동일한 중추 작용 기전. 퍼메트린 독성 후 메토카르바몰 투여 시 입원 기간 단축 효과 보고.",
+    "cat_extra_effects": [
+      "진정(sedation)",
+      "침 흘림(salivation)",
+      "구토(emesis)",
+      "무기력(lethargy)",
+      "쇠약(weakness)",
+      "기립반사 소실(loss of righting reflex)",
+      "운동실조(ataxia)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 경구 및 IV 근육 이완제. 급성 염증성/외상성 골격근 상태, 추간판 질환, 파상풍, 스트리크닌/피레스로이드/메탈알데히드 등 독성 관련 근육 떨림 치료에 사용. IV 투여 속도는 2 mL/분 이하로 유지. 주사제는 신장 질환 개에서 금기. 소변이 짙은 색 또는 청록색으로 변할 수 있으나 임상적으로 유의하지 않음.",
+    "cat": "고양이에서 FDA 승인된 경구 및 IV 근육 이완제. 퍼메트린 독성 후 메토카르바몰 투여 시 입원 기간 단축 효과가 후향적 연구에서 보고됨. IV 투여 속도는 2 mL/분 이하로 유지. 주사제는 신장 질환 고양이에서 금기. 수유 중인 어미 고양이에서 주의 필요(메토카르바몰 또는 대사체가 모유로 분비됨)."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 질환 개에서 주사제 금기(PEG 300 함유). 경련 장애 환자에서 주의. IV 투여 속도 2 mL/분 이하 유지. SC 투여 금지, 혈관 외 누출 방지. 다른 CNS 억제제와 병용 시 부가적 CNS 및 호흡 억제 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신장 질환 고양이에서 주사제 금기(PEG 300 함유). IV 투여 속도 2 mL/분 이하 유지. SC 투여 금지. 수유 중인 어미 고양이에서 주의(모유로 분비). 다른 CNS 억제제와 병용 시 부가적 CNS 및 호흡 억제 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 20~25°C(68~77°F) 보관, 빛과 습기 차단. 주사제: 20~25°C(68~77°F) 보관(15~30°C 허용), 냉동 금지. IV 주입용으로 희석된 용액은 냉장 보관 금지(침전 형성 가능). 투여 전 희석 용액의 혼탁 또는 침전 여부 육안 확인. 4 mg/mL로 희석된 용액(5% 포도당 또는 0.9% NaCl)은 실온에서 6일간 안정.",
+    "forms": [
+      "Methocarbamol Tablets 500 mg (Robaxin-V, Rx) - 개, 고양이 FDA 승인",
+      "Methocarbamol Injection 100 mg/mL, 20 mL 및 100 mL 바이알 (Robaxin-V, Rx) - 개, 고양이, 말(식용 목적이 아닌) FDA 승인",
+      "Methocarbamol Tablets 500 mg, 750 mg (Robaxin, Robaxin-750, generic, Rx) - 인간용",
+      "Methocarbamol Injection 100 mg/mL, 10 mL 바이알 (Robaxin, Rx) - 인간용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메토카르바몰은 중추 작용성 골격근 이완제로, 개와 고양이에서 급성 염증성/외상성 골격근 상태 및 독성(메탈알데히드, 피레스로이드, 스트리크닌, SSRI, 진전유발 마이코톡신 등) 관련 근육 떨림 치료에 FDA 승인된 약물입니다. IV 투여 시 속도를 2 mL/분 이하로 유지해야 하며, 주사제는 신장 질환 동물에서 금기입니다. 진정, 운동실조 등 CNS 억제 부작용이 주요 이상반응입니다. 다른 CNS 억제제와 병용 시 부가적 억제 효과에 주의가 필요합니다.",
+    "indications": "【승인 적응증】 개·고양이: 골격근의 급성 염증성 및 외상성 상태의 보조 치료(근육 경련 감소). 말: 골격근의 급성 염증성 및 외상성 상태의 보조 치료(IV). 【비라벨 적응증】 독성(메탈알데히드, 피레스로이드, 스트리크닌, CNS 자극제, SSRI, 진전유발 마이코톡신, 퇴비 섭취 등) 관련 근육 떨림 및 근육 연축 치료. 추간판 질환 보조 근육 이완(개, 일화적). 파상풍 근육 이완 유지.",
+    "client_info": "이 약은 근육 경련 및 독성 관련 근육 떨림 치료에 사용됩니다. 음식과 함께 또는 공복에 투여할 수 있습니다. 가장 흔한 부작용은 졸음/진정이며, 운동실조(비틀거림), 구토, 침 흘림이 나타날 수 있습니다. 소변이 짙은 색 또는 청록색으로 변할 수 있으나 임상적으로 문제가 없습니다. 5일 이내에 반응이 없으면 수의사에게 알려주세요. 다른 진정제나 수면제와 함께 사용 시 반드시 수의사에게 알려주세요. 임신 중이거나 수유 중인 동물에서는 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile",
+      "Oral bioavailability (dog/cat)",
+      "Protein binding (dog/cat specific)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.extra_information (cat-specific PK)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/64.jsonl",
+    "extracted_at": "2026-03-11T09:10:35.362290+00:00",
+    "reviewer": null
+  }
+}

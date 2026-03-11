@@ -1,0 +1,761 @@
+{
+  "id": "methotrexate",
+  "drug_identity": {
+    "name_ko": "메토트렉세이트",
+    "name_en": "Methotrexate",
+    "active_ingredient": "Methotrexate",
+    "brand_names": [
+      "Trexall",
+      "Xatmep",
+      "Otrexup",
+      "Rasuvo",
+      "Reditrex"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Leucovorin calcium",
+    "reversal_evidence": "Leucovorin calcium (테트라하이드로엽산 유도체)는 메토트렉세이트의 효과를 차단할 수 있으며, 과량 투여 시 가능한 한 빨리(첫 1시간 이내, 48시간 이내) 투여해야 합니다.",
+    "off_label_note": "수의학에서 허가된 제품 없음. 개와 고양이의 림프종 및 면역억제 목적으로 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 7.5,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "value": 15.0,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 25.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "메토트렉세이트는 사구체 여과 및 능동 수송을 통해 신장에서 거의 전량 배설됩니다. CYP 효소 관련 대사 경로는 본 모노그래프에 명시되어 있지 않습니다."
+    },
+    "extra_information": "개에서 저용량(약 0.5 mg/kg) 경구 생체이용률은 약 30%이며 개체 간 변동이 큼. 피하 생체이용률은 약 93%로 더 높고 일관적. 반감기는 약 2~3시간. 신장, 비장, 담낭, 간, 피부에 가장 높은 농도 분포. 복수 또는 흉수가 있는 환자에서 배설이 감소함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설 거의 전량, 신독성 명시, 간독성 가능, 골수억제, CNS 독성(척수강내 투여 시) 근거로 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS toxicity",
+          "encephalopathy",
+          "intrathecal"
+        ],
+        "index": 1,
+        "evidence": "척수강내 투여 시 뇌병증(encephalopathy) 등 CNS 독성이 보고됨. 경구/비경구 투여 시 CSF 치료 농도 미달."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression",
+          "leukopenia",
+          "thrombocytopenia",
+          "bone marrow depression"
+        ],
+        "index": 2,
+        "evidence": "골수억제(백혈구감소증, 혈소판감소증)가 주요 독성으로 명시됨. CBC 정기 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "renal elimination",
+          "nephrotoxicity",
+          "acute renal failure",
+          "tubular necrosis",
+          "renal tubules precipitation"
+        ],
+        "index": 3,
+        "evidence": "신장으로 거의 전량 배설. 고용량 시 신세뇨관 내 약물 침전으로 신독성 및 급성 신부전 가능. 심한 신부전 시 금기."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver enzymes elevation",
+          "hepatic insufficiency"
+        ],
+        "index": 2,
+        "evidence": "간독성 가능(주로 장기 사용 후). 간효소 일시적 상승 흔함. 심한 간부전 시 금기."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "본 모노그래프에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS toxicity",
+          "encephalopathy",
+          "intrathecal"
+        ],
+        "index": 1,
+        "evidence": "척수강내 투여 시 CNS 독성 가능. 개와 고양이 8마리를 포함한 후향적 연구에서 1마리만 발작 발생."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression",
+          "leukopenia",
+          "thrombocytopenia",
+          "bone marrow depression"
+        ],
+        "index": 2,
+        "evidence": "골수억제(백혈구감소증, 혈소판감소증)가 주요 독성으로 명시됨."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "renal elimination",
+          "nephrotoxicity",
+          "acute renal failure",
+          "tubular necrosis"
+        ],
+        "index": 3,
+        "evidence": "신장으로 거의 전량 배설. 고용량 시 신독성 및 급성 신부전 가능. 심한 신부전 시 금기."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver enzymes elevation",
+          "hepatic insufficiency"
+        ],
+        "index": 2,
+        "evidence": "간독성 가능. 간효소 일시적 상승 가능. 심한 간부전 시 금기."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "본 모노그래프에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 3.0,
+      "mean": 2.5,
+      "species": "dog"
+    },
+    "f_percent": 30,
+    "protein_binding_percent": 50,
+    "evidence": "개에서 경구 생체이용률 약 30%(저용량 약 0.5 mg/kg), 피하 약 93%. 반감기 약 2~3시간. 사람에서 단백결합 약 50%, 경구 투여 후 최고 혈중 농도 도달 시간 4시간 이내, IM 투여 후 30분~2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용금기/주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "methotrexate toxicity"
+      ],
+      "evidence": "May increase the risk for methotrexate toxicity."
+    },
+    {
+      "drug": "Asparaginase",
+      "severity": 2,
+      "keywords": [
+        "decreased antineoplastic activity",
+        "cell replication inhibition"
+      ],
+      "evidence": "May decrease the antineoplastic activity of methotrexate, as asparaginase inhibits cell replication required for methotrexate activity."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy"
+      ],
+      "evidence": "May decrease methotrexate efficacy."
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate concentration"
+      ],
+      "evidence": "May increase methotrexate concentrations."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate levels"
+      ],
+      "evidence": "May increase methotrexate levels; consider therapy modification."
+    },
+    {
+      "drug": "Doxycycline",
+      "severity": 2,
+      "keywords": [
+        "methotrexate toxicity"
+      ],
+      "evidence": "May increase the risk for methotrexate toxicity."
+    },
+    {
+      "drug": "Hepatotoxic Drugs (halothane, ketoconazole, valproic acid, phenobarbital, primidone)",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "additive hepatic toxicity"
+      ],
+      "evidence": "Methotrexate should be used cautiously with other drugs that can cause hepatotoxicity."
+    },
+    {
+      "drug": "Hydrochlorothiazide",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate exposure",
+        "myelosuppression"
+      ],
+      "evidence": "May increase methotrexate exposure and increase the risk for myelosuppression."
+    },
+    {
+      "drug": "Immunosuppressive Drugs (azathioprine, cyclophosphamide, corticosteroids)",
+      "severity": 2,
+      "keywords": [
+        "increased infection risk",
+        "immunosuppression"
+      ],
+      "evidence": "Use with other immunosuppressant drugs may increase the risk for infection."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate exposure",
+        "hepatotoxicity",
+        "bone marrow toxicity"
+      ],
+      "evidence": "May result in increased methotrexate exposure and increased risk for hepatotoxicity and bone marrow toxicity."
+    },
+    {
+      "drug": "Levetiracetam",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate exposure",
+        "toxicity"
+      ],
+      "evidence": "May increase methotrexate exposure and toxicity."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "decreased loop diuretic efficacy"
+      ],
+      "evidence": "Methotrexate may decrease the efficacy of loop diuretics; consider therapy modification."
+    },
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "Concurrent use with other bone marrow depressant medications may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Neomycin (oral)",
+      "severity": 2,
+      "keywords": [
+        "decreased methotrexate absorption"
+      ],
+      "evidence": "Oral neomycin may decrease the absorption of oral methotrexate if given concomitantly."
+    },
+    {
+      "drug": "NSAIDs and Salicylates",
+      "severity": 3,
+      "keywords": [
+        "hematologic toxicity",
+        "GI toxicity",
+        "severe toxicity"
+      ],
+      "evidence": "In humans, severe hematologic and GI toxicity has resulted in patients receiving both methotrexate and NSAIDs; avoid or use very cautiously in dogs on methotrexate."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate concentration",
+        "methotrexate toxicity"
+      ],
+      "evidence": "May increase concentrations of methotrexate and its metabolite; increased risk for methotrexate toxicity."
+    },
+    {
+      "drug": "Penicillins",
+      "severity": 3,
+      "keywords": [
+        "decreased methotrexate excretion",
+        "methotrexate toxicity"
+      ],
+      "evidence": "Penicillins may interfere with the excretion of methotrexate and increase the risk for methotrexate toxicity. Avoid concurrent use."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "inhibited tubular secretion",
+        "increased half-life"
+      ],
+      "evidence": "May inhibit the tubular secretion of methotrexate and increase its half-life."
+    },
+    {
+      "drug": "Sulfonamides (sulfadimethoxine, sulfamethoxazole)",
+      "severity": 2,
+      "keywords": [
+        "protein displacement",
+        "increased toxicity risk"
+      ],
+      "evidence": "May displace methotrexate from plasma proteins, increasing the risk for toxicity."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline exposure"
+      ],
+      "evidence": "Methotrexate may increase theophylline exposure."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "diminished vaccine efficacy",
+        "enhanced vaccine adverse effects"
+      ],
+      "evidence": "Methotrexate may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "prolonged bleeding time",
+        "increased bleeding risk"
+      ],
+      "evidence": "May cause prolonged bleeding times and increased risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "림프종 유지 치료 (LMP 프로토콜, 복합 항암 요법의 일부)",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 주 2회 투여. 클로람부실, 프레드니손과 병용.",
+          "evidence": "LMP 프로토콜: 메토트렉세이트 2.5–5 mg/m2 PO 주 2회 (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "복합 항암 요법 (항암 프로토콜의 일부)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 5 mg/m2 PO 주 2회 또는 2.5 mg/m2 PO 매일.",
+          "evidence": "복합 항암 프로토콜: 메토트렉세이트 5 mg/m2 PO 주 2회 또는 2.5 mg/m2 PO 매일 (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "복합 항암 요법 (IV 투여)",
+          "value": "0.8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 0.8 mg/kg IV 21일마다.",
+          "evidence": "복합 항암 프로토콜: 메토트렉세이트 0.8 mg/kg IV 21일마다 (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "면역억제제 (오프라벨)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 2.5 mg/m2 PO 매 24시간. 일화적 용량.",
+          "evidence": "면역억제 목적 일화적 용량: 2.5 mg/m2 PO q24h (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "림프종 등 종양성 질환 (복합 항암 요법의 일부, 경구)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 2.5 mg/m2 PO 주 2~3회.",
+          "evidence": "고양이 종양: 2.5 mg/m2 PO 주 2~3회 (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "림프종 등 종양성 질환 (복합 항암 요법의 일부, IV)",
+          "value": "0.3 - 0.8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 0.3–0.8 mg/m2 IV 7일마다.",
+          "evidence": "고양이 종양: 0.3–0.8 mg/m2 IV 7일마다 (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "재발성 고양이 림프종 구제 요법 (로무스틴, 시타라빈과 병용)",
+          "value": "0.5 - 0.6",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 주의 (NOT mg/kg). 로무스틴, 시타라빈과 교대 투여.",
+          "evidence": "재발성 고양이 림프종 구제 요법: 목표 용량 0.5–0.6 mg/m2 IV (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "면역억제제 - 류마티스 관절염 (레플루노미드와 병용)",
+          "value": "2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이 1마리당 2.5 mg PO, 주 1일에 3회 투여 (총 7.5 mg/일). 개선 시 주 1회로 감량. mg/kg 아님.",
+          "evidence": "류마티스 관절염: 레플루노미드 10 mg/cat PO SID + 메토트렉세이트 2.5 mg/cat PO TID (주 1일) (extra-label)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "심한 신부전 시 금기. 신장으로 거의 전량 배설되므로 신기능 저하 시 독성 위험 크게 증가. 복수 또는 흉수 시 배설 감소. 구체적 크레아티닌 역치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "심한 간부전 시 금기. 간독성 가능(주로 장기 사용 후). 간효소 일시적 상승 흔함. 구체적 ALT 역치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "골수 억제",
+      "match_terms": [
+        "myelosuppression",
+        "bone marrow depression",
+        "leukopenia",
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 75000.0,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "심한 신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "renal failure",
+        "CKD",
+        "acute kidney injury"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심한 간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "severe hepatic disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "메토트렉세이트 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "anaphylaxis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "gestation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "nursing",
+        "lactation",
+        "breastfeeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호중구 감소증 (절대 호중구 수 < 2500/µL)",
+      "match_terms": [
+        "neutropenia",
+        "ANC < 2500"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 2500.0,
+        "unit": "x10^3/uL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본 모노그래프에서 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "S기 특이적 항대사물질 항암제. 엽산 환원효소(dihydrofolate reductase)를 경쟁적으로 억제하여 디하이드로엽산의 테트라하이드로엽산으로의 환원을 방해하고, 퓨린 및 피리미딘 생성에 영향을 미침. 빠르게 증식하는 세포(종양, 골수, 위장관 상피, 태아 세포)에 가장 민감하게 작용. 림프구 복제에 대한 영향으로 면역억제 효과도 있음.",
+    "common_extra_effects": [
+      "식욕부진(inappetence)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "백혈구감소증(leukopenia)",
+      "혈소판감소증(thrombocytopenia)",
+      "일시적 탈모(temporary alopecia)",
+      "탈색소(depigmentation)",
+      "구강 병변(oral lesions)",
+      "간효소 일시적 상승(transient liver enzyme elevation)",
+      "신독성(nephrotoxicity, 고용량 시)",
+      "CNS 독성/뇌병증(encephalopathy, 척수강내 투여 시)",
+      "아나필락시스(anaphylaxis, 드물게)",
+      "기회감염(opportunistic infections)"
+    ],
+    "dog_mechanism": "개에서 경구 생체이용률 약 30%(저용량), 피하 약 93%. 반감기 약 2~3시간. 최대 내성 용량은 0.12 mg/kg 1일 1회 5일간; 10 mg/kg은 류코보린 구제 없이 치사량으로 보고됨.",
+    "dog_extra_effects": [
+      "구토(특히 개에서 흔함)",
+      "설사",
+      "식욕부진",
+      "백혈구감소증",
+      "혈소판감소증",
+      "일시적 탈모",
+      "탈색소",
+      "구강 병변",
+      "간효소 일시적 상승",
+      "신독성(고용량 시)",
+      "과립종성 벽성 모낭염(cyclosporine 병용 시 1례 보고)"
+    ],
+    "cat_mechanism": "고양이에서 특이적 약동학 데이터는 제한적. 주로 림프종 치료에 사용되었으나 현재는 덜 사용됨.",
+    "cat_extra_effects": [
+      "식욕부진(특히 고양이에서 흔함)",
+      "설사",
+      "구토",
+      "백혈구감소증",
+      "혈소판감소증",
+      "일시적 탈모",
+      "탈색소",
+      "구강 병변",
+      "간효소 일시적 상승",
+      "신독성(고용량 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 주로 림프종 복합 항암 프로토콜(LMP 등)의 일부로 사용되었으나, 현재는 더 효과적이고 독성이 낮은 약제의 등장으로 수의 종양학에서 드물게 사용됨. 면역억제제로서의 경험은 제한적이며 일화적 용량만 보고됨. 경구 생체이용률이 낮고 개체 간 변동이 크므로 피하 투여가 더 일관적. 용량은 반드시 mg/m2로 계산하며 mg/kg과 혼동하지 않도록 주의. 정기적 CBC 및 혈청 화학 검사 모니터링 필수.",
+    "cat": "고양이에서 주로 림프종 치료에 사용되었으나 현재는 드물게 사용됨. 재발성 고양이 림프종의 구제 요법(로무스틴, 시타라빈과 병용)으로 제안되었으나 강력한 효능 근거는 부족. 류마티스 관절염에서 레플루노미드와 병용 사용 보고 있음. 식욕부진이 특히 고양이에서 흔한 부작용. 용량은 반드시 mg/m2 또는 mg/cat으로 계산하며 mg/kg과 혼동하지 않도록 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 GI 부작용(구토, 설사, 식욕부진), 골수억제, 간독성, 신독성 가능. 기존 골수억제, 심한 간/신부전, 과민반응 시 금기. 임신 동물에서 최기형성 및 배아독성. 수의 종양 전문의 상담 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 식욕부진이 특히 흔함. 골수억제, 간독성, 신독성 가능. 기존 골수억제, 심한 간/신부전, 과민반응 시 금기. 임신 동물에서 최기형성 및 배아독성. 수의 종양 전문의 상담 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 주사제: 20~25°C(68~77°F) 보관, 밀폐 용기, 차광. 경구 용액: 원래 용기에 밀폐하여 냉장(2~8°C) 보관; 실온에서 최대 60일 보관 가능. 동결 및 과도한 열 피할 것.",
+    "forms": [
+      "Methotrexate Tablets: 2.5 mg, 5 mg, 7.5 mg, 10 mg, 15 mg (Trexall, generic)",
+      "Methotrexate Oral Solution: 2.5 mg/mL in 120 mL (Xatmep)",
+      "Methotrexate Injection SC (auto-injectors): Otrexup, Rasuvo, Reditrex",
+      "Methotrexate Sodium Injection: 25 mg/mL preservative-free (generic)",
+      "Methotrexate Powder for Injection, lyophilized: 1 g (generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메토트렉세이트는 엽산 길항제 항대사물질 항암제로, 개와 고양이의 림프종 복합 항암 프로토콜 및 면역억제 목적으로 오프라벨 사용됨. 수의학에서 허가된 제품 없음. 용량은 반드시 mg/m2로 계산하며 mg/kg과 혼동 금지. 주요 독성: 골수억제, GI 독성, 신독성, 간독성. 류코보린 칼슘이 과량 투여 시 해독제. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비(PPE) 착용 필수. 수의 종양 전문의 상담 강력 권장.",
+    "indications": "개와 고양이의 림프증식성 질환(림프종) 복합 항암 프로토콜(LMP 등)의 일부로 사용(오프라벨). 재발성 고양이 림프종 구제 요법(로무스틴, 시타라빈과 병용, 오프라벨). 다른 약제(프레드니손, 아자티오프린 등)가 효과 없을 때 대체 면역억제제로 사용(오프라벨). 고양이 류마티스 관절염에서 레플루노미드와 병용(오프라벨).",
+    "client_info": "이 약은 항암(화학요법) 약물로, 다른 동물과 사람에게 위험할 수 있습니다. 약을 다룰 때는 반드시 장갑을 착용하세요. 투약 당일과 이후 며칠간 소변, 대변, 구토물 등 체액을 처리할 때 일회용 장갑을 착용하고, 비닐봉지에 밀봉하여 일반 쓰레기로 버리세요. 이 약은 음식과 함께 투여하세요. 이 약은 면역 기능(골수 억제)에 영향을 줄 수 있으며, 골수에 대한 영향은 치료 후 수 주 내에 가장 크게 나타납니다. 출혈, 멍, 호흡 곤란, 구토, 설사, 식욕 저하, 발열(감염 징후), 또는 동물이 매우 쉽게 피로해하면 즉시 수의사에게 연락하세요. 정기적인 신체검사와 혈액검사를 위한 내원을 빠뜨리지 마세요. 이 약은 NIOSH에서 위험 약물로 분류하고 있으므로, 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal creatinine threshold for dose adjustment",
+      "Specific ALT threshold for hepatic dose adjustment",
+      "Cat-specific pharmacokinetic data",
+      "CYP enzyme profile",
+      "QT prolongation data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.electrolyte_effect"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/64.jsonl",
+    "extracted_at": "2026-03-11T09:13:04.634960+00:00",
+    "reviewer": null
+  }
+}

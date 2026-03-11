@@ -1,0 +1,678 @@
+{
+  "id": "metoprolol",
+  "drug_identity": {
+    "name_ko": "메토프롤롤",
+    "name_en": "Metoprolol",
+    "active_ingredient": "Metoprolol",
+    "brand_names": [
+      "Lopressor",
+      "Toprol XL"
+    ],
+    "allergy_class": "beta-blocker",
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 개에서 심방세동의 심박수 조절, 고혈압, 심실 조기수축에 사용; 고양이에서 비대성 심근병증 치료에 사용 (모두 허가 외 사용).",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 37.5,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2D6"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 CYP2D6 다형성에 따라 반감기가 달라짐: 광범위 대사자(extensive metabolizer)에서 3~4시간, 불량 대사자(poor metabolizer)에서 7~9시간. 간에서 광범위하게 대사되며, 미변화체 및 대사산물이 소변으로 배설됨."
+    },
+    "extra_information": "개에서 메토프롤롤 타르트레이트의 반감기는 1.7시간으로 보고됨. 고양이에서는 1.3시간으로 보고됨. 비글견에서 메토프롤롤 50mg/펠로디핀 5mg 서방정 경구 투여 시 최고 혈장 농도 532 µg/mL (3.8시간 후), 반감기 9.1시간, 청소율 1.2 L/hr/kg, 분포용적 16.4 L/kg으로 보고됨(서방형 복합제 기준)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개/고양이 종별 수의학 PK 데이터가 제한적이며, 일부는 인간 데이터 및 약리학적 추론에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "혈뇌장벽 통과",
+          "CNS 억제",
+          "기면",
+          "우울"
+        ],
+        "index": 1,
+        "evidence": "메토프롤롤은 혈뇌장벽을 통과하며, CSF 농도는 혈장의 약 78%. 기면, 무기력, 우울 등 CNS 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "저혈압",
+          "서맥",
+          "저혈당",
+          "고칼륨혈증"
+        ],
+        "index": 2,
+        "evidence": "저혈압, 서맥, 저혈당, 고칼륨혈증 등 혈액/순환계 부작용이 보고됨. 혈압 및 혈당 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "저혈압"
+        ],
+        "index": -1,
+        "evidence": "직접적인 신독성은 보고되지 않으나, 저혈압으로 인한 신관류 감소 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "간 대사",
+          "간부전 주의"
+        ],
+        "index": 3,
+        "evidence": "간에서 광범위하게 대사됨. 유의한 간부전 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "서맥",
+          "AV 전도 장애",
+          "심부전 악화",
+          "음성 변력 작용",
+          "음성 변시 작용"
+        ],
+        "index": 4,
+        "evidence": "베타-1 차단으로 인한 서맥, AV 전도 억제, 심부전 악화, 음성 변력/변시 작용이 주요 부작용으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "혈뇌장벽 통과",
+          "기면"
+        ],
+        "index": 1,
+        "evidence": "혈뇌장벽 통과 및 기면 등 CNS 부작용 가능성. 고양이 특이 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "저혈압",
+          "서맥"
+        ],
+        "index": 2,
+        "evidence": "저혈압, 서맥 등 순환계 부작용 가능성. 고양이 반감기 1.3시간으로 짧음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "저혈압"
+        ],
+        "index": -1,
+        "evidence": "직접적 신독성 보고 없음. 저혈압으로 인한 신관류 감소 가능성."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사"
+        ],
+        "index": 3,
+        "evidence": "간에서 대사됨. 고양이 특이 간독성 데이터는 없으나 간부전 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "서맥",
+          "AV 전도 장애",
+          "폐부종 위험",
+          "음성 변력 작용"
+        ],
+        "index": 4,
+        "evidence": "비대성 심근병증 고양이에서 폐부종 위험 증가 보고. 서맥, AV 전도 억제, 음성 변력 작용."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.8,
+    "half_life_hr": {
+      "min": 1.3,
+      "max": 9.1,
+      "mean": 1.7,
+      "species": "dog"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": 10,
+    "evidence": "인간에서 경구 생체이용률 약 50% (초회통과 대사로 인해). 혈장 단백 결합률 5~15%. 개에서 메토프롤롤 타르트레이트 반감기 1.7시간, 고양이 1.3시간. 비글견 서방형 복합제 투여 시 Tmax 3.8시간, 반감기 9.1시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Inhalant Anesthetic Agents (e.g., halothane)",
+      "severity": 2,
+      "keywords": [
+        "심부전",
+        "저혈압"
+      ],
+      "evidence": "Increased risk for heart failure and hypotension when used concurrently with inhalant anesthetics."
+    },
+    {
+      "drug": "Antidiabetic Agents (e.g., glipizide, insulin)",
+      "severity": 2,
+      "keywords": [
+        "저혈당",
+        "고혈당",
+        "저혈당 증상 은폐"
+      ],
+      "evidence": "May result in hypoglycemia or hyperglycemia; metoprolol may mask signs of hypoglycemia."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "서맥",
+        "AV 전도 장애"
+      ],
+      "evidence": "Increased risk for hypotension, bradycardia, and AV node disturbances. Use with caution, particularly in patients with pre-existing cardiomyopathy or CHF."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "SA 결절 억제",
+        "AV 전도 억제"
+      ],
+      "evidence": "May increase negative effects on SA or AV node conduction."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide, thiazides)",
+      "severity": 1,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "May increase hypotensive effect of metoprolol."
+    },
+    {
+      "drug": "Hydralazine",
+      "severity": 2,
+      "keywords": [
+        "폐고혈압",
+        "요독증"
+      ],
+      "evidence": "May increase the risks for pulmonary hypertension in uremic patients."
+    },
+    {
+      "drug": "Lidocaine (systemic)",
+      "severity": 3,
+      "keywords": [
+        "심근 억제",
+        "심정지",
+        "리도카인 독성"
+      ],
+      "evidence": "May result in lidocaine toxicity including myocardial depression and cardiac arrest."
+    },
+    {
+      "drug": "Methimazole",
+      "severity": 2,
+      "keywords": [
+        "메토프롤롤 대사 변화",
+        "용량 조정 필요"
+      ],
+      "evidence": "Change from hyperthyroid to euthyroid state may alter metoprolol metabolism; metoprolol dose adjustment may be required."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "혈압 상승"
+      ],
+      "evidence": "May result in increased blood pressure."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "메토프롤롤 효능 감소",
+        "효소 유도"
+      ],
+      "evidence": "May reduce metoprolol efficacy."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "메토프롤롤 혈장 농도 증가"
+      ],
+      "evidence": "May increase metoprolol plasma concentrations."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "서맥"
+      ],
+      "evidence": "Potential for additive hypotension and bradycardia."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "메토프롤롤 효능 감소",
+        "효소 유도"
+      ],
+      "evidence": "May reduce metoprolol efficacy."
+    },
+    {
+      "drug": "SSRIs (e.g., fluoxetine, paroxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "메토프롤롤 혈장 농도 증가",
+        "CYP2D6 억제"
+      ],
+      "evidence": "May increase metoprolol plasma concentrations via CYP2D6 inhibition."
+    },
+    {
+      "drug": "Sympathomimetics (e.g., epinephrine, phenylpropanolamine, terbutaline)",
+      "severity": 2,
+      "keywords": [
+        "상호 효능 감소"
+      ],
+      "evidence": "Use together may reduce the efficacy of both agents."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 2,
+      "keywords": [
+        "메토프롤롤 혈장 농도 증가",
+        "CYP2D6 억제"
+      ],
+      "evidence": "May increase metoprolol plasma concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심방세동에서 심박수 조절 보조 치료 (초기 용량, 허가 외)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 6.6,
+          "duration_note": "2~3주마다 내약성에 따라 점진적으로 증량. 최소 용량: 6.25 mg (25 mg 정제의 1/4).",
+          "evidence": "메토프롤롤 타르트레이트(속방형 정제) 사용. 허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심방세동에서 심박수 조절 보조 치료 (일반 유지 용량, 허가 외)",
+          "value": "0.4 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 6.6,
+          "duration_note": "일부 개에서 최대 6.6 mg/kg PO 1일 3회까지 사용 보고. 많은 개에서 증량 내약성 불량.",
+          "evidence": "메토프롤롤 타르트레이트(속방형 정제) 사용. 허가 외 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "베타 차단 (비대성 심근병증 등, 허가 외)",
+          "value": "2 - 15",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "소량 투여를 위해 조제 제품이 필요할 수 있음.",
+          "evidence": "일화적 용량 (mg/cat, mg/kg 아님). 허가 외 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신기능 저하 시 용량 조정에 대한 명시적 권고 없음. 저혈압으로 인한 신관류 감소 가능성에 주의."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "유의한 간부전 환자에서 주의 사용 권고. 간에서 광범위하게 대사되므로 간기능 저하 시 약물 축적 가능성 있음. 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "명백한 또는 불안정 심부전",
+      "match_terms": [
+        "overt heart failure",
+        "unstable heart failure",
+        "CHF",
+        "decompensated heart failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타차단제 과민반응",
+      "match_terms": [
+        "beta-blocker hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "1도 초과 방실 차단",
+      "match_terms": [
+        "AV block",
+        "second degree AV block",
+        "third degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동성 서맥",
+      "match_terms": [
+        "sinus bradycardia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "기관지경련성 폐질환",
+      "match_terms": [
+        "bronchospastic disease",
+        "asthma",
+        "COPD",
+        "feline asthma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동결절 기능 이상",
+      "match_terms": [
+        "sinus node dysfunction",
+        "sick sinus syndrome"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갈색세포종",
+      "match_terms": [
+        "pheochromocytoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병 (불안정형)",
+      "match_terms": [
+        "diabetes mellitus",
+        "labile diabetes"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism",
+        "thyrotoxicosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 특정 품종 유전적 감수성에 대한 언급 없음. CYP2D6 다형성은 인간에서 반감기에 영향을 미치나, 개/고양이에서의 임상적 의의는 명시되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "베타-1 선택적 아드레날린 수용체 차단제 (2세대 베타차단제). 음성 변력 및 음성 변시 작용으로 동성 심박수 감소, AV 전도 지연, 안정 및 운동 시 심박출량 감소, 심근 산소 요구량 감소, 혈압 강하를 유발함. 고용량에서는 베타-1 및 베타-2 비선택적 차단 가능.",
+    "common_extra_effects": [
+      "서맥",
+      "기면 및 무기력",
+      "우울",
+      "AV 전도 장애",
+      "심부전 악화",
+      "저혈압",
+      "저혈당",
+      "기관지수축",
+      "실신",
+      "설사"
+    ],
+    "dog_mechanism": "베타-1 선택적 차단으로 심박수 감소 및 혈압 강하. 심방세동 심박수 조절, 심실 조기수축, 고혈압 치료에 사용.",
+    "dog_extra_effects": [
+      "서맥",
+      "기면",
+      "저혈압",
+      "AV 전도 장애",
+      "심부전 악화",
+      "실신",
+      "설사"
+    ],
+    "cat_mechanism": "베타-1 선택적 차단으로 비대성 심근병증에서 심박수 감소 및 심근 이완 개선.",
+    "cat_extra_effects": [
+      "서맥",
+      "폐부종 위험 증가 (비대성 심근병증 고양이)",
+      "기관지수축",
+      "저혈압"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 메토프롤롤은 심방세동의 심박수 조절, 심실 조기수축(PVC), 고혈압 치료에 허가 외로 사용됩니다. 속방형 타르트레이트 제제를 사용하며, 초기 저용량(약 0.2 mg/kg q12h)에서 시작하여 2~3주마다 점진적으로 증량합니다. 심부전 활성 징후가 있는 개에서는 사용하지 않아야 하며, 노령견이나 급성 심장 질환 악화 시 부작용 위험이 높습니다. 서방형 숙시네이트 제제의 개에서의 PK 데이터는 없습니다.",
+    "cat": "고양이에서 비대성 심근병증 치료에 허가 외로 사용됩니다. 일화적 용량은 2~15 mg/마리(mg/kg 아님) PO q8h이며, 소량 투여를 위해 조제 제품이 필요할 수 있습니다. 비대성 심근병증 고양이에서 폐부종 위험이 증가할 수 있으므로 주의가 필요합니다. 고양이 반감기는 약 1.3시간으로 짧습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심부전 활성 징후, 동성 서맥, 1도 초과 AV 차단, 베타차단제 과민반응 시 금기. 간부전, 기관지경련성 폐질환, 동결절 기능 이상, 당뇨병, 갑상선기능항진증 시 주의. 만성 투여 후 갑작스러운 중단 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "비대성 심근병증 고양이에서 폐부종 위험 증가 보고. 서맥, AV 차단, 심부전 악화 가능성. 만성 투여 후 점진적 감량 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛으로부터 보호. 정제는 밀폐된 차광 용기에 실온 보관. 주사제는 동결 금지.",
+    "forms": [
+      "메토프롤롤 타르트레이트 경구 정제: 25 mg, 37.5 mg, 50 mg, 75 mg, 100 mg (Lopressor®, 제네릭)",
+      "메토프롤롤 숙시네이트 서방형 정제: 25 mg, 50 mg, 100 mg, 200 mg (Toprol XL®, 제네릭)",
+      "메토프롤롤 타르트레이트 주사제: 1 mg/mL (Lopressor®, 제네릭)",
+      "조제 경구 현탁액: 10 mg/mL (메토프롤롤 타르트레이트 100 mg 정제 12개를 Ora-Plus® 60 mL 및 Ora-Sweet® 또는 Ora-Sweet SF®로 120 mL로 조제; 4°C 및 25°C에서 60일간 95% 이상 역가 유지)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메토프롤롤은 베타-1 선택적 아드레날린 수용체 차단제로, 개에서 심방세동의 심박수 조절, 심실 조기수축, 고혈압 치료에, 고양이에서 비대성 심근병증 치료에 허가 외로 사용됩니다. 프로프라놀롤에 비해 기관지경련성 질환 동물에서 상대적으로 안전합니다. 활성 심부전, 동성 서맥, 1도 초과 AV 차단 시 금기이며, 만성 투여 후 갑작스러운 중단은 피해야 합니다. 노령 동물이나 급성 심장 질환 악화 시 부작용 위험이 높습니다.",
+    "indications": "【개】심방세동에서 심박수 조절 보조 치료 (허가 외), 심실 조기수축(PVC) (허가 외), 전신 고혈압 (허가 외). 【고양이】비대성 심근병증 (허가 외). 수의과 승인 제품 없음; 모든 수의학적 사용은 허가 외임.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 가장 흔한 부작용은 심박수 및 혈압 저하와 관련된 피로감, 무기력, 허약감입니다. 이러한 증상이 나타나면 수의사에게 연락하십시오. 운동 불내성, 호흡 곤란, 기침, 행동 변화가 나타나면 즉시 수의사에게 알리십시오. 처음 투약 시 수의사가 저용량에서 시작하여 점진적으로 증량할 수 있습니다. 수의사의 지시 없이 갑자기 투약을 중단하지 마십시오. 정기적인 추적 검사가 매우 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies for metoprolol succinate in dogs/cats",
+      "Renal dose adjustment recommendations",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme data for veterinary species"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates (veterinary)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.half_life_hr (cat-specific object)",
+      "species_flags.narrow_therapeutic_index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/64.jsonl",
+    "extracted_at": "2026-03-11T09:24:09.978423+00:00",
+    "reviewer": null
+  }
+}

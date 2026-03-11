@@ -1,0 +1,725 @@
+{
+  "id": "mexiletine",
+  "drug_identity": {
+    "name_ko": "멕실레틴",
+    "name_en": "Mexiletine",
+    "active_ingredient": "Mexiletine hydrochloride",
+    "brand_names": [
+      "Mexitil",
+      "Mexilen",
+      "Mexitilen",
+      "Myovek",
+      "Ritalmex"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 인체용 제네릭 캡슐을 개와 고양이에 오프라벨로 사용.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체 데이터: 간에서 비활성 대사체로 대사됨. 소변 산성화로 신장 배설 촉진 가능. 수의과 CYP 데이터 없음."
+    },
+    "extra_information": "개에서 약동학 정보 제한적. 소화관에서 비교적 잘 흡수되며 초회통과효과 낮음. 고양이에서 약동학 연구 없음. 인체 데이터: 혈장 단백 결합률 60~75%, 간에서 비활성 대사체로 대사, 반감기 약 10~12시간. 중등도~중증 간질환, 심박출량 심각하게 감소된 경우 반감기 유의하게 증가. 중증 신질환 또는 급성 심근경색 후 반감기 약간 연장될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의과 종별 PK 데이터 부재; 인체 데이터 및 부작용 보고 기반. 간 대사 약물로 간 부담 존재. 신장 배설 경로 확인됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "seizures",
+          "trembling",
+          "dizziness",
+          "depression",
+          "CNS signs"
+        ],
+        "index": 1,
+        "evidence": "인체에서 진전, 어지럼증, 우울, 드물게 경련 보고. 고양이 과용량 시 신경계 징후 확인. 개에서 직접적 CNS 부담 데이터 제한적."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적 언급 없음. 혈장 단백 결합 60~75%(인체)."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal excretion",
+          "urinary acidification"
+        ],
+        "index": 1,
+        "evidence": "신장을 통해 배설되며 소변 pH에 따라 배설 속도 변화. 중증 신질환 시 반감기 약간 연장 가능."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "liver injury",
+          "AST elevation",
+          "hepatic disease"
+        ],
+        "index": 2,
+        "evidence": "간에서 주로 대사됨. 인체에서 AST 3배 이상 상승(1~3%), 드물게 중증 간손상 보고. 간질환 시 반감기 유의하게 증가."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "antiarrhythmic",
+          "AV block",
+          "cardiogenic shock",
+          "conduction abnormalities"
+        ],
+        "index": 2,
+        "evidence": "Class IB 항부정맥제로 심장에 직접 작용. 기존 2~3도 AV 차단, 심인성 쇼크 환자에서 극도 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tremors",
+          "incoordination",
+          "neurologic signs",
+          "CNS signs"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 20mg/kg 이상 투여 시 진전, 운동실조 확인. 고양이가 개보다 부작용에 더 민감하다고 알려짐."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성 직접 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal excretion"
+        ],
+        "index": 1,
+        "evidence": "신장 배설 경로 존재. 고양이 특이적 신장 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "liver injury"
+        ],
+        "index": 2,
+        "evidence": "간 대사 약물. 고양이에서 간 특이적 데이터 없으나 인체 간손상 보고 및 고양이의 약물 대사 취약성 고려."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "antiarrhythmic",
+          "AV block",
+          "cardiogenic shock"
+        ],
+        "index": 2,
+        "evidence": "Class IB 항부정맥제로 심장에 직접 작용. 고양이에서 부작용 민감도 높음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 10.0,
+      "max": 12.0,
+      "mean": 11.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 68,
+    "evidence": "인체 데이터: 혈장 단백 결합 60~75%(중간값 약 68%), 반감기 약 10~12시간. 개 및 고양이 특이적 PK 데이터 없음. 소화관에서 비교적 잘 흡수, 초회통과효과 낮음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 달리 명시되지 않는 한 병용이 반드시 금기는 아니나 추가 모니터링 필요.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "increased mexiletine concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Concurrent use may increase mexiletine blood concentrations, increasing risk of adverse effects."
+    },
+    {
+      "drug": "Antacids (Aluminum-Magnesium)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "delayed absorption"
+      ],
+      "evidence": "Aluminum-magnesium antacids may slow the absorption of mexiletine."
+    },
+    {
+      "drug": "Atropine",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption rate"
+      ],
+      "evidence": "Atropine may reduce the rate of oral absorption of mexiletine."
+    },
+    {
+      "drug": "Bupropion",
+      "severity": 2,
+      "keywords": [
+        "increased mexiletine concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Concurrent use may increase mexiletine blood concentrations."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "altered mexiletine concentration"
+      ],
+      "evidence": "Cimetidine may increase or decrease mexiletine blood concentrations."
+    },
+    {
+      "drug": "Clozapine",
+      "severity": 2,
+      "keywords": [
+        "increased clozapine exposure",
+        "adverse effects"
+      ],
+      "evidence": "Concurrent use may increase clozapine exposure and risk for adverse effects."
+    },
+    {
+      "drug": "Griseofulvin",
+      "severity": 2,
+      "keywords": [
+        "accelerated metabolism",
+        "reduced efficacy"
+      ],
+      "evidence": "Griseofulvin may accelerate the metabolism of mexiletine, potentially reducing efficacy."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 2,
+      "keywords": [
+        "additive adverse effects",
+        "cardiac toxicity"
+      ],
+      "evidence": "Concurrent use may cause additive adverse effects due to similar class IB antiarrhythmic mechanisms."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 1,
+      "keywords": [
+        "accelerated absorption"
+      ],
+      "evidence": "Metoclopramide may accelerate the absorption of mexiletine."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 1,
+      "keywords": [
+        "slowed absorption"
+      ],
+      "evidence": "Opioids may slow the absorption of mexiletine."
+    },
+    {
+      "drug": "Paroxetine",
+      "severity": 2,
+      "keywords": [
+        "increased mexiletine concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Concurrent use may increase mexiletine blood concentrations."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "accelerated metabolism",
+        "reduced efficacy"
+      ],
+      "evidence": "Phenobarbital may accelerate the metabolism of mexiletine, potentially reducing efficacy."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "accelerated metabolism",
+        "reduced efficacy"
+      ],
+      "evidence": "Primidone may accelerate the metabolism of mexiletine, potentially reducing efficacy."
+    },
+    {
+      "drug": "Phenytoin",
+      "severity": 2,
+      "keywords": [
+        "accelerated metabolism",
+        "reduced efficacy"
+      ],
+      "evidence": "Phenytoin may accelerate the metabolism of mexiletine, potentially reducing efficacy."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 2,
+      "keywords": [
+        "increased propranolol concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Concurrent use may result in increased propranolol blood concentrations."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "increased mexiletine bioavailability",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase mexiletine bioavailability and risk for cardiotoxicity."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "accelerated metabolism",
+        "reduced efficacy"
+      ],
+      "evidence": "Rifampin may accelerate the metabolism of mexiletine, potentially reducing efficacy."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 2,
+      "keywords": [
+        "increased mexiletine concentration",
+        "adverse effects"
+      ],
+      "evidence": "Sotalol may increase mexiletine plasma concentrations. May be used for therapeutic effect but could also increase potential for adverse effects."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "reduced theophylline metabolism",
+        "theophylline toxicity"
+      ],
+      "evidence": "Mexiletine may reduce the metabolism of theophylline/aminophylline, leading to theophylline toxicity."
+    },
+    {
+      "drug": "Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "reduced theophylline metabolism",
+        "theophylline toxicity"
+      ],
+      "evidence": "Mexiletine may reduce the metabolism of aminophylline, leading to theophylline toxicity."
+    },
+    {
+      "drug": "Urinary Acidifying Drugs (ammonium chloride, methionine, potassium phosphate, sodium phosphate)",
+      "severity": 2,
+      "keywords": [
+        "accelerated renal excretion",
+        "reduced efficacy"
+      ],
+      "evidence": "Urinary acidifying drugs may accelerate the renal excretion of mexiletine, potentially reducing efficacy."
+    },
+    {
+      "drug": "Urinary Alkalinizing Drugs (bicarbonate, carbonic anhydrase inhibitors, citrates)",
+      "severity": 2,
+      "keywords": [
+        "reduced renal excretion",
+        "increased concentration"
+      ],
+      "evidence": "Urinary alkalinizing drugs may reduce the urinary excretion of mexiletine, potentially increasing plasma concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 2.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심실 부정맥 (PVC, 심실빈맥) — 오프라벨",
+          "value": "4 - 6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 4–6 mg/kg PO every 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심실 부정맥 — 고용량 프로토콜 (오프라벨)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: Higher dosages of 5–8 mg/kg PO every 8 hours also described"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심실 부정맥 — 소탈롤 병용 시 1일 2회 투여 (오프라벨)",
+          "value": "8 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "소탈롤 2.5 mg/kg PO q12h 병용 시에만 해당; 임상에서 일반적으로 사용되지 않음",
+          "evidence": "Plumb's: 8–10 mg/kg PO every 12 hours with sotalol 2.5 mg/kg PO every 12 hours"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "근긴장증 (chow chow, miniature schnauzer) — 오프라벨",
+          "value": "8.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 8.3 mg/kg PO every 8 hours for myotonia congenita"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Jack Russell terrier 근경련증 (myokymia) — 오프라벨",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "발작 빈도 감소 목적",
+          "evidence": "Plumb's: 4 mg/kg PO every 12 hours suggested to decrease frequency of attacks"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심실 부정맥 — 일화적 보고 (오프라벨)",
+          "value": "4 - 6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이는 부작용에 더 민감; 극도 주의 필요",
+          "evidence": "Plumb's: Anecdotal reports describe use at similar dosages to dogs, 4–6 mg/kg PO every 8 hours"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "중증 신질환 시 반감기 약간 연장될 수 있음(인체 데이터). 구체적 용량 조절 지침 없음. 소변 산성화로 신장 배설 촉진 가능."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중등도~중증 간질환 시 반감기 유의하게 증가(인체 데이터). 간기능 장애 환자에서 이익이 위험을 상회할 때만 사용. 구체적 용량 조절 계수 미제시."
+  },
+  "contraindications": [
+    {
+      "condition": "2~3도 AV 차단 (인공박동기 없는 경우)",
+      "match_terms": [
+        "second degree AV block",
+        "third degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심인성 쇼크",
+      "match_terms": [
+        "cardiogenic shock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 울혈성 심부전",
+      "match_terms": [
+        "severe congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 심근경색",
+      "match_terms": [
+        "acute myocardial infarction",
+        "AMI"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "저혈압",
+      "match_terms": [
+        "hypotension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동결절 기능 장애",
+      "match_terms": [
+        "sinus node dysfunction",
+        "sick sinus syndrome"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심실내 전도 이상",
+      "match_terms": [
+        "intraventricular conduction abnormality",
+        "bundle branch block"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "콜리에서 MDR1 유전자 돌연변이(ABCB1-1delta)를 가진 개체에서 표준 용량으로 멕실레틴 독성이 발생한 단일 증례 보고 있음. 멕실레틴이 P-당단백질 기질로 알려져 있지 않으나, 감수성 품종에서 치료 전 또는 독성 발생 시 유전자 검사 고려 권장."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "Class IB 항부정맥제. 내향 나트륨 전류(빠른 나트륨 채널)를 억제하여 활동전위 0상의 상승 속도를 감소시킴. 심근세포의 자동능 감소 및 활동전위 기간 단축. 유효 불응기에는 최소한의 영향. 리도카인과 유사한 기전.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "위장관 장애",
+      "진전",
+      "어지럼증",
+      "우울",
+      "운동실조",
+      "경련 (드물게)",
+      "중증 간손상 (드물게)",
+      "AST 상승 (인체 1~3%)"
+    ],
+    "dog_mechanism": "리도카인에 반응하는 심실 빈맥에 효과적. 개에서 약동학 데이터 제한적이나 소화관 흡수 양호, 초회통과효과 낮음.",
+    "dog_extra_effects": [
+      "구토",
+      "식욕부진",
+      "위장관 장애"
+    ],
+    "cat_mechanism": "개와 유사한 기전으로 추정되나 고양이는 부작용에 더 민감하다고 알려짐.",
+    "cat_extra_effects": [
+      "식욕부진",
+      "진전",
+      "운동실조",
+      "구토"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 심실 부정맥(PVC, 심실빈맥), 복서의 부정맥성 우심실 심근병증, 저먼 셰퍼드의 유전성 심실 부정맥, 근긴장증(미니어처 슈나우저, 차우차우), Jack Russell terrier의 근경련증에 오프라벨로 사용. 8시간마다 투여가 필요하여 순응도가 낮을 수 있으며, 소탈롤 병용 시 12시간 간격 투여 가능. MDR1 돌연변이 품종에서 독성 위험 증가 가능성 있으므로 유전자 검사 고려. 식사와 함께 투여하면 위장관 부작용 감소.",
+    "cat": "고양이에서 심실 부정맥에 일화적으로 사용되나 공식 약동학 연구 없음. 고양이는 개보다 부작용에 더 민감하다고 알려져 있으며, 20mg/kg 이상에서 진전, 운동실조 등 신경계 증상 발생. 극도의 주의를 요하며 면밀한 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 AV 차단, 심인성 쇼크, 중증 CHF, 간기능 장애, 저혈압, 동결절 기능 장애, 경련 장애 환자에서 주의 필요. MDR1 돌연변이 품종에서 독성 위험 가능성. 8시간마다 투여 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 멕실레틴 부작용에 더 민감하다고 알려짐. 공식 PK 데이터 없음. 일화적 보고만 존재하며 면밀한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 조절된 실온에서 밀폐된 차광 용기에 보관. 어린이 안전 잠금 용기 사용.",
+    "forms": [
+      "Mexiletine Oral Capsules 150 mg (generic, Rx)",
+      "Mexiletine Oral Capsules 200 mg (generic, Rx)",
+      "Mexiletine Oral Capsules 250 mg (generic, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "멕실레틴은 Class IB 항부정맥제로 리도카인과 유사한 기전을 가지며, 개의 심실 부정맥(PVC, 심실빈맥) 치료에 오프라벨로 사용됩니다. 수의과 허가 제품은 없으며 인체용 제네릭 캡슐을 사용합니다. 8시간마다 투여가 필요하여 순응도가 낮을 수 있으나, 소탈롤 병용 시 12시간 간격 투여가 가능합니다. 기존 2~3도 AV 차단(인공박동기 없는 경우) 또는 심인성 쇼크 환자에서는 극도의 주의가 필요합니다. 위장관 부작용(구토, 식욕부진)이 가장 흔하며 식사와 함께 투여하면 완화됩니다. MDR1 돌연변이 품종에서 독성 위험 가능성이 있습니다.",
+    "indications": "개: 심실 부정맥(PVC, 심실빈맥), 복서의 부정맥성 우심실 심근병증, 저먼 셰퍼드의 유전성 심실 부정맥, 근긴장증(미니어처 슈나우저, 차우차우), Jack Russell terrier의 근경련증 — 모두 오프라벨. 고양이: 심실 부정맥 — 일화적 보고, 오프라벨. 수의과 허가 적응증 없음.",
+    "client_info": "이 약은 하루 3번(8시간마다, 밤에도 포함) 규칙적으로 투여해야 효과가 있습니다. 구토나 메스꺼움을 줄이기 위해 반드시 식사와 함께 주세요. 구토가 가장 흔한 부작용이며, 증상이 심해지거나 멈추지 않으면 수의사에게 연락하세요. 임의로 투약을 중단하지 마시고, 다음 투약 시간을 놓치지 않도록 주의하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK studies (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability (dog/cat)",
+      "Onset of action",
+      "T_max",
+      "Renal elimination fraction",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment factor"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/65.jsonl",
+    "extracted_at": "2026-03-11T09:30:29.355110+00:00",
+    "reviewer": null
+  }
+}

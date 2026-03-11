@@ -1,0 +1,958 @@
+{
+  "id": "methylprednisolone",
+  "drug_identity": {
+    "name_ko": "메틸프레드니솔론",
+    "name_en": "Methylprednisolone",
+    "active_ingredient": "Methylprednisolone",
+    "brand_names": [
+      "Medrol",
+      "Depo-Medrol",
+      "Solu-Medrol",
+      "A-Methapred",
+      "Medrone V",
+      "Solu-Medrone V",
+      "Depo-Medrone V"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 8,
+        "unit": "mg"
+      },
+      {
+        "value": 16,
+        "unit": "mg"
+      },
+      {
+        "value": 32,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 80,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 산화(oxidation)에 의해 대사되며, 대부분의 약물은 대사산물 형태로 신장을 통해 배설된다. 페노바르비탈, 리팜핀은 글루코코르티코이드 대사를 증가시키고, 아졸계 항진균제 및 마크로라이드 항생제는 대사를 감소시킨다고 보고되어 있다."
+    },
+    "extra_information": "메틸프레드니솔론의 약동학적 파라미터는 약리학적 효과와 직접적으로 연관되지 않으며, 활성 지속시간은 소실 반감기와 독립적이다. 생물학적 반감기는 약 12~36시간이다. 아세테이트 IM 제형은 서서히 흡수되어 수 주~수 개월간 효과가 지속될 수 있다. 소듐 숙시네이트 IV 제형은 수용성으로 속효성이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 부신피질호르몬제 계열 약물로서 간 대사, 신장 배설, 혈당·혈압·전해질 영향, GI 부작용 등이 보고됨. 수의학적 종별 PK 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS effects",
+          "behavior changes",
+          "depression",
+          "aggression"
+        ],
+        "index": 1,
+        "evidence": "개에서 행동 변화(우울, 무기력, 공격성) 및 과량 복용 시 급성 CNS 증상이 보고됨. 경막외 투여 시 실명, 마비, 경련 등 심각한 CNS 반응 위험."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hypokalemia",
+          "hyperglycemia",
+          "hyperlipidemia",
+          "hypercoagulability",
+          "neutrophilia",
+          "lymphopenia"
+        ],
+        "index": 2,
+        "evidence": "개에서 저칼륨혈증, 고혈당, 고지혈증, 과응고성, 호중구증가증, 림프구감소증이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "polyuria",
+          "polydipsia"
+        ],
+        "index": 3,
+        "evidence": "신부전 환자에서 주의 사용 권고. 개에서 다뇨, 다음이 흔한 부작용으로 보고됨. 신장을 통한 대사산물 배설."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatic metabolism",
+          "cyclophosphamide metabolism inhibition"
+        ],
+        "index": 4,
+        "evidence": "개에서 간효소 수치 상승이 부작용으로 보고됨. 간이 주요 대사 기관이며, 사이클로포스파미드 등 다른 약물의 간 대사를 억제할 수 있음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "CHF",
+          "hypertension",
+          "blood pressure reduction",
+          "hypokalemia"
+        ],
+        "index": 5,
+        "evidence": "CHF 환자에서 주의 사용 권고. 고용량 IV 투여 시 혈압 저하 가능. 저칼륨혈증으로 인한 디기탈리스 독성 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "depression",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 우울증이 부작용으로 보고됨. 경막외 투여 시 심각한 CNS 반응 위험."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hyperglycemia",
+          "extracellular hyperglycemia",
+          "volume expansion",
+          "hypokalemia"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 아세테이트 제형 투여 시 세포외 고혈당으로 인한 체액 팽창이 보고됨(n=12 연구). 당뇨병 및 울혈성 심부전 소인 위험."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "polyuria",
+          "polydipsia",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 다뇨, 다음이 부작용으로 보고됨. 신부전 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hyperadrenocorticism"
+        ],
+        "index": 4,
+        "evidence": "간이 주요 대사 기관. 고양이는 개보다 부작용이 적은 경향이 있으나 장기 고용량 투여 시 부신피질기능항진증 관련 효과 발생 가능."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "congestive heart failure",
+          "volume expansion",
+          "CHF"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 아세테이트 제형 투여 시 체액 팽창으로 인한 울혈성 심부전 소인이 보고됨(n=12 연구). 심혈관 질환 동반 고양이에서 주의 필요."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 12.0,
+      "max": 36.0,
+      "mean": 24.0,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "생물학적 반감기는 약 12~36시간(중간 작용형 코르티코스테로이드). 약동학적 파라미터는 약리학적 효과와 직접 연관되지 않으며, 활성 지속시간은 소실 반감기와 독립적으로 약 12~36시간이다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "CHF",
+        "cardiomegaly"
+      ],
+      "evidence": "Concomitant use may cause hypokalemia; CHF and cardiomegaly reported in humans when methylprednisolone was used to treat amphotericin B adverse effects."
+    },
+    {
+      "drug": "Analgesics/Opioids/Local Anesthetics (Epidural)",
+      "severity": 3,
+      "keywords": [
+        "CNS injury",
+        "death",
+        "epidural"
+      ],
+      "evidence": "Combination with glucocorticoids in epidural injections has caused serious CNS injuries and death."
+    },
+    {
+      "drug": "Anticholinesterase Agents (pyridostigmine, neostigmine)",
+      "severity": 2,
+      "keywords": [
+        "muscle weakness",
+        "myasthenia gravis"
+      ],
+      "evidence": "In patients with myasthenia gravis, concomitant use may lead to profound muscle weakness."
+    },
+    {
+      "drug": "Antidiabetic Agents, Oral (glimepiride, glipizide, glyburide, metformin)",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "glycemic control"
+      ],
+      "evidence": "Glucocorticoids may worsen glycemic control, reducing efficacy of oral antidiabetic agents."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "reduced salicylate concentration"
+      ],
+      "evidence": "Glucocorticoids may reduce salicylate blood concentrations; combination may increase risk for GI ulceration."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased methylprednisolone concentration",
+        "adrenal insufficiency",
+        "CYP inhibition"
+      ],
+      "evidence": "May decrease metabolism of glucocorticoids and increase methylprednisolone blood concentrations; ketoconazole may induce adrenal insufficiency when glucocorticoids are withdrawn."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "May reduce methylprednisolone absorption."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "hepatic metabolism inhibition",
+        "dosage adjustment"
+      ],
+      "evidence": "Glucocorticoids may inhibit hepatic metabolism of cyclophosphamide; dosage adjustments may be required."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "mutual hepatic metabolism inhibition",
+        "increased blood concentrations"
+      ],
+      "evidence": "Concomitant administration may increase blood concentration of each drug by mutually inhibiting hepatic metabolism."
+    },
+    {
+      "drug": "Desmopressin (DDAVP)",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "Concomitant administration may increase risk for hyponatremia."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "digitalis toxicity",
+        "hypokalemia"
+      ],
+      "evidence": "Concurrent use with digitalis glycosides increases chance of digitalis toxicity if hypokalemia develops; monitor potassium and digitalis concentrations."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "increased methylprednisolone concentration"
+      ],
+      "evidence": "Concurrent use may increase plasma concentrations of methylprednisolone."
+    },
+    {
+      "drug": "Diuretics, Potassium-Depleting (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concurrent use increases risk for hypokalemia."
+    },
+    {
+      "drug": "Ephedrine",
+      "severity": 1,
+      "keywords": [
+        "reduced methylprednisolone concentration"
+      ],
+      "evidence": "May reduce methylprednisolone blood concentrations."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 1,
+      "keywords": [
+        "potentiation of glucocorticoid effects"
+      ],
+      "evidence": "Effects of methylprednisolone and possibly other glucocorticoids may be potentiated by concomitant estrogen administration."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "tendinitis",
+        "tendon rupture"
+      ],
+      "evidence": "Concurrent use may increase risk for tendinitis and tendon rupture."
+    },
+    {
+      "drug": "Immunosuppressive Agents (azathioprine, hydroxychloroquine, mycophenolate)",
+      "severity": 2,
+      "keywords": [
+        "additive immunosuppression"
+      ],
+      "evidence": "Additive immunosuppressive effects possible."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "increased insulin requirements",
+        "hyperglycemia"
+      ],
+      "evidence": "Insulin requirements may increase in patients receiving glucocorticoids."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 3,
+      "keywords": [
+        "pancytopenia",
+        "agranulocytosis",
+        "thrombocytopenia",
+        "infection"
+      ],
+      "evidence": "Increased risk for pancytopenia, agranulocytosis, thrombocytopenia, and infection."
+    },
+    {
+      "drug": "Macrolide Antibiotics (erythromycin, clarithromycin)",
+      "severity": 2,
+      "keywords": [
+        "decreased glucocorticoid metabolism",
+        "increased methylprednisolone concentration"
+      ],
+      "evidence": "May decrease metabolism of glucocorticoids and increase methylprednisolone blood concentrations."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "altered steroid metabolism",
+        "adrenal insufficiency"
+      ],
+      "evidence": "May alter metabolism of steroids; higher than usual steroid doses may be necessary to treat mitotane-induced adrenal insufficiency."
+    },
+    {
+      "drug": "NSAIDs (carprofen, flunixin, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration"
+      ],
+      "evidence": "Administration of ulcerogenic drugs with glucocorticoids may increase risk for GI ulceration."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased methylprednisolone concentration"
+      ],
+      "evidence": "May increase metabolism of glucocorticoids and decrease methylprednisolone blood concentrations."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased methylprednisolone concentration"
+      ],
+      "evidence": "May increase metabolism of glucocorticoids and decrease methylprednisolone blood concentrations."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "altered pharmacologic effects"
+      ],
+      "evidence": "Concomitant use can alter pharmacologic effects of both drugs."
+    },
+    {
+      "drug": "Vaccines (live attenuated)",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "diminished immune response",
+        "viral replication"
+      ],
+      "evidence": "Patients receiving immunosuppressive doses of corticosteroids should generally not receive live attenuated-virus vaccines; diminished immune response may occur."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "altered clotting times",
+        "prothrombin time"
+      ],
+      "evidence": "Methylprednisolone may affect clotting times; monitor prothrombin times."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 5.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "FDA 승인 경구 투여 (2.3~6.8 kg)",
+          "value": "2",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응 후 점진적으로 감량하여 최저 유효 용량 유지",
+          "evidence": "FDA-approved label; 6~10시간 간격으로 2회 분할 투여"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "FDA 승인 경구 투여 (6.8~18.1 kg)",
+          "value": "2 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응 후 점진적으로 감량하여 최저 유효 용량 유지",
+          "evidence": "FDA-approved label; 6~10시간 간격으로 2회 분할 투여"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "FDA 승인 경구 투여 (18.1~36.3 kg)",
+          "value": "4 - 8",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응 후 점진적으로 감량하여 최저 유효 용량 유지",
+          "evidence": "FDA-approved label; 6~10시간 간격으로 2회 분할 투여"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "FDA 승인 IM 투여 (메틸프레드니솔론 아세테이트)",
+          "value": "2 - 120",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회 또는 상태 중증도 및 반응에 따라 반복 투여 가능. 소형견 2 mg, 중형견 40 mg, 초대형견 최대 120 mg",
+          "evidence": "FDA-approved label (NADA# 012-204)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아토피 피부염 보조 치료 (extra-label)",
+          "value": "0.4 - 0.8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요에 따라 감량",
+          "evidence": "Extra-label; 초기 용량으로 1일 1~2회 투여 후 감량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아나필락시스 보조 치료 (extra-label, 소듐 숙시네이트 제형만 사용)",
+          "value": "2 - 6",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 6.0,
+          "duration_note": "에피네프린의 대체제가 아님. 1~2 mg/kg/분 이하 속도로 주입",
+          "evidence": "Extra-label; 아세테이트 제형 IV 투여 금지"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "FDA 승인 경구 투여 (2.3~6.8 kg)",
+          "value": "2",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응 후 점진적으로 감량하여 최저 유효 용량 유지",
+          "evidence": "FDA-approved label; 6~10시간 간격으로 2회 분할 투여"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "FDA 승인 경구 투여 (6.8 kg 초과)",
+          "value": "2 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응 후 점진적으로 감량하여 최저 유효 용량 유지",
+          "evidence": "FDA-approved label; 6~10시간 간격으로 2회 분할 투여"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "FDA 승인 IM 투여 (메틸프레드니솔론 아세테이트)",
+          "value": "10 - 20",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회 또는 상태 중증도 및 반응에 따라 반복 투여 가능",
+          "evidence": "FDA-approved label (NADA# 012-204)"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "알레르기성 고양이 소양증 유도 치료 (extra-label, ≤5 kg)",
+          "value": "4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 후 관해 미달성 시 1일 용량 2배 증량 후 추가 7일 투여. 관해 후 격일 투여로 전환하여 25% 단계적 감량",
+          "evidence": "Extra-label; 평균 유도 용량 1.41 mg/kg (범위 0.8~2.2 mg/kg)"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "알레르기성 고양이 소양증 유도 치료 (extra-label, >5 kg)",
+          "value": "6",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 후 관해 미달성 시 1일 용량 2배 증량 후 추가 7일 투여. 관해 후 격일 투여로 전환하여 25% 단계적 감량",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 아토피 피부염 복합 치료 (extra-label)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "7일 투여 후 최저 유효 용량으로 감량",
+          "evidence": "Extra-label; 복합 치료 프로토콜의 일부"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아나필락시스 보조 치료 (extra-label, 소듐 숙시네이트 제형만 사용)",
+          "value": "2 - 6",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 6.0,
+          "duration_note": "에피네프린의 대체제가 아님. 1~2 mg/kg/분 이하 속도로 주입",
+          "evidence": "Extra-label; 아세테이트 제형 IV 투여 금지"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 주의 사용 권고. 구체적인 용량 조절 기준은 명시되어 있지 않으나, 신기능 저하 환자에서 신중하게 사용해야 한다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간이 주요 대사 기관이나, 간기능 저하 시 구체적인 용량 조절 권고사항은 모노그래프에 명시되어 있지 않다."
+  },
+  "contraindications": [
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "fungal infection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질기능항진증",
+      "match_terms": [
+        "hyperadrenocorticism",
+        "Cushing's disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소화성 궤양",
+      "match_terms": [
+        "peptic ulcer",
+        "gastric ulcer"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "결핵 (정지형)",
+      "match_terms": [
+        "arrested tuberculosis",
+        "tuberculosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골다공증",
+      "match_terms": [
+        "osteoporosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈전정맥염 소인",
+      "match_terms": [
+        "thrombophlebitis",
+        "hypercoagulability"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안구 헤르페스 감염",
+      "match_terms": [
+        "ocular herpetic infection",
+        "herpesvirus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "특발성 혈소판감소증 (IM 투여 시)",
+      "match_terms": [
+        "idiopathic thrombocytopenia",
+        "ITP"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "각막 궤양",
+      "match_terms": [
+        "corneal ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 글루코코르티코이드로서 코르티솔 대비 약 4~5배의 항염증 효능을 가지며, 미네랄코르티코이드 활성은 거의 없음. 글루코코르티코이드 수용체에 결합하여 항염증, 면역억제, 항종양 효과를 나타냄.",
+    "common_extra_effects": [
+      "다뇨(PU)",
+      "다음(PD)",
+      "다식(PP)",
+      "체중 증가",
+      "고혈당",
+      "저칼륨혈증",
+      "GI 궤양",
+      "간효소 상승",
+      "고지혈증",
+      "과응고성",
+      "근육 소모",
+      "HPA 축 억제",
+      "면역억제",
+      "골다공증"
+    ],
+    "dog_mechanism": "글루코코르티코이드 수용체 결합을 통한 항염증 및 면역억제 효과. 코르티솔 대비 약 5배 항염증 효능.",
+    "dog_extra_effects": [
+      "다뇨",
+      "다음",
+      "다식",
+      "털 윤기 소실/건조",
+      "양측 대칭성 탈모",
+      "체중 증가",
+      "헐떡임(panting)",
+      "구토",
+      "설사",
+      "간효소 상승",
+      "췌장염",
+      "GI 궤양",
+      "과응고성",
+      "고지혈증",
+      "당뇨병 악화",
+      "근육 소모",
+      "행동 변화(우울, 무기력, 공격성)",
+      "성장 지연(어린 동물)"
+    ],
+    "cat_mechanism": "고양이는 개보다 높은 용량이 필요하나 부작용은 적은 경향. 아세테이트 제형은 세포외 고혈당을 유발하여 체액 팽창 및 당뇨병·울혈성 심부전 소인 가능.",
+    "cat_extra_effects": [
+      "다음",
+      "다뇨",
+      "다식",
+      "체중 증가",
+      "설사",
+      "우울증",
+      "세포외 고혈당",
+      "체액 팽창",
+      "당뇨병 소인",
+      "울혈성 심부전 소인",
+      "장기 고용량 시 부신피질기능항진증 관련 효과"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 메틸프레드니솔론은 아토피 피부염 치료에 효과적이나, 흉요추 추간판 탈출증에서는 효과가 입증되지 않았다. 경구 또는 IV 투여 시 프레드니솔론/프레드니손 용량을 1.25로 나누어 동등 용량을 산출한다. 장기 투여 시 HPA 축 억제가 발생하므로 반드시 점진적으로 감량해야 한다. 아세테이트 IM 제형은 격일 경구 요법이 가능한 경우 권장되지 않는다.",
+    "cat": "고양이는 개보다 글루코코르티코이드에 대한 내성이 높아 더 높은 용량이 필요하지만 부작용은 적은 경향이 있다. 그러나 아세테이트 IM 제형은 세포외 고혈당으로 인한 체액 팽창을 유발하여 당뇨병 및 울혈성 심부전 소인이 될 수 있으므로 주의가 필요하다. 경구 투약이 어려운 고양이에서 IM 아세테이트 제형이 대안이 될 수 있으나, 고양이 헤르페스바이러스 1형(FHV-1) 감염 고양이에서 임상 증상이 활성화될 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "당뇨병, 골다공증, 혈전정맥염 소인, 고혈압, CHF, 신부전, 활동성 결핵 환자에서 주의 사용. 전신 진균 감염, 소화성 궤양, 부신피질기능항진증에서는 IM 투여 금기. 장기 투여 시 HPA 축 억제 발생."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "당뇨병 또는 심혈관 질환 동반 고양이에서 주의 사용. 아세테이트 제형은 세포외 고혈당 및 체액 팽창 유발 가능. FHV-1 감염 고양이에서 임상 증상 활성화 가능. 지속형 주사제는 전신 질환의 만성 치료에 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C) 보관. 아세테이트 주사제는 동결 금지. 바이알 첫 개봉 후 12주 이내 사용 또는 폐기. 소듐 숙시네이트 주사제 재구성 후 실온 보관, 48시간 이내 사용. 투명한 용액만 사용.",
+    "forms": [
+      "메틸프레드니솔론 정제 (1 mg, 2 mg, 4 mg) - Medrol, generic",
+      "메틸프레드니솔론 아세테이트 주사제 (20 mg/mL, 40 mg/mL) - Depo-Medrol, generic",
+      "메틸프레드니솔론 소듐 숙시네이트 주사용 분말 (40 mg, 125 mg, 500 mg, 1 g, 2 g) - Solu-Medrol, A-Methapred, generic"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메틸프레드니솔론은 코르티솔 대비 약 4~5배 항염증 효능을 가진 합성 글루코코르티코이드로, 미네랄코르티코이드 활성은 거의 없다. 개와 고양이에서 FDA 승인된 항염증·면역억제제이며, 아토피 피부염, 알레르기, 과민성 피부염 등에 사용된다. 아세테이트 IM 제형은 수 주~수 개월간 효과가 지속되므로 HPA 축 억제 위험이 높다. 고양이에서 아세테이트 제형은 세포외 고혈당 및 체액 팽창을 유발하여 당뇨병·울혈성 심부전 소인이 될 수 있다. 치료 목표는 최소 용량으로 최단 기간 사용이며, 장기 투여 후 갑작스러운 중단은 금지된다.",
+    "indications": "1) 부신피질기능저하증(하이포아드레노코르티시즘) 또는 상대적 부신 기능 부전(패혈성 쇼크)에서의 글루코코르티코이드 보충, 2) 항염증 치료(아토피 피부염, 알레르기, 과민성 피부염), 3) 면역억제 치료, 4) 항종양 치료. 아나필락시스 보조 치료(소듐 숙시네이트 제형, extra-label). 흉요추 추간판 탈출증, 출혈성/저혈량성 쇼크, 두부 외상, 척수 외상, 패혈증에서의 고용량 사용은 지지되지 않는다.",
+    "client_info": "경구 제품은 반드시 음식과 함께 투여하세요. 치료 목표는 가능한 최소 용량으로 최단 기간 사용하는 것입니다. 장기 사용 시 다양한 부작용이 발생할 수 있으며, 가장 흔한 부작용은 헐떡임 증가, 식욕 증가, 갈증 증가, 소변량 증가입니다. 개에서는 위장관 궤양, 천공, 출혈이 발생할 수 있으므로, 식욕 저하, 고열, 흑색 타르 변, 혈성 구토가 나타나면 즉시 수의사에게 연락하세요. 수의사의 지도 없이 갑자기 투약을 중단하지 마세요. 심각한 부작용이 발생할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific veterinary PK parameters (Tmax, F%, protein binding)",
+      "CYP enzyme profile",
+      "Renal dose adjustment thresholds",
+      "Hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/64.jsonl",
+    "extracted_at": "2026-03-11T09:19:23.537927+00:00",
+    "reviewer": null
+  }
+}
