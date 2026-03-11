@@ -377,6 +377,21 @@ def select_drugs_by_ingredients(drugs: list[dict], ingredients: list[str]) -> li
 
 
 _RISK_FLAG_VALUES = {"none", "low", "moderate", "high"}
+_RISK_FLAG_ORDER = {"none": 0, "low": 1, "moderate": 2, "high": 3}
+
+
+def apply_postprocessing_rules(data: dict) -> None:
+    """모델 출력 후처리 규칙 적용."""
+    additive_risks = data.setdefault("additive_risks", {})
+    risk_flags = data.setdefault("risk_flags", {})
+
+    for field in ("nephrotoxic", "hepatotoxic", "gi_ulcer", "bleeding", "qt_prolongation"):
+        if additive_risks.get(field) is not True:
+            continue
+
+        current_value = risk_flags.get(field)
+        if current_value not in _RISK_FLAG_VALUES or _RISK_FLAG_ORDER[current_value] < _RISK_FLAG_ORDER["moderate"]:
+            risk_flags[field] = "moderate"
 
 def validate_result(data: dict, ingredient: str) -> list[str]:
     """변환 결과 유효성 검증. 문제가 있으면 에러 메시지 리스트 반환."""
@@ -521,6 +536,8 @@ async def convert_one(
                     raw_text = re.sub(r"\s*```$", "", raw_text)
 
                 data = json.loads(raw_text)
+
+                apply_postprocessing_rules(data)
 
                 # Inject extraction metadata before writing
                 data["_extraction_metadata"] = {
