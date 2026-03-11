@@ -1,0 +1,647 @@
+{
+  "id": "ropinirole",
+  "drug_identity": {
+    "name_ko": "로피니롤",
+    "name_en": "Ropinirole",
+    "active_ingredient": "Ropinirole",
+    "brand_names": [
+      "Clevor",
+      "Requip",
+      "Requip XL"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Metoclopramide",
+    "reversal_evidence": "메토클로프라미드(0.5 mg/kg IV 또는 SC)는 로피니롤로 인한 지속적 구토, 기면, 근육 떨림 등의 부작용을 100% 개선함. 마로피탄트(IV 경로)는 지속적 구토를 중단시키나 다른 도파민성 증상에는 효과 없음.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 30,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 3,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP1A2"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 CYP1A2가 1상 대사의 주요 사이토크롬 P450 효소임. 탈알킬화, 수산화 및 이후 글루쿠론산 포합 또는 카르복실산으로의 산화를 통해 대사됨. 개에서도 유사한 대사 경로가 추정되나 수의학적 CYP 데이터는 제한적임."
+    },
+    "extra_information": "개에서 안구 투여 후 생체이용률 18~28%, Cmax 26 ng/mL (투여 약 15분 후), 분포용적 5.6 L/kg, 단백결합률 약 40%, 말단 반감기 4~6시간. 대사산물로서 주로 소변으로 배설됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 전용 안구 투여 제제로 수의학적 장기 부담 데이터는 제한적임. 심혈관 영향(빈맥, QTc 연장, 저혈압)은 심장 점수에 반영. 간 ALT 상승 보고는 간 점수에 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "lethargy",
+          "ataxia",
+          "tremors",
+          "CNS signs",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "기면(41%), 운동실조, 근육 떨림 등 CNS 부작용이 보고됨. CNS 부작용은 투여 8시간 이내 소실됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "빈맥(14%), 저혈압이 보고됨. 도파민성 효과로 노르에피네프린 작용 억제 → 저혈압 및 빈맥 유발."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urine excretion"
+        ],
+        "index": -1,
+        "evidence": "대사산물이 주로 소변으로 배설되나 신독성에 대한 직접적 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated ALT"
+        ],
+        "index": 3,
+        "evidence": "ALT 상승(3%)이 보고됨. 간 대사 약물이나 심각한 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "tachycardia",
+          "QTc prolongation",
+          "hypotension",
+          "PR interval shortened",
+          "proarrhythmic"
+        ],
+        "index": 4,
+        "evidence": "비글에서 IV 투여 시 평균 동맥압 16 mmHg 감소, 심박수 29 bpm 증가, PR 간격 13 ms 단축, QTc 33 ms 연장. 안구 투여 후 빈맥 14%. 선천성 또는 후천성 QT 연장 증후군 환자에서 부정맥 유발 위험 가능성."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이는 구토를 유발할 수 없는 종으로 사용 금기. 고양이 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 관련 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 관련 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 12,
+    "t_max_hr": 0.25,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 6.0,
+      "mean": 5.0,
+      "species": "dog"
+    },
+    "f_percent": 23,
+    "protein_binding_percent": 40,
+    "evidence": "개에서 안구 투여 후 생체이용률 18~28%(중간값 약 23%), Cmax 26 ng/mL, 투여 약 15분 후 최고 농도 도달. 말단 반감기 4~6시간. 단백결합률 약 40%. 평균 구토 발생 시간 약 12분, 95%의 개가 30분 이내 구토."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. CYP1A2 억제제 상호작용은 인간 데이터 기반이며 수의학적 유의성은 불명확함.",
+  "drug_interactions": [
+    {
+      "drug": "Antiemetics (maropitant, ondansetron)",
+      "severity": 2,
+      "keywords": [
+        "reduced emetic effect",
+        "dopamine antagonism"
+      ],
+      "evidence": "Antiemetics may reduce the emetogenic effects of ropinirole."
+    },
+    {
+      "drug": "First-generation antihistamines (dimenhydrinate, meclizine)",
+      "severity": 1,
+      "keywords": [
+        "reduced emetic effect"
+      ],
+      "evidence": "Antihistamines with antiemetic effects may reduce emetogenic effects of ropinirole."
+    },
+    {
+      "drug": "Antihypertensive agents (amlodipine, enalapril, sildenafil, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "Additive hypotensive effects may occur when combined with antihypertensive agents."
+    },
+    {
+      "drug": "CNS depressants (phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "lethargy",
+        "ataxia"
+      ],
+      "evidence": "Additive CNS depressant effects (eg, lethargy, ataxia) may occur."
+    },
+    {
+      "drug": "Dopamine antagonists (domperidone, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "dopamine receptor antagonism",
+        "blocked emetic effect"
+      ],
+      "evidence": "May antagonize ropinirole action at dopaminergic receptors and block its emetogenic effect. May be used therapeutically to treat or reverse adverse ropinirole effects."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, promethazine)",
+      "severity": 2,
+      "keywords": [
+        "reduced emetic effect",
+        "dopamine antagonism"
+      ],
+      "evidence": "Phenothiazines may reduce emetogenic effects of ropinirole."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "increased ropinirole concentration",
+        "prolonged vomiting"
+      ],
+      "evidence": "Amiodarone is a CYP1A2 inhibitor; may increase ropinirole AUC and Cmax, potentially prolonging vomiting. Veterinary significance unclear."
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "increased AUC",
+        "increased Cmax"
+      ],
+      "evidence": "In humans, coadministration with immediate-release ropinirole increased ropinirole AUC by 84% and Cmax by 60%. May prolong vomiting in dogs."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "increased ropinirole concentration"
+      ],
+      "evidence": "Erythromycin is a CYP1A2 inhibitor; may increase ropinirole concentration and prolong vomiting. Veterinary significance unclear."
+    },
+    {
+      "drug": "Mexiletine",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "increased ropinirole concentration"
+      ],
+      "evidence": "Mexiletine is a CYP1A2 inhibitor; may increase ropinirole concentration and prolong vomiting. Veterinary significance unclear."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all",
+      "rabbit_all",
+      "rodent_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 (FDA 승인 용량) - 체중 1.8~5 kg",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능. 목표 용량 3.75 mg/m2 (범위 2.7~5.4 mg/m2)",
+          "evidence": "CLEVOR® 미국 제품 라벨 2020; 체중 1.8~5 kg(4~11.1 lb): 한쪽 눈에 1방울"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 (FDA 승인 용량) - 체중 5.1~10 kg",
+          "value": "2",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능",
+          "evidence": "CLEVOR® 미국 제품 라벨 2020; 체중 5.1~10 kg(11.2~22.1 lb): 각 눈에 1방울씩"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 (FDA 승인 용량) - 체중 10.1~20 kg",
+          "value": "3",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능",
+          "evidence": "CLEVOR® 미국 제품 라벨 2020; 체중 10.1~20 kg(22.2~44.1 lb): 한쪽 눈에 2방울, 다른 눈에 1방울"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 (FDA 승인 용량) - 체중 20.1~35 kg",
+          "value": "4",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능",
+          "evidence": "CLEVOR® 미국 제품 라벨 2020; 체중 20.1~35 kg(44.2~77.2 lb): 각 눈에 2방울씩"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 (FDA 승인 용량) - 체중 35.1~60 kg",
+          "value": "6",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능. 초기 각 눈에 2방울, 2분 후 각 눈에 1방울 추가",
+          "evidence": "CLEVOR® 미국 제품 라벨 2020; 체중 35.1~60 kg(77.3~132.3 lb)"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 (FDA 승인 용량) - 체중 60.1~100 kg",
+          "value": "8",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능. 초기 각 눈에 2방울, 2분 후 각 눈에 2방울 추가",
+          "evidence": "CLEVOR® 미국 제품 라벨 2020; 체중 60.1~100 kg(132.4~220.5 lb)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 환자에서의 용량 조정에 대한 구체적인 언급이 없음. 신장 질환 개에서의 안전성은 연구되지 않았음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 환자에서의 안전성은 연구되지 않았음. ALT 상승(3%)이 보고되었으므로 간 질환 환자에서 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "인두 반사 소실 / 후두 마비",
+      "match_terms": [
+        "laryngeal paralysis",
+        "lack of laryngeal reflexes",
+        "pharyngeal reflex absent"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신경학적 장애 / CNS 억제 / 발작",
+      "match_terms": [
+        "CNS depression",
+        "seizures",
+        "neurological impairment"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "각막 궤양 또는 안구 손상/자극",
+      "match_terms": [
+        "corneal ulceration",
+        "ocular injury",
+        "ocular irritation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 쇼크 / 저산소증",
+      "match_terms": [
+        "cardiovascular shock",
+        "hypoxia",
+        "respiratory distress"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부식성 물질 또는 날카로운 이물질 섭취",
+      "match_terms": [
+        "corrosive agents",
+        "sharp foreign objects",
+        "acids",
+        "alkalis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "흡인성 폐렴 병력",
+      "match_terms": [
+        "aspiration pneumonia",
+        "history of aspiration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 자극제 섭취",
+      "match_terms": [
+        "CNS stimulant ingestion",
+        "strychnine"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 1.8 kg 미만",
+      "match_terms": [
+        "weight less than 1.8 kg",
+        "underweight"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 4.5개월 미만",
+      "match_terms": [
+        "younger than 4.5 months",
+        "puppy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환 / 심혈관 이상",
+      "match_terms": [
+        "cardiac disease",
+        "cardiovascular compromise",
+        "long QT syndrome"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "도파민 D2/D3 수용체 선택적 효현제. 화학수용체 유발대(CTZ)의 D2 수용체를 통해 주로 구토를 유발하며, 말초 및 중추 도파민 수용체 모두에 작용함. 세로토닌성, 아드레날린성 수용체에 대한 비표적 결합이 적어 다른 구토제보다 선택적임.",
+    "common_extra_effects": [
+      "기면(lethargy)",
+      "저혈압(hypotension)",
+      "빈맥(tachycardia)",
+      "근육 떨림(tremors)",
+      "운동실조(ataxia)",
+      "설사(diarrhea)",
+      "침 흘림(salivation)",
+      "ALT 상승",
+      "QTc 연장",
+      "결막 충혈(conjunctival hyperemia)",
+      "제3안검 돌출(third eyelid protrusion)",
+      "결막 분비물(conjunctival discharge)",
+      "안검경련(blepharospasm)",
+      "프롤락틴 억제"
+    ],
+    "dog_mechanism": "안구 투여 후 전신 흡수되어 CTZ의 D2 수용체를 자극하여 구토 유발. 도파민성 효과로 노르에피네프린 작용 억제 → 저혈압 및 빈맥 유발.",
+    "dog_extra_effects": [
+      "기면(41%)",
+      "빈맥(14%)",
+      "지속적 구토(8%)",
+      "결막 충혈(51%)",
+      "제3안검 돌출(38%)",
+      "결막 분비물(30%)",
+      "안검경련(19%)",
+      "ALT 상승(3%)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "FDA 승인 안구 투여 구토 유발제. 생후 4.5개월 이상, 체중 1.8 kg 이상의 개에서만 사용. 평균 구토 발생 시간 약 12분, 95%의 개가 30분 이내 구토. 20분 이내 구토가 없을 경우 동일 용량 1회 추가 투여 가능. 심장 질환(QTc 연장 위험), 간 질환, GI 질환 환자에서의 안전성은 연구되지 않음. 지속적 구토 시 메토클로프라미드(0.5 mg/kg IV/SC) 투여.",
+    "cat": "고양이는 구토를 할 수 없는 종이므로 사용 금기. 로피니롤은 고양이에게 사용해서는 안 됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 질환, 간 기능 저하, GI 질환, 흡인성 폐렴 병력, CNS 자극제 섭취 시 주의 필요. QTc 연장 위험이 있는 환자에서 부정맥 유발 가능성. 취급 시 장갑 및 보호 장비 착용 권장."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이는 구토를 할 수 없는 종으로 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 실온 보관, 빛 차단. 개봉 후 드로퍼는 제조사 파우치 안에 직립 보관 시 30분 이내 사용; 미사용분 폐기.",
+    "forms": [
+      "Ropinirole Ophthalmic Solution 3% (30 mg/mL), 0.3 mL 프리필드 단회용 드로퍼 (9 mg/드로퍼), 1방울 = 27 µL (810 µg), Clevor® (Rx), NADA# 141-534",
+      "Ropinirole Tablets 0.25 mg, 0.5 mg, 1 mg, 2 mg, 3 mg, 4 mg, 5 mg (인간용), Requip®, generic (Rx)",
+      "Ropinirole Extended-Release Tablets, Requip XL® (인간용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로피니롤(Clevor®)은 개에서 구토 유발을 위해 FDA 승인된 안구 투여 도파민 D2/D3 수용체 효현제입니다. 생후 4.5개월 이상, 체중 1.8 kg 이상의 개에서만 사용 가능하며, 고양이 및 설치류에는 사용 금기입니다. 평균 구토 발생 시간은 약 12분이며, 95%의 개가 30분 이내 구토합니다. 주요 부작용으로 기면(41%), 빈맥(14%), 안구 자극이 있으며, QTc 연장 위험이 있습니다. 지속적 구토 시 메토클로프라미드로 역전 가능합니다.",
+    "indications": "개에서 구토가 적절한 상황(예: 독소 또는 이물질 섭취 후 2시간 이내)에서 구토 유발. 인간에서는 파킨슨병 및 하지불안증후군 치료에 사용(수의학적 적응증 아님).",
+    "client_info": "로피니롤 안구 투여액은 반드시 수의사의 감독 하에 구토 유발이 적절하고 안전한 경우에만 투여해야 합니다. 투여 후 제3안검이 보이거나 눈이 빨개지고 분비물이 나오거나 눈을 찡그릴 수 있으나, 보통 24시간 이내에 회복됩니다. 투여 후 잠시 동안 졸려 보이거나, 걷기 어려워하거나, 식욕이 감소할 수 있습니다. 1~2일 이내에 식욕이 정상으로 돌아오지 않으면 수의사에게 연락하십시오. 이 약물을 취급할 때는 반드시 장갑을 착용하십시오. 임신 중이거나 수유 중이거나 임신을 계획 중인 분은 이 제품에 접촉하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none stated)",
+      "Compatibility/Compounding Considerations (none noted)",
+      "Renal dose adjustment (not explicitly stated)",
+      "Hepatic dose adjustment (not explicitly stated)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.onset_min (exact value; 12 min is approximate from monograph)",
+      "cyp_profile.substrates (veterinary-specific CYP data absent)",
+      "organ_burden_logic.dog.kidney.calculated_score (no direct nephrotoxicity data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/33.jsonl",
+    "extracted_at": "2026-03-10T23:27:17.873508+00:00",
+    "reviewer": null
+  }
+}

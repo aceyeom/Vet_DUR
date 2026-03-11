@@ -1,0 +1,447 @@
+{
+  "id": "cefaclor",
+  "drug_identity": {
+    "name_ko": "세파클로르",
+    "name_en": "Cefaclor",
+    "active_ingredient": "Cefaclor",
+    "brand_names": [
+      "Ceclor"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 사람용 제품을 동물에게 오프라벨로 사용. 임상 경험 제한적.",
+    "dosage_form": [
+      "Cap",
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 37.4,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 75,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.85,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 투여량의 최대 85%가 신장을 통해 미변화체로 배설됨. 개는 쥐, 마우스, 사람보다 더 많은 비율을 대사하는 것으로 보임."
+    },
+    "extra_information": "개에서 경구 투여 시 약 75%가 흡수되나, 초회통과효과로 인해 생체이용률은 약 60%로 감소함. 담즙 농도는 혈청보다 높음. 개에서 소실 반감기는 약 2시간. 고농도가 소변으로 미변화체 형태로 배설됨. 고양이에 대한 약동학 정보는 현재 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개에서 제한적 약동학 데이터 존재; 고양이는 데이터 없음. 고용량/장기 사용 시 신독성, 혈액독성, 간독성 가능성 문헌 기재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 세팔로스포린 사용 시 신경독성이 보고됨(고용량 관련 이상반응 항목)."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "hemoglobin decrease"
+        ],
+        "index": 2,
+        "evidence": "개 과용량 연구에서 헤모글로빈 일시적 감소 및 혈소판감소증 보고. 고용량/장기 세팔로스포린 사용 시 호중구감소증, 무과립구증, 혈소판감소증 가능."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal excretion",
+          "interstitial nephritis",
+          "tubular necrosis",
+          "BUN increase",
+          "creatinine increase"
+        ],
+        "index": 3,
+        "evidence": "주요 배설 경로가 신장(미변화체). 고용량/장기 사용 시 간질성 신염, 세뇨관 괴사 가능. BUN 및 혈청 크레아티닌 일시적 상승 보고. 신기능 저하 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "liver function tests increase",
+          "hepatitis"
+        ],
+        "index": 2,
+        "evidence": "간기능 검사 수치 상승 및 고용량/장기 사용 시 간염 가능성 보고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 이상반응 또는 부담에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 고용량 세팔로스포린 계열 신경독성 가능성을 개 데이터에서 외삽."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 고용량/장기 세팔로스포린 사용 시 혈액독성 가능성을 계열 효과로 외삽."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal excretion",
+          "interstitial nephritis"
+        ],
+        "index": -1,
+        "evidence": "고양이 약동학 데이터 없음. 신장 배설 경로 및 계열 효과로 신독성 가능성 외삽."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver function tests increase"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 계열 효과로 간독성 가능성 외삽."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 이상반응 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": 2.0,
+      "mean": 2.0,
+      "species": "dog"
+    },
+    "f_percent": 60,
+    "protein_binding_percent": null,
+    "evidence": "개에서 경구 생체이용률 약 60%(초회통과효과 반영). 소실 반감기 약 2시간(개). 사람에서 반감기 1시간 미만(정상 신기능). Tmax 및 단백결합률은 개/고양이에서 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Aminoglycosides의 신독성이 2세대 세팔로스포린에 의해 증강될 수 있음."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, or magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "extended-release"
+      ],
+      "evidence": "알루미늄, 칼슘, 마그네슘 함유 제산제는 서방형 세파클로르 정제의 흡수를 감소시킴. 최소 2시간 간격 투여 권장."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "reduced renal excretion",
+        "increased drug levels"
+      ],
+      "evidence": "프로베네시드는 세파클로르의 신장 배설을 감소시켜 혈중 농도를 높일 수 있음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "세파클로르와 병용 시 항응고 효과 증가에 대한 드문 보고 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "7 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook 오프라벨 용량: 7–20 mg/kg PO q8h"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (오프라벨)",
+          "value": "7 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook 오프라벨 용량(개/고양이 공통): 7–20 mg/kg PO q8h. 고양이 약동학 데이터 없음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "심한 신기능 저하 환자에서 주의 사용 권고. 신기능 부전 환자는 주기적 신기능 모니터링 필요. 구체적 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간기능 저하 시 용량 조절에 대한 구체적 정보 없음. 간기능 검사 수치 상승 가능성 있으므로 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "세파클로르 또는 세팔로스포린 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "cefaclor allergy",
+        "beta-lactam allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "페니실린 알레르기",
+      "match_terms": [
+        "penicillin allergy",
+        "penicillin hypersensitivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 신기능 저하",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제를 통한 살균 작용. 그람음성균(E. coli, K. pneumoniae, P. mirabilis 포함)에 대해 1세대 세팔로스포린보다 넓은 스펙트럼 보유.",
+    "common_extra_effects": [
+      "구역(nausea)",
+      "설사(diarrhea)",
+      "구토(vomiting)",
+      "식욕부진(anorexia)",
+      "과민반응/아나필락시스",
+      "혈청병 유사 반응(serum sickness-like reaction)",
+      "다형홍반(erythema multiforme)",
+      "발진(rash)",
+      "간기능 검사 수치 상승",
+      "BUN 및 혈청 크레아티닌 일시적 상승",
+      "신경독성(고용량/장기 사용 시)",
+      "호중구감소증(고용량/장기 사용 시)",
+      "무과립구증(고용량/장기 사용 시)",
+      "혈소판감소증(고용량/장기 사용 시)",
+      "간염(고용량/장기 사용 시)",
+      "간질성 신염(고용량/장기 사용 시)",
+      "세뇨관 괴사(고용량/장기 사용 시)"
+    ],
+    "dog_mechanism": "세포벽 합성 억제를 통한 살균 작용. 개에서 쥐, 마우스, 사람보다 더 많은 비율을 대사함.",
+    "dog_extra_effects": [
+      "연변(soft stool, 200 mg/kg/day 투여 시)",
+      "구토(200 mg/kg/day 투여 시)",
+      "헤모글로빈 일시적 감소(200 mg/kg/day 투여 시)",
+      "혈소판감소증(가역적, 400 mg/kg/day 투여 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률은 약 60%(초회통과효과 반영). 소실 반감기 약 2시간. 고농도가 소변으로 미변화체 배설. 담즙 농도가 혈청보다 높음. 임상 사용 경험 제한적이며, 1세대 세팔로스포린 내성 감수성 감염에 한해 사용 고려. 서방형 정제의 약동학 정보는 개에서 확인되지 않음.",
+    "cat": "고양이에서 약동학 정보 없음. 개/고양이 공통 오프라벨 용량(7–20 mg/kg PO q8h)이 제시되어 있으나, 고양이에서의 임상 경험은 극히 제한적임. 세팔로스포린 계열 특유의 고양이 소변 냄새 유사 취기에 대해 보호자 안내 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 주의 사용. 페니실린 알레르기 환자에서 교차반응 가능성. 임상 사용 경험 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 약동학 데이터 없음. 임상 사용 경험 극히 제한적. 신기능 저하 및 과민반응 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐, 정제, 현탁액용 분말: 밀폐 용기에 실온(15–30°C) 보관. 재구성 후 현탁액: 밀폐 용기에 냉장 보관, 14일 후 폐기.",
+    "forms": [
+      "경구 캡슐 250 mg, 500 mg",
+      "서방형 경구 정제 500 mg",
+      "경구 현탁액용 분말 125 mg/5 mL (25 mg/mL)",
+      "경구 현탁액용 분말 187 mg/5 mL (37.4 mg/mL)",
+      "경구 현탁액용 분말 250 mg/5 mL (50 mg/mL)",
+      "경구 현탁액용 분말 375 mg/5 mL (75 mg/mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세파클로르는 2세대 경구 세팔로스포린으로, 1세대(세팔렉신, 세파드록실) 내성이지만 세파클로르에 감수성인 그람음성균 감염 치료에 제한적으로 사용될 수 있습니다. 수의학적 허가 제품은 없으며 임상 경험이 매우 제한적입니다. WHO 인체의학 고중요 항균제로 지정되어 있어 신중한 사용이 요구됩니다.",
+    "indications": "1세대 세팔로스포린(세팔렉신, 세파드록실) 내성이나 세파클로르에 감수성인 세균 감염(E. coli, K. pneumoniae, P. mirabilis 등 그람음성균 포함). 수의학에서는 오프라벨 사용. 장내구균, Enterobacter, 대부분의 Pseudomonas, MRSA, ESBL 생성균에는 효과 없음.",
+    "client_info": "이 약은 공복에 투여하는 것이 가장 효과적입니다. 구토나 식욕부진이 나타나면 음식과 함께 투여할 수 있습니다. 가장 흔한 부작용은 설사, 구토, 식욕부진입니다. 동물이 좋아 보여도 수의사가 처방한 기간 동안 반드시 투약을 완료하세요. 세팔로스포린 계열 항생제는 고양이 소변과 유사한 냄새가 날 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat-specific pharmacokinetics",
+      "Extended-release tablet PK in dogs",
+      "Protein binding data (dog/cat)",
+      "Tmax data (dog/cat)",
+      "Onset data",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (cat)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat (species-specific PK validation)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/53.jsonl",
+    "extracted_at": "2026-03-11T05:40:59.748707+00:00",
+    "reviewer": null
+  }
+}

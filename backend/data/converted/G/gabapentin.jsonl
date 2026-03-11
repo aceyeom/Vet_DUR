@@ -1,0 +1,586 @@
+{
+  "id": "gabapentin",
+  "drug_identity": {
+    "name_ko": "가바펜틴",
+    "name_en": "Gabapentin",
+    "active_ingredient": "Gabapentin",
+    "brand_names": [
+      "Neurontin",
+      "Aclonium",
+      "Equipax",
+      "Gantin",
+      "Gabarone",
+      "Neurostil",
+      "Progresse",
+      "Horizant"
+    ],
+    "allergy_class": null,
+    "class": "Anticonvulsant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. 개에서 자일리톨 함유 경구액 사용 주의.",
+    "dosage_form": [
+      "Cap",
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "value": 800,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "가바펜틴은 유의미한 대사를 거치지 않으며 거의 전적으로 신장을 통해 미변화 형태로 배설된다(인체 기준). 개에서는 투여량의 30~40%가 N-메틸-가바펜틴으로 대사된다."
+    },
+    "extra_information": "개: 경구 생체이용률 약 80%(50 mg/kg 용량 기준), 최고 혈장 농도 투여 후 약 1~2시간, 34%가 N-메틸-가바펜틴으로 대사, 제거 반감기 약 2~4시간. 고양이: 경구 생체이용률 90~95%(개체 간 변이 50~120%), 최고 농도 단회 투여 시 65~100분, 반복 투여 시 45분, 분포용적 0.65 L/kg, 청소율 2.7~3 mL/min/kg, 평균 제거 반감기 2.8~3.7시간. IRIS 2~3단계 CKD 고양이에서 혈청 가바펜틴 농도가 유의하게 높았으며 혈청 크레아티닌 및 SDMA와 상관관계가 있었다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 비율, 이상반응, 금기사항 텍스트에서 추출. 수의학 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "ataxia",
+          "anticonvulsant",
+          "anxiolytic",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정 및 운동실조가 가장 흔한 이상반응으로 보고됨. 항경련 및 항불안 작용을 통해 CNS에 직접 작용."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal insufficiency",
+          "dose adjustment",
+          "creatinine",
+          "CKD"
+        ],
+        "index": 1,
+        "evidence": "가바펜틴은 신장을 통해 거의 전량 배설됨. 신부전 시 용량 조절 권고. CKD 고양이에서 혈청 농도 유의하게 상승."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "xylitol hepatotoxic",
+          "metabolized"
+        ],
+        "index": 1,
+        "evidence": "개에서 투여량의 30~40%가 간에서 대사됨. 자일리톨 함유 제제 사용 시 간독성 위험 있음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "ataxia",
+          "anticonvulsant",
+          "anxiolytic"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정 및 운동실조가 가장 흔한 이상반응. 과타액분비 및 구토도 보고됨. 항경련 및 불안 감소 목적으로 사용."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "renal elimination",
+          "CKD",
+          "creatinine",
+          "SDMA",
+          "dose adjustment"
+        ],
+        "index": 1,
+        "evidence": "IRIS 2~3단계 CKD 고양이에서 혈청 가바펜틴 농도가 유의하게 높았으며 크레아티닌 및 SDMA와 상관관계 확인. 신장 배설이 주요 경로."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간 대사에 대한 직접적인 언급 없음. 신장 배설이 주요 경로."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 4.0,
+      "mean": 3.0,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": null,
+    "evidence": "개: 경구 생체이용률 약 80%, 최고 혈장 농도 투여 후 1~2시간, 제거 반감기 2~4시간. 고양이: 생체이용률 90~95%, 최고 농도 65~100분(단회), 반감기 2.8~3.7시간. 가바펜틴은 혈장 단백질에 최소한으로 결합하며 CSF 농도는 혈장의 약 20%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids (Aluminum-, Magnesium-, Calcium-Containing)",
+      "severity": 2,
+      "keywords": [
+        "decreased bioavailability",
+        "absorption",
+        "sedation"
+      ],
+      "evidence": "Concurrent oral antacids may decrease gabapentin oral bioavailability by 20%; separate administration by at least 2 hours. High-dose IV or epidural magnesium may increase sedation risk."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use may result in increased risk for sedation."
+    },
+    {
+      "drug": "Hydroxyzine",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use may result in increased risk for sedation."
+    },
+    {
+      "drug": "Minocycline",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use may result in increased risk for sedation."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use may result in increased risk for sedation."
+    },
+    {
+      "drug": "Opioid Analgesics",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression",
+        "increased AUC",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Concurrent use may increase sedation risk. Hydrocodone co-administration may increase gabapentin AUC and efficacy/adverse effects; gabapentin may reduce hydrocodone AUC. Morphine may increase gabapentin concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "난치성 발작의 보조 치료 (항경련)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "일부 임상의는 30 mg/kg q8h 또는 q6h까지 증량 가능하다고 제안",
+          "evidence": "오프라벨. 근거는 상대적으로 약함. 10 mg/kg PO q8h로 시작하여 과진정 방지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "보조 진통제 (만성 신경병성 통증)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "PK상 q8h 투여가 더 효과적일 수 있음",
+          "evidence": "오프라벨. 최근 근거 강화됨. q8h 투여도 고려 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "보조 진통제 (만성 신경병성 통증) - q8h 용법",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "오프라벨. PK 기반으로 q8h 투여가 BID보다 효과적일 가능성."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "폭풍 공포증 (storm phobia)",
+          "value": "25 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "노출 90분 전 투여",
+          "evidence": "오프라벨. 단일 연구에서 공포 행동 감소 확인."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "이소플루란 마취 전처치 (MAC 절약 효과)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "이소플루란 마취 2시간 전 단회 투여; 20% MAC 절약 효과",
+          "evidence": "오프라벨. 단일 연구."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "난치성 발작의 보조 치료 (항경련)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "일부 임상의는 q24h로 시작 후 필요 시 증량 권고; 최대 5~20 mg/kg q6~12h까지 가능",
+          "evidence": "오프라벨. 근거 약함. 일화적 초기 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "보조 진통제 (만성 신경병성 통증)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "필요 시 5~10 mg/kg q12h까지 증량; PK상 q8h 투여가 더 효과적일 수 있음",
+          "evidence": "오프라벨. 근거 약함. 일화적 보고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "보조 진통제 (만성 신경병성 통증) - 고용량 용법",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 일부 임상의 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경피 진통 (pinna 경유)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "Lipoderm® 기제로 조제; 혈청 내 측정 가능, 일부 시점에서 통증 점수 감소",
+          "evidence": "오프라벨. 단일 연구."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "난소자궁적출술 후 진통 (수술 전처치)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 12시간 전 및 1시간 전 투여 (mg/kg 아님, 고정 용량); 마취 유도 시 부프레노르핀 병용",
+          "evidence": "오프라벨. 단일 연구."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골관절염 통증",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "가속도계 및 보호자 설문으로 전반적 개선 확인; 삶의 질은 위약 대비 변화 없음",
+          "evidence": "오프라벨. 단일 연구."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수의학적 검진 관련 공포 반응 및 불안 감소",
+          "value": "50 - 200",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 아님, 고정 용량 (약 9~48 mg/kg에 해당); 투여 후 3시간 이내 측정 가능한 진정 없이 공포 반응 감소. CKD IRIS 2~3단계 고양이: 10 mg/kg PO",
+          "evidence": "오프라벨. 복수 연구."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 청소율이 0.7 mL/kg/min 이하인 개와 고양이에서 용량 감량 및/또는 투여 간격 연장 권고. 개는 30~40% 대사되므로 경증~중등도 신기능 저하 시 용량 조절이 불필요할 수 있음. 고양이 CKD IRIS 2~3단계에서 혈청 농도 유의하게 상승 확인."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사는 최소한이며(인체 기준 거의 없음), 간기능 저하에 따른 용량 조절에 대한 명시적 권고 없음. 개에서 30~40% 대사되나 간질환 시 조절 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "가바펜틴 과민증",
+      "match_terms": [
+        "hypersensitivity to gabapentin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "자일리톨 함유 경구액 투여 (개)",
+      "match_terms": [
+        "xylitol",
+        "oral solution",
+        "dog"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (고용량)",
+      "match_terms": [
+        "pregnancy",
+        "teratogenic",
+        "fetotoxic"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "전압 개폐 칼슘 채널의 CaV alpha2delta 서브유닛에 결합하여 칼슘 유입을 감소시키고, 흥분성 신경전달물질(substance P, 글루타메이트, 노르에피네프린)의 방출을 억제함. GABA와 구조적으로 유사하나 GABA 결합, 재흡수, 분해에는 영향을 미치지 않음.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "어지러움(dizziness, 인체)",
+      "졸음(somnolence, 인체)",
+      "말초 부종(peripheral edema, 인체)",
+      "구토(vomiting)",
+      "설사(diarrhea, 과량 투여 시)"
+    ],
+    "dog_mechanism": "CaV alpha2delta 서브유닛 결합을 통한 항경련, 진통, 항불안 작용. 투여량의 34%가 N-메틸-가바펜틴으로 대사됨.",
+    "dog_extra_effects": [
+      "진정",
+      "운동실조",
+      "구토(과량 투여 시)",
+      "기면(lethargy, 과량 투여 시)"
+    ],
+    "cat_mechanism": "CaV alpha2delta 서브유닛 결합을 통한 항경련, 진통, 항불안 작용. 신장 배설이 주요 경로.",
+    "cat_extra_effects": [
+      "진정",
+      "운동실조",
+      "과타액분비(hypersalivation)",
+      "구토",
+      "기면(lethargy, 과량 투여 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 가바펜틴은 난치성 발작의 보조 치료, 만성 신경병성 통증, 폭풍 공포증에 오프라벨로 사용됨. 자일리톨 함유 인체용 경구액은 저혈당 및 간독성 위험으로 사용 금지. 신기능 저하 시 용량 조절 고려. 갑작스러운 투약 중단은 발작 유발 가능성이 있으므로 서서히 감량 필요.",
+    "cat": "고양이에서 가바펜틴은 난치성 발작, 만성 통증, 수의학적 검진 관련 공포 반응 감소에 오프라벨로 사용됨. CKD 고양이에서 혈청 농도가 유의하게 상승하므로 용량 조절 필요. 과타액분비 및 구토가 보고되었으나 투여 8시간 이내 소실됨. 자일리톨 함유 경구액은 현재 사용 용량에서 독성 문제가 없는 것으로 보이나 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신부전 시 용량 조절 필요. 자일리톨 함유 경구액 사용 금지. 만성 사용 후 갑작스러운 중단 시 발작 유발 가능. 진정 및 운동실조 발생 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "CKD 고양이에서 혈청 농도 상승으로 용량 조절 필요. 과타액분비 및 구토 가능. 만성 사용 후 갑작스러운 중단 시 발작 유발 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐 및 정제: 실온(25°C) 보관, 15~30°C 허용. 경구액: 냉장(2~8°C) 보관. 조제 경구 현탁액(100 mg/mL): 4°C 및 25°C에서 56일간 90% 이상 역가 유지.",
+    "forms": [
+      "경구 캡슐 100 mg, 300 mg, 400 mg",
+      "경구 정제 600 mg, 800 mg (필름코팅)",
+      "경구액 250 mg/5 mL (50 mg/mL) — 자일리톨 함유 가능",
+      "가바펜틴 에나카르빌 서방정 300 mg, 600 mg (Horizant) — 수의학적 PK 정보 없음"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "가바펜틴은 개와 고양이에서 난치성 발작의 보조 치료, 만성 신경병성 통증, 불안/공포 반응 감소에 오프라벨로 사용되는 항경련제/진통제입니다. 수의학적으로 승인된 제품은 없으며, 인체용 제품을 사용합니다. 개에서 자일리톨 함유 경구액 사용은 금지됩니다. 진정 및 운동실조가 가장 흔한 이상반응이며, 신기능 저하 시 용량 조절이 필요합니다. 만성 투여 후 갑작스러운 중단은 피해야 합니다.",
+    "indications": "【승인 적응증】없음(수의학적 승인 제품 없음). 【오프라벨 적응증】개: 난치성/복합 부분 발작 보조 치료, 만성 신경병성 통증, 폭풍 공포증, 수술 전 진통 보조. 고양이: 난치성 발작 보조 치료, 만성 신경병성 통증, 골관절염 통증, 수의학적 검진 관련 공포/불안 감소, 수술 전후 진통 보조. 기타: 말(라미니티스 통증 연구 중), 소(신경병성 통증), 조류(신경병성 통증).",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 주세요. 졸음과 균형 감각 저하가 가장 흔한 부작용입니다. 사람용 경구액은 개에게 절대 투여하지 마세요(자일리톨 독성 위험). 수의사의 지시 없이 갑자기 투약을 중단하지 마세요(발작 유발 가능). 증상이 지속되거나 악화되면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Protein binding percentage (veterinary)",
+      "Onset time (minutes)",
+      "Hepatic dose adjustment explicit recommendation"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:40:42.178811+00:00",
+    "reviewer": null
+  }
+}

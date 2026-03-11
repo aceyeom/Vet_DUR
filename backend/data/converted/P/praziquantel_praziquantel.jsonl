@@ -1,0 +1,857 @@
+{
+  "id": "praziquantel",
+  "drug_identity": {
+    "name_ko": "프라지콴텔",
+    "name_en": "Praziquantel",
+    "active_ingredient": "Praziquantel",
+    "brand_names": [
+      "Droncit",
+      "Drontal",
+      "Drontal Plus",
+      "Profender",
+      "Centragard",
+      "Equimax",
+      "Zimecterin Gold",
+      "Interceptor Plus",
+      "Sentinel Spectrum",
+      "Quest Plus",
+      "Virbantel",
+      "Iverhart Max",
+      "Quadriguard",
+      "Biltricide"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Chewable",
+      "Topical",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 23,
+        "unit": "mg"
+      },
+      {
+        "value": 34,
+        "unit": "mg"
+      },
+      {
+        "value": 56.8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 600,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "프라지콴텔은 간에서 CYP3A 효소에 의해 대사되며, 대사산물의 활성은 알려져 있지 않다. 주로 소변으로 배설된다."
+    },
+    "extra_information": "개에서 경구 투여 후 30~120분 사이에 최고 혈청 농도에 도달한다. 단백결합률은 약 80%이다. 소화관 벽과 혈액-뇌 장벽을 통과하여 CNS로 분포한다. 소변으로 주로 배설된다. 경구 투여 시 반감기는 고양이에서 1시간, 개에서 약 3시간(그레이하운드에서 7.4시간 보고됨)이다. 국소 복합제 투여 후 반감기는 개에서 347시간, 고양이에서 152시간으로 보고되었다. 개에서 자몽주스 병용 시 AUC가 150~200% 증가할 수 있다. 중등도~중증 간기능 장애 환자에서 반감기가 1.5~3배 연장될 수 있다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 경구 투여 시 이상반응 발생률이 낮으나, 주사제 사용 시 더 높은 이상반응 발생률이 보고됨. 간 대사 약물이며 간기능 장애 시 농도 상승 가능.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈액-뇌 장벽 통과",
+          "비틀거리는 걸음",
+          "진정"
+        ],
+        "index": 1,
+        "evidence": "프라지콴텔은 혈액-뇌 장벽을 통과하며, 주사제 투여 후 비틀거리는 걸음(staggering gait)과 졸음(drowsiness)이 보고되었다."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "단백결합 80%"
+        ],
+        "index": 1,
+        "evidence": "단백결합률이 약 80%로 혈액 내 분포가 높으나, 혈액독성에 대한 직접적인 언급은 없다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 배설",
+          "주요 배설 경로"
+        ],
+        "index": 1,
+        "evidence": "프라지콴텔은 주로 소변으로 배설되므로 신장에 일정 부담이 있으나, 신독성에 대한 직접적인 언급은 없다."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "간 대사",
+          "CYP3A",
+          "간기능 장애 시 반감기 연장",
+          "간기능 장애 주의"
+        ],
+        "index": 2,
+        "evidence": "간에서 CYP3A 효소에 의해 대사되며, 간기능 장애 시 반감기가 1.5~3배 연장되고 혈중 농도가 높아질 수 있다. 간기능 장애 환자에서 주의 사용이 권고된다."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부담 또는 독성에 관한 언급이 없다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "혈액-뇌 장벽 통과",
+          "졸음",
+          "근육 떨림",
+          "운동실조"
+        ],
+        "index": 1,
+        "evidence": "프라지콴텔은 혈액-뇌 장벽을 통과하며, 고양이에서 과량 투여(100~200 mg/kg 비경구) 시 근육 떨림, 일시적 운동실조, 졸음이 보고되었다."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "단백결합 80%"
+        ],
+        "index": 1,
+        "evidence": "단백결합률이 약 80%로 혈액 내 분포가 높으나, 혈액독성에 대한 직접적인 언급은 없다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 배설",
+          "주요 배설 경로"
+        ],
+        "index": 1,
+        "evidence": "프라지콴텔은 주로 소변으로 배설되므로 신장에 일정 부담이 있으나, 신독성에 대한 직접적인 언급은 없다."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "간 대사",
+          "CYP3A",
+          "간기능 장애 시 반감기 연장",
+          "간기능 장애 주의"
+        ],
+        "index": 2,
+        "evidence": "간에서 CYP3A 효소에 의해 대사되며, 간기능 장애 시 반감기가 연장되고 혈중 농도가 높아질 수 있다. 간기능 장애 환자에서 주의 사용이 권고된다."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부담 또는 독성에 관한 언급이 없다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.25,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 3.0,
+      "mean": 2.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 80,
+    "evidence": "경구 투여 후 거의 완전히 흡수되나 초회통과효과가 크다. 개에서 최고 혈청 농도 도달 시간은 30~120분(평균 약 75분). 반감기는 고양이 1시간, 개 약 3시간(그레이하운드 7.4시간). 단백결합률 약 80%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Albendazole",
+      "severity": 1,
+      "keywords": [
+        "알벤다졸 설폭사이드 농도 증가"
+      ],
+      "evidence": "Praziquantel may increase albendazole sulfoxide concentration."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "혈청 농도 증가",
+        "CYP3A 억제"
+      ],
+      "evidence": "Cimetidine may increase serum concentration of praziquantel."
+    },
+    {
+      "drug": "CYP3A4 Inducers (e.g., dexamethasone, phenobarbital, rifampin)",
+      "severity": 2,
+      "keywords": [
+        "프라지콴텔 농도 감소",
+        "CYP3A 유도"
+      ],
+      "evidence": "CYP3A4 inducers such as dexamethasone, phenobarbital, and rifampin may decrease praziquantel concentrations. In humans, rifampin should be discontinued 4 weeks before administering praziquantel."
+    },
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 2,
+      "keywords": [
+        "혈청 농도 유의미한 증가",
+        "CYP3A 억제"
+      ],
+      "evidence": "Grapefruit juice can significantly increase praziquantel serum concentrations; AUC increased by 150-200% in dogs."
+    },
+    {
+      "drug": "Itraconazole",
+      "severity": 2,
+      "keywords": [
+        "프라지콴텔 농도 증가",
+        "CYP3A 억제"
+      ],
+      "evidence": "Itraconazole may increase praziquantel concentrations via CYP3A inhibition."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "프라지콴텔 농도 증가",
+        "CYP3A 억제"
+      ],
+      "evidence": "Ketoconazole may increase praziquantel concentrations via CYP3A inhibition."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "dog_puppy_under4weeks",
+      "cat_kitten_under6weeks"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "조충 제거 (Dipylidium caninum, Taenia pisiformis, Echinococcus granulosus, E. multilocularis) - 주사제 (FDA 승인)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "체중 11.4 kg 초과 시 최대 3 mL. 체중별 용량표 참조 (56.8 mg/mL 주사제 사용)",
+          "evidence": "FDA 승인 라벨 용량. 4주령 이상 강아지에 사용 가능."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조충 제거 (Dipylidium caninum, Taenia pisiformis, Echinococcus granulosus, E. multilocularis) - 주사제 (FDA 승인)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "체중 11.4 kg 초과 시 최대 3 mL. 체중별 용량표 참조 (56.8 mg/mL 주사제 사용). IM이 SC보다 덜 아픈 것으로 보임.",
+          "evidence": "FDA 승인 라벨 용량. 4주령 이상 강아지에 사용 가능."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조충 제거 - 경구 정제 (FDA 승인, 34 mg 정제)",
+          "value": "34",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 정제 수 참조 (최대 5정). 4주령 이상 강아지에 사용 가능.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "조충류 (Taenia spp, Echinococcus spp, Dipylidium caninum, Mesocestoides spp) - 단독 투여 (허가 외)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "조충류 (Taenia spp, Echinococcus spp, Dipylidium caninum, Mesocestoides spp) - 단독 투여 (허가 외)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Diphyllobothrium spp - 단독 투여 (허가 외)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Diphyllobothrium spp - 단독 투여 대안 (허가 외)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Sparganum proliferum (성충) - 단독 투여 (허가 외)",
+          "value": "7.5 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Spirometra mansonoides 또는 Diphyllobothrium erinacei - 단독 투여 (허가 외)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "폐흡충증 (Paragonimus kellicotti) - 단독 투여 (허가 외)",
+          "value": "23 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "간흡충 (Platynosomum spp 또는 Opisthorchiidae) - 단독 투여 (허가 외)",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~10일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Alaria spp - 단독 투여 (허가 외)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 또는 2~10일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "연어 중독 관련 흡충 (Nanophyetus salmincola) 보조 치료 (허가 외)",
+          "value": "10 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Heterobilharzia americana - 단독 투여 (허가 외, 증례 보고)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용. 증례 보고 기반."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "복막 유충 조충증 - 단독 투여 (허가 외, 증례 보고)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 증례 보고 기반."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조충, 구충, 회충, 편충 제거 - Drontal Plus (프라지콴텔/페반텔/피란텔 복합제, FDA 승인)",
+          "value": "22.7 - 136",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 정제 수 참조. 3주령 이상, 체중 0.9 kg 이상 강아지에 사용 가능.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "지아르디아증 - Drontal Plus 복합제 (허가 외)",
+          "value": "22.7 - 136",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일간 투여. 체중별 용량표 참조.",
+          "evidence": "허가 외 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "조충 제거 (Dipylidium caninum, Taenia taeniaeformis) - 주사제 (FDA 승인)",
+          "value": "11.4 - 34.1",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 용량표 참조 (56.8 mg/mL 주사제 사용). 최대 용량 34.1 mg (0.6 mL). 6주령 이상 고양이에 사용 가능.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조충 제거 (Dipylidium caninum, Taenia taeniaeformis) - 주사제 (FDA 승인)",
+          "value": "11.4 - 34.1",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 용량표 참조 (56.8 mg/mL 주사제 사용). 최대 용량 34.1 mg (0.6 mL). 6주령 이상 고양이에 사용 가능.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조충 제거 - 경구 정제 (FDA 승인, 23 mg 고양이용 정제)",
+          "value": "23",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 정제 수 참조 (최대 1.5정). 6주령 이상 고양이에 사용 가능.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "폐흡충증 (Paragonimus kellicotti) - 단독 투여 (허가 외)",
+          "value": "23 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Diphyllobothrium spp (성충) - 단독 투여 (허가 외)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Diphyllobothrium spp (성충) - 단독 투여 대안 (허가 외)",
+          "value": "35",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Sparganum proliferum (성충) - 단독 투여 (허가 외)",
+          "value": "7.5 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Alaria spp - 단독 투여 (허가 외)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 또는 2~10일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "조충류 (Taenia spp, Echinococcus spp, Dipylidium caninum, Mesocestoides spp) - 단독 투여 (허가 외)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "조충류 (Taenia spp, Echinococcus spp, Dipylidium caninum, Mesocestoides spp) - 단독 투여 (허가 외)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Spirometra mansonoides - 단독 투여 (허가 외)",
+          "value": "30 - 35",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 또는 2일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Platynosomum spp - 단독 투여 (허가 외)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~10일간 투여",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조충, 구충, 회충 제거 - Drontal (프라지콴텔/피란텔 복합제, FDA 승인)",
+          "value": "18.2 - 36.4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 정제 수 참조. 생후 2개월 이상, 체중 0.9 kg 이상 고양이에 사용 가능.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Aelurostrongylus abstrusus (성충) - 프라지콴텔/에모뎁사이드 (Profender) 국소 투여 (허가 외)",
+          "value": "12",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 투여 후 14일 후 반복 투여",
+          "evidence": "허가 외 사용. 에모뎁사이드 3 mg/kg와 병용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "지아르디아증 - 프라지콴텔/페반텔/피란텔 (Drontal Plus) 복합제 (허가 외)",
+          "value": "22.7",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여. 소형견용 정제 2정 (프라지콴텔 22.7 mg, 페반텔 113.4 mg, 피란텔 22.7 mg) 1일 1회.",
+          "evidence": "허가 외 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 장애에 따른 용량 조정에 대한 명시적 권고사항이 없다. 주로 소변으로 배설되므로 중증 신기능 장애 환자에서는 주의가 필요할 수 있다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 시 프라지콴텔의 반감기가 1.5~3배 연장되고 혈중 농도가 높아질 수 있다. 중등도~중증 간기능 장애 환자에서 주의하여 사용하도록 권고된다. 구체적인 용량 조정 지침은 명시되어 있지 않다."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "프라지콴텔 과민반응",
+        "약물 알레르기"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "4주령 미만 강아지",
+      "match_terms": [
+        "강아지 연령 제한",
+        "4주령 미만"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "6주령 미만 새끼 고양이",
+      "match_terms": [
+        "새끼 고양이 연령 제한",
+        "6주령 미만"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "간부전",
+        "간기능 저하",
+        "간질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 동물 (복합제 - 페반텔 함유 제품)",
+      "match_terms": [
+        "임신",
+        "임신 동물"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "ABCB1 (MDR1) 유전자 돌연변이 동형접합 개 (국소 에모뎁사이드/프라지콴텔 복합제)",
+      "match_terms": [
+        "MDR1 돌연변이",
+        "ABCB1 돌연변이",
+        "콜리 품종"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "MDR1 돌연변이 보유 품종"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "ABCB1 (MDR-1) 유전자 돌연변이 동형접합 개에서 국소 프라지콴텔/에모뎁사이드 복합제 투여 후 떨림, 운동실조, 침 흘림, 흥분, 헐떡임, 경련이 보고되었다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "조충에 대해서는 기생충 외피의 인지질과 상호작용하여 나트륨, 칼륨, 칼슘의 이온 유입을 유발한다. 저농도에서는 흡반 기능을 마비시키고 충체 운동성을 자극하며, 고농도에서는 충체의 스트로빌라를 수축·마비시킨다. 또한 조충 외피의 특정 부위에 비가역적 국소 공포화를 유발하여 조충이 분해되고 소화에 취약해진다. 흡충 및 주혈흡충에 대해서는 칼슘 이온 유입 증가를 통해 직접 사멸시키고, 이후 외피의 국소 공포화가 일어나 숙주에 의해 탐식된다.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "무기력",
+      "설사",
+      "침 흘림 (고양이)",
+      "주사 부위 통증 (주사제)",
+      "졸음 (주사제)",
+      "비틀거리는 걸음 (주사제)"
+    ],
+    "dog_mechanism": "조충 외피의 인지질과 상호작용하여 이온 유입을 유발하고, 충체를 마비·분해시킨다. CYP3A 효소에 의해 간에서 대사된다.",
+    "dog_extra_effects": [
+      "식욕부진 (경구 투여 시 5% 미만)",
+      "구토 (경구 투여 시 5% 미만)",
+      "무기력 (경구 투여 시 5% 미만)",
+      "설사 (경구 투여 시 5% 미만)",
+      "주사 부위 통증 (주사제)",
+      "구토 (주사제)",
+      "졸음 (주사제)",
+      "비틀거리는 걸음 (주사제)"
+    ],
+    "cat_mechanism": "조충 외피의 인지질과 상호작용하여 이온 유입을 유발하고, 충체를 마비·분해시킨다. CYP3A 효소에 의해 간에서 대사된다.",
+    "cat_extra_effects": [
+      "침 흘림 (경구 투여 시 2% 미만)",
+      "설사 (경구 투여 시 2% 미만)",
+      "설사 (주사제, 약 9.4%)",
+      "쇠약 (주사제)",
+      "구토 (주사제)",
+      "침 흘림 (주사제)",
+      "졸음 (주사제)",
+      "일시적 식욕부진 (주사제)",
+      "주사 부위 통증 (주사제)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 투여 시 이상반응 발생률은 5% 미만으로 낮다. 주사제 투여 시 이상반응이 더 흔하며, 주사 부위 통증이 가장 흔하다. IM 투여가 SC보다 덜 아픈 것으로 보인다. 4주령 이상 강아지에 사용 가능하다. ABCB1 (MDR-1) 유전자 돌연변이 동형접합 개에서 국소 에모뎁사이드/프라지콴텔 복합제 투여 후 신경학적 이상반응이 보고되었으므로 주의가 필요하다. 자몽주스 병용 시 AUC가 150~200% 증가할 수 있다.",
+    "cat": "고양이에서 경구 투여 시 이상반응 발생률은 2% 미만으로 낮으며, 침 흘림과 설사가 보고되었다. 주사제 투여 시 약 9.4%에서 이상반응이 나타났다. 6주령 이상 새끼 고양이에 사용 가능하다. 과량 투여(100~200 mg/kg 비경구) 시 구토, 근육 떨림, 일시적 운동실조, 우울이 나타날 수 있으며, 약 80%에서 사망이 보고되었으므로 용량 준수가 중요하다. 반감기는 약 1시간으로 개보다 짧다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간기능 장애 환자에서 주의하여 사용. 4주령 미만 강아지에는 사용 금지. ABCB1 (MDR-1) 돌연변이 동형접합 개에서 국소 에모뎁사이드/프라지콴텔 복합제 사용 시 신경학적 이상반응 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간기능 장애 환자에서 주의하여 사용. 6주령 미만 새끼 고양이에는 사용 금지. 과량 투여 시 심각한 독성(사망 포함) 위험이 있으므로 용량 준수 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐 용기에 실온(25°C [77°F]) 보관, 빛 차단. 주사제: 25°C 이하 보관, 동결 금지. 바이알 첫 개봉 후 6개월 이내 사용, 최대 천자 횟수 준수 (10 mL 바이알: 25회, 50 mL 바이알: 90회).",
+    "forms": [
+      "프라지콴텔 정제 23 mg (고양이용): Droncit Feline Tablets",
+      "프라지콴텔 정제 34 mg (개용): Droncit Canine Tablets",
+      "프라지콴텔 주사제 56.8 mg/mL (10 mL, 50 mL 바이알): Droncit Injection",
+      "프라지콴텔/에모뎁사이드 국소 용액 (고양이용): Profender",
+      "프라지콴텔/에프리노멕틴 국소 용액 (고양이용): Centragard",
+      "프라지콴텔/페반텔/피란텔 경구 정제 및 씹는 정제 (개용): Drontal Plus, Taste Tabs",
+      "프라지콴텔/이버멕틴 경구 페이스트 (말용): Equimax, Zimecterin Gold",
+      "프라지콴텔/밀베마이신 씹는 경구 정제 (개용): Interceptor Plus",
+      "프라지콴텔/밀베마이신/루페누론 씹는 경구 정제 (개용): Sentinel Spectrum",
+      "프라지콴텔/목시덱틴 경구 젤 (말용): Quest Plus",
+      "프라지콴텔/피란텔 정제 (고양이용): Drontal Tablets",
+      "프라지콴텔/피란텔 씹는 정제 (개용): Virbantel Flavored Chewables",
+      "프라지콴텔/피란텔/이버멕틴 씹는 정제 (개용): Iverhart Max, Quadriguard",
+      "프라지콴텔 경구 정제 600 mg (사람용): Biltricide"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프라지콴텔은 개와 고양이의 조충(촌충) 감염 치료에 FDA 승인된 항기생충제이다. 단회 투여로 효과적이며, 경구 및 주사 제형이 있다. 경구 투여 시 이상반응 발생률이 낮으나(개 5% 미만, 고양이 2% 미만), 주사제 투여 시 이상반응이 더 흔하다. 간에서 CYP3A 효소에 의해 대사되므로 간기능 장애 환자에서 주의가 필요하다. ABCB1 (MDR-1) 유전자 돌연변이 동형접합 개에서 국소 복합제 사용 시 신경학적 이상반응 위험이 있다. 다양한 복합제 제품이 있어 광범위한 내부 기생충 관리가 가능하다.",
+    "indications": "개: Dipylidium caninum, Taenia pisiformis, Echinococcus granulosus, E. multilocularis 치료 및 관리 (FDA 승인). 허가 외: 흡충류(Paragonimus kellicotti, Heterobilharzia americana, Alaria spp 등), 기타 조충류(Diphyllobothrium spp, Spirometra spp 등), 지아르디아증(복합제). 고양이: Dipylidium caninum, Taenia taeniaeformis 치료 (FDA 승인). 허가 외: 흡충류(Paragonimus kellicotti, Platynosomum spp 등), 기타 조충류(Diphyllobothrium spp, Spirometra spp 등), 지아르디아증(복합제).",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 정제는 으깨거나 음식에 섞어 줄 수 있으며, 투여 전 금식은 필요하지 않습니다. 경구 투여 시 부작용은 드물지만 식욕 감소, 침 흘림(고양이), 구토, 무기력/피로, 설사가 나타날 수 있습니다. 지속적인 구토, 혈변, 심한 설사가 나타나면 즉시 수의사에게 연락하십시오. 치료 후 대변에서 죽은 촌충이 보이지 않는 경우가 많습니다. 프라지콴텔은 촌충을 제거하지만 재감염을 예방하지는 않으며, 치료 후 1개월 이내에 재감염이 발생할 수 있습니다. 특히 벼룩 관리 등 기생충 예방에 대해 수의사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Monitoring (minimal)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "drug_identity.available_strengths (combination products)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/20.jsonl",
+    "extracted_at": "2026-03-10T19:34:23.264836+00:00",
+    "reviewer": null
+  }
+}

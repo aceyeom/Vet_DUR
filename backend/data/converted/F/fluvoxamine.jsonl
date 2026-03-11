@@ -1,0 +1,610 @@
+{
+  "id": "fluvoxamine",
+  "drug_identity": {
+    "name_ko": "플루복사민",
+    "name_en": "Fluvoxamine",
+    "active_ingredient": "Fluvoxamine maleate",
+    "brand_names": [
+      "Luvox",
+      "Luvox CR"
+    ],
+    "allergy_class": "SSRI",
+    "class": "Antidepressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이의 행동 장애 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위하게 대사되어 비활성 대사체로 전환되며 소변으로 배설됨. 개에서 투여량의 약 10%만이 소변으로 미변화체로 배설됨."
+    },
+    "extra_information": "개에서 플루복사민은 완전히 흡수되는 것으로 보이며, 투여량의 약 10%만이 소변으로 미변화체로 배설됨. 반감기는 사람과 유사하게 약 15시간으로 추정됨. 고양이에 대한 약동학 정보는 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 제한적인 약동학 데이터 존재; 고양이는 약동학 데이터 없음. 사람 데이터 및 SSRI 계열 특성을 참고하여 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "lethargy",
+          "anxiety",
+          "insomnia",
+          "hyperactivity",
+          "seizures",
+          "tremors",
+          "somnolence"
+        ],
+        "index": 1,
+        "evidence": "개에서 기면, 불안, 불면/과잉행동, 헐떡임 등 CNS 관련 부작용이 보고됨. 과다복용 시 CNS 억제, 진전, 경련 가능."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "abnormal bleeding",
+          "hyponatremia"
+        ],
+        "index": 1,
+        "evidence": "사람에서 비정상 출혈 및 저나트륨혈증이 보고됨. 개에서 직접적인 혈액 독성 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease caution",
+          "renal impairment dose reduction"
+        ],
+        "index": 1,
+        "evidence": "중증 신장 질환 환자에서 주의 사용 권고 및 용량 감량 고려 필요. 신장 독성에 대한 직접적 데이터는 제한적."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "extensively metabolized in liver",
+          "hepatic impairment dose reduction",
+          "hepatic disease caution"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간 기능 장애 환자에서 용량 감량 권고. 중증 간 질환 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "ECG changes",
+          "heart rate and rhythm disturbances"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 서맥/빈맥, ECG 변화 등 심장 리듬 장애 가능. 딜티아젬과 병용 시 서맥 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "sedation",
+          "behavior changes",
+          "anxiety",
+          "irritability",
+          "sleep disturbances"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정, 행동 변화(불안, 과민성, 수면 장애) 등 CNS 관련 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성에 대한 직접적인 데이터 없음. SSRI 계열 특성상 출혈 위험 가능성 낮게 추정."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease caution"
+        ],
+        "index": -1,
+        "evidence": "고양이에 대한 신장 관련 약동학 데이터 없음. 중증 신장 질환 시 주의 권고는 일반적 SSRI 원칙에 근거."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "extensively metabolized in liver",
+          "hepatic impairment"
+        ],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적인 간 약동학 데이터 없음. 간에서 광범위하게 대사되는 약물 특성상 간 부담 존재."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "heart rate disturbances"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접 데이터 없음. 과다복용 시 심박수 및 리듬 장애 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 5.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 15.0,
+      "species": "dog"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": 80,
+    "evidence": "개에서 반감기는 사람과 유사하게 약 15시간으로 추정됨. 사람에서 경구 투여 후 생체이용률 약 50%, 최고 혈장 농도 도달 시간 3~8시간, 혈장 단백 결합률 약 80%. 고양이에 대한 약동학 정보 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "contraindicated",
+        "washout period"
+      ],
+      "evidence": "High risk for serotonin syndrome; concurrent use is contraindicated. In humans, a 5-week washout period is required after discontinuing fluvoxamine; 2-week washout if MAOI is discontinued first."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity"
+      ],
+      "evidence": "Fluvoxamine may increase plasma concentrations of cisapride, leading to toxicity. Concurrent use is contraindicated."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "increased benzodiazepine concentration",
+        "CNS depression"
+      ],
+      "evidence": "Fluvoxamine may increase benzodiazepine plasma concentrations, potentially enhancing CNS depression."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "serotonin syndrome"
+      ],
+      "evidence": "May paradoxically decrease the clinical efficacy of buspirone and increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "increased diltiazem effect",
+        "bradycardia"
+      ],
+      "evidence": "Fluvoxamine may increase the effects of diltiazem; bradycardia has been reported in humans taking this drug combination."
+    },
+    {
+      "drug": "Fentanyl",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 2,
+      "keywords": [
+        "increased methadone concentration",
+        "toxicity",
+        "serotonin syndrome"
+      ],
+      "evidence": "Fluvoxamine may increase plasma concentrations of methadone, leading to toxicity; concurrent use may also increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "enhanced toxicity"
+      ],
+      "evidence": "May enhance adverse/toxic effects of SSRIs and increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Mexiletine",
+      "severity": 2,
+      "keywords": [
+        "decreased mexiletine metabolism",
+        "increased concentration"
+      ],
+      "evidence": "SSRIs may decrease the metabolism of mexiletine, potentially increasing its plasma concentrations."
+    },
+    {
+      "drug": "Propranolol, Metoprolol",
+      "severity": 2,
+      "keywords": [
+        "increased beta-blocker plasma levels"
+      ],
+      "evidence": "Fluvoxamine may increase plasma levels of propranolol and metoprolol. Atenolol may be safer if fluvoxamine is required."
+    },
+    {
+      "drug": "Serotonergic Agents (mirtazapine, ondansetron, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Theophylline, Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration",
+        "toxicity"
+      ],
+      "evidence": "Fluvoxamine may increase plasma concentrations of theophylline, potentially leading to toxicity."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "decreased tramadol efficacy",
+        "serotonin syndrome",
+        "seizures"
+      ],
+      "evidence": "SSRIs can inhibit the metabolism of tramadol to active metabolites, decreasing efficacy and increasing risk for toxicity including serotonin syndrome and seizures."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs; amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "increased TCA blood concentration",
+        "serotonin syndrome"
+      ],
+      "evidence": "Fluvoxamine may increase TCA blood concentrations and increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased bleeding risk"
+      ],
+      "evidence": "Fluvoxamine may increase the risk for bleeding when used concurrently with warfarin."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 1,
+      "keywords": [
+        "decreased SSRI efficacy",
+        "reversal of effects"
+      ],
+      "evidence": "Cyproheptadine may decrease or reverse the effects of SSRIs including fluvoxamine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 3.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애의 보조 치료 (오프라벨)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효능 평가를 위해 3~8주 치료 필요. 치료 중단 시 수 주에 걸쳐 점진적으로 감량.",
+          "evidence": "오프라벨 사용. Plumb's Veterinary Drug Handbook 인용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애의 보조 치료 (오프라벨)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효능 평가를 위해 3~8주 치료 필요. 치료 중단 시 수 주에 걸쳐 점진적으로 감량. 조제 없이 사용 가능한 최소 용량은 25mg 정제의 1/4(약 6mg)으로, 권장 용량보다 높을 수 있음.",
+          "evidence": "오프라벨 사용. Plumb's Veterinary Drug Handbook 인용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신장 질환 환자에서 주의 사용 권고. 중증 신장 기능 장애 시 용량 감량 고려. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 기능 장애 환자 또는 노령 환자에서 낮은 용량 사용 권고. 중증 간 기능 장애 시 용량 감량 고려. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "MAOI 투여 중인 환자",
+      "match_terms": [
+        "MAOI",
+        "monoamine oxidase inhibitor",
+        "selegiline",
+        "amitraz",
+        "linezolid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "시사프리드 투여 중인 환자",
+      "match_terms": [
+        "cisapride"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "플루복사민 또는 SSRI 과민증",
+      "match_terms": [
+        "SSRI hypersensitivity",
+        "fluvoxamine hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심장 질환",
+      "match_terms": [
+        "severe cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD",
+        "renal failure",
+        "renal impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간 질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "liver failure",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CNS에서 세로토닌 재흡수를 고도로 선택적으로 억제하여 세로토닌의 약리학적 활성을 강화함. 도파민 또는 노르에피네프린에는 거의 영향을 미치지 않으며, 다른 신경전달물질에는 영향이 없는 것으로 보임.",
+    "common_extra_effects": [
+      "식욕부진/거식증",
+      "기면",
+      "구역/구토",
+      "설사",
+      "불안",
+      "과민성",
+      "불면/과잉행동",
+      "진정",
+      "행동 변화",
+      "배변 패턴 변화",
+      "세로토닌 증후군 (과다복용 또는 약물 상호작용 시)"
+    ],
+    "dog_mechanism": "세로토닌 재흡수 억제를 통해 CNS 내 세로토닌 활성 강화.",
+    "dog_extra_effects": [
+      "식욕부진 (흔함, 일반적으로 일시적)",
+      "기면",
+      "위장관 부작용",
+      "불안",
+      "과민성",
+      "불면/과잉행동",
+      "헐떡임",
+      "이전에 공격성이 없던 개에서 공격적 행동 발현"
+    ],
+    "cat_mechanism": "세로토닌 재흡수 억제를 통해 CNS 내 세로토닌 활성 강화.",
+    "cat_extra_effects": [
+      "진정",
+      "식욕 감소/거식증",
+      "구토",
+      "설사",
+      "행동 변화 (불안, 과민성, 수면 장애)",
+      "배변 패턴 변화"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 플루복사민은 행동 장애(공격성, 강박 행동 등)의 보조 치료로 오프라벨 사용됨. 식욕부진이 흔한 부작용으로, 일반적으로 일시적이나 지속될 경우 치료 중단이 필요할 수 있음. 이전에 공격성이 없던 개에서 공격적 행동이 나타날 수 있으므로 주의 필요. 효능 평가를 위해 3~8주 치료가 필요하며, 중단 시 수 주에 걸쳐 점진적으로 감량해야 함.",
+    "cat": "고양이에서 플루복사민은 행동 장애의 보조 치료로 오프라벨 사용됨. 진정, 식욕 감소, 구토, 설사, 행동 변화 등의 부작용이 보고됨. 조제 없이 사용 가능한 최소 용량(25mg 정제의 1/4, 약 6mg)이 권장 용량보다 높을 수 있어 정확한 용량 투여를 위해 조제가 필요할 수 있음. 고양이에 대한 약동학 데이터가 없어 주의 깊은 모니터링이 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "중증 심장, 신장, 간 질환 환자에서 주의 사용. 중증 신장 또는 간 기능 장애 시 용량 감량 고려. MAOI 또는 시사프리드와 병용 금기. 세로토닌 증후군 징후 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "중증 심장, 신장, 간 질환 환자에서 주의 사용. 고양이에 대한 약동학 데이터 부재로 주의 깊은 모니터링 필요. MAOI 또는 시사프리드와 병용 금기. 세로토닌 증후군 징후 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "시판 정제 및 서방형 캡슐은 밀폐된 차광 용기에 실온(20°C~25°C, 68°F~77°F) 보관; 15°C~30°C(59°F~86°F) 범위 허용; 고습도로부터 보호.",
+    "forms": [
+      "플루복사민 경구 정제: 25mg, 50mg, 100mg (제네릭, Rx)",
+      "플루복사민 서방형 경구 캡슐 (사람용 24시간): 100mg, 150mg (Luvox CR®, 제네릭, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루복사민은 선택적 세로토닌 재흡수 억제제(SSRI)로, 개와 고양이의 다양한 행동 장애(공격성, 강박 행동 등) 치료에 오프라벨로 사용될 수 있음. 수의학적 허가 제품은 없으며, 더 일반적으로 처방되는 SSRI 대신 사용을 권장할 만한 충분한 정보가 부족함. MAOI 또는 시사프리드와의 병용은 절대 금기. 효능 평가를 위해 최대 8주가 필요할 수 있으며, 치료 중단 시 점진적 감량이 필요함. 세로토닌 증후군 위험에 대한 모니터링이 중요함.",
+    "indications": "개와 고양이의 행동 관련 장애(공격성, 상동증 및 기타 강박-충동 행동 포함) 치료에 보조적으로 사용 고려 가능 (모두 오프라벨 사용). 수의학적 안전성 및 효능을 문서화한 공개 정보가 부족하여 일반적으로 처방되지 않음.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 음식이나 간식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요. 이 약은 행동 교정 프로그램과 함께 사용할 때 가장 효과적입니다. 약이 효과를 나타내는지 확인하는 데 수일에서 수 주가 걸릴 수 있습니다. 수의사와 상담 없이 갑자기 투약을 중단하지 마세요. 가장 흔한 부작용은 졸음/기면과 식욕 감소입니다. 드물게 경련, 공격성 등 심각한 부작용이 발생할 수 있으며, 이 경우 즉시 수의사에게 연락하세요. 과다복용은 매우 위험할 수 있으므로 이 약과 모든 약을 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 최근 2주 이내에 벼룩 및 진드기 방지 목걸이를 착용한 경우 수의사에게 알려주세요. 이 약을 투여하는 동안 수의사와 상담 없이 목걸이를 사용하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no interactions noted)",
+      "Compatibility/Compounding Considerations (no specific information)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat)",
+      "timing_profile.f_percent (dog/cat)",
+      "timing_profile.protein_binding_percent (dog/cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity",
+      "organ_burden_logic.cat (no veterinary PK data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:28:06.018836+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,740 @@
+{
+  "id": "mycophenolate",
+  "drug_identity": {
+    "name_ko": "마이코페놀레이트 모페틸",
+    "name_en": "Mycophenolate Mofetil",
+    "active_ingredient": "Mycophenolate Mofetil",
+    "brand_names": [
+      "CellCept",
+      "Cellmune",
+      "Imuxgen",
+      "Munotras",
+      "Mycept",
+      "Myfortic",
+      "Refrat"
+    ],
+    "allergy_class": null,
+    "class": "Immunosuppressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 인간용 제품을 동물에게 오프라벨로 사용. 개에서 IMHA, IMTP, 중증근무력증, 뇌수막뇌척수염, 사구체신염, 천포창 등 자가면역질환 치료에 사용됨.",
+    "dosage_form": [
+      "Cap",
+      "Tab",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.95,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "마이코페놀레이트 모페틸은 체내에서 활성형인 마이코페놀산(MPA)으로 가수분해된 후, 주로 간에서 글루쿠론산 포합(glucuronidation)을 통해 대사됨. MPA-글루쿠론산 포합체는 장간 순환을 거쳐 재활성화될 수 있음. 고양이는 MPA 글루쿠론산 포합 능력이 결핍되어 있어 주요 대사산물이 글루코시드 형태임."
+    },
+    "extra_information": "개: 경구 생체이용률은 54~87%로 개체 간 및 투여 간 변동이 큼. 정상상태 분포용적 약 5 L/kg(±4.5). MPA 제거 반감기 약 8시간(±4시간). 소변으로 미변화체 약 5%, 글루쿠론산 포합체 약 90% 배설. 고양이: 20 mg/kg IV CRI 투여 시 모든 고양이에서 활성 MPA 대사체 형성 확인. 혈장 MPA 분포는 매우 가변적이고 예측 불가. 주요 대사산물은 글루코시드 형태이며, 글루쿠론산 포합체는 6마리 중 3마리에서만 검출됨. 고양이에서 MPA 글루쿠론산 포합 결핍이 in vitro 연구에서도 확인됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 평가. 수의학 종별 데이터가 일부 존재하나 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "reduced activity"
+        ],
+        "index": 1,
+        "evidence": "개에서 기면/활동 감소가 이상반응으로 보고됨. 직접적인 신경독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "lymphopenia",
+          "myelosuppression",
+          "neutropenia"
+        ],
+        "index": 2,
+        "evidence": "개에서 림프구감소증 보고. 아자티오프린 병용 시 골수억제 위험 증가. 인간에서 백혈구감소증 25~45%, 중증 호중구감소증 보고."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "nephrotoxicity",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "MPA 및 대사체가 주로 신장으로 배설됨(~95%). 중증 신기능 장애 시 용량 조절 필요. 아미노글리코시드 병용 시 신독성 증가(랫트 연구)."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation",
+          "enterohepatic recirculation"
+        ],
+        "index": 4,
+        "evidence": "간에서 글루쿠론산 포합을 통해 광범위하게 대사됨. 장간 순환 존재. 직접적인 간독성은 개에서 드물게 보고됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 관련 이상반응 데이터 없음. 인간에서 고혈압 및 말초부종이 보고되나 개에서는 직접 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 이상반응 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "decreased PCV",
+          "decreased platelet counts"
+        ],
+        "index": 2,
+        "evidence": "고양이 약동학 연구에서 PCV 및 혈소판 수 감소 확인(참조 범위 내). 면역억제로 인한 혈액학적 변화 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "glucuronidation deficiency"
+        ],
+        "index": 3,
+        "evidence": "고양이는 MPA 글루쿠론산 포합 결핍으로 대사 경로가 다름. 신장 배설 경로는 유사하나 대사체 프로파일이 다름."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatopathy",
+          "glucuronidation deficiency"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 IMHA 치료 중 MMF 투여 후 간병증 및 췌장염 보고(증례 1건). 고양이의 글루쿠론산 포합 결핍으로 간 대사 부담 증가 가능."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 이상반응 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 12.0,
+      "mean": 8.0,
+      "species": "dog"
+    },
+    "f_percent": 54,
+    "protein_binding_percent": 97,
+    "evidence": "개: 단일 개체 연구에서 10, 15, 20 mg/kg 투여 시 생체이용률 54%, 65%, 87%. 소형 닥스훈트 연구에서 13 mg/kg PO 투여 후 최고 MPA 농도는 1시간 이내 도달, 반감기 5.5분(이 연구에서는 매우 짧음). 별도 연구에서 MPA 제거 반감기 약 8시간(±4시간). 인간: 경구 생체이용률 평균 94%, 최고 혈중 농도 투여 후 1~2시간, MPA 97% 단백 결합(알부민), 반감기 약 17시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 장간 순환 억제를 통한 MPA 노출 감소 약물군은 별도 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Acyclovir / Valacyclovir",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "MPA glucuronide accumulation"
+      ],
+      "evidence": "Increased serum concentrations of acyclovir and the phenolic glucuronide of mycophenolic acid when used concurrently."
+    },
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "In rats, concurrent use induced greater nephrotoxicity. Monitor renal function closely."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, or magnesium-containing)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "reduced bioavailability"
+      ],
+      "evidence": "Decreased absorption of mycophenolate; separate dosing by at least 2 hours."
+    },
+    {
+      "drug": "Azathioprine",
+      "severity": 3,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Increased risk for myelosuppression; concurrent use is not recommended."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced serum concentration"
+      ],
+      "evidence": "May inhibit enterohepatic recycling of mycophenolate, reducing serum concentrations."
+    },
+    {
+      "drug": "Immunosuppressive Agents (corticosteroids, leflunomide)",
+      "severity": 2,
+      "keywords": [
+        "additive immunosuppression",
+        "increased infection risk"
+      ],
+      "evidence": "Additive immunosuppressant effects could occur with concurrent use of corticosteroids (dexamethasone, predniso(lo)ne) or leflunomide."
+    },
+    {
+      "drug": "Iron (oral)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Decreased absorption of mycophenolate; separate dosing by at least 2 hours."
+    },
+    {
+      "drug": "Lanthanum Carbonate",
+      "severity": 2,
+      "keywords": [
+        "decreased plasma concentration"
+      ],
+      "evidence": "May decrease mycophenolate plasma concentrations."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "increased MPA concentration",
+        "increased glucuronide concentration"
+      ],
+      "evidence": "Potentially increased serum concentrations of mycophenolic acid and the phenolic glucuronide of mycophenolic acid."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "decreased AUC"
+      ],
+      "evidence": "May reduce mycophenolate absorption, decreasing MPA exposure (AUC)."
+    },
+    {
+      "drug": "Salicylates (aspirin, bismuth subsalicylate)",
+      "severity": 2,
+      "keywords": [
+        "increased free MPA concentration",
+        "protein displacement"
+      ],
+      "evidence": "Potentially increased concentrations of free mycophenolic acid."
+    },
+    {
+      "drug": "Sevelamer",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Decreased absorption of mycophenolate; administer MMF at least 2 hours prior to sevelamer."
+    },
+    {
+      "drug": "Telmisartan",
+      "severity": 2,
+      "keywords": [
+        "decreased AUC",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May decrease mycophenolate exposure (AUC)."
+    },
+    {
+      "drug": "Vaccines (modified live)",
+      "severity": 2,
+      "keywords": [
+        "reduced vaccine efficacy",
+        "immunosuppression"
+      ],
+      "evidence": "Vaccines may be less effective; administer vaccines prior to initiating mycophenolate therapy and avoid concurrent use."
+    },
+    {
+      "drug": "Cephalosporins (cephalexin, cefpodoxime)",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "additive immunosuppression",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling; additive immunosuppressant effects also possible."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    },
+    {
+      "drug": "Penicillins (amoxicillin/clavulanate)",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    },
+    {
+      "drug": "Sulfonamides, Potentiated (sulfa-/trimethoprim)",
+      "severity": 2,
+      "keywords": [
+        "enterohepatic recycling inhibition",
+        "reduced MPA exposure"
+      ],
+      "evidence": "May reduce MPA exposure by inhibiting enterohepatic recycling of the mycophenolate glucuronide metabolite."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 용혈성 빈혈(IMHA) - 프레드니솔론 병용",
+          "value": "8 - 12",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 12.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 프레드니솔론 2~3 mg/kg/day PO 병용(25 kg 초과 개는 50~60 mg/m²/day)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 용혈성 빈혈(IMHA) - 프레드니솔론 병용 (IV 투여)",
+          "value": "8 - 12",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 12.0,
+          "duration_note": "IV 투여 시 최소 2시간에 걸쳐 투여",
+          "evidence": "오프라벨. 프레드니솔론 2~3 mg/kg/day PO 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 혈소판감소증(IMTP) - 프레드니솔론 병용",
+          "value": "7 - 9",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 9.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 프레드니솔론 약 2 mg/kg/day 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "원인불명 뇌수막뇌척수염(MUE) - 코르티코스테로이드 병용",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 코르티코스테로이드 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "원인불명 뇌수막뇌척수염(MUE) - IV 투여",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "주사기 펌프로 20분에 걸쳐 IV 투여한 연구 있음",
+          "evidence": "오프라벨. 코르티코스테로이드 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "사구체 질환 면역억제 치료(IRIS 권고) - 급성/급속 진행성",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "이상반응 없을 시 최소 8주 치료 후 평가. 반응 시 최소 12~16주 지속 후 감량 고려",
+          "evidence": "오프라벨. IRIS 합의 성명 기반. 프레드니솔론 단독 또는 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 - 연하 가능 전 IV 투여",
+          "value": "15 - 20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "연하 가능할 때까지 IV 투여 후 경구로 전환",
+          "evidence": "오프라벨. 희석 후 2~4시간에 걸쳐 IV 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 - 경구 유지",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 연하 가능 후 경구 전환"
+        },
+        {
+          "logic_type": "linear",
+          "context": "재생불량성 빈혈(증례 보고)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "투여 2주 후 헤마토크릿 개선, 약 3주 후 완전 관해",
+          "evidence": "오프라벨. 단일 증례 보고"
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 피부 질환",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "고용량에서 GI 이상반응 증가",
+          "evidence": "오프라벨. 고용량에서 GI 독성 주의"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "IMHA 보조 치료(증례 보고)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 2마리 고양이 증례 보고. 약동학/약력학 데이터에 근거하여 일부 전문가는 고양이에서의 사용을 권장하지 않음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신기능 장애 환자에서 용량 조절이 필요할 수 있음. MPA 및 대사체가 주로 신장으로 배설되므로 신기능 저하 시 축적 가능. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 광범위하게 대사되나 간기능 장애 시 구체적인 용량 조절 권고는 명시되지 않음. 고양이에서 간병증 보고 있으므로 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "마이코페놀레이트 과민반응",
+      "match_terms": [
+        "hypersensitivity to mycophenolate",
+        "allergy to mycophenolate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 장애",
+      "match_terms": [
+        "severe renal dysfunction",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "염증성 장질환",
+      "match_terms": [
+        "inflammatory bowel disease",
+        "IBD",
+        "colitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "nursing",
+        "lactation",
+        "breastfeeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이에서의 사용(글루쿠론산 포합 결핍)",
+      "match_terms": [
+        "cat",
+        "feline",
+        "glucuronidation deficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본 모노그래프에서 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "마이코페놀레이트 모페틸(MMF)은 프로드럭으로, 체내에서 활성형인 마이코페놀산(MPA)으로 가수분해됨. MPA는 이노신 모노포스페이트 탈수소효소(IMPDH)를 비경쟁적·가역적으로 억제하며, 특히 활성화된 림프구에 존재하는 IMPDH 2형에 5배 높은 친화력을 가짐. 이를 통해 구아노신 뉴클레오타이드의 de novo 합성을 차단하여 T세포 및 B세포의 증식을 억제하고, B세포의 항체 생성을 억제함으로써 세포성 및 체액성 면역반응을 모두 억제함.",
+    "common_extra_effects": [
+      "설사(용량 의존적)",
+      "구토",
+      "식욕부진",
+      "기면/활동 감소",
+      "림프구감소증",
+      "유두종증",
+      "피부 감염 증가",
+      "궤양성 대장염",
+      "IV 투여 시 경미한 과민반응",
+      "면역억제로 인한 전신 감염 및 악성종양 위험 증가"
+    ],
+    "dog_mechanism": "개에서 MMF는 경구 투여 후 흡수되어 MPA로 전환됨. 소형 닥스훈트 연구에서 CD5+ T 림프구 증식 억제 효과가 관찰되지 않았으나, 다른 연구에서 IMPDH 활성 억제가 확인됨.",
+    "dog_extra_effects": [
+      "설사(가장 흔한 용량 제한 이상반응)",
+      "구토",
+      "식욕부진",
+      "기면/활동 감소",
+      "림프구감소증",
+      "유두종증",
+      "피부 감염 증가",
+      "궤양성 대장염",
+      "체중 감소"
+    ],
+    "cat_mechanism": "고양이에서 MMF는 MPA로 전환되나, 글루쿠론산 포합 능력이 결핍되어 주요 대사산물이 글루코시드 형태임. 혈장 MPA 분포가 매우 가변적이고 예측 불가능함.",
+    "cat_extra_effects": [
+      "설사(경구 투여 시 용량 의존적)",
+      "식욕감소",
+      "PCV 감소(참조 범위 내)",
+      "혈소판 수 감소(참조 범위 내)",
+      "간병증(증례 보고)",
+      "췌장염(증례 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 마이코페놀레이트는 IMHA, IMTP, 중증근무력증, 뇌수막뇌척수염, 사구체신염, 천포창 등 다양한 자가면역질환에 오프라벨로 사용됨. 가장 흔한 이상반응은 용량 의존적 설사이며, 10~15 mg/kg q8h 투여 시 GI 독성이 심각하여 임상적으로 제한됨. 일반적으로 10 mg/kg PO q12h가 임상에서 주로 사용됨. 마이코페놀레이트 소듐 장용정은 MMF 캡슐보다 설사, 체중 감소, 활동 감소가 유의하게 더 많이 발생하므로 상호 교환 불가. 치료 시작 전 및 치료 중 CBC(처음 1개월은 2~3주마다, 이후 2~3개월마다), 혈청 화학 검사, 요검사, 소변 배양 모니터링 권장.",
+    "cat": "고양이에서 마이코페놀레이트 사용 경험은 매우 제한적임. 고양이는 MPA 글루쿠론산 포합 능력이 결핍되어 있어 대사 경로가 다르고, 혈장 MPA 농도가 매우 가변적이며 예측 불가능함. 약동학/약력학 데이터에 근거하여 일부 전문가는 고양이에서의 사용을 권장하지 않음. 사용 시 설사, 간병증, 췌장염 등의 이상반응에 주의하고 면밀한 모니터링이 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 오프라벨 사용. GI 이상반응(설사, 구토, 식욕부진)이 용량 제한 요인. 중증 신기능 장애 시 용량 조절 필요. 염증성 장질환 환자에서 주의. 임신 동물에서 금기(최기형성). NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안전성 및 유효성 데이터 매우 부족. MPA 글루쿠론산 포합 결핍으로 대사 이상 가능. 간병증 및 췌장염 보고 있음. 일부 전문가는 약동학/약력학 데이터에 근거하여 고양이에서의 사용을 권장하지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 캡슐: 20~25°C 보관, 빛 차단. 경구 현탁액 분말: 15~30°C 보관(권장 25°C). 재구성 후 실온 또는 냉장 보관 가능(냉동 금지), 60일 후 폐기. 주사제: 15~30°C 보관(권장 25°C). 재구성 후 5% 포도당으로 희석, 희석 후 6시간 이내 투여. 5% 포도당으로 1~10 mg/mL로 희석 시 냉장 또는 실온에서 7일간 안정.",
+    "forms": [
+      "Mycophenolate Mofetil 경구 캡슐 250 mg (CellCept®, 제네릭)",
+      "Mycophenolate Mofetil 경구 정제 500 mg (CellCept®, 제네릭)",
+      "Mycophenolate Mofetil 경구 현탁액 분말 200 mg/mL (재구성 후, 225 mL 병, CellCept®)",
+      "Mycophenolate Mofetil 동결건조 주사용 분말 500 mg/20 mL 바이알 (CellCept®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "마이코페놀레이트 모페틸(MMF)은 면역억제제로, 수의학에서 개의 IMHA, IMTP, 중증근무력증, 뇌수막뇌척수염, 사구체신염 등 자가면역질환에 오프라벨로 사용됨. 허가된 수의용 제품은 없으며, 인간용 제품을 사용함. 가장 흔한 이상반응은 용량 의존적 설사이며 심각할 수 있음. 고양이에서는 글루쿠론산 포합 결핍으로 인해 사용에 주의가 필요하며 일부 전문가는 권장하지 않음. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요. 임신 동물 및 임신 가능성 있는 보호자에서 특별 주의 요망.",
+    "indications": "개(오프라벨): 면역매개성 용혈성 빈혈(IMHA), 면역매개성 혈소판감소증(IMTP), 중증근무력증, 원인불명 뇌수막뇌척수염(MUE), 사구체신염, 천포창, 재생불량성 빈혈, 면역매개성 피부 질환, 장기이식 거부반응 예방. 고양이(오프라벨, 제한적): IMHA 보조 치료(증례 보고 수준). 인간(허가): 장기이식 거부반응 예방; 다양한 자가면역질환에 오프라벨 사용.",
+    "client_info": "이 약은 가능하면 공복에 투여하세요. 구토나 식욕부진이 발생하면 음식과 함께 투여해 보세요. 설사, 구토, 식욕부진이 가장 흔한 이상반응이며 심각할 수 있습니다. 이러한 증상이 지속되거나 심해지면 즉시 수의사에게 연락하세요. 이 약은 면역 억제 효과가 있어 감염 위험이 증가할 수 있으므로 발열, 무기력, 식욕부진 등의 감염 징후를 주의 깊게 관찰하세요. 이 약은 NIOSH에서 위험 약물로 분류되어 있습니다. 임신 중이거나 임신 가능성이 있는 여성은 이 약을 취급할 때 반드시 장갑을 착용하고 캡슐이나 정제의 분진 흡입을 피하세요. 제조사는 정제나 캡슐을 분쇄, 분할, 개봉하지 않도록 권고합니다. 약을 투여한 후에는 손을 철저히 씻으세요. 이 약의 노출 위험에 대해 우려가 있으시면 수의사 또는 의료 제공자와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Compatibility",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Therapeutic Drug Monitoring (TDM) specific thresholds",
+      "Veterinary-specific CYP enzyme data",
+      "Specific renal dose adjustment thresholds (creatinine values)",
+      "Hepatic dose adjustment recommendations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/27.jsonl",
+    "extracted_at": "2026-03-10T21:44:10.224701+00:00",
+    "reviewer": null
+  }
+}

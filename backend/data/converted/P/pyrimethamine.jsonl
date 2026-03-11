@@ -1,0 +1,533 @@
+{
+  "id": "pyrimethamine",
+  "drug_identity": {
+    "name_ko": "피리메타민",
+    "name_en": "Pyrimethamine",
+    "active_ingredient": "Pyrimethamine",
+    "brand_names": [
+      "Daraprim",
+      "Malocide",
+      "Pirimecidan"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 제제(Daraprim® 25mg 정)를 소동물 및 조류에 오프라벨로 사용. 말에서는 sulfadiazine과의 복합제로 승인됨.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 적어도 부분적으로 대사되며, 대사산물은 소변에서 검출됨(인체 데이터). 수의 종별 CYP 경로는 보고되지 않음."
+    },
+    "extra_information": "말에서 경구 생체이용률 약 55%; 음식(알팔파 건초 포함)은 흡수를 최대 50%까지 감소시킬 수 있음. 정상상태 분포용적 약 1.5 L/kg, 소실 반감기 12시간. 개·고양이 특이적 약동학 데이터는 보고되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개·고양이 종별 약동학 데이터 부재; 인체 및 말 데이터를 참고하여 추정. 골수 억제(혈액독성)가 주요 독성 우려 사항임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "blood-brain barrier penetration",
+          "CNS toxicity"
+        ],
+        "index": 1,
+        "evidence": "혈액-뇌 장벽을 통과하며, 과량 투여 시 CNS 자극(경련 포함) 가능. 치료 용량에서 CNS 독성은 낮음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "bone marrow depression",
+          "anemia",
+          "thrombocytopenia",
+          "leukopenia",
+          "myelosuppression"
+        ],
+        "index": 0,
+        "evidence": "소동물에서 골수 억제(빈혈, 혈소판감소증, 백혈구감소증)가 주요 부작용으로 보고됨. 2주 이상 치료 시 빈번한 CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "renal monitoring"
+        ],
+        "index": 2,
+        "evidence": "신장 기능 저하 환자에서 주의 사용 권장. 과량 투여 시 장기 신장 모니터링 권장. 신독성 직접 보고는 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic impairment caution"
+        ],
+        "index": 3,
+        "evidence": "간에서 대사됨. 간 기능 저하 환자에서 주의 사용 권장. 직접적인 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cardiac rhythm disorders"
+        ],
+        "index": 4,
+        "evidence": "인체에서 심장 리듬 장애가 보고되었으나 개에서의 직접 보고는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "blood-brain barrier penetration",
+          "CNS toxicity"
+        ],
+        "index": 1,
+        "evidence": "혈액-뇌 장벽을 통과함. 고양이에서 CNS 독성 직접 보고는 없으나 부작용 프로파일이 더 심각할 수 있음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "bone marrow depression",
+          "anemia",
+          "thrombocytopenia",
+          "leukopenia",
+          "myelosuppression",
+          "more prominent in cats"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 부작용이 더 두드러지며, 병용 치료 시작 4~6일 후 나타날 수 있음. 일부 임상의는 고양이에서의 사용을 피할 것을 권장함."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment caution"
+        ],
+        "index": 2,
+        "evidence": "신장 기능 저하 환자에서 주의 사용 권장. 고양이 특이적 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic impairment caution"
+        ],
+        "index": 3,
+        "evidence": "간에서 대사됨. 간 기능 저하 환자에서 주의 사용 권장. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cardiac rhythm disorders"
+        ],
+        "index": 4,
+        "evidence": "인체에서 심장 리듬 장애가 보고되었으나 고양이에서의 직접 보고는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 72.0,
+      "max": 120.0,
+      "mean": 96.0,
+      "species": "human"
+    },
+    "f_percent": 55,
+    "protein_binding_percent": 80,
+    "evidence": "경구 생체이용률 55%는 말 데이터(1 mg/kg PO). 단백결합 80% 및 반감기 3~5일(72~120시간)은 인체 데이터. 개·고양이 특이적 약동학 데이터 없음. 말에서 반감기는 12시간으로 인체와 상이함."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Dapsone",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "May increase the risk for myelosuppression when used concomitantly with pyrimethamine."
+    },
+    {
+      "drug": "Folic Acid",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "folate antagonism"
+      ],
+      "evidence": "Folic acid may reduce pyrimethamine efficacy by competing at the dihydrofolate reductase level."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "antifolate",
+        "myelosuppression",
+        "additive toxicity"
+      ],
+      "evidence": "Antifolate effects may be additive, increasing the risk of myelosuppression."
+    },
+    {
+      "drug": "Sulfonamides",
+      "severity": 1,
+      "keywords": [
+        "synergism",
+        "toxoplasmosis",
+        "antiprotozoal"
+      ],
+      "evidence": "Pyrimethamine is synergistic with sulfonamides (e.g., sulfadiazine, sulfadimethoxine) in activity against toxoplasmosis. Combination is intentional and beneficial but monitor for additive hematologic effects."
+    },
+    {
+      "drug": "Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "competitive inhibition",
+        "reduced efficacy",
+        "additive adverse effects"
+      ],
+      "evidence": "Trimethoprim competitively inhibits pyrimethamine, decreasing efficacy of the more effective dihydrofolate reductase inhibitor. Additive adverse effects possible. Not recommended in humans; currently not recommended in horses."
+    },
+    {
+      "drug": "Zidovudine",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "myelosuppression"
+      ],
+      "evidence": "Zidovudine may reduce pyrimethamine efficacy and may also increase the risk for myelosuppression."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 20.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "톡소플라즈마증 (파종성, 오시스트 배출 감소)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~4주, 설폰아미드 30 mg/kg BID와 병용",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, toxoplasmosis)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "Hepatozoon americanum 감염",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "트리메토프림/설파디아진 15 mg/kg PO q12h 및 클린다마이신 10 mg/kg q8h와 병용. 관해 후 데코퀴네이트 15 mg/kg q12h로 2년간 유지.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, Hepatozoon americanum)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 네오스포라증",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주, 트리메토프림/설파디아진 15~20 mg/kg PO q12h와 병용. 임상 개선이 느릴 경우 임상 징후 안정 후 2주까지 연장. 동배 강아지 모두 치료.",
+          "evidence": "Extra-label. Plumb's Dosages section (dog, canine neosporosis)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "파종성 톡소플라즈마증 (오시스트 배출 감소 포함)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~4주, 설폰아미드 30 mg/kg PO BID와 병용. 부작용 프로파일로 인해 일부 임상의는 사용 회피 권장.",
+          "evidence": "Extra-label. Plumb's Dosages section (cat, toxoplasmosis, option a)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 폐 톡소플라즈마증 (사이클로스포린으로 면역억제된 고양이 포함)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "클린다마이신 12.5 mg/kg PO SID(음식 또는 물과 함께)와 병용",
+          "evidence": "Extra-label. Plumb's Dosages section (cat, toxoplasmosis, option b)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 환자에서 주의 사용 권장(Plumb's 명시). 구체적인 용량 조정 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 환자에서 주의 사용 권장(Plumb's 명시). 구체적인 용량 조정 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "피리메타민 과민증",
+      "match_terms": [
+        "pyrimethamine hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "엽산 결핍으로 인한 혈액학적 장애",
+      "match_terms": [
+        "folate deficiency",
+        "megaloblastic anemia",
+        "hematologic disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 엽산 결핍",
+      "match_terms": [
+        "folate deficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (부작용 프로파일)",
+      "match_terms": [
+        "feline",
+        "cat"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "디하이드로엽산 환원효소(dihydrofolate reductase) 억제제로, 디하이드로엽산의 테트라하이드로엽산으로의 전환을 차단함. 포유류 효소보다 원충 효소에 더 선택적으로 결합하여 원충의 단백질 및 핵산 합성을 저해함.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "무기력/우울",
+      "골수 억제 (빈혈, 혈소판감소증, 백혈구감소증)",
+      "기형 유발 가능성 (임신 중 사용 시)"
+    ],
+    "dog_mechanism": "트리메토프림과 유사한 엽산 길항제로 작용. 설폰아미드와 병용 시 톡소플라즈마증에 대해 상승 효과 발휘.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "무기력",
+      "우울",
+      "골수 억제 (빈혈, 혈소판감소증, 백혈구감소증)"
+    ],
+    "cat_mechanism": "트리메토프림과 유사한 엽산 길항제로 작용. 고양이에서 부작용이 더 두드러질 수 있음.",
+    "cat_extra_effects": [
+      "식욕부진",
+      "구토",
+      "무기력",
+      "우울",
+      "골수 억제 (빈혈, 혈소판감소증, 백혈구감소증) — 개보다 더 심각할 수 있음",
+      "병용 치료 시작 4~6일 후 부작용 발현 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 톡소플라즈마증, Hepatozoon americanum 감염, 네오스포라증 치료에 설폰아미드 또는 트리메토프림/설파디아진과 병용하여 사용됨(모두 오프라벨). 2주 이상 치료 시 CBC 및 혈소판 수 빈번한 모니터링 필요. 엽산 결핍 징후 발현 시 용량 감량 또는 투여 중단. 폴린산(류코보린) 투여로 혈액학적 부작용 완화 가능.",
+    "cat": "고양이에서 부작용 프로파일이 더 심각하여 일부 임상의는 사용을 피할 것을 권장함. 25mg 정제 제형으로 인해 정확한 용량 계산이 어려우며, 음식에 혼합 시 기호성이 낮음. 사용 시 CBC 및 혈소판 수 빈번한 모니터링 필수. 폴린산(류코보린) 병용 투여 고려."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 또는 간 기능 저하 환자에서 주의 사용. 엽산 결핍 징후 모니터링. 2주 이상 치료 시 CBC 빈번한 모니터링 필요. 임신 중 사용 시 기형 유발 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "부작용이 개보다 더 심각할 수 있어 일부 임상의는 사용 회피 권장. 사용 시 면밀한 모니터링 필수. 25mg 정제로 인한 정확한 용량 계산 어려움. 음식에 혼합 시 기호성 낮음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~25°C(59°F~77°F)에서 밀폐된 차광 용기에 보관. 현탁액 제조 시 체리 시럽, 옥수수 시럽 또는 수크로스 함유 액체 사용 시 실온 보관 후 7일 이내 폐기.",
+    "forms": [
+      "Pyrimethamine Tablets 25 mg (Daraprim®, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피리메타민은 엽산 길항제로, 설폰아미드와 병용하여 개·고양이의 톡소플라즈마증, 네오스포라증, Hepatozoon americanum 감염 치료에 오프라벨로 사용됨. 좁은 치료 범위를 가지며, 골수 억제(빈혈, 혈소판감소증, 백혈구감소증)가 주요 부작용임. 고양이에서 부작용이 더 심각할 수 있어 주의 필요. 수의과 승인 제품 없음(인체용 25mg 정제 사용). 임신 중 사용 금기.",
+    "indications": "【승인 적응증】 없음(수의과 승인 제품 없음). 말에서는 sulfadiazine과의 복합제로 말 원충성 척수뇌염(EPM) 치료에 승인됨.\n【오프라벨 적응증】 개: 톡소플라즈마증(설폰아미드 병용), Hepatozoon americanum 감염(트리메토프림/설파디아진+클린다마이신 병용), 네오스포라증(트리메토프림/설파디아진 병용). 고양이: 톡소플라즈마증(설폰아미드 또는 클린다마이신 병용). 조류: 원충 감염(톡소플라즈마증, 아톡소플라즈마증, 사르코시스티스).",
+    "client_info": "【보호자 안내】\n• 이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 음식에 섞으면 쓴맛이 날 수 있습니다.\n• 고양이는 부작용이 더 잘 나타날 수 있으므로 주의가 필요합니다.\n• 주요 부작용: 구토, 식욕 감소, 무기력/우울(피로감), 골수 억제. 출혈, 극심한 피로, 감염 징후, 발열이 나타나면 즉시 수의사에게 연락하십시오.\n• 임신한 여성은 이 약을 매우 조심스럽게 다루어야 합니다.\n• 투약 중 정기적인 혈액 검사를 위해 수의사 방문을 빠뜨리지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog/Cat specific pharmacokinetics",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme profile",
+      "Onset of action data",
+      "T_max data for dogs/cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/32.jsonl",
+    "extracted_at": "2026-03-10T22:58:36.956636+00:00",
+    "reviewer": null
+  }
+}

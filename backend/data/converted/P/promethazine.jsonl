@@ -1,0 +1,599 @@
+{
+  "id": "promethazine",
+  "drug_identity": {
+    "name_ko": "프로메타진",
+    "name_en": "Promethazine",
+    "active_ingredient": "Promethazine hydrochloride",
+    "brand_names": [
+      "Phenergan",
+      "Phenadoz",
+      "Promethegan"
+    ],
+    "allergy_class": "phenothiazine",
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이에서 구토 억제제로 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 12.5,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 간에서 대사되며 대사산물은 주로 소변으로 배설됨. 동물에서의 CYP 경로 정보는 Plumb's에 기재되지 않음."
+    },
+    "extra_information": "개에서 경구 생체이용률은 약 10%로 매우 낮음. 동물에서의 약동학 정보는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 동물 종 특이적 약동학 데이터 부족으로 사람 데이터 및 페노티아진 계열 약물 특성을 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "seizure threshold",
+          "extrapyramidal",
+          "paradoxical CNS stimulation"
+        ],
+        "index": 1,
+        "evidence": "진정, CNS 억제, 경련 역치 저하, 추체외로 증상 등 중추신경계 영향이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "myelosuppression",
+          "discolors blood"
+        ],
+        "index": 1,
+        "evidence": "골수억제제와 병용 시 골수억제 효과 증강 가능. 혈액과 접촉 시 변색 유발."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urinary retention"
+        ],
+        "index": 1,
+        "evidence": "항콜린 작용으로 인한 요저류 가능성. 직접적 신독성 근거는 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic dysfunction",
+          "metabolized in the liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사됨. 간기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "QT prolongation",
+          "hypotension",
+          "cardiac disease"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 위험, 저혈압 유발 가능. 심장 질환 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "extrapyramidal",
+          "paradoxical CNS stimulation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정 및 CNS 영향 보고. 페노티아진 계열 특성상 추체외로 증상 가능."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "골수억제제와 병용 시 골수억제 효과 증강 가능."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urinary retention"
+        ],
+        "index": 1,
+        "evidence": "항콜린 작용으로 인한 요저류 가능성. 직접적 신독성 근거는 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic dysfunction",
+          "metabolized in the liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사됨. 간기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "QT prolongation",
+          "hypotension",
+          "cardiac disease"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 위험, 저혈압 유발 가능. 심장 질환 환자에서 주의 사용 권고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 10.0,
+      "species": "human"
+    },
+    "f_percent": 10,
+    "protein_binding_percent": null,
+    "evidence": "사람에서 반감기 약 10시간. 개에서 경구 생체이용률 약 10%. 동물에서의 Tmax 및 단백결합률 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 세로토닌/추체외로 위험으로 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Antacids may reduce GI absorption of oral phenothiazines."
+    },
+    {
+      "drug": "Antidiarrheal Mixtures (kaolin/pectin, bismuth subsalicylate)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Antidiarrheal mixtures may reduce GI absorption of oral phenothiazines."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, glycopyrrolate, hyoscyamine)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic"
+      ],
+      "evidence": "Additive anticholinergic effects when used with promethazine."
+    },
+    {
+      "drug": "CNS Depressant Agents (anesthetics, barbiturates, narcotics, sedatives)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "May cause additive CNS depression if used with phenothiazines."
+    },
+    {
+      "drug": "Emetics (apomorphine, ropinirole)",
+      "severity": 2,
+      "keywords": [
+        "reduced emetic efficacy",
+        "sedation",
+        "hypotension"
+      ],
+      "evidence": "Promethazine may decrease the effectiveness of emetics and increase risk for sedation and hypotension."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 2,
+      "keywords": [
+        "reduced pressor effect",
+        "vasodilation"
+      ],
+      "evidence": "Phenothiazines may reduce or reverse pressor effects of epinephrine."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "extrapyramidal effects"
+      ],
+      "evidence": "Phenothiazines may potentiate the extrapyramidal effects of metoclopramide."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "extrapyramidal effects",
+        "potentiation"
+      ],
+      "evidence": "MAOIs may potentiate extrapyramidal effects of promethazine. Concurrent use should be avoided."
+    },
+    {
+      "drug": "Myelosuppressants",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression"
+      ],
+      "evidence": "Promethazine may potentiate the myelosuppressive effects of myelosuppressants."
+    },
+    {
+      "drug": "Opioids (buprenorphine, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive CNS depression"
+      ],
+      "evidence": "Opioids may enhance the hypotensive effects of phenothiazines; dosages of promethazine may need to be reduced."
+    },
+    {
+      "drug": "Organophosphate Agents",
+      "severity": 2,
+      "keywords": [
+        "potentiation"
+      ],
+      "evidence": "Phenothiazines should not be given within 1 month of deworming with organophosphates as their effects may be potentiated."
+    },
+    {
+      "drug": "QT Prolonging Agents (cisapride, fluoroquinolones, sotalol, SSRIs)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes"
+      ],
+      "evidence": "Increased risk for QT prolongation and torsade de pointes. Concurrent administration of cisapride and promethazine is contraindicated in humans."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구토 억제 / 멀미 예방 (오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 생체이용률이 낮아 효과가 제한적일 수 있음",
+          "evidence": "Plumb's: 0.2–0.5 mg/kg PO every 6 to 8 hours; oral bioavailability is low so efficacy may be limited."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "구토 억제 (자일라진 투여 전, 오프라벨)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "자일라진 투여 1시간 전 투여",
+          "evidence": "소규모 연구에서 자일라진 투여 1시간 전 IM 2 mg/kg 투여 시 구토 빈도 유의하게 감소."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's에 신기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 장애 환자에서 소량 투여 권고. 간에서 대사되므로 간기능 저하 시 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (프로메타진 또는 다른 페노티아진)",
+      "match_terms": [
+        "hypersensitivity",
+        "phenothiazine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증 또는 쇼크",
+      "match_terms": [
+        "hypovolemia",
+        "shock",
+        "hypotension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동맥내 주사",
+      "match_terms": [
+        "intra-arterial injection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "피하 주사",
+      "match_terms": [
+        "subcutaneous injection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "파상풍 또는 스트리크닌 중독",
+      "match_terms": [
+        "tetanus",
+        "strychnine intoxication"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "협우각 녹내장",
+      "match_terms": [
+        "narrow-angle glaucoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대",
+      "match_terms": [
+        "prostatic hypertrophy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "어린 동물 또는 쇠약한 동물",
+      "match_terms": [
+        "very young",
+        "debilitated"
+      ],
+      "severity": "caution",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "H1 수용체, 알파2-아드레날린 수용체, 무스카린 수용체 길항 작용; 도파민 길항 작용(다른 페노티아진보다 약함). 구토 억제는 주로 뇌의 구토 중추 및 화학수용체 유발대(CTZ)에 대한 작용에 의함.",
+    "common_extra_effects": [
+      "진정",
+      "항콜린 효과 (구강 건조, 변비, 요저류)",
+      "역설적 CNS 자극 (과흥분, 진전, 비정상적 근육 운동, 경련)",
+      "경련 역치 저하",
+      "저혈압",
+      "추체외로 증상",
+      "주사 부위 반응"
+    ],
+    "dog_mechanism": "페노티아진 계열로서 H1, 알파2-아드레날린, 무스카린 수용체 길항 작용을 통해 구토 억제 및 항히스타민 효과 발휘.",
+    "dog_extra_effects": [
+      "진정",
+      "항콜린 효과",
+      "경련 역치 저하",
+      "추체외로 증상 가능"
+    ],
+    "cat_mechanism": "페노티아진 계열로서 구토 억제 효과. 자일라진 유발 구토 억제에 효과적임이 소규모 연구에서 확인됨.",
+    "cat_extra_effects": [
+      "진정",
+      "항콜린 효과",
+      "추체외로 증상 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률이 약 10%로 매우 낮아 경구 투여 시 효과가 제한적일 수 있음. 아토피 피부염의 소양증 치료에는 효과가 불량함. 전신마취제 용량 감소 가능성에 주의.",
+    "cat": "고양이에서 자일라진 투여 1시간 전 IM 2 mg/kg 투여 시 구토 빈도를 유의하게 감소시킨 소규모 연구 결과가 있음. 수의학적 경험이 제한적이므로 주의하여 사용."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간기능 장애, 심장 질환, 어린 동물, 쇠약한 동물에서 주의 사용. 경구 생체이용률 낮음. 동맥내 및 피하 주사 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "수의학적 사용 경험 제한적. 간기능 장애, 심장 질환, 어린 동물에서 주의 사용. 동맥내 및 피하 주사 금지."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 실온(20-25°C) 밀폐 차광 용기 보관. 시럽: 15-25°C 차광 및 동결 방지. 주사제: 실온(20-25°C) 차광 보관, 사용 전까지 포장 유지. 좌약: 냉장(2-8°C) 보관. 침전물 형성 또는 변색 시 사용 금지.",
+    "forms": [
+      "Promethazine HCl 주사제: 25 mg/mL, 50 mg/mL (1 mL 앰플)",
+      "Promethazine HCl 경구 시럽: 1.25 mg/mL",
+      "Promethazine HCl 경구 정제: 12.5 mg, 25 mg, 50 mg",
+      "Promethazine HCl 직장 좌약: 12.5 mg, 25 mg, 50 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프로메타진은 페노티아진 계열 항히스타민제/구토억제제로, 수의학적 허가 제품은 없으며 개와 고양이에서 오프라벨로 사용됨. 개에서 경구 생체이용률이 약 10%로 매우 낮아 경구 투여 효과가 제한적임. 동맥내 및 피하 주사는 절대 금기. 저혈량증 및 쇼크 환자에서 금기. QT 연장 위험 약물과의 병용 시 주의 필요.",
+    "indications": "개: 구토 억제, 멀미 예방 (오프라벨, PO). 고양이: 자일라진 유발 구토 억제 (오프라벨, IM). 말: 저혈압 위험 환자에서 아세프로마진 대안 (오프라벨, IV). 아토피 피부염의 소양증 치료에는 효과 불량.",
+    "client_info": "이 약은 구강 건조를 유발할 수 있습니다. 동물의 혀에 소량의 물을 10~15분간 적셔주면 도움이 될 수 있습니다. 진정 또는 행동 변화가 나타날 수 있으니 걱정되시면 수의사에게 연락하세요. 구토나 설사가 지속되면 심각한 상태일 수 있으니 증상이 악화되거나 멈추지 않으면 수의사에게 연락하세요. 비정상적인 움직임, 진전, 또는 경직이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Therapeutic Drug Monitoring",
+      "Renal Dose Adjustment",
+      "Veterinary PK studies"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (veterinary)",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:48:56.643077+00:00",
+    "reviewer": null
+  }
+}

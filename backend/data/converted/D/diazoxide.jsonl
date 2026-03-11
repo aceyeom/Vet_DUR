@@ -1,0 +1,436 @@
+{
+  "id": "diazoxide",
+  "drug_identity": {
+    "name_ko": "디아족사이드",
+    "name_en": "Diazoxide",
+    "active_ingredient": "Diazoxide",
+    "brand_names": [
+      "Proglycem",
+      "Proglicem",
+      "Eudemine",
+      "Glicemin",
+      "Hypertonalum",
+      "Hyperstat IV",
+      "Sefulken",
+      "Tensuril"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인슐린종에 의한 저혈당 치료에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Cap",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 부분적으로 대사되며, 대사산물 및 미변화체로 신장을 통해 배설됨. 신장 기능 저하 시 반감기 연장."
+    },
+    "extra_information": "개에서 혈청 반감기는 약 5시간으로 보고됨. 기타 개의 약동학적 파라미터는 이용 불가. 신장에 가장 높은 농도로 분포하며, 간 및 부신에도 높은 농도 분포. 혈장 단백 결합률 약 90%. 태반 및 CNS 통과 확인됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 특이적 수의학 PK 데이터 제한적. 신장 배설 및 간 대사 명시됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS penetration",
+          "crosses CNS"
+        ],
+        "index": 1,
+        "evidence": "디아족사이드는 CNS를 통과하는 것으로 알려져 있음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "agranulocytosis",
+          "aplastic anemia",
+          "thrombocytopenia",
+          "hematologic abnormalities"
+        ],
+        "index": 2,
+        "evidence": "무과립구증, 재생불량성 빈혈, 혈소판감소증 등 혈액학적 이상이 부작용으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "sodium and water retention",
+          "renal insufficiency",
+          "half-life prolonged in renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장을 통해 배설되며, 신부전 시 반감기 연장. 나트륨 및 수분 저류 유발 가능. 신부전 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "partially metabolized in liver",
+          "hepatic disease",
+          "adverse effects more noted with hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "간에서 부분 대사됨. 간질환 동반 시 부작용 발현 증가 가능성 명시됨."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "sodium and water retention",
+          "congestive heart failure caution"
+        ],
+        "index": 2,
+        "evidence": "빈맥 및 나트륨/수분 저류 부작용 보고. 울혈성 심부전 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적인 CNS 부담 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 혈액학적 부작용 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 신장 부담 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 간 부담 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 심장 부담 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 12.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 5.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 혈청 반감기 약 5시간. 인간에서 10 mg/kg PO 캡슐 투여 후 약 12시간에 최고 혈중 농도 도달. 혈장 단백 결합률 약 90%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-Adrenergic Agents (e.g., phenoxybenzamine)",
+      "severity": 2,
+      "keywords": [
+        "혈당 상승",
+        "diazoxide 효과 감소"
+      ],
+      "evidence": "알파 차단제는 혈당을 증가시켜 diazoxide의 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Glucocorticoids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "고혈당 상승 효과 증강"
+      ],
+      "evidence": "글루코코르티코이드와 병용 시 고혈당 효과가 증강될 수 있음."
+    },
+    {
+      "drug": "Hypotensive Agents (e.g., amlodipine, hydralazine, prazosin, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "저혈압 증강"
+      ],
+      "evidence": "Diazoxide는 다른 강압제의 저혈압 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "고혈당 효과 증강"
+      ],
+      "evidence": "페노티아진계 약물은 diazoxide의 고혈당 효과를 증강시킬 수 있음."
+    },
+    {
+      "drug": "Thiazide Diuretics (e.g., hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "고혈당 효과 증강",
+        "저혈압"
+      ],
+      "evidence": "티아지드 이뇨제는 경구 diazoxide의 고혈당 효과를 증강시킬 수 있음. 병용 시 저혈압 주의."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "인슐린 분비 종양(인슐린종) 또는 비인슐린 세포 종양에 의한 저혈당 보조 치료 (오프라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "효과에 따라 최대 30 mg/kg BID까지 점진적으로 증량 가능",
+          "evidence": "초기 5 mg/kg PO BID로 시작, 효과에 따라 최대 30 mg/kg PO BID까지 증량. 단독 투여 효과 불충분 시 hydrochlorothiazide 1-2 mg/kg PO q12h 병용 고려."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 반감기가 연장됨. 신부전 환자에서 용량 감소 및 주의 사용 권고. 구체적인 조정 수치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 부분 대사되므로 간질환 동반 시 부작용 발현이 더 쉽게 나타날 수 있음. 구체적인 용량 조정 수치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "기능성 저혈당",
+      "match_terms": [
+        "functional hypoglycemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "인슐린 과다투여에 의한 저혈당 (당뇨 환자)",
+      "match_terms": [
+        "insulin overdose hypoglycemia",
+        "diabetic hypoglycemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "티아지드 이뇨제 과민증",
+      "match_terms": [
+        "thiazide hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "췌장 베타세포에서 인슐린 분비를 직접 억제하고, 간의 당신생 및 글리코겐 분해를 촉진하며, 베타 아드레날린 시스템을 자극하여 에피네프린 분비를 유도하고 조직의 포도당 이용을 억제함으로써 혈당을 상승시킴. 또한 말초 세동맥 평활근에 직접 혈관확장 효과를 나타냄.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "과다침흘림",
+      "빈맥",
+      "혈액학적 이상 (무과립구증, 재생불량성 빈혈, 혈소판감소증)",
+      "췌장염",
+      "당뇨병",
+      "백내장",
+      "나트륨 및 수분 저류"
+    ],
+    "dog_mechanism": "인슐린종에 의한 저혈당 치료에 사용. 인슐린 분비 억제 및 혈당 상승 기전.",
+    "dog_extra_effects": [
+      "과다침흘림",
+      "식욕부진",
+      "구토",
+      "설사",
+      "빈맥",
+      "혈액학적 이상",
+      "췌장염",
+      "당뇨병",
+      "백내장",
+      "나트륨 및 수분 저류"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 인슐린종에 의한 저혈당 치료에 오프라벨로 사용됨. 초기 5 mg/kg PO BID로 시작하여 최대 30 mg/kg PO BID까지 증량 가능. 식사와 함께 투여 시 위장관 부작용 감소. 간질환 동반 시 부작용 발현 증가 주의. 혈청 반감기 약 5시간.",
+    "cat": "고양이에 대한 용량 정보가 Plumb's 모노그래프에 명시되어 있지 않음. 사용 시 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "울혈성 심부전 또는 신부전 환자에서 주의 사용. 간질환 동반 시 부작용 발현 증가 가능. 혈액학적 이상 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 안전성 및 용량 데이터 부재. 사용 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 25°C(77°F)에서 보관. 15°C~30°C(59°F~86°F) 범위 허용. 용액 및 현탁액은 동결 금지. 변색된 용액/현탁액은 사용 금지.",
+    "forms": [
+      "Diazoxide 경구 현탁액 50 mg/mL (소르비톨 함유, 30 mL 눈금 드로퍼 포함, Proglycem®, 초콜릿-민트 향)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디아족사이드는 인슐린종에 의한 저혈당 치료에 사용되는 경구 혈당 상승제입니다. 수의학적 승인 제품은 없으며 오프라벨로 사용됩니다. 개에서 초기 5 mg/kg BID로 시작하여 최대 30 mg/kg BID까지 증량 가능합니다. 식사와 함께 투여하면 위장관 부작용을 줄일 수 있습니다. 신부전 및 울혈성 심부전 환자에서 주의가 필요하며, 혈액학적 이상 모니터링이 권장됩니다.",
+    "indications": "인슐린 과분비(인슐린종)에 의한 저혈당 치료 (글루코코르티코이드 및 식이 요법에 반응하지 않는 경우). 개, 페럿, 기니피그에서 오프라벨로 사용됨.",
+    "client_info": "이 약은 혈당을 높이기 위해 사용됩니다. 위장관 부작용(침 흘림, 구토, 설사, 식욕 감소)을 줄이기 위해 식사와 함께 투여하세요. 약이 쓴맛이 나므로 투여가 어려울 경우 수의사나 약사에게 문의하세요. 현탁액은 투여 전 잘 흔들어 주세요. 고혈당 증상(평소보다 많은 음수, 배뇨 증가, 식욕 증가, 무기력, 근육 약화, 우울, 심한 구토)이 나타나면 수의사에게 연락하세요. 저혈당 증상(발작, 근육 약화, 쓰러짐, 근육 경련, 무기력, 비틀거림)이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosage",
+      "CYP profile",
+      "Oral bioavailability",
+      "Onset of action"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/39.jsonl",
+    "extracted_at": "2026-03-11T01:28:07.705182+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,475 @@
+{
+  "id": "cefepime",
+  "drug_identity": {
+    "name_ko": "세페핌",
+    "name_en": "Cefepime",
+    "active_ingredient": "Cefepime",
+    "brand_names": [
+      "Maxipime",
+      "Axepime",
+      "Biopime",
+      "Cefepen",
+      "Ceficad",
+      "Cemax",
+      "Cepim",
+      "Cepimix",
+      "Forpar",
+      "Maxcef",
+      "Maxil"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개, 고양이, 신생 망아지 등에서 중증 감염 치료 시 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.85,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체에서 투여량의 약 85%가 소변으로 미변화체로 배설되며, 1% 미만이 대사됨. CYP 효소 관여 없음."
+    },
+    "extra_information": "개: 정상상태 분포용적 ≈0.14 L/kg, 소실 반감기 약 1.1시간, 청소율 약 0.13 L/kg/시간. 신생 망아지: 분포용적 ≈0.18 L/kg, 반감기 약 1.65시간, 청소율 약 0.08 L/kg/시간. 경구 흡수 없음; 반드시 비경구 투여 필요."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학적 PK 데이터 제한적. 신장 배설 비율(85%) 및 신독성 상호작용 위험에 근거하여 신장 부담 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "encephalopathy",
+          "seizures",
+          "neuromuscular excitability"
+        ],
+        "index": 1,
+        "evidence": "신기능 저하 환자에서 과량 투여 시 뇌병증, 경련, 신경근 흥분성이 보고됨(주로 인체 데이터). 정상 신기능 개에서는 위험 낮음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "false-positive Coombs test"
+        ],
+        "index": 1,
+        "evidence": "세팔로스포린 계열에서 직접 쿰스 검사 위양성 가능성 보고됨. 용혈성 빈혈 위험은 낮음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "nephrotoxicity",
+          "renal impairment",
+          "renal function monitoring"
+        ],
+        "index": 3,
+        "evidence": "투여량의 85%가 신장으로 미변화체 배설. 아미노글리코사이드와 병용 시 신독성 위험 증가. 신기능 저하 시 용량 조절 권장(인체 기준). 신기능 모니터링 권장."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사 비율 1% 미만으로 간 부담 매우 낮음. 간독성 관련 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성 또는 QT 연장 관련 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "encephalopathy",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고양이 특이적 데이터 없음. 인체 및 개 데이터 외삽: 신기능 저하 시 신경계 부작용 가능성."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "false-positive Coombs test"
+        ],
+        "index": 1,
+        "evidence": "세팔로스포린 계열 공통 효과. 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "nephrotoxicity",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "고양이 특이적 PK 데이터 없음. 인체 데이터 외삽: 85% 신장 배설, 신기능 저하 시 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사 비율 1% 미만. 간독성 관련 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성 관련 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.1,
+      "max": 2.0,
+      "mean": 1.1,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 20,
+    "evidence": "개: 소실 반감기 약 1.1시간(PK 연구). 인체: 반감기 약 2시간, 혈장 단백 결합률 20%. 경구 생체이용률 없음(GI 흡수 불가). 송아지 IM 생체이용률 95.7%, 암양 IM 생체이용률 86.8%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "renal function"
+      ],
+      "evidence": "Aminoglycosides와 병용 시 신독성 위험 증가 가능성. 신기능 모니터링 필요."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "increased serum concentration",
+        "reduced renal tubular secretion"
+      ],
+      "evidence": "Probenecid는 세팔로스포린의 혈청 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Vitamin K antagonists (e.g., Warfarin)",
+      "severity": 2,
+      "keywords": [
+        "increased anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "세팔로스포린은 비타민 K 길항제의 농도를 증가시킬 수 있음. 출혈 위험 모니터링 필요."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (PK 연구 기반, 오프라벨)",
+          "value": "40",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "30분에 걸쳐 IV 투여",
+          "evidence": "PK 연구 기반 권장 용량 (Plumb's 인용 문헌 2)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (일화적 출처, 오프라벨)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "IM 투여 시 주사 부위 통증 가능; 1% 리도카인 희석 고려",
+          "evidence": "일화적 출처 기반 (Plumb's 본문)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (일화적 출처, 오프라벨)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 출처 기반 (Plumb's 본문)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - CRI 부하 용량 (일화적 출처, 오프라벨)",
+          "value": "1.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 후 1.1 mg/kg/시간 CRI 유지",
+          "evidence": "일화적 출처 기반 CRI 프로토콜 (Plumb's 본문)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - CRI 유지 용량 (일화적 출처, 오프라벨)",
+          "value": "1.1",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 CRI 유지 용량",
+          "evidence": "일화적 출처 기반 CRI 프로토콜 (Plumb's 본문)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (일화적 출처, 오프라벨)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 출처 기반; 개와 동일 용량 언급 (Plumb's 본문)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (일화적 출처, 오프라벨)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 출처 기반; 개와 동일 용량 언급 (Plumb's 본문)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "인체에서 중증 신기능 저하 시 용량 조절 권장. 수의학적 구체적 기준치 없음. 신기능 저하 환자에서 주기적 신기능 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사 비율 1% 미만으로 간기능 저하 시 용량 조절 불필요. 관련 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "세팔로스포린 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "beta-lactam allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "페니실린 과민반응",
+      "match_terms": [
+        "penicillin allergy",
+        "penicillin hypersensitivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제를 통한 살균 작용. 페니실린 결합 단백질(PBP)에 결합하여 펩티도글리칸 교차결합을 방해함. 베타-락타마제에 대한 높은 안정성을 가지며 베타-락타마제를 쉽게 유도하지 않음.",
+    "common_extra_effects": [
+      "설사/무른 변",
+      "주사 부위 반응(통증, 부종)",
+      "과민반응(아나필락시스 포함)",
+      "쿰스 검사 위양성",
+      "소변 포도당 검사 위양성(구리 환원법)",
+      "신기능 저하 시 뇌병증, 경련, 신경근 흥분성(과량 투여)"
+    ],
+    "dog_mechanism": "개에서 세포벽 합성 억제를 통한 살균 작용. 분포용적 ≈0.14 L/kg, 반감기 약 1.1시간.",
+    "dog_extra_effects": [
+      "무른 변/설사",
+      "IM 주사 시 통증 및 주사 부위 부종",
+      "파행(IM 투여 후 보고됨)"
+    ],
+    "cat_mechanism": "고양이 특이적 기전 데이터 없음. 개 및 인체 데이터 외삽.",
+    "cat_extra_effects": [
+      "무른 변/설사(일화적 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 PK 연구 기반 권장 용량은 40 mg/kg IV(30분 투여) q6h. 일화적으로 50 mg/kg IM 또는 IV q8h, 또는 CRI(부하 1.4 mg/kg 후 1.1 mg/kg/시간) 사용 가능. IM 투여 시 주사 부위 통증, 부종, 파행이 보고되었으며 1% 리도카인 희석으로 완화 가능. 아미노글리코사이드, 플루오로퀴놀론 또는 다른 베타-락탐 항생제가 효과 없거나 금기인 중증 감염에 사용 고려. 반드시 배양 및 감수성 검사 결과에 근거하여 사용할 것.",
+    "cat": "고양이 특이적 PK 데이터 없음. 일화적 출처에서 50 mg/kg IM 또는 IV q8h 사용 가능하다고 언급됨. 임상 경험 매우 제한적. WHO 지정 최우선 중요 항생제로 사용을 최소화해야 하며, 배양 및 감수성 검사 결과에 근거하여 사용할 것."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "IM 투여 시 주사 부위 통증, 부종, 파행 보고됨. 신기능 저하 환자에서 주기적 신기능 모니터링 필요. 세팔로스포린 과민반응 병력 시 주의. 임상 경험 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이적 안전성 데이터 없음. 임상 경험 매우 제한적. 신기능 모니터링 권장. 세팔로스포린 과민반응 병력 시 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 분말: 20–25°C 보관(일부 제조사 15–30°C 허용). 빛 차단. 일부 제조사는 2–25°C 보관. 조제 후 용액: 실온에서 24시간, 냉장 시 7일 안정. GALAXY® 용기: -20°C 이하 보관; 해동 후 냉장 7일 또는 실온 24시간 안정.",
+    "forms": [
+      "주사용 분말 500 mg (15 mL, 20 mL 바이알)",
+      "주사용 분말 1 g (15 mL, 20 mL 바이알, ADD-Vantage 바이알, 100 mL 피기백 병)",
+      "주사용 분말 2 g (15 mL, 20 mL 바이알, ADD-Vantage 바이알, 100 mL 피기백 병)",
+      "주사액 1 g/50 mL DUPLEX® 용기 (5% 포도당)",
+      "주사액 2 g/50 mL DUPLEX® 용기 (5% 포도당)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세페핌은 4세대 세팔로스포린 항생제로, 3세대 대비 그람음성균(특히 Pseudomonas spp.) 및 그람양성균에 대한 활성이 향상되었습니다. 수의학적 허가 제품은 없으며 오프라벨로 사용됩니다. WHO 지정 최우선 중요 항생제로 배양 및 감수성 검사 결과에 근거한 사용이 필수적입니다. 개에서 PK 연구 기반 용량(40 mg/kg IV q6h)이 있으나 임상 경험은 제한적입니다. 신기능 저하 환자에서 용량 조절 및 모니터링이 필요합니다.",
+    "indications": "개 및 신생 망아지의 중증 감수성 감염(오프라벨): 아미노글리코사이드, 플루오로퀴놀론 또는 다른 베타-락탐 항생제가 효과 없거나 금기인 경우. 그람음성균(Pseudomonas spp., E. coli, Klebsiella spp., Enterobacter spp., Proteus spp.) 및 그람양성균(포도상구균, 연쇄상구균) 감염. ESBL 생성균에 대한 활성은 제한적.",
+    "client_info": "이 약은 반드시 수의사 또는 수의 전문가에 의해서만 투여되어야 합니다. 주사 후 설사나 무른 변이 나타날 수 있으며, 근육 주사 부위에 통증이나 부종이 생길 수 있습니다. 이상 반응이 관찰되면 즉시 담당 수의사에게 알려주십시오. 이 약은 인체 의학에서도 매우 중요한 항생제이므로 꼭 필요한 경우에만 사용됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile",
+      "Oral bioavailability (dog/cat)",
+      "Protein binding (dog/cat)",
+      "Specific renal dose adjustment thresholds (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "dosage_and_kinetics.cat.dosage_list (PK-based)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/22.jsonl",
+    "extracted_at": "2026-03-10T20:00:25.309683+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "id": "tranexamic_acid",
+  "drug_identity": {
+    "name_ko": "트라넥삼산",
+    "name_en": "Tranexamic Acid",
+    "active_ingredient": "Tranexamic Acid",
+    "brand_names": [
+      "Cyklokapron",
+      "Lysteda",
+      "Hexakapron"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 허가된 제품 없음. 개와 고양이에서 출혈 예방 및 지혈 목적으로 사람용 제제를 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 650,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "트라넥삼산은 체내에서 거의 대사되지 않으며 소변으로 원형 그대로 배설됨 (사람 데이터 기준)."
+    },
+    "extra_information": "수의학적 약동학 정보 없음. 사람 데이터: 경구 생체이용률 약 45%, 최고 혈중 농도 도달 시간 3시간, 분포용적 약 0.4 L/kg, 혈장 단백 결합 없음, 신장으로 원형 배설. 개에서 완전한 과섬유소용해 억제에 필요한 최소 혈중 농도는 약 145 µg/mL."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 약동학 데이터 없음; 사람 데이터 및 모노그래프 기술 내용 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "seizures",
+          "proconvulsive",
+          "GABA antagonism",
+          "glycine antagonism"
+        ],
+        "index": 1,
+        "evidence": "개에서 강직-간대 발작이 보고됨. GABA 및 글리신 수용체 길항 작용으로 경련 유발 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "thromboembolism",
+          "fibrinolysis inhibition",
+          "clot formation"
+        ],
+        "index": 1,
+        "evidence": "혈전색전증 위험 있음. 섬유소 용해 억제를 통해 혈전 안정화 작용을 함."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal impairment",
+          "ureteral obstruction"
+        ],
+        "index": 1,
+        "evidence": "신장으로 원형 배설됨. 신기능 저하 시 용량 감량 필요. 상부 요로 출혈 치료 시 혈전에 의한 요관 폐색 보고됨."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사 거의 없음. 간 부담 낮음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "빠른 IV 투여 시 저혈압 발생 가능. 척수강 내 우발적 투여 시 심장 부정맥 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "proconvulsive",
+          "GABA antagonism"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 발작 보고는 없으나 GABA/글리신 수용체 길항 기전으로 경련 유발 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "thromboembolism",
+          "fibrinolysis inhibition"
+        ],
+        "index": 1,
+        "evidence": "혈전색전증 위험 있음. 섬유소 용해 억제 기전."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal impairment"
+        ],
+        "index": -1,
+        "evidence": "신장으로 원형 배설됨. 신기능 저하 시 용량 감량 필요. 고양이 특이 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사 거의 없음. 간 부담 낮음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "빠른 IV 투여 시 저혈압 발생 가능. 고양이 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 11.0,
+      "mean": 6.5,
+      "species": "human"
+    },
+    "f_percent": 45,
+    "protein_binding_percent": 0,
+    "evidence": "사람 데이터: 경구 생체이용률 약 45%, 최고 혈중 농도 도달 시간 3시간, IV 투여 후 반감기 약 2시간, 경구 투여 후 반감기 약 11시간. 혈장 단백 결합 없음. 개에서 IV 투여 후 구토 발현 시간 약 2분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Chlorpromazine",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Chlorpromazine may increase the risk for bleeding when used with tranexamic acid."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 2,
+      "keywords": [
+        "thrombosis",
+        "thromboembolism"
+      ],
+      "evidence": "Combined use of estrogens with tranexamic acid increases the risk for thrombotic events."
+    },
+    {
+      "drug": "Thrombolytics (e.g., alteplase)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "Concomitant use of thrombolytics with tranexamic acid may reduce the efficacy of both agents due to opposing mechanisms of action."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "출혈의 보조 치료 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "2분에 걸쳐 IV 투여 후 10 mg/kg/hour CRI로 3시간 유지",
+          "evidence": "Plumb's: 10 mg/kg IV over 2 minutes, followed by 10 mg/kg/hour IV CRI for 3 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Angiostrongylus vasorum 감염 관련 과섬유소용해 조절 (extra-label)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "15~20분에 걸쳐 IV 투여; TEG 검사 결과에 따라 6~8시간 후 반복 투여",
+          "evidence": "Plumb's: 10–20 mg/kg IV over 15 to 20 minutes; repeat 6 to 8 hours later based on TEG testing"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "구토 유도 (emetic, extra-label)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "IV 볼루스; 20~40 mg/kg은 구토 유도에 일관성 없음",
+          "evidence": "Plumb's: 50 mg/kg IV bolus induced vomiting in all dogs (n=10); lower doses (20–40 mg/kg IV) were not uniformly effective"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "외과적 암종 및 육종 제거 중 출혈 조절 (extra-label)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "마취 유도 시 IV 볼루스 투여",
+          "evidence": "Plumb's: 15 mg/kg IV bolus given during anesthetic induction reduced surgical blood loss and shortened ACT without altering PT or aPTT"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량 필요. 구체적인 용량 조정 기준은 모노그래프에 명시되지 않음 (사람 데이터 기반 권고)."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "트라넥삼산은 간에서 거의 대사되지 않으므로 간기능 저하 시 별도의 용량 조정은 필요하지 않을 것으로 판단됨. 모노그래프에 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (Hypersensitivity)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to tranexamic acid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈전색전성 질환 (Thromboembolic disease)",
+      "match_terms": [
+        "thromboembolism",
+        "DVT",
+        "pulmonary embolism",
+        "thromboembolic disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하 (Renal impairment)",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "지주막하 출혈 (Subarachnoid hemorrhage, 사람)",
+      "match_terms": [
+        "subarachnoid hemorrhage",
+        "SAH"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "플라스미노겐의 리신 결합 부위에 가역적으로 결합하여 플라스미노겐이 피브린에 결합하는 것을 방해하고, 플라스민 형성을 억제함으로써 피브린 용해를 억제하고 혈전 기질을 안정화시킴.",
+    "common_extra_effects": [
+      "구토 (dose-dependent)",
+      "혈전색전증",
+      "저혈압 (빠른 IV 투여 시)",
+      "경련/발작",
+      "시각 장애",
+      "오심, 설사 (사람)",
+      "근골격계 통증 (사람)",
+      "아나필락시스 반응 (사람)"
+    ],
+    "dog_mechanism": "아미노카프로산보다 약 4배 강력한 섬유소용해 억제 효과. NK1 수용체를 통한 구토 유발 효과 있음. GABA 및 글리신 수용체 길항 작용으로 경련 유발 가능성 있음.",
+    "dog_extra_effects": [
+      "구토 (IV 투여 후 2~3분 내 발생, 용량 의존적)",
+      "강직-간대 발작",
+      "망막 변성 (과용량 시)"
+    ],
+    "cat_mechanism": "섬유소용해 억제를 통한 지혈 효과. 고양이 특이 기전 데이터 없음.",
+    "cat_extra_effects": [
+      "망막 변성 (과용량 시, 사람 용량의 3~40배 투여 시 보고됨)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 트라넥삼산은 아미노카프로산보다 약 4배 강력한 섬유소용해 억제제임. 완전한 과섬유소용해 억제에 필요한 최소 혈중 농도는 약 145 µg/mL. IV 투여 시 용량 의존적 구토가 2~3분 내 발생하며, 이를 이용해 구토 유도제로도 사용 가능. 마로피탄트를 투여 10분 전 IV 투여하면 구토를 예방할 수 있음. 강직-간대 발작이 보고된 바 있으므로 주의 필요.",
+    "cat": "고양이에서 외과적 종양 제거 시 마취 유도 중 15 mg/kg IV 볼루스 투여가 수술 중 출혈량을 감소시키고 활성화 응고 시간(ACT)을 단축시킨 것으로 보고됨. PT 또는 aPTT에는 영향 없음. 과용량 투여 시 망막 변성이 보고된 바 있으므로 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "혈전색전성 질환 병력 또는 위험이 있는 개에서 금기. 신기능 저하 시 용량 감량 필요. 빠른 IV 볼루스 투여 시 구토 발생 가능. 발작 위험 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "혈전색전성 질환 병력 또는 위험이 있는 고양이에서 금기. 신기능 저하 시 용량 감량 필요. 과용량 시 망막 변성 위험."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관 (20°C-25°C [68°F-77°F]). 15°C-30°C (59°F-86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "Tranexamic Acid for Injection: 100 mg/mL, 10 mL 앰플 및 단회용 바이알 (Cyklokapron®, generic)",
+      "Tranexamic Acid Tablets: 650 mg (Lysteda®, generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "트라넥삼산은 개와 고양이에서 수술 후 출혈 예방 및 외상성 출혈 지혈에 사용되는 섬유소용해 억제제임. 수의학적으로 허가된 제품은 없으며 오프라벨로 사용됨. 개에서 IV 투여 시 용량 의존적 구토가 흔하게 발생하며, 이를 구토 유도 목적으로 활용할 수 있음. 혈전색전성 질환 환자에서는 금기이며, 신기능 저하 시 용량 감량이 필요함. 척수강 내 우발적 투여는 신속히 치명적일 수 있음.",
+    "indications": "개와 고양이에서 수술 후 출혈 예방 및 외상성 출혈 지혈 (오프라벨). Angiostrongylus vasorum 감염 관련 과섬유소용해 조절 (개, 오프라벨). 구토 유도 (개, 오프라벨). 외과적 암종 및 육종 제거 중 출혈 조절 (고양이, 오프라벨).",
+    "client_info": "이 약물은 사람용으로 허가된 약물을 동물에게 오프라벨로 사용하는 것입니다. 드물게 시력 변화나 시력 손실이 보고된 바 있으므로, 반려동물에서 시력 문제가 의심될 경우 즉시 수의사에게 연락하십시오. 혈전 관련 질환이 있는 동물에서는 사용이 금기입니다. 임신 중이거나 수유 중인 동물에서는 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary Pharmacokinetics",
+      "Laboratory Considerations (none noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr (veterinary species)",
+      "timing_profile.t_max_hr (veterinary species)",
+      "timing_profile.f_percent (veterinary species)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction (veterinary)",
+      "organ_burden_logic.dog (veterinary PK data)",
+      "organ_burden_logic.cat (veterinary PK data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/48.jsonl",
+    "extracted_at": "2026-03-11T04:05:02.501631+00:00",
+    "reviewer": null
+  }
+}

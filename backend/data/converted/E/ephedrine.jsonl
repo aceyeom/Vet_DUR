@@ -1,0 +1,678 @@
+{
+  "id": "ephedrine",
+  "drug_identity": {
+    "name_ko": "에페드린",
+    "name_en": "Ephedrine",
+    "active_ingredient": "Ephedrine sulfate",
+    "brand_names": [
+      "Rezipres",
+      "Emerphed"
+    ],
+    "allergy_class": null,
+    "class": "Bronchodilator",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 마취 관련 저혈압 치료 및 요실금 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 47,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 9.4,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4.7,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 에페드린은 빠른 N-탈메틸화를 통해 노르에페드린으로 대사되며, 약리 활성은 주로 이 대사체를 통해 매개된다. 에페드린과 노르에페드린 모두 소변으로 배설되며, 소변 pH에 따라 반감기가 달라진다."
+    },
+    "extra_information": "개에서 에페드린은 빠르게 N-탈메틸화되어 노르에페드린을 생성하며, 약리 효과는 주로 이 대사체를 통해 나타난다. 사람에서 소변 pH 5일 때 반감기 약 3시간, pH 6.3일 때 약 6시간으로 소변 pH에 따라 배설 특성이 크게 달라진다. 신기능 장애 시 반감기가 연장되어 치료 효과 또는 부작용이 지속될 수 있다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학적 종별 PK 데이터 제한적; 사람 데이터 및 약리학적 추론 포함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "restlessness",
+          "irritability",
+          "crosses blood-brain barrier (debated)"
+        ],
+        "index": 1,
+        "evidence": "에페드린은 혈뇌장벽 통과 여부에 대해 논란이 있으나, CNS 자극(불안, 과민성) 부작용이 보고됨. 개에서 직접적인 뇌 부담 데이터는 없으나 CNS 부작용 근거로 중등도 점수 부여."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension",
+          "arrhythmias",
+          "vasoconstriction",
+          "increased heart rate"
+        ],
+        "index": 1,
+        "evidence": "에페드린은 알파 및 베타 아드레날린 수용체 작용제로 심박수 증가, 혈압 상승, 부정맥 위험이 있음. 개에서 이소플루란 마취 중 평균 동맥압, 심장 지수, 전신 혈관 저항 증가가 확인됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal impairment prolongs half-life",
+          "urinary excretion"
+        ],
+        "index": 1,
+        "evidence": "에페드린과 노르에페드린은 신장으로 배설됨. 신기능 장애 시 반감기 연장 및 부작용 지속 가능성 있음. 직접적인 신독성 데이터는 없으나 신장 배설 의존성으로 중저도 점수 부여."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "N-demethylation",
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "개에서 간에서 N-탈메틸화를 통해 노르에페드린으로 대사됨. 직접적인 간독성 보고는 없으나 간 대사 의존성으로 낮은 점수 부여."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmias",
+          "increased coronary blood flow",
+          "cardiac glycoside interaction"
+        ],
+        "index": 1,
+        "evidence": "에페드린은 심박수 증가, 관상동맥 혈류 증가, 부정맥 위험을 유발함. 심한 심혈관 질환 및 부정맥 환자에서 금기. 개에서 심혈관 효과가 직접 확인됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "restlessness",
+          "irritability"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 직접적인 CNS 부담 데이터는 없으나, 개와 동일한 약리 기전으로 CNS 자극 부작용이 예상됨."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension",
+          "arrhythmias",
+          "vasoconstriction"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 마취 관련 저혈압 치료에 사용되며, 혈압 상승 및 심박수 증가 효과가 예상됨. 직접적인 고양이 심혈관 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal impairment prolongs half-life",
+          "urinary excretion"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 신장 배설 의존성으로 신기능 장애 시 반감기 연장 가능성 있음. 직접적인 고양이 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "N-demethylation",
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 간 대사 경로는 개와 유사할 것으로 추정되나 직접적인 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmias",
+          "increased coronary blood flow"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 마취 관련 저혈압 치료에 사용되며, 심박수 증가 및 부정맥 위험이 예상됨. 심한 심혈관 질환 환자에서 금기."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 6.0,
+      "mean": 4.5,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "사람에서 소변 pH 5일 때 반감기 약 3시간, pH 6.3일 때 약 6시간. 개에서의 반감기 데이터는 보고되지 않음. IV 볼루스 투여 후 작용 지속 시간은 약 15~60분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 심각한 고혈압 및 고열 위험으로 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "severe hypertension",
+        "hyperpyrexia",
+        "norepinephrine accumulation"
+      ],
+      "evidence": "Ephedrine should not be given within 2 weeks of MAOI use; severe hypertension and hyperpyrexia are possible due to inhibition of norepinephrine metabolism."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "arrhythmia",
+        "antagonism"
+      ],
+      "evidence": "Phenothiazines may antagonize ephedrine effects; ephedrine may decrease neuroleptic effects and increase risk for cardiac arrhythmias including QT prolongation and torsade de pointes. Combination should be avoided."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., phenylpropanolamine)",
+      "severity": 3,
+      "keywords": [
+        "increased toxicity",
+        "additive sympathomimetic effects"
+      ],
+      "evidence": "Ephedrine should not be administered with other sympathomimetic agents as increased toxicity may result."
+    },
+    {
+      "drug": "Alpha-Adrenergic Antagonists (e.g., phentolamine, prazosin)",
+      "severity": 2,
+      "keywords": [
+        "reduced therapeutic effect",
+        "antagonism"
+      ],
+      "evidence": "Alpha-adrenergic antagonists may inhibit the therapeutic (vasopressor) effects of ephedrine."
+    },
+    {
+      "drug": "Alpha-2 Adrenergic Agonists (e.g., clonidine, dexmedetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "augmented pressor effect",
+        "hypertension"
+      ],
+      "evidence": "Alpha-2 adrenergic agonists may augment the pressor effects of ephedrine, increasing hypertension risk."
+    },
+    {
+      "drug": "Atropine",
+      "severity": 2,
+      "keywords": [
+        "augmented pressor effect",
+        "hypertension",
+        "tachycardia"
+      ],
+      "evidence": "Atropine may augment the pressor effects of ephedrine."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "diminished effects",
+        "mutual antagonism"
+      ],
+      "evidence": "Concomitant use with ephedrine may diminish the effects of both drugs."
+    },
+    {
+      "drug": "Cardiac Glycosides (e.g., digoxin)",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia risk",
+        "cardiac sensitization"
+      ],
+      "evidence": "Concurrent use of cardiac glycosides with ephedrine may increase risk for arrhythmias."
+    },
+    {
+      "drug": "Epidural Anesthesia",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "antagonism"
+      ],
+      "evidence": "Ephedrine may decrease the efficacy of epidural anesthesia."
+    },
+    {
+      "drug": "Oxytocin",
+      "severity": 2,
+      "keywords": [
+        "additive hypertensive effect"
+      ],
+      "evidence": "Concurrent use of oxytocin and ephedrine may result in additive hypertensive effect."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 2,
+      "keywords": [
+        "augmented pressor effect"
+      ],
+      "evidence": "Propofol may augment the pressor effects of ephedrine."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "diminished effects",
+        "mutual antagonism"
+      ],
+      "evidence": "Concurrent use may diminish the effects of both quinidine and ephedrine."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "inhibited pressor effect",
+        "norepinephrine depletion"
+      ],
+      "evidence": "Reserpine may inhibit the pressor effects of ephedrine, likely through norepinephrine depletion."
+    },
+    {
+      "drug": "Sodium Bicarbonate",
+      "severity": 2,
+      "keywords": [
+        "ephedrine toxicity",
+        "reduced renal clearance"
+      ],
+      "evidence": "Concurrent use of ephedrine with sodium bicarbonate may result in ephedrine toxicity, likely due to urinary alkalinization reducing renal excretion."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "GI toxicity",
+        "CNS toxicity"
+      ],
+      "evidence": "Concurrent use of ephedrine with theophylline may increase the risk for GI and CNS toxicity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "decreased pressor effect"
+      ],
+      "evidence": "Tricyclic antidepressants may decrease the pressor effects of ephedrine."
+    },
+    {
+      "drug": "Urinary Alkalinizers (e.g., carbonic anhydrase inhibitors, citrates)",
+      "severity": 2,
+      "keywords": [
+        "reduced urinary excretion",
+        "prolonged duration",
+        "toxicity risk"
+      ],
+      "evidence": "Urinary alkalinizers may reduce the urinary excretion of ephedrine and prolong its duration of activity; dosage adjustments may be required to avoid toxic clinical signs."
+    },
+    {
+      "drug": "Vasopressin",
+      "severity": 2,
+      "keywords": [
+        "additive hypertensive effect"
+      ],
+      "evidence": "Concurrent use of vasopressin and ephedrine may result in additive hypertensive effect."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 관련 저혈압 (ASA I 또는 II 환자, 결정질 볼루스 1~2회에 반응하지 않는 경우)",
+          "value": "0.1 - 0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 볼루스 후 작용 지속 시간 약 15~60분. 희석하여 목표 혈압 달성까지 점진적 IV 볼루스 투여.",
+          "evidence": "오프라벨. 이소플루란 마취 개에서 평균 동맥압, 심장 지수, 전신 혈관 저항 증가 확인."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 관련 저혈압 (지속 주입)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분당 투여량 (CRI). 볼루스 투여가 CRI보다 선호됨.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아드레날린성 약물에 반응하는 요실금 (요도 괄약근 저긴장증)",
+          "value": "1.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "미국에서 경구 제형 판매 중단됨.",
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 관련 저혈압 (볼루스 투여)",
+          "value": "0.15 - 0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "균형 전해질 용액 또는 생리식염수 5mL에 희석하여 목표 혈압 달성까지 점진적 IV 볼루스 투여.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 관련 저혈압 (지속 주입)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분당 투여량 (CRI).",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능 장애 시 에페드린의 반감기가 연장되어 치료 효과 또는 부작용이 지속될 수 있음. 신기능 저하 환자에서 부작용(CNS 자극, 부정맥, 빈맥, 고혈압, 구토, 식욕부진) 모니터링 강화 필요. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간기능 장애에 대한 용량 조절 정보가 모노그래프에 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "심한 심혈관 질환 (특히 부정맥)",
+      "match_terms": [
+        "severe cardiovascular disease",
+        "arrhythmia",
+        "cardiac arrhythmia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대증",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "benign prostatic hyperplasia",
+        "BPH"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비카테콜아민 교감신경 흥분제로, 알파 및 베타 아드레날린 수용체에 직접 작용하고 교감신경에서 내인성 노르에피네프린의 방출을 간접적으로 유도하며, MAO에 의한 노르에피네프린 대사를 억제함. 혈관 수축, 심박수 증가, 관상동맥 혈류 증가, 혈압 상승, 경미한 CNS 자극, 기관지 수축 감소, 비강 충혈 감소, 식욕 감소 효과를 나타냄.",
+    "common_extra_effects": [
+      "불안/과민성 (CNS 자극)",
+      "빈맥",
+      "고혈압",
+      "부정맥",
+      "구역/구토",
+      "식욕부진",
+      "빈맥성 내성 (tachyphylaxis, 반복 투여 시)",
+      "태반 통과 및 모유 분비"
+    ],
+    "dog_mechanism": "개에서 에페드린은 빠르게 N-탈메틸화되어 노르에페드린으로 대사되며, 약리 활성은 주로 이 대사체를 통해 매개됨. 이소플루란 마취 개에서 평균 동맥압, 심장 지수, 전신 혈관 저항을 증가시킴.",
+    "dog_extra_effects": [
+      "평균 동맥압 증가",
+      "심장 지수 증가",
+      "전신 혈관 저항 증가",
+      "요도 괄약근 긴장도 증가 (요실금 치료 효과)"
+    ],
+    "cat_mechanism": "고양이에서의 구체적인 대사 경로 데이터는 제한적이나, 개와 유사한 알파/베타 아드레날린 수용체 작용 기전으로 마취 관련 저혈압 치료에 사용됨.",
+    "cat_extra_effects": [
+      "평균 동맥압 증가",
+      "마취 관련 저혈압 교정"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에페드린은 마취 관련 저혈압 치료에 IV 볼루스로 사용되며, 단회 볼루스 후 작용 지속 시간은 약 15~60분임. 요도 괄약근 저긴장증으로 인한 요실금 치료에도 사용되었으나, 미국에서 경구 제형이 판매 중단되어 현재 이 적응증에 대한 사용이 제한됨. 반복 투여 시 빈맥성 내성(tachyphylaxis)이 발생할 수 있으나, 요실금 치료 목적으로 사용 시에는 보고되지 않음. 신기능 저하 환자에서 부작용 모니터링 강화 필요.",
+    "cat": "고양이에서 에페드린은 마취 관련 저혈압 치료에 균형 전해질 용액 또는 생리식염수에 희석하여 점진적 IV 볼루스로 투여함. 수의학적 허가 제품이 없으므로 오프라벨 사용임. 심한 심혈관 질환 환자에서는 금기이며, 투여 후 혈압, 심박수, 부정맥 여부를 면밀히 모니터링해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심한 심혈관 질환(특히 부정맥) 환자에서 금기. 녹내장, 전립선 비대증, 갑상선 기능 항진증, 당뇨병, 심혈관 질환, 고혈압 환자에서 주의 사용. 신기능 장애 시 반감기 연장으로 부작용 지속 가능. 반복 투여 시 빈맥성 내성 발생 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심한 심혈관 질환(특히 부정맥) 환자에서 금기. 녹내장, 갑상선 기능 항진증, 당뇨병, 심혈관 질환, 고혈압 환자에서 주의 사용. 신기능 장애 시 반감기 연장으로 부작용 지속 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 25°C(77°F) 보관, 15°C~30°C(59°F~86°F) 범위 허용. 미사용 잔량은 폐기.",
+    "forms": [
+      "Ephedrine Sulfate Injection 50 mg/mL (1 mL 단회 바이알 및 앰플, 제네릭)",
+      "Ephedrine Sulfate Injection 47 mg/mL (1 mL 바이알, Rezipres)",
+      "Ephedrine Sulfate Injection 4.7 mg/mL (5 mL 바이알, Rezipres)",
+      "Ephedrine Sulfate Injection 9.4 mg/mL (5 mL 바이알, Rezipres)",
+      "Ephedrine Sulfate Injection 5 mg/mL (10 mL 단회 바이알, Emerphed)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에페드린은 알파 및 베타 아드레날린 수용체 작용제로, 개, 고양이, 말에서 마취 관련 저혈압 치료에 비경구적으로 사용되는 교감신경 흥분제입니다. 수의학적 허가 제품은 없으며 오프라벨로 사용됩니다. 심한 심혈관 질환(특히 부정맥) 환자에서는 금기이며, MAOI와의 병용은 심각한 고혈압 및 고열 위험으로 절대 금기입니다. 페노티아진계 약물과의 병용도 QT 연장 및 부정맥 위험으로 피해야 합니다. 신기능 장애 시 반감기가 연장될 수 있으므로 주의가 필요합니다.",
+    "indications": "【허가 적응증】 없음 (수의학적 허가 제품 없음)\n【오프라벨 적응증】\n- 개, 고양이, 말: 마취 관련 저혈압 치료 (IV 볼루스 또는 CRI)\n- 개, 고양이: 요도 괄약근 저긴장증으로 인한 요실금 치료 (경구, 단 미국에서 경구 제형 판매 중단)",
+    "client_info": "에페드린은 동물병원에서 수의사가 직접 투여하는 약물입니다. 마취 중 혈압이 낮아질 때 혈압을 올리기 위해 사용됩니다. 이 약의 효과는 투여 후 비교적 짧은 시간 내에 사라지므로, 동물이 퇴원할 때는 약효가 대부분 소실된 상태입니다. 투여 후 동물의 상태에 대해 궁금한 점이 있으시면 담당 수의사에게 문의하시기 바랍니다. 임신 중인 동물에게 투여된 경우, 신생아의 상태를 면밀히 관찰해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat half-life, Vd, clearance)",
+      "Oral bioavailability data",
+      "Protein binding data",
+      "CYP enzyme profile",
+      "Hepatic dose adjustment",
+      "Specific renal dose adjustment thresholds",
+      "Onset time (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T18:00:34.253299+00:00",
+    "reviewer": null
+  }
+}

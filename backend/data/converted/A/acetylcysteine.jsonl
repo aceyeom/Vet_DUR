@@ -1,0 +1,480 @@
+{
+  "id": "acetylcysteine",
+  "drug_identity": {
+    "name_ko": "아세틸시스테인",
+    "name_en": "Acetylcysteine",
+    "active_ingredient": "Acetylcysteine",
+    "brand_names": [
+      "Mucomyst",
+      "Acetadote",
+      "Cetylev",
+      "ACC"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 아세트아미노펜 독성, 간독성, 점액용해 등에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "흡수된 약물은 간에서 탈아세틸화(deacetylation)되어 시스테인으로 전환된 후 추가 대사됨."
+    },
+    "extra_information": "고양이에서 경구 생체이용률 약 20%. 고양이에서 반감기: IV 약 0.8시간, PO 약 1.3시간. 흡입 또는 기관내 투여 시 대부분 술프하이드릴-이황화물 반응에 관여하고 나머지는 흡수됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간 대사 및 독성 보호 기전, 이상반응 프로파일을 근거로 평가. 수의학 종별 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 뇌 관련 직접적 독성 또는 부담 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "methemoglobin",
+          "erythrocyte glutathione"
+        ],
+        "index": 1,
+        "evidence": "아세트아미노펜 독성 시 메트헤모글로빈 모니터링 권장; 적혈구 글루타치온 안정화 효과 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음. 신장 제거 분율 미보고."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "glutathione",
+          "hepatic blood flow",
+          "deacetylated"
+        ],
+        "index": 3,
+        "evidence": "간에서 탈아세틸화 대사; 글루타치온 합성 촉진 및 간혈류 개선 기전; 간독성 치료 주적응증."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension",
+          "blood pressure"
+        ],
+        "index": -1,
+        "evidence": "IV 투여 시 혈압 변화(고혈압 또는 저혈압) 보고됨(사람 데이터). 직접적 심장 독성 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "unilateral strabismus"
+        ],
+        "index": -1,
+        "evidence": "고양이 실험적 천식 모델에서 기관내 분무 후 단측 사시 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "methemoglobin",
+          "erythrocyte glutathione"
+        ],
+        "index": 1,
+        "evidence": "아세트아미노펜 독성 시 메트헤모글로빈 모니터링 권장; 적혈구 글루타치온 안정화 효과."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "glutathione",
+          "hepatic lipidosis",
+          "deacetylated"
+        ],
+        "index": 3,
+        "evidence": "간에서 탈아세틸화 대사; 간지방증 보조치료 적응증 포함; 글루타치온 합성 촉진."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "IV 투여 시 저혈압 가능성(사람 데이터). 고양이 직접 심장 독성 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.8,
+      "max": 1.3,
+      "mean": 1.05,
+      "species": "cat"
+    },
+    "f_percent": 20,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 경구 생체이용률 약 20%; 반감기 IV 약 0.8시간, PO 약 1.3시간. 개에서 PK 데이터 미보고."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Activated Charcoal",
+      "severity": 2,
+      "keywords": [
+        "adsorption",
+        "reduced bioavailability"
+      ],
+      "evidence": "Activated charcoal may adsorb orally administered acetylcysteine, potentially reducing its efficacy when both are given orally for acetaminophen toxicity."
+    },
+    {
+      "drug": "Nitroglycerin",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "Nitroglycerin may enhance hypotension when given IV concomitantly with acetylcysteine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 초기 IV 용량",
+          "value": "140 - 180",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5% 희석 후 0.2 micron 필터 사용하여 15~20분에 걸쳐 천천히 투여",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 초기 PO 용량",
+          "value": "280",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "위관 투여; 이후 70 mg/kg q6h로 최소 7회 추가 투여",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 유지 용량",
+          "value": "70",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 7회 투여; 대량 과다복용 시 최대 17회까지 필요할 수 있음",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 유지 IV 용량",
+          "value": "70",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 7회 투여; 구토 조절 불가 시 IV 선호",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "퇴행성 척수병증 보조치료 (아미노카프로산과 병용)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주간 q8h 투여 후 격일 q8h로 전환; 20% 용액을 닭고기 육수 등으로 5%로 희석",
+          "evidence": "Extra-label; 효능 입증된 공개 임상시험 없음. Plumb's 참조문헌 14"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 초기 IV 용량",
+          "value": "140 - 180",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5% 희석 후 0.2 micron 필터 사용하여 15~20분에 걸쳐 천천히 투여",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 초기 PO 용량",
+          "value": "280",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "위관 투여; 이후 70 mg/kg q6h로 최소 7회 추가 투여",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아세트아미노펜 독성 또는 산화적 손상 관련 간독성 보조치료 - 유지 용량",
+          "value": "70",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 7회 투여; 대량 과다복용 시 최대 17회까지 필요할 수 있음",
+          "evidence": "Extra-label; Plumb's 참조문헌 2, 11-13"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간지방증 보조치료 - 초기 IV 용량",
+          "value": "140",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분에 걸쳐 투여; 10% 아세틸시스테인을 생리식염수 1:4로 희석 후 0.2 micron 필터 사용",
+          "evidence": "Extra-label; Plumb's 참조문헌 15"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간지방증 보조치료 - 유지 IV 용량",
+          "value": "70",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.2 micron 필터 사용",
+          "evidence": "Extra-label; Plumb's 참조문헌 15"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 오히려 간독성 치료에 사용되는 약물임."
+  },
+  "contraindications": [
+    {
+      "condition": "아세틸시스테인 과민증 (흡입 적응증)",
+      "match_terms": [
+        "hypersensitivity to acetylcysteine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기관지경련성 질환 (천식, 기관지염)",
+      "match_terms": [
+        "asthma",
+        "bronchitis",
+        "bronchospasm"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "술프하이드릴기 공여를 통한 글루타치온 합성 촉진, 자유 라디칼 소거, 산화질소 생성 증가를 통한 간혈류 개선; 점액 내 이황화 결합 분해를 통한 점액 점도 감소.",
+    "common_extra_effects": [
+      "오심, 구토 (경구 투여 시)",
+      "두드러기 (드물게)",
+      "기관지경련 (흡입 투여 시)",
+      "과민반응",
+      "구내염",
+      "흉부 압박감",
+      "기관지 또는 기관 자극",
+      "혈압 변화 (IV 투여 시, 사람 데이터)",
+      "홍반 및 홍조 (IV 투여 후 30~60분, 사람 데이터)"
+    ],
+    "dog_mechanism": "글루타치온 저장량 유지를 통해 아세트아미노펜의 비독성 대사산물 경로로의 제거 촉진.",
+    "dog_extra_effects": [
+      "오심, 구토",
+      "두드러기 (드물게)"
+    ],
+    "cat_mechanism": "글루타치온 저장량 유지를 통해 아세트아미노펜의 비독성 대사산물 경로로의 제거 촉진; 간지방증 보조치료.",
+    "cat_extra_effects": [
+      "기도 저항 증가 (기관내 분무 시)",
+      "기도 분비물 증가",
+      "기침",
+      "단측 사시 (기관내 분무 시, 실험적 천식 모델)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률 데이터 없음. 해독제로 사용 시 가능하면 첫 번째 용량을 IV로 투여 권장. 경구 투여 시 공복 상태에서 위관을 통해 투여. 퇴행성 척수병증에 대한 사용은 효능 근거 부족. LD50: 경구 1 g/kg, IV 700 mg/kg.",
+    "cat": "고양이에서 경구 생체이용률 약 20%, 반감기 IV 0.8시간/PO 1.3시간. 아세트아미노펜에 특히 민감하므로 독성 치료 시 신속한 투여 중요. 간지방증 보조치료에도 사용. 흡입 투여 시 기도 저항 증가 및 사시 등 이상반응 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "흡입 투여 시 기관지경련 위험; IV 투여 시 반드시 5%로 희석하고 0.2 micron 필터 사용; 경구 투여 시 위관 필요할 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "흡입 투여 시 기도 저항 증가 및 이상반응 위험; 경구 생체이용률 낮음(약 20%); 아세트아미노펜 독성에 매우 민감하므로 신속한 치료 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미개봉 바이알: 실온 15~30°C 보관. IV용 제품: 개봉 후 24시간 이내 사용, 미사용분 폐기. 흡입용 용액 미개봉: 20~25°C 보관(15~30°C 허용). 개봉 후 냉장 보관, 96시간 이내 사용. 개봉 또는 마개 천공 후 무색에서 연분홍 또는 보라색으로 변색될 수 있으나 품질 및 농도에 영향 없음.",
+    "forms": [
+      "Acetylcysteine Injection 20% (200 mg/mL), 30 mL 단회용 바이알",
+      "Acetylcysteine Oral Capsules 500 mg, 600 mg",
+      "Acetylcysteine Inhalation/Oral Solution 10% and 20% (as sodium), 4 mL/10 mL/30 mL 바이알"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아세틸시스테인(NAC)은 아세트아미노펜, 자일리톨, 페놀 독성 및 기타 산화적 손상 관련 간독성의 해독제로 사용되는 핵심 약물입니다. 수의학적 승인 제품은 없으며 사람용 제품을 오프라벨로 사용합니다. 해독제로 사용 시 첫 번째 용량은 가능하면 IV로 투여하고, 경구 투여 시 공복 상태에서 위관을 통해 투여합니다. IV 투여 시 반드시 5%로 희석하고 0.2 micron 인라인 필터를 사용해야 합니다. 흡입 투여 시 기관지경련 위험이 있으므로 기관지경련성 질환 동물에서는 주의가 필요합니다.",
+    "indications": "① 아세트아미노펜, 자일리톨, 페놀 독성 해독제 (개, 고양이) ② 산화적 손상 관련 간독성 보조치료 (설폰아미드 과민증, 사고야자 간독성, 버섯 간독성, 독소루비신 유발 간독성, 카드뮴 독성, 페나조피리딘 독성 등) ③ 폐 점액용해제 (흡입 투여) ④ 고양이 간지방증 보조치료 ⑤ 개 퇴행성 척수병증 보조치료 (아미노카프로산과 병용, 효능 근거 부족) ⑥ 말 구개낭 연골편 분해, 신생 망아지 태변 정체 관장, 자궁내막염 보조치료",
+    "client_info": "이 약물은 반드시 수의사의 감독 하에 임상 환경에서만 사용해야 합니다. 아세트아미노펜(타이레놀 등) 중독이 의심되는 경우 즉시 동물병원을 방문하십시오. 경구 투여 시 황 냄새가 날 수 있으며, 동물이 복용을 거부할 경우 위관 투여가 필요할 수 있습니다. 흡입 치료 중 기침, 쌕쌕거림, 호흡 곤란이 나타나면 즉시 수의사에게 알리십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Dog-specific pharmacokinetics",
+      "Onset of action"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog-specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/60.jsonl",
+    "extracted_at": "2026-03-11T08:02:59.526697+00:00",
+    "reviewer": null
+  }
+}

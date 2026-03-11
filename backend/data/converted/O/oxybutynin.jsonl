@@ -1,0 +1,614 @@
+{
+  "id": "oxybutynin",
+  "drug_identity": {
+    "name_ko": "옥시부티닌",
+    "name_en": "Oxybutynin",
+    "active_ingredient": "Oxybutynin chloride",
+    "brand_names": [
+      "Ditropan",
+      "Oxytrol",
+      "Ditropan XL",
+      "Gelnique"
+    ],
+    "allergy_class": null,
+    "class": "Muscle Relaxant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Physostigmine",
+    "reversal_evidence": "과량 투여 시 IV physostigmine이 유용할 수 있다고 명시됨 (Plumb's Overdose 섹션)",
+    "off_label_note": "수의용 허가 제품 없음. 인체용 제품을 개와 고양이에서 비뇨기 항경련제로 오프라벨 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Patch"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 대사되고 소변으로 배설되는 것으로 알려져 있으나, 구체적인 CYP 경로는 Plumb's 본문에 명시되지 않음."
+    },
+    "extra_information": "쥐 연구에서 뇌, 폐, 신장, 간으로 분포하는 것이 확인됨. 개와 고양이에서의 약동학 데이터는 문서화되지 않음. 인체에서 작용 지속 시간은 1회 투여 후 6~10시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 쥐 분포 데이터 및 인체 약동학 데이터 참조. 개·고양이 종 특이적 수의 PK 연구 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "CNS effects",
+          "sedation",
+          "distributed into the brain",
+          "seizures",
+          "restlessness"
+        ],
+        "index": 1,
+        "evidence": "쥐 연구에서 뇌로 분포 확인. 과량 투여 시 CNS 효과(흥분, 경련) 보고. 진정 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "highly protein bound",
+          "tachycardia",
+          "cardiovascular effects"
+        ],
+        "index": 2,
+        "evidence": "고단백 결합 약물. 과량 투여 시 심혈관 효과(빈맥, 혈압 변화) 보고."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "excreted in the urine",
+          "distributed into the kidneys"
+        ],
+        "index": 3,
+        "evidence": "쥐 연구에서 신장으로 분포 확인. 소변으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "metabolized in the liver",
+          "distributed into the liver",
+          "hepatic impairment"
+        ],
+        "index": 4,
+        "evidence": "간에서 대사됨. 쥐 연구에서 간으로 분포 확인. 간 기능 저하 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac disease",
+          "arrhythmias",
+          "CHF"
+        ],
+        "index": 5,
+        "evidence": "항무스카린 효과로 빈맥 유발 가능. 심장 질환(승모판 협착, 부정맥, CHF) 환자에서 위험-이익 평가 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "CNS effects",
+          "sedation",
+          "distributed into the brain"
+        ],
+        "index": 1,
+        "evidence": "쥐 연구에서 뇌로 분포 확인. 진정 부작용 보고됨. 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "highly protein bound",
+          "tachycardia"
+        ],
+        "index": 2,
+        "evidence": "고단백 결합 약물. 항무스카린 효과로 빈맥 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "excreted in the urine",
+          "distributed into the kidneys"
+        ],
+        "index": 3,
+        "evidence": "쥐 연구에서 신장으로 분포 확인. 소변으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "metabolized in the liver",
+          "distributed into the liver",
+          "hepatic impairment"
+        ],
+        "index": 4,
+        "evidence": "간에서 대사됨. 쥐 연구에서 간으로 분포 확인. 간 기능 저하 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac disease",
+          "arrhythmias"
+        ],
+        "index": 5,
+        "evidence": "항무스카린 효과로 빈맥 유발 가능. 심장 질환 환자에서 위험-이익 평가 필요."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "Plumb's 본문에 반감기, Tmax, 생체이용률, 단백결합률의 구체적 수치가 명시되지 않음. 인체에서 작용 지속 시간 6~10시간으로 기술됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amantadine",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic",
+        "adverse effects potentiation"
+      ],
+      "evidence": "Amantadine may increase anticholinergic adverse effects of oxybutynin."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, propantheline, scopolamine, isopropamide, glycopyrrolate, hyoscyamine, tricyclic antidepressants, disopyramide, procainamide, antihistamines)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic",
+        "additive effects"
+      ],
+      "evidence": "May intensify oxybutynin's anticholinergic effects."
+    },
+    {
+      "drug": "Azole Antifungals (ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Azole antifungals may increase oxybutynin plasma concentration."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression",
+        "additive"
+      ],
+      "evidence": "Benzodiazepines may exacerbate the sedating effects of oxybutynin."
+    },
+    {
+      "drug": "Beta-Receptor Antagonists (atenolol)",
+      "severity": 1,
+      "keywords": [
+        "increased bioavailability",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Oxybutynin may increase the bioavailability of atenolol."
+    },
+    {
+      "drug": "CNS Depressants (methocarbamol, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression",
+        "additive"
+      ],
+      "evidence": "Other sedating drugs may exacerbate the sedating effects of oxybutynin."
+    },
+    {
+      "drug": "Macrolide Antibiotics (erythromycin, clarithromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Macrolide antibiotics may increase oxybutynin plasma concentration."
+    },
+    {
+      "drug": "Opioids (buprenorphine, hydrocodone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic",
+        "sedation",
+        "additive"
+      ],
+      "evidence": "Opioids may exacerbate the anticholinergic and sedating effects of oxybutynin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "난치성 요실금 (배뇨근 과반사) - 체중 기반",
+          "value": "0.2 - 0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. Plumb's: 0.2–0.3 mg/kg PO q8–12h"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "난치성 요실금 (배뇨근 과반사) - 고정 용량 (실용적 투여)",
+          "value": "1.25 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 기반이 아닌 마리당 고정 용량 (5mg 정제의 1/4~1정)",
+          "evidence": "오프라벨. Plumb's: 실용적으로 대부분의 개에서 1.25–5 mg/dog PO q8–12h 투여"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "난치성 요실금 (FeLV 관련 배뇨근 불안정) - 고정 용량",
+          "value": "0.5 - 1.25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5mg 정제의 1/8~1/4 해당. 체중 기반이 아닌 마리당 고정 용량.",
+          "evidence": "오프라벨. Plumb's: 0.5–1.25 mg/cat PO q8–12h"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 본문에 신장 기능 저하 시 구체적인 용량 조정 지침이 명시되지 않음. 약물이 소변으로 배설되므로 신기능 저하 환자에서 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "Plumb's에서 간 기능 저하 환자에서 주의 사용(use with caution in patients with hepatic impairment)을 명시함. 구체적인 용량 조정 수치는 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 위장관 질환 / 위 저류",
+      "match_terms": [
+        "GI obstruction",
+        "gastric retention",
+        "ileus"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위식도 역류 / 열공 탈장",
+      "match_terms": [
+        "gastroesophageal reflux",
+        "GERD",
+        "hiatal hernia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄각 녹내장",
+      "match_terms": [
+        "angle closure glaucoma",
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환 (승모판 협착, 부정맥, 빈맥, 울혈성 심부전)",
+      "match_terms": [
+        "mitral stenosis",
+        "arrhythmia",
+        "tachycardia",
+        "CHF",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 근무력증",
+      "match_terms": [
+        "myasthenia gravis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대증",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "BPH"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 궤양성 대장염",
+      "match_terms": [
+        "severe ulcerative colitis",
+        "ulcerative colitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요폐 / 폐쇄성 요로 질환",
+      "match_terms": [
+        "urinary retention",
+        "obstructive uropathy",
+        "urinary obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 본문에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "항무스카린(아트로핀 유사) 및 평활근 직접 항경련(파파베린 유사) 작용. 방광 배뇨근 및 소장·대장 평활근에 가장 두드러진 항경련 효과. 방광 용량 증가, 배뇨근의 비억제성 수축 빈도 감소, 초기 배뇨 욕구 지연.",
+    "common_extra_effects": [
+      "설사",
+      "변비",
+      "요폐",
+      "구강 건조",
+      "과다 침 분비",
+      "진정",
+      "빈맥",
+      "식욕 부진",
+      "구토",
+      "허약",
+      "산동",
+      "안구 건조"
+    ],
+    "dog_mechanism": "배뇨근 과반사에 대한 보조 치료로 사용. 방광 평활근의 비억제성 수축 억제.",
+    "dog_extra_effects": [
+      "설사",
+      "변비",
+      "요폐",
+      "과다 침 분비",
+      "진정"
+    ],
+    "cat_mechanism": "FeLV 관련 배뇨근 불안정에 대한 보조 치료로 사용.",
+    "cat_extra_effects": [
+      "설사",
+      "변비",
+      "요폐",
+      "과다 침 분비",
+      "진정"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 난치성 요실금(배뇨근 과반사) 보조 치료에 오프라벨로 사용. 체중 기반(0.2–0.3 mg/kg) 또는 고정 용량(1.25–5 mg/마리) PO q8–12h 투여. 수의용 허가 제품 없음. 진정, 구강 건조, 변비 등 부작용 모니터링 필요.",
+    "cat": "고양이에서 FeLV 관련 배뇨근 불안정에 오프라벨로 사용. 고정 용량 0.5–1.25 mg/마리 PO q8–12h 투여 (5mg 정제의 1/8~1/4). 소동물에서의 사용 경험이 제한적이므로 면밀한 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 질환, 간 기능 저하, 녹내장, 요폐, 중증 근무력증 등 다수의 상대적 금기 조건에서 주의 사용 필요. 소동물에서의 사용 경험이 제한적임."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "FeLV 관련 배뇨근 불안정에 사용 가능하나 오프라벨 사용이며 사용 경험이 매우 제한적. 부작용 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 경구 용액은 밀폐된 차광 용기에 실온(20–25°C, 68–77°F) 보관. 15–30°C(59–86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "Oxybutynin Chloride 경구 정제 5 mg (제네릭, Rx)",
+      "Oxybutynin Chloride 경구 시럽 1 mg/mL, 473 mL (제네릭, Rx)",
+      "Oxybutynin 서방형 정제 (Ditropan XL)",
+      "Oxybutynin 경피 패치 (Oxytrol)",
+      "Oxybutynin 외용 겔 (Gelnique)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "옥시부티닌은 항무스카린 및 직접 평활근 항경련 작용을 가진 비뇨기 항경련제로, 개의 배뇨근 과반사 및 고양이의 FeLV 관련 배뇨근 불안정에 오프라벨로 사용됩니다. 수의용 허가 제품은 없으며, 인체용 제품을 사용합니다. 진정, 구강 건조, 변비, 요폐 등의 부작용에 주의가 필요하며, 심장 질환·간 기능 저하·녹내장·요폐 등의 기저 질환이 있는 경우 위험-이익을 신중히 평가해야 합니다.",
+    "indications": "【오프라벨】개: 난치성 요실금(배뇨근 과반사) 보조 치료. 고양이: FeLV 관련 배뇨근 불안정 보조 치료. 인체에서는 과활동성 방광, 신경인성 방광에 허가 사용.",
+    "client_info": "이 약은 개와 고양이에서 방광 경련으로 인한 소변 누출을 줄이는 데 사용됩니다. 가장 흔한 부작용은 졸음/기면, 구강 건조, 변비입니다. 설사와 과다 침 분비도 나타날 수 있습니다. 항상 신선한 물을 충분히 제공하세요. 소변을 보지 못하거나(요폐), 심한 졸음, 빠른 심박수가 관찰되면 즉시 수의사에게 연락하십시오. 이 약은 사람용 처방약을 동물에게 오프라벨로 사용하는 것입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (partial — listed but not detailed)",
+      "Veterinary PK studies (dog/cat specific)",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding percentage",
+      "CYP enzyme profile",
+      "Renal dose adjustment guidelines",
+      "Specific renal/hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/30.jsonl",
+    "extracted_at": "2026-03-10T22:32:25.050506+00:00",
+    "reviewer": null
+  }
+}

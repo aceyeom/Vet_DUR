@@ -1,0 +1,506 @@
+{
+  "id": "vancomycin",
+  "drug_identity": {
+    "name_ko": "반코마이신",
+    "name_en": "Vancomycin",
+    "active_ingredient": "Vancomycin",
+    "brand_names": [
+      "Vancocin",
+      "First-Vancomycin-25",
+      "First-Vancomycin-50"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 다제내성 그람양성균 감염 치료를 위한 오프라벨 사용. WHO 지정 최우선 중요 항생제로, 수의학적 사용은 감염병 전문가 자문 후 최후 수단으로만 권장됨.",
+    "dosage_form": [
+      "Inj",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 5000,
+        "unit": "mg"
+      },
+      {
+        "value": 10000,
+        "unit": "mg"
+      },
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.95,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "반코마이신은 주로 사구체 여과를 통해 신장으로 배설되며, 소량만 담즙으로 배설됨. CYP 효소 대사는 보고되지 않음."
+    },
+    "extra_information": "경구 투여 시 전신 흡수가 거의 없음(개에서 생체이용률 0.27~1.66%). IV 투여 후 흉막액, 복수, 심낭액, 활액에서 치료 농도 도달 가능. 정상 뇌척수액으로는 잘 분포되지 않음. 신기능 저하 시 약물 축적 위험."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신독성은 명시적으로 언급됨. 이독성(청각 신경 독성)은 혈액 관련 독성으로 분류하지 않음. 수의학 종별 PK 데이터 부족으로 인간 데이터 기반 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "ototoxicity"
+        ],
+        "index": 1,
+        "evidence": "이독성(ototoxicity)이 보고되어 있으나 뇌 직접 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombophlebitis"
+        ],
+        "index": 2,
+        "evidence": "인간에서 고용량 장기 투여 시 가역적 호중구감소증 보고. 혈전정맥염 위험."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "glomerular filtration",
+          "renal function",
+          "decreased renal function"
+        ],
+        "index": 4,
+        "evidence": "신독성이 가장 심각한 부작용으로 명시됨. 주로 사구체 여과로 배설되며 신기능 저하 시 용량 감소 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 직접적인 언급 없음. 소량 담즙 배설."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "cardiac arrest"
+        ],
+        "index": 2,
+        "evidence": "급속 IV 투여 시 심한 저혈압 및 드물게 심정지 보고. 최소 30분에 걸쳐 희석 투여 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "ototoxicity"
+        ],
+        "index": 1,
+        "evidence": "이독성 위험은 개와 동일하게 적용되나 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombophlebitis"
+        ],
+        "index": 2,
+        "evidence": "인간 데이터 기반 추정. 고양이 특이적 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "glomerular filtration",
+          "renal function"
+        ],
+        "index": 4,
+        "evidence": "신독성이 주요 부작용. 고양이에서도 신기능 모니터링 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "cardiac arrest"
+        ],
+        "index": 2,
+        "evidence": "급속 IV 투여 시 심혈관계 부작용 위험. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 6.0,
+      "mean": 5.0,
+      "species": "human"
+    },
+    "f_percent": 1,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 정상 신기능 시 반감기 약 4~6시간. 개에서 경구 생체이용률 0.27~1.66%(단회 투여 연구). 수의학 종별 IV PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity",
+        "synergy"
+      ],
+      "evidence": "Vancomycin may increase the risk for aminoglycoside-related ototoxicity or nephrotoxicity. Combination may be medically required due to synergy against staphylococci and enterococci; enhanced monitoring is suggested."
+    },
+    {
+      "drug": "Anesthetic Agents",
+      "severity": 1,
+      "keywords": [
+        "erythema",
+        "histamine-like flushing"
+      ],
+      "evidence": "In children, vancomycin used with anesthetic agents has caused erythema and a histamine-like flushing reaction."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., amphotericin B, cisplatin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Use with caution with other nephrotoxic drugs due to additive nephrotoxicity risk."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit_iv"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 그람양성균 전신 생명위협 감염 (오프라벨)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 30~60분에 걸쳐 투여",
+          "evidence": "15 mg/kg IV over 30 to 60 minutes every 6 to 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 그람양성균 전신 생명위협 감염 - 부하용량 후 CRI (오프라벨)",
+          "value": "3.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하용량 후 1.5 mg/kg/hour CRI로 유지",
+          "evidence": "3.5 mg/kg IV followed by 1.5 mg/kg/hour IV CRI (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 그람양성균 전신 생명위협 감염 - CRI 유지 (오프라벨)",
+          "value": "1.5",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "지속 정맥 주입 (CRI)",
+          "evidence": "1.5 mg/kg/hour IV CRI (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "메트로니다졸에 반응하지 않는 Clostridioides difficile 장내 감염 경구 치료 (오프라벨)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일간 투여. 경구 반코마이신은 전신 흡수 없이 장내 감염에만 유효.",
+          "evidence": "10–20 mg/kg PO every 6 hours for 5 to 7 days (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 그람양성균 전신 생명위협 감염 (오프라벨) - 개/고양이 동일 용량 기재",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 30~60분에 걸쳐 투여",
+          "evidence": "15 mg/kg IV over 30 to 60 minutes every 6 to 8 hours (extra-label, dogs/cats)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 그람양성균 전신 생명위협 감염 - 부하용량 후 CRI (오프라벨)",
+          "value": "3.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하용량 후 1.5 mg/kg/hour CRI로 유지",
+          "evidence": "3.5 mg/kg IV followed by 1.5 mg/kg/hour IV CRI (extra-label, dogs/cats)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Clostridioides difficile 장내 감염 경구 치료 (오프라벨)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일간 투여",
+          "evidence": "10–20 mg/kg PO every 6 hours for 5 to 7 days (extra-label, dogs/cats)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감소 또는 투여 간격 연장 필요. 혈청 최고 및 최저 농도 모니터링 권장. 목표 최저 농도: 10~15 µg/mL (일반), 15~20 µg/mL (중증 MRSA 감염). 혈액투석으로는 유의미한 제거 불가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사 의존성이 낮으며 주로 신장으로 배설됨. 간기능 저하에 따른 용량 조정 권고사항 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "CKD",
+        "renal failure",
+        "acute kidney injury",
+        "azotemia",
+        "elevated creatinine"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "토끼 IV 투여",
+      "match_terms": [
+        "rabbit",
+        "lagomorph"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "SC 또는 IM 투여",
+      "match_terms": [
+        "subcutaneous injection",
+        "intramuscular injection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 항생제로 치료 가능한 감염",
+      "match_terms": [
+        "susceptible infection",
+        "first-line antibiotic available"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제 및 세균 세포막 투과성 변화. RNA 합성에도 영향. 그람양성균에만 효과적(살균성, 시간 의존성). 장구균에 대해서는 정균 작용.",
+    "common_extra_effects": [
+      "신독성 (nephrotoxicity)",
+      "이독성 (ototoxicity)",
+      "혈전정맥염 (thrombophlebitis)",
+      "심한 저혈압 (severe hypotension)",
+      "심정지 (cardiac arrest, rare)",
+      "가역적 호중구감소증 (reversible neutropenia)",
+      "피부 반응 및 과민반응 (dermatologic reactions, hypersensitivity)",
+      "경구 투여 시 오심, 식욕부진, 구토, 설사"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률은 0.27~1.66%로 매우 낮아 전신 감염에는 IV 투여만 유효. 다제내성 MRSA, MRSP 또는 다제내성 장구균 감염에 한해 사용. 감염병 전문가 자문 필수. 혈청 최저 농도 모니터링 및 신기능 정기 검사 권장.",
+    "cat": "고양이에서도 개와 동일한 용량이 적용되나 고양이 특이적 PK 데이터는 없음. 신독성 및 이독성 모니터링 필수. 토끼에서 IV 반코마이신은 치명적일 수 있으므로 토끼에는 절대 금기."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성 위험으로 신기능 모니터링 필수. 최소 30~60분에 걸쳐 희석 IV 투여. SC, IM, IP 투여 금지. 감염병 전문가 자문 후 최후 수단으로만 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "개와 동일한 주의사항 적용. 고양이 특이적 안전성 데이터 부족. 신기능 및 청력 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관, 밀폐 차광 용기. 재구성 후 냉장 시 14일 안정. 5% 포도당 또는 0.9% 생리식염수로 희석 후 실온 24시간, 냉장 2개월 안정. 5% 포도당 냉동 용액은 -20°C 이하 보관; 해동 후 실온 72시간 또는 냉장 30일 안정. 해동 후 재냉동 금지.",
+    "forms": [
+      "Vancomycin HCl Powder for Injection (IV): 500 mg, 750 mg, 1 g, 5 g, 10 g vials",
+      "Vancomycin for IV Injection in dextrose (frozen): 500 mg/100 mL, 750 mg/150 mL, 1 g/200 mL, 1.25 g/250 mL, 1.5 g/300 mL, 2 g/400 mL",
+      "Vancomycin HCl Oral Capsules: 125 mg, 250 mg (Vancocin)",
+      "Vancomycin Oral Solution: 25 mg/mL, 50 mg/mL (First-Vancomycin-25, -50)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "반코마이신은 다제내성 그람양성균(MRSA, MRSP, 다제내성 장구균) 감염 치료를 위한 최후 수단 항생제입니다. WHO 지정 최우선 중요 항생제로 수의학적 사용은 감염병 전문가 자문 후 배양 및 감수성 검사로 확인된 경우에만 허용됩니다. 전신 투여 시 반드시 IV로 투여하며(최소 30~60분), SC/IM 투여는 절대 금기입니다. 신독성이 주요 부작용으로 신기능 정기 모니터링이 필수입니다. 경구 반코마이신은 전신 흡수가 없어 장내 감염(C. difficile)에만 유효합니다.",
+    "indications": "1) 다제내성 그람양성균(MRSA, MRSP, 다제내성 장구균) 전신 생명위협 감염 (오프라벨, 최후 수단) 2) 메트로니다졸에 반응하지 않는 Clostridioides difficile 장내 감염 경구 치료 (오프라벨) 3) 항균제 함침 물질(PMMA 비드, 겔), 관절내 주사, 국소 사지 관류를 통한 국소 치료",
+    "client_info": "이 약은 대부분 입원 중 수의사가 정맥으로 투여합니다. 경구 반코마이신은 외래 치료에 사용될 수 있으며, 수의사의 지시대로 정확히 투여하세요. 소량의 음식과 함께 줄 수 있습니다. 이 약을 복용하는 동안 수의사의 정기적인 검진이 매우 중요합니다. 추적 검사를 빠지지 마세요. 신장 기능 이상이나 청력 변화 등 이상 증상이 나타나면 즉시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat IV PK)",
+      "Protein binding data",
+      "Volume of distribution",
+      "Onset of action",
+      "T-max data",
+      "CYP enzyme interactions",
+      "Cat-specific adverse effects"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (veterinary species)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "organ_burden_logic.dog (veterinary-specific scores)",
+      "organ_burden_logic.cat (veterinary-specific scores)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/6.jsonl",
+    "extracted_at": "2026-03-10T15:25:04.925487+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "id": "isoproterenol",
+  "drug_identity": {
+    "name_ko": "이소프로테레놀",
+    "name_en": "Isoproterenol",
+    "active_ingredient": "Isoproterenol hydrochloride",
+    "brand_names": [
+      "Isuprel",
+      "Imuprel",
+      "Isolin",
+      "Isoprenaline Macure",
+      "Lenoprel",
+      "Norisodrine Aerotrol",
+      "Proterenal",
+      "Saventrine",
+      "Vapo-iso"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 인체용 제제를 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "카테콜-O-메틸전달효소(COMT)에 의해 간 및 기타 조직에서 대사되어 약한 활성 대사체를 생성함. 경구 투여 시 위장관에서 빠르게 불활성화됨."
+    },
+    "extra_information": "IV 투여 시 즉각적인 효과가 나타나지만 투여 중단 후 수 분 내에 효과가 소실됨. 약리 작용은 주로 조직 흡수에 의해 종료됨. 개에서 저산소 상태의 치사량은 10–50 µg/kg IV로 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터 부재; 인체 및 일반 약리 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "anxiety",
+          "tremors",
+          "excitability",
+          "headache",
+          "weakness"
+        ],
+        "index": 1,
+        "evidence": "불안, 진전, 흥분성, 두통, 쇠약 등 CNS 관련 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "hypotension",
+          "cardiac necrosis",
+          "increased cardiac output"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 부정맥, 저혈압, 고용량 시 심근 괴사 위험이 보고됨. 도파민이나 도부타민보다 부정맥 유발성이 높음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease caution",
+          "urine output monitoring"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 환자에서 주의 사용 권고. 쇼크 시 골격근 관류 증가로 중요 장기 관류 감소 가능성."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "metabolized by liver",
+          "COMT"
+        ],
+        "index": 1,
+        "evidence": "간에서 COMT에 의해 대사됨. 직접적인 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "cardiac necrosis",
+          "increased myocardial oxygen requirements",
+          "decreased coronary perfusion",
+          "arrhythmogenic"
+        ],
+        "index": 1,
+        "evidence": "심근 산소 요구량 증가, 관상동맥 관류 감소, 고용량 시 심근 괴사, 도파민/도부타민보다 높은 부정맥 유발성."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "anxiety",
+          "tremors",
+          "excitability",
+          "weakness"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 개와 동일한 부작용 프로파일 적용."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 개/인체 데이터 기반 추정."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease caution"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 신장 질환 주의 권고는 종 공통 적용."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "metabolized by liver"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 간 대사 경로는 동일하게 적용."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "arrhythmogenic",
+          "cardiac necrosis"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 개/인체 데이터 기반 추정. 심장 부담 높음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 시 즉각적인 효과 발현. 투여 중단 후 수 분 내 효과 소실. 설하 투여 시 최대 30분 소요. 반감기는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Inhalant Anesthetics (isoflurane, sevoflurane, cyclopropane, halogenated hydrocarbons)",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia",
+        "cardiac sensitization"
+      ],
+      "evidence": "Increased risk for arrhythmias when isoproterenol is administered to patients that have received cyclopropane or halogenated hydrocarbon anesthetic agents. Propranolol may be used to treat resulting arrhythmias."
+    },
+    {
+      "drug": "Beta-Blockers (atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "bronchodilation blockade",
+        "cardiac blockade"
+      ],
+      "evidence": "Beta-blockers may antagonize isoproterenol's cardiac, bronchodilating, and vasodilating effects by blocking beta receptors. Use with caution in patients with bronchospastic disease."
+    },
+    {
+      "drug": "Digoxin (digitalis glycosides)",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia",
+        "cardiac toxicity"
+      ],
+      "evidence": "Increased risk for arrhythmias may occur if isoproterenol is used concurrently with digitalis glycosides. Isoproterenol is contraindicated in tachycardia or AV block caused by cardiac glycoside intoxication."
+    },
+    {
+      "drug": "Linezolid",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "sympathomimetic potentiation"
+      ],
+      "evidence": "Increased hypertensive effects possible when used concurrently with isoproterenol."
+    },
+    {
+      "drug": "Oxytocin",
+      "severity": 2,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Increased risk for hypertension when used concurrently with isoproterenol."
+    },
+    {
+      "drug": "Selegiline",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "sympathomimetic potentiation"
+      ],
+      "evidence": "Increased hypertensive effects possible when used concurrently with isoproterenol."
+    },
+    {
+      "drug": "Sympathomimetic agents (phenylpropanolamine)",
+      "severity": 3,
+      "keywords": [
+        "additive toxicity",
+        "cardiovascular toxicity"
+      ],
+      "evidence": "Isoproterenol should not be administered with other sympathomimetic agents as increased toxicity may result."
+    },
+    {
+      "drug": "Theophylline / Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "reduced theophylline levels",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Isoproterenol may reduce theophylline levels when used concurrently."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "동방정지, 동성 서맥, 완전 방실 차단, 또는 칼슘 채널 차단제 과다복용에 대한 아트로핀 대체 (오프라벨)",
+          "value": "0.04 - 0.08",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과에 따라 주입 속도 조절; 분당 투여량",
+          "evidence": "희석 후 IV CRI로 0.04–0.08 µg/kg/분 투여 (Plumb's 참고문헌 3)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심박수 및 심박출량 증가, 혈압 감소 목적 (오프라벨)",
+          "value": "0.02 - 0.5",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈압 면밀 모니터링 하에 투여; 분당 투여량",
+          "evidence": "0.02–0.5 µg/kg/분 IV CRI; 전방 혈류 및 조직 관류 증강 (Plumb's 참고문헌 4)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "동방정지, 동성 서맥, 완전 방실 차단, 또는 칼슘 채널 차단제 과다복용에 대한 아트로핀 대체 (오프라벨)",
+          "value": "0.04 - 0.08",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과에 따라 주입 속도 조절; 분당 투여량",
+          "evidence": "개/고양이 공통 용량으로 기재됨 (Plumb's 참고문헌 3)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심박수 및 심박출량 증가, 혈압 감소 목적 (오프라벨)",
+          "value": "0.02 - 0.5",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈압 면밀 모니터링 하에 투여; 분당 투여량",
+          "evidence": "개/고양이 공통 용량으로 기재됨 (Plumb's 참고문헌 4)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 주의 사용 권고되나 구체적인 용량 조절 지침은 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 대사 약물이나 모노그래프에 간 기능 저하 시 용량 조절에 대한 구체적 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "빈맥성 부정맥",
+      "match_terms": [
+        "tachyarrhythmia",
+        "supraventricular tachycardia",
+        "ventricular tachycardia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "강심배당체 중독으로 인한 빈맥 또는 방실 차단",
+      "match_terms": [
+        "digoxin toxicity",
+        "digitalis toxicity",
+        "cardiac glycoside intoxication"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "증가된 변력 작용이 필요하지 않은 심실 부정맥",
+      "match_terms": [
+        "ventricular arrhythmia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "관상동맥 부전",
+      "match_terms": [
+        "coronary insufficiency",
+        "coronary artery disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "diabetes"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비선택적 베타-1 및 베타-2 아드레날린 수용체 작용제. 사이클릭 AMP 생성 자극을 통해 심근 수축력 및 심박수 증가, 기관지 평활근 이완, 말초 혈관 확장을 유발함. 히스타민 및 SRS-A의 항원 매개 방출을 억제함.",
+    "common_extra_effects": [
+      "빈맥",
+      "저혈압",
+      "불안",
+      "진전",
+      "흥분성",
+      "두통",
+      "쇠약",
+      "구토",
+      "부정맥 유발",
+      "심근 산소 요구량 증가",
+      "관상동맥 관류 감소",
+      "고용량 시 심근 괴사"
+    ],
+    "dog_mechanism": "베타-1 및 베타-2 수용체 자극을 통해 심박수 및 심박출량 증가, 기관지 확장, 말초 혈관 저항 감소. 저산소 상태의 개에서 치사량은 10–50 µg/kg IV.",
+    "dog_extra_effects": [
+      "빈맥",
+      "저혈압",
+      "부정맥",
+      "심근 괴사 (고용량)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "이소프로테레놀은 수의학에서 드물게 사용됨. 도파민이나 도부타민보다 부정맥 유발성이 높아 심부전 치료에는 거의 사용되지 않음. 완전 방실 차단, 동성 서맥, 동방정지 등의 서맥성 부정맥 치료에 IV CRI로 사용 가능. 심혈관 상태(심박수, 리듬, 혈압, 중심정맥압, 심박출량), 호흡수, 소변량, 혈가스를 면밀히 모니터링해야 함.",
+    "cat": "개와 동일한 적응증 및 용량으로 사용 가능(오프라벨). 고양이 특이적 PK 데이터는 없음. 훈련된 인력에 의해 적절한 모니터링 환경에서만 사용해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "관상동맥 부전, 갑상선 기능 항진증, 신장 질환, 고혈압, 당뇨병 환자에서 주의 사용. 쇼크 시 적절한 수액 대체 요법의 대안이 아님. 임신 중 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "개와 동일한 주의사항 적용. 고양이 특이적 안전성 데이터 없음. 훈련된 인력에 의해 모니터링 환경에서만 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20–25°C, 68–77°F)에서 보관. 공기, 빛, 열에 노출 시 이소프로테레놀 염이 변색됨. 분홍색 또는 갈색-분홍색으로 변색된 용액이나 침전물이 있는 용액은 사용 금지. pH 6 초과 용액과 혼합 시 즉시 사용 권장.",
+    "forms": [
+      "Isoproterenol HCl 주사액 0.2 mg/mL (1 mL 및 5 mL 앰플 또는 단회용 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이소프로테레놀은 비선택적 베타 아드레날린 작용제로 수의학에서 드물게 사용됨. 완전 방실 차단, 동성 서맥, 동방정지 등 서맥성 부정맥 및 급성 기관지 수축 치료에 IV CRI로 사용. 도파민/도부타민보다 부정맥 유발성이 높아 심부전 치료에는 거의 사용되지 않음. 수의학 허가 제품 없음(오프라벨 사용). 반감기가 매우 짧아 부작용도 일시적임.",
+    "indications": "급성 기관지 수축, 완전 방실 차단, 동성 서맥, 동방정지, 칼슘 채널 차단제 과다복용 시 아트로핀 대체, 쇼크 또는 심부전의 보조 치료(제한적 사용). 모든 적응증은 오프라벨.",
+    "client_info": "이소프로테레놀 주사제는 반드시 훈련된 수의료 인력이 적절한 모니터링 장비가 갖춰진 환경에서만 사용해야 합니다. 이 약물은 심박수를 빠르게 증가시키고 혈압에 영향을 줄 수 있으므로 지속적인 심전도 및 혈압 모니터링이 필요합니다. 부작용(빈맥, 저혈압, 불안, 진전 등)은 대부분 일시적이며 투여 속도를 줄이거나 중단하면 호전됩니다. 임신 중인 동물에서는 자궁 수축을 억제할 수 있으므로 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Species-specific pharmacokinetics (dog/cat)",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "CYP enzyme profile",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/56.jsonl",
+    "extracted_at": "2026-03-11T06:41:25.299631+00:00",
+    "reviewer": null
+  }
+}

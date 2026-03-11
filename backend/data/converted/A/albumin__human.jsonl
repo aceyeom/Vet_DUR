@@ -1,0 +1,537 @@
+{
+  "id": "albumin_human",
+  "drug_identity": {
+    "name_ko": "알부민 (인간/개)",
+    "name_en": "Albumin, Human",
+    "active_ingredient": "Human Serum Albumin",
+    "brand_names": [
+      "Albuked",
+      "Albuminar",
+      "AlbuRX",
+      "Albutein",
+      "Flexbumin",
+      "Kedbumin",
+      "Plasbumin"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "인간 혈청 알부민(HSA)은 개와 고양이에서 허가 외(extra-label)로 사용되며, 이종 알부민(xeno-albumin) 사용에 따른 면역 매개 반응 위험이 있습니다. 개용 동종 알부민(CSA) 제품도 미국에서 상업적으로 이용 가능하나 FDA 승인 제품은 아닙니다.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "%"
+      },
+      {
+        "value": 20,
+        "unit": "%"
+      },
+      {
+        "value": 25,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "알부민은 내인성 단백질로 CYP 효소 경로를 통해 대사되지 않습니다. 외인성으로 투여된 개 알부민의 소실 반감기는 10~12일로 추정됩니다."
+    },
+    "extra_information": "내인성 순환 알부민은 총 체내 알부민의 30~40%를 차지합니다. 외인성으로 투여된 개 알부민의 소실은 20~24일로 추정되며 반감기는 10~12일입니다. 개 또는 고양이에서 인간 알부민의 약동학은 잘 기술되어 있지 않습니다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 이종 알부민(HSA) 투여 시 신부전, 혈관염, 응고장애 등의 지연성 과민반응이 보고됨. 개 및 고양이 특이적 수의학 PK 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "지연성 부작용으로 무기력증(lethargy)이 보고되었으나 직접적인 뇌 독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "coagulopathy",
+          "platelet aggregation",
+          "antithrombin",
+          "urticaria",
+          "anaphylaxis",
+          "serum sickness"
+        ],
+        "index": 2,
+        "evidence": "응고장애, 혈소판 응집 감소, 항트롬빈 증강 작용, 두드러기, 아나필락시스, 혈청병 등 혈액 관련 부작용이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal failure",
+          "delayed hypersensitivity"
+        ],
+        "index": 3,
+        "evidence": "건강한 개에서 HSA 투여 후 지연성 과민반응(III형)으로 인한 신부전으로 사망 사례가 보고됨."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 직접적인 언급 없음. 알부민은 간에서 합성되나 투여 시 간 부담 근거는 제한적임."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypotension",
+          "volume overload"
+        ],
+        "index": 4,
+        "evidence": "빈맥, 저혈압, 용량 과부하 위험이 언급됨. 심장에 대한 직접적인 독성 근거는 없으나 혈역학적 모니터링 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 지연성 부작용으로 무기력증이 보고될 수 있으나 직접적인 뇌 독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "urticaria",
+          "anaphylaxis",
+          "hypersensitivity"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 HSA 사용 시 즉각적 및 지연성 과민반응이 가능하며, 두드러기, 아나필락시스 위험이 있음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal failure",
+          "delayed hypersensitivity"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 HSA 사용 관련 정보는 제한적이나 지연성 과민반응으로 인한 신부전 위험이 있음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간 독성에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypotension",
+          "volume overload"
+        ],
+        "index": 4,
+        "evidence": "빈맥, 저혈압, 용량 과부하 위험이 언급됨. 고양이에서 심장 독성 직접 근거는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 240.0,
+      "max": 288.0,
+      "mean": 264.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "외인성으로 투여된 개 알부민의 반감기는 10~12일(240~288시간)로 추정됨. 인간 알부민의 개/고양이에서의 약동학은 잘 기술되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's 약물 상호작용 섹션에서 추출. 알부민은 혈장 단백질에 고도로 결합된 약물을 결합하여 유리 약물 농도에 영향을 줄 수 있으나 임상적 유의성은 낮은 것으로 기술됨. 심각도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Highly protein-bound drugs",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "free drug concentration"
+      ],
+      "evidence": "Exogenous albumin administration could bind drugs that are highly bound to plasma proteins and affect the amount of free drug circulating; however, clinical significance is considered unlikely."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 55.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "인간 알부민(extra-label) - 비응급 상황 테스트 용량",
+          "value": "0.25",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "15분에 걸쳐 투여하며 심박수, 호흡수, 체온 모니터링. 안면 부종 또는 아나필락시스 징후 시 즉시 중단.",
+          "evidence": "Plumb's Dosages section: nonemergent test dose protocol"
+        },
+        {
+          "logic_type": "linear",
+          "context": "인간 알부민(extra-label) - CRI 유지 용량",
+          "value": "0.1 - 1.7",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "볼루스 투여 후 4~72시간에 걸쳐 CRI로 투여 (0.025~0.425 g/kg/hr)",
+          "evidence": "Plumb's Dosages section: CRI range after bolus"
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "인간 알부민(extra-label) - 저혈압 치료를 위한 최대 볼루스",
+          "value": "4",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "저혈압 치료를 위한 느린 IV push 최대 용량 4 mL/kg (1 g/kg); 평균 보고 용량 2 mL/kg (0.5 g/kg)",
+          "evidence": "Plumb's Dosages section: maximum volume for slow IV push"
+        },
+        {
+          "logic_type": "linear",
+          "context": "인간 알부민(extra-label) - 알부민 결핍 계산 기반 투여",
+          "value": "0.5 - 1.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "10% 용액으로 희석하여 12시간에 걸쳐 수혈 필터를 통해 투여. 알부민 결핍(g) = 10 × (목표 알부민 - 환자 알부민) × 체중(kg) × 0.3",
+          "evidence": "Plumb's Dosages section: albumin deficit calculation protocol"
+        },
+        {
+          "logic_type": "linear",
+          "context": "25% 인간 혈청 알부민(HSA) - 총 용량 2 g/kg 프로토콜",
+          "value": "2",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "2시간에 걸쳐 투여 후 0.1~0.2 mL/kg/hr로 10시간 유지 (총 용량 2 g/kg). 또는 알부민 결핍 계산 후 6~12시간에 걸쳐 보충.",
+          "evidence": "Plumb's Dosages section: 25% HSA protocol"
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 알부민(CSA) - 저혈량성 쇼크 (16% 용액)",
+          "value": "15.6 - 31.2",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "16% 용액 사용, 1 mL/분 속도로 총 2.5~5 g/kg 투여",
+          "evidence": "Plumb's Dosages section: CSA hypovolemic shock"
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "개 알부민(CSA) - 저알부민혈증 (5% 용액)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5% 용액 사용, 임상 상태에 따라 최대 2 g/kg/일 투여",
+          "evidence": "Plumb's Dosages section: CSA hypoalbuminemia 5% solution"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "개 알부민(CSA) - 패혈성 복막염 수술 후 저알부민혈증 (5% 용액)",
+          "value": "800",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5% 용액 사용, 6시간에 걸쳐 투여. 패혈성 복막염 수술적 처치 후 저알부민혈증 개에서 시행된 연구.",
+          "evidence": "Plumb's Dosages section: CSA septic peritonitis study"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "5% 인간 알부민(HSA) - 고양이 저알부민혈증 (25% 제제 사용 금지)",
+          "value": "2",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~10시간에 걸쳐 시간당 2 mL/kg 투여, 최대 10~20 mL/kg/일. 혈청 알부민 농도가 2 g/dL 미만인 경우 이후 날에도 반복 투여. 반드시 5% 제제만 사용 (25% 제제 사용 금지).",
+          "evidence": "Plumb's Dosages section: 5% HSA in cats, NOT 25%"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신부전은 HSA 투여의 지연성 부작용으로 보고됨. 신장 기능 모니터링이 권장되나 구체적인 용량 조절 기준은 명시되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 기능 저하에 따른 용량 조절에 대한 구체적인 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "알부민 제품에 대한 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity to albumin",
+        "albumin allergy",
+        "anaphylaxis to albumin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이종 알부민 반복 투여 (xeno-albumin re-administration)",
+      "match_terms": [
+        "prior xeno-albumin administration",
+        "anti-HSA antibodies"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "용량 과부하 상태",
+      "match_terms": [
+        "volume overload",
+        "hypervolemia",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "빈혈 또는 극심한 탈수",
+      "match_terms": [
+        "anemia",
+        "severe dehydration"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "고알부민혈증/고단백혈증",
+      "match_terms": [
+        "hyperalbuminemia",
+        "hyperproteinemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": 2.5,
+        "unit": "g/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알부민은 혈장 교질삼투압의 75~80%를 제공합니다. 치료적으로 투여 시 혈관 내 교질삼투압을 증가시켜 간질에서 혈관 내 공간으로 체액을 이동시킵니다. 또한 약물, 이온, 호르몬, 지질, 금속의 결합 및 운반; 내피 완전성 유지 및 투과성 조절; 상처 치유; 항산화 특성; 자유 라디칼 제거; 대사 및 산-염기 기능; 혈소판 응집 감소; 항트롬빈 증강 역할을 합니다.",
+    "common_extra_effects": [
+      "안면 부종",
+      "구토",
+      "두드러기",
+      "고열",
+      "쇼크",
+      "무기력증",
+      "파행",
+      "부종",
+      "피부 병변/혈관염",
+      "식욕부진",
+      "신부전",
+      "응고장애",
+      "빈맥",
+      "저혈압",
+      "설사",
+      "진전",
+      "카테터 부위 혈관주위 염증"
+    ],
+    "dog_mechanism": "개에서 HSA 투여 시 즉각적(I형 과민반응; 아나필락시스) 및 지연성(III형 과민반응; 혈청병) 과민반응이 가능합니다. 건강한 개에서 부작용 발생률이 중증 환자보다 높을 수 있으며, 이는 중증 환자에서 면역 반응이 둔화될 수 있기 때문입니다.",
+    "dog_extra_effects": [
+      "즉각적 과민반응 (아나필락시스)",
+      "지연성 과민반응 (혈청병)",
+      "안면 부종",
+      "구토",
+      "두드러기",
+      "고열",
+      "쇼크",
+      "무기력증",
+      "파행",
+      "말초 부종",
+      "반상출혈",
+      "식욕부진",
+      "신부전",
+      "응고장애",
+      "빈맥",
+      "설사",
+      "진전"
+    ],
+    "cat_mechanism": "고양이에서 HSA 사용에 관한 정보는 제한적입니다. 즉각적 및 지연성 과민반응이 가능합니다.",
+    "cat_extra_effects": [
+      "즉각적 과민반응",
+      "지연성 과민반응",
+      "설사",
+      "고열",
+      "진전",
+      "카테터 부위 혈관주위 염증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 HSA 사용은 가역적 질환을 가진 중증 저알부민혈증(혈청 알부민 < 1.5 g/dL) 및 낮은 교질삼투압(COP < 14 mmHg)이 있는 경우에 고려할 수 있습니다. 패혈성 복막염 및 수술적 질환을 가진 개에서 특히 고려될 수 있으나, 합병증 위험과 불확실한 긍정적 결과를 고려하여 극도의 주의가 필요합니다. 개 혈청 알부민(CSA)은 HSA보다 안전한 대안으로 보이나 비교 연구 데이터는 부족합니다. 이전에 HSA를 투여받은 개는 항원성으로 인해 7일 이내 추가 투여가 불가능할 수 있습니다.",
+    "cat": "고양이에서 HSA 사용에 관한 정보는 매우 제한적입니다. 반드시 5% 제제만 사용해야 하며 25% 제제는 사용하지 않아야 합니다. 혈청 알부민 농도가 2 g/dL 미만인 경우 반복 투여를 고려할 수 있습니다. 이종 알부민 사용에 따른 과민반응 위험이 있으므로 신중한 모니터링이 필요합니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "이종 알부민(HSA) 사용 시 즉각적 및 지연성 과민반응 위험이 있습니다. 용량 과부하, 빈혈, 극심한 탈수 상태에서 주의가 필요합니다. 혈청 알부민이 2.5 g/dL를 초과하지 않도록 모니터링해야 합니다. 반복 투여는 상대적 금기입니다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 HSA 사용 정보는 제한적입니다. 반드시 5% 제제만 사용해야 하며, 이종 알부민 사용에 따른 과민반응 위험이 있습니다. 신중한 모니터링이 필요합니다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "5% 용액: 30°C(86°F) 이하에서 보관, 냉동 금지, 유효기간 3년. 25% 및 20% 용액: 30°C(86°F) 이하 실온 보관, 냉동 금지. 혼탁하거나 침전물이 있는 용액 사용 금지. 개봉 후 4시간 이내 사용. 동결된 용액 사용 금지. 동결건조 개 혈청 알부민(CSA) 제품: 4~6°C(39.2~42.7°F) 냉장 보관, 15개월 안정. 재수화 후 24시간 이내 사용.",
+    "forms": [
+      "Human Albumin 5% solution (various sizes)",
+      "Human Albumin 20% solution (various sizes)",
+      "Human Albumin 25% solution (various sizes)",
+      "Canine Albumin lyophilized 5g (Animal Blood Resources International)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "알부민(인간/개)은 중증 저알부민혈증 환자에서 혈관 내 교질삼투압을 증가시키고 장기 관류를 개선하기 위해 사용되는 천연 단백질 교질액입니다. 이종 알부민(HSA) 사용 시 즉각적(아나필락시스) 및 지연성(혈청병) 과민반응 위험이 있으며, 사망 사례도 보고되어 있습니다. 개에서는 CSA가 HSA보다 안전한 대안으로 여겨지나 비교 연구 데이터는 부족합니다. 고양이에서는 반드시 5% HSA만 사용해야 합니다. 혈청 알부민 목표치는 2~2.5 g/dL이며, 이를 초과하지 않도록 모니터링이 필요합니다.",
+    "indications": "중증 저알부민혈증(알부민 < 2.0 g/dL), 전신 염증 반응 증후군(SIRS) 또는 패혈증, 증가된 혈관 투과성, 불응성 저혈압, 위확장-염전(GDV) 관련 불응성 저혈압, 패혈성 복막염, 단백 소실성 장병증 수술 전 처치, 장 부종으로 인한 지속적 구토를 동반한 중증 저알부민혈증 환자에서 교질액 대체 요법으로 사용됩니다.",
+    "client_info": "이 약물은 반드시 입원 환경에서 투여되어야 합니다. 보호자는 알부민 사용과 관련된 위험(특히 인간 알부민을 동물에게 사용할 때의 면역 반응 위험), 비용, 그리고 필요한 모니터링에 대해 충분히 이해하고 동의해야 합니다. 투여 후 수 주까지 지연성 반응이 나타날 수 있으므로 이상 증상(무기력, 파행, 부종, 구토, 식욕부진 등) 발생 시 즉시 병원에 연락해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway data",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability",
+      "Protein binding percentage",
+      "Onset of action (minutes)",
+      "Time to peak plasma concentration",
+      "Cat-specific pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/61.jsonl",
+    "extracted_at": "2026-03-11T08:12:26.596402+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,564 @@
+{
+  "id": "methimazole",
+  "drug_identity": {
+    "name_ko": "메티마졸",
+    "name_en": "Methimazole",
+    "active_ingredient": "Methimazole",
+    "brand_names": [
+      "Felimazole",
+      "Tapazole"
+    ],
+    "allergy_class": null,
+    "class": "Thyroid",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.25,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "value": 50.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "메티마졸은 신장으로 배설된다고 명시되어 있으며, 벤지미다졸 항기생충제의 간 산화를 억제하는 것으로 보고되어 있으나 구체적인 CYP 효소 경로는 Plumb's 본문에 명시되지 않음."
+    },
+    "extra_information": "고양이에서 경구 생체이용률 평균 80%, 반감기 5.1~6.6시간(범위 약 2~15시간). 공복 투여 시 흡수 증가. 단백 결합 최소. 정상 고양이와 갑상선기능항진증 고양이에서 분포용적(1.1 L/kg)은 유사하나, 갑상선기능항진증 고양이에서 반감기가 더 짧음(2.5시간). 개에서 혈청 반감기 8~9시간이며 갑상선 조직에 농축되는 것으로 보임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 고양이 및 개 수의학 데이터 기반. 간독성, 혈액독성, 신장 영향 등 이상반응 보고에 근거하여 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 중추신경계 영향에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "myelosuppression",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "neutropenia"
+        ],
+        "index": 1,
+        "evidence": "개에서 직접적인 혈액 이상반응 보고는 없으나, 클로람페니콜 및 디피론과의 병용 시 골수억제 위험 증가가 언급됨. 고양이 데이터에서 혈액독성이 잘 알려져 있어 유사 위험 가능성 있음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "GFR reduction"
+        ],
+        "index": 1,
+        "evidence": "메티마졸은 신장으로 배설되며, 갑상선기능 정상화 시 GFR 감소가 발생할 수 있음. 개에서 직접적인 신독성 보고는 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic oxidation inhibition"
+        ],
+        "index": 1,
+        "evidence": "개에서 간독성 직접 보고는 없으나, 벤지미다졸의 간 산화를 억제하는 것으로 알려져 있음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 관련 직접적인 영향 보고 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "depression",
+          "lethargy",
+          "abnormal vocalization"
+        ],
+        "index": 1,
+        "evidence": "우울/기력저하 및 비정상적 발성이 이상반응으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "eosinophilia",
+          "leukopenia",
+          "thrombocytopenia",
+          "lymphocytosis",
+          "agranulocytosis",
+          "neutropenia",
+          "blood dyscrasias",
+          "immune-mediated hemolytic anemia"
+        ],
+        "index": 2,
+        "evidence": "치료 첫 8주 내 약 15%의 고양이에서 혈액학적 이상 발생. 혈액 이상증(중증 혈소판감소증, 출혈, 호중구감소증, 무과립구증)이 약 4%에서 발생. 면역매개 용혈성 빈혈 및 면역매개 혈소판감소증 유발 가능."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal failure contraindicated",
+          "GFR reduction",
+          "azotemia",
+          "renal decompensation"
+        ],
+        "index": 2,
+        "evidence": "신부전 시 금기. 갑상선기능 정상화 시 GFR 감소로 기저 신장 질환 노출 가능. 의인성 갑상선기능저하증 시 질소혈증 위험 증가. 약 40%의 갑상선기능항진증 고양이에서 만성 신장 질환 동반."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatopathy",
+          "increased ALT",
+          "hepatotoxicity",
+          "primary liver disease contraindicated"
+        ],
+        "index": 2,
+        "evidence": "간독성이 1.5%에서 발생. 초기 ALT 상승 가능(지속 투여 시 정상화). 원발성 간질환 시 금기. 간질환 고양이에서 저용량 투여 및 집중 모니터링 하에 사용 가능."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "digoxin clearance reduction"
+        ],
+        "index": 1,
+        "evidence": "갑상선기능 정상화 시 디곡신 청소율 감소로 디곡신 독성 위험 증가 가능. 직접적인 심장독성 보고는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": 5.1,
+      "max": 6.6,
+      "mean": 5.85,
+      "species": "cat"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": null,
+    "evidence": "건강한 고양이에서 경구 투여 후 최고 혈중 농도 도달 시간 30~60분, 평균 경구 생체이용률 80%, 소실 반감기 5.1~6.6시간(개인 간 변동 큼, 약 2~15시간). 단백 결합 최소. 갑상선기능항진증 고양이에서 반감기 2.5시간으로 더 짧음. 개에서 혈청 반감기 8~9시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (heparin, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant potentiation",
+        "antivitamin K activity",
+        "bleeding risk"
+      ],
+      "evidence": "Methimazole may potentiate anticoagulant activity. Methimazole has antivitamin K activity. With warfarin, increased monitoring of anticoagulant effect is warranted. Methimazole may decrease clotting factor metabolism, reducing warfarin effects; however, stopping methimazole in a euthyroid patient on warfarin may cause hypoprothrombinemia if thyrotoxicosis recurs."
+    },
+    {
+      "drug": "Benzimidazole Antiparasitics (albendazole, fenbendazole, thiabendazole)",
+      "severity": 2,
+      "keywords": [
+        "hepatic oxidation inhibition",
+        "increased drug concentration"
+      ],
+      "evidence": "Concurrent methimazole use can reduce hepatic oxidation of benzimidazoles and increase blood concentrations of the parent drug or its metabolites."
+    },
+    {
+      "drug": "Beta-Blockers (atenolol, propranolol)",
+      "severity": 1,
+      "keywords": [
+        "dose reduction needed",
+        "euthyroidism restoration"
+      ],
+      "evidence": "Reduction in the beta-blocker dose may be needed when the patient becomes euthyroid."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression"
+      ],
+      "evidence": "Combination may increase the risk for myelosuppression."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced digoxin clearance",
+        "increased digoxin exposure",
+        "toxicity risk"
+      ],
+      "evidence": "Correction to euthyroidism reduces digoxin clearance, resulting in increased digoxin exposure and risk for toxicity. A reduction in the digoxin dose may be needed when the patient becomes euthyroid."
+    },
+    {
+      "drug": "Dipyrone (metamizole)",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression"
+      ],
+      "evidence": "Combination may increase the risk for myelosuppression."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced methimazole efficacy"
+      ],
+      "evidence": "Concurrent use of phenobarbital may reduce the clinical effectiveness of methimazole."
+    },
+    {
+      "drug": "Prednis(ol)one",
+      "severity": 1,
+      "keywords": [
+        "dose reduction needed",
+        "euthyroidism restoration"
+      ],
+      "evidence": "A reduction in prednis(ol)one dose may be needed when the patient becomes euthyroid."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 1,
+      "keywords": [
+        "dose reduction needed",
+        "euthyroidism restoration"
+      ],
+      "evidence": "A reduction in the theophylline dose may be needed when the patient becomes euthyroid."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 (FDA 승인 용량, 초기)",
+          "value": "2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주 후 TT4 및 임상 반응에 따라 2.5 mg 단위로 용량 조절. 1일 최대 총 용량 20 mg (1회 최대 10 mg). 유지 용량 평균 2.5 mg/cat BID (범위 2.5~15 mg/cat/일).",
+          "evidence": "FDA 승인 라벨 용량 (Felimazole). NADA #141-292."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 (오프라벨, 경구, 초기)",
+          "value": "1.25 - 2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "TT4 극도 상승 시 초기 5 mg/cat BID 사용 가능. 치료 시작 또는 용량 조정 후 2~3주마다 TT4 평가. 정상 갑상선 기능 달성 후 1일 1회 투여 고려 가능.",
+          "evidence": "오프라벨 권고 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 (경피 투여, PLO 겔)",
+          "value": "2.5 - 5",
+          "unit": "mg",
+          "route": "Top",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "내이개(inner pinna)에 적용, 매 투여 시 귀를 교대. 효능 발현까지 4주 이상 소요 가능. 경구 투여 불내성 고양이에 대한 대안.",
+          "evidence": "메티마졸 50 mg/mL (5 mg/0.1 mL) PLO 겔 제형. 경구 투여 대비 효능 다소 낮음 (4주 시 정상 갑상선 기능 달성률 67% vs 82%)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전 고양이에서 메티마졸은 금기(미국 수의학 라벨). 갑상선기능 정상화 시 GFR 감소로 기저 신장 질환이 노출될 수 있으므로 치료 중 신장 지표(BUN, 크레아티닌) 면밀히 모니터링 필요. 의인성 갑상선기능저하증 시 질소혈증 위험 증가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "원발성 간질환 시 금기(미국 및 영국 수의학 라벨). 간질환 고양이에서는 저용량 투여 및 집중적인 간기능 검사 모니터링 하에 사용 가능. 초기 ALT 상승은 지속 투여 시 정상화될 수 있으나, 간독성(1.5%) 발생 시 투약 중단 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "메티마졸 또는 카르비마졸 과민증",
+      "match_terms": [
+        "hypersensitivity to methimazole",
+        "hypersensitivity to carbimazole"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폴리에틸렌 글리콜 과민증",
+      "match_terms": [
+        "polyethylene glycol hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자가면역 질환",
+      "match_terms": [
+        "autoimmune disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "원발성 간질환",
+      "match_terms": [
+        "primary liver disease",
+        "hepatic disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "혈액학적 이상 (빈혈, 호중구감소증, 림프구감소증, 혈소판감소증) 또는 응고장애",
+      "match_terms": [
+        "anemia",
+        "neutropenia",
+        "lymphopenia",
+        "thrombocytopenia",
+        "coagulopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "당뇨병 (영국 라벨)",
+      "match_terms": [
+        "diabetes mellitus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 암컷 고양이",
+      "match_terms": [
+        "pregnant queen",
+        "lactating queen",
+        "nursing queen"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "갑상선 과산화효소(thyroid peroxidase)를 억제하여 티로글로불린의 티로실 잔기에 요오드가 결합되는 것을 방해함으로써 갑상선 호르몬 합성을 억제. 또한 요오드화 티로실 잔기의 결합을 억제하여 요오드티로닌 형성을 차단. 이미 형성되어 순환 중인 갑상선 호르몬의 방출이나 활성에는 영향 없음.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "우울/기력저하",
+      "비정상적 발성",
+      "호산구증가증",
+      "백혈구감소증",
+      "혈소판감소증",
+      "림프구증가증",
+      "혈액 이상증 (중증 혈소판감소증, 출혈, 호중구감소증, 무과립구증)",
+      "소양증 및 안면 찰과상",
+      "ALT 상승",
+      "간독성",
+      "직접 항글로불린 검사 양성",
+      "면역매개 용혈성 빈혈",
+      "면역매개 혈소판감소증",
+      "항핵항체(ANA) 양성",
+      "후천성 중증근무력증",
+      "화농육아종성 벽성 모낭염",
+      "림프절비대"
+    ],
+    "dog_mechanism": "개에서 메티마졸은 갑상선 조직에 농축되는 것으로 보임.",
+    "dog_extra_effects": [],
+    "cat_mechanism": "고양이에서 갑상선 호르몬 합성 억제. 치료 시작 후 2~3주 내 혈청 T4의 유의한 감소 발생.",
+    "cat_extra_effects": [
+      "경피 투여 부위 홍반",
+      "의인성 갑상선기능저하증 (과도한 용량 투여 시)",
+      "기저 신장 질환 노출 (GFR 감소로 인해)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 메티마졸의 혈청 반감기는 8~9시간이며 갑상선 조직에 농축되는 것으로 알려져 있음. 개에 대한 FDA 승인 용량은 없으며, 수의학적 사용에 대한 데이터가 제한적임.",
+    "cat": "고양이 갑상선기능항진증 치료의 1차 선택약으로 널리 사용됨. 90% 이상의 내약성 있는 고양이에서 반응. 경구 투여 불내성 고양이에서 경피 PLO 겔 제형 사용 가능(효능은 다소 낮음). 치료 중 갑상선기능 정상화로 기저 신장 질환이 노출될 수 있으므로 신장 지표 모니터링 필수. 임신 또는 수유 중인 암컷 고양이에서 금기. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비 착용 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 FDA 승인 용량 없음. 클로람페니콜, 디피론과 병용 시 골수억제 위험 증가. 갑상선기능 정상화 시 베타차단제, 디곡신, 테오필린, 프레드니솔론 용량 조절 필요 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신부전, 원발성 간질환, 자가면역 질환, 혈액학적 이상, 임신/수유 시 금기. 치료 초기 3개월 내 이상반응 발생 빈도 높음. 정기적인 CBC, 혈청 화학 검사, TT4 모니터링 필수. NIOSH 위험 약물로 취급 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 실온(25°C, 77°F) 보관; 15~30°C(59~86°F) 범위 허용. 습기로부터 보호.",
+    "forms": [
+      "메티마졸 당의정 (수의용): 2.5 mg, 5 mg (Felimazole); 영국에서 1.25 mg도 가용",
+      "메티마졸 정제 (인체용, 일반/분할선): 5 mg, 10 mg (Tapazole, 제네릭)",
+      "경피용 PLO 겔 (조제): 50 mg/mL (5 mg/0.1 mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메티마졸은 고양이 갑상선기능항진증 치료의 1차 선택약으로, FDA 승인을 받은 수의용 제품(Felimazole)이 있습니다. 치료 초기 3개월 내 구토, 식욕부진, 기력저하 등 이상반응이 가장 흔하게 발생합니다. 혈액학적 이상(약 15%), 혈액 이상증(약 4%), 간독성(1.5%), 안면 찰과상(2~15%) 등 심각한 이상반응 발생 시 투약 중단이 필요합니다. 갑상선기능 정상화 시 GFR 감소로 기저 신장 질환이 노출될 수 있으므로 신장 지표 모니터링이 필수적입니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비 착용이 권고됩니다.",
+    "indications": "고양이 갑상선기능항진증 (FDA 승인). 경구 투여 불내성 고양이에서 경피 PLO 겔 제형 사용 가능 (오프라벨). 기니피그 갑상선기능항진증 (증례 보고 기반, 오프라벨).",
+    "client_info": "이 약은 과도한 갑상선 호르몬을 감소시키지만 질환을 완치하지는 않습니다. 수의사의 지시에 따라 정확히 투여하세요. 임상적 개선까지 수 주가 걸릴 수 있습니다. 구토, 식욕감소, 기력저하 등 대부분의 부작용은 치료 첫 3개월 내에 발생합니다. 이 약은 정제 외에도 피부에 바르는 겔 형태로도 사용할 수 있습니다. 경피 겔 적용 시 반드시 장갑을 착용하고, 약 취급 후(장갑 착용 시에도) 비누와 물로 손을 씻으세요. 화장실 청소 시에도 장갑을 착용하세요. 임신 중이거나 임신 가능성이 있는 여성, 수유 중인 여성은 이 약, 모래, 치료받은 고양이의 체액을 다룰 때 반드시 장갑을 착용하세요. 경피 겔이 분리된 것처럼 보이면 사용하지 마세요. 귀에 딱지가 생기면 다음 투여 전 촉촉한 거즈나 솜으로 제거하고, 매번 귀를 교대하여 적용하세요. 이 약은 NIOSH에서 위험 약물로 분류하고 있습니다. 취급 시 개인 보호 장비 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific findings noted)",
+      "Dog dosage (no approved or established dose)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/63.jsonl",
+    "extracted_at": "2026-03-11T09:06:14.488497+00:00",
+    "reviewer": null
+  }
+}

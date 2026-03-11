@@ -1,0 +1,669 @@
+{
+  "id": "chlorothiazide",
+  "drug_identity": {
+    "name_ko": "클로로티아지드",
+    "name_en": "Chlorothiazide",
+    "active_ingredient": "Chlorothiazide",
+    "brand_names": [
+      "Diuril",
+      "Azide",
+      "Saluric"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Diuretic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공인된 동물용 제품은 현재 미국 시장에서 판매되지 않음. 개와 고양이에서의 사용은 사람용 제품을 오프라벨로 사용하는 것임.",
+    "dosage_form": [
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "클로로티아지드는 대사되지 않으며 거의 전량이 미변화체로 신장을 통해 배설됨."
+    },
+    "extra_information": "국내 동물(개, 고양이)에서의 약동학 연구는 보고되지 않음. 사람 데이터에 기반함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 사람 데이터 기반이며 수의학적 종별 PK 연구 없음. 신장 배설 100%, 대사 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "coma",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 CNS 영향(기면, 혼수, 경련) 보고됨. 치료 용량에서는 직접적 뇌 부담 낮음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypokalemia",
+          "hyponatremia",
+          "hypomagnesemia",
+          "hematologic toxicity",
+          "thrombocytopenia"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증, 저나트륨혈증, 저마그네슘혈증 등 전해질 불균형 및 혈액학적 독성 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal elimination",
+          "GFR reduction",
+          "renal toxicity",
+          "calcium excretion",
+          "urolithiasis"
+        ],
+        "index": 3,
+        "evidence": "100% 신장 배설, GFR 감소 유발, 칼슘 배설 증가로 요로결석 위험, 중증 신질환 시 사용 금기."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic coma",
+          "impaired hepatic function"
+        ],
+        "index": 2,
+        "evidence": "간기능 저하 시 간성 혼수 유발 가능. 대사는 간에서 이루어지지 않으나 간질환 환자에서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypokalemia",
+          "digitalis toxicity",
+          "orthostatic hypotension"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증으로 인한 디지탈리스 독성 위험 증가, 기립성 저혈압 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "coma",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 CNS 영향 보고됨. 고양이 특이 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypokalemia",
+          "hyponatremia",
+          "hypomagnesemia",
+          "hematologic toxicity"
+        ],
+        "index": 2,
+        "evidence": "전해질 불균형 및 혈액학적 독성 위험. 고양이 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal elimination",
+          "GFR reduction",
+          "renal toxicity",
+          "calcium excretion"
+        ],
+        "index": 3,
+        "evidence": "100% 신장 배설, GFR 감소 유발. 고양이에서 신장 부담 높음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic coma",
+          "impaired hepatic function"
+        ],
+        "index": 2,
+        "evidence": "간기능 저하 시 간성 혼수 유발 가능. 고양이 특이 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypokalemia",
+          "digitalis toxicity",
+          "orthostatic hypotension"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증으로 인한 심장 독성 위험. 고양이 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 2.0,
+      "mean": 1.5,
+      "species": "human"
+    },
+    "f_percent": 16,
+    "protein_binding_percent": null,
+    "evidence": "사람 데이터: 경구 흡수율 10~21%, 이뇨 작용 발현 1~2시간, 최고 효과 4시간, 반감기 약 1~2시간, 작용 지속 6~12시간. 동물 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 3,
+      "keywords": [
+        "hypokalemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Concurrent use with thiazides can lead to increased risk for severe hypokalemia."
+    },
+    {
+      "drug": "Bromides",
+      "severity": 2,
+      "keywords": [
+        "bromide excretion",
+        "seizure control"
+      ],
+      "evidence": "Thiazides may enhance bromide excretion and reduce seizure control."
+    },
+    {
+      "drug": "Calcium Salts",
+      "severity": 2,
+      "keywords": [
+        "hypercalcemia"
+      ],
+      "evidence": "Hypercalcemia may be exacerbated if thiazides are concurrently administered with calcium salts."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Concurrent use with thiazides can lead to increased risk for severe hypokalemia."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "hyperuricemia",
+        "hypotension"
+      ],
+      "evidence": "Increased risk for hyperglycemia, hyperuricemia, and hypotension may occur."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "hypokalemia",
+        "hypomagnesemia",
+        "hypercalcemia",
+        "digitalis toxicity"
+      ],
+      "evidence": "Thiazide-induced hypokalemia, hypomagnesemia, and/or hypercalcemia may increase the likelihood of digitalis toxicity."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "additive diuresis",
+        "hypokalemia"
+      ],
+      "evidence": "May have additive diuretic and hypokalemic effect."
+    },
+    {
+      "drug": "Hypoglycemic Agents",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "glucose dysregulation"
+      ],
+      "evidence": "Thiazides may cause or exacerbate hyperglycemia in diabetic patients; increase in doses of hypoglycemic agents may be required."
+    },
+    {
+      "drug": "Hypotensive Agents",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May have additive hypotensive effect."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 3,
+      "keywords": [
+        "lithium toxicity",
+        "increased serum lithium"
+      ],
+      "evidence": "Thiazides can increase serum lithium concentrations, potentially leading to lithium toxicity."
+    },
+    {
+      "drug": "Methenamine",
+      "severity": 2,
+      "keywords": [
+        "urine alkalinization",
+        "reduced efficacy"
+      ],
+      "evidence": "Thiazides can alkalinize urine and reduce methenamine effectiveness."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 2,
+      "keywords": [
+        "renal toxicity",
+        "reduced diuretic effect"
+      ],
+      "evidence": "Thiazides may increase risk for renal toxicity, and NSAIDs may reduce diuretic actions of thiazides."
+    },
+    {
+      "drug": "Nondepolarizing Neuromuscular Blocking Agents",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "Nondepolarizing neuromuscular-blocking agents' response or duration may be increased in patients receiving thiazide diuretics."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "uric acid retention",
+        "therapeutic interaction"
+      ],
+      "evidence": "Probenecid blocks thiazide-induced uric acid retention (used to therapeutic advantage)."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "prolonged half-life",
+        "urine alkalinization"
+      ],
+      "evidence": "Quinidine half-life may be prolonged by thiazides due to urine alkalinization."
+    },
+    {
+      "drug": "Vitamin D",
+      "severity": 2,
+      "keywords": [
+        "hypercalcemia"
+      ],
+      "evidence": "Hypercalcemia may be exacerbated if thiazides are concurrently administered with vitamin D or its analogues."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "울혈성 심부전(CHF) - 라벨 용량(FDA 승인, 단 동물용 제품 미판매)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 개는 주 3~5일 간헐적 투여로 충분한 반응을 보일 수 있음. 중증의 경우 더 높은 용량 필요할 수 있음.",
+          "evidence": "FDA 승인 라벨 용량(소 제품 기반); 동물용 제품 현재 미판매. 대부분의 임상의는 CHF에 푸로세미드를 선호함."
+        },
+        {
+          "logic_type": "linear",
+          "context": "이뇨 또는 신성 요붕증 치료 (오프라벨)",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨 사용. Plumb's 참고문헌 6번."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "울혈성 심부전(CHF) - 라벨 용량(FDA 승인, 단 동물용 제품 미판매)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "중증의 경우 더 높은 용량 필요할 수 있음.",
+          "evidence": "FDA 승인 라벨 용량(소 제품 기반); 동물용 제품 현재 미판매. 고양이에서는 하이드로클로로티아지드가 선호됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "이뇨 또는 신성 요붕증 치료 (오프라벨)",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨 사용. Plumb's 참고문헌 6번."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 신질환 환자에서는 사용을 피하거나 극도로 주의하여 사용해야 함. 무뇨증 환자에서는 금기. 구체적인 크레아티닌 역치 또는 용량 조절 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간기능 저하 환자에서 간성 혼수를 유발할 수 있으므로 극도로 주의하거나 사용을 피해야 함. 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "무뇨증",
+      "match_terms": [
+        "anuria",
+        "무뇨"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "과민반응"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD",
+        "신부전",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "간질환",
+        "간기능 저하"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "전해질/수분 불균형",
+      "match_terms": [
+        "electrolyte imbalance",
+        "water balance abnormality",
+        "전해질 불균형"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고요산혈증",
+      "match_terms": [
+        "hyperuricemia",
+        "고요산혈증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "칼슘 옥살산 요로결석",
+      "match_terms": [
+        "calcium oxalate urolithiasis",
+        "요로결석"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신성 홍반성 루푸스(SLE)",
+      "match_terms": [
+        "systemic lupus erythematosus",
+        "SLE",
+        "루푸스"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "당뇨병"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "신세뇨관 상피세포에서 나트륨 이온 수송을 방해하여 이뇨 작용을 나타냄. 주요 작용 부위는 신원의 피질 희석 분절(근위 및 원위 세뇨관 사이)로, 나트륨, 염소, 수분의 배설을 증가시킴. 또한 칼륨, 마그네슘, 인산염, 요오드, 브롬화물 배설을 증가시키고 GFR을 감소시킴.",
+    "common_extra_effects": [
+      "저칼륨혈증",
+      "저염소성 대사성 알칼리증",
+      "저나트륨혈증",
+      "저마그네슘혈증",
+      "고요산혈증",
+      "구토",
+      "설사",
+      "췌장염",
+      "과민반응",
+      "피부 반응",
+      "다뇨",
+      "혈액학적 독성",
+      "고혈당증",
+      "고지혈증",
+      "기립성 저혈압"
+    ],
+    "dog_mechanism": "신성 요붕증에서 역설적 소변량 감소 효과: 원위 세뇨관에서 나트륨 및 염소 재흡수 감소 → 나트륨 손실 및 세포외액 감소 → 근위 세뇨관에서 나트륨 및 수분 재흡수 증가 → 원위 신원 및 집합관으로 전달되는 여과액 감소.",
+    "dog_extra_effects": [
+      "저칼륨혈증",
+      "전해질 불균형",
+      "고혈당증"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "저칼륨혈증",
+      "전해질 불균형"
+    ]
+  },
+  "species_notes": {
+    "dog": "수의학에서 일반적인 이뇨제로는 푸로세미드가 클로로티아지드를 대체하였음. 티아지드 이뇨제가 필요한 경우 개와 고양이에서는 하이드로클로로티아지드가 선호됨. 클로로티아지드는 칼슘 옥살산 요로결석 환자에서 신장 칼슘 배설을 증가시키므로 사용을 피해야 하며, 이 경우 하이드로클로로티아지드를 사용해야 함. 만성 투여 시 혈청 전해질, BUN, 크레아티닌, 혈당 모니터링 필요.",
+    "cat": "고양이에서 클로로티아지드 사용에 대한 특이적 데이터는 제한적임. 티아지드 이뇨제가 필요한 경우 하이드로클로로티아지드가 선호됨. 전해질 불균형(특히 저칼륨혈증)에 대한 모니터링이 중요함. 동물용 승인 제품 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "중증 신질환, 간기능 저하, 전해질 불균형, 당뇨병, SLE, 칼슘 옥살산 요로결석 환자에서 극도의 주의 필요. 임신 중 상대적 금기. 만성 투여 시 전해질 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이 데이터 부족. 중증 신질환, 간기능 저하, 전해질 불균형 환자에서 극도의 주의 필요. 임신 중 상대적 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 현탁액은 실온(15~30°C)에서 보관하고 동결을 피할 것.",
+    "forms": [
+      "Chlorothiazide Oral Suspension 50 mg/mL (237 mL; Diuril)",
+      "Chlorothiazide Sodium Powder for Injection (lyophilized) 500 mg in 20 mL vials (Diuril)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로로티아지드는 티아지드계 이뇨제로, 수의학에서는 주로 신성 요붕증 치료에 사용됨. 동물용 승인 제품은 현재 미국에서 판매되지 않으며, 개와 고양이에서는 하이드로클로로티아지드가 선호됨. 저칼륨혈증이 가장 흔한 부작용이며, 만성 투여 시 전해질 모니터링이 필수적임. 중증 신질환, 간기능 저하, 무뇨증 환자에서는 금기 또는 극도의 주의가 필요함. 디곡신, 리튬, 암포테리신 B 등과의 병용 시 심각한 상호작용 위험이 있음.",
+    "indications": "신성 요붕증(주요 적응증), 울혈성 심부전(이뇨 목적, 오프라벨), 전신 고혈압, 복수, 고마그네슘혈증. 중추성 요붕증의 보조 치료. 수의학에서 일반 이뇨제로는 푸로세미드가 선호됨.",
+    "client_info": "이 약을 처음 투여하면 동물이 평소보다 소변을 더 자주 볼 수 있습니다. 음식과 함께 또는 공복에 투여할 수 있으며, 항상 신선한 물을 충분히 제공하고 정상적인 식이를 유지하도록 해주세요. 이 약은 혈액 내 전해질(염분) 수치를 변화시킬 수 있으므로 수의사가 더 자주 검사를 권할 수 있습니다. 허약함, 쓰러짐, 머리 기울임, 소변이 나오지 않음, 또는 심장이 빠르게 뛰는 증상이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "Species-specific organ burden data",
+      "Protein binding data",
+      "CYP enzyme interactions"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog",
+      "organ_burden_logic.cat",
+      "metabolism_and_clearance.extra_information"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:37:41.253562+00:00",
+    "reviewer": null
+  }
+}

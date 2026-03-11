@@ -1,0 +1,578 @@
+{
+  "id": "vecuronium",
+  "drug_identity": {
+    "name_ko": "베쿠로늄",
+    "name_en": "Vecuronium",
+    "active_ingredient": "Vecuronium bromide",
+    "brand_names": [
+      "Norcuron",
+      "Curlem",
+      "Rivecrum",
+      "Vecural",
+      "Vecuron"
+    ],
+    "allergy_class": null,
+    "class": "Muscle Relaxant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Neostigmine (+ atropine or glycopyrrolate); Sugammadex",
+    "reversal_evidence": "항콜린에스테라제(네오스티그민)와 항콜린제(아트로핀, 글리코피롤레이트) 병용으로 차단 역전 가능. 수가마덱스는 베쿠로늄 및 로쿠로늄에 특이적인 결합제로 역전 가능.",
+    "off_label_note": "수의과 승인 제품 없음. 개와 고양이에서 전신마취 보조제로 근이완 유도 및 기관내 삽관 촉진 목적으로 사용(extra-label).",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.15,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "베쿠로늄은 부분적으로 대사되며, 약물 및 대사산물은 담즙과 소변으로 배설됨. 고양이에서 담즙(40%), 소변(15%), 간(15%)으로 회수됨."
+    },
+    "extra_information": "고양이에서 베쿠로늄 0.6 mg/kg IV 투여 후 정상상태 분포용적 0.23 L/kg, 반감기 31분, 청소율 11 mL/min/kg. 개에서 50 μg/kg IV(할로탄 마취 병용) 시 완전 마비 유발. 볼루스 투여 시 효과 지속시간 약 20-30분. 신장 또는 간 질환 환자에서 회복 시간 연장 가능."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 고양이 PK 데이터(담즙 40%, 소변 15%, 간 15% 회수) 및 간/신장 질환 시 회복 지연 언급 근거. 인간 데이터 보완 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "마취 보조",
+          "진정 작용 없음"
+        ],
+        "index": -1,
+        "evidence": "베쿠로늄은 진통 또는 진정/마취 작용이 없으며, 뇌에 대한 직접적 부담 근거 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "혈압 모니터링",
+          "심박수 모니터링"
+        ],
+        "index": -1,
+        "evidence": "심장 효과는 매우 미미하며 히스타민 유리를 일으키지 않음. 과다투여 시 혈압 및 심박수 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "신장 배설",
+          "신기능 장애",
+          "회복 지연"
+        ],
+        "index": 2,
+        "evidence": "소변으로 15% 배설. 심각한 신기능 장애 환자에서 회복 시간 연장 가능. 신기능 장애 시 주의 사용 권장."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "담즙 배설",
+          "간 질환",
+          "회복 지연",
+          "간담도 질환"
+        ],
+        "index": 3,
+        "evidence": "담즙으로 주요 배설(고양이 40%). 간 또는 담도 질환 환자에서 용량 감소 필요. 간기능 장애 시 회복 시간 연장."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "심장 효과 최소"
+        ],
+        "index": -1,
+        "evidence": "베쿠로늄은 심장 효과가 매우 미미하며 히스타민 유리를 일으키지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "마취 보조",
+          "진정 작용 없음"
+        ],
+        "index": -1,
+        "evidence": "베쿠로늄은 진통 또는 진정/마취 작용이 없으며, 뇌에 대한 직접적 부담 근거 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "혈압 모니터링",
+          "심박수 모니터링"
+        ],
+        "index": -1,
+        "evidence": "심장 효과는 매우 미미하며 히스타민 유리를 일으키지 않음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "소변 배설 15%",
+          "신기능 장애",
+          "회복 지연"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 소변으로 15% 회수. 신기능 장애 시 회복 시간 연장 가능."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "담즙 배설 40%",
+          "간 회수 15%",
+          "간 질환",
+          "회복 지연"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 담즙으로 40%, 간에서 15% 회수. 간 또는 담도 질환 환자에서 용량 감소 및 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "심장 효과 최소"
+        ],
+        "index": -1,
+        "evidence": "베쿠로늄은 심장 효과가 매우 미미하며 히스타민 유리를 일으키지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.517,
+      "max": 1.25,
+      "mean": 0.517,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 80,
+    "evidence": "고양이: 반감기 31분(0.517시간). 인간: 반감기 65-75분. 단백결합 최대 80%(인간 데이터). 개에서 50 μg/kg IV 시 완전 마비, 볼루스 투여 시 효과 지속 약 20-30분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 베쿠로늄의 신경근 차단 효과를 강화하거나 연장하는 약물 목록 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Medetomidine",
+      "severity": 2,
+      "keywords": [
+        "duration reduction",
+        "neuromuscular blockade"
+      ],
+      "evidence": "Medetomidine may shorten the duration of vecuronium effect."
+    },
+    {
+      "drug": "Non-Depolarizing Muscle Relaxants (Other)",
+      "severity": 2,
+      "keywords": [
+        "synergistic effect",
+        "neuromuscular blockade"
+      ],
+      "evidence": "Other non-depolarizing muscle relaxants may have a synergistic effect when used with vecuronium."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "onset acceleration"
+      ],
+      "evidence": "Succinylcholine may speed the onset of action and enhance the neuromuscular blocking actions of vecuronium. Do not give vecuronium until succinylcholine effects have subsided."
+    },
+    {
+      "drug": "Aminoglycoside Antibiotics (e.g., gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Aminoglycoside antibiotics may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "General Anesthetics (e.g., isoflurane)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "General anesthetics may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Antiarrhythmic Agents (e.g., procainamide, quinidine)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Antiarrhythmic agents may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Bacitracin / Polymyxin B (systemic)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "therapy modification"
+      ],
+      "evidence": "Bacitracin and polymyxin B (systemic) may enhance or prolong the neuromuscular blocking activity of vecuronium. Consider therapy modification."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Calcium channel blockers may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Cyclosporine (systemic)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Cyclosporine (systemic) may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Lincosamide Antibiotics (e.g., clindamycin)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Lincosamide antibiotics may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Magnesium Salts (systemic)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Systemic magnesium salts may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Tetracycline Derivatives (e.g., doxycycline, minocycline)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Tetracycline derivatives may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    },
+    {
+      "drug": "Vancomycin",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "Vancomycin may enhance or prolong the neuromuscular blocking activity of vecuronium."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "신경근 이완/차단 (extra-label) - 표준 볼루스",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "추가 차단이 필요한 경우 0.05 mg/kg IV 추가 투여 가능. 0.2 mg/kg 고용량은 회복 기간 연장.",
+          "evidence": "Extra-label. 100 μg/kg (0.1 mg/kg) IV; 추가 용량 0.05 mg/kg IV 가능. 초기 용량 최대 200 μg/kg (0.2 mg/kg) IV 사용 보고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신경근 이완/차단 (extra-label) - 부분 차단 연구 용량",
+          "value": "0.025",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5초에 걸쳐 투여. 무호흡 없이 부분 차단 유도 목적.",
+          "evidence": "암컷 비글 연구: 25 μg/kg (0.025 mg/kg) IV 5초 투여. 10마리 중 9마리에서 연축 감소 80% 이상."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신경근 이완/차단 (extra-label) - 완전 마비 유도",
+          "value": "0.05",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "흡입마취 하에서 ED90은 이전 보고된 90 μg/kg보다 낮을 가능성.",
+          "evidence": "흡입마취 하 50 μg/kg (0.05 mg/kg)에서 완전 마비 유발."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신경근 이완/차단 유지 - CRI (프로포폴-펜타닐 마취)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 0.2 mg/kg/hr CRI 유지",
+          "evidence": "프로포폴-펜타닐 CRI 마취 사용 시: 베쿠로늄 0.2 mg/kg/HOUR IV CRI 유지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신경근 이완/차단 유지 - CRI (이소플루란 또는 세보플루란 + 펜타닐 CRI 마취)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 0.1 mg/kg/hr CRI 유지",
+          "evidence": "이소플루란 또는 세보플루란 + 펜타닐 IV CRI 마취 사용 시: 베쿠로늄 0.1 mg/kg/HOUR IV CRI 유지."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "신경근 이완/차단 (extra-label)",
+          "value": "0.02 - 0.04",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.04,
+          "duration_note": null,
+          "evidence": "Extra-label. 20-40 μg/kg (0.02-0.04 mg/kg) IV."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "심각한 신기능 장애 환자에서 회복 시간 연장 가능. 구체적 용량 조정 기준은 명시되지 않았으나 주의 사용 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 또는 담도 질환 환자에서 낮은 용량이 필요할 수 있음. 인간에서 간기능 장애 또는 간경변 환자는 혈장 반감기 연장 및 회복 시간 약 2배 증가."
+  },
+  "contraindications": [
+    {
+      "condition": "베쿠로늄 과민증",
+      "match_terms": [
+        "hypersensitivity to vecuronium",
+        "vecuronium allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 근무력증",
+      "match_terms": [
+        "myasthenia gravis",
+        "MG"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 또는 담도 질환",
+      "match_terms": [
+        "hepatic disease",
+        "biliary disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심각한 신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "마취 없이 단독 투여",
+      "match_terms": [
+        "unanesthetized patient",
+        "no anesthesia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비탈분극성 신경근 차단제로, 운동 종판의 콜린성 수용체 부위에 경쟁적으로 결합하여 횡문근 마비를 유발함.",
+    "common_extra_effects": [
+      "신경근 차단에 따른 호흡 마비",
+      "심장 효과 최소",
+      "히스타민 유리 없음",
+      "진통 또는 진정 작용 없음"
+    ],
+    "dog_mechanism": "비탈분극성 신경근 차단. 당뇨병 개에서 작용 지속시간 단축.",
+    "dog_extra_effects": [
+      "완전 마비 (50 μg/kg 이상)",
+      "호흡 정지 가능",
+      "당뇨병 개에서 작용 지속시간 단축"
+    ],
+    "cat_mechanism": "비탈분극성 신경근 차단. 고양이에서 반감기 31분, 담즙(40%), 소변(15%), 간(15%)으로 배설.",
+    "cat_extra_effects": [
+      "신경근 차단",
+      "호흡 정지 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 베쿠로늄은 전신마취 보조제로 근이완 및 기관내 삽관 촉진에 사용됨(extra-label). 심장 기저부 종양의 방사선 치료 시 호흡 운동 감소 목적으로도 사용됨. 당뇨병 개에서 작용 지속시간이 단축될 수 있음. 객관적 신경근 모니터링(말초 신경 자극기) 없이 자발 환기 모니터링만으로는 잔류 마비 위험이 있음.",
+    "cat": "고양이에서 베쿠로늄은 20-40 μg/kg IV로 사용됨(extra-label). 반감기 31분, 담즙(40%), 소변(15%), 간(15%)으로 배설. 간 또는 신장 질환 시 회복 지연 가능."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간/담도 질환, 심각한 신기능 장애, 중증 근무력증 환자에서 주의 사용. 반드시 마취 상태에서만 투여. 호흡 지원 및 역전제 준비 필수. 고위험 약물로 분류."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간/담도 질환, 심각한 신기능 장애, 중증 근무력증 환자에서 주의 사용. 반드시 마취 상태에서만 투여. 호흡 지원 및 역전제 준비 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "분말 제형: 실온(20-25°C) 보관, 빛 차단. 재구성 후: 2-8°C에서 24시간 안정. 방부제 미함유로 재구성 후 미사용분 폐기.",
+    "forms": [
+      "Vecuronium Bromide Powder for Injection: 10 mg/10 mL vial, 20 mg/20 mL vial",
+      "Vecuronium Bromide Solution for Injection: 1 mg/mL, 10 mL prefilled syringe or 100 mL vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "베쿠로늄은 비탈분극성 신경근 차단제로, 개와 고양이에서 전신마취 보조제로 근이완 및 기관내 삽관 촉진에 사용됨(extra-label). 심장 효과가 매우 미미하고 히스타민 유리를 일으키지 않음. 진통 또는 진정 작용이 없으므로 반드시 적절한 마취 상태에서만 투여해야 함. 고위험 약물로 분류되며, 호흡 지원 장비, 역전제(네오스티그민, 수가마덱스), 숙련된 인력이 반드시 준비되어야 함. 간/담도 질환 또는 신기능 장애 환자에서 회복 지연 가능.",
+    "indications": "전신마취 보조제로 수술 중 근이완 유도, 기계 환기 촉진, 기관내 삽관 촉진(개, 고양이 extra-label). 개에서 심장 기저부 종양 방사선 치료 시 호흡 운동 감소 목적. 조류에서 안저 검사를 위한 산동 유발(국소 적용).",
+    "client_info": "이 약물은 신경근 차단제로, 반드시 전문 수의사가 마취 상태에서만 투여해야 합니다. 투여 중 환자는 스스로 호흡할 수 없으므로 기계 환기 지원이 필수적입니다. 약물 효과가 끝난 후에도 잔류 마비가 남을 수 있으므로 지속적인 모니터링이 필요합니다. 이 약물은 진통 또는 진정 효과가 없으므로 반드시 마취제와 함께 사용됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Oral bioavailability",
+      "Onset time (minutes)",
+      "T_max",
+      "Dog-specific half-life",
+      "Protein binding (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (dog-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:29:08.640499+00:00",
+    "reviewer": null
+  }
+}

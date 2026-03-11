@@ -1,0 +1,401 @@
+{
+  "id": "ethambutol",
+  "drug_identity": {
+    "name_ko": "에탐부톨",
+    "name_en": "Ethambutol",
+    "active_ingredient": "Ethambutol hydrochloride",
+    "brand_names": [
+      "Myambutol"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개, 고양이, 조류에서 항마이코박테리아 병용 요법의 일환으로 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.85,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "약 15%의 흡수된 약물이 간에서 비활성 대사체로 대사됨. 나머지 대부분은 세뇨관 분비 및 사구체 여과를 통해 소변으로 미변화체로 배설됨 (사람 데이터)."
+    },
+    "extra_information": "개에서 분포용적 3.8 L/kg, 총 체내 청소율 13.2 mL/min/kg, 소실 반감기 4.1시간. 신장 절제 개에서 반감기 5시간으로 연장. 고양이 및 조류의 약동학 데이터는 확인되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 약동학 데이터 일부 존재; 고양이 데이터 없음. 사람 데이터 보완 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "CNS degenerative changes",
+          "neurotoxicity",
+          "peripheral neuritis"
+        ],
+        "index": 1,
+        "evidence": "전임상 연구에서 장기 투여 시 일부 개에서 중추신경계 퇴행성 변화 보고. 말초 신경염 및 신경독성 위험."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "erythrocyte depot"
+        ],
+        "index": 1,
+        "evidence": "사람에서 혈액 이상(혈액 이상증) 보고. 적혈구 농도가 혈청의 약 2배로 적혈구가 약물 저장소 역할을 함."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration",
+          "renal impairment prolongs half-life"
+        ],
+        "index": 2,
+        "evidence": "대부분의 약물이 세뇨관 분비 및 사구체 여과를 통해 신장으로 배설됨. 신기능 저하 시 반감기 연장(사람: 최대 8시간). 신기능 저하 환자에서 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatotoxicity"
+        ],
+        "index": 1,
+        "evidence": "약 15%가 간에서 대사됨. 사람에서 치명적일 수 있는 간독성 보고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "myocardial toxicity"
+        ],
+        "index": 1,
+        "evidence": "독성학 연구에서 대용량 장기 투여 시 개에서 심근 독성 징후 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "peripheral neuritis"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 사람 및 개 데이터에서 신경독성 위험이 알려져 있어 주의 필요."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "blood dyscrasias"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 사람에서 혈액 이상 보고."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal disease caution"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 약동학 데이터 없음. 신장 배설 비율이 높아 신질환 고양이에서 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 사람에서 간독성 보고."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적인 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 5.0,
+      "mean": 4.1,
+      "species": "dog"
+    },
+    "f_percent": 75,
+    "protein_binding_percent": null,
+    "evidence": "개에서 소실 반감기 4.1시간 (신장 절제 시 5시간). 사람에서 경구 생체이용률 약 75%, 정상 신기능 시 반감기 3~4시간, 신기능 저하 시 최대 8시간. 고양이 및 조류 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aluminum-containing Antacids",
+      "severity": 2,
+      "keywords": [
+        "reduced oral absorption",
+        "chelation"
+      ],
+      "evidence": "In humans, co-administration with aluminum-containing antacids has been documented to reduce oral absorption of ethambutol. Separate dosing by at least 4 hours if both drugs are necessary."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "파종성 Mycobacterium tuberculosis 감염 (오프라벨, 병용요법)",
+          "value": "10 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "9개월 이상 치료 지속 필요. 리팜핀, 이소니아지드 등과 병용.",
+          "evidence": "Disseminated M. tuberculosis (extra-label): ethambutol 10–25 mg/kg PO once daily in combination with rifampin 5–10 mg/kg PO q12–24h (max 600 mg/day) and isoniazid 10–20 mg/kg PO once daily (max 300 mg/day). May add pyrazinamide 15–40 mg/kg PO once daily."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마이코박테리아 감염 (오프라벨, 병용요법)",
+          "value": "10 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2종의 항마이코박테리아 약물과 병용. 현재 지침에서 M. tuberculosis complex 감염에는 권장되지 않음.",
+          "evidence": "Mycobacterial infections (extra-label): 10–25 mg/kg PO once daily in combination with 1 or preferably 2 antimycobacterial drugs (e.g., rifampin, isoniazid, clarithromycin or azithromycin, marbofloxacin or pradofloxacin). NOTE: Not recommended in current guidelines for M. tuberculosis complex in cats."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 환자에서 용량 조절이 필요할 수 있음. 구체적인 용량 조절 기준은 명시되지 않음. 신기능 저하 시 반감기 연장(사람: 최대 8시간, 신장 절제 개: 5시간)."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "사람에서 치명적일 수 있는 간독성이 보고됨. 장기 치료 시 간 효소 수치 주기적 모니터링 권장. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "에탐부톨 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity to ethambutol",
+        "drug allergy ethambutol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "시신경염 (기존 존재)",
+      "match_terms": [
+        "optic neuritis",
+        "pre-existing optic neuritis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal disease",
+        "renal impairment",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 정균성 항마이코박테리아제. 활발히 분열하는 마이코박테리아에만 작용. 마이코박테리아 세포 내로 진입하여 RNA 합성을 방해하고 세포벽으로의 마이콜산 통합을 억제하여 다른 항마이코박테리아제의 세포벽 침투를 용이하게 함.",
+    "common_extra_effects": [
+      "시신경염 (시력 저하, 약물 중단 후 대개 가역적)",
+      "말초 신경염",
+      "신경독성",
+      "간독성 (사람에서 치명적 사례 보고)",
+      "혈액 이상증",
+      "고요산혈증",
+      "진균 또는 세균 과증식 감염"
+    ],
+    "dog_mechanism": "개에서도 동일한 항마이코박테리아 기전 적용. 전임상 연구에서 장기 투여 시 중추신경계 퇴행성 변화 및 대용량 장기 투여 시 심근 독성, 안구 tapetum lucidum 탈색소 보고.",
+    "dog_extra_effects": [
+      "중추신경계 퇴행성 변화 (장기 투여 시)",
+      "심근 독성 (대용량 장기 투여 시)",
+      "안구 tapetum lucidum 탈색소"
+    ],
+    "cat_mechanism": "고양이에서의 특이적 기전 데이터 없음. 사람 및 개 데이터 외삽 적용.",
+    "cat_extra_effects": [
+      "시신경염 가능성",
+      "말초 신경염 가능성",
+      "간독성 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에탐부톨은 M. tuberculosis, M. bovis, M. genavense, MAC 등의 마이코박테리아 감염 치료를 위한 병용 요법에 사용됨 (오프라벨). 10~25 mg/kg PO SID로 리팜핀, 이소니아지드 등과 병용. 치료 기간은 9개월 이상. 장기 투여 시 CBC, 간 효소, 신장 지표 및 안과 검사 모니터링 권장. M. tuberculosis complex 감염 치료는 공중 보건 위험으로 인해 논란이 있으며, 지역 공중 보건 당국과 상담 권장.",
+    "cat": "고양이에서 마이코박테리아 감염 치료를 위한 병용 요법에 오프라벨로 사용 (10~25 mg/kg PO SID). 현재 지침에서는 고양이의 M. tuberculosis complex 감염에 에탐부톨을 권장하지 않음. 고양이 특이적 약동학 데이터 없음. 장기 치료 시 정기적인 혈액 검사 및 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 시 용량 조절 필요. 장기 투여 시 CNS 퇴행성 변화 및 심근 독성 위험. 정기적인 CBC, 간 효소, 신장 지표 모니터링 권장. M. tuberculosis complex 감염 치료 시 공중 보건 당국 상담 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이적 안전성 데이터 부족. 신기능 저하 시 주의. 현재 지침에서 M. tuberculosis complex 감염에는 권장되지 않음. 장기 치료 시 정기적 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C (68°F~77°F)에서 밀폐된 차광 용기에 보관.",
+    "forms": [
+      "에탐부톨 HCl 정제 100 mg (scored)",
+      "에탐부톨 HCl 정제 400 mg (scored)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에탐부톨은 개, 고양이, 조류에서 마이코박테리아 감염(M. tuberculosis, M. bovis, M. avium-intracellulare complex 등) 치료를 위한 병용 요법의 일환으로 사용되는 합성 정균성 항마이코박테리아제입니다. 수의학적 허가 제품은 없으며 오프라벨로 사용됩니다. 주요 이상반응으로 시신경염, 말초 신경염, 신경독성, 간독성이 있습니다. 신기능 저하 환자에서 용량 조절이 필요하며, 장기 치료 시 정기적인 모니터링이 필수적입니다. M. tuberculosis complex 감염 치료는 공중 보건 위험으로 인해 논란이 있습니다.",
+    "indications": "개, 고양이: M. tuberculosis, M. bovis, M. genavense, MAC 등 마이코박테리아 감염 (오프라벨, 병용요법). 조류: M. avium 감염 (오프라벨, 병용요법). 특히 리팜핀, 플루오로퀴놀론, 마크로라이드 등 다른 약물 조합에 내성을 보이는 경우 유용.",
+    "client_info": "일부 마이코박테리아 감염은 사람에게도 전파될 수 있습니다. 반드시 수의사 및 담당 의사와 상담하십시오. 치료 기간이 수개월에서 수년까지 매우 길 수 있으므로, 처방된 약을 빠짐없이 끝까지 투여하는 것이 중요합니다. 이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 동물의 눈이나 시력에 변화가 관찰되거나 다른 이상 증상이 나타나면 즉시 수의사에게 알리십시오. 정기적인 혈액 검사 및 치료 반응 모니터링이 필요하므로 예약된 검진을 빠지지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (cat)",
+      "Pharmacokinetics (bird)",
+      "CYP profile",
+      "Protein binding",
+      "T_max",
+      "Onset of action"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list[0].max_dose_mg_kg",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:26:29.175171+00:00",
+    "reviewer": null
+  }
+}

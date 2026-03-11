@@ -1,0 +1,564 @@
+{
+  "id": "pimobendan",
+  "drug_identity": {
+    "name_ko": "피모벤단",
+    "name_en": "Pimobendan",
+    "active_ingredient": "Pimobendan",
+    "brand_names": [
+      "Vetmedin",
+      "Acardi",
+      "Zelys"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Chewable",
+      "Inj",
+      "Oral Liquid",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.25,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "value": 0.75,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 3.5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "피모벤단은 산화적 탈메틸화(oxidative demethylation)를 통해 약리학적으로 활성인 대사체(O-desmethylpimobendan)로 전환되며, 이후 황산염 또는 글루쿠론산과 결합하여 주로 대변으로 배설된다. CYP 효소 관여에 대한 구체적 정보는 본 모노그래프에 기재되어 있지 않다."
+    },
+    "extra_information": "개: 피모벤단의 청소율은 약 90 mL/min/kg이며, 분포용적은 2.6 L/kg, 단백결합률은 90% 이상이다. 모화합물의 말단 반감기는 약 0.5시간, 활성 대사체는 약 2시간이다. 고양이: 단회 경구 투여(약 0.28 mg/kg) 후 최고 혈중 농도는 0.9시간에 도달하며, 분포용적은 높고 평균 반감기는 1.3시간이다. 저용량(0.625 mg/cat) 및 고용량(1.25 mg/cat) 투여 시 반감기는 0.7~0.8시간, 청소율은 42.9~51.1 mL/min/kg이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 심장 관련 약물로 심장 부담이 가장 높으며, 간 대사 및 담즙 배설 경로로 인해 간 부담이 중등도이다. 신장 배설 비율은 명시되지 않았으나 주로 대변 배설이므로 신장 부담은 낮다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "weakness",
+          "ataxia",
+          "syncope"
+        ],
+        "index": 1,
+        "evidence": "기면, 허약, 운동실조, 실신 등의 신경계 관련 이상반응이 보고되었으나 직접적인 뇌 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypotension",
+          "hypertension",
+          "arrhythmia",
+          "platelet"
+        ],
+        "index": 2,
+        "evidence": "빈맥, 저혈압, 고혈압, 부정맥 위험 증가가 보고됨. 임상 용량에서 혈소판 기능에는 영향 없음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "azotemia"
+        ],
+        "index": 3,
+        "evidence": "임상 시험에서 질소혈증(azotemia)이 14%에서 보고됨. 신장 배설 비율은 명시되지 않았으며 주로 대변 배설."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "oxidative demethylation",
+          "hepatic metabolism",
+          "glucuronide conjugation"
+        ],
+        "index": 4,
+        "evidence": "간에서 산화적 탈메틸화 후 황산염/글루쿠론산 포합을 거쳐 주로 대변으로 배설됨. 간 독성은 직접 언급되지 않음."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "positive inotrope",
+          "PDE-III inhibition",
+          "arrhythmia",
+          "tachycardia",
+          "heart murmur",
+          "cardiac contractility",
+          "vasodilation"
+        ],
+        "index": 5,
+        "evidence": "PDE-III 억제 및 칼슘 감수성 증가를 통한 양성 변력 효과. 부정맥, 빈맥, 심잡음 발생 위험. 심장이 주요 작용 기관."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 기면이 보고되었으나 직접적인 뇌 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypotension",
+          "arrhythmia"
+        ],
+        "index": 2,
+        "evidence": "수축기 전방 운동(SAM)이 있는 고양이에서 전신 저혈압 발생 가능성이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "신부전이 있는 고양이에서 사용 사례가 있으나 신독성에 대한 직접적 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "oxidative demethylation"
+        ],
+        "index": 4,
+        "evidence": "고양이에서도 동일한 간 대사 경로가 예상되나 고양이 특이적 간 독성 데이터는 없음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "positive inotrope",
+          "outflow tract obstruction",
+          "left atrial function",
+          "vasodilation"
+        ],
+        "index": 5,
+        "evidence": "좌심실 유출로 폐쇄가 있는 고양이에서 악화 가능성. 비폐쇄성 질환에서는 좌심방 기능 개선 효과 보고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 2.0,
+      "mean": 1.25,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 단회 경구 투여(0.25 mg/kg) 후 모화합물 최고 농도 도달 시간은 평균 2시간, 활성 대사체는 3시간. 모화합물 반감기 약 0.5시간, 활성 대사체 반감기 약 2시간. 단백결합률 90% 이상. 고양이에서 반감기 0.7~1.3시간. 음식이 수용액 제형의 생체이용률을 감소시키나 씹는 정제에서의 영향은 불명확."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1. 피모벤단은 임상 시험에서 푸로세미드, 디곡신, 에날라프릴, 아테놀롤, 니트로글리세린, 하이드랄라진, 딜티아젬, 항기생충제, 항생제, 파모티딘, 테오필린, 레보티록신, 디펜히드라민, 하이드로코돈, 메토클로프라미드, 부토르파놀과 안전하게 병용된 것으로 보고됨.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Blocking Agents (e.g., propranolol)",
+      "severity": 2,
+      "keywords": [
+        "reduced inotropic effect",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "베타 차단제는 피모벤단의 양성 변력 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "reduced inotropic effect",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "칼슘 채널 차단제는 피모벤단의 양성 변력 효과를 감소시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "경증, 중등도, 중증 울혈성 심부전(AV 판막 부전 또는 확장성 심근병증) 관리 - FDA 승인 용량",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 일일 용량을 약 12시간 간격으로 2회 분할 투여. 가장 가까운 반정 단위로 반올림.",
+          "evidence": "FDA 승인 라벨 용량. Vetmedin 제품 라벨."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "전임상 확장성 심근병증 보조 치료 (extra-label) - PROTECT 연구",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 35 kg 미만 개에게 5 mg BID; 35.1 kg 초과 개에게 10 mg BID.",
+          "evidence": "PROTECT 연구 기준 (extra-label)."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "전임상 확장성 심근병증 보조 치료 (extra-label) - PROTECT 연구 (대형견)",
+          "value": "10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 35.1 kg 초과 개에게 10 mg BID.",
+          "evidence": "PROTECT 연구 기준 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "B2기 및 C기 방실판막 부전(AVVI) 보조 치료 (extra-label)",
+          "value": "0.25 - 0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "EPIC 연구에서는 0.4~0.6 mg/kg/day를 2회 분할 투여. 심장 비대 기준(EPIC 연구 기준) 충족 시에만 투여.",
+          "evidence": "ACVIM 합의 가이드라인 및 EPIC 연구 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 또는 만성 D기 심부전 보조 치료 (extra-label)",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "매 8시간마다 투여.",
+          "evidence": "ACVIM 합의 가이드라인 (extra-label)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "좌심실 수축 기능 장애, 흉수, 신부전 또는 중증 불응성 폐부종을 동반한 심부전 (extra-label)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "실용적으로 1.25 mg 정제 1정/마리(kg당이 아님) BID. 일반적으로 ACE 억제제 및 푸로세미드와 병용.",
+          "evidence": "후향적 연구 및 증례 대조 연구 (extra-label). FDA 미승인."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음. 주요 배설 경로가 대변이므로 신장 부담은 낮을 것으로 예상되나 확인된 데이터 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음. 간에서 주로 대사되므로 중증 간질환 시 주의가 필요할 수 있으나 구체적 지침은 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "피모벤단 과민증",
+      "match_terms": [
+        "hypersensitivity to pimobendan",
+        "allergy to pimobendan"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "반월판 협착증",
+      "match_terms": [
+        "semilunar valve stenosis",
+        "aortic stenosis",
+        "pulmonic stenosis"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심박출량 증가가 부적절한 기능적 또는 해부학적 상태",
+      "match_terms": [
+        "outflow tract obstruction",
+        "hypertrophic obstructive cardiomyopathy",
+        "LVOTO"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 심장 부정맥",
+      "match_terms": [
+        "uncontrolled arrhythmia",
+        "ventricular tachycardia",
+        "atrial fibrillation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "6개월 미만 강아지",
+      "match_terms": [
+        "puppy under 6 months",
+        "age < 6 months"
+      ],
+      "severity": "caution",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "선천성 심장 결함",
+      "match_terms": [
+        "congenital heart defect",
+        "congenital heart disease"
+      ],
+      "severity": "caution",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "breeding"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성에 대한 언급 없음. MDR1 관련 위험은 보고되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "PDE-III(포스포디에스테라제 III) 억제 및 심근 수축 장치의 세포내 칼슘 감수성 증가를 통한 양성 변력 효과. 혈관 PDE-III 억제를 통한 동맥 및 정맥 확장 효과(혈관 확장). 심부전 동물에서 간접적으로 심박수를 감소시키는 음성 변시 효과.",
+    "common_extra_effects": [
+      "식욕 감소",
+      "구토",
+      "설사",
+      "기면",
+      "부정맥(심방세동, 심실 이소성 박동)",
+      "빈맥",
+      "저혈압",
+      "고혈압",
+      "호흡곤란",
+      "질소혈증",
+      "허약 및 운동실조",
+      "흉수",
+      "실신",
+      "기침",
+      "복수",
+      "심잡음"
+    ],
+    "dog_mechanism": "개에서 l-이성질체가 d-이성질체보다 약 1.5배 강한 변력 활성을 가짐. 상업용 피모벤단은 l- 및 d-이성질체의 50:50 혼합물. 고용량(0.6 mg/kg PO q12h)에서도 레닌-안지오텐신-알도스테론계에 실질적인 영향을 미치지 않음.",
+    "dog_extra_effects": [
+      "식욕 부진(38%)",
+      "기면(33%)",
+      "설사(30%)",
+      "호흡곤란(29%)",
+      "질소혈증(14%)",
+      "허약 및 운동실조(13%)",
+      "흉수(10%)",
+      "실신(9%)",
+      "기침(7%)",
+      "급사(6%)",
+      "복수(6%)",
+      "심잡음(3%)",
+      "승모판 병변 악화(급성 출혈, 내피 유두상 과형성, 건삭 침윤)"
+    ],
+    "cat_mechanism": "고양이에서도 PDE-III 억제 및 칼슘 감수성 증가 기전으로 작용하나, 좌심실 유출로 폐쇄가 있는 고양이에서는 악화 위험이 있음.",
+    "cat_extra_effects": [
+      "전신 저혈압(수축기 전방 운동이 있는 고양이)",
+      "구토(33%)",
+      "좌심실 유출로 폐쇄 악화 가능성(폐쇄성 질환 고양이)"
+    ]
+  },
+  "species_notes": {
+    "dog": "피모벤단은 AV 판막 부전 또는 확장성 심근병증으로 인한 울혈성 심부전 치료에 FDA 승인된 약물이다. EPIC 연구에서 전임상 B2기 AVVI 개에서 CHF 발생까지의 시간을 15개월 이상 지연시켰다. PROTECT 연구에서 전임상 DCM 도베르만 핀셔에서 임상 증상 발현 및 생존 시간을 연장시켰다. 도베르만 핀셔에서 DCM으로 인한 CHF 치료의 1차 치료제로 권장된다. 공복 시 투여가 권장되나 씹는 정제에서 음식의 영향은 불명확하다. 부정맥 위험 증가 가능성이 있으므로 심전도 모니터링이 필요하다.",
+    "cat": "피모벤단은 고양이에서 FDA 미승인 약물이다. 비폐쇄성 심근병증 및 CHF 고양이에서 일부 이점이 있을 수 있으나, 좌심실 유출로 폐쇄(동적 유출로 폐쇄)가 있는 고양이에서는 악화 위험이 있어 주의가 필요하다. 수축기 전방 운동(SAM)이 있는 고양이에서 전신 저혈압 발생 가능성이 보고되었다. 실용적 용량은 1.25 mg/마리 BID이며, ACE 억제제 및 푸로세미드와 병용하는 것이 일반적이다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "조절되지 않는 심장 부정맥 환자에서 주의 사용. 6개월 미만, 선천성 심장 결함, 당뇨병, 기타 중증 대사 질환 개에서 안전성 미평가. 임신 또는 수유 중인 암컷에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "FDA 미승인 약물로 extra-label 사용. 좌심실 유출로 폐쇄 또는 수축기 전방 운동(SAM)이 있는 고양이에서 상대적 금기. 비폐쇄성 질환 고양이에서는 이점 가능성이 있으나 근거가 제한적임."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "씹는 정제 및 캡슐: 25°C(77°F) 미만 실온, 건조한 곳에 보관. 경구 용액: 25°C(77°F)에서 빛을 차단하여 보관. 주사제: 별도 보관 요건 없음; 단회용 바이알 개봉 후 즉시 사용하고 잔여 약물 폐기.",
+    "forms": [
+      "피모벤단 씹는 정제 1.25 mg, 2.5 mg, 5 mg, 10 mg (Vetmedin)",
+      "피모벤단 0.75 mg/mL 주사액 (Vetmedin Injectable Solution)",
+      "피모벤단 3.5 mg/mL 경구 용액 (Vetmedin, 호주)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피모벤단(Vetmedin®)은 PDE-III 억제 및 칼슘 감수성 증가를 통한 양성 변력 효과와 혈관 확장 효과를 가진 이노다일레이터(inodilator)이다. 개에서 AV 판막 부전 또는 확장성 심근병증으로 인한 울혈성 심부전 치료에 FDA 승인되었으며, 전임상 B2기 AVVI 및 전임상 DCM에서도 사용이 권장된다. 고양이에서는 extra-label로 사용되며, 비폐쇄성 심근병증에서 일부 이점이 있을 수 있으나 좌심실 유출로 폐쇄 고양이에서는 주의가 필요하다. 주요 이상반응으로 GI 증상(식욕 감소, 구토, 설사), 기면, 부정맥 위험 증가가 있다.",
+    "indications": "【승인 적응증 - 개】 AV 판막 부전 또는 확장성 심근병증으로 인한 경증~중증 울혈성 심부전 관리 (FDA 승인). 【Extra-label 적응증 - 개】 전임상 확장성 심근병증 보조 치료; B2기 및 C기 방실판막 부전 보조 치료; D기(말기, 불응성) 심부전 보조 치료; 방실판막 부전에 속발한 폐동맥 고혈압 보조 치료. 【Extra-label 적응증 - 고양이】 좌심실 수축 기능 장애, 흉수, 신부전 또는 중증 불응성 폐부종을 동반한 심부전.",
+    "client_info": "수의사의 지시에 따라 정확히 투여하십시오. 수의사와 상의 없이 투약을 중단하지 마십시오. 이 약은 공복 시 투여하는 것이 가장 효과적입니다. 가장 흔한 부작용은 식욕 감소, 구토, 설사입니다. 이러한 증상이 지속되거나 악화되거나 다른 우려되는 증상이 나타나면 수의사에게 연락하십시오. 이 약을 복용하는 동안 수의사의 정기적인 추적 검사가 매우 중요합니다. 예약된 검진을 빠지지 마십시오. 심박수, 혈압, 심전도, 흉부 청진 및 방사선 검사, 심장 초음파 등의 모니터링이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Oral bioavailability (F%)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/19.jsonl",
+    "extracted_at": "2026-03-10T19:09:18.950218+00:00",
+    "reviewer": null
+  }
+}

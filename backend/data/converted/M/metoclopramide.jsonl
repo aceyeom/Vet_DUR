@@ -1,0 +1,852 @@
+{
+  "id": "metoclopramide",
+  "drug_identity": {
+    "name_ko": "메토클로프라미드",
+    "name_en": "Metoclopramide",
+    "active_ingredient": "Metoclopramide",
+    "brand_names": [
+      "Reglan",
+      "Emeprid",
+      "Metozolv"
+    ],
+    "allergy_class": null,
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 허가 제품 없음. 인체용 제품을 동물에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.65,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 대사되며 투여량의 65%가 소변으로 배설됨. 인체에서는 약 20~25%가 미변화체로 배설되고 나머지는 글루쿠론산 또는 황산 포합체 형태로 소변 배설. CYP 관련 정보는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개와 고양이에서 메토클로프라미드는 거의 완전히 흡수되며, 간에서 대사되고 투여량의 65%가 소변으로 배설됨. 소거 반감기는 약 0.9시간. 비강 스프레이 제형은 경구 정제에 비해 생체이용률이 높고 TMAX가 짧음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 수의학적 종별 PK 데이터가 제한적이며, 일부 인체 데이터를 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS effects",
+          "extrapyramidal",
+          "sedation",
+          "drowsiness",
+          "tremors",
+          "dopamine antagonist"
+        ],
+        "index": 1,
+        "evidence": "도파민(D2) 수용체 길항 작용으로 진정, 추체외로 증상(두부 진전, 근긴장이상), 졸음, 우울 등 CNS 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "prolactin elevation",
+          "aldosterone"
+        ],
+        "index": 0,
+        "evidence": "프로락틴 및 알도스테론 분비 자극 가능성이 있으나, 개에서 알도스테론 효과는 확인되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal insufficiency",
+          "tremors in renal insufficiency"
+        ],
+        "index": 1,
+        "evidence": "투여량의 65%가 신장으로 배설됨. 신부전 시 진전 발생 위험 증가 및 CRI 용량 감량 권고."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic impairment"
+        ],
+        "index": 0,
+        "evidence": "간에서 주로 대사됨. 중등도~중증 간장애 시 용량 감량 고려 권고."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypertension",
+          "pheochromocytoma",
+          "congestive heart failure"
+        ],
+        "index": 0,
+        "evidence": "갈색세포종에서 고혈압 위기 유발 가능. 울혈성 심부전 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "frenzied behavior",
+          "disorientation",
+          "CNS dopamine receptors"
+        ],
+        "index": 1,
+        "evidence": "고양이는 CNS 도파민 수용체가 적어 항구토 효과가 제한적이며, 광란 행동 및 방향감각 상실 등 CNS 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "prolactin elevation"
+        ],
+        "index": 0,
+        "evidence": "프로락틴 분비 자극 가능성. 고양이에서 알도스테론 효과 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 0,
+        "evidence": "투여량의 65%가 신장으로 배설됨. 고양이 신부전 시 용량 조절 고려 필요."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic impairment"
+        ],
+        "index": 0,
+        "evidence": "간에서 주로 대사됨. 중등도~중증 간장애 시 용량 감량 고려 권고."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypertension"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적 데이터는 제한적이나, 고혈압 주의 사항은 동일하게 적용됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 0.9,
+      "max": 0.9,
+      "mean": 0.9,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 30,
+    "evidence": "개와 고양이에서 소거 반감기 약 0.9시간. 인체에서 경구 투여 후 최고 혈장 농도 도달 시간은 약 2시간. 단백 결합률은 인체 기준 최대 30%. 개/고양이 경구 생체이용률은 Plumb's에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "serotonin syndrome risk"
+      ],
+      "evidence": "MAOIs와 병용 시 고혈압 유발 가능. 세로토닌 증후군 위험."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 3,
+      "keywords": [
+        "extrapyramidal effects"
+      ],
+      "evidence": "추체외로 부작용 위험 증가; 인체에서 병용 금기."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "extrapyramidal effects"
+      ],
+      "evidence": "메토클로프라미드의 추체외로 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Butyrophenones (azaperone, droperidol)",
+      "severity": 2,
+      "keywords": [
+        "extrapyramidal effects"
+      ],
+      "evidence": "메토클로프라미드의 추체외로 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; fluoxetine, paroxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "extrapyramidal effects",
+        "neuroleptic malignant syndrome",
+        "increased toxicity"
+      ],
+      "evidence": "추체외로 효과 강화 또는 신경이완제 악성 증후군 가능성. SSRIs가 메토클로프라미드 대사를 억제하여 독성 위험 증가."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "extrapyramidal effects",
+        "neuroleptic malignant syndrome"
+      ],
+      "evidence": "추체외로 효과 강화 또는 신경이완제 악성 증후군 가능성."
+    },
+    {
+      "drug": "CNS Depressants (anesthetic agents, antihistamines, anxiolytics, barbiturates, phenothiazines, sedatives, tranquilizers)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "sedation"
+      ],
+      "evidence": "메토클로프라미드가 CNS 억제 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Opioid Analgesics (fentanyl, hydromorphone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism",
+        "CNS depression",
+        "antiemetic antagonism"
+      ],
+      "evidence": "오피오이드는 메토클로프라미드의 GI 운동 촉진 효과를 길항하고, 메토클로프라미드는 오피오이드의 CNS 억제 효과를 강화할 수 있음. 하이드로모르폰의 구토 유발 효과도 감소시킬 수 있음."
+    },
+    {
+      "drug": "Anticholinergic agents (atropine, dimenhydrinate, diphenhydramine, glycopyrrolate, meclizine, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "항콜린제는 메토클로프라미드의 GI 운동 촉진 효과를 길항함."
+    },
+    {
+      "drug": "Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "acute hypotension"
+      ],
+      "evidence": "IV 병용 시 급성 저혈압이 보고됨."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "seizure risk"
+      ],
+      "evidence": "병용 시 발작 위험 증가."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 1,
+      "keywords": [
+        "increased absorption",
+        "increased AUC"
+      ],
+      "evidence": "메토클로프라미드가 사이클로스포린의 GI 흡수율과 AUC를 증가시킬 수 있으나, 개에서는 임상적으로 문제가 되지 않는 것으로 보임."
+    },
+    {
+      "drug": "Dopamine and Dopaminergic Drugs (bromocriptine, cabergoline)",
+      "severity": 1,
+      "keywords": [
+        "dopamine antagonism"
+      ],
+      "evidence": "메토클로프라미드가 도파민 또는 도파민 작용제를 이론적으로 길항할 수 있으나, 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "Posaconazole",
+      "severity": 2,
+      "keywords": [
+        "reduced drug concentration"
+      ],
+      "evidence": "메토클로프라미드가 포사코나졸 혈중 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 1,
+      "keywords": [
+        "reduced induction requirements"
+      ],
+      "evidence": "인체에서 메토클로프라미드가 프로포폴 유도 용량을 20~25% 감소시킴."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "inhibited metabolism",
+        "increased drug levels"
+      ],
+      "evidence": "퀴니딘이 메토클로프라미드 대사를 억제할 수 있음."
+    },
+    {
+      "drug": "Apomorphine",
+      "severity": 2,
+      "keywords": [
+        "antiemetic antagonism"
+      ],
+      "evidence": "메토클로프라미드가 아포모르핀의 구토 유발 효과를 무효화할 수 있음."
+    },
+    {
+      "drug": "Ropinirole",
+      "severity": 2,
+      "keywords": [
+        "antiemetic antagonism"
+      ],
+      "evidence": "메토클로프라미드가 로피니롤의 구토 유발 효과를 무효화할 수 있음."
+    },
+    {
+      "drug": "Cholinergic Drugs (bethanechol)",
+      "severity": 1,
+      "keywords": [
+        "enhanced GI motility"
+      ],
+      "evidence": "콜린성 약물이 메토클로프라미드의 GI 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Cephalexin",
+      "severity": 1,
+      "keywords": [
+        "increased peak concentration",
+        "increased AUC"
+      ],
+      "evidence": "개에서 경구 메토클로프라미드가 세팔렉신의 최고 혈장 농도와 AUC를 증가시킴. 용량 조절은 불필요."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 1,
+      "keywords": [
+        "increased absorption"
+      ],
+      "evidence": "메토클로프라미드가 테트라사이클린의 GI 흡수율과 흡수 속도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Acetaminophen",
+      "severity": 1,
+      "keywords": [
+        "enhanced absorption"
+      ],
+      "evidence": "과다복용 상황에서 인체에서 아세트아미노펜 흡수를 증가시킴."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 1,
+      "keywords": [
+        "enhanced absorption"
+      ],
+      "evidence": "과다복용 상황에서 인체에서 아스피린 흡수를 증가시킴."
+    },
+    {
+      "drug": "Alpha-2 Adrenergic Receptor Agonists (dexmedetomidine, xylazine)",
+      "severity": 1,
+      "keywords": [
+        "reduced emetic effect"
+      ],
+      "evidence": "고양이에서 메토클로프라미드가 알파-2 작용제의 구토 유발 효과를 감소시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토 및 위장관 운동 촉진 (간헐 투여, 오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "식전 30~60분 투여 권장 (운동 촉진 목적 시)",
+          "evidence": "역사적으로 0.2~0.5 mg/kg q6~8h PO/SC/IV/IM 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토 및 위장관 운동 촉진 (간헐 투여, 오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": null,
+          "evidence": "대부분의 공개 연구에서 0.5 mg/kg IV 또는 SC 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토 및 위장관 운동 촉진 (간헐 투여, 오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": null,
+          "evidence": "역사적으로 0.2~0.5 mg/kg q6~8h 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토 및 위장관 운동 촉진 (간헐 투여, 오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": null,
+          "evidence": "역사적으로 0.2~0.5 mg/kg q6~8h 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항암제 유발 구토 예방 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": null,
+          "evidence": "항암제 유발 구토 시 고용량(1 mg/kg SC 또는 IM) 필요할 수 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항암제 유발 구토 예방 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": null,
+          "evidence": "항암제 유발 구토 시 고용량(1 mg/kg SC 또는 IM) 필요할 수 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "지속 정맥 주입 (CRI, 오프라벨)",
+          "value": "0.04 - 0.09",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2 mg/kg/day에 해당",
+          "evidence": "0.04~0.09 mg/kg/hour IV CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "모르핀 유발 오심/구토 감소 (오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "모르핀 투여 30~45분 전 투여",
+          "evidence": "0.5 mg/kg SC 투여 시 모르핀 유발 구토 발생률 53% 감소"
+        },
+        {
+          "logic_type": "linear",
+          "context": "후두 마비 수술 관련 역류/흡인 감소 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "부하 용량 후 1 mg/kg/hour CRI 수술 중 유지, 수술 후 0.083 mg/kg/hour CRI로 감량하여 총 24시간 치료",
+          "evidence": "후두 마비 수술 관련 역류/흡인 감소 프로토콜"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위염, 유문 경련, 만성 신염, 약물 소화 불내성 관련 구토 및 GI 운동 저하 치료 (오프라벨)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "최대 q6h까지 투여 가능",
+          "evidence": "0.25~0.5 mg/kg BID 또는 0.17~0.33 mg/kg TID PO/IV/IM/SC"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위염, 유문 경련, 만성 신염, 약물 소화 불내성 관련 구토 및 GI 운동 저하 치료 (오프라벨)",
+          "value": "0.17 - 0.33",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 0.33,
+          "duration_note": "최대 q6h까지 투여 가능",
+          "evidence": "0.25~0.5 mg/kg BID 또는 0.17~0.33 mg/kg TID PO/IV/IM/SC"
+        },
+        {
+          "logic_type": "linear",
+          "context": "이차성 무유증 시 비유 유도 (오프라벨)",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "보통 24시간 내 효과 발현",
+          "evidence": "유즙 생산 촉진 목적으로 0.1~0.2 mg/kg SC q12h 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "단두종 기도 수술 시 역류 및 호흡기 합병증 감소 (오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "파모티딘 1 mg/kg IV 또는 SC와 병용, 전처치 시 투여",
+          "evidence": "단두종 기도 수술 전처치 프로토콜; 수술 후 역류 발생률 감소"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토 (오프라벨, 개 용량 참고)",
+          "value": "0.2 - 1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "자일라진 유발 구토 지연 또는 감소 목적",
+          "evidence": "0.2~1 mg/kg IM이 자일라진 유발 구토를 50~88% 감소시킴"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위장관 운동 촉진 (오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": null,
+          "evidence": "0.5 mg/kg SC q8h"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위염, 유문 경련, 만성 신염, 약물 소화 불내성 관련 구토 및 GI 운동 저하 치료 (오프라벨)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "최대 q6h까지 투여 가능",
+          "evidence": "0.25~0.5 mg/kg BID 또는 0.17~0.33 mg/kg TID PO/IV/IM/SC"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위염, 유문 경련, 만성 신염, 약물 소화 불내성 관련 구토 및 GI 운동 저하 치료 (오프라벨)",
+          "value": "0.17 - 0.33",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 0.33,
+          "duration_note": "최대 q6h까지 투여 가능",
+          "evidence": "0.25~0.5 mg/kg BID 또는 0.17~0.33 mg/kg TID PO/IV/IM/SC"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": 0.375,
+    "note": "신부전 동물에서 CRI 사용 시 표준 용량의 25~50%로 감량 권고 (일화적 경험 기반). 신부전 시 진전 발생 위험 증가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중등도~중증 간장애 시 용량 감량 고려 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "GI 출혈",
+      "match_terms": [
+        "GI hemorrhage",
+        "gastrointestinal bleeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "GI 폐색",
+      "match_terms": [
+        "GI obstruction",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "GI 천공",
+      "match_terms": [
+        "GI perforation",
+        "intestinal perforation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "메토클로프라미드 과민증",
+      "match_terms": [
+        "hypersensitivity to metoclopramide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갈색세포종",
+      "match_terms": [
+        "pheochromocytoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "지연성 운동이상증 또는 근긴장이상 반응 병력",
+      "match_terms": [
+        "tardive dyskinesia",
+        "dystonic reaction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "가임신 (개)",
+      "match_terms": [
+        "pseudopregnancy",
+        "pseudocyesis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "상부 위장관 평활근에 대한 아세틸콜린 감수성 증가를 통해 위장관 운동을 촉진하며, 중추 및 말초 도파민(D2) 수용체 길항 작용으로 항구토 효과를 나타냄. 또한 세로토닌 5-HT3 수용체 약한 억제제 및 5-HT4 수용체 작용제로 작용.",
+    "common_extra_effects": [
+      "추체외로 증상 (운동 불안, 근긴장이상, 좌불안석증)",
+      "진정/졸음",
+      "프로락틴 분비 증가",
+      "변비",
+      "오심, 설사",
+      "일시적 고혈압",
+      "신경이완제 악성 증후군 (인체)"
+    ],
+    "dog_mechanism": "도파민(D2) 수용체 길항 작용이 주된 항구토 기전. 위장관 운동 촉진 효과도 있으나 십이지장 통과 촉진 효과는 제한적.",
+    "dog_extra_effects": [
+      "정신 상태 및 행동 변화 (운동 불안, 불수의적 경련, 공격성, 발성, 과잉행동, 졸음, 우울)",
+      "배뇨근 수축력 증가 및 방광 용량 감소",
+      "진전 (특히 신부전 시)",
+      "추체외로 증상 (두부 진전, 등 및 흉부 근육 근긴장이상)",
+      "변비"
+    ],
+    "cat_mechanism": "고양이는 CNS 도파민 수용체가 적어 항구토 효과가 제한적. 원위 식도 운동 촉진 효과는 개보다 큼.",
+    "cat_extra_effects": [
+      "광란 행동 또는 방향감각 상실",
+      "변비"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 메토클로프라미드는 위장관 운동 촉진제보다 항구토제로서 더 효과적임. 그러나 마로피탄트, 온단세트론 등 다른 항구토제가 더 효과적이고 내약성이 우수한 것으로 보임. CRI 방식이 가장 효과적일 수 있음. 신부전 시 진전 발생 위험이 있으며, 신부전 또는 간장애 시 용량 감량 필요. 가임신 개에서는 사용을 피해야 함.",
+    "cat": "고양이는 CNS 도파민 수용체가 적어 메토클로프라미드의 항구토 효과가 제한적일 수 있음. 온단세트론, 마로피탄트, 시사프리드 등이 일반적으로 선호됨. 광란 행동 또는 방향감각 상실 등의 CNS 부작용에 주의. 원위 식도 운동 촉진 효과는 개보다 큼."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 장애, 갈색세포종, GI 출혈/폐색/천공, 가임신 시 주의 또는 금기. 신부전 및 간장애 시 용량 감량 필요. 추체외로 증상 및 행동 변화 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 항구토 효과가 제한적이며 광란 행동, 방향감각 상실 등 CNS 부작용 가능. 다른 항구토제 우선 고려 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛에 민감하므로 차광 용기에 보관. 실온 20~25°C (68~77°F) 보관, 15~30°C (59~86°F) 범위 내 단기 보관 허용. 정제는 밀폐 용기에 보관.",
+    "forms": [
+      "메토클로프라미드 HCl 경구 정제: 5 mg, 10 mg",
+      "메토클로프라미드 경구 분산정(ODT): 5 mg",
+      "메토클로프라미드 HCl 경구 시럽: 1 mg/mL",
+      "메토클로프라미드 HCl 주사액: 5 mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메토클로프라미드는 상부 위장관 운동 촉진 및 항구토 효과를 가진 약물로, 개에서는 항구토제로서 더 효과적이며 고양이에서는 항구토 효과가 제한적일 수 있음. CRI 방식이 가장 효과적일 수 있음. GI 출혈, 폐색, 천공, 갈색세포종 시 금기. 신부전 및 간장애 시 용량 감량 필요. 추체외로 증상, 행동 변화 등 CNS 부작용에 주의. 여러 약물과 상호작용 가능성 있음.",
+    "indications": "위장관 운동 저하 장애, 위식도 역류, 소장 삽관, 파보바이러스 장염·담즙성 구토 증후군·요독성 위염·항암제 유발 구토의 항구토 치료, 단두종 기도 수술 전후 역류 예방, 이차성 무유증 시 비유 유도 등에 오프라벨로 사용됨.",
+    "client_info": "이 약을 경구로 투여할 때는 식전 15~30분 또는 공복에 투여하는 것이 좋습니다. 공복 투여 후 구토나 불편감이 있으면 다음 투여 시 소량의 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하세요. 경구 액제를 주사로 투여하지 마세요. 개와 고양이에서 일반적으로 잘 견디지만, 심한 불안, 과잉행동, 경직, 경련, 공격성, 심한 졸음/우울 증상이 나타나면 즉시 수의사에게 연락하세요. 고양이는 광란 행동이나 방향감각 상실을 보일 수 있습니다. 개와 고양이 모두 변비가 생길 수 있습니다. 이 약을 복용하는 동안 소변을 더 자주 볼 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (상세 기준 없음)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (veterinary)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/64.jsonl",
+    "extracted_at": "2026-03-11T09:22:00.367652+00:00",
+    "reviewer": null
+  }
+}

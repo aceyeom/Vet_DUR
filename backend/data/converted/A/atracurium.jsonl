@@ -1,0 +1,684 @@
+{
+  "id": "atracurium",
+  "drug_identity": {
+    "name_ko": "아트라쿠리움",
+    "name_en": "Atracurium",
+    "active_ingredient": "Atracurium besylate",
+    "brand_names": [
+      "Tracrium",
+      "Abbottracurium",
+      "Atracur",
+      "Faulcurium",
+      "Ifacur",
+      "Laurak",
+      "Mycurium",
+      "Relatrac",
+      "Sitrac",
+      "Trablok",
+      "Tracur"
+    ],
+    "allergy_class": null,
+    "class": "Muscle Relaxant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Neostigmine, Pyridostigmine",
+    "reversal_evidence": "콜린에스테라제 억제제(예: 네오스티그민 0.02–0.04 mg/kg IV, 항콜린제와 병용)로 신경근 차단을 역전시킬 수 있으며, 역전은 일반적으로 8~10분 내에 완료됩니다.",
+    "off_label_note": "수의과 승인 제품 없음. 개, 고양이, 말, 라마, 양, 토끼 등에서 전신마취 보조제로 허가 외 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아트라쿠리움은 에스테르 가수분해(ester hydrolysis)와 호프만 제거(Hofmann elimination)에 의해 대사되며, 이 두 경로는 신장 또는 간 기능과 독립적으로 작용합니다. 체온 상승은 약물 제거를 촉진하고, pH 감소는 에스테르 가수분해를 촉진하지만 호프만 제거는 억제합니다. 대사산물인 로다노신(laudanosine)은 간에서 제거됩니다."
+    },
+    "extra_information": "아트라쿠리움은 지용성이 낮아 생물학적 막 투과가 제한됩니다. 신장 또는 간 기능 부전 환자에서도 안전하게 사용할 수 있습니다. 개에서 세보플루란은 프로포폴에 비해 아트라쿠리움 유발 신경근 차단을 약 15분 연장시킵니다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장/간 독립적 대사 경로로 인해 신장·간 부담은 낮음. 로다노신 대사산물의 CNS 자극 효과(발작 위험)로 뇌 부담 점수 부여. 인간 데이터 중심이며 수의과 종별 PK 연구 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "laudanosine",
+          "CNS stimulant",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "대사산물 로다노신이 CNS 자극제로 발작을 유발할 수 있으며, 개에서 아트라쿠리움 CRI 후 발작 사례 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "histamine release",
+          "hypotension",
+          "bradycardia",
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "히스타민 유리로 인한 저혈압, 서맥, 빈맥 등 심혈관 부작용이 보고됨. 권장 용량에서는 심혈관 영향 최소."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 기능과 독립적으로 대사되므로 신장 부담 매우 낮음. 신부전 환자에서도 안전하게 사용 가능."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "laudanosine",
+          "hepatic clearance"
+        ],
+        "index": 1,
+        "evidence": "로다노신은 간에서 제거되므로 간 기능 저하 시 로다노신 축적 위험이 있으나, 아트라쿠리움 자체는 간 기능과 독립적으로 대사됨."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension",
+          "bradycardia",
+          "tachycardia",
+          "cardiovascular effects"
+        ],
+        "index": 1,
+        "evidence": "과용량 또는 히스타민 유리 시 저혈압, 서맥, 빈맥 등 심혈관 부작용 가능. 권장 용량에서는 심혈관 영향 최소."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "laudanosine",
+          "CNS stimulant",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "대사산물 로다노신이 CNS 자극제로 발작을 유발할 수 있음. 고양이 특이 데이터는 제한적이나 동일 기전 적용."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "histamine release",
+          "hypotension",
+          "bradycardia"
+        ],
+        "index": 1,
+        "evidence": "히스타민 유리로 인한 심혈관 부작용 가능. 권장 용량에서는 최소."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 기능과 독립적으로 대사되므로 신장 부담 매우 낮음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "laudanosine",
+          "hepatic clearance"
+        ],
+        "index": 1,
+        "evidence": "로다노신은 간에서 제거되므로 간 기능 저하 시 로다노신 축적 위험 있음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension",
+          "bradycardia",
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "과용량 또는 히스타민 유리 시 심혈관 부작용 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 3,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 IV 투여 후 최대 신경근 차단은 일반적으로 3~5분 내에 발생. 균형 마취 하에서 최대 차단 지속 시간은 일반적으로 20~35분. 반감기는 본문에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 신경근 차단 강화 약물 목록은 Plumb's에서 직접 인용.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcholinesterase Inhibitors (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade reversal",
+        "antagonism"
+      ],
+      "evidence": "Antagonizes the neuromuscular blocking actions of atracurium. Can be used advantageously to reverse neuromuscular blockade."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "muscle weakness",
+        "neuromuscular effects"
+      ],
+      "evidence": "May enhance unwanted neuromuscular effects of corticosteroids (e.g., muscle weakness). Consider therapy modification."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "onset acceleration"
+      ],
+      "evidence": "May speed the onset of action and enhance the neuromuscular blocking actions of atracurium. Do not give atracurium until succinylcholine effects have diminished."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced neuromuscular blockade",
+        "decreased duration"
+      ],
+      "evidence": "Concomitant administration may decrease the effects and duration of neuromuscular blockade."
+    },
+    {
+      "drug": "Other Muscle Relaxant Drugs (alpha-2 agonists, diazepam, methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "synergistic effect",
+        "antagonistic effect"
+      ],
+      "evidence": "May cause a synergistic or antagonistic effect on neuromuscular blockade."
+    },
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Inhalant Anesthetics (isoflurane, sevoflurane)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "prolonged blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium. Sevoflurane prolonged atracurium-induced NMB by about 15 minutes compared with propofol in dogs."
+    },
+    {
+      "drug": "Antiarrhythmic Agents (procainamide, quinidine)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Beta Adrenergic Receptor Antagonists (atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Cyclosporine (systemic)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "electrolyte imbalance"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Lincosamide Antibiotics (clindamycin)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade",
+        "decreased acetylcholine release"
+      ],
+      "evidence": "Competes with sodium and decreases acetylcholine release, may enhance and/or prolong neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Magnesium Salts (parenteral)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "Parenteral magnesium salts may enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Polymyxin B",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Tetracyclines (doxycycline, minocycline)",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    },
+    {
+      "drug": "Vancomycin",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May enhance and/or prolong the neuromuscular blocking activity of atracurium."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "수술 중 근육 이완 또는 기관내 삽관 보조 (허가 외)",
+          "value": "0.1 - 0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.25,
+          "duration_note": "초기 투여 후 추가 용량 0.1 mg/kg IV; 중증 환자에서는 말초 신경 자극기 적용 또는 자발적 움직임 관찰 없이 20~30분 이내 재투여 금지. 양압 환기 필수.",
+          "evidence": "허가 외 사용. 양압 환기(기계적 환기 권장) 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "기계적 환기 중 호흡근 마비 유도 - 부하 용량",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "부하 용량 투여 5분 후 3–9 µg/kg/min IV CRI 시작. 5% 포도당 또는 0.9% 생리식염수로 희석; 다른 약물과 혼합 금지.",
+          "evidence": "호흡 및 심혈관 모니터링 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "기계적 환기 중 호흡근 마비 유도 - 유지 CRI",
+          "value": "3 - 9",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 투여 5분 후 시작. 단위: µg/kg/min.",
+          "evidence": "호흡 및 심혈관 모니터링 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "안과 수술 시 안구 중심 위치 조정",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "전신마취 하 1회 투여. 장시간 수술 시 필요에 따라 0.1 mg/kg IV 추가 투여 가능. 명확한 산동 효과 없음.",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "척수 병변 후 요저류 (방광 내 주입)",
+          "value": "2 - 4",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.5 mg/mL 아트라쿠리움 용액 2–4 mL를 무균 요도 카테터를 통해 방광 내 주입. 10 kg 미만: 2 mL, 10–20 kg: 3 mL, 20 kg 초과: 4 mL. 카테터는 주입 후 5분간 유지. (10 mg/mL 아트라쿠리움 0.2 mL를 0.9% 생리식염수 3.8 mL에 희석하여 최종 농도 0.5 mg/mL, 총 4 mL 제조)",
+          "evidence": "허가 외 사용. 방광 내 주입으로 전신 부작용 없이 요도 근육 부분 마비 유도."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "IV 마취 및 진통 보조 근육 이완 (허가 외)",
+          "value": "0.1 - 0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.25,
+          "duration_note": "초기 투여 후 추가 용량 0.1 mg/kg IV; 중증 환자에서는 말초 신경 자극기 적용 또는 자발적 움직임 관찰 없이 20~30분 이내 재투여 금지. 양압 환기 필수.",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "기계적 환기 중 호흡근 마비 유도 - 부하 용량",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "부하 용량 투여 5분 후 3–9 µg/kg/min IV CRI 시작. 5% 포도당 또는 0.9% 생리식염수로 희석; 다른 약물과 혼합 금지.",
+          "evidence": "호흡 및 심혈관 모니터링 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "기계적 환기 중 호흡근 마비 유도 - 유지 CRI",
+          "value": "3 - 9",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 투여 5분 후 시작. 단위: µg/kg/min.",
+          "evidence": "호흡 및 심혈관 모니터링 필수."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수컷 고양이 요도 플러그 제거 및 척수 병변 후 요저류 (허가 외)",
+          "value": "2",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "10 mg/mL 아트라쿠리움 0.2 mL를 0.9% 생리식염수 3.8 mL에 희석하여 최종 농도 0.5 mg/mL. 요도 카테터를 통해 2 mL를 5분에 걸쳐 천천히 주입하며 요도를 두 손가락으로 눌러 누출 방지. 이후 최대 20초간 생리식염수로 역행 세척. 첫 시도 실패 시 반복 가능.",
+          "evidence": "허가 외 사용. 요도 내 주입으로 폐색 제거율 64% vs. 대조군 15%."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "아트라쿠리움은 신장 또는 간 기능과 독립적인 에스테르 가수분해 및 호프만 제거에 의해 대사되므로 신부전 환자에서도 용량 조절 없이 안전하게 사용 가능합니다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "아트라쿠리움 자체는 간 기능과 독립적으로 대사되나, 대사산물 로다노신은 간에서 제거됩니다. 간 기능 저하 시 로다노신 축적으로 인한 발작 위험이 증가할 수 있으므로 모니터링이 권장됩니다."
+  },
+  "contraindications": [
+    {
+      "condition": "아트라쿠리움 과민증",
+      "match_terms": [
+        "hypersensitivity to atracurium",
+        "atracurium allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 신경근 차단제에 대한 과민증 병력",
+      "match_terms": [
+        "neuromuscular blocker hypersensitivity",
+        "cross-sensitivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심혈관 질환",
+      "match_terms": [
+        "severe cardiovascular disease",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식",
+      "match_terms": [
+        "asthma",
+        "bronchospasm"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질 이상",
+      "match_terms": [
+        "electrolyte abnormalities",
+        "hypokalemia",
+        "hypermagnesemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 근무력증 (Myasthenia Gravis)",
+      "match_terms": [
+        "myasthenia gravis",
+        "MG"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신마취 미유도 상태 (단독 투여)",
+      "match_terms": [
+        "without general anesthesia",
+        "sole agent"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "운동 종판의 콜린성 수용체 부위에 경쟁적으로 결합하여 아세틸콜린을 길항함으로써 횡문근을 마비시키는 비탈분극성 신경근 차단제. 진통 또는 진정 효과 없음.",
+    "common_extra_effects": [
+      "히스타민 유리 (과용량 또는 빠른 투여 시)",
+      "저혈압",
+      "혈관 확장",
+      "서맥",
+      "빈맥",
+      "호흡 곤란",
+      "기관지 경련",
+      "후두 경련",
+      "발진, 두드러기",
+      "주사 부위 반응",
+      "로다노신(laudanosine) 대사산물에 의한 CNS 자극 및 발작 (장기 사용 또는 간 기능 저하 시)",
+      "알레르기 반응",
+      "부적절하거나 지속적인 신경근 차단"
+    ],
+    "dog_mechanism": "개에서 세보플루란은 프로포폴에 비해 아트라쿠리움 유발 신경근 차단을 약 15분 연장시킴. 부분 신경근 차단은 자발 환기를 감소시키고 고탄산혈증에 대한 반응을 저해함.",
+    "dog_extra_effects": [
+      "자발 환기 감소",
+      "고탄산혈증 반응 저해",
+      "중심핵 근병증 개에서 회복 시간 연장",
+      "아트라쿠리움 CRI 후 발작 (소아 개 사례 보고)",
+      "과용량 시 심각한 심혈관 부작용"
+    ],
+    "cat_mechanism": "고양이에서 요도 내 주입 시 요도 점막을 통해 흡수되어 요도 근육의 부분 마비를 유도함.",
+    "cat_extra_effects": [
+      "요도 내 주입 시 전신 부작용 없이 요도 근육 부분 마비"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아트라쿠리움은 수술 중 근육 이완, 기관내 삽관, 기계적 환기, 안과 수술 시 안구 중심 위치 조정, 척수 병변 후 요저류 치료에 허가 외로 사용됩니다. 중증 근무력증 개에서는 권장 용량의 16~20%로 신경근 전달 모니터링 하에 안전하게 사용된 사례가 있습니다. 중심핵 근병증 개에서도 사용 가능하나 회복 시간이 길어질 수 있습니다. 아트라쿠리움 CRI 후 발작이 보고된 사례가 있으므로 주의가 필요합니다.",
+    "cat": "고양이에서 아트라쿠리움은 IV 마취 보조 근육 이완, 기계적 환기, 수컷 고양이 요도 플러그 제거(요도 내 주입 시 폐색 제거율 64% vs. 대조군 15%), 척수 병변 후 요저류 치료에 허가 외로 사용됩니다. 요도 내 주입은 전신 부작용 없이 요도 근육의 부분 마비를 유도할 수 있습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "전신마취 유도 후에만 투여. 기관내 삽관 및 환기 지원, 역전제 준비 필수. 중증 근무력증, 전해질 이상, 중증 심혈관 질환, 천식 환자에서 주의. 말초 신경 자극기를 이용한 신경근 차단 모니터링 강력 권장. 아트라쿠리움 CRI 후 발작 위험 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "전신마취 유도 후에만 투여. 기관내 삽관 및 환기 지원, 역전제 준비 필수. 전해질 이상, 중증 심혈관 질환, 천식 환자에서 주의. 말초 신경 자극기를 이용한 신경근 차단 모니터링 강력 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "2°C~8°C(36°F~46°F)에서 냉장 보관하며 동결 방지. 냉장고에서 꺼낸 후 실온(25°C)에서 14일 이내 사용 권장. 실온에서 매월 약 5% 역가 손실; 냉장 시 1년에 6% 역가 손실. 0.2 mg/mL 또는 0.5 mg/mL로 희석한 용액은 실온 또는 냉장 상태에서 최대 24시간 안정. 다른 약물과 분리하여 보관하고 경고 라벨 부착 권장.",
+    "forms": [
+      "Atracurium Besylate Injection 10 mg/mL (5 mL 단회용 바이알, 10 mL 다회용 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아트라쿠리움은 비탈분극성 신경근 차단제로, 전신마취 보조제로 사용됩니다. 심혈관 영향이 최소화되어 있으며, 신장 및 간 기능과 독립적인 호프만 제거 및 에스테르 가수분해로 대사됩니다. 진통 또는 진정 효과가 없으므로 반드시 전신마취 유도 후 투여해야 합니다. 역전제(네오스티그민 등)와 기계적 환기 장비를 항상 준비해야 합니다. 수의과 승인 제품은 없으며 허가 외 사용입니다. 고양이 요도 플러그 제거 및 척수 병변 후 요저류 치료에 요도 내 주입으로도 활용됩니다.",
+    "indications": "수술 중 완전 근육 이완, 기관내 삽관 보조, 기계적 환기 중 호흡근 마비 유도, 안과 수술 시 안구 중심 위치 조정(개, 말, 라마), 수컷 고양이 요도 플러그 제거(요도 내 주입), 상위 운동 신경원 징후로 인한 요저류 치료(개, 고양이). 모든 수의과 적응증은 허가 외 사용입니다.",
+    "client_info": "이 약물은 전문 수의사만이 사용할 수 있는 마취 보조제입니다. 아트라쿠리움은 근육을 완전히 마비시키는 약물로, 반드시 전신마취 상태에서만 투여됩니다. 약물 투여 중에는 인공호흡기와 심혈관 모니터링이 필수적으로 제공됩니다. 이 약물은 통증 완화나 진정 효과가 없으므로 단독으로 사용되지 않습니다. 부작용으로는 드물게 알레르기 반응, 혈압 저하, 심박수 변화 등이 나타날 수 있습니다. 약물 효과는 역전제로 되돌릴 수 있습니다. 반드시 이 약물 사용에 익숙한 전문가만이 투여해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Formal PK parameters (half-life, Vd, clearance) for dogs and cats",
+      "Protein binding data",
+      "Oral bioavailability (not applicable - IV only)",
+      "CYP enzyme interactions",
+      "Specific renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/49.jsonl",
+    "extracted_at": "2026-03-11T04:29:15.417564+00:00",
+    "reviewer": null
+  }
+}

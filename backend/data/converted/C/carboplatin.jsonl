@@ -1,0 +1,537 @@
+{
+  "id": "carboplatin",
+  "drug_identity": {
+    "name_ko": "카보플라틴",
+    "name_en": "Carboplatin",
+    "active_ingredient": "Carboplatin",
+    "brand_names": [
+      "Paraplatin"
+    ],
+    "allergy_class": "platinum",
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제네릭 주사제를 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.7,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "카보플라틴은 분해되어 백금 및 백금 복합체로 전환된 후 고단백 결합 상태로 신장을 통해 서서히 배설됨. 개에서 투여 후 24시간 이내에 약 절반이 소변으로 미변화체로 배설되며, 72시간 후에는 투여된 백금의 약 70%가 소변으로 배설됨."
+    },
+    "extra_information": "개: 투여 후 24시간 이내 약 50%가 소변으로 미변화체 배설, 72시간 후 약 70% 배설. 고양이: 신부전 시 카보플라틴 배설이 저하되어 골수억제 위험 증가."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설 비율, 간독성 보고, 골수억제 등 텍스트 근거 반영. 수의학 종별 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neuropathy",
+          "ototoxicity"
+        ],
+        "index": -1,
+        "evidence": "신경독성 및 이독성이 시스플라틴보다 낮은 빈도로 보고됨. 직접적인 뇌 부담 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "용량 제한 독성은 골수억제(호중구감소증, 혈소판감소증)이며, 투여 후 14~21일에 최저점 도달. 15 kg 이하 소형견에서 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal elimination",
+          "renal insufficiency"
+        ],
+        "index": 1,
+        "evidence": "투여량의 약 70%가 신장으로 배설됨. 시스플라틴보다 신독성은 낮으나 신질환 환자에서 주의 필요. 신기능 저하 시 배설 지연."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased liver enzymes",
+          "increased serum bilirubin"
+        ],
+        "index": 1,
+        "evidence": "인체에서 약 15%에서 간독성(빌리루빈 및 간효소 상승) 보고. 간질환 환자에서 주의 권고. 개에서 간독성 빈도 명시 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neuropathy",
+          "ototoxicity"
+        ],
+        "index": -1,
+        "evidence": "신경독성 및 이독성이 시스플라틴보다 낮은 빈도로 보고됨. 고양이 특이적 뇌 부담 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 용량 제한 독성은 골수억제. 신부전 시 배설 저하로 골수억제 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal insufficiency",
+          "elimination impaired"
+        ],
+        "index": 1,
+        "evidence": "고양이 신부전 시 카보플라틴 배설이 저하되어 골수억제 위험 증가. 신기능 모니터링 필수."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "인체 데이터 기반 간독성 가능성. 고양이 특이적 간독성 빈도 명시 없음. 간질환 환자 주의."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "카보플라틴은 IV 투여 후 체내에 광범위하게 분포하며 초기에는 단백 결합이 없음. 분해 후 백금 복합체는 고단백 결합 상태로 신장을 통해 서서히 배설됨. 반감기 수치는 본 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (e.g., gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "Aminoglycosides와 병용 시 신독성 및 이독성 위험 증가 가능성."
+    },
+    {
+      "drug": "Myelosuppressive Agents (e.g., antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "다른 골수억제제와 병용 시 골수억제 상가 효과 발생 가능. 가능한 병용 회피 권고."
+    },
+    {
+      "drug": "Nephrotoxic Agents (e.g., aminoglycosides)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "potentiation"
+      ],
+      "evidence": "신독성 약물의 신장 독성이 카보플라틴에 의해 증강될 수 있음."
+    },
+    {
+      "drug": "Radiation Therapy",
+      "severity": 2,
+      "keywords": [
+        "hematologic toxicity",
+        "radiation sensitizer"
+      ],
+      "evidence": "방사선 치료와 병용 시 혈액학적 독성 증가 가능성."
+    },
+    {
+      "drug": "Tigilanol Tiglate",
+      "severity": 3,
+      "keywords": [
+        "antineoplastic combination",
+        "protocol restriction"
+      ],
+      "evidence": "Tigilanol tiglate 투여 프로토콜은 다른 항종양제와의 병용을 허용하지 않음. 병용 금지."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "vaccine efficacy",
+        "adverse effects"
+      ],
+      "evidence": "골수억제제는 백신 효능을 감소시키고 백신 부작용을 증가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 일반 용량",
+          "value": "250 - 300",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주 간격 반복 투여. 신기능 저하 또는 골수억제 시 용량 조절 필요.",
+          "evidence": "250–300 mg/m2 IV every 3 weeks (extra-label). 단위는 mg/m2이며 mg/kg와 혼동 주의."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "항종양제 (오프라벨) - 15 kg 이하 소형견",
+          "value": "240",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주 간격. 또는 10 mg/kg 사용 가능. 독성 위험 증가로 감량 권고.",
+          "evidence": "15 kg 이하 개에서 240 mg/m2 (또는 10 mg/kg) 권고. 단위는 mg/m2."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 토세라닙 병용 시",
+          "value": "200",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "토세라닙(Palladia®) 병용 시 최대 내약 용량. 단위는 mg/m2.",
+          "evidence": "토세라닙 병용 시 최대 내약 용량 200 mg/m2로 보고됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 일반 용량",
+          "value": "240 - 260",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주 간격 반복 투여. 신기능 저하 시 골수억제 위험 증가로 주의. 단위는 mg/m2.",
+          "evidence": "240–260 mg/m2 IV every 3 weeks (extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (오프라벨) - 저용량",
+          "value": "180 - 200",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21h",
+          "max_dose_mg_kg": null,
+          "duration_note": "저용량 보고 사례 있음. 단위는 mg/m2.",
+          "evidence": "180–200 mg/m2 저용량 사용 보고됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 조절 필요. 고양이 신부전 시 카보플라틴 배설 저하로 골수억제 위험 증가. 구체적 크레아티닌 역치 및 조절 계수는 명시되지 않음. CBC 모니터링 결과에 따라 10–20% 감량 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간질환 환자에서 주의 권고. 구체적 용량 조절 지침은 명시되지 않음. 간독성 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "카보플라틴 또는 다른 백금 화합물에 과민반응",
+      "match_terms": [
+        "hypersensitivity to carboplatin",
+        "hypersensitivity to cisplatin",
+        "platinum allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 골수억제",
+      "match_terms": [
+        "severe bone marrow suppression",
+        "myelosuppression",
+        "neutropenia",
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 50000,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "유의한 출혈",
+      "match_terms": [
+        "significant bleeding",
+        "hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "renal insufficiency",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "활동성 감염",
+      "match_terms": [
+        "active infection"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "DNA 내 및 DNA 간 교차결합(cross-linking)을 통해 단일 및 이중 가닥 DNA 절단을 유발하고, DNA 복제, RNA 전사, 단백질 합성을 억제하여 세포 사멸 및 종양 성장 억제.",
+    "common_extra_effects": [
+      "골수억제 (호중구감소증, 혈소판감소증) - 용량 제한 독성",
+      "구토",
+      "설사",
+      "식욕부진",
+      "신독성",
+      "간독성 (혈청 빌리루빈 및 간효소 상승)",
+      "신경독성",
+      "이독성",
+      "탈모 (지속 성장 모발 품종)",
+      "아나필락시양 반응 (드물게)",
+      "혈뇨성 방광염 (드물게)",
+      "혈관 외 유출 시 괴사"
+    ],
+    "dog_mechanism": "DNA 교차결합을 통한 세포독성. 개에서 골수억제는 체중과 관련되며 15 kg 이하 소형견에서 위험 증가.",
+    "dog_extra_effects": [
+      "골수억제 (투여 후 14~21일에 최저점)",
+      "구토, 설사, 식욕부진 (투여 후 2~5일)",
+      "피부 지연형 과민반응 (1례 보고)",
+      "무균성 출혈성 방광염 (1례 보고)",
+      "혈관 외 유출 관련 괴사",
+      "털 코트 변화 (샤기함, 광택 소실)",
+      "지속 성장 모발 품종에서 탈모"
+    ],
+    "cat_mechanism": "DNA 교차결합을 통한 세포독성. 시스플라틴과 달리 고양이에서 안전하게 사용 가능.",
+    "cat_extra_effects": [
+      "골수억제 (투여 후 14~21일에 최저점)",
+      "구토, 설사, 식욕부진",
+      "신부전 시 골수억제 위험 증가"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 카보플라틴은 시스플라틴에 비해 신독성 및 구토가 적음. 골수억제는 용량 제한 독성으로 체중과 관련됨. 15 kg 이하 소형견(특히 10 kg 이하)에서 중증 호중구감소증 및 혈소판감소증 위험이 유의하게 높으므로 감량 고려. 투여 후 CBC를 1, 2, 3주차에 모니터링 권고. 시스플라틴과 용량 혼동 주의.",
+    "cat": "시스플라틴과 달리 카보플라틴은 고양이에서 안전하게 사용 가능. 신부전 고양이에서 배설이 저하되어 골수억제 위험이 증가하므로 신기능 모니터링 필수. 투여 후 CBC 정기 모니터링 권고."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "골수억제 모니터링 필수. 15 kg 이하 소형견에서 감량 고려. 신장 및 간 질환 환자에서 주의. 시스플라틴과 용량 혼동 주의. NIOSH 위험 약물로 취급 시 PPE 착용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "시스플라틴과 달리 고양이에서 사용 가능하나 신부전 시 골수억제 위험 증가. 신기능 및 CBC 정기 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사액은 빛으로부터 보호하고 25°C(77°F)에서 보관; 15°C~30°C(59°F~86°F) 범위 허용. 다회 투여 바이알은 여러 번 바늘 삽입 후 14일간 안정성 유지. 희석 후 제조사는 8시간 이내 사용 권고(일부 문헌은 24시간 제시). 알루미늄 함유 기구와 접촉 금지.",
+    "forms": [
+      "Carboplatin Injection 10 mg/mL (5 mL, 15 mL, 45 mL, 60 mL, 100 mL 다회 투여 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "카보플라틴은 광범위 항종양 백금 제제로, 편평세포암종, 골육종, 흑색종 등 다양한 종양에 사용됨. 시스플라틴과 달리 고양이에서 안전하게 사용 가능. 용량 제한 독성은 골수억제(호중구감소증, 혈소판감소증)이며 투여 후 14~21일에 최저점 도달. 15 kg 이하 소형견에서 독성 위험 증가로 감량 필요. NIOSH 위험 약물로 취급 시 PPE 착용 필수. 알루미늄 함유 기구 사용 금지.",
+    "indications": "승인 적응증(수의학적 승인 없음, 오프라벨): 편평세포암종, 난소암종, 폐암종, 비강암종, 항문낭 아포크린선 선암종, 결장 선암종, 요로 암종, 간세포암종, 갑상선 선암종, 흑색종, 골육종. 강내 투여: 암종증 및 악성 삼출. 방사선 감작제로도 사용 가능.",
+    "client_info": "카보플라틴은 항암(암 치료) 약물입니다. 약물과 그 부산물은 접촉하는 사람과 다른 동물에게 위험할 수 있습니다. 치료 당일과 이후 며칠간 반려동물의 소변, 대변, 혈액, 구토물을 처리할 때 반드시 일회용 장갑을 착용하세요. 가능하면 치료받은 개는 마당의 별도 구역에 두고, 고양이는 별도의 화장실을 사용하게 하세요. 반려동물의 배설물은 즉시 이중 비닐백에 넣어 밀봉 후 일반 쓰레기통에 버리세요. 구토, 소변, 대변 사고 발생 시 종이 타월로 최대한 흡수한 후 이중 비닐백에 넣어 버리고, 희석된 표백제 용액으로 해당 부위를 청소하세요. 카보플라틴은 구토, 소화기 장애를 유발할 수 있으며, 혈구 수치 변화로 출혈, 멍, 감염, 무기력, 혈변, 호흡 곤란 위험이 증가할 수 있습니다. 이러한 증상이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics - half_life_hr",
+      "Pharmacokinetics - t_max_hr",
+      "Pharmacokinetics - onset_min",
+      "Pharmacokinetics - f_percent",
+      "Pharmacokinetics - protein_binding_percent",
+      "CYP profile",
+      "Renal dose adjustment - specific creatinine threshold",
+      "Hepatic dose adjustment - specific ALT threshold"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/52.jsonl",
+    "extracted_at": "2026-03-11T05:31:34.796079+00:00",
+    "reviewer": null
+  }
+}

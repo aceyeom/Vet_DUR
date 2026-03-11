@@ -1,0 +1,983 @@
+{
+  "id": "dexamethasone",
+  "drug_identity": {
+    "name_ko": "덱사메타손",
+    "name_en": "Dexamethasone",
+    "active_ingredient": "Dexamethasone",
+    "brand_names": [
+      "Azium",
+      "Dexasone"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.25,
+        "unit": "mg"
+      },
+      {
+        "value": 1.25,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Plumb's 모노그래프에 CYP 효소 경로에 대한 구체적인 언급 없음. 간 대사를 통해 제거되며, 아졸계 항진균제 및 마크로라이드 항생제에 의해 대사가 억제되고, 리팜핀에 의해 대사가 유도되는 것으로 알려져 있음."
+    },
+    "extra_information": "개에서 반감기는 약 2~5시간이나 생물학적 활성은 48시간 이상 지속됨. 고양이에서 PLO 제형을 귀 안쪽 피부에 도포 시 경피 흡수가 입증되지 않음. 소에서 반감기는 약 4.5~5시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 덱사메타손은 간, 신장, 위장관, 혈액계, 뇌 등 거의 모든 장기에 영향을 미치는 광범위한 글루코코르티코이드임. 점수는 모노그래프에서 언급된 부작용 및 약리 효과의 빈도와 중증도를 기반으로 산출.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizure threshold",
+          "mood",
+          "behavior changes",
+          "depression",
+          "lethargy",
+          "aggression"
+        ],
+        "index": 1,
+        "evidence": "글루코코르티코이드는 발작 역치를 낮추고, 기분 및 행동 변화(우울, 무기력, 공격성)를 유발할 수 있음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "hypercoagulability",
+          "hyperlipidemia",
+          "neutrophilia",
+          "lymphopenia",
+          "hemolytic anemia"
+        ],
+        "index": 1,
+        "evidence": "혈소판 응집 억제, 과응고성, 고지혈증, 호중구증가증, 림프구감소증 등 혈액계 부작용이 다수 보고됨. 프로필렌글리콜 기반 제제의 급속 IV 투여 시 용혈성 빈혈 위험."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "potassium excretion",
+          "calcium excretion",
+          "diuresis",
+          "GI effects worsened by renal disease"
+        ],
+        "index": 1,
+        "evidence": "신기능 저하 동물에서 GI 부작용 위험 증가. 신세뇨관에서 ADH 활성 감소로 이뇨 발생. 칼륨 및 칼슘 배설 증가."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "ALT",
+          "ALP",
+          "GGT",
+          "hepatic glycogen",
+          "fat deposits",
+          "BSP retention"
+        ],
+        "index": 1,
+        "evidence": "간세포 내 지방 및 글리코겐 침착 증가, ALT/GGT/ALP 혈청 농도 상승. 개에서 ALP 유도 효과 특히 현저함."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypertension",
+          "vasoconstriction",
+          "positive inotropic effect"
+        ],
+        "index": 1,
+        "evidence": "혈압 상승 및 임상적으로 경미한 양성 변력 효과가 보고됨. 혈관 수축 강화."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "depression",
+          "behavior changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 우울 및 행동 변화가 보고되나 개보다 부작용 발생 빈도가 낮음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hyperglycemia",
+          "hyperinsulinemia",
+          "lymphopenia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 혈당 상승 효과가 다른 종보다 강함. 림프구감소증 및 면역억제 효과."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "potassium excretion",
+          "diuresis",
+          "renal insufficiency caution"
+        ],
+        "index": 1,
+        "evidence": "신기능 저하 시 주의 필요. 이뇨 및 전해질 불균형 가능성."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "fat deposits",
+          "glycogen"
+        ],
+        "index": 1,
+        "evidence": "간 대사 약물로 장기 투여 시 간 내 지방 및 글리코겐 침착 가능. 고양이에서 ALP 유도 효과는 개보다 적음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypertension",
+          "vasoconstriction"
+        ],
+        "index": 1,
+        "evidence": "혈압 상승 가능성. 고양이에서 심장 관련 부작용 데이터는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 5.0,
+      "mean": 3.5,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 반감기 약 2~5시간이나 생물학적 활성은 48시간 이상 지속됨. 약동학적 반감기가 약리 효과 지속 시간과 일치하지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concurrent use with glucocorticoids may cause hypokalemia."
+    },
+    {
+      "drug": "Anticholinesterase Agents (pyridostigmine, neostigmine)",
+      "severity": 2,
+      "keywords": [
+        "muscle weakness",
+        "myasthenia gravis"
+      ],
+      "evidence": "In patients with myasthenia gravis, concomitant use may lead to profound muscle weakness. Anticholinesterase medication should be discontinued at least 24 hours prior to glucocorticoid administration if possible."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 1,
+      "keywords": [
+        "reduced salicylate concentration"
+      ],
+      "evidence": "Concurrent use with glucocorticoids may reduce salicylate blood concentrations."
+    },
+    {
+      "drug": "Azole Antifungals",
+      "severity": 2,
+      "keywords": [
+        "increased dexamethasone concentration",
+        "adrenal insufficiency",
+        "CYP inhibition"
+      ],
+      "evidence": "May decrease metabolism of glucocorticoids and increase dexamethasone blood concentrations; ketoconazole may induce adrenal insufficiency when glucocorticoids are withdrawn by inhibiting adrenal corticosteroid synthesis."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "hepatic metabolism inhibition",
+        "dose adjustment required"
+      ],
+      "evidence": "Glucocorticoids may inhibit hepatic metabolism of cyclophosphamide; cyclophosphamide dosage adjustments may be required."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "mutual hepatic metabolism inhibition",
+        "increased blood concentrations"
+      ],
+      "evidence": "Concomitant administration may increase blood concentrations of each by mutually inhibiting hepatic metabolism of each other."
+    },
+    {
+      "drug": "Diazepam",
+      "severity": 1,
+      "keywords": [
+        "decreased diazepam concentration"
+      ],
+      "evidence": "Concurrent use with dexamethasone may decrease diazepam concentrations."
+    },
+    {
+      "drug": "Diuretics, Potassium-Depleting (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "May cause hypokalemia when administered concomitantly with glucocorticoids."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "decreased doxorubicin exposure"
+      ],
+      "evidence": "Concurrent use with dexamethasone may result in decreased doxorubicin exposure."
+    },
+    {
+      "drug": "Ephedrine",
+      "severity": 2,
+      "keywords": [
+        "reduced dexamethasone blood levels",
+        "interference with suppression test"
+      ],
+      "evidence": "May reduce dexamethasone blood levels and interfere with dexamethasone suppression tests."
+    },
+    {
+      "drug": "Fentanyl",
+      "severity": 2,
+      "keywords": [
+        "decreased fentanyl plasma concentration"
+      ],
+      "evidence": "Concurrent use with dexamethasone may result in decreased plasma concentrations of fentanyl."
+    },
+    {
+      "drug": "Fluoroquinolone Antibiotics (enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "tendon rupture"
+      ],
+      "evidence": "Concurrent use with glucocorticoids may result in an increased risk for tendon rupture."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "increased insulin requirements",
+        "hyperglycemia"
+      ],
+      "evidence": "Insulin requirements may increase in patients receiving glucocorticoids."
+    },
+    {
+      "drug": "Ivermectin",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein modulation",
+        "altered pharmacokinetics",
+        "reduced anthelmintic activity"
+      ],
+      "evidence": "Dexamethasone may alter ivermectin pharmacokinetics by modulating P-glycoprotein. In cattle, concurrent dexamethasone injection impaired ivermectin anthelmintic activity against Cooperia oncophora."
+    },
+    {
+      "drug": "Macrolide Antibiotics (erythromycin, clarithromycin)",
+      "severity": 2,
+      "keywords": [
+        "decreased glucocorticoid metabolism",
+        "increased dexamethasone concentration"
+      ],
+      "evidence": "May decrease the metabolism of glucocorticoids and increase dexamethasone blood concentrations."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "altered steroid metabolism",
+        "adrenal insufficiency"
+      ],
+      "evidence": "May alter the metabolism of steroids; higher than usual doses of steroids may be necessary to treat mitotane-induced adrenal insufficiency."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "additive ulcerogenic effect"
+      ],
+      "evidence": "Administration of ulcerogenic drugs with glucocorticoids may increase the risk for GI ulceration."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased dexamethasone efficacy",
+        "enzyme induction"
+      ],
+      "evidence": "Concurrent use with glucocorticoids may result in decreased dexamethasone efficacy."
+    },
+    {
+      "drug": "Praziquantel",
+      "severity": 2,
+      "keywords": [
+        "decreased praziquantel plasma concentration"
+      ],
+      "evidence": "Concurrent use with dexamethasone may significantly decrease praziquantel plasma concentrations."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "increased volume of distribution",
+        "prolonged elimination half-life"
+      ],
+      "evidence": "In a study of dogs, dexamethasone increased quinidine volume of distribution (49% to 78%) and elimination half-life (1.5 to 2.3 times greater than quinidine alone)."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased dexamethasone concentration"
+      ],
+      "evidence": "May increase the metabolism of glucocorticoids and decrease dexamethasone blood concentrations."
+    },
+    {
+      "drug": "Vaccines, Modified Live",
+      "severity": 3,
+      "keywords": [
+        "immunosuppression",
+        "augmented virus replication",
+        "diminished immune response"
+      ],
+      "evidence": "Patients receiving immunosuppressive doses of glucocorticoids should generally not receive live attenuated-virus vaccines, as virus replication may be augmented; a diminished immune response may occur after vaccine, toxoid, or bacterin administration."
+    },
+    {
+      "drug": "Vincristine",
+      "severity": 2,
+      "keywords": [
+        "decreased vincristine plasma concentration"
+      ],
+      "evidence": "Concurrent use with dexamethasone may result in decreased vincristine plasma concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항염증/글루코코르티코이드 (FDA 승인 라벨 용량, 주사)",
+          "value": "0.25 - 1",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5일 반복 가능",
+          "evidence": "라벨 용량: 0.25–1 mg/dog (mg/kg 아님) IV 또는 IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증/글루코코르티코이드 (FDA 승인 라벨 용량, 주사)",
+          "value": "0.25 - 1",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5일 반복 가능",
+          "evidence": "라벨 용량: 0.25–1 mg/dog (mg/kg 아님) IV 또는 IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증/글루코코르티코이드 (FDA 승인 라벨 용량, 경구)",
+          "value": "0.25 - 1.25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 또는 2회 분할 투여",
+          "evidence": "라벨 용량: 0.25–1.25 mg/dog (mg/kg 아님) PO 1일 1회 또는 2회 분할"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항염증/글루코코르티코이드 (엑스트라라벨, 주사)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨: 0.1 mg/kg IM"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항염증/글루코코르티코이드 (엑스트라라벨, 경구)",
+          "value": "0.05 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨: 0.05–2 mg/kg PO 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "초기 항염증 적응증 (엑스트라라벨)",
+          "value": "0.07 - 0.14",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨: 0.07–0.14 mg/kg/day"
+        },
+        {
+          "logic_type": "linear",
+          "context": "백신 접종 후 반응 (엑스트라라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 단독 투여",
+          "evidence": "경미한 백신 접종 후 반응 치료 시 항염증 용량으로 1회 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신 기능 부전 (Addisonian crisis) 초기 치료",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "구토/식욕부진 시 0.05–0.1 mg/kg IV q12h 유지 후 경구 prednisolone으로 전환",
+          "evidence": "덱사메타손 나트륨 인산염 0.1–0.2 mg/kg IV 초기 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신 기능 부전 (Addisonian crisis) 초기 치료 (대안)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "이후 prednisone 유지 요법으로 전환",
+          "evidence": "덱사메타손 나트륨 인산염 0.2–0.5 mg/kg IV 1회; cortisol 검사에 영향 없음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역억제 (예: 면역매개 용혈성 빈혈, 엑스트라라벨)",
+          "value": "0.2 - 0.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 투여 불가 시 일시적 사용",
+          "evidence": "경구 투여 불가 환자에서 0.2–0.4 mg/kg/day IV 일시적 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "저용량 덱사메타손 억제 검사 (LDDS, 엑스트라라벨)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전, 4시간 후, 8시간 후 코르티솔 채혈",
+          "evidence": "부신피질기능항진증 선별 검사: 0.01 mg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고용량 덱사메타손 억제 검사 (HDDS, 엑스트라라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전, 4시간 후, 8시간 후 코르티솔 채혈",
+          "evidence": "PDH와 ACT 감별 검사: 0.1 mg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "림프종 구제 프로토콜 (DMAC, 엑스트라라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 주기 1일차 및 8일차 투여; 관해 유지 중 2주마다 반복",
+          "evidence": "DMAC 프로토콜: 1 mg/kg PO 또는 SC, actinomycin D 및 cytarabine과 병용"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항염증/글루코코르티코이드 (FDA 승인 라벨 용량, 주사)",
+          "value": "0.125 - 0.5",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5일 반복 가능",
+          "evidence": "라벨 용량: 0.125–0.5 mg/cat (mg/kg 아님) IV 또는 IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증/글루코코르티코이드 (FDA 승인 라벨 용량, 주사)",
+          "value": "0.125 - 0.5",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5일 반복 가능",
+          "evidence": "라벨 용량: 0.125–0.5 mg/cat (mg/kg 아님) IV 또는 IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증/글루코코르티코이드 (FDA 승인 라벨 용량, 경구)",
+          "value": "0.125 - 0.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 또는 2회 분할 투여",
+          "evidence": "라벨 용량: 0.125–0.5 mg/cat (mg/kg 아님) PO 1일 1회 또는 2회 분할"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항염증/글루코코르티코이드 (엑스트라라벨, 주사)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨: 0.1 mg/kg IM"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항염증/글루코코르티코이드 (엑스트라라벨, 경구)",
+          "value": "0.05 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨: 0.05–2 mg/kg/day 경구"
+        },
+        {
+          "logic_type": "linear",
+          "context": "초기 항염증 적응증 (엑스트라라벨)",
+          "value": "0.14 - 0.28",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨: 0.14–0.28 mg/kg/day"
+        },
+        {
+          "logic_type": "linear",
+          "context": "과민성 피부염 (엑스트라라벨)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "덱사메타손 나트륨 인산염 4 mg/mL 주사제를 경구 투여",
+          "evidence": "덱사메타손 나트륨 인산염(4 mg/mL) 0.2 mg/kg/day PO로 소양증 및 병변 신속 완화"
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신 기능 부전 초기 치료",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "구토/식욕부진 시 q12h 유지 후 경구 prednisolone으로 전환",
+          "evidence": "덱사메타손 나트륨 인산염 0.1–0.2 mg/kg IV 또는 IM 초기 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "저용량 덱사메타손 억제 검사 (LDDS, 엑스트라라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전, 4시간 후, 8시간 후 코르티솔 채혈. 고양이는 개보다 높은 용량 필요.",
+          "evidence": "고양이 부신피질기능항진증 초기 진단 검사: 0.1 mg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고용량 덱사메타손 억제 검사 (HDDS, 엑스트라라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전, 4시간 후, 8시간 후 코르티솔 채혈. 고양이는 개보다 높은 용량 필요.",
+          "evidence": "고양이 PDH vs ACT 감별 검사: 1 mg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "HDDS + 소변 코르티솔/크레아티닌 비율 검사 (UCCR, 엑스트라라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "집에서 투여 후 다음날 아침 소변 채취",
+          "evidence": "UCCR 상승 및 부신피질기능항진증 임상 증상 있는 고양이: 0.1 mg/kg PO q8h"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 동물에서 GI 부작용 위험이 증가할 수 있음. 구체적인 용량 조절 기준은 모노그래프에 명시되지 않음. 신부전 환자에서 주의하여 사용."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 대사 약물이나 모노그래프에 간기능 저하 시 구체적인 용량 조절 지침이 명시되지 않음. 간 효소 상승(ALT, ALP, GGT) 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "aspergillosis",
+        "cryptococcosis",
+        "blastomycosis"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "특발성 혈소판감소증 (근육 주사 시)",
+      "match_terms": [
+        "idiopathic thrombocytopenia",
+        "ITP",
+        "immune-mediated thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "글루코코르티코이드 과민반응",
+      "match_terms": [
+        "glucocorticoid hypersensitivity",
+        "corticosteroid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM",
+        "hyperglycemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질기능항진증",
+      "match_terms": [
+        "hyperadrenocorticism",
+        "Cushing's disease",
+        "Cushing's syndrome"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "각막 궤양",
+      "match_terms": [
+        "corneal ulcer",
+        "corneal ulceration"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 세균 감염",
+      "match_terms": [
+        "active bacterial infection",
+        "sepsis",
+        "bacteremia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension",
+        "systemic hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골다공증",
+      "match_terms": [
+        "osteoporosis",
+        "osteopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "chronic kidney disease",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 유전적 감수성 또는 MDR1 관련 위험에 대한 언급 없음. 단, 이버멕틴과의 병용 시 P-당단백질 조절 가능성이 언급됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 글루코코르티코이드로서 글루코코르티코이드 수용체에 결합하여 항염증, 면역억제, 대사 조절 효과를 나타냄. 히드로코르티손보다 30배 강력하며 무기질코르티코이드 활성은 없음. 모세혈관 투과성 감소, 혈관 수축 강화, 리소좀막 안정화, 사이토카인 및 염증 매개체 생성 억제 등의 기전으로 작용.",
+    "common_extra_effects": [
+      "다음(PU/PD/PP)",
+      "체중 증가",
+      "쿠싱 증후군 유사 증상",
+      "위장관 궤양/천공",
+      "고혈당",
+      "면역억제",
+      "근육 위축",
+      "골다공증",
+      "간 효소 상승 (ALT, ALP, GGT)",
+      "고지혈증",
+      "피부 위축/탈모",
+      "안압 상승",
+      "HPA 축 억제",
+      "전해질 불균형 (저칼륨혈증)"
+    ],
+    "dog_mechanism": "개에서 덱사메타손은 prednis(ol)one 대비 7배 강력하며 생물학적 활성이 48시간 이상 지속됨. 격일 투여로도 정상 부신 기능 보존이 어려움.",
+    "dog_extra_effects": [
+      "다음/다뇨/다식 (단기 투여 시에도 발생)",
+      "구토/설사",
+      "간 효소 상승",
+      "위장관 궤양/천공 (특히 고용량 비경구 투여 시)",
+      "과응고성",
+      "고지혈증",
+      "당뇨병 악화",
+      "근육 소모",
+      "행동 변화 (우울, 무기력, 공격성)",
+      "둔하고 건조한 피모",
+      "체중 증가",
+      "헐떡거림",
+      "척수 손상 환자에서 치명적 결장 천공 위험",
+      "국소 귀/피부 투여 시 코르티솔, T3, T4 감소"
+    ],
+    "cat_mechanism": "고양이는 개보다 높은 용량이 필요하나 부작용 발생 빈도는 낮음. 혈당 상승 효과가 다른 종보다 강함. PLO 제형의 귀 안쪽 도포 시 경피 흡수 없음.",
+    "cat_extra_effects": [
+      "고혈당 (다른 종보다 강한 효과)",
+      "다음/다뇨/다식 (간헐적)",
+      "체중 증가",
+      "설사",
+      "우울",
+      "장기 고용량 투여 시 쿠싱 증후군",
+      "안압 상승 (덱사메타손 점안액 장기 투여 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 덱사메타손은 prednisone/prednisolone보다 위장관 합병증 및 출혈 위험이 높으므로 최소 필요 용량 사용이 중요함. 척수 손상 환자에서 고용량 투여 시 치명적 결장 천공이 보고됨. 가능하면 경구 항염증/면역억제 치료에는 prednisone/prednisolone을 우선 사용하고, 덱사메타손은 진단 검사(LDDS, HDDS) 또는 경구 투여 불가 시 비경구 대안으로 사용 권장. Prednis(ol)one 용량을 7로 나누어 덱사메타손 용량 산출 가능.",
+    "cat": "고양이는 개보다 높은 용량이 필요하나 부작용 발생 빈도는 낮음. 혈당 상승 효과가 특히 강하므로 비만 고양이나 당뇨 소인이 있는 고양이에서 주의 필요. 경구 투여 시 일반적으로 prednisolone을 우선 사용하며, 덱사메타손은 진단 검사(LDDS 0.1 mg/kg, HDDS 1 mg/kg)에 활용. PLO 제형의 귀 안쪽 도포는 흡수되지 않으므로 효과 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 위장관 궤양/천공 위험이 높으며, 특히 고용량 비경구 투여 및 NSAIDs 병용 시 위험 증가. 신기능 저하 시 GI 부작용 위험 증가. 2주 이상 투여 후 갑작스러운 중단 금지. 당뇨병, 부신피질기능항진증, 활동성 감염 시 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 혈당 상승 효과가 강하므로 비만 또는 당뇨 소인 고양이에서 주의. 장기 고용량 투여 시 쿠싱 증후군 발생 가능. 2주 이상 투여 후 갑작스러운 중단 금지."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C-30°C) 보관. 덱사메타손 나트륨 인산염 주사제는 빛 차단 보관. 정제는 밀폐 용기에 보관. 열에 불안정.",
+    "forms": [
+      "Dexamethasone Injection 2 mg/mL (Azium® Solution, generic)",
+      "Dexamethasone Sodium Phosphate Injection 4 mg/mL (≈3 mg/mL dexamethasone equivalent, generic)",
+      "Dexamethasone Tablets",
+      "Dexamethasone Ophthalmic preparation"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "덱사메타손은 장기 작용형 합성 글루코코르티코이드로 히드로코르티손보다 30배 강력하며 무기질코르티코이드 활성이 없음. 반감기(개: 2~5시간)와 생물학적 활성 지속 시간(48시간 이상)이 불일치하므로 격일 투여로도 HPA 축 억제가 지속됨. 개에서 위장관 궤양/천공 위험이 높으며, 특히 척수 손상 환자에서 고용량 투여 시 치명적 결장 천공이 보고됨. 진단 목적(LDDS, HDDS)으로 광범위하게 사용되며, cortisol 검사에 영향을 주지 않는 장점이 있음. NSAIDs와 병용 시 GI 궤양 위험 현저히 증가. 2주 이상 투여 후 갑작스러운 중단 금지.",
+    "indications": "1) 부신피질기능항진증 진단 검사(LDDS, HDDS), 2) 부신 기능 부전(저코르티솔혈증) 보충 요법, 3) 항염증 치료, 4) 면역억제 치료, 5) 항종양 치료(림프종 등). 기타: 아나필락시스, 자가면역 질환, 혈액 질환, 신경계 질환, 피부 질환, 호흡기 질환 등 다양한 적응증에 사용.",
+    "client_info": "이 약은 장기 작용형 스테로이드 약물입니다. 가능하면 음식과 함께 투여하세요. 빈속에 투여 후 구토가 지속되면 수의사에게 연락하세요. 장기 사용 시 과도한 갈증, 배뇨, 식욕 증가가 나타날 수 있습니다. 개에서는 위장관 궤양, 천공, 출혈이 발생할 수 있으며, 아스피린이나 NSAIDs(예: 카프로펜)와 함께 사용하면 위험이 증가합니다. 식욕 저하, 무기력, 흑색 변, 혈변이 나타나면 즉시 수의사에게 연락하세요. 2주 이상 투여한 경우 수의사 지시 없이 갑자기 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed pharmacokinetic parameters (Tmax, bioavailability, protein binding)",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/39.jsonl",
+    "extracted_at": "2026-03-11T01:14:00.841027+00:00",
+    "reviewer": null
+  }
+}

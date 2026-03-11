@@ -1,0 +1,403 @@
+{
+  "id": "rifaximin",
+  "drug_identity": {
+    "name_ko": "리팍시민",
+    "name_en": "Rifaximin",
+    "active_ingredient": "Rifaximin",
+    "brand_names": [
+      "Xifaxan",
+      "Xifaxin"
+    ],
+    "allergy_class": "rifamycin",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개의 만성 장병증 및 간성 뇌증에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 550,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.0,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "흡수된 소량의 약물은 CYP3A4에 의해 광범위한 간 대사를 거침. 투여량의 95% 이상이 대변으로 미변화 형태로 배설됨."
+    },
+    "extra_information": "개에서 25 mg/kg 단회 경구 투여 또는 10 mg/kg/일 8일 투여 시 혈청 내 리팍시민이 검출되지 않음. 전신 흡수가 매우 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "전신 흡수가 극히 제한적(95% 이상 대변 배설)이므로 장기 부담이 전반적으로 낮음. 간 기능 저하 시 전신 노출이 10~25배 증가할 수 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "dizziness"
+        ],
+        "index": -1,
+        "evidence": "사람에서 어지럼증이 보고되었으나 전신 흡수가 거의 없어 개에서의 뇌 부담은 매우 낮음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "anemia"
+        ],
+        "index": -1,
+        "evidence": "사람에서 빈혈이 보고되었으나 전신 흡수 제한으로 혈액 부담은 낮음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설이 거의 없으며 전신 흡수가 극히 제한적이므로 신장 부담은 매우 낮음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP3A4",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "흡수된 소량은 CYP3A4에 의해 간에서 대사됨. 간 기능 저하 시 전신 노출 10~25배 증가 가능."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "peripheral edema"
+        ],
+        "index": -1,
+        "evidence": "사람에서 말초 부종이 보고되었으나 전신 흡수 제한으로 심장 부담은 낮음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음. 전신 흡수 제한으로 뇌 부담은 낮을 것으로 추정."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음. 신장 배설 거의 없음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음. 흡수된 소량은 간에서 대사될 것으로 추정."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 6.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 65,
+    "evidence": "소화관 내 전신 흡수가 극히 제한적. 흡수된 소량의 단백결합률 약 65%. 반감기 약 6시간(사람 데이터). 개에서는 혈청 내 검출 불가."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 리팍시민은 전신 생체이용률이 낮아 대부분의 약물 상호작용은 임상적으로 유의하지 않을 가능성이 높음.",
+  "drug_interactions": [
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased rifaximin exposure",
+        "P-glycoprotein inhibition"
+      ],
+      "evidence": "Cyclosporine may increase rifaximin systemic exposure, likely via P-glycoprotein inhibition."
+    },
+    {
+      "drug": "CYP3A4 Inhibitors (e.g., clarithromycin, fluoxetine, ketoconazole, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "increased rifaximin exposure",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "CYP3A4 inhibitors may increase rifaximin systemic exposure. Clinically significant alteration is unlikely due to limited bioavailability."
+    },
+    {
+      "drug": "P-Glycoprotein Inhibitors (e.g., amiodarone, clarithromycin, itraconazole, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "increased rifaximin exposure",
+        "P-glycoprotein inhibition"
+      ],
+      "evidence": "P-glycoprotein inhibitors may increase rifaximin systemic exposure, particularly relevant in hepatic impairment."
+    },
+    {
+      "drug": "Live Oral Vaccines",
+      "severity": 1,
+      "keywords": [
+        "reduced immunologic response",
+        "antibiotic interference"
+      ],
+      "evidence": "Antibiotics may reduce the immunologic response to live oral vaccines."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "reduced anticoagulant effect",
+        "reduced prothrombin time"
+      ],
+      "evidence": "Rifaximin may reduce prothrombin time (PT) and anticoagulant effect of warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 장병증 (오프라벨)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "21일간 투여. 메트로니다졸과 동등한 효과 보고.",
+          "evidence": "개 만성 장병증 연구에서 25 mg/kg PO q12h 21일 투여 시 완전 관해 86%, 부분 관해 14% 달성. 메트로니다졸과 동등한 효과."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "전신 흡수가 극히 제한적이므로 신장 기능 저하 시 용량 조절이 일반적으로 필요하지 않음. 95% 이상 대변으로 배설."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 시 전신 노출이 10~25배 증가할 수 있으나, 일반적으로 용량 조절은 필요하지 않다고 기술됨. P-당단백 억제제와 병용 시 전신 노출이 실질적으로 증가할 수 있으므로 주의."
+  },
+  "contraindications": [
+    {
+      "condition": "리팍시민 또는 리파마이신계 항균제 과민증",
+      "match_terms": [
+        "rifamycin hypersensitivity",
+        "rifaximin hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈변 또는 발열을 동반한 설사",
+      "match_terms": [
+        "bloody diarrhea",
+        "diarrhea with fever"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간 기능 저하",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균의 DNA 의존성 RNA 중합효소 베타 서브유닛에 결합하여 세균 단백질 합성을 억제함. 장내 국소 작용 항균제로 전신 흡수가 극히 제한적.",
+    "common_extra_effects": [
+      "말초 부종",
+      "어지럼증",
+      "피로",
+      "소양증",
+      "빈혈",
+      "오심",
+      "과민반응(박탈성 피부염, 발진, 혈관신경성 부종, 두드러기, 홍조, 소양증, 아나필락시스)",
+      "Clostridium difficile 감염 (사람)"
+    ],
+    "dog_mechanism": "장내 미생물 조절을 통해 만성 장병증 및 간성 뇌증 개선에 기여.",
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 25 mg/kg PO BID 21일 투여 시 만성 장병증의 완전 관해 86%, 부분 관해 14%를 달성하였으며 메트로니다졸과 동등한 효과를 보임. 혈청 내 약물이 검출되지 않아 전신 독성 위험은 낮음. 단, 현재 허가된 수의용 제품이 없으며 메트로니다졸이나 락툴로스에 비해 비용이 현저히 높음. 간성 뇌증 치료 또는 재발 예방에도 유용할 수 있으나 임상 사용은 제한적.",
+    "cat": "고양이에 대한 용량 및 안전성 데이터가 없음. 사용 시 주의가 필요하며 수의사의 판단 하에 신중히 고려해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "임신 중 사용 시 태아 독성 위험(쥐 150~300 mg/kg, 토끼 62.5~1000 mg/kg에서 기형 유발). 혈변 또는 발열 동반 설사 시 사용 금기. 리파마이신계 항균제 과민증 환자에서 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 및 유효성 데이터 없음. 사용 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20°C~25°C, 68°F~77°F) 보관. 15°C~30°C(59°F~86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "리팍시민 정제 200 mg",
+      "리팍시민 정제 550 mg",
+      "Xifaxin® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "리팍시민은 장내 국소 작용 항균제로 전신 흡수가 극히 제한적(95% 이상 대변 배설)입니다. 개의 만성 장병증에서 메트로니다졸과 동등한 효과(완전 관해 86%)가 보고되었으나, 수의용 허가 제품이 없고 비용이 높아 임상 사용이 제한적입니다. 약물 상호작용은 제한적이며 임상적으로 유의하지 않을 가능성이 높습니다. 리파마이신계 항균제 과민증 환자에서는 금기입니다.",
+    "indications": "【오프라벨】개의 만성 장병증(만성 설사), 간성 뇌증 치료 및 재발 예방. 【사람 허가】대장균에 의한 여행자 설사, 과민성 장증후군 관련 설사, 간성 뇌증 치료 및 위험 감소.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 혈변이 나타나면 즉시 수의사에게 알려주세요. 처방된 기간 동안 빠짐없이 투여하는 것이 중요합니다. 이 약은 사람용 의약품을 동물에게 오프라벨로 사용하는 것으로, 비용이 다른 치료제보다 높을 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdosage/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (detailed parameters)",
+      "Compatibility/Compounding Considerations",
+      "Cat dosage",
+      "Veterinary PK studies (cat)",
+      "CYP inhibitor/inducer profile (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (veterinary)",
+      "dosage_and_kinetics.cat.dosage_list",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/33.jsonl",
+    "extracted_at": "2026-03-10T23:15:23.699412+00:00",
+    "reviewer": null
+  }
+}

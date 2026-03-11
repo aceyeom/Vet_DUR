@@ -1,0 +1,610 @@
+{
+  "id": "firocoxib",
+  "drug_identity": {
+    "name_ko": "피로콕시브",
+    "name_en": "Firocoxib",
+    "active_ingredient": "Firocoxib",
+    "brand_names": [
+      "Previcox",
+      "Equioxx"
+    ],
+    "allergy_class": "NSAID",
+    "class": "NSAID",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Inj",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 57,
+        "unit": "mg"
+      },
+      {
+        "value": 227,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.82,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 주로 탈알킬화(dealkylation) 및 글루쿠론산화(glucuronidation)를 통해 간에서 대사되며, 담즙 및 대변으로 주로 배설됨. 말에서는 주로 탈사이클로프로필메틸화(decyclopropylmethylation) 후 글루쿠론산화를 거쳐 대사산물이 주로 소변으로 배설됨."
+    },
+    "extra_information": "개: 경구 생체이용률 약 38%(씹는 정제), 분포용적 약 3 L/kg, 혈장단백결합률 96%, 반감기 약 6~8시간. 고양이(n=2): 경구 생체이용률 약 60%(경구 현탁액), 분포용적 2~3 L/kg, 반감기 평균 약 10시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 이상반응 및 약동학 데이터에서 추출. 개 및 고양이 수의학 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "승인 후 보고에서 무기력/우울이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "anemia",
+          "tachycardia",
+          "platelet"
+        ],
+        "index": 2,
+        "evidence": "승인 후 보고에서 빈혈, 빈맥이 보고됨. 혈소판 응집에는 변화 없음이 한 연구에서 확인됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "azotemia",
+          "proteinuria",
+          "urinary incontinence",
+          "kidney failure",
+          "nephrotoxic"
+        ],
+        "index": 3,
+        "evidence": "승인 후 보고에서 질소혈증, 단백뇨, 요실금, 신부전이 보고됨. 탈수, 저혈량증, 저혈압 환자에서 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "ALP",
+          "ALT",
+          "bilirubin",
+          "hepatic fatty changes"
+        ],
+        "index": 4,
+        "evidence": "승인 후 보고에서 ALP, ALT 상승 및 빌리루빈 상승 보고. 강아지 만성 투여 연구에서 간 지방 변성 확인됨."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiovascular dysfunction"
+        ],
+        "index": 2,
+        "evidence": "승인 후 보고에서 빈맥이 보고됨. 심혈관 기능 이상 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 관련 이상반응에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "vomiting"
+        ],
+        "index": 1,
+        "evidence": "소규모 고양이 연구(n=8)에서 구토 1마리 보고. 혈액 관련 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "azotemia",
+          "BUN",
+          "creatinine"
+        ],
+        "index": 3,
+        "evidence": "소규모 고양이 연구(n=8)에서 2마리에서 가역적 질소혈증, BUN 및 크레아티닌 유의한 상승 보고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 간 관련 직접 이상반응 데이터는 제한적이나, 간 대사 약물로서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 8.0,
+      "mean": 7.0,
+      "species": "dog"
+    },
+    "f_percent": 38,
+    "protein_binding_percent": 96,
+    "evidence": "개: 공복 시 최고혈중농도 도달 약 1시간, 급식 시 약 5시간. 경구 생체이용률 약 38%(씹는 정제). 혈장단백결합률 96%. 반감기 약 6~8시간. 고양이(n=2): 반감기 평균 약 10시간, 생체이용률 약 60%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "blood pressure reduction",
+        "reduced antihypertensive effect"
+      ],
+      "evidence": "일부 NSAIDs는 ACE 억제제의 혈압 강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "병용 시 GI 독성(궤양, 출혈, 구토, 설사) 위험 증가."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "병용 시 GI 독성(궤양, 출혈, 구토, 설사) 위험 증가."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum digoxin levels"
+      ],
+      "evidence": "NSAIDs는 디곡신 혈청 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 2,
+      "keywords": [
+        "increased plasma levels",
+        "CYP inhibition"
+      ],
+      "evidence": "플루코나졸 투여 시 사람에서 셀레콕시브 혈중 농도가 증가하였으며, 개에서 피로콕시브 농도에도 영향을 줄 가능성이 있음."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic effect",
+        "reduced saluretic effect",
+        "nephrotoxicity"
+      ],
+      "evidence": "NSAIDs는 푸로세미드의 이뇨 및 염류배설 효과를 감소시킬 수 있으며, 신독성 위험도 증가할 수 있음."
+    },
+    {
+      "drug": "Highly Protein Bound Drugs (e.g., oral anticoagulants, phenytoin, salicylates, sulfonamides, sulfonylurea antidiabetics, valproic acid)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "increased serum levels"
+      ],
+      "evidence": "피로콕시브는 혈장단백결합률이 95% 이상으로, 다른 고단백결합 약물을 이론적으로 치환할 수 있으나 임상적 유의성은 낮은 것으로 보고됨."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "serious toxicity",
+        "methotrexate toxicity"
+      ],
+      "evidence": "NSAIDs와 메토트렉세이트 병용 시 심각한 독성이 보고됨. 극도의 주의 필요."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., aminoglycosides, amphotericin B, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "renal toxicity"
+      ],
+      "evidence": "신독성 약물과 병용 시 신독성 발생 위험 증가."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "다른 NSAIDs와 병용 시 GI 독성(궤양, 출혈, 구토, 설사) 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 (FDA 승인 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "필요에 따라 지속 투여; 최저 유효 용량으로 최단 기간 사용",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-230)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "연조직 및 정형외과 수술 후 통증 및 염증 조절 (FDA 승인 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "3일간 필요에 따라 투여; 수술 약 2시간 전 투여 가능",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-230)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "방광 이행세포암종 보조 치료 (비표시 외 사용)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": null,
+          "evidence": "단독 또는 시스플라틴(60 mg/m² IV 21일마다)과 병용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "염증성 대장 폴립 보조 치료 (비표시 외 사용, 미니어처 닥스훈트 증례군)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "클로람부실(1.5~3.1 mg/m² PO 매일)과 병용",
+          "evidence": "미니어처 닥스훈트 증례군 보고; 중앙값 6.1 mg/kg/일"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "기존 신장 기능 이상 환자에서는 주의하여 사용하고 강화된 모니터링 필요. 탈수, 저혈량증, 저혈압 환자에서 신독성 위험 증가. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간 기능 이상 환자에서 주의하여 사용하고 강화된 모니터링 필요. 강아지에서 만성 투여 시 간 지방 변성 보고. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "피로콕시브 또는 다른 NSAIDs에 과민반응",
+      "match_terms": [
+        "NSAID hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 위장관 궤양",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "GI ulcerative disease"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신장 기능 이상",
+      "match_terms": [
+        "CKD",
+        "renal disease",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "기존 간 기능 이상",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심혈관 기능 이상",
+      "match_terms": [
+        "cardiovascular disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수, 저혈량증, 저혈압",
+      "match_terms": [
+        "dehydration",
+        "hypovolemia",
+        "hypotension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 10주 미만 강아지 (UK 라벨 기준)",
+      "match_terms": [
+        "puppy",
+        "age < 10 weeks"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 5.7 kg 미만 개 (정확한 용량 투여 불가)",
+      "match_terms": [
+        "small dog",
+        "body weight < 5.7 kg"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "COX-2 선택적 억제를 통해 통증 및 염증에 관여하는 프로스타글란딘 생성을 억제하며, 치료 용량에서 COX-1을 상대적으로 보존하여 위장관, 혈소판, 신장 기능 유지에 기여하는 프로스타글란딘을 보호함.",
+    "common_extra_effects": [
+      "구토",
+      "식욕 감소/식욕부진",
+      "설사",
+      "위장관 궤양",
+      "혈변",
+      "혈액 구토",
+      "질소혈증",
+      "단백뇨",
+      "신부전",
+      "무기력/우울",
+      "ALP, ALT 상승",
+      "빌리루빈 상승",
+      "빈혈",
+      "빈맥",
+      "소양증",
+      "피부염"
+    ],
+    "dog_mechanism": "치료 용량에서 주로 COX-2를 억제하여 통증 및 염증 관련 프로스타글란딘 생성을 억제함.",
+    "dog_extra_effects": [
+      "구토 (약 4%)",
+      "식욕 감소/식욕부진 (약 2%)",
+      "설사",
+      "위장관 궤양",
+      "혈변",
+      "혈액 구토",
+      "질소혈증",
+      "단백뇨",
+      "요실금",
+      "신부전",
+      "무기력/우울",
+      "ALP, ALT 상승",
+      "빌리루빈 상승",
+      "빈혈",
+      "빈맥",
+      "소양증",
+      "피부염",
+      "강아지에서 간 지방 변성 (만성 투여 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "구토",
+      "가역적 질소혈증",
+      "BUN 상승",
+      "크레아티닌 상승"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 COX-2 선택적 NSAID로, 골관절염 및 수술 후 통증/염증 조절에 사용됨. 씹는 정제 형태로 경구 투여. 생후 10주 미만 또는 체중 5.7 kg 미만 개에서는 사용 주의. 7개월 미만 강아지에서 권장 용량(5 mg/kg) 초과 시 심각한 이상반응(사망 포함) 보고. 노령견에서 신장 기능 저하 가능성을 고려하여 정기적인 모니터링 강력 권장.",
+    "cat": "고양이에서의 비표시 외 사용은 권장되지 않음. 정제 크기가 커서 안전한 투여가 어려움. 소규모 연구(n=2)에서 경구 생체이용률 약 60%, 반감기 약 10시간으로 보고되었으나, 안전성 및 유효성 데이터가 매우 제한적임. 고양이 연구(n=8)에서 가역적 질소혈증이 2마리에서 보고됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 신장, 간, 심혈관 기능 이상 환자, 탈수/저혈량증/저혈압 환자, 이뇨제 병용 환자에서 주의 필요. 노령견에서 정기적 모니터링 강력 권장. 7개월 미만 강아지에서 권장 용량 초과 시 심각한 이상반응 보고."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 비표시 외 사용은 권장되지 않음. 정제 크기로 인한 정확한 용량 투여 어려움. 가역적 신독성 보고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "씹는 정제 및 경구 페이스트: 실온(15°C~30°C) 보관; 단기간 40°C까지 허용. 주사제: 20°C~25°C 보관, 15°C~30°C 범위 내 단기 보관 허용.",
+    "forms": [
+      "Firocoxib 씹는 정제(scored) 57 mg, 227 mg - Previcox® (개용)",
+      "Firocoxib 경구 페이스트 0.82% w/w (8.2 mg/g) - Equioxx Oral Paste® (말용)",
+      "Firocoxib 씹는 정제(scored) 57 mg - Equioxx® Tablets (말용)",
+      "Firocoxib 주사제 20 mg/mL (25 mL 바이알) - Equioxx® Injection (말용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피로콕시브는 COX-2 선택적 NSAID로, 개에서 골관절염 및 수술 후 통증/염증 조절에 FDA 승인됨. 치료 용량에서 COX-2를 주로 억제하여 위장관, 혈소판, 신장 기능 관련 COX-1을 상대적으로 보존함. 개에서 가장 흔한 이상반응은 구토 및 식욕 감소이며, 신장 및 간 독성도 가능함. 고양이에서의 비표시 외 사용은 권장되지 않음. 7개월 미만 강아지에서 권장 용량 초과 시 심각한 이상반응(사망 포함) 보고됨.",
+    "indications": "개: 골관절염 관련 통증 및 염증 조절(FDA 승인), 연조직 및 정형외과 수술 후 통증 및 염증 조절(FDA 승인), 방광 이행세포암종 보조 치료(비표시 외), 염증성 대장 폴립 보조 치료(비표시 외). 말: 골관절염 관련 통증 및 염증 조절(FDA 승인). 고양이: 비표시 외 사용 권장하지 않음.",
+    "client_info": "이 약은 관절염 및 수술과 관련된 통증과 염증을 조절하기 위해 사용됩니다. 음식과 함께 또는 공복에 투여할 수 있으나, 음식과 함께 투여하면 위장 문제(식욕 저하, 메스꺼움, 구토)를 줄일 수 있습니다. 공복 투여 후 구토가 발생하면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요. 대부분의 개는 이 약을 잘 견디지만, 드물게 위궤양, 심각한 신장 및 간 문제가 발생할 수 있습니다. 식욕 감소, 지속적인 구토, 설사, 행동 또는 활동 수준 변화, 음수량 및 배뇨 습관 변화, 잇몸/피부/눈 흰자위의 황달 증상이 나타나면 즉시 투약을 중단하고 수의사에게 연락하세요. 씹는 정제는 반려동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 치료 중 충분한 음수를 제공하고 탈수를 예방하세요. 정기적인 혈액 및 소변 검사가 필요합니다. 수의사의 승인 없이 다른 진통제나 소염제를 함께 사용하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Genetic sensitivity data",
+      "QT prolongation data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:03:52.746865+00:00",
+    "reviewer": null
+  }
+}

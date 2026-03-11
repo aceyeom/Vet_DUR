@@ -1,0 +1,725 @@
+{
+  "id": "desmopressin",
+  "drug_identity": {
+    "name_ko": "데스모프레신",
+    "name_en": "Desmopressin",
+    "active_ingredient": "Desmopressin acetate",
+    "brand_names": [
+      "DDAVP",
+      "Stimate",
+      "Nocdurna",
+      "Concentraid",
+      "D-Void",
+      "Defirin",
+      "Desmogalen",
+      "Desmospray",
+      "Desmotabs",
+      "Emosint",
+      "Minirin",
+      "Octim",
+      "Octostim",
+      "Presinex"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 승인된 제품 없음. 인체용 비강 스프레이, 주사제, 경구정을 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Inj",
+      "Tab",
+      "Ophthalmic",
+      "Drop"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4.0,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "value": 55.3,
+        "unit": "mcg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "대사 경로는 잘 알려져 있지 않음. 위장관에서 파괴되므로 경구 생체이용률이 매우 낮음. 신장 기능 저하 시 반감기가 연장됨(인체 데이터)."
+    },
+    "extra_information": "개에서 결막 투여 후 항이뇨 작용 발현은 1시간 이내이며, 2~8시간에 최고조에 달하고 최대 24시간 지속될 수 있음. 분포 특성은 잘 기술되어 있지 않음. 경구 투여 시 생체이용률이 매우 낮음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터 부족으로 인체 데이터 및 부작용 프로파일을 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hyponatremia",
+          "seizures",
+          "obtundation",
+          "coma"
+        ],
+        "index": 1,
+        "evidence": "저나트륨혈증으로 인한 신경학적 징후(오심, 구토, 혼미, 경련, 혼수) 가능성이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "von Willebrand factor",
+          "factor VIII",
+          "thrombosis",
+          "hyponatremia",
+          "sodium"
+        ],
+        "index": 1,
+        "evidence": "폰 빌레브란트 인자 및 제VIII인자 방출 촉진, 혈전 형성 위험, 저나트륨혈증으로 인한 전해질 불균형."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "water reabsorption",
+          "urine osmolality",
+          "fluid retention",
+          "renal impairment",
+          "antidiuretic"
+        ],
+        "index": 2,
+        "evidence": "집합관에서 수분 재흡수 증가, 소변 삼투압 증가, 과량 투여 시 수분 저류 및 저나트륨혈증 유발. 중등도~중증 신장 기능 저하 시 금기(인체 기준)."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypertension",
+          "thrombotic events",
+          "vasopressor"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈압 상승 및 혈전 형성 보고(인체). 혈관수축제와 병용 시 고혈압 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hyponatremia",
+          "seizures",
+          "obtundation"
+        ],
+        "index": 1,
+        "evidence": "저나트륨혈증으로 인한 신경학적 징후 가능성. 고양이 특이 데이터 부족."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "von Willebrand factor",
+          "sodium",
+          "fluid retention"
+        ],
+        "index": 1,
+        "evidence": "전해질 불균형 및 수분 저류 위험. 고양이 특이 데이터 부족."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "water reabsorption",
+          "antidiuretic",
+          "fluid retention"
+        ],
+        "index": 2,
+        "evidence": "집합관에서 수분 재흡수 증가. 과량 투여 시 수분 저류 위험. 고양이 특이 PK 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypertension"
+        ],
+        "index": -1,
+        "evidence": "드물게 혈압 상승 가능(인체 데이터). 고양이 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 5.0,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 9.0,
+      "mean": 6.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 결막 투여 후 항이뇨 작용 발현은 1시간 이내, 최고 효과는 2~8시간, 지속 시간은 최대 24시간. 인체 IV 투여 후 반감기 3시간, 중증 신부전 환자에서 9시간으로 연장. 경구 생체이용률은 매우 낮음(수치 미기재)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Carbamazepine",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 반응 감소",
+        "저나트륨혈증"
+      ],
+      "evidence": "May decrease the antidiuretic response and may increase risk for hyponatremia."
+    },
+    {
+      "drug": "Chlorpromazine",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk of hyponatremia."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, fludrocortisone, predniso(lo)ne)",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk of hyponatremia."
+    },
+    {
+      "drug": "Heparin",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 반응 감소"
+      ],
+      "evidence": "May decrease the antidiuretic response."
+    },
+    {
+      "drug": "Loop Diuretics (e.g., bumetanide, furosemide, torsemide)",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk for hyponatremia."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, flunixin, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk for hyponatremia."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, morphine)",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk for hyponatremia."
+    },
+    {
+      "drug": "Oxybutynin",
+      "severity": 3,
+      "keywords": [
+        "경련"
+      ],
+      "evidence": "Seizures have occurred with concurrent use in humans."
+    },
+    {
+      "drug": "SSRIs (e.g., fluoxetine)",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk for hyponatremia."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "저나트륨혈증"
+      ],
+      "evidence": "May increase risk for hyponatremia."
+    },
+    {
+      "drug": "Vasopressor Agents (e.g., dobutamine, norepinephrine)",
+      "severity": 2,
+      "keywords": [
+        "고혈압"
+      ],
+      "evidence": "Increased risk for hypertension when used concurrently."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "중추성 요붕증 치료 - 결막 투여 (초기, 오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2 drops/dog (최대 4 drops/dog)으로 조절 가능. 체중당 용량이 아닌 마리당 용량.",
+          "evidence": "0.1 mg/mL (0.01%) 인체용 비강 스프레이를 결막낭에 투여. 1~2 drops/dog SID~BID로 대부분 조절됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중추성 요붕증 치료 - SC 투여 (오프라벨)",
+          "value": "0.1 - 0.2",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "0.1~0.2 µg/kg SC SID~BID."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "중추성 요붕증 치료 - 경구 투여, 체중 5 kg 미만 (오프라벨)",
+          "value": "0.05",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 후 반응 평가. 조절 불충분 시 q8h로 변경 가능.",
+          "evidence": "체중 5 kg 미만: 0.05 mg/dog PO q12h."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "중추성 요붕증 치료 - 경구 투여, 체중 5~20 kg (오프라벨)",
+          "value": "0.1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 후 반응 평가. 조절 불충분 시 q8h로 변경 가능.",
+          "evidence": "체중 5~20 kg: 0.1 mg/dog PO q12h."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "중추성 요붕증 치료 - 경구 투여, 체중 20 kg 초과 (오프라벨)",
+          "value": "0.2",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일 후 반응 평가. 조절 불충분 시 q8h로 변경 가능.",
+          "evidence": "체중 20 kg 초과: 0.2 mg/dog PO q12h."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "중추성 vs 신성 요붕증 감별 - 결막 투여 (오프라벨)",
+          "value": "1 - 4",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일간 투여. USG가 기저치 대비 50% 이상 증가하거나 1.018 초과 시 중추성 DI 확인.",
+          "evidence": "0.1 mg/mL 비강 용액을 결막낭에 1~4 drops/dog q12h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "제1형 폰 빌레브란트병 또는 제VII인자 결핍 수술 전 예방 (오프라벨)",
+          "value": "1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 30분~1시간 전 투여. 활성 지속 시간 약 2시간. 수혈 준비 필요.",
+          "evidence": "1 µg/kg IV 또는 SC, 0.01% 비강 용액 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아스피린 유발 응고장애 치료 (오프라벨)",
+          "value": "0.3 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "15~30분에 걸쳐 IV 투여. 투여 후 15~120분에 구강 점막 출혈 시간 측정.",
+          "evidence": "0.3~1 µg/kg IV over 15~30 minutes 또는 3 µg/kg SC."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 단핵구성 에를리히아증 이차 출혈 치료 (오프라벨)",
+          "value": "1",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일간 투여. 3마리 증례 보고 기반.",
+          "evidence": "1 µg/kg SC SID for 3 days."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 간질환으로 인한 지혈 장애 (오프라벨)",
+          "value": "3",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "3 µg/kg SC."
+        },
+        {
+          "logic_type": "linear",
+          "context": "유선 종양 보조 치료 (오프라벨)",
+          "value": "1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 30분 전 및 수술 24시간 후 투여. 효과는 논란 있음.",
+          "evidence": "1 µg/kg IV in saline 30 minutes before and 24 hours after surgery."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "중추성 vs 신성 요붕증 감별 - 결막 투여 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~3일간 투여. 음수량 현저히 감소 또는 소변 농도 50% 이상 증가 시 ADH 결핍 확인.",
+          "evidence": "1 drop/cat (NOT drop/kg or drop/eye) into conjunctival sac BID for 2~3 days."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "중추성 요붕증 치료 - 결막 투여 (오프라벨)",
+          "value": "1 - 4",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "활성 지속 시간 8~24시간.",
+          "evidence": "1~4 drops/cat (NOT drops/kg or drops/eye) into conjunctival sac SID~BID."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "중추성 요붕증 치료 - 비강 내 투여 (오프라벨)",
+          "value": "10",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10 µg/cat (NOT µg/kg) q24h로도 사용됨.",
+          "evidence": "Intranasal administration 10 µg/cat q24h has been used."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "중추성 요붕증 치료 - SC 투여 (오프라벨)",
+          "value": "2 - 5",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~5 µg/cat (NOT µg/kg) SC SID~BID.",
+          "evidence": "2~5 µg/cat (NOT µg/kg) SC once to twice daily."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "중추성 요붕증 치료 - 경구 투여 (오프라벨)",
+          "value": "25 - 50",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "25~50 µg/cat (NOT µg/kg) PO q8~12h. 용량 및 반응 개체 차이 있음.",
+          "evidence": "25~50 µg/cat (NOT µg/kg) PO every 8 to 12 hours."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "인체에서 중등도~중증 신장 기능 저하 시 금기. 중증 신부전 환자에서 반감기가 3시간에서 9시간으로 연장됨. 수의학에서 구체적인 크레아티닌 기준치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "만성 간질환 환자에서 지혈 목적으로 사용 가능(3 µg/kg SC). 간 기능 저하 시 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "desmopressin hypersensitivity",
+        "vasopressin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중등도~중증 신장 기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "저나트륨혈증 또는 저나트륨혈증 병력",
+      "match_terms": [
+        "hyponatremia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mEq/L"
+      }
+    },
+    {
+      "condition": "제IIB형 폰 빌레브란트병",
+      "match_terms": [
+        "von Willebrand disease type IIB",
+        "vWD type IIB"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "제III형 폰 빌레브란트병",
+      "match_terms": [
+        "von Willebrand disease type III",
+        "vWD type III"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈소판형(가성) 폰 빌레브란트병",
+      "match_terms": [
+        "platelet-type von Willebrand disease",
+        "pseudo-vWD"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈전 형성 소인",
+      "match_terms": [
+        "thrombosis",
+        "hypercoagulable state"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신성 요붕증",
+      "match_terms": [
+        "nephrogenic diabetes insipidus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아르기닌 바소프레신(항이뇨호르몬)의 합성 유사체로, 신장 집합관에서 수분 재흡수를 용량 의존적으로 증가시켜 소변 삼투압을 높이고 소변량을 감소시킴. 또한 내피세포 및 대식세포에서 폰 빌레브란트 인자를 방출시키고 혈장 제VIII인자를 증가시킴.",
+    "common_extra_effects": [
+      "결막 투여 후 눈 자극",
+      "저나트륨혈증",
+      "수분 저류",
+      "신경학적 징후(오심, 구토, 혼미, 경련, 혼수) - 저나트륨혈증 시",
+      "과민반응",
+      "두통 증가(인체)",
+      "혈압 상승(드물게)",
+      "혈전 형성(인체, 소인 있는 경우)"
+    ],
+    "dog_mechanism": "결막 투여 후 1시간 이내 항이뇨 작용 발현, 2~8시간에 최고조, 최대 24시간 지속. 제1형 폰 빌레브란트병 치료에 사용 가능.",
+    "dog_extra_effects": [
+      "결막 투여 후 눈 자극",
+      "저나트륨혈증",
+      "수분 저류",
+      "반복 투여 시 빠른 내성(tachyphylaxis) 발생 - 24시간 이내"
+    ],
+    "cat_mechanism": "결막 투여 후 항이뇨 작용 지속 시간 8~24시간. 고양이 특이 PK 데이터 부족.",
+    "cat_extra_effects": [
+      "결막 투여 후 눈 자극",
+      "저나트륨혈증",
+      "수분 저류"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 중추성 요붕증 진단 및 치료, 제1형 폰 빌레브란트병 수술 전 예방에 사용됨. 경구 생체이용률이 매우 낮으므로 결막 또는 비경구 투여가 선호됨. 반복 투여 시 24시간 이내 빠른 내성이 발생할 수 있음. 유선 종양 보조 치료 효과는 논란 있음. 신성 요붕증에는 효과 없음.",
+    "cat": "고양이에서 중추성 요붕증 진단 및 치료에 사용됨. 결막 투여(1~4 drops/cat SID~BID) 또는 SC 투여(2~5 µg/cat SID~BID) 가능. 경구 투여 시 용량 및 반응의 개체 차이가 있음. 고양이 특이 PK 데이터 부족."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "혈전 형성 소인이 있는 환자에서 주의 사용. 치료 초기 혈청 나트륨 농도 면밀히 모니터링 필요. 신성 요붕증에는 효과 없음. 제IIB형, 제III형, 혈소판형 폰 빌레브란트병에는 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "치료 초기 혈청 나트륨 농도 면밀히 모니터링 필요. 수분 저류 또는 저나트륨혈증 징후 발생 시 수분 제한 및/또는 용량 감량 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "비강 용액: 제조사에 따라 실온(20~25°C) 또는 냉장(2~8°C) 보관. 일부 제품은 실온에서 최대 3주 보관 가능. 개봉 후 30일 이내 폐기. 주사제: 빛 차단 및 냉장(2~8°C) 보관, 동결 금지.",
+    "forms": [
+      "Desmopressin Acetate Intranasal Spray Solution 0.1 mg/mL (0.01%; 10 µg/spray) - DDAVP, generic",
+      "Desmopressin Acetate Injection Solution 4 µg/mL - DDAVP, generic",
+      "Desmopressin Acetate Oral Tablets 0.1 mg, 0.2 mg - DDAVP, generic",
+      "Desmopressin Acetate Sublingual Tablets 55.3 µg - Nocdurna, generic"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "데스모프레신은 합성 바소프레신 유사체로, 개와 고양이의 중추성 요붕증 진단 및 치료, 개의 제1형 폰 빌레브란트병 수술 전 지혈 보조에 사용됩니다. 수의학 승인 제품은 없으며 인체용 제품을 오프라벨로 사용합니다. 과량 투여 시 수분 저류 및 생명을 위협하는 저나트륨혈증이 발생할 수 있으므로 치료 초기 혈청 나트륨 농도를 면밀히 모니터링해야 합니다. 신성 요붕증에는 효과가 없으며, 제IIB형·제III형·혈소판형 폰 빌레브란트병에는 금기입니다.",
+    "indications": "승인 적응증: 없음(수의학 승인 제품 없음). 오프라벨 적응증: 개·고양이의 중추성 요붕증 진단 및 치료, 개의 제1형 폰 빌레브란트병 또는 제VII인자 결핍 수술 전 예방, 아스피린 유발 응고장애, 개 단핵구성 에를리히아증 이차 출혈, 만성 간질환 지혈 장애, 유선 종양 보조 치료(논란 있음), 말의 중추성 요붕증 진단 및 치료.",
+    "client_info": "개와 고양이에게는 인체용 비강 스프레이를 코가 아닌 눈(결막낭)에 점안하는 방식으로 투여합니다. 대부분의 동물에서 잘 견디지만 가끔 눈 자극이 생길 수 있습니다. 치료 초기에는 효과적인 용량을 결정하기 위해 수의사의 정기적인 검진과 혈액 검사가 반드시 필요하므로 예약된 재진을 빠지지 마세요. 동물이 다시 물을 많이 마시거나 소변을 많이 본다면 즉시 수의사에게 연락하세요. 이 약은 냉장 보관하고, 개봉 후 30일이 지나면 폐기하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway",
+      "Protein binding data",
+      "Oral bioavailability percentage",
+      "Veterinary species-specific PK studies",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/38.jsonl",
+    "extracted_at": "2026-03-11T01:07:00.326439+00:00",
+    "reviewer": null
+  }
+}

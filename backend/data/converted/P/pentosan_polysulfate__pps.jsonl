@@ -1,0 +1,556 @@
+{
+  "id": "pentosan_polysulfate",
+  "drug_identity": {
+    "name_ko": "펜토산 폴리설페이트 나트륨",
+    "name_en": "Pentosan Polysulfate Sodium",
+    "active_ingredient": "Pentosan Polysulfate Sodium",
+    "brand_names": [
+      "Cartrophen-Vet",
+      "Elmiron",
+      "Arthropen Vet 250",
+      "Cartrophen-Vet Forte",
+      "AUPEN5000",
+      "Zydax"
+    ],
+    "allergy_class": null,
+    "class": "NSAID",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 동물용 승인 제품 없음. 영국, 캐나다, 호주에서 개(및 말)에 허가된 주사제 존재. 모든 용법은 extra-label 사용임.",
+    "dosage_form": [
+      "Inj",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.035,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "흡수된 약물의 약 2/3가 1시간 이내에 간과 비장에서 탈황산화(desulfation)됨. 흡수된 약물의 약 3.5%가 소변으로 배설됨 (인체 데이터)."
+    },
+    "extra_information": "개에서 피하 투여 후 최고 혈장 농도는 15분 이내에 도달. 분포 용적 0.43 L. 간, 신장, 세망내피계에 높은 농도 분포. 결합조직 및 근육에는 낮은 농도. 소거 반감기 약 3시간 (개). 인체에서 경구 투여 시 흡수율 약 3%; 주로 비뇨생식기 요로상피에 분포."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 PK 데이터 일부 존재; 고농도 분포 장기(간, 신장)에 가중치 부여. 고양이는 개 데이터 및 임상 보고 기반 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "lethargy",
+          "mild depression"
+        ],
+        "index": 1,
+        "evidence": "개에서 기면 및 경미한 우울 증상이 부작용으로 보고됨. 직접적인 뇌 분포 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "anticoagulant",
+          "bleeding",
+          "aPTT increase",
+          "thrombocytopenia",
+          "thrombin time"
+        ],
+        "index": 2,
+        "evidence": "PPS는 항응고 효과를 가지며, 투여 후 최대 24시간까지 aPTT 연장. 과량 투여 시 혈소판감소증 및 혈전 시간 연장 가능. 반복 고용량 투여 시 aPTT 및 TT 1주 이상 지속."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "high concentrations in kidneys",
+          "renal elimination",
+          "advanced kidney impairment contraindicated"
+        ],
+        "index": 3,
+        "evidence": "개 PK에서 신장에 높은 농도 분포 확인. 고급 신장 장애 시 금기. 흡수된 약물의 3.5%가 소변으로 배설."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "desulfated in liver",
+          "high concentrations in liver",
+          "liver enzyme elevation",
+          "advanced liver impairment contraindicated"
+        ],
+        "index": 4,
+        "evidence": "흡수된 약물의 2/3가 간에서 탈황산화. 개 PK에서 간에 높은 농도 분포. 과량 투여 시 ALT 상승 가능. 고급 간 장애 시 금기."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "anticoagulant",
+          "fibrinolytic"
+        ],
+        "index": -1,
+        "evidence": "직접적인 심장 독성 데이터 없음. 항응고 및 섬유소용해 효과로 인한 간접적 위험 가능성."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 뇌 부작용 보고 없음. 경구 투여 시 내약성 양호."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "anticoagulant",
+          "bleeding"
+        ],
+        "index": 1,
+        "evidence": "PPS의 항응고 효과는 고양이에서도 적용 가능. 출혈 위험 존재. 고양이 특이적 혈액 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "advanced kidney impairment contraindicated",
+          "uroepithelium distribution"
+        ],
+        "index": 2,
+        "evidence": "고급 신장 장애 시 금기. 비뇨생식기 요로상피에 주로 분포. 고양이 특이적 신장 PK 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "desulfated in liver",
+          "liver enzyme elevation",
+          "advanced liver impairment contraindicated"
+        ],
+        "index": 3,
+        "evidence": "간에서 주요 대사. 고급 간 장애 시 금기. 인체에서 간효소 일시적 상승 보고(2% 미만). 고양이 특이적 간 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "anticoagulant"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 심장 독성 데이터 없음. 항응고 효과로 인한 간접적 위험 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.25,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 3.0,
+      "species": "dog"
+    },
+    "f_percent": 3,
+    "protein_binding_percent": null,
+    "evidence": "개에서 SC 투여 후 최고 혈장 농도 15분 이내 도달. 소거 반감기 약 3시간 (개). 인체 경구 생체이용률 약 3%; 랫트에서 칼슘 유도체 경구 흡수율 10-20%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 모든 상호작용은 출혈 위험 증가 또는 임상 징후 은폐와 관련됨.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (eg, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "anticoagulant potentiation"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding due to additive anticoagulant effects."
+    },
+    {
+      "drug": "Antiplatelet Agents (eg, aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "antiplatelet potentiation"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding due to additive antiplatelet effects."
+    },
+    {
+      "drug": "Corticosteroids (eg, dexamethasone, prednisolone, triamcinolone)",
+      "severity": 2,
+      "keywords": [
+        "masking septic joint signs"
+      ],
+      "evidence": "Glucocorticoids could mask the clinical signs associated with septic joints when used concurrently with PPS."
+    },
+    {
+      "drug": "Heparin / Low Molecular Weight Heparins (eg, dalteparin, enoxaparin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "anticoagulant potentiation"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding due to additive anticoagulant effects."
+    },
+    {
+      "drug": "NSAIDs (eg, carprofen, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "masking septic joint signs"
+      ],
+      "evidence": "NSAIDs could mask the clinical signs associated with septic joints and increase the risk for bleeding when used concurrently with PPS."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염/퇴행성 관절 질환의 파행 및 통증 치료 (extra-label)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q7d",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일 간격으로 4회 투여. 12개월 내 최대 3코스(4회 주사 1코스).",
+          "evidence": "Plumb's Dosages: Dogs — extra-label; 3 mg/kg SC on 4 occasions with an interval of 5 to 7 days between injections."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염에 대한 연골보호제 (extra-label, 일화적 사용)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q7d",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회, 4주간 투여 (일화적 보고).",
+          "evidence": "Plumb's Dosages: Cats — extra-label; 3 mg/kg SC or IM once weekly for 4 weeks, used anecdotally."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골관절염에 대한 연골보호제 (extra-label, 일화적 사용)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q7d",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회, 4주간 투여 (일화적 보고).",
+          "evidence": "Plumb's Dosages: Cats — extra-label; 3 mg/kg SC or IM once weekly for 4 weeks, used anecdotally."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "고급 신장 장애 시 금기. 구체적인 용량 조절 기준(크레아티닌 수치 등)은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "고급 간 장애 시 금기. 구체적인 ALT 기준치 또는 용량 조절 방법은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity to PPS",
+        "allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고급 신장 장애",
+      "match_terms": [
+        "advanced kidney impairment",
+        "renal failure",
+        "CKD advanced"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "고급 간 장애",
+      "match_terms": [
+        "advanced liver impairment",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "감염/패혈성 관절염",
+      "match_terms": [
+        "septic arthritis",
+        "infection",
+        "sepsis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 출혈 또는 출혈 장애",
+      "match_terms": [
+        "active bleeding",
+        "bleeding disorder",
+        "coagulopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "악성 종양 (특히 혈관육종)",
+      "match_terms": [
+        "malignancy",
+        "hemangiosarcoma",
+        "neoplasia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수술 전후 기간",
+      "match_terms": [
+        "perioperative",
+        "pre-surgical",
+        "impending surgery"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "분만 전후 기간",
+      "match_terms": [
+        "periparturient",
+        "parturition",
+        "whelping"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골격 미성숙 동물",
+      "match_terms": [
+        "skeletally immature",
+        "growing animal",
+        "puppy",
+        "kitten"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "항응고제 병용",
+      "match_terms": [
+        "anticoagulant",
+        "warfarin",
+        "heparin",
+        "aspirin",
+        "clopidogrel"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "골관절염 관절에 대한 질병 조절 효과: 사이토카인 작용 조절, 프로테오글리칸 함량 보존, 히알루론산 합성 자극. 항염증, 지질저하, 항응고(헤파린의 1/15 수준), 섬유소용해 특성을 가짐. 활막 혈류 증가 및 관절 염증 감소. 방광 점막에 부착하여 자극 물질로부터 방광 세포 보호(간질성 방광염).",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "기면",
+      "경미한 우울",
+      "출혈",
+      "aPTT 연장 (투여 후 최대 24시간)",
+      "간효소 일시적 상승 (인체, 2% 미만)",
+      "혈소판감소증 (과량 투여 시)"
+    ],
+    "dog_mechanism": "SC 투여 후 15분 이내 최고 혈장 농도 도달. 간, 신장, 세망내피계에 높은 농도 분포. 반감기 약 3시간.",
+    "dog_extra_effects": [
+      "구토",
+      "식욕부진",
+      "기면",
+      "경미한 우울",
+      "출혈",
+      "aPTT 및 TT 연장"
+    ],
+    "cat_mechanism": "경구 투여 시 내약성 양호. 하부 요로 질환 보조 치료로 사용 시도되었으나 위약 대비 유의한 차이 없음.",
+    "cat_extra_effects": [
+      "출혈 (항응고 효과로 인한 가능성)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 골관절염 치료를 위한 PPS 효능에 대한 강력한 근거는 부족함. 미국 내 FDA 승인 제품 없음(extra-label 사용). 12개월 내 최대 3코스(코스당 4회 주사) 투여 권장. 수술 전 최근 투여 환자는 응고 검사 고려.",
+    "cat": "고양이에서 하부 요로 질환 보조 치료로 경구, 방광 내, 비경구 투여가 시도되었으나 위약 대비 유의한 차이를 보이지 않음. 골관절염에 대한 SC/IM 투여는 일화적 보고에 기반하며 근거 수준이 낮음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "항응고 효과로 인해 출혈 위험 존재. 다른 항응고제 또는 항혈소판제와 병용 시 주의. 패혈성 관절염, 고급 신장/간 장애, 골격 미성숙, 분만 전후 시 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 경구 투여 시 내약성 양호하나, 항응고 효과로 인한 출혈 위험 존재. 효능 근거 부족. Extra-label 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제품: 실온 보관 (15°C-30°C). 주사제: 냉장 보관 (2°C-8°C), 차광 보관.",
+    "forms": [
+      "주사액 100 mg/mL (Cartrophen-Vet Injection) — 개용, 일부 국가",
+      "주사액 250 mg/mL (Arthropen Vet 250, Cartrophen-Vet Forte Injection) — 말용, 일부 국가",
+      "경구 캡슐 100 mg (Elmiron) — 인체용 (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "펜토산 폴리설페이트(PPS)는 개, 고양이, 말의 골관절염 치료에 사용되는 질병 조절제입니다. 미국 내 동물용 FDA 승인 제품은 없으며, 영국·캐나다·호주에서 개(및 말)용 주사제가 허가되어 있습니다. 항응고 효과(헤파린의 1/15 수준)로 인해 출혈 위험이 있으며, 다른 항응고제·항혈소판제와 병용 시 주의가 필요합니다. 패혈성 관절염, 고급 신장/간 장애, 활동성 출혈, 악성 종양(특히 혈관육종), 수술 전후, 분만 전후, 골격 미성숙 동물에서는 금기입니다. 12개월 내 최대 3코스(코스당 4회 주사) 투여를 권장합니다.",
+    "indications": "개: 골격 성숙 개의 퇴행성 관절 질환/골관절염으로 인한 파행 및 통증 치료 (extra-label, SC 3 mg/kg, 5~7일 간격 4회). 고양이: 골관절염에 대한 연골보호제 (extra-label, 일화적 사용, SC 또는 IM 3 mg/kg 주 1회 4주). 말: 비감염성 염증성 관절 질환 보조 치료 (extra-label, IM 3 mg/kg 5~7일 간격 4회; 또는 관절 내 1 mL(250 mg) 주 1회 3~4회).",
+    "client_info": "이 약은 관절염 통증 및 염증 완화를 위해 주사로 투여됩니다. 집에서 투여하는 경우 올바른 투여 방법을 반드시 숙지하세요. 구토, 식욕 감소, 무기력, 출혈 등의 부작용이 나타나면 즉시 수의사에게 연락하세요. 이 약은 보통 여러 차례 투여가 필요하므로 수의사의 치료 일정을 반드시 따르고 중요한 추적 방문을 빠지지 마세요. 아스피린, 항응고제 등 다른 약물을 함께 복용 중이라면 반드시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no interactions noted)",
+      "Compatibility/Compounding Considerations (no information noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat)",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.f_percent (dog/cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat (evidence-based dosing)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/18.jsonl",
+    "extracted_at": "2026-03-10T18:46:28.186474+00:00",
+    "reviewer": null
+  }
+}

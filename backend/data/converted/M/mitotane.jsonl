@@ -1,0 +1,632 @@
+{
+  "id": "mitotane",
+  "drug_identity": {
+    "name_ko": "미토탄",
+    "name_en": "Mitotane",
+    "active_ingredient": "Mitotane",
+    "brand_names": [
+      "Lysodren",
+      "Lisodren"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 사용되는 모든 적응증은 허가 외(extra-label) 사용이며, 인간용 제품(Lysodren® 500mg 정)을 사용함. 수의학 허가 제품 없음.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [
+        "CYP3A4"
+      ],
+      "pathway_evidence": "인간에서 미토탄은 CYP3A4 효소를 유도하여 CYP3A4 기질 약물의 대사를 증가시킬 수 있음. 간에서 대사되며 대사산물은 담즙(24시간 내 약 15%)과 소변(24시간 내 약 10%)으로 배설됨."
+    },
+    "extra_information": "개에서 경구 생체이용률이 낮으며, 지방/기름이 많은 음식과 함께 투여 시 흡수가 향상됨. 지방 조직에 축적되며 부신에는 축적되지 않음. 소량이 CSF로 진입할 수 있음. 인간에서의 반감기는 18~159일로 매우 길며, 지속 투여 시 지방 조직의 depot 효과로 반감기가 더 길어질 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 간 변화(울혈, 중심소엽 위축, 지방변성) 및 부신 괴사가 명시됨. 고양이 데이터 없음(비권장 약물).",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ataxia",
+          "neurologic signs",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "운동실조, 신경학적 징후가 부작용으로 보고됨. CNS 억제제와 병용 시 부가적 억제 효과 가능."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "aldosterone decrease",
+          "electrolyte monitoring"
+        ],
+        "index": 1,
+        "evidence": "알도스테론 분비 감소 및 전해질 이상 가능성으로 혈액 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "pre-existing renal disease",
+          "caution"
+        ],
+        "index": 1,
+        "evidence": "기존 신장 질환이 있는 개에서 주의 사용 및 집중 모니터링 권고."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "liver changes",
+          "congestion",
+          "centrilobular atrophy",
+          "fatty degeneration",
+          "hepatic impairment",
+          "metabolism"
+        ],
+        "index": 3,
+        "evidence": "개에서 간 울혈, 중심소엽 위축, 중등도~중증 지방변성이 보고됨. 간 장애는 미토탄 대사를 방해할 수 있으며, 기존 간 질환 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 미토탄은 비효과적이고 내약성이 낮아 권장되지 않음. 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 미토탄은 권장되지 않으며 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 미토탄은 권장되지 않으며 관련 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 미토탄은 권장되지 않으며 관련 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 미토탄은 권장되지 않으며 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": 432.0,
+      "max": 3816.0,
+      "mean": 2124.0,
+      "species": "human"
+    },
+    "f_percent": 40,
+    "protein_binding_percent": null,
+    "evidence": "인간 데이터: 경구 투여 후 약 40% 흡수, 최고 혈청 농도는 단회 투여 후 약 3~5시간에 도달. 혈장 반감기는 18~159일(432~3816시간). 개에서의 생체이용률은 낮으며 지방 함유 음식과 함께 투여 시 향상됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. CYP3A4 유도에 의한 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "CNS Depressants (e.g., acepromazine, methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Mitotane used concomitantly with CNS depressant drugs may produce additive depressant effects."
+    },
+    {
+      "drug": "Dexamethasone",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "reduced concentration"
+      ],
+      "evidence": "Mitotane may reduce dexamethasone concentration via CYP3A4 induction."
+    },
+    {
+      "drug": "Estrogens (e.g., diethylstilbestrol, estriol)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "reduced concentration"
+      ],
+      "evidence": "Mitotane may reduce estrogen concentration via CYP3A4 induction."
+    },
+    {
+      "drug": "Fentanyl",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "increased metabolism"
+      ],
+      "evidence": "Mitotane may increase fentanyl metabolism via CYP3A4 induction, potentially reducing efficacy."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "decreased insulin requirement",
+        "hypoglycemia risk"
+      ],
+      "evidence": "Diabetic dogs receiving insulin may have decreased insulin requirements after starting mitotane therapy; close monitoring required to avoid insulin overdose."
+    },
+    {
+      "drug": "Itraconazole",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 induction",
+        "reduced concentration",
+        "avoid"
+      ],
+      "evidence": "Mitotane may reduce itraconazole concentration; it is recommended to avoid this combination in humans."
+    },
+    {
+      "drug": "Midazolam",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "increased metabolism"
+      ],
+      "evidence": "Mitotane may increase midazolam metabolism via CYP3A4 induction."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "reduced mitotane efficacy",
+        "increased phenobarbital metabolism"
+      ],
+      "evidence": "Phenobarbital can induce enzymes and reduce the efficacy of mitotane; conversely, mitotane can induce hepatic microsomal enzymes and increase the metabolism of phenobarbital. Bidirectional interaction."
+    },
+    {
+      "drug": "Praziquantel",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 induction",
+        "reduced concentration",
+        "avoid"
+      ],
+      "evidence": "Mitotane may reduce praziquantel concentration; it is recommended to avoid this combination in humans."
+    },
+    {
+      "drug": "Rivaroxaban",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 induction",
+        "reduced concentration",
+        "avoid"
+      ],
+      "evidence": "Mitotane may reduce rivaroxaban concentration; it is recommended to avoid this combination in humans."
+    },
+    {
+      "drug": "Selegiline",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "increased metabolism",
+        "loss of efficacy"
+      ],
+      "evidence": "Mitotane may increase selegiline metabolism and result in loss of efficacy."
+    },
+    {
+      "drug": "Spironolactone",
+      "severity": 3,
+      "keywords": [
+        "pharmacodynamic antagonism",
+        "blocked mitotane action"
+      ],
+      "evidence": "In dogs, spironolactone has been demonstrated to block the action of mitotane; it is recommended to use an alternate diuretic if possible."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "increased metabolism",
+        "reduced anticoagulation"
+      ],
+      "evidence": "Mitotane may increase warfarin metabolism via CYP3A4 induction, potentially reducing anticoagulant effect."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 442.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "뇌하수체 의존성 부신피질기능항진증(PDH) 유도기 - 프로토콜 A",
+          "value": "30 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "7~10일간 투여; 부작용 발생 시 중단",
+          "evidence": "Extra-label. 식사와 함께 투여. 부작용(기력저하, 구토, 허약, 설사) 발생 시 미토탄 중단 후 글루코코르티코이드 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "뇌하수체 의존성 부신피질기능항진증(PDH) 유지기 - 프로토콜 A",
+          "value": "35 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회, 2~3회 분할 투여; 장기 유지 용량은 26~330 mg/kg/주로 가변적",
+          "evidence": "Extra-label. ACTH 자극 검사로 코르티솔 농도 확인 후 유지기 시작."
+        },
+        {
+          "logic_type": "linear",
+          "context": "뇌하수체 의존성 부신피질기능항진증(PDH) 유도기 - 프로토콜 B",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "음수량이 100 mL/kg/일 미만으로 감소하거나 식욕감소, 우울, 설사, 구토 관찰 시까지 투여(보통 3~7일)",
+          "evidence": "Extra-label. 글루코코르티코이드는 통상 병용하지 않으나 응급용 prednis(ol)one을 보호자에게 제공."
+        },
+        {
+          "logic_type": "linear",
+          "context": "뇌하수체 의존성 부신피질기능항진증(PDH) 유지기 - 프로토콜 B",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7~10일마다 분할 투여; 장기 유지 용량 26~330 mg/kg/주",
+          "evidence": "Extra-label. ACTH 자극 검사로 적절한 억제 확인 후 시작."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신피질 완전 파괴 목적 - 프로토콜 C",
+          "value": "75 - 100",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 100.0,
+          "duration_note": "25일 연속 투여, 하루 3~4회 분할, 식사와 함께; 이후 평생 스테로이드 보충 필요",
+          "evidence": "Extra-label. 전통적 치료의 대안. 프레드니손 및 미네랄코르티코이드 병용 시작."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신피질 완전 제거(Total adrenal ablation) - 프로토콜 D",
+          "value": "100",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 100.0,
+          "duration_note": "30일간 투여; 코르티손 아세테이트 및 플루드로코르티손 병용 시작; 평생 관리 필요",
+          "evidence": "Extra-label. 코르티손 아세테이트 2 mg/kg/일 BID, 플루드로코르티손 0.1 mg/4.5 kg SID, 염화나트륨 1~5 g/일 보충."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신 암종 완화 치료 또는 부신 선종 치료 - 프로토콜 a",
+          "value": "50 - 75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 100.0,
+          "duration_note": "5일간 매일 분할 투여 후 40일 이상 격일 투여; 소형견은 최대 100 mg/kg/일 필요할 수 있음",
+          "evidence": "Extra-label. 3일째부터 prednis(ol)one 0.4 mg/kg/일, 플루드로코르티손 0.0125 mg/kg/일, 소금 0.1 g/kg/일 보충."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신 암종 완화 치료 또는 부신 선종 치료 - 프로토콜 b",
+          "value": "50 - 75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "10~14일간 매일 분할 투여; 반응에 따라 100 mg/kg/일까지 증량 가능; 유지기 100~200 mg/kg/주 분할 투여",
+          "evidence": "Extra-label. ACTH 자극 검사 결과에 따라 용량 조정. prednis(ol)one 0.2 mg/kg/일 보충 가능."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "기존 신장 질환이 있는 개에서 주의하여 사용하고 더 집중적인 모니터링을 권고함. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 장애는 미토탄 대사를 방해할 수 있음. 기존 간 질환이 있는 개에서 주의하여 사용하고 더 집중적인 모니터링을 권고함. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity to mitotane"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임상 징후 없는 환자 또는 병약한 환자",
+      "match_terms": [
+        "lethargy",
+        "inappetence",
+        "sick patient"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이",
+      "match_terms": [
+        "feline",
+        "cat"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "기존 간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "스피로노락톤 병용",
+      "match_terms": [
+        "spironolactone"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "부신 세포독성 약물로, 부신피질의 zona fasciculata 및 zona reticularis에 진행성 괴사를 유발함. 세포 파괴 없이도 부신피질 기능을 억제할 수 있으며, 코르티코스테로이드 생성에 관여하는 여러 효소를 억제함. CYP3A4 유도를 통해 다른 약물의 대사를 증가시킴.",
+    "common_extra_effects": [
+      "기력저하(lethargy)",
+      "운동실조(ataxia)",
+      "허약(weakness)",
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "신경학적 징후",
+      "간 변화(울혈, 중심소엽 위축, 지방변성)",
+      "알도스테론 분비 감소",
+      "애디슨 위기(Addisonian crisis) - 드물게",
+      "갑상선 결합 글로불린 경쟁적 결합으로 혈청 단백결합 요오드 감소"
+    ],
+    "dog_mechanism": "개에서 미토탄은 zona fasciculata 및 zona reticularis의 심각하고 진행성인 괴사를 유발함(치료 시작 후 보통 5~10일 이내). Zona glomerulosa는 상대적으로 보존되나 알도스테론 분비 예비능은 감소할 수 있음.",
+    "dog_extra_effects": [
+      "기력저하",
+      "운동실조",
+      "허약",
+      "식욕부진",
+      "구토",
+      "설사",
+      "간 울혈, 중심소엽 위축, 중등도~중증 지방변성",
+      "알도스테론 분비 예비능 감소",
+      "애디슨 위기(드물게)",
+      "재발(relapse) 흔함"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 PDH 치료에 사용되나 트릴로스탄이 현재 선호되는 치료제임(생존 기간 차이 없으나 미토탄이 부작용이 더 많음). 약 80%의 PDH 개에서 반응. 5 kg 미만 소형견에서 정확한 용량 투여가 어려워 부작용 위험이 높음. 치료 중 스트레스 상황(수술, 외상, 급성 질환)에서는 반드시 글루코코르티코이드 보충 필요. 보호자에게 응급용 prednis(ol)one 또는 덱사메타손 처방 필수. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요.",
+    "cat": "고양이에서 미토탄은 효과가 없고 내약성이 낮아 권장되지 않음. 고양이에서의 사용은 금기에 준함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 신장 또는 간 질환, 당뇨병, 임신 시 주의 필요. 치료 중 집중 모니터링(ACTH 자극 검사, CBC, 혈청 화학, 전해질, 혈압) 필수. NIOSH 위험 약물로 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 미토탄은 효과가 없고 내약성이 낮아 권장되지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C~30°C, 59°F~86°F) 밀폐 차광 용기에 보관.",
+    "forms": [
+      "Mitotane Tablets (scored) 500 mg; Lysodren® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "미토탄(Lysodren®)은 개의 뇌하수체 의존성 부신피질기능항진증(PDH) 및 부신 종양의 완화 치료에 사용되는 부신 세포독성 약물입니다. 현재 트릴로스탄이 PDH의 선호 치료제이며, 미토탄은 부작용이 더 많습니다. 고양이에서는 비효과적이고 내약성이 낮아 사용하지 않습니다. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비(PPE) 착용이 필수입니다. 치료 중 애디슨 위기 발생 가능성이 있으므로 집중 모니터링과 보호자 교육이 필수적입니다. CYP3A4 유도제로 다수의 약물 상호작용이 있으며, 스피로노락톤과의 병용은 피해야 합니다.",
+    "indications": "개의 뇌하수체 의존성 부신피질기능항진증(PDH, 양측 부신 과형성) 치료(허가 외), 개의 부신 암종 완화 치료 및 부신 선종 치료(허가 외), 페럿의 부신피질기능항진증 치료(수술 불가 또는 종양 불완전 절제 시, 허가 외). 인간에서 부신 암종의 완화 치료에 허가됨.",
+    "client_info": "미토탄 치료는 수의사의 집중적인 모니터링과 보호자의 긴밀한 협조가 필요합니다. 반드시 음식과 함께 투여하세요. 치료 시작 후 5~14일 내에 음수량, 식욕, 배뇨량이 감소하는 긍정적인 효과를 볼 수 있습니다. 구토, 설사, 식욕부진, 기력저하, 허약, 비틀거림이 나타나면 즉시 수의사에게 연락하세요. 수술이나 외상 등 스트레스 상황에서는 반드시 미토탄 복용 사실을 담당 수의사에게 알리세요. 임산부는 이 약을 취급하지 마세요. 다른 사람도 취급 시 일회용 장갑을 착용하세요. 이 약은 NIOSH에서 위험 약물로 분류하고 있으므로 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Protein binding data",
+      "Veterinary-specific PK studies (dog/cat)",
+      "QT prolongation data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog-specific)",
+      "timing_profile.f_percent (dog-specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.cat (all organs)",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/26.jsonl",
+    "extracted_at": "2026-03-10T21:28:45.654844+00:00",
+    "reviewer": null
+  }
+}

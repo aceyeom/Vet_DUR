@@ -1,0 +1,707 @@
+{
+  "id": "alfentanil",
+  "drug_identity": {
+    "name_ko": "알펜타닐",
+    "name_en": "Alfentanil",
+    "active_ingredient": "Alfentanil",
+    "brand_names": [
+      "Alfenta",
+      "Alfast",
+      "Fanaxal",
+      "Fentalim",
+      "Limifen",
+      "Rapifen"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "알펜타닐 과다투여 시 날록손(naloxone)으로 오피오이드 효과를 역전시킬 수 있으며, 반감기가 짧더라도 날록손 반복 투여가 필요할 수 있다.",
+    "off_label_note": "수의용 허가 제품 없음. 개와 고양이에서 마취 보조 및 진통 목적으로 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.01,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "알펜타닐은 주로 간에서 비활성 대사체로 대사되며, 대사체는 신장을 통해 소변으로 배설된다. 약 1%만이 미변화체로 소변에 배설된다(사람 데이터). 간 효소 유도제 또는 억제제에 의해 농도가 영향을 받는다."
+    },
+    "extra_information": "개: 정상상태 분포용적 ≈0.6 L/kg, 청소율 ≈19–30 mL/kg/분, 말단 반감기 ≈20–60분. 고양이: 소실 반감기 ≈2–3시간, 정상상태 분포용적 ≈0.9 L/kg, 청소율 12 mL/분/kg. 비만 환자는 제지방체중 기준으로 용량 계산 필요. 알코올성 간경변 또는 비만 환자에서 청소율 약 50% 감소, 노령 환자에서 약 30% 감소(사람 데이터)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 각각 수의학 문헌 및 사람 데이터를 참고하여 평가. 간 대사, 신장 배설, 심혈관 및 CNS 영향을 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "bradycardia",
+          "agitation",
+          "incoordination",
+          "excitement",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "개에서 30 mcg/kg IV 투여 시 흥분, 운동실조, 흥분 상태가 보고됨. 과다투여 시 CNS 억제, 혼수, 경련 가능."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "hypoxemia"
+        ],
+        "index": 2,
+        "evidence": "개에서 서맥 보고됨. 아트로핀 병용 시 심박수 개선되나 저혈압 위험 증가. 저산소혈증 발생률 증가."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination",
+          "caution impaired renal function"
+        ],
+        "index": 3,
+        "evidence": "대사체가 신장으로 배설됨. 신기능 저하 시 주의 권고. 직접적 신독성 보고는 없음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic isoenzymes",
+          "hepatic disease dose adjustment"
+        ],
+        "index": 4,
+        "evidence": "주로 간에서 대사됨. 간질환 시 용량 조절 필요. 간 효소 유도제/억제제에 의해 농도 변화."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "cardiovascular"
+        ],
+        "index": 5,
+        "evidence": "개에서 서맥 보고. 아트로핀 병용 시 저혈압 위험. 심혈관 모니터링 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CNS excitation",
+          "mydriasis",
+          "excitement",
+          "respiratory depression"
+        ],
+        "index": 1,
+        "evidence": "의식 있는 고양이에서 IV 볼루스 후 산동 및 흥분 보고. 호흡 억제 기록됨."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia",
+          "increased blood pressure"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 혈압 상승 및 빈맥 관찰. 알펜타닐-프로포폴 병용 시 레미펜타닐-프로포폴 대비 혈압 유의하게 감소."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination",
+          "caution impaired renal function"
+        ],
+        "index": 3,
+        "evidence": "대사체 신장 배설. 신기능 저하 시 주의 권고. 직접적 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "elimination half-life prolonged"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 반감기 ≈2–3시간으로 개보다 길어 간 대사 부담이 상대적으로 높을 수 있음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased blood pressure",
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 빈맥 및 혈압 변화 보고. 심혈관 모니터링 필요."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": 0.25,
+    "half_life_hr": {
+      "min": 0.33,
+      "max": 1.0,
+      "mean": 0.67,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 90,
+    "evidence": "개: 말단 반감기 ≈20–60분(0.33–1.0시간). 고양이: 소실 반감기 ≈2–3시간. 사람: IV 투여 후 2분 이내 마취 효과 발현, IM 투여 후 5분 이내 발현, IM 최고 효과 ≈15분. 혈장 단백 결합률 ≈90%(사람 데이터). 경구 생체이용률 데이터 없음(주사제만 사용)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. MAOI 병용은 규칙에 따라 severity 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "anxiety",
+        "confusion",
+        "hypotension",
+        "respiratory depression",
+        "cyanosis",
+        "coma"
+      ],
+      "evidence": "MAOIs와 병용 시 불안, 혼란, 저혈압, 호흡 억제, 청색증, 혼수 위험 증가. 오피오이드 투여 14일 전 MAOI 중단 필요. 병용 금기."
+    },
+    {
+      "drug": "CNS Depressants (e.g., anesthetic agents, barbiturates, benzodiazepines, cannabidiol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 CNS 및/또는 호흡 억제 위험 증가. 모니터링 및 용량 조절 필요."
+    },
+    {
+      "drug": "Drugs That Inhibit Hepatic Isoenzymes (e.g., cimetidine, diltiazem, erythromycin, fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression",
+        "prolonged effects"
+      ],
+      "evidence": "알펜타닐의 반감기 증가 및 청소율 감소로 효과 연장 및 호흡 억제 위험 증가. 용량 조절 고려."
+    },
+    {
+      "drug": "Bradycardia-Causing Agents (e.g., amiodarone, anesthetic agents, beta-adrenergic antagonists, digoxin)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "알펜타닐과 병용 시 서맥 또는 저혈압 유발 가능."
+    },
+    {
+      "drug": "Hypotensive Agents (e.g., amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "병용 시 서맥, 저혈압, 기립성 저혈압 위험 증가. 혈압 및 심박수 모니터링 필요."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (e.g., atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "tachycardia",
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "병용 시 빈맥, 서맥, 저혈압 위험 증가. 심박수 및 혈압 모니터링 필요."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia",
+        "seizures",
+        "coma",
+        "respiratory arrest"
+      ],
+      "evidence": "데스모프레신 농도 증가 및 수분 중독/저나트륨혈증 위험 증가. 전해질 및 신기능 모니터링 필요."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "somnolence",
+        "confusion",
+        "hallucinations",
+        "seizures",
+        "coma"
+      ],
+      "evidence": "병용 시 신경독성(졸음, 혼란, 환각, 시야 흐림, 요실금, 경련, 혼수) 위험 증가. 주의하여 사용 및 모니터링."
+    },
+    {
+      "drug": "Iohexol (intrathecal)",
+      "severity": 3,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "척수강 내 이오헥솔과 오피오이드 병용 시 경련 위험 증가. 척수강 내 이오헥솔 투여 48시간 전 및 24시간 후까지 오피오이드 중단 필요."
+    },
+    {
+      "drug": "Drugs That Induce Hepatic Isoenzymes (e.g., griseofulvin, mitotane, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "decreased alfentanil concentration",
+        "reduced efficacy"
+      ],
+      "evidence": "알펜타닐 농도 감소 가능. 임상 반응 모니터링 및 용량 조절 필요."
+    },
+    {
+      "drug": "Anticholinergic Agents (e.g., acepromazine, amitriptyline, atropine, clomipramine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 요저류, 변비, CNS 및 호흡 억제 위험 증가."
+    },
+    {
+      "drug": "Bethanechol",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "베타네콜의 위장관 운동 촉진 효과를 길항할 수 있음. 병용 피할 것."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 1,
+      "keywords": [
+        "decreased diuretic efficacy"
+      ],
+      "evidence": "오피오이드가 이뇨제의 치료 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Domperidone",
+      "severity": 1,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "돔페리돈의 위장관 효과를 길항할 수 있음."
+    },
+    {
+      "drug": "Prokinetic Agents (e.g., cisapride, erythromycin, metoclopramide)",
+      "severity": 1,
+      "keywords": [
+        "prokinetic antagonism"
+      ],
+      "evidence": "위장관 운동 촉진제의 효과를 길항할 수 있음."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 1,
+      "keywords": [
+        "constipation"
+      ],
+      "evidence": "병용 시 변비 위험 증가."
+    },
+    {
+      "drug": "Highly Protein-Bound Drugs (e.g., amiodarone, furosemide, NSAIDs)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "transient increased free drug concentration"
+      ],
+      "evidence": "알펜타닐은 혈장 단백 결합률 >90%로, 다른 고단백 결합 약물을 일시적으로 치환할 수 있으나 임상적 의의는 낮을 것으로 예상됨."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 전처치 (오프라벨)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Alfentanil 5–10 µg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 - 부하 용량 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "이후 CRI 유지",
+          "evidence": "Loading dose 0.5–1 µg/kg IV followed by CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 - CRI 유지 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "지속 주입",
+          "evidence": "0.5–1 µg/kg/minute IV CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "두개내 질환 환자 수술 중 진통 - CRI (오프라벨)",
+          "value": "0.2",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 중 지속 주입",
+          "evidence": "0.2 µg/kg/minute IV CRI for intracranial disease"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 - 프로포폴 병용 (오프라벨)",
+          "value": "2.1 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "프로포폴 2 mg/kg과 병용",
+          "evidence": "Alfentanil 2.1–10 µg/kg + propofol 2 mg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 - 미다졸람 병용 (오프라벨)",
+          "value": "1 - 40",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "미다졸람과 병용",
+          "evidence": "Alfentanil 1–40 µg/kg IV + midazolam"
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "마취 유지 - 프로포폴 병용 CRI (오프라벨)",
+          "value": "≤1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "프로포폴 0.4 mg/kg/min CRI와 병용, 별도 펌프 사용",
+          "evidence": "≤1 µg/kg/min IV CRI + propofol 0.4 mg/kg/min IV CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유지 - 미다졸람 병용 CRI (오프라벨)",
+          "value": "4 - 5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "미다졸람 0.005 mg/kg/min CRI와 병용, 별도 펌프 사용",
+          "evidence": "Alfentanil 4–5 µg/kg/min IV CRI + midazolam 0.005 mg/kg/min IV CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 보조 - 간헐적 볼루스 (오프라벨)",
+          "value": "2 - 5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "q20min",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분마다 반복 투여",
+          "evidence": "Alfentanil 2–5 µg/kg IV every 20 minutes"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 보조 진통 - 부하 용량 (오프라벨)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "이후 CRI 유지. 프로포폴로 마취 유도 후 20분 뒤 알펜타닐-프로포폴 병용 유지 시작.",
+          "evidence": "Loading dose 5–10 µg/kg IV followed by CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 보조 진통 - CRI 유지 (오프라벨)",
+          "value": "0.8 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "프로포폴과 병용 유지",
+          "evidence": "0.8–1 µg/kg/minute IV CRI with propofol"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 주의 사용 권고. 구체적인 용량 조절 기준은 명시되지 않음. 대사체가 신장으로 배설되므로 신기능 저하 환자에서 모니터링 강화 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간질환(알코올성 간경변 등) 시 청소율 약 50% 감소(사람 데이터). 노령 환자에서도 청소율 약 30% 감소. 간질환 환자 및 노령 환자에서 용량 감량 필요. 비만 환자는 제지방체중 기준으로 용량 계산."
+  },
+  "contraindications": [
+    {
+      "condition": "오피오이드 과민반응",
+      "match_terms": [
+        "opioid hypersensitivity",
+        "opioid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부 손상",
+      "match_terms": [
+        "head injury",
+        "intracranial hypertension",
+        "head trauma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐질환 또는 호흡 장애",
+      "match_terms": [
+        "pulmonary disease",
+        "respiratory impairment",
+        "respiratory depression"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "전갈 독침 (Centruroides spp.)",
+      "match_terms": [
+        "scorpion sting",
+        "Centruroides envenomation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본 모노그래프에서 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "강력한 뮤(mu) 오피오이드 수용체 완전 작용제로, 진정, 진통, 마취 효과를 나타냄. 진통 효능 비교: 알펜타닐 0.4–0.8 mg ≈ 펜타닐 0.1–0.2 mg ≈ 모르핀 10 mg (IM 기준).",
+    "common_extra_effects": [
+      "호흡 억제",
+      "서맥 또는 빈맥",
+      "저혈압 또는 고혈압",
+      "CNS 억제",
+      "근육 강직(용량 의존적)",
+      "오심/구토(사람)",
+      "무호흡",
+      "혼수",
+      "동공 축소(miosis)",
+      "근육 이완(flaccidity)"
+    ],
+    "dog_mechanism": "뮤 오피오이드 수용체 작용을 통해 진통 및 마취 효과 발휘. 프로포폴 목표 조절 주입 용량 감소 효과 있으나 심혈관 이점 없음.",
+    "dog_extra_effects": [
+      "서맥",
+      "저산소혈증 발생률 증가",
+      "흥분(30 mcg/kg IV 시)",
+      "운동실조",
+      "저혈압(아트로핀 병용 시)"
+    ],
+    "cat_mechanism": "뮤 오피오이드 수용체 작용. 혈장 농도 500 ng/mL에서 이소플루란 MAC 16–35% 감소.",
+    "cat_extra_effects": [
+      "산동(mydriasis)",
+      "흥분(의식 있는 고양이에서 IV 볼루스 후)",
+      "빈맥",
+      "혈압 상승",
+      "호흡 억제",
+      "혈압 감소(알펜타닐-프로포폴 병용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 알펜타닐은 마취 전처치, 진통, 마취 유도 및 유지에 오프라벨로 사용된다. 서맥이 흔히 보고되며 항콜린제로 대응 가능하나, 아트로핀 병용 시 저혈압 위험이 증가할 수 있다. 저산소혈증 발생률 증가에 주의하며 맥박산소측정기 모니터링이 필수적이다. 비만 환자는 제지방체중 기준으로 용량을 계산해야 한다.",
+    "cat": "고양이에서 반감기가 개보다 길어(≈2–3시간) 약물 축적에 주의가 필요하다. 의식 있는 고양이에서 IV 볼루스 투여 후 산동 및 흥분이 나타날 수 있으며, 호흡 억제도 보고되어 있다. 알펜타닐-프로포폴 병용 마취 시 레미펜타닐-프로포폴 대비 혈압이 유의하게 낮아질 수 있으므로 혈압 모니터링이 중요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 서맥, 저산소혈증, 저혈압 위험이 있으며, 충분한 모니터링 및 기도 관리 장비(삽관, 인공호흡) 구비 환경에서만 사용해야 한다. 두부 손상, 폐질환, 간/신기능 저하 환자에서 주의 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 CNS 흥분, 호흡 억제, 혈압 저하 위험이 있다. 반감기가 개보다 길어 약물 축적 가능성에 주의. 충분한 모니터링 환경에서만 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20°C–25°C; 68°F–77°F)에서 보관. DEA 스케줄 II 규정에 따라 견고하게 잠긴 장소에 보관. 미사용 또는 낭비된 규제 약물의 폐기는 관련 법규에 따름.",
+    "forms": [
+      "알펜타닐 HCl 주사액: 500 µg(염기)/mL, 2 mL/5 mL/10 mL/20 mL 앰플, 방부제 무첨가"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "알펜타닐은 강력한 뮤 오피오이드 완전 작용제로, 개와 고양이에서 마취 보조 및 진통 목적으로 오프라벨 사용된다. 수의용 허가 제품은 없으며 DEA 스케줄 II 규제 약물이다. 과다투여 시 날록손으로 역전 가능하나 반복 투여가 필요할 수 있다. 개에서 서맥, 고양이에서 CNS 흥분이 주요 이상반응이다. 비만 환자는 제지방체중 기준으로 용량 계산 필요.",
+    "indications": "개와 고양이에서 마취 전처치, 수술 중 진통, 마취 유도 및 유지 보조(모두 오프라벨). 펜타닐의 대안으로 사용 가능. 두개내 질환 환자의 수술 중 진통에도 사용 보고됨.",
+    "client_info": "알펜타닐은 매우 강력한 마약성 진통제로, 반드시 수의사의 지도 하에 적절한 모니터링 장비가 갖춰진 환경에서만 사용해야 합니다. 이 약물은 규제 약물(마약류)이며, 가정에서 사용하는 약물이 아닙니다. 투여 후 호흡 억제, 심박수 변화, 혈압 변화 등이 나타날 수 있으므로 전문 의료진의 지속적인 감시가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific CYP enzyme data",
+      "Oral bioavailability data",
+      "Specific renal dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.t_max_hr (veterinary)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.affected_breeds"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/53.jsonl",
+    "extracted_at": "2026-03-11T05:46:13.227462+00:00",
+    "reviewer": null
+  }
+}

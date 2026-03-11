@@ -1,0 +1,604 @@
+{
+  "id": "imidocarb",
+  "drug_identity": {
+    "name_ko": "이미도카브",
+    "name_en": "Imidocarb",
+    "active_ingredient": "Imidocarb dipropionate",
+    "brand_names": [
+      "Imizol",
+      "Imizol Equine"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 120,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 85,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "이미도카브는 대사가 거의 이루어지지 않으며, 주로 미변화체(unchanged drug)로 체외 배출된다. 말에서 IM 투여 후 혈장에서 12시간 이내 검출 불가, 소변에서 36시간까지 최고 혈장 농도와 유사한 수준으로 검출되며, 대변에서는 10일까지 검출된다."
+    },
+    "extra_information": "이미도카브는 경구 투여 시 흡수가 불량하다. IM 투여 후 빠르게 조직에 분포하며, 주로 미변화체로 신장을 통해 배설된다. 개와 고양이에 대한 구체적인 PK 데이터는 문헌에 명시되어 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 과용량 또는 드물게 심각한 신세뇨관 괴사 및 간 괴사가 보고됨. 개 및 고양이 종별 수의학적 PK 연구 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "restlessness",
+          "cholinergic signs"
+        ],
+        "index": 1,
+        "evidence": "콜린성 부작용(불안, 침 흘림 등) 보고됨. 직접적인 CNS 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypoglycemia"
+        ],
+        "index": 1,
+        "evidence": "저혈당증이 보고된 바 있으며, 포도당 조절 기전에 영향을 미치는 것으로 알려져 있음."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal tubular necrosis",
+          "renal function",
+          "unchanged drug"
+        ],
+        "index": 2,
+        "evidence": "드물게 심각한 신세뇨관 괴사가 보고됨. 주로 미변화체로 신장 배설. 신기능 저하 환자에서 위험-이익 평가 권고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic necrosis",
+          "liver enzymes",
+          "hepatic function"
+        ],
+        "index": 2,
+        "evidence": "드물게 심각한 간 괴사 보고. 과용량(9.9 mg/kg)에서 간효소 상승 관찰. 간기능 저하 환자에서 주의 요망."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 빈맥이 보고되었으나, 개에서의 직접적인 심장 독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "muscle tremors",
+          "restlessness"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 근육 떨림, 불안 등 신경계 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 관련 직접적인 독성 데이터는 명시되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal function"
+        ],
+        "index": 1,
+        "evidence": "신기능 저하 환자에서 주의 권고. 고양이 특이적 신독성 데이터는 제한적."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic function"
+        ],
+        "index": 1,
+        "evidence": "간기능 저하 환자에서 주의 권고. 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "dyspnea"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 빈맥 및 호흡곤란이 부작용으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 시 흡수 불량. 말에서 IM 투여 후 12시간 이내 혈장에서 검출 불가. 반감기 데이터는 개 및 고양이에서 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Cholinesterase inhibitors (e.g., neostigmine, pyridostigmine)",
+      "severity": 3,
+      "keywords": [
+        "cholinergic toxicity",
+        "cholinesterase inhibition"
+      ],
+      "evidence": "Manufacturer contraindication: concurrent use with cholinesterase-inhibiting drugs is prohibited due to additive cholinergic toxicity risk."
+    },
+    {
+      "drug": "Organophosphate/carbamate pesticides",
+      "severity": 3,
+      "keywords": [
+        "cholinergic toxicity",
+        "cholinesterase inhibition"
+      ],
+      "evidence": "Manufacturer contraindication: use in animals exposed to cholinesterase-inhibiting pesticides or chemicals is prohibited."
+    },
+    {
+      "drug": "Atropine",
+      "severity": 1,
+      "keywords": [
+        "antimuscarinic",
+        "cholinergic mitigation"
+      ],
+      "evidence": "Atropine (antimuscarinic) is used therapeutically to mitigate cholinergic adverse effects of imidocarb. Pretreatment recommended in cats, puppies, and debilitated dogs."
+    },
+    {
+      "drug": "Glycopyrrolate",
+      "severity": 1,
+      "keywords": [
+        "antimuscarinic",
+        "cholinergic mitigation"
+      ],
+      "evidence": "Glycopyrrolate (antimuscarinic) is used therapeutically to mitigate cholinergic adverse effects of imidocarb."
+    },
+    {
+      "drug": "Doxycycline",
+      "severity": 1,
+      "keywords": [
+        "combination therapy",
+        "ehrlichiosis",
+        "hemoplasmosis"
+      ],
+      "evidence": "Used in combination with imidocarb for ehrlichiosis and feline hemoplasmosis; no adverse pharmacokinetic interaction reported."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 1,
+      "keywords": [
+        "combination therapy",
+        "Babesia gibsoni"
+      ],
+      "evidence": "Used in combination protocol (CDI) with diminazene and imidocarb for B. gibsoni; no adverse interaction reported."
+    },
+    {
+      "drug": "Diminazene aceturate",
+      "severity": 1,
+      "keywords": [
+        "combination therapy",
+        "Babesia gibsoni"
+      ],
+      "evidence": "Used in combination protocol (CDI) with clindamycin and imidocarb for B. gibsoni; no adverse interaction reported."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "바베시아증 (Babesia canis) - FDA 승인 용량",
+          "value": "6.6",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 후 1회 반복 투여",
+          "evidence": "FDA-approved label dose for Babesia canis infections"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "바베시아증 (Babesia canis) - FDA 승인 용량 (SC 경로)",
+          "value": "6.6",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 후 1회 반복 투여",
+          "evidence": "FDA-approved label dose for Babesia canis infections"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바베시아증 (Babesia canis) - 엑스트라라벨 용량",
+          "value": "5 - 7.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "2주 후 반복 투여; 임상적으로 불량한 경우 7일 후 재투여 가능",
+          "evidence": "Extra-label dosage range for Babesia canis"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "바베시아 깁소니 (M121I 유전자 변이) - 엑스트라라벨 CDI 프로토콜",
+          "value": "6",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "디미나젠 투여 다음날 1회 SC 투여 (클린다마이신 30 mg/kg PO q12h, 디미나젠 3.5 mg/kg IM 병용)",
+          "evidence": "Extra-label; prospective unmasked study CDI protocol for B. gibsoni with M121I mutation"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "에를리키아증 (Ehrlichia canis) - 엑스트라라벨",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 또는 15일 간격 2회 투여; 독시사이클린 10 mg/kg PO q24h 28일 병용",
+          "evidence": "Extra-label; reserved for cases where doxycycline or minocycline are ineffective"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간조충증 (Hepatozoon canis) - 엑스트라라벨",
+          "value": "5 - 6",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q14d",
+          "max_dose_mg_kg": 6.0,
+          "duration_note": "혈액 도말에서 가메토사이트가 소실되고 2~3개월 연속 음성 확인될 때까지 반복",
+          "evidence": "Extra-label for Hepatozoon canis"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간조충증 (Hepatozoon canis) - 엑스트라라벨 (SC 경로)",
+          "value": "5 - 6",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q14d",
+          "max_dose_mg_kg": 6.0,
+          "duration_note": "혈액 도말에서 가메토사이트가 소실되고 2~3개월 연속 음성 확인될 때까지 반복",
+          "evidence": "Extra-label for Hepatozoon canis"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "사이토옥스주노시스 (Cytauxzoon felis) - 엑스트라라벨",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 후 반복 투여; 아토바쿠온/아지스로마이신이 현재 1차 선택약. 항무스카린제 전처치 권고.",
+          "evidence": "Extra-label for Cytauxzoon felis; atovaquone/azithromycin is preferred"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고양이 바베시아증 (대형 바베시아) - 엑스트라라벨",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여; 독시사이클린 병용 가능. Babesia felis에는 효과 없음.",
+          "evidence": "Extra-label for large Babesia (B. canis subsp presentii, B. herpailuri); not effective against B. felis"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고양이 헤모플라스마증 (Mycoplasma haemofelis 등) - 엑스트라라벨",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q14d",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 2회 투여; 독시사이클린 불내성 고양이에서 대안으로 사용",
+          "evidence": "Extra-label; used successfully in 5 naturally infected cats that failed other treatments"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 위험-이익 평가 후 투여 여부 결정 권고. 드물게 심각한 신세뇨관 괴사 보고. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 환자에서 위험-이익 평가 후 투여 여부 결정 권고. 드물게 심각한 간 괴사 보고. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "콜린에스테라제 억제제 노출",
+      "match_terms": [
+        "cholinesterase inhibitor",
+        "neostigmine",
+        "pyridostigmine",
+        "organophosphate",
+        "carbamate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "폐기능 저하",
+      "match_terms": [
+        "pulmonary disease",
+        "lung disease",
+        "respiratory impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "정맥 내(IV) 투여",
+      "match_terms": [
+        "intravenous",
+        "IV administration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "이미도카브는 감수성 원충의 DNA 핵산과 결합하여 DNA를 풀고 변성시킴으로써 세포 복구 및 복제를 억제한다. 또한 기생충의 포도당 조절 능력을 변화시키는 것으로 알려져 있다. 콜린성 특성을 가지고 있어 독성 프로파일에 기여한다.",
+    "common_extra_effects": [
+      "주사 부위 통증",
+      "침 흘림(타액 분비 증가)",
+      "비루(nasal drip)",
+      "구토",
+      "헐떡임(panting)",
+      "설사",
+      "주사 부위 염증(드물게 궤양)",
+      "불안(restlessness)",
+      "저혈당증",
+      "드물게 심각한 신세뇨관 괴사",
+      "드물게 심각한 간 괴사",
+      "드물게 심각한 콜린성 증상"
+    ],
+    "dog_mechanism": "개에서 바베시아 등 원충의 DNA와 결합하여 복제를 억제하고 포도당 조절을 방해함.",
+    "dog_extra_effects": [
+      "주사 부위 통증",
+      "침 흘림",
+      "비루",
+      "구토",
+      "헐떡임",
+      "설사",
+      "주사 부위 염증(드물게 궤양)",
+      "불안",
+      "저혈당증",
+      "드물게 신세뇨관 괴사",
+      "드물게 간 괴사",
+      "크레아틴 키나제(CK) 상승"
+    ],
+    "cat_mechanism": "고양이에서 원충의 DNA와 결합하여 복제를 억제함. 콜린성 부작용이 더 두드러질 수 있음.",
+    "cat_extra_effects": [
+      "침 흘림",
+      "눈물 흘림(lacrimation)",
+      "구토",
+      "설사",
+      "근육 떨림",
+      "불안",
+      "빈맥(tachycardia)",
+      "호흡곤란(dyspnea)"
+    ]
+  },
+  "species_notes": {
+    "dog": "이미도카브는 개에서 바베시아증(Babesia canis) 치료에 FDA 승인된 약물이다. Babesia gibsoni에 대해서는 B. canis보다 효과가 낮다. 콜린성 부작용 완화를 위해 아트로핀 0.02~0.05 mg/kg SC 전처치를 고려할 수 있다(0.5 mg/kg는 과용량 오류임). IV 투여는 절대 금기이다. 치료 후 신장 및 간 기능 모니터링이 권고된다.",
+    "cat": "고양이에서 이미도카브는 엑스트라라벨로만 사용된다. 사이토옥스주노시스(Cytauxzoon felis) 치료에는 현재 아토바쿠온/아지스로마이신이 1차 선택약이다. 고양이는 콜린성 부작용(빈맥, 호흡곤란, 근육 떨림 등)에 더 민감할 수 있으므로 아트로핀 또는 글리코피롤레이트 전처치가 권고된다. 적극적인 지지 요법이 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능, 간기능, 폐기능 저하 환자에서 위험-이익 평가 후 사용. 강아지, 임신·수유·번식 동물에서 안전성 미확립. IV 투여 절대 금기. 콜린에스테라제 억제제 노출 동물에서 사용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 엑스트라라벨 사용. 콜린성 부작용에 민감하므로 항무스카린제 전처치 권고. 적극적인 지지 요법 필요. 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "2°C~25°C(36°F~77°F) 보관, 차광 보관. 다른 약물과 혼합 금지.",
+    "forms": [
+      "Imidocarb Dipropionate 120 mg/mL 주사액 (10 mL 다회용 바이알) - Imizol® (개용, FDA 승인)",
+      "Imidocarb Dipropionate 100 mg/mL 주사액 - Imizol® Equine (말/얼룩말용, 미국 내 상업적 유통 불명확)",
+      "Imidocarb Dipropionate 85 mg/mL 주사액 (소용, 일부 국가에서 승인)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이미도카브(Imizol®)는 개의 바베시아증(Babesia canis) 치료에 FDA 승인된 항원충제이다. 콜린성 부작용(침 흘림, 구토 등)이 흔하며, 드물게 심각한 신세뇨관 괴사 및 간 괴사가 발생할 수 있다. IV 투여는 절대 금기이며, 콜린에스테라제 억제제 노출 동물에서는 사용을 금한다. 고양이에서는 엑스트라라벨로만 사용되며, 항무스카린제 전처치가 권고된다.",
+    "indications": "승인 적응증: 개의 바베시아증(Babesia canis). 엑스트라라벨 적응증: 개의 Babesia gibsoni 감염(CDI 프로토콜), 에를리키아증(Ehrlichia canis, 독시사이클린 병용), 간조충증(Hepatozoon canis); 고양이의 사이토옥스주노시스(Cytauxzoon felis), 고양이 바베시아증(대형 바베시아), 고양이 헤모플라스마증; 말의 피로플라스마증(Babesia caballi, Theileria equi, FDA 승인).",
+    "client_info": "이미도카브는 반드시 수의사가 직접 투여해야 합니다. 투여 후 개에서는 침 흘림, 콧물, 구토가 흔하게 나타날 수 있으며, 덜 흔하게 헐떡임, 설사, 주사 부위 염증, 불안이 나타날 수 있습니다. 고양이에서는 침 흘림, 눈물, 구토, 설사, 근육 떨림, 불안, 빠른 심박수, 호흡 곤란이 나타날 수 있습니다. 부작용이 심한 경우 수의사가 이를 완화하는 약물을 추가로 투여할 수 있습니다. 치료 후 신장 및 간 기능 검사를 정기적으로 받는 것이 권장됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific PK data for dogs and cats (half-life, Tmax, bioavailability, protein binding)",
+      "CYP enzyme profile",
+      "Quantitative renal elimination fraction",
+      "Specific dose adjustment guidelines for renal/hepatic impairment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/2.jsonl",
+    "extracted_at": "2026-03-10T14:10:04.391627+00:00",
+    "reviewer": null
+  }
+}

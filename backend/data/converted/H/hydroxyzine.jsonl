@@ -1,0 +1,586 @@
+{
+  "id": "hydroxyzine",
+  "drug_identity": {
+    "name_ko": "하이드록시진",
+    "name_en": "Hydroxyzine",
+    "active_ingredient": "Hydroxyzine",
+    "brand_names": [
+      "Atarax",
+      "Vistaril",
+      "Hyzine",
+      "Masmoran",
+      "Neucalm",
+      "Vistacot",
+      "Vistazine"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "하이드록시진은 활성 대사체인 세티리진으로 빠르게 전환됨. 개에서 세티리진의 AUC는 하이드록시진의 약 10배. 구체적인 CYP 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개(파모에이트 염): 경구 생체이용률 약 70%(개체 간 변동 큼), 최고 혈중 농도 도달 시간 약 3시간, 소실 반감기 약 18시간. 활성 대사체 세티리진의 소실 반감기 약 11시간. 말: 500mg 단회 경구 투여 후 최고 혈중 농도 도달 시간 약 45분, 소실 반감기 7.4시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 약동학 데이터 일부 존재; 고양이 종별 PK 데이터 없음. 진정 효과 및 항콜린 효과가 주요 부담 요인.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "tremors",
+          "seizures",
+          "paradoxical excitement"
+        ],
+        "index": 1,
+        "evidence": "진정이 가장 흔한 부작용이며, 개에서 떨림 및 드물게 경련이 보고됨. CNS 억제 효과가 주요 뇌 부담 요인."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 가능성이 금기 및 약물 상호작용 항목에 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urine retention"
+        ],
+        "index": -1,
+        "evidence": "항콜린 효과로 인한 요저류 가능성이 언급됨. 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "active metabolite"
+        ],
+        "index": 1,
+        "evidence": "간에서 활성 대사체(세티리진)로 전환됨. 직접적인 간독성 보고는 없으나 주요 대사 기관."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiovascular disease"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 위험 및 심혈관 질환 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "depression",
+          "behavioral changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 다음증, 우울, 행동 변화가 보고됨. 진정이 주요 부작용."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": -1,
+        "evidence": "QT 연장 가능성이 언급되나 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urine retention"
+        ],
+        "index": -1,
+        "evidence": "항콜린 효과로 인한 요저류 가능성. 고양이 특이적 신장 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": -1,
+        "evidence": "간 대사 약물이나 고양이 특이적 간 부담 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": -1,
+        "evidence": "QT 연장 위험 언급. 고양이 특이적 심장 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 11.0,
+      "max": 18.0,
+      "mean": 14.5,
+      "species": "dog"
+    },
+    "f_percent": 70,
+    "protein_binding_percent": null,
+    "evidence": "개(파모에이트 염): 경구 생체이용률 약 70%, Tmax 약 3시간, 소실 반감기 약 18시간(하이드록시진), 활성 대사체 세티리진 반감기 약 11시간. 평균값은 두 반감기의 중간값으로 산출."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcholinesterase Inhibitors (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "anticholinergic antagonism"
+      ],
+      "evidence": "Hydroxyzine may reduce the effects of acetylcholinesterase inhibitors."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, glycopyrrolate, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic effects"
+      ],
+      "evidence": "Additive anticholinergic effects may occur when hydroxyzine is used concomitantly with other anticholinergic agents."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "Additive CNS depression may occur."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "increased AUC",
+        "prolonged IDT suppression"
+      ],
+      "evidence": "Cimetidine increased hydroxyzine serum concentration and AUC as well as prolonging the duration of IDT wheal suppression in rabbits."
+    },
+    {
+      "drug": "CNS Depressant Drugs (acepromazine, ketamine, methocarbamol, mirtazapine, phenobarbital, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "Additive CNS depression may occur if hydroxyzine is combined with other CNS depressant medications."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "vasopressor reversal",
+        "hypotension"
+      ],
+      "evidence": "Hydroxyzine may inhibit or reverse the vasopressor effects of epinephrine; use norepinephrine or metaraminol instead."
+    },
+    {
+      "drug": "Opioids (buprenorphine, fentanyl, hydromorphone, methadone, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "additive anticholinergic effects",
+        "opioid-sparing"
+      ],
+      "evidence": "Additive CNS depression and anticholinergic effects may occur. In humans, hydroxyzine may have an opioid-sparing effect."
+    },
+    {
+      "drug": "Potassium Salts, Oral",
+      "severity": 2,
+      "keywords": [
+        "reduced GI motility",
+        "ulcerogenic risk"
+      ],
+      "evidence": "Hydroxyzine may reduce GI motility, which can enhance the ulcerogenic effects of oral solid potassium dosage forms."
+    },
+    {
+      "drug": "Prokinetic Agents (cisapride, erythromycin, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "reduced prokinetic efficacy",
+        "anticholinergic antagonism"
+      ],
+      "evidence": "The anticholinergic effects of hydroxyzine may decrease the effects of prokinetic agents."
+    },
+    {
+      "drug": "QT Prolonging Agents (amiodarone, cisapride, ondansetron, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "additive QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "May have additive arrhythmogenic effects."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine, doxepin)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "additive anticholinergic effects"
+      ],
+      "evidence": "Additive CNS depression and anticholinergic effects may occur."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 3.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항소양/항히스타민 (오프라벨) - 약동학 연구 기반",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "아토피 피부염의 경우 지속적(매일) 예방 투여 권장",
+          "evidence": "약동학 연구(참고문헌 5) 기반. 용량 증가 또는 투여 빈도 증가가 히스타민 억제 효과를 높이지 않는다는 데이터 있음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항소양/항히스타민 (오프라벨) - 대안 용량",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "임상 사용 보고(참고문헌 11)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항소양/항히스타민 (오프라벨) - 고정 용량",
+          "value": "5 - 10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 아님, 마리당 고정 용량",
+          "evidence": "오프라벨 사용. mg/kg 기준이 아닌 마리당 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항소양/항히스타민 (오프라벨) - 체중 기반 용량",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "하이드록시진 또는 세티리진 과민증",
+      "match_terms": [
+        "hydroxyzine hypersensitivity",
+        "cetirizine hypersensitivity",
+        "antihistamine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "협우각 녹내장",
+      "match_terms": [
+        "angle-closure glaucoma",
+        "narrow-angle glaucoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "QT 간격 연장",
+      "match_terms": [
+        "QT prolongation",
+        "long QT syndrome"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대 / 방광경부 폐색",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "bladder neck obstruction",
+        "urinary obstruction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심부전",
+      "match_terms": [
+        "severe cardiac failure",
+        "heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 병력",
+      "match_terms": [
+        "seizure history",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 초기)",
+      "match_terms": [
+        "pregnancy",
+        "first trimester"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "H1 수용체 길항제로서 히스타민 H1 수용체를 경쟁적으로 억제함. 히스타민을 불활성화하거나 방출을 막지는 않으나 세포에 대한 히스타민 작용을 차단함. 추가적으로 항콜린, 진정, 안정, 항경련, 국소마취, 경도 기관지확장, 항구토 효과를 가짐.",
+    "common_extra_effects": [
+      "진정/졸음",
+      "역설적 흥분",
+      "항콜린 효과 (구강 건조, 요저류, 변비)",
+      "QT 연장",
+      "주사 부위 조직 손상/괴사 (SC 투여 시)",
+      "과다복용 시: 기면, 고체온, 떨림, 빈맥, 운동실조, 경련"
+    ],
+    "dog_mechanism": "H1 수용체 길항을 통한 항소양 및 항히스타민 효과. 활성 대사체 세티리진으로 빠르게 전환됨.",
+    "dog_extra_effects": [
+      "진정 (경미하고 일시적, 반복 투여 시 감소 가능)",
+      "미세 급속 떨림, 전신 떨림",
+      "드물게 경련",
+      "역설적 흥분"
+    ],
+    "cat_mechanism": "H1 수용체 길항을 통한 항소양 및 항히스타민 효과.",
+    "cat_extra_effects": [
+      "다음증",
+      "우울",
+      "행동 변화"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 하이드록시진(파모에이트)의 경구 생체이용률은 약 70%이나 개체 간 변동이 큼. 아토피 피부염 치료 시 급성 악화 전 예방적으로 매일 지속 투여 권장. 클로르페니라민과 병용 시 약 1/3의 개에서 임상 증상 개선 보고. 피내 알레르기 검사(IDT) 전 최소 1~2주 전 투약 중단 필요. 진정은 경미하고 일시적이며 반복 투여 시 감소할 수 있음. 드물게 떨림 및 경련 가능.",
+    "cat": "고양이에서는 mg/kg이 아닌 마리당 고정 용량(5~10mg, q12h) 또는 2mg/kg q12h 사용. 다음증, 우울, 행동 변화가 보고됨. 고양이 특이적 약동학 데이터는 제한적."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "진정, 드문 떨림/경련 가능성. 경련 병력, 심혈관 질환, 녹내장, 요로 폐색 환자에서 주의 사용. 작업견에서 진정 효과가 수행 능력에 영향을 줄 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "다음증, 우울, 행동 변화 가능성. mg/kg이 아닌 마리당 고정 용량 사용 주의. 고양이 특이적 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제품: 밀폐 차광 용기에 실온(20~25°C) 보관. 주사제: 차광하여 실온(20~25°C, 허용 범위 15~30°C) 보관. 모든 액체 제품 동결 금지.",
+    "forms": [
+      "Hydroxyzine HCl 경구 정제: 10mg, 25mg, 50mg",
+      "Hydroxyzine HCl 경구 시럽/용액: 10mg/5mL (2mg/mL)",
+      "Hydroxyzine HCl 주사제: 25mg/mL, 50mg/mL",
+      "Hydroxyzine Pamoate 경구 캡슐: 25mg, 50mg, 100mg (파모에이트 염)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "하이드록시진은 1세대 항히스타민제로 개, 고양이, 말에서 소양증, 알레르기 반응, 아토피 피부염의 보조 치료에 사용됨. 수의과 승인 제품은 없으며 오프라벨로 사용. 진정이 가장 흔한 부작용이며, 개에서 드물게 떨림/경련, 고양이에서 다음증·우울·행동 변화 가능. QT 연장 위험 약물과의 병용 시 주의 필요. 아토피 피부염 치료 시 급성 악화 전 예방적 지속 투여가 효과적.",
+    "indications": "히스타민 매개 소양증 및 알레르기 반응(두드러기, 곤충 교상 과민증), 아토피 피부염(보조 치료), 비만세포종 관련 히스타민 방출 예방, 경도 진정/안정 효과. 모든 적응증이 오프라벨 사용임.",
+    "client_info": "이 약은 알레르기 증상이 나타나기 전, 또는 악화되기 전에 규칙적으로 매일 투여할 때 가장 효과적입니다. 가장 흔한 부작용은 졸음이며, 일부 동물에서는 오히려 도움이 될 수 있습니다. 구강 건조, 변비, 소변 횟수 감소가 나타날 수 있습니다. 음식과 함께 또는 공복에 투여 가능하며, 공복 투여 후 구토가 지속되면 음식과 함께 주세요. 피내 알레르기 검사 예정 시 검사 1~2주 전에 투약을 중단해야 합니다. 작업견의 경우 진정 효과가 수행 능력에 영향을 줄 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding data",
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.pharmacokinetics"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/1.jsonl",
+    "extracted_at": "2026-03-10T13:56:29.126217+00:00",
+    "reviewer": null
+  }
+}

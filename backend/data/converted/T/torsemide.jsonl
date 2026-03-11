@@ -1,0 +1,592 @@
+{
+  "id": "torsemide",
+  "drug_identity": {
+    "name_ko": "토르세미드",
+    "name_en": "Torsemide",
+    "active_ingredient": "Torsemide",
+    "brand_names": [
+      "Demadex",
+      "Isemid",
+      "Torem",
+      "Unat"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Diuretic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음(미국 기준). 개와 고양이의 울혈성 심부전 보조 치료에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.6,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 주요 대사산물은 카르복실산 유도체(생물학적 비활성)이며, 약 60%는 소변으로 미변화체로 배설됨. 수의학적 CYP 데이터는 보고되지 않음."
+    },
+    "extra_information": "개에서 경구 생체이용률 80~100%, 혈장 단백 결합률 >98%. 반감기 약 10시간. 고양이에서 경구 생체이용률 80~100%, 반감기 약 13시간. 이뇨 효과는 투여 후 약 12시간 지속됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학적 종별 PK 데이터가 제한적이므로 임상 보고 및 약리 작용에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "weakness",
+          "restlessness"
+        ],
+        "index": 1,
+        "evidence": "허약감 및 불안 증상이 보고되었으나 직접적인 뇌 독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "anemia",
+          "leukopenia",
+          "electrolyte imbalance",
+          "hypokalemia",
+          "hyponatremia"
+        ],
+        "index": 2,
+        "evidence": "빈혈, 백혈구 감소증, 전해질 불균형(저칼륨혈증, 저나트륨혈증, 저칼슘혈증, 저마그네슘혈증) 등 혈액학적 이상이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "polyuria",
+          "increased renal values",
+          "renal insufficiency",
+          "renal failure",
+          "prerenal azotemia",
+          "nephrotoxic",
+          "BUN",
+          "creatinine"
+        ],
+        "index": 3,
+        "evidence": "다뇨, 신장 수치 상승, 신부전, 전신성 질소혈증이 임상 연구에서 보고됨. 신독성 약물 병용 시 급성 신부전 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic dysfunction"
+        ],
+        "index": 1,
+        "evidence": "심각한 간 기능 장애 환자에서 주의 사용 권고. 직접적인 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "decreased blood volume"
+        ],
+        "index": 1,
+        "evidence": "과도한 이뇨로 인한 혈액량 감소 및 저혈압 가능성. 심부전 치료제로 사용되나 과도한 이뇨 시 심박출량 감소 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "weakness"
+        ],
+        "index": 1,
+        "evidence": "허약감이 잠재적 부작용으로 언급됨. 직접적인 뇌 독성 근거 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "electrolyte imbalance",
+          "hypokalemia",
+          "hyponatremia"
+        ],
+        "index": 2,
+        "evidence": "전해질 불균형(저칼륨혈증, 저나트륨혈증 등)이 고양이에서도 발생 가능. 고양이에서 칼륨 배설 효과는 푸로세미드와 유사."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "polyuria",
+          "renal insufficiency",
+          "renal failure",
+          "prerenal azotemia"
+        ],
+        "index": 3,
+        "evidence": "고양이 자발성 CHF 연구에서 내약성 확인됨. 과도한 이뇨로 인한 신기능 악화 가능성 존재."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic dysfunction"
+        ],
+        "index": 1,
+        "evidence": "간 기능 장애 환자에서 주의 사용 권고. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "decreased blood volume"
+        ],
+        "index": 1,
+        "evidence": "과도한 이뇨로 인한 혈액량 감소 및 저혈압 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 10.0,
+      "max": 13.0,
+      "mean": 11.5,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 98,
+    "evidence": "개에서 이뇨 활성은 투여 후 1시간 이내 시작, 약 2시간에 최고조, 약 12시간 지속. 개 반감기 약 10시간, 고양이 반감기 약 13시간. 경구 생체이용률 80~100%(개, 고양이). 혈장 단백 결합률 >98%(개)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (enalapril, benazepril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "volume depletion",
+        "sodium depletion"
+      ],
+      "evidence": "Diuretic-induced volume or sodium depletion may slightly increase risk of hypotension when combined with ACEIs."
+    },
+    {
+      "drug": "Aminoglycosides (gentamicin, amikacin)",
+      "severity": 2,
+      "keywords": [
+        "ototoxicity",
+        "nephrotoxicity"
+      ],
+      "evidence": "Other loop diuretics have been associated with increased ototoxic or nephrotoxic risk of aminoglycosides; clinical significance with torsemide is unknown."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Loop diuretics may increase the risk for nephrotoxicity development when combined with amphotericin B."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Concomitant administration may decrease torsemide absorption; administer separately."
+    },
+    {
+      "drug": "Cisplatin",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "renal failure"
+      ],
+      "evidence": "Concomitant use may increase the risk for worsening renal function or renal failure."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisone/prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Increased risk of hypokalemia when corticosteroids are combined with torsemide."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased AUC",
+        "hypokalemia",
+        "digoxin toxicity"
+      ],
+      "evidence": "Digoxin can increase torsemide AUC by 50% (unlikely clinically significant); torsemide-induced hypokalemia may increase potential for digoxin toxicity."
+    },
+    {
+      "drug": "Iohexol",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Increased risk for nephrotoxicity when combined with iohexol."
+    },
+    {
+      "drug": "NSAIDs (carprofen, flunixin)",
+      "severity": 2,
+      "keywords": [
+        "reduced natriuresis",
+        "renal failure",
+        "worsening renal function"
+      ],
+      "evidence": "NSAIDs may reduce the natriuretic effects of torsemide and increase the risk for worsening renal function or renal failure."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic efficacy"
+      ],
+      "evidence": "Probenecid can reduce the diuretic efficacy of torsemide."
+    },
+    {
+      "drug": "Salicylates (aspirin)",
+      "severity": 1,
+      "keywords": [
+        "reduced salicylate excretion"
+      ],
+      "evidence": "Torsemide can reduce the excretion of salicylates, potentially increasing salicylate levels."
+    },
+    {
+      "drug": "Loop diuretics (other)",
+      "severity": 3,
+      "keywords": [
+        "excessive diuresis",
+        "electrolyte depletion"
+      ],
+      "evidence": "Torsemide should not be used with other loop diuretics due to risk of excessive diuresis and electrolyte depletion."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "울혈성 심부전 보조 치료(오프라벨) - 초기 용량",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "푸로세미드 총 1일 용량의 5~10%에서 시작. 임상 반응에 따라 조정.",
+          "evidence": "Plumb's 오프라벨 용량; 복수의 MMVD 임상 연구에서 사용됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "울혈성 심부전 보조 치료(오프라벨) - 초기 용량",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "푸로세미드 총 1일 용량의 5~10%에서 시작. 소규모 후향적 연구에서 내약성 확인됨.",
+          "evidence": "Plumb's 오프라벨 용량; 고양이 자발성 CHF 소규모 후향적 연구 근거."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "무뇨증 환자에서 사용 금기. 심각한 신장 장애 환자에서 권장 용량 초과 시 이독성 위험 증가. 신독성 약물 병용 시 급성 신부전 위험 증가. 신기능 모니터링(BUN, 크레아티닌) 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "심각한 간 기능 장애 환자에서 주의하여 사용. 구체적인 용량 조정 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "무뇨증",
+      "match_terms": [
+        "anuria",
+        "무뇨"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수 또는 저혈량증",
+      "match_terms": [
+        "dehydration",
+        "hypovolemia",
+        "탈수"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "토르세미드 또는 설포닐우레아 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "sulfonamide allergy",
+        "sulfonylurea allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 전해질 고갈",
+      "match_terms": [
+        "electrolyte depletion",
+        "hypokalemia",
+        "hyponatremia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver failure",
+        "간부전"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "당뇨"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고요산혈증",
+      "match_terms": [
+        "hyperuricemia",
+        "고요산혈증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신독성 약물 병용",
+      "match_terms": [
+        "nephrotoxic drugs",
+        "aminoglycosides",
+        "amphotericin B"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "헨레 고리 상행각에서 1Na+/1K+/2Cl- 공동수송체의 염소 결합 부위를 차단하여 나트륨, 염소, 수분의 재흡수를 억제하는 루프 이뇨제. 푸로세미드보다 약 10~20배 강력하며 이뇨 효과가 약 12시간 지속됨.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "다뇨",
+      "신장 수치 상승",
+      "신부전",
+      "저칼륨혈증",
+      "저나트륨혈증",
+      "저칼슘혈증",
+      "저마그네슘혈증",
+      "탈수",
+      "저혈압",
+      "빈혈",
+      "백혈구 감소증",
+      "허약감",
+      "불안",
+      "이독성(고용량)"
+    ],
+    "dog_mechanism": "개에서 나트륨 대비 칼륨 배설 비율이 20:1로 푸로세미드보다 약 2배 높음. 알도스테론 수치를 증가시키고 수용체 결합 알도스테론을 억제하는 효과가 있음. 건강한 개에서 14일 후 푸로세미드에 대한 이뇨 저항성이 발생하였으나 토르세미드에서는 발생하지 않음.",
+    "dog_extra_effects": [
+      "구강 점막 건조",
+      "음수량 증가",
+      "소변 pH 증가",
+      "소변 비중 감소",
+      "혈청 알도스테론 농도 증가",
+      "BUN 및 혈장 크레아티닌 증가"
+    ],
+    "cat_mechanism": "고양이에서 칼륨 배설 효과는 푸로세미드와 유사. 최대 이뇨는 투여 후 약 4시간에 발생하며 12시간 지속됨.",
+    "cat_extra_effects": [
+      "전해질 불균형",
+      "다뇨"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 토르세미드는 MMVD C~D 단계의 심부전에서 푸로세미드에 반응하지 않는 경우 대안으로 사용됨. 복수의 임상 연구에서 푸로세미드에 비해 비열등성이 확인되었으며, 심장 사망 위험을 64% 감소시키는 효과가 보고됨. 그러나 부작용 발생 빈도가 더 높을 수 있으므로 신기능 및 전해질 모니터링이 필수적임. 초기 용량은 푸로세미드 총 1일 용량의 5~10%에서 시작.",
+    "cat": "고양이에서 소규모 후향적 연구에서 자발성 CHF의 1차 및 2차 치료로 내약성이 확인됨. 고양이에서의 데이터는 제한적이므로 신중한 모니터링이 필요함. 최대 이뇨는 투여 후 약 4시간에 발생하며 12시간 지속됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 장애, 전해질 불균형, 탈수 위험이 있으므로 주의 사용. 신독성 약물 병용 시 급성 신부전 위험 증가. 정기적인 전해질, BUN, 크레아티닌 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 데이터가 제한적임. 소규모 연구에서 내약성 확인. 전해질 및 신기능 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 이하, 가급적 15~30°C(59~86°F) 사이에서 보관.",
+    "forms": [
+      "토르세미드 경구정: 5mg, 10mg, 20mg, 100mg (Demadex®, 제네릭)",
+      "토르세미드 주사제: 10mg/mL (제네릭) - 미국에서 판매 중단됨"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "토르세미드는 푸로세미드보다 약 10~20배 강력한 루프 이뇨제로, 이뇨 효과가 약 12시간 지속됩니다. 개와 고양이의 울혈성 심부전(CHF) 보조 치료에 오프라벨로 사용되며, 특히 푸로세미드에 반응하지 않는 환자에서 유용합니다. 초기 용량은 푸로세미드 총 1일 용량의 5~10%에서 시작합니다. 미국에서 수의학적 허가 제품은 없으며, 주사제는 판매 중단되어 경구 투여만 가능합니다. 신기능, 전해질, 수화 상태의 정기적 모니터링이 필수적입니다.",
+    "indications": "개와 고양이의 울혈성 심부전(CHF) 보조 치료(오프라벨), 특히 푸로세미드에 불응성인 경우. 개의 점액종성 승모판 질환(MMVD) C~D 단계. 말의 체액 과부하(오프라벨).",
+    "client_info": "이 약을 복용하는 동안 반려동물은 평소보다 물을 더 많이 마시고 소변을 더 자주 볼 것입니다. 항상 신선한 물을 충분히 제공해 주세요. 음식과 함께 또는 공복에 투여할 수 있습니다. 수의사의 정기적인 검진을 빠지지 마세요. 과도한 갈증, 허약감, 실신, 머리 기울임, 소변 감소, 또는 빠른 심박동이 관찰되면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min (cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list[0].max_dose_mg_kg",
+      "dosage_and_kinetics.dog.dosage_list[0].max_dose_mg_kg"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/48.jsonl",
+    "extracted_at": "2026-03-11T04:01:01.071492+00:00",
+    "reviewer": null
+  }
+}

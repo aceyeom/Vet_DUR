@@ -1,0 +1,627 @@
+{
+  "id": "calcitriol",
+  "drug_identity": {
+    "name_ko": "칼시트리올",
+    "name_en": "Calcitriol",
+    "active_ingredient": "Calcitriol",
+    "brand_names": [
+      "Rocaltrol",
+      "Calcijex"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 모든 동물 적응증은 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Cap",
+      "Oral Liquid",
+      "Inj",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.25,
+        "unit": "mcg"
+      },
+      {
+        "value": 0.5,
+        "unit": "mcg"
+      },
+      {
+        "value": 1.0,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 2.0,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "칼시트리올은 신장 활성화가 필요 없는 활성형 비타민 D 유사체임. 바르비투레이트계 약물이 간 효소를 유도하여 비타민 D 유사체의 대사를 증가시킬 수 있다고 언급됨. 구체적인 CYP 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "지방 흡수가 정상인 경우 소장에서 잘 흡수됨. 담즙이 적절한 흡수에 필요하며, 지방변증 또는 간·담도 질환 환자에서는 흡수가 감소함. 작용 발현 시간 1~4일, 작용 지속 시간 2주 미만."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 칼시트리올은 고칼슘혈증을 통해 신장 손상을 유발할 수 있으며, 조직 석회화 위험이 있음. 직접적인 수의학적 장기별 PK 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "seizures (hypocalcemia sign)"
+        ],
+        "index": -1,
+        "evidence": "저칼슘혈증 징후로 경련이 언급되나, 칼시트리올 자체의 직접적인 뇌 부담 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypercalcemia",
+          "hyperphosphatemia",
+          "hypercalciuria"
+        ],
+        "index": 1,
+        "evidence": "고칼슘혈증, 고인산혈증, 고칼슘뇨증이 주요 부작용으로 명시됨. 혈청 칼슘·인 모니터링 필수."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hypercalcemia",
+          "tissue mineralization",
+          "renal tissue damage",
+          "azotemia",
+          "hypercalciuria"
+        ],
+        "index": 2,
+        "evidence": "고칼슘혈증으로 인한 조직 석회화 및 추가적인 신장 조직 손상이 명시됨. 고인산혈증과 병용 시 신장 손상 위험 증가. 아조테미아 발생 가능."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic disease (reduced absorption)"
+        ],
+        "index": -1,
+        "evidence": "간 질환 시 흡수 감소 언급. 직접적인 간독성 근거는 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypercalcemia",
+          "digoxin toxicity risk"
+        ],
+        "index": -1,
+        "evidence": "고칼슘혈증이 디곡신 독성 위험을 증가시킬 수 있음. 직접적인 심장 독성 근거는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "seizures (hypocalcemia sign)"
+        ],
+        "index": -1,
+        "evidence": "저칼슘혈증 징후로 경련이 언급되나, 칼시트리올 자체의 직접적인 뇌 부담 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypercalcemia",
+          "hyperphosphatemia",
+          "hypercalciuria"
+        ],
+        "index": 1,
+        "evidence": "고칼슘혈증, 고인산혈증, 고칼슘뇨증이 주요 부작용으로 명시됨. 혈청 칼슘·인 모니터링 필수."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hypercalcemia",
+          "tissue mineralization",
+          "renal tissue damage",
+          "azotemia"
+        ],
+        "index": 2,
+        "evidence": "고칼슘혈증으로 인한 조직 석회화 및 신장 손상 위험. 고양이에서 CKD 관련 사용 근거는 약함."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic disease (reduced absorption)"
+        ],
+        "index": -1,
+        "evidence": "간 질환 시 흡수 감소 언급. 직접적인 간독성 근거는 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypercalcemia",
+          "digoxin toxicity risk"
+        ],
+        "index": -1,
+        "evidence": "고칼슘혈증이 디곡신 독성 위험을 증가시킬 수 있음. 직접적인 심장 독성 근거는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1440,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "작용 발현 시간 1~4일(1440~5760분), 작용 지속 시간 2주 미만으로 명시됨. 반감기, 생체이용률, 단백결합률은 Plumb's에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aluminum-containing Phosphorus Binding Agents (e.g., aluminum hydroxide)",
+      "severity": 2,
+      "keywords": [
+        "aluminum absorption increase"
+      ],
+      "evidence": "Calcitriol may increase aluminum absorption from aluminum-containing phosphorus binders."
+    },
+    {
+      "drug": "Barbiturates (e.g., phenobarbital, primidone)",
+      "severity": 2,
+      "keywords": [
+        "hepatic enzyme induction",
+        "increased metabolism",
+        "decreased efficacy"
+      ],
+      "evidence": "Barbiturates may induce hepatic enzyme systems and increase the metabolism of vitamin D analogues, decreasing their activity."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "hypercalcemia",
+        "antagonism of calcium channel blockers"
+      ],
+      "evidence": "Calcitriol-induced hypercalcemia may antagonize the effects of calcium channel blocking agents."
+    },
+    {
+      "drug": "Calcium-containing Phosphorus Binding Agents (e.g., calcium acetate, calcium carbonate)",
+      "severity": 2,
+      "keywords": [
+        "hypercalcemia"
+      ],
+      "evidence": "Use with calcitriol may induce hypercalcemia."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Cholestyramine may reduce calcitriol absorption; separate administration by several hours."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "nullified efficacy",
+        "antagonism"
+      ],
+      "evidence": "Corticosteroids can nullify the effects of vitamin D analogues."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "hypercalcemia",
+        "digoxin toxicity"
+      ],
+      "evidence": "Hypercalcemia induced by calcitriol increases the risk for digoxin toxicity."
+    },
+    {
+      "drug": "Magnesium-Containing Products (e.g., magnesium hydroxide)",
+      "severity": 2,
+      "keywords": [
+        "hypermagnesemia"
+      ],
+      "evidence": "Concurrent use may result in hypermagnesemia."
+    },
+    {
+      "drug": "Sevelamer",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Sevelamer may reduce calcitriol absorption; separate administration by several hours."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "aluminum absorption increase"
+      ],
+      "evidence": "Calcitriol may increase aluminum absorption from sucralfate."
+    },
+    {
+      "drug": "Thiazide Diuretics (e.g., chlorothiazide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypercalcemia"
+      ],
+      "evidence": "Thiazide diuretics may cause hypercalcemia when given in conjunction with vitamin D analogues."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "이차성 부갑상선기능항진증 및 만성신장질환(CKD) 진행 억제 (허가 외)",
+          "value": "1.5 - 3.5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.005,
+          "duration_note": "평생 치료 필요. 최대 5 ng/kg/일 초과 금지. 고칼슘혈증 발생 시 격일로 2배 용량 투여 고려.",
+          "evidence": "IRIS CKD 3~4단계 개에서 칼시트리올 사용을 지지하는 강력한 근거 있음. 저녁 공복 투여 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "이차성 부갑상선기능항진증 및 만성신장질환(CKD) — 대체 용량 (허가 외)",
+          "value": "2 - 2.5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.005,
+          "duration_note": "최대 5 ng/kg/일. 고칼슘혈증 발생 시 격일로 2배 용량 투여(예: 2 ng/kg/일 → 4 ng/kg 격일).",
+          "evidence": "공복 투여 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부갑상선기능저하증 관련 저칼슘혈증의 장기 유지 (허가 외)",
+          "value": "30 - 60",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 칼슘과 병용하여 비타민 D 용량 요구량 감소.",
+          "evidence": "공복 투여 권장."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "부갑상선기능저하증 관련 저칼슘혈증 — 초기 및 유지 용량 (허가 외)",
+          "value": "20 - 30",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 2~4일간 1일 2회 분할 투여 후 유지 용량 5~15 ng/kg/일로 감량.",
+          "evidence": "유지 용량: 5~15 ng/kg/일."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "원발성 특발성 지루증 (허가 외)",
+          "value": "10",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "공복 투여 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "CKD 관련 이차성 부갑상선기능항진증 (허가 외)",
+          "value": "1.5 - 3.5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "식사와 별도로 투여.",
+          "evidence": "고양이에서 칼시트리올 사용을 지지하는 근거는 약함."
+        },
+        {
+          "logic_type": "linear",
+          "context": "CKD 관련 이차성 부갑상선기능항진증 — 대체 용량 (허가 외)",
+          "value": "2.5 - 3.5",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "식사와 별도로 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부갑상선기능저하증 관련 저칼슘혈증의 장기 유지 (허가 외)",
+          "value": "30 - 60",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 효과 발현 1~4일. 경구 칼슘과 병용. 혈청 칼슘 모니터링으로 용량 조절.",
+          "evidence": "경구 칼슘 보충제 병용 권장."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "부갑상선기능저하증 관련 저칼슘혈증 — 초기 및 유지 용량 (허가 외)",
+          "value": "20 - 30",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 2~4일간 투여 후 10~20 ng/kg/일로 감량하여 장기 관리. 경구 칼슘 보충제는 보통 칼시트리올 시작 1주 내 감량·중단 가능.",
+          "evidence": "최대 효과 발현 1~4일."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "부갑상선기능저하증 관련 저칼슘혈증 — 초기 분할 투여 및 유지 (허가 외)",
+          "value": "20 - 30",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 2~4일간 1일 2회 분할 투여 후 유지 용량 5~15 ng/kg/일로 감량.",
+          "evidence": "유지 용량: 5~15 ng/kg/일."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "칼시트리올은 신장 활성화가 필요 없는 활성형 비타민 D 유사체임. CKD 환자에서 사용되나, 고칼슘혈증 발생 시 즉시 중단 권장. 혈청 크레아티닌을 1~3개월마다 모니터링 권장. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 또는 담도 질환 환자에서 흡수가 감소할 수 있음. 구체적인 용량 조절 권고사항은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "고칼슘혈증",
+      "match_terms": [
+        "hypercalcemia",
+        "elevated calcium",
+        "ionized calcium elevated"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "비타민 D 독성",
+      "match_terms": [
+        "vitamin D toxicity",
+        "vitamin D toxicosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고인산혈증",
+      "match_terms": [
+        "hyperphosphatemia",
+        "elevated phosphorus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "칼슘-인 곱 > 70",
+      "match_terms": [
+        "calcium phosphorus product >70",
+        "Ca x P >70"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": 70.0,
+        "unit": null
+      }
+    },
+    {
+      "condition": "칼슘 옥살레이트 요석증",
+      "match_terms": [
+        "calcium oxalate urolithiasis",
+        "calcium oxalate uroliths"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "흡수불량 증후군",
+      "match_terms": [
+        "malabsorption syndrome",
+        "steatorrhea"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "칼시트리올은 활성형 비타민 D 유사체로, PTH 및 칼시토닌과 함께 칼슘 항상성을 조절하는 호르몬으로 작용함. 위장관에서 칼슘 흡수 증가, 신세뇨관에서 칼슘 재흡수 촉진, 뼈에서 무기질 침착 및 흡수 속도 증가. 신장 활성화 불필요.",
+    "common_extra_effects": [
+      "고칼슘혈증 (다음, 다뇨, 식욕부진)",
+      "고칼슘뇨증",
+      "고인산혈증",
+      "조직 석회화",
+      "구토",
+      "설사",
+      "무기력증",
+      "아조테미아"
+    ],
+    "dog_mechanism": "CKD 개에서 저용량 투여 시 고칼슘혈증을 드물게 유발하나, 칼슘 함유 인 결합제(특히 탄산칼슘)와 병용 시 위험 증가. 만성 투여(최대 26주) 시 경계성 칼시트리올 농도 상승에서도 조직 석회화 확인됨.",
+    "dog_extra_effects": [
+      "고칼슘혈증",
+      "조직 석회화 (만성 투여 시)",
+      "다음",
+      "다뇨",
+      "식욕부진"
+    ],
+    "cat_mechanism": "고양이에서 CKD 관련 사용 근거는 약함. 식욕 및 전반적 건강 상태 개선 효과 보고됨.",
+    "cat_extra_effects": [
+      "고칼슘혈증",
+      "고인산혈증",
+      "고칼슘뇨증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 IRIS CKD 3~4단계에 대한 칼시트리올 사용을 지지하는 강력한 근거가 있음. 초기 권장 용량은 1.5~3.5 ng/kg/일 PO이며 최대 5 ng/kg/일을 초과하지 않음. 저녁 공복 투여 권장. 고칼슘혈증 발생 시 격일 2배 용량 전략 고려. 평생 치료 필요. 혈청 칼슘, 인, 크레아티닌 정기 모니터링 필수.",
+    "cat": "고양이에서 CKD 관련 칼시트리올 사용을 지지하는 근거는 약함. 식욕 및 전반적 건강 상태 개선 효과가 보고됨. 식사와 별도로 투여 권장. 혈청 칼슘 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "고칼슘혈증, 고인산혈증, 칼슘 옥살레이트 요석증, 흡수불량 증후군 환자에서 주의 필요. 혈청 칼슘 모니터링 필수. 칼슘 함유 인 결합제와 병용 시 고칼슘혈증 위험 증가."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고칼슘혈증, 고인산혈증 환자에서 주의 필요. 고양이에서 사용 근거 약함. 혈청 칼슘 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛으로부터 보호. 경구 제품은 밀폐된 차광 용기에 실온(15~30°C, 59~86°F) 보관. 주사제는 20~25°C(68~77°F) 보관. 방부제 미함유; 앰플 개봉 후 잔여 약물 폐기.",
+    "forms": [
+      "Calcitriol 경구 캡슐: 0.25 mcg, 0.5 mcg (Rocaltrol®, 제네릭)",
+      "Calcitriol 경구 용액: 1 mcg/mL, 15 mL 병 (Rocaltrol®, 제네릭)",
+      "Calcitriol 주사제: 1 mcg/mL, 2 mcg/mL, 1 mL 단회용 앰플 및 바이알 (제네릭)",
+      "국소용 칼시트리올 제제"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "칼시트리올은 활성형 비타민 D 유사체로, 개와 고양이의 저칼슘혈증 및 만성신장질환(CKD) 치료에 사용됨. 수의학적 승인 제품 없음(허가 외 사용). 개에서 IRIS CKD 3~4단계에 대한 강력한 근거 있음. 고칼슘혈증이 가장 중요한 부작용이며 혈청 칼슘 모니터링 필수. 공복 투여 권장. 칼시토닌과 혼동 주의.",
+    "indications": "▶ 개: 이차성 부갑상선기능항진증 및 CKD 진행 억제 (IRIS 3~4단계), 부갑상선기능저하증 관련 저칼슘혈증 장기 유지, 원발성 특발성 지루증 (모두 허가 외)\n▶ 고양이: CKD 관련 이차성 부갑상선기능항진증, 부갑상선기능저하증 관련 저칼슘혈증 장기 유지 (모두 허가 외, 근거 약함)\n▶ 기타: 특정 종양(비만세포종 등) 보조 치료, 난치성 피부병 치료 보조",
+    "client_info": "▶ 공복 상태에서 투여하는 것이 좋으며, 저녁에 투여하도록 권장하는 경우도 있습니다.\n▶ 혈중 칼슘이 높아지는 징후(갈증 증가, 소변량 증가, 식욕 감소)와 낮아지는 징후(근육 떨림, 경련, 뻣뻣함, 허약감, 비틀거림, 행동 변화, 발작, 얼굴 가려움)를 주의 깊게 관찰하십시오. 이러한 증상이 나타나면 즉시 수의사에게 연락하십시오.\n▶ 수의사의 승인 없이 칼슘 보충제나 제산제(예: Tums®)를 투여하지 마십시오.\n▶ 칼시토닌(calcitonin)과 혼동하지 않도록 주의하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific half-life data",
+      "Oral bioavailability percentage",
+      "Protein binding percentage",
+      "CYP enzyme profile",
+      "Renal elimination fraction",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.t_max_hr",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/52.jsonl",
+    "extracted_at": "2026-03-11T05:17:45.460716+00:00",
+    "reviewer": null
+  }
+}

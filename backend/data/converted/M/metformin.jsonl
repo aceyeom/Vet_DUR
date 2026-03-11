@@ -1,0 +1,553 @@
+{
+  "id": "metformin",
+  "drug_identity": {
+    "name_ko": "메트포르민",
+    "name_en": "Metformin",
+    "active_ingredient": "Metformin hydrochloride",
+    "brand_names": [
+      "Glucophage",
+      "Glucophage XR",
+      "Glumetza",
+      "Fortamet",
+      "Riomet"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 고양이의 비인슐린의존성 당뇨병(NIDDM) 및 말의 대사증후군에 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 850,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "메트포르민은 간에서 대사되지 않으며 주로 신장을 통해 원형으로 배설된다. CYP 효소 관여에 대한 정보는 본 모노그래프에 기재되지 않음."
+    },
+    "extra_information": "고양이에서 경구 투여 후 흡수율은 35~67%로 가변적이며, 정상상태 분포용적은 0.55 L/kg, 소실 반감기는 약 12시간, 총 청소율은 0.15 L/시간/kg이다. 말에서는 경구 생체이용률이 매우 낮아 급식 시 4%, 공복 시 7%이며, IV 투여 후 소실 반감기는 약 25분이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 약물로 신장 부담이 가장 높음. 유산산증 위험으로 인해 간 및 전신 대사 부담 존재. 고양이 특이적 수의학 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "somnolence"
+        ],
+        "index": 1,
+        "evidence": "개에서 기면(lethargy)이 과다복용 시 임상 증상으로 보고됨. 직접적인 CNS 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "lactic acidosis",
+          "hypoglycemia"
+        ],
+        "index": 2,
+        "evidence": "개에서 198~291 mg/kg 섭취 후 유산산증 및 저혈당이 보고된 증례 2건 존재."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction",
+          "contraindicated"
+        ],
+        "index": 3,
+        "evidence": "메트포르민은 주로 신장으로 배설되며, 신기능 장애 시 금기. 신장 부담이 가장 높음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "lactic acidosis risk"
+        ],
+        "index": 2,
+        "evidence": "간기능 장애는 유산산증의 위험인자로 언급됨. 간 대사는 거의 없으나 간 포도당 생성 억제 작용 존재."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "acute congestive heart failure"
+        ],
+        "index": 1,
+        "evidence": "급성 울혈성 심부전은 유산산증의 위험인자로 언급됨. 직접적인 심장 독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "somnolence"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 기면(lethargy)이 이상반응으로 보고됨. 유산산증 초기 증상으로 기면 포함."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "lactic acidosis",
+          "weight loss",
+          "inappetence"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 유산산증 위험 존재. 5마리 당뇨 고양이 연구에서 1마리가 투여 11일 후 원인불명으로 사망."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction",
+          "contraindicated"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 신장 배설이 주요 경로이며, 신기능 장애 시 금기. 고양이 PK 연구에서 확인됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "lactic acidosis risk"
+        ],
+        "index": 1,
+        "evidence": "간기능 장애는 유산산증의 위험인자. 고양이 특이적 간독성 데이터는 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypoxic states"
+        ],
+        "index": 1,
+        "evidence": "저산소 상태(심부전 포함)는 유산산증 위험인자로 언급됨. 고양이 특이적 심장 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 12.0,
+      "species": "cat"
+    },
+    "f_percent": 51,
+    "protein_binding_percent": null,
+    "evidence": "고양이 PK 연구: 경구 흡수율 35~67%(중간값 약 51%), 소실 반감기 약 12시간, 정상상태 분포용적 0.55 L/kg, 총 청소율 0.15 L/시간/kg. 말에서 IV 반감기 약 25분, 경구 생체이용률 4~7%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia"
+      ],
+      "evidence": "ACE inhibitors may increase the risk for hypoglycemia when used with metformin."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (e.g., acetazolamide, zonisamide)",
+      "severity": 2,
+      "keywords": [
+        "lactic acidosis",
+        "decreased serum bicarbonate"
+      ],
+      "evidence": "Carbonic anhydrase inhibitors frequently cause decreased serum bicarbonate, which may increase the risk for lactic acidosis with metformin."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased plasma levels",
+        "increased AUC"
+      ],
+      "evidence": "In humans, cimetidine can cause a 60% increase in peak metformin plasma levels and a 40% increase in AUC."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisone/prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "hyperglycemia"
+      ],
+      "evidence": "Corticosteroids may reduce metformin efficacy by antagonizing its antihyperglycemic effects."
+    },
+    {
+      "drug": "Thiazide Diuretics",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "Thiazide diuretics may reduce the hypoglycemic efficacy of metformin."
+    },
+    {
+      "drug": "Fluoroquinolones (e.g., enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "hypoglycemia",
+        "blood glucose dysregulation"
+      ],
+      "evidence": "Fluoroquinolones may increase the risk for hyperglycemia or hypoglycemia. Monitor blood glucose closely if combination is necessary."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "increased metformin AUC",
+        "altered plasma levels"
+      ],
+      "evidence": "Furosemide can increase the AUC and plasma levels of metformin by 22% in humans; metformin can decrease the peak plasma concentrations and AUC of furosemide."
+    },
+    {
+      "drug": "Iodinated Contrast Agents, Parenteral",
+      "severity": 3,
+      "keywords": [
+        "acute renal failure",
+        "lactic acidosis"
+      ],
+      "evidence": "Parenteral iodinated contrast agents may cause acute renal failure and lactic acidosis if used within 48 hours of a metformin dose. Metformin is temporarily contraindicated when iodinated contrast agents are to be used."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "Isoniazid may reduce the hypoglycemic efficacy of metformin."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "Sympathomimetic agents may reduce the hypoglycemic efficacy of metformin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "비인슐린의존성 당뇨병(NIDDM) - 인슐린 분비 기능이 있는 환자 (오프라벨)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "최대 내약 용량은 14일 연구에서 10 mg/kg으로 확인됨. 일반적으로 25~50 mg/cat BID에 해당.",
+          "evidence": "고양이 PK 연구(6)에서 2 mg/kg BID가 사람에서 유효한 혈장 농도를 달성하는 것으로 추정. 최대 내약 용량 10 mg/kg은 14일 연구(12)에서 확인."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비인슐린의존성 당뇨병(NIDDM) - 고정 용량 (오프라벨)",
+          "value": "25 - 50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "정제 사용 시 조제(compounding) 필요. 경구액(100 mg/mL) 또는 서방정의 고양이 사용 정보 없음.",
+          "evidence": "2 mg/kg BID는 일반적으로 고양이에서 25~50 mg/cat BID에 해당(1)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 메트포르민은 금기. 신장이 주요 배설 경로이며, 신기능 저하 시 유산산증 위험이 증가함. 구체적인 크레아티닌 역치는 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간기능 장애는 유산산증의 위험인자로 언급됨. 간기능 저하 환자에서는 사용을 피하거나 주의가 필요함. 구체적인 용량 조절 지침은 모노그래프에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "metformin hypersensitivity",
+        "biguanide allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "대사성 산증",
+      "match_terms": [
+        "metabolic acidosis",
+        "lactic acidosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요오드화 조영제 사용 예정",
+      "match_terms": [
+        "iodinated contrast",
+        "contrast agent"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "저산소 상태 (급성 울혈성 심부전 등)",
+      "match_terms": [
+        "congestive heart failure",
+        "hypoxia",
+        "respiratory failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중인 암컷",
+      "match_terms": [
+        "lactation",
+        "nursing",
+        "lactating queen"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비구아나이드계 경구 혈당강하제. 골격근 세포막에서 인슐린의 포도당 수송 능력 증가, 간 포도당 생성 억제, 장내 포도당 흡수 감소. 인슐린 분비를 자극하지 않으므로 단독 사용 시 저혈당을 유발하지 않음. 고급 당화 최종산물(AGE) 형성 억제.",
+    "common_extra_effects": [
+      "기면(lethargy)",
+      "식욕부진(inappetence)",
+      "구토(vomiting)",
+      "체중감소(weight loss)",
+      "설사(diarrhea)",
+      "유산산증(lactic acidosis) - 드물지만 치명적 가능성"
+    ],
+    "dog_mechanism": "개에서 NIDDM 발생률이 낮아 사용 근거가 제한적임. 작용 기전은 사람과 유사할 것으로 추정.",
+    "dog_extra_effects": [
+      "설사(diarrhea)",
+      "식욕부진(inappetence)",
+      "구토(vomiting) - 약 40%에서 발생",
+      "기면(lethargy)",
+      "유산산증(lactic acidosis) - 과다복용 시",
+      "저혈당(hypoglycemia) - 과다복용 시(198~291 mg/kg)"
+    ],
+    "cat_mechanism": "고양이에서 경구 흡수율 35~67%로 가변적. 기능적 베타세포가 있는 제2형 당뇨 고양이에서만 사용 권장.",
+    "cat_extra_effects": [
+      "기면(lethargy)",
+      "식욕부진(inappetence)",
+      "구토(vomiting)",
+      "체중감소(weight loss)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 NIDDM은 드물며, 메트포르민 사용 근거가 매우 제한적임. 개에서 약 40%에서 위장관 이상반응(설사, 식욕부진, 구토)이 보고되었으며, 용량 감량 및 주간 용량 증량으로 관리 가능. 과다복용(198~291 mg/kg) 시 유산산증 및 저혈당 증례 보고 있음. 수의학적 허가 용량 없음.",
+    "cat": "고양이에서 기능적 베타세포가 있는 제2형 당뇨 환자에서만 사용 권장. 단독 사용 시 효과가 제한적이며, 다른 경구 혈당강하제(글리피지드 등)나 인슐린과의 비교 연구 없음. 사람용 정제는 고양이에게 정확한 용량 투여가 어려우므로 조제(compounding)가 필요할 수 있음. 5마리 당뇨 고양이 연구에서 1마리가 투여 11일 후 원인불명으로 사망한 사례 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 NIDDM 발생률이 낮고 사용 근거가 제한적임. 위장관 이상반응 발생률이 높음(약 40%). 신기능 장애 시 금기. 과다복용 시 유산산증 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 기능적 베타세포가 있는 제2형 당뇨 환자에서만 사용. 기면, 식욕부진, 구토, 체중감소 등의 이상반응 가능. 신기능 장애 시 금기. 사람용 정제의 정확한 용량 투여 어려움."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20~25°C, 68~77°F) 보관. 15~30°C(59~86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "메트포르민 HCl 경구정: 500 mg, 850 mg, 1000 mg (Glucophage®, 제네릭)",
+      "메트포르민 HCl 서방정: 500 mg, 750 mg, 1000 mg (Glucophage XR®, Glumetza®, Fortamet®, 제네릭)",
+      "메트포르민 HCl 경구액: 500 mg/5 mL (100 mg/mL), 118 mL 및 473 mL (Riomet®)",
+      "메트포르민/글리부라이드 복합 경구정",
+      "메트포르민/글리피지드 복합 경구정"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메트포르민은 비구아나이드계 경구 혈당강하제로, 고양이의 비인슐린의존성 당뇨병(NIDDM) 보조 치료에 오프라벨로 사용될 수 있으나 효과가 제한적임. 수의학적 허가 제품 없음. 신기능 장애 환자에서 절대 금기이며, 유산산증이라는 드물지만 치명적인 이상반응에 주의 필요. 고양이에서 기능적 베타세포가 있는 제2형 당뇨 환자에서만 사용 권장. 사람용 정제는 고양이에게 정확한 용량 투여가 어려워 조제가 필요할 수 있음.",
+    "indications": "【오프라벨】고양이: 기능적 베타세포가 있는 비인슐린의존성 당뇨병(NIDDM) 보조 치료 (2 mg/kg PO BID, 일반적으로 25~50 mg/cat BID). 【오프라벨】개: NIDDM (근거 매우 제한적, 발생률 낮음). 【오프라벨】말: 말 대사증후군 보조 치료 (30 mg/kg PO q8~12h, 급식 30~60분 전 투여; 효능에 대한 근거 상충).",
+    "client_info": "이 약을 투여하는 동안 구토, 식욕 감소, 설사, 기운 없음 또는 기타 새로운 증상이 나타나면 즉시 수의사에게 알려주세요. 정기적인 신체검사와 혈액검사를 위한 내원 일정을 반드시 지켜주세요. 이 약은 단독으로 사용할 경우 저혈당을 유발하지 않지만, 다른 혈당강하제와 병용 시 저혈당 증상(떨림, 허약감, 방향감각 상실)이 나타날 수 있으니 주의하세요. 신장 기능 검사를 정기적으로 받는 것이 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog dosage (no approved or recommended dose stated)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/63.jsonl",
+    "extracted_at": "2026-03-11T08:57:08.670004+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "id": "colchicine",
+  "drug_identity": {
+    "name_ko": "콜히친",
+    "name_en": "Colchicine",
+    "active_ingredient": "Colchicine",
+    "brand_names": [
+      "Colcrys",
+      "Mitigare",
+      "Gloperba"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 개에서 간 섬유증/경변, 샤페이 열, 아밀로이드증에 대한 오프라벨 사용. 조류에서도 오프라벨 사용.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.6,
+        "unit": "mg"
+      },
+      {
+        "value": 0.12,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간 데이터: 간에서 탈아세틸화(first-pass effect). CYP3A4 기질로 알려져 있으며, CYP3A4 강력 억제제와 병용 시 혈중 농도 증가 위험. 대부분의 용량은 담즙 분비를 통해 장간 순환 후 대변으로 배설되며, 일부는 소변으로 배설됨."
+    },
+    "extra_information": "개 및 고양이에 대한 특이적 약동학 정보 없음. 인간 및 실험동물 데이터만 존재. 혈장 반감기는 약 20분이나 백혈구 반감기는 약 60시간. 간 질환 환자에서 소변 배설 비율 증가 가능. 중증 신장 질환 환자에서 반감기 연장 가능."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 인간 및 실험동물 데이터 기반; 수의학적 종별 PK 연구 없음. 개와 고양이 모두 동일한 인간 데이터 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "peripheral neuropathy",
+          "paralysis"
+        ],
+        "index": 1,
+        "evidence": "말초 신경병증 및 마비가 독성 증상으로 보고됨. 직접적인 CNS 부담 데이터는 없으나 신경독성 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "pancytopenia"
+        ],
+        "index": 0,
+        "evidence": "골수억제(호중구감소증), 범혈구감소증이 독성 증상으로 보고됨. 백혈구에 집중 분포하는 약물 특성상 혈액 독성 위험 높음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal toxicity",
+          "renal insufficiency",
+          "nephrotoxicity"
+        ],
+        "index": 2,
+        "evidence": "신장 독성 및 신부전이 부작용으로 보고됨. 중증 신장 질환 환자에서 반감기 연장. 신부전 발생 시 효과 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver metabolism",
+          "first-pass effect",
+          "biliary secretion"
+        ],
+        "index": 3,
+        "evidence": "간에서 주로 대사되며 담즙 분비를 통한 장간 순환. 과다복용 시 간독성 보고. 간 질환 시 용량 조절 필요."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac dysfunction",
+          "vascular collapse"
+        ],
+        "index": -1,
+        "evidence": "심각한 심장 기능 장애 시 금기. 과다복용 시 혈관 허탈 가능. 직접적인 심장 독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "peripheral neuropathy",
+          "paralysis"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 인간 독성 데이터(말초 신경병증, 마비) 기반 추정."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression",
+          "pancytopenia"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 인간 및 개 데이터 기반 골수억제 위험 추정."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal toxicity",
+          "nephrotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 인간 데이터 기반 신장 독성 위험 추정."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "first-pass effect"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 간 대사 및 담즙 배설 경로 기반 추정."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac dysfunction"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 심각한 심장 기능 장애 시 금기 기반 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.33,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "혈장 반감기 약 20분(0.33시간, 인간 데이터). 백혈구 반감기는 약 60시간. 개 및 고양이 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: contraindicated→3, major→3, moderate→2, minor→1. 인간 또는 동물에서 보고되었거나 이론적으로 유의한 상호작용만 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for nephrotoxicity."
+    },
+    {
+      "drug": "Azole antifungals (itraconazole, ketoconazole)",
+      "severity": 3,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Concurrent use may result in increased colchicine plasma concentrations and increased risk for toxicity. Combination is contraindicated in humans."
+    },
+    {
+      "drug": "Calcium Channel Blockers (diltiazem, verapamil)",
+      "severity": 3,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity"
+      ],
+      "evidence": "Concurrent use may result in increased colchicine plasma concentration and increased risk for toxicity. Combination is contraindicated in humans with severe renal or hepatic impairment."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "GI effects"
+      ],
+      "evidence": "May cause additive myelosuppression or GI effects."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "myelosuppression"
+      ],
+      "evidence": "May increase risk for nephrotoxicity or myelosuppression. Combination is contraindicated in humans with severe renal or hepatic impairment."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "rhabdomyolysis"
+      ],
+      "evidence": "May increase the risk for rhabdomyolysis."
+    },
+    {
+      "drug": "Fenofibrate/Gemfibrozil",
+      "severity": 2,
+      "keywords": [
+        "myopathy",
+        "rhabdomyolysis"
+      ],
+      "evidence": "Concurrent use may increase the risk for myopathy or rhabdomyolysis."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 3,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity"
+      ],
+      "evidence": "May increase colchicine concentrations and risk for toxicity. Combination is contraindicated in humans with severe renal or hepatic impairment."
+    },
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, azathioprine)",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "GI effects"
+      ],
+      "evidence": "May cause additive myelosuppression or GI effects when used with colchicine."
+    },
+    {
+      "drug": "P-Glycoprotein Inhibitors (amiodarone, doxorubicin, spironolactone)",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity",
+        "P-gp inhibition"
+      ],
+      "evidence": "May increase colchicine concentrations and risk for toxicity."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "간 경변/섬유증, 샤페이 열, 아밀로이드증 보조 치료 (오프라벨)",
+          "value": "0.03",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "대부분의 임상의가 권장하는 용량. 일부 임상의는 내약성 확인을 위해 낮은 초기 용량으로 시작 권장.",
+          "evidence": "오프라벨. 성체 샤페이 기준: 0.6mg 정제 1/2정(0.3mg) PO SID로 시작하여 4~5일마다 0.3mg씩 증량, 최대 0.6mg/dog PO BID까지."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "샤페이 열 보조 치료 - 목표 용량 (오프라벨, 체중 기반 아닌 고정 용량)",
+          "value": "0.6",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "내약성에 따라 용량 조절. 내약성 없을 경우 감량 또는 일시 중단 후 낮은 용량으로 재시작.",
+          "evidence": "오프라벨. 상업적으로 이용 가능한 0.6mg 정제 기준 목표 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 기능 부전 환자에서 용량 감량 고려. 중증 신장 질환 환자에서 반감기 연장 가능. 신부전 발생 시 아밀로이드증 치료에 효과 없음. 중증 신장 장애 환자에서 CYP3A4/P-gp 억제제와 병용 금기(인간 기준)."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 기능 부전 환자에서 용량 감량 고려. 간 질환 시 소변 배설 비율 증가 가능. 중증 간 장애 환자에서 CYP3A4/P-gp 억제제와 병용 금기(인간 기준). 간 질환 치료 목적으로 사용 시에도 간 기능 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "심각한 위장관 기능 장애",
+      "match_terms": [
+        "GI dysfunction",
+        "GI disease",
+        "severe GI disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 심장 기능 장애",
+      "match_terms": [
+        "cardiac dysfunction",
+        "heart failure",
+        "severe cardiac disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신장 질환 (CYP3A4/P-gp 억제제 병용 시)",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간 질환 (CYP3A4/P-gp 억제제 병용 시)",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 또는 간 기능 부전",
+      "match_terms": [
+        "renal insufficiency",
+        "hepatic insufficiency",
+        "organ dysfunction"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "노령 또는 쇠약한 환자",
+      "match_terms": [
+        "geriatric",
+        "debilitated",
+        "elderly"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "콜히친은 P-당단백질(P-gp) 기질임. P-gp 억제제와의 병용이 금기로 언급됨. MDR1 돌연변이 품종에서 P-gp 기능 저하로 인한 약물 축적 위험 가능성 있으나, 수의학적 특이 품종 데이터는 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포 분열 중 방추사 형성 억제(튜불린 결합)를 통한 항염증 작용. 콜라게나제 활성 자극을 통한 항섬유화 작용. 혈청 아밀로이드 A(SAA) 합성 및 분비 차단을 통한 아밀로이드 형성 억제.",
+    "common_extra_effects": [
+      "오심, 구토, 설사 (독성의 초기 징후일 수 있음)",
+      "골수억제 (호중구감소증, 범혈구감소증)",
+      "신장 독성",
+      "말초 신경병증",
+      "간독성",
+      "코발라민(비타민 B12) 흡수 장애",
+      "정자형성 감소",
+      "최기형성 (실험동물)"
+    ],
+    "dog_mechanism": "인간 데이터와 동일한 기전으로 추정. 개에서 간 섬유증 및 샤페이 열에 대한 항섬유화 및 항염증 효과 기대.",
+    "dog_extra_effects": [
+      "오심, 구토, 설사 (특히 고용량에서)",
+      "골수억제 (호중구감소증)",
+      "신장 독성",
+      "말초 신경병증"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 콜히친 사용은 논란이 있으며, 안전성과 효능이 충분히 입증되지 않았습니다. 간 경변/섬유증, 샤페이 열, 아밀로이드증에 오프라벨로 사용됩니다. 신부전 발생 후에는 효과가 없으므로 질병 초기에 투여해야 합니다. 일부 수의학 전문가들은 입증된 효능 부족과 부작용 발생 빈도를 이유로 사용을 권장하지 않습니다. 기저치 및 정기적인 CBC, 혈액화학검사, 요검사 모니터링이 필요합니다.",
+    "cat": "고양이에서의 콜히친 사용에 대한 데이터가 없습니다. 고양이에 대한 용량 정보가 없으므로 사용 시 극도의 주의가 필요합니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 안전성 및 효능이 충분히 입증되지 않음. 신장 또는 간 기능 부전, 노령, 쇠약한 환자에서 주의 사용. 위장관 부작용(구토, 설사)이 독성의 초기 징후일 수 있으므로 모니터링 필요. NIOSH 위험 약물로 분류됨."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 사용 데이터 없음. 사용 시 극도의 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 보관.",
+    "forms": [
+      "Colchicine 경구 캡슐 0.6mg (Mitigare®, generic)",
+      "Colchicine 경구 정제 0.6mg (Colcrys®, generic)",
+      "Colchicine 경구 용액 0.12mg/mL (Gloperba®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "콜히친은 독특한 항염증제로, 개에서 샤페이 열, 간 섬유증/경변, 아밀로이드증에 오프라벨로 사용됩니다. 수의학적 허가 제품은 없으며, 안전성과 효능이 충분히 입증되지 않았습니다. 치료 지수가 좁아 소량 과다복용으로도 심각한 독성이 발생할 수 있습니다. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비(PPE) 착용이 필요합니다. 위장관 증상(구토, 설사)은 독성의 초기 징후일 수 있으므로 즉시 수의사에게 보고해야 합니다.",
+    "indications": "개(오프라벨): 간 경변/섬유증 보조 치료, 샤페이 열, 아밀로이드증. 조류(오프라벨): 간 섬유증, 아밀로이드증, 고요산혈증 보조 치료. 인간: 통풍 치료(허가). 수의학적 허가 적응증 없음.",
+    "client_info": "이 약은 동물에서의 사용 경험이 제한적이며 부작용이 충분히 알려져 있지 않습니다. 의심되는 부작용(구토, 설사 등)은 즉시 수의사에게 보고하십시오. 이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 임산부는 이 약 또는 이 약을 투여받는 동물의 배설물(소변, 대변)에 노출되지 않도록 주의하십시오. 이 약은 NIOSH에서 위험 약물로 분류하고 있습니다. 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "Cat dosage",
+      "Bioavailability data",
+      "Protein binding data",
+      "Onset of action data",
+      "T-max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog (veterinary-specific data)",
+      "organ_burden_logic.cat (veterinary-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/36.jsonl",
+    "extracted_at": "2026-03-11T00:22:36.655136+00:00",
+    "reviewer": null
+  }
+}

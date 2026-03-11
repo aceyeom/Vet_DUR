@@ -1,0 +1,803 @@
+{
+  "id": "erythromycin",
+  "drug_identity": {
+    "name_ko": "에리스로마이신",
+    "name_en": "Erythromycin",
+    "active_ingredient": "Erythromycin",
+    "brand_names": [
+      "Gallimycin",
+      "Ery-Tab",
+      "ERYC",
+      "E.E.S. 400",
+      "EryPed",
+      "Eythrocin",
+      "Eryzole",
+      "Pediazole",
+      "Erythro-100"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의용 승인 제품은 현재 시판되지 않음. 개·고양이에서의 사용은 모두 extra-label 사용임. 소에 대한 FDA 승인 제품(Gallimycin)은 과거 존재하였으나 현재 일반적으로 사용되지 않음.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Susp",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 333,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 80,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.035,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP3A4"
+      ],
+      "inducers": [],
+      "pathway_evidence": "에리스로마이신은 간에서 N-탈메틸화(N-demethylation)를 통해 비활성 대사체로 부분 대사되며, 주로 담즙으로 미변화체 형태로 배설된다. 강력한 CYP3A4 억제제로 알려져 있다. 소변으로의 미변화체 배설은 투여량의 약 2~5%에 불과하다."
+    },
+    "extra_information": "개에서 분포용적은 약 2 L/kg, 고양이에서는 2.34 L/kg으로 보고됨. 개와 고양이에서 소실 반감기는 60~90분. 단백결합률은 에리스로마이신 염기 및 스테아레이트 형태에서 73~81%, 에스톨레이트 형태에서 96%. 고양이에서 에리스로마이신 에틸숙시네이트 경구 투여 시 혈청 내 측정 가능한 농도가 나타나지 않았다는 연구 결과가 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의 종별 PK 데이터 일부 존재. 간 담즙 배설 주경로, 신장 배설 최소(2~5%). QT 연장 가능성 있음(심장). 신경학적 이상(MDR1 변이견).",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "MDR1 mutation",
+          "neurologic signs",
+          "P-glycoprotein substrate"
+        ],
+        "index": 1,
+        "evidence": "MDR1(ABCB1-1delta) 유전자 변이가 있는 개에서 신경학적 증상이 보고됨. P-당단백질 기질로서 혈뇌장벽 투과 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "ventricular arrhythmia",
+          "thrombophlebitis"
+        ],
+        "index": 1,
+        "evidence": "QT 간격 연장 및 심실 부정맥 가능성(드물게). IV 투여 시 혈전정맥염 위험."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "2-5% renal excretion"
+        ],
+        "index": 0,
+        "evidence": "신장 배설 비율이 2~5%로 매우 낮아 신장 부담은 최소 수준임."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "biliary excretion",
+          "N-demethylation",
+          "hepatic metabolism",
+          "cholestatic hepatitis",
+          "ALT AST elevation",
+          "CYP3A4 inhibitor"
+        ],
+        "index": 2,
+        "evidence": "주로 담즙으로 배설되며 간에서 N-탈메틸화 대사. 에스톨레이트 형태의 장기 사용 시 가역적 담즙정체성 간염 가능성(인체). AST/ALT 위양성 상승 가능. 강력한 CYP3A4 억제제."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QT prolongation",
+          "ventricular arrhythmia",
+          "torsades de pointes"
+        ],
+        "index": 1,
+        "evidence": "드물게 QT 간격 연장 및 심실 부정맥(torsades de pointes 포함) 유발 가능. 기존 부정맥 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경학적 이상에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "thrombophlebitis"
+        ],
+        "index": 1,
+        "evidence": "QT 간격 연장 가능성 및 IV 투여 시 혈전정맥염 위험은 고양이에서도 동일하게 적용될 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "2-5% renal excretion"
+        ],
+        "index": 0,
+        "evidence": "신장 배설 비율이 2~5%로 매우 낮아 신장 부담은 최소 수준임."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "biliary excretion",
+          "N-demethylation",
+          "hepatic metabolism",
+          "CYP3A4 inhibitor"
+        ],
+        "index": 2,
+        "evidence": "주로 담즙으로 배설되며 간에서 N-탈메틸화 대사. 강력한 CYP3A4 억제제. 고양이에서 에리스로마이신 에틸숙시네이트 경구 투여 시 혈청 농도 미검출 보고 있음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "QT 간격 연장 가능성은 고양이에서도 이론적으로 적용됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 1.5,
+      "mean": 1.25,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 77,
+    "evidence": "개와 고양이에서 소실 반감기 60~90분(1.0~1.5시간). 단백결합률: 에리스로마이신 염기/스테아레이트 73~81%(중간값 77%), 에스톨레이트 96%. 소에서 SC 투여 시 생체이용률 약 40%, IM 투여 시 약 65%. 고양이에서 에리스로마이신 에틸숙시네이트 경구 투여 시 혈청 농도 미검출."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: contraindicated/avoid→3, major/moderate→2, minor→1. CYP3A4 억제로 인한 상호작용은 별도 목록으로 제공됨.",
+  "drug_interactions": [
+    {
+      "drug": "Antiarrhythmic Agents (amiodarone, procainamide, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrest",
+        "arrhythmia",
+        "increased plasma concentration"
+      ],
+      "evidence": "Concurrent use may increase plasma concentration of antiarrhythmic agents and enhance QT prolonging effect. Cases of adverse cardiovascular events including cardiac arrest reported in humans. Avoid combination."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "metabolism inhibition",
+        "contraindicated in humans"
+      ],
+      "evidence": "Erythromycin can inhibit the metabolism of cisapride; manufacturer states use together is contraindicated in humans. One dog study showed no pharmacodynamic alteration, but caution warranted."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "in vitro"
+      ],
+      "evidence": "In vitro evidence of antagonism between erythromycin and clindamycin."
+    },
+    {
+      "drug": "Lincomycin",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "in vitro"
+      ],
+      "evidence": "In vitro evidence of antagonism between erythromycin and lincomycin."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Erythromycin may inhibit P-glycoprotein and increase serum colchicine concentration."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Erythromycin may inhibit P-glycoprotein and increase serum digoxin concentration."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1 mutation",
+        "reduced promotility effect",
+        "toxicity risk"
+      ],
+      "evidence": "Loperamide may reduce promotility effects of erythromycin. Erythromycin may inhibit P-gp, theoretically increasing risk for loperamide toxicity in dogs homozygous for MDR1 mutation."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "separate doses"
+      ],
+      "evidence": "Sucralfate may reduce absorption of erythromycin; separate doses by 2 hours if possible."
+    },
+    {
+      "drug": "Anticoagulants (rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased anticoagulant concentration",
+        "bleeding risk"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of CYP3A4-metabolized anticoagulants."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased erythromycin concentration",
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Possible increased erythromycin concentrations and increased risk for QT interval prolongation and cardiac arrhythmias."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, midazolam, triazolam)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased benzodiazepine concentration",
+        "sedation"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of CYP3A4-metabolized benzodiazepines."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of bromocriptine."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of buspirone."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of calcium channel blockers."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of cannabidiol."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of carbamazepine."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration",
+        "nephrotoxicity risk"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of cyclosporine."
+    },
+    {
+      "drug": "Disopyramide",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "QT prolongation",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; risk for increased QT interval with disopyramide."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of doxorubicin."
+    },
+    {
+      "drug": "Maropitant",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of maropitant."
+    },
+    {
+      "drug": "Methylprednisolone",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of methylprednisolone."
+    },
+    {
+      "drug": "Opioids (alfentanil, fentanyl, methadone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration",
+        "sedation",
+        "respiratory depression"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of CYP3A4-metabolized opioids."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "QT prolongation",
+        "increased concentration"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; risk for prolonged QT interval with quinidine."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased sildenafil concentration"
+      ],
+      "evidence": "Erythromycin may increase serum concentration of sildenafil. Consider therapy modification and monitor pulmonary arterial hypertension."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration",
+        "nephrotoxicity risk"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of tacrolimus."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration",
+        "narrow therapeutic index"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of theophylline/aminophylline."
+    },
+    {
+      "drug": "Vinca Alkaloids (vinblastine, vincristine, vinorelbine)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased concentration",
+        "neurotoxicity risk"
+      ],
+      "evidence": "Erythromycin is a potent CYP3A4 inhibitor; may increase plasma concentrations of vinca alkaloids."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "gerbil",
+      "guinea_pig",
+      "hamster"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 치료 (extra-label)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: extra-label use in dogs, 10–20 mg/kg PO every 8 to 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위장관 운동 촉진제 (prokinetic) (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: extra-label prokinetic use in dogs, 0.5–1 mg/kg PO or IV every 8 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위장관 운동 촉진제 (prokinetic) IV (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "IV 투여 시 20~60분에 걸쳐 천천히 투여",
+          "evidence": "Plumb's Veterinary Drug Handbook: extra-label prokinetic use in dogs, 0.5–1 mg/kg PO or IV every 8 hours"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 치료 (extra-label)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: extra-label use in cats, 10–20 mg/kg PO every 8 to 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위장관 운동 촉진제 (prokinetic) (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "고양이에서 결장 운동 자극 효과는 없는 것으로 보임",
+          "evidence": "Plumb's Veterinary Drug Handbook: extra-label prokinetic use in cats, 0.5–1 mg/kg PO or IV every 8 hours suggested; however, erythromycin does not appear to have colonic motility stimulating effects in cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위장관 운동 촉진제 (prokinetic) IV (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "IV 투여 시 20~60분에 걸쳐 천천히 투여",
+          "evidence": "Plumb's Veterinary Drug Handbook: extra-label prokinetic use in cats, 0.5–1 mg/kg PO or IV every 8 hours"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 배설 비율이 2~5%로 매우 낮아 신부전 환자에서 용량 조절이 필요하지 않을 가능성이 높으나, Plumb's 원문에 명시적인 신장 용량 조절 권고사항이 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "인체에서 간기능 장애 또는 기존 간질환 환자에서 주의 사용 권고. 에스톨레이트 형태의 반복 또는 장기 투여 시 가역적 담즙정체성 간염 드물게 보고(인체). 기존 간기능 장애 환자에서는 에스톨레이트 형태 사용 회피 권고. 장기 투여 시 ALT, AST, ALP 기저치 및 주기적 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "에리스로마이신 또는 관련 약물(아지스로마이신, 클라리스로마이신) 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to erythromycin",
+        "macrolide allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "토끼, 저빌, 기니피그, 햄스터",
+      "match_terms": [
+        "rabbit",
+        "gerbil",
+        "guinea pig",
+        "hamster"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "성체 말에서 경구 투여 (항균 용량)",
+      "match_terms": [
+        "adult horse",
+        "equine oral erythromycin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "반추동물에서 경구 투여",
+      "match_terms": [
+        "ruminant",
+        "cattle oral",
+        "sheep oral",
+        "goat oral"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 간질환 (에스톨레이트 형태)",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "기존 부정맥",
+      "match_terms": [
+        "arrhythmia",
+        "cardiac arrhythmia",
+        "QT prolongation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MDR1(ABCB1-1delta) 유전자 변이 확인 환자",
+      "match_terms": [
+        "MDR1 mutation",
+        "ABCB1-1delta",
+        "P-glycoprotein deficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie",
+      "Old English Sheepdog",
+      "Silken Windhound",
+      "Longhaired Whippet"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "에리스로마이신은 P-당단백질(P-gp) 기질로, MDR1(ABCB1-1delta) 유전자 변이가 있는 개에서 신경학적 증상이 보고됨. 해당 변이 확인 환자에서 주의 사용 권고."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "에리스로마이신은 감수성 세균의 50S 리보솜 소단위에 결합하여 펩타이드 결합 형성 및 단백질 합성을 억제하는 시간 의존성 항생제(주로 정균 작용, 고농도 또는 고감수성 균주에서 살균 작용). 항균 용량 이하에서는 모틸린(고양이, 인체, 토끼) 및 5-HT3 수용체(개)를 자극하여 위장관 운동 촉진 효과를 나타냄.",
+    "common_extra_effects": [
+      "구역/구토/설사 등 위장관 장애 (경구 투여 시)",
+      "IM 주사 부위 통증 및 국소 반응",
+      "IV 투여 시 혈전정맥염",
+      "QT 간격 연장 (드물게)",
+      "심실 부정맥 (torsades de pointes 포함, 드물게)",
+      "담즙정체성 간염 (에스톨레이트 장기 투여 시, 드물게)",
+      "AST/ALT 위양성 상승 (비색 분석법 사용 시)",
+      "요 카테콜아민 형광 측정값 변화"
+    ],
+    "dog_mechanism": "개에서 위장관 운동 촉진 기전은 완전히 규명되지 않았으나 5-HT3 수용체 활성화를 통한 것으로 추정됨. MDR1 변이 개에서 신경학적 증상 유발 가능.",
+    "dog_extra_effects": [
+      "MDR1(ABCB1-1delta) 변이 개에서 신경학적 증상",
+      "위장관 장애 (설사, 식욕부진, 구토)",
+      "결장 운동 자극 효과 있음"
+    ],
+    "cat_mechanism": "고양이에서 모틸린 수용체를 통해 위장관 운동 촉진 효과를 나타냄. 위 배출 시간 단축 및 하부 식도 괄약근 압력 증가 효과. 결장 운동 자극 효과는 없는 것으로 보임.",
+    "cat_extra_effects": [
+      "위장관 장애 (설사, 식욕부진, 구토)",
+      "결장 운동 자극 효과 없음",
+      "에리스로마이신 에틸숙시네이트 경구 투여 시 혈청 농도 미검출 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에리스로마이신은 감수성 감염 치료 및 위장관 운동 촉진제로 extra-label 사용됨. 운동 촉진 용량(0.5~1 mg/kg)은 항균 용량(10~20 mg/kg)보다 훨씬 낮음. MDR1(ABCB1-1delta) 유전자 변이 개에서 신경학적 증상이 보고되므로 해당 품종(콜리, 셰틀랜드 쉽독 등)에서 주의 필요. 결장 운동 자극 효과가 있음. 만성 사용 시 빠른 내성(tachyphylaxis) 발생 가능하며, 메토클로프라미드 병용으로 완화 가능.",
+    "cat": "고양이에서 에리스로마이신은 위 배출 촉진 및 역류성 식도염 치료에 유용할 수 있음. 그러나 에리스로마이신 에틸숙시네이트 경구 투여 시 혈청 농도가 측정되지 않을 수 있어 제형 선택에 주의 필요. 결장 운동 자극 효과는 없는 것으로 보임. 건강한 고양이에서 에리스로마이신과 메토클로프라미드는 위 배출 시간 단축에 유사한 효과를 보임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1(ABCB1-1delta) 유전자 변이 개에서 신경학적 증상 가능. 경구 투여 시 위장관 장애 발생 가능. QT 간격 연장 가능성 있으므로 기존 부정맥 환자에서 주의. 비감염성 적응증에서 항균제 사용은 권장되지 않음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "에리스로마이신 에틸숙시네이트 경구 투여 시 혈청 농도 미검출 가능. 경구 투여 시 위장관 장애 발생 가능. 결장 운동 자극 효과 없음. 비감염성 적응증에서 항균제 사용은 권장되지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "에리스로마이신 염기 캡슐/정제: 밀폐 용기에 실온(15~30°C) 보관. 에스톨레이트 제제: 빛 차단 보관. 경구 현탁액: 냉장 보관(기호성 유지). 에틸숙시네이트 정제 및 경구 현탁액 분말: 밀폐 용기에 실온 보관; 조제 후 현탁액은 냉장 보관(실온에서 최소 14일 안정). 락토비오네이트 주사용 분말: 실온 보관; 재구성 후 실온 24시간, 냉장 2주 안정. pH 5.5 미만에서 불안정.",
+    "forms": [
+      "에리스로마이신 염기 장용정 (250 mg, 333 mg, 500 mg)",
+      "에리스로마이신 염기 필름코팅정 (250 mg, 500 mg)",
+      "에리스로마이신 염기 장용 캡슐 (250 mg)",
+      "에리스로마이신 스테아레이트 필름코팅정 (250 mg)",
+      "에리스로마이신 에틸숙시네이트 정제 (400 mg)",
+      "에리스로마이신 에틸숙시네이트 경구 현탁액 분말 (40 mg/mL, 80 mg/mL)",
+      "에리스로마이신 락토비오네이트 주사용 동결건조 분말 (500 mg/vial)",
+      "에리스로마이신 + 설피속사졸 경구 현탁액 과립",
+      "국소 및 안과용 제제"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에리스로마이신은 마크로라이드계 항생제로, 항균 용량보다 훨씬 낮은 용량에서 위장관 운동 촉진 효과를 나타냄. 개·고양이에서 모든 사용은 extra-label이며, 현재 승인된 수의용 제품은 없음. 강력한 CYP3A4 억제제로 다수의 약물 상호작용이 존재함. MDR1(ABCB1-1delta) 변이 개에서 신경학적 증상 유발 가능. 토끼, 저빌, 기니피그, 햄스터에서 금기. 성체 말 및 반추동물에서 경구 투여 금기. QT 간격 연장 가능성 있으므로 기존 부정맥 환자에서 주의. WHO 및 OIE에서 인체 및 수의 분야 최우선 중요 항균제로 지정됨.",
+    "indications": "【승인 적응증】소에서 Pasteurella multocida에 의한 소 호흡기 질환(과거 FDA 승인, 현재 일반적으로 사용되지 않음). 【Extra-label 적응증】개·고양이: 감수성 세균 감염 치료, 위장관 운동 촉진(위 배출 지연, 역류성 식도염). 말(망아지): Rhodococcus equi 감염(리팜핀 병용), Lawsonia intracellularis에 의한 증식성 장병증. 말: 위장관 운동 촉진. 소: 위장관 운동 촉진(송아지, 성체). 조류: 감수성 감염. 페럿: 감수성 감염.",
+    "client_info": "【보호자 안내】\n• 소동물(개·고양이)에게 경구 투여 시 공복에 투여하십시오. 구토, 식욕부진, 설사 등 위장관 증상이 나타나면 음식과 함께 투여하십시오.\n• 위장관 부작용이 심하거나 지속되면 즉시 수의사에게 연락하십시오.\n• MDR1 유전자 변이가 확인된 개(콜리, 셰틀랜드 쉽독 등)에서는 신경학적 증상(떨림, 비틀거림 등)이 나타날 수 있으므로 주의 깊게 관찰하십시오.\n• 소에게 근육주사 시 라벨 지시사항을 반드시 따르십시오(주사 부위 및 방법 준수).\n• 망아지에게 투여 시 더운 날씨에 체온 상승 및 호흡 곤란이 발생할 수 있으므로 그늘을 제공하고 면밀히 관찰하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Onset of action (minutes)",
+      "T_max (hours)",
+      "Oral bioavailability % (dog/cat specific)",
+      "Renal dose adjustment explicit recommendation",
+      "CYP substrate profile (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "organ_burden_logic.dog.brain.index",
+      "organ_burden_logic.cat.brain.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T18:16:59.016143+00:00",
+    "reviewer": null
+  }
+}

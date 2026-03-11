@@ -1,0 +1,490 @@
+{
+  "id": "piperazine",
+  "drug_identity": {
+    "name_ko": "피페라진",
+    "name_en": "Piperazine",
+    "active_ingredient": "Piperazine",
+    "brand_names": [
+      "Pipa-Tabs"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "피페라진 및 그 염류는 위장관 근위부에서 흡수된 후 대사되어 신장을 통해 배설된다고 알려져 있으나, 구체적인 대사 경로는 문헌에 기술되지 않음."
+    },
+    "extra_information": "개별 종에 대한 흡수, 분포, 배설 동태 데이터는 문헌에서 확인되지 않음. 피페라진과 그 염류는 위장관 근위부에서 빠르게 흡수되며, 대사 후 신장으로 배설된다고 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 연구 데이터 부재로 인해 신뢰도 낮음. 금기사항 및 이상반응 기술에서 키워드 추출.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ataxia",
+          "seizure risk (overdose)",
+          "paralysis"
+        ],
+        "index": 1,
+        "evidence": "독성 용량에서 운동실조(ataxia), 마비(paralysis) 등 신경계 이상반응이 보고됨. 발작 병력 환자에서 고용량 시 발작 유발 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "uric acid interference"
+        ],
+        "index": 1,
+        "evidence": "혈중 요산 수치에 영향을 줄 수 있으나 임상적 혈액독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "contraindicated in kidney disease",
+          "seizure risk in renal disease"
+        ],
+        "index": 2,
+        "evidence": "신장을 통해 배설되며, 만성 신장 질환 환자에서 금기. 신장 질환 환자에서 고용량 시 발작 유발 가능성 보고됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "contraindicated in chronic liver disease",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "만성 간 질환 환자에서 금기로 명시됨. 간에서 대사되는 것으로 알려져 있음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "ataxia",
+          "head-pressing",
+          "positional nystagmus",
+          "muscular fasciculations",
+          "depression",
+          "seizure risk"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 독성 용량 섭취 후 운동실조, 두부압박, 안진, 근육 연축, 우울 등 신경계 이상반응이 상세히 기술됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "uric acid interference"
+        ],
+        "index": 1,
+        "evidence": "혈중 요산 수치에 영향을 줄 수 있으나 임상적 혈액독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "contraindicated in kidney disease"
+        ],
+        "index": 2,
+        "evidence": "신장을 통해 배설되며, 만성 신장 질환 환자에서 금기."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "contraindicated in chronic liver disease",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "만성 간 질환 환자에서 금기로 명시됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개별 종에 대한 흡수, 분포, 배설 동태 데이터는 문헌에서 확인되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Chlorpromazine",
+      "severity": 2,
+      "keywords": [
+        "seizure",
+        "neurotoxicity"
+      ],
+      "evidence": "Data conflict, but concomitant use of piperazine and chlorpromazine may precipitate seizures."
+    },
+    {
+      "drug": "Laxatives/Purgatives",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "premature elimination"
+      ],
+      "evidence": "Use of purgatives with piperazine is not recommended as the drug may be eliminated before full efficacy is established."
+    },
+    {
+      "drug": "Pyrantel",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "Piperazine and pyrantel have antagonistic modes of action (piperazine is GABA agonist causing flaccid paralysis; pyrantel is depolarizing neuromuscular blocker causing spastic paralysis) and should generally not be used together."
+    },
+    {
+      "drug": "Morantel",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "Piperazine and morantel have antagonistic modes of action and should generally not be used together."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "회충(Ascarids) 구제 - 라벨 용량 (FDA 미승인)",
+          "value": "50 - 55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일 후 반복 투여, 이후 재감염 예방을 위해 30일마다 반복",
+          "evidence": "라벨 용량 (FDA 미승인): 피페라진 염기 기준 50–55 mg/kg PO 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "회충(Ascarids) 구제 - 허가 외 용량",
+          "value": "100 - 110",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "21일 후 반복 투여",
+          "evidence": "허가 외 용량: 100–110 mg/kg PO 1회, 21일 후 반복"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "회충(Ascarids) 구제 - 라벨 용량 (FDA 미승인)",
+          "value": "50 - 55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일 후 반복 투여, 이후 재감염 예방을 위해 30일마다 반복",
+          "evidence": "라벨 용량 (FDA 미승인): 피페라진 염기 기준 50–55 mg/kg PO 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "회충(Ascarids) 구제 - 허가 외 용량",
+          "value": "100 - 110",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "21일 후 반복 투여",
+          "evidence": "허가 외 용량: 100–110 mg/kg PO 1회, 21일 후 반복"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "만성 신장 질환 환자에서 금기. 신장 질환 환자에서 고용량 시 발작 유발 가능성이 있으며, 약물이 신장을 통해 배설되므로 신기능 저하 시 축적 위험이 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "만성 간 질환 환자에서 금기로 명시됨. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "만성 간 질환",
+      "match_terms": [
+        "chronic liver disease",
+        "hepatic failure",
+        "liver disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "만성 신장 질환",
+      "match_terms": [
+        "chronic kidney disease",
+        "CKD",
+        "renal failure",
+        "renal disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "위장관 저운동성",
+      "match_terms": [
+        "GI hypomotility",
+        "ileus",
+        "GI stasis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "6주 미만 강아지 또는 새끼 고양이",
+      "match_terms": [
+        "puppy < 6 weeks",
+        "kitten < 6 weeks",
+        "neonatal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 병력",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "seizure history"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "쇠약, 발열, 저체중 동물",
+      "match_terms": [
+        "debilitated",
+        "febrile",
+        "underweight",
+        "physically weak"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "GABA 작동성 염화이온 채널을 자극하여 감수성 선충의 신경근 차단을 유발, 회충을 마비시킴. 회충에서는 숙신산 생성도 억제함.",
+    "common_extra_effects": [
+      "설사(diarrhea)",
+      "구토(emesis)",
+      "운동실조(ataxia)",
+      "독성 용량에서 마비(paralysis)",
+      "독성 용량에서 사망"
+    ],
+    "dog_mechanism": "GABA 작동성 염화이온 채널 자극을 통한 신경근 차단으로 회충 마비 유발",
+    "dog_extra_effects": [
+      "설사",
+      "구토",
+      "운동실조",
+      "독성 용량에서 마비, 발작, 사망 가능"
+    ],
+    "cat_mechanism": "GABA 작동성 염화이온 채널 자극을 통한 신경근 차단으로 회충 마비 유발",
+    "cat_extra_effects": [
+      "구토",
+      "허약",
+      "호흡곤란",
+      "귀, 수염, 꼬리, 눈의 근육 연축",
+      "후지 운동실조",
+      "과다침흘림",
+      "우울",
+      "탈수",
+      "두부압박",
+      "체위성 안진",
+      "동공반사 저하",
+      "독성 용량에서 마비, 사망 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 권장 용량에서는 이상반응이 드물지만 설사, 구토, 운동실조가 가능함. 현재는 더 효과적인 구충제가 있어 거의 권장되지 않음. 6주 미만 강아지에는 사용 금지. 만성 간·신장 질환, 위장관 저운동성 환자에서 금기.",
+    "cat": "고양이에서 독성 용량 섭취 시 24시간 이내에 신경계 이상반응(운동실조, 근육 연축, 두부압박, 안진 등)이 나타날 수 있음. 6주 미만 새끼 고양이에는 사용 금지. 현재는 더 효과적인 구충제가 있어 거의 권장되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "만성 간·신장 질환, 위장관 저운동성, 발작 병력, 쇠약·발열·저체중 동물에서 사용 금기. 6주 미만 강아지에 사용 금지. 권장 용량에서는 이상반응이 드물지만 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "만성 간·신장 질환, 위장관 저운동성, 발작 병력, 쇠약·발열·저체중 동물에서 사용 금기. 6주 미만 새끼 고양이에 사용 금지. 독성 용량에서 심각한 신경계 이상반응 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C–30°C, 59°F–86°F) 보관. 제조사의 별도 지침이 없는 경우 해당 조건 준수.",
+    "forms": [
+      "피페라진 구연산염(citrate)",
+      "피페라진 아디프산염(adipate)",
+      "피페라진 인산염(phosphate)",
+      "피페라진 육수화물(hexahydrate)",
+      "피페라진 일염산염(monohydrochloride)",
+      "피페라진 이염산염(dihydrochloride)",
+      "피페라진 황산염(sulfate)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피페라진은 회충(ascarids) 구제에 사용되는 구충제이나, 현재는 더 효과적인 치료제가 선호되어 거의 권장되지 않음. GABA 작동성 염화이온 채널 자극을 통해 선충을 마비시킴. 권장 용량에서 이상반응은 드물지만 설사, 구토, 운동실조 가능. 만성 간·신장 질환, 위장관 저운동성 환자 및 6주 미만 어린 동물에서 금기. 여러 염류 형태로 제공되며 피페라진 염기 함량이 다르므로 제품 라벨 확인 필수.",
+    "indications": "개·고양이의 회충(Toxocara, Toxascaris) 감염 치료. 위장관염이 동반된 동물에서도 안전하게 사용 가능. 현재는 더 효과적인 구충제(예: 펜벤다졸, 피란텔)가 있어 일선 치료제로는 거의 사용되지 않음. 돼지의 대형 회충(Ascaris suum) 및 결절충, 조류의 Ascaridia galli, 토끼·설치류의 요충 등에도 허가 외 사용 가능.",
+    "client_info": "이 약은 반려동물의 회충 감염 치료에만 사용됩니다. 다른 장내 기생충에는 효과가 없습니다. 부작용은 드물지만 설사, 구토, 비틀거림이나 허약감이 나타날 수 있습니다. 약을 먹인 후 이러한 증상이 심하게 나타나면 즉시 수의사에게 연락하세요. 6주 미만의 강아지나 새끼 고양이, 아픈 동물, 열이 있는 동물, 저체중 동물에는 사용하지 마세요. 피페라진은 여러 종류의 염류 형태로 판매되므로 반드시 제품 라벨의 지시에 따라 올바른 용량을 사용하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed pharmacokinetic parameters (half-life, Vd, Cmax, Tmax)",
+      "CYP enzyme interactions",
+      "Protein binding data",
+      "Oral bioavailability data",
+      "Species-specific PK studies"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "drug_identity.available_strengths",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/19.jsonl",
+    "extracted_at": "2026-03-10T19:12:43.298871+00:00",
+    "reviewer": null
+  }
+}

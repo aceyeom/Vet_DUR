@@ -1,0 +1,557 @@
+{
+  "id": "chlorpheniramine",
+  "drug_identity": {
+    "name_ko": "클로르페니라민",
+    "name_en": "Chlorpheniramine",
+    "active_ingredient": "Chlorpheniramine maleate",
+    "brand_names": [
+      "Chlor-Trimeton"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. 항히스타민제(1세대)로 개와 고양이의 소양증 및 알레르기 질환에 보조적으로 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Drop"
+    ],
+    "available_strengths": [
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 12,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체 자료에 따르면 간에서 대사되며, 대사산물 및 미변화체 거의 전량이 소변으로 배설됨. 수의학적 CYP 경로 데이터는 없음."
+    },
+    "extra_information": "개에서 경구 생체이용률은 10~40%로 용량 의존적이며, 세포외 조직으로의 광범위한 분포가 보고됨. 평균 분포 반감기 12.5분, 소실 반감기 약 1.7시간. 고양이에 대한 PK 데이터는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 소실 반감기 약 1.7시간(경구 생체이용률 10~40%). 고양이 종별 PK 데이터 없음; 개 데이터 및 인체 데이터 참조.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "lethargy",
+          "anticholinergic"
+        ],
+        "index": 1,
+        "evidence": "개에서 가장 흔한 부작용으로 CNS 억제(기면, 진정)가 보고됨. 항콜린 작용으로 인한 중추신경계 영향 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "anticoagulant interaction"
+        ],
+        "index": 2,
+        "evidence": "헤파린 또는 와파린의 항응고 효과를 부분적으로 길항할 수 있다는 상호작용 보고 있음. 직접적인 혈액독성 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "urine retention"
+        ],
+        "index": 3,
+        "evidence": "신기능 장애 시 주의 사용 권고. 소변 정체 가능성. 인체에서 신기능 저하 시 반감기 증가 보고됨."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass metabolism"
+        ],
+        "index": 4,
+        "evidence": "간에서 대사됨. 직접적인 간독성 보고는 없으나 간 대사 부담 존재."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular disease caution",
+          "bradycardia"
+        ],
+        "index": 5,
+        "evidence": "심혈관 질환 환자에서 주의 사용 권고. 과다복용 시 서맥 및 심정지 사례 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "paradoxical excitement",
+          "CNS depression",
+          "sedation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 역설적 흥분 반응이 보고됨. CNS 억제(진정) 또한 가능한 부작용."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "anticoagulant interaction"
+        ],
+        "index": 2,
+        "evidence": "항응고제 상호작용 가능성. 고양이 특이적 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "urine retention"
+        ],
+        "index": 3,
+        "evidence": "신기능 장애 시 주의 사용 권고. 소변 정체 가능성."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "간 대사 약물. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiovascular disease caution"
+        ],
+        "index": 5,
+        "evidence": "심혈관 질환 환자에서 주의 사용 권고. 고양이 특이적 심장 독성 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.7,
+      "species": "dog"
+    },
+    "f_percent": 25,
+    "protein_binding_percent": 52,
+    "evidence": "개에서 경구 생체이용률 10~40%(용량 의존적). 소실 반감기 약 1.7시간. 인체에서 생체이용률 25~60%, 단백결합률 33~70%(중간값 약 52%), 반감기 13.2~43시간. 고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 중증도 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcholinesterase Inhibitors (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "anticholinergic antagonism"
+      ],
+      "evidence": "Chlorpheniramine may reduce the effects of acetylcholinesterase inhibitors due to anticholinergic activity."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, glycopyrrolate, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic effects"
+      ],
+      "evidence": "Additive anticholinergic effects may occur when chlorpheniramine is used concomitantly with other anticholinergic agents."
+    },
+    {
+      "drug": "Anticoagulants (heparin, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "reduced anticoagulation",
+        "antagonism"
+      ],
+      "evidence": "Chlorpheniramine may partially counteract the anticoagulation effects of heparin or warfarin."
+    },
+    {
+      "drug": "CNS Depressant Drugs (acepromazine, ketamine, methocarbamol, mirtazapine, phenobarbital, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "Additive CNS depression may be seen if combining chlorpheniramine with other CNS depressant medications."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "prolonged anticholinergic effects",
+        "exacerbated anticholinergic effects"
+      ],
+      "evidence": "MAOIs may prolong and exacerbate anticholinergic effects of chlorpheniramine."
+    },
+    {
+      "drug": "Opioids (buprenorphine, fentanyl, hydromorphone, methadone, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "additive anticholinergic effects"
+      ],
+      "evidence": "Additive CNS depression and anticholinergic effects may occur when combined with opioids."
+    },
+    {
+      "drug": "Potassium Supplements, Oral",
+      "severity": 2,
+      "keywords": [
+        "reduced GI transit",
+        "focal upper GI injury"
+      ],
+      "evidence": "Risk of focal upper GI injury caused by solid oral dosage forms of potassium salts may be increased by agents that reduce GI transit, such as chlorpheniramine."
+    },
+    {
+      "drug": "Prokinetics (cisapride, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "reduced prokinetic efficacy",
+        "anticholinergic antagonism"
+      ],
+      "evidence": "Chlorpheniramine may reduce the effects of prokinetic agents due to anticholinergic activity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "additive anticholinergic effects"
+      ],
+      "evidence": "Additive CNS depression and anticholinergic effects may occur when combined with tricyclic antidepressants."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "히스타민 관련 소양증 상태의 보조 치료 및 예방, 또는 경도 진정 (오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "1일 최대 1.1 mg/kg 초과 금지. 급사 사례 보고됨.",
+          "evidence": "대부분의 권고 용량은 0.2~0.5 mg/kg PO q8~12h. 시판 정제 기준 2~8 mg/dog(mg/kg 아님)으로 1일 2~3회 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "히스타민 관련 소양증 상태의 보조 치료 및 예방, 또는 경도 진정 (오프라벨) - 고정 용량",
+          "value": "2 - 8",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 최대 1.1 mg/kg 초과 금지.",
+          "evidence": "시판 경구 정제 기준 2~8 mg/dog(mg/kg 아님) 1일 2~3회 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "히스타민 관련 소양증 상태의 보조 치료 및 예방, 또는 경도 진정 (오프라벨)",
+          "value": "1 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 고양이는 1일 1회 투여로 조절 가능.",
+          "evidence": "권장 용량 1~4 mg/cat(mg/kg 아님) PO 1일 2~3회. 일반적으로 2 mg/cat 1일 2회 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의 사용 권고. 인체 자료에서 신기능 저하 시 반감기 증가 보고됨. 수의학적 구체적 용량 조절 지침 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 대사되므로 간기능 저하 시 모니터링 권고. 구체적인 용량 조절 지침은 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "클로르페니라민 또는 동일 계열 항히스타민제에 과민반응",
+      "match_terms": [
+        "drug hypersensitivity",
+        "antihistamine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "협우각 녹내장",
+      "match_terms": [
+        "narrow-angle glaucoma",
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대증",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "BPH"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유문십이지장 또는 방광경부 폐색",
+      "match_terms": [
+        "pyloric obstruction",
+        "GI obstruction",
+        "urinary obstruction",
+        "bladder neck obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "점액 분비가 최소화된 폐질환",
+      "match_terms": [
+        "pulmonary disease",
+        "minimal mucosal secretions"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "H1 수용체 길항제로서 히스타민 H1 수용체를 경쟁적으로 억제함. 히스타민을 불활성화하거나 방출을 억제하지는 않으나 세포에 대한 히스타민 작용을 차단함. 항콜린, 진정, 항경련, 국소마취, 경도 기관지확장, 항구토 작용도 있음.",
+    "common_extra_effects": [
+      "CNS 억제 (기면, 진정)",
+      "항콜린 효과 (구강 건조, 소변 및 대변 정체)",
+      "위장관 효과 (변비, 설사, 구토, 식욕부진)",
+      "과다복용 시 CNS 자극 (과흥분, 경련) 또는 억제 (기면, 혼수)",
+      "호흡 억제 (과다복용 시)"
+    ],
+    "dog_mechanism": "개에서 H1 수용체 길항을 통한 항히스타민 및 항소양 효과. 경구 생체이용률 10~40%(용량 의존적).",
+    "dog_extra_effects": [
+      "진정 효과 (작업견 수행 능력 저하 가능)",
+      "지속 투여 시 진정 효과 감소 가능",
+      "과다복용 시 운동실조, 진전, 서맥, 혼수, 심정지 보고됨"
+    ],
+    "cat_mechanism": "고양이에서 H1 수용체 길항을 통한 항히스타민 및 항소양 효과.",
+    "cat_extra_effects": [
+      "역설적 흥분 반응 가능",
+      "쓴맛으로 인한 기호성 문제"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아토피 피부염 치료 시 1세대 경구 항히스타민제의 효능에 대한 결정적 근거는 없으며, 치료 반응은 개체마다 다름. 클로르페니라민과 하이드록시진 병용 시 약 1/3의 개에서 임상 증상 개선 보고. 소양증이 25% 이상 개선된 경우도 보고됨. 급성 악화 전 예방적 목적으로 매일 지속 투여 권장. 1일 최대 1.1 mg/kg 초과 금지(급사 사례 보고).",
+    "cat": "고양이에서 클로르페니라민은 경구 오메가-3 및 오메가-6 지방산 보충제와 병용 시 항소양 효과가 있음. 쓴맛으로 인해 투여가 어려울 수 있으며, 참치 주스, 버터, 바셀린에 담그거나 젤라틴 캡슐에 넣어 투여 가능. 역설적 흥분 반응에 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "협우각 녹내장, 전립선 비대증, 유문십이지장 또는 방광경부 폐색, 폐질환, 갑상선기능항진증, 심혈관 질환, 고혈압, 신기능 장애 환자에서 주의 사용. 1일 최대 1.1 mg/kg 초과 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "역설적 흥분 반응 가능. 기호성 문제(쓴맛). 협우각 녹내장, 심혈관 질환, 신기능 장애 환자에서 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15~30°C) 보관, 빛 차단. 경구 용액 동결 금지.",
+    "forms": [
+      "클로르페니라민 말레산염 경구 정제 4 mg (OTC)",
+      "클로르페니라민 말레산염 서방형 정제 12 mg (OTC)",
+      "클로르페니라민 말레산염 경구 시럽 2 mg/5 mL (OTC)",
+      "클로르페니라민 말레산염 경구 드롭 2 mg/mL (OTC)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로르페니라민은 1세대 H1 항히스타민제로, 개와 고양이의 히스타민 매개 소양증 및 알레르기 질환(두드러기, 곤충 교상 과민반응 등)의 보조 치료에 사용됨. 수의학적 승인 제품은 없으며 오프라벨 사용임. 개에서 아토피 피부염에 대한 효능 근거는 제한적이며 개체 반응 차이가 큼. 고양이에서 역설적 흥분 반응 가능. OTC 복합 제품(아세트아미노펜, 슈도에페드린 함유)은 동물에게 독성 위험이 있으므로 단일 성분 제품 사용 필수.",
+    "indications": "히스타민 매개 소양증 및 알레르기 질환(두드러기, 곤충 교상 과민반응)의 보조 치료 및 예방. 아토피 피부염 보조 치료(오프라벨). 비만세포종 수술 시 국소 히스타민 방출 예방 보조제. 경도 진정 목적(오프라벨).",
+    "client_info": "이 약은 고양이에게 투여하기 어려울 수 있습니다(쓴맛). 참치 주스, 버터, 바셀린에 담그거나 빈 젤라틴 캡슐에 넣어 투여하면 도움이 됩니다. 항히스타민제는 알레르겐에 노출되기 전에 사용할 때 더 효과적이므로 반응이 좋은 경우 지속적으로 규칙적으로 투여하세요. 졸음이 올 수 있으나 시간이 지나면 줄어드는 경우가 많습니다. 고양이는 오히려 흥분할 수 있습니다. 구강 건조, 변비, 소변 횟수 감소가 나타날 수 있습니다. OTC 복합 제품(아세트아미노펜, 슈도에페드린 등 포함)은 동물에게 독성이 있을 수 있으므로 반드시 클로르페니라민 단일 성분 제품을 선택하세요. 서방형 제품은 분쇄하거나 액체에 녹이지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (cat)",
+      "timing_profile.f_percent (cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:39:34.426160+00:00",
+    "reviewer": null
+  }
+}

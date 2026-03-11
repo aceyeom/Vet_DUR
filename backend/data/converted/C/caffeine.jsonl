@@ -1,0 +1,506 @@
+{
+  "id": "caffeine",
+  "drug_identity": {
+    "name_ko": "카페인",
+    "name_en": "Caffeine",
+    "active_ingredient": "Caffeine",
+    "brand_names": [
+      "Cafcit",
+      "Peyona"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개에서 폐렴 보조치료, 망아지에서 호흡성 산증 치료에 사람용 제품(카페인 시트레이트)을 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP1A2"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 카페인은 CYP1A2에 의해 간에서 거의 완전히 대사되며, 대사산물은 소변으로 배설된다. 신생아는 간 대사가 미성숙하여 대부분 미변화체로 소변 배설. 말에서는 카페인이 테오필린으로 대사됨."
+    },
+    "extra_information": "개에서 경구 투여 후 최고 혈중 농도 도달 시간은 1.6시간, 소실 반감기는 약 3.2시간. 고양이에 대한 약동학 데이터는 보고되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 약동학 데이터 일부 존재; 고양이 데이터 없음. 사람 데이터 보조 참고.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "tremors",
+          "seizures",
+          "increased locomotor activity"
+        ],
+        "index": 1,
+        "evidence": "카페인은 강력한 CNS 자극 효과를 가지며, 과도한 CNS 자극 시 진전, 과민성, 수면 감소가 나타날 수 있음. 뇌혈관 수축 효과도 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension",
+          "hypokalemia",
+          "hyperglycemia"
+        ],
+        "index": 2,
+        "evidence": "카페인은 심박수 및 혈압 증가, 혈당 조절 장애, 저칼륨혈증을 유발할 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "diuresis",
+          "renal blood flow",
+          "tubular sodium reabsorption"
+        ],
+        "index": 3,
+        "evidence": "신장 혈류 증가 및 근위세뇨관 나트륨 재흡수 감소로 경미한 이뇨 효과 발생. 신장 질환 환자에서 감량 필요."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP1A2",
+          "hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "간에서 CYP1A2에 의해 대사됨. 간 질환 환자에서 감량 필요하다고 명시됨."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension",
+          "hypotension",
+          "cardiovascular"
+        ],
+        "index": 5,
+        "evidence": "카테콜아민 분비 자극, 베타-1 및 베타-2 아드레날린 효과로 빈맥 및 고혈압 유발 가능. 고용량에서는 저혈압 및 말초혈관저항 감소 가능. 심혈관 질환 환자에서 주의 사용."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적인 CNS 부담 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 혈액 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 신장 부담 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 간 대사 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 심장 부담 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.6,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 3.2,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 35,
+    "evidence": "개에서 경구 투여 후 Tmax 1.6시간, 소실 반감기 약 3.2시간(단회 약동학 연구). 단백결합률 35%는 사람 데이터. 사람에서 경구 투여 후 최고 혈중 농도 도달 시간 30~120분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 명시된 상호작용은 사람 또는 동물에서 보고되었거나 이론적인 것으로, 수의 환자에서도 임상적 의의가 있을 수 있음.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Receptor Agonists (albuterol, dobutamine, epinephrine)",
+      "severity": 2,
+      "keywords": [
+        "inotropic enhancement",
+        "cardiovascular stimulation"
+      ],
+      "evidence": "Inotropic effects may be enhanced when combined with caffeine."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "reduced caffeine metabolism"
+      ],
+      "evidence": "Cimetidine may reduce caffeine metabolism by 50% to 70%, increasing caffeine plasma concentrations."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 1,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "reduced caffeine metabolism"
+      ],
+      "evidence": "Estrogens may reduce caffeine metabolism, potentially increasing caffeine exposure."
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "reduced caffeine metabolism"
+      ],
+      "evidence": "Ciprofloxacin may reduce caffeine metabolism, increasing caffeine plasma concentrations."
+    },
+    {
+      "drug": "Enrofloxacin",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "reduced caffeine metabolism"
+      ],
+      "evidence": "Enrofloxacin may reduce caffeine metabolism, increasing caffeine plasma concentrations."
+    },
+    {
+      "drug": "Mexiletine",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "reduced caffeine metabolism"
+      ],
+      "evidence": "Mexiletine may reduce caffeine metabolism by 30% to 50%."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 induction",
+        "increased caffeine metabolism"
+      ],
+      "evidence": "Phenobarbital may increase caffeine metabolism, potentially reducing caffeine efficacy."
+    },
+    {
+      "drug": "Phenylpropanolamine",
+      "severity": 2,
+      "keywords": [
+        "increased blood pressure",
+        "additive cardiovascular effect"
+      ],
+      "evidence": "May increase plasma caffeine concentrations. Combination increases blood pressure to a greater extent than either drug alone."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "reduced caffeine metabolism"
+      ],
+      "evidence": "Terbinafine may reduce caffeine metabolism, increasing caffeine plasma concentrations."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "additive adverse effects",
+        "methylxanthine toxicity"
+      ],
+      "evidence": "Additive adverse effects may occur. Premature human neonates metabolize theophylline to caffeine; horses metabolize caffeine to theophylline."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "폐렴 보조치료 (오프라벨) - IV",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "희석 후 최소 30분에 걸쳐 천천히 투여",
+          "evidence": "Plumb's 오프라벨 용량: 5–10 mg/kg IV q6–8h, 희석 후 최소 30분에 걸쳐 투여"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "단회 약동학 연구 (경구)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "단회 약동학 연구에서 사용된 용량",
+          "evidence": "10 mg/kg PO was used in a single-dose pharmacokinetic study"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 감량이 필요할 수 있다고 명시되어 있으나 구체적인 용량 조정 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 질환 환자에서 감량이 필요할 수 있다고 명시되어 있으나 구체적인 용량 조정 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "카페인 과민증",
+      "match_terms": [
+        "hypersensitivity to caffeine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "cardiac disease",
+        "arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 출혈 병력",
+      "match_terms": [
+        "GI bleeding",
+        "gastrointestinal hemorrhage",
+        "peptic ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "메틸잔틴계 약물로 포스포디에스테라제 비선택적 억제(cAMP 및 cGMP 축적)와 아데노신 A1/A2 수용체 길항을 통해 호흡 중추를 자극하고 CNS 흥분 효과를 나타냄. 카테콜아민 분비 자극, 베타-1/베타-2 아드레날린 효과로 빈맥 및 고혈압 유발 가능.",
+    "common_extra_effects": [
+      "진전(tremors)",
+      "과민성(irritability)",
+      "수면 감소",
+      "빈맥",
+      "고혈압",
+      "혈당 조절 장애",
+      "오심",
+      "구토",
+      "식욕 감소",
+      "경미한 이뇨 효과",
+      "안압 상승",
+      "골격근 수축 증가",
+      "위산 분비 증가"
+    ],
+    "dog_mechanism": "개에서 경구 투여 후 Tmax 1.6시간, 소실 반감기 약 3.2시간. 폐렴 보조치료에 오프라벨로 사용.",
+    "dog_extra_effects": [
+      "CNS 과자극",
+      "빈맥",
+      "혈압 상승",
+      "위장관 증상(구토, 설사, 식욕 감소)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 폐렴의 보조치료로 오프라벨 사용됨. 경구 투여 시 Tmax 1.6시간, 소실 반감기 약 3.2시간. IV 투여 시 희석 후 최소 30분에 걸쳐 천천히 투여해야 함. 심혈관 질환, 발작 장애, 위장관 출혈 병력이 있는 환자에서 주의 사용.",
+    "cat": "고양이에 대한 용량 및 약동학 데이터가 없음. 안전성이 확립되지 않아 사용 시 극도의 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심혈관 질환, 발작 장애, 위장관 출혈 병력, 간 또는 신장 질환 환자에서 주의 사용. 내성 발생 가능성 있으며, 갑작스러운 투약 중단 시 금단 증상 발생 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 안전성 및 유효성 데이터 없음. 사용 시 모체의 이익이 잠재적 위험을 상회하는 경우에만 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C~25°C, 68°F~77°F) 보관. 방부제 미함유 제품으로 개봉 후 미사용분은 폐기.",
+    "forms": [
+      "Caffeine Citrate for Injection: 20 mg/mL, 3 mL vials (Cafcit®, generic)",
+      "Caffeine Citrate Oral Solution: 20 mg/mL, 3 mL vials (generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "카페인은 메틸잔틴계 CNS 자극제로, 개에서 폐렴 보조치료 및 망아지의 호흡성 산증 치료에 오프라벨로 사용됨. 수의학적 허가 제품 없음. CYP1A2 기질로 다수의 약물 상호작용 주의 필요. 심혈관 질환, 발작 장애, 위장관 출혈 병력 환자에서 주의 사용. 과용량 시 저칼륨혈증, 빈맥, 발작 등 심각한 독성 발생 가능.",
+    "indications": "【오프라벨】개: 폐렴 보조치료. 망아지: 고탄산혈증 및 호흡성 산증. 사람(허가): 미숙아 무호흡 치료. 경마 규정상 Class 2 물질로 지정되어 있어 경기 참가 전 규정 확인 필요.",
+    "client_info": "카페인은 수의사에 의해서만 투여되는 약물입니다. 투여 후 동물이 평소보다 활동적이거나 수면 패턴이 변할 수 있습니다. 구토, 설사, 식욕 감소가 나타날 수 있으며, 이러한 증상이 지속되면 즉시 수의사에게 연락하십시오. 약물을 갑자기 중단하면 금단 증상(불안, 과민성)이 나타날 수 있으므로 수의사의 지시에 따라 투약하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosage",
+      "Cat pharmacokinetics",
+      "Oral bioavailability (dog)",
+      "Protein binding (dog/cat)",
+      "Specific renal/hepatic dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (cat)",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/52.jsonl",
+    "extracted_at": "2026-03-11T05:14:17.293022+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "id": "ifosfamide",
+  "drug_identity": {
+    "name_ko": "이포스파미드",
+    "name_en": "Ifosfamide",
+    "active_ingredient": "Ifosfamide",
+    "brand_names": [
+      "Ifex"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이의 림프종 및 육종 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 3000,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "이포스파미드는 프로드럭으로, 주로 간의 산화 경로(일부 폐에서도)를 통해 활성 알킬화제인 이포스파미드 머스타드로 대사됨. 대사체는 주로 신장을 통해 소변으로 배설됨."
+    },
+    "extra_information": "이포스파미드의 약동학은 복잡하며, 반감기와 배설은 용량 의존적임(사람 데이터). 개와 고양이에 대한 종별 약동학 데이터는 문헌에 명시되지 않음. SC 또는 경구 투여 시 생체이용률 90% 이상이나, 임상에서는 IV 투여가 표준임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신독성, 방광독성, 골수억제, 신경독성, 간효소 상승 등 명시된 독성 프로파일을 근거로 평가. 수의학 종별 PK 데이터 부재로 사람 데이터 및 임상 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "somnolence",
+          "encephalopathy",
+          "coma"
+        ],
+        "index": 1,
+        "evidence": "신경독성(졸음, 혼돈, 혼수, 뇌병증)이 이상반응으로 명시됨."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "bone marrow depression"
+        ],
+        "index": 0,
+        "evidence": "용량 의존적 호중구감소증(치료 후 5~7일, 지연 시 14~21일)과 혈소판 감소가 주요 독성으로 명시됨."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular damage",
+          "glomerular effects",
+          "electrolyte abnormalities",
+          "renal toxicity"
+        ],
+        "index": 2,
+        "evidence": "근위 및 원위 세뇨관 손상, 사구체 영향, 전해질 이상 등 신독성이 주요 독성으로 명시됨. 신기능 저하 환자에서 극도의 주의 요망."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "increased hepatic enzymes"
+        ],
+        "index": 3,
+        "evidence": "간효소 수치 상승이 이상반응으로 언급됨. 주요 대사 장기이나 직접적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "pulmonary edema",
+          "volume overload",
+          "cardiac disease"
+        ],
+        "index": 4,
+        "evidence": "강제 식염수 이뇨 시 폐부종 및 용량 과부하 위험. 심장 질환 환자에서 사용 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "somnolence",
+          "encephalopathy"
+        ],
+        "index": 1,
+        "evidence": "신경독성이 이상반응으로 명시됨. 고양이 특이 신경독성 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "nadir"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 nadir는 보통 7~8일째 관찰. 900 mg/m² 이하 용량에서 약 33%의 고양이에서 호중구 수 1000/μL 미만 발생."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal toxicity",
+          "tubular damage"
+        ],
+        "index": 2,
+        "evidence": "고양이 임상시험에서 2마리에서 신독성 보고. 신독성 감소를 위해 식염수 이뇨 필수."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "increased hepatic enzymes"
+        ],
+        "index": 3,
+        "evidence": "간효소 상승이 이상반응으로 언급됨. 고양이 특이 간독성 데이터 부재."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "pulmonary edema",
+          "volume overload"
+        ],
+        "index": 4,
+        "evidence": "고양이 임상시험에서 1마리에서 폐부종 보고. 강제 이뇨 시 심장 질환 환자에서 위험."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": null,
+    "evidence": "사람에서 반감기와 배설은 용량 의존적. SC 또는 경구 투여 시 생체이용률 90% 이상(사람 데이터). 개·고양이 특이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Azole Antifungals (e.g., ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "reduced efficacy",
+        "active metabolite"
+      ],
+      "evidence": "아졸계 항진균제 병용 시 이포스파미드의 활성 대사체로의 대사가 감소하여 항종양 효과가 저하될 수 있음."
+    },
+    {
+      "drug": "Cisplatin",
+      "severity": 2,
+      "keywords": [
+        "ototoxicity",
+        "nephrotoxicity",
+        "additive toxicity"
+      ],
+      "evidence": "이포스파미드가 시스플라틴 유발 이독성 및 신독성을 증강시킬 수 있음."
+    },
+    {
+      "drug": "Maropitant",
+      "severity": 2,
+      "keywords": [
+        "toxic metabolite accumulation",
+        "neurotoxicity",
+        "NK1-receptor antagonist"
+      ],
+      "evidence": "사람에서 NK1 수용체 길항제(마로피탄트 유사)가 이포스파미드의 독성 대사체 농도를 증가시킬 수 있음. 이포스파미드 신경독성 임상 징후 모니터링 필요."
+    },
+    {
+      "drug": "Myelosuppressive Agents (e.g., antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "다른 골수억제제와 병용 시 골수억제가 상가적으로 증가할 수 있음. 가능한 병용 회피."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "reduced vaccine efficacy",
+        "enhanced adverse effects",
+        "immunosuppression"
+      ],
+      "evidence": "이포스파미드가 백신 효능을 감소시키고 백신 이상반응을 증강시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "림프종 및 육종 보조 치료 (체중 10 kg 초과, 오프라벨) - 프로토콜 A",
+          "value": "375",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "21일 간격 반복 (일부 문헌에서 2~3주 간격). 반드시 식염수 이뇨 및 메스나 병용 필요. 단위: mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. 20 mg/mL 이하로 희석 후 20분간 IV 투여. 메스나 75 mg/m²를 이포스파미드 직전, 2시간 후, 5시간 후 반복 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "림프종 및 육종 보조 치료 (체중 10 kg 미만, 오프라벨) - 프로토콜 B",
+          "value": "350",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주 간격 반복 (일부 문헌에서 2~3주 간격). 반드시 식염수 이뇨 및 메스나 병용 필요. 단위: mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. 체중 10 kg 미만 환자에 적용. 메스나(이포스파미드 용량의 20%)를 이포스파미드 시작 시, 2시간 후, 5시간 후 IV 볼루스 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "림프종 및 백신 관련 육종 보조 치료 (오프라벨)",
+          "value": "900",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "21일 간격 반복. 반드시 식염수 이뇨 및 메스나 병용 필요. 단위: mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. Phase I 안전성 연구 및 Phase II 백신 관련 육종 임상시험 기반. 메스나(이포스파미드 용량의 20%)를 이포스파미드 직전 투여, 이후 식염수 이뇨(18.3 mL/kg/hr, 30분 전 시작 후 5시간 지속). 41%에서 측정 가능한 반응 보고."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 극도의 주의 필요. 요로 폐색 또는 활동성 출혈성 방광염 환자에서 금기. 구체적인 크레아티닌 역치 또는 용량 조절 계수는 문헌에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간이 주요 대사 장기이나, 문헌에 간기능 저하 시 구체적인 용량 조절 지침은 명시되지 않음. 간효소 상승이 이상반응으로 보고되어 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity to ifosfamide",
+        "allergic reaction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 골수억제",
+      "match_terms": [
+        "severe myelosuppression",
+        "neutropenia",
+        "pancytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요로 폐색",
+      "match_terms": [
+        "urinary outflow obstruction",
+        "urethral obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 출혈성 방광염",
+      "match_terms": [
+        "active hemorrhagic cystitis",
+        "hematuria"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 심장 질환 (강제 식염수 이뇨 불내성)",
+      "match_terms": [
+        "severe heart disease",
+        "cardiac disease",
+        "congestive heart failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알킬화 항종양제. 암세포 DNA 가닥의 알킬화를 통해 교차결합을 유발하고 종양 성장, DNA 복제, RNA 전사, 단백질 합성을 억제함. 이포스파미드는 프로드럭으로 간에서 활성 알킬화제(이포스파미드 머스타드)로 대사됨.",
+    "common_extra_effects": [
+      "골수억제(호중구감소증, 혈소판감소증)",
+      "출혈성 방광염",
+      "신독성(근위·원위 세뇨관 손상, 사구체 영향)",
+      "전해질 이상",
+      "신경독성(졸음, 혼돈, 혼수, 뇌병증)",
+      "오심, 구토, 식욕부진, 설사",
+      "간효소 상승",
+      "탈모",
+      "과민반응",
+      "폐부종(강제 이뇨 시)"
+    ],
+    "dog_mechanism": "개에서 이포스파미드는 림프종 및 육종에 대한 복합 화학요법 프로토콜에서 사용됨. 도소루비신과 교대 투여 시 연조직 육종 및 혈관육종에서 평가되었으나 생존 이점은 없었음. 전이성 골육종에서 경미한 항종양 활성 보고.",
+    "dog_extra_effects": [
+      "호중구감소증(치료 후 5~7일, 지연 시 14~21일)",
+      "혈소판감소증",
+      "신독성",
+      "출혈성 방광염",
+      "신경독성",
+      "오심, 구토, 침흘림",
+      "탈모(지속 성장 모발 견종에서 더 심함)",
+      "폐부종"
+    ],
+    "cat_mechanism": "고양이에서 이포스파미드는 백신 관련 육종 및 림프종에 대해 평가됨. Phase II 연구에서 백신 관련 육종 치료 시 41%에서 측정 가능한 반응 보고.",
+    "cat_extra_effects": [
+      "호중구감소증(nadir: 7~8일째, 900 mg/m² 이하에서 약 33%에서 발생)",
+      "오심, 구토, 식욕부진, 설사",
+      "신독성(2마리에서 보고)",
+      "폐부종(1마리에서 보고)",
+      "과민반응(1마리에서 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 이포스파미드는 림프종 및 육종 치료를 위한 복합 화학요법에서 오프라벨로 사용됨. 반드시 식염수 이뇨(유지 용량의 6배) 및 메스나 병용이 필요함. 체중 10 kg 기준으로 용량이 다름(350 vs 375 mg/m²). 21일 간격으로 반복 투여. 지속 성장 모발 견종(푸들, 테리어, 아프간 하운드, 올드 잉글리시 쉽독 등)에서 탈모 위험이 높음. 이차 요로감염 발생 시 이후 이포스파미드 사용 금기.",
+    "cat": "고양이에서 이포스파미드 용량(900 mg/m²)은 개보다 훨씬 높음. Phase II 연구에서 백신 관련 육종에 41% 반응률 보고. Nadir는 보통 7~8일째 발생. 반드시 식염수 이뇨(18.3 mL/kg/hr) 및 메스나 병용 필요. 고양이에서 폐부종, 과민반응, 신독성이 보고된 바 있어 면밀한 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 심장 질환, 골수억제 환자에서 주의 또는 금기. 반드시 식염수 이뇨 및 메스나 병용 필요. 세포독성 약물 경험이 있는 수의사만 사용 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 용량이 개보다 높으며, 신독성·폐부종·과민반응 등의 이상반응이 보고됨. 반드시 식염수 이뇨 및 메스나 병용 필요. 면밀한 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 보관. 30°C 초과 온도 노출 금지(35°C 초과 시 액화 가능). 재구성 후 냉장(2°C~8°C) 시 24시간 안정. 5% 포도당, 0.9% 식염수, 젖산 링거액으로 희석 후 냉장 시 24시간 안정.",
+    "forms": [
+      "이포스파미드 주사액: 1 g/20 mL, 3 g/60 mL 단회용 바이알 (제네릭)",
+      "이포스파미드 주사용 분말: 1 g, 3 g 단회용 바이알 (Ifex®, 제네릭)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이포스파미드는 알킬화 항종양제로, 개와 고양이의 림프종 및 육종 치료에 오프라벨로 사용됨. 반드시 식염수 이뇨 및 메스나 병용이 필요하며, 골수억제·신독성·방광독성·신경독성 등 심각한 독성이 발생할 수 있음. 수의 종양 전문의와의 협진 및 철저한 모니터링이 필수적임. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비 착용 필요.",
+    "indications": "개와 고양이의 림프종 및 연조직 육종, 백신 관련 육종(고양이)에 대한 복합 화학요법(오프라벨). 사람에서는 방광암, 자궁경부암, 난소암, 일부 림프종 치료에 사용됨.",
+    "client_info": "이포스파미드는 항암(세포독성) 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 투약 당일과 이후 며칠간 반려동물의 모든 배설물(소변, 대변, 구토물 등)은 반드시 일회용 장갑을 착용하고 처리하십시오. 폐기물은 비닐봉지에 밀봉하여 일반 쓰레기와 함께 버리십시오. 골수억제가 발생할 수 있으며, 치료 후 1~2주 내에 가장 심하게 나타납니다. 수의사가 혈액 검사를 통해 이를 모니터링할 것입니다. 정기 검진을 빠지지 마십시오. 출혈, 멍, 발열(감염 징후), 호흡 곤란, 또는 반려동물이 쉽게 피로해하는 경우 즉시 수의사에게 연락하십시오. 이 약물은 NIOSH에서 위험 약물로 분류하고 있습니다. 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (partial)",
+      "Laboratory Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.protein_binding_percent",
+      "species_flags.washout_period_days",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/1.jsonl",
+    "extracted_at": "2026-03-10T14:02:06.118595+00:00",
+    "reviewer": null
+  }
+}

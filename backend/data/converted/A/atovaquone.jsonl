@@ -1,0 +1,438 @@
+{
+  "id": "atovaquone",
+  "drug_identity": {
+    "name_ko": "아토바쿠온",
+    "name_en": "Atovaquone",
+    "active_ingredient": "Atovaquone",
+    "brand_names": [
+      "Mepron",
+      "Malarone",
+      "Malarone Pediatric",
+      "Malanil",
+      "Wellvone"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 개 및 고양이에 오프라벨로 사용.",
+    "dosage_form": [
+      "Susp",
+      "Tab",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 150,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 62.5,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간 대사는 제한적이며, 흡수된 약물의 대부분은 대변으로 미변화체로 배설됨. 장간 순환(enterohepatic recycling)으로 인해 반감기가 연장되는 것으로 추정됨."
+    },
+    "extra_information": "개 및 고양이에 대한 약동학 데이터 없음. 인체 데이터: 경구 생체이용률 23~47%, 고지방 식이와 함께 투여 시 2배 이상 증가. 혈장 단백 결합률 99.9%. CSF 농도는 혈장의 약 1%. 반감기 약 70시간(장간 순환 추정)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학적 PK 데이터 없음; 인체 데이터 및 부작용 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS effects",
+          "headache",
+          "dizziness",
+          "insomnia"
+        ],
+        "index": 1,
+        "evidence": "인체에서 두통, 어지럼증, 불면증 등 CNS 부작용 보고됨. 개에서는 직접적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neutropenia",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "인체에서 호중구감소증 및 빈혈 보고됨. 개에서 CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음. 신장 배설 분율 불명확."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "increased liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "인체에서 간 효소 수치 상승 보고됨. 개에서 간 부담 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적 CNS 부작용 데이터 없음. 인체 데이터 참조."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neutropenia",
+          "anemia"
+        ],
+        "index": -1,
+        "evidence": "인체에서 혈액학적 부작용 보고됨. 고양이에서 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "increased liver enzymes"
+        ],
+        "index": -1,
+        "evidence": "인체에서 간 효소 상승 보고됨. 고양이에서 직접 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 70.0,
+      "species": "human"
+    },
+    "f_percent": 35,
+    "protein_binding_percent": 99,
+    "evidence": "인체 데이터: 경구 생체이용률 23~47%(중간값 약 35%), 혈장 단백 결합률 99.9%, 반감기 약 70시간(장간 순환 추정). 개 및 고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Highly Protein-Bound Drugs (azole antifungals, furosemide, NSAIDs)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "transient serum level increase"
+      ],
+      "evidence": "Atovaquone is 99.9% protein-bound and may theoretically displace other highly protein-bound drugs, causing transient increases in free drug levels. Unlikely to be clinically significant due to compensatory clearance. Monitor for adverse effects."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "decreased atovaquone plasma concentration",
+        "reduced absorption"
+      ],
+      "evidence": "Metoclopramide can decrease atovaquone plasma concentrations. Use together only when no other options are available."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 3,
+      "keywords": [
+        "decreased atovaquone plasma concentration",
+        "reduced efficacy"
+      ],
+      "evidence": "Rifampin can significantly decrease atovaquone plasma concentrations. Concomitant use is not recommended."
+    },
+    {
+      "drug": "Tetracycline",
+      "severity": 2,
+      "keywords": [
+        "decreased atovaquone plasma concentration"
+      ],
+      "evidence": "Tetracycline can decrease atovaquone plasma concentrations. Monitor for reduced efficacy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 14.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Babesia gibsoni (Asian genotype), B conradae, B microti-like (Theileria annae, B vulpes) 감염 - 아지스로마이신 병용",
+          "value": "13.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일간, 고지방 식이와 함께 투여. 아지스로마이신 10 mg/kg PO q24h 병용. 3~5일 내 반응 없을 시 면역억제 치료 고려.",
+          "evidence": "오프라벨. 참고문헌 1,8,15-18."
+        },
+        {
+          "logic_type": "linear",
+          "context": "Babesia gibsoni 단독 치료 (연구 목적)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일간. 2일 내 기생충 소실되었으나 마지막 투여 33일 후 혈액도말에서 재출현.",
+          "evidence": "오프라벨. 참고문헌 10."
+        },
+        {
+          "logic_type": "linear",
+          "context": "Babesia gibsoni (Asian genotype) - 아토바쿠온/프로구아닐 복합정(Malarone®) 사용, 독시사이클린 병용 또는 단독",
+          "value": "17 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일간, 고지방 식이와 함께. 프로구아닐 7~10 mg/kg PO q12h 병용. 독시사이클린 5 mg/kg PO q12h 30일 병용 가능.",
+          "evidence": "오프라벨. 참고문헌 2."
+        },
+        {
+          "logic_type": "linear",
+          "context": "폐포자충증(Pneumocystosis)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간",
+          "evidence": "오프라벨. 참고문헌 19."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Cytauxzoonosis (Cytauxzoon felis 감염) - 아지스로마이신 병용",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일간. 아지스로마이신 10 mg/kg PO q24h 병용. 정맥 수액 및 헤파린 병용 치료. 경구 투여 스트레스 감소 및 흡수 극대화를 위해 급식 튜브 설치 고려.",
+          "evidence": "오프라벨. 참고문헌 6,7."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적 권고사항 없음. 약물 대부분이 대변으로 배설되므로 신장 부담은 낮을 것으로 추정되나 공식 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 용량 조절에 대한 구체적 권고사항 없음. 간 효소 상승이 부작용으로 보고되어 있으므로 간질환 환자에서 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "drug allergy",
+        "atovaquone allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "흡수불량 증후군",
+      "match_terms": [
+        "malabsorption syndrome",
+        "GI malabsorption"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "하이드록시나프토퀴논 계열로서 원충의 사이토크롬 b(cytb)를 표적으로 하여 원충 미토콘드리아 전자전달계를 선택적으로 억제하고, 피리미딘 de novo 합성을 저해함. 포유류 세포와 달리 일부 원충은 기존 피리미딘을 재활용할 수 없어 선택적 독성을 나타냄.",
+    "common_extra_effects": [
+      "발진(인체 최대 39%)",
+      "오심",
+      "구토",
+      "설사",
+      "간 효소 상승",
+      "두통",
+      "어지럼증",
+      "불면증",
+      "고혈당",
+      "저나트륨혈증",
+      "발열",
+      "호중구감소증",
+      "빈혈",
+      "과민반응"
+    ],
+    "dog_mechanism": "개에서의 작용기전은 인체와 동일한 것으로 추정됨. Babesia gibsoni cytochrome b 유전자 돌연변이(M121I, M128I, M128V)에 의해 내성 발생 가능.",
+    "dog_extra_effects": [
+      "부작용 프로파일 불명확(제한적 사용)",
+      "아토바쿠온/프로구아닐 복합제 사용 시 구토 가능"
+    ],
+    "cat_mechanism": "고양이에서의 작용기전은 인체와 동일한 것으로 추정됨. Cytauxzoon felis cytb1 유전형이 치료 반응을 예측할 수 있음.",
+    "cat_extra_effects": [
+      "부작용 프로파일 불명확(제한적 사용)",
+      "치료 중 내성 발생 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아토바쿠온은 아지스로마이신과 병용하여 Babesia gibsoni(아시아형), B conradae, B microti-like 감염 치료에 사용됨. 면역억제 또는 비장절제 상태가 아닌 개에서 특히 효과적. CDI 프로토콜(클린다마이신, 디미나젠, 이미도카브)이 초기 치료 및 M121I 유전자 돌연변이 시 더 효과적일 수 있음. 고지방 식이와 함께 투여하여 흡수를 극대화해야 함. 쉼터 시설에서 압축 캡슐 형태로도 사용된 사례 있음.",
+    "cat": "고양이에서 아토바쿠온은 아지스로마이신과 병용하여 Cytauxzoon felis 감염(사이토옥스주노시스) 치료에 권장됨. 정맥 수액 및 헤파린 병용 치료가 일반적으로 함께 시행됨. 경구 투여 스트레스 감소 및 흡수 극대화를 위해 급식 튜브 설치를 고려할 수 있음. 치료 중 내성 발생 가능성에 유의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 절대적 금기사항은 없으나, 흡수불량 증후군이 있거나 식이와 함께 투여할 수 없는 경우 대체 치료를 고려해야 함. 부작용 프로파일이 충분히 확립되지 않아 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 절대적 금기사항은 없으나, 흡수불량 증후군이 있거나 식이와 함께 투여할 수 없는 경우 대체 치료를 고려해야 함. 치료 중 내성 발생 가능성에 유의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C-25°C, 59°F-77°F) 보관, 밀폐 용기에 보관, 강한 빛으로부터 차단, 냉동 금지.",
+    "forms": [
+      "경구 현탁액 150 mg/mL (750 mg/5mL), 210 mL 병 및 5 mL, 10 mL 단위용량 용기",
+      "복합정: 아토바쿠온 62.5 mg + 프로구아닐 25 mg (Malarone Pediatric®)",
+      "복합정: 아토바쿠온 250 mg + 프로구아닐 100 mg (Malarone®)",
+      "압축 캡슐(조제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아토바쿠온은 원충 미토콘드리아 전자전달계를 억제하는 항원충제로, 개의 Babesia gibsoni 및 고양이의 Cytauxzoon felis 감염 치료에 아지스로마이신과 병용하여 사용됨. 수의학적 허가 제품은 없으며 오프라벨 사용임. 고지방 식이와 함께 투여 시 흡수가 크게 증가함. 리팜핀과의 병용은 권장되지 않음. 개 및 고양이에서 부작용 프로파일은 아직 충분히 확립되지 않았으나 전반적으로 내약성이 양호한 것으로 보임.",
+    "indications": "【허가 외 사용】개: Babesia gibsoni(아시아형), B conradae, B microti-like(Theileria annae, B vulpes) 감염(아지스로마이신 병용), 폐포자충증(2차 치료). 고양이: Cytauxzoon felis 감염(아지스로마이신 병용). 인체: 말라리아 예방 및 치료(아토바쿠온/프로구아닐 복합제).",
+    "client_info": "【보호자 안내】\n• 약을 실온에 보관하고 강한 빛을 피하세요.\n• 사용 전 병을 부드럽게 흔드세요. 이 약은 걸쭉한 현탁액으로 나올 수 있어 계량이 어려울 수 있습니다. 주사기에 약을 뽑은 후 기포가 빠지도록 잠시 기다린 다음 정확한 양이 채워졌는지 확인하세요.\n• 위장관 흡수를 높이기 위해 반드시 고지방 식이(예: 아이스크림, 참치 기름, 버터, 고기 기름)와 함께 투여하세요.\n• 수의사가 급식 튜브를 설치한 경우, 관리 방법을 충분히 숙지하세요.\n• 개와 고양이에서 이 약의 부작용은 아직 충분히 알려지지 않았습니다. 발진, 심한 구토나 설사 등 이상 증상이 나타나면 즉시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Doses",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data (dog/cat)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment",
+      "hepatic_dose_adjustment",
+      "organ_burden_logic.dog (veterinary-specific)",
+      "organ_burden_logic.cat (veterinary-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/49.jsonl",
+    "extracted_at": "2026-03-11T04:26:46.840151+00:00",
+    "reviewer": null
+  }
+}

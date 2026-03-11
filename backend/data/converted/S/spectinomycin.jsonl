@@ -1,0 +1,381 @@
+{
+  "id": "spectinomycin",
+  "drug_identity": {
+    "name_ko": "스펙티노마이신",
+    "name_en": "Spectinomycin",
+    "active_ingredient": "Spectinomycin",
+    "brand_names": [
+      "Spectogard",
+      "Spectogard Scour-Chek",
+      "Spectam",
+      "Adspec",
+      "Amtech Spectam",
+      "Kempi",
+      "Kirin",
+      "Spectoguard Scour-Chek",
+      "Stanilo",
+      "Togamycin",
+      "Trobicin",
+      "Trobicine",
+      "Vabicin",
+      "LS 50 Water Soluble Powder",
+      "SepcLinx-50",
+      "Prospec"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Calcium (parenteral)",
+    "reversal_evidence": "신경근 차단 발생 시 비경구 칼슘 투여로 일반적으로 역전 가능하다고 보고됨",
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "흡수된 약물은 사구체 여과를 통해 대부분 미변화 형태로 소변으로 배설됨"
+    },
+    "extra_information": "경구 투여 시 약 7%만 흡수되며, 위장관 내 잔류 약물은 활성 상태를 유지함. SC 또는 IM 투여 시 흡수가 양호하며 약 1시간 후 최고 혈중 농도에 도달함. 흡수된 약물의 조직 농도는 혈청 농도보다 낮음. CSF 또는 안구로의 침투는 미미하며 혈장 단백질 결합도 유의하지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 소 데이터 기반 반감기 사용; 개·고양이 특이적 수의학 PK 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neuromuscular blockade",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "신경근 차단 가능성 및 과량 투여 시 운동실조 보고됨. CSF 침투는 미미함."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hemoglobin decrease",
+          "hematocrit decrease"
+        ],
+        "index": 2,
+        "evidence": "인체 연구에서 헤모글로빈 및 헤마토크릿 감소 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "BUN increase",
+          "creatinine clearance decrease",
+          "glomerular filtration",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "BUN 증가 및 크레아티닌 청소율 감소 보고됨. 사구체 여과를 통해 신장으로 배설됨. 명백한 신독성은 입증되지 않음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "ALT increase",
+          "alkaline phosphatase increase"
+        ],
+        "index": 2,
+        "evidence": "인체 연구에서 ALT 및 알칼리성 인산분해효소 증가 보고됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "신경근 차단 가능성이 있으나 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hemoglobin decrease",
+          "hematocrit decrease"
+        ],
+        "index": 1,
+        "evidence": "인체 데이터 기반; 고양이 특이적 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "BUN increase",
+          "creatinine clearance decrease",
+          "renal elimination"
+        ],
+        "index": 2,
+        "evidence": "신장 배설 경로 및 인체 연구에서의 신기능 지표 변화 기반. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "ALT increase"
+        ],
+        "index": 1,
+        "evidence": "인체 데이터 기반 ALT 증가 가능성. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 2.0,
+      "species": "unknown"
+    },
+    "f_percent": 7,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 시 생체이용률 약 7%. SC/IM 투여 후 약 1시간에 최고 혈중 농도 도달. 소에서 말단 반감기 약 2시간. 혈장 단백질 결합 미미."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 길항작용 보고 또는 이론적 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "protein synthesis inhibition"
+      ],
+      "evidence": "Chloramphenicol과 병용 시 길항작용이 보고됨. 병용 시 주의 및 추가 모니터링 필요."
+    },
+    {
+      "drug": "Tetracycline",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "protein synthesis inhibition"
+      ],
+      "evidence": "Tetracycline과 병용 시 길항작용이 보고됨. 병용 시 주의 및 추가 모니터링 필요."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "스펙티노마이신은 주로 신장을 통해 미변화 형태로 배설됨. BUN 증가 및 크레아티닌 청소율 감소가 보고되었으나 명백한 신독성은 입증되지 않음. 신기능 저하 환자에서의 용량 조절에 대한 구체적 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 대사에 대한 구체적 정보 없음. ALT 및 알칼리성 인산분해효소 증가가 인체 연구에서 보고되었으나 간기능 저하 시 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "Hypersensitivity to spectinomycin",
+      "match_terms": [
+        "spectinomycin allergy",
+        "aminocyclitol hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pregnancy / Nursing",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 결합하여 감수성 세균의 단백질 합성을 억제하는 정균성 항생제",
+    "common_extra_effects": [
+      "주사 부위 반응 (부종, 통증)",
+      "과민반응",
+      "신경근 차단",
+      "BUN 증가",
+      "알칼리성 인산분해효소 증가",
+      "ALT 증가",
+      "헤모글로빈 감소",
+      "헤마토크릿 감소",
+      "크레아티닌 청소율 감소"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서의 사용은 매우 드물며 적합한 제형이 현재 시판되지 않음. FDA 승인 이력은 있으나 현재 상업적으로 이용 가능한 제품 없음. 감수성 감염에 한해 오프라벨로 사용될 수 있으나 임상 데이터가 매우 제한적임.",
+    "cat": "고양이에서의 사용은 매우 드물며 적합한 제형이 현재 시판되지 않음. 감수성 감염에 한해 오프라벨로 사용될 수 있으나 임상 데이터가 매우 제한적임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 적합한 제형이 없으며 임상 데이터가 제한적임. 신경근 차단 가능성 및 주사 부위 반응에 주의 필요. 신기능 모니터링 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 적합한 제형이 없으며 임상 데이터가 제한적임. 신경근 차단 가능성 및 주사 부위 반응에 주의 필요. 신기능 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C~30°C)에서 보관. 동결 방지.",
+    "forms": [
+      "Spectinomycin Water Soluble Powder: 0.5 g/g (1 kg 용기)",
+      "Spectinomycin Oral Solution: 50 mg/mL (240 mL, 1000 mL 펌프 병, 1갤런 리필)",
+      "Spectinomycin Dihydrochloride Oral Tablets: 100 mg (현재 미시판)",
+      "Spectinomycin Dihydrochloride Injection: 100 mg/mL (현재 미시판)",
+      "Spectinomycin Sulfate Injection: 100 mg/mL, 500 mL 바이알 (현재 미시판)",
+      "Spectinomycin Dihydrochloride Pentahydrate Injection: 100 mg/mL (현재 미시판)",
+      "Spectinomycin/Lincomycin 2:1 복합제 수용성 분말 (현재 미시판)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "스펙티노마이신은 아미노사이클리톨계 항생제로 주로 식용 동물(가금류, 돼지)에 사용됨. 30S 리보솜 소단위 결합을 통한 정균 작용. 혐기성균 및 대부분의 Pseudomonas spp.에 대한 활성은 미미함. 개·고양이에서의 사용은 매우 드물고 현재 적합한 제형이 없음. WHO 인체의학 중요 항균제, OIE 수의학 매우 중요 항균제로 지정됨. 신경근 차단 가능성 있으며 비경구 칼슘으로 역전 가능.",
+    "indications": "FDA 승인: 닭의 감염성 활막염(Mycoplasma synoviae), 만성 호흡기 질환(Mycoplasma gallisepticum), 돼지의 세균성 장염(대장균 설사). 오프라벨: 개·고양이·말의 감수성 감염(매우 드물게 사용), 토끼의 감수성 감염(음수 투여). 인체의학: 임질(Neisseria gonorrhoeae) 치료.",
+    "client_info": "이 약은 주로 가금류와 돼지에 사용되는 항생제입니다. 개나 고양이에서는 매우 드물게 사용되며 현재 적합한 시판 제형이 없습니다. 처방된 용량과 기간을 반드시 준수하시고, 주사 부위에 부종이나 이상 반응이 나타나면 즉시 수의사에게 알려주십시오. 임신 중이거나 수유 중인 동물에게는 신중하게 사용해야 합니다. 이 약은 WHO 및 OIE에서 중요 항균제로 지정되어 있으므로 책임감 있는 사용이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog-specific dosage",
+      "Cat-specific dosage",
+      "CYP profile",
+      "Protein binding (quantified)",
+      "Veterinary species-specific PK studies",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction (dog/cat)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/35.jsonl",
+    "extracted_at": "2026-03-10T23:59:04.993324+00:00",
+    "reviewer": null
+  }
+}

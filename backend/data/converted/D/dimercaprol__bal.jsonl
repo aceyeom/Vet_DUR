@@ -1,0 +1,470 @@
+{
+  "id": "dimercaprol",
+  "drug_identity": {
+    "name_ko": "다이머캅롤",
+    "name_en": "Dimercaprol",
+    "active_ingredient": "Dimercaprol",
+    "brand_names": [
+      "BAL in Oil",
+      "Sulfactin Homburg"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 비소, 납, 수은, 금 중독 치료에 사용되나 수의용 허가 제품은 없으며 인체용 제품을 오프라벨로 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "금속과 결합하지 않은 약물은 빠르게 비활성 대사산물로 대사되어 소변, 담즙, 대변으로 배설됨. 인체에서 작용 지속시간은 약 4시간이며 6~24시간 내 완전 배설됨."
+    },
+    "extra_information": "IM 주사 후 30~60분에 최고 혈중 농도 도달. 뇌를 포함한 전신에 분포하며 간과 신장에서 가장 높은 조직 농도를 보임. 다이머캅롤-금속 복합체는 신장 및 대변 경로로 배설됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간과 신장에서 가장 높은 조직 농도가 보고됨. 신독성 가능성 명시. 뇌 분포 확인됨. 수의학 종별 PK 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "brain distribution",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "뇌를 포함한 전신 분포가 확인되며, 고용량 시 경련이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased blood pressure"
+        ],
+        "index": 1,
+        "evidence": "일시적인 혈압 상승 및 빈맥이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "nephrotoxic",
+          "renal dysfunction",
+          "urine alkalinization"
+        ],
+        "index": 2,
+        "evidence": "신독성 가능성이 명시되어 있으며, 신기능 저하 환자에서 주의 사용 권고. 소변 알칼리화로 신장 보호 필요."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "highest tissue concentration",
+          "liver",
+          "hepatic function"
+        ],
+        "index": 2,
+        "evidence": "간에서 가장 높은 조직 농도 보고. 간기능 장애 시 금기(비소 중독 이차성 제외). 간 효소 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "blood pressure"
+        ],
+        "index": 1,
+        "evidence": "일시적인 혈압 상승 및 빈맥이 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "brain distribution",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "뇌를 포함한 전신 분포가 확인되며, 고용량 시 경련이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased blood pressure"
+        ],
+        "index": 1,
+        "evidence": "일시적인 혈압 상승 및 빈맥이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "nephrotoxic",
+          "renal dysfunction",
+          "urine alkalinization"
+        ],
+        "index": 2,
+        "evidence": "신독성 가능성이 명시되어 있으며, 신기능 저하 환자에서 주의 사용 권고. 소변 알칼리화로 신장 보호 필요."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "highest tissue concentration",
+          "liver",
+          "hepatic function"
+        ],
+        "index": 2,
+        "evidence": "간에서 가장 높은 조직 농도 보고. 간기능 장애 시 금기(비소 중독 이차성 제외). 간 효소 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "blood pressure"
+        ],
+        "index": 1,
+        "evidence": "일시적인 혈압 상승 및 빈맥이 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IM 주사 후 30~60분에 최고 혈중 농도 도달(t_max 0.5~1시간). 인체에서 작용 지속시간 약 4시간, 6~24시간 내 완전 배설. 반감기 수치는 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Iron salts",
+      "severity": 3,
+      "keywords": [
+        "toxic complex formation",
+        "contraindicated"
+      ],
+      "evidence": "Dimercaprol forms a toxic complex with iron. Do not administer concurrently; wait 24 hours after last dimercaprol dose before starting iron therapy."
+    },
+    {
+      "drug": "Selenium salts",
+      "severity": 3,
+      "keywords": [
+        "toxic complex formation",
+        "contraindicated"
+      ],
+      "evidence": "Dimercaprol forms a toxic complex with selenium. Do not administer concurrently; wait 24 hours after last dimercaprol dose before starting selenium therapy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "비소 중독 (오프라벨) - 초기 2일",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "치료 첫 2일간 4시간마다 투여. 5 mg/kg 용량은 첫날 급성 환자에게만 사용.",
+          "evidence": "Plumb's Veterinary Drug Handbook, 오프라벨 용법. 독성 센터 상담 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비소 중독 (오프라벨) - 회복 단계",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "초기 2일 이후 회복까지 12시간마다 투여.",
+          "evidence": "Plumb's Veterinary Drug Handbook, 오프라벨 용법."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "비소 중독 (오프라벨) - 초기 2일",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "치료 첫 2일간 4시간마다 투여. 5 mg/kg 용량은 첫날 급성 환자에게만 사용.",
+          "evidence": "Plumb's Veterinary Drug Handbook, 오프라벨 용법. 독성 센터 상담 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비소 중독 (오프라벨) - 회복 단계",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "초기 2일 이후 회복까지 12시간마다 투여.",
+          "evidence": "Plumb's Veterinary Drug Handbook, 오프라벨 용법."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 주의 사용. 신기능 저하가 발생하면 임상 상황에 따라 용량 조절 또는 투여 중단. 소변 알칼리화로 신장 보호 필요. 구체적인 용량 조절 수치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간기능 장애 환자에서 금기. 단, 급성 비소 중독에 의한 이차성 간기능 장애는 예외. 구체적인 ALT 역치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "철 중독",
+      "match_terms": [
+        "iron toxicosis",
+        "iron poisoning"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "카드뮴 중독",
+      "match_terms": [
+        "cadmium toxicosis",
+        "cadmium poisoning"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "셀레늄 중독",
+      "match_terms": [
+        "selenium toxicosis",
+        "selenium poisoning"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "메틸수은 중독",
+      "match_terms": [
+        "methylmercury intoxication"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "renal dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "다이머캅롤의 설프하이드릴기가 중금속(비소, 납, 수은, 금)과 헤테로사이클릭 고리 복합체를 형성하여 설프하이드릴 의존성 효소에 대한 중금속 결합을 방지 또는 감소시킴.",
+    "common_extra_effects": [
+      "주사 부위 통증",
+      "혈압 상승 (일시적)",
+      "빈맥 (일시적)",
+      "구토",
+      "경련 (고용량)",
+      "혈종 (주사 부위)",
+      "신독성",
+      "구취"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "구토",
+      "경련 (고용량)",
+      "일시적 혈압 상승",
+      "빈맥"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "구토",
+      "경련 (고용량)",
+      "일시적 혈압 상승",
+      "빈맥"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 비소 중독 치료에 주로 사용되나, 소동물에서는 신독성 위험으로 인해 석시머(succimer)가 선호됨. 중금속 중독 치료 전 동물 독성 센터 상담 강력 권고. 소변 알칼리화로 신장 보호 필요.",
+    "cat": "고양이에서 비소 중독 치료에 사용될 수 있으나, 소동물에서는 신독성 위험으로 인해 석시머(succimer)가 선호됨. 중금속 중독 치료 전 동물 독성 센터 상담 강력 권고. 소변 알칼리화로 신장 보호 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 주의 사용. 간기능 장애 시 금기(비소 중독 이차성 제외). 고용량 시 경련 위험. 소변 알칼리화 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 주의 사용. 간기능 장애 시 금기(비소 중독 이차성 제외). 고용량 시 경련 위험. 소변 알칼리화 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 이하 보관, 가급적 실온(15°C~30°C) 유지. 용액이 탁하거나 소량의 침전물이 있어도 변질을 의미하지 않음.",
+    "forms": [
+      "Dimercaprol Injection 100 mg/mL (10%) in 3 mL amps (peanut oil and benzyl benzoate solution, IM use only)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "다이머캅롤(BAL)은 비소 중독 치료에 주로 사용되는 중금속 킬레이트제입니다. 소동물에서는 신독성 위험으로 인해 석시머가 선호되며, 대동물에서는 나트륨 티오황산염이 선호됩니다. 간기능 장애(비소 중독 이차성 제외), 철·카드뮴·셀레늄 중독 시 금기입니다. 신독성 예방을 위해 소변 알칼리화가 필요하며, 치료 전 반드시 동물 독성 센터에 상담하십시오.",
+    "indications": "비소 중독(주 적응증, 오프라벨), 납 중독(에데테이트 칼슘 이나트륨과 병용, 오프라벨), 수은 중독(오프라벨), 금 중독(오프라벨). 수의용 허가 제품 없음.",
+    "client_info": "이 약은 중금속 중독 치료를 위해 수의사의 엄격한 감독 하에만 사용해야 합니다. 투여 후 구취가 발생할 수 있습니다. 구토, 경련, 혈압 변화 등의 부작용이 나타날 수 있으므로 치료 중 반드시 수의사의 모니터링이 필요합니다. 임신 중 안전성이 확립되지 않았으므로 임신한 동물에서는 이익이 위험을 상회할 때만 사용합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "CYP profile",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/13.jsonl",
+    "extracted_at": "2026-03-10T17:14:54.298462+00:00",
+    "reviewer": null
+  }
+}

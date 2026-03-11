@@ -1,0 +1,442 @@
+{
+  "id": "streptozocin",
+  "drug_identity": {
+    "name_ko": "스트렙토조신",
+    "name_en": "Streptozocin",
+    "active_ingredient": "Streptozocin",
+    "brand_names": [
+      "Zanosar"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 개의 인슐린종 치료에 사람용 제품(Zanosar®)을 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간과 신장에서 대사되는 것으로 추정되며, 미변화체 및 대사산물 모두 소변으로 배설됨. 구체적인 CYP 경로는 문헌에 기술되지 않음."
+    },
+    "extra_information": "스트렙토조신은 반드시 IV로 투여해야 함. 췌장 내 농도가 혈장보다 높음. 개와 고양이에 대한 구체적인 약동학 데이터는 문헌에 기술되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신독성(중증, 용량 의존적, 비가역적), 간독성(ALT 상승), 골수독성(경미한 골수억제) 등이 문헌에 명시됨. 고양이에 대한 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypoglycemic collapse",
+          "seizure"
+        ],
+        "index": -1,
+        "evidence": "저혈당성 허탈 또는 발작이 보고되었으나, 이는 약물의 직접적인 뇌 독성보다는 인슐린 방출에 의한 저혈당의 이차적 결과임."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "myelosuppression",
+          "myelotoxicity"
+        ],
+        "index": 2,
+        "evidence": "경미한 골수억제가 보고됨. 한 소규모 연구에서 호중구감소증이나 혈소판감소증은 관찰되지 않았으나, 혈액학적 변화 가능성이 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "Fanconi syndrome",
+          "nephrogenic diabetes insipidus",
+          "azotemia",
+          "renal tubular acidosis",
+          "proteinuria",
+          "renal injury"
+        ],
+        "index": 0,
+        "evidence": "심각하고 비가역적인 신독성이 주요 우려 사항. 개에서 판코니 증후군 및 신성 요붕증 보고. 신기능 모니터링 필수. 식염수 이뇨 요법 필요."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased ALT",
+          "increased liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "ALT 상승 및 간독성 가능성이 문헌에 명시됨. 간기능 저하 환자에서 극도의 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "약동학적 파라미터(반감기, Tmax, 생체이용률 등)가 문헌에 기술되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "prolonged half-life",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Streptozocin may prolong the half-life of doxorubicin; dosage adjustment of doxorubicin may be required."
+    },
+    {
+      "drug": "Myelosuppressive Drugs (e.g., Lomustine)",
+      "severity": 2,
+      "keywords": [
+        "additive myelosuppression",
+        "synergistic myelosuppression"
+      ],
+      "evidence": "Concurrent use with other myelosuppressive drugs may result in additive or synergistic myelosuppression."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., Aminoglycosides, Amphotericin B, Cisplatin)",
+      "severity": 3,
+      "keywords": [
+        "additive nephrotoxicity"
+      ],
+      "evidence": "Concurrent use with other nephrotoxic drugs may cause additive nephrotoxicity."
+    },
+    {
+      "drug": "Niacinamide/Nicotinamide",
+      "severity": 2,
+      "keywords": [
+        "diabetogenic effect blockade",
+        "pharmacodynamic interaction"
+      ],
+      "evidence": "Niacinamide/nicotinamide can block the diabetogenic effects of streptozocin without altering its antineoplastic activity; this may be beneficial or detrimental depending on the clinical context."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "인슐린종 (오프라벨) - 프로토콜 A: 2주 간격 5회 투여",
+          "value": "500",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "500 mg/m² (mg/kg 아님)를 36.6 mL/kg의 0.9% 생리식염수에 희석하여 2시간에 걸쳐 IV 투여. 2주 간격으로 총 5회 투여. 투여 3시간 전부터 0.9% 생리식염수 18.3 mL/kg/hr IV CRI 시작, 투여 후 2시간 동안 지속. 예방적 항구토제 투여 권장.",
+          "evidence": "오프라벨. 소규모 임상 연구(참고문헌 3) 기반. 단위는 mg/m²임에 주의."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "인슐린종 (오프라벨) - 프로토콜 B: 3주 간격 반복 투여",
+          "value": "500",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "500 mg/m² (mg/kg 아님) IV 2시간 투여. 투여 전 0.9% 생리식염수 18.3 mL/kg/hr IV CRI 3시간, 투여 후 2시간 추가 지속. 3주 간격으로 종양 진행, 저혈당 재발, 또는 약물 독성 발생 시까지 반복. 항구토제 병용.",
+          "evidence": "오프라벨. 참고문헌 10 기반. 단위는 mg/m²임에 주의."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "인슐린종 (오프라벨) - 프로토콜 C: 3주 간격, 적극적 식염수 이뇨 요법",
+          "value": "500",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "500 mg/m² (mg/kg 아님) IV 2시간 투여. 3주 간격. 투여 4시간 전부터 0.9% 생리식염수 18-20 mL/kg/hr IV CRI 7-8시간 투여. 식염수 주입 시작 시 마로피탄트 투여 후 3-4일간 매일 지속.",
+          "evidence": "오프라벨. 참고문헌 11 기반. 단위는 mg/m²임에 주의."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 극도의 주의 필요. 각 치료 전 신기능 모니터링 필수. 단백뇨는 신독성의 첫 번째 지표. 구체적인 크레아티닌 역치 또는 용량 조절 계수는 문헌에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 환자에서 극도의 주의 필요. 구체적인 용량 조절 지침은 문헌에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "CKD",
+        "renal insufficiency",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "골수기능 저하",
+      "match_terms": [
+        "bone marrow suppression",
+        "pancytopenia",
+        "neutropenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수술로 완전 절제가 가능한 인슐린종 (초치료)",
+      "match_terms": [
+        "resectable insulinoma",
+        "primary insulinoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "니트로소우레아계 항종양제. 알킬화제로 작용하여 DNA 합성을 억제하고 DNA 가닥 교차결합을 유발함. 세포주기 비특이적. 췌장 베타세포의 NAD 농도를 감소시켜 당뇨유발 효과를 나타냄.",
+    "common_extra_effects": [
+      "심각한 신독성 (용량 의존적, 누적적, 비가역적 가능)",
+      "심한 구역/구토",
+      "일시적 저혈당 (종양세포 파괴로 인한 인슐린 방출)",
+      "영구적 당뇨병",
+      "ALT 상승/간독성",
+      "경미한 골수억제",
+      "주사 부위 반응/괴사 (혈관 외 유출 시)",
+      "탈모 (지속적으로 자라는 털을 가진 견종)"
+    ],
+    "dog_mechanism": "개에서 인슐린종의 베타세포를 선택적으로 파괴하여 항종양 효과를 나타냄.",
+    "dog_extra_effects": [
+      "판코니 증후군",
+      "신성 요붕증",
+      "저혈당성 허탈 또는 발작",
+      "GI 증상 (구역, 식욕부진, 구토, 역류, 설사, 대장염)",
+      "신손상",
+      "털 코트 변화 (거칠어짐, 광택 소실)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개의 재발성 인슐린종, 특히 수술로 완전 절제가 불가능하거나 전이된 경우에 주로 사용됨. 심각한 신독성(판코니 증후군, 신성 요붕증 포함) 위험으로 인해 사용이 제한적임. 각 투여 전후 식염수 이뇨 요법이 필수적이며, 신기능, CBC, 혈청 화학 검사, 요검사를 정기적으로 모니터링해야 함. 단백뇨는 신독성의 초기 지표임. 수의 종양 전문의와의 상담이 강력히 권장됨.",
+    "cat": "고양이에 대한 용량 또는 안전성 데이터가 문헌에 기술되지 않음. 고양이에서의 사용은 권장되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능, 골수기능, 간기능 저하 환자에서 극도의 주의 필요. 식염수 이뇨 요법 필수. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요. 조직 자극제로 혈관 외 유출 시 심각한 괴사 유발 가능."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에 대한 안전성 및 용량 데이터 없음. 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "동결건조 분말: 냉장(2-8°C) 보관, 차광. 냉장 시 제조 후 최소 3년 안정. 실온 보관 시 최소 1년 안정. 재구성 후: 실온에서 48시간, 냉장 시 96시간 안정. 제조사는 혼합 후 12시간 이내 사용 권장(방부제 없음). 재구성 용액 pH 3.5-4.5.",
+    "forms": [
+      "Streptozocin Powder for Injection 1g (100 mg/mL) vials"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "스트렙토조신은 개의 재발성 인슐린종(수술 후 완전 절제 불가 또는 전이된 경우)에 사용되는 니트로소우레아계 항종양제입니다. 심각하고 비가역적인 신독성이 주요 위험으로, 각 투여 전후 적극적인 식염수 이뇨 요법(0.9% NaCl 18-20 mL/kg/hr)이 필수적입니다. 용량은 mg/m²로 계산하며(500 mg/m²), mg/kg과 혼동하지 않도록 주의해야 합니다. 투여 전 조직학적 확진이 필수이며, 수의 종양 전문의 상담이 강력히 권장됩니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 PPE 착용이 필요합니다.",
+    "indications": "개의 재발성 인슐린종 (오프라벨): 수술 후 완전 절제가 불가능하거나 전이된 경우, 난치성 저혈당증이 있는 경우. 기타 종양성 질환에도 잠재적으로 사용 가능하나 근거 제한적.",
+    "client_info": "스트렙토조신은 항암(항종양) 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 동물이 약물을 투여받은 날과 그 후 며칠 동안은 동물의 모든 체액(소변, 대변, 구토물, 혈액)을 처리할 때 일회용 장갑을 착용하십시오. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. 동물이 항상 깨끗한 식수를 충분히 마실 수 있도록 해주십시오. 치료 후 구토, 식욕 감소, 과도한 음수/배뇨, 무기력증이 나타나면 즉시 담당 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (detailed: half-life, Tmax, bioavailability, protein binding)",
+      "CYP enzyme profile",
+      "Cat dosage",
+      "Renal dose adjustment thresholds",
+      "Hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/35.jsonl",
+    "extracted_at": "2026-03-11T00:08:26.065452+00:00",
+    "reviewer": null
+  }
+}

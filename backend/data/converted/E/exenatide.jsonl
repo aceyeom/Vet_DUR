@@ -1,0 +1,448 @@
+{
+  "id": "exenatide",
+  "drug_identity": {
+    "name_ko": "엑세나타이드",
+    "name_en": "Exenatide",
+    "active_ingredient": "Exenatide",
+    "brand_names": [
+      "Bydureon",
+      "Byetta"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "인간용 제제를 고양이의 당뇨병 보조 치료에 오프라벨로 사용. 고양이에 대한 용량 추출이 어려울 수 있음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "고양이에서의 약동학 데이터는 제한적임. 중증 신장 질환(말기 신부전 포함) 환자에서는 사용 금기."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 고양이 특이적 수의학 PK 데이터 부재; 인간 데이터 및 모노그래프 텍스트 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 사용 데이터가 모노그래프에 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 사용 데이터가 모노그래프에 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 사용 데이터가 모노그래프에 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 사용 데이터가 모노그래프에 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 사용 데이터가 모노그래프에 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "nausea",
+          "anorexia"
+        ],
+        "index": 1,
+        "evidence": "오심, 식욕부진 등 중추 매개 가능성 있는 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "DIIMT"
+        ],
+        "index": 2,
+        "evidence": "약물 유발 면역 매개 혈소판감소증(DIIMT) 위험이 언급됨; 발생 시 투여 중단 필요."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal disease",
+          "renal transplant",
+          "severe renal disease"
+        ],
+        "index": 3,
+        "evidence": "중증 또는 말기 신장 질환은 금기; 신기능 저하 또는 신장 이식 병력 시 주의 사용."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 직접적 언급 없음. 낮은 점수 부여."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": null
+  },
+  "_ddi_note": "Plumb's 약물 상호작용 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 모노그래프 텍스트가 제한적으로 제공되어 상호작용 정보가 불완전할 수 있음.",
+  "drug_interactions": [
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "additive hypoglycemic effect"
+      ],
+      "evidence": "Exenatide used concurrently with insulin increases the risk of hypoglycemia."
+    },
+    {
+      "drug": "Hypoglycemic agents (other)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "additive hypoglycemic effect"
+      ],
+      "evidence": "Concurrent use with other hypoglycemic agents increases hypoglycemia risk."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 보조 치료 (즉시방출형 용액, IR)",
+          "value": "Unknown",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "인슐린 대체제가 아님; 보조 치료로만 사용. 구체적 용량은 모노그래프 원문에서 확인 필요.",
+          "evidence": "고양이에서 즉시방출형 엑세나타이드 용액을 이용한 연구에서 공복 혈당 및 인슐린 농도의 중앙값 변화는 유의하지 않았으나 개선 경향을 보였으며, 일부 개체에서 긍정적 반응이 관찰됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 또는 말기 신장 질환에서는 사용 금기. 신기능 저하 또는 신장 이식 병력이 있는 환자에서는 주의하여 사용."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하에 따른 용량 조절에 대한 명시적 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to exenatide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 위장관 질환",
+      "match_terms": [
+        "severe GI disease",
+        "gastrointestinal disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 또는 말기 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "end-stage renal disease",
+        "CKD stage 4",
+        "CKD stage 5"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "갑상선 수질암",
+      "match_terms": [
+        "medullary thyroid carcinoma",
+        "MTC"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다발성 내분비 종양 증후군 2형",
+      "match_terms": [
+        "multiple endocrine neoplasia type 2",
+        "MEN2"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하 또는 신장 이식 병력",
+      "match_terms": [
+        "impaired renal function",
+        "renal transplant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "췌장염 병력",
+      "match_terms": [
+        "pancreatitis",
+        "history of pancreatitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "약물 유발 면역 매개 혈소판감소증(DIIMT) 병력",
+      "match_terms": [
+        "DIIMT",
+        "drug-induced immune-mediated thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "당뇨병성 케톤산증",
+      "match_terms": [
+        "diabetic ketoacidosis",
+        "DKA"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "1형 당뇨병 단독 치료",
+      "match_terms": [
+        "type 1 diabetes mellitus",
+        "insulin-dependent diabetes"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "인크레틴 모방제(GLP-1 수용체 작용제)로서 혈당 의존적 인슐린 분비 촉진, 글루카곤 분비 억제, 위 배출 지연, 식욕 억제를 통해 혈당을 조절함.",
+    "common_extra_effects": [
+      "오심(nausea)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "식욕부진(anorexia)",
+      "체중 감소(weight loss)",
+      "저혈당(hypoglycemia, 다른 혈당강하제와 병용 시)",
+      "췌장염(pancreatitis)",
+      "약물 유발 면역 매개 혈소판감소증(DIIMT)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "GLP-1 수용체 작용제로서 고양이의 당뇨병 보조 치료에 사용; 혈당 의존적 인슐린 분비 촉진 및 글루카곤 억제.",
+    "cat_extra_effects": [
+      "오심",
+      "구토",
+      "설사",
+      "식욕부진",
+      "체중 감소"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에 대한 사용 데이터가 모노그래프에 제시되지 않음. 현재 개에서의 적응증 없음.",
+    "cat": "고양이의 합병증 없는 당뇨병 보조 치료에 사용됨. 인슐린 대체제가 아니며 단독 요법으로 1형 당뇨병 치료에 사용 불가. 즉시방출형(IR)과 서방형(ER) 제제는 상호 교환 불가. 인간용 제제에서 고양이 용량을 추출하는 것이 어려울 수 있음. NIOSH에서 위험 약물로 분류되어 있으므로 취급 시 적절한 예방 조치 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 0,
+      "evidence": "개에 대한 사용 데이터 없음. 적응증 없음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 오프라벨로 사용. 신기능 저하, 췌장염 병력, DIIMT 병력 시 주의 필요. 중증 신장 질환, 중증 위장관 질환, 과민반응, 갑상선 수질암, MEN2에서는 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": null,
+    "forms": [
+      "즉시방출형(IR) 주사액",
+      "서방형(ER) 주사제"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "엑세나타이드는 GLP-1 수용체 작용제(인크레틴 모방제)로, 고양이의 합병증 없는 당뇨병 보조 치료에 피하주사로 사용됩니다. 인슐린 대체제가 아니며, 당뇨병성 케톤산증 치료나 1형 당뇨병 단독 치료에는 사용할 수 없습니다. 중증 신장 질환, 중증 위장관 질환, 갑상선 수질암, MEN2, 과민반응 시 금기입니다. NIOSH 위험 약물로 분류되어 있어 취급 시 주의가 필요합니다.",
+    "indications": "고양이의 합병증 없는 당뇨병 보조 치료(오프라벨). 즉시방출형 용액을 이용한 연구에서 비만 또는 당뇨 고양이의 공복 혈당 및 인슐린 농도 개선 경향이 관찰되었으며, 일부 개체에서 긍정적 반응이 보고됨.",
+    "client_info": "이 약은 고양이의 당뇨병 치료를 보조하기 위해 피하주사로 투여됩니다. 인슐린을 대체하는 약이 아니므로 수의사의 지시에 따라 기존 치료와 병행하여 사용해야 합니다. 오심, 구토, 설사, 식욕부진, 체중 감소 등의 부작용이 나타날 수 있으며, 다른 혈당강하제(인슐린 등)와 함께 사용할 경우 저혈당 위험이 증가할 수 있습니다. 이상 증상 발생 시 즉시 수의사에게 연락하십시오. 이 약은 인간용 제제이므로 취급 시 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 35,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Prescriber Highlights",
+      "Contraindications",
+      "Adverse Effects"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Dosage",
+      "Drug Interactions (full)",
+      "Storage",
+      "Overdose"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "dosage_and_kinetics.cat.dosage_list[0].value",
+      "drug_identity.available_strengths",
+      "storage_and_forms.storage",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:34:03.463234+00:00",
+    "reviewer": null
+  }
+}

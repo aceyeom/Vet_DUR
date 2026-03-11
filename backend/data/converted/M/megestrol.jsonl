@@ -1,0 +1,585 @@
+{
+  "id": "megestrol",
+  "drug_identity": {
+    "name_ko": "메게스트롤 아세테이트",
+    "name_en": "Megestrol Acetate",
+    "active_ingredient": "Megestrol Acetate",
+    "brand_names": [
+      "Ovaban",
+      "Megace",
+      "Megace ES"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 125,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 결합체 및 유리 스테로이드로 완전히 대사되는 것으로 보고됨. 리팜핀에 의한 마이크로솜 효소 유도로 프로게스틴 대사가 증가할 수 있음."
+    },
+    "extra_information": "개에서 메게스트롤 아세테이트의 반감기는 8일로 보고됨. GI관에서 잘 흡수되며 간에서 완전히 대사되는 것으로 보임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 부신 억제, 자궁 독성, 유선 독성이 주요 우려 사항임. 고양이에서는 간독성 및 당뇨병 유발 위험이 추가로 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "behavior change"
+        ],
+        "index": 1,
+        "evidence": "개에서 무기력증 및 행동 변화가 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "adrenocortical suppression",
+          "glucocorticoid activity"
+        ],
+        "index": 1,
+        "evidence": "부신피질 억제 및 글루코코르티코이드 활성으로 인한 혈액/내분비계 영향이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "metabolized in liver",
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 완전히 대사됨. 장기 치료 시 간 효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "personality changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 성격 변화가 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "profound adrenocortical suppression",
+          "adrenal atrophy",
+          "iatrogenic Addison syndrome",
+          "transient diabetes mellitus"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 심각한 부신피질 억제, 부신 위축, 의인성 애디슨 증후군, 일시적 당뇨병이 보고됨. 표준 용량(2.5-5mg 격일)에서 1-2주 내 발생 가능."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "polydipsia",
+          "polyuria"
+        ],
+        "index": 1,
+        "evidence": "다음다뇨가 보고되었으나 직접적인 신장 독성 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 드물게 간독성이 보고됨. 장기 치료 시 간 효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 192.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 반감기 8일(192시간)로 보고됨. 경구 투여 시 GI관에서 잘 흡수됨. 생체이용률 및 단백결합률에 대한 수의학적 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "adrenocortical suppression",
+        "diabetes mellitus"
+      ],
+      "evidence": "메게스트롤과 코르티코스테로이드 장기 병용 시 부신피질 억제 및 당뇨병을 악화시킬 수 있음."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased progestin activity",
+        "increased metabolism"
+      ],
+      "evidence": "리팜핀은 마이크로솜 효소 유도를 통해 프로게스틴 대사를 증가시켜 메게스트롤의 활성을 감소시킬 수 있음. 임상적 유의성은 불명확."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 40.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "발정 지연 - 발정전기 중 투여 (FDA 승인)",
+          "value": "2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "발정전기 첫 3일 이내 시작하여 8일간 투여",
+          "evidence": "FDA 승인 라벨 용량. 발정전기 증상 및 교배 행동이 수일 내 소실되며 해당 주기에 배란 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "발정 지연 - 무발정기 중 투여 (FDA 승인)",
+          "value": "0.55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "32일간 투여. 이후 약 3개월간 발정전기 지연.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "가성임신 임상증상 완화 (FDA 승인 라벨 - 현재 권장하지 않음)",
+          "value": "2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "8일간 투여. 현재는 이 적응증에 대한 사용 권장하지 않음.",
+          "evidence": "FDA 승인 라벨 용량이나 약물 중단 후 재발률, 부작용, 더 안전한 대안(카베르골린 등) 존재로 현재 권장하지 않음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "양성 전립선 비대증 - 거세 전 단기 번식 능력 유지 (비라벨)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~8주간 투여",
+          "evidence": "비라벨(extra-label) 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "태반 부착 부위 퇴축 부전(SIPS) (비라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "첫 1주: 0.1 mg/kg 1일 1회, 둘째 주: 0.05 mg/kg 1일 1회. 소규모 비맹검 연구(9마리).",
+          "evidence": "비라벨(extra-label). 소규모 비맹검 연구에서 치료 기간 내 모든 개에서 질 분비물 소실, 이후 교배한 6마리 중 5마리 임신."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "발정 지연 - 발정전기 중 투여 (비라벨)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "4일간 매일 투여 후, 이후 2주마다 5mg 투여. mg/kg이 아닌 고정 용량.",
+          "evidence": "비라벨(extra-label). mg/kg이 아닌 고양이당 고정 용량 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "발정 지연 - 무발정기 중 투여 (비라벨)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주마다 5mg 또는 주 1회 2.5mg(가능하면 3.5일 간격으로 2회 분할). mg/kg이 아닌 고정 용량.",
+          "evidence": "비라벨(extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "표준 치료 실패 시 고양이 아토피 대체 치료 (비라벨)",
+          "value": "2.5 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~3주간 격일 투여로 임상증상 관해 유도 후 주 1회로 감량. mg/kg이 아닌 고정 용량.",
+          "evidence": "비라벨(extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "중성화 수컷 고양이의 마킹 행동 감소 - 다른 모든 약물 실패 시 (비라벨)",
+          "value": "2.5 - 10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1주간 매일 투여 후 주 1~2회로 감량. mg/kg이 아닌 고정 용량.",
+          "evidence": "비라벨(extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "호산구성 각막염 (비라벨)",
+          "value": "0.5",
+          "unit": "%",
+          "route": "Eye",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q8~12h 투여. 조제 수성 점안액 사용. 17마리 중 15마리 반응.",
+          "evidence": "비라벨(extra-label). 조제 수성 점안 제제 0.5% 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적인 언급 없음. 주로 간에서 대사되므로 신부전 시 조절 필요성은 낮을 수 있으나 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 완전히 대사됨. 고양이에서 드물게 간독성 보고. 장기 치료 시 간 효소 모니터링 권장. 명시적 용량 조절 권고는 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자궁 질환",
+      "match_terms": [
+        "uterine disease",
+        "pyometra",
+        "endometritis",
+        "uterine hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유선 종양",
+      "match_terms": [
+        "mammary neoplasia",
+        "mammary tumor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발정휴지기(디에스트러스)",
+      "match_terms": [
+        "diestrus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자궁 출혈",
+      "match_terms": [
+        "uterine hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈전정맥염",
+      "match_terms": [
+        "thrombophlebitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "첫 발정 전 암컷 개",
+      "match_terms": [
+        "prepubertal",
+        "first estrus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 프로게스틴으로 프로게스테론 수용체에 작용. 유의한 항에스트로겐 및 글루코코르티코이드 활성을 가지며 부신 억제를 유발함. 태아에 대한 동화 또는 남성화 효과 없음.",
+    "common_extra_effects": [
+      "식욕 증가",
+      "체중 증가",
+      "무기력증",
+      "부신피질 억제",
+      "자궁내막 낭성 증식",
+      "자궁내막염",
+      "유선 비대 및 종양",
+      "행동 변화"
+    ],
+    "dog_mechanism": "프로게스틴 수용체 작용을 통한 발정 억제 및 전립선 비대 완화. 글루코코르티코이드 활성으로 인한 부신 억제.",
+    "dog_extra_effects": [
+      "식욕 증가",
+      "체중 증가",
+      "무기력증",
+      "행동 변화",
+      "털 색 변화",
+      "점액자궁축농증(mucometra)",
+      "자궁내막염",
+      "자궁축농증(pyometra)",
+      "낭성 자궁내막 증식",
+      "유선 비대 및 종양",
+      "말단비대증(acromegaly)",
+      "부신피질 억제",
+      "드물게 유즙 분비",
+      "드물게 당뇨병"
+    ],
+    "cat_mechanism": "프로게스틴 수용체 작용. 고양이에서 특히 심각한 부신피질 억제 및 부신 위축 유발. 일시적 당뇨병 유발 가능.",
+    "cat_extra_effects": [
+      "심각한 부신피질 억제",
+      "부신 위축",
+      "의인성 애디슨 증후군",
+      "일시적 당뇨병",
+      "다음다뇨",
+      "성격 변화",
+      "체중 증가",
+      "자궁내막염",
+      "낭성 자궁내막 증식",
+      "유선 비대",
+      "종양",
+      "드물게 간독성",
+      "잠복 바이러스 감염 악화 가능(예: FHV-1)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 적응증은 발정 지연 및 가성임신 완화이나, 가성임신 치료에는 현재 권장하지 않음(카베르골린 등 더 안전한 대안 존재). 발정전기 첫 3일 이내 투여 시작이 중요. 연속 2회 이상 치료 권장하지 않음. 수술/외상 등 스트레스 상황 시 외인성 스테로이드 보충 고려. 치료 전 생식기 병력 청취, 신체검사, 유선 촉진, 질 세포검사 권장.",
+    "cat": "고양이에서는 모두 비라벨(extra-label) 사용. mg/kg이 아닌 고양이당 고정 용량(mg/cat) 사용에 주의. 표준 용량(2.5-5mg 격일)에서도 1-2주 내 심각한 부신피질 억제 발생 가능. 약물 중단 후 수주 내 코르티솔 수치 정상화. 스트레스 상황 시 글루코코르티코이드 보충 고려. 드물게 간독성 발생 가능하므로 장기 치료 시 간 효소 모니터링 필요. FHV-1 등 잠복 바이러스 감염 악화 가능성 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "임신 동물, 자궁 질환, 당뇨병, 유선 종양 보유 동물에서 금기. 첫 발정 전 또는 비정상 주기 암컷에서 사용 금지. 부신 억제로 인해 스트레스 상황 시 외인성 스테로이드 필요 가능. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 모두 비라벨 사용. 심각한 부신피질 억제 및 부신 위축 위험. 일시적 당뇨병, 간독성 가능. mg/kg이 아닌 고정 용량 사용. 장기 치료 시 ACTH 자극 검사 및 간 효소 모니터링 필요. NIOSH 위험 약물."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 미만의 밀폐 용기에 보관. 수의용 제조사 권장: 2°C~30°C(36°F~86°F). 정제는 분쇄하여 음식과 함께 투여 가능하나 위험 약물 특성으로 적절한 주의 필요.",
+    "forms": [
+      "메게스트롤 아세테이트 경구 정제 20mg (Ovaban® - 수의용, FDA 승인, 개 전용)",
+      "메게스트롤 아세테이트 정제 20mg, 40mg (Megace®, 제네릭 - 인체용)",
+      "메게스트롤 아세테이트 경구 현탁액 40mg/mL (Megace®, 제네릭 - 인체용)",
+      "메게스트롤 아세테이트 경구 현탁액 125mg/mL (Megace ES® - 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메게스트롤 아세테이트는 합성 프로게스틴으로 개에서 발정 지연에 FDA 승인됨. 고양이에서는 피부과적 및 행동 관련 질환에 비라벨로 사용. 부신피질 억제(특히 고양이에서 심각), 자궁 독성, 유선 종양 위험이 주요 우려 사항. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필수. 개에서 반감기 8일로 washout 기간 약 40일.",
+    "indications": "【개 - FDA 승인】발정 지연(발정전기 또는 무발정기), 가성임신 완화(현재 권장하지 않음). 【개 - 비라벨】양성 전립선 비대증, 태반 부착 부위 퇴축 부전(SIPS). 【고양이 - 비라벨】발정 지연, 아토피 대체 치료, 중성화 수컷의 마킹 행동 감소, 호산구성 각막염. 【인체】유방암 및 자궁내막암의 완화 치료.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있으나, 구토 예방을 위해 음식과 함께 투여하는 것이 좋습니다. 메게스트롤은 다양한 부작용이 있으며 일부는 심각할 수 있습니다. 유선/젖꼭지의 변화나 질 분비물이 있는지 주의 깊게 관찰하십시오. 임신 중인 경우 이 약을 취급할 때 주의하고 반드시 장갑을 착용하며 취급 후 손을 씻으십시오. 이 약은 NIOSH에서 위험 약물로 분류하고 있습니다. 취급 시 개인 보호 장비(PPE) 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Renal elimination fraction",
+      "Oral bioavailability (F%)",
+      "Protein binding",
+      "Onset of action",
+      "T_max",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment (explicit)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/62.jsonl",
+    "extracted_at": "2026-03-11T08:37:01.979186+00:00",
+    "reviewer": null
+  }
+}

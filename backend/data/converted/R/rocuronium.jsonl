@@ -1,0 +1,580 @@
+{
+  "id": "rocuronium",
+  "drug_identity": {
+    "name_ko": "로쿠로늄",
+    "name_en": "Rocuronium",
+    "active_ingredient": "Rocuronium bromide",
+    "brand_names": [
+      "Zemuron",
+      "Esmeron"
+    ],
+    "allergy_class": null,
+    "class": "Muscle Relaxant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Sugammadex",
+    "reversal_evidence": "Sugammadex는 로쿠로늄의 특이적 길항제로, 과량 투여 시 신경근 차단을 역전시키기 위해 사용된다. 아세틸콜린에스테라제 억제제(예: 네오스티그민)와 항콜린제(예: 아트로핀)도 회복 징후가 나타난 후 고려할 수 있다.",
+    "off_label_note": "수의 환자(개, 고양이, 말)에서의 사용은 모두 허가 외(extra-label) 사용이며, 수의 라벨 제품은 없음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.26,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개와 고양이에서 로쿠로늄은 주로 간에서 제거된다. 주요 대사산물인 17-desacetyl-rocuronium은 고양이에서 로쿠로늄의 약 1/20 신경근 차단 효능을 가진다. 인간에서는 약 26%가 신장으로, 나머지는 담즙(31%)으로 배설된다."
+    },
+    "extra_information": "개에서 로쿠로늄 0.4 mg/kg IV는 약 2~3분 내에 완전한 신경근 차단을 유발한다. 고양이에서 0.6 mg/kg IV는 30~60초 내에 90%에서 완전한 신경근 차단을 유발하며 심박수에 유의한 영향을 미치지 않는다. 0.6 mg/kg 용량에서 작용 지속 시간은 개에서 20분, 고양이에서 13분, 말에서 55분이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 간 제거가 주요 경로이며, 신장 배설은 약 26%(인간 데이터). 심혈관 영향(심박수·혈압 변화)이 보고됨. 뇌 및 혈액에 대한 직접적 독성 데이터는 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "신경근 차단",
+          "진정 작용 없음"
+        ],
+        "index": -1,
+        "evidence": "로쿠로늄은 진정 또는 마취 작용이 없으며, 뇌에 대한 직접적 독성은 보고되지 않음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "혈압 변화",
+          "심박수 변화",
+          "미주신경 차단"
+        ],
+        "index": 1,
+        "evidence": "심박수 및 혈압 변화가 보고됨. 경미한 미주신경 차단 효과로 일시적 빈맥이 나타날 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 배설 26%",
+          "신기능 장애 주의"
+        ],
+        "index": 1,
+        "evidence": "인간 데이터에서 약 26%가 신장으로 배설됨. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "간 제거",
+          "간 대사",
+          "간기능 장애 시 반감기 연장"
+        ],
+        "index": 2,
+        "evidence": "개와 고양이에서 주로 간에서 제거됨. 인간에서 간기능 장애 또는 간경변 환자는 혈장 반감기가 연장되고 회복 시간이 2.5배 길어짐."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "심박수 변화",
+          "혈압 변화",
+          "미주신경 차단"
+        ],
+        "index": 1,
+        "evidence": "심박수 및 혈압 변화가 부작용으로 보고됨. 경미한 미주신경 차단 효과."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "신경근 차단",
+          "진정 작용 없음"
+        ],
+        "index": -1,
+        "evidence": "로쿠로늄은 진정 또는 마취 작용이 없으며, 뇌에 대한 직접적 독성은 보고되지 않음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "심박수 영향 없음",
+          "혈압 변화"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 0.6 mg/kg IV 투여 시 심박수에 유의한 영향 없음. 혈압 변화는 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 배설",
+          "신기능 장애 주의"
+        ],
+        "index": 1,
+        "evidence": "인간 데이터에서 약 26%가 신장으로 배설됨. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "간 제거",
+          "간 대사",
+          "17-desacetyl-rocuronium 대사산물"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 주로 간에서 제거됨. 주요 대사산물 17-desacetyl-rocuronium은 고양이에서 로쿠로늄의 약 1/20 효능을 가짐."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "심박수 변화",
+          "혈압 변화"
+        ],
+        "index": 1,
+        "evidence": "심박수 및 혈압 변화가 부작용으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.1,
+      "max": 2.4,
+      "mean": 1.75,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 30,
+    "evidence": "인간에서 반감기는 66~144분(약 1.1~2.4시간). 혈장 단백 결합률 약 30%. 개에서 0.4 mg/kg IV 투여 시 약 2~3분 내 완전 차단; 고양이에서 0.6 mg/kg IV 투여 시 30~60초 내 완전 차단. 경구 생체이용률 데이터 없음(주사제만 사용)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/피해야 함→3, 주요→3, 중등도→2, 경미→1. 신경근 차단 강화 약물 목록은 Plumb's에서 직접 인용.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcholinesterase Inhibitors (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 길항",
+        "효과 역전"
+      ],
+      "evidence": "아세틸콜린에스테라제 억제제는 로쿠로늄의 효과를 길항한다."
+    },
+    {
+      "drug": "General Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "QT 간격 연장"
+      ],
+      "evidence": "인간에서 로쿠로늄과 전신마취제 병용 시 QT 간격이 연장될 수 있다."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednis(ol)one)",
+      "severity": 2,
+      "keywords": [
+        "효과 감소",
+        "근육 약화 연장",
+        "근병증"
+      ],
+      "evidence": "코르티코스테로이드는 로쿠로늄의 효과를 감소시키고, 근육 약화를 연장하며 근병증을 유발할 수 있다."
+    },
+    {
+      "drug": "Other Nondepolarizing Muscle Relaxants",
+      "severity": 2,
+      "keywords": [
+        "상승 효과",
+        "신경근 차단 강화"
+      ],
+      "evidence": "일부 비탈분극성 근이완제는 로쿠로늄과 병용 시 상승 효과를 나타낼 수 있다."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "발현 속도 증가",
+        "신경근 차단 강화"
+      ],
+      "evidence": "숙시닐콜린은 로쿠로늄의 발현 속도를 높이고 신경근 차단 효과를 강화할 수 있다. 숙시닐콜린 효과가 소실된 후에만 로쿠로늄을 투여해야 한다."
+    },
+    {
+      "drug": "Sugammadex",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 길항",
+        "효과 역전"
+      ],
+      "evidence": "수가마덱스는 로쿠로늄의 효과를 길항한다."
+    },
+    {
+      "drug": "Aminoglycoside Antibiotics (gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "아미노글리코사이드 항생제는 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Inhalation Anesthetics (halothane, isoflurane)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "흡입 마취제는 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Antiarrhythmic Agents (procainamide, quinidine)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "항부정맥제는 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Bacitracin or Polymyxin B (systemic)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "치료 변경 고려"
+      ],
+      "evidence": "전신 투여 시 로쿠로늄의 신경근 차단 활성을 강화할 수 있다. 치료 변경을 고려해야 한다."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "칼슘 채널 차단제는 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Cyclosporine (systemic)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "전신 사이클로스포린은 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Lincosamide Antibiotics (clindamycin)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "린코사마이드 항생제는 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "리튬은 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Magnesium Salts",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "마그네슘 염은 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Quinine",
+      "severity": 3,
+      "keywords": [
+        "신경근 차단 강화",
+        "병용 금기"
+      ],
+      "evidence": "퀴닌은 로쿠로늄의 신경근 차단 활성을 강화할 수 있으며, 병용을 피해야 한다."
+    },
+    {
+      "drug": "Tetracyclines (doxycycline, minocycline)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "테트라사이클린계 항생제는 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    },
+    {
+      "drug": "Vancomycin",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 강화",
+        "차단 연장"
+      ],
+      "evidence": "반코마이신은 로쿠로늄의 신경근 차단 활성을 강화하거나 연장할 수 있다."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "신경근 차단제 (수술 중 근이완) - extra-label",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 용량 후 0.2 mg/kg/hour CRI로 유지",
+          "evidence": "0.5 mg/kg IV 투여 후 0.2 mg/kg/hour IV CRI. 임상에서 효과적이나 주입 적정에 대한 추가 연구 필요."
+        },
+        {
+          "logic_type": "linear",
+          "context": "안과 수술 시 안구 중심 위치 확보 - extra-label",
+          "value": "0.03 - 0.05",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "이소플루란과 병용; 단기 안과 수술에 유용",
+          "evidence": "이소플루란과 병용하여 단기 안과 수술에 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "신경근 차단제 (수술 중 근이완) - extra-label",
+          "value": "0.3 - 0.6",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.6,
+          "duration_note": "0.6 mg/kg에서 작용 지속 시간 약 13분; TOF 비율 0.9 회복 후에도 잔류 차단 가능성 있으므로 역전 권장",
+          "evidence": "0.6 mg/kg IV에서 30~60초 내 완전 차단. TOF 비율 0.9 회복이 잔류 차단을 신뢰성 있게 배제하지 못하므로 역전 권장."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 로쿠로늄 사용에 대한 보고가 상충되며, 신기능 장애 환자에서는 아트라쿠리움이 선호될 수 있다. 구체적인 용량 조정 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 또는 간경변 환자(인간)에서 혈장 반감기가 연장되고 회복 시간이 2.5배 길어짐. 간기능 장애 환자에서는 아트라쿠리움이 선호될 수 있다. 구체적인 용량 조정 수치는 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "로쿠로늄 또는 다른 신경근 차단제에 과민반응",
+      "match_terms": [
+        "약물 과민반응",
+        "아나필락시스"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증근무력증",
+      "match_terms": [
+        "myasthenia gravis",
+        "중증근무력증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "신부전",
+        "CKD",
+        "급성 신손상"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "간부전",
+        "간경변",
+        "간질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "부적절한 마취 또는 기계 환기 불가 환경",
+      "match_terms": [
+        "마취 없이 사용",
+        "환기 지원 불가"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아미노스테로이드계 경쟁적 비탈분극성 신경근 차단제. 운동 종판의 콜린성 수용체 부위에 경쟁적으로 결합하여 아세틸콜린을 길항함으로써 횡문근 마비를 유발한다. 용량 의존적으로 빠른~중간 발현 및 중간 지속 시간을 가진다.",
+    "common_extra_effects": [
+      "심박수 변화",
+      "혈압 변화 (저혈압 또는 고혈압)",
+      "일시적 빈맥 (경미한 미주신경 차단 효과)",
+      "주사 부위 통증 (인간)",
+      "히스타민 유사 반응 (드물게)",
+      "중증 아나필락시스 (드물게, 인간)",
+      "잔류 신경근 차단"
+    ],
+    "dog_mechanism": "벡쿠로늄과 구조적으로 유사한 비탈분극성 신경근 차단제. 0.4 mg/kg IV에서 약 2~3분 내 완전 차단. 주로 간에서 제거됨.",
+    "dog_extra_effects": [
+      "심박수 및 혈압 변화",
+      "후두 신경근 기능 회복이 골반지 회복보다 36% 느림",
+      "잔류 신경근 차단 가능성"
+    ],
+    "cat_mechanism": "0.6 mg/kg IV에서 30~60초 내 완전 차단. 주로 간에서 제거되며 주요 대사산물(17-desacetyl-rocuronium)은 약 1/20 효능을 가짐.",
+    "cat_extra_effects": [
+      "TOF 비율 0.9 회복 후에도 잔류 차단 가능",
+      "심박수에 유의한 영향 없음 (0.6 mg/kg에서)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 로쿠로늄은 수술 중 근이완 및 안과 수술 시 안구 중심 위치 확보에 사용될 수 있다. 0.5 mg/kg IV 후 0.2 mg/kg/hour CRI가 효과적이었다. 후두 신경근 기능 회복이 골반지보다 36% 느리므로, 골반지에서의 회복 모니터링만으로는 후두의 잔류 차단을 배제할 수 없다. 반드시 전신마취 하에 기계 환기와 함께 사용해야 하며, 수가마덱스 등 역전제를 즉시 사용할 수 있는 환경에서만 투여해야 한다.",
+    "cat": "고양이에서 0.3~0.6 mg/kg IV가 사용된다. 0.6 mg/kg에서 30~60초 내 완전 차단이 가능하며 작용 지속 시간은 약 13분이다. TOF 비율 0.9 회복이 잔류 차단을 신뢰성 있게 배제하지 못하므로, 객관적 방법으로 페이드가 감지되지 않더라도 로쿠로늄 및 다른 신경근 차단제를 역전시키는 것이 권장된다. 반드시 전신마취 하에 기계 환기와 함께 사용해야 한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 장애 환자에서 주의 사용. 중증근무력증 환자에서 소량으로도 심각한 효과 가능. 반드시 전신마취 및 기계 환기 하에 사용. 고위험 약물로 추가 용량 확인 및 경고 라벨 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 장애 환자에서 주의 사용. TOF 비율 0.9 회복 후에도 잔류 차단 가능성이 있으므로 역전 권장. 반드시 전신마취 및 기계 환기 하에 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀봉 바이알은 2~8°C(36~46°F)에서 보관하고 동결을 피한다. 냉장에서 꺼낸 후 실온(25°C)에서 60일 이내 사용. 개봉 바이알은 30일 이내 사용. 희석 주입 용액(최대 5 mg/mL)은 실온에서 24시간 안정. 미사용 주입 용액은 폐기.",
+    "forms": [
+      "Rocuronium Bromide for Injection 10 mg/mL (5 mL 및 10 mL 다회 투여 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로쿠로늄은 빠른~중간 발현 및 중간 지속 시간을 가진 비탈분극성 신경근 차단제로, 수의 환자에서 수술 중 근이완에 사용된다. 벡쿠로늄보다 발현이 2~3배 빠르고 숙시닐콜린보다 부작용이 적다. 진통 또는 진정 작용이 없으므로 반드시 전신마취 하에 기계 환기와 함께 사용해야 한다. 특이적 역전제는 수가마덱스이며, 고위험 약물로 분류되어 추가 안전 조치가 필요하다. 개와 고양이 모두 허가 외 사용이며, 수의 라벨 제품은 없다.",
+    "indications": "개, 고양이, 말에서 수술 중 근이완(허가 외). 개에서 안과 수술 시 안구 중심 위치 확보(허가 외). 고양이에서 0.3~0.6 mg/kg IV 사용. 개에서 0.5 mg/kg IV 후 0.2 mg/kg/hour CRI 또는 안과 수술 시 0.03~0.05 mg/kg IV.",
+    "client_info": "이 약물은 신경근 차단제로, 수술 중 근육을 이완시키기 위해 사용됩니다. 반드시 전문 수의사가 전신마취 및 기계 환기 장비가 갖춰진 환경에서만 투여해야 합니다. 이 약물은 통증 완화나 진정 효과가 없으므로 마취 없이 단독으로 사용해서는 안 됩니다. 투여 후 신경근 기능이 완전히 회복될 때까지 집중 모니터링이 필요합니다. 역전제(수가마덱스)가 즉시 사용 가능한 환경에서만 투여됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "CYP profile (not mentioned in Plumb's)",
+      "Oral bioavailability (IV only)",
+      "Veterinary-specific protein binding data",
+      "Specific renal dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "half_life_hr (dog/cat specific values)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/33.jsonl",
+    "extracted_at": "2026-03-10T23:21:48.316000+00:00",
+    "reviewer": null
+  }
+}

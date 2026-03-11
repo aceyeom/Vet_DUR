@@ -1,0 +1,581 @@
+{
+  "id": "oxytocin",
+  "drug_identity": {
+    "name_ko": "옥시토신",
+    "name_en": "Oxytocin",
+    "active_ingredient": "Oxytocin",
+    "brand_names": [
+      "Pitocin"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 10,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "옥시토신은 간과 신장에서 빠르게 대사되며, 순환 효소인 옥시토시나제(oxytocinase)에 의해서도 분해된다. 소량만이 소변으로 미변화 형태로 배설된다."
+    },
+    "extra_information": "개에서 IV 투여 후 지속 시간은 약 13분, IM/SC 투여 후 약 20분으로 보고되었다. 대부분의 포유류에서 혈장 반감기는 약 1~6분이며, 염소에서는 약 22분으로 보고되었다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간과 신장에서 대사되므로 해당 장기 부담이 있으나, 반감기가 매우 짧아 누적 독성은 낮다. 과량 투여 시 자궁 파열, 수분 중독(저나트륨혈증), 심장 부정맥 위험이 있다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "water intoxication",
+          "seizures",
+          "coma"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 수분 중독으로 인한 경련, 혼수 가능성이 있으나 정상 용량에서는 뇌 부담이 낮다."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "인간 제품에서 QT 연장 및 심장 부정맥이 이상반응으로 기재되어 있으나, 정상 용량에서는 혈액 독성이 낮다."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "antidiuretic",
+          "water intoxication",
+          "renal metabolism"
+        ],
+        "index": 2,
+        "evidence": "신장에서 대사되며 약한 항이뇨 작용이 있다. 과량 투여 시 수분 중독 위험이 있다."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 빠르게 대사되나 반감기가 매우 짧아 간 부담은 낮다."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "인간 제품에서 QT 연장 및 심장 부정맥이 보고되었으며, 혈관수축제와 병용 시 고혈압 위험이 있다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "water intoxication",
+          "seizures",
+          "coma"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 수분 중독으로 인한 경련, 혼수 가능성이 있으나 정상 용량에서는 뇌 부담이 낮다."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "인간 제품에서 QT 연장 및 심장 부정맥이 이상반응으로 기재되어 있으나, 정상 용량에서는 혈액 독성이 낮다."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "antidiuretic",
+          "water intoxication",
+          "renal metabolism"
+        ],
+        "index": 2,
+        "evidence": "신장에서 대사되며 약한 항이뇨 작용이 있다. 과량 투여 시 수분 중독 위험이 있다."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 빠르게 대사되나 반감기가 매우 짧아 간 부담은 낮다."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "인간 제품에서 QT 연장 및 심장 부정맥이 보고되었으며, 혈관수축제와 병용 시 고혈압 위험이 있다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.017,
+      "max": 0.1,
+      "mean": 0.058,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 자궁 반응은 거의 즉시 나타나며, IM 투여 후 3~5분 내에 반응이 나타난다. 대부분의 포유류에서 혈장 반감기는 약 1~6분(0.017~0.1시간)이다. 경구 투여 시 위장관에서 파괴되므로 반드시 비경구 투여해야 한다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Agonists (albuterol, clenbuterol)",
+      "severity": 2,
+      "keywords": [
+        "reduced oxytocin effect",
+        "delayed labor"
+      ],
+      "evidence": "Beta-adrenergic agonists may reduce the effects of oxytocin and delay labor."
+    },
+    {
+      "drug": "Dinoprost",
+      "severity": 2,
+      "keywords": [
+        "enhanced oxytocin effect",
+        "uterine hyperstimulation"
+      ],
+      "evidence": "Dinoprost may enhance the effects of oxytocin, potentially leading to uterine hyperstimulation."
+    },
+    {
+      "drug": "Misoprostol",
+      "severity": 2,
+      "keywords": [
+        "enhanced oxytocin effect",
+        "uterine hyperstimulation"
+      ],
+      "evidence": "Misoprostol may enhance the effects of oxytocin, potentially leading to uterine hyperstimulation."
+    },
+    {
+      "drug": "NSAIDs (flunixin)",
+      "severity": 2,
+      "keywords": [
+        "attenuated oxytocic effect"
+      ],
+      "evidence": "Attenuation of oxytocic effects has been demonstrated in postpartum cows receiving NSAIDs such as flunixin."
+    },
+    {
+      "drug": "Vasoconstrictors (ephedrine, epinephrine)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "sympathomimetic"
+      ],
+      "evidence": "Concurrent use with sympathomimetic agents or other vasoconstrictors increases the risk for hypertension."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "자궁 무력증 (uterine inertia) - 프로토콜 A",
+          "value": "0.1",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "q30h",
+          "max_dose_mg_kg": null,
+          "duration_note": "30~40분 간격으로 반복 투여, 최대 2 units/kg (최대 20 units/kg)까지 점진적으로 증량",
+          "evidence": "초기 용량 0.1 units/kg IM; 30~40분마다 반복, 최대 2 units/kg (최대 20 units/kg)까지 점진적 증량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "자궁 무력증 (uterine inertia) - 프로토콜 B",
+          "value": "2",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "30~60분 후 반복 가능",
+          "evidence": "옥시토신 2 units (총 용량, units/kg 아님) IV, 30~60분 후 반복"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "자궁 무력증 (uterine inertia) - 프로토콜 C",
+          "value": "0.25",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 4 units/마리, 일반적으로 1시간 이상 간격으로 투여",
+          "evidence": "0.25 units/마리 (units/kg 아님) SC 또는 IM, 최대 4 units/마리"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "속발성 무유증 (secondary agalactia)",
+          "value": "0.25 - 1",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2시간마다 SC 투여; 투여 후 30분간 신생아 분리 후 포유 유도",
+          "evidence": "0.25~1 units/마리 (units/kg 아님) SC 2시간마다"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "급성 자궁내막염 보조 치료 (acute metritis)",
+          "value": "0.5 - 5",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분만 후 24시간 이내에만 사용 가능",
+          "evidence": "0.5~5 units/마리 (units/kg 아님) IM, 분만 후 24시간 이내"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "자궁 탈출 수동 정복 후 자궁 복구 촉진 - 프로토콜 A",
+          "value": "0.5 - 5",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "자궁 정복 후 1회 투여",
+          "evidence": "0.5~5 units/마리 (units/kg 아님) IM, 자궁 정복 후"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "자궁 탈출 수동 정복 후 자궁 복구 촉진 - 프로토콜 B",
+          "value": "5 - 10",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "자궁 정복 후 1회 투여",
+          "evidence": "5~10 units/마리 (units/kg 아님) IM, 자궁 정복 후"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "자궁 무력증 (uterine inertia) - 프로토콜 A",
+          "value": "0.1",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "30~40분 간격으로 반복 투여, 최대 2 units/kg (최대 20 units/kg)까지 점진적으로 증량",
+          "evidence": "초기 용량 0.1 units/kg IM; 30~40분마다 반복, 최대 2 units/kg까지 점진적 증량 (개/고양이 공통 프로토콜)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "자궁 무력증 (uterine inertia) - 프로토콜 B",
+          "value": "2",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "30~60분 후 반복 가능",
+          "evidence": "옥시토신 2 units (총 용량, units/kg 아님) IV, 30~60분 후 반복 (개/고양이 공통 프로토콜)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "자궁 무력증 (uterine inertia) - 프로토콜 C",
+          "value": "0.25",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 4 units/마리, 일반적으로 1시간 이상 간격으로 투여",
+          "evidence": "0.25 units/마리 (units/kg 아님) SC 또는 IM, 최대 4 units/마리 (개/고양이 공통 프로토콜)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "속발성 무유증 (secondary agalactia)",
+          "value": "0.25 - 1",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2시간마다 SC 투여; 투여 후 30분간 신생아 분리 후 포유 유도",
+          "evidence": "0.25~1 units/마리 (units/kg 아님) SC 2시간마다 (개/고양이 공통 프로토콜)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "급성 자궁내막염 보조 치료 (acute metritis)",
+          "value": "0.5 - 5",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분만 후 24시간 이내에만 사용 가능",
+          "evidence": "0.5~5 units/마리 (units/kg 아님) IM, 분만 후 24시간 이내 (개/고양이 공통 프로토콜)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없다. 옥시토신은 신장에서 대사되며 약한 항이뇨 작용이 있으므로 신장 질환 환자에서 주의가 필요하다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없다. 옥시토신은 간에서 빠르게 대사되나 반감기가 매우 짧아 간 질환 시 임상적으로 유의한 축적 가능성은 낮다."
+  },
+  "contraindications": [
+    {
+      "condition": "폐쇄성 난산 (obstructive dystocia)",
+      "match_terms": [
+        "obstructive dystocia",
+        "abnormal fetal presentation",
+        "abnormal maternal anatomy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "옥시토신 과민반응 (hypersensitivity to oxytocin)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to oxytocin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자궁경부 미완전 이완 (cervix not fully relaxed)",
+      "match_terms": [
+        "cervix not relaxed",
+        "cervical dilation insufficient"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "원발성 자궁 무력증 (primary uterine inertia)",
+      "match_terms": [
+        "primary uterine inertia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼슘혈증 (hypocalcemia)",
+      "match_terms": [
+        "hypocalcemia",
+        "low calcium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "질식 분만이 불가능한 경우 (vaginal delivery contraindicated)",
+      "match_terms": [
+        "vaginal delivery contraindicated",
+        "cephalopelvic disproportion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "옥시토신은 자궁 근섬유의 나트륨 투과성을 증가시켜 자궁 수축을 자극한다. 임신 기간이 길수록, 에스트로겐 수치가 높을수록, 이미 분만 중인 경우 옥시토신에 의한 자궁 수축 역치가 낮아진다. 또한 유즙 분비를 촉진하고 약한 항이뇨 작용을 가진다.",
+    "common_extra_effects": [
+      "자궁 경련 및 불편감 (반복 볼루스 주사 시)",
+      "QT 간격 연장 (인간 제품 기재)",
+      "심장 부정맥 (인간 제품 기재)",
+      "수분 중독 (과량 투여 또는 전해질 없는 IV 수액 대량 병용 시)",
+      "과민반응 (동물 유래 제품 사용 시)",
+      "자궁 파열 (과량 투여 시)",
+      "태아 손상 또는 사망 (과량 투여 시)"
+    ],
+    "dog_mechanism": "개에서 IV 투여 후 지속 시간은 약 13분, IM/SC 투여 후 약 20분이다. 미니 용량이 자궁 수축 빈도를 개선하고 암컷(자궁 파열)과 태아(태반 손상)에 덜 위험하다.",
+    "dog_extra_effects": [
+      "자궁 파열 (과량 투여 시)",
+      "태반 손상 (과량 투여 시)",
+      "수분 중독 (과량 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서도 개와 동일한 프로토콜이 적용된다. 미니 용량이 권장된다.",
+    "cat_extra_effects": [
+      "자궁 파열 (과량 투여 시)",
+      "태반 손상 (과량 투여 시)",
+      "수분 중독 (과량 투여 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 옥시토신은 자궁 무력증, 속발성 무유증, 급성 자궁내막염 보조 치료, 자궁 탈출 정복 후 자궁 복구 촉진에 사용된다. 과거의 높은 용량 권고는 구식이며, 미니 용량(0.25 units/마리)이 자궁 수축 빈도를 개선하고 암컷과 태아에 덜 위험하다. 옥시토신 투여 전 저칼슘혈증을 교정하면 효과가 향상된다. IV 투여 후 지속 시간은 약 13분, IM/SC 투여 후 약 20분이다.",
+    "cat": "고양이에서 옥시토신은 개와 동일한 적응증으로 사용된다. 미니 용량(0.25 units/마리)이 권장되며, 과량 투여 시 자궁 파열 및 태반 손상 위험이 있다. 옥시토신 투여 전 저칼슘혈증을 교정하면 효과가 향상된다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "적절한 용량에서 사용 시 이상반응이 드물다. 과량 투여 시 자궁 파열, 태아 손상, 수분 중독 위험이 있다. 저칼슘혈증 교정 후 사용 권장. 자궁경부가 완전히 이완된 경우에만 사용해야 한다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "적절한 용량에서 사용 시 이상반응이 드물다. 과량 투여 시 자궁 파열, 태아 손상, 수분 중독 위험이 있다. 저칼슘혈증 교정 후 사용 권장. 자궁경부가 완전히 이완된 경우에만 사용해야 한다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 미만에서 보관하되 동결하지 않는다. 일부 제조사는 냉장 보관(2°C-8°C)을 권장하나, 일부 제품은 26°C(78.8°F) 미만에서 최대 5년간 안정적인 것으로 입증되었다.",
+    "forms": [
+      "옥시토신 주사액 20 USP units/mL, 100 mL 바이알 (동물용)",
+      "옥시토신 주사액 10 units/mL, 1 mL 단회용 바이알 (인체용)",
+      "옥시토신 주사액 10 units/mL, 10 mL 다회용 바이알 (인체용)",
+      "옥시토신 주사액 10 units/mL, 30 mL 다회용 바이알 (인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "옥시토신은 시상하부 호르몬으로, 분만 시 자궁 수축 유도 또는 강화, 산후 자궁 내 잔류물 배출, 무유증 치료에 사용된다. 반감기가 매우 짧아(1~6분) 반복 투여가 필요하다. 과거의 높은 용량 권고는 구식이며, 미니 용량이 권장된다. NIOSH에서 위험 약물로 분류하므로 취급 시 개인보호장비(PPE) 착용이 필요하다. QT 연장 가능성이 있으며, 혈관수축제와 병용 시 고혈압 위험이 있다.",
+    "indications": "【승인 적응증】 분만 시 자궁 수축 유도 또는 강화, 산후 자궁 내 잔류물 배출 및 자궁 출혈 조절, 무유증 치료, 유즙 분비 촉진 (소, 돼지). 【오프라벨 적응증】 자궁 탈출 수동 정복 후 자궁 복구 촉진 (개), 급성 자궁내막염 보조 치료, 식도 폐색 치료 (말), 난산 치료 (조류, 파충류, 소형 포유류).",
+    "client_info": "【보호자 안내】 이 약은 폐쇄성 난산, 자궁경부가 이완되지 않은 경우, 또는 질식 분만이 불가능하거나 권장되지 않는 경우에는 사용하지 마십시오. 옥시토신은 효과를 충분히 모니터링할 수 있는 동물에게만 사용해야 합니다. 반드시 수의사의 지시에 따라 사용하십시오. 이 약은 주사로 투여됩니다. 수의사로부터 투여 방법과 시기에 대한 지시를 충분히 이해하십시오. 사용한 주사바늘과 주사기는 즉시 날카로운 물건 전용 폐기 용기에 넣으십시오. 예상 시간 내에 태아가 분만되지 않거나 동물에게 발열, 구토, 경련이 발생하면 즉시 수의사에게 연락하십시오. 임신 중이거나 임신을 계획 중인 분, 수유 중인 분은 이 약을 주의하여 취급하십시오. 이 약은 NIOSH에서 위험 약물로 분류되므로 취급 시 개인보호장비(PPE)를 착용하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Overdose/Acute Toxicity",
+      "Reproductive/Nursing Safety",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Renal dose adjustment recommendations",
+      "Hepatic dose adjustment recommendations",
+      "Oral bioavailability (F%)",
+      "Protein binding data",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/30.jsonl",
+    "extracted_at": "2026-03-10T22:38:50.744590+00:00",
+    "reviewer": null
+  }
+}

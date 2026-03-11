@@ -1,0 +1,415 @@
+{
+  "id": "frunevetmab",
+  "drug_identity": {
+    "name_ko": "프루네벳맙",
+    "name_en": "Frunevetmab",
+    "active_ingredient": "Frunevetmab",
+    "brand_names": [
+      "Solensia"
+    ],
+    "allergy_class": null,
+    "class": "Analgesic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 7.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "단클론항체는 펩타이드 분해(단백질 가수분해)를 통해 대사되며, CYP 효소 경로를 거치지 않는다."
+    },
+    "extra_information": "고양이에서 SC 투여 후 생체이용률 60~73%. 건강한 고양이에서 Cmax ≈43 µg/mL (투여 후 3.5일), 골관절염 고양이에서 Cmax 26.1 µg/mL (3~7일). 분포용적은 혈장 용적과 유사하며 혈액-뇌 장벽을 통과하지 않는다. 2회 투여 후 정상상태 도달. 반감기 ≈10~12일."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 고양이 전용 생물학적 제제로 개에 대한 데이터 없음. 신장 부담은 임상시험에서 신부전 악화 보고에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 데이터 없음. 고양이 전용 제품."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 데이터 없음. 고양이 전용 제품."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 데이터 없음. 고양이 전용 제품."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 데이터 없음. 고양이 전용 제품."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 데이터 없음. 고양이 전용 제품."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "신경성장인자 억제"
+        ],
+        "index": 1,
+        "evidence": "NGF는 신경계 발달에 중요한 역할을 하나, 성숙한 동물에서 혈액-뇌 장벽 통과 없음. 직접적 뇌 독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "빌리루빈뇨"
+        ],
+        "index": 2,
+        "evidence": "과용량 시험에서 일부 고양이에서 빌리루빈뇨 관찰됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "신부전 악화",
+          "탈수",
+          "체중감소"
+        ],
+        "index": 3,
+        "evidence": "임상시험에서 기존 신부전 악화 6.6%, 탈수 4.4%, 체중감소 3.3% 보고됨."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "빌리루빈뇨"
+        ],
+        "index": 2,
+        "evidence": "과용량 시험에서 빌리루빈뇨 관찰. 직접적 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 이상반응 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 84.0,
+    "half_life_hr": {
+      "min": 240.0,
+      "max": 288.0,
+      "mean": 264.0,
+      "species": "cat"
+    },
+    "f_percent": 67,
+    "protein_binding_percent": null,
+    "evidence": "건강한 고양이에서 Tmax ≈3.5일(84시간), 골관절염 고양이에서 3~7일. 생체이용률 60~73%(중앙값 약 67%). 반감기 ≈10~12일(240~288시간)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 프루네벳맙은 다른 약물과의 병용 연구가 수행되지 않았으며, 상호작용은 이론적 또는 인체 유사 약물 데이터에 근거함.",
+  "drug_interactions": [
+    {
+      "drug": "NSAIDs (e.g., meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "rapidly progressive osteoarthritis",
+        "RPOA",
+        "joint damage"
+      ],
+      "evidence": "In humans, concurrent use of anti-NGF monoclonal antibodies with long-term NSAIDs increased the incidence of rapidly progressive osteoarthritis (RPOA). Significance in veterinary patients is uncertain; RPOA has not been reported in cats."
+    },
+    {
+      "drug": "Monoclonal Antibodies, Other (e.g., lokivetmab)",
+      "severity": 2,
+      "keywords": [
+        "immunogenicity",
+        "unevaluated combination"
+      ],
+      "evidence": "Concurrent use of frunevetmab with other monoclonal antibodies has not been evaluated. Potential for additive immunogenicity or unknown interactions."
+    },
+    {
+      "drug": "Vaccines",
+      "severity": 1,
+      "keywords": [
+        "injection site separation"
+      ],
+      "evidence": "Vaccines should be administered at a different site than frunevetmab to avoid local interaction at the injection site."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "dog_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 55.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "골관절염 관련 통증 조절 (체중 2.5~7 kg)",
+          "value": "7",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 용량 범위 1~2.8 mg/kg. 바이알 전체 내용물(1 mL) 투여. 월 1회 반복.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-546). 체중 2.5~7 kg 고양이: 1바이알(7 mg, 1 mL)/마리 SC 월 1회."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "골관절염 관련 통증 조절 (체중 7.1~14 kg)",
+          "value": "14",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 용량 범위 1~2.8 mg/kg. 바이알 전체 내용물(2 mL) 투여. 월 1회 반복.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-546). 체중 7.1~14 kg 고양이: 2바이알(14 mg, 2 mL)/마리 SC 월 1회."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "기존 신부전이 있는 고양이에서 신부전 악화가 보고됨(6.6%). 명시적인 용량 조절 지침은 제공되지 않음. 신기능 저하 환자에서 주의 깊은 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 기능 저하 환자에 대한 용량 조절 지침이 명시되어 있지 않음. 단클론항체는 CYP 경로를 거치지 않으므로 간 대사 영향은 제한적으로 예상됨."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (프루네벳맙에 대한 과민증)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergic reaction",
+        "anaphylaxis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "번식용 고양이",
+      "match_terms": [
+        "breeding cat",
+        "stud",
+        "queen for breeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 고양이",
+      "match_terms": [
+        "pregnant",
+        "lactating",
+        "nursing queen"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "7개월 미만 또는 체중 2.5 kg 미만 고양이",
+      "match_terms": [
+        "kitten",
+        "age < 7 months",
+        "weight < 2.5 kg"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "chronic kidney disease",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "프루네벳맙은 신경성장인자(NGF)에 결합하는 고양이화(felinized) IgG 단클론항체로, NGF가 수용체(TrkA, p75NTR)에 결합하는 것을 억제하여 통증 및 염증 화학 매개체 방출을 감소시키고 통증 관련 세포 신호 전달을 억제한다.",
+    "common_extra_effects": [
+      "주사 부위 반응 (딱지, 피부염, 탈모, 소양증, 부종)",
+      "주사 부위 통증",
+      "구토",
+      "설사",
+      "식욕부진",
+      "기존 신부전 악화",
+      "탈수",
+      "체중감소",
+      "치은 장애",
+      "빌리루빈뇨 (과용량 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "고양이화 IgG 단클론항체로 NGF에 특이적으로 결합. 골관절염 관절에서 상승된 NGF를 차단하여 말초 감작, 신경성 염증 및 통증 인지를 감소시킴.",
+    "cat_extra_effects": [
+      "주사 부위 반응 (3~6%)",
+      "GI 증상 (구토, 설사, 식욕부진, 7~14%)",
+      "주사 부위 통증",
+      "기존 신부전 악화 (6.6%)",
+      "탈수 (4.4%)",
+      "체중감소 (3.3%)",
+      "치은 장애 (2.2%)",
+      "항약물 항체 형성 (1.5%)"
+    ]
+  },
+  "species_notes": {
+    "dog": "프루네벳맙은 고양이 전용 제품으로 개에서의 사용은 금기이며 평가된 바 없음. 개에게 투여해서는 안 됨.",
+    "cat": "FDA 승인 고양이 골관절염 통증 조절 약물(NADA #141-546). 체중에 따라 월 1회 SC 투여. 투여 후 2~3주 후 진통 효과 발현. 3회 투여 시 최대 76%의 치료 성공률 보고. 기존 신부전이 있는 고양이에서 신기능 모니터링 필요. 항약물 항체 형성으로 효과가 감소할 수 있음. 7개월 미만 또는 2.5 kg 미만 고양이에서는 평가되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 2,
+      "evidence": "고양이 전용 제품으로 개에서의 사용은 금기. 다른 종에서 평가된 바 없음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "기존 신부전 악화 가능성, 과민반응 위험, 항약물 항체 형성 가능성에 주의. 번식용, 임신, 수유 중인 고양이에는 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛 차단 및 냉장 보관(2~8°C, 35~46°F). 동결 금지. 바이알은 직립 보관하며 흔들거나 거품이 생기지 않도록 주의. 바이알 개봉 후 즉시 사용.",
+    "forms": [
+      "Frunevetmab 주사액 7 mg/mL, 1 mL 단회용 바이알 (1, 2, 6바이알 카톤 포장); Solensia® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프루네벳맙(Solensia®)은 고양이 골관절염 통증 조절을 위해 FDA 승인된 고양이화 항-NGF IgG 단클론항체입니다. 월 1회 SC 투여하며, 체중 2.5~7 kg은 7 mg(1바이알), 7.1~14 kg은 14 mg(2바이알)을 투여합니다. 투여 후 2~3주 내 진통 효과가 나타나며, 3회 투여 시 최대 76% 치료 성공률이 보고되었습니다. 기존 신부전 악화 가능성이 있으므로 신기능 모니터링이 필요합니다. 번식용, 임신, 수유 중인 고양이에는 금기이며, 개를 포함한 다른 종에는 사용하지 않습니다.",
+    "indications": "고양이 골관절염 관련 통증 조절 (FDA 승인, NADA #141-546). 면역매개성 관절병증, 내장 통증, 정형외과 수술 후 통증, 골절, 전이성 암 통증에 대한 효과 및 안전성은 확립되지 않음.",
+    "client_info": "이 약은 고양이의 골관절염으로 인한 통증을 완화하기 위해 한 달에 한 번 피부 아래에 주사하는 약입니다. 번식용 고양이, 임신 중이거나 수유 중인 고양이, 7개월 미만의 고양이에게는 사용하지 마십시오. 이 약은 다른 약물과의 병용 연구가 충분히 이루어지지 않았으므로, 다른 약을 함께 투여하기 전에 반드시 수의사와 상담하십시오. 부작용은 드물지만 주사 부위 통증, 피부 반응, 구토 등이 나타날 수 있습니다. 이 약은 고양이 전용으로 개 등 다른 동물에게는 절대 사용하지 마십시오. 임신 중이거나 임신을 계획 중인 여성, 수유 중인 여성은 우발적 자가 주사를 피하기 위해 개인 보호 장비를 착용하고 취급하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdosage/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations",
+      "Compatibility/Compounding Considerations",
+      "Human-labeled products"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.clearance_organ",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:34:29.527923+00:00",
+    "reviewer": null
+  }
+}

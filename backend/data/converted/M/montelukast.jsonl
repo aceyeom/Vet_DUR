@@ -1,0 +1,356 @@
+{
+  "id": "montelukast",
+  "drug_identity": {
+    "name_ko": "몬테루카스트",
+    "name_en": "Montelukast",
+    "active_ingredient": "Montelukast",
+    "brand_names": [
+      "Singulair"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서는 고양이의 천식, 아토피, 상부호흡기질환, 염증성장질환, 심장사상충 관련 호흡기질환에 비공인(extra-label)으로 사용됨. 수의 승인 제품 없음.",
+    "dosage_form": [
+      "Tab",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4",
+        "CYP2A6",
+        "CYP2C9"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체 자료: CYP3A4, CYP2A6, CYP2C9에 의해 간에서 광범위하게 대사됨. 대사산물은 주로 담즙으로 배설되어 분변으로 제거됨. 치료 혈장 농도에서 CYP450 동종효소(3A4, 2C9, 1A2, 2A6, 2C19, 2D6)를 억제하지 않음(in vitro)."
+    },
+    "extra_information": "고양이에 대한 약동학 정보 없음. 인체 자료: 경구 생체이용률 64%, 최고 혈장 농도 도달 시간 3~4시간, 혈장 단백 결합률 99% 이상, 반감기 약 4시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 고양이 전용 수의학 PK 자료 없음; 인체 자료 및 부작용 보고 기반으로 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "somnolence",
+          "behavioral effects"
+        ],
+        "index": -1,
+        "evidence": "개에 대한 직접 자료 없음. 인체 과다복용 시 졸음, 행동 이상 보고됨."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 혈액 독성 자료 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성 관련 자료 없음. 담즙/분변 배설 경로."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cholestatic hepatitis",
+          "CYP metabolism"
+        ],
+        "index": -1,
+        "evidence": "인체에서 드물게 담즙정체성 간염 보고. 간에서 광범위 대사."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "palpitations"
+        ],
+        "index": -1,
+        "evidence": "인체에서 드물게 두근거림 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "somnolence"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 부작용 보고 없음. 인체 과다복용 시 졸음 보고 참고."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성 자료 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성 관련 자료 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CYP metabolism",
+          "cholestatic hepatitis"
+        ],
+        "index": -1,
+        "evidence": "간에서 광범위 대사. 인체에서 드물게 담즙정체성 간염 보고. 고양이 전용 자료 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "palpitations"
+        ],
+        "index": -1,
+        "evidence": "인체에서 드물게 두근거림 보고. 고양이 자료 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 4.0,
+      "species": "human"
+    },
+    "f_percent": 64,
+    "protein_binding_percent": 99,
+    "evidence": "인체 자료: 경구 생체이용률 64%, 최고 혈장 농도 도달 3~4시간, 혈장 반감기 약 4시간, 단백 결합률 99% 이상. 고양이 PK 자료 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "CYP450 Enzyme Inducers (e.g., phenobarbital, rifampin)",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "reduced plasma concentration",
+        "reduced efficacy"
+      ],
+      "evidence": "CYP450 효소 유도제(예: 페노바르비탈, 리팜핀)는 몬테루카스트의 혈장 농도 및 효능을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Gemfibrozil",
+      "severity": 2,
+      "keywords": [
+        "CYP2C8 inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "젬피브로질은 몬테루카스트의 혈장 농도를 증가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고양이 천식, 알레르기성 비염, 경증 IBD, 아토피, 심장사상충 관련 호흡기질환의 보조 치료 (extra-label)",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효능에 대한 명확한 근거 없음. 일화적 용량임.",
+          "evidence": "일화적 용량: 0.25~1 mg/kg PO 1일 1회. 실용적으로는 10 mg 정제의 1/8~1/4을 고양이 1마리에 1일 1회 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 수의학적 자료 없음. 주로 담즙/분변 배설 경로이므로 신장 부담은 낮을 것으로 추정되나 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 용량 조절에 대한 명시적 권고 없음. 간에서 광범위 대사되므로 중증 간질환 시 주의가 필요할 수 있으나 Plumb's에 명시된 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "Hypersensitivity to montelukast",
+      "match_terms": [
+        "montelukast hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Acute bronchospasm",
+      "match_terms": [
+        "acute asthma attack",
+        "acute bronchospasm"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "시스테이닐 류코트리엔(CysLT1) 수용체 길항제. LTC4, LTD4, LTE4 등 아라키돈산 대사 산물인 프로염증성 류코트리엔의 작용을 차단하여 항염증 및 기관지 보호 효과를 나타냄.",
+    "common_extra_effects": [
+      "행동 이상 (공격성, 자살 충동 — 인체)",
+      "두근거림 (인체)",
+      "담즙정체성 간염 (드물게, 인체)",
+      "알레르기성 육아종성 혈관염 (드물게, 인체)",
+      "두통 (과다복용 시, 인체)",
+      "구토 (과다복용 시, 인체)",
+      "졸음 (과다복용 시, 인체)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "CysLT1 수용체 길항을 통한 류코트리엔 매개 염증 억제 (고양이 특이적 자료 없음; 인체 기전 외삽).",
+    "cat_extra_effects": [
+      "고양이에서 유의한 부작용 보고 없음 (제한적 사용 경험)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에 대한 용량 또는 임상 사용 자료가 없음. 현재 개에서의 사용은 권장되지 않음.",
+    "cat": "고양이 천식, 아토피, 상부호흡기질환, IBD, 심장사상충 관련 호흡기질환에 보조적으로 사용될 수 있으나, 효능에 대한 근거가 매우 제한적임. 특히 고양이 천식에서의 효과는 실망스러운 것으로 보고됨. 대부분의 임상의는 고양이 천식에 이 약을 권장하지 않음. 고양이에서 유의한 부작용은 보고되지 않았으나 광범위한 연구가 이루어지지 않았음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 0,
+      "evidence": "개에 대한 사용 자료 없음. 용량 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "효능에 대한 근거가 일화적 수준에 불과하며, 급성 기관지경련의 즉각적 치료에는 사용 불가. 광범위한 임상 경험 부족으로 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관 (15~30°C, 59~86°F). 습기와 빛으로부터 보호.",
+    "forms": [
+      "Montelukast Sodium 경구 정제: 4 mg (츄어블), 5 mg (츄어블), 10 mg",
+      "Montelukast Sodium 경구 과립: 4 mg/포"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "몬테루카스트는 CysLT1 수용체 길항제로, 수의학에서는 주로 고양이에서 비공인(extra-label)으로 사용됨. 고양이 천식, 아토피, IBD, 상부호흡기질환, 심장사상충 관련 호흡기질환에 보조 치료로 시도되나 효능 근거가 매우 제한적임. 수의 승인 제품 없음. 고양이에서 유의한 부작용 보고 없으나 사용 경험 자체가 적음. 급성 기관지경련의 즉각 치료에는 사용 불가.",
+    "indications": "【고양이 (extra-label)】 고양이 천식, 알레르기성 비염, 경증 IBD, 아토피, 심장사상충 관련 호흡기질환의 보조 치료 (일화적 근거만 존재). 【인체 승인】 알레르기성 비염, 천식. 【인체 비공인】 아토피 피부염, 두드러기, 호산구성 식도염.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 투약 후 구토나 불편함을 보이면 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하십시오. 몬테루카스트는 급성 천식 발작을 즉시 멈추는 약이 아닙니다. 응급 상황에서는 사용하지 마십시오. 고양이에서 심각한 부작용은 보고되지 않았으나, 사용 경험이 많지 않으므로 새로운 증상이 나타나면 즉시 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 38,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data (cat/dog)",
+      "Monitoring parameters (detailed)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Dog dosage"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat/dog specific)",
+      "timing_profile.f_percent (cat/dog specific)",
+      "timing_profile.protein_binding_percent (cat/dog specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment",
+      "hepatic_dose_adjustment",
+      "dosage_and_kinetics.dog.dosage_list",
+      "organ_burden_logic.cat (veterinary-specific data)",
+      "organ_burden_logic.dog (veterinary-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/27.jsonl",
+    "extracted_at": "2026-03-10T21:33:35.679373+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,881 @@
+{
+  "id": "diazepam",
+  "drug_identity": {
+    "name_ko": "디아제팜",
+    "name_en": "Diazepam",
+    "active_ingredient": "Diazepam",
+    "brand_names": [
+      "Valium",
+      "Diastat",
+      "Diazepam Intensol"
+    ],
+    "allergy_class": "benzodiazepine",
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Flumazenil",
+    "reversal_evidence": "플루마제닐은 벤조디아제핀 과다복용의 보조 치료제로 사용 가능하며, 디아제팜의 부작용을 역전시킬 수 있다고 명시되어 있음.",
+    "off_label_note": "미국 내 수의용 허가 제품 없음. 인체용 제품을 동물에게 적용하는 오프라벨 사용임. 일부 국가(예: 영국)에서는 수의용으로 허가된 제품이 존재함.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "말에서 CYP3A가 테마제팜 형성에 주로 관여함. 개와 고양이에서의 CYP 경로는 명시되지 않음. 간에서 데스메틸디아제팜(노르디아제팜), 테마제팜, 옥사제팜 등 약리학적으로 활성인 대사체로 대사되며, 글루쿠로나이드 포합 후 주로 소변으로 배설됨."
+    },
+    "extra_information": "개에서 직장 투여 시 디아제팜 원형의 생체이용률은 10% 미만이나, 대사체 포함 시 50~80%로 증가함. 비강 내 투여 시 생체이용률은 약 80%. 고양이에서는 반감기가 더 길며 내성 발생이 주요 문제가 아님. 활성 대사체로 인해 혈청 디아제팜 농도만으로는 효능 예측이 어려움."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 함. 고양이 경구 투여 시 간부전 보고 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "paradoxical excitement",
+          "anticonvulsant",
+          "anxiolytic"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, 운동실조, 역설적 흥분(약 30%), 항경련 효과 등 CNS 관련 이상반응이 주요하게 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "phlebitis"
+        ],
+        "index": 1,
+        "evidence": "빠른 IV 투여 시 저혈압 및 정맥염 위험이 있음. 혈액독성은 직접적으로 언급되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease caution",
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 시 주의 사용 권고. 대사체가 주로 소변으로 배설되므로 신기능 저하 시 축적 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic disease contraindication",
+          "enzyme inducers/inhibitors"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 심한 간질환 시 금기. 간효소 유도제/억제제와의 상호작용 다수 보고됨."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypotension",
+          "cardiotoxicity",
+          "cardiac arrest"
+        ],
+        "index": 1,
+        "evidence": "빠른 IV 투여 시 저혈압 및 심독성(프로필렌 글리콜 관련) 가능. 드물게 심정지 보고(주로 인체)."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "behavior changes",
+          "irritability",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 행동 변화(과민성, 우울, 이상 행동), 진정 등 CNS 관련 이상반응 보고됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "빠른 IV 투여 시 저혈압 가능. 혈액독성은 직접 언급되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal disease caution"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 시 주의 사용 권고. 고양이 특이적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "hepatic failure",
+          "idiosyncratic hepatotoxicity",
+          "ALT/AST elevation",
+          "hyperbilirubinemia",
+          "bile acid accumulation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 경구 디아제팜 투여 후 특발성 간부전 보고(비용량 의존적). 투여 5~11일 후 식욕부진, 기면, ALT/AST 상승, 고빌리루빈혈증 발생. 11마리 중 10마리 사망 또는 안락사. 담즙산 축적이 기전으로 추정됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "cardiotoxicity"
+        ],
+        "index": 1,
+        "evidence": "빠른 IV 투여 시 저혈압 및 심독성 가능. 고양이 특이적 심독성 데이터는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.25,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 3.2,
+      "mean": 2.1,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": 98,
+    "evidence": "경구 투여 후 30분~2시간 내 최고 혈장 농도 도달. 비강 내 투여 시 생체이용률 약 80%. 단백결합률: 말 87%, 인체 98~99%. 개 디아제팜 반감기 1~3.2시간, 고양이 3.5~5.5시간. 활성 대사체(노르디아제팜, 테마제팜, 옥사제팜)의 반감기가 더 길어 전체 효과 지속시간에 기여함."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 상호작용은 세로토닌성 약물과의 병용 시 중증도 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "increased bioavailability",
+        "enhanced pharmacologic effect"
+      ],
+      "evidence": "Concurrent use may increase the bioavailability and pharmacologic effects of benzodiazepines; monitoring and dose adjustment needed."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "delayed absorption",
+        "rate of absorption"
+      ],
+      "evidence": "May slow the rate but not the extent of oral absorption; administering 2 hours apart may avoid this interaction."
+    },
+    {
+      "drug": "Antidepressants (amitriptyline, clomipramine, mirtazapine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use increases the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Antihypertensive Agents (amlodipine, atenolol, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension and orthostasis; blood pressure monitoring necessary."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "excessive sedation"
+      ],
+      "evidence": "Metabolism of diazepam may be decreased, resulting in excessive sedation."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (acetazolamide, methazolamide)",
+      "severity": 3,
+      "keywords": [
+        "respiratory depression",
+        "hypoxia",
+        "avoid combination"
+      ],
+      "evidence": "Benzodiazepines may interfere with beneficial effects of carbonic anhydrase inhibitors by inhibiting respiratory responses to hypoxia; combination should be avoided."
+    },
+    {
+      "drug": "CNS Depressant Agents (barbiturates, opioids, anesthetics)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "additive"
+      ],
+      "evidence": "Combination may increase the risk for CNS and/or respiratory depression; monitoring and dose adjustment needed."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum levels",
+        "toxicity"
+      ],
+      "evidence": "Serum digoxin levels may be increased; monitoring of serum digoxin levels and clinical signs of toxicity needed."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 2,
+      "keywords": [
+        "increased benzodiazepine levels"
+      ],
+      "evidence": "Increased benzodiazepine plasma levels are possible with concurrent fluoxetine use."
+    },
+    {
+      "drug": "Fluvoxamine",
+      "severity": 2,
+      "keywords": [
+        "increased benzodiazepine levels"
+      ],
+      "evidence": "Increased benzodiazepine plasma levels are possible with concurrent fluvoxamine use."
+    },
+    {
+      "drug": "Hepatic Enzyme Inducers (glucocorticoids, mitotane, rifampin, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine levels",
+        "reduced efficacy"
+      ],
+      "evidence": "Concurrent use may decrease benzodiazepine levels; monitoring of clinical response and dose adjustment necessary."
+    },
+    {
+      "drug": "Hepatic Enzyme Inhibitors (cimetidine, isoniazid)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "excessive sedation"
+      ],
+      "evidence": "Metabolism of diazepam may be decreased, resulting in excessive sedation."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "encephalopathy"
+      ],
+      "evidence": "Concurrent use may increase the risk for ifosfamide-induced neurotoxic effects; careful monitoring needed, discontinuation of both drugs may be necessary if encephalopathy occurs."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "excessive sedation"
+      ],
+      "evidence": "Metabolism of diazepam may be decreased, resulting in excessive sedation."
+    },
+    {
+      "drug": "Macrocyclic Lactones (ivermectin, milbemycin oxime)",
+      "severity": 2,
+      "keywords": [
+        "potentiated benzodiazepine effects"
+      ],
+      "evidence": "Benzodiazepine effects may be potentiated by concurrent macrocyclic lactone use."
+    },
+    {
+      "drug": "Melatonin",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "prolonged diazepam effects"
+      ],
+      "evidence": "Increased risk for CNS depression and prolonged diazepam effects with concurrent melatonin use."
+    },
+    {
+      "drug": "Non-Depolarizing Neuromuscular Blockers (atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "attenuation",
+        "respiratory monitoring"
+      ],
+      "evidence": "Concurrent use may potentiate, attenuate, or have no effect on neuromuscular blockade; respiratory status monitoring necessary."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 1,
+      "keywords": [
+        "slowed diazepam metabolism"
+      ],
+      "evidence": "Propranolol may slow diazepam metabolism."
+    },
+    {
+      "drug": "Theophylline / Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine concentration",
+        "reduced efficacy",
+        "withdrawal risk"
+      ],
+      "evidence": "Concurrent use may decrease benzodiazepine concentrations and effectiveness; withdrawing theophylline from a stable patient may increase risk for benzodiazepine toxicity."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "decreased anxiolytic effect"
+      ],
+      "evidence": "Limited data indicate yohimbine may decrease the therapeutic effects of anxiolytic drugs including diazepam."
+    },
+    {
+      "drug": "Chlorpyrifos (organophosphate)",
+      "severity": 3,
+      "keywords": [
+        "organophosphate toxicity potentiation",
+        "avoid"
+      ],
+      "evidence": "Diazepam should not be used for seizure control in cats exposed to chlorpyrifos as organophosphate toxicity may be potentiated."
+    },
+    {
+      "drug": "Zolpidem / Eszopiclone (GABA-active sleep aids)",
+      "severity": 3,
+      "keywords": [
+        "paradoxical CNS stimulation",
+        "GABA potentiation",
+        "avoid"
+      ],
+      "evidence": "Animals with toxicity from zolpidem or eszopiclone should not receive diazepam as these drugs also increase GABA activity; IV phenothiazines or phenobarbital are recommended instead."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 1,
+      "keywords": [
+        "muscle rigidity prevention",
+        "dose reduction"
+      ],
+      "evidence": "Diazepam is commonly combined with ketamine to prevent ketamine-mediated excitement and muscle rigidity; reduces required ketamine dose."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "high",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "군발 발작 또는 뇌전증 지속상태 - 직장 투여",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "24시간 내 최대 3회 투여. 페노바르비탈 복용 중인 경우 2 mg/kg 사용 가능.",
+          "evidence": "직장 내 주사용 디아제팜 용액 사용. 발작 시작 시 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "군발 발작 또는 뇌전증 지속상태 - 비강 내 투여",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "만성 페노바르비탈 치료 중인 개는 1~2 mg/kg 필요할 수 있음.",
+          "evidence": "약동학 연구 기반. 비강 내 투여 경로."
+        },
+        {
+          "logic_type": "linear",
+          "context": "군발 발작 또는 뇌전증 지속상태 - IV 볼루스",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "10분 간격으로 최대 3회 반복 가능.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "군발 발작 또는 뇌전증 지속상태 - IV CRI",
+          "value": "0.1 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "PVC 튜빙에 흡착 및 결정화 주의.",
+          "evidence": "오프라벨 사용. 시간당 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "기능성 요도 폐색/요도 괄약근 과긴장",
+          "value": "2 - 10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 아닌 mg/dog 단위 사용.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골격근 경련의 단기 관리",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상황적 불안 (정신치료제)",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "예상 이벤트 30분~1시간 전 투여 권장.",
+          "evidence": "오프라벨 사용. 인체 약사는 개의 고용량에 익숙하지 않을 수 있음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "불안 관련 장애 - 플루옥세틴 및 행동교정 병용",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주간 투여. 플루옥세틴 1 mg/kg PO SID와 동시 시작.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "메트로니다졸 독성의 보조 치료",
+          "value": "0.43",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 IV 볼루스 후 0.43 mg/kg PO q8h 3일간 투여.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "스트리크닌 중독",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV 투여 후 1 mg/kg IM 추가.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 전처치 (다른 진정제와 병용)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.6,
+          "duration_note": "오피오이드 또는 알파-2 작용제와 병용 강력 권장.",
+          "evidence": "오프라벨 사용. 일부 국가 허가 제품에서는 0.2~0.6 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도제와 병용 (마취 유도)",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.3,
+          "duration_note": "케타민, 프로포폴, 알팍살론과 병용 가능.",
+          "evidence": "오프라벨 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 전처치 (다른 진정제와 병용) - 주사용",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.6,
+          "duration_note": "경구 투여는 특발성 간부전 위험으로 권장하지 않음. 오피오이드 또는 알파-2 작용제와 병용 강력 권장. 영국 허가 제품에서는 0.2~0.6 mg/kg IV.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "케타민과 병용 - 채혈을 위한 보정 보조",
+          "value": "0.5",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/cat 단위 (mg/kg 아님). 케타민 10 mg/cat IV와 병용.",
+          "evidence": "오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도제와 병용 (마취 유도)",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.3,
+          "duration_note": "케타민, 프로포폴, 알팍살론과 병용 가능. 경구 투여 금기.",
+          "evidence": "오프라벨 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 질환 시 주의 사용 권고되나 구체적인 용량 조절 지침은 명시되지 않음. 대사체가 주로 소변으로 배설되므로 신기능 저하 시 축적 가능성 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "심한 간질환 시 금기. 고양이에서 경구 투여 후 특발성 간부전 보고로 경구 투여 금기. 간질환 동물에서는 주의하여 사용하거나 피해야 함."
+  },
+  "contraindications": [
+    {
+      "condition": "벤조디아제핀 과민반응",
+      "match_terms": [
+        "benzodiazepine hypersensitivity",
+        "drug allergy benzodiazepine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "hepatic failure",
+        "liver failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "고양이 경구 투여",
+      "match_terms": [
+        "cat oral diazepam",
+        "feline oral benzodiazepine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "클로르피리포스(유기인산염) 노출 고양이",
+      "match_terms": [
+        "chlorpyrifos toxicity",
+        "organophosphate exposure cat"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "혼수 또는 쇼크",
+      "match_terms": [
+        "coma",
+        "shock",
+        "cardiovascular collapse"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡 억제",
+      "match_terms": [
+        "respiratory depression",
+        "respiratory compromise"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "공격적 행동",
+      "match_terms": [
+        "aggression",
+        "aggressive behavior"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 임신 1기)",
+      "match_terms": [
+        "pregnancy",
+        "first trimester",
+        "teratogenicity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본문에서 특정 유전적 감수성 또는 MDR1/ABCB1 돌연변이 관련 위험은 언급되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "벤조디아제핀은 GABA-A 수용체에 결합하여 GABA에 대한 수용체 친화성을 증가시키고, 염소 이온 전도도 증가 및 시냅스 후 세포막 과분극을 유발함으로써 CNS 억제 효과(항불안, 진정, 골격근 이완, 항경련)를 나타냄. 세로토닌 길항, GABA 방출 증가, 아세틸콜린 방출/전환 감소도 기전으로 제시됨.",
+    "common_extra_effects": [
+      "진정",
+      "운동실조",
+      "저혈압 (빠른 IV 투여 시)",
+      "호흡 억제",
+      "역설적 흥분",
+      "정맥염 (IV 투여 시)",
+      "주사 부위 통증 (IM 투여 시)",
+      "식욕 증가",
+      "신체적 의존성 (장기 투여 시)"
+    ],
+    "dog_mechanism": "개에서 GABA-A 수용체 매개 CNS 억제. 장기 투여 시 항경련 효과에 대한 내성 발생. 약 30%의 개에서 역설적 CNS 흥분 발생 가능(특히 0.8 mg/kg 이상 용량).",
+    "dog_extra_effects": [
+      "진정",
+      "식욕 증가",
+      "흥분/초조",
+      "운동실조",
+      "공격성",
+      "역설적 CNS 흥분 (약 30%)",
+      "안압 상승 (케타민과 병용 시)",
+      "항경련 내성 (장기 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서 반감기가 더 길어 내성 발생이 주요 문제가 아님. 경구 투여 시 담즙산 배출 억제 및 간세포 내 축적으로 특발성 간부전 발생 가능.",
+    "cat_extra_effects": [
+      "행동 변화 (과민성, 우울, 이상 행동)",
+      "특발성 간부전 (경구 투여 시, 비용량 의존적)",
+      "식욕부진",
+      "기면",
+      "ALT/AST 상승",
+      "고빌리루빈혈증",
+      "마취 회복 시 불안정"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 디아제팜은 뇌전증 지속상태 및 군발 발작 치료에 사용되나, 장기 투여 시 항경련 효과에 대한 내성이 발생하여 응급 발작 치료 효과가 감소할 수 있음. 약 30%의 개에서 역설적 CNS 흥분이 나타날 수 있으며, 0.8 mg/kg 이상 용량에서 더 빈번함. 단독 진정제로는 효과가 불안정하므로 오피오이드 또는 알파-2 작용제와 병용 권장. 인체 약사는 개의 고용량(인체 대비 매우 높음)에 익숙하지 않을 수 있으므로 주의 필요.",
+    "cat": "고양이에서 경구 디아제팜 투여는 특발성 간부전(비용량 의존적) 위험으로 인해 금기임. 투여 5~11일 후 식욕부진, 기면, 간효소 상승, 고빌리루빈혈증이 나타날 수 있으며 치사율이 높음(11마리 중 10마리 사망/안락사). 주사용 제제는 사용 가능하나 경구 투여는 반드시 피해야 함. 클로르피리포스 노출 고양이에서는 유기인산염 독성 악화 가능성으로 사용 금기."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 장기 투여 시 항경련 내성 발생, 역설적 흥분 가능성, 공격적 동물에서 주의 필요. 간/신장 질환, 혼수, 쇼크, 호흡 억제, 비만, 노령 동물에서 주의 사용. 빠른 IV 투여 시 저혈압 및 심독성 위험."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 경구 투여는 특발성 간부전 위험으로 금기. 클로르피리포스 노출 고양이에서 사용 금기. 주사용 제제는 주의하여 사용 가능하나 더 안전한 대안 약물 고려 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15~30°C) 보관. 주사제는 동결 금지 및 차광 보관. 경구 제형은 밀폐 용기에 차광 보관. 플라스틱에 흡착되므로 플라스틱 주사기에 보관 금지(4시간 이내 사용 시 주사기에 흡인 가능). PVC 백 및 수액 튜빙에 상당량 흡착됨. 유리 또는 폴리올레핀 용기 사용 권장.",
+    "forms": [
+      "주사액 5 mg/mL (2 mL Carpuject 카트리지)",
+      "경구정 2 mg, 5 mg, 10 mg",
+      "경구액 1 mg/mL (500 mL)",
+      "경구액 농축액 5 mg/mL (30 mL, 점적기 포함, Diazepam Intensol)",
+      "직장 젤 2.5 mg, 10 mg, 20 mg (Diastat)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디아제팜은 벤조디아제핀계 약물로 항불안, 근이완, 최면, 항경련, 마취 보조 등 다양한 용도로 사용됨. 미국 내 수의용 허가 제품은 없으며 DEA Schedule IV 규제 약물임. 개에서 장기 투여 시 항경련 내성 발생 주의. 고양이에서 경구 투여는 특발성 간부전 위험으로 절대 금기. 플루마제닐로 효과 역전 가능. 빠른 IV 투여 시 저혈압 위험으로 천천히 투여 필요.",
+    "indications": "항불안제(상황적 불안, 공포증), 골격근 이완제, 항경련제(뇌전증 지속상태, 군발 발작), 마취 전처치 및 유도 보조, 식욕 촉진제, 기능성 요도 폐색 치료, 메트로니다졸 독성 보조 치료, 스트리크닌 중독 치료. 모두 오프라벨 사용(미국 기준).",
+    "client_info": "이 약은 진정 및 방향감각 상실을 유발할 수 있어 작업견의 수행 능력에 영향을 줄 수 있습니다. 천둥 공포증이나 분리불안 등의 상황에 사용할 경우, 예상 이벤트 약 1시간 전에 투여하세요. 공복 투여 후 구토 시 소량의 음식과 함께 투여하세요. 피부, 잇몸, 눈 흰자위가 노랗게 변하면(황달) 즉시 수의사에게 연락하세요. 가장 흔한 부작용은 졸음입니다. 예상치 못한 행동 변화(과잉행동, 불안)가 나타날 수 있습니다. 식욕이 증가할 수 있습니다. 식욕 저하나 기력 저하가 나타나면 즉시 수의사에게 연락하세요. 장기 투여 후 갑자기 중단하지 말고 수의사 지시에 따라 서서히 감량하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment guidelines",
+      "CYP enzyme substrate/inhibitor/inducer data for dogs and cats",
+      "Oral bioavailability in cats",
+      "Protein binding in dogs and cats (only horse and human data available)",
+      "Onset time (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/39.jsonl",
+    "extracted_at": "2026-03-11T01:26:38.221254+00:00",
+    "reviewer": null
+  }
+}

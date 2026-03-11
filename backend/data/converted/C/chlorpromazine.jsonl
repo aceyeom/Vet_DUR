@@ -1,0 +1,684 @@
+{
+  "id": "chlorpromazine",
+  "drug_identity": {
+    "name_ko": "클로르프로마진",
+    "name_en": "Chlorpromazine",
+    "active_ingredient": "Chlorpromazine",
+    "brand_names": [
+      "Thorazine"
+    ],
+    "allergy_class": "phenothiazine",
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제제를 동물에게 오프라벨로 사용. 항구토제 및 진정제로 소동물에 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위한 초회통과 대사를 받으며, 신장에서도 일부 대사됨. 개와 고양이에서의 구체적인 배설 정보는 제한적임."
+    },
+    "extra_information": "경구 투여 후 빠르게 흡수되나 간에서 광범위한 초회통과 대사를 받음. IM 투여 후에도 잘 흡수되나 IV보다 작용 발현이 느림. 뇌 농도가 혈장 농도보다 높음. 혈장 단백 결합률 약 95% (주로 알부민). 개와 고양이에서의 구체적인 배설 데이터는 부족함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 모노그래프 내 언급된 독성/부담 관련 키워드를 근거로 산출. 수의학적 종별 PK 데이터 부족으로 인체 데이터 및 텍스트 기술에 의존.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "뇌 농도 혈장보다 높음",
+          "진정",
+          "CNS 억제",
+          "추체외로 증상",
+          "경련"
+        ],
+        "index": 1,
+        "evidence": "뇌 농도가 혈장 농도보다 높으며, 진정·CNS 억제·추체외로 증상이 보고됨. MDR1 변이견에서 과도한 진정 위험."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "저혈압",
+          "심박수 이상",
+          "QT 연장",
+          "부정맥"
+        ],
+        "index": 2,
+        "evidence": "저혈압, 심박수 이상, 부정맥 등 심혈관계 부작용이 보고됨. 알파 차단 효과로 혈압 저하 위험."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 대사"
+        ],
+        "index": 3,
+        "evidence": "신장에서도 일부 대사되나 직접적인 신독성 언급은 없음. 저혈압으로 인한 이차적 신관류 감소 가능성."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "간 초회통과 대사",
+          "간 기능 부전 시 주의",
+          "간에서 광범위 대사"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 간 기능 장애 시 용량 감소 권고. 간 기능 부전 환자에서 주의 사용 명시."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "저혈압",
+          "심박수 이상",
+          "QT 연장",
+          "부정맥",
+          "심장 질환 주의"
+        ],
+        "index": 5,
+        "evidence": "저혈압, 심박수 이상, QT 연장 위험. 중등도~중증 심장 질환 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "추체외로 증상",
+          "고용량 시 진전·경직·정위반사 소실",
+          "진정"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 고용량 사용 시 추체외로 증상(진전, 떨림, 경직, 정위반사 소실) 발생 가능. 뇌 농도가 혈장보다 높음."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "저혈압",
+          "심박수 이상"
+        ],
+        "index": 2,
+        "evidence": "저혈압 및 심박수 이상 가능성. 고양이에서 아포모르핀 유발 구토 억제 효과 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 대사"
+        ],
+        "index": 3,
+        "evidence": "신장에서도 일부 대사되나 고양이에서 직접적인 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "간 초회통과 대사",
+          "간 기능 부전 시 주의"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 간 기능 장애 시 용량 감소 권고."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "저혈압",
+          "심박수 이상",
+          "QT 연장"
+        ],
+        "index": 5,
+        "evidence": "저혈압, 심박수 이상, QT 연장 위험. 심장 질환 환자에서 주의 사용."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 95,
+    "evidence": "혈장 단백 결합률 약 95% (주로 알부민). 개와 고양이에서의 반감기, Tmax, 생체이용률 데이터는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antipyretics (acetaminophen, dipyrone, NSAIDs)",
+      "severity": 1,
+      "keywords": [
+        "저체온증"
+      ],
+      "evidence": "병용 시 저체온증 위험 증가 가능."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, or magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "경구 페노티아진의 위장관 흡수 감소 가능."
+    },
+    {
+      "drug": "Antidiarrheal Mixtures (kaolin/pectin, bismuth subsalicylate)",
+      "severity": 1,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "경구 페노티아진의 위장관 흡수 감소 가능."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "효과 길항",
+        "어지러움",
+        "저혈압",
+        "졸음"
+      ],
+      "evidence": "페노티아진이 브로모크립틴 효과를 길항하고 어지러움, 저혈압, 졸음 위험 증가."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "신경이완제 악성 증후군",
+        "세로토닌 증후군"
+      ],
+      "evidence": "병용 시 신경이완제 악성 증후군 및 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Cabergoline",
+      "severity": 2,
+      "keywords": [
+        "효능 감소",
+        "세로토닌 증후군",
+        "신경이완제 악성 증후군"
+      ],
+      "evidence": "두 약물의 효능 감소 및 세로토닌 증후군, 신경이완제 악성 증후군 위험 증가."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "기립성 저혈압"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가. 혈압 모니터링 필요."
+    },
+    {
+      "drug": "CNS Depressant Agents (barbiturates, cannabidiol, anesthetics)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제 상가 작용"
+      ],
+      "evidence": "페노티아진과 병용 시 CNS 억제 상가 효과 발생 가능."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "수분 중독",
+        "저나트륨혈증"
+      ],
+      "evidence": "병용 시 수분 중독 및/또는 저나트륨혈증 위험 증가. 전해질 및 신기능 모니터링 필요."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "기립성 저혈압",
+        "고혈당"
+      ],
+      "evidence": "병용 시 저혈압 및 기립성 저혈압 위험 증가. 페노티아진이 디아족사이드의 고혈당 효과 위험 증가."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "독소루비신 혈중 농도 증가"
+      ],
+      "evidence": "클로르프로마진이 독소루비신 혈중 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Emetics (apomorphine, ropinirole)",
+      "severity": 2,
+      "keywords": [
+        "구토 유발 효과 감소",
+        "진정",
+        "저혈압"
+      ],
+      "evidence": "구토제의 효과 감소 및 진정, 저혈압 위험 증가."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "알파 차단",
+        "베타 효과 우세",
+        "혈관 확장",
+        "저혈압"
+      ],
+      "evidence": "페노티아진이 알파 수용체를 차단하여 에피네프린의 베타 효과가 우세해지고 혈관 확장 및 저혈압 유발(에피네프린 역전 현상). FDA 라벨에서 금기."
+    },
+    {
+      "drug": "Laxatives (bisacodyl)",
+      "severity": 2,
+      "keywords": [
+        "전해질 손실",
+        "심혈관 부작용"
+      ],
+      "evidence": "완하제 과용으로 전해질 손실 시 클로르프로마진의 심혈관 부작용 위험 증가."
+    },
+    {
+      "drug": "Loop Diuretics (bumetanide, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "저마그네슘혈증",
+        "저칼륨혈증",
+        "심장 부정맥"
+      ],
+      "evidence": "병용 시 저마그네슘혈증 및 저칼륨혈증 유발로 심장 부정맥 위험 증가."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "추체외로 부작용",
+        "진전",
+        "강직증",
+        "경직"
+      ],
+      "evidence": "병용 시 추체외로 부작용(진전, 강직증, 경직, 흥분, 발한, 경련) 위험 증가."
+    },
+    {
+      "drug": "Opioids (buprenorphine, fentanyl, morphine)",
+      "severity": 2,
+      "keywords": [
+        "저혈압 강화"
+      ],
+      "evidence": "페노티아진의 저혈압 효과 강화. 병용 시 클로르프로마진 용량 감소 필요."
+    },
+    {
+      "drug": "Organophosphate Agents",
+      "severity": 3,
+      "keywords": [
+        "독성 강화"
+      ],
+      "evidence": "유기인산염 항기생충제 투여 후 1개월 이내 페노티아진 사용 금지. 효과 강화 위험."
+    },
+    {
+      "drug": "Physostigmine",
+      "severity": 2,
+      "keywords": [
+        "독성 강화"
+      ],
+      "evidence": "클로르프로마진에 의해 피조스티그민 독성이 강화될 수 있음."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 2,
+      "keywords": [
+        "혈중 농도 증가"
+      ],
+      "evidence": "프로프라놀롤과 페노티아진 병용 시 두 약물 모두 혈중 농도 증가 가능."
+    },
+    {
+      "drug": "QT Prolonging Agents (cisapride, domperidone, erythromycin, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QTc 연장",
+        "부정맥"
+      ],
+      "evidence": "병용 시 QTc 연장 위험 증가. 병용 피해야 함."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "심장 억제 상가 작용"
+      ],
+      "evidence": "퀴니딘과 병용 시 심장 억제 상가 효과."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 1,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "경구 페노티아진의 위장관 흡수 감소 가능."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine, doxepin)",
+      "severity": 2,
+      "keywords": [
+        "혈중 농도 증가",
+        "세로토닌 증후군",
+        "QT 연장",
+        "항콜린 독성"
+      ],
+      "evidence": "병용 시 두 약물 혈중 농도 증가 및 세로토닌 증후군, QT 연장, 항콜린 독성 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "horse"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 또는 진정제 (오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "혈압 모니터링하면서 낮은 용량부터 시작하여 필요에 따라 증량",
+          "evidence": "오프라벨. 대부분의 권고 범위 0.2–0.5 mg/kg IM 또는 SC, 6–8시간마다."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토제 또는 진정제 IV (오프라벨)",
+          "value": "0.05 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "낮은 용량부터 시작하여 혈압 모니터링하면서 필요에 따라 증량. 1 mg/mL 이하로 희석 후 천천히 투여.",
+          "evidence": "오프라벨. IV 용량 범위 0.05–0.5 mg/kg, 6–8시간마다."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 또는 진정제 (오프라벨)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "혈압 모니터링하면서 낮은 용량부터 시작. 고용량 시 추체외로 증상 주의.",
+          "evidence": "오프라벨. 대부분의 권고 범위 0.2–0.5 mg/kg IM 또는 SC, 6–8시간마다."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토제 또는 진정제 IV (오프라벨)",
+          "value": "0.025 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "낮은 용량부터 시작하여 혈압 모니터링하면서 필요에 따라 증량. 1 mg/mL 이하로 희석 후 천천히 투여.",
+          "evidence": "오프라벨. IV 용량 범위 0.025–0.5 mg/kg, 6–8시간마다."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 구체적인 용량 조정 지침이 명시되지 않음. 저혈압 효과로 인해 신관류 감소 가능성 있으므로 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 기능 장애 환자에서 소량으로 주의하여 사용 권고. 간에서 광범위하게 대사되므로 간 기능 부전 시 용량 감소 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "클로르프로마진 과민증",
+        "페노티아진 과민증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증 또는 쇼크",
+      "match_terms": [
+        "hypovolemia",
+        "shock",
+        "저혈량증"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "파상풍 또는 스트리크닌 중독",
+      "match_terms": [
+        "tetanus",
+        "strychnine intoxication"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "간부전",
+        "간기능저하"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 질환 (혈압 저하를 견디지 못하는 중등도~중증)",
+      "match_terms": [
+        "cardiac disease",
+        "심장질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "말(Equine) — 사용 금기",
+      "match_terms": [
+        "horse",
+        "equine",
+        "말"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie",
+      "Old English Sheepdog",
+      "Silken Windhound"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 유전자 변이(ABCB1-1delta) 보유견에서 과도하고 지속적인 진정 효과 발생 가능. 가능하면 사용 회피 권고. 불가피한 경우 이형접합체(heterozygous)에서 25% 감량, 동형접합체(homozygous mutant/mutant)에서 30–50% 감량."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "도파민 D2 수용체 차단을 통한 항구토 및 진정 효과. 알파-아드레날린 수용체 차단으로 혈관 확장 및 저혈압 유발. 아세틸콜린, 히스타민, 세로토닌 수용체에도 작용. 아세프로마진과 유사한 약리 효과이나 효능이 낮고 작용 시간이 더 길다.",
+    "common_extra_effects": [
+      "저혈압",
+      "심박수 이상 (서맥 또는 빈맥)",
+      "저체온증 또는 고체온증",
+      "진정/졸음",
+      "추체외로 증상 (진전, 떨림, 경직, 정위반사 소실)",
+      "설사",
+      "항문 괄약근 긴장도 소실",
+      "QT 연장"
+    ],
+    "dog_mechanism": "도파민 수용체 차단을 통한 항구토 효과. 아포모르핀 유발 구토 억제. 모르핀의 구토 효과 억제. MDR1 변이견에서 과도한 진정 위험.",
+    "dog_extra_effects": [
+      "저혈압",
+      "심박수 이상",
+      "과도한 진정 (MDR1 변이견)",
+      "체온 조절 이상"
+    ],
+    "cat_mechanism": "도파민 수용체 차단을 통한 항구토 및 진정 효과. 고양이에서 아포모르핀 유발 구토는 억제하지 못함. 멀미 치료에 유용할 수 있음.",
+    "cat_extra_effects": [
+      "고용량 시 추체외로 증상 (진전, 떨림, 경직, 정위반사 소실)",
+      "기면",
+      "설사",
+      "항문 괄약근 긴장도 소실",
+      "저혈압"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 항구토제 및 진정제로 오프라벨 사용. 아포모르핀 유발 구토 억제에 효과적. 황산구리 또는 디지탈리스 배당체에 의한 구토는 억제하지 못함. MDR1 변이견에서 과도한 진정 발생 가능하므로 가능하면 사용 회피. 저혈압 환자에서는 사용 금기. IV 투여 시 1 mg/mL 이하로 희석 후 천천히 투여 필요.",
+    "cat": "고양이에서 멀미 치료에 특히 유용할 수 있음. 고용량 사용 시 추체외로 증상(진전, 떨림, 경직, 정위반사 소실) 발생 위험. 아포모르핀 유발 구토는 억제하지 못함. 정상혈압 또는 고혈압 환자에서만 사용 권고."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저혈량증, 쇼크, 간 기능 장애, 심장 질환, 전신 쇠약 환자에서 주의 사용. MDR1 변이견에서 과도한 진정 위험. IV 투여 시 희석 및 천천히 투여 필요. 진통 효과 없으므로 통증 관리 별도 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고용량 시 추체외로 증상 발생 위험. 저혈압 환자에서 사용 금기. 간 기능 장애 시 용량 감소 필요. 진통 효과 없으므로 통증 관리 별도 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C–30°C (59°F–86°F) 실온 보관. 빛 차단 보관. 동결 금지. 플라스틱 주사기나 IV 백에 장기간 보관 금지 (약물이 플라스틱에 흡착될 수 있음). 장시간 빛에 노출 시 갈색으로 변색됨. 짙은 갈색 변색 또는 침전물 형성 시 사용 금지. 약간의 황색 변색은 효능에 영향 없음.",
+    "forms": [
+      "Chlorpromazine Injection 25 mg/mL (1 mL, 2 mL 앰플, 제네릭, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로르프로마진은 원형 페노티아진 계열 약물로, 소동물에서 항구토제 및 진정제로 오프라벨 사용됨. 아세프로마진에 비해 효능이 낮고 작용 시간이 더 길다. 저혈압 유발 효과로 인해 정상혈압 또는 고혈압 환자에서만 항구토 목적으로 사용 가능. MDR1 변이견에서 과도한 진정 위험이 있으며 가능하면 사용 회피 권고. 말에서는 사용 금기. IV 투여 시 반드시 희석(1 mg/mL 이하) 후 천천히 투여. 진통 효과 없음.",
+    "indications": "【승인 적응증】 수의학적 승인 제품 없음 (인체용 제제 오프라벨 사용). 【오프라벨 적응증】 소동물(개, 고양이)에서 항구토제 및 진정/안정제로 사용. 암페타민 유사 ADHD 약물, SSRI, 항우울제 과다복용 또는 세로토닌 증후군 유발 독소에 의한 심한 불안, 빈맥, 고혈압 치료 보조. 고양이 멀미 치료. 개에서 아포모르핀 유발 구토 억제.",
+    "client_info": "이 약은 동물을 졸리게 하는 진정 효과가 있습니다. 진정 및 부작용은 최대 24시간까지 지속될 수 있습니다. 투약 후 동물을 조용하고 적절한 온도의 환경에 두십시오. 이 약이 손이나 옷에 묻지 않도록 주의하십시오 (접촉성 피부염이 생길 수 있습니다). 투약 후 소변이 분홍색~적갈색으로 변할 수 있으나 이는 무해한 현상으로 걱정하지 않아도 됩니다. 이상 증상(심한 졸음, 비틀거림, 떨림, 경직 등)이 나타나면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific half-life data (dog/cat)",
+      "Tmax data (dog/cat)",
+      "Oral bioavailability data (dog/cat)",
+      "Renal elimination fraction",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:41:52.180265+00:00",
+    "reviewer": null
+  }
+}

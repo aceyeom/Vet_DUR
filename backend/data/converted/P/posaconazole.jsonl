@@ -1,0 +1,657 @@
+{
+  "id": "posaconazole",
+  "drug_identity": {
+    "name_ko": "포사코나졸",
+    "name_en": "Posaconazole",
+    "active_ingredient": "Posaconazole",
+    "brand_names": [
+      "Noxafil",
+      "Spriafil",
+      "Posatex"
+    ],
+    "allergy_class": "azole",
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 전신 제제는 허가되지 않음. 개와 고양이에서 이트라코나졸 또는 플루코나졸 내성 진균 감염에 대해 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Susp",
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 18,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.13,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP3A4"
+      ],
+      "inducers": [],
+      "pathway_evidence": "포사코나졸은 주로 글루쿠론산 포합(glucuronidation)을 통해 대사되며, CYP3A4를 억제함. 투여량의 약 71%는 대변으로(주로 미변화 약물), 약 13%는 소변으로 대사체 형태로 배설됨(인체 데이터)."
+    },
+    "extra_information": "개에서 경구 현탁액의 생체이용률은 43~59%이며, 식이와 함께 투여 시 최고 농도 및 AUC가 약 4배 증가함. 지연방출정(DRT)은 경구 현탁액에 비해 흡수가 현저히 높음. 고양이에서 소량의 식이 후 경구 현탁액 투여 시 최고 농도 1.2 µg/mL에 약 18시간 후 도달하며, 분포용적은 1.9 L/kg, 말단 반감기는 38시간임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 임상 보고 및 인체 데이터를 참고함. 수의학 종 특이적 PK 연구는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tremors (human)"
+        ],
+        "index": -1,
+        "evidence": "인체에서 진전(tremors)이 보고되었으나, 개에서 직접적인 신경계 독성 보고는 없음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "leukopenia",
+          "neutropenia"
+        ],
+        "index": 1,
+        "evidence": "개 10마리 중 1마리에서 경미한 혈소판감소증, 1마리에서 백혈구감소증/호중구감소증이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "polyuria",
+          "polydipsia"
+        ],
+        "index": 1,
+        "evidence": "개에서 다뇨/다음이 보고됨. 경구 제제 사용 시 신기능 저하 환자에서 용량 조절은 불필요하나, 주사제의 비활성 성분이 신기능 저하 환자에서 축적될 수 있음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "ALT elevation",
+          "liver enzymes",
+          "hepatic injury"
+        ],
+        "index": 2,
+        "evidence": "개에서 경미한 ALT 상승이 보고됨. 인체에서 간부전 및 담즙정체(고용량)가 드물게 보고됨. 간효소 및 빌리루빈의 경도~중등도 상승은 대개 투약 중단 시 회복됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "torsade de pointes"
+        ],
+        "index": -1,
+        "evidence": "인체에서 QT 간격 연장/torsade de pointes가 드물게 보고됨. 개에서 직접적인 심장 독성 보고는 없으나, CYP3A4 억제를 통한 QT 연장 약물과의 상호작용 위험이 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 이상반응 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액학적 이상반응 보고 없음. 개 데이터 및 인체 데이터를 참고하여 낮은 위험으로 평가."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신독성 직접 보고 없음. 경구 제제 사용 시 신기능 저하 환자에서 용량 조절 불필요."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "ALT elevation",
+          "liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "고양이 10마리 중 2마리에서 ALT 1.1~2배의 일시적 상승이 보고됨. 대체로 내약성 양호."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 심장 독성 보고 없음. 인체 데이터 기반 QT 연장 위험 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 18.0,
+    "half_life_hr": {
+      "min": 15.0,
+      "max": 42.0,
+      "mean": 38.0,
+      "species": "cat"
+    },
+    "f_percent": 51,
+    "protein_binding_percent": 98,
+    "evidence": "개: 경구 현탁액 생체이용률 43~59%, 말단 반감기 15시간(IV) 또는 24시간(경구 현탁액) 또는 42시간(DRT). 고양이: 최고 농도 도달 시간 약 18시간, 말단 반감기 38시간. 인체: 단백결합 >98%, 평균 반감기 35시간. f_percent는 개 경구 현탁액 범위의 중간값(43~59%)으로 산출."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 포사코나졸은 CYP3A4 억제제이며 P-당단백질 기질임.",
+  "drug_interactions": [
+    {
+      "drug": "Benzodiazepines (alprazolam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased benzodiazepine concentration"
+      ],
+      "evidence": "Posaconazole inhibits CYP3A4, potentially increasing benzodiazepine concentrations up to 5-fold."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 3,
+      "keywords": [
+        "decreased posaconazole absorption",
+        "avoid"
+      ],
+      "evidence": "Cimetidine may decrease posaconazole concentration; avoid concurrent use. No interaction reported with other H2 blockers (e.g., famotidine)."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "contraindicated in humans"
+      ],
+      "evidence": "Concurrent use of cisapride and posaconazole is contraindicated in humans due to risk of QT prolongation; clinical relevance in animals is unknown."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased cyclosporine concentration"
+      ],
+      "evidence": "Posaconazole may increase cyclosporine concentrations; in humans, a 25% dose reduction of cyclosporine is recommended when starting posaconazole."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein",
+        "increased digoxin concentration"
+      ],
+      "evidence": "Posaconazole may increase digoxin concentration via P-glycoprotein inhibition."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased diltiazem concentration"
+      ],
+      "evidence": "Posaconazole may increase diltiazem concentration via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "decreased posaconazole absorption"
+      ],
+      "evidence": "Metoclopramide may decrease absorption of posaconazole oral suspension; no effect on delayed-release tablets."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased posaconazole absorption"
+      ],
+      "evidence": "PPIs may decrease absorption of posaconazole oral suspension only; no effect on delayed-release tablets."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased quinidine concentration",
+        "QT prolongation"
+      ],
+      "evidence": "Posaconazole may increase quinidine concentration and prolong QT interval; use is contraindicated in humans."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 3,
+      "keywords": [
+        "P-glycoprotein induction",
+        "decreased posaconazole concentration"
+      ],
+      "evidence": "Rifampin may significantly decrease posaconazole concentration via P-glycoprotein induction."
+    },
+    {
+      "drug": "Vinca Alkaloids (vincristine, vinblastine)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased vinca alkaloid toxicity"
+      ],
+      "evidence": "Posaconazole may increase vinca alkaloid exposure via CYP3A4 inhibition, increasing risk of toxicity."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased bleeding risk",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Posaconazole may increase warfarin exposure, increasing bleeding risk."
+    },
+    {
+      "drug": "HMG-CoA Reductase Inhibitors (atorvastatin, simvastatin)",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "contraindicated in humans",
+        "increased statin concentration"
+      ],
+      "evidence": "Concurrent use of posaconazole with HMG-CoA reductase inhibitors is contraindicated in humans due to risk of myopathy/rhabdomyolysis from increased statin concentrations."
+    },
+    {
+      "drug": "Sirolimus",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "contraindicated in humans",
+        "increased sirolimus concentration"
+      ],
+      "evidence": "Concurrent use with sirolimus is contraindicated in humans; posaconazole markedly increases sirolimus concentrations."
+    },
+    {
+      "drug": "Ergot Alkaloids",
+      "severity": 3,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "contraindicated in humans",
+        "ergotism"
+      ],
+      "evidence": "Concurrent use with ergot alkaloids is contraindicated in humans due to risk of ergotism."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 7.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 (경구 현탁액, 오프라벨)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "수개월의 치료가 필요할 수 있음",
+          "evidence": "전임상 연구에서 10 mg/kg/day PO가 효과적일 것으로 제안됨. 현탁액 기준 q12~24h 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 (지연방출정, 오프라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "수개월의 치료가 필요할 수 있음",
+          "evidence": "약동학 연구 결과에 근거하여 5 mg/kg PO q48h 고려 가능."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 - 부하용량 후 유지 (오프라벨, 프로토콜 A)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "부하용량 1회 투여 후 15 mg/kg q48h 유지",
+          "evidence": "부하용량 30 mg/kg PO 1회 후 15 mg/kg PO q48h 유지 또는 부하용량 15 mg/kg 후 7.5 mg/kg q24h 유지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 - 유지용량 (오프라벨, 프로토콜 A)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "수개월의 치료가 필요할 수 있음",
+          "evidence": "30 mg/kg 부하용량 후 유지용량으로 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 - 부하용량 후 유지 (오프라벨, 프로토콜 B)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "부하용량 1회 투여 후 7.5 mg/kg q24h 유지",
+          "evidence": "부하용량 15 mg/kg PO 1회 후 7.5 mg/kg PO q24h 유지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 - 유지용량 (오프라벨, 프로토콜 B)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "수개월의 치료가 필요할 수 있음",
+          "evidence": "15 mg/kg 부하용량 후 유지용량으로 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 진균 감염 (오프라벨, 프로토콜 C)",
+          "value": "5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "또는 1일 용량을 2회로 분할 투여 가능. 수개월의 치료가 필요할 수 있음.",
+          "evidence": "5~7.5 mg/kg PO q24h 또는 분할 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "경구 제제 사용 시 신기능 저하 환자에서 용량 조절 불필요. 단, 주사제의 비활성 성분이 신기능 저하 환자에서 축적될 수 있으므로 주의. 중증 신기능 저하 환자는 돌발성 진균 감염에 대한 면밀한 모니터링 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 환자에서 용량 조절은 불필요하나 주의가 권장됨. 간질환의 임상 징후 발생 시 투약 중단 고려. 간효소 및 빌리루빈의 경도~중등도 상승은 대개 투약 중단 시 회복됨."
+  },
+  "contraindications": [
+    {
+      "condition": "포사코나졸 또는 현탁액 성분에 대한 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to posaconazole",
+        "azole allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "HMG-CoA 환원효소 억제제 병용 (인체 기준)",
+      "match_terms": [
+        "atorvastatin",
+        "simvastatin",
+        "statin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "시롤리무스 병용 (인체 기준)",
+      "match_terms": [
+        "sirolimus",
+        "rapamycin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "에르고트 알칼로이드 병용 (인체 기준)",
+      "match_terms": [
+        "ergot alkaloids",
+        "ergotamine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "QT 연장 유발 CYP3A4 기질 병용 (퀴니딘, 피모자이드 등)",
+      "match_terms": [
+        "quinidine",
+        "pimozide",
+        "QT prolongation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 구토 또는 설사",
+      "match_terms": [
+        "severe vomiting",
+        "severe diarrhea"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "포사코나졸은 P-당단백질(P-gp) 수송 시스템의 기질임. MDR1 돌연변이 견종에서 P-gp 기능 저하로 인해 약물 노출이 증가할 수 있음. 직접적인 수의학 연구는 없으나 기질 특성상 주의가 필요함."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균 세포막의 에르고스테롤 합성에 필요한 CYP450 의존성 라노스테롤 14α-탈메틸화 효소를 억제하여 메틸화 스테롤의 세포 내 축적을 유발, 세포막 투과성 증가 및 세포 내용물 누출을 초래함.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "ALT 상승",
+      "간효소 상승",
+      "QT 간격 연장 (인체)",
+      "저칼륨혈증 (인체)",
+      "피부 발진 (인체)",
+      "두통 (인체)",
+      "진전 (인체)",
+      "고혈압 (인체)"
+    ],
+    "dog_mechanism": "이트라코나졸과 구조적으로 유사하나 더 넓은 항진균 스펙트럼을 가짐. 진균 세포막 에르고스테롤 합성 억제.",
+    "dog_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "다뇨/다음",
+      "경미한 ALT 상승",
+      "혈소판감소증 (1/10마리)",
+      "백혈구감소증/호중구감소증 (1/10마리)"
+    ],
+    "cat_mechanism": "진균 세포막 에르고스테롤 합성 억제. 고양이에서 경구 현탁액의 약동학적 특성이 확인됨.",
+    "cat_extra_effects": [
+      "안면 및 귀 소양증",
+      "홍반",
+      "일시적 ALT 상승 (1.1~2배, 10마리 중 2마리)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 포사코나졸은 파종성 아스페르길루스증 등 중증 내성 진균 감염에 오프라벨로 사용됨. 지연방출정(DRT)은 경구 현탁액에 비해 흡수가 현저히 높으므로 동일 용량으로 교체 불가. 식이와 함께 투여 시 생체이용률이 크게 증가함. 평균 7.5개월 치료 시 대부분 내약성 양호하였으나 혈액학적 이상이 드물게 보고됨. 간효소 및 전해질 모니터링 필요.",
+    "cat": "고양이에서 포사코나졸은 비강-안와 아스페르길루스증 등에 오프라벨로 사용됨. 소량의 식이 후 투여 시 최고 농도 도달까지 약 18시간 소요되며 반감기가 길어(38시간) 격일 투여 프로토콜이 사용됨. 대체로 내약성 양호하나 일시적 ALT 상승이 일부에서 보고됨. 비용이 높아 소형 고양이에서 상대적으로 비용 효율적일 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 안전성 및 유효성 데이터가 제한적임. 간효소, 전해질, 혈액학적 수치의 기저치 및 주기적 모니터링 필요. 임신 중 사용 금지 권장. 지연방출정과 경구 현탁액은 동일 용량으로 교체 불가."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안전성 데이터가 매우 제한적임. 간효소 모니터링 필요. 임신 중 사용 금지 권장. 반감기가 길어 격일 투여 프로토콜 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제제: 실온 25°C(77°F) 보관, 15~30°C(59~86°F) 허용. 냉동 금지. 주사제: 냉장 2~8°C(36~46°F) 보관.",
+    "forms": [
+      "경구 현탁액 40 mg/mL (105 mL 병, Noxafil®)",
+      "지연방출정 100 mg (Noxafil®, 제네릭)",
+      "주사제 300 mg/16.7 mL (18 mg/mL, Noxafil®)",
+      "수의용 이도 현탁액 (Posatex®: 포사코나졸 0.1% + 오르비플록사신 1% + 모메타손 0.1%)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "포사코나졸은 광범위한 항진균 스펙트럼을 가진 2세대 트리아졸계 항진균제로, 이트라코나졸 또는 플루코나졸 내성 중증 진균 감염(아스페르길루스증, 콕시디오이데스증 등)에 오프라벨로 사용됨. 미국 내 수의용 전신 제제 허가 없음. 비용이 높아 임상 사용이 제한될 수 있으나 소형 고양이 및 소형견에서 비용 효율적일 수 있음. 지연방출정과 경구 현탁액은 동일 용량으로 교체 불가. 반드시 식이와 함께 투여. CYP3A4 억제제로 다수의 약물 상호작용 주의 필요. 간효소, 전해질, 혈액학적 수치 모니터링 필수.",
+    "indications": "개와 고양이에서 이트라코나졸 또는 플루코나졸 내성 중증 전신 진균 감염(아스페르길루스증, 콕시디오이데스증, 블라스토마이세스증, 히스토플라스마증, 스포로트리코시스, 접합균증 등)에 오프라벨로 사용. 인체에서는 칸디다증 및 아스페르길루스증의 예방 및 치료에 허가됨.",
+    "client_info": "경구 현탁액 사용 시 투여 전 반드시 잘 흔들어 주세요. 지연방출정은 씹거나 부수지 말고 통째로 삼켜야 합니다. 반드시 식사 후(가능하면 고지방 식사 직후)에 투여하세요. 하루 1회 투여가 원칙이나, 동물이 구토하거나 불편해 보이면 수의사와 상담하여 1일 용량을 2회로 나누어 투여할 수 있습니다. 수개월간의 치료가 필요할 수 있습니다. 동물에서 경험이 제한적이므로 부작용이 관찰되면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no interactions noted)",
+      "Veterinary species-specific CYP profile data",
+      "Veterinary-specific organ burden studies"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "cyp_profile.substrates",
+      "timing_profile.t_max_hr (dog-specific, DRT)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "organ_burden_logic.dog.brain.index",
+      "organ_burden_logic.cat.blood.index",
+      "organ_burden_logic.cat.kidney.index",
+      "organ_burden_logic.cat.heart.index",
+      "genetic_sensitivity (MDR1 veterinary data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/20.jsonl",
+    "extracted_at": "2026-03-10T19:25:09.994668+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,900 @@
+{
+  "id": "procainamide",
+  "drug_identity": {
+    "name_ko": "프로카인아마이드",
+    "name_en": "Procainamide",
+    "active_ingredient": "Procainamide",
+    "brand_names": [
+      "Procanbid",
+      "Pronestyl",
+      "Biocoryl",
+      "Procan"
+    ],
+    "allergy_class": "local anesthetic ester",
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의용 허가 제품 없음. 모든 동물 적용은 extra-label 사용임. 경구 제형은 현재 상업적으로 판매되지 않으며 조제(compounding)가 필요함.",
+    "dosage_form": [
+      "Inj",
+      "Cap",
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 500,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 375,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서는 N-아세틸화 경로가 결여되어 있어 활성 대사체인 NAPA(N-acetyl-procainamide)가 거의 생성되지 않음. IV 투여 후 90%(50~70%는 미변화체)가 24시간 이내 소변으로 배설됨."
+    },
+    "extra_information": "개: 경구 생체이용률 약 85%, 흡수 반감기 0.5시간, 분포용적 1.4~3 L/kg, 단백결합률 약 15%, 소변으로 90% 배설(50~70% 미변화체). 고양이: 별도의 PK 데이터 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 PK 데이터 일부 존재; 고양이는 데이터 부족으로 개 데이터 및 약리학적 추론 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS distribution",
+          "lethargy",
+          "confusion (overdose)"
+        ],
+        "index": 1,
+        "evidence": "CSF로의 분포가 높다고 보고됨. 과량투여 시 기면, 혼돈 가능."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "leukopenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "bone marrow suppression"
+        ],
+        "index": 2,
+        "evidence": "백혈구감소증, 무과립구증, 혈소판감소증, 골수억제가 이상반응으로 보고됨(주로 사람). 개에서도 CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination 90%",
+          "dose reduction renal failure",
+          "oliguria (overdose)"
+        ],
+        "index": 3,
+        "evidence": "IV 투여량의 90%가 신장으로 배설됨. 신부전 시 용량 감량 권장. 과량투여 시 핍뇨 가능."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "caution hepatic disease",
+          "dose reduction hepatic disease"
+        ],
+        "index": 2,
+        "evidence": "간에서 대사되며 간질환 시 주의 및 용량 감량 권장. 분포가 간에서 높음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "QRS widening",
+          "QT prolongation",
+          "AV block",
+          "negative inotropism",
+          "ventricular tachycardia",
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "QRS 연장, QT 연장, AV 차단, 음성 변력 작용, 다형성 심실빈맥 등 심혈관계 이상반응이 주요 독성으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS distribution"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 개 데이터 및 약리학적 추론 적용."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "leukopenia",
+          "bone marrow suppression"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 사람 및 개 데이터 기반 추론."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "caution renal disease"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 PK 데이터 없음. 신장 배설 비율이 높을 것으로 추정."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "caution hepatic disease"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 간 대사 약물로 간질환 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "QRS widening",
+          "QT prolongation",
+          "AV block",
+          "negative inotropism"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음. 심혈관계 독성은 개와 유사할 것으로 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 3.0,
+      "mean": 2.5,
+      "species": "dog"
+    },
+    "f_percent": 85,
+    "protein_binding_percent": 15,
+    "evidence": "개에서 경구 생체이용률 약 85%, 흡수 반감기 0.5시간, 소실 반감기 2~3시간(대부분의 연구). IM 또는 IV 투여 후 작용 발현은 거의 즉각적. 사람에서 경구 흡수율 75~95%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. QT 연장 위험 약물은 심장독성 위험으로 severity 2~3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinesterase Agents (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "myasthenia gravis"
+      ],
+      "evidence": "Procainamide may antagonize the effects of anticholinesterase agents in patients with myasthenia gravis."
+    },
+    {
+      "drug": "H2 Antagonists (cimetidine, ranitidine)",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentration",
+        "PK interaction"
+      ],
+      "evidence": "H2 antagonists may increase procainamide serum concentrations."
+    },
+    {
+      "drug": "Hypotensive Drugs (amlodipine, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive effect"
+      ],
+      "evidence": "Procainamide may enhance the hypotensive effect of these drugs."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (atracurium, succinylcholine)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "potentiation"
+      ],
+      "evidence": "Procainamide may potentiate or prolong neuromuscular blocking activity."
+    },
+    {
+      "drug": "Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentration",
+        "PK interaction"
+      ],
+      "evidence": "Trimethoprim may increase procainamide serum concentrations."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "increased procainamide concentration",
+        "cardiotoxicity"
+      ],
+      "evidence": "Amiodarone may increase procainamide concentrations; procainamide dose may need to be reduced. Concurrent use increases risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Amitriptyline",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Azithromycin",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, fluconazole)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Clomipramine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Hydroxychloroquine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Hydroxyzine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Isoflurane",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 3,
+      "keywords": [
+        "additive toxicity",
+        "cardiotoxicity",
+        "decreased cardiac output",
+        "decreased mean arterial pressure"
+      ],
+      "evidence": "Toxic effects may be additive and cardiac effects are unpredictable. Cardiotoxicity may include decreases in cardiac output, total peripheral resistance, and mean arterial pressure."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity",
+        "additive antiarrhythmic toxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Sevoflurane",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Sodium Phosphate",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity",
+        "washout required"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity. Discontinue procainamide for at least 3 half-lives before dosing sotalol."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsades de pointes",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity including QT prolongation, torsades de pointes, or cardiac arrest."
+    },
+    {
+      "drug": "Other Antidysrhythmic Agents",
+      "severity": 2,
+      "keywords": [
+        "additive cardiotoxicity",
+        "additive toxicity"
+      ],
+      "evidence": "Use with caution with other antidysrhythmic agents as additive cardiotoxic or other toxic effects may result."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "중증 또는 임상적 심실빈맥 - IV 볼루스 (extra-label)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "2~5분에 걸쳐 천천히 투여. 최대 20 mg/kg까지 반복 가능.",
+          "evidence": "리도카인이 효과 없을 때 고려. 혈청 칼륨 및 마그네슘 농도가 적절한 경우에 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 또는 임상적 심실빈맥 - IV CRI (extra-label)",
+          "value": "20 - 50",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV 볼루스 성공 후 유지요법으로 사용.",
+          "evidence": "분당 20~50 mcg/kg/min IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 또는 임상적 심실빈맥 - IM (extra-label, CRI 불가 시)",
+          "value": "7 - 10",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "6~8시간마다 투여.",
+          "evidence": "CRI가 불가능한 경우 대안."
+        },
+        {
+          "logic_type": "linear",
+          "context": "유지요법 - 경구 지연방출 조제 제형 (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈청 약물 농도 모니터링 권장. 효능 문서화 부족.",
+          "evidence": "소규모 PK 연구(n=6)에서 12시간 간격 투여가 효과적일 수 있다고 결론. 개인 간 변동성 큼."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥(SVT) 급성 처치 - IV (extra-label)",
+          "value": "6 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "3분에 걸쳐 투여. AV 결절 전도 억제 약물 사용 후 적용.",
+          "evidence": "심방 빈맥성 부정맥 종료에 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥(SVT) 급성 처치 - IM (extra-label)",
+          "value": "6 - 20",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "심방 빈맥성 부정맥 종료에 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 임상적 심실빈맥 또는 SVT - IV (extra-label)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "20분에 걸쳐 천천히 투여.",
+          "evidence": "드물게 사용되나 불응성 부정맥에서 고려 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "유지요법 - 경구 (extra-label)",
+          "value": "3 - 8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "6~8시간마다 투여.",
+          "evidence": "드물게 사용되나 불응성 부정맥에서 고려 가능."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 용량 감량 권장. 신장으로 90% 배설되므로 신기능 저하 시 약물 축적 위험. 구체적인 용량 조절 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "유의한 간질환 환자에서 용량 감량 권장. 구체적인 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "중증 근무력증",
+      "match_terms": [
+        "myasthenia gravis",
+        "MG"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "프로카인아마이드, 프로카인 또는 관련 약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "procaine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Torsade de pointes",
+      "match_terms": [
+        "torsades de pointes",
+        "TdP"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "2도 또는 3도 방실 차단 (인공 심박조율기 없는 경우)",
+      "match_terms": [
+        "second degree AV block",
+        "third degree AV block",
+        "complete heart block",
+        "2nd degree AV block",
+        "3rd degree AV block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "강심배당체(디기탈리스, 디곡신) 중독",
+      "match_terms": [
+        "digitalis toxicity",
+        "digoxin toxicity",
+        "cardiac glycoside intoxication"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 신질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "유의한 간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신성 홍반성 루푸스(SLE)",
+      "match_terms": [
+        "systemic lupus erythematosus",
+        "SLE",
+        "lupus"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "확장성 심근병증 또는 대동맥하 협착증이 있는 도베르만 핀셔, 복서",
+      "match_terms": [
+        "dilated cardiomyopathy",
+        "DCM",
+        "subaortic stenosis",
+        "Doberman",
+        "Boxer"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "Class 1A 항부정맥제. 빠른 나트륨 채널을 결합·억제하여 심방 및 심실의 불응기를 연장하고, 심근 흥분성을 감소시키며, 자동능 및 전도 속도를 억제함. 항콜린성 특성도 보유.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "허약",
+      "저혈압",
+      "음성 변력 작용",
+      "QRS 연장",
+      "QT 연장",
+      "방실 차단",
+      "다형성 심실빈맥",
+      "발열",
+      "백혈구감소증"
+    ],
+    "dog_mechanism": "개에서는 N-아세틸화 경로 결여로 활성 대사체 NAPA가 거의 생성되지 않음. 따라서 더 높은 프로카인아마이드 혈중 농도가 필요할 수 있음.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "허약",
+      "저혈압",
+      "음성 변력 작용",
+      "QRS 연장",
+      "QT 연장",
+      "방실 차단",
+      "다형성 심실빈맥",
+      "발열",
+      "백혈구감소증",
+      "IV 급속 투여 시 심각한 저혈압"
+    ],
+    "cat_mechanism": "고양이 특이 기전 데이터 없음. 개와 유사한 Class 1A 기전으로 추정.",
+    "cat_extra_effects": [
+      "저혈압",
+      "QRS 연장",
+      "QT 연장",
+      "방실 차단"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 NAPA 생성이 거의 없으므로 치료 범위 해석에 주의 필요(제안 범위: 3~8 µg/mL 또는 8~20 µg/mL). 혈청 약물 농도 모니터링 권장. 도베르만 핀셔 및 복서의 확장성 심근병증, 대동맥하 협착증 환자에서는 사용 자제. 경구 제형은 조제(compounding) 필요.",
+    "cat": "고양이에서는 드물게 사용되며 불응성 부정맥에서만 고려. IV 투여 시 20분에 걸쳐 천천히 투여. 고양이 특이 PK 데이터 부족."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신질환, 간질환, 울혈성 심부전, 중증 근무력증, 강심배당체 중독, SLE, 도베르만/복서의 확장성 심근병증 또는 대동맥하 협착증 환자에서 주의 또는 금기. 용량 관련 이상반응 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 드물게 사용. 불응성 부정맥에서만 고려. IV 투여 시 천천히 투여. 고양이 특이 안전성 데이터 부족."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사액은 연한 호박색보다 짙지 않으면 사용 가능. 냉장 보관 시 산화 지연 가능하나 실온 보관도 가능.",
+    "forms": [
+      "Procainamide HCl 주사액 100 mg/mL (10 mL 바이알)",
+      "Procainamide HCl 주사액 500 mg/mL (2 mL 바이알)",
+      "즉방형 캡슐 250 mg, 375 mg, 500 mg (캐나다)",
+      "서방형 정제 250 mg, 500 mg, 750 mg (캐나다)",
+      "경구 지연방출 조제 제형 (compounding 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프로카인아마이드는 Class 1A 항부정맥제로 심실빈맥, 심실조기수축(PVC), 상심실성 빈맥(SVT) 치료에 사용됨. 수의용 허가 제품 없으며 모든 동물 적용은 extra-label. 경구 제형은 조제 필요. 개에서 NAPA 생성이 거의 없어 치료 범위 해석 주의 및 혈청 농도 모니터링 필수. QT 연장 위험이 높으며 다수의 약물 상호작용 존재. 신부전, 간질환, 울혈성 심부전 환자에서 용량 감량 필요. IV 급속 투여 시 심각한 저혈압 위험.",
+    "indications": "심실빈맥, 심실조기수축(PVC), 상심실성 빈맥(SVT) 치료. 광범위 QRS 빈맥으로 기원이 불명확한 경우 1차 IV 치료제로 적합. 리도카인 불응성 심실빈맥의 대안.",
+    "client_info": "이 약은 하루 중 일정한 간격으로 투여해야 합니다. 특별한 지시가 없는 경우 공복 상태(식사 1시간 전 또는 2시간 후)에 투여하세요. 동물의 상태가 악화되거나 구토, 설사, 허약 등의 이상 증상이 나타나면 즉시 수의사에게 연락하세요. 이 약을 복용하는 동안 정기적인 혈액 검사, 신체 검사, 심전도 검사를 위해 반드시 내원해야 합니다. 정기 검진을 빠지지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.onset_min (cat)",
+      "timing_profile.f_percent (cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat (PK data)",
+      "organ_burden_logic.cat (species-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:43:38.737476+00:00",
+    "reviewer": null
+  }
+}

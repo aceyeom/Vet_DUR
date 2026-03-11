@@ -1,0 +1,703 @@
+{
+  "id": "sildenafil",
+  "drug_identity": {
+    "name_ko": "실데나필",
+    "name_en": "Sildenafil",
+    "active_ingredient": "Sildenafil",
+    "brand_names": [
+      "Viagra",
+      "Revatio",
+      "Aphrodil"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 폐동맥 고혈압, 선천성 거대식도증 등에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.8,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 주로 CYP3A4를 통해 활성 대사체로 대사됨. 개에서의 구체적 CYP 경로는 명시되지 않았으나 유사한 경로로 추정됨."
+    },
+    "extra_information": "개에서 경구 생체이용률 약 50~80% (사람과 유사). 분포용적 4.5~6.5 L/kg (사람 1.2 L/kg보다 큼). 소실 반감기 약 3~6시간 (개체 간 변동 큼). 음식과 함께 투여 시 최고 혈중 농도 유의하게 감소. 고양이에 대한 약동학 데이터는 보고되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 약동학 데이터 일부 존재; 고양이는 증례 보고 수준. 심혈관계 영향(혈압 강하, 혈관 확장)이 주요 부담 요인.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "vasodilation",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "전신 혈압 강하(수축기 12~24 mmHg 감소)로 인한 뇌혈류 영향 가능성. 직접적 신경독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypotension",
+          "bleeding",
+          "erythrocytosis"
+        ],
+        "index": 2,
+        "evidence": "혈압 강하 효과, 헤파린 병용 시 출혈 위험 증가, Eisenmenger 증후군에서 이차성 적혈구증가증 개선 보고."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment",
+          "dose reduction"
+        ],
+        "index": 1,
+        "evidence": "중증 신장 장애 시 용량 감소 권고. 직접적 신독성 보고는 없으나 혈압 강하로 인한 신관류 감소 가능성."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "CYP3A4",
+          "dose reduction"
+        ],
+        "index": 2,
+        "evidence": "간에서 CYP3A4를 통해 주로 대사됨. 중증 간장애 시 용량 감소 권고."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "pulmonary hypertension",
+          "vasodilation",
+          "inotropic",
+          "chronotropic",
+          "arrhythmia",
+          "congestive heart failure"
+        ],
+        "index": 3,
+        "evidence": "폐동맥 고혈압 치료 목적으로 사용. 고농도에서 직접적 양성 변력·변시 효과 및 관상동맥 확장 작용. 허혈성 심질환, 비후성 심근병증, 심실 부정맥 환자에서 주의 필요. 좌심부전 악화 가능성."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적 뇌 영향 데이터 없음. 혈압 강하로 인한 간접적 영향 가능성."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 혈압 강하 효과 예상. 직접적 혈액 독성 보고 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment",
+          "dose reduction"
+        ],
+        "index": -1,
+        "evidence": "중증 신장 장애 시 용량 감소 권고. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "dose reduction"
+        ],
+        "index": -1,
+        "evidence": "간 대사 약물로 중증 간장애 시 용량 감소 권고. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "pulmonary hypertension",
+          "vasodilation",
+          "acute decompensation",
+          "euthanasia"
+        ],
+        "index": 3,
+        "evidence": "폐모세혈관 혈관종증 유사 혈관증식성 질환을 가진 고양이에서 1회 투여 후 급성 악화로 안락사 보고. 좌심 질환 또는 선천성 심장 단락 환자에서 울혈성 심부전 악화 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 6.0,
+      "mean": 4.5,
+      "species": "dog"
+    },
+    "f_percent": 65,
+    "protein_binding_percent": null,
+    "evidence": "개에서 경구 생체이용률 약 50~80% (중간값 65% 사용). 소실 반감기 3~6시간 (개체 간 변동 큼). 분포용적 4.5~6.5 L/kg. 음식과 함께 투여 시 최고 혈중 농도 유의하게 감소."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Nitrates (isosorbide, nitroglycerin)",
+      "severity": 3,
+      "keywords": [
+        "vasodilation potentiation",
+        "life-threatening hypotension",
+        "contraindicated"
+      ],
+      "evidence": "혈관 확장 효과의 심각한 상승 작용; 생명을 위협하는 저혈압 가능. 병용 금기."
+    },
+    {
+      "drug": "Nitroprusside Sodium",
+      "severity": 3,
+      "keywords": [
+        "vasodilation potentiation",
+        "life-threatening hypotension",
+        "bleeding"
+      ],
+      "evidence": "혈관 확장 효과의 심각한 상승 작용; 생명을 위협하는 저혈압 가능. 출혈 위험 증가."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "reduced metabolism",
+        "increased AUC"
+      ],
+      "evidence": "실데나필 대사 억제로 AUC 증가. 실데나필 용량 감소 고려."
+    },
+    {
+      "drug": "Clarithromycin, Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "reduced metabolism",
+        "increased AUC"
+      ],
+      "evidence": "실데나필 대사 억제로 AUC 증가. 실데나필 용량 감소 고려. 아지스로마이신은 해당 없음."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "저혈압 효과 증가 가능성."
+    },
+    {
+      "drug": "Alpha-1-Adrenergic Receptor Antagonists (phenothiazines, acepromazine, phenoxybenzamine, phentolamine, prazosin)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "저혈압 효과 증가 가능성."
+    },
+    {
+      "drug": "Alpha-2-Adrenergic Receptor Agonists (dexmedetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "저혈압 효과 증가 가능성."
+    },
+    {
+      "drug": "Amlodipine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "저혈압 효과 증가 가능성."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "저혈압 효과 증가 가능성."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "reduced metabolism",
+        "increased AUC"
+      ],
+      "evidence": "실데나필 대사 억제로 AUC 증가."
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "severity": 2,
+      "keywords": [
+        "reduced metabolism",
+        "increased AUC"
+      ],
+      "evidence": "실데나필 대사 억제로 AUC 증가."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "hearing loss",
+        "increased active metabolite concentration"
+      ],
+      "evidence": "병용 시 청력 손실 위험 증가. 실데나필 활성 대사체 농도 증가 가능."
+    },
+    {
+      "drug": "Heparin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "출혈 위험 증가."
+    },
+    {
+      "drug": "Paclitaxel",
+      "severity": 2,
+      "keywords": [
+        "altered plasma concentration"
+      ],
+      "evidence": "파클리탁셀 혈중 농도 변화 가능."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "decreased sildenafil concentration"
+      ],
+      "evidence": "실데나필 혈중 농도 감소 가능."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 1,
+      "keywords": [
+        "increased active metabolite concentration"
+      ],
+      "evidence": "실데나필 활성 대사체 농도 증가 가능."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "decreased sildenafil concentration"
+      ],
+      "evidence": "실데나필 혈중 농도 감소 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "폐동맥 고혈압 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "임상 증상에 따라 최대 3 mg/kg q8h까지 증량 가능",
+          "evidence": "오프라벨. 초기 0.5~1 mg/kg PO q8h, 임상 증상에 따라 3 mg/kg PO q8h까지 증량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "선천성 특발성 거대식도증 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. 전향적 연구에서 1 mg/kg PO q12h."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Eisenmenger 증후군 (오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. 0.5 mg/kg PO BID로 임상 증상 및 이차성 적혈구증가증 개선."
+        },
+        {
+          "logic_type": "linear",
+          "context": "무증상 점액종성 승모판 질환 (오프라벨)",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 1~3 mg/kg PO q12h."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "폐동맥 고혈압 (오프라벨, 증례 보고)",
+          "value": "0.25 - 1.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 1.6,
+          "duration_note": "10개월간 투여; 점진적 용량 증가 필요했으며 결국 악화됨",
+          "evidence": "오프라벨. 심방중격결손으로 인한 폐동맥 고혈압(Eisenmenger 증후군) 고양이 증례 보고. 0.25~1.6 mg/kg PO q12h, 10개월 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신장 장애 환자에서 용량 감소가 필요할 수 있음. 구체적 기준치 및 감량 비율은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간장애 환자에서 용량 감소가 필요할 수 있음. 구체적 기준치 및 감량 비율은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "유기 질산염 병용",
+      "match_terms": [
+        "nitroglycerin",
+        "isosorbide",
+        "nitrate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "실데나필 과민증",
+      "match_terms": [
+        "sildenafil hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐정맥 폐쇄성 질환 (PVOD)",
+      "match_terms": [
+        "pulmonary veno-occlusive disease",
+        "PVOD"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "선천성 심장 단락 또는 좌심 질환으로 인한 폐동맥 고혈압",
+      "match_terms": [
+        "congenital cardiac shunt",
+        "left-sided heart disease",
+        "pulmonary hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안정 시 저혈압",
+      "match_terms": [
+        "resting hypotension",
+        "hypotension"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "허혈성 심질환",
+      "match_terms": [
+        "ischemic heart disease",
+        "coronary artery disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 비후성 심근병증",
+      "match_terms": [
+        "obstructive hypertrophic cardiomyopathy",
+        "HCM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심실 부정맥",
+      "match_terms": [
+        "ventricular arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 장애",
+      "match_terms": [
+        "bleeding disorder",
+        "coagulopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver failure",
+        "severe liver disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 신장 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "PDE5(포스포디에스테라제 5형) 억제를 통해 cGMP 분해를 차단하고, 산화질소 매개 혈관 확장을 유도하여 폐혈관 평활근을 이완시킴.",
+    "common_extra_effects": [
+      "서혜부 피부 홍조",
+      "식욕 감소",
+      "구토",
+      "설사",
+      "저혈압",
+      "청력 손실 (후로세미드 병용 시)"
+    ],
+    "dog_mechanism": "폐혈관 평활근의 PDE5 억제를 통한 cGMP 증가 및 혈관 확장. 고농도에서 직접적 양성 변력·변시 효과 및 관상동맥 확장 작용.",
+    "dog_extra_effects": [
+      "서혜부 피부 홍조",
+      "식욕 감소",
+      "구토",
+      "설사",
+      "수축기 혈압 감소 (12~24 mmHg)"
+    ],
+    "cat_mechanism": "개와 동일한 PDE5 억제 기전으로 추정. 혈관증식성 질환 환자에서 급성 심혈관 악화 보고.",
+    "cat_extra_effects": [
+      "급성 심혈관 악화 (혈관증식성 질환 환자에서 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 폐동맥 고혈압, 선천성 거대식도증, Eisenmenger 증후군, 점액종성 승모판 질환 등에 오프라벨로 사용됨. 경구 생체이용률 50~80%이며 공복 투여 권장. 임상 증상에 따라 용량 조절 가능. 좌심 질환 또는 선천성 심장 단락 환자에서는 울혈성 심부전 악화 가능성에 주의.",
+    "cat": "고양이에서 폐동맥 고혈압에 오프라벨로 사용된 증례 보고가 있으나 데이터가 매우 제한적임. 혈관증식성 질환(폐모세혈관 혈관종증 유사)을 가진 고양이에서 1회 투여 후 급성 악화로 안락사된 사례가 있어 극도의 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "좌심 질환, 선천성 심장 단락, 허혈성 심질환, 비후성 심근병증, 심실 부정맥, 안정 시 저혈압, 출혈 장애, 중증 간·신장 장애 환자에서 주의 사용. 유기 질산염과 병용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "데이터 매우 제한적. 혈관증식성 질환 고양이에서 급성 악화 보고. 좌심 질환 또는 선천성 심장 단락 환자에서 울혈성 심부전 악화 가능. 극도의 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 경구 현탁액: 실온(25°C) 보관; 15~30°C 허용. 경구 현탁액은 재구성 후 냉장(2~8°C) 보관 가능; 동결 금지; 재구성 후 60일 이내 사용. 주사제: 20~25°C 실온 보관.",
+    "forms": [
+      "실데나필 시트레이트 경구 정제: 20 mg, 25 mg, 50 mg, 100 mg (Revatio® 20 mg, Viagra®, 제네릭)",
+      "실데나필 시트레이트 경구 현탁액 분말: 10 mg/mL (Revatio®, 제네릭)",
+      "실데나필 주사액: 10 mg/12.5 mL (Revatio®, 제네릭)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "실데나필은 PDE5 억제제로 폐동맥 고혈압 치료에 소동물에서 오프라벨로 사용됨. 개에서 경구 생체이용률 50~80%, 반감기 3~6시간. 유기 질산염과의 병용은 절대 금기(생명을 위협하는 저혈압). 공복 투여 권장. 좌심 질환 환자에서 울혈성 심부전 악화 가능성 주의. 고양이에서 데이터 매우 제한적이며 혈관증식성 질환 환자에서 급성 악화 보고.",
+    "indications": "【승인 적응증】사람: 발기부전, 폐동맥 고혈압. 【수의학 오프라벨】개: 폐동맥 고혈압(다양한 원인), 선천성 특발성 거대식도증, Eisenmenger 증후군, 점액종성 승모판 질환. 고양이: 폐동맥 고혈압(증례 보고 수준).",
+    "client_info": "이 약은 공복(식사 1시간 전 또는 식사 2시간 후)에 투여하십시오. 공복 투여 후 구토나 불편감이 있으면 소량의 음식과 함께 투여해 보십시오. 구토가 지속되면 수의사에게 연락하십시오. 처방된 용량과 투여 간격을 정확히 지켜주십시오. 이 약은 서혜부(사타구니) 피부 홍조를 유발할 수 있으며, 식욕 감소, 구토, 설사 등 소화기 부작용이 나타날 수 있습니다. 니트로글리세린 등 질산염 계열 약물과 절대 함께 투여하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Monitoring (partial)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat (limited to single case report)",
+      "half_life_hr (cat-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:47:15.490497+00:00",
+    "reviewer": null
+  }
+}

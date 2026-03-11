@@ -1,0 +1,385 @@
+{
+  "id": "famciclovir",
+  "drug_identity": {
+    "name_ko": "팜시클로버",
+    "name_en": "Famciclovir",
+    "active_ingredient": "Famciclovir",
+    "brand_names": [
+      "Famvir"
+    ],
+    "allergy_class": null,
+    "class": "Antiretroviral",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 고양이 FHV-1 및 말 EHV-1 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "팜시클로버는 장벽과 혈액에서 탈아세틸화된 후 간의 알데히드 산화효소(aldehyde oxidase)에 의해 활성 대사체인 펜시클로버(penciclovir)로 산화된다. CYP 효소에 의한 대사는 관여하지 않는다. 고양이는 알데히드 산화효소가 결핍되어 있어 다른 종의 약동학 데이터를 고양이에 외삽하는 것은 신뢰할 수 없다."
+    },
+    "extra_information": "고양이에서 약동학은 비선형적이며, 이는 생체전환 효소계의 포화 때문으로 추정된다. 40 mg/kg 또는 90 mg/kg 경구 투여 시 펜시클로버의 생체이용률은 낮다(7–13%). 두 용량 모두 유사한 Cmax(≈1.3–2.7 µg/mL)와 Tmax(3시간)를 보였으며, 소실 반감기는 4–5시간이었다. 눈물 내 펜시클로버 농도는 90 mg/kg 투여 시 유의하게 높았으며, 눈물 Cmax는 혈장의 약 25%였다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 고양이 특이적 약동학 데이터 존재. 신장 배설이 주요 경로이며, 간에서 활성화 대사가 이루어짐. 사람에서 신부전 및 간 트랜스아미나제 상승 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 뇌 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neutropenia"
+        ],
+        "index": -1,
+        "evidence": "사람에서 호중구감소증 보고됨. 개에 대한 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal failure",
+          "renal dysfunction"
+        ],
+        "index": -1,
+        "evidence": "사람에서 신부전 보고됨. 신장 배설이 주요 경로. 신기능 저하 시 용량 조절 권고됨. 개에 대한 직접 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "aldehyde oxidase",
+          "liver",
+          "increased liver transaminases"
+        ],
+        "index": -1,
+        "evidence": "간에서 알데히드 산화효소에 의해 활성 대사체로 전환됨. 사람에서 간 트랜스아미나제 상승 보고됨. 개에 대한 직접 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "hiding behavior"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 숨는 행동(hiding behavior) 부작용 보고됨. 직접적인 신경독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CBC monitoring",
+          "electrolyte disturbances"
+        ],
+        "index": -1,
+        "evidence": "만성 투여 시 CBC 및 전해질 모니터링 권고됨. 사람에서 전해질 이상 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction",
+          "renal panel",
+          "urethral obstruction"
+        ],
+        "index": -1,
+        "evidence": "신장 배설이 주요 경로. 신기능 저하 시 용량 조절 권고. 만성 투여 시 신장 패널 모니터링 권고. 90 mg/kg q8h 투여 고양이에서 요도 폐색 1건 보고(인과관계 불명확)."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "aldehyde oxidase deficiency",
+          "non-linear pharmacokinetics",
+          "biotransformation"
+        ],
+        "index": -1,
+        "evidence": "고양이는 알데히드 산화효소 결핍으로 팜시클로버의 활성 대사체 전환이 불완전하며 약동학이 비선형적임. 간 대사 부담 존재."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 5.0,
+      "mean": 4.5,
+      "species": "cat"
+    },
+    "f_percent": 10,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 40 mg/kg 또는 90 mg/kg 경구 투여 시 펜시클로버 생체이용률 7–13%, Tmax 3시간, 소실 반감기 4–5시간. 펜시클로버는 혈장 단백질에 미미하게 결합(사람 데이터). 사람에서 펜시클로버 소실 반감기 ≈2–3시간, 신장 배설이 주요 경로."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "renal tubular secretion inhibition",
+        "increased penciclovir plasma concentration"
+      ],
+      "evidence": "Probenecid can reduce renal excretion of penciclovir, leading to increased penciclovir plasma concentrations. Monitor for penciclovir toxicity."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고양이 헤르페스바이러스 1형(FHV-1) 감염 치료 (오프라벨) — 권장 용량",
+          "value": "90",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2–4주 치료 권고. 새끼 고양이(최소 생후 5일 이상)는 2주 치료로 충분할 수 있음.",
+          "evidence": "90 mg/kg PO q12h가 각막 표층에서 치료적 활성 대사체(펜시클로버) 농도 달성에 가장 신뢰할 수 있는 용량으로 제시됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 헤르페스바이러스 1형(FHV-1) 감염 치료 (오프라벨) — 연구된 용량 범위",
+          "value": "30 - 90",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2–4주 치료 권고.",
+          "evidence": "30–90 mg/kg PO q8–12h 범위의 용량이 연구됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "사람 환자에서 크레아티닌 청소율 60 mL/min 미만 시 용량 조절 권고됨. 수의학적 의의는 불명확하나 신기능 저하 환자에서 주의하여 사용하고 용량 조절을 고려해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "고양이는 알데히드 산화효소 결핍으로 간에서의 활성 대사체 전환이 불완전함. 간기능 저하 시 약동학 변화 가능성이 있으나 구체적인 용량 조절 지침은 없음. 만성 투여 시 간 기능 모니터링 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "팜시클로버 또는 펜시클로버 과민증",
+      "match_terms": [
+        "hypersensitivity to famciclovir",
+        "hypersensitivity to penciclovir",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "수유 중인 동물",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "팜시클로버는 프로드럭으로, 체내에서 활성 대사체인 펜시클로버로 전환된다. 헤르페스바이러스 또는 수두대상포진 바이러스에 감염된 세포에서 바이러스 티미딘 키나제가 펜시클로버를 인산화하여 펜시클로버 삼인산으로 전환되며, 이는 데옥시구아노신 삼인산과 경쟁하여 헤르페스바이러스 DNA 중합효소를 선택적으로 억제함으로써 바이러스 DNA 합성을 저해한다. 바이러스 정지(virostatic) 작용제로 잠복 바이러스에는 효과가 없다.",
+    "common_extra_effects": [
+      "구역(nausea)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "소양증(pruritus)",
+      "두통(headache)",
+      "호중구감소증(neutropenia)",
+      "전해질 이상(electrolyte disturbances)",
+      "간 트랜스아미나제 상승(increased liver transaminases)",
+      "신부전(renal failure, 신기능 저하 환자에서 용량 미조절 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "고양이는 알데히드 산화효소 결핍으로 팜시클로버의 펜시클로버로의 전환이 불완전하며 약동학이 비선형적임. 90 mg/kg PO q12h 투여 시 각막 표층에서 치료적 농도 달성 가능.",
+    "cat_extra_effects": [
+      "설사(diarrhea)",
+      "다음증(polydipsia)",
+      "체중 감소(weight loss)",
+      "구토(vomiting)",
+      "숨는 행동(hiding behavior)",
+      "식욕부진(inappetence)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에 대한 팜시클로버 사용 데이터가 없으며, 현재 권장 용량이 확립되어 있지 않다.",
+    "cat": "고양이 FHV-1 감염 치료에 오프라벨로 사용된다. 고양이는 알데히드 산화효소 결핍으로 인해 약동학이 비선형적이며, 다른 종의 데이터를 외삽하는 것은 신뢰할 수 없다. 90 mg/kg PO q12h가 가장 신뢰할 수 있는 용량으로 제시되며, 2–4주 치료가 권고된다. 단기(2–3주) 사용 시 내약성은 양호한 편이다. 만성 투여 시 CBC, 전해질, 신장 패널 모니터링이 필요하다. 팜시클로버 치료 시 국소 안과용 항바이러스제가 불필요할 수 있으나, 항균제나 인공눈물 등 다른 국소 약물이 필요할 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 0,
+      "evidence": "개에 대한 사용 데이터 없음. 현재 권장 용량 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 알데히드 산화효소 결핍으로 인한 비선형 약동학, 신기능 저하 시 용량 조절 필요, 부작용(설사, 다음증, 구토 등) 모니터링 필요. 단기 사용 시 내약성 양호."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C–25°C, 68°F–77°F) 밀폐 차광 용기에 보관.",
+    "forms": [
+      "팜시클로버 경구 정제(필름코팅): 125 mg, 250 mg, 500 mg; Famvir®, 제네릭 (처방전 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "팜시클로버는 고양이 헤르페스바이러스 1형(FHV-1) 감염 및 말 EHV-1 척수뇌병증 치료에 사용될 수 있는 항바이러스제(프로드럭)이다. 수의학적 허가 제품은 없으며 오프라벨로 사용된다. 고양이에서 90 mg/kg PO q12h가 권장 용량이며, 2–4주 치료가 일반적이다. 고양이는 알데히드 산화효소 결핍으로 약동학이 비선형적이므로 다른 종의 데이터 외삽은 신뢰할 수 없다. 단기 사용 시 내약성은 양호하나 설사, 다음증, 구토 등의 부작용이 보고된다. 신기능 저하 환자에서 용량 조절이 필요하다. 바이러스 정지 작용제로 잠복 바이러스를 제거하지는 못한다.",
+    "indications": "고양이 헤르페스바이러스 1형(FHV-1) 감염(오프라벨): 임상 증상 개선 및 바이러스 배출 감소. 말 EHV-1 척수뇌병증(오프라벨): 추가 연구 필요. 사람에서는 대상포진, 단순포진 등 헤르페스바이러스 감염에 허가됨.",
+    "client_info": "이 약은 고양이의 헤르페스바이러스 감염을 조절하는 데 사용되지만, 바이러스를 완전히 제거하지는 못합니다. 가능하면 공복에 투여하되, 구토나 불편함이 있으면 소량의 음식과 함께 투여하세요. 수의학에서 사용 경험이 제한적이므로 투약 중 이상 증상(설사, 물을 많이 마심, 구토, 식욕 저하 등)이 나타나면 즉시 수의사에게 알려주세요. 대부분의 경우 단기 사용 시 잘 견딥니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific information found)",
+      "Dog dosage",
+      "Equine dosage (not in schema species)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/40.jsonl",
+    "extracted_at": "2026-03-11T01:40:34.544053+00:00",
+    "reviewer": null
+  }
+}

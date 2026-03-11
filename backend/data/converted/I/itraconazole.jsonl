@@ -1,0 +1,1009 @@
+{
+  "id": "itraconazole",
+  "drug_identity": {
+    "name_ko": "이트라코나졸",
+    "name_en": "Itraconazole",
+    "active_ingredient": "Itraconazole",
+    "brand_names": [
+      "Itrafungol",
+      "Sporanox"
+    ],
+    "allergy_class": "azole antifungal",
+    "class": "Antifungal",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.05,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [
+        "CYP3A4"
+      ],
+      "inducers": [],
+      "pathway_evidence": "이트라코나졸은 CYP3A4에 의해 대사되며, CYP3A4 및 P-당단백질(P-gp)의 강력한 억제제이다. 주요 활성 대사체는 하이드록시이트라코나졸이다. 대사는 포화 가능한 과정이다."
+    },
+    "extra_information": "개에서 반감기는 33~58시간이며, IV 투여 후 청소율은 234 mL/kg/시간, 분포용적은 17 L/kg이다. 고양이에서 수의사 처방 경구 용액 투여 시 반감기는 1회 투여 후 12시간, 7일 매일 투여 후 36시간이다. 단백결합률은 고양이와 사람 모두 99%이다. 약물은 주로 대변으로 배설되며 소량이 소변으로 배설된다. 피부, 피지, 자궁, 고름에서 혈청보다 높은 농도가 관찰된다. CSF, 소변, 방수, 타액에서는 최소 농도만 검출된다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 독성 보고, 약동학적 분포, 이상반응 빈도를 근거로 평가. 개와 고양이 모두 수의학적 데이터 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "minimal CSF concentration"
+        ],
+        "index": -1,
+        "evidence": "CSF 농도는 최소 수준으로 보고되어 있으며, 뇌 직접 독성은 보고되지 않았다. 신경병증은 사람에서 장기 투여 시 보고되었으나 개에서의 임상적 의의는 불명확하다."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "highly protein bound",
+          "99% protein binding",
+          "P-glycoprotein inhibitor"
+        ],
+        "index": 2,
+        "evidence": "단백결합률 99%로 혈중 약물 상호작용 가능성이 높다. P-gp 억제로 인한 다약제 상호작용 위험이 있다."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "inflammatory lesions kidneys",
+          "hydroxypropyl-beta-cyclodextrin"
+        ],
+        "index": 2,
+        "evidence": "신장 장애 환자에서 주의 사용 권고. 과용량 투여 시 일부 고양이에서 신장 염증 병변이 관찰되었으며, 이는 액체 부형제(HP-β-CD)에 의한 것으로 추정된다."
+      },
+      "liver": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased ALT",
+          "anorexia",
+          "dose-dependent",
+          "hepatic impairment contraindicated"
+        ],
+        "index": 4,
+        "evidence": "개에서 10 mg/kg/일 투여 시 약 10%, 5 mg/kg/일 투여 시 약 5%에서 치료 중단이 필요한 간독성(ALT 상승)이 발생하였다. 간 장애 환자에서는 위험-이익 평가 후 사용해야 한다."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "negative inotropic effect",
+          "cardiac function caution",
+          "ventricular dysfunction"
+        ],
+        "index": 2,
+        "evidence": "특히 고용량에서 음성 변력 효과가 보고되어 있으며, 심기능 저하 동물에서 주의 사용이 권고된다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "depression",
+          "minimal CSF concentration"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 우울증(depression)이 이상반응으로 보고되었다. CSF 농도는 최소 수준이다."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "highly protein bound",
+          "99% protein binding"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 단백결합률 99%로 확인되었다. 혈중 약물 상호작용 가능성이 높다."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "inflammatory lesions kidneys",
+          "hydroxypropyl-beta-cyclodextrin"
+        ],
+        "index": 2,
+        "evidence": "과용량(25 mg/kg/일 격주) 투여 시 일부 고양이에서 신장 염증 병변이 관찰되었으며, 이는 HP-β-CD 부형제에 의한 것으로 추정된다."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased ALT",
+          "jaundice",
+          "dose-dependent",
+          "hepatic impairment contraindicated"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 ALT 상승이 13%에서 보고되었다. 황달, 간독성이 용량 의존적으로 발생한다. 10 mg/kg 이상 용량에서 간독성 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "negative inotropic effect"
+        ],
+        "index": 1,
+        "evidence": "음성 변력 효과가 보고되어 있으나 고양이에서의 임상적 중요성은 불명확하다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 12.0,
+      "max": 58.0,
+      "mean": 35.0,
+      "species": "dog"
+    },
+    "f_percent": 78,
+    "protein_binding_percent": 99,
+    "evidence": "고양이에서 수의사 처방 경구 용액의 생체이용률은 78%이다. 개에서 반감기는 33~58시간, 고양이에서 1회 투여 후 12시간, 7일 투여 후 36시간이다. 사람에서 반감기는 21~64시간이다. 단백결합률은 고양이와 사람 모두 99%이다. 개에서 분포용적은 17 L/kg이다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 이트라코나졸은 CYP3A4 및 P-gp의 강력한 억제제이며 CYP3A4 기질이다.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "Aspergillus",
+        "Candida"
+      ],
+      "evidence": "Laboratory animal studies show potential antagonism against Aspergillus spp or Candida spp when used concomitantly; clinical importance is unclear."
+    },
+    {
+      "drug": "Antacids, Oral (aluminum, calcium, magnesium containing)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "gastric pH"
+      ],
+      "evidence": "May reduce oral absorption of itraconazole; administer itraconazole at least 1 hour before or 2 hours after antacids."
+    },
+    {
+      "drug": "Histamine H2-Blockers (famotidine, ranitidine)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "increased gastric pH"
+      ],
+      "evidence": "Increased gastric pH may reduce itraconazole absorption."
+    },
+    {
+      "drug": "Highly Protein Bound Drugs (NSAIDs, phenytoin, salicylates, sulfonamides, sulfonylureas, warfarin)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "increased serum concentrations"
+      ],
+      "evidence": "Itraconazole (99% protein bound) could theoretically displace other highly bound drugs; temporary increase in serum concentrations may occur but not shown to be of clinical concern."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "decreased itraconazole concentrations"
+      ],
+      "evidence": "Isoniazid may decrease itraconazole plasma concentrations."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased itraconazole concentrations",
+        "bidirectional interaction"
+      ],
+      "evidence": "May increase itraconazole concentrations; itraconazole may increase macrolide antibiotic concentrations."
+    },
+    {
+      "drug": "Meloxicam",
+      "severity": 2,
+      "keywords": [
+        "decreased peak concentration",
+        "reduced exposure"
+      ],
+      "evidence": "Itraconazole may decrease peak meloxicam concentrations and reduce meloxicam exposure."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased itraconazole concentrations",
+        "CYP3A4 induction"
+      ],
+      "evidence": "Phenobarbital may decrease itraconazole plasma concentrations via CYP3A4 induction."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "decreased itraconazole concentrations"
+      ],
+      "evidence": "Primidone may decrease itraconazole plasma concentrations."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "increased gastric pH"
+      ],
+      "evidence": "Increased gastric pH may reduce itraconazole absorption."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 3,
+      "keywords": [
+        "decreased itraconazole concentrations",
+        "increased rifampin concentrations",
+        "contraindicated"
+      ],
+      "evidence": "Rifampin may decrease itraconazole concentrations; itraconazole may increase rifampin concentrations. Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Sucralfate may reduce itraconazole absorption."
+    },
+    {
+      "drug": "Toceranib",
+      "severity": 2,
+      "keywords": [
+        "increased concentrations",
+        "CYP3A4 inhibition",
+        "P-gp inhibition"
+      ],
+      "evidence": "Increased toceranib or itraconazole concentrations may occur due to CYP3A4/P-gp inhibition."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam, oral midazolam)",
+      "severity": 3,
+      "keywords": [
+        "increased benzodiazepine concentrations",
+        "CYP3A4 inhibition",
+        "contraindicated with oral midazolam"
+      ],
+      "evidence": "Itraconazole may increase benzodiazepine concentrations via CYP3A4 inhibition. Concurrent use with oral midazolam is contraindicated in humans."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "increased buspirone concentrations",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Itraconazole may increase plasma concentrations of buspirone via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Busulfan",
+      "severity": 2,
+      "keywords": [
+        "increased busulfan concentrations"
+      ],
+      "evidence": "Itraconazole may increase busulfan concentrations."
+    },
+    {
+      "drug": "Calcium-Channel Blocking Agents (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "increased concentrations",
+        "negative inotropic potentiation",
+        "heart failure risk"
+      ],
+      "evidence": "Itraconazole may increase calcium channel blocker concentrations and risk for toxicity. Negative inotropic effects may be potentiated. Use cautiously in patients with heart failure."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "increased concentrations",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Itraconazole may increase cannabidiol concentrations via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "severity": 2,
+      "keywords": [
+        "increased itraconazole exposure"
+      ],
+      "evidence": "Ciprofloxacin may result in increased itraconazole exposure."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "increased cisapride concentrations",
+        "toxicity risk",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole may increase cisapride concentrations and risk for toxicity. Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in humans."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 3,
+      "keywords": [
+        "increased colchicine concentrations",
+        "contraindicated in hepatic/renal impairment"
+      ],
+      "evidence": "Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in patients with hepatic or renal impairment in humans."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "inhibited corticosteroid metabolism",
+        "increased hepatotoxicity",
+        "increased GI adverse effects"
+      ],
+      "evidence": "Itraconazole may inhibit the metabolism of corticosteroids; increased hepatotoxic and GI adverse effects are possible."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "inhibited metabolism",
+        "increased toxicity"
+      ],
+      "evidence": "Itraconazole may inhibit the metabolism of cyclophosphamide and its metabolites; increased toxicity can occur."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine concentrations",
+        "reduced dose requirements"
+      ],
+      "evidence": "Itraconazole increases cyclosporine concentrations and decreases cyclosporine dose requirements."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentrations",
+        "P-gp inhibition"
+      ],
+      "evidence": "Itraconazole may increase digoxin concentrations via P-glycoprotein inhibition."
+    },
+    {
+      "drug": "Disopyramide",
+      "severity": 3,
+      "keywords": [
+        "contraindicated",
+        "increased concentrations"
+      ],
+      "evidence": "Concurrent use of itraconazole and disopyramide is contraindicated in humans."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "increased doxorubicin exposure",
+        "P-gp inhibition"
+      ],
+      "evidence": "Itraconazole increases doxorubicin exposure via P-glycoprotein inhibition."
+    },
+    {
+      "drug": "Ergot Alkaloids (bromocriptine, cabergoline, pergolide)",
+      "severity": 3,
+      "keywords": [
+        "increased ergot alkaloid concentrations",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole increases ergot alkaloid concentrations. Concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Fentanyl/Alfentanil",
+      "severity": 3,
+      "keywords": [
+        "increased opioid concentrations",
+        "CYP3A4 inhibition",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole may increase fentanyl or alfentanil concentrations via CYP3A4 inhibition. Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in humans."
+    },
+    {
+      "drug": "Ivermectin",
+      "severity": 2,
+      "keywords": [
+        "increased neurotoxicity risk",
+        "P-gp inhibition"
+      ],
+      "evidence": "Itraconazole may increase the risk for ivermectin neurotoxicity via P-glycoprotein inhibition."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 2,
+      "keywords": [
+        "increased concentrations",
+        "P-gp inhibition"
+      ],
+      "evidence": "Itraconazole may increase loperamide concentrations via P-glycoprotein inhibition."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 3,
+      "keywords": [
+        "increased methadone concentrations",
+        "contraindicated"
+      ],
+      "evidence": "Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in humans."
+    },
+    {
+      "drug": "Praziquantel",
+      "severity": 2,
+      "keywords": [
+        "increased praziquantel concentrations",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Itraconazole may increase plasma concentrations of praziquantel via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "increased quinidine toxicity risk",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole increases risk for quinidine toxicity. Concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Rivaroxaban",
+      "severity": 3,
+      "keywords": [
+        "increased rivaroxaban toxicity",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole increases risk for rivaroxaban toxicity. Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in humans."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "increased sildenafil exposure",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Itraconazole increases sildenafil exposure via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Sulfonylurea Antidiabetic Agents (glipizide, glyburide)",
+      "severity": 2,
+      "keywords": [
+        "increased sulfonylurea concentrations",
+        "hypoglycemia risk"
+      ],
+      "evidence": "Itraconazole may increase concentrations of sulfonylurea agents; hypoglycemia is possible."
+    },
+    {
+      "drug": "Tamsulosin",
+      "severity": 3,
+      "keywords": [
+        "increased tamsulosin toxicity",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole increases risk for tamsulosin toxicity. Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in humans."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "decreased TCA metabolism",
+        "increased TCA concentrations",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Itraconazole may decrease metabolism and increase TCA concentrations via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Vincristine/Vinblastine",
+      "severity": 3,
+      "keywords": [
+        "inhibited vinca alkaloid metabolism",
+        "increased concentrations",
+        "contraindicated"
+      ],
+      "evidence": "Itraconazole may inhibit vinca alkaloid metabolism and increase concentrations. Concurrent use or use within 2 weeks of discontinuing itraconazole is contraindicated in humans."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased prothrombin time",
+        "anticoagulant potentiation"
+      ],
+      "evidence": "Itraconazole may cause increased prothrombin times in patients receiving warfarin or other coumarin anticoagulants."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "high",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 7.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "임상 증상 소실 후 최소 30~60일 유지. 피티움증, 라게니디아증, 접합균증, 흑색균증, 투명균증은 10~15 mg/kg/일로 수개월 치료 필요.",
+          "evidence": "Plumb's 권장 용량 (extra-label). 10 mg/kg/일 이상은 이상반응 위험 증가."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 - 피티움증 등 난치성 감염 (extra-label)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "수개월 치료 필요; 외과적 절제 및 추가 항진균제(예: 테르비나핀) 병용 고려",
+          "evidence": "Plumb's 권장 용량 (extra-label). 피티움증, 라게니디아증, 접합균증 등."
+        },
+        {
+          "logic_type": "linear",
+          "context": "블라스토마이코시스 (extra-label)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "임상 증상 소실 후 1개월 추가 투여. 최대 10 mg/kg/일 사용 가능하나 이상반응 위험 증가.",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "히스토플라스마증 (extra-label)",
+          "value": "4.3 - 33.8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 33.8,
+          "duration_note": "중앙값 10 mg/kg/일",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부사상균증, 조갑진균증 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "2주 간격으로 2회 음성 피부 배양 확인 시까지 치료 지속",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "말라세지아 피부염 - 매일 요법 (extra-label)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "임상 증상 완전 소실 후 1주 추가 투여",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "말라세지아 피부염 - 펄스 요법 (extra-label)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "주 2일 연속 투여",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "트리파노소마 크루지 감염 (샤가스병) - 저체중견 (extra-label)",
+          "value": "100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "아미오다론 7.5 mg/kg PO SID 병용. 100 mg 단위로 내림 적용.",
+          "evidence": "Plumb's 권장 용량 (extra-label). 저체중견에 적용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "피티움증 - 테르비나핀 병용 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "테르비나핀 6~12 mg/kg PO SID 병용; 메페녹삼 또는 프레드니솔론 추가 가능",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Microsporum canis에 의한 피부사상균증 (FDA 승인 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "격주 투여: 1, 3, 5주차 투여, 2, 4주차 휴약. 총 3 치료 사이클.",
+          "evidence": "FDA 승인 용량 (Itrafungol). 식이와 무관하게 투여 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "보호소 고양이 전신 피부사상균증 (extra-label)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "21일 연속 투여; 주 2회 석회황 린스 병용",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "말라세지아 피부염 - 매일 요법 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "임상 증상 완전 소실 후 1주 추가 투여",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "말라세지아 피부염 - 펄스 요법 (extra-label)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "주 2일 연속 투여",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "치료 기간은 수개월 이상; 임상 증상 소실 후 최소 30~60일 유지",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신 진균증 - 약동학 연구 기반 (extra-label)",
+          "value": "100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "안전하고 효과적인 혈청 농도 달성 가능",
+          "evidence": "Plumb's 권장 용량 (extra-label). mg/kg 아닌 총 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진균성 골수염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 12.8,
+          "duration_note": "최소 5주 이상; 혈청 음성 2회 확인 시까지 (약 2년)",
+          "evidence": "Plumb's 권장 용량 (extra-label). 증례 보고 기반."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "크립토코쿠스증 (extra-label)",
+          "value": "50 - 100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "후향적 연구 기반; 플루코나졸이 더 높은 효능 보고",
+          "evidence": "Plumb's 권장 용량 (extra-label). mg/kg 아닌 총 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "스포로트리코시스 단독 요법 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~3개월 또는 임상 치유 후 1개월 추가 투여",
+          "evidence": "Plumb's 권장 용량 (extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "스포로트리코시스 단독 요법 - 고정 용량 (extra-label)",
+          "value": "50 - 100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "식이와 함께 투여",
+          "evidence": "Plumb's 권장 용량 (extra-label). mg/kg 아닌 총 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "스포로트리코시스 병용 요법 - 요오드화칼륨 병용 (extra-label)",
+          "value": "100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "요오드화칼륨 초기 2.5 mg/kg/일 PO, 30일마다 2.5 mg/kg씩 증량 (최대 20 mg/kg/일). 중앙 치료 기간 14주.",
+          "evidence": "Plumb's 권장 용량 (extra-label). mg/kg 아닌 총 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신장 장애 환자에서는 잠재적 이익이 위험을 상회하는 경우에만 사용해야 한다. 과용량 투여 시 신장 염증 병변이 보고되었다. 구체적인 크레아티닌 역치나 용량 조정 계수는 명시되지 않았다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간 장애 환자에서는 잠재적 이익이 위험을 상회하는 경우에만 사용해야 한다. ALT가 현저히 상승하면 투약을 중단해야 한다. ALT 정상화 및 이상반응 소실 후 낮은 용량 또는 더 긴 투여 간격으로 재투여 가능하며 집중 모니터링이 필요하다."
+  },
+  "contraindications": [
+    {
+      "condition": "이트라코나졸 또는 다른 아졸계 항진균제 과민증",
+      "match_terms": [
+        "azole hypersensitivity",
+        "itraconazole allergy",
+        "antifungal allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심기능 저하 / 심실 기능 장애",
+      "match_terms": [
+        "heart failure",
+        "ventricular dysfunction",
+        "cardiac dysfunction",
+        "reduced cardiac function"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "이트라코나졸은 P-당단백질(P-gp)의 강력한 억제제이다. MDR1 돌연변이 견종에서 P-gp 기질 약물(예: 이버멕틴)의 독성 위험이 증가할 수 있다. 이트라코나졸 자체가 MDR1 돌연변이에 의해 직접적으로 영향을 받는다는 명시적 언급은 없으나, P-gp 억제제로서 병용 약물의 독성을 증가시킬 수 있다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균 세포막의 에르고스테롤 합성에 필요한 CYP450 의존성 탈메틸화 효소를 억제하는 정진균성 트리아졸 화합물. 메틸화 스테롤의 세포 내 축적으로 세포막 투과성 증가 및 세포 내용물 누출을 유발한다.",
+    "common_extra_effects": [
+      "식욕부진",
+      "간독성 (ALT 상승)",
+      "구토",
+      "설사",
+      "우울증",
+      "체중 감소",
+      "음성 변력 효과",
+      "부종",
+      "저칼륨혈증 (사람)",
+      "고혈압 (사람)",
+      "피부 발진 (사람)"
+    ],
+    "dog_mechanism": "에르고스테롤 합성 억제를 통한 정진균 작용. 항염증 활성(T림프구 증식 억제, 호중구의 칼슘 의존성 염증 활성 억제, 류코트리엔 B4 억제)도 보고되어 있다.",
+    "dog_extra_effects": [
+      "식욕부진 (용량 의존적, 주로 치료 2개월째 발생)",
+      "간독성 (10 mg/kg/일에서 약 10%, 5 mg/kg/일에서 약 5%)",
+      "궤양성 피부 병변 (약 7% 이상)",
+      "혈관염",
+      "사지 부종",
+      "홍반성 다형 (드물게)",
+      "독성 표피 괴사 (드물게)"
+    ],
+    "cat_mechanism": "에르고스테롤 합성 억제를 통한 정진균 작용. 고양이 코로나바이러스 감염 세포 모델에서 항바이러스 활성도 보고되었다.",
+    "cat_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "과다 침 분비",
+      "체중 감소",
+      "우울증",
+      "간독성 (ALT 상승, 황달; 약 13%에서 ALT 상승)",
+      "신장 염증 병변 (과용량 시, HP-β-CD 부형제 관련)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 이트라코나졸은 extra-label로 사용된다. 캡슐은 흡수 극대화를 위해 음식과 함께 투여해야 한다. 10 mg/kg/일 이상의 용량은 이상반응(간독성, 궤양성 피부 병변, 혈관염) 위험이 증가한다. 식욕부진은 독성의 임상적 지표로, 주로 치료 2개월째 발생한다. 피부 병변 발생 후 재투여는 권장되지 않는다. 개에서는 경구 용액과 캡슐 간 생체이용률 차이가 없으므로 고양이와 달리 용량 조정이 필요하지 않다. 조제 제형(bulk powder 기반)은 흡수가 불량하므로 사용을 피해야 한다.",
+    "cat": "고양이에서 Microsporum canis 피부사상균증 치료에 FDA 승인된 약물이다(Itrafungol). 수의사 처방 경구 용액은 식이와 무관하게 투여 가능하다. 고양이에서 경구 용액은 캡슐보다 흡수율이 높으므로 용액 사용 시 더 낮은 용량을 사용할 수 있다. 이상반응은 용량 의존적이며 GI 증상, 간독성, 우울증이 주요 이상반응이다. 임신 중 사용은 태아 독성 및 기형 유발 위험으로 금기이다. 조제 제형(bulk powder 기반)은 흡수가 불량하므로 사용을 피해야 한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 간독성, 궤양성 피부 병변, 혈관염, 부종 등의 이상반응이 보고되어 있다. 10 mg/kg/일 이상 용량에서 이상반응 위험 증가. 심기능 저하 동물에서 음성 변력 효과 주의. 간 및 신장 장애 동물에서 주의 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 용량 의존적 이상반응(GI 증상, 간독성, 우울증)이 보고되어 있다. 임신 중 사용은 금기. 과용량 시 신장 염증 병변 가능. 아프리카 회색 앵무새에서 고감수성 보고(고양이와 무관하나 참고)."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐: 15~25°C 보관, 빛과 습기 차단. 수의사 처방 경구 용액(Itrafungol): 직립 보관, 20~25°C (15~30°C 허용). 사람용 경구 용액(Sporanox): 25°C 미만 보관, 동결 금지.",
+    "forms": [
+      "이트라코나졸 경구 용액 10 mg/mL, 52 mL (Itrafungol, 수의사 처방용, 고양이 적응증)",
+      "이트라코나졸 캡슐 100 mg (Sporanox, 사람용)",
+      "이트라코나졸 경구 용액 10 mg/mL, 150 mL (Sporanox, 사람용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이트라코나졸은 고양이의 Microsporum canis 피부사상균증 치료에 FDA 승인된 경구 트리아졸계 항진균제이다. 개와 고양이에서 전신 진균증, 피부 진균증, 말라세지아 피부염 등에 광범위하게 사용된다. CYP3A4 및 P-gp의 강력한 억제제로 다수의 약물 상호작용이 존재한다. 간독성이 주요 이상반응이며 장기 치료 시 정기적인 간 기능 모니터링이 필요하다. 조제 제형(bulk powder 기반)은 흡수 불량으로 사용을 피해야 한다.",
+    "indications": "고양이: Microsporum canis 피부사상균증 (FDA 승인). 개·고양이 (extra-label): 아스페르길루스증, 크립토코쿠스증, 블라스토마이코시스, 콕시디오이데스증, 스포로트리코시스, 히스토플라스마증, 피티움증, 라게니디아증, 접합균증, 흑색균증, 투명균증, 진균성 골수염, 조갑진균증, 말라세지아 피부염. 말: 스포로트리코시스, Coccidioides immitis 골수염.",
+    "client_info": "수의사의 지시에 따라 정확히 투여하세요. 고양이용 FDA 승인 경구 용액은 제공된 주사기를 사용하고, 용액 추출 시 병을 뒤집지 마세요. 투여 후 주사기를 헹구고 건조시킨 후 병 뚜껑을 단단히 닫으세요. 수의사 처방 경구 용액은 식이와 무관하게 투여 가능합니다. 캡슐은 지방이 풍부한 음식(버터, 크림, 아이스크림, 치즈 등)과 함께 투여하세요. 이 약은 다른 많은 약물과 상호작용할 수 있으므로, 다른 약을 추가로 투여하기 전에 반드시 수의사 또는 수의 약사와 상담하세요. 구토와 식욕 감소가 가장 흔한 부작용입니다. 간독성과 심각한 피부 반응도 가능합니다. 이상반응 발생 시 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "high",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none stated)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/57.jsonl",
+    "extracted_at": "2026-03-11T06:47:34.972354+00:00",
+    "reviewer": null
+  }
+}

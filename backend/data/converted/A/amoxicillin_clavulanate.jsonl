@@ -1,0 +1,590 @@
+{
+  "id": "amoxicillin_clavulanate",
+  "drug_identity": {
+    "name_ko": "아목시실린/클라불란산",
+    "name_en": "Amoxicillin/Clavulanate",
+    "active_ingredient": "Amoxicillin trihydrate / Clavulanate potassium",
+    "brand_names": [
+      "Clavamox",
+      "Augmentin"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Chewable",
+      "Susp",
+      "Drop"
+    ],
+    "available_strengths": [
+      {
+        "value": 62.5,
+        "unit": "mg"
+      },
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 375,
+        "unit": "mg"
+      },
+      {
+        "value": 62.5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.43,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아목시실린은 주로 신장을 통해 세뇨관 분비로 미변화체로 배설되며, 일부는 가수분해되어 페니실로산(비활성)으로 전환 후 소변으로 배설된다. 클라불란산은 개와 쥐에서 광범위하게 대사되며(주요 대사체: 1-amino-4-hydroxybutan-2-one), 미변화체로도 사구체 여과를 통해 소변으로 배설된다. 개에서 투여량의 34~52%가 소변으로, 25~27%가 대변으로, 17%가 호기로 배설된다."
+    },
+    "extra_information": "개에서 아목시실린 경구 생체이용률 64~77%, 최고혈장농도 11~21 µg/mL (약 1.38~2시간 후). 분포용적 0.28~0.71 L/kg. 단백결합률 약 13%. 반감기 0.91~1.52시간. 고양이에서 생체이용률 약 77%, 최고혈장농도 5.89 µg/mL (1.69시간 후), 분포용적 0.86 L/kg, 반감기 약 1.25시간, 청소율 0.45 L/hr/kg. 클라불란산: 개에서 최고혈장농도 2.06~2.3 µg/mL (0.95~1.05시간 후), 분포용적 0.32 L/kg, 반감기 0.71~0.83시간. 고양이에서 생체이용률 약 98%, 최고혈장농도 1.41 µg/mL (1.03시간 후), 분포용적 0.93 L/kg, 반감기 0.71시간, 청소율 0.92 L/hr/kg. 아조혈증성 만성신장질환 고양이에서 아목시실린 소변 농도가 유의하게 낮고 혈청 농도가 다소 높게 나타남."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설 비율, 이상반응 보고, 약동학 데이터를 근거로 평가. 수의학적 종별 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "high doses"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성(개에서 운동실조) 보고됨. 뇌수막 염증 시 CSF 내 농도 혈청의 10~60%에 달함."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia",
+          "agranulocytosis"
+        ],
+        "index": 1,
+        "evidence": "과민반응으로 호중구감소증, 혈소판감소증, 백혈구감소증, 빈혈, 무과립구증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration",
+          "CKD"
+        ],
+        "index": 2,
+        "evidence": "주로 신장 세뇨관 분비로 배설. 신부전 환자에서 아미노글리코사이드 불활성화 위험. 아조혈증성 CKD 고양이에서 이상반응 증가 보고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatotoxicity risk"
+        ],
+        "index": 1,
+        "evidence": "페니실린 사용 시 간효소 상승 보고됨. 레플루노마이드 병용 시 간독성 위험 증가. 클라불란산은 간에서 광범위하게 대사됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "개에서 빈맥 보고됨(이상반응 목록)."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "high doses"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성 가능성. 고양이 특이적 신경독성 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "과민반응으로 혈액학적 이상 가능. 고양이 특이적 데이터는 제한적이나 클래스 효과로 포함."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "CKD",
+          "azotemia",
+          "adverse effects"
+        ],
+        "index": 2,
+        "evidence": "아조혈증성 CKD 고양이에서 아목시실린 소변 농도 유의하게 낮고 혈청 농도 다소 높음. 아조혈증 CKD 고양이에서 다수 이상반응 발생 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "extensively metabolized"
+        ],
+        "index": 1,
+        "evidence": "클라불란산이 고양이에서 광범위하게 대사됨. 간효소 상승 가능성."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 이상반응은 본문에 직접 언급되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.69,
+    "half_life_hr": {
+      "min": 0.71,
+      "max": 1.52,
+      "mean": 1.12,
+      "species": "dog"
+    },
+    "f_percent": 77,
+    "protein_binding_percent": 13,
+    "evidence": "개에서 아목시실린 경구 생체이용률 64~77%, 최고혈장농도 도달 시간 1.38~2시간. 고양이에서 생체이용률 약 77%, Tmax 1.69시간. 단백결합률 약 13%(개). 아목시실린 반감기: 개 0.91~1.52시간, 고양이 약 1.25시간. 클라불란산 반감기: 개 0.71~0.83시간, 고양이 0.71시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (e.g., gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "inactivation",
+        "in vitro antagonism",
+        "CKD"
+      ],
+      "evidence": "베타-락탐계 항생제는 시험관 내(및 만성신장질환 환자에서 생체 내)에서 아미노글리코사이드를 불활성화할 수 있음. 혈청 아미노글리코사이드 농도가 위음성으로 낮게 측정될 수 있음."
+    },
+    {
+      "drug": "Bacteriostatic Antimicrobials (e.g., chloramphenicol, erythromycin, minocycline, tetracyclines, sulfonamides)",
+      "severity": 1,
+      "keywords": [
+        "in vitro antagonism",
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "베타-락탐 항생제와 정균성 항생제 간 시험관 내 길항작용 증거 있음. 임상적 유의성은 불명확하나 병용은 일반적으로 권장되지 않았음."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "washout"
+      ],
+      "evidence": "아목시실린/클라불란산과 레플루노마이드의 사전, 동시, 또는 이후 사용 시 washout 없이 병용하면 간독성 위험 증가 가능."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "decreased renal excretion",
+        "increased MTX concentration",
+        "toxicity"
+      ],
+      "evidence": "아목시실린이 메토트렉세이트의 신장 배설을 감소시켜 MTX 농도 상승 및 독성 위험 증가 가능."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "decreased active metabolite",
+        "reduced concentration"
+      ],
+      "evidence": "아목시실린/클라불란산이 마이코페놀레이트의 활성 대사체 농도를 감소시켜 마이코페놀레이트 혈중 농도 저하 가능."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased serum concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "프로베네시드가 대부분의 페니실린의 세뇨관 분비를 경쟁적으로 차단하여 혈청 농도 및 반감기 증가."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "anticoagulation"
+      ],
+      "evidence": "아목시실린/클라불란산 병용 시 와파린 유발 출혈 위험 증가 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "guinea_pig",
+      "chinchilla",
+      "hamster"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "피부 및 연조직 감염, 치주 감염 (FDA 승인 라벨 용량)",
+          "value": "13.75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "피부/연조직 감염: 5~7일 또는 증상 소실 후 48시간. 심부 농피증: 최대 30일. 증상 개선 없을 시 5일 후 재평가.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (비라벨 사용)",
+          "value": "12.5 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 25.0,
+          "duration_note": "3~5일. 경험적 치료(배양/감수성 검사 전)로는 권장하지 않음.",
+          "evidence": "비라벨(extra-label) 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "표재성 농피증 (비라벨 사용)",
+          "value": "12.5 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 25.0,
+          "duration_note": "21~28일, 최대 90일",
+          "evidence": "비라벨(extra-label) 사용; 중등도~고효능 지지 근거 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심부 농피증 (비라벨 사용)",
+          "value": "12.5 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 25.0,
+          "duration_note": "최소 28일, 최대 90일",
+          "evidence": "비라벨(extra-label) 사용; 고효능 근거 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 포도상구균에 의한 심내막염 만성 치료 (비라벨 사용)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "6~8주",
+          "evidence": "비라벨(extra-label) 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "세균성 상부 호흡기 감염 (비라벨 사용, Mycoplasma 제외)",
+          "value": "11",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "비라벨(extra-label) 사용; 1차 치료 옵션"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "피부 및 연조직 감염, 요로감염 (FDA 승인 라벨 용량)",
+          "value": "62.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "피부/연조직: 5~7일 또는 증상 소실 후 48시간, 최대 30일. 요로감염: 10~14일 이상, 최대 30일. 3일 후 반응 없으면 재평가.",
+          "evidence": "FDA 승인 라벨 용량 (mg/kg 아닌 mg/cat 고정 용량)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (비라벨 사용)",
+          "value": "12.5 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 25.0,
+          "duration_note": "3~5일. 경험적 치료로는 권장하지 않음.",
+          "evidence": "비라벨(extra-label) 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "세균성 상부 호흡기 질환 (비라벨 사용)",
+          "value": "12.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "비라벨(extra-label) 사용"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "아조혈증성 만성신장질환 고양이에서 아목시실린 소변 농도 유의하게 낮고 혈청 농도 다소 높으며 이상반응 위험 증가. 신부전 환자에서 아미노글리코사이드 병용 시 불활성화 위험. 구체적인 용량 조절 기준은 본문에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "페니실린은 간독성 약물로 분류되지 않으나 간효소 상승이 보고됨. 레플루노마이드 병용 시 간독성 위험 증가. 구체적인 간기능 저하 시 용량 조절 지침은 본문에 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응 병력",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 베타-락탐 항생제(세팔로스포린, 세파마이신, 카바페넴) 과민반응",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "cross-reactivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "패혈증, 쇼크 또는 중증 질환 (경구 투여 시)",
+      "match_terms": [
+        "septicemia",
+        "shock",
+        "critical illness"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "토끼, 기니피그, 친칠라, 햄스터",
+      "match_terms": [
+        "rabbit",
+        "guinea pig",
+        "chinchilla",
+        "hamster",
+        "exotic small mammal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "아조혈증성 만성신장질환 (고양이)",
+      "match_terms": [
+        "CKD",
+        "azotemia",
+        "chronic kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제를 통한 살균 작용. 베타-락탐 항생제가 세균 세포질막 내 페니실린 결합 단백질(PBP: 카르복시펩티다제, 트랜스펩티다제, 엔도펩티다제)에 결합하여 무코펩티드 합성을 억제하고 삼투압적으로 불안정한 구형체를 형성. 클라불란산은 베타-락타마제(II, III, IV, V형 및 포도상구균 페니실리나제)에 경쟁적·비가역적으로 결합하여 아목시실린을 보호하는 베타-락타마제 억제제.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "과민반응(발진, 발열, 호산구증가증)",
+      "호중구감소증",
+      "혈소판감소증",
+      "백혈구감소증",
+      "빈혈",
+      "무과립구증",
+      "림프절병증",
+      "아나필락시스",
+      "항생제 관련 설사/장내 세균총 변화",
+      "간효소 상승"
+    ],
+    "dog_mechanism": "시간 의존성 살균제로 MIC 이상 유지 시간이 중요. 아목시실린은 경구 흡수율이 암피실린보다 우수하며 더 높은 혈청 농도 달성.",
+    "dog_extra_effects": [
+      "운동실조(고용량/장기 사용 시 신경독성)",
+      "빈호흡",
+      "호흡곤란",
+      "부종",
+      "빈맥"
+    ],
+    "cat_mechanism": "시간 의존성 살균제. 아조혈증성 CKD 고양이에서 약동학 변화(소변 내 농도 감소, 혈청 농도 증가) 발생.",
+    "cat_extra_effects": [
+      "아조혈증성 CKD 고양이에서 다수 이상반응 위험 증가",
+      "위장관 이상반응(구토, 설사, 식욕부진)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 라벨 용량은 13.75 mg/kg PO BID이며, 피부/연조직 감염 및 치주 감염에 사용. 비라벨 용량으로 12.5~25 mg/kg BID~TID가 농피증, 방광염, 심내막염, 호흡기 감염에 사용됨. 시간 의존성 항생제로 빈번한 투여가 필요. 경험적 방광염 치료에는 클라불란산 없는 아목시실린 단독이 선호됨(소변 내 고농도 달성). 메티실린 내성 포도상구균에는 효과 없음.",
+    "cat": "고양이에서 FDA 승인된 라벨 용량은 62.5 mg/cat(mg/kg 아님) PO BID 고정 용량. 아조혈증성 만성신장질환 고양이에서 소변 내 아목시실린 농도가 유의하게 낮고 이상반응 위험이 증가하므로 주의 필요. 프로바이오틱스 병용이 위장관 이상반응 감소에 도움이 될 수 있음(실험실 고양이 연구). 토끼, 기니피그, 친칠라, 햄스터에는 절대 투여 금지."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "고용량 또는 장기 사용 시 신경독성(운동실조) 가능. 패혈증/쇼크 시 경구 흡수 저하로 비경구 투여 필요. 베타-락탐 과민반응 병력 시 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "아조혈증성 CKD 고양이에서 이상반응 위험 증가 및 약동학 변화. 라벨 용량은 mg/cat 고정 용량(mg/kg 아님)으로 주의 필요. 위장관 이상반응 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 미만 보관. 일부 정제는 20~25°C(68~77°F) 보관 권장. 클라불란산 제품은 습기에 매우 민감하므로 과도한 습도로부터 보호 필요. 재조합 후 경구 현탁액은 냉장 보관 시 10일간 안정; 미사용분은 폐기. 수의용 경구 현탁액은 냉장 보관 필요(물 14 mL 첨가 후 강하게 흔들어 재조합).",
+    "forms": [
+      "경구 정제 (4:1 아목시실린:클라불란산 비율): 62.5 mg, 125 mg, 250 mg, 375 mg",
+      "경구 츄어블 정제 (4:1 비율): 62.5 mg, 125 mg, 250 mg, 375 mg",
+      "경구 현탁액용 분말: 아목시실린 50 mg/클라불란산 12.5 mg per mL (15 mL 드로퍼 병)",
+      "인체용 정제: 250 mg/125 mg, 500 mg/125 mg, 875 mg/125 mg",
+      "인체용 츄어블 정제: 125 mg/31.25 mg, 200 mg/28.5 mg, 250 mg/62.5 mg, 400 mg/57 mg",
+      "인체용 경구 현탁액: 다양한 농도",
+      "인체용 서방정: 1000 mg/62.5 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아목시실린/클라불란산은 베타-락타마제 억제제(클라불란산)가 포함된 광범위 아미노페니실린 항생제로, 베타-락타마제 생성으로 아목시실린에 내성인 균주까지 항균 범위를 확장합니다. 개와 고양이에서 FDA 승인된 수의용 제품(Clavamox®)이 있으며, 피부/연조직 감염, 요로감염, 치주 감염에 사용됩니다. 시간 의존성 항생제로 빈번한 투여가 필요하며, 이상반응은 주로 위장관계입니다. WHO 및 OIE에서 인체 및 수의학 분야 '매우 중요한 항균제'로 지정되어 있어 신중한 사용이 요구됩니다.",
+    "indications": "승인 적응증(개): 베타-락타마제 생성 포도상구균, 연쇄상구균, 대장균에 의한 피부/연조직 감염(상처, 농양, 농피증), 치주 감염. 승인 적응증(고양이): 피부/연조직 감염, 대장균에 의한 요로감염. 비라벨 사용: 산발성 세균성 방광염(개/고양이), 심부 농피증(개), 감수성 포도상구균에 의한 심내막염(개), 세균성 호흡기 감염(개/고양이), 조류 및 페럿의 감수성 감염.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있으나, 위장관 부작용(구토, 설사, 식욕부진)이 있을 경우 음식과 함께 투여하면 도움이 됩니다. 경구 현탁액은 냉장 보관하고 재조합 후 10일이 지나면 남은 약은 버려야 합니다. 처방된 용량과 기간을 정확히 지켜 투여하고, 동물이 좋아 보여도 임의로 중단하지 마십시오. 토끼, 기니피그, 친칠라, 햄스터 등 소형 포유류에는 절대 투여하지 마십시오(생명을 위협하는 설사 발생 가능). 이상반응(심한 설사, 발진, 호흡 곤란 등) 발생 시 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdosage/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Onset of action (minutes)",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/55.jsonl",
+    "extracted_at": "2026-03-11T06:16:20.651632+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,551 @@
+{
+  "id": "cefovecin",
+  "drug_identity": {
+    "name_ko": "세포베신",
+    "name_en": "Cefovecin",
+    "active_ingredient": "Cefovecin sodium",
+    "brand_names": [
+      "Convenia"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 80,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 800,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세포베신은 주로 신장을 통해 미변화 형태로 배설되며, 소량은 담즙을 통해 미변화 형태로 배설된다. 간 대사에 대한 구체적인 CYP 경로는 보고되지 않았다."
+    },
+    "extra_information": "개에서 피하 주사 후 약 6시간, 고양이에서 약 2시간에 최고 혈중 농도에 도달한다. 혈장 단백 결합률이 매우 높다(개 98.5%, 고양이 99.8%). 비선형 약동학을 나타내므로 용량 증가가 혈중 농도를 비례적으로 증가시키지 않는다. 개에서 최대 65일간 체내에 잔류할 수 있으며, 개에서 14일, 고양이에서 21일간 치료 농도로 소변에서 검출될 수 있다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설이 주요 경로이며, 간 효소 상승이 보고됨. 수의학적 종별 데이터 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "depression/lethargy"
+        ],
+        "index": 1,
+        "evidence": "FDA 부작용 보고에서 개에서 우울/무기력이 보고되었으나 직접적인 신경독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neutropenia",
+          "anemia",
+          "thrombocytopenia",
+          "hypoprothrombinemia",
+          "platelet dysfunction",
+          "myelotoxicity"
+        ],
+        "index": 3,
+        "evidence": "세팔로스포린 계열에서 호중구감소증, 빈혈, 혈소판감소증, 저프로트롬빈혈증, 혈소판 기능 이상, 골수독성이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "creatinine elevated",
+          "BUN increased",
+          "renal impairment"
+        ],
+        "index": 4,
+        "evidence": "주요 배설 경로가 신장이며, 전임상 연구에서 일부 개에서 혈청 크레아티닌 상승 및 BUN 증가가 보고됨. 신기능 저하 환자에서 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "ALT increased",
+          "GGT increased",
+          "liver enzymes"
+        ],
+        "index": 3,
+        "evidence": "전임상 연구에서 일부 개에서 ALT, GGT 등 간 효소의 경도~중등도 상승이 보고됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 근거가 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "depression/lethargy"
+        ],
+        "index": 1,
+        "evidence": "FDA 부작용 보고에서 고양이에서 우울/무기력이 보고되었으나 직접적인 신경독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "WBC decreased",
+          "bilirubinuria",
+          "myelotoxicity",
+          "neutropenia"
+        ],
+        "index": 3,
+        "evidence": "과용량 연구에서 고양이에서 WBC 감소 및 빌리루빈뇨가 보고됨. 세팔로스포린 계열 혈액독성 가능."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "creatinine elevated",
+          "BUN increased",
+          "renal impairment"
+        ],
+        "index": 4,
+        "evidence": "주요 배설 경로가 신장이며, 전임상 연구에서 147마리 고양이 중 24마리에서 BUN 증가, 6마리에서 혈청 크레아티닌 중등도 상승이 보고됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ALT increased"
+        ],
+        "index": 2,
+        "evidence": "전임상 연구에서 147마리 고양이 중 4마리에서 ALT 경도 상승이 보고됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 근거가 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 6.0,
+    "half_life_hr": {
+      "min": 117.0,
+      "max": 184.0,
+      "mean": 133.0,
+      "species": "dog"
+    },
+    "f_percent": 100,
+    "protein_binding_percent": 99,
+    "evidence": "개에서 피하 주사 후 완전 흡수(생체이용률 100%). 최고 혈중 농도 도달 시간: 개 약 6시간, 고양이 약 2시간. 반감기: 개 133±16시간(5.5일), 고양이 166±18시간(6.9일). 혈장 단백 결합률: 개 98.5%, 고양이 99.8%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 세포베신은 고단백 결합 약물로 다른 고단백 결합 약물과의 경쟁적 결합 상호작용이 이론적으로 가능하나 임상적 유의성은 낮은 것으로 보고됨.",
+  "drug_interactions": [
+    {
+      "drug": "Carprofen",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "In vitro에서 세포베신이 카프로펜의 유리 농도를 증가시키는 것으로 나타남. 그러나 최근 연구에서 개에서 카프로펜과 세포베신의 병용 투여 시 임상적으로 유의한 약물 상호작용은 없는 것으로 결론지어짐."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "In vitro에서 세포베신이 푸로세미드의 유리 농도를 증가시키는 것으로 나타남. 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "Doxycycline",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "In vitro에서 세포베신이 독시사이클린의 유리 농도를 증가시키는 것으로 나타남. 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "In vitro에서 세포베신이 케토코나졸의 유리 농도를 증가시키는 것으로 나타남. 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "Maropitant",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "고단백 결합 약물로 세포베신과 경쟁적 결합이 이론적으로 가능. 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "고단백 결합 NSAIDs가 세포베신과 경쟁적 결합이 이론적으로 가능. 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "고단백 결합 약물로 세포베신과 경쟁적 결합이 이론적으로 가능. 임상적 유의성은 확립되지 않음."
+    },
+    {
+      "drug": "Anticonvulsants",
+      "severity": 1,
+      "keywords": [
+        "protein binding displacement",
+        "increased free drug concentration"
+      ],
+      "evidence": "고단백 결합 항경련제가 세포베신과 경쟁적 결합이 이론적으로 가능. 임상적 유의성은 확립되지 않음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 27.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "피부 감염(Staphylococcus intermedius 또는 Streptococcus canis 감수성 균주) - FDA 승인 용량",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "S. intermedius 감염의 경우 7일 후, S. canis (group G) 감염의 경우 14일 후 반응이 불완전하면 동일 용량으로 1회 추가 투여 가능. 최대 2회 주사.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-285)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 피부 및 연조직 감염 (허가 외)",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 14일 간격으로 최대 3회 추가 반복 투여 가능.",
+          "evidence": "허가 외 사용; 해외 라벨 기반"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "요로감염(UTI) 및 치주 조직 중증 감염 (허가 외)",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용; 해외 라벨 기반"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "라임병 (Lyme borreliosis) (허가 외)",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 후 2차 투여 반복.",
+          "evidence": "허가 외 사용; 실험적 라임 보렐리아증 연구 기반"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "피부 감염(Pasteurella multocida 감수성 균주) - FDA 승인 용량",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "P. multocida 감염에 대해 약 7일간 치료 농도 유지. 단회 투여.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-285)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 피부 및 연조직 감염 (허가 외)",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 첫 투여 14일 후 2차 투여 가능.",
+          "evidence": "허가 외 사용; 해외 라벨 기반"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "요로감염(UTI) 및 치주 조직 중증 감염 (허가 외)",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용; 해외 라벨 기반"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 주의하여 사용해야 하며 용량 조절이 필요할 수 있다. 그러나 이 지침은 중증 신장 질환 환자에게만 필요할 가능성이 높다. 신장 질환 동물에서 최적 용량 및 투여 간격 변경에 대한 구체적인 지침은 없다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 용량 조절에 대한 구체적인 지침은 없다. 일부 동물에서 간 효소 상승이 보고되었으므로 간 기능 모니터링이 권장된다."
+  },
+  "contraindications": [
+    {
+      "condition": "세팔로스포린 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "cephalosporin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제 과민반응 (페니실린, 세파마이신, 카바페넴 포함)",
+      "match_terms": [
+        "beta-lactam allergy",
+        "penicillin allergy",
+        "carbapenem allergy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "생후 4개월 미만 (미국 라벨) / 생후 8주 미만 (해외 라벨)",
+      "match_terms": [
+        "age < 4 months",
+        "puppy",
+        "kitten",
+        "pediatric"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소형 포유류 (기니피그, 토끼 등)",
+      "match_terms": [
+        "guinea pig",
+        "rabbit",
+        "small mammal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "세포베신에 대한 특정 유전적 감수성(예: MDR1/ABCB1 돌연변이)은 보고되지 않았다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세팔로스포린계 베타-락탐 항생제로, 세균의 페니실린 결합 단백질(트랜스펩티다아제, 카르복시펩티다아제)에 결합하여 세균 세포벽 합성을 방해함으로써 살균 작용을 나타낸다.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "주사 부위 반응",
+      "과민반응/아나필락시스",
+      "간 효소 상승 (ALT, GGT)",
+      "호중구감소증",
+      "빈혈",
+      "혈소판감소증",
+      "저프로트롬빈혈증",
+      "혈소판 기능 이상",
+      "골수독성"
+    ],
+    "dog_mechanism": "개에서 피하 주사 후 완전 흡수되며, 높은 혈장 단백 결합률(98.5%)로 인해 긴 반감기(133±16시간)를 나타낸다. 비선형 약동학을 보인다.",
+    "dog_extra_effects": [
+      "우울/무기력",
+      "식욕부진",
+      "구토",
+      "ALT 경도~중등도 상승",
+      "GGT 상승",
+      "대장균 베타-락탐 내성 증가 (분변)"
+    ],
+    "cat_mechanism": "고양이에서 피하 주사 후 완전 흡수되며, 매우 높은 혈장 단백 결합률(99.8%)로 인해 더 긴 반감기(166±18시간)를 나타낸다. 비선형 약동학을 보인다.",
+    "cat_extra_effects": [
+      "식욕부진",
+      "우울/무기력",
+      "구토",
+      "ALT 경도 상승",
+      "BUN 증가",
+      "혈청 크레아티닌 중등도 상승",
+      "WBC 감소 (과용량 시)",
+      "빌리루빈뇨 (과용량 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 피부 감염(S. intermedius, S. canis group G) 치료에 사용된다. 반감기가 약 5.5일로 길어 단회 또는 14일 간격 투여가 가능하다. 비선형 약동학으로 인해 용량 증가가 혈중 농도를 비례적으로 증가시키지 않는다. 전신성(비-UTI) E. coli 또는 Enterobacterales 감염에 대한 효과는 높은 단백 결합으로 인해 제한적이다. 라임병 치료에 허가 외 사용 근거가 있다. 분변 내 베타-락탐 내성 E. coli 증가가 보고되었으므로 항균제 내성 관리 측면에서 신중하게 사용해야 한다.",
+    "cat": "고양이에서 FDA 승인된 피부 감염(P. multocida) 치료에 사용된다. 반감기가 약 6.9일로 개보다 더 길다. 혈장 단백 결합률이 99.8%로 매우 높다. 전임상 연구에서 BUN 및 크레아티닌 상승이 보고되었으므로 신기능 모니터링이 권장된다. 상부 호흡기 감염에서 단회 세포베신은 경구 아목시실린/클라불란산 또는 독시사이클린보다 효과가 낮은 것으로 나타났다. 약물이 체내에 최대 65일간 잔류할 수 있으므로 부작용 발생 시 장기간 지속될 수 있음을 보호자에게 알려야 한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 주의 필요. 생후 4개월 미만, 장기 사용, IV 또는 IM 투여에서의 안전성 미확립. 베타-락탐 과민반응 병력 시 주의. 비선형 약동학으로 인해 용량 증가 시 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하 환자에서 주의 필요. 생후 4개월 미만, 장기 사용, IV 또는 IM 투여에서의 안전성 미확립. 베타-락탐 과민반응 병력 시 주의. 전임상 연구에서 BUN 및 크레아티닌 상승 보고됨."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "분말 및 재조제 제품을 원래 포장 상자에 넣어 빛을 차단하고 냉장 보관(2°C~8°C, 36°F~46°F). 동결 금지. 재조제 후 56일 이내 사용. 빛에 민감하므로 차광 보관 필수. 용액 색상이 투명에서 호박색으로 변하거나 시간이 지남에 따라 어두워질 수 있으나, 권장 보관 조건에서는 효능에 영향 없음.",
+    "forms": [
+      "세포베신 나트륨 동결건조 분말 800mg/10mL 다회 투여 바이알 (재조제 후 80mg/mL); Convenia®",
+      "320mg/4mL 바이알 (일부 국가에서 이용 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세포베신(Convenia®)은 3세대 세팔로스포린 계열의 장기 지속형 주사용 항생제로, 개와 고양이의 피부 감염 치료에 FDA 승인되었다. 단회 피하 주사로 개에서 약 5.5일, 고양이에서 약 6.9일의 반감기를 나타내며, 경구 투약이 어려운 환자에서 특히 유용하다. 그러나 WHO 및 OIE에서 인체 의학에 매우 중요한 항균제로 분류하고 있으므로 신중하게 사용해야 한다. 전신성 E. coli 또는 Enterobacterales 감염에 대한 효과는 높은 단백 결합으로 인해 제한적이다. 약물이 체내에 최대 65일간 잔류할 수 있으므로 부작용 발생 시 장기간 지속될 수 있다.",
+    "indications": "【미국 FDA 승인】 개: S. intermedius 및 S. canis (group G) 감수성 균주에 의한 피부 감염(이차성 표재성 농피증, 농양, 상처). 고양이: P. multocida 감수성 균주에 의한 피부 감염(상처, 농양). 【허가 외 사용】 개 및 고양이: 요로감염(UTI), 치주 조직 중증 감염(보조 치료), 라임병(개). 【해외 추가 승인】 피부 및 연조직 감염(S. pseudintermedius, 베타-용혈성 연쇄구균, E. coli, P. multocida), UTI(E. coli, Proteus spp), 치주 질환 보조 치료.",
+    "client_info": "이 약은 주사로만 투여되며 경구 투여 시 효과가 없습니다. 개와 고양이에서 대체로 잘 견디지만 구토, 설사, 식욕 감소가 나타날 수 있습니다. 단회 주사 후 항생제 효과가 오래 지속되며, 부작용도 주사 후 최대 2개월까지 나타날 수 있습니다. 가정에서 직접 주사하는 경우 올바른 주사 방법을 충분히 숙지하시기 바랍니다. 이 약은 냉장 보관(2~8°C)하고 빛을 차단하여 보관하십시오. 재조제 후 56일이 지난 약은 폐기하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Specific renal dose adjustment thresholds",
+      "Hepatic dose adjustment guidance",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/22.jsonl",
+    "extracted_at": "2026-03-10T20:07:55.541693+00:00",
+    "reviewer": null
+  }
+}

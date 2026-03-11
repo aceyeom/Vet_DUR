@@ -1,0 +1,754 @@
+{
+  "id": "hydrocodone_combinations",
+  "drug_identity": {
+    "name_ko": "하이드로코돈 복합제",
+    "name_en": "Hydrocodone Combinations",
+    "active_ingredient": "Hydrocodone Bitartrate",
+    "brand_names": [
+      "Hycodan",
+      "Vicodin",
+      "Tussigon",
+      "Hydromet",
+      "Hysingla ER",
+      "Zohydro ER",
+      "Vicoprofen"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "Naloxone antagonizes opioid effects and is used as a reversal agent for hydrocodone overdose per Plumb's monograph.",
+    "off_label_note": "수의학적으로 승인된 제품 없음. 개에서 진해제 및 진통제로 사람용 제품을 오프라벨로 사용. 고양이 및 흰담비에서 아세트아미노펜 복합제 사용 금지.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 N-탈메틸화 및 O-탈메틸화 경로를 통해 간에서 대사되며, 활성 대사체인 하이드로모르폰이 생성됨. 사람에서도 동일한 경로(N-탈메틸화, O-탈메틸화, 글루쿠론산화)로 대사됨."
+    },
+    "extra_information": "개에서 경구 생체이용률 약 40%. 건강한 그레이하운드(n=6)에서 약 0.5 mg/kg 경구 투여 시 하이드로코돈 최고 혈중 농도 도달 시간 약 45분, 활성 대사체 하이드로모르폰은 약 1.5시간. 평균 소실 반감기 1.6~1.8시간(그레이하운드). 수술 후 환자견에서는 최고 농도 도달 시간 3.5시간, 반감기 16시간으로 보고되었으나 약동학 모델 적합 불가로 신뢰도 낮음. 사람에서 반감기 약 3.8시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 약동학 데이터 일부 존재하나 고양이 데이터 없음. 사람 데이터 및 약리학적 기전으로 보완.",
+    "dog": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "CNS receptors",
+          "limbic system",
+          "thalamus",
+          "hypothalamus",
+          "midbrain",
+          "medullary cough center"
+        ],
+        "index": 1,
+        "evidence": "뮤 수용체를 통한 CNS 억제 작용. 진정, 흥분 효과, 두개내압 상승 환자에서 주의 필요. 연수 기침 중추 직접 억제."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased peripheral resistance",
+          "baroreceptor inhibition"
+        ],
+        "index": 2,
+        "evidence": "중추성 미주신경 자극에 의한 서맥, 말초 혈관 저항 감소, 압수용체 억제 등 심혈관계 이차 효과 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "urinary retention",
+          "ADH secretion",
+          "antidiuretic hormone"
+        ],
+        "index": 3,
+        "evidence": "방광 괄약근 긴장도 증가로 요저류 유발 가능. 항이뇨호르몬(ADH) 분비 촉진으로 이뇨제 효과 감소 가능."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "N-demethylation",
+          "O-demethylation",
+          "hepatic insufficiency"
+        ],
+        "index": 4,
+        "evidence": "간에서 N-탈메틸화 및 O-탈메틸화로 대사. 중증 간부전 시 모니터링 필요. 담도 압력 증가로 혈장 리파아제/아밀라아제 상승 가능."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "syncope",
+          "cardiovascular depression"
+        ],
+        "index": 5,
+        "evidence": "중추성 미주신경 자극에 의한 서맥 및 실신 가능성. 심혈관계 기저 질환 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS depression"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 하이드로코돈 사용을 지지하는 근거 없음. 아세트아미노펜 복합제 사용 절대 금기. 오피오이드 계열 CNS 억제 효과는 이론적으로 적용 가능하나 고양이 특이 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 하이드로코돈 사용 근거 없음. 점수 산출 불가."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 하이드로코돈 사용 근거 없음. 점수 산출 불가."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 하이드로코돈 사용 근거 없음. 아세트아미노펜 복합제는 고양이에서 간독성 위험으로 절대 금기."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 하이드로코돈 사용 근거 없음. 점수 산출 불가."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": 1.6,
+      "max": 1.8,
+      "mean": 1.7,
+      "species": "dog"
+    },
+    "f_percent": 40,
+    "protein_binding_percent": null,
+    "evidence": "건강한 그레이하운드에서 경구 투여 후 하이드로코돈 최고 혈중 농도 도달 시간 약 45분(0.75시간), 평균 소실 반감기 1.6~1.8시간. 경구 생체이용률 약 40%. 수술 후 환자견에서는 반감기 16시간으로 보고되었으나 신뢰도 낮음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/심각→3, 중등도→2, 경미→1. MAOI 상호작용은 규칙에 따라 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Drugs (e.g., atropine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic",
+        "urinary retention",
+        "constipation",
+        "paralytic ileus"
+      ],
+      "evidence": "Additive anticholinergic effects; increased risk for urinary retention, constipation, or paralytic ileus. Risk is greater with hydrocodone/homatropine combinations."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., alprazolam, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Additive CNS and respiratory depressant effects."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy"
+      ],
+      "evidence": "May reduce the efficacy of clopidogrel in humans."
+    },
+    {
+      "drug": "CNS Depressants (e.g., anesthetic agents, antihistamines, phenothiazines)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "May cause increased CNS or respiratory depression."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "May result in increased risk for hyponatremia."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 1,
+      "keywords": [
+        "ADH secretion",
+        "reduced diuretic efficacy"
+      ],
+      "evidence": "May decrease diuretic efficacy because opioids can induce antidiuretic hormone (ADH) secretion."
+    },
+    {
+      "drug": "GI Prokinetic Agents (e.g., cisapride, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "May antagonize the GI motility effects of prokinetic agents."
+    },
+    {
+      "drug": "Macrolide Antibiotics (e.g., clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased hydrocodone concentration",
+        "toxicity risk"
+      ],
+      "evidence": "May increase serum hydrocodone concentration and risk for toxicity."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "serotonin syndrome"
+      ],
+      "evidence": "May potentiate CNS and respiratory adverse effects. Not recommended with concurrent MAOI use or within 14 days of MAOI use."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "May increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Opioid Mixed Agonists/Antagonists (e.g., butorphanol, buprenorphine)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy"
+      ],
+      "evidence": "May reduce the efficacy of hydrocodone."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased hydrocodone concentration"
+      ],
+      "evidence": "May induce hydrocodone metabolism and decrease hydrocodone serum concentration."
+    },
+    {
+      "drug": "Phenobarbital/Primidone",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "enzyme induction",
+        "decreased hydrocodone concentration"
+      ],
+      "evidence": "May increase risk for CNS and respiratory depression; may induce hydrocodone metabolism and decrease hydrocodone serum concentration."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "reduced analgesic effect",
+        "reduced antitussive effect"
+      ],
+      "evidence": "May result in reduced analgesic and antitussive effects."
+    },
+    {
+      "drug": "Serotonin Modulators (e.g., fluoxetine, mirtazapine, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "psychomotor impairment"
+      ],
+      "evidence": "May result in psychomotor impairment and increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Skeletal Muscle Relaxants (e.g., dantrolene, methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "May enhance CNS depressant effects."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "anticholinergic effects"
+      ],
+      "evidence": "May have additive CNS depressant and anticholinergic effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진해제 (항기침) - 오프라벨",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "과도한 진정 없이 기침 억제를 목표로 함. 최대 1 mg/kg q6h까지 보고됨.",
+          "evidence": "Plumb's 오프라벨 용량: 0.2–0.5 mg/kg PO q6–12h 권장, 최대 1 mg/kg PO q6h 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통제 (경증~중등도 통증) - 오프라벨, 아세트아미노펜 복합제 사용 시",
+          "value": "0.5 - 0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "아세트아미노펜 15 mg/kg q8h 제공하도록 용량 계산. 임상시험에서 정형외과 수술 후 진통 효과 미흡.",
+          "evidence": "Plumb's 오프라벨 용량: 하이드로코돈 0.5–0.6 mg/kg + 아세트아미노펜 15 mg/kg PO q8h. 임상시험에서 TPLO 수술 후 진통 효과 불충분."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "중증 신부전 환자에서 이상반응 모니터링 강화 권고. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간부전 환자에서 이상반응 모니터링 강화 권고. 간에서 주로 대사되므로 간기능 저하 시 약물 축적 가능성 있음. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (하이드로코돈 또는 마약성 진통제)",
+      "match_terms": [
+        "opioid hypersensitivity",
+        "narcotic allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAOI 투여 중 또는 14일 이내 투여",
+      "match_terms": [
+        "MAOI",
+        "monoamine oxidase inhibitor",
+        "amitraz",
+        "selegiline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "독성 물질 섭취로 인한 설사",
+      "match_terms": [
+        "toxic ingestion diarrhea"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "현저한 호흡 억제",
+      "match_terms": [
+        "respiratory depression",
+        "respiratory failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 폐색",
+      "match_terms": [
+        "GI obstruction",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 및 흰담비 - 아세트아미노펜 복합제",
+      "match_terms": [
+        "cat",
+        "ferret",
+        "acetaminophen combination"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "개 및 고양이 - 이부프로펜 복합제",
+      "match_terms": [
+        "dog",
+        "cat",
+        "ibuprofen combination"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부 손상 또는 두개내압 상승",
+      "match_terms": [
+        "head injury",
+        "increased intracranial pressure",
+        "ICP"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능저하증",
+      "match_terms": [
+        "hypothyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "부신피질기능저하증 (저부신피질증)",
+      "match_terms": [
+        "hypoadrenocorticism",
+        "Addison's disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 복부 질환",
+      "match_terms": [
+        "acute abdomen"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡기 질환 또는 호흡기 분비물 증가",
+      "match_terms": [
+        "respiratory disease",
+        "increased respiratory secretions"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "뮤(μ) 오피오이드 수용체에 주로 작용하며, 고용량에서 카파(κ) 및 델타(δ) 수용체에도 결합. CNS 수용체 결합을 통해 신경 흥분성 감소. 연수 기침 중추를 직접 억제하여 진해 효과 발휘.",
+    "common_extra_effects": [
+      "진정(졸음)",
+      "변비(장기 투여 시)",
+      "구토",
+      "위장관 장애(위식도역류, 역류)",
+      "호흡 억제",
+      "요저류",
+      "서맥",
+      "호흡기 점막 건조 및 분비물 점도 증가",
+      "혈장 리파아제/아밀라아제 상승(담도 압력 증가)"
+    ],
+    "dog_mechanism": "뮤 오피오이드 수용체 작용을 통한 진해 및 진통 효과. 연수 기침 중추 직접 억제. 간에서 N-탈메틸화 및 O-탈메틸화를 통해 활성 대사체 하이드로모르폰 생성.",
+    "dog_extra_effects": [
+      "진정",
+      "변비(장기 투여 시)",
+      "구토",
+      "기타 위장관 장애",
+      "호흡 억제",
+      "기침 증상 은폐(호흡기 질환 진단 방해 가능)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 주로 기관 허탈, 기관지염, 개 감염성 호흡기 질환 복합체(CIRDC, 켄넬 코프)에 의한 기침의 진해제로 사용됨. 코데인보다 강력한 진해 효과. 진통제로서의 효과는 임상시험에서 실망스러운 결과를 보임(TPLO 수술 후 진통 불충분). 아세트아미노펜 복합제 사용 시 아세트아미노펜 독성에 주의. 이부프로펜 복합제는 사용 금지. DEA Schedule II 규제 약물로 처방전 관리 필요.",
+    "cat": "고양이에서 하이드로코돈 사용을 지지하는 근거가 없으며 권장되지 않음. 아세트아미노펜 복합제(예: Vicodin®)는 고양이 및 흰담비에서 절대 사용 금지. 이부프로펜 복합제도 사용 금지. 가용 제형 문제 및 근거 부족으로 고양이 환자에게 추천 불가."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 오프라벨로 사용 가능하나 주의 필요. 갑상선기능저하증, 중증 신/간부전, 저부신피질증, 두부 손상, 두개내압 상승, 급성 복부 질환, 노령 또는 쇠약 환자에서 면밀한 모니터링 필요. 호흡기 분비물 증가 또는 분무 치료 중인 환자에서 극도의 주의 필요. 아세트아미노펜 복합제 사용 시 아세트아미노펜 독성 위험 고려."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 하이드로코돈 사용 근거 없음. 아세트아미노펜 복합제 절대 금기. 가용 제형 문제 및 근거 부족으로 고양이 환자에게 사용 불가."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20°C-25°C) 보관. 일부 제품은 15°C-30°C 허용. DEA Schedule II 규정에 따라 견고하게 제작되고 안전하게 잠긴 장소에 보관 필요. 미사용 또는 폐기 약물은 관련 법규에 따라 처리.",
+    "forms": [
+      "하이드로코돈 비타르트레이트 경구정: 5 mg/호마트로핀 MBr 1.5 mg (Tussigon®, Hycodan®, 제네릭)",
+      "하이드로코돈 비타르트레이트 경구 시럽: 5 mg/호마트로핀 MBr 1.5 mg per 5 mL (Hydromet® Syrup, Hycodan® Syrup, 제네릭)",
+      "하이드로코돈 비타르트레이트 서방형 경구정: 10, 15, 20, 30, 40, 50, 60, 80, 100, 120 mg (Hysingla ER®, Zohydro ER®)",
+      "하이드로코돈/아세트아미노펜 경구정: 5/300 mg, 5/325 mg, 7.5/300 mg, 7.5/325 mg, 10/300 mg, 10/325 mg (Vicodin®, 제네릭)",
+      "하이드로코돈/아세트아미노펜 경구 용액: 2.5 mg/5 mL + 아세트아미노펜 100 mg/5 mL (제네릭)",
+      "하이드로코돈/이부프로펜 경구정: 5/200 mg, 7.5/200 mg, 10/200 mg (Vicoprofen®, 제네릭) - 개/고양이 사용 금지"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "하이드로코돈 복합제는 개에서 주로 진해제로 사용되는 DEA Schedule II 규제 오피오이드 약물입니다. 코데인보다 강력한 진해 효과를 가지며, 연수 기침 중추를 직접 억제합니다. 진통제로서의 임상적 효과는 정형외과 수술 후 연구에서 불충분한 것으로 나타났습니다. 아세트아미노펜 복합제는 고양이 및 흰담비에서 절대 사용 금지이며, 이부프로펜 복합제는 개와 고양이 모두에서 사용 금지입니다. 주요 이상반응으로 진정, 변비, 구토, 호흡 억제가 있습니다. MAOI와의 병용은 금기입니다.",
+    "indications": "【개 - 오프라벨】 기관 허탈, 기관지염, 개 감염성 호흡기 질환 복합체(CIRDC/켄넬 코프)에 의한 건성 비생산적 기침의 진해 치료. 경증~중등도 통증의 진통(임상적 근거 제한적). 【고양이】 사용 권장하지 않음. 【수의학적 승인 제품 없음 - 모든 사용은 오프라벨】",
+    "client_info": "【보호자 안내사항】\n\n1. 아세트아미노펜(타이레놀®, APAP, Vicodin® 등)이 포함된 제품은 고양이나 흰담비에게 절대 사용하지 마십시오. 불확실한 경우 반드시 수의사에게 문의하십시오.\n\n2. 이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함을 보이면 소량의 음식과 함께 투여해 보십시오. 구토가 지속되면 수의사에게 연락하십시오.\n\n3. 가장 흔한 부작용은 졸음(진정)과 변비입니다. 다음 증상이 나타나면 즉시 수의사에게 연락하십시오: 식욕 감소, 눈 흰자위가 노랗게 변함, 지속적인 구토 또는 설사, 구토물이나 대변에 혈액이 보임.\n\n4. 수의사가 처방한 용량보다 더 많이 투여하지 마십시오. 수의사의 지시 없이 다른 진통제, 기침약, 해열제를 함께 투여하지 마십시오.\n\n5. 이 약은 미국에서 규제 약물(DEA Schedule II)로, 재처방 시 새로운 처방전이 필요합니다. 처방받은 동물 이외의 동물이나 사람에게 사용하는 것은 불법입니다.\n\n6. 약물 보관 시 어린이와 다른 반려동물의 손이 닿지 않는 안전한 곳에 보관하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile (specific enzymes)",
+      "Protein binding data",
+      "Renal elimination fraction",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.cat.brain.calculated_score",
+      "organ_burden_logic.cat.blood.calculated_score",
+      "organ_burden_logic.cat.kidney.calculated_score",
+      "organ_burden_logic.cat.liver.calculated_score",
+      "organ_burden_logic.cat.heart.calculated_score"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/0.jsonl",
+    "extracted_at": "2026-03-10T13:40:18.339327+00:00",
+    "reviewer": null
+  }
+}

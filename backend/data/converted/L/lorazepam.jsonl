@@ -1,0 +1,636 @@
+{
+  "id": "lorazepam",
+  "drug_identity": {
+    "name_ko": "로라제팜",
+    "name_en": "Lorazepam",
+    "active_ingredient": "Lorazepam",
+    "brand_names": [
+      "Ativan",
+      "Lorazepam Intensol"
+    ],
+    "allergy_class": "benzodiazepine",
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Flumazenil",
+    "reversal_evidence": "플루마제닐은 벤조디아제핀 과다복용의 보조 치료로 고려될 수 있으나, 발작 장애 환자에게는 발작을 유발할 수 있으므로 권장되지 않음. 적절한 지지 요법을 대체하지 않음.",
+    "off_label_note": "수의학적 승인 제품 없음. 개의 간질 중첩증 및 개/고양이의 행동 장애(공포, 불안, 공포증) 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.5,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "로라제팜은 대부분의 종에서 간에서 비활성 글루쿠로나이드 대사체로 전환됨. 고양이에서는 효율적으로 글루쿠로나이드화됨. CYP 효소 관여에 대한 구체적 언급 없음."
+    },
+    "extra_information": "개: 주요 배설 경로는 소변. 반감기 약 1시간으로 사람(12시간)보다 훨씬 짧음. 뇌 내 농도는 혈청보다 더 오래 지속될 수 있음(CNS 벤조디아제핀 수용체에 대한 높은 친화성). 직장 투여는 높은 초회 통과 효과로 인해 유효 혈청 농도 달성 불가. 고양이: 소변으로 약 50%(주로 글루쿠로나이드), 대변으로 약 50% 배설."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 반감기 약 1시간, 고양이 데이터 제한적. 간 대사(글루쿠로나이드화), 신장 배설, CNS 수용체 결합 근거로 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "anticonvulsant",
+          "benzodiazepine receptor",
+          "sedation",
+          "limbic/thalamic/hypothalamic"
+        ],
+        "index": 1,
+        "evidence": "벤조디아제핀 수용체가 포유류 뇌에 위치하며, CNS 피질하 수준을 억제함. 뇌 내 농도가 혈청보다 오래 지속될 수 있음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "serum concentration",
+          "peak concentration"
+        ],
+        "index": 2,
+        "evidence": "IV 투여 후 최고 혈청 농도 약 165 ng/mL 보고. 혈액 독성에 대한 직접적 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "urine",
+          "diuresis"
+        ],
+        "index": 3,
+        "evidence": "개에서 주요 배설 경로는 소변. 정상 신기능 환자에서 IV 수액/전해질 및 만니톨을 이용한 이뇨가 배설을 촉진할 수 있음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "glucuronide",
+          "hepatic metabolism",
+          "liver dysfunction"
+        ],
+        "index": 4,
+        "evidence": "간에서 비활성 글루쿠로나이드 대사체로 전환됨. 간 기능 장애 환자에서 더 안전하게 사용 가능하다고 언급됨(디아제팜 대비)."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "benzodiazepine receptor (heart)"
+        ],
+        "index": 5,
+        "evidence": "벤조디아제핀 수용체가 심장에도 위치함. 대량 과다복용 시 저혈압 가능. 일반 용량에서 심장 독성 직접 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CNS depression",
+          "benzodiazepine receptor",
+          "sedation",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 과다복용 시 운동실조, 기면, 발성, 흥분이 가장 흔한 임상 증상. CNS 벤조디아제핀 수용체 결합."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성에 대한 직접적 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "urine elimination",
+          "glucuronide"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 소변으로 약 50%(주로 글루쿠로나이드) 배설."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "glucuronidation",
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 효율적으로 글루쿠로나이드화됨. 간 대사 관여."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "대량 과다복용 시 저혈압 가능. 고양이 심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 3,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": null,
+    "evidence": "개: IV 0.2 mg/kg 투여 후 최고 농도 약 165 ng/mL. 비강 내 투여 시 3~9분 후 30 ng/mL 도달. 반감기 약 1시간(개). 사람: 경구 생체이용률 약 90%, 반감기 약 12시간. 고양이 반감기 미보고."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. MAOI 상호작용은 원문에 명시되지 않아 포함하지 않음.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "increased bioavailability",
+        "pharmacologic enhancement"
+      ],
+      "evidence": "Concurrent use may increase bioavailability and pharmacologic effects of benzodiazepines."
+    },
+    {
+      "drug": "Anesthetic Agents (alfaxalone, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Combination may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Antacids (calcium- or magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption rate"
+      ],
+      "evidence": "May slow the rate, but not the extent of oral absorption; administer 2 hours apart."
+    },
+    {
+      "drug": "Antihypertensive Agents (atenolol, lisinopril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension and orthostasis. Monitor blood pressure."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (dichlorophenamide, methazolamide)",
+      "severity": 3,
+      "keywords": [
+        "respiratory response inhibition",
+        "hypoxia"
+      ],
+      "evidence": "Benzodiazepines may interfere with the beneficial effects of CAIs by inhibiting respiratory responses to hypoxia. Avoid combination."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "Increased risk for CNS depression."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum digoxin",
+        "toxicity"
+      ],
+      "evidence": "Serum digoxin levels may be increased; monitor serum digoxin concentrations and clinical signs of toxicity."
+    },
+    {
+      "drug": "Fluoxetine / Fluvoxamine",
+      "severity": 2,
+      "keywords": [
+        "increased lorazepam concentration",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase lorazepam concentrations and lead to increased risk for CNS and respiratory depression."
+    },
+    {
+      "drug": "Hepatic Enzyme Inducers (betamethasone, carbamazepine, rifampin)",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine levels"
+      ],
+      "evidence": "Concurrent use may decrease benzodiazepine levels."
+    },
+    {
+      "drug": "Hepatic Enzyme Inhibitors (cimetidine, erythromycin, isoniazid, ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased lorazepam metabolism",
+        "excessive sedation"
+      ],
+      "evidence": "Metabolism of lorazepam may be decreased, and excessive sedation may occur."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "encephalopathy"
+      ],
+      "evidence": "Concurrent use may increase the risk for ifosfamide-induced neurotoxic effects. Discontinue both drugs if signs of encephalopathy occur."
+    },
+    {
+      "drug": "Nondepolarizing Neuromuscular Blockers (atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade potentiation or attenuation"
+      ],
+      "evidence": "Concurrent use may potentiate, attenuate, or have no neuromuscular blocking effect."
+    },
+    {
+      "drug": "Opioids (buprenorphine, morphine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Combination may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Combination may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Combination may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Theophylline / Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine effectiveness",
+        "benzodiazepine toxicity on withdrawal"
+      ],
+      "evidence": "Concurrent use may decrease the levels and effectiveness of benzodiazepines. Withdrawing theophylline from a stable patient may increase the risk for benzodiazepine toxicity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "increased TCA concentration",
+        "CNS depression",
+        "respiratory depression",
+        "anticholinergic"
+      ],
+      "evidence": "Lorazepam may increase concentrations of TCAs; concurrent use may increase the risk for CNS and/or respiratory depression. Anticholinergic effects may be additive."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "decreased anxiolytic effect"
+      ],
+      "evidence": "Limited data indicate that yohimbine may decrease therapeutic effects of anxiolytic drugs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "간질 중첩증 (Status epilepticus)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV 접근이 어려운 경우 동일 용량을 비강 내 투여 가능. 직장 투여 금지.",
+          "evidence": "오프라벨. 2 mg/분 이하 속도로 천천히 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 적응증 (공포, 불안, 공포증, 야간 각성)",
+          "value": "0.02 - 0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "1일 1~3회 또는 필요 시 투여. 유발 사건 전 투여 권장.",
+          "evidence": "오프라벨. 낮은 용량부터 시작하여 효과에 따라 조절."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 적응증 (공포, 불안, 공포증, 야간 각성) - 대체 용량 범위",
+          "value": "0.02 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "8~24시간마다 투여.",
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 적응증 (공포, 불안, 공포증, 야간 각성)",
+          "value": "0.025 - 0.08",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.08,
+          "duration_note": "1일 1~2회 또는 필요 시 투여.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "행동 적응증 (공포, 불안, 공포증, 야간 각성) - 고정 용량",
+          "value": "0.125 - 0.25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "12~24시간마다 투여. mg/kg이 아닌 마리당 mg 용량.",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "원문에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 정상 신기능 환자에서 이뇨 촉진이 배설을 도울 수 있다고 언급됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 장애 환자에서 디아제팜보다 더 안전하게 사용 가능하다고 언급됨. 그러나 구체적인 용량 조절 권고는 없음. 간에서 글루쿠로나이드화로 대사되므로 심한 간 기능 장애 시 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "벤조디아제핀 과민반응",
+      "match_terms": [
+        "benzodiazepine hypersensitivity",
+        "drug allergy benzodiazepine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 폐쇄각 녹내장",
+      "match_terms": [
+        "acute narrow-angle glaucoma",
+        "glaucoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 호흡 부전 (기계 환기 없는 경우)",
+      "match_terms": [
+        "severe respiratory insufficiency",
+        "respiratory failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "공격성 병력",
+      "match_terms": [
+        "aggression history",
+        "behavioral disinhibition"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "원문에 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "GABAA 수용체에 결합하여 GABA에 대한 수용체 친화성을 증가시키고, 염화물 전도도 증가 및 시냅스 후 세포막 과분극을 유발함. CNS 피질하 수준(주로 변연계, 시상, 시상하부)을 억제하여 항불안, 진정, 골격근 이완, 항경련 효과를 나타냄.",
+    "common_extra_effects": [
+      "식욕 증가",
+      "공격성",
+      "역설적 흥분/활동 증가/불안/초조",
+      "발성",
+      "진정",
+      "근육 이완",
+      "운동실조",
+      "기면",
+      "졸음",
+      "저혈압 (대량 과다복용 시)",
+      "혼수 (대량 과다복용 시)",
+      "프로필렌 글리콜/벤질 알코올 독성 (반복 고용량 또는 CRI 시)"
+    ],
+    "dog_mechanism": "개에서 반감기 약 1시간으로 사람보다 훨씬 짧음. 뇌 내 농도는 혈청보다 오래 지속될 수 있음.",
+    "dog_extra_effects": [
+      "진정",
+      "기면",
+      "과활동",
+      "운동실조",
+      "구토"
+    ],
+    "cat_mechanism": "고양이에서 효율적으로 글루쿠로나이드화됨. 소변 50%, 대변 50%로 배설.",
+    "cat_extra_effects": [
+      "운동실조",
+      "기면",
+      "발성",
+      "흥분"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 로라제팜은 간질 중첩증 치료 및 행동 장애(공포, 불안, 공포증)의 보조 치료에 오프라벨로 사용됨. 반감기가 약 1시간으로 사람(12시간)보다 훨씬 짧음. 비강 내 투여 시 3~9분 후 항경련 유효 농도(30 ng/mL) 도달 가능. 직장 투여는 높은 초회 통과 효과로 권장되지 않음. 간 기능 장애, 비만, 노령 환자에서 디아제팜보다 안전하게 사용 가능. 신체적 의존성이 유발될 수 있으므로 장기 투여 후 점진적 감량 필요.",
+    "cat": "고양이에서 행동 장애(공포, 불안, 공포증) 치료에 오프라벨로 사용됨. 효율적인 글루쿠로나이드화로 대사됨. 주사제에 포함된 프로필렌 글리콜 및 벤질 알코올의 반복 고용량 또는 CRI 투여 시 독성 위험에 주의. 황달, 식욕 부진, 우울 증상 발현 시 즉시 수의사 상담 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "공격성 병력이 있는 환자에서 행동 탈억제 가능. 장기 투여 후 점진적 감량 필요(반동 효과 예방). 주사제의 동맥 내 투여 금지(동맥 경련 및 괴사 위험). 반복 고용량 또는 CRI 시 프로필렌 글리콜/벤질 알코올 독성 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "주사제의 반복 고용량 또는 CRI 시 프로필렌 글리콜/벤질 알코올 독성 위험. 황달, 식욕 부진, 우울 증상 모니터링 필요. 임신/수유 중 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐 용기에 실온(20°C-25°C) 보관. 경구 용액 및 주사제: 냉장(2°C-8°C) 보관, 빛 차단. 주사제는 IV 투여 직전 D5W, 생리식염수 또는 멸균 주사용수로 동량 희석. DEA Schedule IV 통제 약물로 견고하게 제작되고 안전하게 잠긴 장소에 보관.",
+    "forms": [
+      "Lorazepam Tablets: 0.5 mg, 1 mg, 2 mg",
+      "Lorazepam Concentrated Oral Solution: 2 mg/mL",
+      "Lorazepam Injection: 2 mg/mL, 4 mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로라제팜은 벤조디아제핀 계열의 DEA Schedule IV 통제 약물로, 개의 간질 중첩증 및 개/고양이의 불안·공포증 치료에 오프라벨로 사용됨. 개에서 반감기가 약 1시간으로 매우 짧아 사람(12시간)과 크게 다름. 간 기능 장애 환자에서 디아제팜보다 안전한 대안. 주사제에 프로필렌 글리콜 및 벤질 알코올 포함으로 반복 고용량 투여 시 독성 주의. 과다복용 시 플루마제닐 사용 가능하나 발작 환자에는 금기.",
+    "indications": "승인 적응증(수의학): 없음(수의학적 승인 제품 없음). 오프라벨 사용: 개의 간질 중첩증(IV 또는 비강 내), 개/고양이의 행동 장애(공포, 불안, 공포증, 야간 각성). 사람 의학: 간질 중첩증, 항불안, 항구토(화학요법 유발), 알코올 금단, 항정신병약 유발 좌불안석증.",
+    "client_info": "천둥 공포증이나 분리 불안 등 특정 유발 상황에 사용할 경우, 사건 발생 약 1시간 전에 투여하세요. 흔한 부작용으로 졸음, 진정, 식욕 증가가 있을 수 있으며, 반대로 흥분이나 공격성이 나타날 수도 있습니다. 정제는 비교적 무미하며 침에 잘 녹으므로, 투여가 어려울 경우 볼 안쪽에 넣고 1분 후 간식으로 삼키도록 도와주세요. 눈 흰자위, 피부, 잇몸이 노랗게 변하거나, 식욕이 없어지거나, 기운이 없어 보이면 즉시 수의사에게 연락하세요. 이 약은 DEA 통제 약물로, 처방받은 동물 이외의 동물이나 사람에게 사용하는 것은 불법입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (specific lab parameters)",
+      "Renal dose adjustment (explicit)",
+      "Hepatic dose adjustment (explicit)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (cat)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction (cat precise value)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:42:24.414472+00:00",
+    "reviewer": null
+  }
+}

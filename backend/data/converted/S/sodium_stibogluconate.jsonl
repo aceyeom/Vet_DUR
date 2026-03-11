@@ -1,0 +1,383 @@
+{
+  "id": "sodium_stibogluconate",
+  "drug_identity": {
+    "name_ko": "소듐 스티보글루코네이트",
+    "name_en": "Sodium Stibogluconate",
+    "active_ingredient": "Sodium Stibogluconate",
+    "brand_names": [
+      "Pentostam"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Dimercaprol (BAL), DMSA, d-Penicillamine",
+    "reversal_evidence": "과다복용 시 안티몬은 dimercaprol(BAL in oil), dimercaptosuccinic acid(DMSA), 또는 d-penicillamine으로 킬레이트 처리 가능하다고 보고됨.",
+    "off_label_note": "미국에서는 상업적으로 이용 불가. CDC를 통해 가용성 확인 필요. 개에서 리슈만편모충증 치료에 사용되나 수의 허가 제품 없음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주요 배설 경로는 신장이며, 사구체 여과율이 배설 속도를 결정한다고 보고됨."
+    },
+    "extra_information": "개에서 정상상태 분포용적(Vd)은 0.25 L/kg, 청소율은 1.71 L/kg/hr, 말단 반감기는 0.6~1.5시간으로 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 대상 PK 데이터 존재. 고양이 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "shock"
+        ],
+        "index": -1,
+        "evidence": "쇼크 및 급사가 보고되었으나 직접적인 CNS 독성 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hemolytic anemia",
+          "leukopenia",
+          "thrombophlebitis"
+        ],
+        "index": 1,
+        "evidence": "용혈성 빈혈, 백혈구 감소증, 혈전정맥염이 이상반응으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "renal toxicity",
+          "glomerular filtration rate",
+          "renal failure contraindicated"
+        ],
+        "index": 2,
+        "evidence": "신독성이 이상반응으로 보고되며, 주요 배설 경로가 신장임. 신부전 환자에서 금기."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "increased AST",
+          "pancreatitis"
+        ],
+        "index": 1,
+        "evidence": "40 mg/kg 투여 시 AST 상승 보고. 췌장염도 이상반응으로 언급됨."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "myocardial injury",
+          "arrhythmias",
+          "cardiac arrhythmias contraindicated"
+        ],
+        "index": 2,
+        "evidence": "심근 손상 및 부정맥이 이상반응으로 보고되며, 기존 부정맥 환자에서 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 대상 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 대상 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 대상 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 대상 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 대상 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.6,
+      "max": 1.5,
+      "mean": 1.05,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 말단 반감기 0.6~1.5시간으로 보고됨(Plumb's 인용). 경구 생체이용률 및 단백결합률 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 특정 약물 상호작용 없음으로 기재됨. 알로퓨리놀, 파로모마이신, 펜타미딘과 병용 시 문제 없이 사용된 사례 보고.",
+  "drug_interactions": [],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "피부 리슈만편모충증 (extra-label)",
+          "value": "30 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "3~4주간 매일 투여. 이상반응 발생 시 격일 투여로 전환 가능. IV 투여 시 5분 이상에 걸쳐 천천히 투여.",
+          "evidence": "Plumb's extra-label 용량. 알로퓨리놀 10 mg/kg PO BID 병용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부 리슈만편모충증 (extra-label)",
+          "value": "30 - 50",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "3~4주간 매일 투여. 이상반응 발생 시 격일 투여로 전환 가능.",
+          "evidence": "Plumb's extra-label 용량. 알로퓨리놀 10 mg/kg PO BID 병용 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 환자에서 금기. 주요 배설 경로가 신장(사구체 여과)이므로 신부전 시 사용 금지."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "40 mg/kg 투여 시 AST 상승이 보고됨. 간기능 이상 환자에서 주의 모니터링 필요. 명시적 용량 조정 지침은 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "기존 심장 부정맥",
+      "match_terms": [
+        "cardiac arrhythmia",
+        "arrhythmia",
+        "dysrhythmia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전 / 심각한 신기능 저하",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "renal insufficiency",
+        "azotemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "이전 투여 시 심각한 이상반응 경험",
+      "match_terms": [
+        "prior adverse reaction",
+        "drug hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5가 안티몬 화합물로, 감수성 있는 아마스티고트에서 ATP 및 GTP 합성을 억제하는 것으로 추정됨. 막 투과성 또는 능동 수송 기전 변화도 관여할 수 있음. 정확한 작용 기전은 불명확.",
+    "common_extra_effects": [
+      "주사 부위 통증",
+      "근골격계 통증",
+      "용혈성 빈혈",
+      "백혈구 감소증",
+      "구토",
+      "설사",
+      "췌장염",
+      "심근 손상 및 부정맥",
+      "신독성",
+      "쇼크",
+      "급사",
+      "혈전정맥염(IV 투여 시)",
+      "AST 상승"
+    ],
+    "dog_mechanism": "개에서 리슈만편모충 아마스티고트의 ATP/GTP 합성 억제를 통해 항리슈만편모충 효과를 나타냄.",
+    "dog_extra_effects": [
+      "AST 상승 (40 mg/kg 투여 시)",
+      "용혈성 빈혈",
+      "백혈구 감소증",
+      "심근 손상",
+      "부정맥",
+      "신독성",
+      "혈전정맥염"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 리슈만편모충증 치료에 사용되나, 이상반응 및 가용성 문제로 임상 사용이 제한됨. 메글루민 안티모니에이트가 일반적으로 선호되는 안티몬 제제임. 알로퓨리놀(10 mg/kg PO BID) 병용이 권장됨. 2개월 이상 사용 시 이상반응 발생률이 증가하는 것으로 보고됨.",
+    "cat": "고양이에 대한 용량 및 안전성 데이터가 없음. 사용 권장 사항 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성, 심근 손상, 부정맥, 용혈성 빈혈 등 심각한 이상반응 가능. 기저 신기능 및 심장 기능 평가 필수. 정기적인 CBC, 혈청 화학 검사, 심전도 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 안전성 및 유효성 데이터 없음. 사용 시 주의 요망."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(76°F) 미만에서 보관. 동결 및 빛 노출 방지. 첫 번째 용량 채취 후 1개월 이내 사용. 바이알 마개와 보존제 간 상호작용으로 생성될 수 있는 미립자 제거를 위해 5 마이크론 필터 사용 권장.",
+    "forms": [
+      "Sodium Stibogluconate for Injection 100 mg/mL (pentavalent antimony 기준) 100 mL vial — Pentostam® (미국 외 국가에서 이용 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "소듐 스티보글루코네이트는 개의 리슈만편모충증 치료에 사용되는 5가 안티몬 화합물입니다. 미국에서는 상업적으로 이용 불가하며, 수의 허가 제품이 없습니다. 신부전 또는 기존 부정맥 환자에서 절대 금기이며, 심근 손상, 신독성, 용혈성 빈혈 등 심각한 이상반응이 발생할 수 있습니다. 알로퓨리놀 병용이 권장되며, 치료 중 정기적인 CBC, 혈청 화학 검사, 심전도 모니터링이 필수적입니다.",
+    "indications": "개의 피부 리슈만편모충증 치료 (extra-label). 메글루민 안티모니에이트를 구할 수 없는 경우 대안으로 사용. 고양이에 대한 승인 또는 권장 용량 없음.",
+    "client_info": "이 약물은 개의 리슈만편모충증 치료에 사용됩니다. 이 질병은 공중 보건학적 의미가 있을 수 있으며(국가에 따라 다름), 치료 후에도 예후가 불확실합니다. 치료 중 구토, 설사, 주사 부위 통증, 심각한 경우 심장 또는 신장 문제가 발생할 수 있으므로 이상 증상 발견 시 즉시 수의사에게 연락하십시오. 정기적인 혈액 검사 및 심전도 검사가 필요합니다. 임신 중이거나 수유 중인 동물에서는 사용에 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosage",
+      "CYP profile",
+      "Oral bioavailability",
+      "Protein binding",
+      "Onset of action",
+      "T_max",
+      "Hepatic dose adjustment (explicit)",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:50:49.229290+00:00",
+    "reviewer": null
+  }
+}

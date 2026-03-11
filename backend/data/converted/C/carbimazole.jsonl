@@ -1,0 +1,630 @@
+{
+  "id": "carbimazole",
+  "drug_identity": {
+    "name_ko": "카르비마졸",
+    "name_en": "Carbimazole",
+    "active_ingredient": "Carbimazole",
+    "brand_names": [
+      "Vidalta",
+      "Basolest",
+      "Camazol",
+      "Carbimazole",
+      "Carbazole",
+      "Carbistad",
+      "Cazole",
+      "Neo Tomizol",
+      "NeoMercazole",
+      "Neo-Thyreostat",
+      "Thyrostat",
+      "Tyrazol",
+      "Neo-morphazole"
+    ],
+    "allergy_class": null,
+    "class": "Thyroid",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 FDA 승인 제품 없음. 일부 국가에서 수의용 서방정(Vidalta®) 허가. 즉방정은 extra-label 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "카르비마졸은 체내에서 거의 완전히 메티마졸로 전환되는 전구약물이다. 메티마졸이 실제 활성 대사체이며, 벤지미다졸계 항기생충제의 간 산화를 억제하는 것으로 알려져 있다."
+    },
+    "extra_information": "고양이에서 메티마졸의 분포용적은 0.12–0.84 L/kg으로 가변적이며, 경구 투여 후 혈장 소실 반감기는 2.3–10.2시간이다. 서방형 제제는 반감기를 연장하여 1일 1회 투여를 가능하게 한다. 개에서 메티마졸의 혈청 반감기는 8–9시간이다. 식이와 함께 투여 시 생체이용률이 증가한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 고양이 데이터 위주이며, 개에 대한 직접적인 독성 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 신경계 독성에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "agranulocytosis",
+          "thrombocytopenia",
+          "hemolytic anemia",
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 무과립구증, 혈소판감소증, 자가면역성 용혈성 빈혈 가능성 언급. 개에서의 직접 데이터는 없으나 메티마졸 공유 독성 프로파일 적용."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "nephritis",
+          "renal dysfunction"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 신염 가능성 언급. 갑상선기능항진증 치료 시 GFR 감소로 잠재적 신질환 노출 가능."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatopathy",
+          "hepatitis"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 간염 및 간병증 가능성 언급. 중증 간질환 시 금기."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "기면(lethargy)이 흔한 부작용으로 보고됨(약 10%)."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "eosinophilia",
+          "leukopenia",
+          "lymphocytosis",
+          "thrombocytopenia",
+          "agranulocytosis",
+          "hemolytic anemia",
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "호산구증가증, 백혈구감소증, 림프구증가증(약 5%), 혈소판감소증, 무과립구증, 면역매개성 용혈성 빈혈 등 다양한 혈액 독성 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "nephritis",
+          "renal dysfunction",
+          "GFR decrease",
+          "creatinine"
+        ],
+        "index": 1,
+        "evidence": "갑상선기능항진증 치료 시 GFR 감소로 잠재적 신질환 노출 가능. 과량 투여 시 신염 가능. 치료 중 신장 지표 모니터링 필요."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatopathy",
+          "hepatitis",
+          "severe liver disease"
+        ],
+        "index": 1,
+        "evidence": "간병증이 드물지만 심각한 부작용으로 보고됨. 중증 간질환 시 금기. 과량 투여 시 간염 가능."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 심장 독성 언급 없음. 갑상선기능 정상화 후 디곡신 청소율 감소 등 간접적 심혈관 영향 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.3,
+      "max": 10.2,
+      "mean": 6.25,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 경구 투여 후 메티마졸의 혈장 소실 반감기는 2.3–10.2시간. 개에서 메티마졸 혈청 반감기는 8–9시간. 식이와 함께 투여 시 생체이용률 증가. 서방형 제제는 반감기 연장 및 1일 1회 투여 가능."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (heparin, rivaroxaban)",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant potentiation",
+        "bleeding risk"
+      ],
+      "evidence": "Methimazole may potentiate anticoagulant activity of heparin and rivaroxaban."
+    },
+    {
+      "drug": "Benzimidazole Antiparasitics (albendazole, fenbendazole, thiabendazole)",
+      "severity": 2,
+      "keywords": [
+        "hepatic oxidation inhibition",
+        "increased drug levels"
+      ],
+      "evidence": "Concurrent use with methimazole can reduce hepatic oxidation of benzimidazoles and increase blood levels of the parent drug or its metabolites."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, propranolol)",
+      "severity": 1,
+      "keywords": [
+        "dose adjustment",
+        "euthyroid state"
+      ],
+      "evidence": "Beta-blocker dose may need to be decreased once the patient becomes euthyroid."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Combination with carbimazole may increase the risk for myelosuppression."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced clearance",
+        "increased exposure",
+        "toxicity risk"
+      ],
+      "evidence": "Correction to euthyroidism reduces digoxin clearance, resulting in increased digoxin exposure and risk for toxicity. A reduction in the digoxin dose may be needed when the patient becomes euthyroid."
+    },
+    {
+      "drug": "Dipyrone",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Combination with carbimazole may increase the risk for myelosuppression."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "enzyme induction"
+      ],
+      "evidence": "Concurrent use of phenobarbital may reduce the clinical effectiveness of carbimazole."
+    },
+    {
+      "drug": "Prednis(ol)one",
+      "severity": 1,
+      "keywords": [
+        "dose adjustment",
+        "euthyroid state"
+      ],
+      "evidence": "A reduction in prednisolone dose may be needed when the patient becomes euthyroid."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 1,
+      "keywords": [
+        "dose adjustment",
+        "euthyroid state"
+      ],
+      "evidence": "Theophylline dose may need to be reduced once the patient becomes euthyroid."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant potentiation",
+        "antivitamin K activity",
+        "clotting factor metabolism"
+      ],
+      "evidence": "Methimazole has antivitamin K activity and may potentiate warfarin. In hyperthyroid patients, methimazole reduces clotting factor metabolism, altering warfarin sensitivity. Increased monitoring of anticoagulant effect is warranted."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 - 즉방정 (extra-label), 초기 용량",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "유지 용량은 최저 유효 용량으로 서서히 감량. 대부분의 고양이는 12시간 간격으로 2.5–5 mg/cat 필요.",
+          "evidence": "Plumb's: 즉방정 extra-label, 초기 5 mg/cat PO q8–12h"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 - 즉방정 (extra-label), 초기 용량",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "유지 용량은 최저 유효 용량으로 서서히 감량.",
+          "evidence": "Plumb's: 즉방정 extra-label, 초기 5 mg/cat PO q8–12h"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 - 즉방정 (extra-label), 유지 용량",
+          "value": "2.5 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 고양이는 1일 1회 투여로 조절 가능.",
+          "evidence": "Plumb's: 즉방정 extra-label 유지 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 - 서방정 (extra-label), 표준 용량",
+          "value": "15",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "매일 같은 시간에 투여. 정제를 분할하지 말 것.",
+          "evidence": "Plumb's: 서방정 extra-label, 15 mg/cat PO SID"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 - 서방정 (extra-label), 중등도 갑상선기능항진증 (TT4 50–100 nmol/L)",
+          "value": "10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 증상 및 TT4에 따라 10–25 mg/cat/day 범위에서 5 mg 단위로 조정. 10 mg 미만 필요 시 격일 투여 고려.",
+          "evidence": "Plumb's: 서방정 extra-label, 중등도 갑상선기능항진증"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 - 서방정 (extra-label), 격일 투여",
+          "value": "10 - 15",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10 mg/day 미만 필요 시 격일 투여 고려.",
+          "evidence": "Plumb's: 서방정 extra-label, 격일 투여 옵션"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "갑상선기능항진증 치료 시 GFR 감소로 잠재적 신질환이 노출될 수 있으므로 치료 중 신장 지표를 면밀히 모니터링해야 한다. 기존 신질환이 있는 고양이에서는 주의하여 사용한다. 명시적인 용량 조정 권고사항은 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간질환 시 금기. 기존 간질환이 있는 고양이에서는 주의하여 사용한다. 명시적인 용량 조정 수치는 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "카르비마졸 또는 메티마졸 과민반응",
+      "match_terms": [
+        "hypersensitivity to carbimazole",
+        "hypersensitivity to methimazole"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe liver disease",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액학적 이상 (빈혈, 호중구감소증, 림프구감소증, 혈소판감소증)",
+      "match_terms": [
+        "anemia",
+        "neutropenia",
+        "lymphopenia",
+        "thrombocytopenia",
+        "blood dyscrasia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "응고장애",
+      "match_terms": [
+        "coagulopathy",
+        "coagulation disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자가면역질환",
+      "match_terms": [
+        "autoimmune disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "기존 간질환 (경증~중등도)",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "카르비마졸은 메티마졸의 전구약물로, 체내에서 거의 완전히 메티마졸로 전환된다. 메티마졸은 갑상선 퍼옥시다제를 억제하고 티로글로불린의 티로실 잔기에 요오드가 결합하는 것을 방해하여 갑상선 호르몬 합성을 억제한다. 또한 요오드화 티로실 잔기가 결합하여 요오드티로닌을 형성하는 것을 억제한다. 이미 형성되거나 순환 중인 갑상선 호르몬의 방출이나 활성에는 영향을 미치지 않는다.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "기면",
+      "호산구증가증",
+      "백혈구감소증",
+      "림프구증가증",
+      "자가유발 찰과상",
+      "간병증",
+      "혈소판감소증",
+      "무과립구증",
+      "면역매개성 용혈성 빈혈",
+      "면역매개성 혈소판감소증",
+      "후천성 중증근무력증",
+      "항핵항체(ANA) 증가"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "고양이에서 카르비마졸은 경구 투여 후 빠르게 흡수되어 거의 완전히 메티마졸로 전환된다. 메티마졸은 갑상선 조직에 농축되며 혈중 농도가 측정 불가능한 수준이 되어도 생물학적 효과가 지속된다.",
+    "cat_extra_effects": [
+      "구토 (약 10%)",
+      "식욕부진 (약 10%)",
+      "기면 (약 10%)",
+      "호산구증가증 (약 5%)",
+      "백혈구감소증 (약 5%)",
+      "림프구증가증 (약 5%)",
+      "자가유발 찰과상",
+      "간병증",
+      "혈소판감소증",
+      "무과립구증",
+      "면역매개성 용혈성 빈혈",
+      "면역매개성 혈소판감소증",
+      "후천성 중증근무력증",
+      "항핵항체(ANA) 증가 (6개월 이상 투여 시 약 50%)",
+      "과민성 혈관염 (드물게)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 카르비마졸의 사용에 대한 공식적인 승인이나 용량 권고사항이 없다. 메티마졸의 혈청 반감기는 개에서 8–9시간으로 보고되어 있다. 개에서의 사용은 현재 문헌에서 지지되지 않는다.",
+    "cat": "고양이 갑상선기능항진증 치료의 1차 선택약 중 하나이다. 즉방정은 초기 5 mg/cat q8–12h로 시작하며, 서방정(Vidalta®)은 15 mg/cat SID로 투여한다. 치료 시작 후 1–3주의 지연 시간이 있으며, 갑상선기능 정상화 후 잠재적 신질환이 노출될 수 있으므로 신장 지표를 면밀히 모니터링해야 한다. 대부분의 부작용은 치료 첫 3개월 이내에 발생한다. 메티마졸(활성 대사체)은 NIOSH에서 위험 약물로 분류하므로 취급 시 적절한 보호 장비를 착용해야 한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 공식 용량 권고사항 없음. 메티마졸 반감기 데이터만 존재. 사용 시 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "기존 신질환 또는 간질환이 있는 고양이에서 주의하여 사용. 치료 중 정기적인 CBC, 혈청 화학 검사, 혈압, TT4 모니터링 필요. 임신 중 사용 금기. 수유 중인 경우 대체 수유 방법 고려."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(25°C 이하)에서 밀폐 용기에 보관하고 빛을 차단한다. 제조사 병에서 건조제를 제거하지 말 것.",
+    "forms": [
+      "즉방정: 5 mg, 10 mg, 15 mg, 20 mg",
+      "서방정(지속방출정): 10 mg, 15 mg (Vidalta®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "카르비마졸은 메티마졸의 전구약물로, 고양이 갑상선기능항진증 치료의 1차 선택약이다. 미국 내 FDA 승인 제품은 없으나 일부 국가에서 수의용 서방정(Vidalta®)이 허가되어 있다. 대부분의 부작용은 치료 첫 3개월 이내에 발생하며, 구토·식욕부진·기면이 가장 흔하다(약 10%). 드물지만 심각한 부작용으로 무과립구증, 혈소판감소증, 면역매개성 용혈성 빈혈, 간병증, 후천성 중증근무력증이 있다. 갑상선기능 정상화 후 잠재적 신질환이 노출될 수 있으므로 신장 지표 모니터링이 필수적이다. 활성 대사체인 메티마졸은 NIOSH 위험 약물로 분류되므로 취급 시 적절한 보호 장비 착용이 필요하다.",
+    "indications": "고양이 갑상선기능항진증 및 관련 임상 증상 치료. 즉방정(extra-label) 및 서방정(일부 국가 허가) 모두 사용 가능.",
+    "client_info": "이 약은 음식과 함께 투여하세요. 정제를 분쇄하거나 분할하지 마세요. 수의사가 처방한 대로 정확히 투여해야 효과가 있습니다. 이 약은 과도한 갑상선 호르몬을 감소시키지만 질환을 완치하지는 않습니다. 개선이 나타나기까지 수 주가 걸릴 수 있습니다. 투약 중에는 정기적인 검진과 혈액 검사가 필요하므로 추적 방문을 빠지지 마세요. 치료는 장기적으로, 종종 고양이의 남은 생애 동안 지속됩니다. 구토, 식욕 감소, 기력 저하 등의 부작용은 주로 치료 첫 3개월 이내에 나타납니다. 이러한 증상이 보이면 투약을 중단하고 수의사에게 연락하세요. 황달(피부, 눈, 잇몸이 노랗게 변함)이나 심한 가려움증이 나타나면 즉시 투약을 중단하고 수의사에게 연락하세요. 약을 만진 후에는 장갑을 착용했더라도 비누와 물로 손을 씻으세요. 임신 중이거나 임신 가능성이 있는 여성, 수유 중인 여성, 갑상선 기능이 저하된 분은 이 약을 취급하지 않는 것이 좋습니다. 불가피한 경우 일회용 장갑을 착용하고 사용 후 버리세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/52.jsonl",
+    "extracted_at": "2026-03-11T05:29:36.344276+00:00",
+    "reviewer": null
+  }
+}

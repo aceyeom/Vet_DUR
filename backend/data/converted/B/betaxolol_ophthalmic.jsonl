@@ -1,0 +1,455 @@
+{
+  "id": "betaxolol_ophthalmic",
+  "drug_identity": {
+    "name_ko": "베탁솔롤 점안액",
+    "name_en": "Betaxolol Ophthalmic",
+    "active_ingredient": "Betaxolol",
+    "brand_names": [
+      "Betoptic",
+      "Betoptic S"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 점안액을 동물에게 적응증 외(extra-label)로 사용함.",
+    "dosage_form": [
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "%"
+      },
+      {
+        "value": 0.25,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "점안 투여 시 전신 흡수는 최소화되며, 개와 고양이에서의 약동학 데이터는 Plumb's 모노그래프에 기술되어 있지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "점안 투여로 전신 노출이 제한적이나, 고양이에서 다른 국소 베타차단제가 심박수를 유의하게 감소시킨다는 보고가 있음. 점수는 보고된 이상반응 키워드를 기반으로 산출함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "인체에서 기면 및 우울이 보고됨. 개에서의 직접적 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bradycardia",
+          "heart block"
+        ],
+        "index": 1,
+        "evidence": "서맥 및 심장 차단이 이상반응으로 보고됨. 점안 투여 시 전신 효과는 낮을 것으로 예상됨."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "heart block",
+          "congestive heart failure"
+        ],
+        "index": 1,
+        "evidence": "서맥, 심장 차단, 울혈성 심부전이 이상반응으로 보고됨. 점안 투여 시 전신 효과는 낮을 것으로 예상되나 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "인체에서 기면 및 우울이 보고됨. 고양이에서의 직접적 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "bradycardia",
+          "heart rate reduction"
+        ],
+        "index": 1,
+        "evidence": "다른 국소 베타차단제가 건강한 고양이에서 심박수를 유의하게 감소시킨다는 보고가 있음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bradycardia",
+          "heart block",
+          "congestive heart failure",
+          "heart rate reduction"
+        ],
+        "index": 1,
+        "evidence": "다른 국소 베타차단제가 건강한 고양이에서 심박수를 유의하게 감소시킨다는 보고가 있으며, 서맥 및 심장 차단이 이상반응으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "Plumb's 모노그래프에 점안 투여 후 약동학 데이터(반감기, 생체이용률 등)가 기술되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's 모노그래프의 금기/주의사항 및 이상반응 섹션에서 추출함. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Systemic beta-blockers",
+      "severity": 2,
+      "keywords": [
+        "additive beta-blockade",
+        "bradycardia",
+        "heart block"
+      ],
+      "evidence": "Concurrent use with systemic beta-blockers may produce additive effects on heart rate and cardiac conduction."
+    },
+    {
+      "drug": "Calcium channel blockers",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "heart block",
+        "additive cardiac depression"
+      ],
+      "evidence": "Concurrent use may produce additive effects on cardiac conduction and heart rate."
+    },
+    {
+      "drug": "Tafluprost",
+      "severity": 1,
+      "keywords": [
+        "additive IOP reduction"
+      ],
+      "evidence": "Combination with tafluprost leads to greater reduction of IOP in normal dogs compared to timolol; considered a beneficial interaction in glaucoma management."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "녹내장 치료 및 편측성 녹내장 환자의 정상안 예방 (적응증 외)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 'Glaucoma (extra-label): 1 drop to the affected eye(s) twice daily'"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "녹내장 치료 (적응증 외; 고양이에서 심박수 감소 위험 주의)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "다른 국소 베타차단제가 건강한 고양이에서 심박수를 유의하게 감소시킨다는 보고가 있으므로 주의 필요",
+          "evidence": "Plumb's: 'Glaucoma (extra-label): 1 drop to the affected eye(s) twice daily'. 고양이에서 국소 베타차단제의 심박수 감소 효과 보고됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신기능 저하 시 용량 조절에 대한 구체적 언급 없음. 점안 투여로 전신 흡수가 최소화되므로 임상적 영향은 낮을 것으로 예상됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간기능 저하 시 용량 조절에 대한 구체적 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "Hypersensitivity to betaxolol or formulation components",
+      "match_terms": [
+        "drug allergy",
+        "hypersensitivity",
+        "betaxolol allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Heart block",
+      "match_terms": [
+        "heart block",
+        "AV block",
+        "atrioventricular block"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Bradycardia",
+      "match_terms": [
+        "bradycardia",
+        "sinus bradycardia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Congestive heart failure",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Asthma or chronic bronchitis",
+      "match_terms": [
+        "asthma",
+        "chronic bronchitis",
+        "bronchospasm",
+        "COPD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Diabetes mellitus",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM",
+        "hypoglycemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Hyperthyroidism",
+      "match_terms": [
+        "hyperthyroidism",
+        "thyrotoxicosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "섬모체 상피의 베타-1 수용체 차단을 통해 방수 생성을 감소시켜 안압(IOP)을 낮춤. cAMP 활성화 감소, Na+K+ATPase 억제, 홍채 및 섬모체의 혈관 작용 기전이 관여함. 또한 글루타민 유발 세포내 칼슘 및 나트륨 증가를 억제하여 망막 허혈 손상에 대한 보호 효과 가능.",
+    "common_extra_effects": [
+      "점안 시 일시적 작열감, 따끔거림, 자극",
+      "각막염(keratitis)",
+      "동공 크기 불균등(anisocoria)",
+      "광선 공포증(photophobia)",
+      "서맥(bradycardia)",
+      "심장 차단(heart block)",
+      "울혈성 심부전(congestive heart failure)",
+      "호흡 곤란(pulmonary distress)",
+      "불면증(insomnia)",
+      "어지러움(dizziness)",
+      "두통(headache)",
+      "기면(lethargy)",
+      "우울(depression)"
+    ],
+    "dog_mechanism": "개에서 편측성 녹내장 환자의 정상안에 대한 녹내장 발생 지연 효과가 보고됨. 0.5% 용액이 0.25% 용액보다 안압 감소 효과가 크나 이상반응 위험도 증가함.",
+    "dog_extra_effects": [],
+    "cat_mechanism": "다른 국소 베타차단제가 건강한 고양이에서 심박수를 유의하게 감소시킨다는 보고가 있어 주의 필요.",
+    "cat_extra_effects": [
+      "심박수 감소(heart rate reduction)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 편측성 녹내장 환자의 정상안에 녹내장 발생을 지연시키는 효과가 보고됨. 타플루프로스트와 병용 시 티몰롤 단독 사용보다 정상 개에서 안압 감소 효과가 더 큼. 0.5% 용액이 0.25% 용액보다 안압 감소 효과가 크나 이상반응 위험도 증가하므로 농도 선택 시 주의 필요.",
+    "cat": "고양이에서 다른 국소 베타차단제가 심박수를 유의하게 감소시킨다는 보고가 있으므로, 베탁솔롤 점안 시에도 심혈관계 모니터링이 권장됨. 천식이 있는 고양이에서는 기관지 경련 유발 가능성에 주의해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 차단, 서맥, 심부전, 천식, 만성 기관지염 환자에서 주의 사용. 당뇨병 환자에서 저혈당 증상을 가릴 수 있음. 갑상선 기능 항진증 환자에서 증상을 가릴 수 있음. 베타차단제의 갑작스러운 중단은 피해야 함."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "다른 국소 베타차단제가 건강한 고양이에서 심박수를 유의하게 감소시킨다는 보고가 있음. 심혈관계 및 호흡기계 이상 환자에서 주의 사용 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장(2°C-8°C) 또는 실온(20°C-25°C) 보관. 습기와 직사광선을 피하고 동결 금지. 색 변화, 혼탁, 입자 발생 시 사용 금지.",
+    "forms": [
+      "Betaxolol HCl 0.5% 점안액 (2.5mL, 5mL, 10mL, 15mL 멸균 점안 드로퍼 병) - Betoptic®, 제네릭",
+      "Betaxolol HCl 0.25% 점안 현탁액 (10mL, 15mL 멸균 점안 드로퍼 병) - Betoptic®-S"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "베탁솔롤 점안액은 베타-1 선택적 베타차단제로, 방수 생성 억제를 통해 안압을 낮추는 녹내장 치료제입니다. 수의학적 허가 제품은 없으며 인체용 제품을 적응증 외로 사용합니다. 0.5% 용액이 0.25% 용액보다 안압 감소 효과가 크나 이상반응 위험도 증가합니다. 편측성 녹내장 개의 정상안에서 녹내장 발생을 지연시키는 효과가 보고되어 있습니다. 고양이에서 국소 베타차단제에 의한 심박수 감소가 보고되어 있으므로 주의가 필요합니다.",
+    "indications": "원발성 녹내장의 안압 감소 치료 및 편측성 녹내장 동물의 정상안에서 녹내장 예방 목적으로 사용 (적응증 외). 타플루프로스트와 병용 시 개에서 안압 감소 효과 증대.",
+    "client_info": "수의사의 지시에 따라 정확히 사용하십시오. 현탁액 제형은 사용 전 충분히 흔들어 주십시오. 약물 오염을 방지하기 위해 올바른 점안 방법을 사용하고, 사용하지 않을 때는 뚜껑을 꼭 닫아 두십시오. 이 약을 점안한 후 다른 안약을 사용하기 전에 5분을 기다리십시오. 냉장고 또는 실온(습기와 직사광선을 피한 곳)에 보관하고 동결시키지 마십시오. 색이 변하거나 혼탁해지거나 입자가 생기면 사용하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "additive_class",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Drug Interactions",
+      "Overdosage"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.primary_metabolic_organ",
+      "metabolism_and_clearance.clearance_organ",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/9.jsonl",
+    "extracted_at": "2026-03-10T16:14:38.890692+00:00",
+    "reviewer": null
+  }
+}

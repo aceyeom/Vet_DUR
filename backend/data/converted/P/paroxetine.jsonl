@@ -1,0 +1,719 @@
+{
+  "id": "paroxetine",
+  "drug_identity": {
+    "name_ko": "파록세틴",
+    "name_en": "Paroxetine",
+    "active_ingredient": "Paroxetine",
+    "brand_names": [
+      "Paxil",
+      "Paxil CR",
+      "Brisdelle",
+      "Pexeva"
+    ],
+    "allergy_class": null,
+    "class": "Antidepressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이의 행동 장애 치료에 사람용 제품을 엑스트라라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 12.5,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 37.5,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2D6"
+      ],
+      "inhibitors": [
+        "CYP2D6"
+      ],
+      "inducers": [],
+      "pathway_evidence": "파록세틴은 사람에서 CYP2D6의 기질이자 억제제임. 간에서 광범위하게 대사되며, 높은 초회통과효과로 인해 전신 순환에 도달하는 미변화체의 양이 적음."
+    },
+    "extra_information": "개와 고양이에 대한 약동학 데이터 없음. 회색 앵무새에서 경구 투여 시 평균 생체이용률 31%, 반감기 약 5시간으로 보고됨. 사람에서 반감기는 7~65시간(평균 약 24시간)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 특이적 수의학 PK 데이터 없음. 사람 데이터 및 임상 이상반응 보고를 기반으로 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "lethargy",
+          "anxiety",
+          "insomnia",
+          "hyperactivity",
+          "aggression",
+          "seizure threshold",
+          "CNS"
+        ],
+        "index": 1,
+        "evidence": "개에서 기면, 불안, 불면, 과잉행동, 공격성 등 CNS 이상반응 보고됨. 발작 역치 감소 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "platelet aggregation",
+          "bleeding",
+          "hyponatremia",
+          "blood glucose"
+        ],
+        "index": 2,
+        "evidence": "세로토닌성 효과로 혈소판 응집 감소 및 출혈 위험 증가. 혈당 변화 가능성. 사람에서 저나트륨혈증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "중증 신장 질환 시 주의 및 용량 감량 권고. 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass effect",
+          "hepatic disease",
+          "hepatic impairment"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 중증 간질환 시 용량 감량 권고."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "arrhythmias",
+          "QT prolongation",
+          "cardiac disease"
+        ],
+        "index": 5,
+        "evidence": "항콜린 효과로 부정맥 가능성. 베타차단제와 병용 시 QT 연장 위험. 중증 심장 질환 시 주의."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "behavior changes",
+          "anxiety",
+          "aggression",
+          "sleep disturbances",
+          "mydriasis"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 행동 변화(불안, 공격성, 수면 장애) 보고됨. 과다복용 시 산동 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "platelet aggregation",
+          "bleeding"
+        ],
+        "index": 2,
+        "evidence": "세로토닌성 효과로 혈소판 응집 감소 및 출혈 위험 증가 가능."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "중증 신장 질환 시 주의 및 용량 감량 권고. 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass effect",
+          "hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 중증 간질환 시 용량 감량 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "arrhythmias",
+          "cardiac disease"
+        ],
+        "index": 5,
+        "evidence": "항콜린 효과로 부정맥 가능성. 중증 심장 질환 시 주의."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 7.0,
+      "max": 65.0,
+      "mean": 24.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 95,
+    "evidence": "사람에서 반감기 7~65시간, 평균 약 24시간. 혈장 단백 결합률 약 95%. 개와 고양이에 대한 PK 데이터 없음. 회색 앵무새에서 평균 생체이용률 31%, 반감기 약 5시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 관련 상호작용은 세로토닌 증후군 위험으로 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "MAO Inhibitors (amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "contraindicated"
+      ],
+      "evidence": "High risk for serotonin syndrome; use is contraindicated. In humans, a 5-week washout period is required after discontinuing paroxetine and a 2-week washout period if first discontinuing the MAO inhibitor."
+    },
+    {
+      "drug": "Methylene Blue",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome; avoid concomitant use."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Opioids (fentanyl, methadone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "seizures",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "SSRIs can inhibit the metabolism of tramadol to its active metabolites, decreasing its efficacy and increasing the risk for toxicity (serotonin syndrome, seizures)."
+    },
+    {
+      "drug": "Tricyclic antidepressants (clomipramine, amitriptyline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "increased TCA levels",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "Paroxetine may increase TCA blood levels and the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "increased trazodone levels"
+      ],
+      "evidence": "Increased plasma levels of trazodone possible. Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "enhanced toxicity"
+      ],
+      "evidence": "May enhance adverse/toxic effects of SSRIs and increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Pentazocine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome-like effects"
+      ],
+      "evidence": "Serotonin syndrome-like adverse effects are possible."
+    },
+    {
+      "drug": "St John's Wort",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome."
+    },
+    {
+      "drug": "Anticoagulants (heparin, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "anticoagulation"
+      ],
+      "evidence": "Paroxetine may increase the risk for bleeding."
+    },
+    {
+      "drug": "Antiplatelet Agents (aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "platelet aggregation"
+      ],
+      "evidence": "Paroxetine may increase the risk for bleeding."
+    },
+    {
+      "drug": "NSAIDs (aspirin, carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "GI ulceration"
+      ],
+      "evidence": "SSRIs may increase the risk for bleeding and GI ulceration."
+    },
+    {
+      "drug": "Beta-Adrenergic Blocking Agents (atenolol, propranolol, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia",
+        "increased beta-blocker levels"
+      ],
+      "evidence": "SSRIs may increase serum concentrations of beta-blockers and the combination may increase risk for arrhythmias due to prolongation of the QT interval. Atenolol may be safer to use if paroxetine is required."
+    },
+    {
+      "drug": "Phenytoin",
+      "severity": 2,
+      "keywords": [
+        "increased phenytoin levels"
+      ],
+      "evidence": "Increased plasma levels of phenytoin are possible."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced paroxetine levels"
+      ],
+      "evidence": "May reduce paroxetine concentration and exposure."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "increased doxorubicin concentration",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "Paroxetine may increase doxorubicin concentration."
+    },
+    {
+      "drug": "Mexiletine",
+      "severity": 2,
+      "keywords": [
+        "reduced mexiletine metabolism",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "SSRIs may decrease the metabolism of mexiletine."
+    },
+    {
+      "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "Increased risk for hyponatremia."
+    },
+    {
+      "drug": "Codeine",
+      "severity": 2,
+      "keywords": [
+        "reduced analgesic efficacy",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "Paroxetine may reduce codeine's conversion into morphine."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "altered insulin requirements",
+        "blood glucose"
+      ],
+      "evidence": "May alter insulin requirements."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 2,
+      "keywords": [
+        "reduced SSRI efficacy"
+      ],
+      "evidence": "May decrease or reverse the effects of SSRIs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 5.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "SSRI 반응성 행동 문제 (엑스트라라벨) - 공격성, 불안, 강박 행동",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "약 2개월 치료 후 평가 및 용량 조정. 일반(서방형 아님) 정제 사용.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use. 행동 교정과 병행 사용. 낮은 용량부터 시작 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "SSRI 반응성 행동 문제 (엑스트라라벨) - 소변 마킹, 공격성, 고양이 과민증 증후군",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "약 2개월 치료 후 평가 및 용량 조정. 일반(서방형 아님) 정제 사용.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use. 낮은 용량부터 시작 권장."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "SSRI 반응성 행동 문제 (엑스트라라벨) - 고정 용량 (실용적 투여)",
+          "value": "1.25 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "10mg 정제의 1/8~1/2 조각 사용. 1일 1~2회 투여 가능. 약 2개월 치료 후 평가.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use. mg/kg 기준이 아닌 고양이 1마리당 고정 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신장 질환 시 용량 감량 권고. 구체적인 크레아티닌 역치 또는 감량 비율은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간질환 시 용량 감량 권고. 간에서 광범위하게 대사되므로 간기능 저하 시 혈중 농도 상승 가능. 구체적인 ALT 역치 또는 감량 비율은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "paroxetine hypersensitivity",
+        "SSRI hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAO 억제제 병용",
+      "match_terms": [
+        "MAOI",
+        "amitraz",
+        "selegiline",
+        "linezolid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심장 질환",
+      "match_terms": [
+        "severe cardiac disease",
+        "heart failure",
+        "arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "liver failure",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CNS에서 세로토닌 재흡수를 고선택적으로 억제하여 세로토닌의 약리 활성을 강화함. 도파민 및 노르에피네프린 재흡수에 대한 효과는 매우 약하며, 경미한 항콜린 효과를 가짐.",
+    "common_extra_effects": [
+      "식욕부진",
+      "위장관 이상반응",
+      "혈소판 응집 감소 및 출혈 위험 증가",
+      "항콜린 효과 (변비, 요저류, 부정맥)",
+      "발작 역치 감소 가능성",
+      "혈당 변화",
+      "세로토닌 증후군 (과다복용 또는 약물 상호작용 시)"
+    ],
+    "dog_mechanism": "세로토닌 재흡수 억제를 통해 행동 장애(공격성, 불안, 강박 행동) 치료에 사용됨.",
+    "dog_extra_effects": [
+      "기면",
+      "침 분비 증가",
+      "위장관 이상반응",
+      "불안",
+      "과민성",
+      "불면",
+      "과잉행동",
+      "헐떡임",
+      "공격성 (이전에 공격적이지 않던 개에서 보고됨)",
+      "식욕부진 (일반적으로 일시적)"
+    ],
+    "cat_mechanism": "세로토닌 재흡수 억제를 통해 소변 마킹, 공격성, 고양이 과민증 증후군 치료에 사용됨.",
+    "cat_extra_effects": [
+      "행동 변화 (불안, 과민성, 수면 장애)",
+      "식욕부진",
+      "변비",
+      "배변 패턴 변화"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 파록세틴은 공격성, 불안, 강박 행동 등 SSRI 반응성 행동 문제에 엑스트라라벨로 사용됨. 식욕부진이 가장 흔한 이상반응으로, 대부분 일시적이나 일부 개에서는 지속되어 투약 중단이 필요할 수 있음. 플루옥세틴보다 식욕부진 발생률이 낮은 것으로 보임. 행동 교정과 병행 사용 권장. 장기 투여 후 중단 시 수 주에 걸쳐 점진적으로 감량 권고.",
+    "cat": "고양이에서 파록세틴은 소변 마킹, 공격성, 고양이 과민증 증후군에 가끔 사용됨. 행동 변화(불안, 공격성, 수면 장애), 식욕부진, 변비, 배변 패턴 변화가 이상반응으로 보고됨. 실용적으로 10mg 정제의 1/8~1/2 조각(1.25~5mg/마리)을 1일 1~2회 투여. 장기 투여 후 중단 시 점진적 감량 권고."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "중증 심장, 신장, 간질환 시 주의. 발작 장애 환자에서 주의. 장기 투여 후 갑작스러운 중단 금지. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 권고."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "중증 심장, 신장, 간질환 시 주의. 발작 장애 환자에서 주의. 장기 투여 후 갑작스러운 중단 금지. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 권고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 정제: 15~30°C 보관. 경구 현탁액: 25°C 이하 보관.",
+    "forms": [
+      "경구 정제 (일반형): 10mg, 20mg, 30mg, 40mg",
+      "경구 정제 (서방형): 12.5mg, 25mg, 37.5mg",
+      "경구 현탁액: 2mg/mL (250mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "파록세틴은 선택적 세로토닌 재흡수 억제제(SSRI)로, 개와 고양이의 다양한 행동 장애 치료에 엑스트라라벨로 사용됨. MAO 억제제(아미트라즈 포함)와의 병용은 세로토닌 증후군 위험으로 절대 금기. CYP2D6의 기질이자 강력한 억제제로 다수의 약물 상호작용 주의 필요. 개에서 식욕부진이 가장 흔한 이상반응. 장기 투여 후 갑작스러운 중단 금지. NIOSH 위험 약물로 분류.",
+    "indications": "【개】 공격성, 불안, 강박 행동 등 SSRI 반응성 행동 장애 (엑스트라라벨)\n【고양이】 소변 마킹, 공격성, 고양이 과민증 증후군 (엑스트라라벨)\n【조류】 깃털 뽑기 등 스트레스/불안 관련 행동 장애 (엑스트라라벨)\n수의학적 허가 제품 없음.",
+    "client_info": "이 약은 효과가 나타나기까지 최대 6주가 걸릴 수 있습니다. 가장 흔한 부작용은 졸음과 식욕 감소입니다. 발작이나 공격적인 행동이 나타나면 즉시 수의사에게 연락하세요. 과다복용은 매우 위험하므로 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 벼룩·진드기 목걸이를 착용 중이거나 최근 2주 이내에 착용한 경우 반드시 수의사에게 알려주세요. 수의사와 상담 없이 갑자기 투약을 중단하지 마세요. 이 약은 NIOSH에서 위험 약물로 분류하므로 취급 시 적절한 보호 장비를 사용하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability in dogs/cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.has_genetic_risk",
+      "timing_profile.half_life_hr (dog/cat specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:36:06.125967+00:00",
+    "reviewer": null
+  }
+}

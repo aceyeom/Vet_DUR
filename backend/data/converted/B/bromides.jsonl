@@ -1,0 +1,547 @@
+{
+  "id": "bromides",
+  "drug_identity": {
+    "name_ko": "브로마이드 (브롬화칼륨/브롬화나트륨)",
+    "name_en": "Bromides (Potassium Bromide / Sodium Bromide)",
+    "active_ingredient": "Potassium Bromide / Sodium Bromide",
+    "brand_names": [
+      "KBroVet-CA1"
+    ],
+    "allergy_class": null,
+    "class": "Anticonvulsant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "브로마이드는 대사되지 않고 신장을 통해 변화 없이 배설됨. CYP 효소 관여 없음."
+    },
+    "extra_information": "개에서 경구 생체이용률 평균 46% (개체 간 변동 큼). 직장 투여 시 생체이용률 60–100%. 분포용적 0.2–0.4 L/kg (세포외액). 혈장 단백 결합 없음. CSF 농도는 혈청 농도의 약 80%. 반감기 약 15일, 정상 상태 도달까지 약 4개월 소요. 혈청 염화물 수준 변화 또는 신기능 저하 시 배설 속도에 유의한 영향."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 브로마이드는 신장으로 미변화 배설되므로 신장 부담이 가장 높음. 중추신경계 억제 효과로 뇌 부담 중등도. 간 대사 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "stupor",
+          "seizure threshold"
+        ],
+        "index": 1,
+        "evidence": "브로마이드는 신경세포 흥분성을 전반적으로 억제하며, 진정, 운동실조, 혼미 등 CNS 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hyperchloremia",
+          "serum chloride interference",
+          "electrolyte"
+        ],
+        "index": 2,
+        "evidence": "혈청 염화물 측정 간섭 및 고염소혈증 보고. 혈청 ALP, ALT, AST 상승 보고."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction",
+          "dosage adjustment",
+          "unchanged excretion"
+        ],
+        "index": 0,
+        "evidence": "브로마이드는 신장을 통해 미변화 배설됨. 신기능 저하 시 독성 위험 증가 및 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "increased ALP",
+          "increased ALT",
+          "hepatopathy"
+        ],
+        "index": 3,
+        "evidence": "간 대사 없으나, 혈청 ALP 및 ALT 상승, 만성 임상 간병증/독성이 부작용으로 보고됨."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiotoxicity",
+          "potassium"
+        ],
+        "index": 4,
+        "evidence": "브롬화칼륨 IV 투여 시 칼륨에 의한 심독성 위험. 경구 투여 시 대용량 부하 용량은 혈청 칼륨에 영향 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정, 다음증, 체중 증가 등 CNS 관련 부작용 보고."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 관련 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 0,
+        "evidence": "브로마이드는 신장으로 배설되므로 고양이에서도 신장 부담 존재. 고양이 특이 PK 데이터 부재."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간 관련 특이 데이터 없음. 간 대사 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 336.0,
+      "max": 360.0,
+      "mean": 360.0,
+      "species": "dog"
+    },
+    "f_percent": 46,
+    "protein_binding_percent": 0,
+    "evidence": "개에서 반감기 약 15일(360시간). 경구 생체이용률 평균 46%. 혈장 단백 결합 없음. 직장 투여 시 생체이용률 60–100%. 정상 상태 도달까지 약 4개월."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticonvulsants (levetiracetam, phenobarbital, zonisamide)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Other anticonvulsants may increase risk for CNS depression when combined with bromides."
+    },
+    {
+      "drug": "Antihistamines (cetirizine, diphenhydramine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Antihistamines may increase risk for CNS depression when combined with bromides."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Benzodiazepines may increase risk for CNS depression when combined with bromides."
+    },
+    {
+      "drug": "CNS Sedating Drugs (acepromazine, methocarbamol, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Bromides cause CNS depression; other CNS sedating drugs may cause additive sedation."
+    },
+    {
+      "drug": "Diuretics (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "enhanced excretion",
+        "reduced serum bromide",
+        "seizure control"
+      ],
+      "evidence": "Diuretics may enhance excretion of bromides, affecting seizure control and dosage requirements."
+    },
+    {
+      "drug": "IV Fluids Containing Sodium",
+      "severity": 2,
+      "keywords": [
+        "reduced serum bromide",
+        "seizure control"
+      ],
+      "evidence": "IV sodium-containing fluids can reduce serum bromide concentrations. Lactated Ringer's and normal saline reduced serum bromide concentration by 14%."
+    },
+    {
+      "drug": "Low/High Salt (Sodium Chloride) Diets",
+      "severity": 2,
+      "keywords": [
+        "bromide toxicity",
+        "reduced serum bromide",
+        "chloride competition"
+      ],
+      "evidence": "Low-salt diets may cause bromide toxicity; high-salt diets may reduce serum bromide concentrations affecting seizure control. Keep dietary chloride stable."
+    },
+    {
+      "drug": "Opioids (buprenorphine, hydrocodone, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation",
+        "seizure threshold"
+      ],
+      "evidence": "Opioids may increase risk for CNS depression. Tramadol appears to lower seizure threshold in humans; veterinary significance uncertain."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Tricyclic antidepressants may increase risk for CNS depression when combined with bromides."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 75.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "특발성 간질에 의한 발작 조절 (FDA 조건부 승인 라벨 용량, 브롬화칼륨)",
+          "value": "25 - 68",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 68.0,
+          "duration_note": "임상 반응에 따라 조절; 중앙값 37 mg/kg/day",
+          "evidence": "FDA 조건부 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 부하 용량 프로토콜 1 (extra-label, 브롬화칼륨): 7일간 분할 투여",
+          "value": "32",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일간 투여 (총 450 mg/kg을 14회 분할)",
+          "evidence": "Extra-label 부하 용량 프로토콜 1"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 부하 용량 프로토콜 2 (extra-label, 브롬화칼륨): 17–48시간에 걸쳐 분할 투여 후 유지",
+          "value": "600",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5–10회 균등 분할하여 17–48시간에 걸쳐 투여; 이후 30 mg/kg/day 유지 용량 병행",
+          "evidence": "Extra-label 부하 용량 프로토콜 2; 84%에서 24시간 내 치료 범위 도달"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 부하 용량 (extra-label, 브롬화나트륨 3% 수용액 IV): 브롬화칼륨 IV 투여 절대 금지",
+          "value": "브롬화칼륨 용량의 85%",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 8시간에 걸쳐 주입; 인라인 IV 필터 필요; 임상 경험 제한적",
+          "evidence": "Extra-label; 브롬화나트륨만 IV 가능, 브롬화칼륨 IV 절대 금지"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 유지 용량 (extra-label, 브롬화칼륨)",
+          "value": "30 - 40",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": "1일 1회 또는 2회 분할 투여; 페노바르비탈 병용 시 초기 15–30 mg/kg/day 권장; 임상 효과, 부작용, 혈청 농도에 따라 조절",
+          "evidence": "Extra-label 유지 용량"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "브로마이드는 신장으로 미변화 배설되므로 신기능 저하 시 용량 조절 필요. 구체적 조절 계수는 명시되지 않음. 신기능 저하 환자에서 독성 위험 최소화를 위해 용량 감량 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "브로마이드는 간에서 대사되지 않으므로 간기능 저하에 따른 용량 조절 불필요. 단, 페노바르비탈 간독성 환자에서 브로마이드 단독 요법으로 전환 시 고려."
+  },
+  "contraindications": [
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "CKD",
+        "renal failure",
+        "renal insufficiency",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "고양이 폐 질환 / 호산구성 기관지염",
+      "match_terms": [
+        "eosinophilic bronchitis",
+        "feline asthma",
+        "pulmonary disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질 불균형 소인 (조절되지 않는 부신피질기능저하증, 당뇨병)",
+      "match_terms": [
+        "hypoadrenocorticism",
+        "Addison's disease",
+        "diabetes mellitus",
+        "electrolyte imbalance"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "브롬화칼륨 정맥 투여",
+      "match_terms": [
+        "IV potassium bromide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "브로마이드 이온이 세포막을 통한 염화물 수송과 경쟁하여 막 과분극을 유발함으로써 발작 역치를 높이고 간질 방전의 확산을 제한함.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "다식증(polyphagia)",
+      "체중 증가",
+      "다음증(polydipsia)",
+      "다뇨증(polyuria)",
+      "구토",
+      "설사 또는 변비",
+      "후지 마비(hindlimb paresis)",
+      "ALP/ALT 상승",
+      "췌장염(pancreatitis, 특발성)",
+      "피부 병변(panniculitis)",
+      "고염소혈증",
+      "음이온 갭 감소"
+    ],
+    "dog_mechanism": "브로마이드 이온이 염화물 수송과 경쟁하여 신경세포 막 과분극 유발, 발작 역치 상승 및 간질 방전 확산 억제.",
+    "dog_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "다식증(polyphagia)",
+      "체중 증가",
+      "다음증(polydipsia)",
+      "다뇨증(polyuria)",
+      "구토",
+      "설사 또는 변비",
+      "후지 마비(hindlimb paresis/paraparesis)",
+      "사지 마비(tetraparesis)",
+      "과활동성(hyperactivity)",
+      "ALP/ALT/AST 상승",
+      "췌장염(pancreatitis)",
+      "피부 병변(panniculitis)",
+      "고염소혈증",
+      "음이온 갭 감소",
+      "훈련 능력 저하",
+      "거대식도증(megaesophagus, 독성 시)",
+      "근육통",
+      "동공 부동(anisocoria)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "호산구성 기관지염(eosinophilic bronchitis)",
+      "기침(cough)",
+      "호흡곤란(dyspnea)",
+      "폐기관지 침윤",
+      "다음증(polydipsia)",
+      "진정(sedation)",
+      "체중 증가"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 특발성 간질의 1차 또는 보조 치료제로 사용됨. FDA 조건부 승인 약물(브롬화칼륨). 반감기가 매우 길어(약 15일) 정상 상태 도달까지 4개월 소요되므로 부하 용량 투여가 권장됨. 페노바르비탈과 병용 시 진정 부작용 증가. 혈청 브로마이드 치료 농도: 1–3 mg/mL (페노바르비탈 병용 시 하한, 단독 시 상한). 식이 염화물 함량을 일정하게 유지해야 함. 브롬화칼륨 IV 투여 절대 금지.",
+    "cat": "고양이에서 호산구성 기관지염 등 심각한 폐 부작용 위험으로 인해 일반적으로 사용이 권장되지 않음. 일부 전문가는 고양이에서 사용 금기로 명시. 폐 증상은 투약 중단 후 대부분 가역적이나 호흡곤란이 심각하거나 치명적일 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "노령견 및 동반 질환이 있는 개체는 낮은 혈청 농도에서도 불내성 가능. 신기능 저하 시 용량 조절 필요. 전해질 불균형 소인 질환(부신피질기능저하증, 당뇨병) 시 주의. 브롬화칼륨 IV 투여 절대 금지."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 호산구성 기관지염 등 심각한 폐 부작용 위험으로 인해 사용이 극히 제한됨. 일부 전문가는 고양이에서 사용 금기로 명시."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 실온(15–30°C) 보관. 조제 용액은 투명 또는 갈색 유리/플라스틱 용기에 실온에서 최대 1년 보관 가능. 냉장 보관 시 결정 형성 가능(가온 시 재용해). 브롬화나트륨은 흡습성이 있으므로 주의.",
+    "forms": [
+      "브롬화칼륨 씹는 정제 250 mg (KBroVet-CA1)",
+      "브롬화칼륨 씹는 정제 500 mg (KBroVet-CA1)",
+      "브롬화칼륨 경구 용액 250 mg/mL (KBroVet-CA1)",
+      "조제 경구 용액 (250 mg/mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "브로마이드(브롬화칼륨/브롬화나트륨)는 개의 특발성 간질 치료를 위한 FDA 조건부 승인 항경련제입니다. 반감기가 매우 길어(약 15일) 치료 농도 도달까지 부하 용량이 필요하며, 정상 상태 도달까지 약 4개월이 소요됩니다. 가장 흔한 부작용은 진정이며, 페노바르비탈 병용 시 증가합니다. 식이 염화물 함량 변화가 혈청 브로마이드 농도에 직접 영향을 미치므로 식이 관리가 중요합니다. 브롬화칼륨의 IV 투여는 절대 금기이며, IV 투여가 필요한 경우 브롬화나트륨을 사용해야 합니다. 고양이에서는 호산구성 기관지염 등 심각한 폐 부작용으로 인해 사용이 권장되지 않습니다.",
+    "indications": "개의 특발성 간질에 의한 발작 조절 (FDA 조건부 승인, 1차 또는 보조 요법). 페노바르비탈 간독성 환자에서의 단독 요법. 페노바르비탈 단독으로 발작 조절이 불충분한 개에서의 보조 요법. 이메피토인 단독 요법에 불응하는 특발성 간질 개에서의 보조 요법.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 경구 투여 시 음식에 뿌리거나 입 옆으로 직접 투여하세요. 음식에 섞을 경우 음식 그릇을 높이 올려주세요. 용액은 경구 투여용 주사기 등 정확한 측정 도구를 사용하세요. 짠 간식이나 짠 음식을 주지 마시고, 수의사와 상담 없이 식이를 변경하지 마세요. 가장 흔한 부작용은 졸음(보통 몇 주 내 개선)이며, 일부 개는 물이나 음식을 평소보다 많이 섭취할 수 있습니다. 행동 변화, 보행 어려움, 비틀거림, 심한 구토, 삼킴 어려움 등 심각한 부작용이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Onset of action (minutes)",
+      "T_max (hours)",
+      "Cat-specific pharmacokinetics",
+      "Specific renal creatinine threshold for dose adjustment",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "dosage_and_kinetics.cat.dosage_list",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/51.jsonl",
+    "extracted_at": "2026-03-11T04:52:47.578475+00:00",
+    "reviewer": null
+  }
+}

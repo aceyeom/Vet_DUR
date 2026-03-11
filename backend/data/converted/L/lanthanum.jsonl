@@ -1,0 +1,579 @@
+{
+  "id": "lanthanum",
+  "drug_identity": {
+    "name_ko": "란타넘 카보네이트",
+    "name_en": "Lanthanum Carbonate",
+    "active_ingredient": "Lanthanum Carbonate",
+    "brand_names": [
+      "Fosrenol",
+      "Lantharenol",
+      "Renalzin"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 허가 제품 없음. 일부 국가에서 고양이용 제품(Renalzin®)이 허가된 바 있으나 현재 판매 중단된 것으로 보임. 개와 고양이 모두 엑스트라라벨(off-label) 사용.",
+    "dosage_form": [
+      "Chewable",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "란타넘은 경구 생체이용률이 매우 낮으며(<0.002%), 흡수된 소량은 주로 담즙 배설을 통해 대변으로 제거됨(쥐 연구). 개에서 경구 투여 용량의 평균 94%가 대변으로 회수됨."
+    },
+    "extra_information": "개, 마우스, 랫트 연구에서 조직 내 란타넘 농도는 시간이 지남에 따라 증가하며 혈장 농도보다 수 배 높을 수 있음. 가장 높은 조직 농도는 위장관, 뼈, 간에서 발견됨. 혈액-뇌 장벽을 통과하지 않음. 신장 질환 환자에서 반감기가 증가함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 란타넘은 경구 생체이용률이 극히 낮으나(<0.002%), 조직 축적(위장관, 뼈, 간)이 보고됨. 혈액-뇌 장벽 통과 없음. 신장 질환 시 반감기 증가.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액-뇌 장벽을 통과하지 않는다고 명시됨. 뇌 부담 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "plasma protein binding"
+        ],
+        "index": 1,
+        "evidence": "인간에서 흡수된 소량의 란타넘은 혈장 단백질에 99% 이상 결합. 생체이용률이 매우 낮아 전신 혈액 부담은 최소."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "kidney disease increases half-life"
+        ],
+        "index": 2,
+        "evidence": "신장 질환 환자에서 반감기가 증가함. 신장 배설 분율은 낮으나 신부전 시 축적 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "highest tissue concentrations",
+          "liver",
+          "biliary excretion"
+        ],
+        "index": 3,
+        "evidence": "가장 높은 조직 농도가 위장관, 뼈, 간에서 발견됨. 담즙 배설이 주요 제거 경로."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성 또는 심장 조직 축적에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액-뇌 장벽을 통과하지 않는다고 명시됨. 뇌 부담 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "plasma protein binding"
+        ],
+        "index": 1,
+        "evidence": "인간 데이터 기반. 흡수된 소량이 혈장 단백질에 99% 이상 결합. 생체이용률 극히 낮음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "kidney disease increases half-life"
+        ],
+        "index": 2,
+        "evidence": "신장 질환(CKD) 환자에서 반감기 증가. 고양이 CKD 환자에서 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "highest tissue concentrations",
+          "liver",
+          "biliary excretion"
+        ],
+        "index": 3,
+        "evidence": "간에서 높은 조직 농도 보고. 담즙 배설이 주요 제거 경로."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성 또는 심장 조직 축적에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 36.0,
+      "species": "unknown"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": 99,
+    "evidence": "경구 생체이용률 <0.002%. 인간에서 혈장 단백질 결합률 >99%. 말단 반감기 약 36시간(신장 질환 시 증가). 종 불명확(인간/동물 혼합 데이터)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 란타넘은 위장관 내에서 다수의 약물과 불용성 복합체를 형성하여 흡수를 감소시킬 수 있음. 심각도: 금기→3, 주요→3, 중등도→2, 경미→1. 대부분의 상호작용은 경구 투여 간격을 2시간 이상 두어 완화 가능.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., enalapril)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of ACE inhibitors. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Allopurinol",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of allopurinol. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Antacids (aluminum, magnesium, calcium preparations)",
+      "severity": 2,
+      "keywords": [
+        "insoluble complexes",
+        "reduced efficacy"
+      ],
+      "evidence": "May form insoluble complexes with antacids, reducing efficacy of both agents. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Chloroquine",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of chloroquine. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of corticosteroids. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of digoxin. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Ethambutol",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of ethambutol. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Fluoroquinolones (e.g., enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of fluoroquinolones. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "H2-Receptor Antagonists (e.g., famotidine)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of H2-receptor antagonists. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Iron Salts",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of iron salts. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of isoniazid. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of levothyroxine. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of penicillamine. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of phenothiazines. Separate oral doses by at least 2 hours."
+    },
+    {
+      "drug": "Tetracyclines (e.g., doxycycline)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "chelation"
+      ],
+      "evidence": "Lanthanum may decrease absorption of tetracyclines. Separate oral doses by at least 2 hours."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 7.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "인산염 결합제 (엑스트라라벨)",
+          "value": "5 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과에 따라 용량 조절",
+          "evidence": "Plumb's: 5–20 mg/kg PO q12h; titrate to effect"
+        },
+        {
+          "logic_type": "linear",
+          "context": "IRIS 권고 - CKD에서 혈장 인산염 농도가 식이 제한 후에도 1.6 mmol/L (5 mg/dL) 초과 시 (엑스트라라벨)",
+          "value": "30 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "매 식사 시 분할 투여. 식이 인산염 섭취량 및 신장 질환 단계에 따라 용량 조절 필요. 효과에 따라 적정.",
+          "evidence": "IRIS treatment recommendations (extra-label): 30–60 mg/kg/day in divided doses with each meal"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "인산염 결합제 (엑스트라라벨)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 분할 투여, 식사와 함께 또는 식사에 혼합. 일반적 용량: 200 mg PO BID. 최대 95 mg/kg/day까지 보고됨. 효과에 따라 적정.",
+          "evidence": "Plumb's: Initially 30 mg/kg/day PO divided 2–3 times daily with food; common dose 200 mg PO BID; doses up to 95 mg/kg/day noted"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고양이 일반적 임상 용량 (엑스트라라벨)",
+          "value": "200",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "식사와 함께 투여. 효과에 따라 적정.",
+          "evidence": "Plumb's: A common dose is 200 mg PO twice daily"
+        },
+        {
+          "logic_type": "linear",
+          "context": "IRIS 권고 - CKD에서 혈장 인산염 농도가 식이 제한 후에도 1.5 mmol/L (4.6 mg/dL) 초과 시 (엑스트라라벨)",
+          "value": "30 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "매 식사 시 분할 투여. 식이 인산염 및 신장 질환 단계에 따라 용량 조절. 효과에 따라 적정.",
+          "evidence": "IRIS treatment recommendations (extra-label): 30–60 mg/kg/day in divided doses with each meal"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 반감기가 증가함. 구체적인 용량 조절 지침은 명시되지 않았으나 신장 질환 환자에서 모니터링 강화 권고. 란타넘은 주로 담즙으로 배설되므로 신장 배설 의존도는 낮음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 기능 저하 시 용량 조절에 대한 구체적 지침이 모노그래프에 명시되지 않음. 간이 주요 조직 축적 부위이므로 간 질환 환자에서 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "장폐색",
+      "match_terms": [
+        "bowel obstruction",
+        "intestinal obstruction",
+        "GI obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "장마비 (ileus)",
+      "match_terms": [
+        "ileus",
+        "paralytic ileus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "분변 매복 (fecal impaction)",
+      "match_terms": [
+        "fecal impaction",
+        "constipation severe"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 궤양",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "intestinal ulcer",
+        "colitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 운동 저하 또는 해부학적 이상",
+      "match_terms": [
+        "reduced GI motility",
+        "GI surgery history",
+        "diverticula"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "란타넘 카보네이트는 상부 위장관의 산성 환경에서 해리되어 란타넘 이온을 방출함. 이 이온들이 식이 인산염과 결합하여 불용성 란타넘 인산염 복합체를 형성하고 대변으로 배설됨으로써 고인산혈증을 감소시킴.",
+    "common_extra_effects": [
+      "구토",
+      "오심",
+      "식욕부진",
+      "설사",
+      "음식 기피"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "구토",
+      "음식 기피 (란타넘 카보네이트를 음식에 혼합 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 투여 용량의 평균 94%가 대변으로 회수됨. 조직(위장관, 뼈, 간)에 란타넘이 축적될 수 있음. 혈액-뇌 장벽을 통과하지 않음. 미국 내 수의용 허가 제품 없으며 엑스트라라벨 사용. 정제는 투여 전 완전히 분쇄해야 함.",
+    "cat": "고양이에서 1 g/kg PO 3개월 투여 시 뼈 조직학적 변화 없음. 2 g/kg 투여 시 반복적 구토 발생. 일부 국가에서 고양이용 제품(Renalzin®) 허가된 바 있으나 현재 판매 중단. 음식에 혼합 시 음식 기피 발생 가능. 정제는 투여 전 완전히 분쇄해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "위장관 궤양, 장운동 저하, 위장관 수술 병력이 있는 개에서 주의 필요. 정제는 완전히 분쇄 후 투여. 임신 중 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "위장관 궤양, 장운동 저하가 있는 고양이에서 주의 필요. 구토 및 음식 기피 발생 가능. 정제는 완전히 분쇄 후 투여. 임신 중 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(25°C [77°F]) 보관; 15°C-30°C(59°F-86°F) 범위 허용. 습기로부터 보호.",
+    "forms": [
+      "란타넘 카보네이트 경구 씹는 정제: 500 mg, 750 mg, 1000 mg (Fosrenol®)",
+      "란타넘 카보네이트 경구 분말: 750 mg, 1000 mg (Fosrenol®) - 분말 1 g당 약 357 mg 란타넘 카보네이트 함유"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "란타넘 카보네이트는 만성 신장 질환(CKD)에서 고인산혈증 조절을 위한 경구 인산염 결합제입니다. 알루미늄 또는 칼슘 함유 인산염 결합제를 사용할 수 없는 경우 대안으로 고려할 수 있습니다. 경구 생체이용률이 매우 낮아(<0.002%) 전신 독성 위험이 낮으나, 조직(위장관, 뼈, 간) 축적이 보고됩니다. 장폐색, 장마비, 분변 매복 시 금기. 정제는 반드시 완전히 분쇄 후 식사와 함께 투여해야 합니다. 다수의 약물과 흡수 상호작용이 있으므로 다른 경구 약물과 2시간 이상 간격을 두어야 합니다.",
+    "indications": "만성 신장 질환(CKD)에서 식이 제한만으로 조절되지 않는 고인산혈증 치료를 위한 경구 인산염 결합제. 개와 고양이 모두 엑스트라라벨 사용. 미국 내 수의용 허가 제품 없음.",
+    "client_info": "이 약은 음식에서 인산염이 흡수되는 것을 막아주는 약입니다. 반드시 식사 시간에 투여하세요. 정제는 완전히 분쇄하여 음식에 섞어 주세요. 온전한 정제 형태로 투여하지 마세요. 투여한 음식은 즉시 모두 먹어야 합니다. 구토가 발생할 수 있습니다. 이 약을 복용하는 동안 정기적인 혈액 검사를 위해 동물병원 방문을 빠뜨리지 마세요. 다른 경구 약물이 있다면 란타넘 투여 전후 2시간 간격을 두어 주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP profile",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Onset of action",
+      "T_max",
+      "Veterinary-specific pharmacokinetic studies (dog/cat)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (veterinary species-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction (veterinary)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/57.jsonl",
+    "extracted_at": "2026-03-11T07:05:06.126798+00:00",
+    "reviewer": null
+  }
+}

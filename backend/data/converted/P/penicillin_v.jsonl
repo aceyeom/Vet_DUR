@@ -1,0 +1,459 @@
+{
+  "id": "penicillin_v",
+  "drug_identity": {
+    "name_ko": "페니실린 V",
+    "name_en": "Penicillin V",
+    "active_ingredient": "Phenoxymethylpenicillin",
+    "brand_names": [
+      "Veetids"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. 개/고양이에서 감수성 감염에 대해 10 mg/kg PO q8h 7일 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "페니실린 V는 신장을 통해 신속히 배설됨. CYP 대사 경로에 대한 정보는 본 모노그래프에 기술되지 않음."
+    },
+    "extra_information": "개에서 식이는 흡수 속도 및 정도를 감소시킴. 정상 신기능 동물에서 반감기는 일반적으로 1시간 미만. 말에서 경구 투여 후 반감기 3.7시간 보고됨. 송아지에서 경구 생체이용률 약 30%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 경로 및 부작용 프로파일에 근거. 수의학적 종별 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "매우 고용량 또는 장기 사용 시 신경독성(개에서 운동실조) 보고됨. 일반 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "과민반응으로 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈 보고됨(주로 인체 데이터)."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "renal disease"
+        ],
+        "index": 2,
+        "evidence": "신장을 통해 신속히 배설됨. 신질환 환자에서 고용량 비경구 투여 시 CNS 효과 유발 가능. 신기능 저하 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "간독성 약물로 분류되지 않으나 간효소 수치 상승 보고됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "개에서 빈맥 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS effects"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신경독성 데이터 없음. 인체 및 개 데이터에서 고용량 시 CNS 효과 가능."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombocytopenia"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 혈액 독성 데이터 없음. 인체 데이터 기반 과민반응 가능성."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion"
+        ],
+        "index": -1,
+        "evidence": "신장 배설 경로. 고양이 특이적 신독성 데이터 없으나 신기능 저하 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": -1,
+        "evidence": "간독성 약물로 분류되지 않으나 간효소 수치 상승 가능성. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 부작용 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": 1.0,
+      "mean": null,
+      "species": "dog"
+    },
+    "f_percent": 60,
+    "protein_binding_percent": 80,
+    "evidence": "인체에서 경구 생체이용률 약 60~73%. 단백결합률 약 80%(페니실린 G는 50%). 정상 신기능 동물에서 반감기 일반적으로 1시간 미만. 말에서 경구 투여 후 반감기 3.7시간. 개에서 식이가 흡수 속도 및 정도 감소시킴."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 1,
+      "keywords": [
+        "synergy",
+        "additive activity"
+      ],
+      "evidence": "In vitro studies show penicillins can have synergistic or additive activity against certain bacteria when combined with aminoglycosides. Note: penicillins can inactivate aminoglycosides in vitro; serum aminoglycoside concentrations may be falsely decreased if stored prior to analysis."
+    },
+    {
+      "drug": "Cephalosporins",
+      "severity": 1,
+      "keywords": [
+        "synergy",
+        "additive activity"
+      ],
+      "evidence": "In vitro studies show penicillins can have synergistic or additive activity against certain bacteria when combined with cephalosporins."
+    },
+    {
+      "drug": "Bacteriostatic Antibiotics (chloramphenicol, erythromycin, tetracyclines)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "reduced efficacy"
+      ],
+      "evidence": "Use of bacteriostatic antibiotics with penicillins is generally not recommended, particularly in acute infections where the organism is proliferating rapidly, as penicillins perform better on actively growing bacteria. Clinical significance unknown."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "reduced renal elimination",
+        "increased methotrexate toxicity"
+      ],
+      "evidence": "Penicillins may decrease renal elimination of methotrexate, potentially increasing methotrexate toxicity."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased penicillin concentration"
+      ],
+      "evidence": "Probenecid competitively blocks tubular secretion of most penicillins, increasing serum concentrations and serum half-lives."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "horse",
+      "rabbit",
+      "guinea_pig",
+      "hamster",
+      "gerbil",
+      "chinchilla"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (오프라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일",
+          "evidence": "Plumb's Veterinary Drug Handbook: 10 mg/kg PO every 8 hours for 7 days (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (오프라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7일",
+          "evidence": "Plumb's Veterinary Drug Handbook: 10 mg/kg PO every 8 hours for 7 days (extra-label, dogs/cats combined dosing)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 구체적인 용량 조정 지침 없음. 신질환 환자에서 고용량 비경구 페니실린 투여 시 CNS 효과 가능성 언급됨. 신기능 저하 환자에서 주의 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "모노그래프에 간기능 저하 시 용량 조정 지침 없음. 페니실린은 간독성 약물로 분류되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응 병력",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제 과민반응 (세팔로스포린, 세파마이신, 카바페넴)",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "beta-lactam allergy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "후장 발효 동물 (말, 토끼, 기니피그, 햄스터, 저빌, 친칠라)",
+      "match_terms": [
+        "hindgut fermenter",
+        "horse",
+        "rabbit",
+        "guinea pig",
+        "hamster",
+        "gerbil",
+        "chinchilla"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "패혈증, 쇼크 또는 중증 질환 (경구 투여 시)",
+      "match_terms": [
+        "septicemia",
+        "shock",
+        "severe illness"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 무코펩타이드 합성 억제를 통한 살균 작용. 세균 세포막 내 페니실린 결합 단백질(PBP: 카복시펩티다제, 트랜스펩티다제, 엔도펩티다제)에 결합하여 세포벽 합성을 방해하고 삼투압적으로 불안정한 스페로플라스트를 형성함. 시간 의존성 항생제로 혈장/조직 농도가 MIC를 초과하는 시간에 의해 효능이 결정됨.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "항생제 관련 설사",
+      "과민반응 (발진, 발열, 호산구증가증, 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈, 아나필락시스)",
+      "신경독성 (고용량 또는 장기 사용 시 운동실조)",
+      "간효소 수치 상승"
+    ],
+    "dog_mechanism": "시간 의존성 살균 항생제. 개에서 식이가 흡수 속도 및 정도를 감소시킴.",
+    "dog_extra_effects": [
+      "빈호흡",
+      "호흡곤란",
+      "부종",
+      "빈맥",
+      "운동실조 (고용량 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 페니실린 V는 오프라벨로 사용되며, 공복 시 투여가 권장됨. 식이는 흡수를 감소시킴. 구토 발생 시 소량의 음식과 함께 투여 가능. 정상 신기능에서 반감기는 1시간 미만으로 짧아 q8h 투여가 필요함. 치료 효과 모니터링이 주된 관리 방법이며 혈중 농도 모니터링은 일반적으로 불필요함.",
+    "cat": "고양이에서 페니실린 V는 오프라벨로 사용됨. 개와 동일한 용량(10 mg/kg PO q8h)이 권장됨. 공복 시 투여 권장. 고양이 특이적 PK 데이터는 모노그래프에 기술되지 않음. 후장 발효 동물에는 절대 사용 금지."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 오프라벨 사용. 공복 투여 필요. 고용량 또는 장기 사용 시 신경독성 가능. 과민반응 모니터링 필요. 패혈증/쇼크 시 경구 흡수 저하 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 오프라벨 사용. 공복 투여 권장. 고양이 특이적 안전성 데이터 제한적. 과민반응 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 경구용액 분말: 밀폐 용기에 실온(20°C-25°C) 보관. 재조제 후 경구용액: 냉장(2°C-8°C) 보관, 재조제 후 14일 이내 사용. 제조사별 보관 온도 권장사항 상이할 수 있음.",
+    "forms": [
+      "페니실린 V 칼륨 정제 250 mg",
+      "페니실린 V 칼륨 정제 500 mg",
+      "페니실린 V 칼륨 경구용액 분말 25 mg/mL (125 mg/5 mL)",
+      "페니실린 V 칼륨 경구용액 분말 50 mg/mL (250 mg/5 mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "페니실린 V(페녹시메틸페니실린)는 천연 페니실린계 항생제로, 연쇄구균 등 그람양성균에 활성을 가짐. 수의학에서는 공복 투여 필요 및 빈번한 투여 간격(q8h)으로 인해 사용이 제한적임. 수의학적 허가 제품 없으며 개/고양이에서 오프라벨로 사용. 후장 발효 동물(말, 토끼, 기니피그 등)에는 절대 금기. WHO 및 OIE에서 중요 항균제로 지정됨.",
+    "indications": "개/고양이의 감수성 세균 감염(오프라벨): 연쇄구균 등 자연 페니실린 감수성 균주에 의한 경증~중등도 감염. 페니실리나제 생성 균주, 대부분의 그람음성 간균, Pseudomonas spp., Rickettsia, 마이코박테리아, 진균, Mycoplasma, 바이러스에는 효과 없음.",
+    "client_info": "페니실린 V는 말, 토끼, 기니피그, 저빌, 햄스터, 친칠라에게 절대 투여하지 마십시오. 생명을 위협하는 설사가 발생할 수 있습니다. 공복 시 투여가 가장 좋으나, 빈 위에 투여 후 구토나 불편감이 있으면 소량의 음식과 함께 투여해 보십시오. 구토가 지속되면 수의사에게 연락하십시오. 액체 형태의 약은 정확히 계량하여 냉장 보관하고, 조제 후 14일 이내에 사용하십시오. 처방된 기간 동안 빠짐없이 투여하고, 임의로 중단하지 마십시오. 부작용은 드물지만 식욕부진, 구토, 설사가 가장 흔합니다. 발진, 발열, 쓰러짐, 호흡곤란 등 알레르기 반응 징후가 나타나면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies (dog/cat)",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "CYP metabolic pathway data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.mean",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/18.jsonl",
+    "extracted_at": "2026-03-10T18:42:25.736546+00:00",
+    "reviewer": null
+  }
+}

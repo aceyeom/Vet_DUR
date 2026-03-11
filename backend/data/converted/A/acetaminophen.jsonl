@@ -1,0 +1,605 @@
+{
+  "id": "acetaminophen",
+  "drug_identity": {
+    "name_ko": "아세트아미노펜",
+    "name_en": "Acetaminophen",
+    "active_ingredient": "Acetaminophen",
+    "brand_names": [
+      "Tylenol"
+    ],
+    "allergy_class": null,
+    "class": "Analgesic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "N-Acetylcysteine",
+    "reversal_evidence": "N-아세틸시스테인(NAC)은 아세트아미노펜 과다복용 시 해독제로 사용되며, 고양이에서는 첫 번째 용량을 IV로 투여하는 것이 권장됩니다.",
+    "off_label_note": "수의과 허가 제품 없음. 인체용 제품을 개, 말, 소형 포유류에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Chewable",
+      "Oral Liquid",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 160,
+        "unit": "mg"
+      },
+      {
+        "value": 325,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "value": 650,
+        "unit": "mg"
+      },
+      {
+        "value": 32,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아세트아미노펜은 주로 글루쿠론산 포합(glucuronidation)을 통해 간에서 대사됩니다. 고양이는 글루쿠로닐 전달효소(glucuronyl transferase)가 결핍되어 독성 대사산물(활성 산소 라디칼)이 형성되어 메트헤모글로빈혈증 및 하인즈 소체 형성을 유발합니다. 페노바르비탈 등 바르비투르산염은 간독성 대사산물로의 전환을 증가시킵니다."
+    },
+    "extra_information": "개에서 경구 생체이용률은 45%이며, 경구 투여 후 20~50분에 최고 혈중 농도에 도달합니다. 단백 결합률은 약 25%, 분포 용적은 0.9 L/kg, 청소율은 1.5~2 L/kg/시간입니다. 직장 투여 시 흡수율은 경구 투여의 30%에 불과하며 유효 농도에 도달하지 못합니다. 말에서는 경구 투여 후 60~80분에 최고 농도에 도달하며, 생체이용률은 91%, 단백 결합률은 49%, 청소율은 약 0.25 L/kg/시간입니다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 수의과 종별 PK 연구가 제한적이며, 주로 Plumb's 모노그래프의 이상반응 및 독성 데이터를 기반으로 합니다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic encephalopathy"
+        ],
+        "index": 1,
+        "evidence": "심각한 간독성 시 간성 뇌증이 발생할 수 있으나, 직접적인 뇌 독성은 보고되지 않았습니다."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "methemoglobinemia",
+          "Heinz body",
+          "hematologic effects",
+          "coagulopathy"
+        ],
+        "index": 2,
+        "evidence": "고용량(>200 mg/kg)에서 메트헤모글로빈혈증이 발생할 수 있으며, 혈액학적 이상반응이 보고되어 있습니다. 응고장애도 심각한 경우 발생 가능합니다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal effects",
+          "adverse renal"
+        ],
+        "index": 3,
+        "evidence": "권장 용량에서도 신장 이상반응 가능성이 있으며, 고용량(>30 mg/kg)에서 건성각결막염(KCS)이 보고되었습니다."
+      },
+      "liver": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic necrosis",
+          "liver",
+          "icterus",
+          "hepatic glutathione"
+        ],
+        "index": 4,
+        "evidence": "75~100 mg/kg 이상에서 간독성이 발생하며, 만성 치료 시 치료 용량에서도 간독성이 보고되었습니다. 황달, 구토, 식욕부진, 복통이 나타날 수 있습니다."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급이 없습니다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "depression",
+          "hypothermia",
+          "weakness"
+        ],
+        "index": 1,
+        "evidence": "메트헤모글로빈혈증으로 인한 우울, 저체온, 허약이 보고되어 있습니다."
+      },
+      "blood": {
+        "calculated_score": 95,
+        "triggered_keywords": [
+          "methemoglobinemia",
+          "Heinz body",
+          "hematuria",
+          "oxidative injury",
+          "red blood cells"
+        ],
+        "index": 2,
+        "evidence": "고양이는 글루쿠로닐 전달효소 결핍으로 인해 10~40 mg/kg에서도 심각한 메트헤모글로빈혈증과 하인즈 소체 형성이 발생합니다. 어떠한 용량도 안전하지 않습니다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hematuria"
+        ],
+        "index": 3,
+        "evidence": "혈뇨가 보고되어 있으며 신장 독성 가능성이 있습니다."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "icterus"
+        ],
+        "index": 4,
+        "evidence": "고용량에서 간독성이 발생하나, 대부분의 고양이는 간독성 증상 이전에 메트헤모글로빈혈증 증상을 먼저 나타냅니다."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급이 없습니다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 4.0,
+      "mean": 2.5,
+      "species": "dog"
+    },
+    "f_percent": 45,
+    "protein_binding_percent": 25,
+    "evidence": "개에서 경구 생체이용률 45%, 최고 혈중 농도 도달 시간 20~50분, 반감기 1~4시간, 단백 결합률 약 25%. 말에서 생체이용률 91%, 최고 농도 도달 시간 60~80분, 반감기 2~4시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Local Anesthetics (bupivacaine, lidocaine, mepivacaine, ropivacaine)",
+      "severity": 2,
+      "keywords": [
+        "methemoglobinemia"
+      ],
+      "evidence": "Concurrent use may increase the risk for methemoglobinemia."
+    },
+    {
+      "drug": "Barbiturates (phenobarbital, primidone)",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "toxic metabolites"
+      ],
+      "evidence": "Increased conversion of acetaminophen to hepatotoxic metabolites; potentially increased risk for hepatotoxicity."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "May reduce oral acetaminophen absorption; administer separately."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 1,
+      "keywords": [
+        "increased concentration"
+      ],
+      "evidence": "Increased acetaminophen concentration noted in humans; veterinary significance is unclear."
+    },
+    {
+      "drug": "Dipyrone",
+      "severity": 2,
+      "keywords": [
+        "hepatocellular injury"
+      ],
+      "evidence": "Combined use may increase risk for hepatocellular injury."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "glutathione depletion"
+      ],
+      "evidence": "May deplete hepatic glutathione, leading to increased hepatic toxicity."
+    },
+    {
+      "drug": "Fenbendazole",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity"
+      ],
+      "evidence": "May increase the risk for hepatotoxicity (study done in mice)."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "toxic metabolites"
+      ],
+      "evidence": "Increased conversion of acetaminophen to hepatotoxic metabolites with possible increased risk for hepatotoxicity."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity"
+      ],
+      "evidence": "May increase the risk for hepatotoxicity."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 1,
+      "keywords": [
+        "increased absorption"
+      ],
+      "evidence": "May increase acetaminophen absorption."
+    },
+    {
+      "drug": "Metyrapone",
+      "severity": 2,
+      "keywords": [
+        "toxic metabolites",
+        "reduced conjugation"
+      ],
+      "evidence": "May reduce acetaminophen conjugation, potentially increasing formation of toxic acetaminophen metabolites."
+    },
+    {
+      "drug": "Penicillin G Benzathine and/or Procaine",
+      "severity": 2,
+      "keywords": [
+        "methemoglobinemia"
+      ],
+      "evidence": "Concurrent use of the benzathine and/or procaine penicillin G salts may increase risk for methemoglobinemia."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 1,
+      "keywords": [
+        "hypothermia"
+      ],
+      "evidence": "Possible increased risk for hypothermia."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "increased concentration",
+        "toxic metabolites",
+        "altered metabolism"
+      ],
+      "evidence": "May increase acetaminophen concentration and alter its metabolism, potentially increasing formation of toxic acetaminophen metabolites."
+    },
+    {
+      "drug": "Propylene Glycol",
+      "severity": 2,
+      "keywords": [
+        "methemoglobinemia",
+        "Heinz body"
+      ],
+      "evidence": "Foods containing propylene glycol (often found in wet cat foods) may increase the severity of acetaminophen-induced methemoglobinemia or Heinz body formation."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity"
+      ],
+      "evidence": "May increase the risk for hepatotoxicity."
+    },
+    {
+      "drug": "Verdinexor",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "glutathione S-transferase inhibition"
+      ],
+      "evidence": "Increases of serum concentration of either drug are possible due to competitive inhibition of glutathione S-transferase. Avoid combination if possible or monitor closely."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant potentiation",
+        "bleeding"
+      ],
+      "evidence": "Although acetaminophen is relatively safe to use, large doses may potentiate anticoagulant effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "high",
+    "gi_ulcer": "moderate",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all",
+      "ferret_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통 또는 해열 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "장기 사용(5일 초과) 시 용량 범위의 하한선으로 12시간마다 투여 고려",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "권장 용량에서도 신장 이상반응 가능성이 있습니다. 만성 치료 시 정기적인 신장 기능 모니터링이 권장되나, 구체적인 용량 조정 기준은 명시되어 있지 않습니다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간질환이 있는 환자에서는 사용을 피해야 합니다. 만성 치료 시 치료 용량에서도 간독성이 발생할 수 있으므로 정기적인 간 기능 모니터링이 필요합니다."
+  },
+  "contraindications": [
+    {
+      "condition": "고양이 (모든 용량)",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "페럿",
+      "match_terms": [
+        "ferret"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "슈가글라이더 및 고슴도치",
+      "match_terms": [
+        "sugar glider",
+        "hedgehog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatotoxicity",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "메트헤모글로빈혈증 위험",
+      "match_terms": [
+        "methemoglobinemia",
+        "anemia",
+        "Heinz body anemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "특정 유전적 위험은 명시되어 있지 않으나, 일부 개에서 특발성 과민반응이 일화적으로 보고되어 있습니다. 반감기가 품종에 따라 다를 수 있다고 언급되어 있습니다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX) 및 프로스타글란딘 H2 합성효소의 퍼옥시다제 부위 억제를 통한 진통 및 해열 효과. 세로토닌성 활성도 진통 효과에 기여할 수 있습니다. 아스피린과 달리 임상 권장 용량에서는 유의한 항염증 활성이나 혈소판 기능 억제가 없습니다.",
+    "common_extra_effects": [
+      "간독성 (hepatotoxicity)",
+      "메트헤모글로빈혈증 (methemoglobinemia)",
+      "하인즈 소체 형성 (Heinz body formation)",
+      "신장 독성 (renal toxicity)",
+      "위장관 이상반응 (GI adverse effects)",
+      "건성각결막염 (keratoconjunctivitis sicca, 고용량)"
+    ],
+    "dog_mechanism": "개는 인간보다 아세트아미노펜을 잘 대사하지 못하며, 고용량에서 메트헤모글로빈혈증 및 간독성이 발생할 수 있습니다.",
+    "dog_extra_effects": [
+      "황달 (icterus)",
+      "구토 (vomiting)",
+      "식욕부진 (anorexia)",
+      "복통 (abdominal pain)",
+      "응고장애 (coagulopathy, 심각한 경우)",
+      "저혈당 (hypoglycemia, 심각한 경우)",
+      "간성 뇌증 (hepatic encephalopathy, 심각한 경우)",
+      "건성각결막염 (KCS, >30 mg/kg)"
+    ],
+    "cat_mechanism": "고양이는 글루쿠로닐 전달효소가 결핍되어 아세트아미노펜을 충분히 글루쿠론산 포합할 수 없으며, 이로 인해 활성 독성 대사산물(활성 산소 라디칼)이 형성되어 산화적 손상, 메트헤모글로빈혈증 및 하인즈 소체 형성을 유발합니다.",
+    "cat_extra_effects": [
+      "메트헤모글로빈혈증 (methemoglobinemia)",
+      "혈뇨 (hematuria)",
+      "황달 (icterus)",
+      "안면 및 사지 부종 (facial and limb swelling)",
+      "호흡곤란 (respiratory distress)",
+      "청색증 (cyanosis)",
+      "우울 (depression)",
+      "저체온 (hypothermia)",
+      "허약 (weakness)",
+      "부종 (edema)",
+      "사망 (death)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아세트아미노펜은 오프라벨로 진통 및 해열 목적으로 사용됩니다. 다른 진통제(NSAIDs, 오피오이드)를 사용할 수 없는 만성 통증 상태에 특히 유용할 수 있습니다. 임상 시험에서 선택적 난소자궁절제술을 받은 암캐에서 멜록시캄 및 카프로펜과 동등한 수술 후 진통 효과를 보였습니다. 코데인, 하이드로코돈, 트라마돌과의 복합 제제로도 사용됩니다. 직장 투여는 경구 투여의 30% 흡수율로 유효 농도에 도달하지 못하므로 권장되지 않습니다. 만성 사용 시 간, 신장, 혈액학적 모니터링이 필요합니다.",
+    "cat": "고양이에서는 어떠한 용량에서도 절대 금기입니다. 글루쿠로닐 전달효소 결핍으로 인해 10 mg/kg에서도 메트헤모글로빈혈증이 발생할 수 있습니다. 과다복용 시 N-아세틸시스테인 치료를 지체 없이 시작해야 하며, 첫 번째 용량은 IV로 투여하는 것이 바람직합니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개는 인간보다 아세트아미노펜을 잘 대사하지 못하므로 신중하게 사용해야 합니다. 고용량에서 메트헤모글로빈혈증 위험이 있으며, 만성 치료 시 치료 용량에서도 간독성이 발생할 수 있습니다. 일부 개에서 특발성 과민반응이 보고되어 있습니다."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서는 어떠한 용량에서도 절대 금기입니다. 글루쿠로닐 전달효소 결핍으로 인해 치명적인 메트헤모글로빈혈증이 발생할 수 있습니다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 미만에서 보관. 경구 용액 또는 현탁액은 냉동 보관하지 마십시오.",
+    "forms": [
+      "160 mg 정제/캡슐/캐플릿",
+      "325 mg 정제/캡슐/캐플릿",
+      "500 mg 정제/캡슐/캐플릿",
+      "80 mg 씹는 정제",
+      "650 mg 서방형 정제",
+      "32 mg/mL 경구 액제",
+      "60 mg, 80 mg, 120 mg, 125 mg, 250 mg, 325 mg, 650 mg 직장 좌약"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아세트아미노펜(파라세타몰)은 개, 말, 소형 포유류에서 오프라벨로 사용되는 진통제 및 해열제입니다. 고양이와 페럿에서는 절대 금기이며, 어떠한 용량도 안전하지 않습니다. 개에서는 다른 진통제를 사용할 수 없는 만성 통증에 유용하며, 코데인, 하이드로코돈, 트라마돌과의 복합 제제로도 사용됩니다. 수의과 허가 제품은 없으며 인체용 제품을 오프라벨로 사용합니다.",
+    "indications": "【승인 적응증】 없음 (수의과 허가 제품 없음)\n【오프라벨 적응증】\n- 개: 진통 및 해열 (10~15 mg/kg PO q8h; 장기 사용 시 q12h)\n- 말: 진통 및 해열 (20 mg/kg PO 1일 1~2회)\n- 토끼/설치류/소형 포유류: 경증~중등도 통증 조절 (Children's Tylenol® 사용, 음수에 1~2 mg/mL 농도로 희석)\n- 다른 진통제(NSAIDs, 오피오이드)를 사용할 수 없는 만성 통증 상태에 특히 유용",
+    "client_info": "【보호자 안내사항】\n⚠️ 고양이에게는 절대 사용하지 마십시오. 페럿에도 사용하지 마십시오.\n\n다음과 같은 부작용이 나타나면 즉시 수의사에게 연락하십시오:\n- 개가 먹지 않는 경우\n- 눈의 흰자위가 노랗게 변하는 경우\n- 지속적인 구토 또는 설사\n- 구토물이나 대변에 혈액이 보이는 경우\n\n수의사가 처방한 용량 이상으로 투여하지 마십시오. 수의사의 지시 없이 다른 진통제나 해열제와 함께 투여하지 마십시오.\n\n어린이의 손이 닿지 않는 곳에 보관하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile (substrates/inhibitors/inducers)",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Onset of action (minutes)",
+      "Cat pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "timing_profile.t_max_hr (cat)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/60.jsonl",
+    "extracted_at": "2026-03-11T07:58:06.336846+00:00",
+    "reviewer": null
+  }
+}

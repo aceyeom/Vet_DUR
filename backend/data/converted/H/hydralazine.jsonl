@@ -1,0 +1,636 @@
+{
+  "id": "hydralazine",
+  "drug_identity": {
+    "name_ko": "하이드랄라진",
+    "name_en": "Hydralazine",
+    "active_ingredient": "Hydralazine hydrochloride",
+    "brand_names": [
+      "Apresoline"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.15,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "N-아세틸화(N-acetylation)가 주요 대사 경로이며, 이 경로는 개에서 대부분 결여되어 있어 독성 위험 증가 우려가 있음. 간에서 광범위하게 대사되며 약 15%는 소변으로 미변화체로 배설됨."
+    },
+    "extra_information": "개에서 경구 투여 후 빠르게 흡수되며 작용 발현은 1시간 이내, 최대 효과는 3시간에 나타남. 음식은 개에서 경구 생체이용률을 약 63% 감소시킴. 저용량에서는 초회통과효과가 높으나 용량 증가에 따라 생체이용률이 증가하는 포화 가능한 과정임. 개에서 경구 투여 후 작용 지속 시간은 11~13시간으로 보고됨. N-아세틸화 경로가 개에서 대부분 결여되어 있어 독성 위험 증가 우려가 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학 종별 PK 데이터가 제한적이며 인체 데이터를 일부 참조함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "syncope",
+          "weakness",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "저혈압으로 인한 실신, 무력감, 기면이 보고됨. 직접적인 CNS 독성보다는 혈압 저하에 의한 이차적 영향."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "reflex tachycardia",
+          "tachycardia"
+        ],
+        "index": 2,
+        "evidence": "인체에서 혈액 이상(blood dyscrasias)이 보고됨. 반사성 빈맥 및 나트륨/수분 저류 가능성."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "decreased renal perfusion",
+          "increased creatinine",
+          "RAAS activation",
+          "renal blood flow"
+        ],
+        "index": 3,
+        "evidence": "신장 관류 감소로 인해 크레아티닌 수치 상승 가능. RAAS 활성화로 신장 손상 악화 가능. 신장 질환 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "extensively metabolized in the liver",
+          "N-acetylation absent in dogs"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 개에서 N-아세틸화 경로 결여로 대사 부담 증가 우려."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "reflex tachycardia",
+          "myocardial ischemia",
+          "cardiac output"
+        ],
+        "index": 5,
+        "evidence": "반사성 빈맥 및 과용량 시 심근 허혈 가능. 심부전 치료에 사용되나 심근 질환 시 효과 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "syncope",
+          "weakness",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "저혈압으로 인한 실신, 무력감, 기면이 보고됨. 직접적인 CNS 독성보다는 혈압 저하에 의한 이차적 영향."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "reflex tachycardia"
+        ],
+        "index": 2,
+        "evidence": "인체에서 혈액 이상이 보고됨. 고양이 특이적 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "decreased renal perfusion",
+          "RAAS activation",
+          "renal blood flow"
+        ],
+        "index": 3,
+        "evidence": "신장 관류 감소로 인한 RAAS 활성화 및 신장 손상 악화 가능. 고양이에서 신장 질환 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "extensively metabolized in the liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 고양이 특이적 대사 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "reflex tachycardia",
+          "cardiac output"
+        ],
+        "index": 5,
+        "evidence": "반사성 빈맥 가능. 고양이 심부전 보조 치료에 사용되나 고양이 특이적 심장 데이터 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 8.0,
+      "mean": 3.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 85,
+    "evidence": "개에서 경구 투여 후 작용 발현 1시간 이내, 최대 효과 3시간. 작용 지속 시간 11~13시간(개). 인체 반감기 통상 2~4시간, 최대 8시간. 혈장 단백 결합률 약 85%(인체). 음식이 개에서 경구 생체이용률을 약 63% 감소시킴."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 저혈압 상가 효과로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., enalapril)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "ACE 억제제와 병용 시 저혈압 상가 효과 가능. 치료적 이점을 위해 사용될 수 있으나 모니터링 필요."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 3,
+      "keywords": [
+        "profound hypotension"
+      ],
+      "evidence": "디아족사이드와 병용 시 심각한 저혈압 유발 가능."
+    },
+    {
+      "drug": "Diuretics",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "이뇨제와 병용 시 저혈압 상가 효과 가능. 통상 치료적 이점을 위해 사용됨."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "increased renal effects"
+      ],
+      "evidence": "하이드랄라진이 푸로세미드의 신장 효과를 증가시킬 수 있음."
+    },
+    {
+      "drug": "MAOIs (e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "MAO 억제제와 병용 시 저혈압 상가 효과 가능."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 2,
+      "keywords": [
+        "increased propranolol bioavailability",
+        "bradycardia",
+        "bronchospasm"
+      ],
+      "evidence": "병용 시 프로프라놀롤의 생체이용률, 최고 농도, AUC 증가. 서맥, 피로, 기관지경련 위험 증가."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "실데나필과 병용 시 저혈압 상가 효과 가능."
+    },
+    {
+      "drug": "Sympathomimetics (e.g., epinephrine)",
+      "severity": 2,
+      "keywords": [
+        "decreased pressor effect",
+        "additive tachycardia"
+      ],
+      "evidence": "하이드랄라진이 교감신경흥분제의 승압 효과를 감소시키고 빈맥을 상가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "심부전 보조 치료 (판막 질환) - ACE 억제제 미사용 시 (오프라벨)",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "1 mg/kg으로 시작하여 12~48시간 간격으로 반응 평가 후 2 mg/kg, 3 mg/kg으로 단계적 증량",
+          "evidence": "오프라벨. 유효 용량 0.5~3 mg/kg PO q12h. 저용량에서 시작하여 0.5 mg/kg 단위로 증량."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "심부전 보조 치료 - ACE 억제제 병용 시 (오프라벨)",
+          "value": "0.5 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "0.5 mg/kg으로 시작하여 혈압 모니터링 하에 0.5 mg/kg 단위로 증량. 심장 전문의 의뢰 고려.",
+          "evidence": "오프라벨. ACE 억제제 병용 시 심각한 저혈압 위험으로 주의 필요."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "급성 중증 승모판 역류로 인한 급성 심부전 (ACE 억제제 미사용, 오프라벨)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "IV 푸로세미드와 병용. 혈압 면밀히 모니터링.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 - 급성 중증 (비경구, 오프라벨)",
+          "value": "0.5 - 3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 니트로프루시드의 대안으로 고려 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 - 급성 중증 IV 부하 용량 후 CRI (오프라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 후 1.5~5 µg/kg/분 IV CRI 유지",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 - 경구 (오프라벨)",
+          "value": "0.5 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 - 장기 경구 치료 (오프라벨)",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "tiered",
+          "context": "심부전 보조 치료 (오프라벨)",
+          "value": "2.5 - 10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2.5 mg/cat으로 시작하여 필요 시 최대 10 mg/cat까지 증량 (mg/kg 아님)",
+          "evidence": "오프라벨. mg/cat 단위 사용 (mg/kg 아님)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신 고혈압 - 급성 중증 (비경구, 오프라벨)",
+          "value": "1 - 2.5",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "수축기 혈압이 감소하지 않으면 15~30분 후 반복 가능 (mg/cat 단위)",
+          "evidence": "오프라벨. mg/cat 단위 사용 (mg/kg 아님)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신 고혈압 - 급성 중증 IV 부하 용량 후 CRI (오프라벨)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 후 1.5~5 µg/kg/분 IV CRI 유지",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신 고혈압 - 경구 급성 (오프라벨)",
+          "value": "2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과에 따라 조절 (mg/cat 단위)",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신 고혈압 - 장기 경구 치료 (3~4번째 선택 약물, 오프라벨)",
+          "value": "2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "암로디핀, ACE 억제제, 스피로노락톤 이후 3~4번째 선택 약물. q12h~q24h 투여 (mg/cat 단위)",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 주의 사용 권고. 신장 혈류 감소로 RAAS 활성화 및 신장 손상 악화 가능. 크레아티닌 수치 상승 모니터링 필요. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 광범위하게 대사되나 간 기능 저하 시 구체적인 용량 조절 권고는 명시되지 않음. 개에서 N-아세틸화 경로 결여로 대사 부담 증가 가능성 있어 모니터링 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity to hydralazine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증",
+      "match_terms": [
+        "hypovolemia",
+        "volume depletion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 저혈압",
+      "match_terms": [
+        "pre-existing hypotension",
+        "hypotension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "두개내 출혈",
+      "match_terms": [
+        "intracranial bleeding",
+        "intracranial hemorrhage"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 자가면역 질환",
+      "match_terms": [
+        "autoimmune disease",
+        "lupus",
+        "SLE"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "특정 유전적 감수성 품종에 대한 정보는 본 모노그래프에 명시되지 않음. 단, 개에서 N-아세틸화 경로 결여로 인한 종 특이적 대사 차이가 있음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "직접 전신 동맥 혈관확장제. 혈관 평활근에 작용하여 세포 내 칼슘 대사를 변화시켜 수축 상태 개시 및 유지를 방해함. 세미카르바지드 감수성 아민 산화효소(SSAO) 억제제. 정맥보다 세동맥에 더 강하게 작용하여 말초 혈관 저항 및 혈압 감소.",
+    "common_extra_effects": [
+      "저혈압",
+      "반사성 빈맥",
+      "나트륨/수분 저류",
+      "구토",
+      "설사",
+      "무력감",
+      "기면",
+      "실신",
+      "혈액 이상(blood dyscrasias)",
+      "요저류",
+      "변비",
+      "과민반응",
+      "말초 신경염(피리독신 결핍으로 인한)",
+      "루푸스 유사 증후군(인체)",
+      "눈물 분비 증가",
+      "결막염",
+      "심근 허혈(과용량 시)"
+    ],
+    "dog_mechanism": "경구 투여 후 빠르게 흡수. N-아세틸화 경로 대부분 결여로 독성 위험 증가 우려. 심부전 시 심박출량 증가 및 전신 혈관 저항 감소.",
+    "dog_extra_effects": [
+      "저혈압",
+      "무력감",
+      "기면",
+      "실신",
+      "반사성 빈맥",
+      "나트륨/수분 저류",
+      "구토",
+      "설사",
+      "크레아티닌 수치 상승"
+    ],
+    "cat_mechanism": "개와 유사한 기전. 고양이에서는 mg/cat 단위로 용량 설정 필요(mg/kg 아님).",
+    "cat_extra_effects": [
+      "저혈압",
+      "반사성 빈맥",
+      "나트륨/수분 저류",
+      "구토",
+      "설사"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 N-아세틸화 대사 경로가 대부분 결여되어 있어 독성 위험이 증가할 수 있음. 음식이 경구 생체이용률을 약 63% 감소시키므로 음식과 함께 투여 권장. 용량은 반드시 저용량에서 시작하여 단계적으로 증량해야 하며, 급격한 용량 증가 시 심각한 저혈압 발생 가능. ACE 억제제 병용 시 특히 주의 필요. 심근 질환이 있는 경우 효과가 제한적임. 단기 CHF 치료 시 평균 동맥압(MAP) 60~80 mmHg 유지 권장.",
+    "cat": "고양이에서는 mg/kg이 아닌 mg/cat 단위로 용량을 설정해야 함(2.5~10 mg/cat). 전신 고혈압 장기 치료 시 암로디핀, ACE 억제제, 스피로노락톤 이후 3~4번째 선택 약물로 고려. 비경구 투여 시에도 mg/cat 단위 사용(1~2.5 mg/cat SC)."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 질환, 두개내 출혈, 기존 자가면역 질환 환자에서 주의 사용. N-아세틸화 경로 결여로 독성 위험 증가 가능. 용량 적정 시 심각한 저혈압 발생 가능하므로 저용량에서 시작하여 단계적 증량 필요. ACE 억제제 병용 시 특히 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "mg/cat 단위로 용량 설정 필요. 신장 질환 및 저혈압 환자에서 주의. 장기 고혈압 치료 시 3~4번째 선택 약물로 고려."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐된 차광 용기에 실온 보관. 주사제: 실온 보관; 냉장 또는 동결 피할 것. 대부분의 수액과 혼합 시 색 변화 가능하나 8~12시간 이내 발생 시 역가 손실을 반드시 의미하지는 않음.",
+    "forms": [
+      "경구 정제: 10 mg, 25 mg, 50 mg, 100 mg",
+      "주사제: 20 mg/mL (1 mL 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "하이드랄라진은 직접 동맥 혈관확장제로, 수의학에서 주로 충혈성 심부전(CHF) 보조 치료 및 전신 고혈압 치료에 오프라벨로 사용됩니다. 수의학 허가 제품은 없으며 인체용 제품을 사용합니다. 개에서 N-아세틸화 대사 경로가 결여되어 있어 독성 위험이 증가할 수 있습니다. 반드시 저용량에서 시작하여 단계적으로 증량해야 하며, 급격한 용량 증가 시 심각한 저혈압이 발생할 수 있습니다. 고양이에서는 mg/kg이 아닌 mg/cat 단위로 용량을 설정해야 합니다.",
+    "indications": "【허가 적응증】없음(수의학 허가 제품 없음). 【오프라벨 적응증】① 판막 질환에 의한 충혈성 심부전 보조 치료(후부하 감소제): 특히 불응성 CHF, 대동맥판 역류, 심실 중격 결손 환자. ② 전신 고혈압 치료: 급성 중증 고혈압(니트로프루시드 대안), 장기 고혈압 관리(개: 단독 또는 병용; 고양이: 3~4번째 선택 약물).",
+    "client_info": "【보호자 안내사항】\n• 이 약은 음식과 함께 투여하십시오.\n• 처음 투여 시 수의사가 낮은 용량에서 시작하여 서서히 증량할 수 있습니다. 반드시 처방된 용량을 정확히 투여하십시오.\n• 초기 용량이 너무 많으면 혈압이 지나치게 낮아질 수 있습니다. 식욕 저하, 우울감, 무기력, 근육 약화 등의 증상이 나타나면 혈압이 너무 낮다는 신호일 수 있으므로 즉시 수의사에게 연락하십시오.\n• 이 약을 갑자기 중단하지 마십시오.\n• 정기적인 혈압 측정 및 혈액 검사가 필요할 수 있습니다.\n• 하이드랄라진(hydralazine)과 하이드록시진(hydroxyzine)을 혼동하지 않도록 주의하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetic studies",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability percentage (dog/cat)",
+      "Veterinary species half-life data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction (veterinary)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/0.jsonl",
+    "extracted_at": "2026-03-10T13:37:55.331815+00:00",
+    "reviewer": null
+  }
+}

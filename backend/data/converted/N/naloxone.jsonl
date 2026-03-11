@@ -1,0 +1,574 @@
+{
+  "id": "naloxone",
+  "drug_identity": {
+    "name_ko": "날록손",
+    "name_en": "Naloxone",
+    "active_ingredient": "Naloxone hydrochloride",
+    "brand_names": [
+      "Narcan",
+      "Evzio"
+    ],
+    "allergy_class": null,
+    "class": "Reversal Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의용 승인 제품 없음. 인체용 제품을 동물에 오프라벨로 사용. 과거 수의용 승인 제품은 현재 판매 중단됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.4,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 글루쿠론산 포합(glucuronidative conjugation)을 통해 대사되며, 대사산물은 소변으로 배설됨."
+    },
+    "extra_information": "경구 투여 시 광범위한 초회통과 대사로 인해 흡수가 매우 적음. IV 투여 시 뇌, 신장, 비장, 골격근, 폐, 심장에 높은 농도로 빠르게 분포됨. 수의 종별 PK 데이터는 제한적이며, 반감기는 인체 데이터(약 60분) 기반임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 주로 인체 데이터 및 Plumb's 기술 내용 기반. 수의 종별 PK 연구 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression reversal",
+          "CNS excitement",
+          "seizures",
+          "high concentrations in brain"
+        ],
+        "index": 1,
+        "evidence": "뇌에 높은 농도로 분포됨. CNS 억제 역전 및 과량 투여 시 경련 유발 가능(GABA 길항 작용). 메페리딘 과량 투여 시 CNS 흥분 유발 보고."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "blood pressure changes",
+          "ventricular arrhythmias",
+          "pulmonary edema"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 또는 급격한 역전 시 빈맥, 혈압 변화, 심실 부정맥 보고. 표준 용량에서 비심인성 폐부종 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "high concentrations in kidneys",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "신장에 높은 농도로 분포됨. 대사산물이 소변으로 배설되나 직접적인 신독성 보고는 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidative conjugation",
+          "first-pass metabolism"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위한 초회통과 대사 및 글루쿠론산 포합을 통해 대사됨. 직접적인 간독성 보고는 없으나 간이 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ventricular arrhythmias",
+          "tachycardia",
+          "pulmonary edema",
+          "cardiac abnormalities"
+        ],
+        "index": 5,
+        "evidence": "기존 심장 이상이 있는 동물에서 주의 필요. 과량 투여 시 심실 부정맥, 빈맥 보고. 비심인성 폐부종 드물게 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression reversal",
+          "seizures",
+          "high concentrations in brain",
+          "postanesthesia hyperthermia"
+        ],
+        "index": 1,
+        "evidence": "뇌에 높은 농도로 분포됨. 마취 후 고체온증 치료에 사용됨. 과량 투여 시 경련 가능성."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "blood pressure changes",
+          "ventricular arrhythmias"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 또는 급격한 역전 시 심혈관계 부작용 가능. 고양이 특이 데이터 제한적."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "high concentrations in kidneys",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "신장에 높은 농도로 분포됨. 대사산물이 소변으로 배설. 고양이 특이 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidative conjugation"
+        ],
+        "index": 4,
+        "evidence": "간에서 글루쿠론산 포합을 통해 대사됨. 고양이는 글루쿠론산 포합 능력이 제한적이나 날록손 특이 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ventricular arrhythmias",
+          "tachycardia",
+          "cardiac abnormalities"
+        ],
+        "index": 5,
+        "evidence": "기존 심장 이상이 있는 고양이에서 주의 필요. 과량 투여 시 심혈관계 부작용 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.75,
+      "max": 1.5,
+      "mean": 1.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 시 통상 1~2분 내 작용 발현. IM 투여 시 약 5분 내 발현. 작용 지속 시간은 통상 45~90분, 최대 3시간. 인체 혈청 반감기 약 60분(신생아 약 3시간). 경구 투여 시 광범위한 초회통과 대사로 흡수 최소화."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Apomorphine",
+      "severity": 2,
+      "keywords": [
+        "prolonged emesis",
+        "partial reversal",
+        "cardiovascular effects"
+      ],
+      "evidence": "Naloxone may prolong the emetic effect of apomorphine. Naloxone can reverse respiratory depressant effects but NOT the emetic or cardiovascular effects of apomorphine."
+    },
+    {
+      "drug": "Clonidine",
+      "severity": 2,
+      "keywords": [
+        "hypotension reversal",
+        "bradycardia reversal"
+      ],
+      "evidence": "Naloxone may reduce the hypotensive and bradycardic effects of clonidine; potentially useful for clonidine overdoses."
+    },
+    {
+      "drug": "Meperidine",
+      "severity": 3,
+      "keywords": [
+        "CNS excitation",
+        "normeperidine excitotoxicity",
+        "seizures"
+      ],
+      "evidence": "Naloxone may contribute to CNS excitatory effects of normeperidine (meperidine metabolite). In cases where normeperidine excitotoxicity is suspected, avoid use of naloxone unless severe respiratory depression is present without ventilatory support."
+    },
+    {
+      "drug": "Opioid Agonist-Antagonists (butorphanol, pentazocine, nalbuphine)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "respiratory depression reversal",
+        "analgesia reversal"
+      ],
+      "evidence": "Naloxone may antagonize the effects of opioid agonist-antagonists including respiratory depression and analgesia."
+    },
+    {
+      "drug": "Opioid Partial-Agonists (buprenorphine)",
+      "severity": 2,
+      "keywords": [
+        "partial reversal",
+        "high dose required",
+        "respiratory depression"
+      ],
+      "evidence": "Naloxone may antagonize effects of partial opioid agonists, but higher doses may be needed. Should not be relied upon to treat respiratory depression caused by buprenorphine. Doses 100x label dosage have been required to reverse buprenorphine in a normal dog."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 2,
+      "keywords": [
+        "CNS effects",
+        "anxiety",
+        "tremors",
+        "cortisol elevation"
+      ],
+      "evidence": "Naloxone may increase CNS effects of yohimbine (anxiety, tremors, nausea, palpitations) and increase plasma cortisol levels."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 역전 (표준 용량)",
+          "value": "0.001 - 0.04",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 2~3분마다 반복 투여 가능. 재마취 징후 모니터링 필요.",
+          "evidence": "오프라벨. 중증도에 따라 0.1~0.2 mg/kg까지 사용 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 역전 (표준 용량, IM/SC)",
+          "value": "0.001 - 0.04",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "IM 또는 SC 투여 시 효과 발현까지 최대 5분 소요.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 역전 (지속 정맥 주입, CRI)",
+          "value": "0.001 - 0.004",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "분당 1~4 μg/kg/min IV CRI",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신생아 호흡 억제 역전 (모체에 오피오이드 투여된 경우)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 반복 투여.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신생아 호흡 억제 역전 (경점막 투여)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.4 mg/mL 주사액 사용, 혀 아래 또는 비강 내 1~2방울 투여. 필요 시 반복.",
+          "evidence": "오프라벨. 경점막 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "CPR 중 오피오이드 독성 또는 최근 오피오이드 투여 시",
+          "value": "0.04",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IO 경로도 고려 가능.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 불쾌감(dysphoria) 치료",
+          "value": "0.04 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "희석 후 30~60초에 걸쳐 천천히 적정 투여. 과량 투여 시 통각과민 유발 가능.",
+          "evidence": "오프라벨. 신중한 적정 투여 필요."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 모르핀 후 요저류 역전",
+          "value": "0.01 - 0.04",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 역전 (표준 용량)",
+          "value": "0.001 - 0.04",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 2~3분마다 반복 투여 가능.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 역전 (IM/SC)",
+          "value": "0.001 - 0.04",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "IM 또는 SC 투여 시 효과 발현까지 최대 5분 소요.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 후 고체온증 보조 치료 (41.1°C 초과)",
+          "value": "0.01 - 0.02",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "30분 이내 체온 정상화 보고됨. IM 또는 SC 투여도 가능.",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 간에서 주로 대사되므로 심한 간부전 시 주의가 필요할 수 있으나 구체적 권고는 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "날록손 과민증",
+      "match_terms": [
+        "naloxone hypersensitivity",
+        "drug allergy naloxone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 심장 이상",
+      "match_terms": [
+        "cardiac arrhythmia",
+        "heart disease",
+        "ventricular arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "오피오이드 의존성",
+      "match_terms": [
+        "opioid dependence",
+        "opioid addiction"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "노르메페리딘 흥분독성 의심",
+      "match_terms": [
+        "meperidine overdose",
+        "normeperidine toxicity",
+        "meperidine toxicity"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "순수 오피오이드 길항제로서 mu, kappa, delta 오피오이드 수용체에 경쟁적으로 결합하며, mu 수용체에 가장 높은 친화성을 가짐. 통상 용량에서 진통 활성 없음. 고용량에서 도파민 기전 및 GABA 길항 효과 나타남.",
+    "common_extra_effects": [
+      "오피오이드 진통 효과 역전",
+      "구토 (급격한 역전 시)",
+      "빈맥",
+      "혈압 변화",
+      "심실 부정맥 (과량 투여 시)",
+      "비심인성 폐부종 (드물게)",
+      "경련 (과량 투여 시, GABA 길항 작용)",
+      "오피오이드 금단 증후군 (의존성 동물에서)"
+    ],
+    "dog_mechanism": "개에서 날록손은 아포모르핀의 구토 또는 저혈압 작용을 역전시키지 않음. 메페리딘 과량 투여 시 CNS 흥분 유발 가능.",
+    "dog_extra_effects": [
+      "CNS 흥분 (메페리딘 과량 투여 시)",
+      "통각과민 (수술 후 불쾌감 치료 시 과량 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서 마취 후 고체온증(41.1°C 초과) 치료에 사용됨.",
+    "cat_extra_effects": [
+      "마취 후 고체온증 개선"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 날록손은 아포모르핀의 구토 또는 저혈압 효과를 역전시키지 않음. 부프레노르핀 역전을 위해서는 표준 용량의 100배까지 필요할 수 있음. 메페리딘 과량 투여 시 노르메페리딘 흥분독성이 의심되면 날록손 사용을 피해야 함(심한 호흡 억제 및 환기 지원 불가 시 제외). 날록손의 작용 지속 시간이 역전 대상 오피오이드보다 짧을 수 있으므로 재마취 징후를 면밀히 모니터링해야 함.",
+    "cat": "고양이에서 마취 후 고체온증(41.1°C 초과) 치료에 0.01~0.02 mg/kg IV/IM/SC로 사용 가능하며, 30분 이내 체온 정상화가 보고됨. 고양이는 글루쿠론산 포합 능력이 제한적이나 날록손 특이 독성 보고는 없음. 날록손의 작용 지속 시간이 역전 대상 오피오이드보다 짧을 수 있으므로 재마취 징후를 면밀히 모니터링해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 심장 이상이 있거나 오피오이드 의존성이 있는 개에서 주의 필요. 과량 투여 또는 급격한 역전 시 구토, 빈맥, 혈압 변화, 심실 부정맥, 폐부종, 경련 가능. 날록손의 작용 지속 시간이 역전 대상 오피오이드보다 짧을 수 있으므로 재마취 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "기존 심장 이상이 있거나 오피오이드 의존성이 있는 고양이에서 주의 필요. 날록손의 작용 지속 시간이 역전 대상 오피오이드보다 짧을 수 있으므로 재마취 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15~30°C) 보관, 빛 차단. IV 주입 시 5% 포도당 또는 0.9% 생리식염수로 희석. 황산염, 아황산염, 장쇄 또는 고분자량 음이온 함유 용액, 알칼리성 pH 용액과 혼합 금지.",
+    "forms": [
+      "Naloxone HCl Injection 0.4 mg/mL (400 μg/mL)",
+      "Naloxone HCl Injection 1 mg/mL",
+      "Naloxone HCl Auto-Injector 0.4 mg/0.4 mL (Evzio)",
+      "Naloxone HCl Auto-Injector 2 mg/0.4 mL (Evzio)",
+      "Naloxone Nasal Spray 2 mg/0.1 mL (Narcan)",
+      "Naloxone Nasal Spray 4 mg/0.1 mL (Narcan)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "날록손은 순수 오피오이드 길항제로, 주로 mu 수용체 완전 작용제(펜타닐, 모르핀 등)의 역전에 가장 효과적임. 부분 작용제(부프레노르핀)에는 고용량이 필요하며 신뢰성이 낮음. 날록손의 작용 지속 시간(45~90분)이 역전 대상 오피오이드보다 짧을 수 있으므로 재마취 징후를 반드시 모니터링해야 함. 수의용 승인 제품은 없으며 인체용 제품을 오프라벨로 사용함. 경주 동물에서 ARCI 3등급 물질로 지정되어 있어 사용 제한이 있을 수 있음.",
+    "indications": "오피오이드 역전(개, 고양이, 말, 토끼, 설치류, 파충류 - 모두 오프라벨), 신생아 호흡 억제 역전(모체 오피오이드 투여 시), 수술 후 불쾌감 치료, 경막외 모르핀 후 요저류 역전, 고양이 마취 후 고체온증 보조 치료, CPR 중 오피오이드 독성 처치. 패혈성/저혈량성/심인성 쇼크 치료 및 자해 행동 검사 목적으로도 연구됨.",
+    "client_info": "이 약물은 반드시 수의사의 직접적인 감독 하에만 사용해야 합니다. 날록손은 오피오이드(마약성 진통제)의 효과를 역전시키는 약물로, 오피오이드 과량 투여나 호흡 억제 시 응급으로 사용됩니다. 날록손의 효과는 역전시키려는 오피오이드보다 짧게 지속될 수 있으므로, 투여 후에도 반드시 수의사의 지속적인 모니터링이 필요합니다. 날록손 투여 후 동물이 통증을 느낄 수 있으며, 이는 오피오이드의 진통 효과도 함께 역전되기 때문입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Veterinary-specific PK studies",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability percentage",
+      "t_max_hr"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (veterinary species)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment",
+      "hepatic_dose_adjustment"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/27.jsonl",
+    "extracted_at": "2026-03-10T21:48:05.294140+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "id": "dalteparin",
+  "drug_identity": {
+    "name_ko": "달테파린",
+    "name_en": "Dalteparin",
+    "active_ingredient": "Dalteparin sodium",
+    "brand_names": [
+      "Fragmin",
+      "Fragmine",
+      "Boxol",
+      "Ligofragmin",
+      "Low Liqumine"
+    ],
+    "allergy_class": null,
+    "class": "Anticoagulant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Protamine sulfate",
+    "reversal_evidence": "프로타민 설페이트 1 mg IV는 투여된 항-Xa 달테파린 100 units의 효과를 억제할 수 있음. 느린 IV 투여 필요.",
+    "off_label_note": "수의학적 허가 제품 없음. 개, 고양이, 말에서 혈전색전증 예방 및 치료 목적으로 오프라벨 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 25000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 2500,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 18000,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "달테파린은 신장으로 배설됨. CYP 효소 관련 대사 경로는 보고되지 않음."
+    },
+    "extra_information": "개: SC 투여 후 완전 흡수, 분포용적 50–70 mL/kg, 용량 의존적 반감기 약 1.5–3시간. 고양이: SC 투여 후 완전 흡수, 반감기 약 2시간. 고양이는 인간보다 LMWH의 항-Xa 활성 지속 시간이 훨씬 짧음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 수의학적 PK 데이터 일부 존재. 출혈 위험 및 신장 배설 관련 정보 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurologic sequelae",
+          "epidural hematoma"
+        ],
+        "index": -1,
+        "evidence": "경막외 또는 척수 혈종으로 인한 신경학적 후유증 가능성이 언급됨. 직접적인 뇌 부담 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hemorrhage",
+          "bleeding complications",
+          "anti-Xa activity",
+          "thrombocytopenia"
+        ],
+        "index": 1,
+        "evidence": "중증 개의 약 9%에서 출혈 합병증 발생. 혈소판 감소증 위험 및 항-Xa 활성 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "drug accumulation",
+          "renal impairment",
+          "urine excretion"
+        ],
+        "index": 1,
+        "evidence": "신장 기능 장애 시 약물 축적 가능. 신장으로 배설됨. 신기능 저하 환자에서 반감기 연장 가능."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "AST increase",
+          "ALT increase"
+        ],
+        "index": -1,
+        "evidence": "LMWH는 AST 또는 ALT의 무증상 가역적 증가를 유발할 수 있음. 빌리루빈은 드물게 증가. 간 손상을 의미하지 않을 수 있음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부담 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurologic sequelae"
+        ],
+        "index": -1,
+        "evidence": "신경학적 후유증 가능성 언급. 직접적인 고양이 뇌 부담 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "bleeding complications",
+          "anti-Xa activity",
+          "thrombocytopenia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 보호자 투여 시 출혈 합병증은 드물었음. 항-Xa 활성 모니터링 필요. 혈소판 감소증 위험."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "drug accumulation",
+          "urine excretion"
+        ],
+        "index": 1,
+        "evidence": "신장 기능 장애 시 약물 축적 가능. 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "AST increase",
+          "ALT increase"
+        ],
+        "index": -1,
+        "evidence": "LMWH는 AST 또는 ALT의 무증상 가역적 증가를 유발할 수 있음. 간 손상을 의미하지 않을 수 있음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부담 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": 1.5,
+      "max": 3.0,
+      "mean": 2.25,
+      "species": "dog"
+    },
+    "f_percent": 87,
+    "protein_binding_percent": null,
+    "evidence": "개: SC 투여 후 완전 흡수, 반감기 1.5–3시간(용량 의존적). 고양이: 반감기 약 2시간. 인간: 생체이용률 약 87%, 최고 혈장 농도 도달 시간 약 4시간, 반감기 3–5시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 모든 상호작용은 출혈 위험 증가와 관련됨.",
+  "drug_interactions": [
+    {
+      "drug": "Oral Anticoagulants (e.g., rivaroxaban, warfarin)",
+      "severity": 3,
+      "keywords": [
+        "hemorrhage",
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use increases risk for hemorrhage."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, flunixin, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "hemorrhage",
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use increases risk for hemorrhage."
+    },
+    {
+      "drug": "Platelet-Aggregation Inhibitors (e.g., aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "hemorrhage",
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use increases risk for hemorrhage."
+    },
+    {
+      "drug": "SSRIs (e.g., fluoxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use may increase risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "혈전색전증 예방 (오프라벨)",
+          "value": "150 - 175",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨 사용. 항-Xa 활성 목표 0.5–1 units/mL. 투여 3시간 후 최고 항-Xa 활성 측정 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "혈전색전증 예방 (오프라벨)",
+          "value": "75 - 150",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨 사용. 75 units/kg SC q6h 투여 시 모든 고양이에서 목표 최고 항-Xa 활성 0.5–1 units/mL 달성(투여 2시간 후 측정). 약동학 모델링에서는 150 units/kg SC q4h 필요 예측."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 기능 장애 환자에서 약물 축적 가능. 신기능 저하 시 주의하여 사용. 항-Xa 활성 모니터링을 통한 용량 조절 권장. 반감기 연장 가능."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "LMWH는 AST/ALT의 무증상 가역적 증가를 유발할 수 있으나 간 손상을 의미하지 않음. 간 기능 장애에 대한 명시적 용량 조절 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "달테파린, 헤파린 또는 돼지 제품에 과민반응",
+      "match_terms": [
+        "heparin hypersensitivity",
+        "pork allergy",
+        "dalteparin hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "주요 출혈",
+      "match_terms": [
+        "major bleeding",
+        "active hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "헤파린 유발 혈소판 감소증 (HIT)",
+      "match_terms": [
+        "heparin-induced thrombocytopenia",
+        "HIT"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "항혈소판 항체 양성 혈소판 감소증",
+      "match_terms": [
+        "thrombocytopenia",
+        "antiplatelet antibody"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "신장 기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure",
+        "renal impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "경막외 마취",
+      "match_terms": [
+        "epidural anesthesia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 위험 증가",
+      "match_terms": [
+        "hemorrhage risk",
+        "bleeding risk"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "항트롬빈 III에 결합하여 활성화함으로써 인자 Xa 및 트롬빈 억제를 강화하는 저분자량 헤파린(LMWH). 표준 헤파린에 비해 인자 Xa를 선택적으로 억제하며 응고 시간(PT, TT, aPTT)에는 최소한의 영향을 미침.",
+    "common_extra_effects": [
+      "출혈",
+      "주사 부위 혈종 또는 통증",
+      "알레르기 반응",
+      "경막외 또는 척수 혈종으로 인한 신경학적 후유증",
+      "AST/ALT 무증상 가역적 증가",
+      "혈소판 감소증"
+    ],
+    "dog_mechanism": "SC 투여 후 완전 흡수. 인자 Xa 억제를 통한 항응고 효과.",
+    "dog_extra_effects": [
+      "중증 개의 약 9%에서 출혈 합병증 발생"
+    ],
+    "cat_mechanism": "SC 투여 후 완전 흡수. 고양이는 인간보다 LMWH의 항-Xa 활성 지속 시간이 훨씬 짧아 매우 빈번한 투여가 필요할 수 있음.",
+    "cat_extra_effects": [
+      "보호자 투여 시 출혈 합병증은 드물었음"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 달테파린은 SC 투여 후 완전 흡수되며 분포용적은 50–70 mL/kg, 반감기는 용량 의존적으로 약 1.5–3시간입니다. 혈전색전증 예방을 위해 150–175 units/kg SC q8h 투여가 권장됩니다. 중증 개의 약 9%에서 출혈 합병증이 보고되었습니다. 항-Xa 활성 모니터링 시 투여 3시간 후 채혈을 권장하며 목표 범위는 0.5–1 units/mL입니다. 빈번한 투여로 인해 외래 투여가 어려울 수 있으며 대형견에서는 비용 문제가 있을 수 있습니다.",
+    "cat": "고양이에서 달테파린은 SC 투여 후 완전 흡수되며 반감기는 약 2시간입니다. 고양이는 인간보다 LMWH의 항-Xa 활성 지속 시간이 훨씬 짧아 매우 빈번한 투여(q4–6h)가 필요합니다. 75 units/kg SC q6h 투여 시 목표 항-Xa 활성 0.5–1 units/mL 달성이 보고되었습니다. 항-Xa 활성 모니터링 시 투여 2시간 후 채혈을 권장합니다. 보호자 투여 시 출혈 합병증은 드물었습니다. 빈번한 투여 필요성으로 인해 장기 외래 투여가 현실적으로 어려울 수 있습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 기능 장애 시 약물 축적 가능. 출혈 위험 모니터링 필요. 경막외 마취 시 극도의 주의 필요. SC 경로로만 투여 가능(IM, IV 금지). 빈번한 투여로 외래 관리 어려울 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 LMWH 항-Xa 활성 지속 시간이 매우 짧아 q4–6h 투여 필요. 신장 기능 장애 시 주의. SC 경로로만 투여 가능. 빈번한 투여로 외래 관리 어려울 수 있음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C–25°C) 보관. 입자 또는 변색 시 사용 금지. 다회용 바이알 개봉 후 실온 보관, 2주 후 미사용분 폐기. 주사기에 충전 후 실온 또는 냉장 보관 시 30일간 안정성 확인됨.",
+    "forms": [
+      "Dalteparin Sodium Injection 25,000 units/mL (3.8 mL 다회용 바이알, 벤질알코올 함유) - Fragmin",
+      "보존제 없는 단회용 주사기 2,500 units/0.2 mL ~ 18,000 units/0.72 mL (다양한 용량)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "달테파린은 저분자량 헤파린(LMWH)으로 인자 Xa를 선택적으로 억제하여 혈전색전증 예방 및 치료에 사용됩니다. 수의학적 허가 제품은 없으며 개, 고양이에서 오프라벨로 사용됩니다. 반드시 SC 경로로만 투여해야 하며, 개와 고양이는 빈번한 투여(q6–8h)가 필요하여 외래 장기 투여가 어려울 수 있습니다. 출혈 합병증 모니터링 및 항-Xa 활성 측정이 권장됩니다. 과량 투여 시 프로타민 설페이트로 역전 가능합니다.",
+    "indications": "혈전색전증 예방 및 치료 (오프라벨). 개: 150–175 units/kg SC q8h. 고양이: 75–150 units/kg SC q6h. 인간에서는 불안정 협심증 및 비-Q파 심근경색과 관련된 허혈성 합병증 예방에도 승인됨.",
+    "client_info": "달테파린은 반드시 피하(SC, 피부 아래)로 주사해야 합니다. 하루에 여러 번 주사가 필요할 수 있으며 치료 비용이 매우 높을 수 있습니다. 주사 시 통증이 있을 수 있습니다. 출혈 가능성은 낮지만 발생할 수 있으므로 출혈이 관찰되면 즉시 수의사에게 연락하십시오. 동물이 무기력하거나, 호흡 곤란, 보행 장애, 또는 뒷다리 마비 증상을 보이면 혈전 형성 가능성이 있으므로 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Protein binding data (dog/cat)",
+      "Specific renal creatinine threshold for dose adjustment",
+      "Hepatic dose adjustment guidance"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/37.jsonl",
+    "extracted_at": "2026-03-11T00:49:11.945255+00:00",
+    "reviewer": null
+  }
+}

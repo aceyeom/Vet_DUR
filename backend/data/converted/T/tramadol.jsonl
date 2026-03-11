@@ -1,0 +1,789 @@
+{
+  "id": "tramadol",
+  "drug_identity": {
+    "name_ko": "트라마돌",
+    "name_en": "Tramadol",
+    "active_ingredient": "Tramadol hydrochloride",
+    "brand_names": [
+      "Ultram",
+      "Ultram ER",
+      "Ryzolt",
+      "ConZip",
+      "Qdolo",
+      "Ultracet"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone (partial only)",
+    "reversal_evidence": "날록손은 트라마돌의 진통 효과를 부분적으로만 길항하며, 과다복용 시 경련 위험을 증가시킬 수 있어 주의가 필요합니다.",
+    "off_label_note": "수의용 허가 제품 없음. 모든 동물 적용은 오프라벨 사용임. 개에서의 진통 효능에 대한 근거는 상충되며, 고양이에서는 보다 강력한 효능 근거가 있음.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2B11",
+        "CYP2D15",
+        "CYP2C21",
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "트라마돌은 CYP2D15에 의해 활성 대사체 M1(O-desmethyltramadol)으로 전환되나, 개에서는 M1이 소량 생성됨. 개에서는 CYP2B11에 의해 비활성 대사체 M2가 주로 생성되며, M1과 M2는 CYP2C21 및 CYP2D15에 의해 M5로 추가 대사됨. 고양이에서는 M1이 주요 대사체임."
+    },
+    "extra_information": "개: 경구 생체이용률 약 65% (개체 간 변동 큼), 직장 투여 시 약 10%. VD 3.8 L/kg, 총 체내 청소율 55 mL/kg/min, 반감기 1.7시간. IV 투여(4 mg/kg) 시 젊은 개에서 반감기 1.91±0.26시간, 중년 개에서 2.39±0.97시간. 그레이하운드에서 반감기 약 1.1시간으로 약간 짧음. 고령 동물에서 배설이 유의하게 지연됨. 고양이: 경구 생체이용률 약 60%, VD(VSS) 약 2 L/kg, 청소율 12 mL/kg/min, 말단 반감기 약 3.2시간. M1 대사체 반감기 약 4.8시간. 경피 겔 제형은 혈장 농도가 검출 불가 또는 매우 낮음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 평가. 수의 종별 데이터 존재하나 장기별 직접 독성 연구는 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "agitation",
+          "anxiety",
+          "tremor",
+          "dizziness",
+          "seizure risk",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "개에서 과도한 진정, 흥분, 불안, 진전, 어지러움 등 CNS 이상반응이 보고됨. 경련 역치 저하 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 빈맥이 보고됨. 직접적인 혈액독성 근거는 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment",
+          "dosage adjustment"
+        ],
+        "index": 1,
+        "evidence": "신기능 장애 시 용량 조절이 필요할 수 있다고 언급됨. 직접적인 신독성 근거는 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "CYP metabolism",
+          "dosage adjustment"
+        ],
+        "index": 1,
+        "evidence": "간기능 장애 시 용량 조절이 필요할 수 있음. 간에서 광범위하게 대사됨(CYP2B11, CYP2D15, CYP2C21)."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 빈맥 보고. 주사제형에서 심장 억제 가능성(인체 데이터). 개에서 직접적인 심장독성 근거는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "mydriasis",
+          "dysphoria",
+          "euphoria",
+          "neurologic effects",
+          "serotonin syndrome"
+        ],
+        "index": 1,
+        "evidence": "고양이의 25%에서 신경학적 이상반응(산동, 불쾌감)이 보고됨. 과다복용(80 mg/kg PO) 시 세로토닌 증후군 사례 보고."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 빈맥 보고. 직접적인 혈액독성 근거는 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment",
+          "dosage adjustment"
+        ],
+        "index": 1,
+        "evidence": "신기능 장애 시 용량 조절이 필요할 수 있다고 언급됨."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "CYP metabolism",
+          "dosage adjustment"
+        ],
+        "index": 1,
+        "evidence": "간기능 장애 시 용량 조절 필요 가능. 고양이에서 M1이 주요 대사체로 생성됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 빈맥 보고. 직접적인 심장독성 근거는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.7,
+      "max": 2.39,
+      "mean": 2.0,
+      "species": "dog"
+    },
+    "f_percent": 65,
+    "protein_binding_percent": null,
+    "evidence": "개: 경구 즉시방출정 생체이용률 약 65%, 반감기 1.7~2.39시간(젊은~중년 개). 고양이: 경구 생체이용률 약 60%, 말단 반감기 약 3.2시간. 비강 내 투여 시 최고 농도 도달 약 40분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 세로토닌 증후군 위험으로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "MAOI",
+        "avoid"
+      ],
+      "evidence": "Potential for serotonin syndrome; MAOI use within the past 14 days or concurrent use should be avoided."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, paroxetine, sertraline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "seizures",
+        "CYP inhibition",
+        "reduced efficacy"
+      ],
+      "evidence": "SSRIs can inhibit tramadol metabolism to active metabolites, decreasing efficacy and increasing risk for serotonin syndrome and seizures."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., fluconazole, ketoconazole)",
+      "severity": 3,
+      "keywords": [
+        "increased tramadol exposure",
+        "31-fold increase",
+        "toxicity"
+      ],
+      "evidence": "Fluconazole inhibits tramadol metabolism; in dogs receiving fluconazole, tramadol and M1 concentrations increased by 31-fold and 39-fold respectively. Ketoconazole may also increase tramadol exposure and risk for toxicity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 3,
+      "keywords": [
+        "seizures",
+        "serotonin syndrome",
+        "CYP inhibition"
+      ],
+      "evidence": "Increased risk for seizures and serotonin syndrome; amitriptyline may inhibit tramadol metabolism."
+    },
+    {
+      "drug": "Antidepressants, Miscellaneous (e.g., mirtazapine, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome with concurrent use."
+    },
+    {
+      "drug": "Opioid Analgesics (e.g., buprenorphine, butorphanol, methadone)",
+      "severity": 2,
+      "keywords": [
+        "seizures",
+        "serotonin syndrome",
+        "CNS depression",
+        "respiratory depression",
+        "CYP inhibition"
+      ],
+      "evidence": "May increase the risk for seizures, serotonin syndrome, and CNS and respiratory depression; methadone may inhibit tramadol metabolism."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., alprazolam, diazepam)",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression"
+      ],
+      "evidence": "Increased risk for respiratory depression with concurrent use."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Increased risk for CNS and respiratory depression with concurrent use."
+    },
+    {
+      "drug": "Amantadine",
+      "severity": 2,
+      "keywords": [
+        "seizures",
+        "CNS depression",
+        "seizure threshold"
+      ],
+      "evidence": "Concomitant use may increase the risk for seizures; amantadine can lower the seizure threshold. Monitor for sedation or neurologic adverse effects."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "Increased risk for seizures with concurrent use."
+    },
+    {
+      "drug": "Iohexol",
+      "severity": 2,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "Concurrent use may increase the risk for seizures."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "reduced tramadol levels",
+        "seizure threshold"
+      ],
+      "evidence": "Increased risk for CNS depression. Tramadol may lower the seizure threshold. Phenobarbital may decrease tramadol levels."
+    },
+    {
+      "drug": "CNS Depressants, Miscellaneous (e.g., dexmedetomidine, gabapentin, levetiracetam, methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "Increased risk for CNS depression with concurrent use."
+    },
+    {
+      "drug": "Antihistamines (e.g., diphenhydramine, hydroxyzine, promethazine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "Increased risk for CNS depression with concurrent use."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "increased tramadol concentration",
+        "decreased M1 concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "May increase tramadol concentrations and decrease M1 (active metabolite) concentrations."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "increased tramadol concentration",
+        "decreased M1 concentration"
+      ],
+      "evidence": "May increase tramadol concentrations and decrease M1 (active metabolite) concentrations."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 2,
+      "keywords": [
+        "increased tramadol levels",
+        "reduced M1 formation",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "May increase tramadol levels and reduce formation of M1 metabolite due to CYP2D6 inhibition. In humans, this effect may persist for weeks after discontinuing terbinafine."
+    },
+    {
+      "drug": "Anticholinergic Agents (e.g., atropine, glycopyrrolate)",
+      "severity": 1,
+      "keywords": [
+        "constipation",
+        "urinary retention",
+        "anticholinergic effects"
+      ],
+      "evidence": "Concurrent use may increase the risk for anticholinergic effects such as constipation and urinary retention."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased tramadol exposure",
+        "toxicity"
+      ],
+      "evidence": "May increase tramadol exposure and risk for toxicity."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "increased tramadol exposure",
+        "toxicity"
+      ],
+      "evidence": "May increase tramadol exposure and risk for toxicity."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "reduced tramadol levels",
+        "reduced efficacy"
+      ],
+      "evidence": "May reduce tramadol levels and efficacy."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "reduced tramadol levels",
+        "reduced efficacy"
+      ],
+      "evidence": "May reduce tramadol levels and efficacy."
+    },
+    {
+      "drug": "Sevoflurane",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction",
+        "anesthetic sparing"
+      ],
+      "evidence": "Pretreatment with tramadol reduced minimum alveolar concentration (MAC) values by 22–30% in dogs and 40% in cats."
+    },
+    {
+      "drug": "S-Adenosyl Methionine (SAMe)",
+      "severity": 1,
+      "keywords": [
+        "serotonergic effects",
+        "additive"
+      ],
+      "evidence": "Theoretically, concurrent use of SAMe with tramadol could cause additive serotonergic effects."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 1,
+      "keywords": [
+        "reduced tramadol efficacy"
+      ],
+      "evidence": "May decrease efficacy of tramadol."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 1,
+      "keywords": [
+        "digoxin toxicity"
+      ],
+      "evidence": "In humans, tramadol has been rarely linked to digoxin toxicity."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 1,
+      "keywords": [
+        "reduced efficacy",
+        "mutual antagonism"
+      ],
+      "evidence": "In humans, use together may reduce the effectiveness of both drugs."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "partial antagonism"
+      ],
+      "evidence": "May antagonize (partial) the pharmacologic effects of tramadol."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 1,
+      "keywords": [
+        "increased prothrombin time",
+        "bleeding risk"
+      ],
+      "evidence": "In humans, increased prothrombin time in patients taking tramadol has been reported (relatively rare)."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통 (오프라벨)",
+          "value": "4 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "약동학 데이터에 따르면 6시간 간격 투여가 필요할 수 있음. 단독 제제로서의 효능은 불확실하며, 장기 효능은 시간이 지남에 따라 감소할 수 있음.",
+          "evidence": "오프라벨. Plumb's Veterinary Drug Handbook 기재 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통 (오프라벨)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "일부 임상의는 24시간 간격 투여를 제안하며, 일부는 최대 4 mg/kg까지 사용. 2 mg/kg 초과 시, 특히 노령 고양이에서 신경학적 및 오피오이드 이상반응 발생 가능. 쓴맛으로 인해 복약 거부 가능.",
+          "evidence": "오프라벨. 전향적 연구에 기반한 명확한 용량 없음. Plumb's Veterinary Drug Handbook 기재 권장 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 장애 동물에서 용량 조절이 필요할 수 있다고 언급됨. 구체적인 기준치나 조절 계수는 명시되지 않음. 고령 동물에서 배설이 유의하게 지연됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 장애 동물에서 용량 조절이 필요할 수 있다고 언급됨. 구체적인 기준치는 명시되지 않음. 트라마돌은 간에서 광범위하게 대사됨."
+  },
+  "contraindications": [
+    {
+      "condition": "트라마돌 또는 다른 오피오이드에 과민반응",
+      "match_terms": [
+        "opioid hypersensitivity",
+        "tramadol allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 폐색 또는 마비성 장폐색",
+      "match_terms": [
+        "GI obstruction",
+        "paralytic ileus",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이에서 아세트아미노펜 복합 제제 사용",
+      "match_terms": [
+        "acetaminophen combination",
+        "Ultracet",
+        "cat acetaminophen"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 경련 장애 또는 경련 위험 증가",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "head trauma",
+        "CNS infection"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "노령 또는 심하게 쇠약한 동물",
+      "match_terms": [
+        "geriatric",
+        "debilitated",
+        "elderly"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 천식",
+      "match_terms": [
+        "severe asthma",
+        "respiratory compromise"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAOI 투여 후 14일 이내",
+      "match_terms": [
+        "MAOI",
+        "selegiline",
+        "amitraz",
+        "monoamine oxidase inhibitor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [
+      "Greyhound"
+    ],
+    "gene": null,
+    "evidence": "그레이하운드에서 트라마돌 반감기가 약 1.1시간으로 다른 견종보다 약간 짧음. 유전적 위험에 대한 직접적인 근거는 없으나 품종 간 약동학 차이가 보고됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "중추 작용성 부분 뮤(mu) 오피오이드 수용체 작용제로, 세로토닌 및 노르에피네프린 재흡수를 약하게 억제함. 진통 효과는 모체 화합물과 활성 대사체 M1(O-desmethyltramadol)에 의해 나타남.",
+    "common_extra_effects": [
+      "진정",
+      "흥분/불안",
+      "진전",
+      "어지러움",
+      "식욕부진",
+      "구토",
+      "변비",
+      "설사",
+      "경련(고용량)",
+      "세로토닌 증후군(과다복용 또는 약물 상호작용 시)"
+    ],
+    "dog_mechanism": "개에서 M1 활성 대사체는 소량 생성되며, 비활성 대사체 M2가 주로 생성됨(CYP2B11). 이로 인해 개에서의 진통 효능이 제한될 수 있음.",
+    "dog_extra_effects": [
+      "진정(가장 흔한 이상반응)",
+      "흥분",
+      "불안",
+      "진전",
+      "어지러움",
+      "식욕부진",
+      "구토",
+      "변비",
+      "설사",
+      "빈맥(과다복용 시)",
+      "발성(과다복용 시)",
+      "운동실조(과다복용 시)"
+    ],
+    "cat_mechanism": "고양이에서는 M1이 주요 대사체로 생성되어 진통 효능이 개보다 강력함. 말단 반감기 약 3.2시간, M1 반감기 약 4.8시간.",
+    "cat_extra_effects": [
+      "구토",
+      "진정",
+      "산동",
+      "불쾌감 또는 행복감",
+      "변비",
+      "과다침분비(과다복용 시)",
+      "운동실조(과다복용 시)",
+      "빈맥(과다복용 시)",
+      "세로토닌 증후군(과다복용 시, 80 mg/kg PO 사례 보고)",
+      "쓴맛으로 인한 복약 거부"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 트라마돌의 진통 효능에 대한 근거는 상충됨. 단독 진통제로서의 효능은 의문스러우며, NSAID 또는 다른 진통제(아만타딘, 가바펜틴 등)와 병용 시 가장 유용함. 골관절염 연구에서 위약 대비 이점이 없었음. 경구 생체이용률은 약 65%이나 개체 간 변동이 큼. 개에서 M1 활성 대사체 생성이 적어 진통 효능이 제한될 수 있음. DEA Schedule IV 규제 약물.",
+    "cat": "고양이에서 트라마돌의 진통 효능 근거가 더 강력함. M1이 주요 대사체로 생성됨. 쓴맛으로 인해 복약 거부가 문제될 수 있음. 2 mg/kg 초과 시, 특히 노령 고양이에서 신경학적 이상반응(산동, 불쾌감) 발생 가능. 아세트아미노펜 복합 제제(Ultracet®)는 고양이에서 절대 금기. 경피 겔 제형은 혈장 농도가 매우 낮아 권장되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 진통 효능 근거가 제한적이며 상충됨. 경련 역치 저하 가능성, 신/간기능 장애 시 용량 조절 필요. SSRI, MAOI와의 병용 금기. 노령 동물에서 배설 지연."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 진통 효능 근거는 더 강력하나, 신경학적 이상반응(25%) 및 쓴맛으로 인한 복약 거부 주의. 2 mg/kg 초과 시 특히 노령 고양이에서 이상반응 증가. 아세트아미노펜 복합 제제 절대 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F)에서 보관; 15°C~30°C(59°F~86°F) 범위 내 일시적 보관 허용. 밀폐된 차광 용기에 보관. DEA 규정에 따라 견고하게 잠긴 장소에 보관.",
+    "forms": [
+      "트라마돌 HCl 경구 정제(필름코팅): 50 mg; Ultram®, 제네릭",
+      "트라마돌 HCl 서방형 정제: 100 mg, 200 mg, 300 mg; Ultram ER®, Ryzolt®, 제네릭",
+      "트라마돌 HCl 서방형 캡슐: 100 mg, 200 mg, 300 mg; ConZip®",
+      "트라마돌 HCl 경구 용액: 5 mg/mL; Qdolo®",
+      "트라마돌 HCl 37.5 mg + 아세트아미노펜 325 mg 복합 정제: Ultracet® (고양이 금기)",
+      "조제 현탁액: 5 mg/mL 및 10 mg/mL (냉장 또는 실온에서 90일간 안정성 확인)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "트라마돌은 합성 뮤 수용체 부분 오피오이드 작용제로, 세로토닌 및 노르에피네프린 재흡수도 억제합니다. 개에서의 진통 효능 근거는 상충되며 단독 진통제로서의 사용은 의문스럽지만, 고양이에서는 보다 강력한 효능 근거가 있습니다. NSAID 또는 다른 진통제와의 병용 시 가장 효과적입니다. SSRI 및 MAOI와의 병용은 세로토닌 증후군 위험으로 반드시 피해야 합니다. 아졸계 항진균제(특히 플루코나졸)와 병용 시 트라마돌 혈중 농도가 31배까지 증가할 수 있어 주의가 필요합니다. DEA Schedule IV 규제 약물입니다.",
+    "indications": "개와 고양이에서 수술 후 또는 만성 통증의 보조 치료(오프라벨). NSAID, 아만타딘, 가바펜틴, 알파-2 작용제 등과 병용 시 가장 유용. 고양이에서 진통 효능 근거가 더 강력함. 개에서 골관절염 통증에 대한 단독 효능은 위약 대비 이점 없음. 항기침제로도 사용되나 효능 근거 부족.",
+    "client_info": "동물의 통증이 조절되지 않는다고 생각되면 수의사에게 연락하세요. 이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 쓴맛을 가리기 위해 소량의 캔 사료에 섞어 줄 수 있습니다. 공복 투여 후 구토가 있으면 음식과 함께 투여하세요. 구토가 지속되면 수의사에게 연락하세요. 이 약은 졸음이나 행동 변화를 일으킬 수 있으므로 작업견이나 서비스견에서는 주의하여 사용하세요. 아세트아미노펜이 포함된 복합 제제(Ultracet®)는 고양이에게 절대 사용하지 마세요. 트라마돌은 미국에서 규제 약물(C-IV)입니다. 처방 없이 사용하거나 타인에게 양도하는 것은 불법입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific interactions noted)",
+      "Monitoring (only general efficacy and adverse effects listed)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (injection not available in US)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/48.jsonl",
+    "extracted_at": "2026-03-11T04:03:28.292479+00:00",
+    "reviewer": null
+  }
+}

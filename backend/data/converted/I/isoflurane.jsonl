@@ -1,0 +1,563 @@
+{
+  "id": "isoflurane",
+  "drug_identity": {
+    "name_ko": "이소플루란",
+    "name_en": "Isoflurane",
+    "active_ingredient": "Isoflurane",
+    "brand_names": [
+      "Isoflo",
+      "Iso-Thesia",
+      "AErrane",
+      "Forane",
+      "Forene",
+      "Forenium",
+      "Forthane",
+      "Isofor",
+      "Isoforine",
+      "Isosol",
+      "Isothane",
+      "Lisorane",
+      "Sofloran",
+      "Tensocold",
+      "Terrell",
+      "Zuflax"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 99.9,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "이소플루란의 대부분은 폐를 통해 배설되며, 간에서 약 0.2%만 대사된다. 소량의 무기 불소(inorganic fluoride)가 생성된다."
+    },
+    "extra_information": "혈액-가스 분배계수(blood-gas partition coefficient)가 1.4로 낮아 폐포에서 빠르게 흡수된다. 중추신경계로 빠르게 분포하며 태반을 통과한다. 대부분은 폐를 통해 배설되며 간 대사는 극히 미미하다(약 0.2%)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 이소플루란은 흡입 마취제로 주로 폐를 통해 배설되며 간 대사는 0.2%에 불과하다. 심혈관 억제, 뇌혈류 증가, 호흡 억제 등의 효과가 보고되어 있다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "increased cerebral blood flow",
+          "intracranial pressure",
+          "MAC"
+        ],
+        "index": 1,
+        "evidence": "이소플루란은 CNS 억제, 뇌혈류 증가, 두개내압 상승 효과가 있으며 개에서 MAC 1.3~1.5%로 보고됨"
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypotension",
+          "vasodilation",
+          "arrhythmia",
+          "cardiodepression"
+        ],
+        "index": 1,
+        "evidence": "용량 의존적 저혈압(혈관확장), 심근 억제, 드물게 부정맥이 보고됨"
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal disease"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 환자에서도 사용 가능하다고 언급되어 있으나 직접적인 신독성 데이터는 없음"
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "0.2% metabolized"
+        ],
+        "index": 1,
+        "evidence": "간 대사는 약 0.2%로 극히 미미하며 간 질환 환자에서도 사용 가능하다고 언급됨"
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "cardiodepression",
+          "hypotension",
+          "arrhythmia",
+          "myocardial depression"
+        ],
+        "index": 1,
+        "evidence": "심근 억제(할로탄보다 적음), 저혈압, 드물게 부정맥 보고. 교감신경 흥분제에 대한 심근 감작 가능성 있음"
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "increased cerebral blood flow",
+          "MAC"
+        ],
+        "index": 1,
+        "evidence": "고양이 MAC 1.20~2.22%, 평균 1.71%로 보고됨. CNS 억제 및 뇌혈류 증가 효과 있음"
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hypotension",
+          "vasodilation",
+          "cardiovascular effects",
+          "more sensitive"
+        ],
+        "index": 1,
+        "evidence": "고양이는 흡입 마취제의 심혈관 효과에 개보다 더 민감한 것으로 보고됨"
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal disease"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 환자에서도 사용 가능하다고 언급되어 있으나 직접적인 신독성 데이터는 없음"
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "0.2% metabolized"
+        ],
+        "index": 1,
+        "evidence": "간 대사는 약 0.2%로 극히 미미하며 간 질환 환자에서도 사용 가능하다고 언급됨"
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "cardiodepression",
+          "hypotension",
+          "cardiovascular depression",
+          "more sensitive"
+        ],
+        "index": 1,
+        "evidence": "고양이는 흡입 마취제의 심혈관 효과에 더 민감하며, 덱스메데토미딘 병용 시 심혈관 억제 악화 가능"
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "이소플루란은 낮은 혈액-가스 분배계수(1.4)로 인해 폐포에서 빠르게 흡수된다. 조류에서 마스크 유도 시 1~2분 내 마취 유도가 보고됨. 반감기는 흡입 마취제 특성상 전통적인 반감기 개념이 적용되지 않으며 별도로 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antihypertensive Agents (amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "blood pressure decrease"
+      ],
+      "evidence": "Concomitant use may increase risks for hypotension. Enalapril caused significant decreases in systolic blood pressure in dogs and cats undergoing isoflurane anesthesia."
+    },
+    {
+      "drug": "Acepromazine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "vasodilation"
+      ],
+      "evidence": "May enhance the hypotensive effects of isoflurane in dogs."
+    },
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "additive"
+      ],
+      "evidence": "Use with caution with halogenated anesthetic agents, as additive neuromuscular blockade may occur."
+    },
+    {
+      "drug": "Benzodiazepines (midazolam)",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction",
+        "CNS depression"
+      ],
+      "evidence": "May reduce MAC requirements for isoflurane."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (propranolol)",
+      "severity": 2,
+      "keywords": [
+        "cardiovascular depression",
+        "cardiodepression"
+      ],
+      "evidence": "May enhance the cardiovascular depressant effects of isoflurane."
+    },
+    {
+      "drug": "Dexmedetomidine",
+      "severity": 2,
+      "keywords": [
+        "cardiovascular depression",
+        "MAC reduction"
+      ],
+      "evidence": "May worsen cardiovascular depression in cats. May reduce minimum alveolar concentration (MAC) requirements in dogs."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction"
+      ],
+      "evidence": "May reduce MAC requirements in dogs."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction"
+      ],
+      "evidence": "May reduce MAC requirements in dogs and rabbits."
+    },
+    {
+      "drug": "Lincosamides (clindamycin)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "additive"
+      ],
+      "evidence": "Use with caution with halogenated anesthetic agents, as additive neuromuscular blockade may occur."
+    },
+    {
+      "drug": "Nondepolarizing Neuromuscular Blocking Agents (atracurium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "additive"
+      ],
+      "evidence": "Additive neuromuscular blockade may occur."
+    },
+    {
+      "drug": "Opioids (buprenorphine, fentanyl, hydromorphone)",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction"
+      ],
+      "evidence": "Intraoperative opioids can reduce MAC requirements in dogs."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 3,
+      "keywords": [
+        "malignant hyperthermia",
+        "bradycardia",
+        "arrhythmia",
+        "sinus arrest",
+        "apnea"
+      ],
+      "evidence": "With inhalation anesthetics, may induce increased incidences of cardiac effects (bradycardia, arrhythmias, sinus arrest, and apnea) and, in susceptible patients, malignant hyperthermia."
+    },
+    {
+      "drug": "Sympathomimetic Agents (dopamine, epinephrine, norepinephrine, ephedrine, metaraminol)",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia",
+        "myocardial sensitization"
+      ],
+      "evidence": "Although isoflurane sensitizes the myocardium to the effects of sympathomimetics less so than halothane, arrhythmias may still occur. Use with significantly reduced initial doses and intensive monitoring."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 유도 (FDA 승인, 주사 마취제 전처치 후)",
+          "value": "2 - 2.5",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "주사 마취제 유도 후 사용. 마스크 유도는 권장하지 않음.",
+          "evidence": "FDA 승인 라벨 용량: 주사 마취제 유도 후 산소와 함께 2~2.5% 이소플루란 사용"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 유지 (FDA 승인)",
+          "value": "1.5 - 1.8",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술적 마취 수준 유지",
+          "evidence": "FDA 승인 라벨 용량: 산소와 함께 1.5~1.8% 이소플루란으로 수술적 마취 수준 유지"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 유도 (비라벨, 마스크/챔버)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "비재호흡 회로, 산소 유량 3~4 L/분 사용",
+          "evidence": "비라벨(extra-label): 3~5% 이소플루란, 비재호흡 회로, 산소 유량 3~4 L/분"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 유지 (비라벨)",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "일반적으로 1~1.5% 사용; 환자 상태, 호흡 회로 종류, 신선 가스 유량에 따라 조절",
+          "evidence": "비라벨(extra-label): 1~3% (일반적으로 1~1.5%) 이소플루란, 마취 깊이에 따라 조절"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 (비라벨) - MAC 기준",
+          "value": "1.20 - 2.22",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "평균 MAC 1.71 ± 0.07%; 마취 깊이에 따라 조절",
+          "evidence": "비라벨(extra-label): 고양이 MAC 1.20 ± 0.13% ~ 2.22 ± 0.35%, 평균 MAC 1.71 ± 0.07%"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "이소플루란은 신장 질환 환자에서도 사용 가능하다고 명시되어 있음. 대부분 폐를 통해 배설되므로 신기능 저하에 따른 용량 조절이 필요하지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "이소플루란은 간 질환 환자에서도 사용 가능하다고 명시되어 있음. 간 대사는 약 0.2%에 불과하므로 간기능 저하에 따른 용량 조절이 필요하지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "악성 고체온증 병력 또는 소인",
+      "match_terms": [
+        "malignant hyperthermia",
+        "악성 고체온증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두개내압 상승 또는 두부 손상",
+      "match_terms": [
+        "increased intracranial pressure",
+        "head injury",
+        "두개내압 상승"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증근무력증",
+      "match_terms": [
+        "myasthenia gravis",
+        "중증근무력증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Pig",
+      "Dog",
+      "Horse"
+    ],
+    "gene": null,
+    "evidence": "악성 고체온증은 개, 말, 돼지, 사람에서 보고되어 있음. 특정 유전자 변이(예: RYR1)와 관련될 수 있으나 Plumb's 본문에는 구체적인 유전자 정보가 명시되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "정확한 기전은 불명확하나 GABAA 수용체 및 전압 개폐 채널에 작용하여 뇌 신경세포 기능을 억제함으로써 전신마취 효과를 나타냄",
+    "common_extra_effects": [
+      "CNS 억제",
+      "체온 조절 중추 억제",
+      "뇌혈류 증가",
+      "호흡 억제",
+      "혈관확장(저혈압)",
+      "심근 억제(할로탄보다 경미)",
+      "근육 이완",
+      "오심, 구토, 장폐색 등 위장관 효과",
+      "악성 고체온증(드물게)"
+    ],
+    "dog_mechanism": "GABAA 수용체 및 전압 개폐 채널 작용을 통한 전신마취. 개에서 MAC 1.3~1.5%",
+    "dog_extra_effects": [
+      "용량 의존적 저혈압",
+      "호흡 억제",
+      "드물게 부정맥",
+      "악성 고체온증(드물게)"
+    ],
+    "cat_mechanism": "GABAA 수용체 및 전압 개폐 채널 작용을 통한 전신마취. 고양이 MAC 1.20~2.22%, 평균 1.71%",
+    "cat_extra_effects": [
+      "흡입 마취제의 심혈관 효과에 개보다 더 민감",
+      "용량 의존적 저혈압",
+      "호흡 억제",
+      "덱스메데토미딘 병용 시 심혈관 억제 악화 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 흡입 마취제로, 주사 마취제 유도 후 2~2.5%로 유도하고 1.5~1.8%로 유지한다. 마스크 유도는 스트레스 및 직원 노출 위험으로 권장하지 않는다. 벤조디아제핀, 오피오이드, 케타민, 리도카인, 덱스메데토미딘 등 병용 시 MAC이 감소할 수 있다. 난치성 간질 지속 상태에서 벤조디아제핀에 반응하지 않는 경우 이소플루란을 사용할 수 있으나 두개내압 상승에 주의해야 한다.",
+    "cat": "고양이는 흡입 마취제의 심혈관 효과에 개보다 더 민감하다. MAC은 1.20~2.22% 범위이며 평균 1.71%이다. 덱스메데토미딘 병용 시 심혈관 억제가 악화될 수 있으므로 주의가 필요하다. 에날라프릴 투여 중인 고양이에서 이소플루란 마취 시 수축기 혈압이 유의하게 감소할 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "두개내압 상승, 두부 손상, 중증근무력증 환자에서 주의 사용. 악성 고체온증 병력 또는 소인이 있는 경우 금기. 적절한 모니터링 및 환자 지원 장비(삽관, 환기) 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 흡입 마취제의 심혈관 효과에 더 민감함. 덱스메데토미딘, 에날라프릴 등 병용 시 저혈압 위험 증가. 악성 고체온증 병력 또는 소인이 있는 경우 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관. 빛에 비교적 안정적이나 밀폐된 차광 용기에 보관해야 함. 알루미늄, 황동, 주석, 철, 구리를 부식시키지 않음.",
+    "forms": [
+      "Isoflurane for Inhalation 99.9%/mL (100 mL, 250 mL) - 동물용: Aerrane, Isoflo, Isosol, generic",
+      "Isoflurane Liquid for Inhalation (100 mL, 250 mL) - 인체용: Forane, Terrell, generic"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이소플루란은 수의학에서 광범위하게 사용되는 흡입 전신마취제이다. 할로탄에 비해 심근 억제 및 카테콜아민 감작 효과가 적으며, 간 또는 신장 질환 환자에서도 사용 가능하다. 악성 고체온증 병력 또는 소인이 있는 환자에서는 금기이다. 용량 의존적 저혈압, 호흡 억제, 위장관 효과(오심, 구토, 장폐색)가 주요 부작용이다. 고양이는 흡입 마취제의 심혈관 효과에 개보다 더 민감하다.",
+    "indications": "개 및 말(식용 목적이 아닌 경우)에서 FDA 승인된 전신마취제. 고양이, 소형 반추동물, 조류, 소형 포유류, 파충류에서 비라벨(extra-label)로 사용. 벤조디아제핀에 반응하지 않는 난치성 간질 지속 상태(개)에서 비라벨 사용 가능.",
+    "client_info": "이소플루란은 수의사만이 전신마취 목적으로 사용하는 흡입 마취제입니다. 마취 중에는 호흡, 심박수, 혈압 등을 지속적으로 모니터링합니다. 마취 후 오심, 구토 등의 위장관 증상이 나타날 수 있습니다. 악성 고체온증 병력이 있는 동물에서는 사용할 수 없으므로 반드시 수의사에게 알려주시기 바랍니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Drug Interactions",
+      "Dosages",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (partial)",
+      "Laboratory Considerations (minimal)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "species_flags.washout_period_days",
+      "genetic_sensitivity.gene"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/56.jsonl",
+    "extracted_at": "2026-03-11T06:37:39.804355+00:00",
+    "reviewer": null
+  }
+}

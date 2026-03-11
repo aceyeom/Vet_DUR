@@ -1,0 +1,457 @@
+{
+  "id": "isoflupredone",
+  "drug_identity": {
+    "name_ko": "이소플루프레돈",
+    "name_en": "Isoflupredone",
+    "active_ingredient": "Isoflupredone acetate",
+    "brand_names": [
+      "Predef 2X"
+    ],
+    "allergy_class": "corticosteroid",
+    "class": "Corticosteroid",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "특이적인 약동학 데이터 없음. 제조사는 소에서 포도당신생 활성이 투여 후 48시간 지속된다고 명시함."
+    },
+    "extra_information": "개 및 고양이에 대한 특이적 약동학 데이터 없음. 소에서 단회 투여 후 포도당신생 활성이 48시간 지속된다고 알려져 있음. 소에서 단회 투여로도 저칼륨혈증이 발생할 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개·고양이 대상 수의학적 PK 데이터 없음. 글루코코르티코이드 계열 약물의 일반적 부작용 프로파일 및 본문 기술 내용을 근거로 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hyperadrenocorticism"
+        ],
+        "index": 1,
+        "evidence": "장기 투여 시 부신피질기능항진증 징후가 나타날 수 있으나, 개에 대한 직접적 뇌 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "hyperglycemia",
+          "hyperlipidemia"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증, 고혈당, 고지혈증 등 혈액 전해질 및 대사 이상이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal dysfunction"
+        ],
+        "index": 3,
+        "evidence": "잠재적 부작용으로 신기능 장애가 명시되어 있음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatopathy",
+          "liver enzyme testing"
+        ],
+        "index": 4,
+        "evidence": "간병증(hepatopathy)이 잠재적 부작용으로 명시되어 있으며, 지속 사용 시 간효소 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypokalemia",
+          "digitalis toxicosis"
+        ],
+        "index": 5,
+        "evidence": "저칼륨혈증으로 인한 디지탈리스 독성 위험 증가 가능성이 언급됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적 데이터 없음. 사용 권장되지 않음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적 데이터 없음. 사용 권장되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적 데이터 없음. 사용 권장되지 않음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적 데이터 없음. 사용 권장되지 않음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 직접적 데이터 없음. 사용 권장되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "특이적 약동학 수치 없음. 제조사는 소에서 포도당신생 활성이 48시간 지속된다고 명시함."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 기준: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Digitalis glycosides (e.g., digoxin)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "digitalis toxicosis"
+      ],
+      "evidence": "Hypokalemia induced by isoflupredone may increase the risk of digitalis toxicosis. Diligent monitoring of potassium and digitalis glycoside concentrations is recommended."
+    },
+    {
+      "drug": "Fluoroquinolone Antibiotics (e.g., enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "tendon rupture"
+      ],
+      "evidence": "Concurrent use with glucocorticoids may result in an increased risk for tendon rupture."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "insulin resistance"
+      ],
+      "evidence": "Insulin requirements may increase in patients receiving glucocorticoids."
+    },
+    {
+      "drug": "Potassium-depleting Diuretics (e.g., furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concomitant use may cause additive hypokalemia."
+    },
+    {
+      "drug": "Salicylates",
+      "severity": 1,
+      "keywords": [
+        "reduced salicylate concentration"
+      ],
+      "evidence": "Glucocorticoids may reduce salicylate blood concentrations."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration"
+      ],
+      "evidence": "Glucocorticoids may increase the risk for GI ulceration when given concomitantly with NSAIDs."
+    },
+    {
+      "drug": "Vaccines, Toxoids, Bacterins",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "diminished immune response",
+        "live attenuated virus"
+      ],
+      "evidence": "A diminished immune response may occur after vaccine, toxoid, or bacterin administration. Patients receiving immunosuppressive doses of glucocorticoids should generally not receive live attenuated-virus vaccines, as virus replication may be augmented."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애가 잠재적 부작용으로 언급되어 있으나, 구체적인 용량 조절 지침은 제시되지 않음. 신기능 이상 환자에서는 주의 사용 및 모니터링 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간병증(hepatopathy)이 잠재적 부작용으로 명시되어 있으며, 지속 사용 시 간효소 모니터링이 권고됨. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "fungal infection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "특발성 혈소판감소증 (근육주사 시)",
+      "match_terms": [
+        "idiopathic thrombocytopenia",
+        "ITP"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 위장관 궤양",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "peptic ulcer"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼륨혈증 감수성 동물 (다운 카우 포함)",
+      "match_terms": [
+        "hypokalemia",
+        "downer cow"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 후기)",
+      "match_terms": [
+        "pregnancy",
+        "gestation"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 불소화 글루코코르티코이드로서 히드로코르티손 대비 약 17배(간 글리코겐 침착 기준 50배)의 항염증 효능을 가짐. 글루코코르티코이드 수용체에 결합하여 항염증 및 면역억제 효과를 나타내며, 일부 무기질코르티코이드 효과도 있어 저칼륨혈증을 유발할 수 있음.",
+    "common_extra_effects": [
+      "저칼륨혈증",
+      "유즙 생산 감소",
+      "상처 치유 지연",
+      "위장관 궤양",
+      "감염률 증가",
+      "당뇨병 악화/고혈당",
+      "췌장염",
+      "간병증",
+      "신기능 장애",
+      "골다공증",
+      "갑상선기능저하증",
+      "고지혈증",
+      "성장 지연 (어린 동물)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서의 사용은 FDA 승인이 없으며, 개와 고양이에는 FDA 승인된 다른 글루코코르티코이드 제제를 사용하도록 권고됨. 개에 대한 특이적 약동학 데이터 없음.",
+    "cat": "고양이에서의 사용은 FDA 승인이 없으며, 개와 고양이에는 FDA 승인된 다른 글루코코르티코이드 제제를 사용하도록 권고됨. 고양이에 대한 특이적 약동학 데이터 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에 대한 FDA 승인 없음. 소동물에서는 FDA 승인된 다른 글루코코르티코이드 사용 권고. 사용 시 글루코코르티코이드 일반 주의사항 적용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 FDA 승인 없음. 소동물에서는 FDA 승인된 다른 글루코코르티코이드 사용 권고. 사용 시 글루코코르티코이드 일반 주의사항 적용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C-25°C, 68°F-77°F) 보관",
+    "forms": [
+      "이소플루프레돈 아세테이트 2 mg/mL 수성 현탁 주사액, 100 mL 바이알 (Predef 2X®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이소플루프레돈은 말, 소, 돼지에 FDA 승인된 주사용 합성 글루코코르티코이드입니다. 히드로코르티손 대비 약 17배의 항염증 효능을 가지며, 일부 무기질코르티코이드 효과로 인해 저칼륨혈증을 유발할 수 있습니다. 덱사메타손이나 베타메타손에 비해 조기 분만 유발 가능성은 낮으나, 임신 중 사용은 피해야 합니다. 개와 고양이에는 FDA 승인된 다른 글루코코르티코이드 사용이 권장됩니다.",
+    "indications": "승인 적응증(말, 소, 돼지): 항염증 및 면역억제 효과. 소 케토시스 보조치료, 근골격계 통증 및 파행, 급성 과민반응, 중증 감염의 보조치료(폐렴, 복막염, 자궁내막염, 패혈성 유방염), 쇼크, 스트레스 상태 지지요법, 난산, 태반 정체, 안구 염증, 뱀 교상, 분만 마비. 비승인(말): 반복성 기도 폐쇄(RAO/heaves), 관절 내 주사를 통한 관절 염증 치료.",
+    "client_info": "이 약은 말, 소, 돼지에 사용하도록 승인된 주사용 스테로이드 제제입니다. 젖소에 사용할 경우 유즙 생산이 감소할 수 있습니다. 수의사의 지시에 따라서만 투여하십시오. 부작용은 장기간 사용하거나 고용량 투여 시 더 많이 나타납니다. 임신한 동물에는 사용을 피해야 합니다. 저칼륨혈증 위험이 있으므로 단회 투여 후에도 혈청 칼륨 농도를 모니터링하는 것이 좋습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (specific values)",
+      "Dog dosage",
+      "Cat dosage",
+      "CYP profile",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "Onset of action data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/56.jsonl",
+    "extracted_at": "2026-03-11T06:35:49.195868+00:00",
+    "reviewer": null
+  }
+}

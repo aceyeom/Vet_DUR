@@ -1,0 +1,654 @@
+{
+  "id": "vasopressin",
+  "drug_identity": {
+    "name_ko": "바소프레신",
+    "name_en": "Vasopressin",
+    "active_ingredient": "Vasopressin",
+    "brand_names": [
+      "Vasostrict",
+      "Pitressin",
+      "Pressyn",
+      "Neo-Lidocaton"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인간용 제품(Vasostrict®)을 소동물 및 말에서 허가 외(extra-label)로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "바소프레신은 간과 신장에서 빠르게 분해된다. GI관에서 흡수 전 파괴되므로 경구 투여 불가."
+    },
+    "extra_information": "개에서 IM 또는 SC 투여 후 항이뇨 활성은 2~8시간 지속. 혈장 단백 결합 없음. 세포외액에 분포."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 혈관수축, 신장 및 내장 허혈 위험, 심장 부정맥 위험 등 본문 기술 근거.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cerebral blood flow",
+          "water intoxication",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "과다투여 시 수분 중독으로 혼수, 경련 가능. CPR 시 뇌혈류 개선 목적으로 사용."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "platelet aggregation",
+          "arrhythmias",
+          "vasoconstriction",
+          "blood pressure"
+        ],
+        "index": 1,
+        "evidence": "혈소판 응집, 부정맥, 강력한 혈관수축 효과. 심근 허혈 위험(0.04 units/min 초과 시)."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal vasoconstriction",
+          "renal ischemia",
+          "hematuria",
+          "antidiuretic",
+          "chronic nephritis"
+        ],
+        "index": 1,
+        "evidence": "과도한 혈관수축 시 신장 허혈 위험. 혈뇨 부작용 보고. 만성 신염 환자에서 금기."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic flow increased",
+          "hyperbilirubinemia",
+          "liver metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 빠르게 대사됨. 고용량에서 간 혈류 증가 가능. 고빌리루빈혈증 부작용 보고."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "arrhythmias",
+          "myocardial ischemia",
+          "cardiac arrest",
+          "heart failure"
+        ],
+        "index": 1,
+        "evidence": "부정맥, 심근 허혈 위험. 이소플루란 마취 중 심정지 보고(말). 심부전 환자 주의 사용."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "water intoxication",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "과다투여 시 수분 중독으로 혼수, 경련 가능. 고양이 특이 데이터 부족."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "platelet aggregation",
+          "arrhythmias",
+          "vasoconstriction"
+        ],
+        "index": 1,
+        "evidence": "혈소판 응집, 부정맥, 혈관수축 효과. 고양이 특이 데이터 부족하나 소동물 공통 적용."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal vasoconstriction",
+          "renal ischemia",
+          "hematuria",
+          "antidiuretic"
+        ],
+        "index": 1,
+        "evidence": "과도한 혈관수축 시 신장 허혈 위험. 혈뇨 부작용 보고. 고양이 특이 데이터 부족."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hyperbilirubinemia",
+          "liver metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 빠르게 대사됨. 고빌리루빈혈증 부작용 보고. 고양이 특이 데이터 부족."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "arrhythmias",
+          "myocardial ischemia",
+          "heart failure"
+        ],
+        "index": 1,
+        "evidence": "부정맥, 심근 허혈 위험. 심부전 환자 주의 사용. 고양이 특이 데이터 부족."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.167,
+      "max": 0.333,
+      "mean": 0.25,
+      "species": "human"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": 0,
+    "evidence": "인간에서 혈장 반감기 10~20분. 경구 생체이용률 0%(GI관에서 파괴). 혈장 단백 결합 없음. 개에서 IM/SC 투여 후 항이뇨 활성 2~8시간. 혈압 상승은 투여 15분 이내 관찰(개 사례 보고)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Isoflurane",
+      "severity": 3,
+      "keywords": [
+        "혈압 상승",
+        "점막 허혈",
+        "심정지"
+      ],
+      "evidence": "Horses under isoflurane anesthesia: IV vasopressin caused mucous membrane ischemia within 1 minute and cardiac arrest within 5–10 minutes in 8 of 10 horses. Avoid combination."
+    },
+    {
+      "drug": "Ethanol",
+      "severity": 1,
+      "keywords": [
+        "항이뇨 활성 억제"
+      ],
+      "evidence": "Ethanol may inhibit the antidiuretic activity of vasopressin."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 활성 억제",
+        "대용량"
+      ],
+      "evidence": "Large doses of epinephrine may inhibit the antidiuretic activity of vasopressin."
+    },
+    {
+      "drug": "Heparin",
+      "severity": 1,
+      "keywords": [
+        "항이뇨 활성 억제"
+      ],
+      "evidence": "Heparin may inhibit the antidiuretic activity of vasopressin."
+    },
+    {
+      "drug": "Norepinephrine",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 활성 억제",
+        "대용량"
+      ],
+      "evidence": "Large doses of norepinephrine may inhibit the antidiuretic activity of vasopressin."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 효과 강화",
+        "수분 중독 위험"
+      ],
+      "evidence": "Cyclophosphamide may potentiate the antidiuretic effects of vasopressin, increasing risk of water intoxication."
+    },
+    {
+      "drug": "Enalapril",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 효과 강화"
+      ],
+      "evidence": "Enalapril may potentiate the antidiuretic effects of vasopressin."
+    },
+    {
+      "drug": "Fludrocortisone",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 효과 강화"
+      ],
+      "evidence": "Fludrocortisone may potentiate the antidiuretic effects of vasopressin."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 효과 강화",
+        "비혼화성"
+      ],
+      "evidence": "Furosemide may potentiate the antidiuretic effects of vasopressin. Also physically incompatible for Y-site co-administration."
+    },
+    {
+      "drug": "Tricyclic Antidepressants",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 효과 강화",
+        "수분 중독 위험"
+      ],
+      "evidence": "Tricyclic antidepressants (e.g., amitriptyline, clomipramine) may potentiate the antidiuretic effects of vasopressin."
+    },
+    {
+      "drug": "Vincristine",
+      "severity": 2,
+      "keywords": [
+        "항이뇨 효과 강화"
+      ],
+      "evidence": "Vincristine may potentiate the antidiuretic effects of vasopressin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "당뇨 무감증 진단 - 변형 수분 박탈 검사 보조",
+          "value": "0.2 - 0.4",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 총 용량 5 units/동물(kg당 아님)",
+          "evidence": "Extra-label. 최대 총 용량 5 units/동물 초과 금지."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "당뇨 무감증 진단 - 변형 수분 박탈 검사 보조",
+          "value": "2 - 3",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단위: units/dog (kg당 아님)",
+          "evidence": "Extra-label. 2~3 units/dog SC (체중 기반 아님)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 보조 치료",
+          "value": "0.8",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5분마다 반복 가능. 기본 소생술 2사이클마다 투여. IV/IO 불가 시 기관내(IT) 1.2 units/kg 투여 고려.",
+          "evidence": "Extra-label. CPR 중 에피네프린 대체 또는 병용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 - 무맥성 전기 활동 또는 심실 무수축",
+          "value": "0.2 - 0.8",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label. 심근 및 뇌혈류 개선 목적."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 후 CRI - 저혈압 쇼크 보조 치료",
+          "value": "0.4 - 0.8",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "이후 1~4 milliunits/kg/분 IV CRI 유지",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "CPR 후 저혈압 보조 치료 CRI",
+          "value": "0.5 - 5",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.5~5 milliunits/kg/분 (0.03~0.3 units/kg/시간) IV CRI",
+          "evidence": "Extra-label. 과도한 혈관수축(내장 및 신장 허혈) 주의."
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "혈관확장성 쇼크 - 카테콜아민 불응성 저혈압",
+          "value": "0.01 - 0.04",
+          "unit": "IU/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "단위: units/분 (체중 기반 아님). 0.04 units/분 초과 금지(심근 허혈 위험). 심인성 쇼크에는 사용 금지.",
+          "evidence": "Extra-label. 체중 비의존적 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "패혈성 쇼크 또는 중증 SIRS 보조 치료 CRI",
+          "value": "1 - 4",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~4 milliunits/kg/분 IV CRI. 노르에피네프린 0.5~1 µg/kg/분으로 목표 혈압 미달 시 추가. 목표: 이완기압 70~90 mmHg.",
+          "evidence": "Extra-label. 저용량에서 시작하여 반응에 따라 적정."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "당뇨 무감증 진단 - 변형 수분 박탈 검사 보조",
+          "value": "0.55",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 보조 치료",
+          "value": "0.8",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5분마다 반복 가능. 기본 소생술 2사이클마다 투여.",
+          "evidence": "Extra-label. 개/고양이 공통 용량으로 기술됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혈관확장성 저혈압 보조 치료 (2차 선택제)",
+          "value": "0.5 - 5",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.5~5 milliunits/kg/분 IV CRI. 노르에피네프린 후 2차 선택제.",
+          "evidence": "Extra-label. 소동물(개/고양이) 공통 적용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "만성 신염 환자에서 질소 저류가 합리적 수준으로 해소될 때까지 금기. 과도한 혈관수축으로 신장 허혈 위험 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 빠르게 대사되나 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 고빌리루빈혈증 부작용 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "만성 신염 (질소 저류)",
+      "match_terms": [
+        "chronic nephritis",
+        "azotemia",
+        "nitrogen retention"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "bun",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "과민증 (바소프레신)",
+      "match_terms": [
+        "hypersensitivity",
+        "urticaria"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심인성 쇼크",
+      "match_terms": [
+        "cardiogenic shock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈관 질환",
+      "match_terms": [
+        "vascular disease",
+        "arteriosclerosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전",
+      "match_terms": [
+        "heart failure",
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식",
+      "match_terms": [
+        "asthma",
+        "bronchoconstriction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "V1, V2, V3 수용체 및 옥시토신 수용체, 퓨린성 P2 수용체를 통해 작용. V2 수용체: 원위 세뇨관 및 집합관에서 수분 재흡수 촉진(cAMP 증가, 요삼투압 증가). V1 수용체: 평활근 수축, 혈관수축(모세혈관 및 소동맥). 고용량에서 K+-감수성 ATP 채널 차단.",
+    "common_extra_effects": [
+      "주사 부위 국소 자극 및 외삼출 괴사",
+      "기관지수축",
+      "부정맥",
+      "피부 반응",
+      "혈소판 응집",
+      "고빌리루빈혈증",
+      "오심",
+      "복통 및 경련",
+      "혈뇨",
+      "과민 반응 (두드러기)",
+      "수분 중독 (과다투여 시)"
+    ],
+    "dog_mechanism": "개에서 IM/SC 투여 후 항이뇨 활성 2~8시간 지속. SIRS 및 패혈증 유발 저혈압에서 혈압 상승 효과 확인.",
+    "dog_extra_effects": [
+      "내장 혈관수축으로 장 장벽 기능 손상 및 세균 전위 위험",
+      "신장 허혈 위험",
+      "심근 허혈 (고용량)"
+    ],
+    "cat_mechanism": "소동물에서 노르에피네프린 후 2차 혈관확장성 저혈압 치료제로 사용. 고양이 특이 약동학 데이터 부족.",
+    "cat_extra_effects": [
+      "신장 허혈 위험",
+      "심근 허혈 (고용량)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 SIRS 및 패혈증 유발 저혈압 치료에 사용. 노르에피네프린 후 2차 선택제. 도파민 불응성 SIRS/패혈증 5마리 사례에서 바소프레신 추가 후 15분 이내 평균 동맥압 상승 확인. 내장 혈관수축으로 장 장벽 기능 손상 및 세균 전위 위험 주의. 심인성 쇼크에는 사용 금지.",
+    "cat": "고양이에서도 혈관확장성 저혈압의 2차 선택제(노르에피네프린 후)로 사용. 고양이 특이 약동학 및 임상 데이터 부족. 소동물 공통 용량 적용."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "혈관 질환, 경련 장애, 심부전, 천식 환자에서 주의 사용. 과도한 혈관수축(내장 및 신장 허혈) 위험. 고용량 시 심근 허혈 위험. 혈압, 심박수 및 리듬, 수분/전해질 상태, 소변량 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "혈관 질환, 경련 장애, 심부전, 천식 환자에서 주의 사용. 고양이 특이 안전성 데이터 부족. 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "수성 주사제: 2~8°C 냉장 보관. 개봉 전 실온에서 최대 12개월 또는 제조사 유효기간까지 보관 가능. 개봉 후 다회용 바이알은 냉장 보관하고 30일 후 폐기. IV 희석액은 실온에서 18시간, 냉장 시 24시간 이내 사용. 동결 금지.",
+    "forms": [
+      "Vasopressin Injection 20 pressor units/mL (1 mL, 10 mL vials) - Vasostrict®"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "바소프레신은 항이뇨 호르몬(ADH)으로, 소동물에서 당뇨 무감증 진단 및 쇼크/심폐소생술 보조 치료에 허가 외(extra-label)로 사용됩니다. 산성증 환경에서도 혈관수축 효과를 유지하며, 에피네프린과 달리 부정맥 유발 및 심박수 증가 효과가 없어 CPR 시 유용합니다. 반감기가 매우 짧아(10~20분) 지속 주입(CRI)이 필요한 경우가 많습니다. 고용량 시 심근 허혈, 내장 및 신장 허혈 위험이 있으므로 용량 초과에 주의해야 합니다.",
+    "indications": "【허가 외 사용】 ① 당뇨 무감증 진단(변형 수분 박탈 검사 보조) ② 심폐소생술 보조 치료(심실 무수축, 무맥성 전기 활동) ③ 혈관확장성 쇼크/패혈성 쇼크/SIRS 유발 저혈압 보조 치료(노르에피네프린 후 2차 선택제). 수의학적 허가 제품 없음; 인간용 Vasostrict® 사용.",
+    "client_info": "이 약은 주로 응급 상황(심폐소생술, 쇼크 치료)이나 특수 진단 검사에 사용되는 호르몬 주사제입니다. 투여 중에는 혈압, 심박수, 소변량, 수분 상태를 지속적으로 모니터링해야 합니다. 과다 투여 시 수분 중독(무기력, 경련, 혼수)이 발생할 수 있으므로 반드시 수의사의 지시에 따라 사용해야 합니다. 임신 중인 동물에서는 신중하게 사용해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability (veterinary)",
+      "Protein binding (veterinary)",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/6.jsonl",
+    "extracted_at": "2026-03-10T15:27:15.034769+00:00",
+    "reviewer": null
+  }
+}

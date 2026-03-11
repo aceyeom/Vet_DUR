@@ -1,0 +1,757 @@
+{
+  "id": "sotalol",
+  "drug_identity": {
+    "name_ko": "소탈롤",
+    "name_en": "Sotalol",
+    "active_ingredient": "Sotalol hydrochloride",
+    "brand_names": [
+      "Betapace",
+      "Sorine",
+      "Sotylize"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 개, 고양이, 말에서 심실 및 상심실 빈맥 조절에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "value": 160,
+        "unit": "mg"
+      },
+      {
+        "value": 240,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "소탈롤은 간에서 거의 대사되지 않으며, 대부분 신장을 통해 미변화체로 배설된다. 초회통과효과가 없다."
+    },
+    "extra_information": "개에서 경구 투여 후 초회통과효과 없음. 지질 용해도가 낮고 단백 결합이 거의 없음. 개에서 소실 반감기 약 5시간; 사람에서 약 12시간. 말에서 IV 1 mg/kg 투여 시 반감기 8.7시간, 경구 투여 시 반감기 15.2시간, 생체이용률 47.8%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 비율 100%, 부정맥 유발 가능성, 음성 변력 효과 등을 반영. 수의과 종별 PK 데이터 일부 존재(개, 말).",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "fatigue",
+          "dizziness",
+          "lethargy",
+          "syncope"
+        ],
+        "index": 1,
+        "evidence": "피로, 어지러움, 기면, 실신 등 CNS 관련 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "proarrhythmic",
+          "bradycardia",
+          "QT prolongation",
+          "negative chronotropic"
+        ],
+        "index": 2,
+        "evidence": "부정맥 유발 가능성, 서맥, QT 연장, 음성 변시 효과가 보고됨. 심실 빈맥 치료제이나 역설적 부정맥 악화 가능."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal elimination",
+          "unchanged excretion",
+          "renal dysfunction dose reduction"
+        ],
+        "index": 3,
+        "evidence": "약물의 거의 전량이 신장을 통해 미변화체로 배설됨. 신기능 저하 시 용량 감소 또는 투여 간격 연장 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사가 거의 없으며, 간 독성 관련 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "negative inotropic",
+          "proarrhythmic",
+          "CHF",
+          "AV block",
+          "QT prolongation"
+        ],
+        "index": 4,
+        "evidence": "음성 변력 효과, 부정맥 유발 가능성, 울혈성 심부전 악화 위험, AV 차단 가능성이 주요 우려 사항."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "fatigue"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 개와 유사한 CNS 부작용(기면, 피로) 가능성. 고양이 특이 데이터 부족."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "proarrhythmic",
+          "bradycardia",
+          "QT prolongation"
+        ],
+        "index": 2,
+        "evidence": "고양이 상심실 빈맥 치료에 사용 보고 있음. 부정맥 유발 및 서맥 위험."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal elimination",
+          "unchanged excretion"
+        ],
+        "index": 3,
+        "evidence": "신장 배설 비율이 매우 높아 신기능 저하 시 축적 위험."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사 거의 없음. 간 독성 관련 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "negative inotropic",
+          "proarrhythmic",
+          "CHF",
+          "QT prolongation"
+        ],
+        "index": 4,
+        "evidence": "음성 변력 효과 및 부정맥 유발 가능성. 고양이 특이 데이터 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 5.0,
+      "max": 12.0,
+      "mean": 5.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 0,
+    "evidence": "개에서 반감기 5시간. 사람에서 반감기 약 12시간. 경구 투여 후 공복 시 생체이용률 90~100%(사람 기준). 최고 혈장 농도 도달 시간 2~4시간. 단백 결합 거의 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "refractory period prolongation",
+        "proarrhythmic"
+      ],
+      "evidence": "불응기 연장 가능성; 사람 환자에서 병용 비권장."
+    },
+    {
+      "drug": "General Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "myocardial depression",
+        "additive"
+      ],
+      "evidence": "심근 억제 마취제와 병용 시 심근 억제 효과 상가."
+    },
+    {
+      "drug": "Antacids (Aluminum- or Magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "경구 소탈롤 흡수 감소 가능; 최소 2시간 간격 투여 권장."
+    },
+    {
+      "drug": "Class 1A Antiarrhythmics (disopyramide, procainamide, quinidine)",
+      "severity": 3,
+      "keywords": [
+        "refractory period prolongation",
+        "QT prolongation",
+        "proarrhythmic"
+      ],
+      "evidence": "불응기 연장 및 QT 간격 연장 가능; 사람 환자에서 병용 비권장."
+    },
+    {
+      "drug": "Class 1B/1C Antiarrhythmics (lidocaine, mexiletine, phenytoin)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격 연장 가능."
+    },
+    {
+      "drug": "Azithromycin",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity",
+        "QT prolongation"
+      ],
+      "evidence": "심독성 위험 증가."
+    },
+    {
+      "drug": "Beta-2-Adrenergic Agonists (metaproterenol, terbutaline, albuterol)",
+      "severity": 2,
+      "keywords": [
+        "pharmacodynamic antagonism",
+        "bronchospasm"
+      ],
+      "evidence": "소탈롤에 의해 베타-2 작용제의 효과가 차단될 수 있음."
+    },
+    {
+      "drug": "Calcium Channel Blockers (diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "AV conduction",
+        "negative inotropic"
+      ],
+      "evidence": "저혈압 효과 증가; AV 전도 및 심실 기능에 상가 효과; 심근병증 또는 CHF 환자에서 특히 주의."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격 연장 가능."
+    },
+    {
+      "drug": "Clonidine",
+      "severity": 2,
+      "keywords": [
+        "rebound hypertension"
+      ],
+      "evidence": "소탈롤 병용 후 클로니딘 중단 시 반동성 고혈압 위험 증가."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "proarrhythmic"
+      ],
+      "evidence": "부정맥 유발 사건 위험 증가 가능."
+    },
+    {
+      "drug": "Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity",
+        "hypokalemia"
+      ],
+      "evidence": "심독성 위험 증가(저칼륨혈증 매개 가능성)."
+    },
+    {
+      "drug": "Erythromycin / Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격 연장 가능."
+    },
+    {
+      "drug": "Fluoroquinolones",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격 연장 위험 증가."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity"
+      ],
+      "evidence": "심독성 위험 증가."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 2,
+      "keywords": [
+        "reduced clearance",
+        "toxicity"
+      ],
+      "evidence": "소탈롤에 의해 리도카인 청소율 저하 가능."
+    },
+    {
+      "drug": "Methimazole / Carbimazole",
+      "severity": 2,
+      "keywords": [
+        "altered metabolism"
+      ],
+      "evidence": "소탈롤 대사 변화 가능."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 1,
+      "keywords": [
+        "reduced antihypertensive effect"
+      ],
+      "evidence": "소탈롤의 항고혈압 효과 감소 가능."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격 연장 가능."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "bradycardia",
+        "additive"
+      ],
+      "evidence": "저혈압 및 서맥에 상가 효과."
+    },
+    {
+      "drug": "Sympathomimetics (phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "소탈롤에 의해 교감신경 작용제의 효과가 차단될 수 있음."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격 연장 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심실 빈맥 및 상심실 빈맥의 비응급 조절 (오프라벨)",
+          "value": "1 - 3.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.5,
+          "duration_note": "대부분의 임상의는 2~2.5 mg/kg를 권장; 저용량에서 시작하여 부정맥 조절에 따라 증량",
+          "evidence": "Anecdotal; 오프라벨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "ARVC(복서 등) 관련 심실 빈맥 - 단독 요법 (오프라벨)",
+          "value": "1.5 - 3.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 3.5,
+          "duration_note": null,
+          "evidence": "오프라벨; 참고문헌 2"
+        },
+        {
+          "logic_type": "linear",
+          "context": "ARVC 관련 심실 빈맥 - 멕실레틴 병용 요법 (오프라벨)",
+          "value": "1.5 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "멕실레틴 5~7.5 mg/kg PO TID와 병용; 10 kg 초과 개에서 멕실레틴 8~10 mg/kg q12h 가능(확인 필요)",
+          "evidence": "오프라벨; 참고문헌 16, 17, 18"
+        },
+        {
+          "logic_type": "linear",
+          "context": "독일 셰퍼드 유전성 부정맥 - 멕실레틴 병용 (오프라벨)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 2.5,
+          "duration_note": "멕실레틴 8 mg/kg PO q8h와 병용",
+          "evidence": "오프라벨; 참고문헌 1"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심실 빈맥 및 상심실 빈맥의 비응급 조절 (오프라벨)",
+          "value": "1 - 3.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 3.5,
+          "duration_note": "대부분의 임상의는 2~2.5 mg/kg를 권장; 저용량에서 시작하여 부정맥 조절에 따라 증량",
+          "evidence": "Anecdotal; 오프라벨; 고양이 상심실 빈맥 증례 보고 있음(참고문헌 6)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감소 또는 투여 간격 연장이 필요할 수 있음. 약물의 거의 전량이 신장을 통해 미변화체로 배설되므로 신부전 시 축적 위험이 높음. 구체적인 크레아티닌 역치나 조정 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "소탈롤은 간 대사가 거의 없으므로 간기능 저하 시 용량 조정이 일반적으로 필요하지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity to sotalol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식",
+      "match_terms": [
+        "asthma",
+        "bronchospasm"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동성 서맥",
+      "match_terms": [
+        "sinus bradycardia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "2도 또는 3도 방실 차단",
+      "match_terms": [
+        "second-degree AV block",
+        "third-degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "병든 동방 증후군",
+      "match_terms": [
+        "sick sinus syndrome"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼륨혈증",
+      "match_terms": [
+        "hypokalemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "선천성 또는 후천성 QT 연장 증후군",
+      "match_terms": [
+        "long QT syndrome",
+        "QT prolongation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심인성 쇼크",
+      "match_terms": [
+        "cardiogenic shock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 울혈성 심부전",
+      "match_terms": [
+        "uncontrolled CHF",
+        "congestive heart failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절된 울혈성 심부전 또는 심근 기능 저하",
+      "match_terms": [
+        "controlled CHF",
+        "decreased myocardial function"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비선택적 베타-아드레날린 수용체 차단제(클래스 II) 및 칼륨 채널 차단제(클래스 III 항부정맥제). 재분극 및 불응기를 연장하며 전도에는 영향을 미치지 않음. 프로프라놀롤의 약 30% 베타 차단 활성.",
+    "common_extra_effects": [
+      "음성 변력 효과",
+      "음성 변시 효과",
+      "부정맥 유발 효과",
+      "호흡 곤란",
+      "기관지 경련",
+      "피로/어지러움",
+      "오심",
+      "구토",
+      "실신",
+      "기면",
+      "QT 간격 연장"
+    ],
+    "dog_mechanism": "개에서 경구 투여 후 초회통과효과 없음. 반감기 약 5시간. 1~2 mg/kg PO BID 투여 시 박출률 5.8% 감소 및 최대 심박수 17 bpm 감소(건강한 개 기준).",
+    "dog_extra_effects": [
+      "박출률 감소",
+      "최대 심박수 감소",
+      "부정맥 수 또는 복잡성 증가(드물게)",
+      "서맥 동반 시 실신 또는 기면 악화"
+    ],
+    "cat_mechanism": "고양이에서의 PK 데이터는 제한적. 상심실 빈맥 치료에 사용 보고 있음.",
+    "cat_extra_effects": [
+      "기면",
+      "피로",
+      "부정맥 유발 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 심실 빈맥(ARVC, 복서, 독일 셰퍼드 유전성 부정맥 포함) 및 상심실 빈맥 치료에 오프라벨로 사용. 멕실레틴과 병용 시 상가 효과. 신기능 저하 시 용량 조정 필요. 공복 투여 권장.",
+    "cat": "고양이 상심실 빈맥 치료에 사용 증례 보고 있으나 데이터 제한적. 개와 동일한 용량 범위(1~3.5 mg/kg PO q12h)가 일반적으로 사용되나 근거 수준이 낮음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "음성 변력 효과, 부정맥 유발 가능성, 신기능 저하 시 용량 조정 필요. 조절된 CHF, 심근 기능 저하, 당뇨병, 갑상선 기능 항진증 환자에서 주의 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 및 유효성 데이터 제한적. 개와 유사한 주의사항 적용. 신기능 저하 시 용량 조정 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관",
+    "forms": [
+      "소탈롤 HCl 정제: 80 mg, 120 mg, 160 mg, 240 mg (Betapace®, Sorine®, 제네릭)",
+      "소탈롤 HCl 경구 용액: 5 mg/mL (Sotylize®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "소탈롤은 비선택적 베타 차단제이자 클래스 III 항부정맥제(칼륨 채널 차단제)로, 개, 고양이, 말에서 심실 및 상심실 빈맥 조절에 오프라벨로 사용됩니다. 수의과 승인 제품은 없으며 사람용 제품을 사용합니다. 신장으로 거의 전량 미변화체 배설되므로 신기능 저하 시 용량 조정이 필요합니다. QT 연장 및 부정맥 유발 가능성이 주요 위험 요소이며, 공복 투여가 권장됩니다.",
+    "indications": "【승인 적응증】없음(수의과 승인 제품 없음). 【오프라벨 적응증】개: 심실 빈맥(ARVC, 복서, 독일 셰퍼드 유전성 부정맥), 상심실 빈맥(부속 전도로 매개 빈맥, 심방 조동 등); 고양이: 상심실 빈맥; 말: 심실 및 상심실 빈맥, 심방세동 심율동전환 역치 감소 및 재발 예방.",
+    "client_info": "【보호자 안내】\n• 소탈롤은 공복(식사 전)에 투여하는 것이 가장 좋습니다.\n• 흔한 부작용으로는 무기력함, 허약감, 식욕 저하, 구토가 있습니다. 이러한 증상이 지속되거나 악화되면 수의사에게 연락하십시오.\n• 동물이 호흡 곤란을 보이거나 쓰러지는 경우 즉시 수의사에게 연락하십시오.\n• 수의사가 저용량에서 시작하여 점차 용량을 증가시킬 수 있습니다. 처방된 용량 이상을 투여하지 마십시오.\n• 이 약을 복용하는 동안 정기적인 추적 검사(심전도, 심박수, 혈압 등)가 매우 중요합니다. 예약된 검진을 빠지지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Approval"
+    ],
+    "missing_sections": [
+      "Cat-specific pharmacokinetics",
+      "Specific creatinine thresholds for dose adjustment",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (dog-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "dosage_and_kinetics.cat (cat-specific PK data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/35.jsonl",
+    "extracted_at": "2026-03-10T23:57:43.315004+00:00",
+    "reviewer": null
+  }
+}

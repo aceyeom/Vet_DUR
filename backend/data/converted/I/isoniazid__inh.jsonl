@@ -1,0 +1,553 @@
+{
+  "id": "isoniazid",
+  "drug_identity": {
+    "name_ko": "이소니아지드",
+    "name_en": "Isoniazid",
+    "active_ingredient": "Isoniazid",
+    "brand_names": [
+      "Laniazid",
+      "Nydrazid",
+      "Isotamine",
+      "Rifater",
+      "IsonaRif",
+      "Rifamate"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 소동물(개, 고양이) 및 소에서 오프라벨로 사용. 결핵균 화학예방 및 요네병(MAP) 치료에 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Inj",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체에서 주로 간에서 아세틸화(N-acetyltransferase)를 통해 대사됨. N-아세틸화 형태는 이소니코틴산과 모노아세틸히드라진으로 추가 대사됨. 개는 N-acetyltransferase가 결핍되어 독성 위험이 증가함. 대부분 비활성 대사체로 소변을 통해 배설됨."
+    },
+    "extra_information": "개와 고양이에서의 약동학 정보 없음. 개는 N-acetyltransferase 결핍으로 인해 이소니아지드 독성 위험이 인체보다 높을 수 있음. 인체 기준: 빠른 아세틸화자 반감기 0.5~1.6시간, 느린 아세틸화자 반감기 2~5시간. 급성 또는 만성 간질환, 중증 신장애 환자에서 반감기가 최대 2배까지 연장될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이에서의 수의학적 약동학 데이터 없음. 인체 데이터 및 보고된 이상반응을 기반으로 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "peripheral neuropathy",
+          "seizures",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "개에서 CNS 자극, 말초 신경병증이 보고됨. 과다복용 시 운동실조, 경련, 대사성 산증이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "blood dyscrasias"
+        ],
+        "index": 1,
+        "evidence": "개에서 혈소판감소증이 보고됨. 인체에서 혈액 이상이 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment",
+          "renal disease"
+        ],
+        "index": 1,
+        "evidence": "중증 신장애 시 주의 사용 권고. 신장 배설 경로이나 직접적 신독성 보고는 없음."
+      },
+      "liver": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver enzymes",
+          "acute liver disease",
+          "hepatopathy"
+        ],
+        "index": 1,
+        "evidence": "개에서 간독성(혈청 간효소 상승)이 주요 이상반응으로 보고됨. 급성 간질환 시 금기. 개는 N-acetyltransferase 결핍으로 독성 대사체 축적 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "myocardial necrosis",
+          "arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 심근 괴사 및 부정맥이 보고됨. 치료 용량에서의 심장 독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "peripheral neuritis",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 말초 신경염이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성에 대한 직접적 보고 없음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal disease"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 신독성에 대한 직접적 보고 없음. 중증 신장애 시 주의 권고."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 간독성이 보고된 이상반응으로 명시됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 5.0,
+      "mean": 2.75,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 10,
+    "evidence": "개와 고양이에서의 약동학 데이터 없음. 인체 데이터: 빠른 아세틸화자 반감기 0.5~1.6시간, 느린 아세틸화자 반감기 2~5시간. 혈장 단백 결합률 약 10%. 경구 또는 근육주사 후 빠르게 흡수됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 이소니아지드는 MAO 억제 효과가 있으므로 세로토닌성 약물과의 병용 시 중증도 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Acetaminophen",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity"
+      ],
+      "evidence": "May increase risk for hepatotoxicity when combined with INH."
+    },
+    {
+      "drug": "Alfentanil",
+      "severity": 2,
+      "keywords": [
+        "prolonged duration",
+        "opioid"
+      ],
+      "evidence": "INH may prolong alfentanil duration of action."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "increased exposure",
+        "drug level"
+      ],
+      "evidence": "INH may increase amiodarone exposure."
+    },
+    {
+      "drug": "Antacids (aluminum-containing)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Antacids, especially those containing aluminum, may decrease INH absorption."
+    },
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "reduced metabolism",
+        "increased drug level"
+      ],
+      "evidence": "INH may reduce benzodiazepine metabolism, potentially increasing benzodiazepine effects."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "reduced antiplatelet effect"
+      ],
+      "evidence": "INH may reduce the antiplatelet effect of clopidogrel."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "reduced INH efficacy"
+      ],
+      "evidence": "Corticosteroids (e.g., dexamethasone, prednisolone) may reduce INH efficacy."
+    },
+    {
+      "drug": "Ketoconazole / Itraconazole",
+      "severity": 2,
+      "keywords": [
+        "reduced antifungal levels"
+      ],
+      "evidence": "INH may reduce ketoconazole/itraconazole serum concentrations; does not appear to affect other azole antifungals."
+    },
+    {
+      "drug": "Other Hepatotoxic Drugs (azole antifungals, methimazole, phenothiazines, sulfonamides, estrogens)",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "additive"
+      ],
+      "evidence": "Increased risk for hepatotoxicity when combined with other hepatotoxic drugs."
+    },
+    {
+      "drug": "Other Neurotoxic Drugs",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "additive"
+      ],
+      "evidence": "Increased risk for neurotoxicity when combined with other neurotoxic drugs."
+    },
+    {
+      "drug": "Pyridoxine",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "peripheral neuropathy",
+        "pyridoxine excretion"
+      ],
+      "evidence": "INH may antagonize or increase the excretion of pyridoxine and reduce formation of the active form. Increased peripheral neuritis may occur secondary to pyridoxine/INH interaction."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "additive"
+      ],
+      "evidence": "Increased risk for hepatotoxicity when INH is combined with rifampin."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline toxicity",
+        "drug level"
+      ],
+      "evidence": "INH may increase risk for theophylline toxicity."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "anticoagulation"
+      ],
+      "evidence": "INH may increase risk for bleeding when combined with warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "high",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Mycobacterium tuberculosis 화학예방 (오프라벨, 인체 데이터 외삽)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "인체 데이터에서 외삽된 용량. 활성 M. tuberculosis 또는 M. bovis 감염 치료는 인수공통감염 위험으로 인해 논란이 있음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고양이 결핵 2차 치료 (내성 감염에 한정, 오프라벨)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "내성 감염에 대한 2차 치료제로 사용. 활성 M. tuberculosis 또는 M. bovis 감염 치료는 인수공통감염 위험으로 인해 논란이 있음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신장애 환자에서 주의 사용 권고. 인체에서 중증 신장애 시 반감기가 최대 2배까지 연장될 수 있음. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "급성 간질환 환자에서 금기. 과거 이소니아지드 복용 중 간독성이 발생한 환자에서도 금기. 간기능 저하 환자에서 주의 사용 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "급성 간질환",
+      "match_terms": [
+        "acute liver disease",
+        "acute hepatitis",
+        "acute hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "이소니아지드 과민반응",
+      "match_terms": [
+        "hypersensitivity to isoniazid",
+        "INH allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이소니아지드 복용 중 간독성 발생 과거력",
+      "match_terms": [
+        "drug-induced hepatopathy",
+        "INH-induced hepatotoxicity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "chronic liver disease",
+        "decreased hepatic function"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 신장애",
+      "match_terms": [
+        "severe renal disease",
+        "severe renal impairment",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "개는 N-acetyltransferase가 결핍되어 있어 이소니아지드의 독성 대사체(모노아세틸히드라진)가 축적될 위험이 증가함. 이는 일부 인체 느린 아세틸화자와 유사한 상황임. 특정 품종에 대한 데이터는 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "마이코박테리아 세포벽 구성 성분인 미콜산(mycolic acid) 합성을 억제함. 분열 중인 마이코박테리아에 가장 활성이 높으며, 세포외 및 세포내 마이코박테리아 모두에 작용함. 분열 중인 마이코박테리아에 대해 살균 작용, 휴면 또는 반휴면 상태에 대해 정균 작용을 나타냄. 또한 모노아민 산화효소(MAO)에 대한 억제 효과가 있음.",
+    "common_extra_effects": [
+      "간독성 (혈청 간효소 상승)",
+      "말초 신경병증",
+      "CNS 자극",
+      "혈소판감소증",
+      "두드러기",
+      "혈액 이상",
+      "전신성 홍반성 루푸스 유사 증후군",
+      "경련"
+    ],
+    "dog_mechanism": "마이코박테리아 미콜산 합성 억제. 개는 N-acetyltransferase 결핍으로 독성 대사체 축적 위험 증가.",
+    "dog_extra_effects": [
+      "간독성 (혈청 간효소 상승)",
+      "CNS 자극",
+      "말초 신경병증",
+      "혈소판감소증",
+      "과다복용 시: 운동실조, 경련, 심근 괴사, 대사성 산증, 횡문근융해증, 타액 분비, 설사, 구토, 부정맥"
+    ],
+    "cat_mechanism": "마이코박테리아 미콜산 합성 억제.",
+    "cat_extra_effects": [
+      "간독성",
+      "말초 신경염"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 이소니아지드는 결핵균(M. tuberculosis) 화학예방 목적으로 10 mg/kg PO SID로 사용됨(인체 데이터 외삽). 개는 N-acetyltransferase가 결핍되어 독성 위험이 높으며, 보고된 LD50은 50 mg/kg임. 300 mg 정제 1정만으로도 심각한 독성이 발생할 수 있음. 활성 결핵 감염 치료는 인수공통감염 위험으로 인해 논란이 있으며, 치료 전 지역 수의 또는 공중보건 당국에 문의 권장. 기저치 및 주기적 CBC, 혈액화학 검사 모니터링 필요.",
+    "cat": "고양이에서 이소니아지드는 내성 감염에 대한 고양이 결핵의 2차 치료제로 10~20 mg/kg PO SID로 사용됨(오프라벨). 간독성과 말초 신경염이 주요 이상반응으로 보고됨. 활성 결핵 감염 치료는 인수공통감염 위험으로 인해 논란이 있으며, 치료 전 지역 수의 또는 공중보건 당국에 문의 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개는 N-acetyltransferase 결핍으로 독성 위험이 높음. 좁은 치료 지수를 가지며 간독성, 신경독성 모니터링 필요. 급성 간질환 시 금기. 중증 신장애 시 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 간독성 및 말초 신경염이 보고됨. 좁은 치료 지수. 급성 간질환 시 금기. 주기적 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 이하, 가급적 15~30°C(59~86°F)에서 밀폐된 차광 용기에 보관. 경구 시럽과 주사제는 동결 방지. 저온에서 주사액에 결정이 형성될 수 있으나 실온으로 가온 시 재용해됨.",
+    "forms": [
+      "경구 정제: 100 mg, 300 mg",
+      "경구 시럽: 10 mg/mL (50 mg/5 mL)",
+      "주사액: 100 mg/mL (10 mL 다회용 바이알)",
+      "복합제 정제: 리팜핀 120 mg + 이소니아지드 50 mg + 피라진아미드 300 mg (Rifater)",
+      "복합제 캡슐: 리팜핀 300 mg + 이소니아지드 150 mg (IsonaRif, Rifamate)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이소니아지드(INH)는 마이코박테리아 세포벽 미콜산 합성을 억제하는 항마이코박테리아제로, 소동물에서 결핵균 화학예방 및 활성 감염 치료(논란 있음), 소에서 요네병(MAP) 치료에 오프라벨로 사용됨. 수의학적 허가 제품 없음. 좁은 치료 지수를 가지며 간독성과 신경독성이 주요 우려 사항. 개는 N-acetyltransferase 결핍으로 독성 위험이 특히 높음. 과다복용 시 매우 위험하며 피리독신(비타민 B6)이 해독에 사용될 수 있음. 결핵 감염 동물 치료 전 반드시 지역 수의 또는 공중보건 당국에 문의 필요.",
+    "indications": "【허가 외 사용】 ① 소동물(개, 고양이): 결핵균(M. tuberculosis) 또는 M. bovis 화학예방 및 치료(인수공통감염 위험으로 논란). ② 소/반추동물: 요네병(MAP; Johne's disease) 임상 증상 완화 목적 치료(완치 불가, 증상 감소 및 생존 기간 연장 목적). 인체에서는 잠복 결핵 치료(단독) 및 활성 결핵 치료(병용)에 허가됨.",
+    "client_info": "【보호자 안내】 이 약은 빈속에 투여하는 것이 가장 좋습니다. 빈속 투여 후 구토나 불편함이 있으면 다음 투여 시 소량의 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하세요. 용량을 빠뜨리지 마시고 처방대로 규칙적으로 투여하세요. 빠뜨린 경우 다음 용량을 두 배로 투여하지 마세요. 이 약은 과다복용 시 매우 위험하므로 다른 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 다음 증상이 나타나면 즉시 수의사에게 연락하세요: 구토, 식욕 감소, 체중 감소, 설사, 행동 변화, 눈 흰자위·잇몸·피부의 황달, 계단 오르내리기 어려움."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability (dog/cat)",
+      "Renal elimination fraction",
+      "Specific renal dose adjustment thresholds",
+      "Onset of action"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (veterinary)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/56.jsonl",
+    "extracted_at": "2026-03-11T06:39:38.394706+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "id": "felbamate",
+  "drug_identity": {
+    "name_ko": "펠바메이트",
+    "name_en": "Felbamate",
+    "active_ingredient": "Felbamate",
+    "brand_names": [
+      "Felbatol",
+      "Felbamyl",
+      "Taloxa"
+    ],
+    "allergy_class": "carbamate",
+    "class": "Anticonvulsant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 개에서 난치성 간질 발작 조절을 위한 2~3차 항경련제로 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "펠바메이트는 소변으로 미변화체 및 대사산물 형태로 배설된다. 간 효소 유도를 일으킬 수 있으며, 이로 인해 시간이 지남에 따라 반감기가 단축될 수 있다."
+    },
+    "extra_information": "개에서 경구 투여 후 잘 흡수됨. 반감기는 성견에서 평균 4~6시간. 간 효소 유도로 인해 반감기가 감소할 수 있으므로 용량 조정이 필요할 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 간 효소 유도, 혈액 이상(혈소판감소증, 림프구감소증, 백혈구감소증) 보고에 근거함. 수의과 종별 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tremor",
+          "limb rigidity",
+          "restlessness",
+          "agitation",
+          "excitability"
+        ],
+        "index": 1,
+        "evidence": "고용량에서 진전, 사지 경직, 불안, 흥분 등 CNS 관련 이상반응이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "lymphopenia",
+          "leukopenia",
+          "aplastic anemia",
+          "blood dyscrasias"
+        ],
+        "index": 2,
+        "evidence": "혈소판감소증, 림프구감소증, 백혈구감소증이 일화적으로 보고됨. 사람에서 재생불량성 빈혈 보고 있으며 개에서도 가능성 배제 불가."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 0,
+        "evidence": "소변으로 미변화체 및 대사산물 배설. 직접적 신독성 보고는 없음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "liver enzyme induction",
+          "hepatic necrosis",
+          "hepatic failure",
+          "hepatic dysfunction"
+        ],
+        "index": 3,
+        "evidence": "간 효소 유도가 이상반응으로 보고됨. 사람에서 급성 간부전 및 간 괴사 보고. 기존 간 기능 이상 환자에서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": 0,
+        "evidence": "QT 연장 약물과의 병용 시 QT 간격 연장 위험 증가 가능성이 약물 상호작용으로 언급됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 용량 또는 이상반응 데이터가 모노그래프에 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 혈액 독성 데이터가 모노그래프에 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 신장 관련 데이터가 모노그래프에 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 간 관련 데이터가 모노그래프에 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 심장 관련 데이터가 모노그래프에 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 6.0,
+      "mean": 5.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 반감기는 평균 4~6시간으로 보고됨. 간 효소 유도로 인해 시간 경과에 따라 반감기가 단축될 수 있음. 생체이용률 및 단백결합률은 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "antiplatelet"
+      ],
+      "evidence": "Concurrent use may result in a reduction in the clinical efficacy of clopidogrel."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "increased phenobarbital levels",
+        "decreased felbamate levels",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "When felbamate is added to patients taking phenobarbital, phenobarbital levels may increase. When phenobarbital is added to patients taking felbamate, felbamate levels may decrease."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "increased phenobarbital levels",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Primidone is metabolized to phenobarbital; concurrent use with felbamate may cause increases in phenobarbital levels."
+    },
+    {
+      "drug": "QTc Prolonging Drugs (e.g., amiodarone, cisapride, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Concurrent use may increase the risk for QT-interval prolongation."
+    },
+    {
+      "drug": "Valproate",
+      "severity": 2,
+      "keywords": [
+        "increased valproic acid levels",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Felbamate can cause increases in valproic acid levels."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "발작 조절 (2~3차 항경련제, 오프라벨) - 초기 용량",
+          "value": "15 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주마다 약 15 mg/kg씩 점진적으로 증량 가능. 최대 60~70 mg/kg q8h까지 보고됨.",
+          "evidence": "오프라벨. 근거 데이터 부족. 대부분의 문헌에서 초기 15~20 mg/kg PO q8h 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "발작 조절 (2~3차 항경련제, 오프라벨) - 저용량 시작 옵션",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q12h에서 q8h로 점진적 증량 가능.",
+          "evidence": "오프라벨. 일부에서 저용량으로 시작하여 q8h로 증량하는 방법 사용."
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "발작 조절 - 최대 용량 상한",
+          "value": "60 - 70",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 70.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 상한 용량으로 60~70 mg/kg q8h가 보고됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고사항 없음. 펠바메이트는 소변으로 미변화체 및 대사산물로 배설되므로 신기능 저하 시 주의가 필요할 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "기존 간 기능 이상 환자에서는 사용하지 않도록 권고됨. 사람에서 급성 간부전 보고 있음. 간 효소 유도로 인해 반감기가 단축될 수 있으므로 정기적인 간 기능 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "카바메이트 과민반응",
+      "match_terms": [
+        "carbamate hypersensitivity",
+        "meprobamate allergy",
+        "felbamate hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액 이상 병력",
+      "match_terms": [
+        "blood dyscrasia",
+        "aplastic anemia",
+        "thrombocytopenia",
+        "leukopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "간 기능 이상",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신/수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "흥분성 신경전달 감소를 통한 항경련 작용. 나트륨 채널 활성화를 증가시켜 고빈도 활동전위 발화를 억제하는 것으로 추정되나 정확한 기전은 불명확함.",
+    "common_extra_effects": [
+      "각막건조증(KCS)",
+      "간 효소 유도",
+      "진전",
+      "사지 경직",
+      "과도한 침 분비",
+      "불안",
+      "흥분(고용량)",
+      "구토(다른 항경련제 병용 시)",
+      "오심(다른 항경련제 병용 시)"
+    ],
+    "dog_mechanism": "개에서 경구 투여 후 잘 흡수됨. 간 효소 유도로 인해 반감기가 시간 경과에 따라 단축될 수 있음.",
+    "dog_extra_effects": [
+      "각막건조증(KCS)",
+      "간 효소 유도",
+      "진전",
+      "사지 경직",
+      "과도한 침 분비",
+      "불안",
+      "흥분(고용량)",
+      "혈소판감소증(일화적)",
+      "림프구감소증(일화적)",
+      "백혈구감소증(일화적)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 2~3차 항경련제로 사용 가능. 단독 요법 시 진정 효과가 없어 페노바르비탈 또는 브롬화물과 병용 시에도 추가적인 진정을 유발하지 않는 장점이 있음. 사용 경험이 제한적이므로 이상반응 프로파일이 불완전할 수 있음. 정기적인 CBC 및 혈액화학 검사 모니터링 필요. 치료 혈중 농도는 25~100 µg/mL로 추정되나 모니터링의 유용성은 불확실함.",
+    "cat": "고양이에 대한 용량 및 안전성 데이터가 모노그래프에 없음. 사용 권장하지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 간 기능 이상 또는 혈액 이상 병력이 있는 개에서 주의 필요. 정기적인 CBC 및 간 기능 검사 모니터링 권장. 간 효소 유도로 인해 시간 경과에 따라 용량 조정이 필요할 수 있음."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에 대한 안전성 및 용량 데이터 없음. 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 밀폐 용기에 보관. 현탁액은 사용 전 잘 흔들어 사용.",
+    "forms": [
+      "Felbamate Tablets 400 mg (Felbatol, generic)",
+      "Felbamate Tablets 600 mg (Felbatol, generic)",
+      "Felbamate Suspension 120 mg/mL in 240 mL and 960 mL (Felbatol, generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "펠바메이트는 개에서 2~3차 항경련제로 사용되는 다이카바메이트 계열 약물입니다. 수의과 허가 제품은 없으며 사람용 제품을 오프라벨로 사용합니다. 단독 요법 시 진정 효과가 없어 페노바르비탈/브롬화물 병용 시에도 추가 진정을 유발하지 않는 장점이 있습니다. 간 효소 유도, 각막건조증(KCS), 혈액 이상 등의 이상반응 모니터링이 필요합니다. 정기적인 CBC 및 혈액화학 검사가 권장됩니다.",
+    "indications": "개에서 전신 발작 및 복합 부분 발작을 포함한 발작 장애 조절(오프라벨). 다른 표준 치료로 적절한 발작 조절이 되지 않거나 이상반응으로 내약성이 없는 경우 추가 약물로 고려.",
+    "client_info": "이 약은 개의 발작(간질) 치료에 사용되는 항경련제입니다. 수의학에서 사용 경험이 제한적입니다. 일반적으로 졸음이나 진정 효과를 유발하지 않습니다.\n\n음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편감이 있으면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요.\n\n개에서 비교적 안전한 것으로 보이나, 이상한 증상이 나타나면 즉시 수의사에게 알려주세요. 가능한 부작용으로는 진전(떨림), 사지 경직, 과도한 침 흘림, 불안, 흥분, 안구 건조(KCS), 간 효소 수치 상승 등이 있습니다.\n\n하루 여러 번 투여가 필요합니다. 용량을 빠뜨리면 효과가 없을 수 있습니다.\n\n이 약을 복용하는 동안 정기적인 혈액 검사(CBC, 혈액화학)를 위해 수의사 방문이 중요합니다. 정기 검진을 빠뜨리지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (cat)",
+      "Dosages (cat)",
+      "CYP enzyme profile",
+      "Bioavailability data",
+      "Protein binding data",
+      "Onset of action",
+      "Time to peak concentration",
+      "Renal dose adjustment",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/41.jsonl",
+    "extracted_at": "2026-03-11T01:44:01.206355+00:00",
+    "reviewer": null
+  }
+}

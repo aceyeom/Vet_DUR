@@ -1,0 +1,729 @@
+{
+  "id": "sodium_bicarbonate",
+  "drug_identity": {
+    "name_ko": "탄산수소나트륨",
+    "name_en": "Sodium Bicarbonate",
+    "active_ingredient": "Sodium Bicarbonate",
+    "brand_names": [
+      "Neut",
+      "Zegerid"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 대부분 허가 외(extra-label) 사용이며, 수의용 주사제(8.4%)는 FDA 미승인 제품임.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 4.0,
+        "unit": "%"
+      },
+      {
+        "value": 4.2,
+        "unit": "%"
+      },
+      {
+        "value": 7.5,
+        "unit": "%"
+      },
+      {
+        "value": 8.4,
+        "unit": "%"
+      },
+      {
+        "value": 325.0,
+        "unit": "mg"
+      },
+      {
+        "value": 650.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "탄산수소나트륨은 체내에서 중탄산염 이온으로 해리되어 세포외액의 주요 완충계(중탄산염:탄산 완충계)에 직접 참여한다. 전통적인 간 대사 경로를 거치지 않으며, 신장을 통해 배설된다. 개와 고양이에 대한 별도의 약동학 연구 데이터는 본 모노그래프에 기술되어 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 중탄산나트륨은 전통적 약물 대사 경로를 거치지 않으나, 부작용 프로파일에 따라 장기 부담을 평가함. 수의학 종별 PK 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "paradoxical CNS acidosis",
+          "CSF acidosis",
+          "depression",
+          "stupor",
+          "coma",
+          "respiratory arrest"
+        ],
+        "index": 1,
+        "evidence": "급속 IV 투여 시 CO2가 CNS로 확산되어 역설적 CSF 산증을 유발할 수 있으며, 우울, 혼미, 혼수, 호흡 정지가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "metabolic alkalosis",
+          "hypokalemia",
+          "hypocalcemia",
+          "hypernatremia",
+          "oxygen dissociation curve",
+          "ventricular fibrillation"
+        ],
+        "index": 1,
+        "evidence": "대사성 알칼리증, 저칼륨혈증, 저칼슘혈증, 고나트륨혈증, 산소해리곡선 좌편이, 심실세동 위험이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "oliguria",
+          "sodium load",
+          "volume overload"
+        ],
+        "index": 1,
+        "evidence": "신부전 또는 핍뇨 환자에서 나트륨 부하 및 용적 과부하 위험. 신장을 통해 배설되므로 신기능 저하 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성 또는 간 대사에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "CHF",
+          "volume overload",
+          "ventricular fibrillation",
+          "hypernatremia"
+        ],
+        "index": 1,
+        "evidence": "CHF 환자에서 나트륨 부하로 인한 용적 과부하 위험. CPR 중 심실세동 소인 가능성 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "paradoxical CNS acidosis",
+          "CSF acidosis",
+          "depression",
+          "stupor",
+          "coma",
+          "respiratory arrest"
+        ],
+        "index": 1,
+        "evidence": "개와 동일한 기전으로 역설적 CNS 산증 위험. 고양이 특이 데이터는 없으나 동일 경고가 적용됨."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "metabolic alkalosis",
+          "hypokalemia",
+          "hypocalcemia",
+          "hypernatremia",
+          "oxygen dissociation curve",
+          "ventricular fibrillation"
+        ],
+        "index": 1,
+        "evidence": "대사성 알칼리증, 전해질 이상, 산소해리곡선 좌편이, 심실세동 위험이 고양이에도 동일하게 적용됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "oliguria",
+          "sodium load",
+          "volume overload"
+        ],
+        "index": 1,
+        "evidence": "신부전 또는 핍뇨 고양이에서 나트륨 부하 및 용적 과부하 위험."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성 또는 간 대사에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "CHF",
+          "volume overload",
+          "ventricular fibrillation",
+          "hypernatremia"
+        ],
+        "index": 1,
+        "evidence": "CHF 고양이에서 나트륨 부하로 인한 용적 과부하 위험. CPR 중 심실세동 소인 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 약동학적 파라미터(반감기, 최고혈중농도 도달시간, 생체이용률 등)가 명시되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents (e.g., hyoscyamine, oxybutynin)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "separate administration"
+      ],
+      "evidence": "Concomitant oral sodium bicarbonate may reduce absorption of oral anticholinergic agents; administer separately."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "alkaline environment"
+      ],
+      "evidence": "Concomitant oral sodium bicarbonate may reduce absorption of azole antifungals; administer separately."
+    },
+    {
+      "drug": "Ciprofloxacin",
+      "severity": 2,
+      "keywords": [
+        "crystalluria",
+        "decreased solubility",
+        "alkaline urine"
+      ],
+      "evidence": "Solubility of ciprofloxacin is decreased in an alkaline environment; monitor for crystalluria in patients with alkaline urine."
+    },
+    {
+      "drug": "Enrofloxacin",
+      "severity": 2,
+      "keywords": [
+        "crystalluria",
+        "decreased solubility",
+        "alkaline urine"
+      ],
+      "evidence": "Solubility of enrofloxacin is decreased in an alkaline environment; monitor for crystalluria in patients with alkaline urine."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "hypernatremia",
+        "sodium retention"
+      ],
+      "evidence": "Patients receiving high dosages of sodium bicarbonate and ACTH or glucocorticoids may develop hypernatremia."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced digoxin concentration",
+        "reduced absorption"
+      ],
+      "evidence": "Concomitant oral sodium bicarbonate may reduce digoxin concentrations."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypochloremic alkalosis",
+        "potassium-wasting"
+      ],
+      "evidence": "Concurrent use of sodium bicarbonate in patients receiving potassium-wasting diuretics may cause hypochloremic alkalosis."
+    },
+    {
+      "drug": "Ephedrine",
+      "severity": 1,
+      "keywords": [
+        "decreased renal excretion",
+        "alkaline urine"
+      ],
+      "evidence": "When urine is alkalinized by sodium bicarbonate, excretion of ephedrine may be decreased, potentially increasing drug effect."
+    },
+    {
+      "drug": "Histamine Type 2 Receptor Antagonists (e.g., famotidine)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "separate administration"
+      ],
+      "evidence": "Concomitant oral sodium bicarbonate may reduce absorption of H2 antagonists; separate dosages by at least 2 hours."
+    },
+    {
+      "drug": "Iron Products",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "separate administration"
+      ],
+      "evidence": "Concomitant oral sodium bicarbonate may reduce absorption of iron products; separate dosages by at least 2 hours."
+    },
+    {
+      "drug": "Methenamine",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "alkaline urine"
+      ],
+      "evidence": "Methenamine efficacy may be decreased when urine is alkalinized by sodium bicarbonate."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 1,
+      "keywords": [
+        "decreased renal excretion",
+        "alkaline urine"
+      ],
+      "evidence": "When urine is alkalinized by sodium bicarbonate, excretion of quinidine may be decreased."
+    },
+    {
+      "drug": "Salicylates (e.g., aspirin)",
+      "severity": 1,
+      "keywords": [
+        "increased renal excretion",
+        "alkaline urine",
+        "weakly acidic drugs"
+      ],
+      "evidence": "When urine is alkalinized by sodium bicarbonate, excretion of weakly acidic drugs such as salicylates may be increased, potentially reducing efficacy."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 1,
+      "keywords": [
+        "reduced efficacy",
+        "separate administration"
+      ],
+      "evidence": "Oral sodium bicarbonate may reduce the efficacy of sucralfate if administered concurrently; separate dosages by at least 2 hours."
+    },
+    {
+      "drug": "Tetracyclines (e.g., doxycycline)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "separate administration"
+      ],
+      "evidence": "Concomitant oral sodium bicarbonate may reduce absorption of tetracyclines; separate dosages by at least 2 hours."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증 대사성 산증 (severe metabolic acidosis) - 계산식 기반",
+          "value": "0.3 × 체중(kg) × (목표 HCO3- - 측정 HCO3-)",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "계산량의 1/4~1/3을 천천히 IV 볼루스로 투여하고, 나머지는 4~6시간에 걸쳐 IV 주입. 투여 후 혈가스 재검 필요.",
+          "evidence": "Extra-label. 계산식: NaHCO3 필요량(mEq) = 0.3 × 체중(kg) × (목표 HCO3- - 측정 HCO3-)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "심폐소생술 중 중증 산증 (prolonged cardiac arrest >10-15분, 혈가스 측정 불가)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "천천히 IV 또는 IO 투여",
+          "evidence": "Extra-label. 단위는 mEq/kg (원문 기준)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고칼륨혈증 위기 보조 치료 (hyperkalemic crisis) - 경험적 용량",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "10~20분에 걸쳐 천천히 IV 투여. 또는 계산식 사용: 0.3 × 체중(kg) × (목표 HCO3- - 측정 HCO3-) mEq",
+          "evidence": "Extra-label. 단위는 mEq/kg (원문 기준). 저알도스테론증 관련 고칼륨혈증은 수액 단독으로 개선되는 경우가 많음."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소변 알칼리화 (urine alkalinization)",
+          "value": "650 - 5850",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "환자 크기 및 치료 전 소변 pH에 따라 용량 개별화. 목표 소변 pH ≈7~7.5. mg/kg 단위가 아닌 동물 1마리당 총량.",
+          "evidence": "Extra-label. 650 mg ~ 5.85 g/동물(체중당 용량 아님)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증 대사성 산증 (severe metabolic acidosis) - 계산식 기반",
+          "value": "0.3 × 체중(kg) × (목표 HCO3- - 측정 HCO3-)",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "계산량의 1/4~1/3을 천천히 IV 볼루스로 투여하고, 나머지는 4~6시간에 걸쳐 IV 주입. 투여 후 혈가스 재검 필요.",
+          "evidence": "Extra-label. 개/고양이 공통 용량 기준. 계산식: NaHCO3 필요량(mEq) = 0.3 × 체중(kg) × (목표 HCO3- - 측정 HCO3-)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "심폐소생술 중 중증 산증 (prolonged cardiac arrest >10-15분, 혈가스 측정 불가)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "천천히 IV 또는 IO 투여",
+          "evidence": "Extra-label. 단위는 mEq/kg (원문 기준). 개/고양이 공통."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고칼륨혈증 위기 보조 치료 (hyperkalemic crisis) - 경험적 용량",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "10~20분에 걸쳐 천천히 IV 투여. 개/고양이 공통.",
+          "evidence": "Extra-label. 단위는 mEq/kg (원문 기준)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소변 알칼리화 (urine alkalinization)",
+          "value": "650 - 5850",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "환자 크기 및 치료 전 소변 pH에 따라 용량 개별화. 목표 소변 pH ≈7~7.5. mg/kg 단위가 아닌 동물 1마리당 총량.",
+          "evidence": "Extra-label. 개/고양이 공통."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전, 핍뇨, 급성 신손상 환자에서는 나트륨 부하 및 용적 과부하 위험으로 인해 극도의 주의가 필요하며, 가능하면 사용을 피하거나 용량을 최소화해야 함. 구체적인 용량 조정 기준은 모노그래프에 명시되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사를 거치지 않으므로 간기능 저하에 따른 용량 조정은 필요하지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "대사성 알칼리증 (Metabolic alkalosis)",
+      "match_terms": [
+        "metabolic alkalosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡성 알칼리증 (Respiratory alkalosis)",
+      "match_terms": [
+        "respiratory alkalosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "구토 또는 위장관 흡인으로 인한 과도한 염소 손실",
+      "match_terms": [
+        "excessive chloride loss",
+        "vomiting",
+        "GI suction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이뇨제 유발 저염소성 알칼리증 위험 환자",
+      "match_terms": [
+        "diuretic-induced hypochloremic alkalosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼슘혈증 (알칼리증으로 인한 테타니 위험)",
+      "match_terms": [
+        "hypocalcemia",
+        "tetany"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전 (CHF)",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신증후군 (Nephrotic syndrome)",
+      "match_terms": [
+        "nephrotic syndrome"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압 (Hypertension)",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "핍뇨 (Oliguria)",
+      "match_terms": [
+        "oliguria"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "용적 과부하 (Volume overload)",
+      "match_terms": [
+        "volume overload"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "적절한 환기가 불가능한 환자",
+      "match_terms": [
+        "inadequate ventilation",
+        "hypercapnia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "중탄산염 이온은 체내 세포외액의 주요 완충계(중탄산염:탄산 완충계)의 공액 염기 성분으로 작용하여 산을 중화하고 혈액 및 소변의 pH를 상승시킨다.",
+    "common_extra_effects": [
+      "대사성 알칼리증 (metabolic alkalosis)",
+      "저칼륨혈증 (hypokalemia)",
+      "저칼슘혈증 (hypocalcemia)",
+      "과잉 알칼리증 (overshoot alkalosis)",
+      "고나트륨혈증 (hypernatremia)",
+      "용적 과부하 (volume overload)",
+      "울혈성 심부전 악화 (CHF exacerbation)",
+      "산소해리곡선 좌편이로 인한 조직 산소화 감소",
+      "역설적 CNS 산증 (paradoxical CNS acidosis)",
+      "우울, 혼미, 혼수 (depression, stupor, coma)",
+      "호흡 정지 (respiratory arrest)",
+      "사망 (death)",
+      "심실세동 소인 (predisposition to ventricular fibrillation, CPR 중)",
+      "고탄산혈증 (hypercapnia, CPR 중 환기 불충분 시)",
+      "혈전성 정맥염/조직 괴사 (cellulitis, tissue necrosis, sloughing - 고장성 용액 혈관 외 유출 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 중탄산나트륨은 중증 대사성 산증, 심폐소생술, 고칼륨혈증 위기, 소변 알칼리화에 허가 외로 사용된다. 당뇨병성 케톤산증에서의 사용은 논란이 있으며, 유산산증에는 일반적으로 효과가 없다. 투여 전 저칼슘혈증 및 저칼륨혈증을 교정하는 것이 이상적이며, 칼륨 보충 전 투여는 저칼륨혈증을 악화시킬 수 있다. 급속 IV 볼루스는 피해야 한다.",
+    "cat": "고양이에서도 개와 동일한 적응증 및 주의사항이 적용된다. 고양이는 신부전이 흔하므로 나트륨 부하 및 용적 과부하에 특히 주의해야 한다. 모든 사용은 허가 외(extra-label)이며, 혈가스 및 전해질 모니터링이 필수적이다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저칼슘혈증, CHF, 신부전, 핍뇨, 고혈압, 용적 과부하 환자에서 주의 사용. 급속 IV 투여 금지. 혈가스 및 전해질 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서도 동일한 주의사항 적용. 신부전이 흔한 고양이에서 나트륨 부하에 특히 주의. 혈가스 및 전해질 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐 용기에 실온(15°C-30°C) 보관. 주사제: 40°C 미만, 가급적 실온 보관; 동결 금지. 분말: 건조한 공기 중 안정적이나 습기에 노출 시 서서히 분해됨.",
+    "forms": [
+      "Sodium Bicarbonate Injection 4% (0.48 mEq/mL) - 5 mL vials",
+      "Sodium Bicarbonate Injection 4.2% (0.5 mEq/mL) - 5 mL, 10 mL syringes",
+      "Sodium Bicarbonate Injection 7.5% (0.9 mEq/mL) - 50 mL syringes",
+      "Sodium Bicarbonate Injection 8.4% (1 mEq/mL) - 10 mL syringes, 50 mL syringes, 50 mL vials, 100 mL vials",
+      "Sodium Bicarbonate Tablets 325 mg (OTC)",
+      "Sodium Bicarbonate Tablets 650 mg (OTC)",
+      "Sodium Bicarbonate Powder 113 g, 120 g, 0.5 kg (OTC)",
+      "Omeprazole/Sodium Bicarbonate Capsules (Zegerid) 20 mg/1100 mg, 40 mg/1100 mg",
+      "Omeprazole/Sodium Bicarbonate Powder for Oral Suspension (Zegerid) 20 mg/1680 mg, 40 mg/1680 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "탄산수소나트륨(중탄산나트륨)은 중증 대사성 산증 치료, 고칼륨혈증/고칼슘혈증 위기의 보조 치료, 소변 알칼리화에 사용되는 알칼리화제입니다. 수의학적 사용은 대부분 허가 외(extra-label)이며, 특히 비경구 투여 시 대사성 알칼리증, 저칼륨혈증, 저칼슘혈증, 고나트륨혈증, 용적 과부하 등 심각한 부작용이 발생할 수 있습니다. 급속 IV 볼루스는 역설적 CNS 산증을 유발할 수 있으므로 반드시 피해야 합니다. 투여 중 혈가스 분석 및 전해질 모니터링이 필수적입니다. 유산산증에는 일반적으로 효과가 없으며, 당뇨병성 케톤산증에서의 사용은 논란이 있습니다.",
+    "indications": "▶ 중증 대사성 산증 (심폐소생술, 신부전, 신세뇨관 산증, 독소 노출 등에 의한 경우) - 허가 외\n▶ 고칼륨혈증 위기 보조 치료 - 허가 외\n▶ 고칼슘혈증 보조 치료 - 허가 외\n▶ 소변 알칼리화 - 허가 외\n▶ 수의용 주사제(8.4%)는 FDA 미승인 제품임",
+    "client_info": "이 약은 혈액의 산성도를 낮추거나 소변을 알칼리성으로 만들기 위해 사용됩니다. 반드시 수의사의 지시에 따라 사용해야 하며, 자가 판단으로 용량을 조절하거나 중단하지 마십시오. 투여 중 구토, 근육 경련, 호흡 곤란, 부종 등의 증상이 나타나면 즉시 수의사에게 연락하십시오. 정맥 주사 부위에 붓거나 발적이 생기면 즉시 알려주십시오. 치료 중 정기적인 혈액 검사(전해질, 혈가스)가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Client Information (formal section)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:49:26.981700+00:00",
+    "reviewer": null
+  }
+}

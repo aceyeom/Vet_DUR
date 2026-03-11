@@ -1,0 +1,405 @@
+{
+  "id": "meglumine_antimoniate",
+  "drug_identity": {
+    "name_ko": "메글루민 안티모니에이트",
+    "name_en": "Meglumine Antimoniate",
+    "active_ingredient": "Meglumine Antimoniate",
+    "brand_names": [
+      "Glucantime",
+      "Glucantim",
+      "Protostib"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국에서는 승인되지 않은 약물로, 지중해 및 남미 일부 국가에서 상업적으로 이용 가능하며 수의사 처방 하에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 300.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "투여 후 9시간 이내에 항모니의 80%가 소변으로 배설됨. 신기능 저하 시 반감기 연장 가능."
+    },
+    "extra_information": "개에서 SC 또는 IM 투여 후 전신 생체이용률 약 92%. 간, 비장, 피부에서 가장 높은 조직 농도 확인. 반감기는 SC 투여 시 약 2시간으로 비교적 짧음. 신기능 저하 시 반감기 연장 및 약물 축적 위험 증가."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 신세뇨관 손상, 간효소 상승, 주사 부위 반응 등이 보고됨. 고양이 데이터 부족.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "기면(lethargy)이 주요 부작용으로 보고되었으나 직접적인 신경독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "WBC decrease",
+          "hemoglobin decrease",
+          "hematologic effects"
+        ],
+        "index": 2,
+        "evidence": "사람에서 백혈구 감소 및 헤모글로빈 감소 보고. 과다 투여 시 혈액학적 영향 가능성 언급."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "nephrotoxic",
+          "tubular damage",
+          "proximal tubule vacuolization",
+          "coagulative necrosis",
+          "renal elimination",
+          "drug accumulation"
+        ],
+        "index": 5,
+        "evidence": "건강한 개에서 근위세뇨관 세포 공포화 및 응고괴사 확인. 신기능 저하 시 약물 축적 및 독성 위험 증가. 투여량의 80%가 9시간 내 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "liver enzymes elevated",
+          "hepatic insufficiency",
+          "hepatotoxic"
+        ],
+        "index": 3,
+        "evidence": "개에서 일시적인 간효소 상승 보고. 간부전 환자에서 심각한 부작용 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT interval",
+          "cardiac troponin"
+        ],
+        "index": 2,
+        "evidence": "사람에서 QT 간격 연장 보고. 개 28마리 연구에서 심장 트로포닌 I 또는 교정 QT 간격의 유의한 변화는 없었음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 신경계 영향 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 혈액학적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 신독성 데이터 없음. 안전성 및 유효성 근거 부족."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 심장 영향 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 2.0,
+      "species": "dog"
+    },
+    "f_percent": 92,
+    "protein_binding_percent": null,
+    "evidence": "개에서 SC 투여 후 반감기 약 2시간. 전신 생체이용률 약 92% (SC 또는 IM 투여 시)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "QT Interval Prolonging Agents (e.g., tricyclic antidepressants, disopyramide, quinidine, procainamide)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Meglumine antimoniate may further prolong QT interval when combined with other QT-prolonging agents, increasing risk for arrhythmias."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., amphotericin B, aminoglycosides)",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "renal damage",
+        "drug accumulation"
+      ],
+      "evidence": "Avoid or use with extreme caution in dogs with leishmaniasis and kidney disease; additive nephrotoxicity risk."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 치료 (오프라벨) - 1일 1회 요법",
+          "value": "100",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주간 투여",
+          "evidence": "가장 일반적으로 보고된 치료 요법 (100 mg/kg SC 1일 1회, 4주)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 치료 (오프라벨) - 1일 2회 요법 (짧은 반감기 고려)",
+          "value": "50 - 75",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "4~8주간 투여. 알로퓨리놀 10 mg/kg PO BID 최소 6개월 병용 권장.",
+          "evidence": "짧은 반감기를 고려할 때 BID 투여가 더 효과적일 수 있음. 알로퓨리놀 병용 시 임상적 관해 기간 연장 가능."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 약물 축적 및 독성 위험 증가. IRIS 3~4단계 심한 신부전 개에서는 알로퓨리놀 단독 치료 전 수액 및 산-염기 불균형 교정 권장. 신기능 저하 시 사용 금기에 준하는 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간부전 환자에서 심각한 부작용 위험 증가. 간기능 저하 시 투여 전 위험-이익 비교 평가 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal failure",
+        "renal insufficiency",
+        "CKD",
+        "IRIS stage III",
+        "IRIS stage IV"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic failure",
+        "hepatic insufficiency",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심부전",
+      "match_terms": [
+        "cardiac failure",
+        "cardiac insufficiency",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "메글루민 안티모니에이트 또는 아황산염 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "sulfite allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5가 안티몬 화합물로서 리슈만편모충의 당분해 및 지방산 산화에 필요한 효소를 선택적으로 억제함.",
+    "common_extra_effects": [
+      "주사 부위 반응 (피부 농양, 봉와직염)",
+      "기면(lethargy)",
+      "식욕부진",
+      "구토",
+      "일시적 간효소 상승",
+      "신세뇨관 손상 (근위세뇨관 공포화, 응고괴사)",
+      "QT 간격 연장 (사람에서 보고)"
+    ],
+    "dog_mechanism": "알로퓨리놀과 병용 시 리슈만편모충증 치료에 상승 효과 및 항모니 내성 발생 위험 감소.",
+    "dog_extra_effects": [
+      "주사 부위 피부 농양/봉와직염",
+      "기면",
+      "식욕부진",
+      "구토",
+      "일시적 간효소 상승",
+      "신세뇨관 손상 (건강한 개에서 조직학적 확인)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 리슈만편모충증 치료의 1차 선택약으로 알로퓨리놀과 병용 사용이 권장됨. 짧은 반감기(약 2시간)로 인해 1일 2회 투여가 더 효과적일 수 있음. 신독성 위험이 있으므로 치료 전후 신기능 모니터링 필수. 완전한 박멸은 어려우며 치료 비용이 높고 기간이 길 수 있음. 미국에서는 시판되지 않음.",
+    "cat": "고양이 리슈만편모충증 치료에 유용할 수 있으나, 안전성 및 유효성에 대한 근거가 부족하여 현재로서는 권장하기 어려움. 추가 연구가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신부전, 간부전, 심부전 환자에서 상대적 금기. 신기능 저하 시 약물 축적 및 독성 위험 증가. 치료 전 CBC, 혈청 화학 검사, 요검사 기저치 측정 및 주기적 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 및 유효성 데이터 부족. 사용 전 위험-이익 비교 평가 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 이하, 가급적 15~30°C(59~86°F)에서 보관. 동결 금지. 사용 전 용액 내 입자 확인. 소량 입자 존재 시 잘 흔든 후 사용; 흔든 후에도 입자가 지속되면 사용 금지. 장기 보관 시 변질 가능. 개봉 후 즉시 사용.",
+    "forms": [
+      "주사액 (5 mL 앰플당 메글루민 안티모니에이트 1.5 g / 5가 안티몬 425 mg 함유)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메글루민 안티모니에이트는 개의 리슈만편모충증 치료에 사용되는 5가 안티몬 화합물입니다. 알로퓨리놀과의 병용 요법이 현재 표준 치료로 권장됩니다. 미국에서는 시판되지 않으며, 지중해 및 남미 일부 국가에서만 구입 가능합니다. 신독성 위험이 있으므로 신기능 모니터링이 필수적이며, 신부전·간부전·심부전 환자에서는 극도의 주의가 필요합니다. 짧은 반감기(약 2시간)로 인해 1일 2회 투여가 더 효과적일 수 있습니다.",
+    "indications": "개의 리슈만편모충증 치료 (알로퓨리놀 병용 권장, 오프라벨). 고양이 리슈만편모충증에 대한 사용은 근거 부족으로 현재 권장되지 않음.",
+    "client_info": "이 약은 개의 리슈만편모충증 치료에 사용됩니다. 치료 기간이 길고 비용이 상당할 수 있으며, 완전한 박멸(완치)은 어렵습니다. 주사 부위 반응, 기력 저하, 식욕부진, 구토 등의 부작용이 나타날 수 있습니다. 신장 및 간 기능 검사를 포함한 정기적인 혈액 검사와 소변 검사가 필요합니다. 미국에서는 판매되지 않는 약물이므로 수의사의 안내에 따라 구입 및 사용하시기 바랍니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP profile",
+      "Protein binding",
+      "T_max",
+      "Onset of action",
+      "Cat dosage",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/62.jsonl",
+    "extracted_at": "2026-03-11T08:38:30.044263+00:00",
+    "reviewer": null
+  }
+}

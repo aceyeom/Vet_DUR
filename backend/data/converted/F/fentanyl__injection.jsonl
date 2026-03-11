@@ -1,0 +1,844 @@
+{
+  "id": "fentanyl_injection",
+  "drug_identity": {
+    "name_ko": "펜타닐 주사",
+    "name_en": "Fentanyl, Injection",
+    "active_ingredient": "Fentanyl citrate",
+    "brand_names": [
+      "Sublimaze"
+    ],
+    "allergy_class": "opioid",
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "Naloxone is the agent of choice when treating fentanyl-related respiratory and circulatory depression. In massive overdoses, naloxone may need to be repeated.",
+    "off_label_note": "수의학적 승인 제품 없음. 모든 용량은 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.05,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Plumb's 본문에 CYP 효소 경로에 대한 직접적인 언급 없음. 아졸계 항진균제, 마크로라이드 항생제, 딜티아젬, 시메티딘이 펜타닐의 반감기를 증가시키고 청소율을 감소시킨다고 기술되어 있어 간 대사(CYP3A4 추정)가 관여함을 시사하나, 본문에 명시되지 않음."
+    },
+    "extra_information": "개: 10 µg/kg IV 볼루스 투여 시 분포용적 약 5 L/kg, 말단 소실 반감기 약 45분, 총 청소율 78 mL/min/kg. 고양이: 5 µg/kg IV 볼루스 후 5 µg/kg/hour CRI 2시간 투여 시 소실 반감기 2.4시간, 평균 전신 청소율 1.4 L/kg/hour, 분포용적 4.42 L/kg."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 호흡억제, 서맥, 저혈압, 진정, 변비, 요저류 등의 이상반응이 보고됨. 간 대사 약물이나 직접적인 간독성 보고 없음. 신장 직접 독성 보고 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "dysphoria",
+          "agitation",
+          "seizures (overdose)"
+        ],
+        "index": 1,
+        "evidence": "개에서 CNS 억제(진정), 불쾌감(약 25%), 흥분이 보고됨. 과량 투여 시 경련 가능."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "cardiovascular depression",
+          "asystole"
+        ],
+        "index": 2,
+        "evidence": "서맥, 저혈압, 심박출량 감소, 이소플루란 병용 시 평균 동맥압 유의한 감소 보고. 이소플루란 마취 중 2마리 개에서 심정지 보고."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urine retention"
+        ],
+        "index": 3,
+        "evidence": "요저류가 이상반응으로 보고됨. 직접적인 신독성 보고 없음. 신장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic clearance",
+          "hepatic impairment caution"
+        ],
+        "index": 4,
+        "evidence": "간 대사 약물로 간장애 환자에서 주의 사용 권고. 직접적인 간독성 보고 없음. 아졸계 등 간 효소 억제제가 펜타닐 청소율 감소시킬 수 있음."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "cardiac index decrease",
+          "asystole"
+        ],
+        "index": 5,
+        "evidence": "서맥, 저혈압, 심박출지수 감소 보고. 이소플루란 병용 시 심혈관 억제 증가. 이소플루란 마취 중 심정지 2례 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "mydriasis",
+          "dysphoria"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 CNS 억제, 산동(mydriasis) 보고. 모르핀이나 하이드로모르폰보다 이상반응이 적다고 기술됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiovascular depression",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "서맥, 심혈관 억제가 이상반응으로 보고됨. 고양이는 인간보다 호흡억제에 덜 민감하다고 기술됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urine retention"
+        ],
+        "index": 3,
+        "evidence": "요저류가 이상반응으로 보고됨. 직접적인 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic impairment caution"
+        ],
+        "index": 4,
+        "evidence": "간장애 환자에서 주의 사용 권고. 직접적인 간독성 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiovascular depression"
+        ],
+        "index": 5,
+        "evidence": "서맥 및 심혈관 억제가 이상반응으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 10,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.43,
+      "max": 2.4,
+      "mean": 0.75,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개: 말단 소실 반감기 약 45분(0.75시간). 고양이: 소실 반감기 2.4시간. 경막외 투여 시 10분 이내 발현, 지속시간 약 30분. IV 단회 투여 시 지속시간 매우 짧음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/avoid→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 상호작용은 스키마 규칙에 따라 severity 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., enalapril)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase the risk for bradycardia, hypotension, and orthostasis."
+    },
+    {
+      "drug": "Alfaxalone",
+      "severity": 2,
+      "keywords": [
+        "reduced dosage requirement",
+        "CNS depression"
+      ],
+      "evidence": "Fentanyl reduced alfaxalone dosage requirements in dogs."
+    },
+    {
+      "drug": "Inhalant Anesthetics (e.g., isoflurane, sevoflurane)",
+      "severity": 2,
+      "keywords": [
+        "MAC reduction",
+        "bradycardia",
+        "hypotension",
+        "reduced clearance"
+      ],
+      "evidence": "Isoflurane anesthesia reduced fentanyl clearance in horses. Fentanyl reduces MAC by ~40%. Combination increases risk for bradycardia or hypotension."
+    },
+    {
+      "drug": "Anticholinergic Agents (e.g., acepromazine, amitriptyline, atropine, clomipramine, hyoscyamine)",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for urinary retention, constipation, and CNS and respiratory depression."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs, e.g., telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase the risk for bradycardia, hypotension, and orthostasis."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk of respiratory depression. However, a study in dogs showed ketoconazole did not significantly alter fentanyl elimination."
+    },
+    {
+      "drug": "Barbiturates (e.g., pentobarbital, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression. Monitor and adjust doses accordingly."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression. Monitor and adjust doses accordingly."
+    },
+    {
+      "drug": "Beta-Blockers (e.g., atenolol, esmolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "May produce bradycardia or hypotension if used concurrently with fentanyl."
+    },
+    {
+      "drug": "Bethanechol",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the beneficial effects of bethanechol on GI motility; avoid combination."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for bradycardia, hypotension, and orthostasis. Diltiazem may increase the half-life and decrease the clearance of fentanyl."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS depression."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 3,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia",
+        "seizures",
+        "coma",
+        "respiratory arrest"
+      ],
+      "evidence": "Concurrent use may increase levels of oral desmopressin and increase the risk for water intoxication and/or hyponatremia, which can progress to seizures, coma, respiratory arrest, and death."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 1,
+      "keywords": [
+        "reduced diuretic efficacy"
+      ],
+      "evidence": "Opioids may decrease therapeutic effects of diuretics."
+    },
+    {
+      "drug": "Domperidone",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the GI effects of domperidone."
+    },
+    {
+      "drug": "Hepatic Enzyme Inducers (e.g., griseofulvin, mitotane, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "decreased fentanyl levels",
+        "reduced efficacy"
+      ],
+      "evidence": "Concurrent use may decrease levels of fentanyl. Monitor clinical response and adjust doses accordingly."
+    },
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "somnolence",
+        "confusion",
+        "hallucinations",
+        "seizures"
+      ],
+      "evidence": "Concurrent use may increase the risk for neurotoxicity, including somnolence, confusion, hallucinations, blurred vision, urinary incontinence, seizures, and coma."
+    },
+    {
+      "drug": "Iohexol (intrathecal)",
+      "severity": 3,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "Concurrent use of opioids with intrathecal iohexol may increase the risk for seizures. Opioids should be withheld for 48 hours before and 24 hours after intrathecal administration of iohexol."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 1,
+      "keywords": [
+        "constipation"
+      ],
+      "evidence": "Concurrent use may increase the risk for constipation."
+    },
+    {
+      "drug": "Macrolide Antibiotics (e.g., clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs, e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "anxiety",
+        "confusion",
+        "hypotension",
+        "respiratory depression",
+        "cyanosis",
+        "coma"
+      ],
+      "evidence": "Concurrent use may increase the risk for anxiety, confusion, hypotension, respiratory depression, cyanosis, and coma. MAOIs should be withheld for 14 days prior to administration of opioids; avoid combination."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "prokinetic antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the prokinetic effects of metoclopramide."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (e.g., atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "tachycardia",
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for tachycardia, bradycardia, and/or hypotension. Use cautiously and monitor."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "cardiorespiratory depression"
+      ],
+      "evidence": "Increased risk for CNS and cardiorespiratory depression."
+    },
+    {
+      "drug": "Serotonergic Agents (e.g., fluoxetine, ondansetron)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome; avoid combination."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "seizures",
+        "serotonin syndrome",
+        "urine retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for seizures, serotonin syndrome, urine retention, and constipation. The risk for CNS and respiratory depression may be additive."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "수술 전후 진통 - 부하 용량",
+          "value": "2 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 후 CRI로 이어서 투여",
+          "evidence": "Others have recommended loading doses ranging from 2–10 µg/kg IV, followed by 2–10 µg/kg/hour IV CRI for dogs."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전후 진통 - CRI",
+          "value": "2 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "µg/kg/hour CRI; 최대 40 µg/kg/hour까지 가능",
+          "evidence": "2–10 µg/kg/hour IV CRI for dogs; up to 40 µg/kg/hour in dogs for MAC reduction."
+        },
+        {
+          "logic_type": "linear",
+          "context": "응급 환자 중증 통증 - 부하 용량",
+          "value": "10 - 50",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과적인 용량을 시간당 CRI로 사용",
+          "evidence": "Fentanyl 10–50 µg/kg IV titrated to effect; use the effective dose as an hourly IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통",
+          "value": "4",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "보존제 없는 생리식염수 또는 국소마취제 0.2 mL로 희석 후 경막외 투여; 발현 10분 이내, 지속 약 30분",
+          "evidence": "Fentanyl 4 µg/kg, diluted with 0.2 mL preservative-free saline or local anesthetic, placed in the epidural space."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취제 단독 또는 보조 - 볼루스",
+          "value": "20 - 40",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단독 마취제로 사용 시; 다른 심폐억제제 병용 시 감량",
+          "evidence": "Fentanyl 20–40 µg/kg IV (or SC, IM) bolus noted when used as sole agent."
+        },
+        {
+          "logic_type": "linear",
+          "context": "MAC 감소 및 수술 중 통증 조절 - CRI",
+          "value": "5 - 20",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "µg/kg/hour CRI; 최대 40 µg/kg/hour",
+          "evidence": "CRI dosage recommendations usually in the 5–20 µg/kg/hour (up to 40 µg/kg/hour in dogs) range."
+        },
+        {
+          "logic_type": "linear",
+          "context": "볼루스 IV/IM/SC 단회 투여 (CRI 없이)",
+          "value": "5 - 8",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "지속시간 매우 짧음; 1~2시간 간격으로 재투여 필요할 수 있음",
+          "evidence": "If bolus IV, IM, or SC doses (usually 5–8 µg/kg) are administered without a follow-up CRI, duration of action is very short and re-administration may need to be repeated at 1 to 2 hour intervals."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "수술 전후 진통 - 부하 용량",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 후 CRI로 이어서 투여",
+          "evidence": "In cats, fentanyl 5 µg/kg IV loading dose followed by 5 µg/kg/hour IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전후 진통 - CRI",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "µg/kg/hour CRI",
+          "evidence": "In cats, fentanyl 5 µg/kg IV loading dose followed by 5 µg/kg/hour IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "볼루스 IV/IM/SC 단회 투여 (CRI 없이)",
+          "value": "5 - 8",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "지속시간 매우 짧음; 1~2시간 간격으로 재투여 필요할 수 있음",
+          "evidence": "If bolus IV, IM, or SC doses (usually 5–8 µg/kg) are administered without a follow-up CRI, duration of action is very short and re-administration may need to be repeated at 1 to 2 hour intervals."
+        },
+        {
+          "logic_type": "linear",
+          "context": "응급 환자 중증 통증 - 부하 용량",
+          "value": "10 - 50",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과적인 용량을 시간당 CRI로 사용",
+          "evidence": "Fentanyl 10–50 µg/kg IV titrated to effect; use the effective dose as an hourly IV CRI (dogs/cats combined dosing note)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장애 환자에서 주의 사용 권고되나, 구체적인 용량 조절 지침은 본문에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간장애 환자에서 주의 사용 권고됨. 간 효소 억제제(아졸계, 마크로라이드, 딜티아젬, 시메티딘)가 펜타닐 청소율을 감소시킬 수 있으므로 간기능 저하 시 모니터링 강화 필요. 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "Known hypersensitivity to fentanyl or other opioids",
+      "match_terms": [
+        "opioid allergy",
+        "fentanyl hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Scorpion envenomation (Centruroides spp.)",
+      "match_terms": [
+        "scorpion sting",
+        "Centruroides envenomation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS or respiratory depression",
+      "match_terms": [
+        "respiratory depression",
+        "CNS depression",
+        "hypoventilation"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "GI obstruction",
+      "match_terms": [
+        "GI obstruction",
+        "intestinal obstruction",
+        "ileus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Renal impairment",
+      "match_terms": [
+        "CKD",
+        "renal failure",
+        "azotemia",
+        "renal impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "Hepatic impairment",
+      "match_terms": [
+        "hepatic failure",
+        "liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "Geriatric, ill, or debilitated patients",
+      "match_terms": [
+        "geriatric",
+        "debilitated",
+        "cachexia",
+        "critical illness"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pre-existing respiratory problems",
+      "match_terms": [
+        "respiratory disease",
+        "COPD",
+        "asthma",
+        "brachycephalic"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본문에 유전적 감수성에 대한 직접적인 언급 없음. 말에서 mu-오피오이드 수용체 G57C 다형성(이형접합체)이 펜타닐에 대한 운동 반응 증가와 관련된다고 보고되었으나, 개/고양이에서의 유전적 위험은 기술되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "Mu-오피오이드 수용체 완전 작용제. 뇌의 통증 조절 영역, 척수 후각, 말초 조직의 mu 수용체에 작용하여 진통, 진정, 호흡억제, 신체적 의존성, 축동, 저체온 효과를 나타냄. 모르핀보다 약 80~100배 강력함.",
+    "common_extra_effects": [
+      "용량 의존적 호흡억제 (서호흡, 고탄산혈증)",
+      "CNS 억제 (진정)",
+      "심혈관 억제 (서맥, 저혈압)",
+      "요저류",
+      "변비",
+      "불쾌감(dysphoria)",
+      "흥분/초조",
+      "저체온증",
+      "혈장 아밀라아제/리파아제 증가 (담도압 상승으로 인해)"
+    ],
+    "dog_mechanism": "Mu-오피오이드 수용체 완전 작용제. 개에서 이소플루란 및 세보플루란 MAC을 약 40% 감소시킴.",
+    "dog_extra_effects": [
+      "불쾌감 (CRI 후 약 25%에서 보고)",
+      "저체온증",
+      "이소플루란 마취 중 심정지 (2례 보고)",
+      "이소플루란 병용 시 평균 동맥압, 심박수, 심박출지수 유의한 감소",
+      "안압에 대한 효과는 상충되는 데이터 존재"
+    ],
+    "cat_mechanism": "Mu-오피오이드 수용체 완전 작용제. 고양이에서 산동(mydriasis) 유발. 모르핀이나 하이드로모르폰보다 이상반응이 적음.",
+    "cat_extra_effects": [
+      "산동(mydriasis)",
+      "CNS 억제",
+      "서맥",
+      "호흡억제 (인간보다 덜 민감)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 펜타닐 주사는 수술 전후 통증 조절 및 중증 통증(암, 췌장염, 대동맥혈전색전증, 복막염 등)에 주로 사용됨. 단회 IV 투여 시 지속시간이 매우 짧으므로 CRI가 권장됨. 수술 후 CRI 투여 시 약 25%에서 불쾌감 보고. 이소플루란 병용 시 심혈관 억제 증가에 주의. 날록손을 항상 준비해 두어야 함.",
+    "cat": "고양이에서 펜타닐은 수술 전후 통증 조절에 특히 유용하며, 고용량 진통이 필요한 경우 하이드로모르폰이나 모르핀보다 이상반응이 적음. 산동을 유발하므로 밝은 빛을 피하고 천천히 접근해야 함. 리도카인 CRI 사용 시 독성에 주의(저용량 사용). 날록손을 항상 준비해 두어야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 주의 사용: 노령, 쇠약, 병약 환자; GI 폐색, 기존 호흡기 질환, 신장 또는 간장애 환자. CNS/호흡 억제제 병용 시 극도의 주의 필요. 전갈 독침 환자에서 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 주의 사용: 산동 유발로 밝은 빛 노출 피할 것. 노령, 쇠약, 병약 환자; 신장 또는 간장애 환자에서 주의. 리도카인 CRI 병용 시 저용량 사용 및 독성 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온에서 보관. 산성 용액에서 가수분해됨. 미국 Schedule II (C-II) 규제 약물로 견고하게 잠금 가능한 장소에 보관. 미사용 또는 낭비된 규제 약물의 폐기는 관련 법규에 따를 것.",
+    "forms": [
+      "Fentanyl Injectable: 0.05 mg/mL (50 µg/mL) — 1 mL, 2 mL, 5 mL, 10 mL, 20 mL, 50 mL 보존제 없는 앰플 및 바이알; Sublimaze®, 제네릭 (Rx, C-II)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "펜타닐 주사는 강력한 mu-오피오이드 완전 작용제로 모르핀보다 약 80~100배 강력함. 개와 고양이의 수술 전후 통증 및 중증 통증 조절에 사용되는 허가 외(extra-label) 약물임. 단회 투여 시 지속시간이 매우 짧아 CRI가 권장됨. 미국 Schedule II 규제 약물. 날록손으로 역전 가능. 호흡억제, 서맥, 저혈압 등 심폐 이상반응 모니터링 필수. 전갈 독침 환자에서 금기.",
+    "indications": "【허가 외 사용】 개/고양이: 수술 전후 진통, 중증 통증(암, 췌장염, 대동맥혈전색전증, 복막염 등), 마취 보조(흡입마취제 MAC 감소), 경막외 진통. 고양이: 하이드로모르폰이나 모르핀보다 이상반응이 적어 고용량 진통이 필요한 경우 특히 유용. 수의학적 승인 제품 없음.",
+    "client_info": "이 약은 강력한 진통제(마약성 진통제)로, 동물병원에서 수술 전후 통증 조절이나 심한 통증 완화를 위해 주사로 투여됩니다. 투여 중에는 호흡수, 심박수, 혈압 등을 지속적으로 모니터링합니다. 고양이에서는 동공이 커질 수 있으므로 밝은 빛을 피해 주세요. 이 약은 미국에서 Schedule II 규제 약물로 엄격히 관리됩니다. 이상반응(과도한 진정, 호흡 곤란, 서맥 등) 발생 시 즉시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (partial — listed but not detailed)",
+      "CYP enzyme profile (not stated in source)",
+      "Oral bioavailability (injection only)",
+      "Protein binding",
+      "Renal dose adjustment specifics",
+      "Hepatic dose adjustment specifics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/41.jsonl",
+    "extracted_at": "2026-03-11T01:52:22.743028+00:00",
+    "reviewer": null
+  }
+}

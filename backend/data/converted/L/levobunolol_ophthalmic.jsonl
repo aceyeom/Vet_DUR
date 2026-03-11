@@ -1,0 +1,416 @@
+{
+  "id": "levobunolol_ophthalmic",
+  "drug_identity": {
+    "name_ko": "레보부놀롤 점안액",
+    "name_en": "Levobunolol Ophthalmic",
+    "active_ingredient": "Levobunolol",
+    "brand_names": [
+      "Akbeta",
+      "Betagan"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 인체용 점안액을 동물에게 적응증 외(extra-label)로 사용함.",
+    "dosage_form": [
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.25,
+        "unit": "%"
+      },
+      {
+        "value": 0.5,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "점안 투여 후 전신 흡수가 일어날 수 있으며, 건강한 개에서 국소 투여 시 심박수의 유의한 감소가 보고되었다. 수의과 특이적 약동학 데이터는 문헌에 기재되어 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "점안 투여 경로로 전신 노출이 제한적이나, 개에서 심박수 감소가 보고됨. 수의과 종 특이적 PK 데이터 없음. 키워드 기반 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "beta-blocker",
+          "topical absorption"
+        ],
+        "index": -1,
+        "evidence": "전신 흡수 가능성이 있으나 뇌에 대한 직접적 영향은 문헌에 기재되지 않음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "heart rate reduction",
+          "beta-adrenergic blockade"
+        ],
+        "index": 1,
+        "evidence": "건강한 개에서 국소 투여 후 심박수의 유의한 감소가 보고됨. 전신 베타차단 효과 시사."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장에 대한 직접적 영향은 문헌에 기재되지 않음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간에 대한 직접적 영향은 문헌에 기재되지 않음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "heart rate reduction",
+          "beta-adrenergic blockade",
+          "heart block",
+          "heart failure"
+        ],
+        "index": 2,
+        "evidence": "비선택적 베타차단제로 서맥, 심차단, 심부전 환자에서 주의 필요. 개에서 심박수 감소 확인됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌에 대한 직접적 영향은 문헌에 기재되지 않음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "beta-adrenergic blockade"
+        ],
+        "index": -1,
+        "evidence": "전신 흡수 가능성으로 인한 베타차단 효과가 추정되나 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장에 대한 직접적 영향은 문헌에 기재되지 않음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간에 대한 직접적 영향은 문헌에 기재되지 않음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bradycardia",
+          "beta-adrenergic blockade",
+          "heart block"
+        ],
+        "index": -1,
+        "evidence": "비선택적 베타차단제로 심장에 대한 주의가 필요하나 고양이 특이적 데이터는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "Plumb's 모노그래프에 약동학 수치(반감기, 생체이용률, 단백결합률 등)가 기재되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's 약물상호작용 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 점안 투여이나 전신 흡수로 인한 상호작용 가능성 고려.",
+  "drug_interactions": [
+    {
+      "drug": "Calcium channel blockers (systemic)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "AV block",
+        "additive cardiovascular depression"
+      ],
+      "evidence": "Systemic beta-blockers combined with calcium channel blockers can cause additive bradycardia and AV block. Topical absorption of levobunolol may contribute to this effect."
+    },
+    {
+      "drug": "Systemic beta-blockers",
+      "severity": 2,
+      "keywords": [
+        "additive beta-blockade",
+        "bradycardia"
+      ],
+      "evidence": "Concurrent use of topical levobunolol with systemic beta-blockers may result in additive beta-adrenergic blockade effects including bradycardia."
+    },
+    {
+      "drug": "Antidiabetic agents",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia masking",
+        "beta-blockade"
+      ],
+      "evidence": "Beta-blockers can mask signs of hypoglycemia. Monitoring recommended in diabetic patients per Plumb's monograph."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "녹내장 치료 및 편측 녹내장에서 정상안 예방 (적응증 외)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 'Glaucoma (extra-label): 1 drop in the affected eye(s) twice daily'"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to levobunolol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심차단",
+      "match_terms": [
+        "heart block",
+        "AV block"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "서맥",
+      "match_terms": [
+        "bradycardia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전",
+      "match_terms": [
+        "heart failure",
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식",
+      "match_terms": [
+        "asthma",
+        "bronchospasm"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "만성 기관지염 및 기타 심폐 질환",
+      "match_terms": [
+        "chronic bronchitis",
+        "cardiopulmonary disease",
+        "COPD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비선택적 베타-아드레날린 수용체 차단제. 섬모체의 베타-2 수용체 차단을 통해 방수(aqueous humor) 생성을 감소시켜 안압(IOP)을 낮춤. cAMP 활성화 감소, Na+K+ATPase 억제, 홍채 및 섬모체의 혈관 작용 기전이 제안됨. 또한 글루타민 유발 세포내 칼슘 및 나트륨 증가를 억제하여 망막 허혈 손상에 대한 보호 효과 가능.",
+    "common_extra_effects": [
+      "점안 시 일시적 작열감",
+      "점안 시 일시적 따끔거림",
+      "점안 시 일시적 자극감",
+      "심박수 감소 (전신 흡수 시)"
+    ],
+    "dog_mechanism": "국소 점안 투여 후 전신 흡수로 인해 건강한 개에서 심박수의 유의한 감소가 보고됨.",
+    "dog_extra_effects": [
+      "심박수 감소",
+      "점안 시 일시적 자극감"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 레보부놀롤 단독 사용 시 안압 감소 효과는 레보부놀롤+도르졸아미드 병용 또는 티몰롤+도르졸아미드 병용에 비해 낮다. 국소 투여 후 전신 흡수로 인한 심박수 감소가 확인되었으므로 심폐 질환이 있는 개에서는 사용을 제한해야 한다. 편측 녹내장 환자의 정상안에 예방적으로 사용할 수 있다.",
+    "cat": "고양이에 대한 용량 정보가 Plumb's 모노그래프에 명시되어 있지 않다. 천식 또는 기관지 질환이 있는 고양이에서는 기관지경련 유발 가능성으로 인해 주의가 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심폐 질환(심차단, 서맥, 심부전, 천식, 만성 기관지염)이 있는 개에서 주의 사용. 국소 투여 후 심박수 감소가 보고됨."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "천식 또는 기관지 질환이 있는 고양이에서 기관지경련 유발 가능성. 고양이 특이적 용량 데이터 없음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C-25°C(59°F-77°F)의 실온에서 습기와 직사광선을 피해 보관. 냉동 금지.",
+    "forms": [
+      "Levobunolol 0.25% 점안액 (5, 10, 15 mL 점안 드로퍼 병)",
+      "Levobunolol 0.5% 점안액 (5, 10, 15 mL 점안 드로퍼 병)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "레보부놀롤 점안액은 비선택적 베타차단제로, 방수 생성 억제를 통해 안압을 낮추는 녹내장 치료제입니다. 수의과 허가 제품은 없으며 인체용 제품을 적응증 외로 사용합니다. 개에서 국소 투여 후 전신 흡수로 인한 심박수 감소가 보고되어 있어 심폐 질환 환자에서는 주의가 필요합니다. 단독 사용보다 도르졸아미드 병용 시 안압 감소 효과가 더 우수합니다.",
+    "indications": "원발성 녹내장에서 안압 감소 (적응증 외). 편측 녹내장 동물의 정상안에서 녹내장 예방 (적응증 외). 수의과 허가 적응증 없음.",
+    "client_info": "수의사의 지시에 따라 정확히 사용하세요. 약물 오염을 방지하기 위해 올바른 점안 방법을 사용하고, 사용하지 않을 때는 뚜껑을 꼭 닫아두세요. 이 약을 점안한 후 다른 안약을 사용하기 전에 5~10분 기다리세요. 실온(15~25°C)에서 습기와 직사광선을 피해 보관하고 냉동하지 마세요. 색이 변하거나 흐려지거나 이물질이 보이면 사용하지 마세요. 반려동물에게 심장 또는 호흡기 질환이 있다면 반드시 수의사에게 알리세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "additive_class",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Drug Interactions",
+      "Overdosage",
+      "Reproductive Safety"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.primary_metabolic_organ",
+      "metabolism_and_clearance.clearance_organ",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/12.jsonl",
+    "extracted_at": "2026-03-10T17:00:18.730561+00:00",
+    "reviewer": null
+  }
+}

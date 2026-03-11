@@ -1,0 +1,462 @@
+{
+  "id": "tamsulosin",
+  "drug_identity": {
+    "name_ko": "탐수로신",
+    "name_en": "Tamsulosin",
+    "active_ingredient": "Tamsulosin hydrochloride",
+    "brand_names": [
+      "Flomax",
+      "Flowmaxtra",
+      "Omexel",
+      "Omnic"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용이며, 개와 고양이에서의 안전성·유효성·용량은 아직 확립되지 않았습니다.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.4,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2D6",
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 CYP3A4가 탐수로신을 M1 및 AM-1 대사체로 대사시키는 것으로 보고됨. 사람에서는 CYP2D 및 CYP3A 효소군의 기질임."
+    },
+    "extra_information": "개에서 비서방형 경구 제형 투여 시 생체이용률 약 30%, 최고 혈장 농도 도달 시간 약 0.5시간, Vdss 1.74 L/kg, 단백결합률 90%, 청소율 4 L/hr/kg, 소실 반감기 약 1.5시간. 전립선 및 요도 조직 내 농도가 혈장보다 현저히 높고 오래 유지됨(투여 6시간 후 전립선/혈장 비 10.5, 요도/혈장 비 6.6). 고양이에 대한 약동학 데이터는 보고되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 저혈압, 진정/기면, 빈맥, 구토 등의 이상반응이 보고됨. 고양이 데이터 부재로 개 데이터를 준용하여 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "sedation",
+          "dizziness"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 기면/진정(lethargy/sedation) 보고됨. 중추신경계 직접 독성보다는 저혈압에 의한 이차적 영향으로 추정됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia"
+        ],
+        "index": 2,
+        "evidence": "저혈압 및 빈맥이 과다복용 시 이상반응으로 보고됨. 혈관 평활근 알파-1 수용체 차단에 의한 혈압 저하 가능."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urethral relaxation",
+          "ureteral relaxation"
+        ],
+        "index": 0,
+        "evidence": "요관/요도 이완 목적으로 사용되나 직접적인 신독성 보고는 없음. 저혈압에 의한 이차적 신관류 감소 가능성 낮음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CYP3A4 metabolism"
+        ],
+        "index": 1,
+        "evidence": "개에서 CYP3A4에 의해 간에서 대사됨. 직접적인 간독성 보고는 없으나 간이 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 빈맥 및 저혈압 보고. 심혈관계에 대한 이차적 영향 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "lethargy",
+          "sedation"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 개 데이터 준용하여 기면/진정 가능성 추정."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 알파-1 차단에 의한 저혈압 가능성 추정."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urethral relaxation"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 요도 이완 목적으로 사용되나 직접적 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CYP3A4 metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이 약동학 데이터 없음. 간 대사 추정."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 개 데이터 준용하여 심혈관계 영향 가능성 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.5,
+      "species": "dog"
+    },
+    "f_percent": 30,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 비서방형 경구 제형 기준: 생체이용률 약 30%, Tmax 약 0.5시간, 소실 반감기 약 1.5시간, 단백결합률 90%. 사람에서는 공복 시 생체이용률 90% 이상, 반감기 6~15시간, 단백결합률 98~99%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 별도 언급이 없는 한 병용이 절대 금기는 아니나 추가 모니터링 권장.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-1 Adrenergic Receptor Agonists (e.g., phenylephrine)",
+      "severity": 2,
+      "keywords": [
+        "pharmacodynamic antagonism",
+        "reduced efficacy"
+      ],
+      "evidence": "May decrease the effects of each other through opposing alpha-1 adrenergic receptor activity."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased tamsulosin concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Cimetidine may increase tamsulosin plasma concentration."
+    },
+    {
+      "drug": "Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "increased tamsulosin concentration",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Clarithromycin may increase plasma concentration of tamsulosin via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "increased tamsulosin concentration",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Erythromycin may increase plasma concentration of tamsulosin via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Hypotensive Agents (e.g., amlodipine, atenolol, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May have additive hypotensive effects when used concurrently with tamsulosin."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "increased tamsulosin concentration",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Ketoconazole may increase plasma concentration of tamsulosin via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Phosphodiesterase Type 5 (PDE5) Inhibitors (e.g., sildenafil, tadalafil)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May have additive hypotensive effects when used concurrently with tamsulosin."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 2,
+      "keywords": [
+        "increased tamsulosin concentration",
+        "CYP2D6 inhibition"
+      ],
+      "evidence": "Terbinafine may increase plasma concentration of tamsulosin."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "inconclusive interaction",
+        "caution"
+      ],
+      "evidence": "Drug interaction studies with tamsulosin and warfarin are inconclusive; use together with caution."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "요관/요도 이완제 (허가 외 사용) - 1일 1회",
+          "value": "0.01 - 0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "안전성, 유효성 및 용량 미확립. 1일 1회 투여로 효과가 없을 경우 12시간 간격으로 증량 가능(일화적 보고).",
+          "evidence": "허가 외 사용. 조제 캡슐이 필요할 수 있음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "요관/요도 이완제 (허가 외 사용) - 1일 1회",
+          "value": "0.004 - 0.006",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.006,
+          "duration_note": "안전성, 유효성 및 용량 미확립. 조제 캡슐 필요.",
+          "evidence": "일화적 용량 보고(anecdotal). 허가 외 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "수의학적 신기능 저하 시 용량 조정에 대한 명시적 권고사항 없음. 저혈압 위험이 있으므로 신기능 저하 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "수의학적 간기능 저하 시 용량 조정에 대한 명시적 권고사항 없음. 간이 주요 대사 기관이므로 간기능 저하 시 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "탐수로신 과민반응",
+      "match_terms": [
+        "hypersensitivity to tamsulosin",
+        "tamsulosin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압 위험 (고용량 또는 노령견)",
+      "match_terms": [
+        "hypotension",
+        "elderly dog",
+        "high dose"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중인 동물",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파-1A 아드레날린 수용체 선택적 차단제. 전립선, 전립선 피막, 전립선 요도, 방광경부의 평활근을 이완시켜 요류 개선 및 요로결석 배출을 촉진함.",
+    "common_extra_effects": [
+      "저혈압",
+      "기립성 저혈압",
+      "빈맥",
+      "기면/진정",
+      "구토",
+      "두통",
+      "어지러움",
+      "시야 흐림",
+      "비염",
+      "근육 약화",
+      "사정 이상",
+      "성욕 감소",
+      "요실금 수술 중 홍채 이완 증후군(사람)"
+    ],
+    "dog_mechanism": "개에서 탐수로신은 전립선 및 요도 내 알파-1A 수용체를 차단하여 요도 내압을 감소시킴. 혈장보다 전립선 및 요도 조직에서 현저히 높은 농도 유지.",
+    "dog_extra_effects": [
+      "저혈압 (특히 고용량 또는 노령견)",
+      "기면/진정 (과다복용 시)",
+      "빈맥 (과다복용 시)",
+      "구토 (과다복용 시)"
+    ],
+    "cat_mechanism": "고양이에서의 작용 기전은 개와 유사하게 알파-1A 수용체 차단을 통한 요도 이완으로 추정되나, 고양이 특이적 데이터는 없음.",
+    "cat_extra_effects": [
+      "저혈압 (추정)",
+      "기면/진정 (추정)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 탐수로신은 요관결석 및 요도결석 통과 촉진, 기능성 요도 폐색, 양성 전립선 비대증, 배뇨근-요도 협조 장애 치료에 허가 외로 사용될 수 있습니다. 서방형 캡슐 내 비드를 분쇄하거나 경구 현탁액으로 조제하지 마십시오. 노령견에서 저혈압 위험이 높을 수 있으므로 혈압 모니터링이 권장됩니다.",
+    "cat": "고양이에서 탐수로신은 폐색 후 요도 경련 및 요관결석 통과 촉진을 위해 허가 외로 사용될 수 있습니다. 일화적 용량(0.004~0.006 mg/kg PO SID)만 보고되어 있으며, 안전성과 유효성은 확립되지 않았습니다. 조제 캡슐이 필요하며, 서방형 비드를 분쇄하거나 현탁액으로 만들지 마십시오."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저혈압 위험(특히 고용량 또는 노령견), 서방형 캡슐 분쇄 금지, 혈압 모니터링 필요. 번식 수컷에서 사정 기능 변화 가능성."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이적 안전성 데이터 없음. 저혈압 위험 가능성. 조제 캡슐 필요. 수유 중인 고양이에서 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 이하에서 보관하고 습기로부터 보호하십시오.",
+    "forms": [
+      "탐수로신 HCl 캡슐 0.4 mg (서방형, Flomax® 및 제네릭)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "탐수로신은 알파-1A 아드레날린 수용체 선택적 차단제로, 개와 고양이에서 요관/요도 이완제로 허가 외 사용됩니다. 전립선 및 요도 조직에 선택적으로 높은 농도를 유지하며, 혈관에 대한 영향은 상대적으로 적습니다. 서방형 캡슐을 분쇄하거나 현탁액으로 조제하면 급속 흡수로 인한 저혈압 위험이 있으므로 절대 금지입니다. 고용량 또는 노령견에서 저혈압 위험이 증가합니다. 수의학적 안전성·유효성·용량은 아직 확립되지 않았습니다.",
+    "indications": "【허가 외 사용】 개: 요관결석 및 요도결석 통과 촉진, 기능성 요도 폐색, 양성 전립선 비대증, 배뇨근-요도 협조 장애. 고양이: 폐색 후 요도 경련, 요관결석 통과 촉진. 【사람 허가 적응증】 양성 전립선 비대증(BPH), 요로결석 배출 촉진.",
+    "client_info": "【보호자 안내】\n• 캡슐 안의 비드(작은 알갱이)를 분쇄하거나 동물이 씹지 않도록 하십시오. 분쇄 시 혈압이 급격히 떨어질 수 있습니다.\n• 이 약은 최대 효과가 나타나기까지 며칠이 걸릴 수 있습니다.\n• 투약 후 동물이 비틀거리거나 기운이 없어 보이면 즉시 수의사에게 연락하십시오.\n• 노령 동물에서는 저혈압 위험이 더 높을 수 있으므로 정기적인 혈압 측정이 필요할 수 있습니다.\n• 번식 수컷에서 사정 기능에 영향을 줄 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat pharmacokinetics",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Laboratory Considerations (no interactions found)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat)",
+      "timing_profile.f_percent (cat)",
+      "timing_profile.protein_binding_percent (cat)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates (cat-specific)",
+      "organ_burden_logic.cat (all organs - no cat-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:12:34.053975+00:00",
+    "reviewer": null
+  }
+}

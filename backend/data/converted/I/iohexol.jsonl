@@ -1,0 +1,628 @@
+{
+  "id": "iohexol",
+  "drug_identity": {
+    "name_ko": "이오헥솔",
+    "name_en": "Iohexol",
+    "active_ingredient": "Iohexol",
+    "brand_names": [
+      "Omnipaque"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 모든 수의 용도는 허가 외(extra-label) 사용이며, 인간용 제품을 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 140,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 180,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 240,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 300,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 350,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "이오헥솔은 대사되지 않으며, 정상 신기능 환자에서 24시간 이내 거의 100%가 소변으로 미변화 형태로 배설된다."
+    },
+    "extra_information": "개: Vdss 221 mL/kg, 청소율 약 2.5–2.9 mL/kg/분, 평균 체류 시간 82분, 소실 반감기 75분. 고양이: 평균 청소율 2.3–2.75 mL/kg/분. 단백 결합률 1% 미만."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설 100%, 단백 결합 무시할 수준. 신독성 위험은 과용량 또는 신기능 저하 시 증가. 수의 종별 특이적 장기 부담 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizure",
+          "convulsions",
+          "intrathecal"
+        ],
+        "index": 1,
+        "evidence": "척수강 내 투여 시 경련 역치 저하 위험이 보고됨. 대형견 경추 병변에서 경련 발생 가능성 증가."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hemodynamic changes",
+          "erythrocyte damage",
+          "bradycardia"
+        ],
+        "index": 1,
+        "evidence": "혈관 내 투여 시 혈역학적 변화, 적혈구 손상 가능성이 인간 데이터에서 보고됨. 개에서는 제한적 데이터."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal impairment",
+          "renal elimination",
+          "GFR marker"
+        ],
+        "index": 2,
+        "evidence": "신장으로 100% 배설되며, 신독성 위험이 있음. 신기능 저하 시 주의 사용 권고. GFR 측정 마커로 사용됨."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic impairment"
+        ],
+        "index": 0,
+        "evidence": "간 대사 없음. 간기능 저하 시 주의 사용 권고되나 직접적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular disease",
+          "bradycardia",
+          "cardiac arrest",
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "과용량 시 서맥, 심정지 위험. QT 연장 약물과 병용 시 부가적 QT 연장 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "seizure",
+          "intrathecal"
+        ],
+        "index": 0,
+        "evidence": "척수강 내 투여 시 경련 역치 저하 위험. 고양이 특이적 데이터 제한적."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hemodynamic changes",
+          "erythrocyte damage"
+        ],
+        "index": 0,
+        "evidence": "혈관 내 투여 시 혈역학적 변화 가능성. 고양이 특이적 데이터 제한적."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal impairment",
+          "renal elimination",
+          "GFR marker"
+        ],
+        "index": 2,
+        "evidence": "신장으로 100% 배설. 신독성 위험. 고양이 GFR 측정에 사용됨. 신기능 저하 시 주의."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic impairment"
+        ],
+        "index": 0,
+        "evidence": "간 대사 없음. 간기능 저하 시 주의 권고되나 직접적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular disease",
+          "bradycardia",
+          "cardiac arrest",
+          "QT prolongation"
+        ],
+        "index": 0,
+        "evidence": "과용량 시 심혈관계 독성 위험. QT 연장 약물 병용 시 주의."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.25,
+      "max": 1.25,
+      "mean": 1.25,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 1,
+    "evidence": "개에서 소실 반감기 75분(1.25시간). 인간에서 약 2시간. 단백 결합률 1% 미만. 경구 생체이용률 데이터 없음(주로 혈관 내 투여)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 병용은 경련 역치 저하 위험으로 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "contrast reaction",
+        "hypersensitivity",
+        "threshold reduction"
+      ],
+      "evidence": "Concurrent use reduces the threshold for and increases the severity of contrast reactions. Use together cautiously."
+    },
+    {
+      "drug": "CNS Stimulants (e.g., caffeine, doxapram)",
+      "severity": 2,
+      "keywords": [
+        "seizure threshold",
+        "intrathecal"
+      ],
+      "evidence": "Concurrent use with iohexol (especially intrathecal) may increase the risk for lowering seizure threshold."
+    },
+    {
+      "drug": "Iodine Isotopes",
+      "severity": 1,
+      "keywords": [
+        "thyroid binding",
+        "iodine uptake"
+      ],
+      "evidence": "Iohexol may alter binding to thyroid tissue for up to two weeks, affecting thyroid scintigraphy."
+    },
+    {
+      "drug": "Metformin",
+      "severity": 3,
+      "keywords": [
+        "lactic acidosis",
+        "acute renal failure"
+      ],
+      "evidence": "Injection of iodinated contrast materials in metformin-treated patients has been associated with lactic acidosis and acute renal failure in humans."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "seizure threshold",
+        "intrathecal",
+        "CNS toxicity"
+      ],
+      "evidence": "Concurrent use with iohexol (especially intrathecal) may increase the risk for lowering seizure threshold."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "seizure threshold",
+        "intrathecal"
+      ],
+      "evidence": "Concurrent use with iohexol (especially intrathecal) may increase the risk for lowering seizure threshold."
+    },
+    {
+      "drug": "QT Prolongation Drugs (e.g., amiodarone, cisapride, procainamide, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Iohexol may cause additive prolongation of QT interval."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs; e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "seizure threshold",
+        "intrathecal"
+      ],
+      "evidence": "Concurrent use with iohexol (especially intrathecal) may increase the risk for lowering seizure threshold."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "GFR 추정 (2-샘플 또는 3-샘플법, 300 mg iodine/mL 용액 사용)",
+          "value": "129 - 658",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "2-샘플법: 투여 후 2, 3시간에 채혈; 3-샘플법: 2, 3, 4시간에 채혈",
+          "evidence": "Plumb's: 건강한 개 연구, 300 mg iodine/mL 용액 사용, 약 1분에 걸쳐 IV 투여"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "GFR 추정 (1-, 2-, 3-, 5-샘플법)",
+          "value": "64.7",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1-샘플: 60분; 2-샘플: 60, 90분; 3-샘플: 60, 90, 180분; 5-샘플: 5, 15, 60, 90, 180분에 채혈",
+          "evidence": "Plumb's: 1분에 걸쳐 IV 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "GFR 추정 (비아조혈증 동물, iodine 함량 기준)",
+          "value": "90",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "채혈: 120, 180, 240분 (비아조혈증); 120, 240, 360분 (아조혈증 동물은 45 mg iodine/kg 사용)",
+          "evidence": "Plumb's: iodine 함량 기준 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "GI 조영제 - 위장관 천공 의심 (240 mg iodine/mL 용액)",
+          "value": "700 - 875",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "구위관 튜브로 투여 권장; 투여 직후, 15, 30, 60분에 방사선 촬영",
+          "evidence": "Plumb's: extra-label"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "방사선/초음파 이중 목적 조영제 (647 mg/mL 용액)",
+          "value": "1.5",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.5% 카르복시메틸셀룰로오스 8.5 mL/kg와 혼합 투여",
+          "evidence": "Plumb's: extra-label"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "GFR 추정 (3-샘플법, iodine 함량 기준)",
+          "value": "90",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "비아조혈증: 120, 180, 240분에 채혈; 아조혈증(45 mg iodine/kg): 120, 240, 360분에 채혈",
+          "evidence": "Plumb's: extra-label, iodine 함량 기준 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "GFR 추정 (건강한 성체 및 노령 고양이, 647 mg/kg 용액)",
+          "value": "647",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1 mL 생리식염수 후속 투여; slope-intercept 혈장 이오헥솔 청소율 보정 공식 적용",
+          "evidence": "Plumb's: extra-label"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "GI 조영제 - 위장관 천공 의심 (iohexol 240 희석액)",
+          "value": "10",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "iohexol 240을 1:3 희석; 비위관/비식도관으로 투여 권장; 투여 직후, 15, 30, 60분에 방사선 촬영",
+          "evidence": "Plumb's: extra-label"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "아조혈증 동물에서 GFR 추정 시 iodine 함량 기준 용량을 90 mg/kg에서 45 mg/kg으로 감량. 중증 신기능 저하 시 주의 사용 권고. 투여 전후 충분한 수화 필수."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간기능 저하 시 주의 사용 권고. 이오헥솔은 간에서 대사되지 않으나, 간기능 저하 환자에서 주의가 필요하다고 명시됨."
+  },
+  "contraindications": [
+    {
+      "condition": "이오헥솔 또는 요오드 기반 조영제 과민반응 기왕력",
+      "match_terms": [
+        "iohexol hypersensitivity",
+        "iodine contrast allergy",
+        "contrast reaction history"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간기능 저하",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 심혈관 질환",
+      "match_terms": [
+        "severe cardiovascular disease",
+        "heart failure",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism",
+        "thyrotoxicosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갈색세포종",
+      "match_terms": [
+        "pheochromocytoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "단클론 감마글로불린병증",
+      "match_terms": [
+        "monoclonal gammopathy",
+        "multiple myeloma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 기왕력",
+      "match_terms": [
+        "seizure history",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "척수강 내 사용 부적합 제형",
+      "match_terms": [
+        "intrathecal use",
+        "myelography"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비이온성 요오드화 조영제로, 유기 요오드가 방사선 불투과성을 나타내어 인접 구조물을 시각화함. GFR 측정 마커로서 단백 결합이 거의 없고 신장으로 100% 미변화 배설되는 특성을 이용.",
+    "common_extra_effects": [
+      "과민반응(hypersensitivity)",
+      "신독성(nephrotoxicity)",
+      "오심(nausea)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "경련(seizures) - 특히 척수강 내 투여 시",
+      "서맥(bradycardia)",
+      "산증(acidosis)",
+      "폐출혈(pulmonary hemorrhage)",
+      "혼수(coma)",
+      "심정지(cardiac arrest) - 과용량 시"
+    ],
+    "dog_mechanism": "혈관 내 투여 후 순환계 전체에 신속히 분포. 단백 결합 1% 미만. 정상 신기능 시 24시간 이내 거의 100% 소변으로 배설.",
+    "dog_extra_effects": [
+      "경련 - 대형견 경추 병변 또는 소뇌연수조 주사 시 위험 증가",
+      "척수강 내 대용량(8 mL 초과) 투여 시 경련 위험 증가"
+    ],
+    "cat_mechanism": "혈관 내 투여 후 신속 분포. 평균 청소율 2.3–2.75 mL/kg/분. GFR 측정에 활용.",
+    "cat_extra_effects": [
+      "고양이 특이적 부작용 데이터 제한적",
+      "경구 투여 시 오심, 구토, 설사 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 GFR 추정을 위한 이오헥솔 청소율 검사는 아조혈증 발생 전 CKD 진단, 근감소증 동물에서 크레아티닌이 GFR 저하를 정확히 반영하지 못할 때, 카보플라틴·아미노글리코사이드 등 신독성 약물의 용량 조정에 유용하다. 척수조영술 시 대형견에서 8 mL 초과 용량 및 소뇌연수조 주사를 피해야 한다. 투여 전후 충분한 수화가 필수적이다.",
+    "cat": "고양이에서 GFR 추정을 위한 이오헥솔 청소율 검사는 CKD 조기 진단 및 진행 모니터링에 유용하다. 비아조혈증 고양이에는 90 mg iodine/kg, 아조혈증 고양이에는 45 mg iodine/kg IV 투여 후 3회 채혈하는 방법이 사용된다. 위장관 천공 의심 시 iohexol 240을 1:3 희석하여 10 mL/kg 경구(비위관) 투여할 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 저하, 심혈관 질환, 갈색세포종, 갑상선기능항진증, 단클론 감마글로불린병증, 경련 기왕력 시 주의. 척수조영술 시 대용량 및 소뇌연수조 주사 금지. 투여 전후 충분한 수화 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 저하, 심혈관 질환 시 주의. 투여 전후 충분한 수화 필수. 고양이 특이적 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20–25°C) 보관; 15–30°C 범위 허용. 빛 차단, 동결 금지. 조영제 워머에서 36–38°C로 최대 1개월 보관 가능.",
+    "forms": [
+      "Iohexol Injection (preservative-free) 140 mg/mL",
+      "Iohexol Injection (preservative-free) 180 mg/mL",
+      "Iohexol Injection (preservative-free) 240 mg/mL",
+      "Iohexol Injection (preservative-free) 300 mg/mL",
+      "Iohexol Injection (preservative-free) 350 mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이오헥솔은 비이온성 요오드화 조영제로, 의료 영상 및 GFR 측정에 사용된다. 수의학적 승인 제품은 없으며 모든 수의 용도는 허가 외 사용이다. 신장으로 100% 미변화 배설되므로 신기능 저하 시 신독성 위험이 있다. 투여 전후 충분한 수화가 필수적이다. 척수강 내 투여 시 경련 역치 저하에 주의해야 하며, 일부 제형은 척수강 내 사용이 금기이다. QT 연장 약물과의 병용 시 부가적 QT 연장 위험이 있다.",
+    "indications": "혈관 내(동맥, 정맥), 척수강 내, 체강 내, 피하, 경구 투여를 통한 조영 검사. 개와 고양이에서 GFR 추정(CKD 조기 진단, 진행 모니터링, 신독성 약물 용량 조정). 위장관 천공 의심 시 GI 조영제. 말, 조류, 토끼, 파충류에서도 extra-label 사용 보고됨.",
+    "client_info": "이 약물은 수의사만 투여할 수 있습니다. 검사 전후에 반려동물이 충분히 수분을 섭취할 수 있도록 해주세요. 투여 후 과민반응(두드러기, 호흡 곤란, 부종) 또는 이상 증상이 나타나면 즉시 수의사에게 알려주세요. 이 약물은 신장 기능 검사(GFR 측정)나 영상 검사를 위해 사용되며, 신장으로 배설되므로 신장 기능이 저하된 동물에서는 특별한 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (specific parameters not detailed)",
+      "Compatibility/Compounding (detailed data not extracted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "half_life_hr (cat-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/3.jsonl",
+    "extracted_at": "2026-03-10T14:34:08.846919+00:00",
+    "reviewer": null
+  }
+}

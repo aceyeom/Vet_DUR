@@ -1,0 +1,516 @@
+{
+  "id": "dimenhydrinate",
+  "drug_identity": {
+    "name_ko": "디멘히드리네이트",
+    "name_en": "Dimenhydrinate",
+    "active_ingredient": "Dimenhydrinate",
+    "brand_names": [
+      "Dramamine",
+      "Gravol",
+      "Driminate",
+      "Travtabs",
+      "Triptone"
+    ],
+    "allergy_class": "antihistamine-ethanolamine",
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품을 동물에게 extra-label로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "디멘히드리네이트의 활성 성분인 디펜히드라민은 간에서 대사되며, 대부분 대사산물 형태로 소변으로 배설된다. 비활성 대사산물인 N-desmethyl diphenhydramine이 형성된다. CYP 효소 관련 정보는 본 모노그래프에 명시되지 않음."
+    },
+    "extra_information": "비글에서 경구 생체이용률은 22%이며, 투여 1시간 후 디펜히드라민 최고 혈중 농도(124 ng/mL)에 도달한다. 디멘히드리네이트 투여 시 동등 용량의 경구 디펜히드라민 대비 Cmax 및 생체이용률이 약 3배 높다. 디펜히드라민의 분포용적은 약 180 L/kg이며, 소실 반감기는 11.5시간이다. 8-클로로테오필린의 최고 농도는 투여 1.5시간 후 도달하며, 소실 반감기는 21시간이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 비글 PK 데이터 존재. 고양이는 종별 특이 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "somnolence",
+          "lethargy",
+          "sedation",
+          "anticholinergic",
+          "paradoxical excitement"
+        ],
+        "index": 1,
+        "evidence": "CNS 억제(기면, 졸음) 및 항콜린 효과가 주요 부작용으로 보고됨. 역설적 흥분도 일부 동물에서 발생 가능."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary retention"
+        ],
+        "index": 1,
+        "evidence": "항콜린 효과로 인한 요저류 가능성이 언급됨. 신독성에 대한 직접적 언급은 없으나 대사산물이 소변으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "metabolized in the liver"
+        ],
+        "index": 1,
+        "evidence": "디펜히드라민은 간에서 대사됨. 간독성에 대한 직접적 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular disease",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "심혈관 질환 및 고혈압 환자에서 주의 사용 권고. 직접적 심장독성 언급은 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "paradoxical excitement",
+          "agitation",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 역설적 흥분 또는 초조가 특히 발생할 수 있다고 명시됨. CNS 억제도 가능."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary retention"
+        ],
+        "index": 1,
+        "evidence": "항콜린 효과로 인한 요저류 가능성. 고양이 특이 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "metabolized in the liver"
+        ],
+        "index": 1,
+        "evidence": "디펜히드라민은 간에서 대사됨. 고양이 특이 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiovascular disease"
+        ],
+        "index": -1,
+        "evidence": "심혈관 질환 환자에서 주의 사용 권고. 고양이 특이 심장 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 11.5,
+      "max": 11.5,
+      "mean": 11.5,
+      "species": "dog"
+    },
+    "f_percent": 22,
+    "protein_binding_percent": null,
+    "evidence": "비글에서 경구 생체이용률 22%, Tmax 1시간, 디펜히드라민 소실 반감기 11.5시간. 인체에서 경구 투여 후 30분 이내 항구토 효과 발현, IV 투여 시 거의 즉시 효과 발현. 효과 지속시간은 보통 3~6시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 세로토닌 증후군 위험으로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Drugs (e.g., atropine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic potentiation",
+        "dry mouth",
+        "urinary retention"
+      ],
+      "evidence": "Dimenhydrinate may potentiate the anticholinergic effects of other anticholinergic drugs."
+    },
+    {
+      "drug": "CNS Depressant Drugs",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "CNS depression"
+      ],
+      "evidence": "Increased sedation can occur if dimenhydrinate is combined with other CNS depressant drugs."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs, e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "anticholinergic potentiation",
+        "MAOI interaction"
+      ],
+      "evidence": "MAOIs may potentiate anticholinergic effects of dimenhydrinate."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs, e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic potentiation"
+      ],
+      "evidence": "TCAs may potentiate anticholinergic effects of dimenhydrinate."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토/항히스타민 - 특히 멀미 예방 및 치료 (extra-label)",
+          "value": "4 - 8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label. IV 투여 시 디멘히드리네이트 50mg을 0.9% 생리식염수 10mL에 희석하여 2분에 걸쳐 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토/항히스타민 - 특히 멀미 예방 및 치료 (extra-label)",
+          "value": "4 - 8",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토/항히스타민 - 특히 멀미 예방 및 치료 (extra-label)",
+          "value": "4 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV 투여 시 50mg을 0.9% 생리식염수 10mL에 희석하여 2분에 걸쳐 투여",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전정 질환으로 인한 구토 및 오심 (extra-label)",
+          "value": "25 - 50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 기준이 아닌 고정 용량(개 1마리당)",
+          "evidence": "Extra-label. 25–50 mg/dog (NOT mg/kg) PO 3회/일."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토/항히스타민 (extra-label) - 고양이에서는 다른 약제가 선호됨",
+          "value": "4 - 8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이에서 히스타민은 구토의 중요한 매개체가 아닌 것으로 알려져 있어 NK-1 길항제(마로피탄트) 또는 M1-콜린성 길항제가 더 적합할 수 있음",
+          "evidence": "Extra-label. 모노그래프에서 DOGS/CATS 용량으로 함께 기재됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 명시적 권고 없음. 디펜히드라민이 간에서 대사되므로 간질환 환자에서 주의가 필요할 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "항히스타민제 과민반응",
+      "match_terms": [
+        "antihistamine hypersensitivity",
+        "dimenhydrinate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄각 녹내장",
+      "match_terms": [
+        "angle closure glaucoma",
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 또는 요로 폐색",
+      "match_terms": [
+        "GI obstruction",
+        "urinary obstruction",
+        "pyloroduodenal obstruction",
+        "bladder neck obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "만성 폐쇄성 폐질환(COPD) 및 천식",
+      "match_terms": [
+        "COPD",
+        "asthma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 질환 또는 고혈압",
+      "match_terms": [
+        "cardiovascular disease",
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이독성 약물 병용 투여",
+      "match_terms": [
+        "ototoxic drug",
+        "ototoxicity"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "H1 히스타민 수용체 차단, 항콜린 작용, CNS 억제, 국소마취 효과를 가짐. 디펜히드라민과 8-클로로테오필린의 복합체로, 주요 약리 작용은 디펜히드라민 부분에 기인함. 전정 자극을 억제하며, 항콜린 작용이 전정계 및 망상계의 아세틸콜린 자극을 차단하는 데 관여할 수 있음.",
+    "common_extra_effects": [
+      "CNS 억제 (기면, 졸음)",
+      "항콜린 효과 (구강 건조, 요저류)",
+      "설사",
+      "구토",
+      "식욕부진",
+      "역설적 흥분 또는 초조 (특히 고양이)"
+    ],
+    "dog_mechanism": "전정 자극 억제를 통한 항구토 효과. 항콜린 작용이 전정계 및 망상계의 아세틸콜린 자극 차단에 기여. 장기 사용 시 CNS 억제 효과 및 항구토 효과에 내성이 생길 수 있음.",
+    "dog_extra_effects": [
+      "CNS 억제 (기면, 졸음)",
+      "항콜린 효과",
+      "GI 증상 (설사, 구토, 식욕부진)"
+    ],
+    "cat_mechanism": "고양이에서 히스타민은 구토의 중요한 매개체가 아닌 것으로 알려져 있어 효과가 제한적일 수 있음.",
+    "cat_extra_effects": [
+      "역설적 흥분 또는 초조",
+      "CNS 억제",
+      "항콜린 효과"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 멀미 예방 및 전정 질환 관련 구토 치료에 주로 사용됨. 비글 PK 데이터에 따르면 경구 생체이용률은 22%이며, 디펜히드라민 소실 반감기는 11.5시간임. 멀미 예방을 위해서는 여행 30~60분 전 투여 권장. 장기 사용 시 내성 발생 가능.",
+    "cat": "고양이에서 히스타민은 구토의 중요한 매개체가 아닌 것으로 알려져 있어, NK-1 길항제(마로피탄트) 또는 M1-콜린성 길항제(프로클로르페라진, 클로르프로마진, 메클리진)가 더 적합한 선택일 수 있음. 고양이에서 역설적 흥분 또는 초조가 특히 발생할 수 있으므로 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "녹내장, 위장관/요로 폐색, COPD, 갑상선 기능 항진증, 발작 장애, 심혈관 질환, 고혈압 환자에서 주의 사용. 이독성 약물 병용 시 이독성 임상 징후를 가릴 수 있음. 작업견에서 진정 효과가 수행 능력에 영향을 줄 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 역설적 흥분 또는 초조 발생 가능. 히스타민이 고양이 구토의 주요 매개체가 아니므로 효과가 제한적일 수 있음. 다른 항구토제가 더 적합할 수 있음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C~25°C, 68°F~77°F) 보관. 경구 및 주사 용액의 동결 금지. 정제는 밀폐 용기에 보관.",
+    "forms": [
+      "경구 정제 50mg (일반 및 츄어블): Dramamine®, Driminate®, Travtabs®, Triptone®, 제네릭 (OTC)",
+      "주사제 50mg/mL (1mL 및 10mL 바이알): 제네릭 (Rx) - 일부 제제에 벤질알코올 및 프로필렌 글리콜 함유"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디멘히드리네이트는 H1 항히스타민제로, 개에서 멀미 예방 및 항구토 목적으로 주로 사용됨. 디펜히드라민과 8-클로로테오필린의 복합체임. 수의학적 승인 제품은 없으며 extra-label로 사용됨. 고양이에서는 히스타민이 구토의 주요 매개체가 아니므로 효과가 제한적이며, 역설적 흥분 위험이 있음. CNS 억제 및 항콜린 효과가 주요 부작용임. MAOI와의 병용은 금기에 준하여 주의 필요.",
+    "indications": "개에서 멀미 예방 및 치료 (extra-label), 전정 질환으로 인한 구토 및 오심 치료 (extra-label). 고양이에서는 제한적으로 사용되며, 다른 항구토제가 선호됨.",
+    "client_info": "디멘히드리네이트(Dramamine®)는 멀미 예방에 사용되는 항히스타민제입니다. 반드시 디멘히드리네이트 단일 성분 제품만 사용하세요. 진통제, 충혈 완화제 등이 포함된 복합 인체용 제품은 동물에게 독성을 유발할 수 있습니다. 멀미 예방을 위해서는 여행 30~60분 전에 투여하는 것이 좋습니다. 졸음을 유발할 수 있으며, 이는 멀미 치료 시 유익한 효과일 수 있습니다. 공복 또는 소량의 음식과 함께 투여할 수 있습니다. 장기 사용 시 효과가 감소할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 65,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding data",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/13.jsonl",
+    "extracted_at": "2026-03-10T17:13:27.089337+00:00",
+    "reviewer": null
+  }
+}

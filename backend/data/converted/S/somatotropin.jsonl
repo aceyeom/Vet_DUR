@@ -1,0 +1,404 @@
+{
+  "id": "somatotropin",
+  "drug_identity": {
+    "name_ko": "소마토트로핀",
+    "name_en": "Somatotropin",
+    "active_ingredient": "Somatotropin",
+    "brand_names": [
+      "Posilac"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "개에서 뇌하수체성 왜소증 치료에 사용되는 돼지 성장호르몬은 FDA 승인 제품이 없으며 엑스트라라벨(off-label) 사용임. 소에서는 우유 생산 증가 목적으로 승인된 소 소마토트로핀(Posilac) 제품이 있음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "소마토트로핀은 펩타이드이므로 간과 신장을 통한 제거가 예상되나, 개에 특이적인 약동학 정보는 확인되지 않음."
+    },
+    "extra_information": "개에 특이적인 약동학 정보 없음. 펩타이드 호르몬으로서 간 및 신장을 통한 제거가 예상됨."
+  },
+  "organ_burden_logic": {
+    "note": "소마토트로핀은 펩타이드 호르몬으로 간·신장 대사가 예상되나 수의학적 종별 PK 데이터 부재. 혈당 영향(고혈당/저혈당), 말단비대증 가능성, 주사 부위 반응 등을 근거로 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "acromegaly"
+        ],
+        "index": -1,
+        "evidence": "말단비대증 유발 가능성이 있으나 직접적인 뇌 독성 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hyperglycemia",
+          "hypoglycemia",
+          "diabetes mellitus"
+        ],
+        "index": 1,
+        "evidence": "혈당 상승(고혈당) 및 과다투여 시 저혈당 유발 가능. 혈당 및 요당 정기 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": -1,
+        "evidence": "펩타이드로서 신장을 통한 제거가 예상되나 직접적인 신독성 근거는 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic elimination"
+        ],
+        "index": -1,
+        "evidence": "펩타이드로서 간을 통한 제거가 예상되나 직접적인 간독성 근거는 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부담 근거 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에 특이적인 약동학 정보가 확인되지 않음. 펩타이드 호르몬으로 경구 생체이용률은 없음(주사제)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Glucocorticoids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "growth inhibition",
+        "adrenal insufficiency"
+      ],
+      "evidence": "Glucocorticoids may inhibit the growth-promoting effect of somatotropin. If concurrent adrenal insufficiency is diagnosed, glucocorticoid dose should be adjusted carefully to avoid negative effects on growth."
+    },
+    {
+      "drug": "Insulin / Oral Hypoglycemic Agents (e.g., glipizide, metformin)",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "hypoglycemia",
+        "glucose regulation"
+      ],
+      "evidence": "Doses of hypoglycemic agents may require modification when somatotropin is initiated and/or discontinued due to somatotropin's diabetogenic effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "뇌하수체성 왜소증 (돼지 성장호르몬, 엑스트라라벨)",
+          "value": "2",
+          "unit": "EA",
+          "route": "SC",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4~6주간 투여; 임상 반응 및 IGF-1 수치에 따라 용량 조정",
+          "evidence": "2 units/dog (NOT units/kg) SC every other day for 4 to 6 weeks"
+        },
+        {
+          "logic_type": "linear",
+          "context": "뇌하수체성 왜소증 (돼지 성장호르몬, 엑스트라라벨, 대안 용량)",
+          "value": "0.1",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 3회, 4~6주간 투여; 임상 반응 및 IGF-1 수치에 따라 용량 조정",
+          "evidence": "0.1 unit/kg SC 3 times weekly for 4 to 6 weeks"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장을 통한 제거가 예상되나 신기능 저하 시 용량 조정에 대한 구체적인 정보가 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간을 통한 제거가 예상되나 간기능 저하 시 용량 조정에 대한 구체적인 정보가 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (Hypersensitivity)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to growth hormone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병 또는 포도당 내성 장애",
+      "match_terms": [
+        "diabetes mellitus",
+        "impaired glucose tolerance"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "부신피질기능저하증 (Hypoadrenocorticism)",
+      "match_terms": [
+        "hypoadrenocorticism",
+        "adrenal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능저하증 (Hypothyroidism)",
+      "match_terms": [
+        "hypothyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활성 악성 종양 (Active malignancy)",
+      "match_terms": [
+        "malignancy",
+        "neoplasm",
+        "cancer"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "소마토트로핀(성장호르몬)은 근골격계 성장(선형 성장, 골 및 근육량 증가)과 세포·장기 성장을 촉진하며, 단백질·탄수화물·지질·결합조직·무기질 대사에 관여하고 흉선 발달 및 T세포 기능에 중요한 역할을 함.",
+    "common_extra_effects": [
+      "당뇨병 유발 (일시적 또는 영구적)",
+      "고혈당",
+      "과민반응",
+      "말단비대증 (장기 고용량 투여 시)",
+      "발 및 머리 크기 증가 (말단비대증)",
+      "두경부 피부 주름 증가 (말단비대증)",
+      "하악전돌증 (prognathism)",
+      "흡기성 협착음 (inspiratory stridor)"
+    ],
+    "dog_mechanism": "돼지 성장호르몬은 개에서 면역원성이 낮아 과민반응 위험이 적음. 뇌하수체성 왜소증 치료에 사용.",
+    "dog_extra_effects": [
+      "당뇨병 (일시적 또는 영구적, 치료 중단 후에도 지속 가능)",
+      "고혈당",
+      "과민반응",
+      "말단비대증 (장기 고용량 투여 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 뇌하수체성 왜소증 치료에 사용됨. FDA 승인 돼지 성장호르몬 제품은 없으며 엑스트라라벨 사용임. 당뇨병 유발 위험이 있으므로 혈당 및 요당을 정기적으로 모니터링해야 함. 소 소마토트로핀(Posilac)은 서방형 제제로 개에 사용하기 부적합함. 인간 재조합 성장호르몬은 개에서 면역원성 반응을 유발할 수 있으며 비용이 매우 높음.",
+    "cat": "고양이에 대한 용량 정보 및 안전성 데이터가 없음. 사용 시 모체의 이익이 잠재적 위험을 상회하는 경우에만 고려."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "당뇨병 유발 가능성(일시적 또는 영구적), 과민반응 위험, 말단비대증 위험(장기 고용량). 혈당·요당·갑상선·부신 기능 정기 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "소동물에서 안전성이 확립되지 않았으므로 모체의 이익이 잠재적 위험을 상회하는 경우에만 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "돼지 성장호르몬: 제품 라벨에 따라 보관. 소 소마토트로핀(Posilac): 냉장 보관(2°C-8°C, 36°F-46°F); 냉동 금지. 과도한 열이나 직사광선에 장시간 노출 금지. 사용 전 주사기를 실온(15°C-30°C)으로 데워서 사용.",
+    "forms": [
+      "소 소마토트로핀 서방형 주사제 500mg 단회용 주사기 (25개 또는 100개 박스, Posilac, OTC)",
+      "돼지 성장호르몬: FDA 승인 상업용 제품 없음 (조제 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "소마토트로핀(성장호르몬)은 개의 뇌하수체성 왜소증 치료에 사용되는 펩타이드 호르몬임. 돼지 성장호르몬은 개에서 면역원성이 낮아 선호되나 FDA 승인 제품이 없어 구하기 어렵고 비용이 높음. 가장 중요한 부작용은 당뇨병 유발(치료 중단 후에도 영구적으로 지속될 수 있음)이며, 혈당 및 요당의 정기적 모니터링이 필수적임. 소에서는 Posilac(소 소마토트로핀)이 비유 중 젖소의 우유 생산 증가 목적으로 승인되어 있음.",
+    "indications": "【승인 적응증】소: 비유 중 건강한 젖소에서 상품성 있는 우유 생산 증가 (소 소마토트로핀, Posilac). 【엑스트라라벨】개: 뇌하수체성 왜소증 치료 (돼지 성장호르몬). 과거에는 성인 개의 탈모증 X(성장호르몬 반응성 피부증) 치료에 사용되었으나, 현재는 질환 병인에 대한 이해가 높아져 더 이상 권장되지 않음.",
+    "client_info": "이 약은 개의 성장호르몬 결핍증(뇌하수체성 왜소증) 치료에 사용됩니다. 피하주사 방법과 요당 검사 방법을 반드시 숙지하시기 바랍니다. 이 약을 투여받은 개는 당뇨병이 발생할 수 있으며, 약을 중단한 후에도 당뇨병이 지속될 수 있습니다. 매주 혈당 검사와 매일 요당 검사가 필요합니다. 고혈당이 발생하면 즉시 투약을 중단하고 수의사에게 연락하십시오. 이 약은 구하기 어렵고 비용이 높을 수 있으므로 치료 전 비용에 대해 충분히 이해하시기 바랍니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Canine-specific pharmacokinetics",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "CYP profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Cat dosage"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/35.jsonl",
+    "extracted_at": "2026-03-10T23:54:05.198018+00:00",
+    "reviewer": null
+  }
+}

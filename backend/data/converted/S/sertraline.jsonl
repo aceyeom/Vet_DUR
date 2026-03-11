@@ -1,0 +1,641 @@
+{
+  "id": "sertraline",
+  "drug_identity": {
+    "name_ko": "설트랄린",
+    "name_en": "Sertraline",
+    "active_ingredient": "Sertraline hydrochloride",
+    "brand_names": [
+      "Zoloft",
+      "Altruline",
+      "Anilar",
+      "Aremis",
+      "Atenix",
+      "Besitran",
+      "Bicromil",
+      "Gladem",
+      "Insertec",
+      "Irradial",
+      "Lustral",
+      "Novativ",
+      "Sealdin",
+      "Serad",
+      "Sercerin",
+      "Serlain",
+      "Serta",
+      "Tatig",
+      "Tolrest",
+      "Tresleen"
+    ],
+    "allergy_class": "SSRI",
+    "class": "Antidepressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 개와 고양이의 행동 장애 치료에 사람용 제품을 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "CYP3A 억제제(예: 클라리스로마이신, 케토코나졸)는 설트랄린 대사를 감소시키고, CYP3A 유도제(예: 페노바르비탈, 리팜핀)는 설트랄린 대사를 증가시킬 수 있음. 사람에서 주요 대사체는 N-데스메틸설트랄린(활성)이며, 간에서 광범위하게 대사됨."
+    },
+    "extra_information": "개에서 분포용적은 25 L/kg이며 혈장 단백 결합률은 97%임. 높은 초회통과 대사가 발생하며 청소율은 35 mL/min/kg 이상임. 담즙이 주요 배설 경로로 보임. 사람에서 경구 투여 후 최고 혈중 농도는 약 4.5~8시간 후에 도달하며, 혈장 단백 결합률은 98%임. 설트랄린과 데스메틸설트랄린의 평균 반감기는 각각 26시간과 80시간임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 수의과 특이적 PK 데이터가 제한적이며, 일부는 사람 데이터에서 추론함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "lethargy",
+          "anxiety",
+          "irritability",
+          "insomnia",
+          "hyperactivity",
+          "CNS depression",
+          "CNS stimulation",
+          "seizures",
+          "serotonin syndrome"
+        ],
+        "index": 1,
+        "evidence": "개에서 기면, 불안, 과민성, 불면/과활동성이 보고됨. 과다복용 시 CNS 억제(60%), CNS 자극(24%), 경련이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bleeding risk",
+          "anticoagulant interaction",
+          "antiplatelet interaction",
+          "QTc prolongation"
+        ],
+        "index": 2,
+        "evidence": "사람에서 출혈 위험 증가 및 QTc 연장이 보고됨. 항응고제 및 항혈소판제와의 상호작용으로 출혈 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 담즙이 주요 배설 경로임."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "high first-pass metabolism",
+          "hepatic impairment",
+          "liver enzymes monitoring",
+          "severe hepatic disease"
+        ],
+        "index": 3,
+        "evidence": "높은 초회통과 대사, 간 장애 시 주의 사용 및 용량 감소 필요. 기저치 및 주기적 간 효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QTc prolongation",
+          "torsade de pointes",
+          "tachycardia",
+          "cardiovascular signs"
+        ],
+        "index": 4,
+        "evidence": "사람에서 QTc 연장 및 torsade de pointes 보고. 과다복용 시 심혈관 징후(8%) 보고. ECG 모니터링 권장."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "anxiety",
+          "irritability",
+          "sleep disturbances",
+          "behavior changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정, 불안, 과민성, 수면 장애, 행동 변화가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bleeding risk"
+        ],
+        "index": 2,
+        "evidence": "사람 데이터에서 출혈 위험 증가 보고. 고양이 특이적 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "high first-pass metabolism",
+          "hepatic impairment",
+          "severe hepatic disease"
+        ],
+        "index": 3,
+        "evidence": "높은 초회통과 대사, 중증 간 질환 시 주의 사용. 간 효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QTc prolongation",
+          "tachycardia"
+        ],
+        "index": 4,
+        "evidence": "사람에서 QTc 연장 보고. ECG 모니터링 권장."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 6.25,
+    "half_life_hr": {
+      "min": 26.0,
+      "max": 26.0,
+      "mean": 26.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 97,
+    "evidence": "개에서 혈장 단백 결합률 97%. 사람에서 경구 투여 후 Tmax 약 4.5~8시간(중간값 6.25시간). 설트랄린 평균 반감기 26시간, 활성 대사체 데스메틸설트랄린 반감기 80시간(사람 데이터)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI와의 상호작용은 세로토닌 증후군 고위험으로 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "contraindicated"
+      ],
+      "evidence": "세로토닌 증후군 고위험. 병용 금기. 사람에서 설트랄린 중단 후 5주, MAOI 중단 후 2주의 휴약 기간 필요."
+    },
+    {
+      "drug": "Anticoagulants (e.g., heparins, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "사람에서 출혈 위험 증가 보고."
+    },
+    {
+      "drug": "Antiplatelet Agents (e.g., aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "사람에서 출혈 위험 증가 보고."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "CYP3A Inhibitors (e.g., clarithromycin, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "increased adverse effects"
+      ],
+      "evidence": "설트랄린 대사 감소로 부작용 위험 증가."
+    },
+    {
+      "drug": "CYP3A Inducers (e.g., phenobarbital, rifampin)",
+      "severity": 2,
+      "keywords": [
+        "increased metabolism",
+        "decreased efficacy"
+      ],
+      "evidence": "설트랄린 대사 증가로 임상 반응 달성을 위해 더 높은 용량이 필요할 수 있음."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 2,
+      "keywords": [
+        "decreased SSRI effect"
+      ],
+      "evidence": "SSRI의 효과를 감소시키거나 역전시킬 수 있음."
+    },
+    {
+      "drug": "Diazepam",
+      "severity": 2,
+      "keywords": [
+        "decreased clearance"
+      ],
+      "evidence": "설트랄린이 디아제팜 청소율을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "enhanced toxicity"
+      ],
+      "evidence": "SSRI의 부작용/독성을 강화하고 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Mexiletine",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism"
+      ],
+      "evidence": "SSRI가 멕실레틴 대사를 감소시킬 수 있음."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "출혈 위험 증가."
+    },
+    {
+      "drug": "Opioids (e.g., fentanyl, meperidine)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 유사 부작용 가능."
+    },
+    {
+      "drug": "Pentazocine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 유사 부작용 가능."
+    },
+    {
+      "drug": "QT Prolonging Agents (e.g., amiodarone, ciprofloxacin, cisapride, erythromycin, ondansetron, quinidine)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "QT 연장 및 부정맥 위험 증가."
+    },
+    {
+      "drug": "Serotonergic Agents (e.g., dextromethorphan, mirtazapine, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가. 가능하면 병용 피할 것."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "seizures",
+        "decreased efficacy"
+      ],
+      "evidence": "SSRI가 트라마돌의 활성 대사체로의 대사를 억제하여 효능 감소 및 독성(세로토닌 증후군, 경련) 위험 증가."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., clomipramine, amitriptyline)",
+      "severity": 2,
+      "keywords": [
+        "increased TCA levels",
+        "serotonin syndrome"
+      ],
+      "evidence": "설트랄린이 TCA 혈중 농도를 증가시키고 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "설트랄린이 출혈 위험을 증가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 5.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애(강박 장애, 불안 등) 보조 치료 (행동 교정과 병행) - 오프라벨",
+          "value": "0.5 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "최소 6~8주 시험 기간 권장. 중단 시 최소 2~3주에 걸쳐 점진적으로 감량.",
+          "evidence": "일화적 용량 권고. 특정 용량을 지지하는 연구 없음. q12h 투여도 일화적으로 사용됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애(강박 장애, 불안, 스프레이 등) 보조 치료 (행동 교정과 병행) - 오프라벨",
+          "value": "0.5 - 1.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.5,
+          "duration_note": "최소 6~8주 시험 기간 권장. 중단 시 최소 2~3주에 걸쳐 점진적으로 감량.",
+          "evidence": "일화적 용량 권고. 특정 용량을 지지하는 연구 없음. q12h 투여도 일화적으로 사용됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 용량 조절에 대한 명시적 권고 없음. 담즙이 주요 배설 경로이므로 신장 기능 저하 시 영향이 제한적일 수 있으나, 명시적 데이터 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 장애 환자에서 용량 감소 또는 투여 간격 연장이 필요할 수 있음. 중증 간 질환 시 주의 사용."
+  },
+  "contraindications": [
+    {
+      "condition": "SSRI 과민증",
+      "match_terms": [
+        "SSRI hypersensitivity",
+        "sertraline hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAOI 병용",
+      "match_terms": [
+        "MAOI",
+        "monoamine oxidase inhibitor",
+        "selegiline",
+        "amitraz",
+        "linezolid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간 질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "hepatic impairment",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "diabetic"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "노령 환자",
+      "match_terms": [
+        "geriatric",
+        "elderly"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신/수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CNS에서 세로토닌(5-HT) 재흡수를 고선택적으로 억제하여 세로토닌의 약리학적 활성을 강화함. 도파민 또는 노르에피네프린에는 거의 영향을 미치지 않으며, 다른 신경전달물질에는 영향 없음.",
+    "common_extra_effects": [
+      "세로토닌 증후군",
+      "QTc 연장",
+      "Torsade de pointes",
+      "출혈 위험 증가",
+      "저나트륨혈증",
+      "식욕 감소/식욕부진",
+      "구토",
+      "설사",
+      "기면"
+    ],
+    "dog_mechanism": "개에서 세로토닌 재흡수 억제를 통한 행동 조절.",
+    "dog_extra_effects": [
+      "기면",
+      "위장관 부작용",
+      "불안",
+      "과민성",
+      "불면/과활동성",
+      "헐떡임",
+      "식욕부진(일반적으로 일시적)"
+    ],
+    "cat_mechanism": "고양이에서 세로토닌 재흡수 억제를 통한 행동 조절.",
+    "cat_extra_effects": [
+      "진정",
+      "식욕 감소/식욕부진",
+      "구토",
+      "설사",
+      "행동 변화(불안, 과민성, 수면 장애)",
+      "배변 패턴 변화"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 설트랄린은 강박 장애, 불안 관련 행동, 공격성 등 다양한 행동 장애의 보조 치료(행동 교정과 병행)에 오프라벨로 사용됨. 용량 범위는 0.5~4 mg/kg PO q24h이며, 낮은 용량에서 시작하는 것이 권장됨. 식욕부진은 흔한 부작용이나 일반적으로 일시적임. 최소 6~8주의 시험 기간이 필요하며, 중단 시 점진적 감량이 필요함. 벼룩/진드기 목걸이(아미트라즈 함유) 착용 여부를 확인할 것.",
+    "cat": "고양이에서 설트랄린은 강박 장애, 불안, 스프레이(부적절한 배뇨) 등 행동 장애의 보조 치료에 오프라벨로 사용됨. 용량 범위는 0.5~1.5 mg/kg PO q24h이며, 낮은 용량에서 시작하는 것이 권장됨. 진정과 식욕 감소가 흔한 부작용임. 최소 6~8주의 시험 기간이 필요하며, 중단 시 점진적 감량이 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 장애, 당뇨병, 노령 환자에서 주의 사용. MAOI 병용 금기. 세로토닌 증후군 위험 모니터링 필요. 기저치 및 주기적 간 효소 및 ECG 모니터링 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간 장애, 당뇨병, 노령 환자에서 주의 사용. MAOI 병용 금기. 세로토닌 증후군 위험 모니터링 필요. 기저치 및 주기적 간 효소 및 ECG 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "시판 설트랄린 정제 및 경구 용액은 조절된 실온(25°C [77°F])에서 보관; 15°C~30°C(59°F~86°F) 범위 허용.",
+    "forms": [
+      "설트랄린 HCl 정제: 25 mg, 50 mg, 100 mg (Zoloft®, 제네릭)",
+      "설트랄린 HCl 경구 용액 농축액: 20 mg/mL, 60 mL (Zoloft®, 제네릭)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "설트랄린은 SSRI 계열 항우울제로, 개와 고양이의 강박 장애, 불안 관련 행동, 공격성 등 다양한 행동 장애 치료에 오프라벨로 사용됨. 수의과 허가 제품 없음. MAOI와의 병용은 절대 금기(세로토닌 증후군 위험). 간 장애, 당뇨병, 노령 환자에서 주의 사용. 기저치 및 주기적 간 효소 및 ECG 모니터링 권장. 효과 평가를 위해 최소 6~8주 시험 기간 필요. 중단 시 점진적 감량 필요.",
+    "indications": "개와 고양이의 행동 장애(강박 장애, 불안 관련 행동, 공격성, 고양이 스프레이/부적절한 배뇨) 보조 치료 - 모두 오프라벨 사용.",
+    "client_info": "이 약은 효과가 나타나기까지 며칠 또는 몇 주가 걸릴 수 있습니다. 가장 흔한 부작용은 졸음/기면과 식욕 감소입니다. 경련이나 공격성(위협적인 행동/행동)과 같은 드물지만 심각한 부작용이 나타나면 즉시 수의사에게 연락하십시오. 지난 2주 동안 반려동물이 벼룩/진드기 목걸이를 착용했다면 수의사에게 알려주십시오. 일부 목걸이는 이 약을 복용하는 동안 착용하면 반려동물을 아프게 할 수 있습니다. 수의사와 상담 없이 이 약을 갑자기 중단하지 마십시오. 장기간 복용한 경우 점진적인 감량이 권장됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies",
+      "Renal dose adjustment",
+      "Specific CYP enzyme substrate data beyond CYP3A",
+      "Oral bioavailability (F%)",
+      "Onset of action"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates (specific CYP isoforms beyond CYP3A)",
+      "cyp_profile.inhibitors",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:41:47.596661+00:00",
+    "reviewer": null
+  }
+}

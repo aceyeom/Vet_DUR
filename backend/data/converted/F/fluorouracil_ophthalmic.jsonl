@@ -1,0 +1,392 @@
+{
+  "id": "fluorouracil_ophthalmic",
+  "drug_identity": {
+    "name_ko": "플루오로우라실 점안제",
+    "name_en": "Fluorouracil Ophthalmic",
+    "active_ingredient": "Fluorouracil",
+    "brand_names": [],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 영역에서 허가된 제품 없음. 조제 약국에서 제조한 1% 점안액 또는 연고 형태로 안구 표면 종양 및 녹내장 수술 보조 목적으로 사용됨(extra-label).",
+    "dosage_form": [
+      "Ophthalmic",
+      "Oint"
+    ],
+    "available_strengths": [
+      {
+        "value": 1,
+        "unit": "%"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "플루오로우라실은 세포 내에서 여러 활성 대사체로 전환되어 DNA 및 RNA 합성을 억제함. 점안 투여 시 전신 대사 경로에 대한 수의과 특이적 데이터는 본 모노그래프에 기술되지 않음."
+    },
+    "extra_information": "점안 투여 시 전신 흡수 및 약동학 데이터는 본 모노그래프에 기술되지 않음. 고양이에서는 모든 투여 경로(점안 포함)에서 심각한 신경독성이 발생할 수 있어 절대 금기임."
+  },
+  "organ_burden_logic": {
+    "note": "점안 투여 형태이나 전신 흡수 시 골수억제, 위장관 독성, 신경독성이 보고됨. 수의과 종별 PK 데이터 부재로 키워드 기반 추정 점수 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "신경독성(발작)이 부작용으로 보고됨. 점안 투여 시 전신 흡수 후 발생 가능."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression",
+          "dose-dependent myelosuppression"
+        ],
+        "index": 0,
+        "evidence": "용량 의존적 골수억제가 주요 부작용으로 명시됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음. 전신 흡수 시 간접적 위험 가능성."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "fatal neurotoxicity",
+          "seizures"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 모든 투여 경로(점안 포함)에서 심각하고 잠재적으로 치명적인 신경독성 발생. 절대 금기."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "골수억제가 부작용으로 보고됨. 고양이에서는 신경독성이 더 우선적 위험."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "점안 투여 형태에 대한 약동학 데이터(반감기, 생체이용률 등)가 본 모노그래프에 기술되지 않음."
+  },
+  "_ddi_note": "본 모노그래프에는 플루오로우라실 점안제와 다른 약물 간의 구체적인 약물 상호작용이 기술되지 않음. 다른 점안 약물과 직접 혼합 금지. 전신 흡수 시 골수억제 약물과의 상가 위험 가능성 있음.",
+  "drug_interactions": [
+    {
+      "drug": "Other ophthalmic medications (concurrent eye drops)",
+      "severity": 2,
+      "keywords": [
+        "direct mixing contraindicated",
+        "formulation incompatibility"
+      ],
+      "evidence": "Fluorouracil ophthalmic preparations should not be mixed directly with any other ophthalmic medications. A 5–10 minute interval between applications is recommended."
+    },
+    {
+      "drug": "Myelosuppressive agents",
+      "severity": 2,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Additive myelosuppression risk if systemic absorption occurs with concurrent use of other myelosuppressive drugs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "안구 표면 종양(편평세포암종, 육종) - extra-label",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "Eye",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1주 투여 후 정기적 주기로 반복 가능. 1% 점안액 1 drop 또는 1% 연고 적용.",
+          "evidence": "Fluorouracil 1% ophthalmic solution (compounded), 1 drop in affected eye(s) 4 times daily for 1 week; may be repeated in regular cycles. Use of a topical 1% fluorouracil ointment applied 4 times daily also has been described."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "점안 투여 시 신장 용량 조절에 대한 구체적 지침이 본 모노그래프에 기술되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "점안 투여 시 간 기능에 따른 용량 조절에 대한 구체적 지침이 본 모노그래프에 기술되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "고양이 (모든 투여 경로)",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "과민반응 (플루오로우라실 또는 제형 성분)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "fluorouracil allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수억제",
+      "match_terms": [
+        "myelosuppression",
+        "bone marrow suppression",
+        "pancytopenia",
+        "neutropenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 감염",
+      "match_terms": [
+        "serious infection",
+        "sepsis",
+        "immunocompromised"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "피리미딘 유사체로서 세포 내에서 여러 활성 대사체로 전환되어 DNA 및 RNA 합성을 억제하고 세포 성장을 저해하며 세포 사멸을 유도함. 항섬유화 작용으로 섬유아세포 증식을 억제하여 수술 후 반흔 형성을 방지함.",
+    "common_extra_effects": [
+      "골수억제 (용량 의존적)",
+      "위장관 독성 (설사, 위장관 궤양, 점막 탈락, 구내염)",
+      "신경독성 (발작)",
+      "국소 반응: 작열감, 가피 형성, 알레르기성 접촉 피부염, 미란, 홍반, 과색소침착, 자극, 통증, 안와 주위 탈모, 광과민성, 소양증, 반흔, 발진, 압통, 궤양"
+    ],
+    "dog_mechanism": "점안 투여 시 섬유아세포 증식 억제를 통해 녹내장 배액 수술 후 반흔 형성 방지 및 안구 표면 종양 치료에 활용됨.",
+    "dog_extra_effects": [
+      "국소 안구 자극",
+      "전신 흡수 시 골수억제 가능",
+      "전신 흡수 시 위장관 독성 가능",
+      "전신 흡수 시 신경독성(발작) 가능"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "모든 투여 경로에서 심각하고 잠재적으로 치명적인 신경독성 발생 — 절대 금기"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 플루오로우라실 점안제는 녹내장 배액 수술 보조 및 안구 표면 종양(편평세포암종, 육종) 치료에 extra-label로 사용됨. 1% 점안액 또는 연고를 1일 4회 적용하며, 수술 관련 프로토콜은 안과 전문의가 결정함. 전신 부작용(골수억제, 신경독성) 가능성을 모니터링해야 함. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비 착용 필요.",
+    "cat": "고양이에서 플루오로우라실은 점안 투여를 포함한 모든 투여 경로에서 절대 금기임. 고양이는 플루오로우라실에 노출 시 심각하고 잠재적으로 치명적인 신경독성을 나타냄. 어떠한 상황에서도 사용해서는 안 됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "점안 투여 시에도 전신 흡수로 인한 골수억제, 위장관 독성, 신경독성 가능성 있음. 임신 중 사용 금지. 골수억제 또는 중증 감염 환자에서 사용 금지. NIOSH 위험 약물로 취급 시 주의 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 모든 투여 경로(점안 포함)에서 심각하고 잠재적으로 치명적인 신경독성 발생. 절대 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "제품 라벨에 명시된 대로 보관. 색상 변화, 혼탁, 입자 발생 시 사용 금지. 조제된 1% 점안액은 3주간 안정성이 보고됨.",
+    "forms": [
+      "1% 점안액 (조제, 50 mg/mL 주사액으로부터 제조)",
+      "1% 점안 연고 (조제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루오로우라실 점안제는 항섬유화 및 항종양 작용을 가진 피리미딘 유사체로, 녹내장 배액 수술 보조 및 안구 표면 종양 치료에 사용됨. 고양이에서는 점안 투여를 포함한 모든 경로에서 절대 금기. 임신 동물, 골수억제 환자, 중증 감염 환자에서 사용 금지. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비 착용 필수. 수의과 허가 제품 없으며 조제 약국에서 제조한 제품만 사용 가능.",
+    "indications": "1) 녹내장 배액 수술(배액 션트 삽입 또는 방수 유출로 변경) 보조 — 섬유아세포 증식 억제 및 반흔 형성 방지 목적 (extra-label). 2) 안구 표면 종양(편평세포암종, 육종) 치료 — 1% 점안액 또는 연고 1일 4회 적용 (extra-label). 수술 관련 프로토콜은 수의 안과 전문의가 결정함.",
+    "client_info": "이 약은 항암(화학요법) 약물입니다. 임신 중인 분, 면역력이 저하된 분, 아픈 분은 이 약에 접촉하지 마십시오. 투여 시 반드시 보호 장갑과 마스크를 착용하십시오. 투여 후 장갑, 마스크 및 기타 폐기물은 비닐봉지에 밀봉하여 일반 쓰레기통에 버리고, 즉시 손을 씻으십시오. 눈 주위 털이 빠질 수 있습니다. 이 약을 점안한 후 다른 안약을 사용하기 전에 5~10분 기다리십시오. 약의 색이 변하거나 혼탁해지거나 입자가 생기면 사용하지 마십시오. 보관 방법은 라벨 또는 처방전의 지시에 따르십시오. 고양이에게는 절대 사용하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "additive_class",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Drug Interactions",
+      "Overdosage",
+      "Reproductive Safety"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type",
+      "species_flags.washout_period_days",
+      "drug_interactions"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/11.jsonl",
+    "extracted_at": "2026-03-10T16:45:57.012029+00:00",
+    "reviewer": null
+  }
+}

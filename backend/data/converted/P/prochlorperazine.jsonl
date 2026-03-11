@@ -1,0 +1,580 @@
+{
+  "id": "prochlorperazine",
+  "drug_identity": {
+    "name_ko": "프로클로르페라진",
+    "name_en": "Prochlorperazine",
+    "active_ingredient": "Prochlorperazine",
+    "brand_names": [
+      "Compazine",
+      "Compro",
+      "Prochlor",
+      "Prorazin",
+      "Stemetil",
+      "Tementil"
+    ],
+    "allergy_class": "phenothiazine",
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품은 현재 미국 내 시판 중단 상태이며, 인체용 제품을 개 및 고양이에 오프라벨로 사용함",
+    "dosage_form": [
+      "Inj",
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "동물에서의 약동학 정보는 제한적이며, 다른 페노티아진계 약물의 일반적인 흡수·분포·배설 패턴을 따를 것으로 추정됨"
+    },
+    "extra_information": "개와 고양이에서의 약동학 데이터는 거의 없음. 인체에서 IM 투여 후 작용 발현은 10~20분, 지속 시간은 3~4시간임. IV 투여는 저혈압 위험 증가로 일반적으로 피하며, SC 투여는 국소 자극으로 인해 피함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 동물 종 특이적 PK 데이터 부재로 인체 데이터 및 페노티아진 계열 약물 특성을 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "extrapyramidal effects",
+          "CNS depression",
+          "dopamine antagonism",
+          "emetic center"
+        ],
+        "index": 1,
+        "evidence": "도파민, 히스타민-1, 알파-2 아드레날린, 무스카린 수용체 길항 작용으로 뇌의 구토 중추 및 화학수용체 유발대에 작용. 진정 및 추체외로 효과 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypotension",
+          "prolactin release"
+        ],
+        "index": 2,
+        "evidence": "저혈압 및 프로락틴 분비가 소동물에서 보고됨. 혈압 저하 효과로 혈액 순환계에 영향."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 저혈압으로 인한 이차적 신관류 감소 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic dysfunction"
+        ],
+        "index": 3,
+        "evidence": "간 기능 장애 환자에서 주의 사용 권고. 페노티아진계 약물은 간에서 대사됨."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypotension",
+          "QT prolongation",
+          "cardiac disease"
+        ],
+        "index": 4,
+        "evidence": "심장 질환 환자에서 주의 사용 권고. QT 연장 위험 및 저혈압 효과 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "extrapyramidal effects",
+          "CNS depression",
+          "dopamine antagonism"
+        ],
+        "index": 1,
+        "evidence": "개와 동일한 기전으로 뇌에 작용. 소동물에서 근육 연축, 진전, 진정 효과 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypotension",
+          "prolactin release"
+        ],
+        "index": 2,
+        "evidence": "저혈압 및 프로락틴 분비가 소동물에서 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic dysfunction"
+        ],
+        "index": 3,
+        "evidence": "간 기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypotension",
+          "QT prolongation",
+          "cardiac disease"
+        ],
+        "index": 4,
+        "evidence": "심장 질환 환자에서 주의 사용 권고. QT 연장 위험 및 저혈압 효과 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체에서 IM 투여 후 작용 발현 10~20분(중간값 15분 사용), 지속 시간 3~4시간. 동물에서의 약동학 데이터는 제한적임."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents (atropine, glycopyrrolate, hyoscyamine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic effects",
+        "dry mucous membranes",
+        "constipation",
+        "urinary retention"
+      ],
+      "evidence": "항콜린 효과(구강 건조, 변비, 요저류) 위험 증가"
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "저혈압 위험 증가 가능성"
+    },
+    {
+      "drug": "CNS Depressant Agents (anesthetics, barbiturates)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "상가적 중추신경 억제 효과 유발 가능. 페노티아진 투여 후 전신마취제 용량 감소 필요할 수 있음."
+    },
+    {
+      "drug": "Dopamine",
+      "severity": 2,
+      "keywords": [
+        "pressor effect reduction",
+        "dopamine antagonism"
+      ],
+      "evidence": "페노티아진이 도파민의 승압 효과를 감소시킬 수 있음"
+    },
+    {
+      "drug": "Emetics (apomorphine, ropinirole)",
+      "severity": 2,
+      "keywords": [
+        "reduced emetic efficacy",
+        "sedation",
+        "hypotension"
+      ],
+      "evidence": "구토 유발제의 효과를 감소시키고 진정 및 저혈압 위험 증가"
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "epinephrine reversal",
+        "hypotension",
+        "blood pressure depression"
+      ],
+      "evidence": "프로클로르페라진 또는 페노티아진에 의한 급성 저혈압 치료에 에피네프린 사용 금기. 혈압이 더욱 저하될 수 있음(에피네프린 역전 현상)."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "extrapyramidal effects",
+        "potentiation"
+      ],
+      "evidence": "페노티아진이 메토클로프라미드의 추체외로 효과를 강화할 수 있음"
+    },
+    {
+      "drug": "Opioids (buprenorphine, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive"
+      ],
+      "evidence": "페노티아진의 저혈압 효과를 강화할 수 있음. 병용 시 프로클로르페라진 용량 감량 필요할 수 있음."
+    },
+    {
+      "drug": "Organophosphate Agents",
+      "severity": 3,
+      "keywords": [
+        "organophosphate toxicity",
+        "potentiation"
+      ],
+      "evidence": "유기인산염 구충제 투여 후 1개월 이내 페노티아진 사용 금지. 유기인산염 독성이 강화될 수 있음."
+    },
+    {
+      "drug": "Paraquat",
+      "severity": 2,
+      "keywords": [
+        "herbicide toxicity",
+        "potentiation"
+      ],
+      "evidence": "제초제 파라쿼트의 독성이 프로클로르페라진에 의해 증가할 수 있음"
+    },
+    {
+      "drug": "Physostigmine",
+      "severity": 2,
+      "keywords": [
+        "toxicity enhancement"
+      ],
+      "evidence": "피조스티그민의 독성이 프로클로르페라진에 의해 강화될 수 있음"
+    },
+    {
+      "drug": "Procaine",
+      "severity": 1,
+      "keywords": [
+        "activity enhancement"
+      ],
+      "evidence": "페노티아진이 프로카인의 활성을 강화할 수 있음"
+    },
+    {
+      "drug": "QT Prolonging Agents (cisapride, fluoroquinolones, sotalol, SSRIs)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes"
+      ],
+      "evidence": "QT 연장 및 토르사드 드 포인트 위험 증가"
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구토 억제 (오프라벨)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "적절한 수화 상태 유지 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook 오프라벨 용량; 6~8시간마다 SC 투여"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구토 억제 (오프라벨)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "적절한 수화 상태 유지 필요",
+          "evidence": "Plumb's Veterinary Drug Handbook 오프라벨 용량; 6~8시간마다 SC 투여"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적인 정보가 모노그래프에 명시되어 있지 않음. 저혈압 효과로 인해 탈수 또는 저혈량증 환자에서는 사용을 피해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 기능 장애 환자에서 소량 투여 권고. 구체적인 용량 조절 기준은 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "페노티아진 과민증",
+      "match_terms": [
+        "phenothiazine hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 억제제 과량 투여로 인한 혼수 상태",
+      "match_terms": [
+        "coma",
+        "CNS depression",
+        "overdose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증, 탈수, 쇼크",
+      "match_terms": [
+        "hypovolemia",
+        "dehydration",
+        "shock"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "파상풍 또는 스트리크닌 중독",
+      "match_terms": [
+        "tetanus",
+        "strychnine intoxication"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "매우 어린 동물 또는 쇠약한 동물",
+      "match_terms": [
+        "young animal",
+        "debilitated",
+        "geriatric"
+      ],
+      "severity": "caution",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "도파민, 히스타민-1형, 알파-2 아드레날린, 무스카린 수용체 길항 작용을 통한 다중 기전. 뇌의 구토 중추 및 화학수용체 유발대(CTZ)에 주로 작용하여 항구토 효과 발휘. 말초 활성도 일부 존재.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "저혈압(hypotension)",
+      "추체외로 효과(extrapyramidal effects)",
+      "근육 연축(muscle fasciculations)",
+      "진전(tremors)",
+      "프로락틴 분비(prolactin release)",
+      "약한 항콜린 효과(weak anticholinergic effects)"
+    ],
+    "dog_mechanism": "페노티아진 유도체로서 도파민, 히스타민-1, 알파-2 아드레날린, 무스카린 수용체 길항 작용을 통해 항구토 효과 발휘",
+    "dog_extra_effects": [
+      "진정",
+      "저혈압",
+      "근육 연축",
+      "진전",
+      "프로락틴 분비",
+      "추체외로 효과"
+    ],
+    "cat_mechanism": "페노티아진 유도체로서 도파민, 히스타민-1, 알파-2 아드레날린, 무스카린 수용체 길항 작용을 통해 항구토 효과 발휘",
+    "cat_extra_effects": [
+      "진정",
+      "저혈압",
+      "근육 연축",
+      "진전",
+      "프로락틴 분비",
+      "추체외로 효과"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 항구토제로 사용되며, 입원 환경에서 경미한 진정 효과가 유리할 수 있음. 탈수 또는 저혈량증 환자에서는 저혈압 위험으로 인해 상대적 금기임. 투여 전 적절한 수화 상태 확인 필요. 경쟁 동물에서는 ARCI 클래스 2 물질로 지정되어 있어 사용 제한 가능.",
+    "cat": "고양이에서 항구토제로 사용되며, 개와 동일한 용량 범위 적용. 탈수 또는 저혈량증 고양이에서는 저혈압 위험으로 인해 주의 필요. 매우 어린 고양이에서는 소량 투여 권고. 임상 사용을 지지하는 발표된 정보가 제한적임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저혈량증, 탈수, 쇼크 환자에서 상대적 금기. 간 기능 장애, 심장 질환, 전신 쇠약 환자에서 소량 투여 권고. 파상풍 또는 스트리크닌 중독 시 사용 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "저혈량증, 탈수, 쇼크 환자에서 상대적 금기. 간 기능 장애, 심장 질환, 전신 쇠약 환자에서 소량 투여 권고. 매우 어린 고양이에서 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 보관. 동결 금지. 빛 차단 보관. 경미한 황변은 효능에 영향 없음. 침전물 형성 또는 현저한 변색 시 사용 금지.",
+    "forms": [
+      "Prochlorperazine for Injection: 5 mg/mL (edisylate salt), 2 mL vials",
+      "Prochlorperazine Tablets: 5 mg, 10 mg (maleate salt)",
+      "Prochlorperazine Suppositories: 25 mg (base)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프로클로르페라진은 페노티아진계 항구토제로 개와 고양이에서 오프라벨로 사용됨. 주요 이상반응은 진정과 저혈압이며, 탈수·저혈량증·쇼크 환자에서는 상대적 금기임. 에피네프린과의 병용은 절대 금기(저혈압 악화). QT 연장 위험이 있으므로 QT 연장 유발 약물과의 병용 시 주의 필요. 수의과 허가 제품은 현재 미국 내 시판 중단 상태.",
+    "indications": "개와 고양이에서의 구토 억제(오프라벨). 과거 이소프로파미드와의 복합제로 구토, 비특이적 위장염, 약물 유발 설사, 감염성 설사, 경련성 대장염, 멀미에 FDA 허가를 받았으나 현재 시판 중단.",
+    "client_info": "투여 후 최소 1시간 동안 동물을 관찰하고 조용하고 적절한 온도의 환경에 두십시오. 이 약은 소변 색깔을 분홍색 또는 적갈색으로 변화시킬 수 있으나 해롭지 않습니다. 구토나 설사가 호전되지 않거나 악화되면 수의사에게 연락하십시오. 비정상적인 행동, 경직, 또는 기타 비정상적인 신체 움직임이 관찰되면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK studies",
+      "Renal dose adjustment",
+      "CYP enzyme profile",
+      "Half-life (veterinary)",
+      "Bioavailability",
+      "Protein binding"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:47:17.955736+00:00",
+    "reviewer": null
+  }
+}

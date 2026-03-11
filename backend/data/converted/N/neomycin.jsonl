@@ -1,0 +1,511 @@
+{
+  "id": "neomycin",
+  "drug_identity": {
+    "name_ko": "네오마이신",
+    "name_en": "Neomycin",
+    "active_ingredient": "Neomycin sulfate",
+    "brand_names": [
+      "Biosol",
+      "Neomix",
+      "Neo-325",
+      "Neo-fradin",
+      "Neo-Sol 50",
+      "Neomix 325",
+      "Neovet"
+    ],
+    "allergy_class": "aminoglycoside",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 325,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "경구 투여 후 약 3%만 흡수되며, 흡수되지 않은 대부분은 대변으로 배설됨. 흡수된 분획은 다른 아미노글리코사이드와 유사하게 신장을 통해 배설되는 것으로 추정됨."
+    },
+    "extra_information": "경구 또는 직장(정체 관장) 투여 후 약 3%만 흡수됨. 장 운동이 저하되거나 장벽이 손상된 경우 흡수율이 증가할 수 있음. 경구 투여 후 전신 순환에서 치료 농도에 도달하지 않음. 경구 투여된 네오마이신은 거의 전량 대변으로 배설됨. IM 투여 시 투여 후 1시간 이내에 최고 혈중 농도에 도달함. 단백 결합률은 낮음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 경구 흡수율이 매우 낮아(~3%) 전신 독성 위험은 제한적이나, 신독성 및 이독성 경고가 명시되어 있음. 수의학적 종별 PK 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ototoxicity",
+          "neurotoxicity",
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "이독성(청력 손실, 전정 기능 장애) 및 신경독성이 보고됨. 신경근 차단 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "intestinal malabsorption"
+        ],
+        "index": 1,
+        "evidence": "장 흡수 장애로 인한 간접적 영향 가능. 직접적인 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal impairment",
+          "azotemic"
+        ],
+        "index": 2,
+        "evidence": "신독성이 주요 부작용으로 명시됨. 신기능 저하 환자에서 위험 증가. 아조테미아 환자에서 사용 금기."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic encephalopathy"
+        ],
+        "index": 1,
+        "evidence": "간성 뇌증 보조 치료에 사용됨. 간 자체에 대한 직접적 독성 데이터는 없으나 간 질환 환자에서 사용됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ototoxicity",
+          "neurotoxicity",
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "이독성(청력 손실, 전정 기능 장애) 및 신경독성이 보고됨. 신경근 차단 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "intestinal malabsorption"
+        ],
+        "index": 1,
+        "evidence": "장 흡수 장애로 인한 간접적 영향 가능. 직접적인 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal impairment",
+          "azotemic"
+        ],
+        "index": 2,
+        "evidence": "신독성이 주요 부작용으로 명시됨. 신기능 저하 환자에서 위험 증가. 아조테미아 환자에서 사용 금기."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic encephalopathy"
+        ],
+        "index": 1,
+        "evidence": "간성 뇌증 보조 치료에 사용됨. 간 자체에 대한 직접적 독성 데이터는 없으나 간 질환 환자에서 사용됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": 3,
+    "protein_binding_percent": null,
+    "evidence": "경구 또는 직장 투여 후 약 3% 흡수. IM 투여 시 1시간 이내 최고 혈중 농도 도달. 반감기 데이터는 본 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Cephalosporins (e.g., ceftiofur, cephalexin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concurrent use may enhance the nephrotoxic effect of neomycin."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Neomycin may increase the nephrotoxic potential of cyclosporine."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "altered serum levels",
+        "TDM required"
+      ],
+      "evidence": "Oral neomycin may decrease oral digoxin absorption. In some patients (<10%), neomycin may increase serum digoxin levels. TDM recommended if neomycin is added or withdrawn."
+    },
+    {
+      "drug": "Mannitol",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "avoid concurrent use"
+      ],
+      "evidence": "Concurrent use should be avoided as it may enhance the nephrotoxic effect of neomycin."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Absorption of methotrexate may be reduced by oral neomycin."
+    },
+    {
+      "drug": "Neuromuscular-Blocking Agents (e.g., atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "potentiation"
+      ],
+      "evidence": "Concomitant use with neuromuscular-blocking agents could potentiate neuromuscular blockade."
+    },
+    {
+      "drug": "Ototoxic and Nephrotoxic Drugs",
+      "severity": 2,
+      "keywords": [
+        "ototoxicity",
+        "nephrotoxicity",
+        "additive toxicity"
+      ],
+      "evidence": "Concurrent use of other ototoxic or nephrotoxic drugs with neomycin should be done with caution, even though minimal amounts are absorbed after oral/rectal administration."
+    },
+    {
+      "drug": "Penicillin V Potassium (oral)",
+      "severity": 2,
+      "keywords": [
+        "malabsorption",
+        "reduced absorption"
+      ],
+      "evidence": "Oral neomycin should not be given concurrently with oral penicillin V potassium, as malabsorption of the penicillin may occur."
+    },
+    {
+      "drug": "Vancomycin",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Vancomycin may enhance the nephrotoxic effect of neomycin."
+    },
+    {
+      "drug": "Vitamin K Antagonists (e.g., warfarin)",
+      "severity": 2,
+      "keywords": [
+        "reduced vitamin K absorption",
+        "anticoagulant effect"
+      ],
+      "evidence": "Oral neomycin may decrease the amount of vitamin K absorbed from the gut, which may affect patients receiving oral anticoagulants."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit_all",
+      "horse_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "간성 뇌증 보조 치료 (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q8h 또는 q12h 간격으로 투여",
+          "evidence": "Plumb's: 20 mg/kg PO every 8 to 12 hours (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "간성 뇌증 보조 치료 (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q8h 또는 q12h 간격으로 투여",
+          "evidence": "Plumb's: 20 mg/kg PO every 8 to 12 hours (extra-label, dogs/cats combined)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 신독성 및 이독성 위험이 증가함. 아조테미아 환자에서는 사용을 피해야 함. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간성 뇌증 치료에 사용되나, 간 기능 저하에 따른 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "장 폐색",
+      "match_terms": [
+        "intestinal obstruction",
+        "ileus",
+        "bowel obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "아미노글리코사이드 과민증",
+      "match_terms": [
+        "aminoglycoside hypersensitivity",
+        "aminoglycoside allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "아조테미아 / 신기능 저하",
+      "match_terms": [
+        "azotemia",
+        "renal failure",
+        "CKD",
+        "renal impairment"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신생아 환자",
+      "match_terms": [
+        "neonate",
+        "neonatal"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "장 출혈 또는 궤양",
+      "match_terms": [
+        "intestinal bleeding",
+        "intestinal ulceration",
+        "GI ulcer"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아미노글리코사이드계 항생제로서 세균의 30S 리보솜 소단위에 결합하여 단백질 합성을 억제함. 주로 그람 음성 호기성 세균에 효과적. 암모니아 생성 감소 및 글루타민 활성 감소 효과도 있음.",
+    "common_extra_effects": [
+      "이독성 (청력 손실, 전정 기능 장애)",
+      "신독성",
+      "심한 설사",
+      "장 흡수 장애",
+      "항생제 관련 설사",
+      "장기 사용 시 세균성 또는 진균성 중복 감염",
+      "신경근 차단 가능성"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개와 고양이에서 간성 뇌증의 보조 치료로 extra-label로 사용됨 (20 mg/kg PO q8-12h). FDA 승인 적응증은 아님. 신기능 저하, 탈수, 고령 환자에서 신독성 및 이독성 위험이 증가하므로 주의 필요. 장기 사용 시 중복 감염 위험 있음.",
+    "cat": "고양이에서 간성 뇌증의 보조 치료로 extra-label로 사용됨 (20 mg/kg PO q8-12h). FDA 승인 적응증은 아님. 신기능 저하, 탈수 환자에서 신독성 및 이독성 위험이 증가하므로 주의 필요. 장기 사용 시 중복 감염 위험 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 탈수, 고령 환자에서 신독성 및 이독성 위험 증가. 신생아에서 전신 흡수 증가로 독성 위험. 장기 사용 시 중복 감염 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하, 탈수 환자에서 신독성 및 이독성 위험 증가. 신생아에서 전신 흡수 증가로 독성 위험. 장기 사용 시 중복 감염 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 용액: 실온(15°C-30°C)에서 밀폐된 차광 용기에 보관. 정제/볼루스: 밀폐 용기에 실온 보관. 건조 상태에서 실온 보관 시 최소 2년간 안정.",
+    "forms": [
+      "Neomycin Sulfate Oral Liquid 200 mg/mL (140 mg neomycin base/mL)",
+      "Neomycin Sulfate Soluble Powder 325 g/lb",
+      "Neomycin Sulfate Tablets 500 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "네오마이신은 경구 투여용 아미노글리코사이드계 항생제로, 주로 장내 감염 치료 및 간성 뇌증의 보조 치료에 사용됨. 경구 흡수율이 매우 낮아(~3%) 전신 감염 치료에는 사용되지 않음. 신독성 및 이독성이 주요 부작용이며, 신기능 저하 환자에서 위험이 증가함. 토끼, 말 등 후장 발효 동물에서는 금기임. WHO 및 OIE에서 중요 항균제로 지정됨.",
+    "indications": "개/고양이: 간성 뇌증 보조 치료 (extra-label, 20 mg/kg PO q8-12h). 소, 양, 염소, 돼지: 대장균에 의한 장염(콜리바실로시스) 치료 및 관리 (FDA 승인, 22 mg/kg PO 1일 1회, 최대 14일). 터키: 대장균 관련 폐사 관리 (FDA 승인, 22 mg/kg PO 1일 1회, 5일간). 페럿: 감수성 장내 감염 (extra-label, 10-20 mg/kg PO 하루 2-4회).",
+    "client_info": "이 약은 말, 햄스터, 토끼에게 투여하면 안 됩니다. 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토가 있으면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요. 단기간 경구 투여 시 일반적으로 잘 견딥니다. 설사가 발생하면 수의사에게 알려주세요. 드물게 장기 사용 시 청력 손실, 신장 손상이 발생할 수 있습니다. 청력 손실, 머리 기울임, 쇠약, 식욕 변화, 음수량 또는 배뇨 습관 변화가 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific concerns noted)",
+      "Compatibility/Compounding Considerations (no specific information)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/28.jsonl",
+    "extracted_at": "2026-03-10T21:51:42.013089+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,608 @@
+{
+  "id": "losartan",
+  "drug_identity": {
+    "name_ko": "로사르탄",
+    "name_en": "Losartan",
+    "active_ingredient": "Losartan potassium",
+    "brand_names": [
+      "Cozaar"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개에서 단백뇨의 보조 치료 목적으로 사람용 제품을 오프라벨로 사용. 고양이에서의 유용성은 불확실하며, 텔미사르탄이 선호됨.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C9"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 로사르탄은 간에서 CYP2C9를 통해 활성 대사체(E-3174)로 전환됨. 개는 이 활성 대사체를 거의 생성하지 않는 것으로 알려져 있음."
+    },
+    "extra_information": "개에서 로사르탄은 활성 대사체(E-3174)를 거의 생성하지 않아 사람에 비해 약효가 낮을 수 있음. 대부분의 약물은 담즙/대변으로 배설되며 장간 순환이 일어남. 고양이에 대한 약동학 데이터는 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개에서의 수의학적 PK 데이터 일부 존재; 고양이는 데이터 없음. 사람 데이터 보완 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension",
+          "dizziness"
+        ],
+        "index": -1,
+        "evidence": "기립성 어지럼증 및 저혈압이 부작용으로 보고되어 간접적인 뇌 관련 영향 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hypotension",
+          "blood pressure"
+        ],
+        "index": 1,
+        "evidence": "고칼륨혈증 및 저혈압 위험이 보고됨. 혈압 및 전해질 변화가 혈액에 영향을 미침."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal function changes",
+          "proteinuria",
+          "hyperkalemia",
+          "renal impairment"
+        ],
+        "index": 2,
+        "evidence": "신기능 변화 및 고칼륨혈증 가능성. 단백뇨 치료 목적으로 사용되며 신기능 모니터링 필요."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "hepatopathy",
+          "increased liver enzymes",
+          "first-pass metabolism"
+        ],
+        "index": 3,
+        "evidence": "간 대사 약물로 간장애 시 용량 감량 권고. 드물게 간독성 및 간효소 상승 보고됨."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypotension",
+          "blood pressure",
+          "heart rate",
+          "stroke volume"
+        ],
+        "index": 4,
+        "evidence": "혈압 강하 효과로 인한 심혈관계 영향. 실험적 심부전 개 모델에서 혈역학적 효과 확인됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음. 사람 부작용 프로파일 기반 간접 추정."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 로사르탄의 혈압 강하 효과가 유의하지 않았다는 연구 결과 있음. 고칼륨혈증 가능성은 이론적으로 존재."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal function changes"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 로사르탄의 신기능에 대한 직접적 데이터 없음. 이론적 위험만 존재."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "hepatopathy"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 간 대사 데이터 없음. 간장애 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "blood pressure"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 혈압 강하 효과가 유의하지 않았다는 연구 결과 있음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 3.0,
+      "mean": 2.5,
+      "species": "dog"
+    },
+    "f_percent": 28,
+    "protein_binding_percent": 97,
+    "evidence": "개에서 단회 경구 투여 시 1시간 이내 최고 혈중 농도 도달, 생체이용률 23~33%, 분포용적 0.3 L/kg, 혈장 단백 결합률 약 97%, 소실 반감기 2~3시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "hyperkalemia",
+        "renal function changes"
+      ],
+      "evidence": "Increased risk for adverse effects including hypotension, hyperkalemia, and renal function changes; increased monitoring warranted."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "reduced antihypertensive effect",
+        "renal impairment"
+      ],
+      "evidence": "Possible reduced antihypertensive effects of losartan and increased risk for renal impairment."
+    },
+    {
+      "drug": "Baclofen",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "additive blood pressure lowering"
+      ],
+      "evidence": "Concurrent use may have additive blood pressure lowering effects."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam, lorazepam)",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Cabergoline",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "increased losartan concentration"
+      ],
+      "evidence": "Concurrent use may increase the risk for increased losartan concentrations."
+    },
+    {
+      "drug": "Corticosteroids (e.g., betamethasone, dexamethasone)",
+      "severity": 2,
+      "keywords": [
+        "reduced antihypertensive effect"
+      ],
+      "evidence": "May decrease the antihypertensive effects of angiotensin II receptor blockers (ARBs)."
+    },
+    {
+      "drug": "Dexmedetomidine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "bradycardia",
+        "additive blood pressure and heart rate effects"
+      ],
+      "evidence": "Concurrent use may result in additive effects on blood pressure and heart rate."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Dichlorphenamide",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration"
+      ],
+      "evidence": "Concurrent use may increase digoxin concentration; closely monitor digoxin concentration and therapeutic effects."
+    },
+    {
+      "drug": "Diphenhydramine",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Doxepin",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia"
+      ],
+      "evidence": "Concurrent use may increase risk for hypoglycemia."
+    },
+    {
+      "drug": "Low Molecular Weight Heparins (e.g., dalteparin, enoxaparin)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia"
+      ],
+      "evidence": "Concurrent use may increase risk for hyperkalemia."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "reduced antihypertensive effect",
+        "renal impairment"
+      ],
+      "evidence": "Possible reduced antihypertensive effects of losartan and increased risk for renal impairment."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, butorphanol)",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Potassium Preparations / Potassium-Sparing Diuretics (e.g., spironolactone)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia"
+      ],
+      "evidence": "Increased risk for hyperkalemia; increased monitoring of serum potassium warranted."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 2,
+      "keywords": [
+        "reduced ARB efficacy"
+      ],
+      "evidence": "Concurrent use may decrease the efficacy of ARBs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "사구체 질환에서 단백뇨의 보조 치료 (질소혈증 개) - 초기 용량 (오프라벨, IRIS 권고)",
+          "value": "0.125",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 반응 및 부작용 모니터링 필요. 1~2주 후 용량 증량 고려.",
+          "evidence": "IRIS 합의 권고 용량. 질소혈증 개에서 초기 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "사구체 질환에서 단백뇨의 보조 치료 (질소혈증 개) - 증량 용량 (오프라벨, IRIS 권고)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "모니터링 후 증량. UPC, 크레아티닌, 칼륨, 혈압 모니터링 필요.",
+          "evidence": "IRIS 합의 권고 용량. 질소혈증 개에서 증량 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "사구체 질환에서 단백뇨의 보조 치료 (비질소혈증 개) - 초기 용량 (오프라벨, IRIS 권고)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 반응 및 부작용 모니터링 필요. 1~2주 후 용량 증량 고려.",
+          "evidence": "IRIS 합의 권고 용량. 비질소혈증 개에서 초기 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "사구체 질환에서 단백뇨의 보조 치료 (비질소혈증 개) - 증량 용량 (오프라벨, IRIS 권고)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "모니터링 후 증량. UPC, 크레아티닌, 칼륨, 혈압 모니터링 필요.",
+          "evidence": "IRIS 합의 권고 용량. 비질소혈증 개에서 증량 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신기능 변화 및 고칼륨혈증 가능성이 있으므로 신기능 모니터링 필요. 저혈압 또는 전해질 불균형 환자에서는 사용 금기. 명시적인 용량 조정 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간장애 환자에서 용량 감량이 필요할 수 있음. 드물게 간독성 및 간효소 상승이 보고됨. 구체적인 용량 조정 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (로사르탄 또는 ARB류)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to losartan",
+        "ARB allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압",
+      "match_terms": [
+        "hypotension",
+        "low blood pressure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체액 또는 전해질 결핍",
+      "match_terms": [
+        "volume depletion",
+        "electrolyte depletion",
+        "dehydration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "안지오텐신 II 수용체 차단제(ARB)로서 AT1 수용체를 선택적으로 차단하여 알도스테론 합성 및 분비를 감소시키고, 혈관 확장, 칼륨 배설 감소, 나트륨 배설 증가를 유발함.",
+    "common_extra_effects": [
+      "저혈압",
+      "고칼륨혈증",
+      "신기능 변화",
+      "기립성 어지럼증",
+      "건성 기침 (사람)",
+      "비충혈",
+      "요통",
+      "드물게 간독성 및 간효소 상승"
+    ],
+    "dog_mechanism": "개에서는 활성 대사체(E-3174)가 거의 생성되지 않아 사람에 비해 약효가 낮을 수 있음. 로사르탄 자체는 E-3174보다 약 3배 효능이 낮음.",
+    "dog_extra_effects": [
+      "저혈압",
+      "고칼륨혈증",
+      "신기능 변화",
+      "구토",
+      "설사",
+      "식욕부진",
+      "피로"
+    ],
+    "cat_mechanism": "고양이에서 로사르탄은 혈압 또는 승압 반응에 유의한 효과를 보이지 않았음 (실험적 고혈압 모델, n=6).",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 로사르탄은 활성 대사체(E-3174)를 거의 생성하지 않아 사람에 비해 효능이 낮을 수 있음. IRIS 권고에 따라 사구체 질환에서 단백뇨의 보조 치료로 사용 가능하나, 임상 경험이 제한적임. ACE 억제제와의 병용이 일반적으로 권고됨. 텔미사르탄이 더 많은 연구와 임상 경험을 바탕으로 선호될 수 있음.",
+    "cat": "고양이에서 로사르탄의 유용성은 불확실함. 실험적 고혈압 모델에서 혈압에 유의한 효과를 보이지 않았음. 고양이에서는 FDA 승인을 받은 텔미사르탄 사용이 권고됨. 약동학 데이터 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 임상 경험이 매우 제한적이며 실험적 사용으로 간주됨. 활성 대사체 생성이 적어 용량 조정이 필요할 수 있음. 신기능, 혈압, 전해질 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 혈압 강하 효과가 유의하지 않았다는 연구 결과 있음. 약동학 데이터 없음. 텔미사르탄 사용이 권고됨."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(30°C 이하) 보관, 빛 차단. 현탁액은 냉장(2~8°C) 보관, 30일 이내 사용.",
+    "forms": [
+      "경구 정제: 25 mg, 50 mg, 100 mg (Cozaar®, 제네릭)",
+      "즉석 조제 현탁액: 2.5 mg/mL (냉장 보관, 30일 이내 사용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로사르탄은 안지오텐신 II 수용체 차단제(ARB)로, 개에서 사구체 질환에 의한 단백뇨의 보조 치료에 사용될 수 있으나 임상 경험이 매우 제한적임. 개는 활성 대사체(E-3174)를 거의 생성하지 않아 사람에 비해 효능이 낮을 수 있으며, 용량 조정이 필요할 수 있음. 고양이에서는 혈압 강하 효과가 유의하지 않았으며, 텔미사르탄이 선호됨. 임신 동물에서는 사용 금기.",
+    "indications": "개: 사구체 질환에서 단백뇨의 보조 치료 (오프라벨, IRIS 권고). 고양이: 현재 권고되지 않음 (텔미사르탄 선호).",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 개나 고양이에서 사용 경험이 적어 부작용이 잘 알려져 있지 않으므로, 설사, 구토, 식욕 감소, 피로, 저혈압(실신, 무기력, 운동 불내성 등) 등의 증상이 나타나면 즉시 수의사에게 알려주세요. 이 약은 기형을 유발할 수 있으므로 임신한 동물에게는 사용하지 마십시오. 가정 내 임산부는 이 약을 복용하지 않도록 주의하고, 투약 시 일회용 장갑을 착용하며 투약 후 손을 씻으십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Cat pharmacokinetics",
+      "Cat dosage",
+      "Specific renal dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.half_life_hr (cat)",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:44:08.134090+00:00",
+    "reviewer": null
+  }
+}

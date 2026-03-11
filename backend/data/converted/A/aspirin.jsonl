@@ -1,0 +1,866 @@
+{
+  "id": "aspirin",
+  "drug_identity": {
+    "name_ko": "아스피린",
+    "name_en": "Aspirin",
+    "active_ingredient": "Acetylsalicylic Acid",
+    "brand_names": [
+      "Canine Aspirin Chewable Tablets for Small & Medium Dogs",
+      "Canine Aspirin Chewable Tablets for Large Dogs",
+      "Arthri-Eze Aspirin Granules",
+      "Alka-Seltzer",
+      "Aspirin 60 Grains",
+      "Aspirin 240 Grains Boluses",
+      "Aspirin 480 Grains Boluses"
+    ],
+    "allergy_class": null,
+    "class": "NSAID",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Desmopressin acetate",
+    "reversal_evidence": "데스모프레신 아세테이트는 응급 수술이 필요한 개 3마리에서 아스피린 유발 혈소판 기능 장애를 역전시키는 것으로 나타났습니다.",
+    "off_label_note": "수의 환자에 대해 FDA 승인된 제품 또는 용량이 없으며, 모든 용량은 허가 외 사용입니다.",
+    "dosage_form": [
+      "Tab",
+      "Chewable",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 81,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 325,
+        "unit": "mg"
+      },
+      {
+        "value": 450,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 650,
+        "unit": "mg"
+      },
+      {
+        "value": 12,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "살리실산염은 주로 글리신 및 글루쿠론산과의 포합(glucuronyl transferase 경유)을 통해 간에서 대사됩니다. 고양이는 이 효소 경로가 결핍되어 반감기가 연장됩니다. 대사는 대사 경로에 따라 1차 및 용량 의존적 동역학에 의해 결정됩니다."
+    },
+    "extra_information": "개에서 혈청 반감기는 약 8시간이며, 고양이에서는 약 38시간(범위 27~45시간)으로 고양이의 glucuronyl transferase 결핍으로 인해 약물 축적이 발생할 수 있습니다. 신장은 여과 및 세뇨관 분비를 통해 살리실산염과 그 대사물을 빠르게 배설하며, 상당한 세뇨관 재흡수가 pH 의존적으로 발생합니다."
+  },
+  "organ_burden_logic": {
+    "note": "점수는 원문에서 언급된 키워드 및 독성/약리 효과를 기반으로 산정되었습니다. 수의학 종 특이적 PK 데이터가 제한적이므로 일부 점수는 인간 데이터 및 독성 보고를 참고하였습니다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "cerebral edema",
+          "seizures",
+          "ataxia",
+          "coma"
+        ],
+        "index": 1,
+        "evidence": "고용량 과다복용 시 대뇌 부종, 운동실조, 발작, 혼수가 보고됨"
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "platelet aggregation inhibition",
+          "bleeding",
+          "anemia",
+          "panhypoproteinemia",
+          "antiplatelet"
+        ],
+        "index": 1,
+        "evidence": "COX-1 비가역적 억제로 혈소판 응집 억제, 위장관 출혈로 인한 빈혈 및 범저단백혈증 가능"
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "nephrotoxicity",
+          "renal tubular secretion",
+          "renal excretion"
+        ],
+        "index": 1,
+        "evidence": "신부전 환자에서 상대적 금기이며, 아미노글리코사이드와 병용 시 신독성 위험 증가. 신장이 주요 배설 경로임"
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "severe hepatic failure",
+          "liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 주로 대사되며, 중증 간부전 환자에서 주의 사용 권고. 살리실산염 고농도 분포"
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "heart",
+          "salicylate distribution"
+        ],
+        "index": 1,
+        "evidence": "살리실산염이 심장에 고농도로 분포하나, 직접적인 심장 독성 보고는 제한적임"
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "cerebral edema",
+          "seizures",
+          "ataxia",
+          "coma",
+          "drug accumulation"
+        ],
+        "index": 1,
+        "evidence": "고양이는 반감기가 길어(27~45시간) 약물 축적 위험이 높으며, 과다복용 시 대뇌 부종, 발작, 혼수 보고됨"
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "platelet aggregation inhibition",
+          "bleeding",
+          "antiplatelet",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "혈소판 응집 억제 및 위장관 출혈로 인한 빈혈 위험. 고양이에서 클로피도그렐이 더 안전한 대안으로 권고됨"
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "renal excretion",
+          "drug accumulation",
+          "prolonged half-life"
+        ],
+        "index": 1,
+        "evidence": "고양이는 살리실산염 대사 및 배설이 느려 신장 부담 증가. 신부전 시 상대적 금기"
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "glucuronyl transferase deficiency",
+          "prolonged half-life",
+          "drug accumulation",
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "고양이는 glucuronyl transferase 결핍으로 간 대사가 크게 저하되어 반감기 연장 및 약물 축적 위험이 높음"
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "heart",
+          "salicylate distribution"
+        ],
+        "index": 1,
+        "evidence": "살리실산염이 심장에 고농도로 분포하나, 직접적인 심장 독성 보고는 제한적임"
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 27.0,
+      "max": 45.0,
+      "mean": 38.0,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 혈청 반감기 약 8시간, 고양이에서 약 38시간(범위 27~45시간), 인간에서 평균 1.5시간. 낮은 살리실산염 농도에서 단백 결합률 약 90%, 높은 농도에서 약 70%. 위의 half_life_hr은 고양이 기준이며, 개의 평균 반감기는 8시간임."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 이론적 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "reduced ACE inhibitor efficacy",
+        "nephrotoxicity"
+      ],
+      "evidence": "ACE 억제제의 효과가 감소할 수 있으며, 병용 시 신독성 위험이 증가할 수 있음"
+    },
+    {
+      "drug": "Alendronate",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects"
+      ],
+      "evidence": "아스피린과 병용 시 상부 위장관 부작용 위험 증가"
+    },
+    {
+      "drug": "Aminoglycosides (e.g., amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "아미노글리코사이드와 병용 시 신독성 발생 가능성 증가; 임상적 유의성은 불명확하나 위험-이익 평가 필요"
+    },
+    {
+      "drug": "Anticoagulants, Oral (e.g., rivaroxaban, warfarin)",
+      "severity": 3,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "병용 시 출혈 위험 증가"
+    },
+    {
+      "drug": "Calcium Channel Blockers, Nondihydropyridine (e.g., diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet effect",
+        "bleeding risk"
+      ],
+      "evidence": "아스피린의 항혈소판 효과가 증가하여 출혈 위험 증가"
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (e.g., acetazolamide, dichlorphenamide)",
+      "severity": 3,
+      "keywords": [
+        "metabolic acidosis"
+      ],
+      "evidence": "고용량 아스피린과 dichlorphenamide 병용은 대사성 산증 위험으로 금기; 다른 탄산탈수효소 억제제와도 주의 필요"
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "병용 시 출혈 위험 증가"
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "GI bleeding",
+        "reduced salicylate levels",
+        "increased clearance"
+      ],
+      "evidence": "코르티코스테로이드는 살리실산염 청소율을 증가시키고 혈청 농도를 감소시키며 위장관 출혈 위험을 증가시킬 수 있음"
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin plasma levels",
+        "decreased digoxin clearance"
+      ],
+      "evidence": "개에서 아스피린이 디곡신 청소율을 감소시켜 혈장 디곡신 농도를 증가시킴"
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "delayed aspirin excretion",
+        "aspirin toxicity",
+        "reduced diuretic effect"
+      ],
+      "evidence": "푸로세미드가 아스피린의 신장 배설과 경쟁하여 아스피린 배설을 지연시킬 수 있으며, 고용량 아스피린 투여 시 독성 위험 증가. 푸로세미드의 이뇨 효과도 감소할 수 있음"
+    },
+    {
+      "drug": "Glucosamine",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "병용 시 출혈 위험 증가"
+    },
+    {
+      "drug": "Heparin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "병용 시 출혈 위험 증가"
+    },
+    {
+      "drug": "Hyaluronidase",
+      "severity": 1,
+      "keywords": [
+        "reduced therapeutic benefit"
+      ],
+      "evidence": "히알루로니다제의 치료 효과가 감소할 수 있으며, 더 높은 용량이 필요할 수 있음"
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "potentiated hypoglycemic effect"
+      ],
+      "evidence": "아스피린이 인슐린의 혈당 강하 효과를 강화할 수 있음"
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "protein displacement",
+        "reduced renal tubular excretion",
+        "methotrexate toxicity"
+      ],
+      "evidence": "아스피린이 메토트렉세이트를 혈장 단백에서 치환하고 신세뇨관 배설을 감소시켜 메토트렉세이트 독성 위험 증가"
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, deracoxib, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration"
+      ],
+      "evidence": "병용 시 위장관 궤양 발생 위험 증가. 아스피린에서 COX-2 NSAID로 전환 시 개에서 3~10일, 고양이에서 7~10일의 휴약 기간 권고"
+    },
+    {
+      "drug": "Omega-3 Fatty Acids",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet effect",
+        "bleeding risk"
+      ],
+      "evidence": "항혈소판 효과를 증강시키고 출혈 위험을 증가시킬 수 있음"
+    },
+    {
+      "drug": "Pentosan Polysulfate Sodium",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "출혈 위험 증가"
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 1,
+      "keywords": [
+        "hepatic enzyme induction",
+        "increased aspirin metabolism"
+      ],
+      "evidence": "페노바르비탈에 의한 간 효소 유도로 아스피린 대사가 증가할 수 있음"
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "antagonized uricosuric effect"
+      ],
+      "evidence": "일반 용량의 아스피린이 프로베네시드의 요산 배설 촉진 효과를 길항할 수 있음"
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, paroxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet effect",
+        "bleeding risk"
+      ],
+      "evidence": "아스피린의 항혈소판 효과가 증가하여 출혈 위험 증가"
+    },
+    {
+      "drug": "Spironolactone",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic activity"
+      ],
+      "evidence": "아스피린이 스피로노락톤의 이뇨 활성을 억제할 수 있음"
+    },
+    {
+      "drug": "Sulfonylureas (e.g., glipizide, glyburide)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "potentiated hypoglycemic effect"
+      ],
+      "evidence": "아스피린이 설포닐우레아의 혈당 강하 효과를 강화할 수 있음"
+    },
+    {
+      "drug": "Tetracycline",
+      "severity": 1,
+      "keywords": [
+        "chelation",
+        "reduced absorption"
+      ],
+      "evidence": "완충 아스피린의 제산제 성분이 테트라사이클린을 킬레이트화할 수 있으므로 최소 1시간 간격으로 투여 필요"
+    },
+    {
+      "drug": "Tiludronate",
+      "severity": 2,
+      "keywords": [
+        "reduced tiludronate serum concentration"
+      ],
+      "evidence": "아스피린 병용 시 틸루드로네이트 혈청 농도가 감소할 수 있음"
+    },
+    {
+      "drug": "Urinary Acidifying Drugs (e.g., ammonium chloride, ascorbic acid, methionine)",
+      "severity": 2,
+      "keywords": [
+        "decreased renal salicylate excretion",
+        "salicylate accumulation"
+      ],
+      "evidence": "소변 산성화제는 살리실산염의 신장 배설을 감소시켜 축적 위험 증가"
+    },
+    {
+      "drug": "Urinary Alkalinizing Drugs (e.g., acetazolamide, sodium bicarbonate)",
+      "severity": 2,
+      "keywords": [
+        "increased renal salicylate excretion",
+        "reduced efficacy"
+      ],
+      "evidence": "소변 알칼리화제는 살리실산염의 신장 배설을 유의하게 증가시켜 혈중 농도 감소"
+    },
+    {
+      "drug": "Valproic Acid, Divalproex",
+      "severity": 2,
+      "keywords": [
+        "increased valproate serum concentration"
+      ],
+      "evidence": "아스피린 병용 시 발프로에이트 혈청 농도가 증가할 수 있음"
+    },
+    {
+      "drug": "Vitamin E",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet effect",
+        "bleeding risk"
+      ],
+      "evidence": "아스피린의 항혈소판 효과가 증가하여 출혈 위험 증가"
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "thromboxane synthesis",
+        "antiplatelet offset"
+      ],
+      "evidence": "사이클로스포린 치료 시 아스피린이 사이클로스포린 유발 트롬복산 합성을 상쇄하기 위해 권고될 수 있음"
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "high",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 7.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "혈소판 응집 억제/항혈전",
+          "value": "2 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 혈전색전증 예방을 위한 이상적 용량은 상충되는 데이터로 인해 불명확함"
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 용혈성 빈혈(IMHA) - 클로피도그렐과 병용",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 클로피도그렐과 병용 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통/해열/항염증 (완충 아스피린)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "허가 외 사용(일화적 용량). FDA 승인 NSAID가 위장관 부작용이 적어 선호됨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통/해열/항염증 (고용량, 일화적)",
+          "value": "20 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": null,
+          "evidence": "허가 외 사용(일화적 용량). FDA 승인 NSAID가 선호됨"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통/해열/항염증",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "주 3회(월, 수, 금) 또는 2~3일마다 투여; 일화적 용량",
+          "evidence": "허가 외 사용(일화적). 실질적으로 81mg 정제 1/2~1정을 주 3회 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항혈전 - 고용량",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "2~3일마다 투여",
+          "evidence": "허가 외 사용. 클로피도그렐이 항혈소판제로 더 우수한 것으로 나타남"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항혈전 - 저용량",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일마다 투여 (mg/kg 아닌 고정 용량)",
+          "evidence": "허가 외 사용. 5 mg/cat(mg/kg 아님) 3일마다 투여"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 상대적 금기. 살리실산염 및 대사물은 신장을 통해 배설되므로 신기능 저하 시 축적 위험이 있음. 고양이는 반감기가 길어 특히 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간부전 환자에서 주의 사용 권고. 간이 주요 대사 기관이므로 간기능 저하 시 살리실산염 축적 위험 증가."
+  },
+  "contraindications": [
+    {
+      "condition": "아스피린 또는 살리실산염 과민반응",
+      "match_terms": [
+        "aspirin hypersensitivity",
+        "salicylate allergy",
+        "NSAID hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 위장관 출혈/궤양",
+      "match_terms": [
+        "GI bleeding",
+        "GI ulceration",
+        "GI erosion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 장애",
+      "match_terms": [
+        "hemorrhagic disorder",
+        "coagulopathy",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간부전",
+      "match_terms": [
+        "hepatic failure",
+        "liver failure",
+        "severe hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "코르티코스테로이드 또는 다른 NSAID 병용",
+      "match_terms": [
+        "concurrent corticosteroid",
+        "concurrent NSAID",
+        "glucocorticoid use"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "천식",
+      "match_terms": [
+        "asthma",
+        "bronchospasm",
+        "aspirin-sensitive asthma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저알부민혈증",
+      "match_terms": [
+        "hypoalbuminemia",
+        "low albumin"
+      ],
+      "severity": "caution",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "원문에서 특정 유전적 감수성 또는 품종 특이적 위험에 대한 언급 없음. 고양이의 glucuronyl transferase 결핍은 종 특이적 대사 특성이나 유전자 돌연변이에 의한 것은 아님."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX-1, 프로스타글란딘 합성효소)를 억제하여 프로스타글란딘 및 트롬복산(TXA2) 합성을 감소시킴. 혈소판에서는 새로운 COX 합성이 불가능하여 혈소판 응집의 비가역적 억제가 발생함.",
+    "common_extra_effects": [
+      "위장관 자극(오심, 식욕부진, 구토, 설사)",
+      "위장관 출혈",
+      "혈소판 응집 억제",
+      "빈혈",
+      "범저단백혈증",
+      "과민반응(드물게)",
+      "대뇌 부종(과다복용 시)",
+      "발작(과다복용 시)",
+      "혼수(과다복용 시)",
+      "고체온증(과다복용 시)",
+      "대사성 산증(과다복용 시)"
+    ],
+    "dog_mechanism": "COX-1 비가역적 억제를 통한 항혈소판, 진통, 해열, 항염증 효과. 개에서 12 mg/kg/day 이상에서 혈소판 기능 및 응집 억제 효과가 통계적으로 유의함.",
+    "dog_extra_effects": [
+      "위장관 궤양(특히 무코팅 아스피린)",
+      "구토",
+      "설사",
+      "위장관 출혈",
+      "과민반응(드물게)",
+      "기면(과다복용 시)",
+      "헐떡임(과다복용 시)",
+      "고체온증(과다복용 시)",
+      "혈변(과다복용 시)"
+    ],
+    "cat_mechanism": "COX-1 비가역적 억제. 고양이는 glucuronyl transferase 결핍으로 살리실산염 대사가 느려 반감기가 27~45시간으로 연장되어 약물 축적 위험이 높음.",
+    "cat_extra_effects": [
+      "구토",
+      "식욕부진",
+      "기면",
+      "혈변",
+      "약물 축적으로 인한 독성",
+      "대뇌 부종(과다복용 시)",
+      "발작(과다복용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아스피린 사용은 더 안전하고 효과적인 대안(FDA 승인 NSAID, 클로피도그렐)으로 대체되었습니다. 위장관 부작용(궤양, 구토, 설사)에 비교적 민감하며, 완충 또는 장용정이 무코팅 정제보다 위장관 자극이 적습니다. 수술 1주일 전(혈전 위험이 높은 경우 48시간 전) 투여를 중단해야 합니다. 혈소판 응집 억제 효과는 개체 간 변이가 있습니다.",
+    "cat": "고양이는 glucuronyl transferase 결핍으로 살리실산염 반감기가 약 38시간(27~45시간)으로 매우 길어 약물 축적 위험이 높습니다. 반드시 신중하게 용량을 조절하고 투여 간격을 충분히 두어야 합니다(2~3일마다). 클로피도그렐이 항혈소판제로 더 안전하고 효과적인 대안으로 권고됩니다. 다른 NSAID로 전환 시 7~10일의 휴약 기간이 필요합니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 위장관 부작용(궤양, 출혈)에 민감하며, FDA 승인 NSAID가 선호됩니다. 신부전, 간부전, 출혈 장애, 코르티코스테로이드 또는 다른 NSAID 병용 시 주의가 필요합니다. 수술 전 1주일(또는 48시간) 투여 중단 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 살리실산염 대사 능력이 저하되어 반감기가 매우 길고 약물 축적 위험이 높습니다. 용량과 투여 간격에 각별한 주의가 필요하며, 클로피도그렐이 더 안전한 대안입니다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 방습 용기에 보관. 유효기간이 지났거나 강한 식초 냄새가 나는 제품은 사용하지 마십시오. 건조한 공기에서는 안정적이나 수분에 노출되면 아세트산과 살리실산으로 가수분해됩니다. 수용액은 pH 2~3에서 가장 안정적입니다.",
+    "forms": [
+      "장용정 (81 mg)",
+      "완충 씹는 정제 (60 mg, 120 mg, 150 mg, 300 mg, 450 mg)",
+      "일반 정제 (325 mg, 500 mg)",
+      "장용정 (81 mg, 325 mg, 500 mg, 650 mg)",
+      "서방정 (81 mg, 650 mg)",
+      "완충 정제 (324 mg, 325 mg)",
+      "분말 (1 lb)",
+      "과립 (2.5 g/39 mL 스쿱)",
+      "액상 농축액 (12% 아스피린 상당)",
+      "볼루스 (240 그레인, 480 그레인)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아스피린은 COX-1 억제를 통한 진통, 해열, 항혈소판 효과를 가진 NSAID입니다. 개와 고양이에서의 사용은 더 안전하고 효과적인 대안으로 대체되었습니다. 고양이는 glucuronyl transferase 결핍으로 반감기가 약 38시간으로 매우 길어 약물 축적 위험이 높으므로 용량 조절에 각별한 주의가 필요합니다. 개에서는 위장관 부작용(궤양, 출혈)에 비교적 민감합니다. 수의 환자에 대해 FDA 승인된 용량이 없으며 모든 용량은 허가 외 사용입니다.",
+    "indications": "진통, 해열, 항염증 효과(허가 외). 혈소판 응집 억제 및 항혈전 목적(허가 외). 면역매개성 용혈성 빈혈(IMHA)에서 클로피도그렐과 병용(허가 외). 사이클로스포린 유발 트롬복산 합성 상쇄(허가 외). 말에서 제엽염의 항혈소판 보조 치료(허가 외). 소에서 진통(허가 외).",
+    "client_info": "동물이 식욕 감소, 구토, 설사, 과도한 출혈 또는 멍이 드는 증상을 보이면 즉시 수의사에게 연락하십시오. 검고 타르 같은 변은 심각한 내부 출혈의 징후이므로 즉시 수의사에게 알려야 합니다. 고양이에게는 반드시 처방된 용량과 투여 간격을 엄격히 지켜야 하며, 임의로 용량을 늘리지 마십시오. 수술 예정이 있는 경우 최소 1주일 전에 수의사에게 알려 투약 중단 여부를 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme profile",
+      "Oral bioavailability percentage",
+      "Time to peak plasma concentration (Tmax)",
+      "Onset of action (minutes)",
+      "Dog-specific half-life range (only mean ~8h reported)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/49.jsonl",
+    "extracted_at": "2026-03-11T04:20:43.572321+00:00",
+    "reviewer": null
+  }
+}

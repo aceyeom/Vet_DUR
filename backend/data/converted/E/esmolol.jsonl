@@ -1,0 +1,610 @@
+{
+  "id": "esmolol",
+  "drug_identity": {
+    "name_ko": "에스몰롤",
+    "name_en": "Esmolol",
+    "active_ingredient": "Esmolol hydrochloride",
+    "brand_names": [
+      "Brevibloc",
+      "Miniblock"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 영역에서 허가된 제품 없음. 개와 고양이에서 상심실성 빈맥, 심실 부정맥 치료 등에 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "에스몰롤은 혈중 에스테라제에 의해 신속히 대사되어 거의 불활성인 대사체로 전환됨. 신장 또는 간 기능 장애가 있어도 소실 특성에 큰 영향을 미치지 않음."
+    },
+    "extra_information": "개에서 IV 주입 중단 후 약 20분 이내에 약효가 소실됨. 분포 반감기 약 2분, 말단 반감기 약 10분. 로딩 도스 투여 시 약 5분, 미투여 시 약 30분 내 정상 상태 혈중 농도 도달."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 혈중 에스테라제 대사로 간/신장 부담 최소. 주요 심혈관계 효과(음성 변력, 음성 변시) 및 저혈압/서맥 부작용 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS에 거의 분포하지 않음"
+        ],
+        "index": -1,
+        "evidence": "IV 주사 후 CNS로의 분포가 미미하다고 명시됨. 과량 투여 시 운동실조, 진전, 경련 등 CNS 증상 보고."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "혈중 에스테라제 대사",
+          "저혈압",
+          "서맥"
+        ],
+        "index": 1,
+        "evidence": "혈중 에스테라제에 의해 대사됨. 저혈압 및 서맥이 가장 흔한 부작용으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "신기능 장애 영향 없음"
+        ],
+        "index": -1,
+        "evidence": "신기능 장애가 소실 특성에 큰 영향을 미치지 않는다고 명시됨."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "간기능 장애 영향 없음"
+        ],
+        "index": -1,
+        "evidence": "간기능 장애가 소실 특성에 큰 영향을 미치지 않는다고 명시됨."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "음성 변력",
+          "음성 변시",
+          "AV 차단",
+          "서맥",
+          "심근 억제"
+        ],
+        "index": 1,
+        "evidence": "심근의 베타-1 수용체 차단으로 음성 변력 및 음성 변시 효과 발생. 서맥, AV 차단, 심근 억제가 주요 심혈관계 부작용."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS에 거의 분포하지 않음"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 CNS 데이터 없음. 개와 동일한 약리학적 특성 적용."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "혈중 에스테라제 대사",
+          "저혈압",
+          "서맥"
+        ],
+        "index": 1,
+        "evidence": "혈중 에스테라제에 의해 대사됨. 고양이 비대성 심근병증 치료에 사용됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "신기능 장애 영향 없음"
+        ],
+        "index": -1,
+        "evidence": "신기능 장애가 소실 특성에 큰 영향을 미치지 않는다고 명시됨."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "간기능 장애 영향 없음"
+        ],
+        "index": -1,
+        "evidence": "간기능 장애가 소실 특성에 큰 영향을 미치지 않는다고 명시됨."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "음성 변력",
+          "음성 변시",
+          "AV 차단",
+          "서맥",
+          "심근 억제"
+        ],
+        "index": 1,
+        "evidence": "고양이 비대성 심근병증에서 항부정맥제로 사용. 심근 억제 및 서맥 위험."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.167,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "말단 반감기 약 10분(≈0.167시간). 분포 반감기 약 2분. IV 주입 중단 후 약 20분 이내 약효 소실(개). 로딩 도스 투여 시 약 5분 내 정상 상태 도달."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 규칙에 따라 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcholinesterase Inhibitors (e.g., physostigmine)",
+      "severity": 2,
+      "keywords": [
+        "severe bradycardia",
+        "서맥"
+      ],
+      "evidence": "병용 시 심각한 서맥 위험 증가."
+    },
+    {
+      "drug": "Alpha-2 Agonists (e.g., dexmedetomidine)",
+      "severity": 2,
+      "keywords": [
+        "AV block",
+        "AV 차단"
+      ],
+      "evidence": "병용 시 AV 차단 위험 증가."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "sinus arrest",
+        "AV block"
+      ],
+      "evidence": "병용 시 서맥, 저혈압, 동정지, AV 차단 발생 가능."
+    },
+    {
+      "drug": "Anesthetic Agents, General",
+      "severity": 2,
+      "keywords": [
+        "myocardial depression",
+        "심근 억제"
+      ],
+      "evidence": "심근 억제성 마취제와 병용 시 심근 억제 상가 효과 발생 가능."
+    },
+    {
+      "drug": "Anticholinergics (e.g., atropine)",
+      "severity": 1,
+      "keywords": [
+        "bradycardia antagonism",
+        "서맥 길항"
+      ],
+      "evidence": "베타차단제의 서맥 효과를 상쇄할 수 있음."
+    },
+    {
+      "drug": "Beta-2-Adrenergic Agonists (e.g., albuterol, terbutaline)",
+      "severity": 2,
+      "keywords": [
+        "bronchodilation impairment",
+        "기관지확장 억제"
+      ],
+      "evidence": "고용량에서 기관지확장 효과를 저해할 수 있음."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., diltiazem, verapamil)",
+      "severity": 3,
+      "keywords": [
+        "myocardial depression",
+        "심근 억제",
+        "IV contraindicated"
+      ],
+      "evidence": "두 약물군의 심근 억제 효과가 상승. IV 근접 투여는 금기. 에스몰롤 중단 후 30분 뒤 딜티아젬 투여 가능."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin levels",
+        "bradycardia",
+        "서맥"
+      ],
+      "evidence": "에스몰롤이 혈청 디곡신 농도를 최대 20% 증가시킬 수 있음. 서맥 위험 증가."
+    },
+    {
+      "drug": "Hypotensive Agents (e.g., amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "저혈압"
+      ],
+      "evidence": "병용 시 저혈압 위험 증가."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs)",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "고혈압"
+      ],
+      "evidence": "MAOI와 에스몰롤 병용은 고혈압 위험으로 권장하지 않음."
+    },
+    {
+      "drug": "Morphine",
+      "severity": 2,
+      "keywords": [
+        "increased esmolol concentration",
+        "에스몰롤 혈중 농도 증가"
+      ],
+      "evidence": "모르핀이 에스몰롤 정상 상태 혈중 농도를 최대 50% 증가시킬 수 있음. 용량 조절 필요."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "저혈압"
+      ],
+      "evidence": "저혈압 위험 증가."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "bradycardia",
+        "저혈압",
+        "서맥"
+      ],
+      "evidence": "저혈압 및 서맥의 상가 효과 발생 가능."
+    },
+    {
+      "drug": "Theophylline, Aminophylline",
+      "severity": 3,
+      "keywords": [
+        "bronchospasm",
+        "기관지경련",
+        "reduced theophylline efficacy"
+      ],
+      "evidence": "에스몰롤이 심각한 기관지경련을 유발하고 테오필린의 치료 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Vasoconstrictors and Inotropes (e.g., dopamine, epinephrine, norepinephrine)",
+      "severity": 3,
+      "keywords": [
+        "blocked cardiac contractility",
+        "심장 수축력 차단"
+      ],
+      "evidence": "전신 혈관 저항이 높은 경우 심장 수축력 차단 위험 증가. 이 약물들을 투여 중인 환자에서 상심실성 빈맥 조절에 에스몰롤 사용 비권장."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥 또는 심실 부정맥 치료 - 초기 로딩 도스 (오프라벨)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "2~5분에 걸쳐 천천히 IV 투여",
+          "evidence": "오프라벨. 초기 IV 로딩 도스 0.25–0.5 mg/kg (250–500 µg/kg)을 2~5분에 걸쳐 투여 후 CRI 시작."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥 또는 심실 부정맥 치료 - 지속 주입 (CRI) (오프라벨)",
+          "value": "10 - 200",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "10분마다 상향 조정 가능. 지속적 모니터링 필요.",
+          "evidence": "오프라벨. CRI 10–200 µg/kg/분 IV. 심부전 또는 승모판 역류 환자에서는 초기 볼루스 없이 CRI 하한 용량으로 시작."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥 또는 심실 부정맥 치료 - 저용량 간헐적 볼루스 프로토콜 (오프라벨)",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "5분마다 반복 투여 가능, 최대 누적 용량 0.5 mg/kg",
+          "evidence": "오프라벨. 일부 임상의는 초기 0.05–0.1 mg/kg (50–100 µg/kg)으로 시작하여 5분마다 0.05–0.1 mg/kg 간헐적 볼루스, 최대 0.5 mg/kg까지 투여 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥 또는 심실 부정맥 치료 - 초기 로딩 도스 (오프라벨, 비대성 심근병증 포함)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "2~5분에 걸쳐 천천히 IV 투여",
+          "evidence": "오프라벨. 개/고양이 공통 용량 권장. 고양이 비대성 심근병증에서 항부정맥제로 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상심실성 빈맥 또는 심실 부정맥 치료 - 지속 주입 (CRI) (오프라벨)",
+          "value": "10 - 200",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "10분마다 상향 조정 가능. 지속적 모니터링 필요.",
+          "evidence": "오프라벨. 개/고양이 공통 용량 권장."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "신기능 장애가 에스몰롤의 소실 특성에 큰 영향을 미치지 않는다고 명시됨. 용량 조절 불필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간기능 장애가 에스몰롤의 소실 특성에 큰 영향을 미치지 않는다고 명시됨. 용량 조절 불필요."
+  },
+  "contraindications": [
+    {
+      "condition": "명백한 심부전 (Overt cardiac failure)",
+      "match_terms": [
+        "cardiac failure",
+        "heart failure",
+        "CHF decompensated"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "2도 또는 3도 AV 차단",
+      "match_terms": [
+        "second-degree AV block",
+        "third-degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동성 서맥 (Sinus bradycardia)",
+      "match_terms": [
+        "sinus bradycardia",
+        "bradycardia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심인성 쇼크 (Cardiogenic shock)",
+      "match_terms": [
+        "cardiogenic shock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전 (CHF)",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기관지수축 (Bronchoconstriction)",
+      "match_terms": [
+        "bronchoconstriction",
+        "asthma",
+        "bronchospasm"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병 (Diabetes mellitus)",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM",
+        "hypoglycemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "심근의 베타-1 아드레날린 수용체를 선택적으로 차단하여 음성 변력 및 음성 변시 효과를 나타냄. AV 결절 전도 지연, 동방결절 회복 시간 연장, 동주기 연장을 통해 항부정맥 효과 발휘. 내인성 교감신경 활성(ISA) 없음. 막 안정화 효과 없음.",
+    "common_extra_effects": [
+      "저혈압 (Hypotension)",
+      "서맥 (Bradycardia)",
+      "저혈당 증상 마스킹 (심박수 증가, 혈압 상승 억제)",
+      "과량 투여 시: 운동실조, 타액 분비, 근육 강직, 진전, 경련, 안검하수, 구토, 과호흡, 발성, 허탈"
+    ],
+    "dog_mechanism": "개에서 IV 주입 중단 후 약 20분 이내 약효 소실. 폐동맥 판막 협착증에서 풍선 판막성형술 후 과역동성 우심실 유출로 폐쇄 관리에 사용.",
+    "dog_extra_effects": [
+      "저혈압",
+      "서맥",
+      "과량 투여 시 운동실조, 타액 분비, 근육 강직, 진전, 경련"
+    ],
+    "cat_mechanism": "고양이 비대성 심근병증에서 항부정맥제로 사용. 상심실성 빈맥 치료에 적용.",
+    "cat_extra_effects": [
+      "저혈압",
+      "서맥"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 IV 주입 중단 후 약 20분 이내 약효가 소실됨. 폐동맥 판막 협착증에서 풍선 판막성형술 후 과역동성 우심실 유출로 폐쇄 관리에 사용 가능. 심부전 또는 승모판 역류 환자에서는 초기 볼루스 없이 CRI 하한 용량으로 시작 권장. IV LD50은 약 32 mg/kg.",
+    "cat": "고양이 비대성 심근병증에서 항부정맥제로 사용됨. 상심실성 빈맥 치료에 적용. 개/고양이 공통 용량 권장사항 적용. 고양이 특이적 약동학 데이터는 제한적임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "울혈성 심부전, 기관지수축, 당뇨병 환자에서 주의 사용. 명백한 심부전, 2~3도 AV 차단, 동성 서맥, 심인성 쇼크에서는 금기. 지속적인 혈압, ECG, 심박수 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "울혈성 심부전, 기관지수축, 당뇨병 환자에서 주의 사용. 명백한 심부전, 2~3도 AV 차단, 동성 서맥, 심인성 쇼크에서는 금기. 지속적인 혈압, ECG, 심박수 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사 농축액은 실온 25°C(77°F) 보관, 15~30°C(59~86°F) 범위 허용. 동결 금지, 과도한 열 차단. 10 mg/mL로 희석 후 냉장 또는 실온에서 24시간 안정.",
+    "forms": [
+      "Esmolol HCl Injection 10 mg/mL (10 mL vials, regular 및 방부제 무첨가)",
+      "Esmolol HCl Injection 20 mg/mL (100 mL bags, 방부제 무첨가)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에스몰롤은 초단시간 작용형 베타-1 선택적 차단제로, 상심실성 빈맥(심방세동/조동, 동성 빈맥) 및 심실 부정맥의 단기 치료에 IV로 사용됩니다. 전신마취 중 발생하는 고혈압 및 상심실성 빈맥 조절에 선택 약물입니다. 혈중 에스테라제에 의해 신속히 대사되어 말단 반감기가 약 10분으로 매우 짧으며, 주입 중단 후 약 20분 내 약효가 소실됩니다. 저혈압과 서맥이 가장 흔한 부작용이며, 명백한 심부전, 2~3도 AV 차단, 동성 서맥, 심인성 쇼크에서는 금기입니다. 수의과 허가 제품은 없으며 오프라벨로 사용됩니다.",
+    "indications": "【승인 적응증】없음 (수의과 허가 제품 없음). 【오프라벨 적응증】개/고양이: 상심실성 빈맥(심방세동/조동, 동성 빈맥), 심실 부정맥의 단기 치료; 베타차단제 치료 효과 판정을 위한 테스트 약물; 전신마취 중 부적절한 교감신경 활성으로 인한 고혈압 및 상심실성 빈맥 조절. 개: 폐동맥 판막 협착증에서 풍선 판막성형술 후 과역동성 우심실 유출로 폐쇄 관리. 고양이: 비대성 심근병증에서 항부정맥제.",
+    "client_info": "에스몰롤은 반드시 입원 환경에서 적절한 모니터링(혈압, 심전도, 심박수) 하에 정맥 주사로만 투여되는 약물입니다. 매우 짧은 시간 동안만 효과가 지속되므로 지속적인 주입이 필요합니다. 저혈압(무기력, 허약감)이나 심박수 감소가 나타날 수 있으나 대부분 일시적입니다. 당뇨병이 있는 반려동물에서는 저혈당 증상(심박수 증가 등)을 가릴 수 있으므로 주의가 필요합니다. 경쟁 동물에서는 사용 전 해당 규정을 반드시 확인하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability (IV only drug)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat (cat-specific dosage confirmation)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:19:07.510910+00:00",
+    "reviewer": null
+  }
+}

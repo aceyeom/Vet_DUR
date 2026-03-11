@@ -1,0 +1,379 @@
+{
+  "id": "demecarium_ophthalmic",
+  "drug_identity": {
+    "name_ko": "데메카리움 점안액",
+    "name_en": "Demecarium Ophthalmic",
+    "active_ingredient": "Demecarium bromide",
+    "brand_names": [],
+    "allergy_class": "organophosphate",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "discontinued",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "현재 상업적으로 판매되지 않으며, 조제약국에서 컴파운딩하여 사용. 개의 원발성 녹내장 예방 목적으로 비표지 사용됨.",
+    "dosage_form": [
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.125,
+        "unit": "%"
+      },
+      {
+        "value": 0.25,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "데메카리움은 유기인산염 계열 항콜린에스테라제로, 슈도콜린에스테라제 및 아세틸콜린에스테라제를 모두 불활성화시킨다. 전신 흡수 시 용량 의존적 독성이 발생할 수 있으며, 특히 고양이에서 치명적일 수 있다. 구체적인 PK 데이터는 모노그래프에 기술되어 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "점안 투여 경로이나 전신 흡수 가능성이 있으며, 유기인산염 계열로 전신 독성 위험이 있음. 특히 고양이에서 치명적 독성 보고됨. 구체적 PK 데이터 부재로 점수는 임상 기술 기반으로 추정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "organophosphate",
+          "acetylcholinesterase inhibition",
+          "systemic toxicity"
+        ],
+        "index": 1,
+        "evidence": "유기인산염 계열로 전신 아세틸콜린에스테라제 감소에 의한 신경계 독성 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "systemic acetylcholinesterase levels"
+        ],
+        "index": 1,
+        "evidence": "전신 아세틸콜린에스테라제 수치 감소가 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "organophosphate",
+          "systemic toxicity"
+        ],
+        "index": 1,
+        "evidence": "유기인산염 계열로 전신 독성 시 심혈관계 영향 가능성 있으나 직접 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "organophosphate",
+          "fatal toxicity",
+          "systemic toxicity",
+          "lethargy",
+          "weakness"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 치명적인 전신 독성이 보고됨. 기면, 허약 등 신경계 증상 포함."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "systemic acetylcholinesterase levels",
+          "fatal dose-related toxicity"
+        ],
+        "index": 1,
+        "evidence": "전신 아세틸콜린에스테라제 감소로 인한 심각한 독성 위험."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "organophosphate",
+          "fatal toxicity"
+        ],
+        "index": 1,
+        "evidence": "유기인산염 계열로 고양이에서 치명적 전신 독성 보고; 심혈관계 영향 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 약동학 데이터(반감기, 생체이용률, 단백결합률 등)가 기술되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's 모노그래프의 약물 상호작용 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Organophosphate compounds (systemic)",
+      "severity": 3,
+      "keywords": [
+        "additive organophosphate toxicity",
+        "cholinesterase inhibition"
+      ],
+      "evidence": "Demecarium is an organophosphate; concurrent use with other organophosphate compounds may cause additive systemic cholinesterase inhibition and severe toxicity."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 3,
+      "keywords": [
+        "prolonged neuromuscular blockade",
+        "pseudocholinesterase inhibition"
+      ],
+      "evidence": "Demecarium inhibits pseudocholinesterase, which metabolizes succinylcholine; concurrent use may result in prolonged neuromuscular blockade."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "녹내장 예방 (원발성 녹내장이 발생한 반대쪽 정상 눈)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 1~2회 점안; 비표지 사용",
+          "evidence": "Prophylaxis of glaucoma in the normal eye (extra-label): 1 drop to the nonglaucomatous eye 1 to 2 times daily"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 구체적 언급 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 구체적 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to demecarium"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (전신 독성 위험)",
+      "match_terms": [
+        "cat",
+        "feline",
+        "organophosphate toxicity"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "항콜린에스테라제 작용: 슈도콜린에스테라제 및 아세틸콜린에스테라제를 불활성화하여 아세틸콜린의 효과를 연장시킴. 홍채 괄약근 및 모양체근 수축(축동)을 유발하여 방수 유출을 촉진하고 안압을 낮춤.",
+    "common_extra_effects": [
+      "자통(stinging)",
+      "작열감(burning)",
+      "안구 자극",
+      "구토",
+      "식욕부진",
+      "설사",
+      "기면",
+      "허약",
+      "전신 독성 (치명적 가능성, 특히 고양이)",
+      "방수 플레어(aqueous humor flare) 유발 (단기)"
+    ],
+    "dog_mechanism": "점안 후 방수 유출 촉진 및 안압 감소. 정상 개에서 8일간 방수 플레어 유발이 보고됨.",
+    "dog_extra_effects": [
+      "단기 방수 플레어 유발",
+      "전신 독성 가능성 (구토, 설사, 기면, 허약)"
+    ],
+    "cat_mechanism": "유기인산염 계열로 고양이에서 심각하고 치명적인 전신 독성 위험이 높음.",
+    "cat_extra_effects": [
+      "심각한 전신 독성",
+      "치명적 독성 가능성",
+      "구토",
+      "식욕부진",
+      "설사",
+      "기면",
+      "허약"
+    ]
+  },
+  "species_notes": {
+    "dog": "개의 원발성 녹내장이 발생한 반대쪽 정상 눈에 예방적으로 사용됨. 활성 녹내장 치료에는 다른 약물에 비해 효과가 제한적임. 정상 개에서 단기(8일) 방수 플레어 유발이 보고됨. 전신 독성 징후(구토, 설사, 기면, 허약)를 모니터링해야 함.",
+    "cat": "고양이에서 심각하고 치명적인 전신 독성이 보고됨. 유기인산염 계열 약물로 고양이에서의 사용은 피해야 하며, 사용 시 극도의 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "전신 독성 징후(구토, 식욕부진, 설사, 기면, 허약) 모니터링 필요. 임신한 보호자는 접촉을 피해야 함. 다른 점안제 투여 전 5분 대기 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 심각하고 치명적인 전신 독성이 보고됨. 사용을 피하는 것이 권장됨."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "습기와 직사광선을 피하여 보관. 냉동 금지. 변색, 혼탁, 입자 발생 시 사용 금지.",
+    "forms": [
+      "0.125% 점안액 (컴파운딩)",
+      "0.25% 점안액 (컴파운딩)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "데메카리움 점안액은 항콜린에스테라제 계열 유기인산염 약물로, 개의 원발성 녹내장이 발생한 반대쪽 정상 눈의 녹내장 예방에 사용됨. 현재 상업적으로 판매되지 않아 컴파운딩 조제가 필요함. 특히 고양이에서 치명적인 전신 독성 위험이 있으므로 주의가 필요하며, 임신 동물 및 임신한 보호자에게는 금기임.",
+    "indications": "개의 원발성 녹내장 반대쪽 정상 눈에 대한 녹내장 예방적 관리 (비표지 사용). 활성 녹내장 치료에는 효과가 제한적임.",
+    "client_info": "수의사의 지시에 따라 정확히 사용하세요. 약물 오염을 방지하기 위해 올바른 점안 방법을 사용하고, 사용하지 않을 때는 뚜껑을 꼭 닫아두세요. 이 약을 점안한 후 다른 점안제를 사용하기 전에 5분을 기다리세요. 습기와 직사광선을 피해 보관하고 냉동하지 마세요. 색이 변하거나 혼탁해지거나 입자가 생기면 사용하지 마세요. 구토, 식욕부진, 설사, 기면, 허약 등 전신 독성 징후가 나타나면 즉시 수의사에게 연락하세요. 임신 중인 보호자는 이 약과의 접촉을 피해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "additive_class",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Drug Interactions",
+      "Overdosage",
+      "Reproductive Safety"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.primary_metabolic_organ",
+      "metabolism_and_clearance.clearance_organ",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.adjustment_type",
+      "species_flags.washout_period_days",
+      "drug_interactions"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/10.jsonl",
+    "extracted_at": "2026-03-10T16:31:33.411023+00:00",
+    "reviewer": null
+  }
+}

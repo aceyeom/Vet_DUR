@@ -1,0 +1,622 @@
+{
+  "id": "hydroxyethyl_starch_hes_colloids",
+  "drug_identity": {
+    "name_ko": "하이드록시에틸 전분 콜로이드",
+    "name_en": "Hydroxyethyl Starch (HES) Colloids",
+    "active_ingredient": "Hydroxyethyl Starch",
+    "brand_names": [
+      "Hespan",
+      "Vetstarch",
+      "Hextend",
+      "Voluven",
+      "Pentaspan"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "헤타스타치(HES 450/0.7, Hespan®)는 소동물에서 허가 외(extra-label) 사용이며, 테트라스타치(HES 130/0.4, Vetstarch®)는 FDA 승인 없이 라벨 정보만 FDA 검토된 수의용 제품임.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 6,
+        "unit": "%"
+      },
+      {
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "value": 6,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "저분자량(50 kDa 미만) 분자는 신장으로 신속히 배설되며, 고분자량 분자는 효소적으로 서서히 분해된 후 신장으로 배설됨. 인체 연구에서 단회 500 mL 투여 후 24시간 내 33%, 2주 후 90% 이상 배설됨."
+    },
+    "extra_information": "개와 고양이에서 별도의 종 특이적 약동학 데이터는 보고되지 않음. 저분자량 HES(130/0.4)의 지속 효과는 약 12시간, 헤타스타치(450/0.7)는 24시간 이상 지속될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종 특이적 PK 데이터 부재로 인체 및 일반 수의 임상 데이터를 기반으로 평가함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS surgery caution",
+          "intracranial bleeding contraindication"
+        ],
+        "index": 1,
+        "evidence": "두개내 출혈 시 금기이며, CNS 수술 환자에서 혈소판 기능 저하로 인한 출혈 위험으로 극도의 주의가 필요함."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "coagulopathy",
+          "platelet dysfunction",
+          "factor VIII",
+          "von Willebrand factor",
+          "PTT increase",
+          "hemodilution"
+        ],
+        "index": 5,
+        "evidence": "혈소판 기능 저하, 응고 시간 연장, 인자 VIII 및 폰 빌레브란트 인자 변화, PTT 유의한 증가, 혈액희석에 의한 혈구용적 및 혈장 단백 감소가 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal failure contraindication",
+          "acute kidney injury risk",
+          "oliguria",
+          "anuria",
+          "renal elimination"
+        ],
+        "index": 4,
+        "evidence": "핍뇨 또는 무뇨성 신부전 시 금기. 인체에서 급성 패혈증 환자의 급성 신손상(AKI) 위험 보고됨. 동물에서의 AKI 위험은 현재 조사 중."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "severe liver disease caution",
+          "coagulopathy risk"
+        ],
+        "index": 2,
+        "evidence": "중증 간질환 환자에서 기존 응고장애 악화 위험으로 주의 권고됨."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "volume overload",
+          "pulmonary edema",
+          "cardiac dysfunction",
+          "congestive heart failure contraindication"
+        ],
+        "index": 3,
+        "evidence": "울혈성 심부전 및 폐부종 시 금기. 심기능 저하 환자에서 순환 과부하 및 폐부종 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "intracranial bleeding contraindication",
+          "CNS surgery caution"
+        ],
+        "index": 1,
+        "evidence": "두개내 출혈 시 금기이며, CNS 수술 환자에서 극도의 주의가 필요함."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "coagulopathy",
+          "platelet dysfunction",
+          "factor VIII",
+          "von Willebrand factor",
+          "hemodilution"
+        ],
+        "index": 5,
+        "evidence": "혈소판 기능 저하, 응고 인자 변화, 혈액희석 효과가 보고됨. 고양이에서 빠른 주입 시 오심 및 구토 유발 가능."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal failure contraindication",
+          "acute kidney injury risk",
+          "oliguria",
+          "anuria"
+        ],
+        "index": 4,
+        "evidence": "핍뇨 또는 무뇨성 신부전 시 금기. 동물에서의 AKI 위험은 현재 조사 중."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "severe liver disease caution"
+        ],
+        "index": 2,
+        "evidence": "중증 간질환 환자에서 기존 응고장애 악화 위험으로 주의 권고됨."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "volume overload",
+          "pulmonary edema",
+          "cardiac dysfunction",
+          "congestive heart failure contraindication"
+        ],
+        "index": 3,
+        "evidence": "울혈성 심부전 및 폐부종 시 금기. 심기능 저하 환자에서 순환 과부하 및 폐부종 위험."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "주입 완료 후 수 분 이내에 최대 혈장량 확장 효과 발생. 헤타스타치(HES 450/0.7)는 24시간 이상, 테트라스타치(HES 130/0.4)는 약 12시간 효과 지속. 반감기는 명시적으로 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (heparins, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "coagulopathy"
+      ],
+      "evidence": "High doses of HES may increase risk for bleeding when used with anticoagulants; use together with caution."
+    },
+    {
+      "drug": "Anti-Platelet Agents (aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "platelet dysfunction"
+      ],
+      "evidence": "High doses of HES may increase risk for bleeding when used with anti-platelet agents; use together with caution."
+    },
+    {
+      "drug": "ACE Inhibitors (enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Potential for increased serum potassium if HES in lactated electrolytes is used with ACE inhibitors; increased monitoring warranted."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (irbesartan, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Potential for increased serum potassium if HES in lactated electrolytes is used with ARBs; increased monitoring warranted."
+    },
+    {
+      "drug": "Potassium-Sparing Diuretics (spironolactone)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Potential for increased serum potassium if HES in lactated electrolytes is used with potassium-sparing diuretics; increased monitoring warranted."
+    },
+    {
+      "drug": "Ceftriaxone",
+      "severity": 3,
+      "keywords": [
+        "calcium precipitation",
+        "IV incompatibility"
+      ],
+      "evidence": "In human neonates, use of ceftriaxone with calcium-containing IV fluids (e.g., HES in lactated Ringer's solution) is contraindicated due to risk of precipitation."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "혈장량 대체 - 6% HES 130/0.4 (Vetstarch®, 라벨 용량; FDA 미승인)",
+          "value": "20",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 최대 20 mL/kg; 수일간 반복 투여 가능",
+          "evidence": "Vetstarch® 라벨 권고 용량. 소동물 환자에 대한 일반 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "쇼크 볼루스(소생) - 6% HES 450/0.7 (Hespan®, 허가 외)",
+          "value": "10 - 20",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "15~30분에 걸쳐 투여; 1일 최대 20 mL/kg 초과 금지",
+          "evidence": "허가 외 사용. 쇼크 소생 시 일반 권고 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지속 주입(CRI) - 6% HES 450/0.7 (Hespan®, 허가 외)",
+          "value": "1 - 2",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 1~2 mL/kg CRI; 1일 최대 20 mL/kg 초과 금지",
+          "evidence": "허가 외 사용. 볼루스 투여 후 CRI 유지 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "혈장량 대체 - 6% HES 130/0.4 (Vetstarch®, 라벨 용량; FDA 미승인)",
+          "value": "20",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 최대 20 mL/kg; 수일간 반복 투여 가능",
+          "evidence": "Vetstarch® 라벨 권고 용량. 소동물 환자에 대한 일반 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "쇼크 볼루스(소생) - 6% HES 450/0.7 (Hespan®, 허가 외)",
+          "value": "5 - 10",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "15~30분에 걸쳐 투여; 일부 임상의는 1일 최대 10 mL/kg 권고. 빠른 주입 시 오심/구토 유발 가능.",
+          "evidence": "허가 외 사용. 고양이에서 빠른 주입 시 오심 및 구토 발생 가능하므로 15~30분에 걸쳐 투여 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지속 주입(CRI) - 6% HES 450/0.7 (Hespan®, 허가 외)",
+          "value": "1 - 2",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 1~2 mL/kg CRI; 일부 임상의는 1일 최대 10 mL/kg 권고",
+          "evidence": "허가 외 사용. 볼루스 투여 후 CRI 유지 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "핍뇨 또는 무뇨성 신부전(저혈량증과 무관한 경우) 시 사용 금기. 신기능 저하 환자에서 순환 과부하 위험으로 주의 필요. 특정 크레아티닌 역치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간질환 환자에서 기존 응고장애 악화 위험으로 주의 권고. 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "울혈성 심부전/폐부종",
+      "match_terms": [
+        "congestive heart failure",
+        "pulmonary edema",
+        "fluid overload"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두개내 출혈",
+      "match_terms": [
+        "intracranial bleeding",
+        "intracranial hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "핍뇨/무뇨성 신부전",
+      "match_terms": [
+        "oliguric renal failure",
+        "anuric renal failure",
+        "oliguria",
+        "anuria"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 고나트륨혈증 또는 고염소혈증",
+      "match_terms": [
+        "severe hypernatremia",
+        "severe hyperchloremia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "투석 치료 중인 환자",
+      "match_terms": [
+        "dialysis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "HES 과민반응",
+      "match_terms": [
+        "hypersensitivity to hydroxyethyl starch"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈소판감소증",
+      "match_terms": [
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "폰 빌레브란트병 또는 중증 출혈 장애",
+      "match_terms": [
+        "von Willebrand disease",
+        "severe bleeding disorder",
+        "coagulopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 수술",
+      "match_terms": [
+        "CNS surgery",
+        "neurosurgery"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심기능 또는 신기능 저하",
+      "match_terms": [
+        "cardiac dysfunction",
+        "renal dysfunction",
+        "cardiac insufficiency"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "혈관 내 공간의 교질삼투압을 증가시켜 혈장량을 확장하는 콜로이드 혈장량 확장제. 덱스트란 또는 알부민과 유사한 기전으로 작용하며, 주입 완료 후 수 분 이내에 최대 혈장량 확장 효과 발생.",
+    "common_extra_effects": [
+      "응고장애(혈소판 기능 저하, 응고 시간 연장, 인자 VIII 및 폰 빌레브란트 인자 변화)",
+      "혈액희석(혈구용적 및 혈장 단백 감소)",
+      "과민반응(아나필락시스 포함, 드물게 발생)",
+      "순환 과부하 및 폐부종(특히 심기능/신기능 저하 환자)",
+      "간질 공간으로의 콜로이드 누출 후 혈관 내 수분 감소",
+      "혈청 아밀라아제 증가(인체, 3~5일간)"
+    ],
+    "dog_mechanism": "혈관 내 교질삼투압 증가를 통한 혈장량 확장. 헤타스타치는 PTT를 유의하게 증가시킬 수 있으나 생존율에는 영향 없음이 후향적 연구에서 확인됨.",
+    "dog_extra_effects": [
+      "PTT 유의한 증가(헤타스타치)",
+      "혈소판 기능 저하(HES 130/0.4 in vitro 연구)",
+      "혈소판 폐쇄 시간 연장(HES 670/0.75, 최대 24시간)",
+      "소양증",
+      "굴절계를 이용한 총 혈장 단백 과대 추정(HES 130/0.4 투여 후 최소 3시간)",
+      "소변 비중 허위 상승"
+    ],
+    "cat_mechanism": "혈관 내 교질삼투압 증가를 통한 혈장량 확장.",
+    "cat_extra_effects": [
+      "빠른 주입 시 오심 및 구토(15~30분에 걸쳐 투여 시 예방 가능)",
+      "응고장애",
+      "혈액희석"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 헤타스타치는 이소플루란 유발 저혈압 모델에서 젖산 링거액보다 혈압 회복에 우수한 것으로 나타남. HES 450/0.7의 1일 20 mL/kg 초과 투여 시 응고 이상 위험 증가. 테트라스타치(HES 130/0.4)는 출혈된 개에서 일차 지혈에 영향을 미치지 않고 젖산 링거액과 유사한 일시적 희석성 응고장애를 유발함. 굴절계를 이용한 총 혈장 단백 측정 시 투여 후 최소 3시간 동안 과대 추정될 수 있으며, 소변 비중도 허위 상승할 수 있음.",
+    "cat": "고양이에서 헤타스타치를 빠르게 주입하면 오심 및 구토가 발생할 수 있으므로 반드시 15~30분에 걸쳐 투여해야 함. 일부 임상의는 고양이에서 1일 최대 용량을 10 mL/kg으로 제한할 것을 권고함. 응고 기능 및 혈액희석 효과에 대한 모니터링이 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심기능 또는 신기능 저하 환자에서 순환 과부하 위험. 기존 응고장애, 중증 간질환, 혈소판감소증 환자에서 출혈 위험 증가. CNS 수술 환자에서 극도의 주의 필요. 패혈증, SIRS, 중증 외상 환자에서 폐부종 악화 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "빠른 주입 시 오심 및 구토 발생 가능(15~30분에 걸쳐 투여 시 예방). 일부 임상의는 1일 최대 용량을 10 mL/kg으로 제한 권고. 심기능 또는 신기능 저하 환자에서 순환 과부하 위험."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C~25°C, 59°F~77°F) 보관. 동결 및 과도한 열 노출 금지. 결정성 침전물 형성 또는 탁한 짙은 갈색으로 변색 시 사용 금지.",
+    "forms": [
+      "Tetrastarch Injection 6% (HES 130/0.4) in 0.9% NaCl 250 mL, 500 mL polyolefin bags (Vetstarch®)",
+      "Hetastarch Injection 6% (HES 450/0.7) in 0.9% NaCl 500 mL IV infusion bottles/polyolefin bags (Hespan®)",
+      "Hetastarch Injection 6% (HES 670/0.75) in lactated electrolyte 500 mL (Hextend®)",
+      "Tetrastarch Injection 6% (HES 130/0.4) in 0.9% NaCl 500 mL polyolefin bags (Voluven®)",
+      "Pentastarch 10% in 0.9% NaCl 250 mL, 500 mL plastic bags (Pentaspan®, 미국 외)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "하이드록시에틸 전분(HES) 콜로이드는 저혈량증 및 저교질삼투압 상태(저알부민혈증)의 보조 치료에 사용되는 합성 콜로이드 혈장량 확장제입니다. 주요 임상 포인트: ① 울혈성 심부전, 폐부종, 두개내 출혈, 핍뇨/무뇨성 신부전, 중증 고나트륨혈증/고염소혈증 시 절대 금기. ② 응고장애, 혈소판 기능 저하, 인자 VIII 및 폰 빌레브란트 인자 변화 유발 가능 — 기존 응고장애 환자에서 특히 주의. ③ 고양이에서 빠른 주입 시 오심/구토 발생 가능 — 반드시 15~30분에 걸쳐 투여. ④ HES 450/0.7의 1일 20 mL/kg 초과 투여 시 응고 이상 위험 증가. ⑤ 굴절계를 이용한 총 혈장 단백 측정 및 소변 비중 검사 결과에 영향을 줄 수 있음. ⑥ 경주마 등 동물 경기에서 사용 금지(ARCI 클래스 3 물질).",
+    "indications": "승인 및 허가 외 적응증: 소동물(개, 고양이) 및 대동물(말, 낙타류, 조류)의 저혈량증 및 저교질삼투압 상태(저알부민혈증: 총 단백 < 3.5 g/dL 또는 알부민 < 1.5 g/dL) 치료. 결정질 수액 단독으로 혈액량 유지가 불충분한 경우, 수액 소생 효과의 지속 시간 연장이 필요한 경우, 수액 소생 중 부종 발생 시, 혈액 제제가 필요하지 않은 혈액 손실로 인한 저혈량증, 외상성 뇌손상 환자(결정질 수액과 병용). Vetstarch®(HES 130/0.4)는 FDA 미승인이나 라벨 정보는 FDA 검토됨. Hespan®(HES 450/0.7)은 소동물에서 허가 외 사용.",
+    "client_info": "이 약물은 입원 환경에서만 정맥 주사로 투여됩니다. 보호자와 상담 시 다음 사항을 안내하십시오: ① 콜로이드 수액 치료가 필요한 이유(혈압 유지, 혈장 단백 보충 등). ② 치료 비용(합성 콜로이드는 결정질 수액보다 고가). ③ 가능한 부작용: 응고 기능 변화, 드문 과민반응(가려움증, 아나필락시스), 순환 과부하(호흡 곤란, 폐부종). ④ 고양이의 경우 빠른 주입 시 구토가 발생할 수 있으나 천천히 투여하면 예방 가능. ⑤ 치료 중 수분 상태, 신장 기능, 응고 기능, 혈압 등을 면밀히 모니터링함."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Species-specific pharmacokinetic data (dog/cat)",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "CYP metabolism data",
+      "Specific creatinine/ALT thresholds for dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/1.jsonl",
+    "extracted_at": "2026-03-10T13:52:27.789831+00:00",
+    "reviewer": null
+  }
+}

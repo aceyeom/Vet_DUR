@@ -1,0 +1,432 @@
+{
+  "id": "primaquine",
+  "drug_identity": {
+    "name_ko": "프리마퀸",
+    "name_en": "Primaquine",
+    "active_ingredient": "Primaquine phosphate",
+    "brand_names": [],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 고양이 Babesia felis 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 26.3,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 carboxyprimaquine으로 광범위하게 대사됨. 대사체의 항원충 활성은 불명확. 수의 소동물 대상 PK 데이터 없음."
+    },
+    "extra_information": "소동물에 대한 약동학 정보 없음. 사람에서 경구 생체이용률 약 96%, 간에서 광범위 대사, 프리마퀸 반감기 약 6시간, 대사체(carboxyprimaquine) 반감기 약 24시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 소동물 수의 PK 데이터 없음; 사람 데이터 및 고양이 독성 보고 기반. 개에 대한 직접 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 CNS 영향에 대한 직접 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "myelosuppression",
+          "hemolysis",
+          "methemoglobinemia"
+        ],
+        "index": 1,
+        "evidence": "골수억제, 용혈, 메트헤모글로빈혈증이 잠재적 부작용으로 기술됨."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 신독성에 대한 직접 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간독성에 대한 직접 언급은 없으나 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 유발 약물과의 병용 시 QT 연장 위험 증가 가능성 언급."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 영향에 대한 직접 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "hemolysis",
+          "methemoglobinemia",
+          "narrow therapeutic index",
+          "lethal dose"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 골수억제, 용혈, 메트헤모글로빈혈증이 부작용으로 기술됨. 1 mg/kg 초과 시 치사 가능. 치료 지수 매우 좁음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신독성에 대한 직접 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간독성에 대한 직접 언급은 없으나 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 유발 약물과의 병용 시 QT 연장 위험 증가 가능성 언급."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 6.0,
+      "mean": 6.0,
+      "species": "human"
+    },
+    "f_percent": 96,
+    "protein_binding_percent": null,
+    "evidence": "사람 데이터: 경구 생체이용률 약 96%, 반감기 약 6시간(프리마퀸), 약 24시간(carboxyprimaquine). 소동물 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration"
+      ],
+      "evidence": "Grapefruit juice may increase primaquine plasma concentrations."
+    },
+    {
+      "drug": "Hemolysis-Inducing Drugs (e.g., acetohydroxamic acid, quinidine, sulfonamides, sulfonylureas)",
+      "severity": 2,
+      "keywords": [
+        "hemolysis",
+        "increased toxicity risk"
+      ],
+      "evidence": "Concurrent use with primaquine may increase risk for hemolytic toxicity."
+    },
+    {
+      "drug": "Myelosuppressive Drugs (e.g., amphotericin B, antineoplastic drugs, azathioprine, chloramphenicol)",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "myelotoxicity"
+      ],
+      "evidence": "Concurrent use with primaquine may increase risk for myelotoxicity."
+    },
+    {
+      "drug": "Quinacrine",
+      "severity": 3,
+      "keywords": [
+        "potentiated toxicity"
+      ],
+      "evidence": "Quinacrine may potentiate the toxicity of primaquine; use within 3 months of quinacrine is not recommended."
+    },
+    {
+      "drug": "QT Prolonging Agents (e.g., cisapride, domperidone, erythromycin, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Concurrent use may increase risk for QT prolongation and should be avoided."
+    },
+    {
+      "drug": "Rabies Vaccine",
+      "severity": 1,
+      "keywords": [
+        "decreased immune response"
+      ],
+      "evidence": "In humans, primaquine can decrease the immune response to rabies vaccine. Significance in veterinary patients is unknown."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Babesia felis 치료 (오프라벨) - 프리마퀸 염기 기준",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "1회 단독 투여 또는 3일 연속 매일 투여. 1 mg/kg/day 초과 금지. 치료 기간은 혈액학적 수치 및 임상 증상에 따라 결정.",
+          "evidence": "오프라벨. 프리마퀸 염기 0.5–1 mg/kg PO 1회 또는 3일 연속 투여. 1 mg/kg/day 초과 시 치사 보고."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Babesia felis 치료 (오프라벨) - 프리마퀸 인산염 고정 용량",
+          "value": "1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q36h",
+          "max_dose_mg_kg": null,
+          "duration_note": "36시간마다 4회 투여 후, 이후 7일마다 1 mg/cat으로 4회 추가 투여. mg/kg이 아닌 고양이당 mg 기준.",
+          "evidence": "오프라벨. 프리마퀸 인산염 1 mg/cat(mg/kg 아님) PO 36시간마다 4회, 이후 7일마다 4회 추가."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 용량 조절에 대한 구체적 정보 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 광범위하게 대사되므로 간기능 저하 시 주의가 필요하나, 구체적 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "프리마퀸 과민반응",
+      "match_terms": [
+        "hypersensitivity to primaquine",
+        "primaquine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유",
+      "match_terms": [
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수억제 약물 병용",
+      "match_terms": [
+        "myelosuppressive drugs",
+        "bone marrow suppression"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "G6PD 결핍 (사람)",
+      "match_terms": [
+        "G6PD deficiency",
+        "glucose-6-phosphate dehydrogenase deficiency"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "수의 환자에서 유전적 감수성에 대한 직접적 언급 없음. 사람에서 G6PD 결핍 시 용혈성 빈혈 위험 증가 기술됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "항원충 기전은 완전히 밝혀지지 않음. 원충 DNA에 결합하여 변형시키는 것과 관련될 수 있음.",
+    "common_extra_effects": [
+      "구토",
+      "골수억제",
+      "메트헤모글로빈혈증",
+      "용혈"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "Babesia felis에 대해 기생충혈증 감소 및 임상 증상 개선 효과. 1–3일 내 효과 발현.",
+    "cat_extra_effects": [
+      "구토",
+      "골수억제",
+      "메트헤모글로빈혈증",
+      "용혈"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서의 용량 정보 없음. Hepatozoon spp 감염 치료에 유용할 수 있다는 언급이 있으나 구체적 용량 지침은 제시되지 않음.",
+    "cat": "고양이 Babesia felis 치료의 1차 선택약. 치료 지수가 매우 좁아 프리마퀸 인산염 1 mg/kg 초과 시 치사 가능. 프리마퀸 염기와 인산염 용량을 명확히 구분해야 함(인산염 26.3 mg = 염기 15 mg). 정확한 용량 투여를 위해 조제 제형이 필요할 수 있음. 치료 중 매주 CBC 모니터링 필요. 감염이 완전히 제거되지 않을 수 있으며 재발률 20–80% 보고됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 직접적인 안전성 데이터 없음. Hepatozoon spp 치료에 사용 가능성 언급되나 용량 지침 없음. 주의하여 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "치료 지수가 매우 좁음. 1 mg/kg 초과 시 치사 가능. 정확한 용량 계산 및 조제 제형 사용 권장. 치료 중 매주 CBC 모니터링 필수. 음식과 함께 투여하여 구토 감소."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 40°C(104°F) 이하, 가급적 15–30°C(59–86°F)에서 보관.",
+    "forms": [
+      "프리마퀸 인산염 경구정 26.3 mg (프리마퀸 염기 15 mg 함량); 제네릭; 처방전 필요"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프리마퀸은 고양이 Babesia felis 감염 치료의 1차 선택약입니다. 치료 지수가 매우 좁아 고양이에서 프리마퀸 인산염 1 mg/kg 초과 시 치사 가능합니다. 프리마퀸 염기와 인산염 용량을 반드시 구분하여 처방해야 하며(인산염 26.3 mg = 염기 15 mg), 정확한 소용량 투여를 위해 조제 제형이 필요할 수 있습니다. 치료 중 매주 CBC 모니터링이 필수적입니다.",
+    "indications": "고양이 Babesia felis 감염 (오프라벨, 1차 선택약). 개 및 고양이 Hepatozoon spp 감염 (오프라벨). 조류 Plasmodium spp 감염 (오프라벨). 사람: 말라리아 치료 및 예방, Pneumocystis spp 폐렴 치료.",
+    "client_info": "이 약은 고양이에게 과량 투여 시 매우 위험할 수 있습니다. 수의사의 지시를 정확히 따르십시오. 구토와 위장 장애를 줄이기 위해 반드시 음식과 함께 투여하십시오. 투여를 빠뜨린 경우 다음 투여 시 두 배로 투여하지 마십시오. 치료 중 수의사의 정기적인 혈액 검사(CBC) 추적 관찰이 매우 중요합니다. 예약된 검진을 빠지지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data",
+      "Dog dosage",
+      "CYP profile",
+      "Protein binding",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "dosage_and_kinetics.dog.dosage_list",
+      "genetic_sensitivity.gene"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:39:39.771594+00:00",
+    "reviewer": null
+  }
+}

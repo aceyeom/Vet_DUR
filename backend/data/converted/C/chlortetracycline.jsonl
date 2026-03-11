@@ -1,0 +1,467 @@
+{
+  "id": "chlortetracycline",
+  "drug_identity": {
+    "name_ko": "클로르테트라사이클린",
+    "name_en": "Chlortetracycline",
+    "active_ingredient": "Chlortetracycline",
+    "brand_names": [
+      "Aureomycin",
+      "Aureomycin Sulmet",
+      "Aureo S 700",
+      "Aureomix 500",
+      "Pennclor SP 250",
+      "Aureozol 500"
+    ],
+    "allergy_class": "tetracycline",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Plumb's 모노그래프에 CYP 대사 경로에 대한 구체적인 정보가 없음. 일반적인 테트라사이클린 약동학은 Oxytetracycline 항목을 참조하도록 안내됨."
+    },
+    "extra_information": "약동학에 대한 구체적인 개/고양이 데이터는 본 모노그래프에 기재되지 않았으며, Oxytetracycline 항목을 참조하도록 안내됨. 신기능 저하 시 약물 축적으로 신독성이 악화될 수 있음. 고양이는 경구 테트라사이클린 내약성이 낮음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터 부재; 부작용 및 주의사항 텍스트에서 추출. 개와 고양이 모두 동일한 텍스트 근거 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "intracranial hypertension (retinoid 병용 시)"
+        ],
+        "index": -1,
+        "evidence": "두개내 고혈압은 레티노이드 병용 시 언급되며, 단독 투여 시 직접적인 뇌 부담 근거는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "prothrombin activity",
+          "intravascular hemolysis"
+        ],
+        "index": 1,
+        "evidence": "혈액 이상(blood dyscrasias), 혈장 프로트롬빈 활성 저하, 프로필렌글리콜 기반 제제의 급속 IV 투여 시 혈관 내 용혈 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal insufficiency",
+          "BUN increase",
+          "drug accumulation"
+        ],
+        "index": 2,
+        "evidence": "신기능 저하 환자에서 약물 축적으로 신독성 악화 가능. 만성 과다투여 시 신독성 위험. BUN 상승 보고됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic impairment",
+          "catabolic effect"
+        ],
+        "index": 2,
+        "evidence": "고용량 또는 기존 신기능 저하 환자에서 간독성 보고. 간기능 저하 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "transient collapse"
+        ],
+        "index": 1,
+        "evidence": "급속 IV 투여 시 일시적 허탈 및 심장 부정맥 유발 보고(칼슘 이온 킬레이션 기전 추정)."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "depression"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 우울증(depression) 증상 보고됨. 직접적인 뇌 부담 근거는 제한적."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "prothrombin activity"
+        ],
+        "index": 1,
+        "evidence": "혈액 이상 및 프로트롬빈 활성 저하 가능성. 고양이 특이 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal insufficiency",
+          "BUN increase"
+        ],
+        "index": 2,
+        "evidence": "신기능 저하 시 약물 축적으로 신독성 악화 가능. 고양이는 테트라사이클린 내약성이 낮아 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic impairment"
+        ],
+        "index": 2,
+        "evidence": "간기능 저하 시 주의 사용 권고. 간독성 보고됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "급속 IV 투여 시 심장 부정맥 유발 가능. 고양이 특이 데이터는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "본 모노그래프에 약동학 수치가 기재되지 않음. Oxytetracycline 항목 참조 안내."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Lactam Antibiotics (Penicillins, Cephalosporins)",
+      "severity": 2,
+      "keywords": [
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "Bacteriostatic tetracyclines may interfere with bactericidal activity of penicillins and cephalosporins; clinical significance is controversial."
+    },
+    {
+      "drug": "Aminoglycoside Antibiotics",
+      "severity": 2,
+      "keywords": [
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "Bacteriostatic tetracyclines may interfere with bactericidal activity of aminoglycosides; clinical significance is controversial."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Cholestyramine may decrease absorption of tetracyclines."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased bioavailability",
+        "digoxin toxicity"
+      ],
+      "evidence": "Tetracyclines may increase bioavailability of digoxin in a small percentage of patients, potentially leading to digoxin toxicity. Effects may persist for months after tetracycline discontinuation."
+    },
+    {
+      "drug": "Divalent or Trivalent Cations (antacids, sucralfate, bismuth, calcium, iron, magnesium, zinc)",
+      "severity": 2,
+      "keywords": [
+        "chelation",
+        "decreased absorption"
+      ],
+      "evidence": "Oral tetracyclines chelate divalent/trivalent cations, decreasing absorption of tetracycline or the cation-containing product. Administer at least 1–2 hours apart."
+    },
+    {
+      "drug": "Lanthanum",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Lanthanum may decrease absorption of tetracyclines."
+    },
+    {
+      "drug": "Retinoid Acids (acitretin, vitamin A)",
+      "severity": 3,
+      "keywords": [
+        "intracranial hypertension"
+      ],
+      "evidence": "Combination of tetracyclines and retinoid acids may increase the potential for intracranial hypertension. Combination is contraindicated."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant potentiation",
+        "prothrombin activity"
+      ],
+      "evidence": "Tetracyclines may depress plasma prothrombin activity; anticoagulant dosage adjustment may be needed."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "guinea_pig"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "대규모 캐터리에서 국소 치료가 비실용적인 경우 Mycoplasma spp 또는 클라미디아 결막염 재발 예방 (extra-label)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1개월간 투여",
+          "evidence": "수용성 클로르테트라사이클린 분말을 사료에 혼합; 50 mg/cat/day (mg/kg 아님)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 정상보다 낮은 용량 권고 및 신기능 모니터링 강화. 다른 신독성 약물과의 병용 금지. 구체적인 용량 조정 수치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 저하 환자에서 주의 사용 및 정상보다 낮은 용량 권고. 간기능 모니터링 강화. 다른 간독성 약물과의 병용 금지. 구체적인 용량 조정 수치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "클로르테트라사이클린 또는 테트라사이클린계 약물 과민증",
+      "match_terms": [
+        "tetracycline hypersensitivity",
+        "chlortetracycline allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 초기)",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "기니피그",
+      "match_terms": [
+        "guinea pig",
+        "Cavia porcellus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 가역적으로 결합하여 단백질 합성을 억제하는 정균성 항생제. 감수성 균의 세포질막 투과성도 변화시킴.",
+    "common_extra_effects": [
+      "치아 및 골격 착색 (황색, 갈색, 회색)",
+      "골 성장 및 치유 지연",
+      "오심, 구토, 식욕부진, 설사",
+      "중복감염(비감수성 세균 또는 진균 과증식)",
+      "광과민성 반응",
+      "간독성 (드물게)",
+      "혈액 이상 (드물게)",
+      "BUN 상승 (고용량 또는 신기능 저하 시)",
+      "급속 IV 투여 시 일시적 허탈 및 심장 부정맥"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "장기 사용 시 요석 형성 보고",
+      "급속 IV 투여 시 심장 부정맥"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "경구 테트라사이클린 내약성 저하",
+      "복통(colic)",
+      "발열",
+      "탈모",
+      "우울증(depression)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 클로르테트라사이클린의 승인된 적응증은 없으나, 감수성 감염 치료에 사용될 수 있음. 장기 사용 시 요석 형성 위험이 보고됨. 신기능 및 간기능 모니터링 권장.",
+    "cat": "고양이는 경구 테트라사이클린 및 옥시테트라사이클린에 대한 내약성이 낮으며, 복통, 발열, 탈모, 우울증 등의 증상이 나타날 수 있음. 대규모 캐터리에서 Mycoplasma spp 또는 클라미디아 결막염 재발 예방을 위해 사료 내 50 mg/cat/day로 1개월간 투여하는 extra-label 용법이 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 저하 시 주의 사용. 어린 동물에서 치아 및 골격 착색 위험. 임신 중 사용 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 경구 테트라사이클린 내약성이 낮아 주의 필요. 복통, 발열, 탈모, 우울증 등의 부작용 가능. 신기능 및 간기능 저하 시 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 보관하고 빛으로부터 차단하여 보관.",
+    "forms": [
+      "사료 첨가제/음수 혼합 제제 (Type A Medicated Feed Article, VFD 필요)",
+      "클로르테트라사이클린 + 설파메타진 복합제 (Aureomycin Sulmet, Aureo S 700)",
+      "클로르테트라사이클린 + 설파메타진 + 페니실린 G 복합제 (Aureomix 500, Pennclor SP 250, Pennclor SP 500)",
+      "클로르테트라사이클린 + 설파티아졸 + 페니실린 G 복합제 (Aureozol 500)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로르테트라사이클린은 주로 식용 동물의 사료/음수 첨가 또는 안과용 국소 치료에 사용되는 테트라사이클린계 항생제입니다. Mycoplasma spp, Rickettsia spp, 스피로헤타, Chlamydia spp에 유용할 수 있으나 많은 세균이 내성을 보입니다. WHO는 테트라사이클린을 인의학에서 매우 중요한 항균제로, OIE는 클로르테트라사이클린을 수의학적으로 매우 중요한 항균제(VCIA)로 지정하였습니다. 신기능 또는 간기능 저하 환자에서 주의 사용이 필요하며, 어린 동물에서 치아 및 골격 착색을 유발할 수 있습니다. 기니피그에는 사용 금기입니다.",
+    "indications": "식용 동물(소, 돼지, 가금류 등)의 감수성 세균 감염 치료 및 예방 (FDA 승인). 고양이에서 Mycoplasma spp 또는 클라미디아 결막염 재발 예방 (extra-label). 조류의 클라미디아증 (extra-label). 토끼, 친칠라, 햄스터, 마우스, 랫트 등 소형 포유류의 감수성 감염 (extra-label).",
+    "client_info": "이 약을 경구로 투여할 때는 우유, 유제품, 칼슘, 철분 등 미네랄 섭취 1~2시간 전후에 공복 상태에서 투여하십시오. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 투여해 보시고, 구토가 지속되면 수의사에게 연락하십시오. 어린 동물에서 치아와 뼈를 영구적으로 착색시킬 수 있습니다. 식용 동물에 사용 시 라벨의 용량과 휴약 기간을 반드시 준수하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (개/고양이 종별 PK 데이터 없음; Oxytetracycline 참조 안내만 있음)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "drug_identity.available_strengths",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:43:29.828303+00:00",
+    "reviewer": null
+  }
+}

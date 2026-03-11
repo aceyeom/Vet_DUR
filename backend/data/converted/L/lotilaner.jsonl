@@ -1,0 +1,482 @@
+{
+  "id": "lotilaner",
+  "drug_identity": {
+    "name_ko": "로틸라너",
+    "name_en": "Lotilaner",
+    "active_ingredient": "Lotilaner",
+    "brand_names": [
+      "Credelio",
+      "Credelio CAT"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 12,
+        "unit": "mg"
+      },
+      {
+        "value": 48,
+        "unit": "mg"
+      },
+      {
+        "value": 56.25,
+        "unit": "mg"
+      },
+      {
+        "value": 112.5,
+        "unit": "mg"
+      },
+      {
+        "value": 225,
+        "unit": "mg"
+      },
+      {
+        "value": 450,
+        "unit": "mg"
+      },
+      {
+        "value": 900,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "담즙 배설이 주요 제거 경로임. CYP 관련 정보는 모노그래프에 명시되지 않음."
+    },
+    "extra_information": "개: 경구 투여 후 2시간에 최고 혈중 농도 도달. 음식과 함께 투여 시 흡수 증가. 단백 결합률 높음. 담즙 배설이 주요 제거 경로. 평균 반감기: 2개월령 비글 9.6일, 10개월령 비글 28일, 성견 비글 30.7일. 고양이: 경구 투여 후 4시간에 최고 혈중 농도 도달. 음식과 함께 투여 시 생체이용률 약 100%, 공복 시 8.4%. 음식과 함께 투여 시 최고 농도가 공복 대비 약 9배 높음. 정상 상태 분포 용적 5.37 L/kg, 청소율 0.13 L/kg/day, IV 투여 후 말단 반감기 28.7일, 경구 투여 후 33.6일."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 담즙 배설이 주요 경로이며 간 대사가 관여함. 신경계 이상반응(근육 떨림, 운동실조, 발작) FDA 경고 존재. 수의학적 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "seizures",
+          "muscle tremors",
+          "ataxia",
+          "neurologic adverse effects",
+          "GABA-gated chloride channel inhibition"
+        ],
+        "index": 1,
+        "evidence": "FDA는 이소옥사졸린 계열 약물이 근육 떨림, 운동실조, 발작 등 신경계 이상반응을 유발할 수 있다고 경고함. 발작 병력이 있는 개에서 투여 6일 후 발작 발생 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "elevated BUN"
+        ],
+        "index": 2,
+        "evidence": "BUN 상승이 이상반응으로 보고됨(1%). 직접적인 혈액독성 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated BUN",
+          "polyuria"
+        ],
+        "index": 3,
+        "evidence": "BUN 상승 및 다뇨가 이상반응으로 보고됨(각 1%). 직접적인 신독성 데이터는 없으나 신장 관련 지표 변화가 관찰됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "biliary excretion",
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "담즙 배설이 주요 제거 경로이며 간 대사가 관여함. 직접적인 간독성 보고는 없으나 간 부담이 예상됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 이상반응 또는 심독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "seizures",
+          "muscle tremors",
+          "ataxia",
+          "neurologic adverse effects",
+          "GABA-gated chloride channel inhibition"
+        ],
+        "index": 1,
+        "evidence": "FDA는 이소옥사졸린 계열 약물이 고양이에서도 근육 떨림, 운동실조, 발작 등 신경계 이상반응을 유발할 수 있다고 경고함."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "elevated BUN"
+        ],
+        "index": 2,
+        "evidence": "BUN 상승이 고양이 이상반응으로 보고됨(0.9%)."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated BUN"
+        ],
+        "index": 3,
+        "evidence": "BUN 상승이 고양이 이상반응으로 보고됨(0.9%). 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "biliary excretion",
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "담즙 배설이 주요 제거 경로이며 간 대사가 관여함. 고양이에서 직접적인 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "tachypnea"
+        ],
+        "index": -1,
+        "evidence": "빈호흡(1.3%)이 고양이 이상반응으로 보고되었으나 직접적인 심독성 데이터는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 120,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 230.4,
+      "max": 806.4,
+      "mean": 736.8,
+      "species": "dog"
+    },
+    "f_percent": 100,
+    "protein_binding_percent": null,
+    "evidence": "개: 경구 투여 후 2시간에 최고 혈중 농도 도달. 반감기: 2개월령 비글 9.6일(230.4시간), 10개월령 비글 28일(672시간), 성견 비글 30.7일(736.8시간). 고양이: 경구 투여 후 4시간에 최고 혈중 농도 도달. 음식과 함께 투여 시 생체이용률 약 100%. 고양이 반감기: IV 28.7일, 경구 33.6일. 단백 결합률은 '높음'으로만 기술되어 정확한 수치 불명."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 현장 연구에서 백신, 항생제, NSAIDs, 구충제, 마취제와 병용 투여 시 이상반응 없음이 보고됨. 특정 약물 상호작용은 명시되지 않음. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 153.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 및 진드기 감염 치료 및 예방 (허가 용량, FDA 승인)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "8주령 이상, 체중 2 kg 이상 강아지 및 성견. 음식과 함께 투여. 1개월 효과 지속.",
+          "evidence": "최소 용량 20 mg/kg PO 월 1회 음식과 함께. 체중별 정제 크기: 2–2.7 kg → 56.25 mg, 2.8–5.5 kg → 112.5 mg, 5.5–11.4 kg → 225 mg, 11.5–22.7 kg → 450 mg, 22.8–45.5 kg → 900 mg."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신성 모낭충증 (비허가 용도)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주 간격으로 3회 투여",
+          "evidence": "최소 용량 20 mg/kg PO 4주마다 3회 투여 시 자연 발생 Demodex spp 감염 개에서 생존 진드기 수 감소 및 제거에 효과적임."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개선충증(옴) (비허가 용도)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주 간격으로 3회 투여",
+          "evidence": "제조사 허가 용량에 따라 4주마다 3회 투여. 2주 내 소양증 소실, 1개월 내 피부 소파 검사 음성, 2개월 내 모든 개에서 활성 병변 소실."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 감염 치료 및 예방 (허가 용량, FDA 승인)",
+          "value": "6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "8주령 이상, 체중 0.9 kg(2 lb) 이상 고양이 및 새끼 고양이. 음식과 함께 투여. 1개월 효과 지속.",
+          "evidence": "최소 용량 6 mg/kg PO 월 1회. 체중별 정제 크기: 0.9–1.8 kg → 12 mg, 1.9–7.7 kg → 48 mg, 7.7 kg 초과 → 적절한 조합."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "검은다리진드기(Ixodes scapularis) 감염 치료 및 조절 (허가 용량, FDA 승인)",
+          "value": "6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "6개월령 이상, 체중 0.9 kg(2 lb) 이상 고양이 및 새끼 고양이. 1개월 효과 지속.",
+          "evidence": "최소 용량 6 mg/kg PO 월 1회."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 및 진드기 감염 치료 (비허가 용도, EU 승인 기준)",
+          "value": "6 - 24",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": 24.0,
+          "duration_note": "8주령 이상, 체중 0.5 kg(1.1 lb) 이상 고양이. 음식과 함께 투여.",
+          "evidence": "6–24 mg/kg PO 월 1회 음식과 함께. 체중별 정제 크기: 0.5–2 kg → 12 mg, 2–8 kg → 48 mg, 8 kg 초과 → 적절한 조합."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항 없음. BUN 상승이 이상반응으로 보고되었으므로 신장 질환 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항 없음. 담즙 배설이 주요 경로이므로 간 질환 환자에서 주의가 필요할 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "로틸라너 과민증",
+      "match_terms": [
+        "hypersensitivity to lotilaner",
+        "알레르기"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 또는 간질 병력",
+      "match_terms": [
+        "seizures",
+        "epilepsy",
+        "발작",
+        "간질"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "8주 미만 강아지/새끼 고양이",
+      "match_terms": [
+        "age < 8 weeks",
+        "puppy",
+        "kitten"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 미달 (개: 2 kg 미만, 고양이: 0.9 kg 미만)",
+      "match_terms": [
+        "underweight",
+        "body weight < 2 kg",
+        "body weight < 0.9 kg"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신, 수유, 번식 중인 동물",
+      "match_terms": [
+        "pregnant",
+        "lactating",
+        "breeding",
+        "임신",
+        "수유"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 품종 또는 유전적 감수성에 대한 언급 없음. MDR1 관련 정보 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "이소옥사졸린계 살충제 및 살비제. 곤충 및 진드기의 말초 및 중추 신경계에서 GABA 개폐 염화물 채널을 억제하여 세포막을 통한 염화물 이온 전달을 차단함. 결과적인 신경 과흥분이 감수성 곤충 및 진드기의 신속한 사망을 유발함.",
+    "common_extra_effects": [
+      "체중 감소",
+      "BUN 상승",
+      "다뇨",
+      "설사",
+      "구토",
+      "근육 떨림",
+      "발작",
+      "운동실조"
+    ],
+    "dog_mechanism": "개에서 벼룩 감염 또는 투여 후 2~4시간 내 벼룩 사멸 시작. 8시간 내 약 99.8%, 12시간 내 100% 벼룩 사멸. 이 사멸 속도는 투여 후 35일간 유지됨.",
+    "dog_extra_effects": [
+      "체중 감소 (1.5%)",
+      "BUN 상승 (1%)",
+      "다뇨 (1%)",
+      "설사 (1%)",
+      "구토",
+      "두부 떨림 (1례)",
+      "발작 (발작 병력 있는 개에서 1례)"
+    ],
+    "cat_mechanism": "고양이에서 투여 후 8시간 내 벼룩 사멸 시작. Ixodes ricinus에 대해 투여 후 35일까지 99% 이상 효과. 투여 후 7일간 12시간 내 90% 이상, 8~35일간 18시간 내 90% 이상 사멸.",
+    "cat_extra_effects": [
+      "체중 감소 (2.2%)",
+      "빈호흡 (1.3%)",
+      "구토 (1.3%)",
+      "설사 (0.9%)",
+      "식욕부진 (0.9%)",
+      "BUN 상승 (0.9%)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 벼룩 및 진드기(미국개진드기, 검은다리진드기, 론스타진드기, 갈색개진드기) 치료 및 예방에 사용. 최소 용량 20 mg/kg PO 월 1회 음식과 함께 투여. 8주령 이상, 체중 2 kg 이상에서 사용. 전신성 모낭충증 및 개선충증에 비허가 용도로 사용 가능. 발작 병력이 있는 개에서 주의 필요. 반감기가 연령에 따라 크게 다름(2개월령 9.6일 vs 성견 30.7일).",
+    "cat": "고양이에서 FDA 승인된 벼룩 및 검은다리진드기 치료 및 예방에 사용. 최소 용량 6 mg/kg PO 월 1회 음식과 함께 투여. 벼룩 치료는 8주령 이상, 체중 0.9 kg 이상; 진드기 치료는 6개월령 이상, 체중 0.9 kg 이상에서 사용. 음식과 함께 투여 시 생체이용률 약 100%, 공복 시 8.4%로 반드시 음식과 함께 투여해야 함. 반감기 약 28.7~33.6일로 매우 길어 월 1회 투여로 충분한 효과 유지."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 또는 간질 병력이 있는 개에서 주의하여 사용. FDA는 이소옥사졸린 계열 약물이 근육 떨림, 운동실조, 발작 등 신경계 이상반응을 유발할 수 있다고 경고함. 임신, 수유, 번식 중인 개에서의 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "발작 또는 간질 병력이 있는 고양이에서 주의하여 사용. FDA는 이소옥사졸린 계열 약물이 신경계 이상반응을 유발할 수 있다고 경고함. 반드시 음식과 함께 투여해야 함(공복 시 생체이용률 8.4%). 임신, 수유, 번식 중인 고양이에서의 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~25°C(59°F~77°F)에서 보관. 5°C~40°C(41°F~104°F) 범위 내 일시적 보관 허용. 어린이 손이 닿지 않는 곳에 보관.",
+    "forms": [
+      "로틸라너 씹는 정제(소고기 맛) 56.25 mg, 112.5 mg, 225 mg, 450 mg, 900 mg - Credelio® (개용, FDA 승인, NADA# 141-494)",
+      "로틸라너 씹는 정제(바닐라 및 효모 맛) 12 mg, 48 mg - Credelio® CAT (고양이용, FDA 승인, NADA# 141-528)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로틸라너(Credelio®)는 이소옥사졸린계 외부기생충 구제제로, 개와 고양이에서 벼룩 및 진드기 감염 치료 및 예방에 FDA 승인된 월 1회 경구 씹는 정제입니다. 개에서 최소 용량 20 mg/kg, 고양이에서 최소 6 mg/kg을 음식과 함께 투여합니다. 반드시 음식과 함께 투여해야 하며(특히 고양이에서 생체이용률 차이 큼), 8주령 이상, 최소 체중 기준 충족 시 사용 가능합니다. FDA는 이소옥사졸린 계열 약물의 신경계 이상반응(근육 떨림, 운동실조, 발작) 가능성을 경고하고 있으므로 발작 병력이 있는 동물에서 주의가 필요합니다. 개에서 비허가 용도로 전신성 모낭충증 및 개선충증 치료에도 사용됩니다.",
+    "indications": "【허가 적응증 - 개】 벼룩(Ctenocephalides felis) 감염 치료 및 예방, 미국개진드기(Dermacentor variabilis), 검은다리진드기(Ixodes scapularis), 론스타진드기(Amblyomma americanum), 갈색개진드기(Rhipicephalus sanguineus) 감염 치료 및 조절 (월 1회). 【허가 적응증 - 고양이】 벼룩(Ctenocephalides felis) 감염 치료 및 예방 (8주령 이상, 0.9 kg 이상), 검은다리진드기(Ixodes scapularis) 감염 치료 및 조절 (6개월령 이상, 0.9 kg 이상). 【비허가 용도 - 개】 전신성 모낭충증, 개선충증(옴). 【EU 추가 허가】 개: C. canis, Ixodes ricinus, I. hexagonus, Dermacentor reticulatus 포함; 고양이: 벼룩 및 진드기 감염 (0.5 kg 이상).",
+    "client_info": "이 약은 반드시 음식과 함께 또는 식사 30분 전후에 투여해야 합니다. 동물이 약을 완전히 섭취했는지 확인하고, 투여 후 몇 분간 지켜보세요. 투여 후 2시간 이내에 구토를 한 경우 전체 용량을 다시 투여하세요. 투여를 잊은 경우 기억하는 즉시 투여하고 새로운 월별 투여 일정을 시작하세요. 치료는 연중 어느 때나 시작할 수 있으며, 벼룩이 연중 발생하는 지역에서는 연중 지속적으로 투여해야 합니다. 가정 내 모든 동물을 승인된 벼룩 구제 제품으로 치료하여 재감염을 최소화하세요. 로틸라너는 벼룩과 진드기가 동물을 물고 흡혈한 후에만 사멸시킵니다. 정제 취급 후 손을 씻으세요. 떨림, 보행 장애, 발작 등 신경계 이상 증상이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Compatibility/Compounding Considerations (none noted)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "drug_interactions"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:46:08.006194+00:00",
+    "reviewer": null
+  }
+}

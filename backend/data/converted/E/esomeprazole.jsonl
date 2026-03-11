@@ -1,0 +1,562 @@
+{
+  "id": "esomeprazole",
+  "drug_identity": {
+    "name_ko": "에소메프라졸",
+    "name_en": "Esomeprazole",
+    "active_ingredient": "Esomeprazole",
+    "brand_names": [
+      "NexIUM",
+      "NexIUM 24HR",
+      "NexIUM I.V."
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 모든 동물 적용은 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Cap",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "value": 24.65,
+        "unit": "mg"
+      },
+      {
+        "value": 40.0,
+        "unit": "mg"
+      },
+      {
+        "value": 49.3,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C19",
+        "CYP3A4"
+      ],
+      "inhibitors": [
+        "CYP2C19"
+      ],
+      "inducers": [],
+      "pathway_evidence": "에소메프라졸은 주로 간에서 CYP2C19에 의해 대사되어 하이드록시 및 데스메틸 대사체를 형성하며, CYP3A4에 의해 설폰 대사체가 소량 생성됨. 소변으로 약 80%가 대사체로 배설되며, 원형 약물은 1% 미만이 소변으로 배설됨."
+    },
+    "extra_information": "개에서 1 mg/kg IV 투여 후 말단 소실 반감기 0.73시간, 전신 혈장 청소율 0.3 L/hr/mL, 정상상태 분포용적 0.27 L/kg. SC 투여 시 Tmax 0.38시간, 생체이용률 106%; PO 투여 시 Tmax 1.81시간, 생체이용률 71.4%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이에 대한 수의학적 특이적 장기 부담 데이터는 제한적이며, 주로 인체 데이터 및 약리학적 추론에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS disturbances"
+        ],
+        "index": 1,
+        "evidence": "CNS 장애가 잠재적 부작용으로 언급되나 드문 것으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hematologic abnormalities"
+        ],
+        "index": 1,
+        "evidence": "혈액학적 이상이 잠재적 부작용으로 언급되나 인체에서도 드문 것으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "proteinuria",
+          "UTI"
+        ],
+        "index": 1,
+        "evidence": "단백뇨 및 요로감염이 잠재적 부작용으로 언급됨. 대사체의 약 80%가 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "hepatic metabolism",
+          "CYP2C19",
+          "CYP3A4"
+        ],
+        "index": 2,
+        "evidence": "간에서 주로 대사되며, 간 효소 상승이 잠재적 부작용으로 언급됨. 중증 간질환 시 반감기 연장 가능."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS disturbances"
+        ],
+        "index": 1,
+        "evidence": "CNS 장애가 소동물에서 잠재적 부작용으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hematologic abnormalities"
+        ],
+        "index": 1,
+        "evidence": "혈액학적 이상이 소동물에서 잠재적 부작용으로 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "proteinuria",
+          "UTI"
+        ],
+        "index": 1,
+        "evidence": "단백뇨 및 요로감염이 소동물에서 잠재적 부작용으로 언급됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "간에서 주로 대사되며, 간 효소 상승이 잠재적 부작용으로 언급됨. 중증 간질환 시 용량 조절 필요."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.81,
+    "half_life_hr": {
+      "min": 0.73,
+      "max": 1.5,
+      "mean": 1.0,
+      "species": "dog"
+    },
+    "f_percent": 71,
+    "protein_binding_percent": 97,
+    "evidence": "개에서 PO 투여 시 Tmax 1.81시간, 반감기 0.98시간, 생체이용률 71.4%. SC 투여 시 반감기 0.9시간, 생체이용률 106%. 인체에서 단백결합률 97%, 반감기 약 1~1.5시간. 인체에서 공복 시 생체이용률 약 90%, 식후 약 50%로 감소."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "increased esomeprazole exposure"
+      ],
+      "evidence": "Esomeprazole can reduce azole antifungal absorption; azoles can potentially increase esomeprazole exposure."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam)",
+      "severity": 2,
+      "keywords": [
+        "altered metabolism",
+        "prolonged CNS effects"
+      ],
+      "evidence": "Esomeprazole may potentially alter benzodiazepine metabolism and prolong CNS effects."
+    },
+    {
+      "drug": "Cefpodoxime",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Esomeprazole may decrease cefpodoxime absorption; consider alternative antibiotic."
+    },
+    {
+      "drug": "Cefuroxime",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Esomeprazole may decrease cefuroxime absorption; consider alternative antibiotic."
+    },
+    {
+      "drug": "Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentrations"
+      ],
+      "evidence": "Increased concentrations of esomeprazole, clarithromycin, and 14-hydroxyclarithromycin are possible."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "thrombosis risk"
+      ],
+      "evidence": "In humans, concurrent use may decrease clopidogrel efficacy and increase thrombosis risk; however, a dog study found omeprazole combined with clopidogrel did not alter antiplatelet effects in healthy dogs."
+    },
+    {
+      "drug": "Cyanocobalamin (oral)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Esomeprazole may decrease oral cyanocobalamin absorption."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "reduced metabolism",
+        "increased cyclosporine exposure"
+      ],
+      "evidence": "Esomeprazole may reduce cyclosporine metabolism, potentially increasing cyclosporine concentrations."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentrations"
+      ],
+      "evidence": "Esomeprazole may increase digoxin concentrations."
+    },
+    {
+      "drug": "Diuretics (loop or thiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypomagnesemia"
+      ],
+      "evidence": "Increased risk for hypomagnesemia with concurrent use; increased monitoring suggested particularly in susceptible patients."
+    },
+    {
+      "drug": "Iron (oral)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Esomeprazole may decrease oral iron absorption."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "increased TSH"
+      ],
+      "evidence": "Concurrent use may result in increased TSH concentrations."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "increased methotrexate concentrations",
+        "prolonged exposure"
+      ],
+      "evidence": "Esomeprazole may increase and prolong methotrexate and its metabolite concentrations."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "reduced MPA concentrations"
+      ],
+      "evidence": "Esomeprazole may reduce mycophenolic acid (active metabolite) concentrations."
+    },
+    {
+      "drug": "Propranolol",
+      "severity": 2,
+      "keywords": [
+        "increased propranolol exposure"
+      ],
+      "evidence": "Concurrent use may result in increased propranolol exposure."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "inhibited absorption"
+      ],
+      "evidence": "Sucralfate may inhibit absorption of esomeprazole; stagger doses."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 2,
+      "keywords": [
+        "increased tacrolimus exposure"
+      ],
+      "evidence": "Concurrent use may result in increased tacrolimus exposure."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "Esomeprazole may increase the anticoagulant effect of warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 감소 (extra-label) - IV",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3분에 걸쳐 천천히 IV 투여",
+          "evidence": "Plumb's: 0.5–1 mg/kg IV slowly over 3 minutes every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 감소 (extra-label) - PO",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "공복 시 투여",
+          "evidence": "Plumb's: 1 mg/kg PO once daily on an empty stomach"
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 중 위식도 역류 감소 (extra-label) - cisapride 병용",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "마취 유도 1~1.5시간 전 cisapride 1 mg/kg IV와 병용, 3분에 걸쳐 투여",
+          "evidence": "Plumb's: 1 mg/kg IV over 3 minutes in combination with cisapride 1 mg/kg IV administered 1 to 1.5 hours prior to induction"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 감소 (extra-label) - PO",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 1 mg/kg PO every 12 hours; 고양이 연구에서 에소메프라졸만이 위십이지장 궤양 치료 목표를 달성함."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 명시적 권고사항이 없음. 대사체의 약 80%가 신장으로 배설되므로 중증 신부전 환자에서는 주의가 필요할 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간질환 환자에서 반감기가 연장될 수 있으며 용량 조절이 필요할 수 있음. 구체적인 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "에소메프라졸 과민증",
+      "match_terms": [
+        "hypersensitivity to esomeprazole",
+        "PPI allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "liver failure",
+        "hepatic insufficiency"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "에소메프라졸은 치환된 벤즈이미다졸 계열의 양성자 펌프 억제제(PPI)로, 위벽세포의 분비면에 있는 H+/K+ ATPase 효소에 비가역적으로 결합하여 위산 분비를 억제함. 기저 및 자극 조건 모두에서 산 분비를 감소시킴.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "오심",
+      "고창증",
+      "설사",
+      "혈액학적 이상(드묾)",
+      "요로감염",
+      "단백뇨",
+      "간 효소 상승",
+      "CNS 장애",
+      "저마그네슘혈증(장기 투여 시, 드묾)",
+      "피부 루푸스 에리테마토수스(인체)",
+      "전신 루푸스 에리테마토수스(인체)"
+    ],
+    "dog_mechanism": "개에서 IV, SC, PO 투여 모두 위내 pH를 증가시킴. IV 투여 시 빠른 효과 발현 가능.",
+    "dog_extra_effects": [
+      "구토(경구 및 비경구 투여 후 관찰됨)"
+    ],
+    "cat_mechanism": "고양이에서 경구 에소메프라졸은 란소프라졸 또는 덱스란소프라졸보다 우수한 산 억제 효과를 보임.",
+    "cat_extra_effects": [
+      "구토",
+      "GI 증상(잠재적)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에소메프라졸은 위산 분비 감소 및 위식도 역류 예방에 사용됨(허가 외). IV 투여 시 cisapride와 병용하면 마취 중 역류 사건을 유의하게 감소시킴. 공복 시 경구 투여 권장.",
+    "cat": "고양이에서 에소메프라졸 1 mg/kg PO q12h는 위십이지장 궤양 치료 목표를 달성한 유일한 약물로 확인됨(란소프라졸, 덱스란소프라졸과 비교). 허가 외 사용임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의학적 안전성 데이터 제한적. 중증 간질환 시 용량 조절 필요. 공복 투여 권장. 유사 발음 PPI와 혼동 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "수의학적 안전성 데이터 제한적. 허가 외 사용. 공복 투여 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 캡슐: 밀폐 용기에 25°C(77°F) 보관, 15~30°C 노출 허용. 에소메프라졸 나트륨 주사제(바이알): 실온 보관, 빛 차단. 재구성 후 0.9% 생리식염수로 희석 시 실온에서 12시간 이내 투여. 용액 안정성은 pH에 크게 의존하며 pH 감소 시 안정성 저하.",
+    "forms": [
+      "Esomeprazole Magnesium 경구 지연방출 캡슐 20 mg, 40 mg (NexIUM®, generic)",
+      "Esomeprazole Magnesium 경구 지연방출 정제 20 mg (NexIUM® 24HR, generic, OTC)",
+      "Esomeprazole Magnesium 경구 지연방출 현탁액 분말 2.5 mg, 5 mg, 10 mg, 20 mg, 40 mg 패킷 (NexIUM®)",
+      "Esomeprazole Strontium 경구 지연방출 캡슐 24.65 mg, 49.3 mg (generic)",
+      "Esomeprazole Sodium 주사제 20 mg, 40 mg (NexIUM I.V.®, generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에소메프라졸은 오메프라졸의 S-거울상이성질체로, 위십이지장 궤양 및 위 미란 치료에 사용되는 양성자 펌프 억제제(PPI)입니다. 수의학적 허가 제품은 없으며 모든 동물 적용은 허가 외 사용입니다. 경구, SC, IV 등 다양한 제형이 이용 가능합니다. 개에서 IV 투여 시 cisapride와 병용하면 마취 중 위식도 역류를 유의하게 감소시킵니다. 고양이에서 경구 에소메프라졸은 란소프라졸 및 덱스란소프라졸보다 우수한 산 억제 효과를 보입니다. 중증 간질환 시 반감기 연장 및 용량 조절이 필요할 수 있습니다.",
+    "indications": "위십이지장 궤양 치료 및 예방(허가 외), 궤양 유발 약물(예: 아스피린)에 의한 위 미란 예방 및 치료(허가 외), 마취 중 위식도 역류 감소(개, 허가 외), 말에서 위산 분비 감소(허가 외).",
+    "client_info": "이 약은 공복 상태, 가급적 아침 식사 1시간 전에 투여하는 것이 가장 효과적입니다. 캡슐을 분쇄하지 마십시오(지시가 없는 한). 캡슐을 열어 내용물을 사과소스 등 차갑거나 실온의 음식에 섞어 즉시 투여할 수 있습니다. 약을 준비한 후 즉시 투여하십시오. 투약에 어려움이 있으시면 수의사 또는 약사에게 문의하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies for cats",
+      "Renal dose adjustment guidelines",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates (veterinary-specific)",
+      "organ_burden_logic.dog (veterinary-specific data)",
+      "organ_burden_logic.cat (veterinary-specific data)",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:21:01.745557+00:00",
+    "reviewer": null
+  }
+}

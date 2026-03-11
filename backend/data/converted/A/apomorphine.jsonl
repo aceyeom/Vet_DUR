@@ -1,0 +1,703 @@
+{
+  "id": "apomorphine",
+  "drug_identity": {
+    "name_ko": "아포모르핀",
+    "name_en": "Apomorphine",
+    "active_ingredient": "Apomorphine hydrochloride",
+    "brand_names": [
+      "Apokyn",
+      "Emedog",
+      "APO-go",
+      "APO-go Pen",
+      "Apofin",
+      "Apokinon",
+      "Apometic",
+      "Apomine",
+      "Britaject",
+      "Ixense",
+      "Taluvian",
+      "Uprima"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "날록손은 아포모르핀의 CNS 및 호흡 억제 효과를 역전시킬 수 있으나, 구토 또는 심혈관 효과는 역전시키지 못함. 실제로 날록손은 mu 수용체 차단을 통해 구토 효과를 증가 및 연장시킬 수 있음.",
+    "off_label_note": "개에서 구토 유도 목적으로 사용되며, 수의 라벨 제품은 영국(Emedog®) 및 호주/뉴질랜드에서만 허가됨. 미국에서는 extra-label 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 6.5,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아포모르핀은 주로 간에서 포합(conjugation)된 후 소변으로 배설됨. 간 기능 장애 환자에서 최고 혈중 농도가 25% 높고 전체 약물 노출이 10% 증가할 수 있음(인체 데이터)."
+    },
+    "extra_information": "개에서 SC 투여 후 10분 이내에 유효 농도에 도달하며, 25분에 최고 농도에 도달함. 비강 내 투여 시 Tmax 약 19.17분, 반감기 약 29.85분(개 데이터). 개에서 소거 반감기는 30~64분. MDR1(ABCB1-1delta) 돌연변이 개에서 구토 및 CNS 억제의 심각도가 증가함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 수의학적 데이터 존재; 고양이 데이터는 제한적. 간 포합 대사 및 신장 배설 확인됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "CNS stimulation",
+          "sedation",
+          "seizures",
+          "MDR1 mutation",
+          "respiratory depression"
+        ],
+        "index": 1,
+        "evidence": "아포모르핀은 화학수용체 유발대(CTZ)의 도파민 수용체를 자극하여 구토를 유발하며, CNS 억제 및 자극 효과를 모두 나타낼 수 있음. MDR1 돌연변이 개에서 CNS 억제 심각도 증가. 고용량에서 호흡 억제 가능."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia",
+          "cardiac depression"
+        ],
+        "index": 2,
+        "evidence": "빈맥(16%) 및 저혈압이 보고됨. 과용량 시 심장 억제 가능. 저용량(0.01 mg/kg IV)에서 양성 변시성·변력성 효과 보고."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary excretion"
+        ],
+        "index": 3,
+        "evidence": "아포모르핀은 간에서 포합 후 소변으로 배설됨. 직접적인 신독성 보고는 없으나 신장이 주요 배설 경로임."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic conjugation",
+          "hepatic impairment",
+          "prolonged drug effects"
+        ],
+        "index": 4,
+        "evidence": "주로 간에서 포합 대사됨. 간 기능 장애 시 약물 효과 연장 가능. 인체에서 간 장애 시 노출 증가 보고."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "bradycardia",
+          "hypotension",
+          "QT prolongation risk"
+        ],
+        "index": 5,
+        "evidence": "빈맥(16%) 보고. 심한 서맥 시 아트로핀 권장. 인체에서 QT 연장 보고되나 개에서는 저용량에서 전기생리학적 변수에 영향 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "hallucinations",
+          "hyperesthesia",
+          "anxiety"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 고용량(0.5 또는 2 mg/kg SC) 투여 시 운동 감소, 불안, 보행 이상, 사지 떨림, 과민반응, 환각, 과다침흘림 보고(실험 연구)."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 혈역학적 효과에 대한 직접 데이터는 제한적. 저혈압 가능성은 이론적으로 존재."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urinary excretion"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 신장 관련 직접 데이터 없음. 간 포합 후 신장 배설 경로는 개와 유사할 것으로 추정."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic conjugation"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 간 대사 관련 직접 데이터 없음. 개 및 인체 데이터에 근거하여 간 포합 대사 추정."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접 데이터 없음. 이론적 위험만 존재."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": 0.42,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 1.07,
+      "mean": 0.78,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 SC 투여 후 구토 발생 중앙값 약 13.5분(범위 3~32분). IV 투여 후 1분(범위 1~5분) 이내 구토 가능. 비강 내 투여 시 Tmax 19.17분, 반감기 29.85분. 개에서 소거 반감기 30~64분. 각 경로별 구토 지속 시간 약 30~45분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antidopaminergic drugs (metoclopramide, phenothiazines)",
+      "severity": 2,
+      "keywords": [
+        "emetic antagonism",
+        "dopamine receptor blockade"
+      ],
+      "evidence": "May negate the emetic effects of apomorphine by blocking dopamine receptors."
+    },
+    {
+      "drug": "Sedating Antihistamines (chlorpheniramine, diphenhydramine)",
+      "severity": 1,
+      "keywords": [
+        "additive sedation",
+        "CNS depression"
+      ],
+      "evidence": "Added sedative effects may occur when combined with apomorphine."
+    },
+    {
+      "drug": "Barbiturates (phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "respiratory depression",
+        "hypotension"
+      ],
+      "evidence": "Additive CNS or respiratory depression and hypotension may occur."
+    },
+    {
+      "drug": "CNS Depressant Drugs (alpha-2 adrenergic agonists, benzodiazepines, gabapentin, propofol)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Additive CNS or respiratory depression may occur with concurrent use."
+    },
+    {
+      "drug": "Hypotensive Agents (amlodipine, enalapril, furosemide, hydralazine, prazosin)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May have additive hypotensive effects when combined with apomorphine."
+    },
+    {
+      "drug": "Maropitant",
+      "severity": 2,
+      "keywords": [
+        "emetic antagonism",
+        "NK1 receptor blockade"
+      ],
+      "evidence": "Maropitant negates the emetic effects of apomorphine."
+    },
+    {
+      "drug": "Meclizine",
+      "severity": 2,
+      "keywords": [
+        "emetic antagonism",
+        "additive sedation"
+      ],
+      "evidence": "May negate the emetic effects of apomorphine; additive sedative effects may occur."
+    },
+    {
+      "drug": "Naloxone",
+      "severity": 2,
+      "keywords": [
+        "prolonged emesis",
+        "mu receptor blockade",
+        "respiratory reversal"
+      ],
+      "evidence": "Naloxone prolongs and increases the emetic effect of apomorphine by blocking mu receptors. It can reverse respiratory depressant effects but not emetic or cardiovascular effects."
+    },
+    {
+      "drug": "Nitroglycerin",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May increase the risk for hypotension when combined with apomorphine."
+    },
+    {
+      "drug": "Nitroprusside",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May increase the risk for hypotension when combined with apomorphine."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 3,
+      "keywords": [
+        "emetic antagonism",
+        "severe hypotension",
+        "contraindicated in humans"
+      ],
+      "evidence": "May negate the emetic effects of apomorphine. A human patient who received ondansetron and apomorphine developed severe hypotension. Use together is contraindicated in humans."
+    },
+    {
+      "drug": "Opioids (hydromorphone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Additive CNS or respiratory depression may occur; use together cautiously."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May increase the risk for hypotension when combined with apomorphine."
+    },
+    {
+      "drug": "QT Prolonging Drugs (amiodarone, cisapride, clomipramine, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia risk"
+      ],
+      "evidence": "May increase the risk for QT prolongation when combined with apomorphine."
+    },
+    {
+      "drug": "Serotonin Antagonists (mirtazapine, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "emetic antagonism",
+        "severe hypotension",
+        "contraindicated in humans"
+      ],
+      "evidence": "May negate the emetic effects of apomorphine. Severe hypotension reported in a human patient receiving ondansetron (serotonin antagonist) and apomorphine. Use together is contraindicated in humans."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "May increase the risk for hypotension when combined with apomorphine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit_all",
+      "rodent_all"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구토 유도 (extra-label) - 비경구 투여",
+          "value": "0.01 - 0.04",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.04,
+          "duration_note": "IV 투여가 가장 빠른 구토 유도; 반복 투여는 구토 미발생 시 독성 위험으로 권장하지 않음",
+          "evidence": "Plumb's Veterinary Drug Handbook; extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구토 유도 (extra-label) - SC 또는 IM 투여",
+          "value": "0.01 - 0.04",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.04,
+          "duration_note": "SC 투여는 IV 다음으로 빠른 구토 유도; IM은 가장 느린 발현",
+          "evidence": "Plumb's Veterinary Drug Handbook; extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구토 유도 (extra-label) - 경구 투여",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "6.5 mg 정제 1개당 26 kg 기준; 경구 흡수는 느리고 예측 불가",
+          "evidence": "Plumb's Veterinary Drug Handbook; extra-label use"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "구토 유도 (extra-label) - 결막하 투여",
+          "value": "6.25",
+          "unit": "mg",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "구토 후 정제 제거 및 생리식염수로 세척 필요; 용액은 즉시 조제하여 사용",
+          "evidence": "Plumb's Veterinary Drug Handbook; extra-label use; 미국에서는 해당 제형 미판매"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에서 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 신장이 주요 배설 경로이므로 신기능 저하 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 장애 환자에서 약물 효과가 연장될 수 있음. 인체 데이터에서 간 장애 시 최고 혈중 농도 25% 증가, 전체 노출 10% 증가 보고. 명시적 용량 조정 권고는 없으나 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "설치류 및 토끼",
+      "match_terms": [
+        "rabbit",
+        "rodent",
+        "guinea pig",
+        "hamster",
+        "rat",
+        "mouse"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저산소증",
+      "match_terms": [
+        "hypoxia",
+        "hypoxemia",
+        "respiratory distress"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 쇼크",
+      "match_terms": [
+        "cardiovascular shock",
+        "circulatory shock",
+        "hypotension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 발작",
+      "match_terms": [
+        "active seizures",
+        "seizure",
+        "epilepsy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "인두 반사 소실 (후두 마비 등)",
+      "match_terms": [
+        "laryngeal paralysis",
+        "absent pharyngeal reflex",
+        "megaesophagus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부식성 물질 섭취 (강산, 강알칼리, 날카로운 이물)",
+      "match_terms": [
+        "caustic ingestion",
+        "acid ingestion",
+        "alkali ingestion",
+        "sharp foreign body"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "모르핀 과민증",
+      "match_terms": [
+        "morphine hypersensitivity",
+        "opioid allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경구 오피오이드 또는 CNS 억제제(바르비투레이트) 중독",
+      "match_terms": [
+        "opioid toxicity",
+        "barbiturate toxicity",
+        "CNS depressant overdose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "흡인성 폐렴 병력",
+      "match_terms": [
+        "aspiration pneumonia",
+        "recurrent aspiration"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 중",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie",
+      "Old English Sheepdog",
+      "Silken Windhound",
+      "Longhaired Whippet"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1(ABCB1-1delta) 돌연변이 개에서 구토 및 CNS 억제의 심각도가 증가함. 해당 품종에서 주의하여 사용할 것."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "화학수용체 유발대(CTZ)의 도파민 수용체를 자극하여 구토를 유발하는 중추성 구토제. 알파-아드레날린 수용체에도 친화성을 가짐(인체 데이터).",
+    "common_extra_effects": [
+      "지속적 구역 및 구토",
+      "진정(44%)",
+      "빈맥(16%)",
+      "무기력",
+      "과다침흘림",
+      "저혈압",
+      "CNS 억제 또는 자극",
+      "호흡 억제(고용량)",
+      "안구 충혈/자극(결막하 투여 시)",
+      "각막 궤양(결막하 투여 후 일화적 보고)"
+    ],
+    "dog_mechanism": "CTZ의 도파민 수용체 자극을 통한 구토 유도. 개에서 90~100% 구토 유발 성공률.",
+    "dog_extra_effects": [
+      "MDR1 돌연변이 개에서 CNS 억제 심각도 증가",
+      "결막하 투여 시 진정 및 빈맥 발생률 높음",
+      "저용량 IV에서 양성 변시성·변력성 효과"
+    ],
+    "cat_mechanism": "고양이에서 효과가 불확실하며 알파-2 아드레날린 작용제보다 효과가 낮고 안전성도 불분명함.",
+    "cat_extra_effects": [
+      "고용량에서 운동 감소",
+      "불안, 보행 이상, 사지 떨림",
+      "과민반응",
+      "환각",
+      "과다침흘림"
+    ]
+  },
+  "species_notes": {
+    "dog": "아포모르핀은 개에서 90~100%의 구토 유발 성공률을 보이는 신속한 중추성 구토제입니다. IV 투여가 가장 빠른 발현(1분 이내)을 보이며, SC 투여(중앙값 13.5분)가 그 다음입니다. MDR1(ABCB1-1delta) 돌연변이 개에서는 CNS 억제 및 구토의 심각도가 증가하므로 주의가 필요합니다. 결막하 투여 시 진정(44%) 및 빈맥(16%) 발생률이 높으며, 구토 후 결막낭을 생리식염수로 세척해야 합니다.",
+    "cat": "고양이에서 아포모르핀의 사용은 논란이 있으며, 알파-2 아드레날린 작용제(예: 덱스메데토미딘)보다 효과가 낮고 안전성도 불분명합니다. 고용량에서 불안, 환각, 과민반응 등의 CNS 자극 효과가 보고되었습니다. 고양이에서 구토 유도가 필요한 경우 알파-2 작용제를 우선 고려하십시오."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1 돌연변이 개에서 CNS 억제 및 구토 심각도 증가. 간 기능 장애 시 약물 효과 연장 가능. 반복 투여는 독성 위험으로 권장하지 않음. 구토 유도 금기 상황(저산소증, 쇼크, 발작, 부식성 물질 섭취 등) 확인 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 효과가 불확실하고 안전성이 확립되지 않음. 알파-2 아드레날린 작용제를 우선 고려. 고용량에서 CNS 자극 효과(환각, 과민반응 등) 보고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C~30°C)에서 밀폐 용기에 보관하며 빛과 습기를 차단. 빛과 공기에 노출 시 점차 변색(녹색~청록색)되므로 변색된 정제 및 용액은 폐기. 용액은 산성 환경에서 더 안정적(pH 약 3~4). 조제된 용액은 빛과 공기를 차단하여 냉장 보관 시 2일간 안정. API로 조제된 주사액(2.5 mg/mL)은 25°C에서 2개월간 역가 유지.",
+    "forms": [
+      "Apomorphine HCl Injection 1 mg/mL (1 mL 앰플, Emedog®, 영국)",
+      "Apomorphine HCl Tablet 6.5 mg (호주/뉴질랜드)",
+      "Apomorphine HCl Injection 10 mg/mL (3 mL 카트리지, Apokyn®, 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아포모르핀은 개에서 90~100%의 구토 유발 성공률을 보이는 신속한 중추성 구토제입니다. CTZ의 도파민 수용체를 자극하여 구토를 유발하며, IV 투여 시 1분 이내로 가장 빠른 발현을 보입니다. MDR1 돌연변이 개에서 CNS 억제 및 구토 심각도가 증가하므로 주의가 필요합니다. 고양이에서는 효과가 불확실하여 알파-2 작용제를 우선 권장합니다. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비(PPE) 착용이 필요합니다. 날록손은 CNS/호흡 억제를 역전시킬 수 있으나 구토 및 심혈관 효과는 역전시키지 못합니다.",
+    "indications": "개에서 독소 또는 이물 섭취 후 구토 유도(extra-label). 이물 섭취 시 약 75%에서 성공적으로 이물 제거. 페럿에서도 extra-label로 사용 가능. 고양이에서는 효과 불확실로 거의 사용하지 않음.",
+    "client_info": "이 약은 반드시 수의사에 의해서만 투여되어야 합니다. 아포모르핀은 NIOSH에서 위험 약물로 분류하고 있으므로, 취급 시 개인보호장비(PPE)를 착용해야 합니다. 투여 후 지속적인 구역·구토, 과도한 침 흘림, 무기력, 눈 충혈 등의 부작용이 나타날 수 있으며, 이러한 증상이 지속되면 즉시 수의사에게 연락하십시오. 수유 중인 어미에게 투여된 경우 새끼에게 부작용이 나타날 수 있으므로 모니터링이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Formal cat dosage",
+      "CYP enzyme profile",
+      "Oral bioavailability percentage",
+      "Protein binding percentage",
+      "Renal dose adjustment guidance"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "dosage_and_kinetics.cat.dosage_list",
+      "drug_identity.allergy_class"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/55.jsonl",
+    "extracted_at": "2026-03-11T06:29:20.677497+00:00",
+    "reviewer": null
+  }
+}

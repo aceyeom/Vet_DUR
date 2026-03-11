@@ -1,0 +1,607 @@
+{
+  "id": "cannabidiol_cbd",
+  "drug_identity": {
+    "name_ko": "칸나비디올",
+    "name_en": "Cannabidiol",
+    "active_ingredient": "Cannabidiol",
+    "brand_names": [
+      "Epidiolex"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "FDA 승인 제품(Epidiolex®)은 인간용으로만 승인되어 있으며, 동물에서의 사용은 FDA 미승인 상태임. 주 및 지역 법률에 따라 수의사는 법적 자문을 구해야 함.",
+    "dosage_form": [
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4",
+        "CYP2C19"
+      ],
+      "inhibitors": [
+        "CYP2C19",
+        "CYP1A2"
+      ],
+      "inducers": [],
+      "pathway_evidence": "인간에서 CBD는 CYP2C19, CYP3A4, UGT1A7, UGT1A9, UGT2B7에 의해 간 및 위장관에서 광범위하게 대사됨. 활성 대사체(7-OH-CBD) 존재. 배설은 주로 대변을 통해 이루어짐."
+    },
+    "extra_information": "개에서 단회 투여 후 반감기 약 1~4시간, 28일 반복 투여 후 약 14~25시간. IV 투여 시 반감기 7~9시간. 고양이에서 단회 투여(CBD 어유 제형) 후 최고 혈중 농도 43 ng/mL, AUC 164 ng·hr/mL, 반감기 1.7시간. 경구 흡수는 광범위한 초회 통과 효과로 제한됨. 귀 피부 경유 투여 시 경구 대비 생체이용률 약 9%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 간 효소 상승(ALP, ALT) 보고, 간 대사 주요 경로, 간 독성 약물 상호작용 등을 근거로 간 부담 점수 높음. 신장 관련 직접 언급 없음. 수의학적 종별 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ataxia",
+          "lethargy",
+          "CNS depression",
+          "sedation"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 THC 함유 제품에서 운동실조, 기면, CNS 억제 효과 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ALP elevation",
+          "ALT elevation",
+          "prothrombin time"
+        ],
+        "index": 2,
+        "evidence": "ALP 상승(정상 상한의 2배) 보고. 와파린과 병용 시 프로트롬빈 시간 연장 가능성."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "ALP elevation",
+          "hepatotoxicity",
+          "liver enzymes",
+          "CYP3A4",
+          "CYP2C19",
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "건강한 개에서 ALP 상승(정상 상한의 2배) 보고. 고용량(12 mg/kg/day)에서 더 빈번. 간 기능 장애 환자에서 용량 감량 권고. 간 독성 약물과의 병용 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia"
+        ],
+        "index": -1,
+        "evidence": "삼환계 항우울제와 병용 시 저혈압, 빈맥 위험 증가 보고. 직접적인 심장 독성 언급은 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "ataxia",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 기면 및 운동실조 보고됨(낮은 빈도)."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ALT elevation"
+        ],
+        "index": 2,
+        "evidence": "고양이 1마리에서 ALT 상승(정상 상한의 3배) 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "ALT elevation",
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "고양이 1마리에서 ALT 상승(정상 상한의 3배) 보고. 간 대사 경로 동일하게 적용될 것으로 추정."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.5,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 25.0,
+      "mean": 13.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 94,
+    "evidence": "개에서 단회 투여 후 반감기 1~4시간, 28일 반복 투여 후 14~25시간. 고양이에서 반감기 1.7시간. 인간에서 최고 혈중 농도 도달 시간 약 2~2.5시간, 단백 결합률 94% 초과. 음식과 함께 투여 시 Cmax 4~5배, AUC 3~4배 증가."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. CBD는 CYP3A4 및 CYP2C19의 기질이며, CYP2C19 및 CYP1A2 억제제로 작용할 수 있음.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased CBD concentration"
+      ],
+      "evidence": "Concurrent use may lead to increased CBD concentration via CYP inhibition."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole, voriconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased CBD concentration",
+        "additive hepatotoxicity"
+      ],
+      "evidence": "Increased CBD concentration possible; additive hepatotoxicity risk."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam)",
+      "severity": 2,
+      "keywords": [
+        "increased benzodiazepine concentration",
+        "sedation",
+        "respiratory depression"
+      ],
+      "evidence": "CBD may increase concentrations of certain benzodiazepines (alprazolam, diazepam; not midazolam). Concurrent use may increase risk for sedation and respiratory depression."
+    },
+    {
+      "drug": "CNS Depressants (acepromazine, gabapentin, pregabalin, tramadol, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use with other CNS depressants increases risk for sedation."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased CBD concentration"
+      ],
+      "evidence": "Concurrent use may lead to increased CBD concentration."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased CBD concentration"
+      ],
+      "evidence": "Concurrent use may lead to increased CBD concentration."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "decreased active metabolite",
+        "CYP2C19 inhibition",
+        "increased CBD concentration"
+      ],
+      "evidence": "CBD may decrease formation of clopidogrel active metabolite. Clopidogrel may increase CBD concentration."
+    },
+    {
+      "drug": "Dexamethasone",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "decreased CBD concentration"
+      ],
+      "evidence": "Concurrent use may lead to decreased CBD concentration via CYP induction."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased CBD concentration"
+      ],
+      "evidence": "Concurrent use may lead to increased CBD concentration."
+    },
+    {
+      "drug": "Fenofibrate",
+      "severity": 2,
+      "keywords": [
+        "increased fenofibrate concentration"
+      ],
+      "evidence": "Increased fenofibrate concentration may occur when used concurrently with CBD."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 3,
+      "keywords": [
+        "increased CBD concentration",
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may lead to increased CBD concentration and risk for serotonin syndrome."
+    },
+    {
+      "drug": "Glipizide",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "hypoglycemia"
+      ],
+      "evidence": "CBD may decrease glipizide metabolism, increasing hypoglycemic effect."
+    },
+    {
+      "drug": "Hepatotoxic Drugs (lomustine, prednis(ol)one, sex-steroid hormones)",
+      "severity": 2,
+      "keywords": [
+        "additive hepatotoxicity",
+        "elevated liver transaminases"
+      ],
+      "evidence": "Concurrent use with valproate and clobazam increased serum liver transaminases. Use CBD cautiously with other hepatotoxic drugs."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 2,
+      "keywords": [
+        "increased lidocaine concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Increased lidocaine concentration is possible with concurrent use."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 2,
+      "keywords": [
+        "increased loperamide concentration"
+      ],
+      "evidence": "Increased loperamide concentration is possible with concurrent use."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam)",
+      "severity": 1,
+      "keywords": [
+        "no significant adverse effects observed"
+      ],
+      "evidence": "Concurrent use with CBD oil for 4 weeks resulted in no apparent adverse effects or significant laboratory value changes in dogs."
+    },
+    {
+      "drug": "Opioids (fentanyl, methadone, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "Increased risk for CNS depression with concurrent opioid use."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "additive hepatotoxicity"
+      ],
+      "evidence": "A pharmacokinetic interaction was not observed in healthy dogs, but possible additive risk for CNS depression or hepatotoxicity."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 2,
+      "keywords": [
+        "increased propofol concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "CBD use may increase propofol concentration."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased CBD concentration"
+      ],
+      "evidence": "Concurrent use may lead to increased CBD concentration."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "decreased CBD concentration"
+      ],
+      "evidence": "Rifampin may decrease CBD concentration via CYP induction."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "increased sildenafil concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "CBD may increase sildenafil concentrations."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration",
+        "CYP1A2 inhibition"
+      ],
+      "evidence": "CBD may increase theophylline concentration via CYP1A2 inhibition."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "cardiovascular effects",
+        "hypotension",
+        "tachycardia"
+      ],
+      "evidence": "Concurrent use increased risk for cardiovascular effects (hypotension, tachycardia)."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "prolonged prothrombin time",
+        "bleeding risk"
+      ],
+      "evidence": "CBD may prolong prothrombin times and increase the risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염 (extra-label)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "경구 또는 구강 점막 투여(OTM). 피어 리뷰 연구 기반 권고 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 (extra-label) — 기존 치료에 추가",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "항경련제로 사용 시 갑작스러운 중단 금지; 점진적으로 감량할 것",
+          "evidence": "피어 리뷰 연구 기반 권고 용량. 저자들은 더 높은 용량이 더 효과적일 수 있다고 가설을 제시함."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 직접적인 언급 없음. CBD는 주로 대변으로 배설되므로 신장 기능 저하 시 조절이 필요하지 않을 수 있으나, 수의학적 데이터 부재."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "인간에서 중등도 간 기능 장애 시 50%, 중증 간 기능 장애 시 80% 용량 감량 권고. 수의학적 특이 정보가 확보될 때까지 간 기능 장애 환자에서 초기 용량 감량 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "CBD 과민반응",
+      "match_terms": [
+        "hypersensitivity to cannabidiol",
+        "CBD allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 중",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CBD는 친지질성 비향정신성 칸나비노이드로, 주로 말초(면역계)에 분포하는 CB2 수용체에 결합하여 염증성 사이토카인 방출을 억제함. 또한 세로토닌 1A 수용체(5-HT1A), 바닐로이드 수용체(TRPV1) 등 65개 이상의 비칸나비노이드 수용체와 상호작용하여 항불안, 진통, 항구역 효과를 나타냄. 항경련 효과는 칸나비노이드 수용체 직접 작용과는 무관한 것으로 추정됨.",
+    "common_extra_effects": [
+      "과다 침 분비(hypersalivation)",
+      "설사(diarrhea)",
+      "구토(emesis)",
+      "간 효소 상승(ALP, ALT)",
+      "기면(lethargy)",
+      "운동실조(ataxia)",
+      "체중 감소"
+    ],
+    "dog_mechanism": "개에서 CB2 수용체 활성화를 통한 항염증 효과 및 5-HT1A, TRPV1 수용체를 통한 진통 효과. 항경련 기전은 칸나비노이드 수용체 직접 작용과 무관한 것으로 추정됨.",
+    "dog_extra_effects": [
+      "ALP 상승(정상 상한의 2배, 특히 고용량에서)",
+      "과다 침 분비",
+      "설사",
+      "구토",
+      "기면",
+      "운동실조(고용량 또는 THC 함유 제품)",
+      "Stevens-Johnson 증후군(1례 보고)",
+      "체중 감소"
+    ],
+    "cat_mechanism": "개와 유사한 기전으로 추정되나 고양이 특이적 데이터 제한적.",
+    "cat_extra_effects": [
+      "기면(낮은 빈도)",
+      "운동실조(낮은 빈도)",
+      "구토(제형 내 중쇄 트리글리세리드 오일에 의한 것으로 추정)",
+      "과다 침 분비(제형 내 중쇄 트리글리세리드 오일에 의한 것으로 추정)",
+      "ALT 상승(1례, 정상 상한의 3배)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 CBD는 골관절염 통증 완화 및 간질 발작 빈도 감소에 효과가 있음이 연구를 통해 확인됨. 아토피 피부염에서 소양 행동 감소 효과도 보고됨. 4 mg/kg/day PO 용량에서 대체로 내약성이 양호하나, ALP 상승이 건강한 개에서도 관찰될 수 있으므로 간 효소 모니터링이 필요함. 항경련제로 사용 시 갑작스러운 중단을 피하고 점진적으로 감량해야 함.",
+    "cat": "고양이에서 CBD 사용에 대한 데이터는 매우 제한적임. 단회 투여 연구에서 반감기 1.7시간으로 개보다 짧음. 기면, 운동실조, 구토, 과다 침 분비가 보고되었으나 일부는 제형(중쇄 트리글리세리드 오일)에 의한 것으로 추정됨. ALT 상승 1례 보고. 고양이에서의 적정 용량 및 안전성은 아직 확립되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 기능 장애 환자에서 용량 감량 필요. 항경련제로 사용 시 점진적 감량 필요. ALP 상승 모니터링 필요. THC 함유 제품 사용 시 부작용 위험 증가."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안전성 및 유효성 데이터 매우 제한적. 기면, 운동실조, 간 효소 상승 보고됨. 제형 선택 시 주의 필요(중쇄 트리글리세리드 오일 함유 제품에서 GI 부작용 가능)."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "Epidiolex®: 20°C~25°C(68°F~77°F) 직립 보관, 15°C~30°C(59°F~86°F) 허용. 냉동 금지. 개봉 후 12주 이내 사용. 뚜껑을 단단히 닫아 보관. 기타 CBD 제품은 밀폐 용기에 실온 보관.",
+    "forms": [
+      "Cannabidiol 경구 용액 100 mg/mL (60 mL 또는 100 mL 병, Epidiolex®)",
+      "다양한 조제 제형(오일, 펠릿 등) 가용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "칸나비디올(CBD)은 개의 골관절염 통증 완화 및 간질 발작 빈도 감소에 효과가 있음이 연구를 통해 확인된 비향정신성 칸나비노이드임. FDA 승인 제품(Epidiolex®)은 인간용으로만 승인되어 있으며, 동물에서의 사용은 모두 허가 외(extra-label) 사용임. 간 효소(ALP, ALT) 상승이 보고되므로 정기적인 모니터링이 필요함. CYP3A4 및 CYP2C19 기질로서 다수의 약물 상호작용 가능성이 있음. THC 함유 제품은 부작용 위험이 더 높으므로 순수 CBD 제품 선택을 권장함.",
+    "indications": "개: 골관절염(extra-label, 2 mg/kg PO q12h), 간질(extra-label, 2.5 mg/kg PO q12h, 기존 치료에 추가), 아토피 피부염 소양 행동 감소(연구 단계). 고양이: 공식 권고 용량 미확립. 불안 완화(소음 공포증)에서는 저용량(1.4 mg/kg/day)이 효과 없었음.",
+    "client_info": "CBD는 개와 고양이에서 대체로 내약성이 양호한 것으로 보이나, 동물에서의 사용은 아직 FDA 승인을 받지 않았습니다. 음식과 함께 투여하면 흡수량이 증가하지만, 공복 또는 식후 투여 모두 가능합니다. 매번 동일한 방식으로 투여하는 것이 중요합니다. 공복 투여 후 구토가 발생하면 다음 투여 시 소량의 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하세요. 수의사와 상의 없이 CBD 제품을 임의로 투여하지 마세요. 일부 제품에는 동물에게 해로울 수 있는 THC 등 다른 성분이 포함될 수 있습니다. 간질 치료 목적으로 사용 중인 경우 갑자기 투약을 중단하지 마세요. 이상 증상(구토, 침 과다 분비, 기면, 운동실조 등)이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosage (no established veterinary dose)",
+      "Renal dose adjustment (no veterinary-specific data)",
+      "Oral bioavailability percentage (not quantified for dogs/cats)",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates (veterinary-specific)",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/52.jsonl",
+    "extracted_at": "2026-03-11T05:27:32.061321+00:00",
+    "reviewer": null
+  }
+}

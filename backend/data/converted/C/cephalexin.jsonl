@@ -1,0 +1,681 @@
+{
+  "id": "cephalexin",
+  "drug_identity": {
+    "name_ko": "세팔렉신",
+    "name_en": "Cephalexin",
+    "active_ingredient": "Cephalexin",
+    "brand_names": [
+      "Rilexine",
+      "Keflex",
+      "Cefaceptin",
+      "Ceporex",
+      "Cephaforte",
+      "Cephorum",
+      "Cefaseptin",
+      "Kefvet",
+      "Therios"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Susp",
+      "Chewable",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 600,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 333,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 180,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세팔렉신은 신장으로 배설되며, 간 대사에 대한 언급은 없음. CYP 관련 대사 경로는 보고되지 않음."
+    },
+    "extra_information": "개: 경구 투여 후 생체이용률 약 90%, 최고 혈청 농도 18.6 µg/mL (평균 12.7 mg/kg 투여 후 약 1.8시간), 반감기 1~2시간. 단백 결합률 낮음(21%), 간질액 반감기 약 3.2시간, 총 혈장 반감기 약 4.7시간. FDA 승인 정제 22 mg/kg 공복 투여 시 최고 농도 21.7 µg/mL (1.4시간), 식이 투여 시 17 µg/mL (1.2시간); 반감기 각각 7.3시간, 8.8시간. 고양이: 경구 투여 후 생체이용률 약 60%, 최고 혈청 농도 18.7 µg/mL (22.9 mg/kg 투여 후 약 2.6시간), 반감기 1~2시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 약물로 신장 부담이 가장 높음. 고용량/장기 사용 시 간독성, 혈액독성, 신경독성 보고됨. 수의학적 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "high doses"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성이 보고됨. 일반 치료 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "positive Coombs test",
+          "prothrombin time"
+        ],
+        "index": 2,
+        "evidence": "고용량/장기 사용 시 호중구감소증, 무과립구증, 혈소판감소증, 쿰스 양성, 프로트롬빈 시간 연장 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renally eliminated",
+          "nephrotoxicity",
+          "interstitial nephritis",
+          "tubular necrosis",
+          "renal dysfunction"
+        ],
+        "index": 3,
+        "evidence": "신장으로 배설되며, 드물게 신독성(간질성 신염, 세뇨관 괴사) 보고. 신기능 저하 환자에서 감수성 증가."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatitis",
+          "increased ALT"
+        ],
+        "index": 2,
+        "evidence": "고용량 사용 시 간염 및 ALT 상승 보고됨. 110 mg/kg q8h 투여 개에서 ALT 증가 관찰(임상적 유의성 불명확)."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고용량/장기 사용 시 신경독성 가능성. 고양이 특이적 데이터 부족."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia"
+        ],
+        "index": 1,
+        "evidence": "고용량/장기 사용 시 혈액 독성 가능성. 고양이에서 구토 및 발열 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renally eliminated",
+          "nephrotoxicity",
+          "interstitial nephritis"
+        ],
+        "index": 3,
+        "evidence": "신장 배설 약물. 신기능 저하 고양이에서 감수성 증가 가능."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatitis"
+        ],
+        "index": 1,
+        "evidence": "고용량 사용 시 간염 가능성. 고양이 특이적 데이터 부족."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.8,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 2.0,
+      "mean": 1.5,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 21,
+    "evidence": "개: 경구 생체이용률 약 90%, Tmax 약 1.8시간(12.7 mg/kg), 반감기 1~2시간, 단백 결합률 21%. 고양이: 경구 생체이용률 약 60%, Tmax 약 2.6시간(22.9 mg/kg), 반감기 1~2시간. FDA 승인 정제(22 mg/kg, 공복) 반감기 7.3시간, 식이 투여 시 8.8시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "Concurrent use may cause additive nephrotoxicity. Synergistic/additive antibacterial activity also possible in vitro."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "Concurrent use with nephrotoxic drugs including amphotericin B may cause additive nephrotoxicity."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "Concurrent use with furosemide may cause additive nephrotoxicity."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Cholestyramine may reduce cephalexin oral absorption."
+    },
+    {
+      "drug": "Estrogens (estriol)",
+      "severity": 1,
+      "keywords": [
+        "enterohepatic recirculation",
+        "reduced efficacy"
+      ],
+      "evidence": "Cephalexin disruption of GI flora may alter enterohepatic recirculation, potentially decreasing estrogen effectiveness."
+    },
+    {
+      "drug": "Metformin",
+      "severity": 1,
+      "keywords": [
+        "increased drug levels"
+      ],
+      "evidence": "Metformin levels may be increased when used concurrently with cephalexin."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 1,
+      "keywords": [
+        "increased absorption",
+        "increased peak concentration",
+        "increased AUC"
+      ],
+      "evidence": "IV metoclopramide given prior to oral cephalexin may increase cephalexin peak concentration and AUC."
+    },
+    {
+      "drug": "Omeprazole",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "reduced peak concentration",
+        "delayed absorption"
+      ],
+      "evidence": "Omeprazole may reduce peak cephalexin concentration and AUC and delay oral absorption in adult dogs; however, time above MIC was not altered."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased serum levels",
+        "increased half-life"
+      ],
+      "evidence": "Probenecid may competitively block tubular secretion of cephalosporins, increasing serum levels and half-lives."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "increased prothrombin time"
+      ],
+      "evidence": "Concurrent use with warfarin may increase risk for bleeding."
+    },
+    {
+      "drug": "Zinc (oral)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Oral zinc may reduce cephalexin absorption."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "guinea_pig",
+      "hamster",
+      "gerbil"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "피부 감염(표재성 세균성 농피증) - FDA 승인 용량",
+          "value": "22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "28일간 투여",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-326)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부 감염(표재성/심부 농피증) - 엑스트라라벨",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "표재성 농피증: 임상 증상 소실 후 7일 추가, 심부 농피증: 소실 후 14일 추가",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부 감염 - 엑스트라라벨 (최대 3주)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 3주; 14일 후 개선 없으면 재평가",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부 감염 - 엑스트라라벨",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "표재성 감염성 피부염: 최소 15일, 심부 감염성 피부염: 최소 28일",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "요로감염(UTI) - 엑스트라라벨",
+          "value": "12 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "요로감염(UTI) - 엑스트라라벨",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 - 엑스트라라벨",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일",
+          "evidence": "엑스트라라벨 권장 용량"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "피부 감염(표재성/심부 농피증) - 엑스트라라벨",
+          "value": "22 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "표재성 농피증: 임상 증상 소실 후 7일 추가, 심부 농피증: 소실 후 14일 추가",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "상처 및 농양 - 엑스트라라벨",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "상처/농양: 5일, 농피증: 최소 14일; 병변 소실 후 10일 추가",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "요로감염(UTI) - 엑스트라라벨",
+          "value": "12 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "하부 요로감염(E. coli, Proteus mirabilis) - 엑스트라라벨",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "10~14일",
+          "evidence": "엑스트라라벨 권장 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 - 엑스트라라벨",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "10일",
+          "evidence": "엑스트라라벨 권장 용량"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "심각한 신기능 저하 환자에서 투여 간격 연장 등 용량 감소를 고려할 수 있음. 구체적인 크레아티닌 역치나 조정 계수는 명시되지 않음. 신독성 위험이 있는 환자(신기능 저하, 다른 신독성 약물 병용, 노령)에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사 약물이 아니므로 간기능 저하에 따른 용량 조정은 일반적으로 필요하지 않음. 고용량 사용 시 ALT 상승 가능성 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "세팔로스포린 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "cephalosporin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제(페니실린, 세파마이신, 카바페넴) 과민반응",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity",
+        "carbapenem allergy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "패혈증, 쇼크 또는 중증 질환(경구 투여 시)",
+      "match_terms": [
+        "septicemia",
+        "shock",
+        "severe illness"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "토끼, 기니피그, 햄스터, 저빌, 소형 설치류",
+      "match_terms": [
+        "rabbit",
+        "guinea pig",
+        "hamster",
+        "gerbil",
+        "small rodent"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제: 세균 세포막의 페니실린 결합 단백질(PBP; 카르복시펩티다제, 트랜스펩티다제, 엔도펩티다제)에 결합하여 무코펩티드 합성을 억제하고, 삼투압적으로 불안정한 구형체(spheroplast)를 형성하여 살균 작용을 나타냄. 시간 의존적 살균 항생제.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "타액 분비 증가",
+      "과민반응(발진, 발열, 호산구증가증, 림프절병증, 간질성 신염, 아나필락시스)",
+      "신독성(드묾)",
+      "고용량/장기 사용 시: 신경독성, 호중구감소증, 무과립구증, 혈소판감소증, 간염, 쿰스 양성, 간질성 신염, 세뇨관 괴사",
+      "프로트롬빈 시간 연장",
+      "항생제 관련 설사",
+      "심각한 피부 반응(다형홍반, 독성 표피 괴사용해, 피부 혈관염, 낙엽상 천포창) - 드묾"
+    ],
+    "dog_mechanism": "1세대 세팔로스포린으로 그람 양성균(특히 포도상구균, 연쇄상구균)에 우수한 항균력. 시간 의존적 살균 작용. 포도상구균 감염 시 투여 간격의 40% 이상, 연쇄상구균 감염 시 60% 이상 MIC 초과 유지 필요.",
+    "dog_extra_effects": [
+      "무기력",
+      "소양증",
+      "타액 분비 증가",
+      "빈호흡",
+      "흥분",
+      "구토",
+      "설사",
+      "식욕부진"
+    ],
+    "cat_mechanism": "1세대 세팔로스포린으로 감수성 세균에 대한 살균 작용. 고양이에서 경구 생체이용률이 개보다 낮음(약 60%).",
+    "cat_extra_effects": [
+      "구토",
+      "발열"
+    ]
+  },
+  "species_notes": {
+    "dog": "세팔렉신은 개의 표재성 세균성 농피증 치료에 FDA 승인된 1세대 경구 세팔로스포린입니다. 식이와 함께 투여 시 위장관 부작용을 줄일 수 있습니다. 메티실린 내성 포도상구균(MRSA/MRSP) 또는 다제내성균 감염이 의심되는 경우 항균제 감수성 검사 후 사용을 권장합니다. 투여 시간대에 따라 약동학적 차이가 있을 수 있습니다(저녁 투여 시 최고 농도 약 23% 감소, 반감기 약 50% 연장).",
+    "cat": "고양이에서 세팔렉신은 엑스트라라벨로 사용됩니다. 경구 생체이용률이 개보다 낮으므로(약 60%) 용량 조정이 필요할 수 있습니다. 고양이에서 구토 및 발열이 보고되었습니다. 세팔로스포린 항생제는 고양이 소변 냄새와 유사한 냄새가 날 수 있으나 정상입니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 다른 신독성 약물 병용, 노령견에서 신독성 위험 증가. 베타-락탐 과민반응 병력 시 주의. 패혈증/쇼크 시 경구 투여 흡수 저하 가능."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 엑스트라라벨 사용. 경구 생체이용률이 개보다 낮음(약 60%). 구토 및 발열 보고됨. 신기능 저하 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제, 씹는 정제, 캡슐, 경구 현탁액 분말: 실온(15°C-30°C; 59°F-86°F) 밀폐 용기 보관. 재조제 후 경구 현탁액: 냉장 보관 시 2주간 안정.",
+    "forms": [
+      "씹는 정제(scored): 75 mg, 150 mg, 300 mg, 600 mg (Rilexine®, 동물용)",
+      "경구 캡슐: 250 mg, 333 mg, 500 mg, 750 mg (인체용)",
+      "경구 정제: 250 mg, 500 mg (인체용)",
+      "경구 현탁액 분말: 125 mg/5 mL (25 mg/mL), 250 mg/5 mL (50 mg/mL) (Keflex®, 인체용)",
+      "주사용 현탁액: 세팔렉신 나트륨 180 mg/mL (Ceporex®, 영국 - 개, 고양이, 소)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세팔렉신은 개의 표재성 세균성 농피증 치료에 FDA 승인된 1세대 경구 세팔로스포린입니다. 그람 양성균(특히 포도상구균, 연쇄상구균)에 우수한 항균력을 보이며, 시간 의존적 살균 작용을 합니다. 고양이, 페럿, 파충류, 조류에서도 엑스트라라벨로 사용됩니다. 토끼, 기니피그, 햄스터, 저빌 등 소형 설치류에는 사용 금기입니다. WHO 및 OIE에서 중요 항균제로 지정되어 있어 신중한 사용이 필요합니다.",
+    "indications": "승인 적응증: 개의 감수성 균주(Staphylococcus pseudintermedius)에 의한 이차성 표재성 세균성 농피증. 엑스트라라벨 적응증: 심부 농피증, 요로감염(UTI), 고양이/페럿/파충류/조류의 감수성 세균 감염, 상처 및 농양 감염.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 위장관 부작용(구토, 설사)이 발생하면 소량의 음식과 함께 투여하세요. 가장 흔한 부작용은 설사, 구토, 식욕부진입니다. 심한 구토/설사나 발진/가려움증이 나타나면 즉시 수의사에게 연락하세요. 동물이 좋아 보여도 수의사가 처방한 기간 동안 반드시 투약을 완료하세요. 세팔로스포린 항생제는 고양이 소변과 유사한 냄새가 날 수 있으나 정상입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Specific renal dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/23.jsonl",
+    "extracted_at": "2026-03-10T20:25:50.677111+00:00",
+    "reviewer": null
+  }
+}

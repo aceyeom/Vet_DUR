@@ -1,0 +1,519 @@
+{
+  "id": "zoledronate",
+  "drug_identity": {
+    "name_ko": "졸레드론산",
+    "name_en": "Zoledronic Acid",
+    "active_ingredient": "Zoledronic Acid",
+    "brand_names": [
+      "Zometa",
+      "Reclast",
+      "Aclasta"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 개, 고양이, 말에서 모두 허가 외(extra-label) 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 4.0,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "졸레드론산은 대사되지 않으며 다른 약물의 대사를 변경하지 않는다. 투여량의 약 50~75%는 뼈에 흡수되고, 나머지는 대부분 소변으로 변화 없이 배설된다(인체 데이터)."
+    },
+    "extra_information": "개에서 15분 IV 주입 후 분포용적 약 0.3 L/kg, 반감기 2.2시간(건강한 개 4마리). 인체에서 말단 제거 반감기는 약 146시간이며, 동물에서 보고된 짧은 반감기는 샘플링 기간이 짧기 때문으로 추정된다. 신기능 저하 시 총 약물 노출(AUC)이 증가한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 인체 데이터 혼용. 신독성 및 전해질 이상이 주요 위험 요인.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypocalcemia-related neurologic adverse effects"
+        ],
+        "index": 1,
+        "evidence": "저칼슘혈증 관련 신경학적 이상반응이 보고되어 있으나 직접적인 뇌 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "agranulocytosis",
+          "anemia",
+          "hypocalcemia"
+        ],
+        "index": 2,
+        "evidence": "인체에서 혈소판감소증, 무과립구증, 빈혈 보고. 개에서 CBC 모니터링 권고. 저칼슘혈증으로 인한 심장/신경 이상반응 가능."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal toxicity",
+          "acute kidney injury",
+          "azotemia",
+          "nephrotoxic",
+          "renal impairment"
+        ],
+        "index": 4,
+        "evidence": "개에서 급성 신손상 및 질소혈증 보고. 신독성 약물 병용 시 위험 증가. 투여 전 신기능 검사 필수. 중증 신기능 저하 시 금기."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "atrial fibrillation",
+          "hypocalcemia-related cardiac adverse effects",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 시 심한 저칼슘혈증으로 인한 심방세동 보고. 인체에서 저혈압 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypocalcemia-related neurologic adverse effects"
+        ],
+        "index": 1,
+        "evidence": "저칼슘혈증 관련 신경학적 이상반응 가능성. 고양이 특이 데이터 부족."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypocalcemia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 CBC 모니터링 권고. 인체 데이터 기반 혈액 독성 가능성."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "renal toxicity",
+          "nephrotoxic",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 신독성 위험. 투여 전 신기능 검사 필요. 중증 신기능 저하 시 금기."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypocalcemia-related cardiac adverse effects"
+        ],
+        "index": 1,
+        "evidence": "저칼슘혈증 관련 심장 이상반응 가능성. 고양이 특이 데이터 부족."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 2.2,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개(건강한 4마리)에서 15분 IV 주입 후 반감기 2.2시간. 인체에서 말단 반감기 약 146시간(뼈 결합 반영). 경구 생체이용률 데이터 없음(IV 전용)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "hypocalcemia",
+        "nephrotoxicity"
+      ],
+      "evidence": "Aminoglycosides may enhance hypocalcemic effects of zoledronate; also additive nephrotoxicity risk. Monitor calcium and renal function."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, fludrocortisone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "calcium dysregulation"
+      ],
+      "evidence": "Zoledronate must be used carefully with monitoring when used with drugs that can affect calcium concentrations."
+    },
+    {
+      "drug": "Loop Diuretics (e.g., furosemide)",
+      "severity": 2,
+      "keywords": [
+        "hypocalcemia",
+        "calcium excretion"
+      ],
+      "evidence": "Loop diuretics promote calcium excretion and may result in additive effects on calcium concentrations with zoledronate."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., aminoglycosides, amphotericin B, cisplatin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Use with caution; potential for increased risk for nephrotoxicity when combined with zoledronate."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, flunixin, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Use with caution; potential for increased risk for nephrotoxicity when combined with zoledronate."
+    },
+    {
+      "drug": "Thiazide Diuretics (e.g., hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypercalcemia",
+        "calcium retention"
+      ],
+      "evidence": "Thiazide diuretics promote calcium retention and may impair the hypocalcemic effects of zoledronate."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "악성 종양에 의한 고칼슘혈증 보조 치료 (허가 외)",
+          "value": "4",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "15분 이상 IV 주입. 체중 기반 용량 0.1~0.32 mg/kg도 보고됨.",
+          "evidence": "4 mg/dog (NOT mg/kg) IV infusion over 15 minutes. Doses ranging from 0.1–0.32 mg/kg have been reported."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골육종 관련 골통증 완화 치료 (허가 외)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q28h",
+          "max_dose_mg_kg": null,
+          "duration_note": "방사선 치료 2일차에 투여 후 4주마다 반복. 15분 이상 IV 주입.",
+          "evidence": "0.1 mg/kg IV infusion over 15 minutes on the second of 2 days of ionizing radiation and repeated every 4 weeks."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구강 편평세포암종(골 침범) 보조 치료 (허가 외)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q28h",
+          "max_dose_mg_kg": null,
+          "duration_note": "28일마다 반복. 15분 이상 IV 주입.",
+          "evidence": "0.2 mg/kg IV infusion over 15 minutes every 28 days."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 신기능 저하 시 금기. 경증~중등도 신기능 저하 시 용량 조정 불필요(인체 데이터). 중등도 신기능 저하 환자에서는 주의하여 사용. 투여 전 신기능 검사 필수. 신독성 약물 병용 시 주의."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 용량 조정에 대한 언급 없음. 약물이 대사되지 않으므로 간기능 저하에 의한 용량 조정은 불필요한 것으로 추정."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to zoledronate",
+        "bisphosphonate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼슘혈증",
+      "match_terms": [
+        "hypocalcemia",
+        "low calcium"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "calcium",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD stage 4",
+        "CKD stage 5",
+        "acute kidney injury"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중등도 신기능 저하",
+      "match_terms": [
+        "moderate renal impairment",
+        "azotemia",
+        "CKD stage 3"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "전해질 불균형",
+      "match_terms": [
+        "electrolyte imbalance",
+        "hypomagnesemia",
+        "hypophosphatemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유",
+      "match_terms": [
+        "lactation",
+        "nursing",
+        "breastfeeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비스포스포네이트계 약물로 하이드록시아파타이트 결정에 결합하여 골흡수를 억제. 파골세포의 효소인 파르네실 피로인산 합성효소를 주요 표적으로 하여 파골세포 활성 억제 및 세포자멸사 유도. 파미드로네이트 대비 약 100배 강력한 골흡수 억제 효과.",
+    "common_extra_effects": [
+      "저칼슘혈증",
+      "저인산혈증",
+      "고마그네슘혈증",
+      "구역",
+      "근골격계 통증",
+      "턱뼈 괴사",
+      "비정형 골절",
+      "빈혈",
+      "홍채염/포도막염",
+      "저혈압",
+      "혈소판감소증",
+      "무과립구증",
+      "주입 후 발열",
+      "피로",
+      "근육통",
+      "관절통"
+    ],
+    "dog_mechanism": "파골세포 활성 억제 및 세포자멸사 유도. 골육종 세포주에 대한 직접적 세포독성/세포정지 효과. 항혈관신생 효과 및 세포 이동 억제 가능.",
+    "dog_extra_effects": [
+      "질소혈증",
+      "구토",
+      "설사",
+      "급성 신손상(경미~중등도)",
+      "저칼슘혈증",
+      "턱뼈 괴사",
+      "혈관 외 누출 시 자극"
+    ],
+    "cat_mechanism": "파골세포 활성 억제. 구강 편평세포암종에서 종양 성장 억제 및 병적 골 전환 감소.",
+    "cat_extra_effects": [
+      "저칼슘혈증",
+      "신독성 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 골육종 관련 골통증 완화 및 악성 종양에 의한 고칼슘혈증 치료에 허가 외 사용. 15분 IV 주입으로 잘 내약되는 것으로 보고됨. 투여 전 신기능 및 전해질 검사 필수. 신독성 약물 병용 시 주의. 실험적으로 유발된 골관절염에서 연골보호 효과 확인.",
+    "cat": "구강 편평세포암종(골 침범)에서 종양 성장 억제 및 병적 골 전환 감소 효과 보고. 0.2 mg/kg을 28일마다 15분 IV 주입. 투여 전 신기능 검사 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성 위험으로 투여 전 신기능 검사 필수. 중증 신기능 저하 시 금기. 신독성 약물 병용 시 주의. NIOSH 위험 약물(그룹 3) 분류로 취급 시 적절한 보호 장비 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신독성 위험으로 투여 전 신기능 검사 필수. 중증 신기능 저하 시 금기. 고양이에서의 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 25°C(77°F) 보관; 15°C~30°C(59°F~86°F) 범위 허용. 희석된 주입액은 냉장(2°C~8°C) 보관하며 희석 후 24시간 이내 투여 완료. 2가 양이온 함유 IV 수액(LRS, Plasmalyte, Ringer's 등)과 혼합 금지. 0.9% 생리식염수 또는 5% 포도당 수액 사용 권장.",
+    "forms": [
+      "Zoledronic Acid Injection 4 mg/5 mL (0.8 mg/mL) 농축액 단회용 바이알",
+      "Zoledronic Acid Injection 4 mg/100 mL 즉시 사용 IV 용액",
+      "Zoledronic Acid Injection 5 mg/100 mL 즉시 사용 IV 용액"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "졸레드론산은 비스포스포네이트계 약물로 파미드로네이트 대비 약 100배 강력한 골흡수 억제 효과를 가진다. 개에서 골육종 관련 골통증 완화 및 악성 종양에 의한 고칼슘혈증 치료에 허가 외 사용된다. 고양이에서는 구강 편평세포암종(골 침범)에 사용된다. 반드시 15분 이상 IV 주입으로 투여해야 하며, 투여 전 신기능 및 전해질 검사가 필수적이다. 중증 신기능 저하 및 저칼슘혈증 환자에서는 금기이다. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비가 필요하다.",
+    "indications": "【허가 외 사용】 ① 개: 악성 종양에 의한 고칼슘혈증 보조 치료 (4 mg/dog 또는 0.1~0.32 mg/kg IV), 골육종 관련 골통증 완화 (0.1 mg/kg IV, 4주마다). ② 고양이: 구강 편평세포암종(골 침범) 보조 치료 (0.2 mg/kg IV, 28일마다). ③ 말: 골취약성 장애 (0.075 mg/kg IV). 수의학적 승인 제품 없음.",
+    "client_info": "이 약은 동물병원에서만 투여 가능하며 가정에서 투여할 수 없습니다. 투여 후 체온 상승, 식욕 저하, 근육·뼈·관절 통증이 며칠간 나타날 수 있습니다. 이상 증상이 있으면 즉시 수의사에게 연락하세요. 정기적인 추적 검사(혈액검사, 신기능 검사)가 반드시 필요하므로 예약된 검진을 빠지지 마세요. 이 약은 NIOSH에서 위험 약물로 분류하고 있습니다. 반려동물의 배설물(소변, 대변, 구토물) 처리 시 개인 보호 장비 착용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Veterinary-labeled products"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "half_life_hr (cat-specific)",
+      "contraindications.lab_trigger.threshold (renal)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/8.jsonl",
+    "extracted_at": "2026-03-10T15:54:54.836467+00:00",
+    "reviewer": null
+  }
+}

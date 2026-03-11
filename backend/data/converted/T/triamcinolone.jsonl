@@ -1,0 +1,910 @@
+{
+  "id": "triamcinolone",
+  "drug_identity": {
+    "name_ko": "트리암시놀론 아세토니드",
+    "name_en": "Triamcinolone Acetonide",
+    "active_ingredient": "Triamcinolone Acetonide",
+    "brand_names": [
+      "Vetalog",
+      "Kenalog"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Topical",
+      "Oint"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "value": 1.5,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 6,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "모노그래프에 CYP 효소 경로에 대한 구체적인 정보가 기재되어 있지 않음. 아졸계 항진균제가 글루코코르티코이드 대사를 억제하고, 페노바르비탈 및 리팜핀이 대사를 촉진한다고 언급되어 있어 간 대사(CYP 관여 추정)가 시사됨."
+    },
+    "extra_information": "혈장 농도는 생물학적 활성의 좋은 지표가 아님. 말에서 IM 투여 시 혈장 말단 소실 반감기 11.4일(±6.53), IA 투여 시 0.78일(±1). 경구 투여 시 대사 활성 지속 시간 24~48시간(중간 작용형). IM 투여 시 활성 지속 4~6주(최대 8주). 개/고양이에 대한 구체적인 PK 데이터는 모노그래프에 기재되어 있지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개/고양이 종별 수의학적 PK 데이터 부재; 부작용 및 금기 항목에서 추출. 간 대사 억제/유도 약물 상호작용, 신장 관련 주의사항, 혈당 상승, 전해질 이상 등을 근거로 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "행동 변화",
+          "우울",
+          "무기력",
+          "공격성"
+        ],
+        "index": 1,
+        "evidence": "개에서 장기 투여 시 행동 변화(우울, 무기력, 공격성) 보고됨."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "호중구증가증",
+          "림프구감소증",
+          "과응고성",
+          "고지혈증",
+          "저칼륨혈증"
+        ],
+        "index": 2,
+        "evidence": "글루코코르티코이드는 호중구증가증, 림프구감소증, 과응고성, 고지혈증, 저칼륨혈증을 유발할 수 있음. 혈당 상승 및 전해질 이상도 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "다뇨",
+          "다음",
+          "신부전 주의"
+        ],
+        "index": 2,
+        "evidence": "다뇨/다음 부작용 보고. 만성 신염 시 전신 투여 금기. 신부전 시 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "간 효소 증가",
+          "간 대사",
+          "사이클로스포린 상호작용",
+          "사이클로포스파미드 상호작용"
+        ],
+        "index": 3,
+        "evidence": "개에서 간 효소 증가 보고. 간에서 대사되며, 사이클로스포린 및 사이클로포스파미드의 간 대사를 억제할 수 있음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CHF 상대적 금기",
+          "저칼륨혈증으로 인한 부정맥 위험"
+        ],
+        "index": 1,
+        "evidence": "CHF 시 상대적 금기. 저칼륨혈증으로 인한 디곡신 부정맥 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "우울"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 우울 증상이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "고혈당",
+          "저칼륨혈증",
+          "림프구감소증"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 글루코코르티코이드의 혈당 상승 효과가 다른 종보다 크다고 보고됨. 전해질 이상 및 림프구감소증 가능."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "다뇨",
+          "다음"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 다뇨/다음 부작용 보고됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "간 대사",
+          "쿠싱 효과"
+        ],
+        "index": 2,
+        "evidence": "장기 고용량 투여 시 쿠싱 효과 발생 가능. 간 대사 약물."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CHF 상대적 금기",
+          "저칼륨혈증"
+        ],
+        "index": 1,
+        "evidence": "CHF 시 상대적 금기. 저칼륨혈증으로 인한 심장 부작용 위험."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개/고양이에 대한 반감기, 생체이용률, 단백결합률 데이터가 모노그래프에 기재되어 있지 않음. 말에서 IM 투여 시 혈장 말단 소실 반감기 11.4일(±6.53), IA 투여 시 0.78일(±1)로 보고됨. 경구 투여 시 대사 활성 24~48시간 지속(중간 작용형)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "저칼륨혈증"
+      ],
+      "evidence": "글루코코르티코이드와 병용 시 저칼륨혈증 유발 가능."
+    },
+    {
+      "drug": "Local Anesthetics (epidural)",
+      "severity": 3,
+      "keywords": [
+        "CNS 손상",
+        "사망"
+      ],
+      "evidence": "경막외 주사에서 글루코코르티코이드와 병용 시 심각한 CNS 손상 및 사망 보고."
+    },
+    {
+      "drug": "Anticholinesterase Agents (pyridostigmine, neostigmine)",
+      "severity": 2,
+      "keywords": [
+        "근육 약화",
+        "중증근무력증"
+      ],
+      "evidence": "중증근무력증 환자에서 병용 시 심각한 근육 약화 유발 가능. 가능하면 코르티코스테로이드 투여 최소 24시간 전에 항콜린에스테라제 약물 중단 권고."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "글루코코르티코이드 대사 억제",
+        "혈중 농도 증가",
+        "부신 기능 부전"
+      ],
+      "evidence": "글루코코르티코이드 대사를 억제하여 트리암시놀론 혈중 농도 증가 가능. 케토코나졸은 부신 코르티코스테로이드 합성 억제로 글루코코르티코이드 중단 시 부신 기능 부전 유발 가능."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "간 대사 억제",
+        "용량 조절 필요"
+      ],
+      "evidence": "글루코코르티코이드가 사이클로포스파미드의 간 대사를 억제할 수 있음; 용량 조절 필요할 수 있음."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "상호 간 대사 억제",
+        "혈중 농도 증가"
+      ],
+      "evidence": "글루코코르티코이드와 사이클로스포린 병용 시 상호 간 대사 억제로 각각의 혈중 농도 증가 가능; 임상적 유의성 불명확."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "저칼륨혈증",
+        "부정맥"
+      ],
+      "evidence": "저칼륨혈증으로 인한 디곡신 부정맥 위험 증가."
+    },
+    {
+      "drug": "Potassium-Depleting Diuretics (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "저칼륨혈증"
+      ],
+      "evidence": "글루코코르티코이드와 병용 시 저칼륨혈증 유발 가능."
+    },
+    {
+      "drug": "Ephedrine",
+      "severity": 1,
+      "keywords": [
+        "글루코코르티코이드 대사 촉진"
+      ],
+      "evidence": "에페드린이 글루코코르티코이드 대사를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Estrogens (DES, estriol)",
+      "severity": 2,
+      "keywords": [
+        "트리암시놀론 효과 증강"
+      ],
+      "evidence": "에스트로겐 병용 시 트리암시놀론 및 기타 글루코코르티코이드의 효과가 증강될 수 있음."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "인슐린 요구량 증가",
+        "혈당 상승"
+      ],
+      "evidence": "글루코코르티코이드 투여 시 인슐린 요구량 증가 가능."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 1,
+      "keywords": [
+        "이소니아지드 혈중 농도 감소"
+      ],
+      "evidence": "트리암시놀론이 이소니아지드 혈중 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "트리암시놀론 혈중 농도 증가"
+      ],
+      "evidence": "마크로라이드 항생제가 트리암시놀론 혈중 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "스테로이드 대사 변화",
+        "부신 기능 부전"
+      ],
+      "evidence": "미토탄이 스테로이드 대사를 변화시킬 수 있음; 미토탄 유발 부신 기능 부전 치료 시 통상보다 높은 스테로이드 용량 필요할 수 있음."
+    },
+    {
+      "drug": "NSAIDs (carprofen, flunixin, meloxicam, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "GI 궤양",
+        "위장관 출혈"
+      ],
+      "evidence": "궤양 유발 약물과 글루코코르티코이드 병용 시 GI 궤양 위험 증가."
+    },
+    {
+      "drug": "Opioids (morphine, epidural)",
+      "severity": 3,
+      "keywords": [
+        "CNS 손상",
+        "사망"
+      ],
+      "evidence": "경막외 주사에서 글루코코르티코이드와 오피오이드 병용 시 심각한 CNS 손상 및 사망 보고."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "글루코코르티코이드 대사 촉진",
+        "트리암시놀론 혈중 농도 감소"
+      ],
+      "evidence": "페노바르비탈이 글루코코르티코이드 대사를 증가시켜 트리암시놀론 혈중 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "글루코코르티코이드 대사 촉진",
+        "트리암시놀론 혈중 농도 감소"
+      ],
+      "evidence": "리팜핀이 글루코코르티코이드 대사를 증가시켜 트리암시놀론 혈중 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Salicylates (aspirin, bismuth subsalicylate)",
+      "severity": 1,
+      "keywords": [
+        "살리실산염 혈중 농도 감소"
+      ],
+      "evidence": "글루코코르티코이드가 살리실산염 혈중 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Modified Live Vaccines",
+      "severity": 2,
+      "keywords": [
+        "면역억제",
+        "바이러스 복제 증가",
+        "백신 반응 감소"
+      ],
+      "evidence": "면역억제 용량의 코르티코스테로이드 투여 중에는 생백신 접종을 일반적으로 피해야 함; 바이러스 복제 증가 및 면역 반응 감소 가능."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "응고 시간 변화"
+      ],
+      "evidence": "트리암시놀론이 응고 시간에 영향을 줄 수 있음; 모니터링 필요."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "글루코코르티코이드 효과 - 경구 초기 용량 (FDA 승인)",
+          "value": "0.11",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.22,
+          "duration_note": "초기 반응 불충분 시 0.22 mg/kg으로 증량 가능. 가능한 빨리, 늦어도 2주 이내에 0.028~0.055 mg/kg/day로 점감.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "글루코코르티코이드 효과 - 주사 (FDA 승인, 염증/알레르기)",
+          "value": "0.11 - 0.22",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.22,
+          "duration_note": "효과는 일반적으로 7~15일 지속. 임상 증상 재발 시 반복 투여 또는 경구 치료로 전환 가능.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "글루코코르티코이드 효과 - 주사 (FDA 승인, 피부과적 장애)",
+          "value": "0.22",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.22,
+          "duration_note": "효과는 일반적으로 7~15일 지속.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "병변내 주사 (FDA 승인)",
+          "value": "1.2 - 1.8",
+          "unit": "mg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량을 병변 주위 0.5~2.5 cm 간격으로 여러 부위에 분할 주사. 한 부위 최대 0.6 mg, 다발성 병변 치료 시 총 최대 6 mg. 필요 시 3~4일 후 반복 가능.",
+          "evidence": "FDA 승인 라벨 용량 (mg/kg 아님)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "관절내/활막내 주사 (FDA 승인)",
+          "value": "1 - 3",
+          "unit": "mg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "관절 크기 및 임상 증상 중증도에 따라 용량 결정. 3~4일 후 반복 가능.",
+          "evidence": "FDA 승인 라벨 용량 (mg/kg 아님)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항염증제 - 유도 (extra-label)",
+          "value": "0.05 - 0.22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.22,
+          "duration_note": "유지: 0.05~0.1 mg/kg PO q48~72h. 중단 시 점감 필요.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역억제 - 자가면역 피부 질환 유도 (extra-label)",
+          "value": "0.4 - 0.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.6,
+          "duration_note": "유지: 0.1~0.2 mg/kg PO q48~72h.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고관절 골관절염 - 관절내 주사 (extra-label)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "히알루론산 1~2 mL와 병용 관절내 투여. 또는 20 mg/관절(mg/kg 아님).",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "식도 협착 재발 방지 - 병변내 주사 (extra-label)",
+          "value": "2 - 10",
+          "unit": "mg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량을 4사분면에 분할 점막하 주사(약 0.5~2.5 mg/사분면). 풍선 확장 전 시행.",
+          "evidence": "Extra-label 용량 (mg/kg 아님)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "직장 협착 재발 방지 - 병변내 주사 (extra-label, 개)",
+          "value": "5 - 10",
+          "unit": "mg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량을 4사분면에 분할 점막하 주사. 풍선 확장 전 시행.",
+          "evidence": "Extra-label 용량 (mg/kg 아님)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비만세포종 - 병변내 주사 (extra-label)",
+          "value": "1 - 2",
+          "unit": "mg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "종양 최장 직경 1 cm당 트리암시놀론 1~2 mg. 투여 간격은 주 1회(20%), 1회 투여(40%), 또는 임상의 재량(40%).",
+          "evidence": "Extra-label 용량 (mg/kg 아님)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "만성 녹내장 모양체 소작술 - 유리체내 주사 (extra-label, 개)",
+          "value": "1 - 2",
+          "unit": "mg",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "겐타마이신 30~50 mg과 병용 유리체내 투여.",
+          "evidence": "Extra-label 용량 (mg/kg 아님)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "글루코코르티코이드 효과 - 경구 초기 용량 (FDA 승인)",
+          "value": "0.11",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.22,
+          "duration_note": "초기 반응 불충분 시 0.22 mg/kg으로 증량 가능. 가능한 빨리, 늦어도 2주 이내에 0.028~0.055 mg/kg/day로 점감.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "글루코코르티코이드 효과 - 주사 (FDA 승인, 염증/알레르기)",
+          "value": "0.11 - 0.22",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.22,
+          "duration_note": "효과는 일반적으로 7~15일 지속. 임상 증상 재발 시 반복 투여 또는 경구 치료로 전환 가능.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "알레르기성 소양증 보조 치료 - 유도 (extra-label)",
+          "value": "0.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 5 kg 이하 고양이: 0.5 mg/마리/일. 체중 5 kg 초과: 0.75 mg/마리/일. 7일 후 관해 미달성 시 유도 용량 2배로 증량하여 추가 7주 투여. 관해 달성 후 격일 투여로 전환 후 점감.",
+          "evidence": "Extra-label 용량 (mg/kg 아님). 평균 유도 용량 0.18 mg/kg(범위 0.09~0.26 mg/kg). 94%의 고양이가 2주 이내 관해 달성."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역억제 - 천포창 유도 (extra-label)",
+          "value": "0.6 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "유지: 0.6~1 mg/kg PO q2~7일. 프레드니솔론+클로람부실 병용 대비 부작용 유의하게 적음.",
+          "evidence": "Extra-label 용량 - 고양이 천포창 엽상형"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "직장 협착 재발 방지 - 병변내 주사 (extra-label, 고양이)",
+          "value": "0.8",
+          "unit": "mg",
+          "route": "Inj",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량을 4사분면에 각 0.8 mg씩 점막하 주사. 풍선 확장 전 시행.",
+          "evidence": "Extra-label 용량 (mg/kg 아님)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "만성 신염 시 전신 투여 금기. 신부전 시 주의 사용 권고. 구체적인 용량 조절 기준은 모노그래프에 기재되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 대사되며, 간 효소 증가가 부작용으로 보고됨. 구체적인 간 기능 저하 시 용량 조절 기준은 모노그래프에 기재되어 있지 않음. 간 기능 모니터링 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "진균증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "바이러스 감염",
+      "match_terms": [
+        "viral infection",
+        "바이러스 감염"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "결핵",
+      "match_terms": [
+        "tuberculosis",
+        "결핵"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "과부신피질증",
+      "match_terms": [
+        "hyperadrenocorticism",
+        "쿠싱증후군"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "만성 신염",
+      "match_terms": [
+        "chronic nephritis",
+        "만성 신염"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "특발성 혈소판감소증 (IM 투여 시)",
+      "match_terms": [
+        "idiopathic thrombocytopenia",
+        "ITP"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "당뇨"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골다공증",
+      "match_terms": [
+        "osteoporosis",
+        "골다공증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure",
+        "울혈성 심부전"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension",
+        "고혈압"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈전정맥염 소인",
+      "match_terms": [
+        "thrombophlebitis",
+        "혈전정맥염"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 마지막 삼분기)",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 정보가 기재되어 있지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 글루코코르티코이드로서 히드로코르티손보다 4~10배(일부 보고에서 최대 40배) 강력한 항염증 및 면역억제 효과를 나타냄. 무기질코르티코이드 활성은 거의 없음. 세포 내 글루코코르티코이드 수용체에 결합하여 염증 매개체 생성 억제, 면역세포 기능 조절, 단백질 및 탄수화물 대사 변화 등 광범위한 효과를 나타냄.",
+    "common_extra_effects": [
+      "다뇨(PU)",
+      "다음(PD)",
+      "다식(PP)",
+      "체중 증가",
+      "근육 소모",
+      "골다공증",
+      "고혈당",
+      "저칼륨혈증",
+      "고지혈증",
+      "과응고성",
+      "GI 궤양",
+      "HPA 축 억제",
+      "쿠싱 증후군 유사 증상",
+      "성장 지연(어린 동물)",
+      "면역억제",
+      "감염 증상 은폐"
+    ],
+    "dog_mechanism": "트리암시놀론은 개에서 중간 작용형 글루코코르티코이드로 작용하며, 경구 투여 시 대사 활성이 24~48시간 지속됨. IM 투여 시 4~6주(최대 8주) 지속.",
+    "dog_extra_effects": [
+      "다뇨/다음/다식",
+      "둔하고 건조한 피모",
+      "체중 증가",
+      "헐떡임",
+      "구토",
+      "설사",
+      "간 효소 증가",
+      "GI 궤양(특히 고용량 비경구 또는 경구 투여 시)",
+      "과응고성",
+      "고지혈증",
+      "당뇨병 활성화 또는 악화",
+      "근육 소모",
+      "행동 변화(우울, 무기력, 공격성)",
+      "림프구감소증(약물 중단 후 수주간 지속 가능)"
+    ],
+    "cat_mechanism": "고양이에서 트리암시놀론은 메틸프레드니솔론보다 약 7배 강력한 것으로 보고됨. 고양이에서 글루코코르티코이드의 혈당 상승 효과가 다른 종보다 큼.",
+    "cat_extra_effects": [
+      "다뇨/다음/다식",
+      "체중 증가",
+      "설사",
+      "우울",
+      "장기 고용량 투여 시 쿠싱 효과",
+      "고혈당"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 경구 및 주사 제형이 있음. 항염증, 면역억제, 관절내 주사 등 다양한 용도로 사용됨. 장기 투여 시 쿠싱 증후군 유사 부작용 주의. GI 궤양 위험이 있으므로 NSAIDs와 병용 시 특히 주의 필요. 중단 시 반드시 점감 요법 시행.",
+    "cat": "고양이에서 FDA 승인된 제형이 있음. 메틸프레드니솔론보다 약 7배 강력하며, 혈당 상승 효과가 다른 종보다 큼. 천포창 치료 시 프레드니솔론+클로람부실 병용 대비 부작용이 유의하게 적었다는 보고 있음. 알레르기성 소양증 치료에도 사용됨. 장기 고용량 투여 시 쿠싱 효과 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 FDA 승인 약물이나 장기 투여, 고용량, 격일 요법 미시행 시 쿠싱 증후군 유사 부작용 위험. 당뇨, 골다공증, CHF, 신부전, 고혈압 등 기저 질환 시 주의 사용. 중단 시 반드시 점감 요법 시행."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 FDA 승인 약물이나 혈당 상승 효과가 다른 종보다 크므로 당뇨 고양이에서 특히 주의. 장기 고용량 투여 시 쿠싱 효과 위험. 중단 시 반드시 점감 요법 시행."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15~30°C, 59~86°F) 보관. 주사제는 제조사 포장 내에 직립 보관하며 빛과 동결로부터 보호.",
+    "forms": [
+      "트리암시놀론 아세토니드 정제: 0.5 mg, 1.5 mg (Vetalog®, 제네릭) - 개, 고양이 FDA 승인",
+      "트리암시놀론 아세토니드 주사용 현탁액: 2 mg/mL (25 mL, 100 mL 바이알), 6 mg/mL (3 mL, 5 mL, 25 mL 바이알) (Vetalog® Parenteral) - 개, 고양이, 말(식용 아님) FDA 승인",
+      "트리암시놀론 아세토니드 경구 분말: 15 g 분말 중 10 mg 함유 (Vetalog® Oral Powder) - 말 FDA 승인 (현재 시판 여부 불명확)",
+      "국소 스프레이, 크림, 연고 (단독 또는 복합 제제)",
+      "인체용: Kenalog®-10 (10 mg/mL), Kenalog®-40 (40 mg/mL) 주사제; 다수의 국소 제제, 구강 점막 페이스트, 흡입 제제"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "트리암시놀론 아세토니드는 히드로코르티손보다 4~10배(최대 40배) 강력한 합성 글루코코르티코이드로, 무기질코르티코이드 활성은 거의 없음. 개, 고양이, 말에서 FDA 승인된 항염증, 면역억제, 관절내 주사 치료제. 경구 투여 시 중간 작용형(24~48시간), IM 투여 시 4~6주 지속. 장기 투여 시 쿠싱 증후군 유사 부작용 위험. 최소 용량, 최단 기간 사용 원칙 준수 필요. 중단 시 반드시 점감 요법 시행.",
+    "indications": "승인 적응증: 개, 고양이, 말에서 염증 및 관련 장애; 개, 고양이에서 급성 관절염, 알레르기 및 피부과적 장애. 비승인(extra-label) 적응증: 알레르기성 소양증(고양이), 자가면역 피부 질환, 천포창(고양이), 고관절 골관절염(개), 식도/직장 협착 재발 방지, 비만세포종 병변내 주사, 만성 녹내장 모양체 소작술(개), 말 중증 천식, 말 재발성 포도막염.",
+    "client_info": "경구 제품은 반드시 음식과 함께 투여하세요. 치료 목표는 가능한 가장 낮은 용량을 가장 짧은 기간 동안 사용하는 것입니다. 수의사의 지시에 따라 정확히 투여하세요. 장기 투여 또는 고용량 사용 시 식욕 증가, 갈증 증가, 소변량 증가 등의 부작용이 흔히 나타날 수 있습니다. 개에서는 위장관 궤양, 천공, 출혈이 발생할 수 있으므로 식욕 저하, 고열, 흑색 타르 변, 혈성 구토(커피 찌꺼기 모양) 발생 시 즉시 수의사에게 연락하세요. 수의사의 지도 없이 갑자기 투약을 중단하지 마세요. 심각한 부작용이 발생할 수 있습니다. 현재 투여 중인 모든 약물(비타민, 보조제, 한약 포함)을 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile (substrates/inhibitors/inducers)",
+      "Dog/cat-specific pharmacokinetic data (half-life, bioavailability, protein binding, Tmax, onset)",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/48.jsonl",
+    "extracted_at": "2026-03-11T04:10:26.926363+00:00",
+    "reviewer": null
+  }
+}

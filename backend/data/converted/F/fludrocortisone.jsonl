@@ -1,0 +1,620 @@
+{
+  "id": "fludrocortisone",
+  "drug_identity": {
+    "name_ko": "플루드로코르티손",
+    "name_en": "Fludrocortisone",
+    "active_ingredient": "Fludrocortisone acetate",
+    "brand_names": [
+      "Florinef",
+      "Astonin",
+      "Astonin H",
+      "Florinefe",
+      "Lonikan"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 영역에서 허가된 제품 없음. 인체용 플루드로코르티손 아세테이트 정제(0.1 mg)를 소동물 부신피질기능저하증 치료에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.1,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Plumb's 모노그래프에 CYP 대사 경로에 대한 구체적 정보 없음. 코르티코스테로이드 계열로 간 대사가 주요 경로로 추정됨."
+    },
+    "extra_information": "개와 고양이에서의 약동학 데이터는 Plumb's에 기재되지 않음. 인체 데이터: 경구 흡수 양호, 최고 혈중 농도 도달 시간 약 1.7시간, 혈장 반감기 약 3.5시간, 생물학적 활성 지속 시간 18~36시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의과 종별 약동학 데이터 부재로 인체 데이터 및 약리학적 특성에 근거함. 점수 = 트리거된 키워드 가중치 합산.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects",
+          "panting"
+        ],
+        "index": -1,
+        "evidence": "글루코코르티코이드 활성으로 인한 헐떡임(panting) 등 CNS 관련 부작용 가능성 언급. 직접적인 뇌 독성 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "electrolyte imbalance",
+          "sodium retention"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증, 나트륨 저류, 전해질 불균형 위험이 명시됨. 혈액 전해질에 직접적 영향을 미침."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal distal tubule",
+          "sodium reabsorption",
+          "fluid retention",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "신장 원위세뇨관에서 나트륨 재흡수 및 칼륨/수소이온 배설 증가가 작용 기전. 신장 질환 환자에서 주의 사용 권고. 체액 저류 및 고혈압 유발 가능."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "corticosteroid metabolism"
+        ],
+        "index": -1,
+        "evidence": "코르티코스테로이드 계열로 간 대사가 주요 경로로 추정되나, 직접적인 간독성 데이터는 Plumb's에 기재되지 않음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypertension",
+          "edema",
+          "fluid retention"
+        ],
+        "index": 2,
+        "evidence": "체액 저류로 인한 고혈압 및 부종 위험 명시. 심장 질환 환자에서 주의 사용 권고. 저칼륨혈증으로 인한 디곡신 독성 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 뇌 관련 데이터 없음. 글루코코르티코이드 활성으로 인한 간접적 영향 가능성."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "electrolyte imbalance",
+          "aldosterone suppression"
+        ],
+        "index": 2,
+        "evidence": "건강한 성묘에서 혈청 알도스테론 억제 보고됨. 전해질 불균형 위험."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal distal tubule",
+          "sodium reabsorption",
+          "fluid retention",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "신장 원위세뇨관 작용 기전 동일. 신장 질환 환자에서 주의 사용 권고. 체액 저류 및 고혈압 유발 가능."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "corticosteroid metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 간독성 데이터 없음. 코르티코스테로이드 계열 간 대사 추정."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypertension",
+          "edema",
+          "fluid retention"
+        ],
+        "index": 2,
+        "evidence": "체액 저류로 인한 고혈압 및 부종 위험. 심장 질환 환자에서 주의 사용 권고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.7,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 3.5,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 경구 흡수 양호, 최고 혈중 농도 도달 시간 약 1.7시간, 혈장 반감기 약 3.5시간, 생물학적 활성 지속 시간 18~36시간. 개·고양이 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 명시적 금기가 없는 경우 임상적 유의성에 따라 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "electrolyte"
+      ],
+      "evidence": "Concomitant administration may increase risk for hypokalemia."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects",
+        "salicylate levels"
+      ],
+      "evidence": "Concomitant administration may reduce salicylate levels and may also increase risk for GI adverse effects."
+    },
+    {
+      "drug": "Calcitriol",
+      "severity": 2,
+      "keywords": [
+        "decreased therapeutic effect"
+      ],
+      "evidence": "Concomitant administration may decrease the therapeutic effect of calcitriol."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "decreased bioavailability",
+        "absorption"
+      ],
+      "evidence": "May decrease fludrocortisone bioavailability."
+    },
+    {
+      "drug": "Corticosteroids (eg, dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "corticosteroid side effects",
+        "additive"
+      ],
+      "evidence": "Concomitant administration may increase risk for corticosteroid side effects."
+    },
+    {
+      "drug": "Cosyntropin",
+      "severity": 2,
+      "keywords": [
+        "decreased diagnostic effect"
+      ],
+      "evidence": "Concomitant administration may decrease diagnostic effects of cosyntropin."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "Concomitant administration may increase risk for hyponatremia from desmopressin."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "digoxin toxicity"
+      ],
+      "evidence": "By lowering potassium, fludrocortisone may increase the risk for digoxin toxicity."
+    },
+    {
+      "drug": "Diuretics, Potassium-Depleting (eg, thiazides, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "sodium loss",
+        "counteract"
+      ],
+      "evidence": "Concomitant administration may increase risk for hypokalemia. Diuretics also cause a loss of sodium and may counteract the effects of fludrocortisone."
+    },
+    {
+      "drug": "Hypoglycemic Agents (eg, glipizide, insulin, metformin)",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "reduced antidiabetic effect"
+      ],
+      "evidence": "Fludrocortisone may increase blood glucose, reducing antidiabetic effect."
+    },
+    {
+      "drug": "I131",
+      "severity": 1,
+      "keywords": [
+        "decreased thyroid uptake"
+      ],
+      "evidence": "Uptake of I131 by thyroid tissue may be decreased by glucocorticoids."
+    },
+    {
+      "drug": "Immunosuppressive Agents (eg, leflunomide, mycophenolate, tacrolimus)",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "infection risk"
+      ],
+      "evidence": "Concomitant administration may increase risk for immunosuppression and subsequent infection."
+    },
+    {
+      "drug": "NSAIDs (eg, carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects",
+        "GI ulceration"
+      ],
+      "evidence": "Concomitant administration may increase risk for GI adverse effects."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "enzyme induction"
+      ],
+      "evidence": "Concomitant administration may result in decreased fludrocortisone efficacy."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "enzyme induction"
+      ],
+      "evidence": "Concomitant administration may result in decreased fludrocortisone efficacy."
+    },
+    {
+      "drug": "Vaccines",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "inadequate immune response"
+      ],
+      "evidence": "Fludrocortisone may result in inadequate immunological response to the vaccine due to its immunosuppressive effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "부신피질기능저하증(애디슨병) 유지 치료 (오프라벨)",
+          "value": "0.01 - 0.02",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "전해질 농도 평가에 따라 5일마다 0.05~0.1 mg씩 용량 조정. 안정화 후 대부분 0.02~0.03 mg/kg/일 필요. 일부 개는 1일 1회 투여로 전환 가능.",
+          "evidence": "Plumb's Dosages, Dogs: 초기 0.01~0.02 mg/kg PO 1회 또는 2회 분할 투여. 오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "부신피질기능저하증(애디슨병) 유지 치료 (오프라벨)",
+          "value": "0.05 - 0.1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "프레드니솔론 2.5~5 mg/cat/일 병용 필요 시 추가. 프레드니솔론은 임상 증상 조절 최소 용량으로 감량.",
+          "evidence": "Plumb's Dosages, Cats: 0.05~0.1 mg/cat (mg/kg 아님) PO BID. 오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 원발성 고알도스테론증(PHA) 진단 도구 - 소변 알도스테론:크레아티닌 비율(UACR) 측정 (오프라벨)",
+          "value": "0.05",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4일간 투여 전후 UACR 측정",
+          "evidence": "Plumb's Dosages, Cats: 진단 목적 오프라벨 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 원발성 고알도스테론증(PHA) 진단 도구 - 혈청 알도스테론:크레아티닌 비율 측정 (오프라벨)",
+          "value": "0.05",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3회 투여 전후 혈청 알도스테론:크레아티닌 비율 측정",
+          "evidence": "Plumb's Dosages, Cats: 진단 목적 오프라벨 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 체액 저류 및 전해질 불균형, 고혈압 위험으로 주의 사용 권고. 구체적인 용량 조정 기준은 Plumb's에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's에 간 기능 저하 시 용량 조정에 대한 구체적 정보 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to fludrocortisone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신성 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "fungal infection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "소화성 궤양",
+      "match_terms": [
+        "peptic ulcer",
+        "GI ulcer",
+        "gastric ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골다공증",
+      "match_terms": [
+        "osteoporosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증근무력증",
+      "match_terms": [
+        "myasthenia gravis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "강력한 미네랄코르티코이드 작용: 신장 원위세뇨관에서 나트륨 재흡수 증가 및 집합관에서 칼륨·수소이온 배설 촉진. 히드로코르티손 대비 미네랄코르티코이드 효능 125배, 글루코코르티코이드 효능 10~15배.",
+    "common_extra_effects": [
+      "다뇨(polyuria)",
+      "다음(polydipsia)",
+      "다식(polyphagia)",
+      "헐떡임(panting)",
+      "고혈압(hypertension)",
+      "부종(edema)",
+      "저칼륨혈증(hypokalemia)",
+      "위장관 장애(GI upset)",
+      "면역억제(immunosuppression)",
+      "녹내장 위험 증가",
+      "백내장 위험 증가"
+    ],
+    "dog_mechanism": "미네랄코르티코이드 효과를 통한 부신피질기능저하증 치료. 약 50%의 개에서 추가적인 글루코코르티코이드 보충 필요.",
+    "dog_extra_effects": [
+      "부신피질기능항진증 유사 증상(과도한 글루코코르티코이드 활성 시)",
+      "전해질 정상화 실패 시 DOCP로 전환 고려"
+    ],
+    "cat_mechanism": "미네랄코르티코이드 효과를 통한 부신피질기능저하증 치료. 건강한 성묘에서 혈청 알도스테론 억제 확인됨.",
+    "cat_extra_effects": [
+      "혈청 알도스테론 억제",
+      "프레드니솔론 병용 필요 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 부신피질기능저하증 유지 치료에 오프라벨로 사용. 초기 0.01~0.02 mg/kg PO로 시작하여 혈청 전해질 농도에 따라 5일마다 0.05~0.1 mg씩 조정. 대부분 최종적으로 0.02~0.03 mg/kg/일 필요. 약 50%의 개에서 프레드니솔론 보충 필요. 다뇨·다음 증상 발생 시 추가 글루코코르티코이드를 먼저 중단하고, 증상 지속 시 플루드로코르티손의 글루코코르티코이드 활성 고려. 전해질 정상화 불가 시 DOCP로 전환 검토. 스트레스·수술 시 추가 글루코코르티코이드 투여 필요.",
+    "cat": "고양이에서 부신피질기능저하증 유지 치료에 오프라벨로 사용. 0.05~0.1 mg/cat(mg/kg 아님) PO BID 투여. 프레드니솔론 2.5~5 mg/cat/일 병용 필요 시 추가하고 최소 유효 용량으로 감량. 건강한 성묘에서 혈청 알도스테론 억제 확인됨. 원발성 고알도스테론증 진단 도구로도 사용 가능(0.05 mg/kg PO q12h)."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 질환, 심장 질환 환자에서 주의 사용. 스트레스·급성 질환 시 추가 글루코코르티코이드 투여 필요. 갑작스러운 투여 중단 금지(서서히 감량). 장기 투여 시 면역억제, 녹내장, 백내장 위험 증가."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신장 질환, 심장 질환 환자에서 주의 사용. 스트레스·급성 질환 시 추가 글루코코르티코이드 투여 필요. 갑작스러운 투여 중단 금지. 수유 중인 어미 고양이의 경우 새끼에게 초유 섭취 후 모유 대신 대용유 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 밀폐 용기 보관. 과도한 열 노출 피할 것. 빛과 공기에 비교적 안정적.",
+    "forms": [
+      "Fludrocortisone Acetate Tablets 0.1 mg (generic, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루드로코르티손은 소동물 부신피질기능저하증(애디슨병) 치료를 위한 경구용 미네랄코르티코이드제입니다. 수의과 허가 제품은 없으며 인체용 제품을 오프라벨로 사용합니다. 히드로코르티손 대비 미네랄코르티코이드 효능이 125배로 매우 강력하며, 글루코코르티코이드 활성도 일부 보유합니다. 부작용은 주로 과량 투여 시 발생하며 다뇨, 다음, 고혈압, 부종, 저칼륨혈증 등이 포함됩니다. 혈청 전해질 모니터링이 필수적이며, 스트레스 상황에서는 추가 글루코코르티코이드 투여가 필요합니다.",
+    "indications": "【허가 외 사용】 개·고양이 부신피질기능저하증(애디슨병) 유지 치료. 고양이 원발성 고알도스테론증 진단 보조. 페럿 부신피질기능저하증 유지 치료. 【인체 허가】 심한 기립성 저혈압, 염분 소실형 선천성 부신 과형성.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 투여하세요. 장기간 과량 투여 시 털 변화, 복부 팽만, 탈모 등이 나타날 수 있습니다. 허약함, 우울함, 식욕 부진, 구토, 설사 증상이 나타나면 즉시 수의사에게 연락하세요(용량이 너무 낮을 수 있습니다). 수술이나 스트레스(외상, 질병 등) 상황에서는 추가 글루코코르티코이드(예: 프레드니솔론)를 투여해야 하므로 항상 비상용 프레드니솔론을 보유하고 있어야 합니다. 이 약을 갑자기 중단하면 심각한 부작용이 발생할 수 있으므로 반드시 수의사의 지시에 따라 서서히 감량하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP metabolic pathway data",
+      "Renal elimination fraction",
+      "Oral bioavailability (veterinary)",
+      "Protein binding data",
+      "Specific renal/hepatic dose adjustment recommendations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:12:01.713810+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,740 @@
+{
+  "id": "carprofen",
+  "drug_identity": {
+    "name_ko": "카프로펜",
+    "name_en": "Carprofen",
+    "active_ingredient": "Carprofen",
+    "brand_names": [
+      "Rimadyl",
+      "Carprieve",
+      "Carprovet",
+      "Norocarp",
+      "Novox",
+      "quellin",
+      "Rovera",
+      "Vetprofen",
+      "Zinecarp",
+      "Canidryl",
+      "Aventicarp",
+      "Rycarfa",
+      "Rimifin",
+      "Carpox",
+      "Prolet",
+      "Tergive",
+      "Carprodyl",
+      "Truprofen"
+    ],
+    "allergy_class": "propionic acid NSAID",
+    "class": "NSAID",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Chewable",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.15,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "카프로펜은 주로 간에서 글루쿠론산 포합 및 산화 과정을 통해 광범위하게 대사된다. 고양이는 글루쿠론산 포합 능력이 제한되어 약물 축적 위험이 높다."
+    },
+    "extra_information": "개: 경구 투여 시 90% 이상의 생체이용률, 혈장 단백 결합률 99%, 분포용적 0.12~0.22 L/kg, 반감기 약 8시간. 대변으로 70~80%, 소변으로 10~20% 배설. 장간 순환 발생. 고양이: 평균 반감기 20시간(범위 9~49시간), 개체 간 변이 큼. 글루쿠론산 포합 능력 제한으로 약물 축적 위험."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학 데이터 기반. 간독성(희귀 특발성), 신독성(전처치 조건 시), GI 부작용, 혈액학적 이상 등 보고된 이상반응 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ataxia",
+          "seizures",
+          "vestibular signs",
+          "disorientation",
+          "sedation"
+        ],
+        "index": 1,
+        "evidence": "신경계 이상반응(운동실조, 발작, 전정 증상, 방향감각 상실) 및 행동 변화(진정, 기면, 과활동, 공격성)가 드물게 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "platelet aggregation",
+          "hemolytic anemia",
+          "thrombocytopenia",
+          "epistaxis",
+          "bleeding time"
+        ],
+        "index": 2,
+        "evidence": "혈소판 응집 억제, 면역매개성 용혈성 빈혈 및 혈소판감소증, 비출혈, 출혈 시간 연장, 혈색소/헤마토크릿 감소 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal toxicity",
+          "renal insufficiency",
+          "nephrotoxic",
+          "azotemia",
+          "decreased renal blood flow"
+        ],
+        "index": 3,
+        "evidence": "신부전, 탈수, 나트륨 결핍 시 신독성 위험 증가. 과용량 시 신손상 우려 기준 50 mg/kg(개). 루프 이뇨제 병용 시 사구체여과율 감소 보고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatocellular damage",
+          "hepatopathy",
+          "idiosyncratic hepatic failure",
+          "ALT",
+          "ALP"
+        ],
+        "index": 4,
+        "evidence": "특발성 간부전 드물게 발생(발생률 약 0.05% 이하). ALT, ALP, LDH 등 간효소 상승 보고. 노령견 및 만성질환 보유견에서 위험 증가. 치료 시작 2~4주 후 간효소 재검사 권장."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cardiovascular disease"
+        ],
+        "index": -1,
+        "evidence": "심혈관 질환 보유 동물에서 주의 사용 권고. 직접적인 심장독성 데이터는 없으나 심부전 환자에서 디곡신 농도 상승 가능성 언급."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "sedation",
+          "lethargy"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 신경계 이상반응에 대한 직접적 데이터는 제한적이나 기면 및 진정이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "antiplatelet",
+          "bleeding"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 혈소판 억제 및 출혈 위험이 있으나 개에 비해 데이터 제한적."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal adverse effects",
+          "nephrotoxic",
+          "azotemia",
+          "drug accumulation"
+        ],
+        "index": 3,
+        "evidence": "고양이는 NSAIDs에 의한 신장 이상반응에 더 취약. 글루쿠론산 포합 능력 제한으로 약물 축적 위험. 과용량 신손상 우려 기준 8 mg/kg(고양이). 반감기 9~49시간으로 개체 간 변이 큼."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "glucuronidation",
+          "drug accumulation"
+        ],
+        "index": 2,
+        "evidence": "고양이는 글루쿠론산 포합 대사산물을 유의미하게 형성하지 않아 간독성은 주요 우려사항이 아닌 것으로 보임. 그러나 약물 축적 가능성 존재."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 7.0,
+      "max": 9.0,
+      "mean": 8.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 99,
+    "evidence": "개: 경구 투여 후 1~3시간 내 최고 혈청 농도 도달, 생체이용률 90% 이상, 혈장 단백 결합률 99%, 반감기 약 8시간. 고양이: 평균 반감기 20시간(범위 9~49시간). 피하 투여 시 흡수 지연되나 12시간 내 총 흡수량은 유사."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. NSAID 계열 공통 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (coumarin, indanedione derivatives, heparin, thrombolytics)",
+      "severity": 3,
+      "keywords": [
+        "platelet aggregation inhibition",
+        "GI ulceration",
+        "bleeding risk"
+      ],
+      "evidence": "NSAID에 의한 혈소판 응집 억제 및 GI 궤양 형성이 항응고제 또는 혈전용해제 투여 동물에서 위험할 수 있음."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "prostaglandin inhibition",
+        "reduced efficacy",
+        "renal function"
+      ],
+      "evidence": "NSAIDs가 혈관확장성 프로스타글란딘 효과를 억제하여 ACE 억제제의 효과를 감소시킬 수 있음. 개에서의 임상적 영향은 불확실."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 3,
+      "keywords": [
+        "GI ulceration",
+        "toxicity",
+        "washout period"
+      ],
+      "evidence": "카프로펜과 아스피린 병용 시 독성(GI 궤양 등) 위험 증가. 아스피린에서 COX-2 NSAID로 전환 시 3~10일 휴약기 필요."
+    },
+    {
+      "drug": "NSAIDs (other)",
+      "severity": 3,
+      "keywords": [
+        "GI ulceration",
+        "toxicity"
+      ],
+      "evidence": "다른 NSAIDs와의 병용은 피해야 함. 독성(GI 궤양 등) 위험 증가."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects",
+        "ulceration"
+      ],
+      "evidence": "NSAIDs와 코르티코스테로이드 병용 시 GI 이상반응 위험 증가."
+    },
+    {
+      "drug": "Cyclosporine and other nephrotoxic medications",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "renal prostaglandin inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "NSAIDs와 신독성 약물 병용 시 약물 유발 신독성 위험 증가. NSAIDs가 신장 프로스타글란딘 억제를 통해 신독성 약물의 혈장 농도를 높일 수 있음."
+    },
+    {
+      "drug": "Dacarbazine",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "NSAIDs와 병용 시 출혈 위험 증가."
+    },
+    {
+      "drug": "Dactinomycin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "NSAIDs와 병용 시 출혈 위험 증가."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "병용 시 수분 중독 및/또는 저나트륨혈증 위험 증가. 전해질 및 신기능 모니터링 필요."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "cardiac failure"
+      ],
+      "evidence": "카프로펜이 디곡신 혈청 농도를 증가시킬 수 있음. 중증 심부전 환자에서 주의 필요."
+    },
+    {
+      "drug": "Dinoprost",
+      "severity": 2,
+      "keywords": [
+        "prostaglandin synthesis inhibition"
+      ],
+      "evidence": "NSAIDs가 프로스타글란딘 합성을 억제하여 디노프로스트의 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Highly protein-bound drugs (phenytoin, valproic acid, oral anticoagulants, salicylates, sulfonamides, sulfonylurea antidiabetics)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "increased serum concentration"
+      ],
+      "evidence": "카프로펜의 높은 혈장 단백 결합률(99%)로 인해 다른 고단백 결합 약물을 경쟁적으로 치환하여 혈청 농도를 높일 수 있음. 일반적으로 임상적 우려는 낮으나 주의 필요."
+    },
+    {
+      "drug": "Insulin or oral antidiabetic agents",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "glucose metabolism"
+      ],
+      "evidence": "NSAIDs가 프로스타글란딘을 통한 포도당 대사 조절에 영향을 미쳐 인슐린 및 경구 혈당강하제의 저혈당 효과를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Loop diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic effect",
+        "renal insufficiency",
+        "decreased GFR"
+      ],
+      "evidence": "카프로펜이 프로스타글란딘 합성 억제를 통해 이뇨제의 이뇨, 살루레틱, 항고혈압 효과를 감소시킬 수 있음. 병용 시 신부전 위험 증가. 개에서 8일 병용 후 사구체여과율 감소 보고."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "increased plasma concentration",
+        "decreased protein binding",
+        "decreased renal excretion",
+        "serious toxicity"
+      ],
+      "evidence": "NSAIDs가 단백 결합 감소 및/또는 신장 배설 감소를 통해 메토트렉세이트 혈장 농도를 증가시키고 지속시킬 수 있음. 고용량 메토트렉세이트 주입 시 특히 위험. 극도의 주의 필요."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs, e.g., fluoxetine)",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet effect",
+        "bleeding risk"
+      ],
+      "evidence": "SSRIs 병용 시 NSAIDs의 항혈소판 효과가 증가할 수 있음."
+    },
+    {
+      "drug": "Tricyclic antidepressants (e.g., clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "antiplatelet effect",
+        "bleeding risk"
+      ],
+      "evidence": "삼환계 항우울제 병용 시 NSAIDs의 항혈소판 효과가 증가할 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항염증 및 진통 (허가 용량, 1일 1회)",
+          "value": "4.4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.4,
+          "duration_note": "가장 가까운 반정제 단위로 내림하여 투여",
+          "evidence": "FDA 허가 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항염증 및 진통 (허가 용량, 1일 2회 분할)",
+          "value": "2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 2.2,
+          "duration_note": "가장 가까운 반정제 단위로 내림하여 투여",
+          "evidence": "FDA 허가 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 통증 관리 (수술 전 피하 투여)",
+          "value": "4.4",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.4,
+          "duration_note": "수술 약 2시간 전 투여",
+          "evidence": "FDA 허가 라벨 용량"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "수술 후 통증 치료 (단회 투여, 미국 외 허가)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "마취 유도 시 수술 전 투여 권장. 미국 내 extra-label 사용. 지속 투여 시 극도의 주의 필요.",
+          "evidence": "Extra-label; 미국 외 일부 국가에서 허가"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수술 후 통증 치료 (단회 투여, 미국 외 허가)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "마취 유도 시 수술 전 투여 권장. 미국 내 extra-label 사용.",
+          "evidence": "Extra-label; 미국 외 일부 국가에서 허가"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증 및 진통 (성묘, 주 1회 투여)",
+          "value": "12.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "성묘 기준 12.5 mg/cat (mg/kg 아님), 주 1회. 미국 내 extra-label 사용.",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증 및 진통 (성묘, 주 1회 피하 투여)",
+          "value": "12.5",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "성묘 기준 12.5 mg/cat (mg/kg 아님), 주 1회. 미국 내 extra-label 사용.",
+          "evidence": "Extra-label"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전, 탈수, 나트륨 결핍 시 신독성 위험 증가. 기존 신기능 부전 동물에서 주의 사용 또는 회피 권장. 구체적인 크레아티닌 역치 및 용량 조정 계수는 명시되지 않음. 수술 중 수액 투여로 NSAID 유발 신손상 위험 감소 고려."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간기능 부전 동물에서 주의 사용 권장. 치료 시작 2~4주 후 및 이후 3~6개월 간격으로 간효소 재검사 권장. 문제 발생 시 투여 중단. 구체적인 용량 조정 계수는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "출혈 장애 (폰 빌레브란트병, 혈소판감소증)",
+      "match_terms": [
+        "Von Willebrand disease",
+        "thrombocytopenia",
+        "bleeding disorder",
+        "coagulopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "카프로펜 또는 프로피온산계 NSAIDs에 대한 이전 심각한 반응",
+      "match_terms": [
+        "NSAID hypersensitivity",
+        "propionic acid NSAID reaction",
+        "carprofen reaction",
+        "ketoprofen reaction",
+        "naproxen reaction",
+        "ibuprofen reaction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "GI 궤양",
+      "match_terms": [
+        "GI ulceration",
+        "gastric ulcer",
+        "peptic ulcer",
+        "gastrointestinal bleeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration",
+        "hypovolemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저단백혈증",
+      "match_terms": [
+        "hypoproteinemia",
+        "hypoalbuminemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": null
+    },
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "heart failure",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": null
+    },
+    {
+      "condition": "염증성 장질환",
+      "match_terms": [
+        "inflammatory bowel disease",
+        "IBD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": null
+    },
+    {
+      "condition": "6주 미만 강아지",
+      "match_terms": [
+        "puppy under 6 weeks",
+        "neonatal dog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": null
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "라브라도 리트리버가 초기 보고된 간 증후군 사례의 약 25%를 차지하였으나, 이는 해당 품종이 카프로펜을 가장 많이 처방받기 때문으로 판단되며, 유전적 소인은 확인되지 않음. MDR1 감수성 관련 데이터 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX), 포스포리파제 A2 억제 및 프로스타글란딘 합성 억제를 통한 진통, 항염증, 해열 작용. COX-1보다 COX-2에 상대적으로 선택적이나 종, 용량, 조직에 따라 선택성이 다름.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "변비",
+      "식욕부진",
+      "기면",
+      "GI 궤양/미란",
+      "간세포 손상 (희귀, 특발성)",
+      "신장 손상",
+      "혈소판 응집 억제",
+      "출혈 시간 연장",
+      "면역매개성 용혈성 빈혈",
+      "혈소판감소증",
+      "운동실조",
+      "발작",
+      "전정 증상",
+      "방향감각 상실",
+      "진정",
+      "과활동",
+      "공격성",
+      "소양증",
+      "탈모",
+      "혈관염",
+      "안면 부종",
+      "두드러기",
+      "췌장염"
+    ],
+    "dog_mechanism": "개에서 COX-2 선택성이 상대적으로 높아 GI 궤양, 혈소판 억제, 신장 손상 등 COX-1 관련 부작용이 구형 비선택적 NSAIDs에 비해 적음.",
+    "dog_extra_effects": [
+      "피하 주사 부위 부종 및 열감",
+      "특발성 간부전 (발생률 약 0.05% 이하)",
+      "뼈 치유 억제 (120일 장기 투여 시)",
+      "호중구성 피부증 (Sweet 증후군, 극히 드묾)"
+    ],
+    "cat_mechanism": "고양이에서는 COX-2 선택성이 개만큼 높지 않음. 글루쿠론산 포합 능력 제한으로 약물 축적 위험 증가.",
+    "cat_extra_effects": [
+      "신장 이상반응 (개보다 취약)",
+      "GI 이상반응 (다회 투여 시)",
+      "약물 축적으로 인한 독성"
+    ]
+  },
+  "species_notes": {
+    "dog": "카프로펜은 개에서 골관절염 통증/염증 및 수술 후 통증 관리에 FDA 허가된 NSAID입니다. 치료 시작 전 기저치 검사(CBC, 혈청 화학, 요검사)를 실시하고, 치료 시작 2~4주 후 및 이후 3~6개월 간격으로 간효소를 재검사해야 합니다. 노령견, 만성질환 보유견에서 간독성 및 신독성 위험이 증가합니다. 수술 전 피하 투여 시 세보플루란 MAC 절약 효과가 있습니다. 전립선 암종 개에서 생존 이점이 보고되었습니다.",
+    "cat": "카프로펜은 미국에서 고양이에 대해 허가되지 않은 extra-label 사용입니다. 고양이는 글루쿠론산 포합 능력이 제한되어 약물 축적 위험이 높고, NSAIDs에 의한 신장 이상반응에 더 취약합니다. 단회 투여(수술 후 통증)는 비교적 안전하나, 지속 투여 시 극도의 주의가 필요합니다. 반감기가 9~49시간으로 개체 간 변이가 크므로 모니터링이 필수적입니다. IV 지질 에멀전 요법이 고양이 카프로펜 독성 관리에 성공적으로 사용된 사례가 있습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "노령견, 만성질환(GI 궤양, 탈수, 저단백혈증, 심혈관 질환, 염증성 장질환, 신기능/간기능 부전) 보유견에서 주의 사용. 출혈 장애 또는 프로피온산계 NSAIDs에 대한 이전 심각한 반응 시 금기. 6주 미만 강아지에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "미국 내 extra-label 사용. 글루쿠론산 포합 능력 제한으로 약물 축적 위험. 신장 이상반응에 더 취약. 단회 투여 외 지속 투여 시 극도의 주의 필요. 반감기 개체 간 변이 큼(9~49시간)."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제/씹는 정제: 실온(15~30°C) 보관. 주사제(미국): 냉장(2~8°C) 보관; 개봉 후 25°C 이하에서 28일간 보관 가능. 조제 현탁액: 빛 차단 보관, 5°C 또는 25°C에서 21일간 90% 역가 유지.",
+    "forms": [
+      "Carprofen Scored Caplets 25 mg, 75 mg, 100 mg",
+      "Carprofen Flavored Tablets 25 mg, 75 mg, 100 mg",
+      "Carprofen Chewable Tablets 25 mg, 75 mg, 100 mg",
+      "Carprofen Sterile Injectable Solution 50 mg/mL (20 mL multidose vial)",
+      "Carprofen Oral Suspension (compounded, 5 mg/mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "카프로펜은 개의 골관절염 및 수술 후 통증 관리에 FDA 허가된 프로피온산계 NSAID입니다. COX-2 상대적 선택성으로 구형 NSAIDs에 비해 GI 부작용이 적으나, 희귀 특발성 간부전(발생률 약 0.05%)과 신독성 위험이 있습니다. 치료 전 기저치 검사 및 정기적 간/신기능 모니터링이 필수입니다. 고양이에서는 extra-label 사용이며 단회 투여 외 지속 투여 시 극도의 주의가 필요합니다.",
+    "indications": "개(허가): 골관절염 관련 통증 및 염증, 연조직 및 정형외과 수술 후 통증 관리. 개(허가 외): 전립선 암종(생존 이점 보고). 고양이(미국 내 extra-label): 수술 후 단회 통증 관리. 미국 외: 말, 소, 고양이에서 허가. 기타 동물(extra-label): 페럿, 토끼, 설치류, 조류, 파충류.",
+    "client_info": "이 약은 반려견의 관절염 통증 및 수술 후 통증 완화에 사용됩니다. 음식과 함께 또는 공복에 투여할 수 있으나, 음식과 함께 투여하면 위장 부작용을 줄일 수 있습니다. 대부분의 개는 카프로펜을 잘 견디지만, 드물게 위궤양, 신장 또는 간 문제가 발생할 수 있습니다. 다음 증상이 나타나면 즉시 수의사에게 연락하세요: 식욕 감소, 구토, 설사, 검은 변, 음수량/배뇨량 변화, 기력 저하, 행동 변화, 근육 약화(비틀거림), 발작, 눈/잇몸/피부의 황달. 씹는 정제는 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 정기적인 혈액 검사(간/신기능)를 빠짐없이 받으세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific object)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "contraindications.lab_trigger.threshold (renal, hepatic)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/53.jsonl",
+    "extracted_at": "2026-03-11T05:35:40.610578+00:00",
+    "reviewer": null
+  }
+}

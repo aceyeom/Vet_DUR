@@ -1,0 +1,365 @@
+{
+  "id": "finasteride",
+  "drug_identity": {
+    "name_ko": "피나스테리드",
+    "name_en": "Finasteride",
+    "active_ingredient": "Finasteride",
+    "brand_names": [
+      "Proscar",
+      "Propecia"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개의 양성 전립선 비대증(BPH) 및 페럿의 부신 질환 보조 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위하게 대사되며, 대사산물은 소변 및 대변으로 배설됨 (사람 데이터 기준)."
+    },
+    "extra_information": "개 및 고양이에 대한 종 특이적 약동학 데이터는 보고되지 않음. 사람 데이터: 경구 생체이용률 65%, 최고 혈장 농도 도달 시간 1~2시간, 단백 결합률 약 90%, 반감기 5~6시간. 혈액-뇌 장벽을 통과하며 정액에서도 검출됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 사람 PK 데이터 및 Plumb's 텍스트 기반. 수의학 종 특이적 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "blood-brain barrier"
+        ],
+        "index": 1,
+        "evidence": "피나스테리드는 혈액-뇌 장벽을 통과하는 것으로 알려져 있음 (사람 데이터)."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "protein bound"
+        ],
+        "index": 1,
+        "evidence": "약 90% 단백 결합. 혈액 독성에 대한 직접적 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urine excretion"
+        ],
+        "index": 1,
+        "evidence": "대사산물이 소변으로 배설됨. 신독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "hepatic impairment",
+          "caution"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 유의한 간 기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음. 점수 산정 불가."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음. 간 대사 약물이므로 이론적 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 5.0,
+      "max": 6.0,
+      "mean": 5.5,
+      "species": "human"
+    },
+    "f_percent": 65,
+    "protein_binding_percent": 90,
+    "evidence": "사람 데이터: 경구 생체이용률 65%, Tmax 1~2시간, 반감기 5~6시간, 단백 결합률 약 90%. 개/고양이 종 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Drugs",
+      "severity": 2,
+      "keywords": [
+        "urinary retention"
+      ],
+      "evidence": "Anticholinergic drugs may precipitate or aggravate urinary retention when used with finasteride."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_female",
+      "dog_female_sexually_mature"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "양성 전립선 비대증(BPH) 치료 (오프라벨)",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 용량은 일반적으로 5 mg. 3~4개월 치료 후 격일 투여로 감량 가능. 전립선 크기 감소 효과는 투약 중단 시 소실되므로 평생 투여가 필요할 수 있음. 번식 목적 수컷의 경우 교배 수일 전 투약 중단 후 교배 후 재개.",
+          "evidence": "Plumb's Veterinary Drug Handbook 오프라벨 용량. 1 mg/kg으로 21주 투여 시 부작용 없음 보고."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적 권고사항이 Plumb's 텍스트에 명시되어 있지 않음. 대사산물이 소변으로 배설되므로 중증 신부전 시 주의가 필요할 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "유의한 간 기능 장애 환자에서 약물 대사가 감소할 수 있으므로 주의하여 사용. 구체적인 용량 조절 수치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity to finasteride",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "성적으로 발달 중인 동물",
+      "match_terms": [
+        "sexually developing animals",
+        "juvenile"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "성적으로 성숙한 암컷",
+      "match_terms": [
+        "sexually mature females",
+        "female dog",
+        "female cat"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5-알파 환원효소를 경쟁적으로 억제하여 전립선, 간, 피부에서 테스토스테론이 디하이드로테스토스테론(DHT)으로 전환되는 것을 차단함. DHT는 전립선 발달의 주요 호르몬임.",
+    "common_extra_effects": [
+      "GI 증상 (구역, 구토)",
+      "사정액 감소 (번식견에서 보고)",
+      "성욕 감소 (사람에서 보고)",
+      "발기부전 (사람에서 보고)"
+    ],
+    "dog_mechanism": "개에서 BPH 치료 시 1주 이내에 임상 효과가 나타날 수 있으나, 완전한 효과는 최대 8주가 소요될 수 있음.",
+    "dog_extra_effects": [
+      "1 mg/kg으로 21주 투여 시 부작용 없음 보고",
+      "사정액 양 감소 가능 (정액 품질은 유지)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개의 BPH 치료에 오프라벨로 사용 가능. 거세 없이 치료 가능하며 성욕 및 정자 형성에 영향을 주지 않아 번식견에 유용함. 치료 반응에 최대 8주 소요. 투약 중단 시 전립선 크기가 다시 증가하므로 평생 투여가 필요할 수 있음. 교배 수일 전 투약 중단으로 사정액 양 회복 가능.",
+    "cat": "고양이에 대한 용량 및 안전성 데이터가 없음. 페럿의 부신 질환 보조 치료에 사용 보고 있음 (5 mg/마리, 1일 1회 경구)."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "유의한 간 기능 장애 시 주의 사용. 암컷 및 성적으로 발달 중인 동물에는 금기. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 권고."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 안전성 데이터 없음. 암컷에는 금기. 간 대사 약물이므로 간 기능 장애 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "30°C(86°F) 이하, 밀폐 용기에 보관하며 빛을 차단하여 보관.",
+    "forms": [
+      "경구 정제 1 mg (Propecia®, 제네릭)",
+      "경구 정제 5 mg (Proscar®, 제네릭)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피나스테리드는 5-알파 환원효소 억제제로, 개의 양성 전립선 비대증(BPH) 치료에 오프라벨로 사용됩니다. 거세 없이 치료 가능하며 번식견에서 성욕 및 정자 형성에 영향을 주지 않는 장점이 있습니다. 치료 효과 발현에 최대 8주가 소요되며, 투약 중단 시 효과가 소실됩니다. 수의학적 허가 제품은 없으며 사람용 제품을 오프라벨로 사용합니다. NIOSH 위험 약물로 분류되어 취급 시 주의가 필요합니다.",
+    "indications": "【허가 외 사용】 개의 양성 전립선 비대증(BPH), 특히 번식 목적으로 사용되는 수컷 개에서 거세 대안으로 사용. 페럿의 부신 질환 보조 치료. 수의학적 허가 제품 없음.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 투여하세요. 효과가 나타나기까지 수 주가 걸릴 수 있으므로 용량을 빠뜨리지 마세요. 임신 중이거나 임신 가능성이 있는 여성은 이 약을 취급할 때 각별히 주의해야 합니다. 이 약은 NIOSH에서 위험 약물로 분류하고 있으므로, 취급 시 개인 보호 장비(장갑 등) 착용을 권장합니다. 정제를 자르거나 부수지 마세요. 궁금한 점은 수의사 또는 약사에게 문의하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 58,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Laboratory Considerations (none stated)",
+      "Monitoring (limited)",
+      "CYP enzyme profile",
+      "Renal dose adjustment specifics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat.dosage_list",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/41.jsonl",
+    "extracted_at": "2026-03-11T02:01:30.972968+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "id": "amphotericin_b",
+  "drug_identity": {
+    "name_ko": "암포테리신 B",
+    "name_en": "Amphotericin B",
+    "active_ingredient": "Amphotericin B",
+    "brand_names": [
+      "Abelcet",
+      "AmBisome",
+      "Fungizone"
+    ],
+    "allergy_class": null,
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음; 모든 동물 적응증은 허가 외 사용(extra-label)임. 인체용 제품(Fungizone®, Abelcet®, AmBisome®)을 동물에 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.035,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "암포테리신 B의 대사 경로는 알려져 있지 않음. 약 2~5%가 신장을 통해 변화되지 않은 형태로 배설됨. 치료 종료 후 7주까지 소변에서 검출 가능."
+    },
+    "extra_information": "개와 고양이에서의 PK 데이터는 제한적. 인체에서 이중상 소실(biphasic elimination): 초기 반감기 약 24시간, 말기 반감기 약 15일(재래형 제제). 지질 복합체 제제(ABLC)는 분포용적이 131 L/kg으로 재래형(5 L/kg)보다 훨씬 크며, 폐·간·비장 조직 침투가 우수함. 고양이는 개보다 신독성에 더 민감할 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신독성은 본 약물의 가장 주요한 독성으로 명시됨. 간독성 직접 언급 없음. 심장 부정맥 및 저혈압 보고됨. 혈액독성(비재생성 빈혈, 골수억제) 보고됨. 뇌 관련: CSF 농도는 혈청의 약 3%로 낮으나 CNS 감염 치료에 사용됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CSF penetration 3%",
+          "neurologic signs"
+        ],
+        "index": 1,
+        "evidence": "CSF 농도는 혈청의 약 3%로 낮음. 개에서 직접적인 신경독성 보고는 없으나 과용량 시 신독성(LD50 6 mg/kg IV) 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "nonregenerative anemia",
+          "hypokalemia",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "비재생성 빈혈, 저칼륨혈증, 저마그네슘혈증이 부작용으로 보고됨. 조류에서 골수억제 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal vasoconstriction",
+          "decreased GFR",
+          "renal tubular acidosis",
+          "nephrogenic diabetes insipidus",
+          "hypokalemia",
+          "hypomagnesemia",
+          "irreversible"
+        ],
+        "index": 0,
+        "evidence": "신독성은 암포테리신 B의 가장 주요한 독성. 신혈관 수축 및 GFR 감소, 신세뇨관 직접 독성, 신세뇨관 산증, 신성 요붕증 유발 가능. 고용량 또는 기존 신질환 시 비가역적 손상 위험 증가. 개에서 지질 복합체 제제는 재래형보다 8~10배 덜 신독성."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver penetration (lipid forms)"
+        ],
+        "index": 3,
+        "evidence": "지질 제제는 간 조직 침투가 높음. 직접적인 간독성 언급은 없으나 간이 주요 분포 장기 중 하나임."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac arrhythmia",
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "빈맥, 심장 부정맥, 저혈압이 부작용으로 보고됨. 저칼륨혈증으로 인한 디곡신 독성 증가 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurologic signs",
+          "CNS involvement"
+        ],
+        "index": 1,
+        "evidence": "크립토코쿠스증(CNS 침범) 고양이에서 치료 시작 후 3일 이내 신경학적 증상 악화 가능(사멸 균에 대한 염증 반응으로 추정)."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "nonregenerative anemia",
+          "hypokalemia"
+        ],
+        "index": 2,
+        "evidence": "비재생성 빈혈, 저칼륨혈증, 저마그네슘혈증이 부작용으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 95,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "more sensitive than dogs",
+          "renal vasoconstriction",
+          "decreased GFR",
+          "renal tubular acidosis"
+        ],
+        "index": 0,
+        "evidence": "고양이는 개보다 신독성에 더 민감한 것으로 명시됨. 재래형 제제 사용 시 신독성 위험이 매우 높으며, 누적 용량 및 모니터링이 필수적."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver penetration (lipid forms)"
+        ],
+        "index": 3,
+        "evidence": "지질 제제는 간 조직 침투가 높음. 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac arrhythmia",
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "빈맥, 심장 부정맥, 저혈압이 부작용으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 24.0,
+      "max": 360.0,
+      "mean": 192.0,
+      "species": "human"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": 92,
+    "evidence": "인체 데이터: 재래형 제제의 초기 반감기 약 24시간, 말기 반감기 약 15일(360시간). 단백결합률 90~95%. 경구 흡수 불량으로 전신 감염 치료 시 반드시 비경구 투여 필요. 개·고양이 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요(contraindicated/major)→3, 중등도(moderate)→2, 경미(minor)→1. 이론적 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "potassium depletion"
+      ],
+      "evidence": "암포테리신 B의 칼륨 소실 효과를 악화시킬 수 있음."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "digoxin toxicity"
+      ],
+      "evidence": "암포테리신 B 유발 저칼륨혈증이 디곡신 독성을 악화시킬 수 있음."
+    },
+    {
+      "drug": "Flucytosine",
+      "severity": 2,
+      "keywords": [
+        "synergy",
+        "increased flucytosine toxicity"
+      ],
+      "evidence": "Cryptococcus spp 및 Candida spp에 대해 시험관 내 상승 효과가 있으나, 플루시토신 독성 증가 가능."
+    },
+    {
+      "drug": "Highly Protein Bound Drugs (e.g., azole antifungals, furosemide, NSAIDs)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "transient increased serum levels"
+      ],
+      "evidence": "암포테리신 B의 높은 단백결합률(90~95%)로 인해 다른 고단백결합 약물을 일시적으로 치환할 수 있으나, 임상적 의의는 낮을 것으로 예상됨."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., aminoglycosides, cisplatin, cyclosporine)",
+      "severity": 3,
+      "keywords": [
+        "additive nephrotoxicity",
+        "renal toxicity"
+      ],
+      "evidence": "다른 신독성 약물과의 병용 또는 순차 사용 시 신독성이 상가적으로 증가할 수 있으므로 가능한 한 피해야 함."
+    },
+    {
+      "drug": "Potassium-Depleting Drugs (e.g., thiazide or loop diuretics)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "potassium depletion"
+      ],
+      "evidence": "저칼륨혈증 위험 증가."
+    },
+    {
+      "drug": "Neuromuscular Blockers (e.g., atracurium, tubocurarine)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "암포테리신 B 유발 저칼륨혈증이 신경근 차단을 강화할 수 있음."
+    },
+    {
+      "drug": "Zidovudine (AZT)",
+      "severity": 2,
+      "keywords": [
+        "myelotoxicity",
+        "nephrotoxicity"
+      ],
+      "evidence": "골수독성 또는 신독성 증가 가능성."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 40.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 재래형(deoxycholate) IV",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "누적 용량 9~12 mg/kg 권장; 주 3회(월·수·금) 투여. D5W로 1:50 희석 후 4~6시간에 걸쳐 천천히 IV 투여.",
+          "evidence": "Extra-label. 투여 전후 충분한 수액 공급 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 재래형(deoxycholate) SC",
+          "value": "0.5 - 0.75",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "누적 용량 8~26 mg/kg; 주 1~3회. 0.45% NaCl/2.5% 덱스트로스 350~500 mL에 희석하여 견갑골 사이 SC 투여. 농도 20 mg/L 이하 유지.",
+          "evidence": "Extra-label. SC 투여 시 농도 25 mg/L 이상에서 무균성 농양 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 지질 복합체(ABLC; Abelcet®) IV",
+          "value": "1 - 3.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "누적 용량 8~30 mg/kg; 2시간에 걸쳐 IV 투여. 기존 신질환 또는 재래형 제제로 신독성 발생 시 권장.",
+          "evidence": "Extra-label. 재래형보다 8~10배 덜 신독성."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 리포솜 제제(AmBisome®) IV",
+          "value": "3.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일간 1일 1회(누적 10 mg/kg); 또는 3 mg/kg 1일 1회 4~5회(1, 2, 3, 10일 또는 1, 2, 3, 4, 10일; 누적 12~15 mg/kg).",
+          "evidence": "Extra-label."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 재래형(deoxycholate) IV",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "누적 용량 6~9 mg/kg(4~16 mg/kg 범위 보고); 주 3회. D5W로 1:50 희석 후 4~6시간에 걸쳐 천천히 IV 투여.",
+          "evidence": "Extra-label. 고양이는 개보다 신독성에 더 민감함."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 재래형(deoxycholate) SC",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "누적 용량 16~20 mg/kg; 주 1~3회. 0.45% NaCl/2.5% 덱스트로스 350 mL에 희석하여 견갑골 사이 SC 투여.",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 전신 진균 감염 - 지질 제제(ABLC 또는 리포솜) IV",
+          "value": "1 - 3.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "누적 용량 약 12 mg/kg; 1~2시간에 걸쳐 IV 투여.",
+          "evidence": "Extra-label."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": 3.0,
+    "creatinine_threshold_cat_mg_dL": 3.0,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "혈청 크레아티닌 3 mg/dL 초과 또는 BUN 30~40 mg/dL 도달 시 치료를 최소한 일시 중단 권장. 기존 신질환 환자에서는 지질 제제 사용 권장. 신독성은 치료 중단 후 수개월에 걸쳐 회복될 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 기능 저하에 따른 용량 조정에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "암포테리신 B 과민증",
+      "match_terms": [
+        "hypersensitivity to amphotericin B"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": 3.0,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "경증~중등도 진균 감염(더 안전한 대안 가능)",
+      "match_terms": [
+        "mild fungal infection",
+        "fluconazole-responsive",
+        "itraconazole-responsive"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균 세포막의 에르고스테롤에 결합하여 막 투과성을 변화시키고 세포 내 칼륨 및 기타 세포 구성 성분의 누출을 유발함. 주로 정진균 작용이나 고농도에서 살진균 작용 가능.",
+    "common_extra_effects": [
+      "신독성(신혈관 수축, GFR 감소, 신세뇨관 산증, 신성 요붕증)",
+      "저칼륨혈증",
+      "저마그네슘혈증",
+      "비재생성 빈혈",
+      "빈맥",
+      "심장 부정맥",
+      "저혈압",
+      "기관지 경련",
+      "발열",
+      "구토",
+      "식욕부진",
+      "무기력",
+      "정맥염",
+      "다뇨",
+      "허탈"
+    ],
+    "dog_mechanism": "에르고스테롤 결합을 통한 진균 세포막 투과성 변화. 개에서 지질 복합체 제제는 재래형보다 8~10배 덜 신독성.",
+    "dog_extra_effects": [
+      "무균성 농양(SC 투여 시 농도 25 mg/L 이상)",
+      "석회화 피부증(calcinosis cutis)",
+      "신독성"
+    ],
+    "cat_mechanism": "에르고스테롤 결합을 통한 진균 세포막 투과성 변화. 고양이는 개보다 신독성에 더 민감함.",
+    "cat_extra_effects": [
+      "신독성(개보다 민감)",
+      "크립토코쿠스증(CNS 침범) 치료 시작 후 3일 이내 신경학적 증상 악화 가능"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 재래형(deoxycholate) 암포테리신 B는 IV 또는 SC 경로로 투여 가능. SC 투여 시 농도를 20 mg/L 이하로 유지해야 무균성 농양을 예방할 수 있음. 기존 신질환이 있거나 재래형 제제로 신독성이 발생한 경우 지질 복합체(ABLC) 또는 리포솜 제제 사용 권장. 치료 전후 충분한 수액 공급 필수. BUN 30~40 mg/dL 또는 크레아티닌 3 mg/dL 초과 시 치료 일시 중단 고려.",
+    "cat": "고양이는 개보다 신독성에 더 민감하므로 재래형 제제 사용 시 더 낮은 초기 용량(0.25 mg/kg IV)으로 시작. 크립토코쿠스증(CNS 침범) 치료 시 처음 3일 이내 신경학적 증상이 일시적으로 악화될 수 있음(사멸 균에 대한 염증 반응). 지질 제제 사용이 신독성 감소에 유리함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성 위험으로 인해 치료 전·중 정기적인 신기능 모니터링(CBC, 생화학, 전해질, 요검사) 필수. 충분한 수액 공급 유지. 용량 계산 및 제제 준비 시 이중 확인 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 개보다 신독성에 더 민감함. 더 낮은 초기 용량 사용 및 엄격한 신기능 모니터링 필수. 크립토코쿠스증(CNS 침범) 치료 시 초기 신경학적 증상 악화 가능성에 대해 보호자 교육 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "재래형(deoxycholate) 및 지질 복합체(ABLC): 냉장 보관(2~8°C), 빛과 습기 차단. 재구성 후 재래형: 실온 24시간, 냉장 1주일 안정. 리포솜 제제(AmBisome®): 25°C 이하 보관; 재구성 후 냉장(2~8°C) 24시간 보관 가능, 동결 금지; D5W 희석 후 6시간 이내 투여 시작.",
+    "forms": [
+      "Amphotericin B deoxycholate (conventional) 분말 주사제 50 mg/vial",
+      "Amphotericin B lipid complex (ABLC; Abelcet®) 현탁 주사제 100 mg/20 mL",
+      "Amphotericin B liposome (AmBisome®) 주사제 50 mg/vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "암포테리신 B는 중증 전신 진균 감염 치료에 사용되는 폴리엔 계열 항진균제입니다. 수의과 승인 제품은 없으며 모든 동물 적응증은 허가 외 사용입니다. 세 가지 제제(재래형/deoxycholate, 지질 복합체/ABLC, 리포솜)가 있으며 각각 용량, 희석 방법, 안정성이 다르므로 상호 교환 불가합니다. 신독성이 가장 중요한 부작용이며, 고양이는 개보다 더 민감합니다. 지질 제제는 신독성이 낮고 조직 침투가 우수하나 비용이 높습니다. 치료 중 정기적인 신기능 모니터링이 필수적입니다.",
+    "indications": "블라스토마이세스증, 아스페르길루스증, 콕시디오이데스증, 히스토플라스마증, 크립토코쿠스증, 무코르증, 스포로트리쿠스증 등 중증 전신 진균 감염(extra-label). 리포솜 제제는 리슈만편모충증 치료에도 사용 가능하나 WHO는 개의 리슈만편모충증 치료에 암포테리신 B 사용을 권장하지 않음(내성 균주 발생 우려). 다른 항진균제에 반응하지 않는 진행성 질환 또는 항진균제 감수성 검사 결과에 따라 사용.",
+    "client_info": "이 약은 동물의 심각한 진균 감염 치료에 사용됩니다. 특수한 취급이 필요하고 정기적인 혈액 검사가 필요하므로 동물병원에서 투여됩니다. 치료 중 신장 기능을 모니터링하기 위한 정기 검진을 빠짐없이 받으셔야 합니다. 무기력, 구토, 식욕 감소, 다뇨 등의 증상이 나타나면 즉시 수의사에게 알려주세요. 치료 기간 동안 충분한 수분 공급이 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies (dog/cat)",
+      "CYP metabolic pathway data",
+      "Oral bioavailability in dogs/cats",
+      "Hepatic dose adjustment guidance"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.primary_metabolic_organ",
+      "hepatic_dose_adjustment.applies",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/55.jsonl",
+    "extracted_at": "2026-03-11T06:18:30.877362+00:00",
+    "reviewer": null
+  }
+}

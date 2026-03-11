@@ -1,0 +1,843 @@
+{
+  "id": "fluconazole",
+  "drug_identity": {
+    "name_ko": "플루코나졸",
+    "name_en": "Fluconazole",
+    "active_ingredient": "Fluconazole",
+    "brand_names": [
+      "Diflucan"
+    ],
+    "allergy_class": "azole antifungal",
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 인체용 제품을 동물에 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.7,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP2C",
+        "CYP3A4"
+      ],
+      "inducers": [],
+      "pathway_evidence": "플루코나졸은 인체에서 강력한 CYP2C 억제제이자 중등도 CYP3A 억제제임. 개에서 미다졸람 청소율을 50% 감소시키고 케타민 청소율도 50% 감소시킨 것으로 보고됨."
+    },
+    "extra_information": "개: 경구 생체이용률 100%, 최고 혈장 농도 도달 시간 4시간, 분포용적 0.7–0.8 L/kg, 단백결합률 11%, 반감기 13–15시간, 혈장 청소율 약 0.65 mL/kg/분, 투여량의 약 70%가 소변으로 미변화체 배설. 고양이: 완전 흡수, 최고 농도 도달 시간 2.6시간, 분포용적 1 L/kg, CSF/혈청 농도비 0.88, 방수/혈청 농도비 0.79, 상피 내층액/혈청 농도비 1.2, 청소율 0.6–0.9 mL/kg/분, 반감기 약 13–25시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 종별 PK 데이터 존재. 신장 배설 70% 확인됨. 간독성 가능성 보고됨(ALT 상승 15–20%).",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS penetration",
+          "CSF"
+        ],
+        "index": 1,
+        "evidence": "개에서 CNS 감염 치료에 유용하며 CSF 침투가 우수함. 직접적인 뇌 독성 보고는 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "thrombocytopenia (human)"
+        ],
+        "index": 1,
+        "evidence": "인체에서 혈소판감소증이 드물게 보고됨. 개에서 직접적인 혈액 독성 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal elimination",
+          "unchanged urine",
+          "renal impairment",
+          "dosage adjustment"
+        ],
+        "index": 3,
+        "evidence": "투여량의 약 70%가 신장을 통해 미변화체로 배설됨. 신기능 저하 시 반감기 연장 및 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "ALT elevation",
+          "CYP inhibitor"
+        ],
+        "index": 2,
+        "evidence": "장기 치료 시 개의 15–20%에서 ALT 상승 보고. 드물게 심각한 간독성 가능. CYP2C/3A 억제로 간 대사 영향."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "QT prolongation",
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "QT 간격 연장과 관련됨. 구조적 심장 질환, 심부전, 전해질 불균형 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS penetration",
+          "CSF"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 CSF/혈청 농도비 0.88로 CNS 침투 우수. 직접적인 뇌 독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "thrombocytopenia (human)"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성 데이터 없음. 인체 데이터 참고."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal elimination",
+          "unchanged urine",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장을 통한 미변화체 배설이 주요 경로. 신기능 저하 시 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "ALT elevation",
+          "hepatotoxicity"
+        ],
+        "index": 2,
+        "evidence": "고양이에서도 ALT 상승 가능성 보고됨. 간기능 저하 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 위험. 고양이 특이적 심장 데이터는 제한적이나 일반적 주의 필요."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": 13.0,
+      "max": 15.0,
+      "mean": 14.0,
+      "species": "dog"
+    },
+    "f_percent": 100,
+    "protein_binding_percent": 11,
+    "evidence": "개: 경구 생체이용률 100%, Tmax 4시간, 반감기 13–15시간, 단백결합률 11%. 고양이: 완전 흡수, Tmax 2.6시간, 반감기 13–25시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 플루코나졸은 강력한 CYP2C 억제제 및 중등도 CYP3A 억제제로 다수의 약물 상호작용 가능.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "Aspergillus",
+        "Candida"
+      ],
+      "evidence": "Laboratory animal studies suggest fluconazole combined with amphotericin B may be antagonistic against Aspergillus spp or Candida spp; clinical importance unclear."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased concentration",
+        "sedation",
+        "prolonged recovery"
+      ],
+      "evidence": "Fluconazole decreased midazolam clearance by 50% in dogs; prolonged clinical effects and recovery times noted in horses."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Plasma buspirone concentrations may be elevated due to CYP3A inhibition by fluconazole."
+    },
+    {
+      "drug": "Calcium Channel Blocking Agents (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased exposure"
+      ],
+      "evidence": "Fluconazole may increase exposure of calcium channel blockers via CYP inhibition."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Fluconazole may increase cannabidiol concentration."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 1,
+      "keywords": [
+        "reduced fluconazole concentration"
+      ],
+      "evidence": "Cimetidine may reduce fluconazole concentrations."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "CYP3A inhibition",
+        "increased concentration"
+      ],
+      "evidence": "Concomitant use is contraindicated in humans; may increase cisapride plasma concentration and risk for QT prolongation."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 3,
+      "keywords": [
+        "increased concentration",
+        "toxicity",
+        "hepatic/renal impairment"
+      ],
+      "evidence": "Increased colchicine concentrations and adverse effects possible. Contraindicated in humans with hepatic or renal impairment."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased corticosteroid exposure",
+        "adverse effects"
+      ],
+      "evidence": "Fluconazole may inhibit metabolism of corticosteroids, leading to potential for increased adverse effects."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased toxicity"
+      ],
+      "evidence": "Fluconazole may inhibit metabolism of cyclophosphamide and its metabolites, with potential for increased toxicity."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased cyclosporine concentration",
+        "dose reduction required"
+      ],
+      "evidence": "Fluconazole increases cyclosporine concentrations. In healthy dogs, fluconazole 5 mg/kg PO once daily decreased cyclosporine dosages by ~50% to achieve similar therapeutic trough concentrations."
+    },
+    {
+      "drug": "Diuretics, Thiazides (hydrochlorothiazide)",
+      "severity": 1,
+      "keywords": [
+        "increased fluconazole concentration"
+      ],
+      "evidence": "Thiazide diuretics may increase fluconazole concentrations."
+    },
+    {
+      "drug": "Fentanyl/Alfentanil",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased opioid concentration"
+      ],
+      "evidence": "Fluconazole may increase fentanyl concentrations via CYP3A inhibition."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "decreased clearance",
+        "prolonged recovery"
+      ],
+      "evidence": "Fluconazole decreased ketamine clearance by 50% and prolonged clinical effects in dogs; prolonged recovery noted in horses."
+    },
+    {
+      "drug": "Losartan",
+      "severity": 2,
+      "keywords": [
+        "CYP2C inhibition",
+        "increased losartan effect",
+        "blood pressure"
+      ],
+      "evidence": "Increased losartan effects possible; increased monitoring of blood pressure recommended."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Concomitant use may increase risk for QT prolongation; concurrent therapy is contraindicated in humans. Interaction may not apply to azithromycin."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 3,
+      "keywords": [
+        "CYP inhibition",
+        "increased methadone exposure",
+        "QT prolongation"
+      ],
+      "evidence": "Fluconazole significantly increases methadone exposure in dogs. In humans, concomitant use is contraindicated due to increased risk for QT prolongation."
+    },
+    {
+      "drug": "NSAIDs (carprofen, flunixin, meloxicam, phenylbutazone, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "CYP2C inhibition",
+        "increased NSAID concentration",
+        "adverse effects"
+      ],
+      "evidence": "Fluconazole may increase plasma concentrations of some NSAIDs; increased risk for adverse effects."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "CYP inhibition",
+        "reduced quinidine metabolism",
+        "cardiotoxicity"
+      ],
+      "evidence": "Fluconazole may reduce quinidine metabolism, increasing risk for cardiotoxicity. Concurrent therapy is contraindicated in humans."
+    },
+    {
+      "drug": "QT Prolonging Agents (amiodarone, disopyramide, ondansetron, procainamide, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Concomitant use with QT-prolonging agents increases risk for arrhythmias."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased fluconazole exposure",
+        "reduced efficacy",
+        "increased rifampin concentration"
+      ],
+      "evidence": "Rifampin may decrease fluconazole exposure and efficacy; fluconazole may increase rifampin concentrations."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased sildenafil exposure"
+      ],
+      "evidence": "Fluconazole increases sildenafil exposure via CYP3A inhibition."
+    },
+    {
+      "drug": "Sulfonylurea Antidiabetic Agents (glipizide, glyburide)",
+      "severity": 2,
+      "keywords": [
+        "CYP2C inhibition",
+        "increased concentration",
+        "hypoglycemia"
+      ],
+      "evidence": "Fluconazole may increase sulfonylurea concentrations; hypoglycemia is possible."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased theophylline concentration"
+      ],
+      "evidence": "Increased theophylline concentrations are possible with concomitant fluconazole use."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "CYP inhibition",
+        "markedly increased tramadol and M1 metabolite"
+      ],
+      "evidence": "In dogs, fluconazole increased tramadol and its M1 metabolite by 31 and 39 times, respectively."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased TCA effects"
+      ],
+      "evidence": "Fluconazole may exacerbate the effects of tricyclic antidepressants via CYP inhibition."
+    },
+    {
+      "drug": "Vincristine/Vinblastine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "inhibited vinca alkaloid metabolism"
+      ],
+      "evidence": "Fluconazole may inhibit vinca alkaloid metabolism, potentially increasing toxicity."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "CYP2C inhibition",
+        "increased prothrombin time",
+        "bleeding risk"
+      ],
+      "evidence": "Fluconazole may cause increased prothrombin times in patients receiving warfarin or other coumarin anticoagulants."
+    },
+    {
+      "drug": "Zidovudine",
+      "severity": 2,
+      "keywords": [
+        "increased zidovudine concentration",
+        "increased exposure"
+      ],
+      "evidence": "Fluconazole increases zidovudine concentration and exposure."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "budgerigar"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (크립토콕쿠스증, 블라스토마이코시스, 히스토플라스마증 등 플루코나졸 감수성 균주)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4–8개월 치료 필요; 임상 증상 소실 및 항원 역가 감소 후 2개월 추가 투여",
+          "evidence": "Extra-label. Plumb's Dosages section."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (크립토콕쿠스증, 블라스토마이코시스, 히스토플라스마증 등 플루코나졸 감수성 균주)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4–8개월 치료 필요; 임상 증상 소실 및 항원 역가 감소 후 2개월 추가 투여",
+          "evidence": "Extra-label. Plumb's Dosages section."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (CNS 및 안구 침범)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "CNS 및 안구 감염 시 고용량 필요",
+          "evidence": "Extra-label. Plumb's Dosages section."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 IV 투여",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1–2시간에 걸쳐 천천히 투여",
+          "evidence": "Extra-label. Plumb's Dosages section."
+        },
+        {
+          "logic_type": "linear",
+          "context": "요로 칸디다증",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3–5주",
+          "evidence": "Extra-label. Plumb's Dosages section."
+        },
+        {
+          "logic_type": "linear",
+          "context": "콕시디오이데스 골수염",
+          "value": "18",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 치료 필요",
+          "evidence": "Extra-label. Average initial dosage from case reports."
+        },
+        {
+          "logic_type": "linear",
+          "context": "말라세지아 피부염, 피부사상균증, 조갑진균증 전신 치료",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "말라세지아: 임상 증상 완전 소실 후 최소 1주 추가; 피부사상균증/조갑진균증: 2주 간격 음성 피부 배양 2회 확인까지",
+          "evidence": "Extra-label. Ketoconazole or itraconazole preferred."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (크립토콕쿠스증, 블라스토마이코시스, 히스토플라스마증, 콕시디오이데스증 등 플루코나졸 감수성 균주)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "수개월 치료 필요; 임상 증상 소실 또는 혈청/CSF 항원 음성 후 1–3개월 추가 투여",
+          "evidence": "Extra-label. Practically administered as 50 mg/cat PO q12h."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신 진균증 (실용적 고정 용량)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "수개월 치료 필요; 임상 증상 소실 또는 혈청/CSF 항원 음성 후 1–3개월 추가 투여",
+          "evidence": "Extra-label. 50 mg/cat (NOT mg/kg) PO q12h."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "급속 진행성 또는 중증 파종성 감염",
+          "value": "100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "중증 감염 시 고용량 사용",
+          "evidence": "Extra-label. 100 mg/cat (NOT mg/kg) PO q12h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "크립토콕쿠스증으로 인한 전방 포도막염",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 증상 소실 및 항원 역가 감소 후 2개월 추가 투여",
+          "evidence": "Extra-label. Plumb's Dosages section."
+        },
+        {
+          "logic_type": "linear",
+          "context": "말라세지아 피부염, 피부사상균증, 조갑진균증 전신 치료",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "말라세지아: 임상 증상 완전 소실 후 최소 1주 추가; 피부사상균증/조갑진균증: 2주 간격 음성 피부 배양 2회 확인까지",
+          "evidence": "Extra-label. Itraconazole preferred."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "플루코나졸은 주로 신장을 통해 미변화체로 배설되므로 신기능 저하 시 용량 조절이 필요할 수 있음. 인체에서 신기능 저하 환자는 반감기가 현저히 연장됨. 구체적인 수의과 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 환자에서는 잠재적 이익이 위험을 상회할 때만 사용. 장기 치료 시 기저치 및 주기적 간 효소(ALT, ALP) 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "플루코나졸 또는 다른 아졸계 항진균제 과민증",
+      "match_terms": [
+        "azole hypersensitivity",
+        "fluconazole allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하/간부전",
+      "match_terms": [
+        "hepatic failure",
+        "liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "만성 신장 질환",
+      "match_terms": [
+        "CKD",
+        "renal impairment",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "부정맥 위험 증가 (구조적 심장 질환, 심부전, 전해질 불균형)",
+      "match_terms": [
+        "arrhythmia",
+        "heart failure",
+        "structural heart disease",
+        "electrolyte imbalance",
+        "QT prolongation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "잉꼬(Budgerigar) 사용",
+      "match_terms": [
+        "budgerigar",
+        "parakeet"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균 세포막의 에르고스테롤 합성에 필요한 CYP450 의존성 탈메틸화 효소를 억제하는 정진균성 트리아졸 화합물. 메틸화 스테롤의 세포 내 축적으로 세포막 투과성 증가 및 세포 내용물 누출 유발.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "연변",
+      "ALT 상승",
+      "간독성 (드물게)",
+      "QT 간격 연장",
+      "국소 탈모",
+      "저부신피질증",
+      "안구 분비물",
+      "건성 피부",
+      "무기력"
+    ],
+    "dog_mechanism": "개에서 경구 생체이용률 100%, 단백결합률 낮음(11%), CNS 침투 우수. 장기 치료 시 15–20%에서 ALT 상승 가능.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "연변/설사",
+      "ALT 상승 (장기 치료 시 15–20%)",
+      "국소 탈모",
+      "저부신피질증",
+      "안구 분비물",
+      "건성 피부",
+      "무기력"
+    ],
+    "cat_mechanism": "고양이에서 완전 흡수, CSF/혈청 농도비 0.88로 CNS 침투 우수. 반감기 13–25시간.",
+    "cat_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "ALT 상승"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 플루코나졸은 블라스토마이코시스 및 히스토플라스마증에서 이트라코나졸과 유사한 효능을 보이며 비용이 약 1/3 수준임. CNS 및 요로 진균 감염에 특히 유용. 장기 치료 시 15–20%에서 ALT 상승이 관찰될 수 있으나 대부분 용량 감소 없이 치료 완료 가능. 말라세지아 피부염에는 케토코나졸 또는 이트라코나졸이 선호됨.",
+    "cat": "고양이에서 실용적으로 50 mg/cat (mg/kg 아님) PO q12h로 투여. 중증 감염 시 100 mg/cat PO q12h 사용 가능. 정제를 분쇄하여 투여 가능. 말라세지아 피부염 및 피부사상균증에는 이트라코나졸이 선호됨. 잉꼬(Budgerigar)에서는 일반 용량에서도 비효과적이고 독성이 높으므로 사용 금지."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 간기능 저하, 임신, QT 연장 위험 환자에서 주의 필요. 장기 치료 시 정기적 간 효소 모니터링 권장. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하, 간기능 저하, 임신, QT 연장 위험 환자에서 주의 필요. 정기적 간 효소 모니터링 권장. 잉꼬에서는 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 경구 현탁액 분말: 30°C 미만 밀폐 용기 보관. 주사제: 5–30°C 보관, 동결 금지. 재조제 경구 현탁액: 5–30°C 보관, 동결 금지, 재조제 후 2주 이내 사용.",
+    "forms": [
+      "경구 정제: 50 mg, 100 mg, 150 mg, 200 mg",
+      "경구 현탁액 분말: 10 mg/mL, 40 mg/mL (재조제 후)",
+      "주사액 (0.9% 생리식염수): 2 mg/mL (100 mL, 200 mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루코나졸은 CNS 및 요로 진균 감염에 특히 유용한 경구/비경구 항진균제입니다. 경구 생체이용률이 100%이며 음식 유무에 관계없이 투여 가능합니다. 이트라코나졸과 유사한 효능을 보이나 산성 환경이 필요 없고 비용이 저렴합니다. 신장을 통해 주로 배설되므로 신기능 저하 시 용량 조절이 필요합니다. 강력한 CYP2C 억제제로 다수의 약물 상호작용에 주의해야 합니다. QT 연장 위험이 있으며 심장 질환 환자에서 주의가 필요합니다. 수의과 허가 제품은 없으며 모든 적응증이 오프라벨입니다.",
+    "indications": "전신 진균증(크립토콕쿠스 수막염, 블라스토마이코시스, 히스토플라스마증, 콕시디오이데스증), CNS 진균 감염, 요로 칸디다증, 말라세지아 피부염(오프라벨, 2차 선택), 피부사상균증, 조갑진균증. 모든 적응증이 오프라벨(수의과 허가 제품 없음).",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 투여하세요. 구토가 지속되면 수의사에게 연락하세요. 가장 흔한 부작용은 식욕부진, 구토, 설사 등 소화기 증상입니다. 간독성은 매우 드물지만 가능합니다. 장기 치료 시 정기적인 혈액 검사(간 효소 수치)가 필요합니다. 용량을 빠뜨리지 마세요. 전신 진균 감염은 수개월의 치료가 필요할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "high",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds for dogs/cats",
+      "Specific hepatic dose adjustment thresholds for dogs/cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:08:06.543847+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "id": "difluprednate_ophthalmic",
+  "drug_identity": {
+    "name_ko": "디플루프레드네이트 점안액",
+    "name_en": "Difluprednate Ophthalmic",
+    "active_ingredient": "Difluprednate",
+    "brand_names": [
+      "Durezol"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품(Durezol®)을 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.05,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "점안 투여 경로로 전신 흡수는 최소화되나, 장기 사용 시 전신 부작용(간독성, 내인성 글루코코르티코이드 억제, 국소 탈모) 가능성이 보고됨. 약동학 데이터는 모노그래프에 명시되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "점안 국소 투여 약물로 전신 노출이 제한적임. 장기 사용 또는 전신 스테로이드 병용 시 간독성 및 내분비 억제 가능성 언급. 수의학적 종별 PK 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "모노그래프에 뇌 관련 영향 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "immunosuppression",
+          "glucocorticoid suppression"
+        ],
+        "index": 1,
+        "evidence": "면역억제 및 내인성 글루코코르티코이드 생산 억제 가능성 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "chronic renal failure contraindication"
+        ],
+        "index": 1,
+        "evidence": "만성 신부전 환자에서 사용 금기로 명시되어 있으나, 직접적인 신독성 기전은 언급되지 않음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatopathy"
+        ],
+        "index": 1,
+        "evidence": "전신 부작용으로 간독성(hepatopathy) 가능성이 명시됨. 전신 스테로이드 병용 시 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "congestive heart failure contraindication"
+        ],
+        "index": 1,
+        "evidence": "울혈성 심부전 환자에서 사용 금기로 명시되어 있으나, 직접적인 심독성 기전은 언급되지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "모노그래프에 뇌 관련 영향 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "immunosuppression",
+          "glucocorticoid suppression"
+        ],
+        "index": 1,
+        "evidence": "면역억제 및 내인성 글루코코르티코이드 생산 억제 가능성 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "chronic renal failure contraindication"
+        ],
+        "index": 1,
+        "evidence": "만성 신부전 환자에서 사용 금기로 명시되어 있으나, 직접적인 신독성 기전은 언급되지 않음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatopathy"
+        ],
+        "index": 1,
+        "evidence": "전신 부작용으로 간독성(hepatopathy) 가능성이 명시됨. 전신 스테로이드 병용 시 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "congestive heart failure contraindication"
+        ],
+        "index": 1,
+        "evidence": "울혈성 심부전 환자에서 사용 금기로 명시되어 있으나, 직접적인 심독성 기전은 언급되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 약동학 데이터(반감기, 생체이용률, 단백결합률 등) 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's 약물 상호작용 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 전신 스테로이드 병용 시 부작용 위험 증가가 명시됨.",
+  "drug_interactions": [
+    {
+      "drug": "Systemic Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "hepatopathy",
+        "adrenal suppression",
+        "systemic adverse effects"
+      ],
+      "evidence": "Concurrent use of systemic steroids increases the risk for systemic adverse effects including hepatopathy, suppression of endogenous glucocorticoid production, and focal alopecia."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "결막염 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 호전이 유지되는 경우 수일~수주에 걸쳐 점진적으로 감량",
+          "evidence": "Conjunctivitis (extra-label): 1 drop in affected eye(s) every 4 to 8 hours, then gradually decrease the dose over days to weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "각막염 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 호전이 유지되는 경우 수일~수주에 걸쳐 점진적으로 감량",
+          "evidence": "Keratitis (extra-label): 1 drop in affected eye(s) every 4 to 8 hours, then gradually decrease the dose over days to weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전방 포도막염 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일간 하루 4회 투여 후 수일~수주에 걸쳐 점진적으로 감량",
+          "evidence": "Anterior uveitis (extra-label): 1 drop in affected eye(s) 4 times daily for 14 days, then gradually decrease the dose over days to weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "백내장 수술 후 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 24시간 후 시작, 수술 후 2주간 하루 4회, 이후 1주간 하루 2회, 이후 임상 반응에 따라 감량",
+          "evidence": "Post-cataract removal (extra-label): 1 drop in the surgical eye 4 times daily, beginning 24 hours after surgery and continuing 2 weeks postoperative, then decrease to 2 times daily for 1 week, then continue to taper dosage based on clinical response."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "결막염 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 호전이 유지되는 경우 수일~수주에 걸쳐 점진적으로 감량",
+          "evidence": "Conjunctivitis (extra-label): 1 drop in affected eye(s) every 4 to 8 hours, then gradually decrease the dose over days to weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "각막염 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 호전이 유지되는 경우 수일~수주에 걸쳐 점진적으로 감량",
+          "evidence": "Keratitis (extra-label): 1 drop in affected eye(s) every 4 to 8 hours, then gradually decrease the dose over days to weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전방 포도막염 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일간 하루 4회 투여 후 수일~수주에 걸쳐 점진적으로 감량",
+          "evidence": "Anterior uveitis (extra-label): 1 drop in affected eye(s) 4 times daily for 14 days, then gradually decrease the dose over days to weeks."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "백내장 수술 후 (오프라벨)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 24시간 후 시작, 수술 후 2주간 하루 4회, 이후 1주간 하루 2회, 이후 임상 반응에 따라 감량",
+          "evidence": "Post-cataract removal (extra-label): 1 drop in the surgical eye 4 times daily, beginning 24 hours after surgery and continuing 2 weeks postoperative, then decrease to 2 times daily for 1 week, then continue to taper dosage based on clinical response."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "만성 신부전 환자에서 사용 금기로 명시됨. 불가피하게 사용해야 하는 경우 최소 유효 용량을 최단 기간 동안 투여해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "전신 부작용으로 간독성(hepatopathy) 가능성이 보고됨. 간질환 환자에서의 구체적인 용량 조절 지침은 모노그래프에 명시되지 않음. 장기 사용 시 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to difluprednate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "각막 궤양",
+      "match_terms": [
+        "corneal ulcer",
+        "corneal ulceration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안구 감염 (세균, 진균, 바이러스)",
+      "match_terms": [
+        "bacterial ocular infection",
+        "fungal ocular infection",
+        "viral ocular infection",
+        "corneal infection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "만성 신부전",
+      "match_terms": [
+        "chronic renal failure",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신 고혈압",
+      "match_terms": [
+        "systemic hypertension",
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위궤양",
+      "match_terms": [
+        "gastric ulceration",
+        "gastric ulcer",
+        "peptic ulcer"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "감염성 질환",
+      "match_terms": [
+        "infectious disease",
+        "active infection"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "diabetic"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "코르티코스테로이드는 유전자 발현에 대한 직접적인 영향 및 세포막과 수용체에 대한 비유전체적 효과를 통해 광범위한 면역조절 및 항염증 작용을 나타냄. 궁극적으로 전염증성 유전자 전사, 전염증성 프로스타글란딘 및 류코트리엔 생성, B세포 및 T세포 수와 기능, 세포 매개 면역 및 체액성 면역을 감소시킴.",
+    "common_extra_effects": [
+      "백내장 형성 (포도당 또는 수정체 대사 변화)",
+      "안압 상승 (섬유주 내 글루코코르티코이드 수용체 활성화)",
+      "감염 위험 증가 (면역억제)",
+      "상처 치유 지연 (콜라겐 분해 활성 증가)",
+      "산동",
+      "석회성 각막병증",
+      "간독성",
+      "내인성 글루코코르티코이드 생산 억제",
+      "국소 탈모"
+    ],
+    "dog_mechanism": "개에서 실험적으로 유발된 전방 염증에서 프레드니솔론 아세테이트와 유사한 효능을 나타냄.",
+    "dog_extra_effects": [
+      "안압 상승 (장기 사용 시, 대부분 가역적)",
+      "전신 부작용 (전신 스테로이드 병용 시 위험 증가)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "안압 상승 (모니터링 특히 중요)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 실험적으로 유발된 전방 염증 모델에서 프레드니솔론 아세테이트와 동등한 효능이 입증됨. 장기 사용 시 안압 상승이 발생할 수 있으나 대부분 가역적임. 전신 스테로이드 병용 시 전신 부작용 위험이 증가하므로 주의 필요.",
+    "cat": "고양이에서는 안압(IOP) 모니터링이 특히 중요함. 모노그래프에서 고양이에서의 안압 상승 위험을 별도로 강조하고 있음. 수의학적 허가 제품이 없으므로 오프라벨 사용임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "각막 궤양, 안구 감염, 만성 신부전, 울혈성 심부전, 전신 고혈압, 위궤양 환자에서 사용 금기. 당뇨 동물에서 혈당/소변 포도당 모니터링 필요. 장기 사용 시 안압 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안압(IOP) 모니터링이 특히 중요함. 각막 궤양, 안구 감염 등 금기 조건 동일하게 적용됨. 수의학적 허가 제품 없음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C-25°C, 68°F-77°F) 보관, 습기 및 직사광선 차단, 냉동 금지. 색상 변화, 혼탁, 가시적 입자 발생 시 사용 금지.",
+    "forms": [
+      "Difluprednate 0.05% 점안 에멀젼 (5 mL 점안 드로퍼 병)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디플루프레드네이트 점안액(Durezol®)은 전방 안구 염증 치료에 사용되는 코르티코스테로이드 점안제로, 프레드니솔론 아세테이트와 동등한 효능을 나타냄. 수의학적 허가 제품은 없으며 오프라벨로 사용됨. 각막 궤양, 안구 감염(세균/진균/바이러스) 존재 시 절대 금기. 장기 사용 시 안압 상승 모니터링 필수(특히 고양이). 다른 점안제와 직접 혼합 금지.",
+    "indications": "전방 안구 염증 치료: 결막염, 각막염, 전방 포도막염, 안구 손상 또는 백내장 수술 후 염증. 모든 적응증이 수의학적 오프라벨 사용임.",
+    "client_info": "이 약은 다양한 기간 동안 투여될 수 있습니다. 투여 횟수와 기간을 정확히 이해하고 지켜주세요. 약물 오염을 방지하기 위해 올바른 점안 방법을 사용하고, 사용하지 않을 때는 뚜껑을 꼭 닫아두세요. 이 약을 점안한 후 다른 점안약을 사용하기 전에 5분을 기다려 주세요. 동물의 눈 상태가 악화되거나 호전되지 않으면 즉시 수의사에게 연락하세요. 정기적인 추적 검진을 빠지지 마세요. 약을 실온(20-25°C)에 보관하고 냉동하지 마세요. 색이 변하거나 혼탁해지거나 입자가 보이면 사용하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Drug Interactions (dedicated section)",
+      "Overdosage"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.primary_metabolic_organ",
+      "metabolism_and_clearance.clearance_organ",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/11.jsonl",
+    "extracted_at": "2026-03-10T16:36:21.234219+00:00",
+    "reviewer": null
+  }
+}

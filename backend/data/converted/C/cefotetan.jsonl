@@ -1,0 +1,538 @@
+{
+  "id": "cefotetan",
+  "drug_identity": {
+    "name_ko": "세포테탄",
+    "name_en": "Cefotetan",
+    "active_ingredient": "Cefotetan disodium",
+    "brand_names": [
+      "Cefotan",
+      "Apacef",
+      "Apatef",
+      "Ceftenon",
+      "Cepan",
+      "Darvilen",
+      "Yamatetan"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이에서 extra-label로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      },
+      {
+        "value": 10000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세포테탄은 주로 신장을 통해 사구체 여과(주) 및 세뇨관 분비에 의해 변화 없이 소변으로 배설됨. 간 대사는 유의미하지 않음."
+    },
+    "extra_information": "경구 투여 후 흡수가 거의 되지 않아 반드시 비경구 투여가 필요함. 대부분의 조직에 잘 분포하나 CSF 투과는 제한적임. 심각한 신기능 저하 시 반감기가 유의미하게 연장될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터 부재; 인체 데이터 및 약물 특성에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성 및 경련 가능성이 언급됨. 일반 임상 용량에서는 위험 낮음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypoprothrombinemia",
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "positive Coombs test",
+          "bleeding"
+        ],
+        "index": 2,
+        "evidence": "N-메틸티오테트라졸 측쇄로 인해 저프로트롬빈혈증, 혈소판감소증, 호중구감소증, 무과립구증, 양성 쿰스 검사 등 혈액학적 이상 가능성이 있음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "interstitial nephritis",
+          "tubular necrosis",
+          "renal elimination",
+          "glomerular filtration"
+        ],
+        "index": 3,
+        "evidence": "신장을 통해 거의 전량 배설되며, 고용량 또는 장기 사용 시 간질성 신염 및 세뇨관 괴사 가능성. 신기능 저하 시 반감기 연장."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatitis"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 간염 가능성이 언급됨. 일반 임상 용량에서는 위험 낮음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성 및 경련 가능성이 언급됨. 고양이 특이 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypoprothrombinemia",
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "positive Coombs test",
+          "bleeding"
+        ],
+        "index": 2,
+        "evidence": "N-메틸티오테트라졸 측쇄로 인해 혈액학적 이상 가능성. 고양이 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "interstitial nephritis",
+          "tubular necrosis",
+          "renal elimination",
+          "glomerular filtration"
+        ],
+        "index": 3,
+        "evidence": "신장을 통해 거의 전량 배설. 고양이에서 혈청 크레아티닌 기반 용량 조절 지침이 명시되어 있어 신장 부담이 높음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatitis"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 간염 가능성. 고양이 특이 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 반감기, Tmax, 생체이용률, 단백결합률에 대한 구체적 수치가 제시되지 않음. 심각한 신기능 저하 시 반감기가 유의미하게 연장된다고 언급됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Alcohol (ethylene glycol 포함)",
+      "severity": 2,
+      "keywords": [
+        "disulfiram-like reaction",
+        "vomiting"
+      ],
+      "evidence": "Cefotetan contains N-methylthiotetrazole side chain; disulfiram-like reaction (e.g., vomiting) is possible when used concurrently with alcohol."
+    },
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive",
+        "synergistic antibacterial"
+      ],
+      "evidence": "Concurrent use may cause additive nephrotoxicity (well-documented only with cephaloridine). In vitro synergistic/additive antibacterial activity reported; do not mix in same solution."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., amphotericin B)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "Concurrent use with nephrotoxic drugs may cause additive nephrotoxicity."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "increased serum concentration",
+        "reduced renal tubular secretion"
+      ],
+      "evidence": "Probenecid may increase serum concentrations of cefotetan by reducing renal tubular secretion."
+    },
+    {
+      "drug": "Vitamin K Antagonists (e.g., warfarin)",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant enhancement",
+        "hypoprothrombinemia",
+        "bleeding"
+      ],
+      "evidence": "Cephalosporins may enhance the anticoagulant effects of vitamin K antagonists; cefotetan's N-methylthiotetrazole side chain may further increase bleeding risk via hypoprothrombinemia."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: 30 mg/kg IV every 8 hours (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: 30 mg/kg SC every 12 hours (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소화관 수술 예방적 항생제 (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "절개 30~60분 전 투여. 약물의 긴 반감기로 인해 수술 중 재투여 불필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook: surgical (GI surgery) prophylaxis, extra-label"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "신기능 저하 시 용량 조절 — CrCl 0.15~0.4 mL/kg/min (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "CrCl 0.15~0.4 mL/kg/min인 경우 1일 1회 투여 고려",
+          "evidence": "Plumb's Veterinary Drug Handbook: empirical renal insufficiency dosage adjustment"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "신기능 저하 시 용량 조절 — CrCl < 0.15 mL/kg/min (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "CrCl < 0.15 mL/kg/min인 경우 48시간마다 투여 고려",
+          "evidence": "Plumb's Veterinary Drug Handbook: empirical renal insufficiency dosage adjustment"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: 30 mg/kg IV every 8 hours (extra-label, dogs/cats combined dosing)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: 30 mg/kg SC every 12 hours (extra-label, dogs/cats combined dosing)"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "신기능 저하 시 용량 조절 — 혈청 크레아티닌 4.9~5.5 mg/dL (433~486 µmol/L) (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이에서 혈청 크레아티닌 4.9~5.5 mg/dL에 해당하는 CrCl 0.15~0.4 mL/kg/min인 경우 1일 1회 투여 고려",
+          "evidence": "Plumb's Veterinary Drug Handbook: empirical renal insufficiency dosage adjustment for cats"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "신기능 저하 시 용량 조절 — 혈청 크레아티닌 약 8.5 mg/dL (751 µmol/L) (extra-label)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이에서 혈청 크레아티닌 약 8.5 mg/dL에 해당하는 CrCl < 0.15 mL/kg/min인 경우 48시간마다 투여 고려",
+          "evidence": "Plumb's Veterinary Drug Handbook: empirical renal insufficiency dosage adjustment for cats"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": 4.9,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "CrCl 0.15~0.4 mL/kg/min (고양이 혈청 크레아티닌 4.9~5.5 mg/dL)인 경우 24시간마다 투여; CrCl < 0.15 mL/kg/min (고양이 혈청 크레아티닌 약 8.5 mg/dL)인 경우 48시간마다 투여. 심각한 신기능 저하 시 반감기가 유의미하게 연장됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "모노그래프에 간기능 저하에 따른 용량 조절에 대한 언급 없음. 약물이 주로 신장으로 배설되므로 간기능 저하의 영향은 최소로 예상됨."
+  },
+  "contraindications": [
+    {
+      "condition": "세포테탄 또는 세팔로스포린계 항생제 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "cefotetan hypersensitivity",
+        "beta-lactam allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "페니실린계 항생제 과민반응 (교차반응 가능성)",
+      "match_terms": [
+        "penicillin allergy",
+        "penicillin hypersensitivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심각한 신기능 저하",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "acute kidney injury",
+        "renal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": 4.9,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "출혈 소인 또는 응고 장애",
+      "match_terms": [
+        "coagulopathy",
+        "bleeding disorder",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 세포벽의 뮤코펩타이드 합성을 억제하여 살균 작용을 나타내는 세팔로스포린계(세파마이신) 항생제. 그람양성 및 그람음성 세균에 광범위한 활성을 가지며, 1세대 세팔로스포린에 비해 그람음성균에 대한 활성이 강화됨. ESBL에 의해 영향을 받지 않음.",
+    "common_extra_effects": [
+      "과민반응 (발진, 발열, 호산구증가증, 림프절병증, 아나필락시스)",
+      "저프로트롬빈혈증 (N-메틸티오테트라졸 측쇄로 인한 출혈 위험 증가)",
+      "디설피람 유사 반응 (알코올과 병용 시 구토 등)",
+      "항생제 관련 설사 / 장내 미생물 변화",
+      "주사 부위 통증 (IM 투여 시)",
+      "혈전정맥염 (IV 투여 시)",
+      "혈소판감소증",
+      "호중구감소증 / 무과립구증",
+      "간염",
+      "양성 쿰스 검사",
+      "간질성 신염",
+      "세뇨관 괴사 (고용량 또는 장기 사용 시)",
+      "신경독성 / 경련 (고용량 또는 장기 사용 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 세포테탄의 약동학적 프로파일은 세폭시틴보다 우수하며, 대장균(E. coli) 감염에 더 효과적일 수 있음. 세폭시틴보다 투여 빈도가 낮아 임상적으로 유리할 수 있음. 수의학적 임상 데이터는 제한적이며 extra-label 사용임. 허가된 수의용 제품 없음.",
+    "cat": "고양이에서도 잘 내약되는 것으로 보이나 임상 데이터가 부족함. 신기능 저하 시 혈청 크레아티닌 수치에 따른 구체적인 용량 조절 지침이 제시되어 있음 (크레아티닌 4.9~5.5 mg/dL: 24시간마다; 약 8.5 mg/dL: 48시간마다). Extra-label 사용이며 허가된 수의용 제품 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "베타-락탐 항생제 과민반응 병력이 있는 경우 주의 필요. 출혈 위험 증가 가능성(저프로트롬빈혈증). 신기능 저하 시 투여 간격 연장 필요. 수의학적 임상 데이터 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "베타-락탐 항생제 과민반응 병력이 있는 경우 주의 필요. 신기능 저하 시 혈청 크레아티닌 기반 용량 조절 필요. 수의학적 임상 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 분말: 20~25°C(68~77°F) 보관, 차광 필요. 재구성 후: 25°C에서 24시간, 5°C에서 96시간, -20°C에서 7일간 안정. 시간이 지남에 따른 분말의 갈변은 효능 저하를 의미하지 않음.",
+    "forms": [
+      "Cefotetan Disodium 주사용 분말 1 g (10 mL 바이알)",
+      "Cefotetan Disodium 주사용 분말 2 g (20 mL 바이알)",
+      "Cefotetan Disodium 주사용 분말 10 g (바이알)",
+      "Cefotetan Disodium 1 g 프리믹스 백 (덱스트로스 포함)",
+      "Cefotetan Disodium 2 g 프리믹스 백 (덱스트로스 포함)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세포테탄은 2세대 세팔로스포린(세파마이신)계 비경구 항생제로, 그람양성 및 그람음성 세균과 혐기성균에 광범위한 활성을 가집니다. 수의학적 허가 제품은 없으나 개와 고양이에서 extra-label로 사용됩니다. 세폭시틴보다 약동학적 프로파일이 우수하고 투여 빈도가 낮을 수 있습니다. N-메틸티오테트라졸 측쇄로 인해 출혈 위험(저프로트롬빈혈증)이 있으며, 알코올과 병용 시 디설피람 유사 반응이 가능합니다. 심각한 신기능 저하 시 투여 간격 연장이 필요합니다. WHO 인체의학 고중요 항균제로 지정되어 있습니다.",
+    "indications": "감수성 세균(E. coli, Proteus spp, Klebsiella spp, Salmonella spp, Staphylococcus spp, Streptococcus spp, 혐기성균 포함)에 의한 중증 감염 치료 (extra-label). 소화관 수술 예방적 항생제 (extra-label). ESBL 생성균은 in vitro 감수성에도 불구하고 임상적 효능 근거 부족으로 권장되지 않음.",
+    "client_info": "이 약은 주사로만 투여되며 동물병원에서 수의사의 지시에 따라 사용됩니다. 투여 중 출혈이나 멍이 쉽게 드는 증상, 발진, 구토, 설사 등이 나타나면 즉시 수의사에게 알려주세요. 신장 기능이 저하된 경우 투여 간격 조절이 필요할 수 있습니다. 임신 또는 수유 중인 동물에게 사용 시 수의사와 충분히 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 58,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific veterinary PK data (half-life, Tmax, bioavailability, protein binding)",
+      "CYP enzyme profile",
+      "Dog-specific adverse effect data",
+      "Cat-specific adverse effect data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/22.jsonl",
+    "extracted_at": "2026-03-10T20:05:49.544085+00:00",
+    "reviewer": null
+  }
+}

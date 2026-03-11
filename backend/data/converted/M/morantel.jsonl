@@ -1,0 +1,364 @@
+{
+  "id": "morantel",
+  "drug_identity": {
+    "name_ko": "모란텔",
+    "name_en": "Morantel",
+    "active_ingredient": "Morantel tartrate",
+    "brand_names": [
+      "Rumatel",
+      "Goat Care-2X",
+      "Rumatel-88"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.194,
+        "unit": "%"
+      },
+      {
+        "value": 19.4,
+        "unit": "%"
+      },
+      {
+        "value": 88,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.17,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 신속히 대사되며, 투여 후 96시간 이내에 17%가 소변으로, 나머지는 대변으로 배설됨."
+    },
+    "extra_information": "개 및 고양이에 대한 약동학 데이터는 모노그래프에 기재되어 있지 않음. 소와 염소에서 경구 투여 후 상부 제4위 및 소장에서 빠르게 흡수되며, 최고 혈중 농도는 투여 후 약 4~6시간에 도달함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이에 대한 수의학적 종 특이 데이터 없음. 소/염소 데이터에서 추론.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cholinergic",
+          "ataxia"
+        ],
+        "index": -1,
+        "evidence": "과량 투여 시 운동실조 및 콜린성 효과가 보고되었으나, 개에 대한 직접적인 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urinary excretion"
+        ],
+        "index": -1,
+        "evidence": "투여량의 17%가 소변으로 배설되나, 신독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": -1,
+        "evidence": "간에서 신속히 대사됨. 간독성에 대한 직접적인 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cholinergic",
+          "ataxia"
+        ],
+        "index": -1,
+        "evidence": "과량 투여 시 콜린성 효과 및 운동실조 가능성이 있으나, 고양이에 대한 직접적인 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urinary excretion"
+        ],
+        "index": -1,
+        "evidence": "투여량의 17%가 소변으로 배설되나, 신독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": -1,
+        "evidence": "간에서 신속히 대사됨. 간독성에 대한 직접적인 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 5.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 최고 혈중 농도는 약 4~6시간에 도달(평균 5시간). 반감기 데이터는 모노그래프에 기재되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Bentonite",
+      "severity": 3,
+      "keywords": [
+        "feed incompatibility",
+        "avoid combination"
+      ],
+      "evidence": "Bentonite를 함유한 사료에 모란텔을 첨가하지 말 것. 제품 라벨에 명시된 금기사항."
+    },
+    {
+      "drug": "Pyrantel",
+      "severity": 2,
+      "keywords": [
+        "similar mechanism",
+        "additive toxicity",
+        "neuromuscular blockade"
+      ],
+      "evidence": "작용 기전 및 독성이 유사하므로 병용 권장하지 않음."
+    },
+    {
+      "drug": "Levamisole",
+      "severity": 2,
+      "keywords": [
+        "similar mechanism",
+        "additive toxicity",
+        "neuromuscular blockade"
+      ],
+      "evidence": "작용 기전 및 독성이 유사하므로 병용 권장하지 않음."
+    },
+    {
+      "drug": "Organophosphates",
+      "severity": 2,
+      "keywords": [
+        "cholinergic toxicity",
+        "increased adverse effects"
+      ],
+      "evidence": "부작용 위험 증가; 추가 모니터링 필요."
+    },
+    {
+      "drug": "Diethylcarbamazine",
+      "severity": 2,
+      "keywords": [
+        "increased adverse effects"
+      ],
+      "evidence": "부작용 위험 증가; 추가 모니터링 필요."
+    },
+    {
+      "drug": "Piperazine",
+      "severity": 3,
+      "keywords": [
+        "antagonistic mechanism",
+        "reduced efficacy"
+      ],
+      "evidence": "피페라진과 모란텔은 길항적 작용 기전을 가지므로 병용 금기."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "심각한 쇠약 상태",
+      "match_terms": [
+        "debilitation",
+        "severely debilitated"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "탈분극성 신경근 차단제로 감수성 기생충을 마비시킴. 니코틴 유사 특성을 가지며 아세틸콜린과 유사하게 작용. Haemonchus spp.에서 푸마레이트 환원효소를 억제함.",
+    "common_extra_effects": [
+      "과량 투여 시 호흡수 증가",
+      "과량 투여 시 과도한 발한(땀샘이 있는 종)",
+      "과량 투여 시 운동실조",
+      "과량 투여 시 기타 콜린성 효과"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에 대한 FDA 승인 적응증 없음. 모노그래프에 개에 대한 용량 또는 안전성 데이터가 기재되어 있지 않음.",
+    "cat": "고양이에 대한 FDA 승인 적응증 없음. 모노그래프에 고양이에 대한 용량 또는 안전성 데이터가 기재되어 있지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에 대한 승인된 적응증이 없으며, 심각하게 쇠약한 동물에서는 주의하여 사용해야 함."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 승인된 적응증이 없으며, 심각하게 쇠약한 동물에서는 주의하여 사용해야 함."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 이하에서 보관하고 빛을 차단하여 보관. 최대 40°C(104°F)까지 일시적 보관 허용.",
+    "forms": [
+      "Morantel Tartrate Medicated Pellets 0.194% (880 mg/lb) — Goat Care-2X",
+      "Morantel Tartrate Medicated Premix 19.4% (88 g/lb) — Rumatel-88"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "모란텔은 소와 염소에서 FDA 승인된 구충제(Type A 약용 사료)로, Haemonchus, Ostertagia, Trichostrongylus 등 성숙한 위장관 선충류를 구제함. 피란텔과 유사한 기전을 가지나 약 100배 더 강력함. 권장 용량에서 부작용은 드물며, 안전 범위가 넓음. 벤토나이트 함유 사료와 혼합 금지. 피페라진과 병용 금기.",
+    "indications": "소: Haemonchus spp., Ostertagia spp., Trichostrongylus spp., Nematodirus spp., Cooperia spp., Oesophagostomum radiatum의 성숙형 제거 및 구제 (FDA 승인). 염소: Haemonchus contortus, Ostertagia (Teladorsagia) circumcincta, Trichostrongylus axei의 성숙형 제거 및 구제 (FDA 승인). 양: 동일 용량으로 사용 가능 (허가 외 사용).",
+    "client_info": "모든 라벨 지시사항과 도축 전 휴약 기간을 반드시 준수하십시오. 소: 육류 14일 휴약, 우유 휴약 없음. 염소: 육류 30일 휴약. 아픈 동물에게 사용하기 전에 수의사에게 문의하십시오. 벤토나이트가 포함된 사료와 혼합하지 마십시오. 약용 사료는 혼합 후 6시간 이내에 섭취되어야 합니다. 항상 신선한 물을 제공하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog dosage",
+      "Cat dosage",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "CYP profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.onset_min",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment",
+      "hepatic_dose_adjustment",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/27.jsonl",
+    "extracted_at": "2026-03-10T21:34:44.969123+00:00",
+    "reviewer": null
+  }
+}

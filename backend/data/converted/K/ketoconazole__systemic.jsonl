@@ -1,0 +1,948 @@
+{
+  "id": "ketoconazole_systemic",
+  "drug_identity": {
+    "name_ko": "케토코나졸",
+    "name_en": "Ketoconazole",
+    "active_ingredient": "Ketoconazole",
+    "brand_names": [
+      "Nizoral"
+    ],
+    "allergy_class": null,
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용임. 개와 고양이에서 전신 진균 감염 치료에 사용되나, 현재는 플루코나졸 또는 이트라코나졸이 우선 권장됨.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.13,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP2B11",
+        "CYP2C21",
+        "CYP2C41",
+        "CYP2D15",
+        "CYP3A12",
+        "CYP3A4"
+      ],
+      "inducers": [],
+      "pathway_evidence": "케토코나졸은 개에서 CYP2B11, 2C21/41, 2D15, 3A12의 강력한 억제제이며, 사람에서는 CYP3A4 및 P-당단백질을 억제함. 간에서 여러 비활성 대사체로 대사되며, 대사는 포화 가능성이 있음(반복 투여 시 평균 체류 시간 증가). 대사체는 주로 담즙을 통해 대변으로 배설됨."
+    },
+    "extra_information": "개에서 경구 생체이용률은 4~89%로 매우 가변적임(공복 시 400mg 투여 기준). 최고 혈청 농도는 1~4.25시간 후 도달. 약 13%가 소변으로 배설되며, 2~4%만이 미변화체로 소변 배설. 반감기는 개에서 약 1~6시간(평균 2.7시간). 혈장 단백 결합률 84~99%. 뇌, 고환, 안구에서는 일반 항진균 용량(10 mg/kg)으로 치료적 농도 달성이 어려움."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간독성, 신장 배설 분율, 혈액학적 이상, 심장 관련 상호작용, 뇌 분포 제한 등을 근거로 평가. 수의학적 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CSF 농도 낮음",
+          "뇌 치료 농도 불충분",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "일반 용량(10 mg/kg)에서 뇌 내 약물 농도는 대부분 감염 치료에 불충분함. 운동실조(ataxia) 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "혈소판 감소"
+        ],
+        "index": 2,
+        "evidence": "혈소판 감소증이 드문 부작용으로 보고됨. 혈소판 감소증 환자에서 주의 사용 권고."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination 13%",
+          "소변 배설"
+        ],
+        "index": 1,
+        "evidence": "투여량의 약 13%가 소변으로 배설되며, 2~4%만 미변화체로 배설. 신독성에 대한 직접적 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "cholangiohepatitis",
+          "ALT 증가",
+          "ALP 증가",
+          "fulminant hepatic failure",
+          "간독성",
+          "황달"
+        ],
+        "index": 4,
+        "evidence": "간독성(담관간염, 간효소 상승)이 보고됨. 15마리 개 대상 후향적 연구에서 7마리가 간 손상으로 사망. 용량 의존적 또는 특이체질성 간독성 가능. 간질환 시 금기."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation",
+          "ventricular arrhythmia"
+        ],
+        "index": 2,
+        "evidence": "여러 약물 상호작용에서 QT 연장 및 심실 부정맥 위험 증가가 언급됨. 직접적인 심장독성 보고는 없으나 상호작용을 통한 간접 위험 존재."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CSF 농도 낮음"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 뇌 분포 데이터 없음. 개와 유사하게 일반 용량에서 뇌 내 치료 농도 달성 어려울 것으로 추정."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "thrombocytopenia"
+        ],
+        "index": 1,
+        "evidence": "혈소판 감소증이 드문 부작용으로 보고됨. 고양이 특이적 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination 13%"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신장 배설 데이터 없음. 개 데이터 기반 추정."
+      },
+      "liver": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "간독성",
+          "고양이 간독성 위험 높음",
+          "anorexia",
+          "weight loss"
+        ],
+        "index": 4,
+        "evidence": "고양이는 개보다 간독성 발생 위험이 더 높은 것으로 알려짐. 식욕부진, 체중감소, 간독성 가능성으로 일부 임상가는 고양이에서 금기로 간주. 사용 자체가 논란."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QT prolongation"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 심장 데이터 없음. 약물 상호작용을 통한 간접적 QT 연장 위험 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.625,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 6.0,
+      "mean": 2.7,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 92,
+    "evidence": "개에서 경구 생체이용률은 4~89%로 매우 가변적(공복 시). 최고 혈청 농도 도달 시간: 1~4.25시간. 반감기: 1~6시간(평균 2.7시간). 혈장 단백 결합률: 84~99%(중간값 92% 사용). 음식과 함께 투여 시 흡수 증가 가능."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)/심각→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 상호작용 해당 없음.",
+  "drug_interactions": [
+    {
+      "drug": "Alcohol (Ethanol)",
+      "severity": 2,
+      "keywords": [
+        "disulfiram-like reaction",
+        "vomiting"
+      ],
+      "evidence": "Ethanol may interact with ketoconazole and produce a disulfiram-like reaction (vomiting)."
+    },
+    {
+      "drug": "Antacids (aluminum, calcium, magnesium-containing)",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "gastric pH"
+      ],
+      "evidence": "May reduce oral absorption of ketoconazole; administer ketoconazole at least 1 hour before or 2 hours after antacids."
+    },
+    {
+      "drug": "Antiarrhythmics (amiodarone, disopyramide, quinidine)",
+      "severity": 3,
+      "keywords": [
+        "ventricular arrhythmia",
+        "CYP inhibition",
+        "reduced metabolism"
+      ],
+      "evidence": "Ketoconazole may reduce metabolism and increase risk for ventricular arrhythmia and other adverse effects. Concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 3,
+      "keywords": [
+        "increased benzodiazepine concentrations",
+        "CYP inhibition",
+        "reduced elimination"
+      ],
+      "evidence": "Ketoconazole may increase benzodiazepine concentrations. A study in greyhounds showed ketoconazole significantly decreased elimination of midazolam. Concurrent oral use is contraindicated in humans."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Plasma concentrations of bromocriptine may be elevated by ketoconazole."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 2,
+      "keywords": [
+        "increased opioid concentrations",
+        "toxicity risk"
+      ],
+      "evidence": "Ketoconazole may increase buprenorphine concentrations and risk for toxicity."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Plasma concentrations of buspirone may be elevated by ketoconazole."
+    },
+    {
+      "drug": "Busulfan",
+      "severity": 2,
+      "keywords": [
+        "increased busulfan concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may increase busulfan concentrations."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may increase concentrations of calcium channel blockers."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "increased cannabidiol concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may increase cannabidiol concentrations."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "ventricular arrhythmia",
+        "increased cisapride concentrations"
+      ],
+      "evidence": "Ketoconazole may increase cisapride concentrations and possibility for ventricular arrhythmia; use together is contraindicated in humans."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 3,
+      "keywords": [
+        "colchicine toxicity",
+        "CYP inhibition"
+      ],
+      "evidence": "Increased risk for colchicine toxicity. Concurrent use is contraindicated in humans with renal or hepatic impairment and not recommended in other patients."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, predniso(lo)ne)",
+      "severity": 2,
+      "keywords": [
+        "inhibited corticosteroid metabolism",
+        "increased adverse effects"
+      ],
+      "evidence": "Ketoconazole may inhibit the metabolism of corticosteroids; potential for increased adverse effects."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "inhibited metabolism",
+        "increased toxicity"
+      ],
+      "evidence": "Ketoconazole may inhibit the metabolism of cyclophosphamide and its metabolites; potential for increased toxicity."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine concentrations",
+        "CYP inhibition",
+        "intentional interaction"
+      ],
+      "evidence": "Increased cyclosporine concentrations; this interaction has been used intentionally in dogs to reduce cyclosporine dosage and cost."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentrations",
+        "P-gp inhibition"
+      ],
+      "evidence": "Ketoconazole may increase digoxin concentrations."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "increased doxorubicin exposure",
+        "CYP inhibition"
+      ],
+      "evidence": "Increased doxorubicin exposure with ketoconazole co-administration."
+    },
+    {
+      "drug": "Fentanyl/Alfentanil",
+      "severity": 2,
+      "keywords": [
+        "increased opioid concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may increase fentanyl or alfentanil concentrations."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Increased risk for QT prolongation with concurrent use of fluoroquinolones and ketoconazole."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "increased fluoxetine concentrations"
+      ],
+      "evidence": "Increased risk for QT prolongation; increased fluoxetine peak concentrations and exposure; clinical significance is unclear."
+    },
+    {
+      "drug": "Haloperidol",
+      "severity": 2,
+      "keywords": [
+        "increased haloperidol concentrations",
+        "QT prolongation"
+      ],
+      "evidence": "Increased haloperidol concentrations and increased risk for QT prolongation."
+    },
+    {
+      "drug": "H2-Receptor Antagonists (famotidine, ranitidine)",
+      "severity": 2,
+      "keywords": [
+        "reduced ketoconazole absorption",
+        "increased gastric pH"
+      ],
+      "evidence": "Increased gastric pH from H2-blockers may reduce ketoconazole absorption."
+    },
+    {
+      "drug": "Hepatotoxic Drugs (androgens, estrogens, NSAIDs)",
+      "severity": 2,
+      "keywords": [
+        "additive hepatotoxicity"
+      ],
+      "evidence": "Because ketoconazole can cause hepatotoxicity, it should be used cautiously with other hepatotoxic agents."
+    },
+    {
+      "drug": "Hydroxyzine",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Hydroxyzine may increase risk for QT prolongation when used with ketoconazole."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "reduced ketoconazole concentrations",
+        "reduced efficacy"
+      ],
+      "evidence": "Isoniazid may reduce ketoconazole concentrations and efficacy; concomitant use is not recommended in humans."
+    },
+    {
+      "drug": "Ivermectin",
+      "severity": 3,
+      "keywords": [
+        "increased ivermectin concentration",
+        "neurotoxicity",
+        "P-gp inhibition"
+      ],
+      "evidence": "Ketoconazole increases ivermectin concentration and residence time, and may increase risk for neurotoxicity. One reference states ivermectin should never be used with ketoconazole in dogs."
+    },
+    {
+      "drug": "Macrolide Antibacterials (azithromycin, clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased ketoconazole concentrations"
+      ],
+      "evidence": "Macrolide antibacterials may increase ketoconazole concentrations."
+    },
+    {
+      "drug": "Maropitant",
+      "severity": 2,
+      "keywords": [
+        "increased NK1-antagonist concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole can increase plasma concentrations of NK1-receptor antagonists (the class maropitant belongs to) in humans."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 3,
+      "keywords": [
+        "increased methadone concentrations",
+        "ventricular arrhythmia",
+        "QT prolongation"
+      ],
+      "evidence": "Increased plasma methadone concentrations and risk for ventricular arrhythmia; concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Metronidazole may increase risk for QT prolongation when used with ketoconazole."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "increased mirtazapine concentrations",
+        "QT prolongation",
+        "ventricular arrhythmia"
+      ],
+      "evidence": "Ketoconazole may increase mirtazapine concentrations, increasing risk for QT prolongation and ventricular arrhythmias."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "reduced adrenolytic effect",
+        "CYP inhibition"
+      ],
+      "evidence": "Mitotane and ketoconazole are not recommended for use together to treat hyperadrenocorticism, as ketoconazole's CYP450 inhibition may inhibit the adrenolytic effects of mitotane."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 2,
+      "keywords": [
+        "cardiotoxicity",
+        "QT prolongation"
+      ],
+      "evidence": "Increased risk for cardiotoxicity with concurrent use of ondansetron and ketoconazole."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced ketoconazole concentrations",
+        "CYP induction"
+      ],
+      "evidence": "Phenobarbital may decrease ketoconazole concentrations."
+    },
+    {
+      "drug": "Praziquantel",
+      "severity": 2,
+      "keywords": [
+        "increased praziquantel concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Increased plasma concentrations of praziquantel; concurrent use is not recommended in humans."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "reduced ketoconazole absorption",
+        "increased gastric pH"
+      ],
+      "evidence": "Increased gastric pH from PPIs may reduce ketoconazole absorption."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "reduced ketoconazole concentrations",
+        "increased rifampin concentrations",
+        "hepatotoxicity"
+      ],
+      "evidence": "Rifampin may decrease ketoconazole concentrations; ketoconazole may increase rifampin concentrations; increased potential for hepatotoxicity."
+    },
+    {
+      "drug": "Rivaroxaban",
+      "severity": 3,
+      "keywords": [
+        "increased rivaroxaban concentrations",
+        "bleeding risk"
+      ],
+      "evidence": "Increased rivaroxaban concentrations or exposure may occur; concurrent use is not recommended in humans."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "increased sildenafil exposure",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may increase sildenafil exposure."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Increased risk for QT prolongation with concurrent use of sotalol and ketoconazole."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "reduced ketoconazole absorption"
+      ],
+      "evidence": "Sucralfate may reduce absorption of ketoconazole."
+    },
+    {
+      "drug": "Sulfonylureas (glipizide, glyburide)",
+      "severity": 2,
+      "keywords": [
+        "increased sulfonylurea concentrations",
+        "hypoglycemia"
+      ],
+      "evidence": "Ketoconazole may increase sulfonylurea concentrations; hypoglycemia is possible."
+    },
+    {
+      "drug": "Tamsulosin",
+      "severity": 2,
+      "keywords": [
+        "increased tamsulosin concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Increased tamsulosin concentration is possible; concurrent use is not recommended in humans."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline concentrations",
+        "monitoring required"
+      ],
+      "evidence": "Ketoconazole may decrease serum theophylline concentrations in some patients; theophylline concentrations should be monitored."
+    },
+    {
+      "drug": "Toceranib",
+      "severity": 2,
+      "keywords": [
+        "increased toceranib concentrations",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "May increase toceranib or ketoconazole concentrations via CYP3A4 inhibition."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "increased tramadol exposure",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may increase tramadol exposure."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 2,
+      "keywords": [
+        "substantially increased trazodone concentrations",
+        "CYP inhibition"
+      ],
+      "evidence": "Ketoconazole may substantially increase trazodone concentrations."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "reduced TCA metabolism",
+        "increased adverse effects"
+      ],
+      "evidence": "Ketoconazole may reduce metabolism of tricyclic antidepressants and increase adverse effects."
+    },
+    {
+      "drug": "Vinca Alkaloids (vinblastine, vincristine, vinorelbine)",
+      "severity": 2,
+      "keywords": [
+        "inhibited vinca alkaloid metabolism",
+        "increased concentrations"
+      ],
+      "evidence": "Ketoconazole may inhibit vinca alkaloid metabolism and increase concentrations."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased prothrombin time",
+        "bleeding risk"
+      ],
+      "evidence": "Ketoconazole may cause increased prothrombin times in patients receiving warfarin or other coumarin anticoagulants."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "high",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Malassezia 피부염",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "3~4주, 임상 증상 완전 소실까지. 국소 치료(미코나졸/클로르헥시딘 샴푸)와 병용 권장.",
+          "evidence": "Plumb's Dosages: Dogs - Malassezia dermatitis"
+        },
+        {
+          "logic_type": "linear",
+          "context": "조갑진균증(Onychomycosis)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "건강한 발톱 재성장 후 1~3개월 추가 치료",
+          "evidence": "Plumb's Dosages: Dogs - Onychomycosis"
+        },
+        {
+          "logic_type": "linear",
+          "context": "사이클로스포린 용량 절감 목적",
+          "value": "2.5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "사이클로스포린 농도 모니터링 권장",
+          "evidence": "Plumb's Dosages: Dogs - Reducing cyclosporine dosage requirements"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "임상 증상 완전 소실 후 최소 1개월 이상 지속",
+          "evidence": "Plumb's Dosages: Dogs - Systemic mycoses"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "전신 진균증 (논란 있음, 다른 항진균제 우선 고려)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "수개월 치료 필요할 수 있음. 독성 위험으로 사용 논란. 플루코나졸 또는 이트라코나졸 우선 권장.",
+          "evidence": "Plumb's Dosages: Cats - Systemic mycoses (50 mg/cat, NOT mg/kg)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 진균증 (체중 기반 대안 용량)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "수개월 치료 필요할 수 있음. 독성 위험으로 사용 논란.",
+          "evidence": "Plumb's Dosages: Cats - Systemic mycoses (10 mg/kg alternative)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 약물의 약 13%가 소변으로 배설되므로 심각한 신부전 시 주의가 필요할 수 있으나, 구체적 조정 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "급성 또는 만성 간질환 환자에서 금기. ALT가 현저히 상승하거나 고빌리루빈혈증 발생 시 투약 중단. ALT 상승만 있고 다른 증상 없는 경우 반드시 중단할 필요는 없으나 집중 모니터링 필요. 증상 소실 및 ALT 정상화 후 더 낮은 용량 또는 더 긴 투여 간격으로 재시작 가능."
+  },
+  "contraindications": [
+    {
+      "condition": "간질환 (급성 또는 만성)",
+      "match_terms": [
+        "liver disease",
+        "hepatic disease",
+        "hepatitis",
+        "cholangiohepatitis",
+        "hepatic failure",
+        "간부전",
+        "간염"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "케토코나졸 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "과민반응"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈소판 감소증",
+      "match_terms": [
+        "thrombocytopenia",
+        "low platelets",
+        "혈소판 감소"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이에서의 사용 (논란)",
+      "match_terms": [
+        "cat",
+        "feline",
+        "고양이"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수술/외상/중증 질환 등 스트레스 상황 (부신 억제 위험)",
+      "match_terms": [
+        "surgery",
+        "trauma",
+        "critical illness",
+        "stress",
+        "수술",
+        "외상"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 유전적 감수성 또는 MDR1 돌연변이 관련 위험에 대한 명시적 언급 없음. 단, 케토코나졸은 P-당단백질 억제제로 작용하므로 MDR1 돌연변이 견종에서 P-gp 기질 약물(예: 이버멕틴)과 병용 시 간접적 위험 증가 가능."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균 세포막의 에르고스테롤 합성에 필요한 사이토크롬 P450 의존성 탈메틸화 효소를 억제하여 세포막 투과성 증가 및 세포 내용물 누출을 유발하는 정진균 작용. 고농도 또는 감수성 높은 균에서는 살진균 작용. 또한 5-리폭시게나아제 억제를 통한 항염증 작용, T-림프구 증식 억제를 통한 면역억제 작용, 여러 P450 효소계 차단을 통한 스테로이드 합성 억제 작용을 가짐.",
+    "common_extra_effects": [
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "체중감소(weight loss)",
+      "간독성(hepatotoxicity) - 담관간염, ALT/ALP 상승",
+      "혈소판 감소증(thrombocytopenia)",
+      "털색 가역적 탈색(reversible lightening of haircoat)",
+      "부신 스테로이드 합성 억제(adrenal steroid suppression)",
+      "고환 스테로이드 합성 억제(testicular steroid suppression) - 불임, 무정자증",
+      "운동실조(ataxia)",
+      "행동 변화(behavior changes) - 불안",
+      "백내장(cataracts) - 장기 사용 시",
+      "황달(jaundice)"
+    ],
+    "dog_mechanism": "개에서 CYP2B11, 2C21/41, 2D15, 3A12의 강력한 억제제로 작용. 경구 생체이용률이 4~89%로 매우 가변적. 반감기 평균 2.7시간(범위 1~6시간).",
+    "dog_extra_effects": [
+      "간독성(15마리 대상 후향적 연구에서 7마리 사망)",
+      "케토코나졸 유발 부신기능저하증(hypoadrenocorticism) 사례 보고",
+      "백내장(장기 사용 시)",
+      "수컷 불임 및 무정자증(testosterone 감소)"
+    ],
+    "cat_mechanism": "고양이에서 사용은 논란이 있으며, 간독성 위험이 개보다 높은 것으로 알려짐. 일부 임상가는 금기로 간주.",
+    "cat_extra_effects": [
+      "식욕부진(anorexia) - 개보다 더 흔함",
+      "체중감소(weight loss)",
+      "간독성(hepatotoxicity) - 개보다 위험 높음",
+      "구토(vomiting)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 케토코나졸은 Malassezia 피부염, 조갑진균증, 전신 진균증 치료에 사용되어 왔으나, 현재는 이트라코나졸 또는 플루코나졸이 우선 권장됨. 사이클로스포린 용량 절감 목적으로 의도적으로 병용하는 경우도 있음. 경구 생체이용률이 매우 가변적(4~89%)이므로 임상적 반응 모니터링이 중요함. 고용량(30 mg/kg/day) 사용 시 부신 기능 억제 가능. 치료 전 및 치료 중 정기적인 간 기능 검사 필수.",
+    "cat": "고양이에서의 케토코나졸 사용은 논란이 있으며, 간독성 및 식욕부진 위험이 개보다 높아 일부 임상가는 금기로 간주함. 가능하면 플루코나졸 또는 이트라코나졸 사용을 우선 고려할 것. 불가피하게 사용 시 50 mg/마리(mg/kg 아님) 또는 10 mg/kg을 12~24시간 간격으로 음식과 함께 투여하며, 간 기능 및 부작용을 집중 모니터링해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간질환 시 금기. 혈소판 감소증, 스트레스 상황(수술, 외상, 중증 질환), 임신 시 주의. 경구 생체이용률 가변성으로 인한 독성 및 효능 불확실성 존재. 장기 사용 시 백내장 위험. 정기적 간 기능 검사 및 CBC 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "사용 자체가 논란. 간독성 및 식욕부진 위험이 개보다 높음. 일부 임상가는 금기로 간주. 사용 시 집중 모니터링 필수. 가능하면 다른 항진균제 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 보관, 밀폐 용기, 습기 차단. 조제 경구 현탁액(20 mg/mL)은 5°C 또는 25°C에서 빛 차단 시 60일간 95% 이상 역가 유지.",
+    "forms": [
+      "케토코나졸 정제 200 mg (scored) - 사람용 처방약",
+      "조제 경구 현탁액 20 mg/mL (Ora Plus + Ora Sweet 또는 Ora-Sweet-SF)",
+      "국소 제형(스프레이, 샴푸, 약용 와이프, 이도 세척제) - 수의용 OTC (전신 사용 아님)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "케토코나졸은 경구 투여 가능한 이미다졸계 항진균제로, 개에서 Malassezia 피부염, 조갑진균증, 전신 진균증 치료에 사용됨. 현재는 독성이 적고 효능이 우수한 플루코나졸 또는 이트라코나졸이 우선 권장됨. 간독성이 주요 위험으로, 치료 전 및 치료 중 정기적 간 기능 검사 필수. 고양이에서의 사용은 논란이 있으며 가능하면 피할 것. CYP450 억제를 통한 다수의 약물 상호작용 주의 필요. 모든 수의학적 사용은 허가 외(extra-label) 사용임.",
+    "indications": "【허가 외 사용】 개: Malassezia 피부염(5~10 mg/kg PO SID), 조갑진균증(5~10 mg/kg PO q12h), 전신 진균증(5~10 mg/kg PO q12~24h), 사이클로스포린 용량 절감(2.5~10 mg/kg PO SID). 고양이: 전신 진균증(50 mg/마리 또는 10 mg/kg PO q12~24h, 논란 있음). 역사적으로 개의 부신피질기능항진증 치료에 사용되었으나 현재는 미토탄 또는 트릴로스탄이 권장됨.",
+    "client_info": "【보호자 안내】\n• 음식과 함께, 특히 지방이 많은 음식(크림, 치즈, 버터 등)과 함께 투여하세요.\n• 가장 흔한 부작용은 식욕부진, 구토 등 소화기 증상입니다(특히 고양이에서 더 흔함).\n• 간독성이 발생할 수 있습니다. 심한 구토, 식욕 완전 소실, 잇몸·피부·눈 흰자위의 황달(노란색) 증상이 나타나면 즉시 투약을 중단하고 수의사에게 연락하세요.\n• 임신 동물이나 번식에 사용되는 수컷 동물에게는 꼭 필요한 경우에만 사용하세요(기형 유발 및 불임 가능성). 임신 중인 보호자는 이 약 취급 시 주의하세요.\n• 처방된 기간 동안 빠짐없이 투여하고, 임의로 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "고양이 약동학(PK) 데이터",
+      "신장 기능 저하 시 용량 조정 권고",
+      "CYP 기질 정보(케토코나졸 자체의 대사 경로)",
+      "onset_min",
+      "고양이 반감기"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "cyp_profile.substrates",
+      "metabolism_and_clearance.extra_information (cat-specific PK)",
+      "timing_profile.half_life_hr (cat-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/57.jsonl",
+    "extracted_at": "2026-03-11T06:57:33.644389+00:00",
+    "reviewer": null
+  }
+}

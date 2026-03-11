@@ -1,0 +1,523 @@
+{
+  "id": "grapiprant",
+  "drug_identity": {
+    "name_ko": "그라피프란트",
+    "name_en": "Grapiprant",
+    "active_ingredient": "Grapiprant",
+    "brand_names": [
+      "Galliprant"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "NSAID",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.2,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "그라피프란트는 CYP1A2, CYP2C9, CYP2C19, CYP2D6, CYP3A4 매개 대사 경로를 억제하지 않는다. 수산화 및 N-산화 대사체가 소변과 대변에서 검출되었으나 대사 경로는 완전히 규명되지 않았다. P-당단백질(P-gp) 수송체의 기질이다."
+    },
+    "extra_information": "개에서 경구 투여 후 빠르게 흡수되며, 공복 시 투여 후 약 1~2시간에 최고 혈중 농도(최대 1600 ng/mL)에 도달한다. 음식은 최고 농도 도달 시간을 지연시키고 Cmax를 4배, AUC를 2배 감소시킨다. 배설은 주로 대변(약 65%)과 신장(약 20%)을 통해 이루어진다. MDR1 유전자 동형접합 콜리에서 Cmax(4600~5200 ng/mL) 및 AUC가 정상 개보다 현저히 높다. 고양이에서 3 mg/kg PO 1일 1회 28일 투여 시 최고 농도 약 1100 ng/mL, 반감기 3.1~14.1시간이었다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 각 장기에 대한 직접적 독성 언급, 이상반응, 수용체 발현 정보를 근거로 점수를 부여함. 수의학적 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lethargy",
+          "MDR1"
+        ],
+        "index": 1,
+        "evidence": "기면(lethargy)이 이상반응으로 보고됨. MDR1 동형접합 콜리에서 CNS 영향은 관찰되지 않았으나 약물 노출량이 현저히 높아 주의 필요."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "decreased albumin",
+          "decreased total protein",
+          "increased ALP",
+          "increased ALT",
+          "increased calcium"
+        ],
+        "index": 2,
+        "evidence": "혈청 알부민 및 총단백 감소, 알칼리성 인산분해효소 및 ALT 증가, 칼슘 농도 증가가 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal function",
+          "EP4 receptor",
+          "antinatriuretic",
+          "renin",
+          "renal blood flow"
+        ],
+        "index": 3,
+        "evidence": "EP4 수용체가 신장 기능(항나트륨배설, 레닌 분비)에 관여함. 루프 이뇨제 병용 시 신장 혈류 감소로 인한 신장 손상 위험 증가. 신장 배설 약 20%."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased ALP",
+          "increased ALT",
+          "hepatic dysfunction"
+        ],
+        "index": 4,
+        "evidence": "알칼리성 인산분해효소 및 ALT 증가가 이상반응으로 보고됨. UK 라벨에서 기존 간 기능 이상 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "EP4 receptor",
+          "cardiovascular",
+          "cardiac disease"
+        ],
+        "index": 5,
+        "evidence": "EP4 수용체가 개의 심장에 풍부하게 발현되나 임상적 의의는 아직 불명확. 심장 질환 개에서의 안전성 미연구."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 영향에 대한 직접적 언급 없음. 15 mg/kg/일 28일 투여 시 이상반응 미관찰."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 15 mg/kg/일 28일 투여 시 이상반응 또는 조직병리학적 변화 미관찰."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "EP4 receptor",
+          "renal function"
+        ],
+        "index": 1,
+        "evidence": "EP4 수용체가 신장 기능에 관여하므로 이론적 신장 부담 존재. 고양이 특이적 신독성 데이터는 제한적."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간독성에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "EP4 receptor",
+          "cardiovascular"
+        ],
+        "index": -1,
+        "evidence": "EP4 수용체의 심혈관계 발현으로 이론적 부담 존재하나 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 4.5,
+      "max": 6.0,
+      "mean": 5.25,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 95,
+    "evidence": "공복 개에서 경구 투여 후 1~2시간에 최고 혈중 농도 도달. 반감기 약 4.5~6시간. 혈장 단백 결합률 약 95%. 고양이에서 2 mg/kg IV 또는 PO 단회 투여 시 경구 생체이용률 40%, 반감기 5.5시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/피해야 함→3, 주요→3, 중등도→2, 경미→1. 제조사는 다른 항염증제(COX 억제 NSAIDs, 코르티코스테로이드)와의 병용을 피하도록 경고함.",
+  "drug_interactions": [
+    {
+      "drug": "NSAIDs (eg, aspirin, carprofen, meloxicam)",
+      "severity": 3,
+      "keywords": [
+        "GI ulceration",
+        "GI toxicity",
+        "concurrent NSAID"
+      ],
+      "evidence": "Concurrent administration with grapiprant may increase the risk for GI toxicity including ulceration. Manufacturer states concomitant use should be avoided."
+    },
+    {
+      "drug": "Corticosteroids (eg, dexamethasone, fludrocortisone, prednisolone)",
+      "severity": 3,
+      "keywords": [
+        "GI adverse effects",
+        "concurrent anti-inflammatory"
+      ],
+      "evidence": "Concomitant administration with grapiprant may increase the risk for GI adverse effects. Manufacturer states concomitant use should be avoided."
+    },
+    {
+      "drug": "ACE Inhibitors (eg, benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "reduced renal vasodilatory prostaglandins",
+        "decreased antihypertensive efficacy"
+      ],
+      "evidence": "NSAIDs may decrease effectiveness of ACE inhibitors by reducing renal vasodilatory prostaglandins. Interaction may apply to grapiprant."
+    },
+    {
+      "drug": "Loop Diuretics (eg, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "renal damage",
+        "decreased renal blood flow"
+      ],
+      "evidence": "Concurrent use of NSAIDs and loop diuretics may increase the risk for renal damage secondary to decreased renal blood flow. Interaction may apply to grapiprant."
+    },
+    {
+      "drug": "Highly Protein Bound Drugs (eg, oral anticoagulants, salicylates, sulfonamides, sulfonylurea antidiabetics)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "transient increased free drug concentration"
+      ],
+      "evidence": "Grapiprant is highly protein-bound (95%) and could theoretically displace other highly protein-bound drugs, causing transient increases in serum concentrations. Unlikely to be of clinical concern due to increased clearance equilibration."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 (FDA 승인 용량)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 유효 용량을 최단 기간 사용. 14일 후 임상적 개선이 없으면 투여 중단 고려 (UK 라벨). 3.6 kg 미만 개에는 정확한 용량 투여 불가.",
+          "evidence": "FDA 승인 (NADA #141-455). 2 mg/kg PO q24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "MDR1 유전자 동형접합 개에서의 골관절염 통증 및 염증 조절 (비표준 용량)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "내약성에 따라 2 mg/kg/일까지 증량 가능. 첫 투여 후 4~6주에 혈장 단백 농도 재검 권장.",
+          "evidence": "MDR1 동형접합 개에서 50% 용량 감량(1 mg/kg) 권장 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "MDR1 유전자 이형접합 개에서의 골관절염 통증 및 염증 조절 (비표준 용량)",
+          "value": "1.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "내약성에 따라 2 mg/kg/일까지 증량 가능.",
+          "evidence": "MDR1 이형접합 개에서 25% 용량 감량(1.5 mg/kg) 권장 (extra-label)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "UK 라벨에서 기존 신장 기능 이상 시 주의 사용을 권고하나, 구체적인 용량 조절 지침은 제시되지 않음. 신장 배설 약 20%."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "UK 라벨에서 기존 간 기능 이상 시 주의 사용을 권고하나, 구체적인 용량 조절 지침은 제시되지 않음. ALT 및 ALP 증가가 이상반응으로 보고됨."
+  },
+  "contraindications": [
+    {
+      "condition": "그라피프란트 과민증",
+      "match_terms": [
+        "hypersensitivity to grapiprant",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 NSAIDs 또는 코르티코스테로이드 동시 투여",
+      "match_terms": [
+        "concurrent NSAID",
+        "concurrent corticosteroid",
+        "anti-inflammatory"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 3.6 kg 미만 또는 9개월 미만 개",
+      "match_terms": [
+        "underweight",
+        "puppy",
+        "young dog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 간 기능 이상",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "elevated ALT",
+        "elevated ALP"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "기존 신장 기능 이상",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "기존 심혈관 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease",
+        "cardiovascular dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 위장관 질환",
+      "match_terms": [
+        "GI disease",
+        "gastrointestinal disease",
+        "IBD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신, 수유, 번식 중인 개",
+      "match_terms": [
+        "pregnant",
+        "lactating",
+        "breeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Old English Sheepdog"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 유전자(ABCB1 유전자) 동형접합 돌연변이 개에서 그라피프란트의 Cmax(4600~5200 ng/mL) 및 AUC가 정상 개보다 현저히 높아 용량 감량(50%)이 권장됨. 이형접합 개에서는 25% 감량 권장. 그라피프란트는 P-당단백질 수송체의 기질임."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "프로스타글란딘 E2(PGE2) EP4 수용체 길항제로, COX를 억제하지 않고 EP4 수용체를 직접 차단하여 PGE2의 염증 효과를 감소시키고 감각 신경에서의 통증 전달을 억제함.",
+    "common_extra_effects": [
+      "구토",
+      "설사 또는 무른 변",
+      "식욕 감소",
+      "기면(lethargy)",
+      "점액성, 수양성 또는 혈성 변",
+      "알칼리성 인산분해효소(ALP) 증가",
+      "알라닌 아미노전이효소(ALT) 증가",
+      "혈청 알부민 감소",
+      "총단백 감소",
+      "칼슘 농도 증가"
+    ],
+    "dog_mechanism": "EP4 수용체 길항을 통해 PGE2 매개 염증 및 통증 전달 억제. 소장 운동성 억제 및 대장 사이토카인 발현 억제 가능성.",
+    "dog_extra_effects": [
+      "구토",
+      "설사 또는 무른 변",
+      "식욕 감소",
+      "기면",
+      "점액성, 수양성 또는 혈성 변",
+      "ALP 증가",
+      "ALT 증가",
+      "혈청 알부민 감소",
+      "총단백 감소",
+      "칼슘 농도 증가"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 골관절염 관련 통증 및 염증 조절에 FDA 승인된 약물(NADA #141-455). 2 mg/kg PO q24h 투여. 음식과 함께 또는 공복에 투여 가능(구토 시 음식과 함께 투여 권장). MDR1 유전자 돌연변이 개에서는 용량 감량 필요. 9개월 미만 또는 3.6 kg 미만 개에서의 안전성 미확립. 장기 투여 시 CBC, 혈청 화학 검사, 요검사 정기 모니터링 권장.",
+    "cat": "고양이에서 승인된 적응증 없음. 3 mg/kg PO 1일 1회 28일 투여 내약성 연구에서 이상반응 미관찰(최대 15 mg/kg/일). 임상 사용 전 추가 연구 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 간, 신장, 심혈관 질환 또는 위장관 질환 시 주의 사용. MDR1 유전자 돌연변이 개에서 용량 감량 필요. 9개월 미만 또는 3.6 kg 미만 개에서 사용 금기. 임신, 수유, 번식 중인 개에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 승인되지 않은 약물. 제한적인 안전성 데이터만 존재하며 임상 사용 전 추가 연구 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "30°C(86°F) 이하에서 보관. 동물과 어린이의 손이 닿지 않는 곳에 보관.",
+    "forms": [
+      "그라피프란트 풍미 정제(scored): 20 mg, 60 mg, 100 mg — Galliprant® (Rx)",
+      "20 mg 및 60 mg 정제는 분할선 있음; 100 mg 정제는 분할선 없으며 반으로 나누지 않도록 권장"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "그라피프란트(Galliprant®)는 개의 골관절염 관련 통증 및 염증 조절을 위해 FDA 승인된 PGE2 EP4 수용체 길항제 NSAID입니다. COX를 억제하지 않는 독특한 작용 기전을 가집니다. 주요 이상반응은 위장관 증상(구토, 설사, 혈변)이며, MDR1 유전자 돌연변이 개에서는 약물 노출량이 현저히 증가하므로 용량 감량이 필요합니다. 다른 NSAIDs 또는 코르티코스테로이드와의 병용은 금기입니다.",
+    "indications": "승인 적응증: 개의 골관절염 관련 통증 및 염증 조절 (FDA 승인, NADA #141-455). UK/유럽에서는 경증~중등도 골관절염에 특이적으로 승인. 비표준 사용: MDR1 유전자 돌연변이 개에서 용량 조절 투여. 실험적: 토끼에서 항통각 효과 확인(임상 사용 전 추가 연구 필요).",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 구토가 발생하면 음식과 함께 투여해 보세요. 부작용으로 구토, 설사, 식욕 감소가 나타날 수 있습니다. 동물의 식욕이 감소하거나, 구토가 발생하거나, 변에 이상(수양성, 혈액 또는 점액 포함)이 생기면 즉시 수의사에게 연락하세요. 이 약은 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 다른 소염제나 스테로이드 약물과 함께 투여하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Human-labeled products",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Complete biotransformation pathway",
+      "Cat-specific dosing recommendations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/0.jsonl",
+    "extracted_at": "2026-03-10T13:24:25.128729+00:00",
+    "reviewer": null
+  }
+}

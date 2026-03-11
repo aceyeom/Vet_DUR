@@ -1,0 +1,837 @@
+{
+  "id": "oxymorphone",
+  "drug_identity": {
+    "name_ko": "옥시모르폰",
+    "name_en": "Oxymorphone",
+    "active_ingredient": "Oxymorphone",
+    "brand_names": [
+      "Numorphan",
+      "Opana",
+      "Opana ER"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "discontinued",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "날록손은 호흡 억제 치료에 선택 약물이며, 옥시모르폰의 효과를 신속히 역전시킬 수 있다. 날록손 투여 후 옥시모르폰의 독성 농도가 지속될 수 있으므로 반복 투여가 필요할 수 있다.",
+    "off_label_note": "수의용 허가 제품 없음. 개, 고양이, 말, 조류, 소형 포유류 등에서 진통 및 진정 목적으로 사용되나 모두 허가 외(extra-label) 사용임. 주사제는 2017년 제조 중단됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 글루쿠론산 포합(glucuronidation)에 의해 대사되며, 신장을 통해 배설된다."
+    },
+    "extra_information": "고양이에서 정상 상태 분포 용적 약 2.5 L/kg, 청소율 약 26 mL/분/kg, 소실 반감기 약 1.6시간. 고양이에서 협측(buccal) 투여 시 생체이용률 약 17%. 신장, 간, 폐에 고농도로 분포하며 CNS 농도는 낮음. 태반을 통과함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장(배설 경로), 간(대사 경로), 뇌(CNS 효과), 심장(서맥/혈압 저하), 혈액(호흡 억제/혈압 변화) 관련 텍스트 근거로 평가. 고양이 데이터는 일부 PK 수치 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "euphoria",
+          "confusion",
+          "respiratory depression",
+          "seizure"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, CNS 억제, 호흡 억제, 발작 유발 가능성이 보고됨. 뇌에 대한 직접적 약리 효과가 주요 작용임."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "respiratory depression",
+          "histamine release"
+        ],
+        "index": 2,
+        "evidence": "서맥, 저혈압, 호흡 억제, 히스타민 유리(모르핀보다 적음) 등 심혈관 및 혈액 관련 효과가 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "urinary retention",
+          "concentrates in kidneys"
+        ],
+        "index": 3,
+        "evidence": "신장을 통해 배설되며, 신장에 고농도로 분포. 요저류 부작용 가능. 중증 신부전 시 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation",
+          "severe hepatic disease",
+          "concentrates in liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 글루쿠론산 포합으로 대사. 중증 간질환 시 약물 작용 시간 연장 가능. 간에 고농도 분포."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased cardiac contractility",
+          "hypotension",
+          "bradyarrhythmia"
+        ],
+        "index": 5,
+        "evidence": "미주신경 자극에 의한 서맥, 심장 수축력 감소, 저혈압 등 심혈관 효과가 보고됨. 기존 서맥부정맥 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "hyperexcitability",
+          "ataxia",
+          "behavioral changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 고용량 시 운동실조, 감각과민, 흥분/공격성 등 행동 변화 보고. CNS 효과가 주요 작용."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "respiratory depression",
+          "histamine release"
+        ],
+        "index": 2,
+        "evidence": "서맥, 호흡 억제, 히스타민 유리 가능성이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "urinary retention",
+          "concentrates in kidneys",
+          "clearance 26 mL/min/kg"
+        ],
+        "index": 3,
+        "evidence": "고양이 PK: 청소율 약 26 mL/분/kg, 신장 배설. 신장에 고농도 분포. 요저류 가능."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation",
+          "concentrates in liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 글루쿠론산 포합으로 대사. 간에 고농도 분포. 중증 간질환 시 주의."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased cardiac contractility",
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "서맥, 심장 수축력 감소, 저혈압 등 심혈관 효과 보고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 3,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.6,
+      "species": "cat"
+    },
+    "f_percent": 10,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 진통 효과 발현 3~5분(사람). 개에서 0.1 mg/kg IM 투여 후 발현 약 15분, 효과 지속 2~4시간. 고양이 소실 반감기 약 1.6시간. 경구 생체이용률 약 10%(사람). 고양이 협측 투여 생체이용률 약 17%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/극도 주의→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 규칙에 따라 severity 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation"
+      ],
+      "evidence": "항콜린 작용 약물과 병용 시 요저류 및 변비 위험 증가."
+    },
+    {
+      "drug": "Butorphanol",
+      "severity": 2,
+      "keywords": [
+        "opioid antagonism"
+      ],
+      "evidence": "부토르파놀은 옥시모르폰의 오피오이드 효과를 길항할 수 있음."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 2,
+      "keywords": [
+        "opioid antagonism"
+      ],
+      "evidence": "부프레노르핀은 옥시모르폰의 오피오이드 효과를 길항할 수 있음."
+    },
+    {
+      "drug": "Nalbuphine",
+      "severity": 2,
+      "keywords": [
+        "opioid antagonism"
+      ],
+      "evidence": "날부핀은 옥시모르폰의 오피오이드 효과를 길항할 수 있음."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "decreased antiplatelet effect",
+        "metabolism inhibition"
+      ],
+      "evidence": "오피오이드는 클로피도그렐의 활성 대사체로의 전환을 감소시켜 항혈소판 효과를 저하시킬 수 있음."
+    },
+    {
+      "drug": "CNS Depressants (anesthetic agents, antihistamines, barbiturates, ethanol, gabapentin, phenothiazines, tranquilizers)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "CNS 억제제와 병용 시 CNS 또는 호흡 억제 위험 증가."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia"
+      ],
+      "evidence": "오피오이드와 데스모프레신 병용 시 수분 중독 또는 저나트륨혈증 위험 증가."
+    },
+    {
+      "drug": "Diuretics",
+      "severity": 1,
+      "keywords": [
+        "decreased diuretic efficacy"
+      ],
+      "evidence": "오피오이드는 울혈성 심부전 환자에서 이뇨제의 효능을 감소시킬 수 있음."
+    },
+    {
+      "drug": "GI Prokinetic Agents (cisapride, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "decreased prokinetic efficacy",
+        "GI motility"
+      ],
+      "evidence": "오피오이드는 위장관 운동 촉진제의 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Magnesium Sulfate",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive"
+      ],
+      "evidence": "황산마그네슘과 병용 시 CNS 억제 효과 증가. 고용량 또는 IV 마그네슘 요법 시 더 가능성 높음."
+    },
+    {
+      "drug": "Minocycline (IV)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive"
+      ],
+      "evidence": "IV 미노사이클린 요법은 옥시모르폰의 CNS 억제 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Opioid Antagonists (naloxone, naltrexone)",
+      "severity": 3,
+      "keywords": [
+        "opioid reversal",
+        "antagonism"
+      ],
+      "evidence": "오피오이드 길항제와 병용 시 오피오이드 효과가 완전히 소실됨."
+    },
+    {
+      "drug": "MAOIs (amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "opioid overdose signs",
+        "serotonin syndrome",
+        "extreme caution"
+      ],
+      "evidence": "MAOI와 병용 시 극도의 주의 필요. 관련 오피오이드인 메페리딘은 MAOI 투여 중 및 투여 후 최소 14일간 금기. 일부 환자에서 치료 용량에서도 오피오이드 과다 증상 발현 보고."
+    },
+    {
+      "drug": "Skeletal Muscle Relaxants",
+      "severity": 2,
+      "keywords": [
+        "enhanced muscle relaxation"
+      ],
+      "evidence": "옥시모르폰은 골격근 이완제의 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "analgesic antagonism",
+        "hypotension"
+      ],
+      "evidence": "일부 페노티아진은 진통 효과를 길항하고 저혈압 위험을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Rufinamide",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "dizziness",
+        "sleepiness"
+      ],
+      "evidence": "루피나마이드와 병용 시 어지러움 및 졸음 등 CNS 효과 증가."
+    },
+    {
+      "drug": "Serotonin Modulators (linezolid, methylene blue, metoclopramide, SSRIs, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "serotonin concentration increase"
+      ],
+      "evidence": "세로토닌 조절제와 병용 시 세로토닌 농도 증가 및 세로토닌 증후군 위험. 모니터링 필요."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "additive"
+      ],
+      "evidence": "석시닐콜린과 오피오이드 병용 시 서맥 효과 강화."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "TCA effects exacerbation"
+      ],
+      "evidence": "옥시모르폰은 삼환계 항우울제의 효과를 악화시킬 수 있음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant potentiation",
+        "bleeding risk"
+      ],
+      "evidence": "오피오이드는 와파린의 항응고 활성을 강화할 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 통증 진통, 진정, 전마취 투약 (extra-label)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 1~6시간마다 반복 투여 가능. 진정제와 병용 가능.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 통증 진통, 진정, 전마취 투약 (extra-label)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 1~6시간마다 반복 투여 가능.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 통증 진통, 진정, 전마취 투약 (extra-label)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 1~6시간마다 반복 투여 가능.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 투여 진통 (extra-label)",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.1,
+          "duration_note": "0.9% 생리식염수 0.3 mL/kg에 희석. 최대 6 mL 권장. 방부제 없는 제품 사용 권장.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (b) - 경막외 투여"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 통증 진통, 진정, 전마취 투약 (extra-label)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 1~6시간마다 반복 투여 가능. 고용량 시 진정제 병용 권장.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 통증 진통, 진정, 전마취 투약 (extra-label)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 1~6시간마다 반복 투여 가능.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 통증 진통, 진정, 전마취 투약 (extra-label)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 1~6시간마다 반복 투여 가능.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 투여 진통 (extra-label)",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.1,
+          "duration_note": "0.9% 생리식염수 0.3 mL/kg에 희석. 최대 6 mL 권장. 방부제 없는 제품 사용 권장.",
+          "evidence": "Plumb's Dosages: Dogs/Cats 항목 (b) - 경막외 투여"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신부전 환자에서 주의 사용 권고. 신장을 통해 배설되므로 신기능 저하 시 약물 축적 가능성 있음. 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간질환 환자에서 약물 작용 시간이 연장될 수 있음. 중등도~중증 간기능 장애는 사람에서 금기로 간주됨. 수의 환자에서 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "마약성 진통제 과민반응",
+      "match_terms": [
+        "opioid hypersensitivity",
+        "narcotic analgesic allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "독성 물질 섭취로 인한 설사 (독소 배출 전)",
+      "match_terms": [
+        "toxic ingestion diarrhea"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 폐색 및 마비성 장폐색",
+      "match_terms": [
+        "GI obstruction",
+        "paralytic ileus",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "hepatic impairment"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "위확장-염전 의심",
+      "match_terms": [
+        "gastric dilation-volvulus",
+        "GDV"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부 손상 / 두개내압 상승",
+      "match_terms": [
+        "head injury",
+        "increased intracranial pressure",
+        "ICP"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안압 상승",
+      "match_terms": [
+        "increased intraocular pressure",
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡기 질환 / 급성 호흡 기능 장애",
+      "match_terms": [
+        "respiratory disease",
+        "pulmonary edema",
+        "respiratory dysfunction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 저하증",
+      "match_terms": [
+        "hypothyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신부전",
+      "match_terms": [
+        "severe renal insufficiency",
+        "renal failure",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "부신피질 기능 저하증",
+      "match_terms": [
+        "hypoadrenocorticism",
+        "Addison's disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 병력",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압 / 순환 쇼크",
+      "match_terms": [
+        "hypotension",
+        "circulatory shock"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 서맥부정맥",
+      "match_terms": [
+        "bradyarrhythmia",
+        "bradycardia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "담도 질환 / 급성 췌장염",
+      "match_terms": [
+        "biliary tract impairment",
+        "acute pancreatitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전갈(Centruroides sculpturatus, C. gertschi) 독침",
+      "match_terms": [
+        "scorpion envenomation",
+        "Centruroides"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 MDR1/ABCB1 유전자 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "뮤(mu) 오피오이드 수용체 작용제로, 모르핀보다 약 10배 강력함. 변연계, 척수, 시상, 시상하부, 선조체, 중뇌의 오피오이드 수용체에 작용하여 진통 및 진정 효과를 나타냄. 델타 수용체에도 일부 활성 가능성 있음.",
+    "common_extra_effects": [
+      "호흡 억제",
+      "서맥",
+      "저혈압",
+      "구토",
+      "변비",
+      "위장관 운동 감소",
+      "요저류",
+      "진정",
+      "히스타민 유리(모르핀보다 적음)",
+      "발작 유발 또는 악화 가능성",
+      "태반 통과"
+    ],
+    "dog_mechanism": "뮤 오피오이드 수용체 작용을 통해 진통 및 진정 효과 발현. 개에서 일반 용량으로 우수한 진정 효과.",
+    "dog_extra_effects": [
+      "구토",
+      "진정",
+      "헐떡임(panting)",
+      "울음/발성",
+      "배변",
+      "CNS 억제",
+      "서맥",
+      "호흡 억제"
+    ],
+    "cat_mechanism": "뮤 오피오이드 수용체 작용. 고양이에서 고용량 시 예측 불가능한 행동 변화 가능.",
+    "cat_extra_effects": [
+      "운동실조(ataxia)",
+      "감각과민(hyperesthesia)",
+      "흥분/공격성 등 행동 변화",
+      "산동(mydriasis)",
+      "호흡 억제",
+      "서맥"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 옥시모르폰은 진통 및 진정 목적으로 사용되며, 하이드로모르폰과 비교하여 효능 및 효과가 유사하나 구토 발생이 적다는 연구 결과가 있음. SC 투여 시 IV 투여보다 구토, 오심, 배변이 더 자주 발생함. IV CRI로 0.05 mg/kg/시간 초과하여 12시간 이상 투여 시 진정 및 부작용이 심해질 수 있어 속도 감소가 필요할 수 있음. 마로피탄트 전처치로 구토 예방 가능.",
+    "cat": "고양이에서 옥시모르폰은 정상 상태 분포 용적 약 2.5 L/kg, 청소율 약 26 mL/분/kg, 소실 반감기 약 1.6시간의 약동학적 특성을 가짐. 협측 투여 시 생체이용률 약 17%. 고용량 투여 시 운동실조, 감각과민, 흥분/공격성 등 예측 불가능한 행동 변화가 발생할 수 있으므로 진정제 병용이 권장됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 호흡 억제, 서맥, 구토, 발작 유발 가능성, 저혈압 등 주의가 필요한 부작용이 있음. 두부 손상, 호흡기 질환, 신부전, 간질환, 발작 병력, 저혈압, 서맥부정맥 환자에서 주의 사용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 고용량 시 예측 불가능한 행동 변화(흥분, 공격성), 운동실조, 감각과민이 발생할 수 있으며, 진정제 병용이 권장됨. 호흡 억제 및 심혈관 효과에 대한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "바이알은 빛을 차단하여 실온(15~30°C, 59~86°F)에서 보관하며 동결을 피함. 시판 좌약은 2~15°C(35.6~59°F)에서 보관. 경구 제품은 25°C(77°F)에서 보관(15~30°C 범위 허용). 빛에 장시간 노출 시 변색됨.",
+    "forms": [
+      "Oxymorphone HCl 주사액 1 mg/mL (1 mL 앰플) - 2017년 제조 중단",
+      "경구정 (Opana)",
+      "서방형 경구정 (Opana ER)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "옥시모르폰은 뮤 오피오이드 수용체 작용제로 모르핀보다 약 10배 강력한 진통·진정제입니다. DEA 스케줄 II 규제 약물이며, 주사제는 2017년 제조 중단되었습니다. 개와 고양이에서 중등도~중증 통증 관리 및 전마취 투약에 사용되나 모두 허가 외(extra-label) 사용입니다. 모르핀에 비해 히스타민 유리가 적고 심혈관계에 미치는 영향이 최소화되어 있습니다. 날록손으로 효과를 신속히 역전시킬 수 있습니다. 고양이에서 고용량 투여 시 예측 불가능한 행동 변화가 발생할 수 있으므로 진정제 병용이 권장됩니다.",
+    "indications": "개, 고양이: 중등도~중증 급성 통증 진통, 진정, 전마취 투약, 경막외 진통 (모두 extra-label). 말: 진통 및 마취 유도 보조 (extra-label). 돼지: 케타민/자일라진 마취 보조 진통 (extra-label). 소형 설치류: 소수술 진통 및 마취 (extra-label). 조류: 전마취 투약 (extra-label). 페럿: 진통 (extra-label). 수의용 허가 제품 없음.",
+    "client_info": "이 약물은 일반적으로 근육주사, 정맥주사, 피하주사 또는 직장 투여로 투약됩니다. 보통 동물병원 내에서 또는 전문가의 직접 감독 하에 사용됩니다. 옥시모르폰은 미국 마약단속국(DEA)에 의해 스케줄 II(C-II) 규제 약물로 분류되어 있으며, 재처방 시 새로운 서면 처방전이 필요합니다. 처방된 동물 또는 사람 이외에 이 약물을 사용하는 것은 불법입니다. 주사제는 2017년에 제조가 중단되었습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Dog-specific half-life",
+      "Renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment factors",
+      "t_max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/30.jsonl",
+    "extracted_at": "2026-03-10T22:34:58.216854+00:00",
+    "reviewer": null
+  }
+}

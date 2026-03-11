@@ -1,0 +1,586 @@
+{
+  "id": "oxytetracycline",
+  "drug_identity": {
+    "name_ko": "옥시테트라사이클린",
+    "name_en": "Oxytetracycline",
+    "active_ingredient": "Oxytetracycline",
+    "brand_names": [
+      "Terramycin",
+      "Pennox",
+      "LA-200",
+      "Liquamycin",
+      "Biomycin",
+      "Oxybiotic",
+      "Oxytet",
+      "Vetrimycin",
+      "Noromycin 300-LA",
+      "300 Pro LA",
+      "Hexasol",
+      "Agrimycin",
+      "Medamycin"
+    ],
+    "allergy_class": "tetracycline",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 300,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "오xytetracycline과 tetracycline은 대사되지 않고 주로 사구체 여과를 통해 변화 없이 배설된다. 담즙 및 비담즙 경로를 통해 위장관으로도 배설된다."
+    },
+    "extra_information": "소동물에서 분포용적은 약 2.1 L/kg이다. 혈장 단백 결합률은 약 10~40%이다. 신기능 저하 환자에서 반감기가 연장되고 반복 투여 시 약물이 축적될 수 있다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 약물로 신독성 위험 있음. 간독성은 고용량/장기 사용 시 드물게 보고됨. 수의학적 종별 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 CNS 관련 직접적 부작용은 보고되지 않음. CSF 내 분포는 소량에 불과함."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈액 이상",
+          "혈액 이상증"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈액 이상증(blood dyscrasias)이 보고됨. 정맥 내 빠른 투여 시 혈관 내 용혈 위험."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "신독성",
+          "사구체 여과",
+          "신기능 저하",
+          "반감기 연장",
+          "축적"
+        ],
+        "index": 3,
+        "evidence": "주로 사구체 여과를 통해 배설되며, 신기능 저하 시 반감기 연장 및 약물 축적 가능. 만성 과용량 시 신독성 위험. 개에서 반감기 4~6시간."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "간독성",
+          "항이화작용"
+        ],
+        "index": 2,
+        "evidence": "고용량 또는 기존 신기능 저하 환자에서 항이화 효과로 인한 간독성 가능성. 드물게 간독성 보고됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "심장억제",
+          "심장 부정맥"
+        ],
+        "index": 1,
+        "evidence": "빠른 정맥 투여 시 칼슘 킬레이션 및 프로필렌 글리콜 부형제로 인한 심장억제 효과 및 부정맥 가능성."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 관련 직접적 부작용은 보고되지 않음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈액 이상증"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈액 이상증 보고됨. 정맥 내 빠른 투여 시 혈관 내 용혈 위험."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "신독성",
+          "사구체 여과",
+          "신기능 저하",
+          "반감기 연장",
+          "축적"
+        ],
+        "index": 3,
+        "evidence": "주로 사구체 여과를 통해 배설되며, 신기능 저하 시 반감기 연장 및 약물 축적 가능. 고양이에서 반감기 4~6시간."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "간독성"
+        ],
+        "index": 2,
+        "evidence": "고용량 또는 기존 신기능 저하 환자에서 간독성 가능성. 드물게 간독성 보고됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "심장억제",
+          "심장 부정맥"
+        ],
+        "index": 1,
+        "evidence": "빠른 정맥 투여 시 심장억제 효과 및 부정맥 가능성."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 6.0,
+      "mean": 5.0,
+      "species": "dog"
+    },
+    "f_percent": 70,
+    "protein_binding_percent": 25,
+    "evidence": "경구 투여 후 공복 시 생체이용률 약 60~80%. 혈장 단백 결합률 약 10~40%. 개와 고양이에서 반감기 약 4~6시간. IM 투여 후 최고 혈중 농도 도달 시간은 30분에서 수 시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Atovaquone",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "혈중 농도 저하"
+      ],
+      "evidence": "Tetracyclines have caused decreased atovaquone concentrations."
+    },
+    {
+      "drug": "Beta-Lactam Antibiotics (Penicillins, Cephalosporins)",
+      "severity": 1,
+      "keywords": [
+        "살균 활성 저해",
+        "정균 작용 간섭"
+      ],
+      "evidence": "Bacteriostatic drugs such as tetracyclines may interfere with bactericidal activity of penicillins and cephalosporins; actual clinical significance is in doubt."
+    },
+    {
+      "drug": "Aminoglycoside Antibiotics",
+      "severity": 1,
+      "keywords": [
+        "살균 활성 저해"
+      ],
+      "evidence": "Bacteriostatic drugs such as tetracyclines may interfere with bactericidal activity of aminoglycosides; actual clinical significance is in doubt."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "Cholestyramine may decrease oxytetracycline absorption."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "생체이용률 증가",
+        "디곡신 독성"
+      ],
+      "evidence": "Tetracyclines may increase the bioavailability of digoxin in a small percentage of human patients and lead to digoxin toxicity. Effects may persist for months after discontinuation of tetracycline."
+    },
+    {
+      "drug": "Divalent or Trivalent Cations (antacids, sucralfate, bismuth, calcium, iron, magnesium, zinc)",
+      "severity": 2,
+      "keywords": [
+        "킬레이션",
+        "흡수 감소"
+      ],
+      "evidence": "Oral tetracyclines can chelate divalent or trivalent cations, decreasing absorption of the tetracycline or the cation-containing product. Administer at least 1–2 hours apart."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "급성 신손상",
+        "신부전"
+      ],
+      "evidence": "Concurrent use with furosemide increases risk for acute kidney injury and renal failure."
+    },
+    {
+      "drug": "Lanthanum",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "Lanthanum may decrease oxytetracycline absorption."
+    },
+    {
+      "drug": "Retinoid Acids (acitretin, isotretinoin)",
+      "severity": 3,
+      "keywords": [
+        "두개내 고혈압",
+        "금기"
+      ],
+      "evidence": "Retinoid acids may increase the potential for intracranial hypertension. Combination is contraindicated."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "프로트롬빈 활성 저하",
+        "항응고 효과 증가"
+      ],
+      "evidence": "Tetracyclines may depress plasma prothrombin activity; patients on anticoagulant therapy may need dosage adjustment."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 전신 감염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 10 mg/kg IV every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 전신 감염 (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 20 mg/kg PO every 8 to 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 전신 감염 (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 20 mg/kg PO every 8 to 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Neorickettsia helminthoeca (연어 중독) 보조 치료 (extra-label)",
+          "value": "7",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5일",
+          "evidence": "Plumb's: 7 mg/kg IV every 8 hours for 3 to 5 days"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 전신 감염 (extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 10 mg/kg IV every 12 hours (dogs/cats combined)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 전신 감염 (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 20 mg/kg PO every 8 to 12 hours (dogs/cats combined)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 전신 감염 (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's: 20 mg/kg PO every 8 to 12 hours (dogs/cats combined)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 통상 용량보다 낮은 용량 권장. 신기능 및 간기능 모니터링 강화 필요. 대체 항생제가 없는 경우에만 사용. 장기 치료 시 혈청 약물 농도 모니터링 고려."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 저하 환자에서 주의하여 사용. 통상 용량보다 낮은 용량 권장하며 간기능 모니터링 강화 필요. 다른 간독성 약물과의 병용 투여 금지."
+  },
+  "contraindications": [
+    {
+      "condition": "테트라사이클린 과민증",
+      "match_terms": [
+        "tetracycline hypersensitivity",
+        "tetracycline allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 초기)",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "어린 동물 (성장기)",
+      "match_terms": [
+        "young animal",
+        "puppy",
+        "kitten",
+        "pediatric"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 가역적으로 결합하여 아미노아실-tRNA의 리보솜 결합을 억제함으로써 단백질 합성을 저해하는 시간 의존성 정균 항생제. 고농도에서는 세포질막 투과성도 변화시킴.",
+    "common_extra_effects": [
+      "구역, 구토, 식욕부진, 설사 등 위장관 장애",
+      "어린 동물에서 치아 및 뼈의 황색/갈색/회색 착색",
+      "골 성장 및 치유 지연",
+      "광과민성 반응",
+      "중복감염(비감수성 세균 또는 진균 과증식)",
+      "드물게 혈액 이상증",
+      "드물게 간독성",
+      "장기 사용 시 요석 형성 가능 (개)",
+      "빠른 정맥 투여 시 심장억제 효과 및 부정맥"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "구역, 구토, 식욕부진, 설사",
+      "장기 사용 시 드물게 요석 형성",
+      "치아 착색 및 골 발달 장애 (어린 개)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "위장관 장애",
+      "발열",
+      "탈모",
+      "우울",
+      "경구 테트라사이클린/옥시테트라사이클린에 대한 내약성 불량"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 옥시테트라사이클린은 Neorickettsia helminthoeca(연어 중독), 항생제 반응성 설사, 감수성 전신 감염 치료에 사용된다. 장기 사용 시 드물게 요석 형성이 보고되었다. 경구 투여 시 공복 상태에서 투여하며, 유제품 및 미네랄과의 병용을 피해야 한다.",
+    "cat": "고양이는 경구 테트라사이클린 및 옥시테트라사이클린에 대한 내약성이 낮아 위장관 장애, 발열, 탈모, 우울 등이 나타날 수 있다. 독시사이클린이 고양이에서 더 선호되는 경우가 많다. 어린 고양이에서 치아 착색 및 골 발달 장애 위험이 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 저하 시 주의 사용. 어린 동물에서 치아 착색 및 골 발달 장애 위험. 빠른 정맥 투여 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 경구 테트라사이클린/옥시테트라사이클린에 대한 내약성이 낮음. 위장관 장애, 발열, 탈모, 우울 등 부작용 위험. 신기능 또는 간기능 저하 시 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 40°C 미만(바람직하게는 15~30°C)에서 보관. 냉동 금지. 냉장 보관 불필요. 제조사별 보관 조건 및 개봉 후 사용 기간 확인 필요.",
+    "forms": [
+      "Oxytetracycline HCl 100 mg/mL 주사액",
+      "Oxytetracycline base 200 mg/mL 주사액 (LA-200)",
+      "Oxytetracycline base 300 mg/mL 주사액",
+      "Oxytetracycline 경구 정제(볼루스) 250 mg, 500 mg",
+      "수용성 분말 제제",
+      "사료 첨가제",
+      "안과용 연고 (Polymyxin B 복합)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "옥시테트라사이클린은 Mycoplasma spp, Rickettsia spp, 스피로헤타, Chlamydia spp 감염 치료에 여전히 유용한 테트라사이클린계 항생제이다. 많은 세균이 내성을 획득하였으나 특정 적응증에서 임상적 가치가 있다. 빠른 정맥 투여 시 심장억제 및 혈관 내 용혈 위험이 있으므로 반드시 희석하여 천천히 투여해야 한다. 신기능 또는 간기능 저하 환자에서 용량 감량 및 모니터링이 필요하다. 어린 동물에서 치아 착색 및 골 발달 장애를 유발할 수 있다.",
+    "indications": "개·고양이: 감수성 전신 감염(extra-label), Neorickettsia helminthoeca(연어 중독), 항생제 반응성 설사. 식용 동물: 소, 돼지, 가금류 등에서 호흡기 질환, 장염, 족부 부패, 렙토스피라증, 자궁염 등 다양한 세균 감염(FDA 승인). WHO 고중요 항균제, OIE 수의학적 매우 중요 항균제로 지정됨.",
+    "client_info": "이 약을 경구로 투여할 때는 음식, 우유, 유제품, 칼슘·철분 등 미네랄 섭취 1~2시간 전후에 공복 상태에서 투여하십시오. 공복 투여 후 구토나 불편감이 있으면 소량의 음식과 함께 투여해 보시고, 구토가 지속되면 수의사에게 연락하십시오. 어린 동물에서 치아 영구 착색 및 뼈 발달 장애가 생길 수 있습니다. 소변이 어두워질 수 있으며, 혈뇨가 보이거나 증상이 지속되면 수의사에게 알리십시오. 이 약은 피부를 햇빛에 민감하게 만들 수 있으므로, 치료 중에는 동물을 햇빛에 노출시키지 않도록 하고 피부 발적이 관찰되면 수의사에게 알리십시오. 주사제 투여 시 통증 및 피부 착색이 생길 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP profile (not reported in Plumb's for this drug)",
+      "Exact creatinine thresholds for dose adjustment",
+      "t_max_hr (not explicitly stated for dogs/cats)",
+      "Hepatic adjustment factor"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/30.jsonl",
+    "extracted_at": "2026-03-10T22:36:51.224303+00:00",
+    "reviewer": null
+  }
+}

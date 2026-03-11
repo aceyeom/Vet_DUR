@@ -1,0 +1,620 @@
+{
+  "id": "selegiline",
+  "drug_identity": {
+    "name_ko": "셀레길린",
+    "name_en": "Selegiline",
+    "active_ingredient": "Selegiline hydrochloride",
+    "brand_names": [
+      "Anipryl",
+      "Eldepryl",
+      "Selgian",
+      "Zelapar",
+      "Emsam"
+    ],
+    "allergy_class": null,
+    "class": "Antidepressant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Patch"
+    ],
+    "available_strengths": [
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 1.25,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "고도의 초회통과효과(first-pass effect)를 거쳐 N-desmethylselegiline, L-methamphetamine, L-amphetamine으로 대사됨. 대사산물은 주로 소변으로 배설됨(결합형 및 비결합형 대사산물)."
+    },
+    "extra_information": "개에서 절대 생체이용률 약 10%, 중심구획 분포용적 약 7 L/kg, 말단 반감기 약 1시간. 개에서의 약동학 정보는 제한적(4마리 대상 연구)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 특이적 수의학 PK 데이터 부족; 주로 부작용 보고 및 약리 기전에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "CNS effects",
+          "restlessness",
+          "disorientation",
+          "lethargy",
+          "repetitive movements",
+          "aggression",
+          "MAO-B inhibition",
+          "dopamine"
+        ],
+        "index": 1,
+        "evidence": "개에서 불안, 방향감각 상실, 공격성, 반복 행동, 기면 등 CNS 부작용 보고됨. MAO-B 억제를 통한 도파민 농도 증가가 주요 작용 기전."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypertension",
+          "blood pressure fluctuations"
+        ],
+        "index": -1,
+        "evidence": "약물 상호작용으로 인한 고혈압 위험이 보고되나, 직접적인 혈액독성 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urinary excretion"
+        ],
+        "index": -1,
+        "evidence": "대사산물이 소변으로 배설되나, 신독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "first pass effect",
+          "extensive metabolism",
+          "metabolites"
+        ],
+        "index": 1,
+        "evidence": "고도의 간 초회통과효과 및 광범위한 간 대사가 보고됨. 간독성에 대한 직접적 언급은 없으나 간 부담이 있음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypertension",
+          "cardiovascular collapse"
+        ],
+        "index": -1,
+        "evidence": "트라마돌과 병용 시 심혈관 허탈 위험 보고. 단독 사용 시 심장 독성에 대한 직접적 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS effects",
+          "cognitive dysfunction",
+          "MAO-B inhibition",
+          "dopamine"
+        ],
+        "index": 1,
+        "evidence": "고양이 인지기능장애 치료에 사용되며 CNS에 작용함. 고양이 특이적 부작용 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 관련 직접적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "urinary excretion"
+        ],
+        "index": -1,
+        "evidence": "대사산물이 소변으로 배설되나, 고양이에서 신독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "first pass effect",
+          "extensive metabolism"
+        ],
+        "index": -1,
+        "evidence": "간 초회통과효과 및 광범위한 대사가 예상되나 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.0,
+      "species": "dog"
+    },
+    "f_percent": 10,
+    "protein_binding_percent": null,
+    "evidence": "개 4마리 대상 연구: 절대 생체이용률 약 10%, 말단 반감기 약 1시간, 중심구획 분포용적 약 7 L/kg."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/contraindicated→3, 주요/major→3, 중등도/moderate→2, 경미/minor→1. MAOI 관련 세로토닌 증후군 위험 상호작용은 모두 severity 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-2 Agonists (e.g., medetomidine)",
+      "severity": 2,
+      "keywords": [
+        "blood pressure fluctuation",
+        "hypertension"
+      ],
+      "evidence": "Concurrent use in humans has resulted in extreme blood pressure fluctuations; however, concurrent administration with medetomidine in healthy dogs did not affect cardiopulmonary parameters beyond those caused by medetomidine alone."
+    },
+    {
+      "drug": "Atropine",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "hypertensive crisis"
+      ],
+      "evidence": "Increased risk for hypertension and hypertensive crisis reported."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Increased risk for hypertension with concurrent use."
+    },
+    {
+      "drug": "CNS Stimulants (e.g., doxapram, methylphenidate)",
+      "severity": 2,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Increased risk for hypertension with concurrent use."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome; avoid combination."
+    },
+    {
+      "drug": "Diphenoxylate",
+      "severity": 3,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Increased risk for hypertension; avoid combination."
+    },
+    {
+      "drug": "Meperidine",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "agitation",
+        "hallucinations",
+        "death"
+      ],
+      "evidence": "Severe agitation, hallucinations, serotonin syndrome, and death have occurred in humans receiving meperidine with an MAOI. A separation of 2 weeks has been recommended."
+    },
+    {
+      "drug": "Opioids (e.g., morphine)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "extreme caution"
+      ],
+      "evidence": "Other opioids should be safer than meperidine but use with extreme caution, if at all."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, methylene blue)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use can contribute to serotonin syndrome. Manufacturer recommends not using selegiline concurrently with amitraz in dogs. Avoid combination."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "hypertensive crisis",
+        "loss of efficacy"
+      ],
+      "evidence": "Concurrent use may result in increased risk for hypertensive crisis and loss of selegiline efficacy."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Potential for serotonin syndrome with concurrent use."
+    },
+    {
+      "drug": "Phenylpropanolamine (PPA)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "hyperpyrexia"
+      ],
+      "evidence": "Possibility for increased risk for hypertension and hyperpyrexia; however, adverse effects were not observed when selegiline was given with PPA to healthy dogs."
+    },
+    {
+      "drug": "Pseudoephedrine",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "hyperpyrexia"
+      ],
+      "evidence": "Possibility for increased risk for hypertension and hyperpyrexia."
+    },
+    {
+      "drug": "Serotonin 5-HT3 Receptor Antagonists (e.g., ondansetron)",
+      "severity": 2,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Increased risk for hypertension with concurrent use."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Potential for serotonin syndrome. Several sources recommend a 5-week washout before administering selegiline after fluoxetine is discontinued, and 2 weeks if switching from selegiline to an SSRI."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., dopamine, ephedrine, epinephrine, norepinephrine, phenylephrine)",
+      "severity": 2,
+      "keywords": [
+        "hypertension"
+      ],
+      "evidence": "Concurrent selegiline use may enhance hypertensive effects."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "cardiovascular collapse"
+      ],
+      "evidence": "Use together is contraindicated in humans due to the potential for serotonin syndrome or cardiovascular collapse."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase risk for serotonin syndrome."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., clomipramine, amitriptyline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Potential for serotonin syndrome; use together is not advised. A 2-week separation between these compounds and selegiline is recommended."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "뇌하수체 의존성 부신피질기능항진증 (FDA 승인 용량)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "2개월 후 재평가; 개선 없으면 2 mg/kg/day로 증량 가능. 증량 후 1개월 내 개선 없으면 진단 재평가 또는 대체 치료 고려.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-080)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 인지기능장애 증후군 (FDA 승인 용량)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "가급적 오전에 투여. 초기에는 가장 가까운 정수 정제로 투여 후 반응 및 내약성에 따라 조정.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #141-080)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고양이 인지기능장애 증후군 (허가 외 사용)",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "가급적 저녁에 투여.",
+          "evidence": "허가 외 사용 (extra-label); 문헌 참고"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 용량 조정에 대한 구체적 지침이 Plumb's 모노그래프에 명시되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간기능 저하 시 용량 조정에 대한 구체적 지침이 Plumb's 모노그래프에 명시되어 있지 않음. 고도의 간 초회통과효과를 고려할 때 간질환 환자에서 주의가 필요할 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "셀레길린 과민증",
+      "match_terms": [
+        "selegiline hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질 의존성 이외의 부신피질기능항진증",
+      "match_terms": [
+        "adrenal-dependent hyperadrenocorticism",
+        "adrenal tumor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "공격성 또는 인지기능장애 이외의 행동 문제",
+      "match_terms": [
+        "aggression",
+        "behavioral disorder"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질기능항진증 이외의 쇠약성 질환",
+      "match_terms": [
+        "debilitating disease",
+        "severe systemic illness"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신, 번식, 수유 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "breeding"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "MAO-B(모노아민 산화효소-B)를 비가역적으로 억제하여 도파민 농도를 증가시킴. 고용량에서는 MAO-B 선택성을 잃고 MAO-A도 억제함. 대사산물인 암페타민 및 메스암페타민이 효능 및 부작용에 기여할 수 있음.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "불안/흥분",
+      "방향감각 상실",
+      "공격성",
+      "반복 행동",
+      "기면",
+      "침 흘림",
+      "식욕부진",
+      "청력 감소/난청",
+      "소양증",
+      "핥기",
+      "떨림/진전"
+    ],
+    "dog_mechanism": "시상하부에서 MAO-B 억제를 통해 도파민 농도를 증가시켜 ACTH 분비를 억제하고 코르티솔 생성을 감소시킴. 인지기능장애에서는 도파민성 신경전달 개선을 통해 작용.",
+    "dog_extra_effects": [
+      "구토",
+      "설사",
+      "CNS 부작용(불안, 방향감각 상실, 공격성, 반복 행동, 기면)",
+      "침 흘림",
+      "식욕부진",
+      "청력 감소/난청",
+      "소양증",
+      "핥기",
+      "떨림/진전/흔들림",
+      "체중 감소(과용량 시)",
+      "동공 반응 감소(과용량 시)",
+      "헐떡임(과용량 시)",
+      "상동 행동(과용량 시)",
+      "피부 탄력 감소/탈수(과용량 시)"
+    ],
+    "cat_mechanism": "개와 유사하게 MAO-B 억제를 통한 도파민성 신경전달 개선으로 인지기능장애에 작용하는 것으로 추정됨.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "셀레길린은 개의 뇌하수체 의존성 부신피질기능항진증(PDH) 및 인지기능장애 증후군(CDS)에 FDA 승인된 약물임. PDH에 대한 효능은 임상 연구에서 실망스러운 결과를 보여 논란이 있음. CDS에서는 임상적 개선을 보이기까지 2~6주가 소요될 수 있음. 만성 불안, 특히 프로락틴 수치가 높은 개에서도 유용할 수 있으며, 벤조디아제핀 및 프로프라놀롤과 병용 시 사회적 또는 소음 공포증 치료에 유용할 수 있음. 임상 시험에서 3마리의 개에서 공격성 증가가 보고되어 공격성 치료에는 권장되지 않음.",
+    "cat": "고양이 인지기능장애 증후군(CDS)에 허가 외(extra-label)로 사용될 수 있음. 고양이에서의 안전성 및 효능 데이터는 제한적이며, 일반적으로 저녁에 투여하는 것이 권장됨. 고양이에서의 약동학 및 부작용 프로파일에 대한 정보가 부족하므로 주의 깊은 모니터링이 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "부신피질기능항진증 이외의 쇠약성 질환에서 안전성이 확립되지 않음. 공격성 증가 가능성 있음. 다수의 심각한 약물 상호작용 가능. 진단 확인 후 투여 시작 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안전성 및 효능이 충분히 확립되지 않음. 허가 외 사용이며 제한적인 데이터에 근거함. 주의 깊은 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C~25°C, 68°F~77°F)에서 보관.",
+    "forms": [
+      "셀레길린 HCl 경구 정제: 2 mg, 5 mg, 10 mg, 15 mg, 30 mg (블리스터팩 30정); Anipryl® (동물용)",
+      "셀레길린 HCl 정제 및 캡슐 5 mg; Eldepryl®, 제네릭 (인체용)",
+      "셀레길린 구강붕해정 1.25 mg; Zelapar® (인체용)",
+      "셀레길린 HCl 경피 패치: 6 mg/24시간, 9 mg/24시간, 12 mg/24시간; Emsam® (인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "셀레길린은 MAO-B 억제제로, 개의 인지기능장애 증후군(CDS) 및 뇌하수체 의존성 부신피질기능항진증(PDH)에 FDA 승인된 약물입니다. PDH에 대한 효능은 논란이 있으며, CDS에서는 임상 개선까지 2~6주가 소요될 수 있습니다. 고양이 CDS에도 허가 외로 사용 가능합니다. 다수의 심각한 약물 상호작용(특히 세로토닌 증후군 위험)이 있으므로 병용 약물 검토가 필수적입니다. 암페타민 및 메스암페타민 대사산물로 인해 인간에 의한 약물 남용 가능성에 주의해야 합니다.",
+    "indications": "개: FDA 승인 - 인지기능장애 증후군(CDS), 뇌하수체 의존성 부신피질기능항진증(PDH). 허가 외 - 만성 불안, 사회적/소음 공포증(벤조디아제핀, 베타차단제와 병용). 고양이: 허가 외 - 인지기능장애 증후군(CDS). 인체: 파킨슨병 보조 치료.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 개는 보통 아침에, 고양이는 저녁에 하루 한 번 투여합니다. 효과가 나타나기까지 수 주가 걸릴 수 있으므로 인내심을 가지고 투여를 지속해 주세요. 동물의 식이, 약물, 벼룩/진드기 치료제(예: 목걸이, 스팟온 제품)를 변경하기 전에 반드시 수의사와 상담하세요. 부작용으로는 구토, 설사, 식욕 감소, 침 흘림 등 소화기 문제와 행동 변화가 나타날 수 있습니다. 이상한 행동 변화가 관찰되면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding data",
+      "Onset of action (minutes)",
+      "T-max (hours)",
+      "Cat-specific pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list[0].evidence"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:39:53.857728+00:00",
+    "reviewer": null
+  }
+}

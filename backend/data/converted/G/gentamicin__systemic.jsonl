@@ -1,0 +1,649 @@
+{
+  "id": "gentamicin_systemic",
+  "drug_identity": {
+    "name_ko": "젠타마이신 (전신)",
+    "name_en": "Gentamicin, Systemic",
+    "active_ingredient": "Gentamicin",
+    "brand_names": [
+      "Gentocin",
+      "Garamycin",
+      "Garasol",
+      "Gentapoult",
+      "Garacin",
+      "Gen-Gard"
+    ],
+    "allergy_class": "aminoglycoside",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "젠타마이신은 간 대사를 거치지 않으며, 사구체 여과를 통해 거의 전량 신장으로 배설된다."
+    },
+    "extra_information": "개와 고양이에서 분포용적은 0.15–0.3 L/kg이며, 신생아 및 어린 동물에서는 세포외액 비율이 높아 분포용적이 더 크다. 반감기는 개와 고양이에서 0.5–1.5시간으로 보고되어 있다. 신기능 저하 시 반감기가 현저히 연장된다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신독성 및 이독성은 문헌에 명확히 기술됨. 간 영향은 드물게 보고됨. 신장 축적이 주요 독성 기전임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ototoxicity",
+          "eighth cranial nerve",
+          "neuromuscular blockade",
+          "peripheral neuropathy"
+        ],
+        "index": 1,
+        "evidence": "제8뇌신경 독성(청각/전정 독성), 신경근 차단, 말초 신경병증이 보고됨. 개에서 이독성은 고양이보다 덜 두드러지나 주의 필요."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic effects"
+        ],
+        "index": 1,
+        "evidence": "혈액학적 이상이 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular necrosis",
+          "azotemia",
+          "renal tubular accumulation",
+          "glomerular filtration",
+          "acute kidney injury"
+        ],
+        "index": 0,
+        "evidence": "신세뇨관 괴사, 아조테미아, 사구체 여과를 통한 배설, 신세뇨관 세포 내 축적이 명확히 기술됨. 신독성은 가장 중요한 부작용."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic effects"
+        ],
+        "index": 3,
+        "evidence": "간 영향은 드물게 보고됨. 주요 독성 기관이 아님."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neuromuscular blockade",
+          "anaphylactic reactions"
+        ],
+        "index": 3,
+        "evidence": "신경근 차단 및 과민반응(아나필락시스)이 보고됨. 직접적인 심장 독성은 기술되지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "vestibular effects",
+          "vertigo",
+          "head tilt",
+          "ataxia",
+          "ototoxicity",
+          "eighth cranial nerve"
+        ],
+        "index": 0,
+        "evidence": "고양이는 아미노글리코사이드의 전정 독성에 특히 민감하며, 현기증, 두부 기울임, 운동실조, 자세 반사 장애가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic effects"
+        ],
+        "index": 1,
+        "evidence": "혈액학적 이상이 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular necrosis",
+          "azotemia",
+          "renal tubular accumulation",
+          "acute kidney injury"
+        ],
+        "index": 0,
+        "evidence": "고양이에서도 신세뇨관 괴사 및 신독성이 주요 부작용으로 기술됨. 신기능 모니터링 필수."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic effects"
+        ],
+        "index": 3,
+        "evidence": "간 영향은 드물게 보고됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neuromuscular blockade"
+        ],
+        "index": 3,
+        "evidence": "신경근 차단이 보고됨. 직접적인 심장 독성은 기술되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 1.5,
+      "mean": 1.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 20,
+    "evidence": "개와 고양이에서 IM 투여 후 최고 혈중 농도는 30분~1시간 내 도달. SC 투여 시 최고 농도 도달이 약간 지연됨. 혈장 단백 결합률 20% 미만. 경구 또는 자궁 내 투여 시 흡수 거의 없음. 반감기 0.5–1.5시간(개, 고양이)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Lactam Antibiotics (penicillins, cephalosporins)",
+      "severity": 2,
+      "keywords": [
+        "synergy",
+        "aminoglycoside inactivation",
+        "renal failure"
+      ],
+      "evidence": "일부 세균에 대해 상승 효과가 있으나, 신부전 환자에서 혼합 투여 또는 병용 시 아미노글리코사이드 불활성화 가능성 있음."
+    },
+    {
+      "drug": "Cephalosporins",
+      "severity": 2,
+      "keywords": [
+        "additive nephrotoxicity"
+      ],
+      "evidence": "세팔로스포린과 병용 시 부가적 신독성 가능성 있음(세팔로리딘, 세팔로틴에서 잘 문서화됨)."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide, torsemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "루프 이뇨제 병용 시 아미노글리코사이드의 신독성 또는 이독성 위험 증가."
+    },
+    {
+      "drug": "Osmotic Diuretics (mannitol)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "삼투성 이뇨제 병용 시 신독성 또는 이독성 위험 증가."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (cisplatin, amphotericin B, cyclosporine, polymyxin B, vancomycin)",
+      "severity": 2,
+      "keywords": [
+        "additive nephrotoxicity"
+      ],
+      "evidence": "다른 신독성 약물과 병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Neuromuscular-Blocking Agents",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade potentiation"
+      ],
+      "evidence": "신경근 차단제와 병용 시 신경근 차단 효과 강화 가능."
+    },
+    {
+      "drug": "General Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade potentiation"
+      ],
+      "evidence": "전신 마취제와 병용 시 신경근 차단 효과 강화 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (정상 신기능, 비법정 사용)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": "생명을 위협하는 감염 또는 면역저하/호중구감소 환자에서 고용량 사용",
+          "evidence": "Plumb's: 정상 신기능 개에서 9–14 mg/kg IV, IM, SC 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (정상 신기능, 비법정 사용)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 정상 신기능 개에서 9–14 mg/kg IV, IM, SC 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (정상 신기능, 비법정 사용)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 정상 신기능 개에서 9–14 mg/kg IV, IM, SC 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 신기능 저하 (ClCr 0.4–0.7 mL/kg/min, 혈청 크레아티닌 약 2.3–4 mg/dL)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": "36–48시간 간격",
+          "evidence": "Plumb's: 신기능 저하 시 용량 조정"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 신기능 저하 (ClCr 0.15–0.4 mL/kg/min, 혈청 크레아티닌 약 4.9–5.5 mg/dL)",
+          "value": "9 - 14",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 14.0,
+          "duration_note": "48시간 간격",
+          "evidence": "Plumb's: 신기능 저하 시 용량 조정"
+        },
+        {
+          "logic_type": "linear",
+          "context": "그레이하운드/시각하운드 - 감수성 감염",
+          "value": "6",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 6.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 시각하운드는 분포용적이 작아 감량 필요; 6 mg/kg IV 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "그레이하운드/시각하운드 - 감수성 감염",
+          "value": "9",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 9.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 시각하운드 9 mg/kg SC/IM 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Bordetella bronchiseptica 분무 치료 (비법정 사용)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3–4주간, 10분에 걸쳐 분무",
+          "evidence": "Plumb's: 4 mg/kg 분무, 12시간 간격, 3–4주"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "화학적 섬모체 절제술 (비법정 사용, 유리체 내 주사)",
+          "value": "0.25 - 0.5",
+          "unit": "ml/kg",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "젠타마이신 황산염 100 mg/mL 주사액 0.25–0.5 mL를 유리체 내 주사",
+          "evidence": "Plumb's: 0.25–0.5 mL of gentamicin sulfate 100 mg/mL 유리체 내 주사"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비법정 사용)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 5–8 mg/kg IV, IM, SC 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비법정 사용)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 5–8 mg/kg IV, IM, SC 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비법정 사용)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 5–8 mg/kg IV, IM, SC 1일 1회"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 신기능 저하 (ClCr 0.4–0.7 mL/kg/min, 혈청 크레아티닌 약 2.3–4 mg/dL)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "36–48시간 간격",
+          "evidence": "Plumb's: 신기능 저하 시 용량 조정"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 - 신기능 저하 (ClCr 0.15–0.4 mL/kg/min, 혈청 크레아티닌 약 4.9–5.5 mg/dL)",
+          "value": "5 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "48시간 간격",
+          "evidence": "Plumb's: 신기능 저하 시 용량 조정"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "화학적 섬모체 절제술 (비법정 사용, 유리체 내 주사)",
+          "value": "0.25 - 0.5",
+          "unit": "ml/kg",
+          "route": "Eye",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "젠타마이신 황산염 100 mg/mL 주사액 0.25–0.5 mL를 유리체 내 주사",
+          "evidence": "Plumb's: 0.25–0.5 mL of gentamicin sulfate 100 mg/mL 유리체 내 주사"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": 2.3,
+    "creatinine_threshold_cat_mg_dL": 2.3,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "개와 고양이 모두 신기능 저하 시 투여 간격 연장 권고. ClCr 0.4–0.7 mL/kg/min (혈청 크레아티닌 약 2.3–4 mg/dL): 36–48시간 간격; ClCr 0.15–0.4 mL/kg/min (혈청 크레아티닌 약 4.9–5.5 mg/dL): 48시간 간격; ClCr < 0.15 mL/kg/min (혈청 크레아티닌 ≥8.5 mg/dL): 사용 비권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "젠타마이신은 간 대사를 거치지 않으며, 간기능 저하에 따른 용량 조정은 문헌에 기술되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "아미노글리코사이드 과민증",
+      "match_terms": [
+        "aminoglycoside hypersensitivity",
+        "gentamicin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신질환",
+      "match_terms": [
+        "CKD",
+        "renal disease",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": 2.3,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 신기능 저하 (ClCr < 0.15 mL/kg/min, 혈청 크레아티닌 ≥8.5 mg/dL)",
+      "match_terms": [
+        "severe renal failure",
+        "creatinine >= 8.5"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": 8.5,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신경근 질환 (중증근무력증)",
+      "match_terms": [
+        "myasthenia gravis",
+        "neuromuscular disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "보툴리즘",
+      "match_terms": [
+        "botulism"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고막 손상이 확인되지 않은 외이염",
+      "match_terms": [
+        "otitis",
+        "ruptured tympanic membrane"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [
+      "Greyhound",
+      "Sighthound"
+    ],
+    "gene": null,
+    "evidence": "시각하운드(그레이하운드 등)는 분포용적이 현저히 작아 감량이 필요하나, 이는 유전자 돌연변이가 아닌 체형 특성에 기인함. MDR1 감수성은 문헌에 기술되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 비가역적으로 결합하여 단백질 합성을 억제하는 농도 의존성 살균 항생제. 최적 항균 효과를 위해 최고 혈중 농도/MIC 비율 10 이상 권장.",
+    "common_extra_effects": [
+      "신독성 (세뇨관 괴사, 아조테미아)",
+      "이독성 (제8뇌신경 독성, 청각 및 전정 독성)",
+      "신경근 차단",
+      "말초 신경병증",
+      "주사 부위 통증 및 염증",
+      "안면 부종",
+      "과민반응/아나필락시스",
+      "드물게 위장관 증상, 혈액학적 이상, 간 영향"
+    ],
+    "dog_mechanism": "그람 음성 호기성 간균 및 포도상구균에 주로 활성. 농도 의존성 살균 효과. 시각하운드에서 분포용적 감소로 감량 필요.",
+    "dog_extra_effects": [
+      "신독성",
+      "이독성 (청각 독성이 전정 독성보다 상대적으로 더 흔함)",
+      "신경근 차단",
+      "유리체 내 주사 시 안내 종양 발생 가능성(인과관계 미확립)"
+    ],
+    "cat_mechanism": "개와 동일한 기전. 고양이는 전정 독성에 특히 민감.",
+    "cat_extra_effects": [
+      "전정 독성 (현기증, 두부 기울임, 운동실조, 자세 반사 장애)",
+      "신독성",
+      "유리체 내 주사 시 안내 종양 발생 가능성(인과관계 미확립)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 젠타마이신은 정상 신기능 시 9–14 mg/kg 1일 1회 투여가 권장됨. 시각하운드(그레이하운드 등)는 분포용적이 작아 6 mg/kg IV 또는 9 mg/kg SC/IM으로 감량 필요. 신기능 저하 시 투여 간격 연장 필수. 치료 약물 모니터링(최고 농도 >32 μg/mL, 최저 농도 <1–2 μg/mL) 권장. 청각 장애 위험이 있는 안내견, 목양견 등에서 이독성에 주의.",
+    "cat": "고양이는 아미노글리코사이드의 전정 독성에 특히 민감하여 현기증, 두부 기울임, 운동실조 등이 나타날 수 있음. 5–8 mg/kg 1일 1회 투여 권장. 신기능 저하 시 투여 간격 연장 필수. 전정 및 청각 독성 모니터링 강력 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성, 이독성, 신경근 차단 위험으로 주의 사용. 신기능 모니터링 및 치료 약물 모니터링 권장. 시각하운드에서 감량 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 전정 독성에 특히 민감. 신독성 및 이독성 모니터링 강력 권장. 신기능 저하 시 투여 간격 연장 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사액 및 경구 용액: 실온(15–30°C) 보관, 냉동 및 40°C 이상 노출 금지. 수용성 분말: 2–30°C 보관. 녹인 음용수는 녹슨 용기에 보관 금지.",
+    "forms": [
+      "Gentamicin Sulfate Injection 100 mg/mL (intrauterine, 말)",
+      "Gentamicin Sulfate Injection 100 mg/mL (가금류용)",
+      "Gentamicin Sulfate Injection 5 mg/mL (돼지 새끼용)",
+      "Gentamicin Sulfate Oral Solution 5 mg/mL",
+      "Gentamicin Soluble Powder 333.33 mg/g",
+      "Gentamicin Sulfate Soluble Powder 2 g/30 g",
+      "Gentamicin Sulfate Injection 10 mg/mL (인체용)",
+      "Gentamicin Sulfate Injection 40 mg/mL (인체용)",
+      "Ophthalmic/Otic/Topical preparations"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "젠타마이신은 그람 음성 호기성 간균 및 포도상구균에 활성을 가진 아미노글리코사이드계 항생제로, 심각한 감염에서 다른 저독성 항생제에 내성이 있거나 즉각적인 치료가 필요한 경우에 한해 사용이 권장됩니다. 신독성과 이독성이 주요 부작용이며, 고양이는 전정 독성에 특히 민감합니다. 1일 1회 투여가 항균 효과 극대화 및 독성 최소화에 유리합니다. 치료 약물 모니터링(TDM) 및 신기능 모니터링이 필수적입니다. WHO 및 OIE에서 중요 항균제로 지정되어 있어 신중한 사용이 요구됩니다.",
+    "indications": "감수성 그람 음성균 및 포도상구균에 의한 중증 감염(비법정 사용, 개/고양이). 말 자궁 내 감염(FDA 승인). 말 재발성 포도막염 및 말기 녹내장의 유리체 내 주사(비법정 사용). Bordetella bronchiseptica 분무 치료(비법정 사용, 개). 돼지, 가금류의 장관 감염(FDA 승인).",
+    "client_info": "젠타마이신은 체내 감염 치료를 위해 반드시 주사로 투여해야 합니다(경구 투여는 장내 세균 감소 목적으로만 사용). 정맥, 근육, 또는 피하 주사로 1일 1회 투여할 수 있습니다. 가정에서 주사하는 경우 올바른 주사 방법을 반드시 숙지하세요. 이 약은 신경, 청력, 신장에 손상을 줄 수 있으며, 고양이는 청력 손상 위험이 더 높습니다. 치료 중 구토, 식욕 부진, 비틀거림, 두부 기울임 등의 증상이 나타나면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "high",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP profile (not applicable for aminoglycosides)",
+      "Exact onset_min not reported"
+    ],
+    "requires_pmc_rag": false,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/44.jsonl",
+    "extracted_at": "2026-03-11T02:48:23.179768+00:00",
+    "reviewer": null
+  }
+}

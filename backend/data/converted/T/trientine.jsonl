@@ -1,0 +1,368 @@
+{
+  "id": "trientine",
+  "drug_identity": {
+    "name_ko": "트리엔틴",
+    "name_en": "Trientine",
+    "active_ingredient": "Trientine hydrochloride",
+    "brand_names": [
+      "Syprine",
+      "Metalite"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "인간용 Wilson병 치료제로 허가되어 있으며, 개의 구리 관련 간병증 치료에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 주로 아세틸화에 의해 광범위하게 대사되며, 약물 및 대사산물은 소변으로 배설됨. 동물 데이터 없음."
+    },
+    "extra_information": "동물 약동학 데이터 없음. 인간에서 경구 흡수율이 낮고, 반감기는 약 2~4시간임."
+  },
+  "organ_burden_logic": {
+    "note": "인간 데이터 기반 점수 산정. 수의학적 종별 약동학 연구 없음. 급성 신손상 보고에 근거하여 신장 부담 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 신경계 영향에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "iron deficiency anemia"
+        ],
+        "index": 1,
+        "evidence": "철 결핍성 빈혈 모니터링이 권고되며, 혈액 내 철 흡수 억제 가능성이 있음."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "acute kidney injury"
+        ],
+        "index": 2,
+        "evidence": "특히 간 구리 수치가 높은 개 또는 고용량 투여 시 급성 신손상이 보고됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "copper hepatotoxicity",
+          "liver copper levels"
+        ],
+        "index": 1,
+        "evidence": "구리 관련 간병증 치료 목적으로 사용되며, 주기적 간 생검 및 간기능 검사 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 4.0,
+      "mean": 3.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간 데이터: 경구 흡수율 낮음, 반감기 약 2~4시간. 동물 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Iron",
+      "severity": 2,
+      "keywords": [
+        "흡수 억제",
+        "chelation"
+      ],
+      "evidence": "Iron and trientine mutually inhibit each other's absorption. If iron therapy is needed, doses should be separated by at least 2 hours."
+    },
+    {
+      "drug": "Zinc",
+      "severity": 2,
+      "keywords": [
+        "chelation",
+        "mineral interaction"
+      ],
+      "evidence": "Trientine may chelate zinc or other minerals. Concomitant use should be avoided or doses separated by at least 2 hours. Most guidelines recommend completing copper chelation therapy before initiating zinc therapy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구리 관련 간독성 치료 (오프라벨)",
+          "value": "5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "식사 1~2시간 전 투여. 일부 문헌에서 10~15 mg/kg BID까지 제안됨.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 5–7.5 mg/kg PO twice daily (extra-label). Doses up to 10–15 mg/kg PO twice daily have been suggested."
+        },
+        {
+          "logic_type": "linear",
+          "context": "구리 관련 간독성 치료 - 고용량 제안 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "식사 1~2시간 전 투여. 고용량 사용 시 급성 신손상 위험 증가.",
+          "evidence": "Plumb's: Doses up to 10–15 mg/kg PO twice daily have been suggested."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "급성 신손상이 보고되어 있으므로 기저치 및 주기적 신기능 검사 모니터링 권고. 명시적인 용량 조절 지침은 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 구리 수치가 높은 환자에서 급성 신손상 위험이 증가할 수 있음. 주기적 간기능 검사 모니터링 권고. 명시적인 간기능 저하에 따른 용량 조절 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "트리엔틴 과민증",
+      "match_terms": [
+        "hypersensitivity to trientine",
+        "trientine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (잠재적 최기형성)",
+      "match_terms": [
+        "pregnancy",
+        "teratogen"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "철 결핍성 빈혈",
+      "match_terms": [
+        "iron deficiency anemia",
+        "anemia"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "구리 킬레이트제로서 혈장 내 구리와 결합하여 소변을 통한 구리 배설을 증가시킴. 혈장 내 구리에 대한 친화력은 페니실라민보다 높으나, 조직 구리에 대한 친화력은 페니실라민이 더 높음.",
+    "common_extra_effects": [
+      "급성 신손상 (특히 고용량 또는 간 구리 수치가 높은 경우)",
+      "철 결핍성 빈혈",
+      "오심 (인간, 특히 치료 초기)",
+      "근긴장이상증 (인간, 장기 사용 시)",
+      "근육 경련 (인간)",
+      "중증 근무력증 (인간)",
+      "역설적 신경학적 악화 (인간)",
+      "접촉성 피부염 (피부 접촉 시)"
+    ],
+    "dog_mechanism": "구리 관련 간병증에서 구리 킬레이트 및 소변 배설 촉진.",
+    "dog_extra_effects": [
+      "급성 신손상 (고용량 또는 간 구리 수치가 높은 경우)",
+      "이상반응은 최소한으로 보고되나 수의학적 경험 제한적"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개의 구리 관련 간병증 치료에 오프라벨로 사용됨. 페니실라민의 부작용(구토 등)을 견디지 못하는 경우 대안으로 고려. 수의학적 경험이 제한적이며, 급성 신손상 위험이 있으므로 신기능 모니터링 필요. 식사 1~2시간 전 공복에 투여. 캡슐을 열거나 씹지 않도록 주의. 페니실라민보다 비용이 높고 상업적으로 구하기 어려워 소분 조제가 필요할 수 있음.",
+    "cat": "고양이에 대한 용량 및 안전성 데이터 없음. 사용 권고 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "급성 신손상 위험(특히 고용량 또는 간 구리 수치가 높은 경우), 철 결핍성 빈혈 모니터링 필요. 임신 동물에서 최기형성 가능성. 수의학적 경험 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 안전성 및 용량 데이터 없음. 사용 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관 (2°C~8°C, 36°F~46°F), 밀폐 용기에 보관.",
+    "forms": [
+      "Trientine HCl 경구 캡슐 250mg (Syprine®, 제네릭)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "트리엔틴은 경구 구리 킬레이트제로, 개의 구리 관련 간병증 치료에 오프라벨로 사용됩니다. 페니실라민 부작용을 견디지 못하는 경우 대안으로 고려할 수 있습니다. 급성 신손상 위험이 있으며, 수의학적 경험이 제한적입니다. 식사 1~2시간 전 공복 투여가 권장됩니다.",
+    "indications": "개의 구리 관련 간병증 (오프라벨). 인간에서는 페니실라민을 견디지 못하는 Wilson병 환자에게 허가됨.",
+    "client_info": "이 약은 식사나 다른 약물 투여 1~2시간 전 공복에 투여하는 것이 가장 좋습니다. 투여 후 구토가 발생하면 소량의 음식과 함께 투여해도 되는지 수의사에게 문의하세요. 트리엔틴은 피부 반응을 일으킬 수 있으므로 캡슐 내용물이 피부에 닿으면 즉시 물로 씻어내세요. 캡슐은 통째로 삼켜야 하며 열거나 씹지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics",
+      "Cat dosage",
+      "CYP profile",
+      "Protein binding",
+      "Bioavailability",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "dosage_and_kinetics.cat.dosage_list",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/49.jsonl",
+    "extracted_at": "2026-03-11T04:13:07.764430+00:00",
+    "reviewer": null
+  }
+}

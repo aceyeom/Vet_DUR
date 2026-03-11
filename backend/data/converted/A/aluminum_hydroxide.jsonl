@@ -1,0 +1,558 @@
+{
+  "id": "aluminum_hydroxide",
+  "drug_identity": {
+    "name_ko": "수산화알루미늄",
+    "name_en": "Aluminum Hydroxide",
+    "active_ingredient": "Aluminum Hydroxide",
+    "brand_names": [
+      "Amphojel",
+      "Maalox"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용이며, 수의용 허가 제품은 없음. 인체용 제품을 동물에 적용.",
+    "dosage_form": [
+      "Susp",
+      "Oral Liquid",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 320,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "경구 흡수가 매우 불량하며, 장내에서 인산과 결합하여 불용성 인산알루미늄을 형성한 후 대변으로 배설됨. 전신 대사 경로에 대한 정보 없음."
+    },
+    "extra_information": "신부전 환자에서 알루미늄이 체내에 축적될 수 있음. 적어도 2마리의 신부전 개에서 알루미늄 독성이 보고된 바 있음."
+  },
+  "organ_burden_logic": {
+    "note": "경구 흡수가 매우 불량하여 전신 장기 부담은 낮음. 그러나 신부전 환자에서 알루미늄 축적 가능성이 있어 신장 및 뇌(신경근 독성) 점수를 부여함. 수의학적 종별 PK 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "aluminum toxicity",
+          "neuromuscular effects"
+        ],
+        "index": 1,
+        "evidence": "알루미늄 독성 시 신경근 이상(허약, 보행 장애) 가능성이 언급됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "microcytosis",
+          "decreased MCV"
+        ],
+        "index": 1,
+        "evidence": "알루미늄 독성 모니터링 지표로 평균 적혈구 용적(MCV) 감소 및 소적혈구증이 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "aluminum accumulation",
+          "renal failure",
+          "aluminum toxicity"
+        ],
+        "index": 2,
+        "evidence": "신부전 환자에서 알루미늄 축적 위험이 명시됨. 신부전 개 2마리에서 알루미늄 독성 보고."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "aluminum toxicity",
+          "neuromuscular effects"
+        ],
+        "index": 1,
+        "evidence": "알루미늄 독성 시 신경근 이상 가능성이 언급됨. 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "microcytosis",
+          "decreased MCV"
+        ],
+        "index": 1,
+        "evidence": "알루미늄 독성 모니터링 지표로 MCV 감소 및 소적혈구증이 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "aluminum accumulation",
+          "renal failure"
+        ],
+        "index": 2,
+        "evidence": "신부전 환자에서 알루미늄 축적 위험이 명시됨. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 흡수가 불량하다고 명시되어 있으나, 구체적인 PK 파라미터(반감기, 생체이용률 등)는 모노그래프에 기재되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용 금기→3, 주요→3, 중등도→2, 경미→1. 수산화알루미늄은 주로 위장관 내 pH 변화 및 흡착을 통해 다수 약물의 흡수를 감소시킴.",
+  "drug_interactions": [
+    {
+      "drug": "Diazepam",
+      "severity": 2,
+      "keywords": [
+        "increased absorption",
+        "chelation"
+      ],
+      "evidence": "Concurrent aluminum may increase diazepam absorption."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "increased gastric pH",
+        "increased absorption"
+      ],
+      "evidence": "Increased gastric pH caused by aluminum hydroxide can potentially increase the absorption of basic drugs such as quinidine; separate by at least 2 hours."
+    },
+    {
+      "drug": "Vitamin D Analogues (calcitriol, ergocalciferol)",
+      "severity": 3,
+      "keywords": [
+        "increased aluminum absorption",
+        "aluminum toxicity"
+      ],
+      "evidence": "Vitamin D analogues may increase aluminum absorption. Avoid combination."
+    },
+    {
+      "drug": "Allopurinol",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption",
+        "chelation"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of allopurinol absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption",
+        "increased gastric pH"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of aspirin absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "increased gastric pH"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of azole antifungals absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Cefpodoxime",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "chelation"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of cefpodoxime absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of corticosteroids absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "adsorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of digoxin absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Ethambutol",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of ethambutol absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Fexofenadine",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of fexofenadine absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Fluoroquinolones (enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "chelation"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of fluoroquinolones absorbed orally via chelation; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Gabapentin",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of gabapentin absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "H2 Antagonists (famotidine, ranitidine)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of H2 antagonists absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Iron Salts (ferrous sulfate)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "chelation"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of iron salts absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of isoniazid absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of mycophenolate absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "chelation"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of penicillamine absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, chlorpromazine)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of phenothiazines absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Phenytoin",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of phenytoin absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of sotalol absorbed orally; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Tetracyclines (doxycycline, minocycline)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "chelation"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of tetracyclines absorbed orally via chelation; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Thyroid Hormones",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Aluminum hydroxide can decrease the amount of thyroid hormones absorbed orally; separate doses by at least 2 hours."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환에 의한 고인산혈증 치료 (extra-label)",
+          "value": "30 - 100",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 100.0,
+          "duration_note": "4~6주마다 혈청 인 수치를 확인하며 용량 조절. 식사와 함께 또는 식사 직전 투여.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label. 1일 총량을 각 식사에 나누어 혼합 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환에 의한 고인산혈증 치료 (extra-label)",
+          "value": "30 - 100",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 100.0,
+          "duration_note": "4~6주마다 혈청 인 수치를 확인하며 용량 조절. 식사와 함께 또는 식사 직전 투여.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label. 개와 동일 용량 범위 적용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 알루미늄이 축적될 수 있으므로 주의 깊은 모니터링이 필요함. 구체적인 용량 감량 기준은 명시되지 않음. 알루미늄 독성 징후(신경근 이상, MCV 감소, 소적혈구증) 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 기능 저하에 따른 용량 조절에 대한 언급 없음. 경구 흡수가 불량하여 간 대사 영향이 최소화됨."
+  },
+  "contraindications": [
+    {
+      "condition": "위 배출구 폐쇄",
+      "match_terms": [
+        "gastric outlet obstruction",
+        "pyloric obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "변비 경향",
+      "match_terms": [
+        "constipation",
+        "obstipation"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "장내에서 식이 인산과 결합하여 불용성 인산알루미늄을 형성함으로써 인의 흡수를 감소시킴. 제산제로 사용 시 수산화 이온이 위 내 수소 이온과 반응하여 위 pH를 상승시킴.",
+    "common_extra_effects": [
+      "변비",
+      "저인산혈증 (저인산 식이와 병용 시)",
+      "알루미늄 독성 (장기 사용 시)",
+      "골연화증 (저인산혈증 또는 알루미늄 축적 관련)",
+      "식욕 감소"
+    ],
+    "dog_mechanism": "경구 투여 후 장내에서 인산과 결합하여 대변으로 배설. 신부전 개에서 알루미늄 축적 및 독성 보고 있음.",
+    "dog_extra_effects": [
+      "변비",
+      "저인산혈증",
+      "알루미늄 독성 (신경근 이상, MCV 감소, 소적혈구증)"
+    ],
+    "cat_mechanism": "개와 동일한 기전으로 작용. 고양이 특이적 데이터는 제한적.",
+    "cat_extra_effects": [
+      "변비",
+      "저인산혈증",
+      "알루미늄 독성 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "만성 신장 질환(CKD)에 의한 고인산혈증 치료에 사용됨. 수산화알루미늄 겔 분말(USP)이 선호되며 식사에 혼합하여 투여. 저인산 식이와 고용량 수산화알루미늄으로도 혈청 인 조절이 불충분한 경우 란타넘 또는 칼슘 기반 인산 결합제 추가를 고려. 신부전 개 2마리에서 알루미늄 독성이 보고된 바 있어 장기 사용 시 주의 필요.",
+    "cat": "개와 동일한 적응증 및 용량 범위 적용. 인체용 현탁액(민트 향)은 고양이가 잘 받아들이지 않으므로 무취의 분말 형태가 권장됨. 장기 사용 시 알루미늄 독성 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신부전 환자에서 알루미늄 축적 위험. 위 배출구 폐쇄 또는 변비 경향 환자에서 주의 사용. 장기 사용 시 알루미늄 독성(신경근 이상, MCV 감소) 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신부전 환자에서 알루미늄 축적 위험. 변비 경향 환자에서 주의 사용. 인체용 현탁액은 기호성 불량."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "분말 형태는 밀폐 용기에 보관. 액상 제제는 동결 금지.",
+    "forms": [
+      "Aluminum Hydroxide Concentrated Gel Suspension 320 mg/5 mL (473 mL, UD 15 mL, 30 mL)",
+      "Aluminum Hydroxide Gel, Dried Powder, USP (bulk powder, 다수 조제 약국에서 구입 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "수산화알루미늄은 만성 신장 질환(CKD)에 의한 고인산혈증 치료를 위한 인산 결합제로 주로 사용됨. 모든 수의학적 사용은 허가 외(extra-label)이며, 수의용 허가 제품은 없음. 무취의 USP 분말 형태가 식사 혼합 투여에 적합. 신부전 환자에서 알루미늄 축적 및 독성 위험이 있으므로 장기 사용 시 모니터링 필수. 다수의 약물과 흡수 상호작용이 있어 다른 경구 약물과 최소 2시간 간격 투여 권장.",
+    "indications": "【허가 외 사용】 ① 만성 신장 질환(CKD)에 의한 고인산혈증 (개, 고양이, 파충류, 토끼/설치류 등) ② 위궤양/위산 과다 시 제산제 (소, 말 등). IRIS CKD 단계별 목표 혈청 인 수치: Stage 2: 2.7~4.6 mg/dL, Stage 3: 2.7~5.0 mg/dL, Stage 4: 2.7~6.0 mg/dL.",
+    "client_info": "• 수산화알루미늄은 처방전 없이 구입 가능하지만 반드시 수의사의 지도 하에 사용해야 합니다.\n• 분말 또는 조제 캡슐 형태가 액상보다 투여하기 쉽습니다. 현탁액은 투여 전 충분히 흔들어 주세요.\n• 반드시 식사 직전 또는 식사와 함께 혼합하여 투여해야 효과가 있습니다.\n• 변비나 식욕 감소가 나타날 수 있습니다.\n• 허약감, 보행 장애, 비틀거림 등 이상 증상이 나타나면 즉시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdosage/Acute Toxicity",
+      "Drug Interactions",
+      "Doses",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T05:53:58.238535+00:00",
+    "reviewer": null
+  }
+}

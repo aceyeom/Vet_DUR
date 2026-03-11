@@ -1,0 +1,731 @@
+{
+  "id": "hydrocortisone",
+  "drug_identity": {
+    "name_ko": "하이드로코르티손",
+    "name_en": "Hydrocortisone",
+    "active_ingredient": "Hydrocortisone",
+    "brand_names": [
+      "Cortef",
+      "Solu-Cortef",
+      "A-Hydrocort",
+      "Alkindi Sprinkle"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 전신 사용 제품은 없으며, 모든 전신 투여 용법은 사람용 제품을 오프라벨로 사용하는 것임. 국소용 수의 제품은 별도로 존재함.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "모노그래프에 CYP 효소 관련 구체적 정보가 기술되어 있지 않음. 글루코코르티코이드 계열로서 간 대사가 주요 경로임."
+    },
+    "extra_information": "사람에서 경구 투여 후 빠르게 흡수되며, 근육 주사 후 하이드로코르티손 소듐 숙시네이트는 빠르게 흡수됨. 활성 지속 시간은 8~12시간. 개와 고양이에 대한 종 특이적 약동학 데이터는 모노그래프에 기술되어 있지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 글루코코르티코이드 계열 약물로 전신 영향이 광범위함. 수의학 종 특이적 PK 데이터 부재로 사람 데이터 및 계열 특성에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS effects",
+          "psychosis",
+          "HPA axis suppression"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 급성 CNS 영향 보고(개 1례). 사람에서 정신증 및 HPA 축 억제 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypokalemia",
+          "neutrophilia",
+          "lymphopenia",
+          "hyperglycemia",
+          "coagulation"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증, 호중구증가증(투여 후 4~8시간), 림프구감소증(개에서 수 주 지속 가능), 혈당 상승, 응고 상태 변화 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "electrolyte imbalance",
+          "hypokalemia",
+          "mineralocorticoid effect"
+        ],
+        "index": 1,
+        "evidence": "미네랄코르티코이드 효과로 인한 전해질 불균형(저칼륨혈증) 위험. 직접적 신독성 기술 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "ALT elevation",
+          "ALP elevation",
+          "GGT elevation",
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "개에서 ALT, ALP, GGT 상승 보고됨. 간에서 대사되며 사이클로포스파미드 등의 간 대사를 억제할 수 있음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypokalemia",
+          "CHF risk",
+          "cardiac enlargement"
+        ],
+        "index": 1,
+        "evidence": "암포테리신 B와 병용 시 CHF 및 심장 비대 보고(사람). 저칼륨혈증으로 인한 간접적 심장 영향 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "HPA axis suppression",
+          "CNS effects"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 CNS 데이터 없음. 글루코코르티코이드 계열 특성에 근거한 추정."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypokalemia",
+          "hyperglycemia",
+          "lymphopenia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 저칼륨혈증, 혈당 상승, 림프구감소증 가능. 고양이 특이적 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "electrolyte imbalance",
+          "mineralocorticoid effect"
+        ],
+        "index": 1,
+        "evidence": "미네랄코르티코이드 효과로 인한 전해질 불균형 위험. 직접적 신독성 기술 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "enzyme elevation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 간 효소 상승 가능성. 개만큼 명확히 기술되지 않음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypokalemia",
+          "CHF risk"
+        ],
+        "index": -1,
+        "evidence": "저칼륨혈증으로 인한 간접적 심장 영향 가능. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 반감기, Tmax, 생체이용률, 단백결합률에 대한 구체적 수치가 기술되어 있지 않음. 활성 지속 시간은 8~12시간으로 기술됨(사람 데이터)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "CHF",
+        "cardiac enlargement"
+      ],
+      "evidence": "Concomitant use may cause hypokalemia; cases of CHF and cardiac enlargement reported in humans when hydrocortisone used to treat amphotericin B adverse effects."
+    },
+    {
+      "drug": "Anticholinesterase Agents (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "muscle weakness",
+        "myasthenia gravis"
+      ],
+      "evidence": "In myasthenia gravis patients, concomitant use may lead to profound muscle weakness. Discontinue anticholinesterase at least 24 hours prior to hydrocortisone if possible."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "reduced salicylate levels"
+      ],
+      "evidence": "Glucocorticoids may reduce salicylate blood levels and increase the risk for GI ulceration/bleeding."
+    },
+    {
+      "drug": "Azole Antifungals (ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased hydrocortisone levels",
+        "adrenal insufficiency",
+        "CYP inhibition"
+      ],
+      "evidence": "May decrease metabolism of glucocorticoids and increase hydrocortisone blood levels; ketoconazole may induce adrenal insufficiency when glucocorticoids are withdrawn by inhibiting adrenal corticosteroid synthesis."
+    },
+    {
+      "drug": "Barbiturates (phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "increased metabolism",
+        "decreased hydrocortisone levels",
+        "enzyme induction"
+      ],
+      "evidence": "May increase the metabolism of glucocorticoids and decrease hydrocortisone blood levels."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "inhibited hepatic metabolism",
+        "increased cyclophosphamide levels"
+      ],
+      "evidence": "Glucocorticoids may inhibit the hepatic metabolism of cyclophosphamide; dosage adjustments may be required."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "mutual hepatic metabolism inhibition",
+        "increased blood levels"
+      ],
+      "evidence": "Concomitant administration may increase blood levels of both drugs by mutually inhibiting hepatic metabolism of each other."
+    },
+    {
+      "drug": "Diuretics, Potassium-Depleting (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "When administered concomitantly with glucocorticoids, may cause hypokalemia."
+    },
+    {
+      "drug": "Ephedrine",
+      "severity": 1,
+      "keywords": [
+        "reduced hydrocortisone levels"
+      ],
+      "evidence": "May reduce hydrocortisone blood levels."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 1,
+      "keywords": [
+        "potentiated glucocorticoid effect"
+      ],
+      "evidence": "The effects of hydrocortisone and possibly other glucocorticoids may be potentiated by concomitant administration with estrogens."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "increased insulin requirements",
+        "hyperglycemia"
+      ],
+      "evidence": "Insulin requirements may increase in patients receiving glucocorticoids."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "increased hydrocortisone levels"
+      ],
+      "evidence": "May decrease the metabolism of glucocorticoids and increase hydrocortisone blood levels."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "altered steroid metabolism",
+        "adrenal insufficiency"
+      ],
+      "evidence": "May alter the metabolism of steroids; higher than usual doses of steroids may be necessary to treat mitotane-induced adrenal insufficiency."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "ulcerogenic"
+      ],
+      "evidence": "Administration of ulcerogenic drugs with glucocorticoids may increase the risk for GI ulceration."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "increased metabolism",
+        "decreased hydrocortisone levels",
+        "enzyme induction"
+      ],
+      "evidence": "May increase the metabolism of glucocorticoids and decrease hydrocortisone blood levels."
+    },
+    {
+      "drug": "Vaccines (live attenuated)",
+      "severity": 3,
+      "keywords": [
+        "immunosuppression",
+        "virus replication",
+        "diminished immune response"
+      ],
+      "evidence": "Patients receiving corticosteroids at immunosuppressive dosages should generally not receive live attenuated-virus vaccines as virus replication may be augmented; diminished immune response may occur."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "altered coagulation",
+        "bleeding risk"
+      ],
+      "evidence": "Hydrocortisone may affect coagulation status; monitor."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 부신피질 기능부전(애디슨 위기) 보조 치료 - CRI",
+          "value": "0.3 - 0.5",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "GI 기능 회복 및 경구 섭취 가능 시까지, 이후 경구 스테로이드로 전환",
+          "evidence": "오프라벨. ACTH 자극 검사 완료 후 투여. 0.3–0.5 mg/kg/hour IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 부신피질 기능부전(애디슨 위기) 보조 치료 - 간헐 투여",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "GI 기능 회복 및 경구 섭취 가능 시까지, 이후 경구 스테로이드로 전환",
+          "evidence": "오프라벨. 2–4 mg/kg IV every 6 to 8 hours."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부신피질 기능저하증 장기 유지 치료 - 경구",
+          "value": "0.4 - 0.8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "안정화 후 0.4 mg/kg PO 1~2회/일로 유지",
+          "evidence": "오프라벨. 초기 0.4–0.8 mg/kg PO 1~2회/일, 안정화 후 0.4 mg/kg PO 1~2회/일."
+        },
+        {
+          "logic_type": "linear",
+          "context": "상대적 부신 기능부전(RAI)/중증 질환 관련 코르티코스테로이드 부전(CIRCI) - CRI 또는 간헐 투여",
+          "value": "1 - 4.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4등분하여 6시간마다 IV 또는 CRI. 중증 질환 해소 후 매일 25%씩 감량",
+          "evidence": "오프라벨. 1–4.3 mg/kg/day divided into 4 equal doses IV q6h or CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술(CPR) 후 소생 - 초기 용량",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "이후 1 mg/kg q6h IV 또는 0.15 mg/kg/hour CRI, 환자 상태에 따라 감량",
+          "evidence": "오프라벨. 수액, 양성 강심제, 혈관수축제에도 혈역학적으로 불안정한 경우에만 고려."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술(CPR) 후 소생 - 유지 CRI",
+          "value": "0.15",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "환자 상태에 따라 감량",
+          "evidence": "오프라벨. 0.15 mg/kg/hour IV CRI."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 부신피질 기능부전(애디슨 위기) 보조 치료 - CRI",
+          "value": "0.3 - 0.5",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "GI 기능 회복 및 경구 섭취 가능 시까지, 이후 경구 스테로이드로 전환",
+          "evidence": "오프라벨. 개/고양이 공통 용량으로 기술됨. 0.3–0.5 mg/kg/hour IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 부신피질 기능부전(애디슨 위기) 보조 치료 - 간헐 투여",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "GI 기능 회복 및 경구 섭취 가능 시까지, 이후 경구 스테로이드로 전환",
+          "evidence": "오프라벨. 개/고양이 공통 용량으로 기술됨. 2–4 mg/kg IV every 6 to 8 hours."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조절에 대한 구체적 지침이 기술되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 구체적 지침이 기술되어 있지 않음. 간에서 대사되므로 심한 간질환 시 주의가 필요할 수 있으나 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "fungal infection",
+        "aspergillosis",
+        "cryptococcosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "특발성 혈소판감소증 (근육 주사 시)",
+      "match_terms": [
+        "idiopathic thrombocytopenia",
+        "ITP",
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "약물 성분에 대한 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "anaphylaxis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신생아 환자 (벤질알코올 함유 제형)",
+      "match_terms": [
+        "neonatal",
+        "newborn",
+        "benzyl alcohol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "척수강 내 투여",
+      "match_terms": [
+        "intrathecal",
+        "spinal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 초기 및 후기)",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "gestation"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 감염 (면역억제 용량 사용 시)",
+      "match_terms": [
+        "infection",
+        "sepsis",
+        "immunosuppression"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "글루코코르티코이드 수용체에 결합하여 포유류의 거의 모든 세포 유형 및 시스템에 영향을 미침. 항염증, 면역억제, 대사 조절, 미네랄코르티코이드 효과를 나타냄.",
+    "common_extra_effects": [
+      "고부신피질증 임상 증상 (장기 투여 시)",
+      "저칼륨혈증",
+      "고혈당증",
+      "면역억제 및 감염 위험 증가",
+      "상처 치유 지연",
+      "근병증",
+      "저칼륨성 대사성 산증",
+      "HPA 축 억제",
+      "성장 지연 (어린 동물)",
+      "ALT, ALP, GGT 상승 (개)",
+      "호중구증가증",
+      "림프구감소증",
+      "혈청 콜레스테롤 증가",
+      "소변 포도당 증가"
+    ],
+    "dog_mechanism": "글루코코르티코이드 수용체 매개 작용. 개에서 ALT, ALP, GGT 상승 및 림프구감소증이 특히 두드러짐.",
+    "dog_extra_effects": [
+      "ALT 상승",
+      "ALP 상승",
+      "GGT 상승",
+      "림프구감소증 (수 주 지속 가능)",
+      "호중구증가증 (투여 후 4~8시간)",
+      "고부신피질증 임상 증상"
+    ],
+    "cat_mechanism": "글루코코르티코이드 수용체 매개 작용. 고양이에서의 부작용 프로파일은 개에 비해 덜 기술되어 있음.",
+    "cat_extra_effects": [
+      "고혈당증",
+      "저칼륨혈증",
+      "면역억제",
+      "HPA 축 억제"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 급성 저부신피질증(애디슨 위기) 및 CIRCI 치료에 IV 하이드로코르티손 소듐 숙시네이트가 주로 사용됨. 경구 제형은 장기 유지 치료에 사용 가능하나 일반적으로 잘 사용되지 않음. 개에서 ALT, ALP, GGT 상승 및 장기간 림프구감소증이 특징적으로 나타날 수 있음. ACTH 자극 검사는 하이드로코르티손 투여 전 또는 마지막 투여 24시간 후에 시행해야 함(교차반응 주의).",
+    "cat": "고양이에서도 개와 동일한 용량으로 급성 부신피질 기능부전 치료에 사용될 수 있음. 고양이에서의 IV 하이드로코르티손 부작용 프로파일은 충분히 기술되어 있지 않음. 경구 제형은 고양이에서 일반적으로 잘 사용되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "장기 투여 시 고부신피질증 임상 증상 발생 가능. 만성 투여 후 갑작스러운 중단 금지(서서히 감량 필요). 수술, 외상, 질병 등 스트레스 상황 시 추가 글루코코르티코이드 투여 고려. ACTH 자극 검사와의 교차반응 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 부작용 프로파일이 충분히 기술되어 있지 않으나 글루코코르티코이드 계열 특성상 주의 필요. 만성 투여 후 갑작스러운 중단 금지."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "하이드로코르티손 소듐 숙시네이트: 밀봉 용기에 20~25°C(68~77°F) 보관. 재구성 후 빛 차단 및 실온 이하 보관, 3일 이내 사용. 열에 불안정하여 고압증기멸균 불가. 경구 정제: 15~30°C(59~86°F) 밀폐 용기 보관.",
+    "forms": [
+      "경구 정제 (5 mg, 10 mg, 20 mg)",
+      "경구 스프링클 캡슐 (0.5 mg, 1 mg, 2 mg, 5 mg)",
+      "주사제 - 하이드로코르티손 소듐 숙시네이트 (100 mg/vial, 250 mg/vial, 500 mg/vial, 1000 mg/vial)",
+      "국소용 제품 (다양한 제형)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "하이드로코르티손은 기준 글루코코르티코이드로, IV 소듐 숙시네이트 제형은 즉각적인 글루코코르티코이드 및 미네랄코르티코이드 효과가 필요한 경우(애디슨 위기, CIRCI)에 주로 사용됨. 수의학적 전신 사용 승인 제품은 없으며 모두 오프라벨 사용임. 장기 투여 시 고부신피질증 증상 발생 가능하며, 만성 투여 후 반드시 서서히 감량해야 함. 개에서 ALT/ALP/GGT 상승 및 림프구감소증이 특징적으로 나타날 수 있음. ACTH 자극 검사와의 교차반응으로 인해 검사는 투여 전 또는 마지막 투여 24시간 후에 시행해야 함.",
+    "indications": "급성 부신피질 기능부전(애디슨 위기) 보조 치료(오프라벨), 부신피질 기능저하증 장기 유지 치료(오프라벨), 중증 질환 관련 코르티코스테로이드 부전(CIRCI)(오프라벨), 심폐소생술 후 혈역학적 불안정 시(오프라벨). 경구 제형은 부신피질 기능저하증 장기 유지에 사용 가능하나 수의 임상에서 일반적으로 잘 사용되지 않음.",
+    "client_info": "경구 정제를 집에서 투여하는 경우, 처방된 용량을 정확히 따르고 수의사와 상담 없이 갑자기 투약을 중단하지 마십시오. 위장 장애를 예방하기 위해 음식과 함께 투여하십시오. 장기 투여 중 과도한 음수, 다뇨, 식욕 증가, 복부 팽만 등의 증상이 나타나면 수의사에게 알려주십시오. 스트레스 상황(수술, 외상, 질병)이 발생하면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP enzyme profile",
+      "Half-life (veterinary)",
+      "Bioavailability (veterinary)",
+      "Protein binding (veterinary)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/1.jsonl",
+    "extracted_at": "2026-03-10T13:42:33.333261+00:00",
+    "reviewer": null
+  }
+}

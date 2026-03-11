@@ -1,0 +1,458 @@
+{
+  "id": "spinosad",
+  "drug_identity": {
+    "name_ko": "스피노사드",
+    "name_en": "Spinosad",
+    "active_ingredient": "Spinosad",
+    "brand_names": [
+      "Comfortis",
+      "Trifexis",
+      "Natroba",
+      "Acuguard",
+      "Extinosad"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 140,
+        "unit": "mg"
+      },
+      {
+        "value": 270,
+        "unit": "mg"
+      },
+      {
+        "value": 560,
+        "unit": "mg"
+      },
+      {
+        "value": 810,
+        "unit": "mg"
+      },
+      {
+        "value": 1620,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "스피노사드는 간에서 생체변환되며, 글루타치온 결합체 형태로 70~90%가 담즙을 통해 분변으로 배설된다. P-당단백질(P-gp)의 기질이자 강력한 억제제로 확인되었다."
+    },
+    "extra_information": "개에서 경구 투여(식사와 함께) 후 스피노신 A의 최고 혈장 농도는 약 2시간, 스피노신 D는 약 3시간에 도달한다. 스피노신 D 농도는 스피노신 A의 약 5배이다. 스피노신 A와 D는 개의 혈장 단백질에 약 99% 결합한다. 혈장 소실 반감기는 약 10일이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간 대사 및 담즙 배설, 과용량 시 ALT 상승 및 인지질증(phospholipidosis) 보고를 근거로 간 부담 점수 산정. 신장 관련 데이터는 원문에 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ataxia",
+          "trembling",
+          "seizures",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "과용량 또는 이버멕틴 병용 시 운동실조, 떨림, 발작 등 신경독성 증상이 보고됨. 정상 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematology"
+        ],
+        "index": 2,
+        "evidence": "과용량 연구에서 혈액학적 유의한 변화는 없었으나 모니터링 권고됨."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "원문에 신장 독성 관련 데이터 없음. 신장 배설 분율 미기재."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic biotransformation",
+          "bile",
+          "ALT elevation",
+          "phospholipidosis"
+        ],
+        "index": 3,
+        "evidence": "간에서 생체변환 후 담즙을 통해 70~90% 배설. 과용량 시 ALT 경미한 상승 및 림프조직 인지질증 발생. 4.4배 용량 6개월 투여 시 간 인지질증 보고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "원문에 심장 독성 관련 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고용량에서 신경독성 가능성이 언급되나 고양이 특이적 신경 이상 보고는 드묾."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "원문에 고양이 혈액학적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "원문에 고양이 신장 독성 관련 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "phospholipidosis",
+          "hepatic"
+        ],
+        "index": 2,
+        "evidence": "3배 용량 6개월 투여 시 간 인지질증 보고. 간 대사 경로는 개와 동일하게 추정됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "원문에 고양이 심장 독성 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 2.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 240.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 99,
+    "evidence": "개에서 스피노신 A Tmax ≈2시간, 스피노신 D Tmax ≈3시간. 혈장 소실 반감기 ≈10일(240시간). 혈장 단백질 결합률 ≈99%. 벼룩 사망은 투여 30분 이내 시작, 개에서 4시간, 고양이에서 24시간 내 완료."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Ivermectin",
+      "severity": 3,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "neurotoxicity",
+        "AUC increase"
+      ],
+      "evidence": "Spinosad can increase ivermectin plasma concentrations (AUC 3.6-fold increase) in dogs. High extra-label doses of ivermectin combined with spinosad may cause severe neurotoxicity. Use at label heartworm preventive doses appears safe."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "intestinal interaction"
+      ],
+      "evidence": "Spinosad is a potent inhibitor of canine P-glycoprotein; orally dosed P-gp substrates such as cyclosporine could potentially interact at the intestinal level."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "intestinal interaction"
+      ],
+      "evidence": "Spinosad is a potent inhibitor of canine P-glycoprotein; orally dosed P-gp substrates such as verapamil could potentially interact at the intestinal level."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "intestinal interaction"
+      ],
+      "evidence": "Spinosad is a potent inhibitor of canine P-glycoprotein; orally dosed P-gp substrates such as ketoconazole could potentially interact at the intestinal level."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "intestinal interaction"
+      ],
+      "evidence": "Spinosad is a potent inhibitor of canine P-glycoprotein; orally dosed P-gp substrates such as loperamide could potentially interact at the intestinal level."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 50.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 감염 예방 및 치료 (단독 제제, 14주령 이상, 2.2 kg 이상)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 투여, 식사와 함께 급여",
+          "evidence": "FDA 승인 라벨 용량. 최소 30 mg/kg PO 월 1회. 체중별 정제 용량: 2.3-4.5 kg→140 mg, 4.6-9.1 kg→270 mg, 9.1-18.2 kg→560 mg, 18.2-27.3 kg→810 mg, 27.3-54.5 kg→1620 mg."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "심장사상충 예방, 벼룩 감염 예방 및 치료, 구충(구충/회충/편충) 치료 - 스피노사드/밀베마이신 복합제 (8주령 이상, 2.2 kg 이상)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 투여. 심장사상충 예방을 위해 모기 노출 후 최소 3개월간 투여. 투여 전 심장사상충 음성 확인 필요.",
+          "evidence": "FDA 승인 라벨 용량. 스피노사드 최소 30 mg/kg + 밀베마이신 옥심 0.5 mg/kg PO 월 1회. 체중별 정제 용량: 2.3-4.5 kg→140/2.3 mg, 4.6-9.1 kg→270/4.5 mg, 9.1-18.2 kg→560/9.3 mg, 18.2-27.3 kg→810/13.5 mg, 27.3-54.5 kg→1620/27 mg."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 감염 예방 및 치료 (14주령 이상, 1.8 kg 이상)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 투여, 식사 직전 또는 직후 급여. 10.9 kg 초과 시 적절한 정제 조합 투여.",
+          "evidence": "FDA 승인 라벨 용량. 최소 50 mg/kg PO 월 1회. 체중별 정제 용량: 1.9-2.7 kg→140 mg, 2.8-5.5 kg→270 mg, 5.5-10.9 kg→560 mg. 고양이 용량표를 개에게 사용하지 말 것(과용량 위험)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "원문에 신장 기능 저하 시 용량 조절에 관한 구체적인 권고사항이 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "스피노사드는 주로 간에서 대사되어 담즙으로 배설됨. 과용량 시 ALT 상승 및 인지질증이 보고되었으나, 원문에 간 기능 저하 시 구체적인 용량 조절 권고사항은 없음. 간 질환 환자에서 모니터링 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "간질(뇌전증) 기왕력",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder"
+      ],
+      "severity": "relative",
+      "action": "caution",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장사상충 감염 (Trifexis® 사용 시)",
+      "match_terms": [
+        "heartworm infection",
+        "Dirofilaria immitis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "돼지고기 또는 대두 단백질 알레르기",
+      "match_terms": [
+        "pork allergy",
+        "soy allergy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 돌연변이(ABCB1-1delta)에 대해 동형접합 및 이형접합인 콜리에서 라벨 권장량의 최대 5배 용량(밀베마이신 최대 10배 포함)을 투여한 연구에서 신경독성 징후가 나타나지 않았음. 따라서 MDR1 돌연변이 품종에서 라벨 용량 사용은 안전한 것으로 판단됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "스피노사드는 스피노신 A와 스피노신 D 두 가지 천연 마크로사이클릭 락톤의 혼합물로, 곤충의 니코틴성 아세틸콜린 D-알파 수용체 작용제로 작용하여 운동 신경 활성화를 통한 불수의적 근육 수축 및 떨림을 유발한다. 지속적 노출은 마비 및 벼룩 사망을 초래한다. 또한 다른 마크로사이클릭 락톤과 유사하게 염화물 채널을 개방한다.",
+    "common_extra_effects": [
+      "구토",
+      "무기력/기면",
+      "식욕부진",
+      "운동실조",
+      "설사",
+      "소양증",
+      "떨림",
+      "과다침흘림",
+      "발작"
+    ],
+    "dog_mechanism": "개에서 투여 30분 이내 벼룩 사망 시작, 4시간 내 완료. P-당단백질의 기질이자 강력한 억제제.",
+    "dog_extra_effects": [
+      "구토 (최대 12%)",
+      "무기력/기면",
+      "식욕부진",
+      "운동실조",
+      "설사",
+      "소양증",
+      "떨림",
+      "과다침흘림",
+      "발작",
+      "과용량 시 ALT 상승",
+      "과용량 시 림프조직 인지질증"
+    ],
+    "cat_mechanism": "고양이에서 투여 후 24시간 내 벼룩 사망 완료.",
+    "cat_extra_effects": [
+      "구토 (약 14%)",
+      "기면",
+      "식욕감소",
+      "체중감소",
+      "설사",
+      "과용량 시 간/폐/부신 인지질증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 경구 벼룩 성충 구제제. 최소 30 mg/kg PO 월 1회 식사와 함께 투여. 스피노사드/밀베마이신 복합제(Trifexis®)는 심장사상충 예방, 벼룩 예방·치료, 구충 치료에 추가 승인됨. 투여 전 심장사상충 음성 확인 필수. 고양이 용량표를 개에게 사용하지 말 것(과용량 위험). 간질 기왕력 개에서 라벨 초과 용량 사용 시 주의.",
+    "cat": "고양이에서 FDA 승인된 경구 벼룩 성충 구제제. 최소 50 mg/kg PO 월 1회 식사 직전 또는 직후 투여. 개 용량표를 고양이에게 사용하지 말 것(과소 투여 위험). 번식, 임신, 수유 중인 고양이에서의 안전성은 평가되지 않음. 고양이에서 벼룩 사망은 투여 후 24시간 내 완료(개의 4시간보다 느림)."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간질 기왕력 개에서 라벨 초과 용량 사용 시 발작 역치 감소 가능. 번식 암컷에서 주의하여 사용. 돼지고기/대두 단백질 알레르기 개에서 이상반응 가능. 이버멕틴 고용량 병용 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "번식, 임신, 수유 중인 고양이에서 안전성 미평가. 고용량에서 구토, 기면, 식욕감소, 체중감소, 설사 보고. 인지질증 발생 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "씹는 정제는 20°C~25°C(68°F~77°F)에서 보관. 15°C~30°C(59°F~86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "Spinosad 씹는 정제 140 mg (개 2.3-4.5 kg용) - Comfortis®",
+      "Spinosad 씹는 정제 270 mg (개 4.6-9.1 kg용) - Comfortis®",
+      "Spinosad 씹는 정제 560 mg (개 9.1-18.2 kg용) - Comfortis®",
+      "Spinosad 씹는 정제 810 mg (개 18.2-27.3 kg용) - Comfortis®",
+      "Spinosad 씹는 정제 1620 mg (개 27.3-54.5 kg용) - Comfortis®",
+      "Spinosad 씹는 정제 140 mg (고양이 1.9-2.7 kg용) - Comfortis® for Cats",
+      "Spinosad 씹는 정제 270 mg (고양이 2.8-5.5 kg용) - Comfortis® for Cats",
+      "Spinosad 씹는 정제 560 mg (고양이 5.5-10.9 kg용) - Comfortis® for Cats",
+      "Spinosad/Milbemycin 씹는 정제 140 mg/2.3 mg (개 2.3-4.5 kg용) - Trifexis®",
+      "Spinosad/Milbemycin 씹는 정제 270 mg/4.5 mg (개 4.6-9.1 kg용) - Trifexis®",
+      "Spinosad/Milbemycin 씹는 정제 560 mg/9.3 mg (개 9.1-18.2 kg용) - Trifexis®",
+      "Spinosad/Milbemycin 씹는 정제 810 mg/13.5 mg (개 18.2-27.3 kg용) - Trifexis®",
+      "Spinosad/Milbemycin 씹는 정제 1620 mg/27 mg (개 27.3-54.5 kg용) - Trifexis®"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "스피노사드는 개와 고양이에서 FDA 승인된 경구 벼룩 성충 구제제로, 투여 30분 이내 벼룩 사망이 시작되는 빠른 효과를 보인다. 개에서 최소 30 mg/kg, 고양이에서 최소 50 mg/kg을 월 1회 식사와 함께 투여한다. 스피노사드/밀베마이신 복합제(Trifexis®)는 개에서 심장사상충 예방 및 구충 치료에도 승인되어 있다. 이버멕틴 고용량과의 병용은 심각한 신경독성 위험으로 금기이다. P-당단백질 강력 억제제로 사이클로스포린, 베라파밀, 케토코나졸, 로페라미드 등과의 상호작용에 주의가 필요하다.",
+    "indications": "【개】 벼룩(Ctenocephalides felis) 감염 예방 및 치료 (14주령 이상, 2.2 kg 이상, FDA 승인). 스피노사드/밀베마이신 복합제: 심장사상충(Dirofilaria immitis) 예방, 벼룩 감염 예방·치료, 성충 구충(Ancylostoma caninum), 회충(Toxocara canis, Toxascaris leonina), 편충(Trichuris vulpis) 치료 (8주령 이상, 2.2 kg 이상, FDA 승인). 【고양이】 벼룩(C. felis) 구제 및 감염 예방·치료 (14주령 이상, 1.8 kg 이상, FDA 승인). 【오프라벨】 갈색개진드기(Rhipicephalus sanguineus)에 대한 파일럿 연구에서 50-100 mg/kg 용량으로 24시간 내 약 95% 구제 효과 보고.",
+    "client_info": "스피노사드는 개와 고양이의 벼룩 성충을 죽이는 월 1회 경구 투여 약물입니다. 투여 후 30분 이내에 벼룩이 죽기 시작합니다. 단독 사용 시 벼룩 알이나 유충에는 효과가 없으므로, 수의사와 함께 종합적인 벼룩 관리 프로그램을 계획하세요. 이 약은 진드기에는 효과가 없습니다. 반드시 식사와 함께 또는 식사 직후에 투여하세요. 씹는 정제는 어린이와 다른 동물의 손이 닿지 않는 곳에 보관하세요. 스피노사드/밀베마이신 복합제(Trifexis®)는 벼룩 구제 외에도 심장사상충 예방과 장내 기생충 치료에도 사용됩니다. 투여 전 심장사상충 검사가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific concerns noted)",
+      "Compatibility/Compounding Considerations (no specific information noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.half_life_hr (cat-specific)",
+      "drug_identity.available_strengths (cat-specific mg/mL or unit)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/35.jsonl",
+    "extracted_at": "2026-03-11T00:01:02.604269+00:00",
+    "reviewer": null
+  }
+}

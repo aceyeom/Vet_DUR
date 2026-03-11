@@ -1,0 +1,527 @@
+{
+  "id": "flucytosine",
+  "drug_identity": {
+    "name_ko": "플루시토신",
+    "name_en": "Flucytosine",
+    "active_ingredient": "Flucytosine",
+    "brand_names": [
+      "Ancobon",
+      "Alcobon",
+      "Ancotil"
+    ],
+    "allergy_class": null,
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 캡슐(Ancobon®)을 동물에게 오프라벨로 사용. 반드시 다른 항진균제와 병용해야 함.",
+    "dosage_form": [
+      "Cap",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "플루시토신은 사람 세포에서 대사되지 않으며(세포 내 시토신 탈아미노효소 활성 없음), 거의 변화 없이 신장을 통해 사구체 여과로 배설됨. 장내 세균이 소량을 플루오로우라실로 전환할 수 있음."
+    },
+    "extra_information": "개에서 반감기는 약 2.7시간. 사람에서는 정상 신기능 시 3~6시간이나 신기능 저하 시 현저히 연장됨. CSF 농도는 혈청 농도의 60~100%에 달함. 혈장 단백 결합률은 2~4%로 매우 낮음. 분포용적(사람)은 약 0.7 L/kg."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개에서 피부/점막 반응, 골수억제, 간효소 상승이 보고됨. 고양이에서 CNS 이상행동 및 발작 보고. 신장 배설이 주경로이므로 신장 부담이 가장 높음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "개에서 CNS 이상 보고는 드물며, 주요 독성은 피부/점막 반응임. CNS 영향은 간접적."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression",
+          "anemia",
+          "leukopenia",
+          "thrombocytopenia",
+          "bone marrow suppressant"
+        ],
+        "index": 2,
+        "evidence": "용량 의존적 골수억제(빈혈, 백혈구감소증, 혈소판감소증)가 보고됨. CBC 및 혈소판 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal impairment",
+          "glomerular filtration",
+          "renal dysfunction",
+          "azotemia",
+          "serum creatinine"
+        ],
+        "index": 3,
+        "evidence": "신장을 통해 거의 변화 없이 배설되므로 신기능 저하 시 약물 축적 및 독성 위험 현저히 증가. 신기능 저하 환자에서 극도의 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased hepatic enzymes",
+          "increased liver enzymes",
+          "hepatic disease"
+        ],
+        "index": 2,
+        "evidence": "간효소 상승이 부작용으로 보고됨. 간질환 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "aberrant behavior",
+          "seizures",
+          "CNS effects"
+        ],
+        "index": 2,
+        "evidence": "CNS 감염 없이 이상행동 및 발작이 고양이에서 보고됨. CNS 침투율이 높아(혈청의 60~100%) 신경독성 위험 존재."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression",
+          "anemia",
+          "leukopenia",
+          "thrombocytopenia"
+        ],
+        "index": 2,
+        "evidence": "용량 의존적 골수억제가 고양이에서도 우려됨. CBC 및 혈소판 정기 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "renal impairment",
+          "glomerular filtration",
+          "renal dysfunction"
+        ],
+        "index": 3,
+        "evidence": "신장 배설이 주경로이므로 신기능 저하 시 독성 위험 증가. 암포테리신 B 병용 시 신기능 주 2회 이상 모니터링 권고."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased hepatic enzymes",
+          "hepatic disease"
+        ],
+        "index": 2,
+        "evidence": "간효소 상승 보고. 간질환 고양이에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.7,
+      "max": 2.7,
+      "mean": 2.7,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 3,
+    "evidence": "개에서 반감기 약 2.7시간. 경구 투여 후 잘 흡수됨(식이와 함께 투여 시 흡수 속도는 감소하나 흡수량은 변화 없음). 혈장 단백 결합률 2~4%(평균 3%). 사람에서 정상 신기능 시 반감기 3~6시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "synergism",
+        "renal dysfunction",
+        "drug accumulation",
+        "toxicity enhancement"
+      ],
+      "evidence": "Cryptococcus spp 및 Candida spp에 대해 상승 효과가 있으나, 암포테리신 B가 신기능 저하를 유발할 경우 플루시토신 축적으로 독성이 증가할 수 있음. 신독성 발생 시 플루시토신 용량 조절 필요."
+    },
+    {
+      "drug": "Antacids (Aluminum- or Magnesium-Containing)",
+      "severity": 1,
+      "keywords": [
+        "delayed absorption"
+      ],
+      "evidence": "알루미늄 또는 마그네슘 함유 제산제는 플루시토신의 흡수를 지연시킬 수 있음."
+    },
+    {
+      "drug": "Cytarabine",
+      "severity": 2,
+      "keywords": [
+        "competitive antagonism",
+        "reduced antifungal activity"
+      ],
+      "evidence": "시타라빈이 진균 작용 부위에서 경쟁적으로 작용하여 플루시토신의 항진균 활성을 저해할 수 있음."
+    },
+    {
+      "drug": "Myelosuppressive Drugs (antineoplastics, azathioprine, chloramphenicol, methimazole)",
+      "severity": 2,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "골수억제 약물과 병용 시 상가적 골수억제가 발생할 수 있음."
+    },
+    {
+      "drug": "Zidovudine",
+      "severity": 2,
+      "keywords": [
+        "neutropenia",
+        "additive myelosuppression"
+      ],
+      "evidence": "지도부딘과 병용 시 호중구감소증 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "크립토콕쿠스증 (오프라벨) — 심각한 독성 위험으로 통상 권장하지 않음",
+          "value": "50 - 75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 기간 1~12개월. 반드시 암포테리신 B 또는 아졸계 항진균제와 병용",
+          "evidence": "오프라벨. 심각한 피부/점막 반응 위험으로 개에서는 통상 권장하지 않음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "크립토콕쿠스증 (오프라벨) — 반드시 다른 항진균제와 병용",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 기간 1~9개월. 암포테리신 B 또는 아졸계 항진균제와 병용 필수",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "크립토콕쿠스증 (오프라벨) — 대체 용량",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 기간 1~9개월. 암포테리신 B 또는 아졸계 항진균제와 병용 필수",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "크립토콕쿠스증 (오프라벨) — 대체 용량",
+          "value": "75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 기간 1~9개월. 암포테리신 B 또는 아졸계 항진균제와 병용 필수",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "크립토콕쿠스증 (오프라벨) — 고정 용량",
+          "value": "250",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 기간 1~9개월. 암포테리신 B 또는 아졸계 항진균제와 병용 필수. 250 mg/마리(mg/kg 아님)",
+          "evidence": "오프라벨. 고정 용량(mg/cat)으로 처방."
+        },
+        {
+          "logic_type": "linear",
+          "context": "칸디다증 (오프라벨) — 반드시 다른 항진균제와 병용",
+          "value": "25 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "42일간 투여. 암포테리신 B 또는 아졸계 항진균제와 병용 필수",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "칸디다증 (오프라벨) — 대체 용량",
+          "value": "50 - 65",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "42일간 투여. 암포테리신 B 또는 아졸계 항진균제와 병용 필수",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하(질소혈증) 발생 시 혈청 크레아티닌 수치로 플루시토신 용량을 나누는 방법이 권고됨. 혈청 플루시토신 최고 농도를 100 µg/mL 미만으로 유지하도록 용량 또는 투여 간격 조정 권고. 암포테리신 B 병용 시 신기능을 주 2회 이상 모니터링."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간질환 환자에서 주의하여 사용하고 강화된 모니터링 권고. 구체적인 용량 조정 지침은 명시되지 않음. 간효소를 최소 월 1회 모니터링."
+  },
+  "contraindications": [
+    {
+      "condition": "플루시토신 과민증",
+      "match_terms": [
+        "hypersensitivity to flucytosine",
+        "flucytosine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "azotemia",
+        "renal dysfunction"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "기존 골수억제 또는 혈액 질환",
+      "match_terms": [
+        "myelosuppression",
+        "hematologic disease",
+        "bone marrow suppression",
+        "anemia",
+        "leukopenia",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "플루시토신은 진균 세포 내로 침투하여 시토신 탈아미노효소에 의해 플루오로우라실로 전환됨. 플루오로우라실은 항대사물질로 작용하여 우라실과 경쟁함으로써 피리미딘 대사, RNA 및 단백질 합성을 방해함. 이후 플루오로데옥시우리딜산으로 전환되어 티미딜산 합성 및 DNA 합성을 억제함.",
+    "common_extra_effects": [
+      "오심, 구토, 설사 등 위장관 장애",
+      "용량 의존적 골수억제 (빈혈, 백혈구감소증, 혈소판감소증)",
+      "구강 궤양",
+      "간효소 상승"
+    ],
+    "dog_mechanism": "개 세포의 시토신 탈아미노효소 활성 여부는 불명확함. 장내 세균이 소량을 플루오로우라실로 전환할 수 있음.",
+    "dog_extra_effects": [
+      "피부/점막 약물 반응 (탈색소, 궤양, 삼출, 가피 형성 — 주로 음낭 및 비강 평면에 발생)",
+      "치료 시작 후 10~20일 이내(최대 6주) 발생 가능",
+      "골수억제",
+      "간효소 상승"
+    ],
+    "cat_mechanism": "고양이 세포의 시토신 탈아미노효소 활성 여부는 불명확함.",
+    "cat_extra_effects": [
+      "이상행동 및 발작 (CNS 감염 없이도 발생 가능)",
+      "독성 표피 괴사용해 (일화적 보고)",
+      "골수억제",
+      "간효소 상승",
+      "위장관 장애"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 플루시토신은 심각한 피부/점막 약물 반응(탈색소, 궤양, 삼출, 가피 형성) 위험으로 인해 통상 권장하지 않음. 반응은 치료 시작 후 10~20일 이내(최대 6주)에 발생할 수 있으며, 주로 음낭 및 비강 평면에 나타남. 즉시 투약 중단 시 2~3주 내 병변 호전. 반드시 다른 항진균제(암포테리신 B 또는 아졸계)와 병용해야 하며, 단독 사용 시 내성 발현 위험이 높음.",
+    "cat": "고양이에서 크립토콕쿠스증 및 칸디다증 치료에 오프라벨로 사용됨. CNS 침투율이 높아(혈청의 60~100%) CNS 크립토콕쿠스증에 유용하나, CNS 감염 없이도 이상행동 및 발작이 보고됨. 독성 표피 괴사용해의 일화적 보고 있음. 반드시 다른 항진균제와 병용 사용. 신기능, CBC, 간효소를 정기적으로 모니터링해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 심각한 피부/점막 반응 위험으로 극도의 주의 필요. 통상 권장하지 않으나 크립토콕쿠스증 등 심각한 진균 감염 시 오프라벨로 사용 가능. 신기능, CBC, 간효소 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 CNS 이상(이상행동, 발작), 독성 표피 괴사용해, 골수억제 위험. 신기능 저하 시 독성 위험 증가. 정기적인 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F)에서 밀폐된 차광 용기에 보관. 15~30°C(59~86°F) 범위 허용. 고온 보관 시 플루오로우라실로 분해될 수 있음.",
+    "forms": [
+      "플루시토신 경구 캡슐 250 mg (Ancobon®, 제네릭)",
+      "플루시토신 경구 캡슐 500 mg (Ancobon®, 제네릭)",
+      "조제 경구 현탁액 10 mg/mL (250 mg 캡슐 4개 + Ora-Plus® 50 mL + Ora-Sweet® qs 100 mL; 5°C 및 25°C에서 60일간 95% 이상 역가 유지)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루시토신은 크립토콕쿠스증, 칸디다증, 아스페르길루스증 등 심각한 진균 감염에 반드시 다른 항진균제(암포테리신 B 또는 아졸계)와 병용하여 사용하는 항진균제임. CNS 침투율이 우수하여 CNS 크립토콕쿠스증에 유용함. 개에서는 심각한 피부/점막 반응 위험으로 통상 권장하지 않음. 신기능 저하 환자에서 극도의 주의 필요(신장 배설이 주경로). 용량 의존적 골수억제, 간독성, CNS 독성(고양이) 위험이 있으며 정기적인 모니터링 필수.",
+    "indications": "크립토콕쿠스증(CNS 포함), 칸디다증, 아스페르길루스증, 피부/피하 크로모블라스토마이코시스. 모두 오프라벨(수의과 승인 제품 없음). 반드시 다른 항진균제와 병용 사용.",
+    "client_info": "이 약은 반드시 다른 항진균제와 함께 사용해야 합니다. 구토가 발생하면 소량의 음식과 함께 투여하세요. 비정상적인 출혈, 멍, 창백함 등 혈액 독성 증상이 나타나면 즉시 수의사에게 알리세요. 개에서 음낭, 코 주변의 피부 변화(탈색, 궤양, 삼출)가 나타나면 즉시 투약을 중단하고 수의사에게 연락하세요. 임신 중인 보호자는 이 약을 취급할 때 주의하세요(실험동물에서 기형 유발이 보고됨). 치료 기간이 수개월에 달할 수 있으며, 정기적인 혈액검사 및 신장·간 기능 검사가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (cat-specific half-life)",
+      "Pharmacokinetics (onset_min, t_max_hr, f_percent)",
+      "CYP profile",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:10:02.926454+00:00",
+    "reviewer": null
+  }
+}

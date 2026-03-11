@@ -1,0 +1,436 @@
+{
+  "id": "bisacodyl",
+  "drug_identity": {
+    "name_ko": "비사코딜",
+    "name_en": "Bisacodyl",
+    "active_ingredient": "Bisacodyl",
+    "brand_names": [
+      "Dulcolax"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 인체용 제품을 개와 고양이에 비허가(extra-label)로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "장내 또는 세균 효소에 의해 활성 대사체(desacetyl 대사체)로 전환되며, 대변으로 배설됨. 경구 또는 직장 투여 후 흡수는 최소한임."
+    },
+    "extra_information": "경구 투여 후 작용 발현은 6~10시간, 직장 투여 후 15분~1시간. 흡수가 매우 적어 전신 노출이 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "흡수가 최소한이므로 전신 장기 부담이 낮음. 주로 장관 내 국소 작용. 과량 투여 시 전해질 불균형 가능성 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "전신 흡수가 거의 없어 뇌에 대한 직접적 영향 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "electrolyte imbalance"
+        ],
+        "index": -1,
+        "evidence": "과량 투여 시 수분 및 전해질 불균형 가능성이 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음. 흡수 최소."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "전신 흡수가 거의 없어 뇌에 대한 직접적 영향 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "electrolyte imbalance"
+        ],
+        "index": -1,
+        "evidence": "과량 투여 시 수분 및 전해질 불균형 가능성이 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 언급 없음. 흡수 최소."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 360,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 작용 발현 6~10시간(360~600분), 직장 투여 후 15~60분. 반감기 데이터 없음(흡수 최소)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids (Aluminum-, Calcium-, or Magnesium-Containing) / Milk",
+      "severity": 2,
+      "keywords": [
+        "enteric coating dissolution",
+        "reduced efficacy"
+      ],
+      "evidence": "Antacids or milk given within 1 hour of bisacodyl tablets may cause premature disintegration of the enteric coating, resulting in diminished therapeutic effect and potential GI irritation."
+    },
+    {
+      "drug": "Oral Medications (general)",
+      "severity": 1,
+      "keywords": [
+        "decreased GI transit time",
+        "reduced absorption"
+      ],
+      "evidence": "Stimulant laxatives may decrease GI transit time, potentially reducing absorption of concurrently administered oral medications. Separate doses by 2 hours if possible."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "완하제 (Cathartic) - 소형견 (extra-label)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 사용만 권장; 장기 사용 시 장신경총 손상 가능",
+          "evidence": "Anecdotally, one 5 mg tablet/small dog (NOT tablet/kg) PO once daily."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "완하제 (Cathartic) - 중대형견 (extra-label)",
+          "value": "5 - 15",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 사용만 권장; 장기 사용 시 장신경총 손상 가능",
+          "evidence": "Anecdotally, one to three 5 mg tablets (5–15 mg)/dog (NOT tablets/kg) PO once daily for medium to large dogs."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "완하제 (Cathartic) - 고양이 (extra-label)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 사용만 권장; 장기 사용 시 장신경총 손상 가능",
+          "evidence": "Anecdotally, one 5 mg tablet/cat (NOT tablet/kg) PO once daily."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "흡수가 최소한이므로 신장 용량 조절에 대한 구체적 언급 없음. 탈수 환자에서는 주의 사용 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 용량 조절에 대한 언급 없음. 흡수가 최소한이므로 간 대사 영향 미미."
+  },
+  "contraindications": [
+    {
+      "condition": "GI obstruction",
+      "match_terms": [
+        "intestinal obstruction",
+        "GI obstruction",
+        "bowel obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Undiagnosed rectal bleeding",
+      "match_terms": [
+        "rectal bleeding",
+        "hematochezia",
+        "undiagnosed GI bleeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Risk of intestinal perforation",
+      "match_terms": [
+        "intestinal perforation",
+        "GI perforation risk"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Hypersensitivity to bisacodyl",
+      "match_terms": [
+        "bisacodyl hypersensitivity",
+        "bisacodyl allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Dehydration",
+      "match_terms": [
+        "dehydration",
+        "hypovolemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Infiltrative bowel disease",
+      "match_terms": [
+        "inflammatory bowel disease",
+        "IBD",
+        "infiltrative bowel disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Acute GI conditions",
+      "match_terms": [
+        "acute gastroenteritis",
+        "acute abdomen",
+        "acute GI condition"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "장관 평활근의 벽내 신경총을 직접 자극하여 연동운동을 증가시키는 자극성 완하제. 결장 내 수분 및 이온 축적을 증가시켜 배변을 촉진함.",
+    "common_extra_effects": [
+      "복부 불편감 (경련)",
+      "오심",
+      "설사",
+      "과량 투여 시 심한 경련, 구토, 수분·전해질 불균형"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 비허가(extra-label)로 사용되는 자극성 완하제. 소형견은 5mg 1정, 중대형견은 5~15mg(1~3정)을 1일 1회 경구 투여. 정제를 분쇄하거나 쪼개지 말 것. 대장내시경 준비 시 폴리에틸렌글리콜(PEG) 전해질 용액보다 효과가 낮을 수 있음.",
+    "cat": "고양이에서 비허가(extra-label)로 사용되는 자극성 완하제. 5mg 1정을 1일 1회 경구 투여(체중 기준 아님). 정제를 분쇄하거나 쪼개지 말 것. 단기 사용만 권장하며 장기 사용 시 장신경총 손상 위험이 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "탈수, 침윤성 장질환, 급성 위장관 질환 환자에서 주의 사용. 장기 사용 시 장신경총 손상 가능. GI 폐색, 직장 출혈, 장 천공 위험 시 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "탈수, 침윤성 장질환, 급성 위장관 질환 환자에서 주의 사용. 장기 사용 시 장신경총 손상 가능. GI 폐색, 직장 출혈, 장 천공 위험 시 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 미만에서 보관하고 습기로부터 보호. 좌약, 관장제, 장용정 모두 동일 조건 적용.",
+    "forms": [
+      "Bisacodyl 장용정 5mg (Dulcolax®, generic) - OTC",
+      "Bisacodyl 직장 좌약 10mg (Dulcolax®, generic) - OTC",
+      "Bisacodyl 직장 관장제 10mg/30mL - OTC"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "비사코딜은 개와 고양이에서 단기 변비 치료에 사용되는 자극성 완하제입니다. 수의과 허가 제품은 없으며 인체용 제품을 비허가로 사용합니다. 장용정을 분쇄하거나 쪼개면 안 되며, 투여 1시간 이내에 제산제나 유제품을 함께 주지 않아야 합니다. 장기 사용은 장신경총 손상을 유발할 수 있으므로 단기 사용만 권장됩니다.",
+    "indications": "개와 고양이의 변비 완화(비허가 사용). 대장내시경 전처치(개, 비허가 사용 - 단, PEG 전해질 용액보다 효과 낮을 수 있음).",
+    "client_info": "이 약은 개와 고양이의 변비 치료에 사용되는 자극성 완하제입니다. 정제를 씹거나 부수거나 쪼개지 마세요. 설사, 복통, 경련이 나타날 수 있습니다. 경구 정제 투여 1시간 이내에 유제품(우유 등)이나 액상 제산제를 주지 마세요. 다른 경구 약물을 함께 투여하는 경우 비사코딜과 2시간 간격을 두고 투여하세요. 비사코딜은 가끔씩만 사용해야 하며, 장기적·규칙적 사용은 장에 손상을 줄 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "CYP profile",
+      "Half-life data",
+      "Protein binding",
+      "Oral bioavailability",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.t_max_hr",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/50.jsonl",
+    "extracted_at": "2026-03-11T04:46:58.251348+00:00",
+    "reviewer": null
+  }
+}

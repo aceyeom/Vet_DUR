@@ -1,0 +1,491 @@
+{
+  "id": "flumazenil",
+  "drug_identity": {
+    "name_ko": "플루마제닐",
+    "name_en": "Flumazenil",
+    "active_ingredient": "Flumazenil",
+    "brand_names": [
+      "Romazicon",
+      "Anexate",
+      "Fadaflumaz",
+      "Flumage",
+      "Flumanovag",
+      "Flumazen",
+      "Fluxifarm",
+      "Lanexat"
+    ],
+    "allergy_class": null,
+    "class": "Reversal Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 제제를 동물에 오프라벨로 사용. 개/고양이에서 벤조디아제핀 역전 목적으로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 거의 완전히 대사됨. 간기능 저하 시 반감기 연장. 구체적인 CYP 효소 경로는 본 모노그래프에 명시되지 않음."
+    },
+    "extra_information": "개/고양이에 대한 종별 약동학 데이터는 모노그래프에 명시되지 않음. 인체 데이터 기준 평균 반감기 약 1시간. IV 투여 후 1~2분 이내에 치료 효과 발현."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개/고양이 종별 수의학적 PK 데이터 부재; 인체 및 개 이상반응 보고 기반으로 평가.",
+    "dog": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "seizures",
+          "opisthotonos",
+          "howling",
+          "shivering",
+          "CNS effects",
+          "cerebral blood flow"
+        ],
+        "index": 1,
+        "evidence": "고용량(0.08–0.16 mg/kg)에서 경련, 후궁반장, 울부짖음, 떨림 등 CNS 이상반응 보고. 두부 외상 환자에서 뇌혈류 변화 및 경련 유발 가능성 경고."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "cutaneous vasodilatation"
+        ],
+        "index": 2,
+        "evidence": "인체 및 실험적 개 연구에서 심장 부정맥 보고. 피부 혈관확장 이상반응 보고."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 관련 이상반응 또는 신독성에 대한 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "liver dysfunction",
+          "prolonged half-life"
+        ],
+        "index": 3,
+        "evidence": "간에서 거의 완전히 대사됨. 간기능 저하 시 반감기 연장 및 경련 위험 증가. 중증 간장애 환자에서 경련 위험 높음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "sudden death"
+        ],
+        "index": 4,
+        "evidence": "인체 및 실험적 개 연구에서 심장 부정맥 및 급사 보고. 루틴 사용 비권장 근거."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "seizures",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "개/고양이 동일 용량 권고. 고양이 특이적 CNS 데이터는 없으나 벤조디아제핀 수용체 길항 기전상 CNS 영향 가능."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac arrhythmias"
+        ],
+        "index": 2,
+        "evidence": "고양이 특이적 데이터 없음. 인체 데이터 기반 심장 부정맥 위험 추정."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 관련 이상반응 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "liver dysfunction"
+        ],
+        "index": 3,
+        "evidence": "간 대사 약물로 간기능 저하 시 반감기 연장 가능. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac arrhythmias"
+        ],
+        "index": 4,
+        "evidence": "고양이 특이적 데이터 없음. 인체 데이터 기반 심장 부정맥 위험 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 1~2분 이내 치료 효과 발현. 인체 평균 반감기 약 1시간. 간기능 저하 시 반감기 연장. 개/고양이 종별 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Cyclic (Tricyclic/Tetracyclic) Antidepressants (e.g., clomipramine, amitriptyline)",
+      "severity": 3,
+      "keywords": [
+        "seizures",
+        "cardiac dysrhythmias",
+        "contraindicated in overdose"
+      ],
+      "evidence": "Cyclic antidepressant overdose 환자에서 flumazenil 사용 시 경련 및 심장 부정맥 위험 증가. 삼환계 항우울제 과다복용 치료 중 사용 금기."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "incomplete reversal"
+      ],
+      "evidence": "신경근 차단이 완전히 역전되기 전 flumazenil 사용 비권장."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "벤조디아제핀 효과 또는 독성(호흡억제 등) 역전, 이미다조피리딘계 수면제(졸피뎀 등) 독성 역전 (오프라벨)",
+          "value": "0.01 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "낮은 용량(0.01 mg/kg)부터 시작하여 진정 역전까지 반복 투여. 최고 용량에서도 역전 반응 없으면 다른 원인 평가.",
+          "evidence": "오프라벨. 대부분의 문헌에서 초기 용량 0.01–0.2 mg/kg IV(또는 IO) 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "틸레타민/졸라제팜 마취 역전 (오프라벨)",
+          "value": "0.04 - 0.06",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.06,
+          "duration_note": "틸레타민 효과는 역전되지 않으므로 지속적 모니터링 필요.",
+          "evidence": "오프라벨. 틸레타민/졸라제팜 마취 역전 목적."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "벤조디아제핀 효과 또는 독성(호흡억제 등) 역전, 이미다조피리딘계 수면제(졸피뎀 등) 독성 역전 (오프라벨)",
+          "value": "0.01 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "낮은 용량(0.01 mg/kg)부터 시작하여 진정 역전까지 반복 투여.",
+          "evidence": "오프라벨. 개/고양이 동일 용량 권고."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하에 따른 용량 조정 권고 없음. 주로 간 대사 약물."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 시 반감기 연장. 경련 위험 증가. 구체적 용량 조정 권고는 명시되지 않았으나 모니터링 강화 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "플루마제닐 또는 벤조디아제핀 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to benzodiazepine",
+        "allergy to flumazenil"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생명을 위협하는 상태(간질 지속증, 두개내압 상승)에서 벤조디아제핀 치료 중",
+      "match_terms": [
+        "status epilepticus",
+        "increased intracranial pressure",
+        "ICP"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "삼환계 항우울제 과다복용 치료 중",
+      "match_terms": [
+        "tricyclic antidepressant overdose",
+        "cyclic antidepressant overdose",
+        "clomipramine overdose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부 외상",
+      "match_terms": [
+        "head trauma",
+        "traumatic brain injury"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혼합 과다복용(특히 삼환계 항우울제 포함)",
+      "match_terms": [
+        "mixed overdose",
+        "polypharmacy overdose"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간기능 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "바클로펜 또는 카리소프로돌 과다복용",
+      "match_terms": [
+        "baclofen overdose",
+        "carisoprodol overdose"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중(태아 위험 가능성)",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "GABAA 수용체의 벤조디아제핀 결합 부위에서 경쟁적 중립 길항제로 작용. 벤조디아제핀의 진정 및 기억상실 효과를 길항함.",
+    "common_extra_effects": [
+      "구토",
+      "피부 혈관확장",
+      "부정맥",
+      "어지럼증",
+      "초조",
+      "근긴장도 증가",
+      "운동실조",
+      "시야 흐림",
+      "주사 부위 반응",
+      "경련(고위험군)"
+    ],
+    "dog_mechanism": "벤조디아제핀 수용체 경쟁적 길항. 틸레타민/졸라제팜의 졸라제팜 성분 역전 가능하나 틸레타민 효과는 역전 불가.",
+    "dog_extra_effects": [
+      "타액 분비 증가",
+      "떨림",
+      "경련",
+      "울부짖음",
+      "기침(hacking cough)",
+      "후궁반장(opisthotonos)",
+      "주사 부위 반응",
+      "구토",
+      "피부 혈관확장",
+      "어지럼증",
+      "운동실조"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 고용량(0.08–0.16 mg/kg) 사용 시 타액 분비, 떨림, 경련, 울부짖음, 기침, 후궁반장 등 심각한 이상반응 보고. 틸레타민/졸라제팜 역전 시 틸레타민 효과는 지속되므로 주의. 루틴 사용은 권장되지 않으며, 심장 부정맥, 경련, 급사 등 드물지만 심각한 이상반응 가능성 있음.",
+    "cat": "고양이에 대한 종별 특이적 데이터는 제한적. 개/고양이 동일 용량(0.01–0.2 mg/kg IV) 권고. 장시간 작용 벤조디아제핀 투여 후 재진정 가능성 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "고용량에서 CNS 이상반응(경련, 후궁반장 등) 보고. 간기능 저하, 두부 외상, 혼합 과다복용 환자에서 주의 필요. 루틴 사용 비권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이적 데이터 제한적. 재진정 가능성 및 간기능 저하 시 반감기 연장 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 보관. 15°C~30°C(59°F~86°F) 범위 허용. 주사기에 흡입하거나 용액과 혼합 후 24시간 이내 사용.",
+    "forms": [
+      "Flumazenil Injection 0.1 mg/mL (5 mL vial)",
+      "Flumazenil Injection 0.1 mg/mL (10 mL vial)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루마제닐은 GABAA 수용체의 벤조디아제핀 결합 부위에서 경쟁적 길항제로 작용하는 벤조디아제핀 역전제입니다. 수의과 승인 제품은 없으며 인체용 제제를 오프라벨로 사용합니다. IV 투여 후 1~2분 이내 효과 발현. 반감기가 짧아(인체 기준 약 1시간) 장시간 작용 벤조디아제핀 투여 후 재진정 가능성에 주의해야 합니다. 고용량에서 경련, 후궁반장 등 심각한 CNS 이상반응 가능. 삼환계 항우울제 과다복용 치료 중 사용 금기.",
+    "indications": "벤조디아제핀 진정/마취 프로토콜의 이상반응 역전 또는 신속 회복이 필요한 경우(오프라벨). 벤조디아제핀 과다복용 관리. 졸피뎀 등 비벤조디아제핀 벤조디아제핀 수용체 작용제 과다복용. 틸레타민/졸라제팜 마취 역전(개). 말에서 다중 마취 프로토콜의 미다졸람 성분 역전.",
+    "client_info": "이 약물은 동물병원에서 특정 진정제의 효과를 역전시키기 위해 투여됩니다. 플루마제닐 투여 후 진정 효과가 다시 나타날 수 있으므로 귀가 후에도 반려동물의 상태를 주의 깊게 관찰하십시오. 이상 증상(과도한 졸음, 비틀거림, 경련 등)이 나타나면 즉시 동물병원에 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "dosage_and_kinetics.cat (cat-specific PK data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:13:38.927744+00:00",
+    "reviewer": null
+  }
+}

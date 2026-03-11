@@ -1,0 +1,401 @@
+{
+  "id": "ertapenem",
+  "drug_identity": {
+    "name_ko": "에르타페넴",
+    "name_en": "Ertapenem",
+    "active_ingredient": "Ertapenem",
+    "brand_names": [
+      "Invanz"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 다제내성 감염에 한해 감염병 전문가 자문 후 사용 고려. 경험적 사용 지양.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "에르타페넴의 생체변환은 간 기전에 의존하지 않으며, 주요 대사산물(비활성)은 베타-락탐 고리의 가수분해에 의해 형성됨. IV 투여량의 약 80%가 소변으로 배설(비활성 대사산물과 미변화 약물이 거의 동등하게 분배), 약 10%는 대변으로 배설됨(인체 데이터)."
+    },
+    "extra_information": "개와 고양이에 대한 약동학 데이터는 발표된 바 없음. 일화적으로 개와 고양이의 약동학이 인체에서 관찰된 값과 유사하지 않다고 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개/고양이 수의학적 PK 데이터 없음; 인체 데이터 및 약리학적 추론에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizures",
+          "hallucinations",
+          "agitation",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "인체에서 드물게 환각, 흥분, 경련 등 CNS 이상반응이 보고됨. 개에서의 발생률은 불명확."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hematopoietic function monitoring"
+        ],
+        "index": 1,
+        "evidence": "인체에서 장기 투여 시 조혈 기능 모니터링 권장. 개에서의 직접적 혈액독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal function monitoring",
+          "80% urine excretion"
+        ],
+        "index": 2,
+        "evidence": "IV 투여량의 약 80%가 신장으로 배설됨. 인체에서 장기 투여 시 신기능 검사 권장. 신부전 시 아미노글리코사이드 대안으로 사용 고려됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic function monitoring"
+        ],
+        "index": 1,
+        "evidence": "인체에서 장기 투여 시 간기능 검사 권장. 간 대사 의존성은 낮으나 모니터링 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "인체에서 빈맥이 간헐적으로 보고됨. 직접적 심장독성 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizures",
+          "hallucinations",
+          "agitation",
+          "CNS effects"
+        ],
+        "index": 1,
+        "evidence": "인체에서 드물게 CNS 이상반응 보고. 고양이에서의 발생률 불명확."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hematopoietic function monitoring"
+        ],
+        "index": 1,
+        "evidence": "인체에서 장기 투여 시 조혈 기능 모니터링 권장. 고양이에서의 직접적 혈액독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal function monitoring",
+          "80% urine excretion"
+        ],
+        "index": 2,
+        "evidence": "IV 투여량의 약 80%가 신장으로 배설됨. 고양이에서의 직접적 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic function monitoring"
+        ],
+        "index": 1,
+        "evidence": "인체에서 장기 투여 시 간기능 검사 권장. 고양이에서의 직접적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 1,
+        "evidence": "인체에서 빈맥이 간헐적으로 보고됨. 고양이에서의 직접적 심장독성 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.3,
+    "half_life_hr": {
+      "min": 2.5,
+      "max": 4.0,
+      "mean": 3.25,
+      "species": "human"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 95,
+    "evidence": "인체 데이터: IM 생체이용률 약 90%, 최고 혈장 농도 도달 시간 약 2.3시간. 혈장 단백 결합은 농도 의존적(100 µg/mL 미만 시 95%, 300 µg/mL 시 85%). 성인 반감기 약 4시간, 소아 약 2.5시간. 개/고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "AUC increase",
+        "half-life extension",
+        "renal tubular secretion inhibition"
+      ],
+      "evidence": "Probenecid 병용 시 ertapenem AUC 약 25% 증가, 소실 반감기 약 20% 연장. 효과가 비교적 작아 제조사는 반감기 연장 목적의 probenecid 사용을 권장하지 않음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 확인된 감염증 (허가 외 사용) — 다른 모든 치료 옵션에 내성이 확인된 경우에 한함",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고; 허가 외 사용. 감염병 전문가 자문 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 확인된 감염증 (허가 외 사용) — 다른 모든 치료 옵션에 내성이 확인된 경우에 한함",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고; 허가 외 사용. 감염병 전문가 자문 필수."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 확인된 감염증 (허가 외 사용) — 다른 모든 치료 옵션에 내성이 확인된 경우에 한함",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고; 허가 외 사용. 감염병 전문가 자문 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 확인된 감염증 (허가 외 사용) — 다른 모든 치료 옵션에 내성이 확인된 경우에 한함",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고; 허가 외 사용. 감염병 전문가 자문 필수."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "개/고양이에서 신기능 저하 시 용량 조정에 대한 구체적 지침 없음. 인체에서는 신기능 저하 시 용량 감량 권장. 장기 투여 시 신기능 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "에르타페넴의 생체변환은 간 기전에 의존하지 않으므로 간기능 저하 시 용량 조정이 필요하지 않을 것으로 예상됨. 그러나 장기 투여 시 간기능 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "에르타페넴 또는 다른 카르바페넴에 과민반응",
+      "match_terms": [
+        "carbapenem hypersensitivity",
+        "ertapenem allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제 투여 후 아나필락시스 병력",
+      "match_terms": [
+        "beta-lactam anaphylaxis",
+        "penicillin anaphylaxis",
+        "cephalosporin anaphylaxis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "리도카인 또는 아미드형 국소마취제에 과민반응 (IM 투여 시)",
+      "match_terms": [
+        "lidocaine hypersensitivity",
+        "amide local anesthetic allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 세포벽 합성 억제 (베타-락탐계). 시간 의존적 살균 작용. 신장 디하이드로펩티다제 I에 안정적이어서 실라스타틴 병용 불필요.",
+    "common_extra_effects": [
+      "주사 부위 반응 (IV)",
+      "설사",
+      "오심",
+      "구토",
+      "두통",
+      "빈맥",
+      "과민반응",
+      "CNS 이상반응 (환각, 흥분, 경련) — 드물게"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서의 이상반응 프로파일은 알려져 있지 않음. 수의학에서 사용은 조사적(investigational)으로 간주해야 함. 다제내성 그람음성균 감염, 특히 아미노글리코사이드 사용이 위험한 경우(예: 신부전) 또는 효과가 없는 경우(예: 내성, CNS 감염)에 유용할 수 있음. Pseudomonas aeruginosa에는 효과 없음.",
+    "cat": "고양이에서의 이상반응 프로파일은 알려져 있지 않음. 수의학에서 사용은 조사적(investigational)으로 간주해야 함. 일화적으로 개와 고양이의 약동학이 인체 값과 유사하지 않다고 보고됨. 감염병 전문가 자문 후 사용 고려."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의학에서 사용 경험 제한적. 조사적 사용으로 간주. 감염병 전문가 자문 필수. 경험적 사용 지양. 가능하면 메로페넴 또는 이미페넴 우선 고려."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "수의학에서 사용 경험 제한적. 조사적 사용으로 간주. 감염병 전문가 자문 필수. 경험적 사용 지양. 가능하면 메로페넴 또는 이미페넴 우선 고려."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미재조합 바이알은 25°C(77°F) 이하에서 보관. 재조합 후 0.9% 생리식염수로 희석 시 실온에서 6시간 안정. 냉장 보관 시 24시간 보관 가능하며 냉장고에서 꺼낸 후 4시간 이내 사용. 재조합 용액 동결 금지.",
+    "forms": [
+      "Ertapenem Sodium 동결건조 주사용 분말 1 g (단회용 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에르타페넴은 이미페넴, 메로페넴과 유사한 카르바페넴계 항생제이나 Pseudomonas spp. 및 Acinetobacter spp.에는 효과가 없음. 수의학에서 사용은 매우 제한적이며 조사적으로 간주해야 함. WHO 지정 인체의학 최우선 중요 항균제로, 수의학에서의 사용은 논란이 있음. 반드시 감염병 전문가 자문 후, 배양 및 감수성 검사로 다른 모든 치료 옵션에 내성이 확인된 경우에만 사용해야 함.",
+    "indications": "다제내성 그람음성균 감염(허가 외 사용): 배양 및 감수성 검사에서 다른 모든 치료 옵션에 내성이 확인된 경우. 아미노글리코사이드 사용이 위험하거나 효과 없는 경우(신부전, 내성, CNS 감염). 혼합 혐기성 및 그람음성 호기성 감염(Pseudomonas spp.가 주요 병원체가 아닌 경우). 경험적 사용 금지.",
+    "client_info": "이 약은 정맥(IV, 병원에서만 시행) 또는 피하(SC)로 주사해야 합니다. 수의사 또는 약사가 주사에 필요한 모든 용품(바늘, 주사기, 희석액 등)을 제공합니다. 투여 전 약을 혼합해야 하는 경우 수의사 또는 약사의 지시에 따라 정확히 혼합하십시오. 주사 방법, 용량, 주사 부위를 정확히 숙지하십시오. 주사 시 따끔거릴 수 있으며, 동물이 너무 힘들어하면 수의사에게 통증 완화 방법을 문의하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 35,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics (dog/cat)",
+      "Renal dose adjustment (veterinary)",
+      "Hepatic dose adjustment (veterinary)",
+      "Genetic sensitivity data",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction (dog/cat)",
+      "organ_burden_logic.dog (veterinary-specific)",
+      "organ_burden_logic.cat (veterinary-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T18:14:17.130676+00:00",
+    "reviewer": null
+  }
+}

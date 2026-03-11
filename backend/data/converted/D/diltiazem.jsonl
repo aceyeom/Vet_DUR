@@ -1,0 +1,823 @@
+{
+  "id": "diltiazem",
+  "drug_identity": {
+    "name_ko": "딜티아젬",
+    "name_en": "Diltiazem",
+    "active_ingredient": "Diltiazem hydrochloride",
+    "brand_names": [
+      "Cardizem",
+      "Cardizem CD",
+      "Cardizem LA",
+      "Cartia XT",
+      "Dilacor XR",
+      "Dilt-XR",
+      "Taztia XT",
+      "Tiazac"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 인체용 제품을 동물에게 적응증 외(extra-label)로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "value": 240,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 360,
+        "unit": "mg"
+      },
+      {
+        "value": 420,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "딜티아젬은 간에서 신속하고 거의 완전하게 대사되며, 일부 활성 대사체를 포함한 여러 대사체로 전환된다. 인체에서 경구 투여 후 장에서 약 80%가 흡수되나 높은 초회통과효과로 인해 흡수된 약물의 약 절반만 전신 순환에 도달한다."
+    },
+    "extra_information": "개: 정제 형태의 생체이용률은 약 25%이며, 분포용적은 약 8 L/kg, 혈청 단백 결합률은 약 97%, 소실 반감기는 약 2~4시간(최대 8시간 보고됨), 경구 즉시방출정 투여 후 최고 혈장 농도 도달 시간은 약 3시간이다. 고양이: 즉시방출정의 생체이용률은 50~80%, 경구 투여 후 최고 농도 도달 시간은 약 45분, 단백 결합률은 약 50%, 반감기는 약 1~2시간이다. 서방형 제품(Cardizem CD, 10 mg/kg PO 1일 1회)의 경우 생체이용률 22~59%, 최고 농도 도달 시간 4~8시간, 단백 결합률 약 40%, 반감기 약 7시간이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 각 장기에 대한 이상반응, 금기사항, 약동학 정보를 근거로 점수를 부여함. 수의학 종별 특이적 PK 데이터가 일부 존재하나 장기 부담 점수는 임상 보고 기반임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS effects",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "과용량 시 CNS 억제 및 CNS 이상반응이 보고됨. 권장 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "hypotension",
+          "heart failure"
+        ],
+        "index": 2,
+        "evidence": "서맥, AV 차단, 저혈압, 심부전이 이상반응 및 과용량 시 나타날 수 있음. 심장 전도에 직접적인 영향을 미침."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "신장 장애 환자에서 주의 사용 권고. 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "liver metabolism",
+          "elevations in liver function tests",
+          "hepatic impairment"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 간기능 검사 수치 상승이 이상반응으로 보고됨. 간 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "AV block",
+          "bradycardia",
+          "negative inotropic",
+          "heart failure",
+          "sinus node dysfunction"
+        ],
+        "index": 3,
+        "evidence": "AV 전도 억제, 음성 변력 효과, 서맥, 심부전 악화 가능성. 동결절 기능 이상 환자에서 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CNS effects",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "서방형 펠렛(60 mg) 투여 고양이의 36%에서 무기력증이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "서맥, AV 차단, 저혈압이 이상반응으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "신장 장애 환자에서 주의 사용 권고. 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "liver metabolism",
+          "elevations in liver function tests",
+          "hepatic impairment"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 간기능 검사 수치 상승 가능. 간 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "AV block",
+          "bradycardia",
+          "negative inotropic",
+          "heart failure",
+          "hypertrophic cardiomyopathy"
+        ],
+        "index": 3,
+        "evidence": "AV 전도 억제, 음성 변력 효과. 비후성 심근병증 치료에 역사적으로 사용되었으나 최근 전문가 패널은 권고하지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 4.0,
+      "mean": 3.0,
+      "species": "dog"
+    },
+    "f_percent": 25,
+    "protein_binding_percent": 97,
+    "evidence": "개: 즉시방출정 생체이용률 약 25%, 단백 결합률 약 97%, 반감기 약 2~4시간(최대 8시간), Tmax 약 3시간. 고양이: 즉시방출정 생체이용률 50~80%, 반감기 약 1~2시간, Tmax 약 45분, 단백 결합률 약 50%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "bradycardia",
+        "AV block",
+        "sinus arrest"
+      ],
+      "evidence": "Concurrent use may result in bradycardia, atrioventricular (AV) block, or sinus arrest."
+    },
+    {
+      "drug": "General Anesthetics (e.g., isoflurane, propofol)",
+      "severity": 2,
+      "keywords": [
+        "cardiac depression",
+        "negative inotropic"
+      ],
+      "evidence": "May increase cardiac depressant effects of diltiazem."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., fluconazole, ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased diltiazem exposure",
+        "toxicity"
+      ],
+      "evidence": "Concurrent use may increase diltiazem exposure and risk for toxicity."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "increased benzodiazepine concentration"
+      ],
+      "evidence": "Diltiazem may increase benzodiazepine concentrations."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (e.g., atenolol, esmolol, propranolol)",
+      "severity": 3,
+      "keywords": [
+        "bradycardia",
+        "AV block",
+        "congestive heart failure",
+        "increased propranolol bioavailability"
+      ],
+      "evidence": "Diltiazem may increase the likelihood of bradycardia, AV block, or congestive heart failure; may substantially increase bioavailability of propranolol. Includes ophthalmic beta-blockers (e.g., timolol)."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "increased buspirone concentration"
+      ],
+      "evidence": "Diltiazem may increase buspirone concentrations."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "increased cannabidiol concentration"
+      ],
+      "evidence": "Diltiazem may increase cannabidiol concentration."
+    },
+    {
+      "drug": "Clonidine",
+      "severity": 2,
+      "keywords": [
+        "bradycardia"
+      ],
+      "evidence": "Increased risk for bradycardia with concurrent use."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "decreased antiplatelet effect",
+        "thrombotic events"
+      ],
+      "evidence": "Concurrent use may result in decreased antiplatelet effects and increased risk for thrombotic events."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased diltiazem concentration"
+      ],
+      "evidence": "Cimetidine may increase plasma diltiazem concentrations; increased monitoring warranted."
+    },
+    {
+      "drug": "Ranitidine",
+      "severity": 1,
+      "keywords": [
+        "increased diltiazem concentration"
+      ],
+      "evidence": "Ranitidine may also affect diltiazem concentrations but to a lesser extent than cimetidine."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine concentration"
+      ],
+      "evidence": "Diltiazem may increase serum cyclosporine concentrations; increased monitoring and dosage adjustments may be required."
+    },
+    {
+      "drug": "Dexamethasone",
+      "severity": 2,
+      "keywords": [
+        "increased dexamethasone concentration",
+        "adrenal suppression"
+      ],
+      "evidence": "Concurrent use may result in increased plasma dexamethasone concentrations and enhanced adrenal-suppressant effects."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "altered digoxin pharmacokinetics"
+      ],
+      "evidence": "Data conflict regarding whether diltiazem affects digoxin pharmacokinetics; diligent monitoring of serum digoxin concentrations should be performed."
+    },
+    {
+      "drug": "Macrolide Antibiotics (e.g., clarithromycin, erythromycin)",
+      "severity": 3,
+      "keywords": [
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may result in an increased risk for cardiotoxicity."
+    },
+    {
+      "drug": "Methylprednisolone",
+      "severity": 2,
+      "keywords": [
+        "increased methylprednisolone concentration",
+        "adrenal suppression"
+      ],
+      "evidence": "Concurrent use may result in increased plasma methylprednisolone concentrations and enhanced adrenal-suppressant effects."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, fentanyl, hydrocodone, morphine, methadone)",
+      "severity": 2,
+      "keywords": [
+        "increased opioid exposure",
+        "prolonged opioid effects"
+      ],
+      "evidence": "Concurrent use may increase opioid exposure and risk for increased or prolonged effects."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "increased quinidine concentration"
+      ],
+      "evidence": "Diltiazem may increase serum quinidine concentrations; increased monitoring and dosage adjustments may be required."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased diltiazem concentration"
+      ],
+      "evidence": "Rifampin may decrease diltiazem concentrations."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 2,
+      "keywords": [
+        "increased tacrolimus trough concentration",
+        "tacrolimus toxicity"
+      ],
+      "evidence": "Concurrent use may increase tacrolimus trough concentrations and risk for tacrolimus toxicity."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration",
+        "theophylline toxicity"
+      ],
+      "evidence": "Concurrent use may result in increased serum theophylline concentrations and risk for theophylline toxicity."
+    },
+    {
+      "drug": "Vincristine",
+      "severity": 2,
+      "keywords": [
+        "increased vincristine concentration"
+      ],
+      "evidence": "Concurrent use may increase plasma vincristine concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 상심실성 빈맥 치료 (IV 볼루스 옵션 A)",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.1,
+          "duration_note": "2분에 걸쳐 투여; 5분 간격으로 최대 2회 반복 가능",
+          "evidence": "Extra-label; adapted from multiple sources"
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "급성 상심실성 빈맥 치료 (IV 볼루스 옵션 B)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "2~5분에 걸쳐 투여; 필요 시 총 0.5 mg/kg까지 신중하게 증량 가능",
+          "evidence": "Extra-label; adapted from multiple sources"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 상심실성 빈맥 재발 시 지속 정맥 주입 (CRI)",
+          "value": "2 - 6",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 투여가 가능해질 때까지 사용",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "max_capped",
+          "context": "급성 상심실성 빈맥 경구 전환 요법",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "초회 0.5 mg/kg 투여 후 매 1시간마다 0.25 mg/kg; 전환 또는 총 경구 용량 1.5~2 mg/kg 도달 시까지",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "상심실성 빈맥 만성 치료 (즉시방출정)",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "초기 1 mg/kg q8h로 시작하여 최대 3 mg/kg q8h까지 적정; 심한 심근부전 또는 심각한 심장 기능 저하 환자에서는 2.5 mg/kg q8h 초과 투여 지양",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "심방세동 관련 심실 박동수 조절 (즉시방출정)",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 상향 적정; 적절한 심실 박동수 조절을 위해 총 일일 용량 7~9 mg/kg이 필요한 경우가 많음",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "심방세동 관련 심실 박동수 조절 (서방형 제품)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 신중하게 상향 적정; 총 일일 용량은 즉시방출정과 유사하나 1일 2회 분할 투여",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심방세동 심실 박동수 조절 - 딜티아젬 서방형 + 디곡신 병용",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "디곡신(0.003~0.006 mg/kg PO q12h)과 병용 시 단독 투여보다 효과적인 심실 박동수 감소",
+          "evidence": "Extra-label; combination study referenced"
+        },
+        {
+          "logic_type": "linear",
+          "context": "심방세동 심실 박동수 조절 - 딜티아젬 즉시방출정 + 디곡신 병용",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "디곡신(0.003~0.006 mg/kg PO q12h)과 병용",
+          "evidence": "Extra-label; combination study referenced"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "급성 상심실성 빈맥 치료 (IV)",
+          "value": "0.125 - 0.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.75,
+          "duration_note": "2분에 걸쳐 투여; 정상 동율동으로 전환 또는 누적 용량 0.75 mg/kg 도달 시까지 15분 간격으로 추가 볼루스 투여",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비후성 심근병증 보조 치료 / 상심실성 빈맥 (즉시방출정)",
+          "value": "7.5 - 15",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/cat 기준 (mg/kg 아님); 1일 2~3회 투여",
+          "evidence": "Extra-label; dosage evidence not strong"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비후성 심근병증 보조 치료 / 상심실성 빈맥 (서방형 제품)",
+          "value": "30 - 45",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/cat 기준 (mg/kg 아님); 1일 1회 투여",
+          "evidence": "Extra-label; dosage evidence not strong"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 장애 환자에서 주의 사용이 권고되나, 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 장애 환자에서 주의 사용이 권고됨. 딜티아젬은 간에서 광범위하게 대사되므로 간 기능 저하 시 노출이 증가할 수 있으나, 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "diltiazem hypersensitivity",
+        "calcium channel blocker allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 저혈압",
+      "match_terms": [
+        "severe hypotension",
+        "systolic BP < 90 mmHg"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": 90.0,
+        "unit": "mmHg"
+      }
+    },
+    {
+      "condition": "동결절 기능 이상 (병적 동성 서맥 증후군)",
+      "match_terms": [
+        "sick sinus syndrome",
+        "sinus node dysfunction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고도 방실 차단 (인공 심박조율기 미설치 시)",
+      "match_terms": [
+        "high-grade AV block",
+        "complete heart block",
+        "third-degree AV block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "방사선학적으로 확인된 폐울혈 또는 폐부종",
+      "match_terms": [
+        "pulmonary congestion",
+        "pulmonary edema"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전 (특히 베타차단제 병용 시)",
+      "match_terms": [
+        "heart failure",
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "노령 환자",
+      "match_terms": [
+        "geriatric",
+        "senior",
+        "elderly"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "벤조티아제핀계 칼슘 채널 차단제(Class IV 항부정맥제). 심장 및 혈관 평활근 세포로의 세포외 칼슘 이온 유입을 억제하여 방실결절 전도를 늦추고 불응기를 연장시킴. 주로 결절 세포에 작용하며 약한 음성 변력 효과를 나타냄.",
+    "common_extra_effects": [
+      "무기력증(lethargy)",
+      "위장관 장애(GI disturbances: 식욕부진, 구토, 설사)",
+      "체중 감소",
+      "저혈압",
+      "방실 차단(AV block)",
+      "서맥(bradycardia)",
+      "기타 부정맥",
+      "CNS 이상반응",
+      "피부 발진",
+      "간기능 검사 수치 상승"
+    ],
+    "dog_mechanism": "방실결절 전도 억제, PQ 간격 연장, 불응기 연장을 통해 상심실성 빈맥의 심실 박동수를 조절함.",
+    "dog_extra_effects": [
+      "서맥",
+      "저혈압",
+      "AV 차단",
+      "CNS 억제(과용량 시)",
+      "위장관 증상(과용량 시)"
+    ],
+    "cat_mechanism": "방실결절 전도 억제를 통한 상심실성 빈맥 조절; 비후성 심근병증에서의 이완 개선 목적으로 역사적으로 사용되었으나 현재는 권고되지 않음.",
+    "cat_extra_effects": [
+      "무기력증(서방형 펠렛 투여 고양이의 36%에서 보고)",
+      "위장관 장애(식욕부진)",
+      "체중 감소(2~6개월 치료 후)",
+      "서맥",
+      "저혈압",
+      "AV 차단"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 딜티아젬은 상심실성 빈맥(SVT) 및 심방세동의 심실 박동수 조절에 사용된다(extra-label). 즉시방출정의 생체이용률은 약 25%로 낮으며, 반감기는 2~4시간이다. 디곡신과 병용 시 심방세동에서 단독 투여보다 효과적인 심실 박동수 감소 효과가 보고되었다. 심한 심근부전 환자에서는 2.5 mg/kg q8h 초과 투여를 지양한다. 서방형 제품의 약동학 데이터는 제한적이다.",
+    "cat": "고양이에서 딜티아젬은 급성 SVT 치료 및 비후성 심근병증(HCM) 보조 치료에 역사적으로 사용되었으나, 최근 전문가 합의 패널은 고양이 심근병증에서의 사용을 권고하지 않는다. 즉시방출정의 생체이용률은 50~80%로 개보다 높으며, 반감기는 1~2시간이다. 서방형 펠렛(60 mg) 투여 시 36%의 고양이에서 무기력증, 위장관 장애, 체중 감소가 보고되었다. 고양이에서 용량은 mg/cat 단위로 처방하며 mg/kg 단위를 사용하지 않는다. 서방형 캡슐 사용 시 코팅 비드로 제조된 복합 캡슐 또는 60 mg 펠렛의 절반 사용이 권장된다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 또는 간 기능 장애, 심부전(특히 베타차단제 병용 시), 노령 환자에서 주의 사용. 동결절 기능 이상, 고도 AV 차단, 중증 저혈압, 폐울혈 환자에서는 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "서방형 펠렛 투여 시 무기력증, 위장관 장애, 체중 감소 발생 가능(36%). 신장 또는 간 기능 장애, 심부전 환자에서 주의 사용. 최근 전문가 패널은 고양이 심근병증에서의 사용을 권고하지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제품: 실온, 밀폐 차광 용기에 보관. 주사용 분말: 15~30°C 보관, 재조제 후 24시간 내 사용. 주사액: 2~8°C 냉장 보관; 실온에서 최대 1개월 보관 가능하나 30일 후 폐기; 동결 금지.",
+    "forms": [
+      "즉시방출정 (30 mg, 60 mg, 90 mg, 120 mg)",
+      "서방형 정제/캡슐 (60 mg, 90 mg, 120 mg, 180 mg, 240 mg, 300 mg, 360 mg, 420 mg)",
+      "주사액 (5 mg/mL, 5 mL/10 mL/25 mL 바이알)",
+      "주사용 분말 (25 mg 단회용 용기)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "딜티아젬은 벤조티아제핀계 칼슘 채널 차단제(Class IV 항부정맥제)로, 개·고양이·페럿에서 상심실성 빈맥(SVT) 및 심방세동의 심실 박동수 조절에 사용된다. 수의학적으로 승인된 제품은 없으며 모두 extra-label 사용이다. 서방형 제품은 즉시방출형과 상호 교환 불가하며, 제형별 용량 지침을 명확히 따라야 한다. 고양이에서 비후성 심근병증 치료 목적의 사용은 최근 전문가 패널에 의해 권고되지 않는다. 베타차단제, 아미오다론, 마크로라이드 항생제 등과의 병용 시 심각한 상호작용 가능성에 주의해야 한다.",
+    "indications": "【승인 적응증】 없음 (수의학적 승인 제품 없음)\n【Extra-label 적응증】\n- 개: 상심실성 빈맥(SVT), 심방세동의 심실 박동수 조절, 전신성/폐동맥 고혈압 보조 치료(3차 선택)\n- 고양이: 급성 SVT, 비후성 심근병증 보조 치료(역사적 사용; 현재 권고 약화), 전신성/폐동맥 고혈압 보조 치료\n- 페럿: 비후성 심근병증\n- 말: 심방세동 중 심실 박동수 조절(퀴니딘 치료 보조)\n- 소형 포유류(토끼, 설치류): SVT",
+    "client_info": "【보호자 안내사항】\n- 딜티아젬은 반려동물의 심장 리듬 이상(부정맥) 치료에 사용되며, 고양이와 페럿에서는 심근 질환 치료에도 사용됩니다.\n- 모든 용량을 빠짐없이 투여하는 것이 중요합니다. 투여를 건너뛰지 마세요.\n- 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함을 보이면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요.\n- 흔한 부작용으로는 구토(특히 고양이), 식욕 저하, 설사, 심박수 감소 등이 있습니다.\n- 정기적인 추적 검사(심박수, 심전도, 혈압 모니터링)가 필요합니다. 예약된 검진을 빠지지 마세요.\n- 서방형 캡슐은 개봉하여 일부 내용물만 투여해야 할 수 있습니다. 수의사의 지시를 정확히 따르세요. 예: '캡슐을 열어 60 mg 펠렛 1개만 투여'와 같이 명확한 지시를 따르세요.\n- 다른 약물(특히 심장약, 항진균제, 항생제)을 함께 복용 중이라면 반드시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (detailed lab thresholds)",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "CYP enzyme profile (veterinary-specific)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/13.jsonl",
+    "extracted_at": "2026-03-10T17:11:40.705409+00:00",
+    "reviewer": null
+  }
+}

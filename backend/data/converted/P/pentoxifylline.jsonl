@@ -1,0 +1,561 @@
+{
+  "id": "pentoxifylline",
+  "drug_identity": {
+    "name_ko": "펜톡시필린",
+    "name_en": "Pentoxifylline",
+    "active_ingredient": "Pentoxifylline",
+    "brand_names": [
+      "Trental",
+      "Pentoxil"
+    ],
+    "allergy_class": "xanthine",
+    "class": "Immunosuppressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 400mg 서방정(Rx)을 동물에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 400,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간 및 적혈구에서 대사되며, 확인된 모든 대사체는 활성형으로 알려져 있음. 대사체는 소변으로 배설됨. CYP 관련 정보는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개: 생체이용률 약 50%, 최고 혈중 농도 도달 시간 약 1~3시간, 모체 화합물 반감기 약 6~7시간, 활성 대사체 1의 반감기 약 36시간, 활성 대사체 2의 반감기 약 8시간. 인체: 위장관 흡수는 빠르고 거의 완전하나 초회 통과 효과가 현저함. 반감기 약 1~2시간(약물 및 대사체)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 특이적 수의학 PK 데이터 제한적. 부작용 및 금기 사항 텍스트에서 추출.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS excitement",
+          "nervousness",
+          "seizures (overdose)"
+        ],
+        "index": 1,
+        "evidence": "개에서 CNS 부작용(흥분, 신경과민)이 보고됨. 과다복용 시 경련 가능."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bleeding risk",
+          "anticoagulant interaction",
+          "platelet aggregation inhibition",
+          "fibrinolytic activity"
+        ],
+        "index": 1,
+        "evidence": "출혈 위험 증가, 항응고제·혈소판 응집 억제제와 병용 시 출혈 위험 상승. 섬유소 용해 활성 증가 기전."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "dose-reduce"
+        ],
+        "index": 1,
+        "evidence": "신장 장애 환자에서 주의 사용 및 용량 감량 권고. 대사체 신장 배설."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment caution",
+          "dose-reduce",
+          "liver metabolism"
+        ],
+        "index": 1,
+        "evidence": "간 장애 환자에서 주의 사용 및 용량 감량 권고. 간에서 대사됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular adverse effects",
+          "ECG changes (overdose)"
+        ],
+        "index": 1,
+        "evidence": "심혈관 부작용이 드물게 보고됨. 과다복용 시 ECG 변화 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS excitement",
+          "nervousness"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 CNS 부작용(흥분, 신경과민)이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "bleeding risk",
+          "fibrinolytic activity"
+        ],
+        "index": 1,
+        "evidence": "출혈 위험 증가 기전은 개와 동일하게 적용됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal impairment caution"
+        ],
+        "index": 1,
+        "evidence": "신장 장애 시 주의 사용 권고. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment caution"
+        ],
+        "index": 1,
+        "evidence": "간 장애 시 주의 사용 권고. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiovascular adverse effects"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 심혈관 부작용에 대한 직접적 언급 없음. 인체 데이터 기반 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 7.0,
+      "mean": 6.5,
+      "species": "dog"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": null,
+    "evidence": "개: 생체이용률 약 50%, 최고 혈중 농도 도달 시간 약 1~3시간(중간값 2시간), 모체 반감기 약 6~7시간. 활성 대사체 1 반감기 36시간, 활성 대사체 2 반감기 8시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (e.g., rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "hemorrhage"
+      ],
+      "evidence": "Pentoxifylline used with anticoagulants may increase risk for bleeding; enhanced monitoring and caution required."
+    },
+    {
+      "drug": "Antihypertensive Drugs (e.g., amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive hypotensive effect"
+      ],
+      "evidence": "Pentoxifylline may increase hypotensive effect of antihypertensive drugs."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentration",
+        "PK interaction"
+      ],
+      "evidence": "Cimetidine may increase pentoxifylline plasma concentration."
+    },
+    {
+      "drug": "Fluoroquinolones (e.g., ciprofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentration",
+        "PK interaction"
+      ],
+      "evidence": "Fluoroquinolones may increase pentoxifylline plasma concentration."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia"
+      ],
+      "evidence": "Concurrent use with insulin may increase risk of hypoglycemia."
+    },
+    {
+      "drug": "Macrolides (e.g., clarithromycin, erythromycin; not azithromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentration",
+        "PK interaction"
+      ],
+      "evidence": "Macrolides (clarithromycin, erythromycin but not azithromycin) may increase pentoxifylline plasma concentration."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "controversial efficacy in horses"
+      ],
+      "evidence": "Concurrent use may increase risk for bleeding. In horses, use with NSAIDs is controversial regarding efficacy in endotoxemia."
+    },
+    {
+      "drug": "Platelet-Aggregation Inhibitors (e.g., aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "platelet inhibition"
+      ],
+      "evidence": "Concurrent use with platelet-aggregation inhibitors increases risk for bleeding."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration",
+        "xanthine toxicity"
+      ],
+      "evidence": "Theophylline serum concentration may be increased when used concurrently with pentoxifylline."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "염증성/자가면역성 피부 질환 (오프라벨)",
+          "value": "10 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": null,
+          "evidence": "10–30 mg/kg PO every 8 to 12 hours; typically 15–20 mg/kg PO every 8 to 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "염증성/자가면역성 피부 질환 (오프라벨) - 일반적 용량",
+          "value": "15 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "Typically 15–20 mg/kg PO every 8 to 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "대칭성 루포이드 조갑이영양증 (오프라벨)",
+          "value": "15 - 25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 25.0,
+          "duration_note": null,
+          "evidence": "15–25 mg/kg PO every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "허혈성 피부병증 (오프라벨)",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": null,
+          "evidence": "15 mg/kg PO every 8 hours to 30 mg/kg PO every 12 hours; one open label study used 25 mg/kg PO every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "혈관염 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": null,
+          "evidence": "10–15 mg/kg PO every 12 hours"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "염증성 피부 질환 (오프라벨)",
+          "value": "100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/cat (체중 기준 아님)",
+          "evidence": "100 mg/cat (NOT mg/kg) PO every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부 혈관염 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": null,
+          "evidence": "10–15 mg/kg PO every 12 hours"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "심한 신장 장애 환자에서 용량 감량 권고. 구체적인 크레아티닌 기준치 또는 감량 비율은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "심한 간 장애 환자에서 용량 감량 또는 회피 권고. 구체적인 ALT 기준치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "망막 출혈",
+      "match_terms": [
+        "retinal hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "뇌출혈",
+      "match_terms": [
+        "cerebral hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "잔틴계 약물(테오필린, 카페인, 테오브로민) 과민증",
+      "match_terms": [
+        "xanthine hypersensitivity",
+        "theophylline intolerance",
+        "caffeine intolerance"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 신장 장애",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심한 간 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "출혈 위험 환자",
+      "match_terms": [
+        "hemorrhage risk",
+        "recent surgery",
+        "GI ulceration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "적혈구 인산디에스테라제 억제를 통한 적혈구 유연성 증가, 프로스타사이클린 합성 촉진·혈장 피브리노겐 감소·콜라겐 합성 감소·섬유소 용해 활성 증가를 통한 혈액 점도 감소, 백혈구 변형능 증가, 호중구 부착 및 활성화 억제, TNF-α 억제를 통한 미세순환 개선 및 면역조절 효과.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "묽은 변",
+      "흥분",
+      "신경과민",
+      "출혈 위험 증가",
+      "어지러움(인체)",
+      "두통(인체)",
+      "심혈관 부작용(드물게)"
+    ],
+    "dog_mechanism": "건강한 개에서 비만세포 탈과립 억제 및 피내 IgE 특이 항체 주사 부위의 피부 염증세포(특히 호산구) 수 유의하게 감소시킴. 후기 반응 억제, 즉각 반응에는 영향 없음.",
+    "dog_extra_effects": [
+      "구토",
+      "식욕부진",
+      "묽은 변",
+      "흥분",
+      "신경과민"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "구토",
+      "식욕부진",
+      "흥분",
+      "신경과민"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 일반적으로 내약성이 좋음. 서방정 분할은 가능하나 분쇄는 피해야 함(과흥분, 설사 위험). 효과 발현까지 수 주가 소요될 수 있음. 피부 면역매개 질환, 혈관염, 허혈성 피부병증 등 다양한 적응증에 오프라벨로 사용됨. 출혈 위험이 있는 환자(최근 수술, 위장관 궤양)에서는 PCV 등 출혈 징후 모니터링 권장.",
+    "cat": "고양이에서의 경험은 제한적임. 염증성 피부 질환 및 피부 혈관염에 오프라벨로 사용됨. FIP 관련 혈관염에서는 효과가 입증되지 않음. 100 mg/cat(체중 기준 아님) 고정 용량 또는 10~15 mg/kg q12h 용량이 보고됨. 서방정 분쇄 사용 시 부작용(과흥분, 설사) 위험 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "출혈 위험 환자, 신장·간 장애 환자에서 주의 사용. 서방정 분쇄 금지. 피내 알레르기 검사 최소 1주 전 투약 중단 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 데이터 제한적. 신장·간 장애 시 주의. 서방정 분쇄 금지. FIP 관련 혈관염에서 효과 미입증."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 보관, 빛 차단, 20°C~25°C(68°F~77°F) 보관.",
+    "forms": [
+      "Pentoxifylline Controlled-/Extended-Release Tablets 400 mg (generic, Rx, 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "펜톡시필린은 합성 잔틴 유도체로, 적혈구 유연성 증가, 혈액 점도 감소, TNF-α 억제 등을 통해 미세순환을 개선하고 면역조절 효과를 나타냅니다. 수의학적 승인 제품은 없으며, 인체용 400mg 서방정을 오프라벨로 사용합니다. 개에서 다양한 면역매개 피부 질환, 혈관염, 허혈성 피부병증에 사용되며, 고양이에서는 경험이 제한적입니다. 효과 발현까지 수 주가 소요될 수 있으며, 출혈 위험 증가에 주의해야 합니다.",
+    "indications": "개: 면역매개 피부 질환(박리성 피부 홍반 루푸스, 천포창, 다형 홍반 등), 허혈성 피부병증(가족성 피부근염, 백신 반응 등), 혈관염, 대칭성 루포이드 조갑이영양증, 지간 종기증, 아토피 피부염 보조 치료 등 (모두 오프라벨). 고양이: 염증성 피부 질환, 피부 혈관염 (오프라벨). 말: 피부 혈관염, 태반염, 아토피 피부염, 내독소혈증 보조 치료 (오프라벨).",
+    "client_info": "이 약은 음식과 함께 투여하세요. 개에서 부작용은 흔하지 않으나 식욕 감소, 구토, 신경과민 또는 흥분이 나타날 수 있습니다. 이 약은 출혈 위험을 증가시킬 수 있으므로, 출혈 소인이 있는 동물에서는 특히 주의가 필요합니다. 효과가 나타나기까지 1~2주 이상 걸릴 수 있습니다. 서방정은 필요 시 분할할 수 있으나, 분쇄는 부작용 위험을 높이므로 가능한 한 피해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Renal elimination fraction",
+      "Specific renal/hepatic dose adjustment thresholds",
+      "Genetic sensitivity data",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/18.jsonl",
+    "extracted_at": "2026-03-10T18:48:14.688092+00:00",
+    "reviewer": null
+  }
+}

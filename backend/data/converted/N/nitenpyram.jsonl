@@ -1,0 +1,423 @@
+{
+  "id": "nitenpyram",
+  "drug_identity": {
+    "name_ko": "니텐피람",
+    "name_en": "Nitenpyram",
+    "active_ingredient": "Nitenpyram",
+    "brand_names": [
+      "Capstar",
+      "Bestguard"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 11.4,
+        "unit": "mg"
+      },
+      {
+        "value": 57,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "니텐피람은 주로 포합 대사산물(conjugated metabolites)로 소변을 통해 배설되며, 투여 후 48시간 이내에 배설이 완료된다. 개에서 약 3%, 고양이에서 약 5%가 대변으로 배설된다."
+    },
+    "extra_information": "개에서 최고 혈중 농도 도달 시간은 약 80분, 고양이에서는 약 40분이다. 소실 반감기는 개에서 약 3시간, 고양이에서 약 8시간이다. 투여 후 48시간 이내에 배설이 완료된다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 니텐피람은 포합 대사산물로 신장 배설되며, 포유류에 대한 독성은 낮다. 곤충 니코틴성 아세틸콜린 수용체에 선택적으로 작용하며 척추동물 수용체에 대한 친화성은 매우 낮다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "seizures",
+          "incoordination",
+          "trembling",
+          "nervousness"
+        ],
+        "index": 1,
+        "evidence": "과다 투여 또는 소형/어린 동물에서 경련, 운동실조, 떨림 등 신경계 이상 반응이 보고되었으나, 이는 주로 벼룩 사멸과 관련된 반응으로 약물 자체의 직접적 신경독성은 낮다."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "allergic reactions",
+          "hives"
+        ],
+        "index": 1,
+        "evidence": "두드러기 및 알레르기 반응이 드물게 보고되었으나, 혈액독성에 대한 직접적 근거는 없다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary excretion",
+          "conjugated metabolites"
+        ],
+        "index": 1,
+        "evidence": "니텐피람은 주로 포합 대사산물로 신장을 통해 배설되므로 신장이 주요 배설 기관이나, 신독성에 대한 직접적 보고는 없다."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "conjugated metabolites"
+        ],
+        "index": 1,
+        "evidence": "포합 대사산물 형성을 위해 간 대사가 관여하나, 간독성에 대한 직접적 보고는 없다."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적 독성 근거 없음. 고양이에서 심박수 증가가 보고되었으나 개에서는 해당 보고 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizures",
+          "incoordination",
+          "trembling",
+          "nervousness",
+          "hyperactivity"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 과잉행동, 발성, 운동실조, 경련, 동공 확장, 떨림 등 신경계 이상 반응이 보고되었다. 대부분 벼룩 사멸과 관련된 반응으로 자연 소실된다."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액독성에 대한 직접적 근거 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary excretion",
+          "conjugated metabolites"
+        ],
+        "index": 1,
+        "evidence": "니텐피람은 주로 포합 대사산물로 신장을 통해 배설되므로 신장이 주요 배설 기관이나, 신독성에 대한 직접적 보고는 없다."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "conjugated metabolites"
+        ],
+        "index": 1,
+        "evidence": "포합 대사산물 형성을 위해 간 대사가 관여하나, 간독성에 대한 직접적 보고는 없다."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "increased heart rate"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 심박수 증가가 이상 반응으로 보고되었다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 1.33,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 8.0,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 빠르고 거의 완전하게 흡수된다. 투여 후 30분 이내에 효과가 나타나며, 개에서 최고 혈중 농도 도달 시간은 약 80분(≈1.33시간), 고양이에서는 약 40분(≈0.67시간)이다. 소실 반감기는 개에서 약 3시간, 고양이에서 약 8시간이다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 니텐피람에 대한 특정 약물 상호작용은 확인되지 않았으며, 다양한 다른 약물 및 벼룩 제품과 안전하게 병용 사용된 것으로 보고되었다.",
+  "drug_interactions": [],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 감염 치료 (FDA 승인 용량, 체중 0.9–11.4 kg)",
+          "value": "1",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "재감염 시 1일 1회 반복 투여 가능. 11.4 mg 정제 사용 (0.9–11.4 kg)",
+          "evidence": "FDA 승인 라벨 용량. 체중 0.9–11.4 kg 개에 11.4 mg 정제 1정 경구 투여."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 감염 치료 (FDA 승인 용량, 체중 11.4–56.8 kg)",
+          "value": "1",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "재감염 시 1일 1회 반복 투여 가능. 57 mg 정제 사용 (11.4–56.8 kg)",
+          "evidence": "FDA 승인 라벨 용량. 체중 11.4–56.8 kg 개에 57 mg 정제 1정 경구 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "개 구더기증(screwworm myiasis) 치료 (비라벨 용도)",
+          "value": "1",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 투여 또는 6시간 후 2회째 투여. 체중에 따라 라벨 용량 적용.",
+          "evidence": "비라벨(extra-label) 용도. 라벨 벼룩 용량을 사용하여 1회 또는 6시간 간격으로 2회 경구 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 감염 치료 (FDA 승인 용량, 체중 0.9–11.4 kg)",
+          "value": "1",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "재감염 시 1일 1회 반복 투여 가능. 11.4 mg 정제 사용 (0.9–11.4 kg)",
+          "evidence": "FDA 승인 라벨 용량. 체중 0.9–11.4 kg 고양이에 11.4 mg 정제 1정 경구 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 시 용량 조절에 대한 구체적인 정보가 없다. 니텐피람은 주로 신장으로 배설되므로 신기능 저하 환자에서 주의가 필요할 수 있다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 기능 저하 시 용량 조절에 대한 구체적인 정보가 없다."
+  },
+  "contraindications": [
+    {
+      "condition": "체중 0.9 kg 미만",
+      "match_terms": [
+        "저체중",
+        "체중 미달",
+        "소형 동물"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 4주 미만",
+      "match_terms": [
+        "신생아",
+        "4주 미만"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 8주 미만",
+      "match_terms": [
+        "8주 미만",
+        "어린 동물"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "니오니코티노이드계 살충제로, 성충 벼룩이 혈액을 섭취한 후 전신 순환계로 흡수된다. 시냅스 후막의 니코틴성 아세틸콜린 수용체에 결합하여 아세틸콜린 매개 신경 전달을 차단함으로써 벼룩의 마비 및 사망을 유발한다. 곤충의 알파-4 베타-2 니코틴성 수용체에 대해 척추동물 수용체보다 3,500배 높은 선택성을 가진다. 아세틸콜린에스테라제를 억제하지 않는다.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕 감소",
+      "무기력/우울",
+      "과잉행동",
+      "가려움증",
+      "운동실조",
+      "떨림",
+      "경련",
+      "헐떡임",
+      "발성",
+      "타액 분비",
+      "발열",
+      "신경과민"
+    ],
+    "dog_mechanism": "성충 벼룩이 혈액 섭취 후 니텐피람을 흡수하여 신경 전달 차단으로 사망. 투여 후 4시간 이내에 90% 이상의 벼룩을 사멸시킨다.",
+    "dog_extra_effects": [
+      "무기력/우울",
+      "구토",
+      "가려움증",
+      "식욕 감소",
+      "설사",
+      "과잉행동",
+      "운동실조",
+      "떨림",
+      "경련",
+      "헐떡임",
+      "두드러기를 포함한 알레르기 반응",
+      "발성",
+      "타액 분비",
+      "발열",
+      "신경과민"
+    ],
+    "cat_mechanism": "성충 벼룩이 혈액 섭취 후 니텐피람을 흡수하여 신경 전달 차단으로 사망. 투여 후 6시간 이내에 90% 이상의 벼룩을 사멸시킨다.",
+    "cat_extra_effects": [
+      "과잉행동",
+      "헐떡임",
+      "무기력",
+      "가려움증",
+      "발성",
+      "구토",
+      "발열",
+      "식욕 감소",
+      "신경과민",
+      "설사",
+      "호흡 곤란",
+      "타액 분비",
+      "운동실조",
+      "경련",
+      "동공 확장",
+      "심박수 증가",
+      "떨림"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 투여 후 30분 이내에 효과가 나타나며, 4시간 이내에 90%의 벼룩을 사멸시킨다. 소실 반감기는 약 3시간이다. 구더기증(myiasis) 치료에도 비라벨 용도로 사용 가능하다. 체중 0.9 kg 미만, 생후 8주 미만, 또는 건강 상태가 불량한 동물에서 심각한 이상 반응 발생 빈도가 높다.",
+    "cat": "고양이에서 투여 후 30분 이내에 효과가 나타나며, 6시간 이내에 90%의 벼룩을 사멸시킨다. 소실 반감기는 약 8시간으로 개보다 길다. 고양이에서 심박수 증가, 동공 확장 등 자율신경계 관련 이상 반응이 보고되었으나 대부분 자연 소실된다. 체중 0.9 kg 미만, 생후 8주 미만, 또는 건강 상태가 불량한 동물에서 심각한 이상 반응 발생 빈도가 높다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "체중 0.9 kg 미만 또는 생후 4주 미만인 개에는 사용 금지. 생후 8주 미만인 개에는 주의하여 사용. 임신 또는 수유 중인 개에서 안전하게 사용 가능하나, 번식 동물에서는 모체의 이익이 잠재적 위험을 상회할 때만 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "체중 0.9 kg 미만 또는 생후 4주 미만인 고양이에는 사용 금지. 생후 8주 미만인 고양이에는 주의하여 사용. 임신 또는 수유 중인 고양이에서 안전하게 사용 가능하나, 번식 동물에서는 모체의 이익이 잠재적 위험을 상회할 때만 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C~25°C, 59°F~77°F)에서 보관.",
+    "forms": [
+      "니텐피람 경구 정제 11.4 mg (블리스터 팩 6정 포장)",
+      "니텐피람 경구 정제 57 mg (블리스터 팩 6정 포장)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "니텐피람(Capstar®)은 개와 고양이의 성충 벼룩(Ctenocephalides felis) 구제에 사용되는 경구 살충제이다. 투여 후 30분 이내에 효과가 나타나며, 개에서 4시간, 고양이에서 6시간 이내에 90% 이상의 벼룩을 사멸시킨다. 단독 사용 시 벼룩 알이나 미성숙 단계에는 효과가 없다. 임신 및 수유 중인 동물에서도 안전하게 사용 가능하며, 일반의약품(OTC)으로 구입 가능하다. 개의 구더기증(myiasis) 치료에도 비라벨 용도로 사용된다.",
+    "indications": "【승인 적응증】 개와 고양이의 성충 벼룩(Ctenocephalides felis) 감염 치료 (체중 0.9 kg 이상, 생후 4주 이상). 【비라벨 적응증】 개의 구더기증(screwworm myiasis, Cochliomyia hominivorax, Chrysomya bezziana 등) 치료; 파충류의 구더기증 치료.",
+    "client_info": "이 약은 주로 개와 고양이의 성충 벼룩을 사멸시키는 데 사용됩니다. 단독으로 사용할 경우 벼룩 알이나 미성숙 단계에는 효과가 없으므로, 완전한 벼룩 관리를 위해 수의사와 추가 치료 방법을 상담하십시오. 가정 내 모든 동물을 함께 치료해야 합니다. 수의사의 지시에 따라 투여하십시오. 이 약은 개와 고양이에서 일반적으로 잘 견디며, 심각한 부작용은 드뭅니다. 체중 0.9 kg 미만, 생후 8주 미만, 또는 건강 상태가 불량한 동물에서 심각한 부작용이 더 자주 발생할 수 있습니다. 어린이의 손이 닿지 않는 곳에 보관하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations",
+      "Compatibility/Compounding Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr.mean",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/28.jsonl",
+    "extracted_at": "2026-03-10T21:58:33.038272+00:00",
+    "reviewer": null
+  }
+}

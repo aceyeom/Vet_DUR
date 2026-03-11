@@ -1,0 +1,585 @@
+{
+  "id": "amikacin_systemic",
+  "drug_identity": {
+    "name_ko": "아미카신",
+    "name_en": "Amikacin",
+    "active_ingredient": "Amikacin",
+    "brand_names": [
+      "Amikin",
+      "Amiglyde-V"
+    ],
+    "allergy_class": "aminoglycoside",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아미카신은 간 대사를 거치지 않으며, 사구체 여과를 통해 거의 전량 신장으로 배설된다."
+    },
+    "extra_information": "개와 고양이에서 반감기는 0.5~2시간으로 보고됨. 분포용적은 성견·성묘에서 0.15~0.3 L/kg. 신생아 및 어린 동물에서는 세포외액 비율이 높아 분포용적이 더 클 수 있음. 신기능 저하 시 반감기가 현저히 연장됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신독성 및 이독성은 본문에 명시됨. 간독성은 드물게 보고됨. 신경근 차단 효과 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ototoxicity",
+          "eighth cranial nerve",
+          "vestibular",
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "제8뇌신경 독성(청력 손실, 전정 증상)과 신경근 차단이 보고됨. 뇌 실질 직접 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈액학적 이상이 보고되었으나 구체적 내용은 기술되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular necrosis",
+          "BUN",
+          "creatinine",
+          "proteinuria",
+          "renal tubular cells",
+          "casts",
+          "urine specific gravity"
+        ],
+        "index": 1,
+        "evidence": "신세뇨관 괴사, BUN/크레아티닌 상승, 단백뇨, 요침사 이상 등 신독성이 주요 부작용으로 명시됨. 신기능 저하 시 반감기 현저히 연장."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 간 이상이 보고되었으나 구체적 기전이나 빈도는 기술되지 않음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음. 치료 농도가 심장 조직에서 발견된다는 기술만 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "vestibular effects",
+          "ototoxicity",
+          "eighth cranial nerve",
+          "more sensitive"
+        ],
+        "index": 1,
+        "evidence": "고양이는 아미노글리코사이드의 전정 독성에 더 민감한 것으로 알려져 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 혈액학적 이상이 보고되었으나 구체적 내용은 기술되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "tubular necrosis",
+          "BUN",
+          "creatinine",
+          "proteinuria",
+          "renal tubular cells",
+          "casts"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 신독성이 주요 부작용으로 명시됨. 신기능 저하 시 반감기 현저히 연장."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic effects"
+        ],
+        "index": 1,
+        "evidence": "드물게 간 이상이 보고되었으나 구체적 기전이나 빈도는 기술되지 않음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 2.0,
+      "mean": 1.25,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 20,
+    "evidence": "IM 또는 SC 투여 후 30~60분에 최고 농도 도달. 세포외 주사(IM 또는 SC) 생체이용률 90% 이상. 단백 결합률 20% 미만. 개와 고양이에서 반감기 0.5~2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "General Anesthetics (e.g., isoflurane, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "potentiation"
+      ],
+      "evidence": "전신마취제와 병용 시 신경근 차단 효과가 증강될 수 있음."
+    },
+    {
+      "drug": "Cephalosporins",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "세팔로스포린과 병용 시 부가적 신독성 가능성이 있으나, cephaloridine 및 cephalothin에서만 잘 문서화됨. 3~4세대 세팔로스포린과의 병용은 그람음성 스펙트럼의 불필요한 중복을 초래할 수 있음."
+    },
+    {
+      "drug": "Loop Diuretics (e.g., furosemide, torsemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity",
+        "additive"
+      ],
+      "evidence": "루프 이뇨제 병용 시 신독성 또는 이독성 위험 증가."
+    },
+    {
+      "drug": "Osmotic Diuretics (e.g., mannitol)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity",
+        "additive"
+      ],
+      "evidence": "삼투성 이뇨제 병용 시 신독성 또는 이독성 위험 증가."
+    },
+    {
+      "drug": "Systemic Magnesium (e.g., magnesium sulfate)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade"
+      ],
+      "evidence": "전신 마그네슘 병용 시 신경근 차단 위험 증가."
+    },
+    {
+      "drug": "Other Nephrotoxic Drugs (e.g., amphotericin B, cisplatin, polymyxin B, vancomycin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "다른 신독성 약물과 병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (e.g., atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "potentiation"
+      ],
+      "evidence": "신경근 차단제와 병용 시 신경근 차단 효과 증강."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, firocoxib, flunixin, meloxicam, phenylbutazone, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "NSAIDs 병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Penicillins",
+      "severity": 1,
+      "keywords": [
+        "synergy",
+        "physical inactivation",
+        "in vitro inactivation"
+      ],
+      "evidence": "일부 세균에 대해 상승 효과 가능. 시험관 내 아미노글리코사이드 불활성화 가능성 있으므로 동일 주사기나 IV 백에 혼합 금지. 신부전 환자에서 생체 내 불활성화 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 및 경험적 치료 (허가 외)",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요. 신기능 현저히 저하 시(IRIS 2~3단계) 용량은 동일하게 유지하되 투여 간격 연장.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Dogs 용량 섹션 (허가 외)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "패혈증 환자 경험적 치료 (허가 외)",
+          "value": "20 - 30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Dogs 용량 섹션 (허가 외)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 및 경험적 치료 (허가 외)",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Dogs 용량 섹션 (허가 외)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 및 경험적 치료 (허가 외)",
+          "value": "15 - 30",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 30.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Dogs 용량 섹션 (허가 외)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 및 경험적 치료 (허가 외)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요. 신기능 현저히 저하 시(IRIS 2~3단계) 용량은 동일하게 유지하되 투여 간격 연장.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Cats 용량 섹션 (허가 외)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "패혈증 환자 경험적 치료 (허가 외)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Cats 용량 섹션 (허가 외)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 및 경험적 치료 (허가 외)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "SID",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Cats 용량 섹션 (허가 외)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 및 경험적 치료 (허가 외)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "신기능 및 혈중 아미카신 농도에 따라 용량 조절 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, Cats 용량 섹션 (허가 외)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 경우(예: IRIS 2~3단계), 용량은 동일하게 유지하되 투여 간격을 연장한다. 가능하면 치료적 약물 모니터링(TDM) 및 혈청 화학 검사를 주기적으로 실시하여 용량을 조절한다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "아미카신은 간 대사를 거치지 않으므로 간기능 저하에 따른 용량 조절은 일반적으로 필요하지 않다."
+  },
+  "contraindications": [
+    {
+      "condition": "아미노글리코사이드 과민증",
+      "match_terms": [
+        "aminoglycoside hypersensitivity",
+        "amikacin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "IRIS stage II",
+        "IRIS stage III"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신경근 장애 (예: 중증 근무력증)",
+      "match_terms": [
+        "myasthenia gravis",
+        "neuromuscular disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고막 손상이 확인되지 않은 외이염",
+      "match_terms": [
+        "otitis externa",
+        "ruptured tympanic membrane",
+        "perforated eardrum"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신생아 또는 노령 동물",
+      "match_terms": [
+        "neonatal",
+        "geriatric",
+        "pediatric"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Greyhound",
+      "Sight hound"
+    ],
+    "gene": null,
+    "evidence": "시각 하운드(사이트하운드)는 분포용적이 현저히 낮아 아미노글리코사이드 감량이 필요할 수 있다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "30S 리보솜 소단위에 비가역적으로 결합하여 단백질 합성을 억제하는 농도 의존성 살균 항생제.",
+    "common_extra_effects": [
+      "신독성 (세뇨관 괴사)",
+      "이독성 (제8뇌신경 독성: 청력 손실, 전정 증상)",
+      "신경근 차단",
+      "안면 부종",
+      "주사 부위 통증 및 염증",
+      "말초 신경병증",
+      "과민 반응",
+      "드물게 위장관 증상, 혈액학적 이상, 간 이상"
+    ],
+    "dog_mechanism": "30S 리보솜 소단위에 비가역적으로 결합하여 단백질 합성 억제. 농도 의존성 살균 효과 및 항생제 후 효과(PAE) 발휘.",
+    "dog_extra_effects": [
+      "신독성 (BUN, 크레아티닌 상승, 단백뇨, 요침사 이상)",
+      "이독성 (청력 손실이 더 흔함)",
+      "신경근 차단",
+      "주사 부위 통증"
+    ],
+    "cat_mechanism": "30S 리보솜 소단위에 비가역적으로 결합하여 단백질 합성 억제.",
+    "cat_extra_effects": [
+      "전정 독성에 더 민감 (두부 기울임, 안진)",
+      "신독성",
+      "이독성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 비경구 아미노글리코사이드 항생제. 15~30 mg/kg IV/IM/SC 1일 1회 투여. 패혈증 환자는 20~30 mg/kg IV로 시작 가능. 신기능 저하 시 투여 간격 연장 필요. 치료적 약물 모니터링(TDM) 및 주기적 신기능 검사 권장. 사이트하운드는 분포용적이 낮아 감량 필요.",
+    "cat": "고양이에서는 FDA 미승인(허가 외 사용). 10~15 mg/kg IV/IM/SC 1일 1회 투여. 패혈증 환자는 20 mg/kg IV로 시작 가능. 고양이는 아미노글리코사이드의 전정 독성에 더 민감하므로 주의 깊은 모니터링 필요. 신기능 저하 시 투여 간격 연장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성, 이독성, 신경근 차단 위험. 기존 신장 질환, 신생아/노령, 발열, 패혈증, 탈수 시 독성 위험 증가. 주기적 신기능 검사 및 TDM 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 아미노글리코사이드의 독성 효과에 더 민감할 수 있음. 전정 독성 위험 증가. 신독성 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C) 보관. 동결 또는 40°C 이상 온도 피할 것. 시간이 지나면 연한 노란색으로 변할 수 있으나 효능 손실을 의미하지 않음. 실온에서 최소 2년간 안정. IV 희석 후 실온 24시간, 냉장(4°C) 60일, 냉동(-15°C) 30일 안정.",
+    "forms": [
+      "Amikacin Sulfate Injection 50 mg/mL (50 mL vials) — 동물용, FDA 승인(개)",
+      "Amikacin Sulfate Intrauterine Solution 250 mg/mL (48 mL vials) — 동물용, FDA 승인(말)",
+      "Amikacin Injection 50 mg/mL — 인체용",
+      "Amikacin Injection 250 mg/mL — 인체용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아미카신은 그람음성 호기성 간균 및 포도상구균에 효과적인 비경구 아미노글리코사이드 항생제입니다. 개에서 FDA 승인. 주요 부작용은 신독성, 이독성, 신경근 차단이며, 고양이는 독성에 더 민감합니다. 1일 1회 투여가 권장되며, 신기능 모니터링이 필수적입니다. WHO 지정 인체의학 최우선 중요 항균제입니다.",
+    "indications": "심각한 그람음성균 및 다제내성 포도상구균 감염 치료. 개에서 비경구 투여 FDA 승인. 고양이, 말, 조류, 파충류 등 다양한 동물종에서 허가 외 사용. 말에서 자궁내 주입 FDA 승인(식용 목적이 아닌 말). 외이염(개, EDTA-Triz와 병용), 관절내 감염, 정맥 국소 사지 관류(IVRLP) 등에도 사용.",
+    "client_info": "이 약은 주사제로, 적절한 교육을 받은 경우 가정에서 피하 주사가 가능합니다. 그러나 치료 효과와 독성 여부를 확인하기 위해 수의사의 정기적인 모니터링이 반드시 필요합니다. 이 약을 사용하는 동안 영구적인 청력 손실과 심각한 신장 손상이 발생할 수 있습니다. 동물이 머리를 기울이거나, 소리에 반응하지 않거나, 균형을 잃거나, 식욕 저하, 무기력, 구토 증상을 보이면 즉시 수의사에게 연락하십시오. 정기 검진을 빠지지 마십시오. 식용 동물에 사용하는 것은 논란이 있으며, 잔류 기간이 길 수 있으므로 수의사와 반드시 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Specific onset time (minutes)",
+      "Exact creatinine thresholds for dose adjustment",
+      "Oral bioavailability (not applicable — parenteral only)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "organ_burden_logic.dog.heart.calculated_score",
+      "organ_burden_logic.cat.heart.calculated_score"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T05:57:54.049669+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "id": "paromomycin",
+  "drug_identity": {
+    "name_ko": "파로모마이신",
+    "name_en": "Paromomycin",
+    "active_ingredient": "Paromomycin sulfate",
+    "brand_names": [
+      "Humatin",
+      "Gabbrovet",
+      "Parofor",
+      "Parofor crypto"
+    ],
+    "allergy_class": "aminoglycoside",
+    "class": "Antiparasitic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 허가 제품 없음. 개와 고양이에서의 크립토스포리디움증 치료는 모두 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 140,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 70000,
+        "unit": "IU"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "경구 투여 시 장관에서 거의 흡수되지 않으며, 대변으로 변화 없이 배설됨. 신장 대사/배설 경로는 기술되지 않음."
+    },
+    "extra_information": "네오마이신과 유사하게 경구 투여 시 흡수가 매우 불량함. 장관 점막이 손상된 경우(궤양, 출혈 등) 전신 흡수가 증가할 수 있으며, 신생아에서도 GI 흡수가 증가함. 전신 흡수 시 신독성, 이독성, 췌장염이 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 경구 투여 시 정상 장관에서는 전신 흡수가 거의 없으나, 장관 손상 시 전신 독성 가능. 고양이에서 신기능 장애, 이독성, 실명 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "ototoxicity"
+        ],
+        "index": 1,
+        "evidence": "전신 흡수 시 이독성(청각 신경 독성) 가능성이 언급됨. 직접적인 뇌 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "nonsusceptible bacterial overgrowth"
+        ],
+        "index": 1,
+        "evidence": "장내 세균총 변화로 인한 비감수성 세균 또는 진균 과증식 가능성 언급. 직접적인 혈액 독성 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal dysfunction",
+          "impaired renal function"
+        ],
+        "index": 3,
+        "evidence": "장관 손상 시 전신 흡수로 인한 신독성 가능. 외국 라벨에서 신기능 저하 동물에 주의 권고. 수화 상태 유지 권고."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "impaired hepatic function"
+        ],
+        "index": 1,
+        "evidence": "외국 라벨에서 간기능 저하 동물에 주의 권고. 직접적인 간독성 데이터는 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "ototoxicity",
+          "blindness",
+          "head tilt"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 이독성 및 실명(안독성) 보고됨. 두부 기울임(head tilt) 증상 언급."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "nonsusceptible bacterial overgrowth"
+        ],
+        "index": 1,
+        "evidence": "장내 세균총 변화로 인한 비감수성 세균 또는 진균 과증식 가능성 언급."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal dysfunction",
+          "renal toxicity",
+          "impaired renal function"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 신기능 장애 보고됨. 일부 임상의는 독성 위험으로 인해 고양이에서 금기로 간주. 모니터링 필수."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "impaired hepatic function"
+        ],
+        "index": 1,
+        "evidence": "외국 라벨에서 간기능 저하 동물에 주의 권고. 직접적인 간독성 데이터는 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 시 흡수가 매우 불량하여 전신 약동학 데이터가 보고되지 않음. 장관 손상 시 흡수 증가 가능."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "decreased bioavailability"
+      ],
+      "evidence": "Paromomycin may reduce digoxin oral absorption, potentially decreasing therapeutic efficacy."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "decreased bioavailability"
+      ],
+      "evidence": "Paromomycin may reduce methotrexate oral absorption, potentially decreasing therapeutic efficacy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "크립토스포리디움증 (Cryptosporidiosis) - 허가 외",
+          "value": "125 - 165",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여",
+          "evidence": "125–165 mg/kg PO 하루 2회, 5일간 투여 권고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "크립토스포리디움증 (Cryptosporidiosis) - 허가 외",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여",
+          "evidence": "150 mg/kg PO 하루 1회, 5일간 투여가 일반적으로 권고됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "크립토스포리디움증 (Cryptosporidiosis) - 허가 외; 고용량 사용 시 신독성, 이독성, 실명 위험 있음. 대체 치료제(예: 아지스로마이신) 우선 고려 권고.",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "첫 7일 투여 후 독성 없이 반응 확인 시, 설사의 임상적 해소 후 1주 추가 투여",
+          "evidence": "150 mg/kg PO q12–24h. 독성 모니터링 필수."
+        },
+        {
+          "logic_type": "linear",
+          "context": "크립토스포리디움증 (Cryptosporidiosis) - 허가 외",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 투여",
+          "evidence": "150 mg/kg PO 하루 1회, 5일간 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서는 사용을 피하도록 외국 라벨에서 권고함. 경구 투여 시 정상 장관에서는 전신 흡수가 거의 없으나, 장관 손상 시 신독성 위험 증가. 투여 전 충분한 수화 상태 유지 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간기능 저하 환자에서는 사용을 피하도록 외국 라벨에서 권고함. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity to paromomycin",
+        "aminoglycoside allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "장폐색 또는 장마비",
+      "match_terms": [
+        "ileus",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "장관 궤양 또는 혈변",
+      "match_terms": [
+        "GI ulceration",
+        "blood in feces",
+        "intestinal ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (독성 위험)",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신생아 동물",
+      "match_terms": [
+        "neonate",
+        "newborn"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아미노글리코사이드계 항생제로서 세균의 30S 리보솜 소단위에 비가역적으로 결합하여 단백질 합성을 억제함. 살균성, 농도 의존적 항생제. 주요 치료 적응증은 장내 원충(Leishmania spp., Entamoeba histolytica, Cryptosporidium spp.) 감염임.",
+    "common_extra_effects": [
+      "오심(nausea)",
+      "식욕부진(inappetence)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "비감수성 세균 또는 진균 과증식",
+      "신독성(nephrotoxicity) - 전신 흡수 시",
+      "이독성(ototoxicity) - 전신 흡수 시",
+      "췌장염(pancreatitis) - 전신 흡수 시"
+    ],
+    "dog_mechanism": "경구 투여 시 장관에서 거의 흡수되지 않으며 대변으로 배설됨. 장관 내 원충에 직접 작용.",
+    "dog_extra_effects": [
+      "오심",
+      "구토",
+      "설사",
+      "장내 세균총 변화"
+    ],
+    "cat_mechanism": "경구 투여 시 장관에서 거의 흡수되지 않으나, 고양이는 독성에 더 민감할 수 있음.",
+    "cat_extra_effects": [
+      "신기능 장애(renal dysfunction)",
+      "이독성(ototoxicity)",
+      "실명(blindness)",
+      "오심",
+      "구토",
+      "설사"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 크립토스포리디움증 치료에 사용됨. 125–165 mg/kg BID 또는 150 mg/kg SID로 5일간 투여. 피부 리슈만편모충증의 국소 치료에도 사용됨. 전신 리슈만편모충증에는 메글루민 안티모니에이트와 병용하는 피하 투여 프로토콜이 있으나 심각한 부작용으로 유용성이 제한됨.",
+    "cat": "고양이에서 크립토스포리디움증 치료에 사용될 수 있으나, 고용량 사용 시 신독성, 이독성, 실명이 보고됨. 일부 임상의는 독성 위험으로 인해 고양이에서 금기로 간주함. 대체 치료제(예: 아지스로마이신)를 우선 고려하거나, 초기 감량 용량으로 시작할 것을 권고. 투여 중 신기능 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "장관 궤양이나 혈변이 있는 경우 전신 흡수 증가로 신독성, 이독성 위험. 투여 전 충분한 수화 상태 유지 권고. 신생아 강아지에서 GI 흡수 증가."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 신기능 장애, 이독성, 실명이 보고됨. 일부 임상의는 독성 위험으로 인해 금기로 간주. 사용 시 신기능 모니터링 필수이며, 대체 치료제 우선 고려 권고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C–30°C, 59°F–86°F) 보관, 밀폐 용기에 습기 차단하여 보관.",
+    "forms": [
+      "Paromomycin Sulfate Oral Capsules 250 mg (인체용, 제네릭)",
+      "Paromomycin solution 140 mg/mL (수의용, 해외 - Gabbrovet)",
+      "Paromomycin powder 70,000 IU/g (수의용, 해외 - Parofor)",
+      "Paromomycin oral solution 140 mg/mL (수의용, 해외 - Parofor crypto)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "파로모마이신은 경구 아미노글리코사이드계 항기생충제로, 주로 개와 고양이의 크립토스포리디움증 치료에 허가 외로 사용됨. 미국 내 수의용 허가 제품 없음. 경구 투여 시 정상 장관에서는 전신 흡수가 거의 없어 GI 부작용이 주된 이상반응임. 고양이에서는 신독성, 이독성, 실명이 보고되어 사용에 각별한 주의 필요. WHO 및 OIE에서 중요 항균제로 지정됨.",
+    "indications": "【허가 적응증】없음(미국 내 수의용 허가 제품 없음). 【허가 외 사용】개·고양이의 크립토스포리디움증; 개의 피부 리슈만편모충증(국소); 소, 양, 염소, 낙타과 동물, 파충류의 크립토스포리디움증. 【인체 적응증】장내 아메바증, 간성 혼수 보조 치료.",
+    "client_info": "【보호자 안내】\n• 특별한 지시가 없는 한 음식과 함께 투여하십시오.\n• 단기간 경구 투여 시 일반적으로 잘 견딥니다. 투약 중 설사가 발생하면 수의사에게 연락하십시오.\n• 드물게 장기간 사용 시 청력 손실, 신장 및 신경 손상이 발생할 수 있습니다. 청력 손실, 머리 기울임, 쇠약, 식욕 변화, 음수량 또는 배뇨 습관 변화가 관찰되면 즉시 수의사에게 연락하십시오.\n• 고양이에서는 특히 신장 기능 이상, 청력 손실, 시력 손실이 보고된 바 있으므로 투약 중 면밀한 관찰이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed pharmacokinetic parameters (half-life, Tmax, bioavailability, protein binding)",
+      "CYP enzyme interactions",
+      "Specific renal/hepatic dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/31.jsonl",
+    "extracted_at": "2026-03-10T22:46:36.939612+00:00",
+    "reviewer": null
+  }
+}

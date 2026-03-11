@@ -1,0 +1,607 @@
+{
+  "id": "cyproheptadine",
+  "drug_identity": {
+    "name_ko": "사이프로헵타딘",
+    "name_en": "Cyproheptadine",
+    "active_ingredient": "Cyproheptadine hydrochloride",
+    "brand_names": [
+      "Periactin",
+      "Ciplactin",
+      "Cyheptine",
+      "Cyprogin",
+      "Cyprono",
+      "Cyprosian",
+      "Klarivitina",
+      "Nuran",
+      "Periactine",
+      "Periactinol",
+      "Periatin",
+      "Peritol",
+      "Polytab",
+      "Practin",
+      "Preptin",
+      "Supersan",
+      "Trimetabol"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학 승인 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. ARCI 클래스 3 물질로 지정됨.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 0.4,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 거의 완전히 대사되며 대사산물은 소변으로 배설됨. 만성 신장 질환에서 배설이 감소함(인체 데이터)."
+    },
+    "extra_information": "고양이에서 반감기는 평균 약 13시간이나 개체 간 변동이 큼. 개에 대한 PK 데이터는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 고양이 반감기 13시간 데이터 존재; 개에 대한 수의학적 PK 연구 부재. 인체 데이터 및 부작용 프로파일 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "anticholinergic"
+        ],
+        "index": 1,
+        "evidence": "CNS 억제(진정) 및 항콜린 효과가 주요 부작용으로 보고됨. 개에서 과식증 유발 가능."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urine retention",
+          "renal elimination reduced"
+        ],
+        "index": 1,
+        "evidence": "소변 정체(항콜린 효과) 및 만성 신장 질환에서 배설 감소 보고(인체 데이터)."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "almost completely metabolized"
+        ],
+        "index": 1,
+        "evidence": "간에서 거의 완전히 대사됨. 간독성에 대한 직접적 언급은 없으나 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "anticholinergic"
+        ],
+        "index": 1,
+        "evidence": "항콜린 효과로 인한 빈맥 가능성. 중증 심장 질환에서 주의 요망."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "CNS depression",
+          "paradoxical hyperexcitability",
+          "sedation",
+          "anticholinergic"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 CNS 억제 및 역설적 흥분 상태(과잉 흥분) 모두 보고됨. 용량 감량 또는 투약 중단 시 해소됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urine retention",
+          "renal elimination reduced"
+        ],
+        "index": 1,
+        "evidence": "소변 정체(항콜린 효과) 및 만성 신장 질환에서 배설 감소 보고(인체 데이터)."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "almost completely metabolized"
+        ],
+        "index": 1,
+        "evidence": "간에서 거의 완전히 대사됨. 간독성에 대한 직접적 언급은 없으나 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "anticholinergic"
+        ],
+        "index": 1,
+        "evidence": "항콜린 효과로 인한 빈맥 가능성. 중증 심장 질환에서 주의 요망."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 13.0,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 경구 투여 후 잘 흡수됨. 반감기 평균 약 13시간(고양이), 개체 간 변동 큼. 분포 특성은 잘 기술되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents (e.g., amantadine, atropine, glycopyrrolate, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic",
+        "dry mucous membranes",
+        "tachycardia",
+        "urine retention"
+      ],
+      "evidence": "항콜린 효과 상가 작용 가능. 구강 건조, 빈맥, 소변 정체 등 항콜린 부작용 증가 위험."
+    },
+    {
+      "drug": "Cholinergic Agonists (e.g., pilocarpine)",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "antagonism"
+      ],
+      "evidence": "콜린성 효능제의 효능 감소 가능."
+    },
+    {
+      "drug": "CNS Depressant Agents (e.g., acepromazine, anesthetic agents, cannabidiol, diazepam, gabapentin, methocarbamol, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "sedation"
+      ],
+      "evidence": "CNS 억제 효과 상가 작용으로 진정 증가 가능."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "prolonged anticholinergic effects",
+        "intensified anticholinergic effects",
+        "contraindicated"
+      ],
+      "evidence": "항콜린 효과의 연장 및 강화. 인체에서 병용 금기로 간주됨."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 3,
+      "keywords": [
+        "antagonistic mechanism",
+        "avoid"
+      ],
+      "evidence": "사이프로헵타딘과 미르타자핀은 작용 기전이 길항적이므로 병용을 피해야 함."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, morphine)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic",
+        "additive CNS depression"
+      ],
+      "evidence": "항콜린 및/또는 CNS 억제 효과 증가 가능."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, paroxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "decreased SSRI efficacy",
+        "serotonin antagonism"
+      ],
+      "evidence": "사이프로헵타딘이 SSRI의 효능을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs; e.g., clomipramine, amitriptyline)",
+      "severity": 2,
+      "keywords": [
+        "decreased TCA efficacy"
+      ],
+      "evidence": "사이프로헵타딘이 TCA의 효능을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "decreased tramadol efficacy"
+      ],
+      "evidence": "사이프로헵타딘이 트라마돌의 효능을 감소시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "식욕 촉진제 (오프라벨)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "식욕 부진이 경미한 경우 더 낮은 빈도로 투여 가능",
+          "evidence": "오프라벨 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "세로토닌 증후군 및 독성(SSRI, TCA, 암페타민, 바클로펜 등) 관련 불쾌감의 보조 치료 (오프라벨)",
+          "value": "1.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "증상이 해소될 때까지 1~6시간마다 반복 투여 가능. 경구 투여 불가 시(심한 구토 등) 정제를 분쇄하여 생리식염수에 혼합 후 직장 투여",
+          "evidence": "오프라벨 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항히스타민제 (오프라벨)",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고용량이 효능을 개선한다는 근거 부족",
+          "evidence": "오프라벨 사용; 개에서 효능 근거 제한적"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "식욕 촉진제 (오프라벨) - 고정 용량",
+          "value": "1 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "대부분의 고양이는 1일 2회 투여 필요. 효과 발현까지 3일 소요 가능. 투약 중단 시 반동성 식욕 부진 예방을 위해 점감. 치료 전 적절한 구토 억제 및/또는 진통 치료 필요",
+          "evidence": "오프라벨 사용; mg/kg 아닌 mg/cat 단위"
+        },
+        {
+          "logic_type": "linear",
+          "context": "식욕 촉진제 (오프라벨) - 체중 기반 용량",
+          "value": "0.2 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "대부분의 고양이는 1일 2회 투여 필요",
+          "evidence": "오프라벨 사용"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항히스타민제 (오프라벨)",
+          "value": "2 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 시작 후 3~10일 내 효능 확인",
+          "evidence": "오프라벨 사용; mg/kg 아닌 mg/cat 단위"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "세로토닌 증후군 보조 치료 (오프라벨)",
+          "value": "2 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "세로토닌 증후군 임상 증상이 해소될 때까지 4~6시간마다 반복 투여 가능. 경구 투여 불가 시 정제를 분쇄하여 생리식염수에 혼합 후 직장 투여",
+          "evidence": "오프라벨 사용; mg/kg 아닌 mg/cat 단위"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "인체 데이터에서 만성 신장 질환 시 배설 감소 보고. 신장 기능 저하 환자에서 용량 조절 고려 권장되나 수의학적 구체적 기준치는 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 거의 완전히 대사되므로 간 기능 저하 시 약물 축적 가능성 있음. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "사이프로헵타딘 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to cyproheptadine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요로 폐색",
+      "match_terms": [
+        "urinary obstruction",
+        "bladder neck obstruction",
+        "urethral obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 폐색",
+      "match_terms": [
+        "GI obstruction",
+        "pyloric obstruction",
+        "pyloroduodenal obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 울혈성 심부전",
+      "match_terms": [
+        "severe CHF",
+        "congestive heart failure",
+        "severe cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄각 녹내장",
+      "match_terms": [
+        "angle-closure glaucoma",
+        "glaucoma",
+        "increased intraocular pressure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질/발작 역치 저하",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder",
+        "convulsions"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대증",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "BPH"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "H1 수용체 길항제로서 히스타민과 경쟁적으로 H1 수용체에 결합하여 히스타민 효과를 차단. 강력한 세로토닌 길항 작용, 항콜린 작용 및 칼슘 채널 차단 작용도 보유.",
+    "common_extra_effects": [
+      "CNS 억제(진정)",
+      "항콜린 효과(구강 건조, 위장관 운동 감소, 고체온증, 빈맥, 소변 정체)",
+      "과식증",
+      "저혈압(과다 복용 시)"
+    ],
+    "dog_mechanism": "H1 수용체 길항, 세로토닌 길항, 항콜린 작용",
+    "dog_extra_effects": [
+      "진정",
+      "과식증",
+      "항콜린 효과(구강 건조, 빈맥, 소변 정체, 고체온증)"
+    ],
+    "cat_mechanism": "H1 수용체 길항, 세로토닌 길항, 항콜린 작용",
+    "cat_extra_effects": [
+      "진정",
+      "역설적 흥분 상태(과잉 흥분, 발성, 방향 감각 상실)",
+      "과식증",
+      "항콜린 효과(구강 건조, 빈맥, 소변 정체, 고체온증)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 항소양증/항히스타민 효능은 제한적이며, 알레르기성 개 16마리 모두에서 소양증 개선이 없었다는 이중맹검 위약 대조 연구 결과가 있음. 세로토닌 증후군 보조 치료 및 식욕 촉진제로 오프라벨 사용 가능. 뇌하수체 의존성 부신피질 기능 항진증에 대한 효능은 입증되지 않음.",
+    "cat": "고양이에서 식욕 촉진제로 가장 많이 사용됨. 반감기 평균 약 13시간이나 개체 간 변동 큼. 역설적 흥분 상태(과잉 흥분) 발생 가능하며 용량 감량 또는 투약 중단 시 해소됨. 세로토닌 증후군 보조 치료에 유용. 호산구성 기도 염증 및 천식에 대한 단독 요법은 효과 없음. 투약 중단 시 반동성 식욕 부진 예방을 위해 점감 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 항히스타민 효능 제한적. 발작 역치 저하 가능성(동물 모델에서 항경련제 효능 감소 보고). 요로/위장관 폐색, 중증 심장 질환, 녹내장 환자에서 주의 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "역설적 흥분 상태 발생 가능. 간 기능 저하 시 약물 축적 가능성. 투약 중단 시 반동성 식욕 부진 예방을 위해 점감 필요. 간 지방증 관리에는 권장되지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 보관. 경구 시럽(용액) 동결 금지.",
+    "forms": [
+      "Cyproheptadine HCl 경구 정제 4mg (제네릭, Rx)",
+      "Cyproheptadine HCl 경구 시럽 2mg/5mL (0.4mg/mL), 473mL (제네릭, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "사이프로헵타딘은 1세대 항히스타민제로 H1 수용체 길항 작용 외에 강력한 세로토닌 길항 작용을 보유합니다. 고양이에서 식욕 촉진제로 주로 사용되며, 소동물의 세로토닌 증후군 보조 치료에 유용합니다. 말에서는 광선 두부 진탕 및 뇌하수체 중간부 기능 장애(PPID) 보조 치료에 사용됩니다. 개와 고양이에서 항소양증/항히스타민 효능은 제한적입니다. 수의학 승인 제품은 없으며 모두 오프라벨 사용입니다.",
+    "indications": "【고양이】식욕 촉진(오프라벨), 세로토닌 증후군 보조 치료(오프라벨), 항히스타민(오프라벨, 효능 제한적), 수컷 고양이 소변 스프레이(오프라벨) 【개】세로토닌 증후군 및 관련 독성(SSRI, TCA, 바클로펜 등) 보조 치료(오프라벨), 식욕 촉진(오프라벨), 항히스타민(오프라벨, 효능 매우 제한적) 【말】광선 두부 진탕(오프라벨), 난치성 PPID 보조 치료(오프라벨)",
+    "client_info": "사이프로헵타딘은 항히스타민제로 식욕 촉진제 또는 특정 독성 치료에도 사용될 수 있습니다. 알레르기 반응에 사용할 경우 알레르겐 노출 전에 미리 투여하면 더 효과적입니다. 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편감이 있으면 다음 투여 시 소량의 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하세요. 졸음(기면)을 유발할 수 있으며 시간이 지나면 줄어들 수 있습니다. 고양이는 이 약을 복용할 때 과도하게 흥분할 수 있습니다. 이 경우 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed PK data for dogs",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability percentage",
+      "Tmax data",
+      "Onset of action data",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/37.jsonl",
+    "extracted_at": "2026-03-11T00:41:35.193667+00:00",
+    "reviewer": null
+  }
+}

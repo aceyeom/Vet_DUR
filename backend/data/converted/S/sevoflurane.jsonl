@@ -1,0 +1,643 @@
+{
+  "id": "sevoflurane",
+  "drug_identity": {
+    "name_ko": "세보플루란",
+    "name_en": "Sevoflurane",
+    "active_ingredient": "Sevoflurane",
+    "brand_names": [
+      "SevoFlo",
+      "Ultane",
+      "Sevocris",
+      "Sevorane",
+      "Petrem",
+      "Sojourn"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "ml/kg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.0,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2E1"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "약 3~5%가 간에서 사이토크롬 P450 2E1 동위효소에 의해 대사되며, 나머지 대부분은 폐를 통해 배설된다."
+    },
+    "extra_information": "세보플루란은 혈액-가스 분배계수(0.6)가 낮아 혈액 내 소량만으로도 폐포 분압과 동맥 분압이 평형을 이루며, 폐에서 빠르게 제거된다. 혈장 단백 결합률은 알려져 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 세보플루란은 주로 폐를 통해 배설되며, 소량(3~5%)만 간에서 대사된다. 신독성 대사산물(Compound A, 불화물)이 생성될 수 있으나 임상적 유의성은 낮다고 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "CNS depression",
+          "increased cerebral blood flow",
+          "MAC"
+        ],
+        "index": 1,
+        "evidence": "세보플루란은 뇌혈류 증가 및 CNS 억제를 유발하며, 두개내압 상승 환자에서 주의가 필요하다."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "vasodilation"
+        ],
+        "index": 2,
+        "evidence": "저혈압 및 혈관확장이 보고되었으나 주요 혈액독성은 없다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "compound A",
+          "nephrotoxic",
+          "fluoride",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "Compound A 및 불화물 생성으로 이론적 신독성이 있으나, 개와 사람에서 임상적 신독성은 입증되지 않았다. 신부전 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CYP2E1 metabolism",
+          "liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "3~5%가 간에서 CYP2E1에 의해 대사되며, 흡입마취제는 일시적인 간효소 상승을 유발할 수 있다."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "myocardial depression",
+          "hypotension",
+          "cardiodepression",
+          "arrhythmia"
+        ],
+        "index": 5,
+        "evidence": "심근억제 및 저혈압이 용량 의존적으로 발생할 수 있으며, 교감신경흥분제와 병용 시 부정맥 위험이 있다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "CNS depression",
+          "increased cerebral blood flow",
+          "MAC"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 뇌혈류 증가 및 CNS 억제가 유발된다. MAC은 2.6~3.4%로 개보다 높다."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "vasodilation"
+        ],
+        "index": 2,
+        "evidence": "저혈압 및 혈관확장이 보고되었으나 주요 혈액독성은 없다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "compound A",
+          "nephrotoxic",
+          "fluoride",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "Compound A 및 불화물 생성으로 이론적 신독성이 있으나 임상적 유의성은 낮다. 신부전 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CYP2E1 metabolism",
+          "liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "3~5%가 간에서 CYP2E1에 의해 대사되며, 흡입마취제는 일시적인 간효소 상승을 유발할 수 있다."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "myocardial depression",
+          "hypotension",
+          "cardiodepression"
+        ],
+        "index": 5,
+        "evidence": "심근억제 및 저혈압이 용량 의존적으로 발생할 수 있다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 3,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "혈액-가스 분배계수 0.6으로 매우 낮아 마취 유도 및 회복이 빠르다. 외과적 마취는 3~14분 내에 달성된다. 혈장 단백 결합률은 알려져 있지 않다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade"
+      ],
+      "evidence": "Aminoglycosides may enhance neuromuscular blockade when used with sevoflurane."
+    },
+    {
+      "drug": "Lincosamides",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade"
+      ],
+      "evidence": "Lincosamides may enhance neuromuscular blockade when used with sevoflurane."
+    },
+    {
+      "drug": "Barbiturates (phenobarbital, pentobarbital)",
+      "severity": 2,
+      "keywords": [
+        "inorganic fluoride",
+        "nephrotoxicity"
+      ],
+      "evidence": "Barbiturates may increase concentrations of inorganic fluoride when used with sevoflurane."
+    },
+    {
+      "drug": "Dexmedetomidine",
+      "severity": 2,
+      "keywords": [
+        "MAC reduction",
+        "potentiation"
+      ],
+      "evidence": "Dexmedetomidine may potentiate sevoflurane effects and decrease MAC."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "inorganic fluoride",
+        "nephrotoxicity"
+      ],
+      "evidence": "Isoniazid may increase concentrations of inorganic fluoride when used with sevoflurane."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction"
+      ],
+      "evidence": "Ketamine may decrease MAC requirements for sevoflurane."
+    },
+    {
+      "drug": "Lidocaine (IV)",
+      "severity": 2,
+      "keywords": [
+        "MAC reduction"
+      ],
+      "evidence": "IV lidocaine can significantly reduce MAC in horses and dogs when used with sevoflurane."
+    },
+    {
+      "drug": "Methimazole",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "prolonged recovery"
+      ],
+      "evidence": "Methimazole may decrease the metabolism of sevoflurane and prolong recovery."
+    },
+    {
+      "drug": "Midazolam",
+      "severity": 2,
+      "keywords": [
+        "MAC reduction",
+        "potentiation"
+      ],
+      "evidence": "Midazolam may potentiate sevoflurane effects and decrease MAC."
+    },
+    {
+      "drug": "Nondepolarizing Neuromuscular Blocking Agents (atracurium, pancuronium, vecuronium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "additive"
+      ],
+      "evidence": "Additive neuromuscular blockade may occur when nondepolarizing NMBAs are used with sevoflurane."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "MAC reduction",
+        "potentiation"
+      ],
+      "evidence": "Opioids may potentiate sevoflurane effects and decrease MAC."
+    },
+    {
+      "drug": "Propofol (IV CRI)",
+      "severity": 2,
+      "keywords": [
+        "MAC reduction",
+        "dose-dependent"
+      ],
+      "evidence": "IV propofol CRI can significantly reduce MAC in dogs in a dose-dependent manner."
+    },
+    {
+      "drug": "QT Prolonging Agents (amiodarone, cisapride, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Concurrent use with QT prolonging agents may increase the risk for arrhythmias with sevoflurane."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "prolonged recovery"
+      ],
+      "evidence": "Sildenafil may decrease the metabolism of sevoflurane and prolong recovery."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 3,
+      "keywords": [
+        "anesthetic complications"
+      ],
+      "evidence": "St. John's Wort increases risk for anesthetic complications; recommend discontinuing 5 days before surgery."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "enhanced effects",
+        "neuromuscular blockade"
+      ],
+      "evidence": "Sevoflurane may enhance the effects of succinylcholine."
+    },
+    {
+      "drug": "Sympathomimetics (dopamine, epinephrine, norepinephrine, ephedrine, metaraminol)",
+      "severity": 2,
+      "keywords": [
+        "myocardial sensitization",
+        "arrhythmia"
+      ],
+      "evidence": "Sevoflurane sensitizes the myocardium to sympathomimetics less than halothane, but arrhythmias may still result; caution and monitoring advised."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 1,
+      "keywords": [
+        "MAC reduction"
+      ],
+      "evidence": "Tramadol may decrease MAC requirements for sevoflurane."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "cardiovascular depression"
+      ],
+      "evidence": "Verapamil may cause cardiovascular depression when used with sevoflurane."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "마스크 유도 마취 (FDA 승인 라벨)",
+          "value": "up to 7",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~14분 내 외과적 마취 달성; 의식 소실 즉시 농도 감소",
+          "evidence": "FDA 승인 라벨: 건강한 개에서 마스크 유도 시 최대 7% 세보플루란 사용"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "마취 유지 (전처치 없음, FDA 승인 라벨)",
+          "value": "3.7 - 4",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "전처치 없는 건강한 개에서 유지 농도",
+          "evidence": "FDA 승인 라벨: 전처치 없이 3.7~4% 유지"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "마취 유지 (전처치 있음, FDA 승인 라벨)",
+          "value": "3.3 - 3.6",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "전처치 있는 건강한 개에서 유지 농도",
+          "evidence": "FDA 승인 라벨: 전처치 있을 때 3.3~3.6% 유지"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "마스크 유도 마취 (비라벨 사용)",
+          "value": "4 - 4.5",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "비재호흡 시스템 사용; 의식 소실 즉시 농도 감소",
+          "evidence": "비라벨: 마스크 유도 시 약 4~4.5%로 시작"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "챔버 유도 마취 (비라벨 사용)",
+          "value": "8",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "챔버 내 농도가 높은 수준에 도달하는 데 시간이 걸림; 의식 소실 즉시 챔버에서 꺼낼 것",
+          "evidence": "비라벨: 챔버 유도 시 기화기 최대 농도(8%) 사용 가능"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "마취 유지 (원형 시스템, 비라벨 사용)",
+          "value": "3",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "주사제 잔류 효과 및 환자 상태에 따라 조정",
+          "evidence": "비라벨: 원형 시스템에서 3% 기화기 설정이 합리적인 초기 농도"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "마스크 유도 마취 (비라벨 사용)",
+          "value": "4 - 4.5",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "비재호흡 시스템 사용; 의식 소실 즉시 농도 감소",
+          "evidence": "비라벨: 고양이 마스크 유도 시 약 4~4.5%로 시작"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "챔버 유도 마취 (비라벨 사용)",
+          "value": "8",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "의식 소실 즉시 챔버에서 꺼낼 것",
+          "evidence": "비라벨: 챔버 유도 시 기화기 최대 농도(8%) 사용 가능"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "마취 유지 (원형 시스템, 비라벨 사용)",
+          "value": "3",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "주사제 잔류 효과 및 환자 상태에 따라 조정",
+          "evidence": "비라벨: 원형 시스템에서 3% 기화기 설정이 합리적인 초기 농도"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "최소폐포농도(MAC) 참고값",
+          "value": "2.6 - 3.4",
+          "unit": "%",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "평균 MAC 3.08% ± 0.4% (범위 2.5~3.95%)",
+          "evidence": "후향적 연구 검토: 고양이 세보플루란 평균 MAC 3.08%"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 주의 사용 권고. Compound A 및 불화물 생성으로 인한 이론적 신독성이 있으나 임상적 유의성은 낮다. CO2 흡수제를 정기적으로 교체하고 산소 유량을 500 mL/분 이상으로 유지해야 한다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "흡입마취제는 일시적인 간효소 상승을 유발할 수 있다. 간질환 환자에서 특별한 용량 조정 지침은 명시되어 있지 않으나 모니터링이 권장된다."
+  },
+  "contraindications": [
+    {
+      "condition": "악성 고열증 병력 또는 소인",
+      "match_terms": [
+        "malignant hyperthermia",
+        "악성 고열증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두개내압 상승 또는 두부 손상",
+      "match_terms": [
+        "elevated intracranial pressure",
+        "head injury",
+        "두개내압 상승"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "신부전"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "신경세포 지질막 기질에 작용하여 신경이온채널(특히 빠른 시냅스 신경전달물질 수용체)의 활성을 변화시킴으로써 전신마취 효과를 나타낸다. 혈액-가스 분배계수(0.6)가 낮아 빠른 마취 유도 및 회복이 가능하다.",
+    "common_extra_effects": [
+      "저혈압 (용량 의존적)",
+      "호흡 억제 (용량 의존적)",
+      "심근 억제",
+      "혈관 확장",
+      "체온 조절 중추 억제",
+      "뇌혈류 증가",
+      "근육 이완",
+      "오심/구토",
+      "장폐색",
+      "악성 고열증 유발 가능 (소인 환자)",
+      "QT 간격 연장 (사람에서 보고)"
+    ],
+    "dog_mechanism": "개에서 MAC은 2.1~2.4%이며, 마스크 유도 시 최대 7% 농도 사용 가능. 외과적 마취는 3~14분 내 달성.",
+    "dog_extra_effects": [
+      "위 운동성 감소 (마취 중)",
+      "위 배출 지연 (30~40시간)",
+      "수술 후 장폐색 위험 증가"
+    ],
+    "cat_mechanism": "고양이에서 MAC은 2.6~3.4% (평균 3.08%)로 개보다 높다. 마스크 유도 시 호흡 정지 및 발버둥 가능성이 있어 전처치 필요.",
+    "cat_extra_effects": [
+      "호흡 정지 및 발버둥 (마스크 유도 시)",
+      "전처치 및 면밀한 관찰 필요"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 흡입마취제로, 마스크 유도 시 최대 7% 농도를 사용하며 3~14분 내 외과적 마취를 달성한다. 전처치 없이 3.7~4%, 전처치 있을 때 3.3~3.6%로 유지한다. 마취 중 위 운동성 감소 및 위 배출 지연(30~40시간)이 보고되어 수술 후 장폐색 위험에 주의해야 한다. 노령 동물은 더 낮은 농도가 필요할 수 있다.",
+    "cat": "고양이에서 비라벨 사용으로, MAC은 2.6~3.4% (평균 3.08%)이다. 마스크 유도 시 호흡 정지 및 발버둥이 발생할 수 있어 전처치와 면밀한 관찰이 필요하다. 이소플루란보다 빠른 유도 및 회복이 가능하여 쇠약하거나 노령 고양이에서 유용하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "두개내압 상승, 두부 손상, 신부전 환자에서 주의 사용. 유도 단계에서 과량 투여 주의. CO2 흡수제 정기 교체 및 산소 유량 500 mL/분 이상 유지 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "마스크 유도 시 호흡 정지 및 발버둥 가능성으로 전처치 필요. 두개내압 상승, 두부 손상, 신부전 환자에서 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관. 금속과는 반응하지 않으나 루이스산과 반응하여 불화수소산을 생성할 수 있다.",
+    "forms": [
+      "세보플루란 250 mL 병 (수의용): SevoFlo®, Petrem®",
+      "세보플루란 250 mL 병 (인체용): Ultane®, Sojourn®, 제네릭"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세보플루란은 이소플루란과 유사한 흡입마취제로, 혈액-가스 분배계수(0.6)가 낮아 빠른 마취 유도 및 회복이 가능하다. 개에서 FDA 승인되었으며, 고양이, 말, 소형 포유류, 조류, 파충류 등 다양한 종에서 비라벨로 사용된다. 악성 고열증 소인 환자에서는 금기이며, 두개내압 상승 및 신부전 환자에서 주의가 필요하다. Compound A 생성으로 인한 이론적 신독성이 있으나 임상적 유의성은 낮다. QT 연장 약물과의 병용 시 부정맥 위험에 주의해야 한다.",
+    "indications": "전신마취 유도 및 유지 (개: FDA 승인; 고양이, 말, 소형 포유류, 반추동물, 조류, 파충류, 양서류: 비라벨). 빠른 마취 유도 및 회복이 필요한 경우, 쇠약하거나 노령 환자에서 특히 유용하다.",
+    "client_info": "세보플루란은 수의사만이 사용하는 전신마취제입니다. 마취 전 금식 지시를 반드시 따르시고, 마취 후 회복 중 반려동물을 면밀히 관찰해 주십시오. 마취 후 위 배출이 지연될 수 있으므로 수술 후 식이 관리에 주의가 필요합니다. 악성 고열증 병력이 있는 경우 반드시 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "species_flags.washout_period_days",
+      "drug_identity.available_strengths",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:45:14.509860+00:00",
+    "reviewer": null
+  }
+}

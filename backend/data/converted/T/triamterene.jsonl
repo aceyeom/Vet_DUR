@@ -1,0 +1,506 @@
+{
+  "id": "triamterene",
+  "drug_identity": {
+    "name_ko": "트리암테렌",
+    "name_en": "Triamterene",
+    "active_ingredient": "Triamterene",
+    "brand_names": [
+      "Dyrenium",
+      "Dytac",
+      "Triteren"
+    ],
+    "allergy_class": null,
+    "class": "Diuretic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 승인된 제품 없음. 개의 울혈성 심부전 보조 치료에 스피로노락톤의 대안으로 비공식적으로 사용됨.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 6-p-하이드록시트리암테렌 및 그 황산 결합체로 대사됨. 대사산물은 담즙/대변 및 소변으로 배설됨."
+    },
+    "extra_information": "개 및 고양이에 대한 약동학 데이터 없음. 인간 데이터만 존재: 경구 생체이용률 약 85%, 이뇨 발현 2~4시간, 최고 효과 약 6시간, 지속 12~16시간, 반감기 약 2시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학적 PK 데이터 없음; 인간 데이터 및 부작용 프로파일 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "dizziness",
+          "headache"
+        ],
+        "index": 1,
+        "evidence": "인간에서 두통, 어지러움 보고됨. 개에서의 직접 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hyponatremia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "megaloblastosis"
+        ],
+        "index": 2,
+        "evidence": "고칼륨혈증, 저나트륨혈증, 무과립구증, 혈소판감소증, 거적아구증이 인간에서 보고됨. 전해질 불균형 위험."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "azotemia",
+          "nephrolithiasis",
+          "GFR reduction",
+          "renal blood flow"
+        ],
+        "index": 3,
+        "evidence": "신독성, 질소혈증, 트리암테렌 신결석증, GFR 감소, 신혈류 영향이 보고됨. 신기능 모니터링 필수."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "liver enzyme abnormalities",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "간에서 대사됨. 인간에서 간효소 이상 드물게 보고됨. 중증 간질환 시 금기."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "고칼륨혈증으로 인한 심장 영향 가능. 저혈압 가능성. 직접적 심장독성 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "dizziness",
+          "headache"
+        ],
+        "index": -1,
+        "evidence": "고양이에서의 직접 데이터 없음. 인간 부작용 프로파일 기반 추정."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hyponatremia"
+        ],
+        "index": -1,
+        "evidence": "고양이에서의 직접 데이터 없음. 전해질 불균형 위험은 인간 데이터 기반."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "azotemia",
+          "GFR reduction"
+        ],
+        "index": -1,
+        "evidence": "고양이에서의 직접 데이터 없음. 신독성 및 GFR 감소 위험은 인간 데이터 기반."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "liver enzyme abnormalities",
+          "hepatic metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이에서의 직접 데이터 없음. 간 대사 및 간효소 이상 위험은 인간 데이터 기반."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hyperkalemia"
+        ],
+        "index": -1,
+        "evidence": "고양이에서의 직접 데이터 없음. 고칼륨혈증으로 인한 심장 영향 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 120,
+    "t_max_hr": 6.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 2.0,
+      "species": "human"
+    },
+    "f_percent": 85,
+    "protein_binding_percent": null,
+    "evidence": "인간 데이터: 경구 투여 후 빠르게 흡수, 생체이용률 약 85%. 이뇨 발현 2~4시간, 최고 약 6시간, 지속 12~16시간, 반감기 약 2시간. 개/고양이 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (enalapril, benazepril)",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia"
+      ],
+      "evidence": "ACE inhibitors combined with triamterene increase risk of hyperkalemia."
+    },
+    {
+      "drug": "Potassium-sparing Diuretics (spironolactone, amiloride)",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia",
+        "contraindicated"
+      ],
+      "evidence": "Concurrent use with other potassium-sparing diuretics is contraindicated due to markedly increased risk of hyperkalemia."
+    },
+    {
+      "drug": "Potassium Supplements or High Potassium Foods",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia"
+      ],
+      "evidence": "Concurrent potassium supplementation increases risk of hyperkalemia; contraindicated."
+    },
+    {
+      "drug": "NSAIDs (especially indomethacin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Triamterene combined with NSAIDs, especially indomethacin, may increase risk of nephrotoxicity."
+    },
+    {
+      "drug": "Antidiabetic Agents (insulin, glipizide)",
+      "severity": 2,
+      "keywords": [
+        "hyperglycemia",
+        "blood glucose"
+      ],
+      "evidence": "Triamterene may increase blood glucose levels, potentially reducing efficacy of antidiabetic agents."
+    },
+    {
+      "drug": "Antihypertensive Agents",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "potentiation"
+      ],
+      "evidence": "Possible potentiation of hypotensive effects when combined with antihypertensive agents."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "lithium toxicity",
+        "reduced clearance"
+      ],
+      "evidence": "Triamterene may reduce lithium clearance, potentially increasing lithium toxicity risk."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "울혈성 심부전 보조 치료 (비공식 사용)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "공식 근거 제한적; 스피로노락톤이 일반적으로 선호됨",
+          "evidence": "일화적 보고 기반. 공식 발표 근거 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "울혈성 심부전 보조 치료 (비공식 사용, 1일 1회 대안)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "공식 근거 제한적; 스피로노락톤이 일반적으로 선호됨",
+          "evidence": "일화적 보고 기반. 공식 발표 근거 없음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 또는 진행성 신질환 시 금기. 무뇨증 시 금기. 신기능 저하 환자에서 고칼륨혈증 위험 증가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간질환 시 금기. 간에서 대사되므로 간기능 저하 시 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "무뇨증",
+      "match_terms": [
+        "anuria",
+        "무뇨"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 또는 진행성 신질환",
+      "match_terms": [
+        "severe renal disease",
+        "progressive renal disease",
+        "CKD",
+        "신부전"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "간부전",
+        "간경변"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "기존 고칼륨혈증",
+      "match_terms": [
+        "hyperkalemia",
+        "고칼륨혈증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "트리암테렌 과민반응",
+      "match_terms": [
+        "hypersensitivity to triamterene",
+        "알레르기"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 칼륨보존 이뇨제 병용",
+      "match_terms": [
+        "spironolactone",
+        "amiloride",
+        "potassium-sparing diuretic"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "칼륨 보충제 병용",
+      "match_terms": [
+        "potassium supplement",
+        "칼륨 보충"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "원위 세뇨관에 직접 작용하여 수소 및 칼륨 이온과의 교환을 통한 나트륨 재흡수를 억제하는 칼륨보존 이뇨제. 알도스테론 경쟁적 억제 없이 작용.",
+    "common_extra_effects": [
+      "고칼륨혈증",
+      "저나트륨혈증",
+      "질소혈증",
+      "두통",
+      "어지러움",
+      "오심, 구토, 설사",
+      "광과민성",
+      "신결석증",
+      "간효소 이상",
+      "무과립구증",
+      "신독성",
+      "혈소판감소증",
+      "거적아구증",
+      "과민반응"
+    ],
+    "dog_mechanism": "인간과 동일한 기전으로 추정되나 개에서의 직접 데이터 없음.",
+    "dog_extra_effects": [
+      "고칼륨혈증",
+      "전해질 불균형",
+      "소변 청색 변색"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서의 임상 경험이 매우 제한적임. 칼륨보존 이뇨제가 필요한 경우 스피로노락톤이 일반적으로 선호됨. 사용 시 혈청 전해질(특히 칼륨), BUN, 크레아티닌을 정기적으로 모니터링해야 함. 소변이 청색으로 변할 수 있으나 정상적인 현상임.",
+    "cat": "고양이에서의 사용 경험이 거의 없으며 용량 데이터가 없음. 사용을 권장하지 않으며, 필요 시 극도의 주의와 모니터링이 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 임상 경험이 매우 제한적임. 신기능, 전해질 모니터링 필수. 중증 신질환, 간질환, 고칼륨혈증 시 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 용량 데이터 없음. 사용 경험 거의 없음. 일반적으로 권장되지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15~30°C(59~86°F) 사이에서 밀폐된 차광 용기에 보관.",
+    "forms": [
+      "Triamterene Capsules 50 mg (Dyrenium)",
+      "Triamterene Capsules 100 mg (Dyrenium)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "트리암테렌은 칼륨보존 이뇨제로, 개의 울혈성 심부전 보조 치료에서 스피로노락톤의 대안으로 고려될 수 있으나 수의학적 임상 경험이 매우 제한적임. 고칼륨혈증이 가장 중요한 부작용이며, 정기적인 전해질 및 신기능 모니터링이 필수적임. 수의학 승인 제품 없음.",
+    "indications": "개의 울혈성 심부전 보조 치료 (비공식 사용, 스피로노락톤 대안). 고양이에서의 적응증 없음. 무뇨증, 중증 신질환, 중증 간질환, 고칼륨혈증, 트리암테렌 과민반응 시 금기.",
+    "client_info": "이 약은 위장 장애를 줄이기 위해 음식과 함께 투여하십시오. 복용 중 소변이 청색으로 변할 수 있으나 정상적인 현상이며 약을 중단하면 사라집니다. 이 약은 개나 고양이에서 사용 경험이 매우 적으므로 비정상적인 부작용이 나타나면 즉시 수의사에게 알려주십시오. 정기적인 혈액 검사(특히 칼륨 수치 및 신기능)가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data (dog/cat)",
+      "Cat dosage",
+      "CYP profile",
+      "Protein binding",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "timing_profile.half_life_hr (veterinary species)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/48.jsonl",
+    "extracted_at": "2026-03-11T04:11:52.933022+00:00",
+    "reviewer": null
+  }
+}

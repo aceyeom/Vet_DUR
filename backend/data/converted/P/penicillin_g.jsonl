@@ -1,0 +1,581 @@
+{
+  "id": "penicillin_g",
+  "drug_identity": {
+    "name_ko": "페니실린 G",
+    "name_en": "Penicillin G",
+    "active_ingredient": "Penicillin G",
+    "brand_names": [
+      "Pfizerpen-G",
+      "Bicillin L-A",
+      "Bicillin C-R",
+      "Bicillin CR 900/300"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "개, 고양이에서의 사용은 허가 외(extra-label) 사용임. 미국 FDA는 말, 소, 양, 돼지에 대해 승인.",
+    "dosage_form": [
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 300000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 150000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 600000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 5000000,
+        "unit": "IU"
+      },
+      {
+        "value": 20000000,
+        "unit": "IU"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "페니실린 G는 주로 신장을 통해 사구체 여과 및 세뇨관 분비에 의해 변화 없이 배설됨. 간 대사는 최소한임."
+    },
+    "extra_information": "개와 고양이에서 반감기는 정상 신기능 시 1시간 이하. 토끼에서 IM 투여 후 최고 농도는 30분, 반감기 약 2시간. 말에서 IM 투여 시 혈청 농도가 IV보다 약 2배 오래 유지됨(IV: 3~4시간, IM: 6~7시간)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설이 주경로이므로 신장 부담이 가장 높음. 고용량 또는 IV 투여 시 CNS 독성 보고됨. 간독성은 보고되지 않으나 간효소 상승 사례 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "CNS effects",
+          "high doses"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성(개에서 운동실조) 보고됨. 프로카인 페니실린 IV 투여 시 CNS 흥분 독성 가능."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "leukopenia",
+          "anemia",
+          "eosinophilia"
+        ],
+        "index": 1,
+        "evidence": "과민반응으로 혈소판감소증, 호중구감소증, 무과립구증, 백혈구감소증, 빈혈, 호산구증가증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration",
+          "renal disease"
+        ],
+        "index": 2,
+        "evidence": "주로 신장을 통해 사구체 여과 및 세뇨관 분비로 배설됨. 신질환 시 전해질 불균형 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 0,
+        "evidence": "페니실린은 간독성 약물로 분류되지 않으나 간효소 상승이 보고된 바 있음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "tachycardia",
+          "electrolyte imbalances",
+          "congestive heart failure"
+        ],
+        "index": 0,
+        "evidence": "고용량 나트륨/칼륨염 투여 시 전해질 불균형 및 빈맥 보고됨. 울혈성 심부전 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS effects",
+          "procaine toxicity"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 프로카인 페니실린 IV 투여 시 신경독성 및 혈관 반응 보고됨(고양이 포함)."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "leukopenia",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "과민반응으로 혈액학적 이상 가능. 고양이 특이적 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration"
+        ],
+        "index": 2,
+        "evidence": "주로 신장을 통해 배설됨. 신기능 저하 시 반감기 연장 및 독성 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 0,
+        "evidence": "간독성 약물로 분류되지 않으나 간효소 상승 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "electrolyte imbalances"
+        ],
+        "index": 0,
+        "evidence": "고용량 나트륨/칼륨염 투여 시 전해질 불균형 가능. 고양이 특이적 심장 데이터는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 20,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": null,
+      "max": 1.0,
+      "mean": 0.75,
+      "species": "dog"
+    },
+    "f_percent": 20,
+    "protein_binding_percent": 50,
+    "evidence": "페니실린 G 칼륨/나트륨 IM 투여 후 약 20분 내 최고 농도 도달. 대부분의 종에서 반감기 1시간 이하(정상 신기능 시). 경구 생체이용률 약 15~30%(공복 시). 혈장 단백 결합률 약 50%. 토끼에서 IM 투여 후 최고 농도 30분, 반감기 2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 1,
+      "keywords": [
+        "synergistic",
+        "additive antibacterial activity",
+        "in vitro inactivation"
+      ],
+      "evidence": "In vitro studies show synergistic or additive antibacterial activity against certain bacteria. However, penicillins can inactivate aminoglycosides in vitro; serum samples should be frozen if assay is delayed."
+    },
+    {
+      "drug": "Cephalosporins",
+      "severity": 1,
+      "keywords": [
+        "synergistic",
+        "additive antibacterial activity"
+      ],
+      "evidence": "In vitro studies demonstrate synergistic or additive activity against certain bacteria when used with cephalosporins."
+    },
+    {
+      "drug": "Bacteriostatic Antibiotics (chloramphenicol, erythromycin, tetracyclines)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "reduced bactericidal efficacy",
+        "time-dependent killing"
+      ],
+      "evidence": "Concurrent use generally not recommended, particularly in acute infections with rapidly proliferating organisms, as penicillins perform better on actively growing bacteria. Clinical significance unknown."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "reduced renal elimination",
+        "increased methotrexate toxicity"
+      ],
+      "evidence": "Penicillins may decrease renal elimination of methotrexate, potentially increasing methotrexate toxicity."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased penicillin serum concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "Probenecid competitively blocks tubular secretion of most penicillins, increasing serum concentrations and serum half-lives."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit_oral",
+      "bird_procaine_caution"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 프로카인",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G procaine 20,000–40,000 units/kg IM or SC every 12 to 24 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 프로카인",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G procaine 20,000–40,000 units/kg IM or SC every 12 to 24 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 나트륨 또는 칼륨",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G sodium or potassium 20,000–40,000 units/kg IV or IM every 4 to 8 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 나트륨 또는 칼륨",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G sodium or potassium 20,000–40,000 units/kg IV or IM every 4 to 8 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "렙토스피라증 초기 치료 (허가 외) - 페니실린 G 나트륨 또는 칼륨",
+          "value": "25000 - 40000",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 투여 가능 시 독시사이클린으로 전환 (5 mg/kg PO q12h 또는 10 mg/kg PO q24h, 2주간)",
+          "evidence": "Plumb's Veterinary Drug Handbook: Leptospirosis (extra-label), Penicillin G sodium or potassium 25,000–40,000 units/kg IV every 12 hours initially"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 프로카인",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G procaine 20,000–40,000 units/kg IM or SC every 12 to 24 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 프로카인",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G procaine 20,000–40,000 units/kg IM or SC every 12 to 24 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 나트륨 또는 칼륨",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G sodium or potassium 20,000–40,000 units/kg IV or IM every 4 to 8 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (허가 외) - 페니실린 G 나트륨 또는 칼륨",
+          "value": "20000 - 40000",
+          "unit": "IU/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: Dogs/Cats, susceptible infections (extra-label), Penicillin G sodium or potassium 20,000–40,000 units/kg IV or IM every 4 to 8 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "렙토스피라증 초기 치료 (허가 외) - 페니실린 G 나트륨 또는 칼륨",
+          "value": "25000 - 40000",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 투여 가능 시 독시사이클린으로 전환",
+          "evidence": "Plumb's Veterinary Drug Handbook: Leptospirosis (extra-label), Penicillin G sodium or potassium 25,000–40,000 units/kg IV every 12 hours initially"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 반감기가 연장될 수 있음. 신질환 환자에서 고용량 페니실린 G 나트륨/칼륨 투여 시 전해질 불균형 위험. 구체적인 용량 조절 기준은 본문에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "페니실린 G는 주로 신장으로 배설되며 간 대사가 최소화되어 있어 간기능 저하 시 용량 조절이 일반적으로 필요하지 않음. 간효소 상승이 보고된 바 있으나 간독성 약물로 분류되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "세팔로스포린/카바페넴 과민반응",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "beta-lactam cross-reactivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF",
+        "cardiac failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질 이상",
+      "match_terms": [
+        "electrolyte abnormality",
+        "hypokalemia",
+        "hyperkalemia",
+        "hyponatremia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본문에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 세포벽의 무코펩타이드 합성을 억제하여 삼투압적으로 불안정한 구형체(spheroplast)를 형성함으로써 살균 작용을 나타냄. 세균 세포막 내 페니실린 결합 단백질(PBP: 카르복시펩티다제, 트랜스펩티다제, 엔도펩티다제)에 결합하여 세포벽 합성을 방해함. 시간 의존성 항생제로 혈장/조직 농도가 MIC를 초과하는 시간이 효능을 결정함.",
+    "common_extra_effects": [
+      "과민반응 (발진, 발열, 호산구증가증, 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈, 림프절병증, 아나필락시스)",
+      "신경독성 (고용량 시 운동실조)",
+      "간효소 상승",
+      "전해질 불균형 (고용량 나트륨/칼륨염)",
+      "프로카인 독성 (행동 변화, 운동 이상, 신경학적 반응, 혈관 반응)"
+    ],
+    "dog_mechanism": "개에서 고용량 또는 장기 사용 시 신경독성(운동실조) 보고됨. 프로카인 페니실린 IV 투여 시 즉각적인 CNS 흥분 독성 가능.",
+    "dog_extra_effects": [
+      "빈호흡",
+      "호흡곤란",
+      "부종",
+      "빈맥",
+      "운동실조 (고용량 시)"
+    ],
+    "cat_mechanism": "고양이에서 프로카인 페니실린 고용량 또는 IV 투여 시 신경독성 및 혈관 반응 보고됨.",
+    "cat_extra_effects": [
+      "프로카인 독성 (행동 변화, 신경학적 반응)",
+      "과민반응"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 페니실린 G는 허가 외 사용임. 감수성 감염에 페니실린 G 프로카인 20,000~40,000 IU/kg IM/SC q12~24h 또는 페니실린 G 나트륨/칼륨 20,000~40,000 IU/kg IV/IM q4~8h 사용. 렙토스피라증 초기 치료에 IV 투여 후 독시사이클린으로 전환. 고용량 시 신경독성(운동실조), 빈호흡, 호흡곤란, 부종, 빈맥 주의. 레이블 용량은 현재 항생제 치료 원칙에 비해 과소 용량일 수 있음.",
+    "cat": "고양이에서 페니실린 G는 허가 외 사용임. 개와 동일한 용량 범위 적용. 프로카인 페니실린 IV 투여 금지. 고용량 투여 시 프로카인 독성(행동 변화, 신경학적 반응) 주의. 신질환 고양이에서 전해질 불균형 위험 증가."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "고용량 또는 장기 사용 시 신경독성 가능. 프로카인 페니실린 IV 투여 금지. 신질환, 울혈성 심부전, 전해질 이상 환자에서 주의. 레이블 용량이 현재 기준으로 과소 용량일 수 있으므로 현대적 용량 지침 참고."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "프로카인 페니실린 IV 투여 금지. 고용량 시 프로카인 독성 위험. 신질환 환자에서 전해질 불균형 주의. 허가 외 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "페니실린 G 프로카인 및 벤자틴: 2~8°C 냉장 보관, 동결 금지. 페니실린 G 나트륨/칼륨 분말: 실온(15~30°C) 보관 가능. 재조제 후 냉장 시 7일, 실온 시 24시간 안정.",
+    "forms": [
+      "페니실린 G 프로카인 주사액 300,000 units/mL",
+      "페니실린 G 벤자틴 150,000 units/mL + 페니실린 G 프로카인 150,000 units/mL 복합 주사액",
+      "페니실린 G 나트륨 분말 (주사용)",
+      "페니실린 G 칼륨 분말 (주사용)",
+      "페니실린 G 프로카인 주사액 (인체용)",
+      "페니실린 G 벤자틴 주사액 (인체용)",
+      "유방내 투여용 주사기",
+      "가금류 음수 투여용 분말"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "페니실린 G는 원형 페니실린 항생제로 감수성 세균 감염의 비경구 치료에 사용됨. 그람양성 호기성 구균, 혐기성 세균, 스피로헤타에 효과적이나 페니실리나제 생성 균주에는 무효. 시간 의존성 항생제로 혈중 농도가 MIC를 초과하는 시간이 중요. 레이블 용량은 현재 항생제 치료 원칙에 비해 과소 용량일 수 있으므로 현대적 용량 지침 사용 권장. 프로카인 또는 벤자틴 함유 제품의 IV 투여는 심각한 독성 및 사망을 초래할 수 있으므로 절대 금지. WHO 및 OIE에서 중요 항생제로 지정됨.",
+    "indications": "감수성 세균에 의한 전신 감염(그람양성 호기성 구균, 혐기성 세균, 스피로헤타 포함). 개/고양이: 감수성 감염(허가 외), 렙토스피라증 초기 치료(허가 외). 말: 연쇄구균 감염, 파상풍, 클로스트리디움 근괴사(허가 외 포함). 소/반추동물: 세균성 폐렴, 클로스트리디움 감염(허가 외 포함). 돼지: 단독증(FDA 승인). 미국 FDA 승인: 말, 소, 양(호흡기 감염), 돼지(단독증).",
+    "client_info": "이 약은 일반적으로 경구로 투여하지 않습니다. 페니실린 G 프로카인 또는 벤자틴 제품은 절대 정맥(혈관)에 주사하면 안 됩니다. 정맥 내 투여 시 심각한 독성 반응 및 사망이 발생할 수 있습니다. 올바른 주사 방법을 반드시 숙지하십시오. 피하 주사 시 주사 부위에 따끔거림이 있을 수 있습니다. 부작용은 드물지만 동물의 상태에 이상이 있으면 즉시 수의사에게 연락하십시오. 페니실린에 알레르기가 있는 동물에게는 투여하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Hepatic dose adjustment",
+      "Therapeutic drug monitoring parameters",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr.min",
+      "genetic_sensitivity.affected_breeds"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/18.jsonl",
+    "extracted_at": "2026-03-10T18:40:42.625991+00:00",
+    "reviewer": null
+  }
+}

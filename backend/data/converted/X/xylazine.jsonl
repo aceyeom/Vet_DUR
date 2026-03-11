@@ -1,0 +1,779 @@
+{
+  "id": "xylazine",
+  "drug_identity": {
+    "name_ko": "자일라진",
+    "name_en": "Xylazine",
+    "active_ingredient": "Xylazine hydrochloride",
+    "brand_names": [
+      "Rompun",
+      "AnaSed",
+      "Chanazine",
+      "Nerfasin",
+      "Sedazine",
+      "Tranquived",
+      "X-Ject E",
+      "Xylamax",
+      "Xylamed"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Yohimbine, Atipamezole, Tolazoline",
+    "reversal_evidence": "요힘빈, 아티파메졸, 톨라졸린은 단독 또는 병용으로 자일라진의 효과를 역전시키거나 회복 시간을 단축하는 데 사용될 수 있다.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": null
+    },
+    "extra_information": "개에서 IM 또는 SC 투여 후 작용 발현은 약 10~15분, IV 투여 후 3~5분이다. 진통 효과는 15~30분, 진정 효과는 1~2시간 지속될 수 있다. 개에서 혈청 반감기는 평균 30분으로 보고되었다. 완전 회복은 2~4시간 소요된다. 고양이도 유사한 패턴을 보인다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 자일라진은 심혈관계(서맥, 부정맥, 심박출량 감소), 호흡기계(호흡 억제), 중추신경계(진정, CNS 억제), 신장(이뇨), 간(중증 간부전 시 주의) 등에 영향을 미친다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "seizures on overdose",
+          "muscle relaxation"
+        ],
+        "index": 1,
+        "evidence": "자일라진은 강력한 알파-2 작용제로 중추신경 억제, 진정, 근이완을 유발하며, 과량 투여 시 경련이 보고되었다."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "arrhythmia",
+          "cardiac output decrease",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "서맥, 2도 방실차단, 심박출량 최대 30% 감소, 초기 고혈압 후 저혈압이 보고되었다."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "polyuria",
+          "diuresis",
+          "osmotic diuresis",
+          "decreased ADH"
+        ],
+        "index": 1,
+        "evidence": "바소프레신(ADH) 분비 감소로 인한 다뇨증 및 삼투성 이뇨가 보고되었다. 요로 폐색 동물에서는 금기이다."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "severe hepatic insufficiency caution"
+        ],
+        "index": 1,
+        "evidence": "중증 간부전 환자에서 극도의 주의가 필요하다고 명시되어 있으나, 직접적인 간독성 데이터는 제한적이다."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "ventricular arrhythmia",
+          "cardiac output decrease",
+          "epinephrine arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "서맥, 2도 방실차단, 에피네프린과 병용 시 심실 부정맥 유발 가능성이 있으며, 심박출량이 최대 30% 감소할 수 있다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "emesis centrally mediated"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 자일라진은 중추신경 억제 및 진정을 유발하며, 구토는 중추 매개로 알려져 있다."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "cardiac output decrease"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 서맥, 2도 방실차단, 심박출량 감소가 보고되었다."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "increased urination",
+          "diuresis",
+          "decreased ADH"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 배뇨 증가가 부작용으로 보고되었으며, ADH 감소로 인한 이뇨가 원인이다."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "severe hepatic insufficiency caution"
+        ],
+        "index": 1,
+        "evidence": "중증 간부전 고양이에서 극도의 주의가 필요하다고 명시되어 있다."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 서맥 및 2도 방실차단이 부작용으로 보고되었다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 10,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.5,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 IM/SC 투여 후 작용 발현 약 10~15분, IV 투여 후 3~5분. 혈청 반감기 평균 30분(개). 말에서는 반감기 약 50분. 개/고양이에서 IM 생체이용률 52~90% 보고."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Acepromazine",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension",
+        "hemodynamic complication"
+      ],
+      "evidence": "Concurrent use is generally considered safe but carries potential for additive hypotensive effects after the initial hypertensive phase of xylazine. Use cautiously in animals susceptible to hemodynamic complications."
+    },
+    {
+      "drug": "Anesthetic Agents (alfaxalone, isoflurane, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "dose reduction required"
+      ],
+      "evidence": "May cause additive CNS depression. Dosages of these agents may need to be reduced."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, butylscopolamine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "increased arterial blood pressure",
+        "tachycardia",
+        "arrhythmia"
+      ],
+      "evidence": "Use of anticholinergic agents with alpha-2 agonists may significantly increase arterial blood pressure, heart rate, and incidence of arrhythmia. Clinical use to prevent or treat bradycardia is controversial and discouraged."
+    },
+    {
+      "drug": "Antiemetic Agents (maropitant, metoclopramide, ondansetron)",
+      "severity": 1,
+      "keywords": [
+        "decreased emetic effect"
+      ],
+      "evidence": "Antiemetics may decrease the emetogenic effects of xylazine."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "dose reduction required"
+      ],
+      "evidence": "May cause additive CNS depression if used with xylazine. Dosages of these agents may need to be reduced."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "prolonged sedation",
+        "GI stasis"
+      ],
+      "evidence": "Prolonged sedation and GI stasis are possible when chloramphenicol is used concurrently with xylazine."
+    },
+    {
+      "drug": "CNS Depressant Agents (barbiturates, methocarbamol, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "dose reduction required"
+      ],
+      "evidence": "May cause additive CNS depression if used with xylazine. Dosages of these agents may need to be reduced."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "ventricular arrhythmia",
+        "arrhythmogenic"
+      ],
+      "evidence": "The use of epinephrine with xylazine, with or without concurrent halothane, may induce ventricular arrhythmias. Xylazine is contraindicated in animals receiving epinephrine."
+    },
+    {
+      "drug": "Opioids (buprenorphine, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "dose reduction required"
+      ],
+      "evidence": "May cause additive CNS depression if used with xylazine. Dosages of these agents may need to be reduced."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "colic-like signs",
+        "avoid combination"
+      ],
+      "evidence": "A case of a horse developing colic-like clinical signs after reserpine and xylazine has been reported. Use of these two agents together should be avoided until more is known."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "reversal",
+        "hypotension risk"
+      ],
+      "evidence": "Yohimbine may reverse the effects of xylazine; however, atipamezole is preferred for clinical use as it is more selective and less likely to cause hypotension."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "진정 및 단기 진통; 전마취제 (FDA 승인 라벨 용량)",
+          "value": "1.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "라벨 용량은 대부분의 적응증에 필요한 것보다 높다고 여겨짐; 더 낮은 용외 용량 고려 권장",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진정 및 단기 진통; 전마취제 (FDA 승인 라벨 용량)",
+          "value": "1.1 - 2.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "라벨 용량은 대부분의 적응증에 필요한 것보다 높다고 여겨짐; 더 낮은 용외 용량 고려 권장",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전마취제 (용외 용량)",
+          "value": "0.2 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전마취제 (용외 용량)",
+          "value": "0.2 - 1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 보조제 (용외 용량)",
+          "value": "0.05 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 보조제 (용외 용량)",
+          "value": "0.05 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "진정 및 단기 진통; 전마취제 (FDA 승인 라벨 용량)",
+          "value": "1.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "라벨 용량은 대부분의 적응증에 필요한 것보다 높다고 여겨짐; 더 낮은 용외 용량 고려 권장",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "진정 및 단기 진통; 전마취제 (FDA 승인 라벨 용량)",
+          "value": "2.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "라벨 용량은 대부분의 적응증에 필요한 것보다 높다고 여겨짐; 더 낮은 용외 용량 고려 권장",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구토 유도 (용외 용량) - 독소 섭취 또는 약물 과다복용 후",
+          "value": "0.4 - 1.1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "CRTZ를 표적으로 하는 독소에는 효과 없음; 구토 후 요힘빈, 톨라졸린, 또는 아티파메졸로 역전 가능",
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전마취제 (용외 용량)",
+          "value": "0.2 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전마취제 (용외 용량)",
+          "value": "0.2 - 1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 보조제 (용외 용량)",
+          "value": "0.05 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "진통 보조제 (용외 용량)",
+          "value": "0.05 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항불안제 (용외 용량)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항불안제 (용외 용량)",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "용외 용량"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 신부전 환자에서 극도의 주의가 필요하다고 명시되어 있다. 요로 폐색 동물에서는 투여 금기이다. 구체적인 용량 조절 기준은 제시되지 않았다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간부전 환자에서 극도의 주의가 필요하다고 명시되어 있으나, 구체적인 용량 조절 지침은 제시되지 않았다."
+  },
+  "contraindications": [
+    {
+      "condition": "에피네프린 투여 중",
+      "match_terms": [
+        "epinephrine administration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 심실 부정맥",
+      "match_terms": [
+        "ventricular arrhythmia",
+        "active arrhythmia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration",
+        "dehydrated"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요로 폐색",
+      "match_terms": [
+        "urinary tract obstruction",
+        "UTO"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 심장 기능 장애",
+      "match_terms": [
+        "cardiac dysfunction",
+        "heart disease",
+        "cardiomyopathy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압 또는 쇼크",
+      "match_terms": [
+        "hypotension",
+        "shock"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡기 기능 장애",
+      "match_terms": [
+        "respiratory dysfunction",
+        "respiratory disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "severe liver disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "kidney failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "기존 발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 말기 (특히 소)",
+      "match_terms": [
+        "late pregnancy",
+        "third trimester",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "극도로 쇠약한 동물",
+      "match_terms": [
+        "debilitated",
+        "exhausted",
+        "severely debilitated"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파-2 아드레날린 수용체 작용제로서 중추 및 말초 알파-2 수용체에 결합하여 진정, 진통, 근이완 효과를 나타낸다. 알파-2:알파-1 수용체 선택성은 160:1이다.",
+    "common_extra_effects": [
+      "서맥 및 2도 방실차단",
+      "심박출량 최대 30% 감소",
+      "초기 혈압 상승 후 저혈압",
+      "호흡수 및 일회호흡량 감소",
+      "근육 떨림",
+      "혈당 상승 (인슐린 분비 감소)",
+      "다뇨증 (ADH 감소)",
+      "체온 조절 장애 (저체온 또는 고체온)",
+      "GI 운동성 감소"
+    ],
+    "dog_mechanism": "알파-2 수용체 작용을 통한 중추신경 억제, 진정, 진통, 근이완. 에피네프린과 병용 시 심실 부정맥 유발 가능성 증가.",
+    "dog_extra_effects": [
+      "근육 떨림",
+      "서맥 및 2도 방실차단",
+      "호흡수 감소",
+      "청각 자극에 대한 반응성 움직임",
+      "구토",
+      "공기 연하로 인한 복부 팽만",
+      "눈물 분비 감소 (용량 의존적)",
+      "다뇨증"
+    ],
+    "cat_mechanism": "알파-2 수용체 작용을 통한 중추신경 억제 및 진정. 구토는 중추 매개로 알려져 있으며, 도파민 차단제나 알파 차단제로는 억제되지 않는다.",
+    "cat_extra_effects": [
+      "구토 (투여 후 3~5분 내)",
+      "근육 떨림",
+      "서맥 및 2도 방실차단",
+      "호흡수 감소",
+      "청각 자극에 대한 반응성 움직임",
+      "배뇨 증가"
+    ]
+  },
+  "species_notes": {
+    "dog": "대부분의 임상의는 알파-2 수용체에 대한 선택성이 더 높은 덱스메데토미딘과 같은 신세대 알파-2 작용제를 자일라진보다 선호한다. 자일라진은 부정맥 유발, 심박출량 감소, 전신마취 관련 사망 위험 증가로 인해 일반적으로 건강한 동물에 한해 사용이 권장된다. 라벨 용량(1.1 mg/kg IV, 1.1~2.2 mg/kg IM/SC)은 대부분의 적응증에 필요한 것보다 높다고 여겨지므로 더 낮은 용외 용량 사용을 고려해야 한다.",
+    "cat": "구토 유도 목적(독소 섭취 또는 약물 과다복용 후)을 제외하고는 대부분의 임상의가 덱스메데토미딘을 선호한다. 고양이에서 자일라진은 투여 후 3~5분 내에 구토를 유발하며, 이 시간이 경과하기 전에 추가 마취를 유도하지 않아야 흡인을 예방할 수 있다. CRTZ를 표적으로 하는 독소에는 구토 유도 효과가 없다. 구토 후 요힘빈, 톨라졸린, 또는 아티파메졸로 효과를 역전시킬 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 기능 장애, 저혈압, 쇼크, 호흡기 기능 장애, 중증 간/신부전, 발작 장애, 탈수, 요로 폐색, 에피네프린 투여 중인 동물에서 주의 또는 금기. 단두종 개에서 상기도 질환으로 인한 호흡 곤란 위험이 있다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심장 기능 장애, 저혈압, 쇼크, 호흡기 기능 장애, 중증 간/신부전, 발작 장애, 탈수, 요로 폐색, 에피네프린 투여 중인 동물에서 주의 또는 금기. 구토 유도 시 흡인 예방을 위해 구토 발생 후 5분이 경과하기 전에 마취를 유도하지 않아야 한다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "30°C(86°F) 이상에서 보관하지 말 것. 일부 제조사는 20°C~25°C(68°F~77°F) 보관을 권장하며 최대 40°C(104°F)까지 허용.",
+    "forms": [
+      "Xylazine Injection 20 mg/mL (20 mL vials)",
+      "Xylazine Injection 100 mg/mL (50 mL vials)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "자일라진은 강력한 알파-2 아드레날린 작용제로 진정, 진통, 근이완 효과를 나타낸다. 개, 고양이, 말, 사슴, 엘크에 FDA 승인되어 있다. 고양이에서는 구토 유도제로도 사용된다. 에피네프린 투여 중이거나 활동성 심실 부정맥이 있는 동물에서는 금기이다. 요힘빈, 아티파메졸, 톨라졸린으로 역전 가능하나, 역전 시 진통 효과도 함께 소실된다. 신세대 알파-2 작용제(덱스메데토미딘)가 개와 고양이에서 더 선호된다.",
+    "indications": "FDA 승인 적응증: 개, 고양이, 말, 사슴, 엘크에서 진정 및 단기 진통, 전마취제. 용외 적응증: 고양이에서 구토 유도(독소 섭취 후), 진통 보조제, 항불안제, 소/양/염소/낙타류/돼지/조류/페럿/토끼/설치류에서 화학적 보정 및 마취.",
+    "client_info": "자일라진은 수의사만이 사용해야 하는 전문 의약품입니다. 투여 후 동물이 졸리거나 비틀거릴 수 있으며, 완전 회복까지 2~4시간이 소요될 수 있습니다. 투여 후 고양이는 구토를 할 수 있으므로 흡인 예방을 위해 주의가 필요합니다. 역전제(요힘빈, 아티파메졸, 톨라졸린)가 항상 준비되어 있어야 하며, 역전 시 진통 효과도 함께 소실됩니다. 투여 중 심박수, 호흡수, 혈압, 체온을 모니터링해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Protein binding data",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability (not applicable - injection only)",
+      "t_max_hr for dogs/cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:49:24.753555+00:00",
+    "reviewer": null
+  }
+}

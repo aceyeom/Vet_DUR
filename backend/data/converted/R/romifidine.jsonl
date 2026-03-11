@@ -1,0 +1,506 @@
+{
+  "id": "romifidine",
+  "drug_identity": {
+    "name_ko": "로미피딘",
+    "name_en": "Romifidine",
+    "active_ingredient": "Romifidine",
+    "brand_names": [
+      "Sedivet",
+      "Romidys",
+      "Sedivan"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Atipamezole, Yohimbine",
+    "reversal_evidence": "과용량 시 아티파메졸 또는 요힘빈을 역전제로 사용하여 독성 효과의 지속 시간과 정도를 줄일 수 있다고 Plumb's에 명시됨.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "로미피딘은 간에서 생체 변환된다. 개에서 투여 용량의 약 80%가 소변으로, 20%가 대변으로 배설된다."
+    },
+    "extra_information": "개에서 IM 투여 후 생체이용률 86%, SC 투여 후 92%. 고양이에서 IM 투여 후 생체이용률 95%. 개에서 IM 투여 후 최고 혈중 농도 도달 시간 약 50분, 고양이에서 약 25분. IV 투여 후 분포 용적: 개 약 3 L/kg, 고양이 약 6 L/kg. 소실 반감기: 개 약 2시간, 고양이 약 6시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 말에서의 PK 데이터 및 개/고양이 PK 데이터 일부 존재. 주요 적응증은 말이며, 개/고양이 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "alpha-2 agonist",
+          "norepinephrine inhibition"
+        ],
+        "index": 1,
+        "evidence": "알파-2 작용제로서 CNS에서 노르에피네프린 방출의 피드백 억제를 통해 진정 및 진통 효과를 나타냄. 개에서 IM 생체이용률 86-92%로 CNS 노출 높음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypertension",
+          "hypotension",
+          "arrhythmia",
+          "hematocrit decrease"
+        ],
+        "index": 2,
+        "evidence": "심박수 감소, 초기 고혈압 후 저혈압, 방실 차단 등 심혈관계 영향. 헤마토크릿 감소 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "urination",
+          "renal elimination 80%",
+          "renal disease contraindicated"
+        ],
+        "index": 3,
+        "evidence": "개에서 투여 용량의 약 80%가 신장으로 배설됨. 신장 질환 시 사용 금기. 배뇨 증가 효과 있음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic biotransformation",
+          "hepatic disease contraindicated"
+        ],
+        "index": 4,
+        "evidence": "간에서 생체 변환됨. 간 질환 시 사용 금기로 명시됨."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "arrhythmia",
+          "hypotension",
+          "hypertension"
+        ],
+        "index": 5,
+        "evidence": "심한 서맥, 1도 및 2도 방실 차단, 용량 의존적 동성 부정맥, 초기 고혈압 후 저혈압 등 심혈관계 부작용이 주요 우려 사항."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "sedation",
+          "alpha-2 agonist",
+          "CNS depression",
+          "high bioavailability"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 IM 생체이용률 95%, 분포 용적 약 6 L/kg으로 CNS 노출이 높음. 알파-2 작용제로서 진정 효과 강함."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "platelet aggregation inhibition"
+        ],
+        "index": 2,
+        "evidence": "관련 알파-2 작용제(메데토미딘)에서 고양이의 ADP 유도 혈소판 응집 억제 보고됨. 심혈관계 영향 예상됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal elimination",
+          "urination"
+        ],
+        "index": 3,
+        "evidence": "고양이에서의 신장 배설 비율은 명시되지 않았으나, 개와 유사한 경로로 추정됨. 배뇨 증가 효과 있음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic biotransformation",
+          "long half-life"
+        ],
+        "index": 4,
+        "evidence": "간에서 생체 변환됨. 고양이에서 반감기 약 6시간으로 개보다 길어 간 부담이 더 클 수 있음."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "arrhythmia",
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "알파-2 작용제 계열 약물로서 고양이에서도 서맥, 방실 차단, 저혈압 등 심혈관계 부작용이 예상됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": 0.83,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 6.0,
+      "mean": 2.25,
+      "species": "horse"
+    },
+    "f_percent": 86,
+    "protein_binding_percent": null,
+    "evidence": "말에서 IV 투여 후 작용 발현 30초~5분, 효과 지속 2~4시간, 소실 반감기 약 135분(≈2.25시간). 개에서 IM 생체이용률 86%, SC 92%; 고양이 IM 95%. 개 반감기 약 2시간, 고양이 약 6시간. f_percent는 개 IM 기준값."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)/심각→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anesthetics (general)",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "anesthetic sparing",
+        "arrhythmia risk"
+      ],
+      "evidence": "Effects may be additive; dosage reduction of one or both agents may be required. Increased risk for arrhythmias when used with thiopental, ketamine, or halothane."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "synergistic analgesia"
+      ],
+      "evidence": "Effects may be additive; dosage reduction of one or both agents may be required. Opioids and alpha-2 agonists may have synergistic analgesic effects."
+    },
+    {
+      "drug": "Sedative/Hypnotics",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "CNS depression"
+      ],
+      "evidence": "Effects may be additive; dosage reduction of one or both agents may be required."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "adverse effects"
+      ],
+      "evidence": "Epinephrine may potentiate adverse effects of alpha-2 agonists."
+    },
+    {
+      "drug": "Other Alpha-2 Agonists (clonidine, detomidine, medetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "adverse effects",
+        "concurrent use not recommended"
+      ],
+      "evidence": "May potentiate adverse effects of romifidine; concurrent use not recommended."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 3,
+      "keywords": [
+        "severe hypotension"
+      ],
+      "evidence": "Severe hypotension can result when phenothiazines are used concurrently with romifidine."
+    },
+    {
+      "drug": "Potentiated Sulfonamides IV (trimethoprim/sulfa)",
+      "severity": 3,
+      "keywords": [
+        "fatal dysrhythmias",
+        "contraindicated"
+      ],
+      "evidence": "Use with IV potentiated sulfonamides may result in fatal dysrhythmias; combination is contraindicated."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신장 질환이 있는 말에서는 사용 금기로 명시됨. 개/고양이에 대한 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간 질환이 있는 말에서는 사용 금기로 명시됨. 로미피딘은 간에서 생체 변환되므로 간 기능 저하 시 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to romifidine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡기 질환",
+      "match_terms": [
+        "respiratory disease",
+        "respiratory compromise"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "kidney disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (암말)",
+      "match_terms": [
+        "pregnancy",
+        "pregnant mare"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease",
+        "arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "IV 포텐시에이티드 설폰아미드 병용",
+      "match_terms": [
+        "trimethoprim/sulfa IV",
+        "potentiated sulfonamides IV"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파-2 아드레날린 수용체 작용제로서 CNS에서 노르에피네프린 방출의 피드백 억제를 통해 진정, 진통, 근육 이완 효과를 나타냄. 말초에서는 초기 혈관 수축 후 저혈압 단계가 발생하며, 심박수 감소, 방실 차단, GI 운동성 감소, 인슐린 분비 억제로 인한 고혈당 등의 효과가 나타남.",
+    "common_extra_effects": [
+      "심한 서맥",
+      "1도 및 2도 방실 차단",
+      "용량 의존적 동성 부정맥",
+      "초기 고혈압 후 저혈압",
+      "운동 실조",
+      "발한",
+      "기모",
+      "타액 분비",
+      "근육 떨림",
+      "음경 이완",
+      "배뇨",
+      "천명음",
+      "GI 운동성 감소",
+      "고창증",
+      "경미한 산통",
+      "두부 하강으로 인한 안면/입술/상기도 수동 울혈 및 부종",
+      "역설적 흥분",
+      "아나필락시스 반응"
+    ],
+    "dog_mechanism": "알파-2 작용제로서 CNS 억제 및 진정 효과. 개에서 IM 생체이용률 86%, SC 92%, 반감기 약 2시간.",
+    "dog_extra_effects": [],
+    "cat_mechanism": "알파-2 작용제로서 CNS 억제 및 진정 효과. 고양이에서 IM 생체이용률 95%, 반감기 약 6시간으로 개보다 길어 효과 지속 시간이 더 길 수 있음.",
+    "cat_extra_effects": [
+      "ADP 유도 혈소판 응집 억제 가능성 (관련 약물 메데토미딘에서 보고됨)"
+    ]
+  },
+  "species_notes": {
+    "dog": "로미피딘은 개에서 FDA 승인을 받지 않았으나, 약동학 데이터(IM 생체이용률 86-92%, 반감기 약 2시간)가 존재함. 개에서의 임상 용량은 Plumb's에 명시되지 않음. 사용 시 심혈관계 모니터링이 필수적이며, 역전제(아티파메졸, 요힘빈) 준비가 필요함.",
+    "cat": "로미피딘은 고양이에서 FDA 승인을 받지 않았으나, 약동학 데이터(IM 생체이용률 95%, 반감기 약 6시간)가 존재함. 고양이에서의 임상 용량은 Plumb's에 명시되지 않음. 반감기가 개보다 길어(약 6시간) 효과 지속 시간이 더 길 수 있으며, 관련 약물(메데토미딘)에서 혈소판 응집 억제가 보고된 바 있어 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 FDA 승인 없음. 약동학 데이터는 존재하나 임상 용량이 명시되지 않음. 심혈관계 부작용(서맥, 저혈압, 부정맥) 위험이 있으며, 신장/간 질환 시 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 FDA 승인 없음. 약동학 데이터는 존재하나 임상 용량이 명시되지 않음. 반감기가 개보다 길어(약 6시간) 효과 지속 시간이 더 길 수 있음. 심혈관계 부작용 및 혈소판 응집 억제 가능성에 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~30°C(59°F~86°F)의 실온에서 보관.",
+    "forms": [
+      "Romifidine HCl 1% (10 mg/mL) 주사제; Sedivet® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로미피딘은 성체 말에서 진정 및 진통을 위해 FDA 승인된 알파-2 아드레날린 수용체 작용제입니다. 주요 임상 특징: (1) 자일라진이나 데토미딘보다 운동 실조가 적고 진정 지속 시간이 가장 길어 스탠딩 시술에 적합. (2) 진통 지속 시간은 진정 지속 시간보다 짧음. (3) 천장 효과(ceiling effect) 존재 - 일정 용량 이상에서는 진정 강도가 아닌 지속 시간만 증가. (4) IV 포텐시에이티드 설폰아미드와 병용 금기(치명적 부정맥 위험). (5) 페노티아진(아세프로마진)과 병용 시 심한 저혈압 위험. (6) 마취 절약 효과가 있으므로 병용 마취제 용량 감량 필요. (7) 역전제: 아티파메졸, 요힘빈 사용 가능.",
+    "indications": "FDA 승인 적응증(말): 취급, 임상 검사, 시술 및 경미한 외과적 처치를 위한 진정 및 진통(40-120 µg/kg IV), 전신마취 유도 전 전마취제(100 µg/kg IV). 허가 외 사용: 소(경막외 마취), 망아지, GKR 삼중 드립 TIVA 프로토콜, 케타민/로미피딘 PIVA 프로토콜, 마취 후 진정, 스탠딩 진정.",
+    "client_info": "이 약물은 반드시 수의사 또는 수의 전문가만이 투여해야 합니다. 로미피딘 투여 후 말이 완전히 진정된 것처럼 보여도 외부 자극(예: 소리, 접촉)에 반응하여 발차기 등의 방어 행동을 할 수 있습니다. 말 주변에 있을 때는 항상 안전에 주의하시기 바랍니다. 이 약물은 피부 흡수 및 경구 흡수가 가능하므로 취급 시 주의가 필요합니다. 경마 등 동물 경기에 참가하는 경우 해당 규정을 반드시 확인하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog dosage (no approved or labeled dose)",
+      "Cat dosage (no approved or labeled dose)",
+      "Protein binding data",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/33.jsonl",
+    "extracted_at": "2026-03-10T23:23:33.066060+00:00",
+    "reviewer": null
+  }
+}

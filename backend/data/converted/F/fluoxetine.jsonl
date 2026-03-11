@@ -1,0 +1,658 @@
+{
+  "id": "fluoxetine",
+  "drug_identity": {
+    "name_ko": "플루옥세틴",
+    "name_en": "Fluoxetine",
+    "active_ingredient": "Fluoxetine",
+    "brand_names": [
+      "Prozac",
+      "Reconcile"
+    ],
+    "allergy_class": null,
+    "class": "Antidepressant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 8,
+        "unit": "mg"
+      },
+      {
+        "value": 16,
+        "unit": "mg"
+      },
+      {
+        "value": 32,
+        "unit": "mg"
+      },
+      {
+        "value": 64,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 90,
+        "unit": "mg"
+      },
+      {
+        "value": 4,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP450"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "플루옥세틴은 주로 간에서 CYP450에 의해 대사되어 활성 대사체인 노르플루옥세틴(norfluoxetine)을 포함한 다양한 대사체로 전환된다. 신장 기능 저하는 배설 속도에 유의한 영향을 미치지 않으나, 간 기능 저하는 청소율을 감소시킬 수 있다."
+    },
+    "extra_information": "개에서 경구 투여 후 생체이용률은 72~88%이며, 씹는 정제는 젤라틴 캡슐 대비 AUC가 15% 높다. 음식은 흡수 속도에는 영향을 주나 흡수 정도에는 영향을 주지 않는다. 플루옥세틴과 노르플루옥세틴은 폐와 간에 가장 높은 농도로 분포하며, 투여 1시간 이내에 CNS에서 검출된다. 개에서 플루옥세틴의 평균 반감기는 6~18시간, 노르플루옥세틴은 49시간이다. 고양이에서 경구 투여 후 플루옥세틴 반감기는 47시간, 노르플루옥세틴은 52시간이다. 고양이에서 경피 투여(PLO 겔 15%) 시 생체이용률은 경구 투여의 약 10%에 불과하다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 간: 주요 대사 기관, 간독성 보고(인체). 신장: 신장 기능 저하 시 배설에 유의한 영향 없음. 뇌: CNS 분포 확인, 발작·진전·혼돈 등 신경계 이상반응 보고. 혈액: 출혈 위험 증가(SSRI+NSAID/항응고제). 심장: 직접적 심독성 언급 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "seizures",
+          "tremors",
+          "CNS distribution",
+          "confusion",
+          "incoordination",
+          "mydriasis"
+        ],
+        "index": 1,
+        "evidence": "투여 1시간 이내 CNS 농도 검출. 개에서 발작(0.4~2.5%), 진전(11%), 혼돈, 운동실조, 산동 등 신경계 이상반응 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bleeding",
+          "anticoagulants",
+          "NSAIDs",
+          "antiplatelet"
+        ],
+        "index": 2,
+        "evidence": "SSRI는 NSAIDs 또는 항응고제와 병용 시 출혈 위험 증가와 관련됨(인체 역학 연구). 혈소판 기능에 영향 가능."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장 기능 저하는 플루옥세틴 배설 속도에 유의한 영향을 미치지 않는다고 명시됨. 신독성 직접 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP450",
+          "hepatotoxicity",
+          "liver impairment",
+          "highest concentrations in liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 CYP450에 의해 주로 대사됨. 폐와 간에 가장 높은 농도 분포. 간 기능 저하 시 청소율 감소. 인체에서 간독성 가능성 보고됨. 중증 간 기능 장애 시 감량 권고."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "직접적인 심독성 또는 심장 관련 이상반응 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS distribution",
+          "agitation",
+          "tremors",
+          "anxiety",
+          "irritability"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 SSRI 독성 시 흥분, 진전 보고. 행동 변화(불안, 과민성, 수면 장애) 이상반응 보고됨. CNS 분포 확인."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bleeding",
+          "NSAIDs"
+        ],
+        "index": 2,
+        "evidence": "SSRI와 NSAIDs 병용 시 출혈 위험 증가(인체 데이터). 고양이 특이적 혈액 데이터 부재."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장 기능 저하가 배설에 유의한 영향을 미치지 않는다고 명시됨. 고양이 특이적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP450",
+          "liver impairment",
+          "highest concentrations in liver"
+        ],
+        "index": 4,
+        "evidence": "간에서 CYP450에 의해 주로 대사됨. 간 기능 저하 시 청소율 감소. 중증 간 기능 장애 시 감량 권고."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "직접적인 심독성 또는 심장 관련 이상반응 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 18.0,
+      "mean": 12.0,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": 95,
+    "evidence": "개에서 경구 투여 후 생체이용률 72~88%(평균 약 80%). 플루옥세틴 반감기 6~18시간(개), 노르플루옥세틴 49시간(개). 고양이에서 플루옥세틴 반감기 47시간, 노르플루옥세틴 52시간. 말에서 Tmax 1.5시간, 반감기 15.6시간. 인체에서 혈장 단백 결합률 약 95%. CNS 농도는 투여 1시간 이내 검출."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)/세로토닌 증후군 위험→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "contraindicated",
+        "washout period"
+      ],
+      "evidence": "세로토닌 증후군 고위험. 개에서 병용 금기. 플루옥세틴 중단 후 6주, MAOI 중단 후 2주 휴약 기간 필요."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Isoniazid (INH)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "seizures",
+        "CYP inhibition",
+        "reduced efficacy"
+      ],
+      "evidence": "SSRI는 트라마돌의 활성 대사체로의 대사를 억제하여 효능 감소 및 독성(세로토닌 증후군, 발작) 위험 증가."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCA; clomipramine, amitriptyline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "increased TCA concentration"
+      ],
+      "evidence": "플루옥세틴이 TCA 혈중 농도를 증가시키고 세로토닌 증후군 위험을 높임."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 유사 이상반응 가능."
+    },
+    {
+      "drug": "Pentazocine",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 유사 이상반응 가능."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "increased trazodone concentration"
+      ],
+      "evidence": "트라조돈 혈중 농도 증가 가능; 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Anticoagulants (clopidogrel, heparin, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "플루옥세틴과 병용 시 출혈 위험 증가(인체 보고)."
+    },
+    {
+      "drug": "Antiplatelet Agents (aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "플루옥세틴과 병용 시 출혈 위험 증가(인체 보고)."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "bleeding"
+      ],
+      "evidence": "SSRI는 NSAIDs와 병용 시 위장관 궤양 및 출혈 위험 증가."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 2,
+      "keywords": [
+        "increased methadone concentration",
+        "increased AUC"
+      ],
+      "evidence": "개에서 플루옥세틴 경구 병용 투여 시 메타돈의 최고 혈중 농도 및 AUC 증가 보고."
+    },
+    {
+      "drug": "Propranolol, Metoprolol",
+      "severity": 2,
+      "keywords": [
+        "increased beta-blocker concentration"
+      ],
+      "evidence": "플루옥세틴이 이들 베타차단제의 혈중 농도를 증가시킬 수 있음. 아테놀롤이 더 안전한 대안으로 제시됨."
+    },
+    {
+      "drug": "Alprazolam",
+      "severity": 2,
+      "keywords": [
+        "increased alprazolam concentration"
+      ],
+      "evidence": "플루옥세틴이 알프라졸람 혈중 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Diazepam",
+      "severity": 2,
+      "keywords": [
+        "prolonged diazepam half-life"
+      ],
+      "evidence": "플루옥세틴이 디아제팜의 반감기를 연장시킬 수 있음."
+    },
+    {
+      "drug": "Diuretics",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "이뇨제와 병용 시 저나트륨혈증 위험 증가."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "altered insulin requirements",
+        "blood glucose"
+      ],
+      "evidence": "플루옥세틴이 혈당 농도를 변화시켜 인슐린 요구량에 영향을 줄 수 있음."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 1,
+      "keywords": [
+        "decreased SSRI efficacy"
+      ],
+      "evidence": "사이프로헵타딘이 SSRI의 효과를 감소시키거나 역전시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "분리불안 치료 (행동교정 프로그램 병행, FDA 승인 용량)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "FDA 승인 라벨 용량. 행동교정 프로그램과 병행 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 장애 보조 치료 (소음 공포증, 강박 장애, 상동 행동, 공격성 등, 허가 외 사용)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "효능 평가까지 4~8주 소요될 수 있음. 최대 4 mg/kg q24h까지 보고됨.",
+          "evidence": "허가 외 사용. 효능 완전 평가까지 4~8주 필요."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애 보조 치료 (소변 마킹, 분리불안, 공격성 등, 허가 외 사용)",
+          "value": "0.5 - 1.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 1.3,
+          "duration_note": "효능 완전 평가까지 최대 8주 필요. 소변 마킹 치료 성공 후 8~12주 경과 시 매주 약 25%씩 점진적 감량 가능. 마킹 재발 시 마지막 유효 용량으로 증량.",
+          "evidence": "허가 외 사용. 경피 투여(PLO 겔)는 경구 투여 대비 생체이용률이 현저히 낮아 권장되지 않음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하는 플루옥세틴 배설 속도에 유의한 영향을 미치지 않는다고 명시됨. 용량 조절 불필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간 기능 장애 동물에서 용량 감량이 필요할 수 있음. 간 기능 저하 시 청소율 감소."
+  },
+  "contraindications": [
+    {
+      "condition": "MAOI 투여 중",
+      "match_terms": [
+        "MAOI",
+        "amitraz",
+        "selegiline",
+        "linezolid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "플루옥세틴 과민증",
+      "match_terms": [
+        "fluoxetine hypersensitivity",
+        "SSRI allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질 또는 발작 병력 (개)",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder",
+        "seizure history"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver failure",
+        "severe hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "6개월 미만 강아지",
+      "match_terms": [
+        "puppy under 6 months",
+        "age < 6 months"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "시냅스 전 세로토닌 재흡수를 고선택적으로 억제하여 CNS 내 세로토닌 농도를 증가시킴. 도파민, 노르에피네프린 등 다른 신경전달물질에 대한 영향은 미미함.",
+    "common_extra_effects": [
+      "식욕부진",
+      "체중 감소",
+      "구토",
+      "설사",
+      "진전",
+      "발작",
+      "불안/초조",
+      "과도한 발성",
+      "기면",
+      "산동",
+      "헐떡임",
+      "혼돈",
+      "운동실조",
+      "과다침흘림",
+      "간독성 (인체)",
+      "저나트륨혈증 (인체)",
+      "출혈 반응 (인체)"
+    ],
+    "dog_mechanism": "개에서 항불안 및 항강박 효과를 나타내며, 반응성 감소를 통해 공격 행동을 줄일 수 있음.",
+    "dog_extra_effects": [
+      "기면 (33%)",
+      "식욕부진 (27%)",
+      "체중 감소 (30%)",
+      "구토 (17%)",
+      "설사 (10%)",
+      "진전 (11%)",
+      "초조/불안 (7%)",
+      "과도한 발성 (6%)",
+      "발작 (0.4~2.5%)",
+      "공격 행동",
+      "산동",
+      "헐떡임",
+      "혼돈",
+      "운동실조",
+      "과다침흘림"
+    ],
+    "cat_mechanism": "고양이에서 항불안 및 항강박 효과를 나타내며, 공격 행동 감소에 도움이 될 수 있음.",
+    "cat_extra_effects": [
+      "행동 변화 (불안, 과민성, 수면 장애)",
+      "식욕부진",
+      "설사",
+      "배변 패턴 변화",
+      "피부 자극 (경피 제제 사용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "플루옥세틴은 개의 분리불안 치료에 FDA 승인된 수의용 제품(Reconcile®)이 있으며, 행동교정 프로그램과 병행 투여해야 한다. 씹는 정제는 젤라틴 캡슐 대비 AUC가 15% 높다. 반감기가 길어 장기 투여(8주 이상) 후 중단 시 3~5주에 걸쳐 점진적 감량이 권장된다. 플루옥세틴 중단 후 MAOI 시작 전 6주 휴약 기간이 필요하다. 간질 또는 발작 병력이 있는 개에는 사용하지 않는다.",
+    "cat": "고양이에서는 허가 외 사용으로, 소변 마킹, 분리불안, 공격성 등 행동 장애 치료에 사용된다. 경피 투여(PLO 겔)는 경구 투여 대비 생체이용률이 약 10%에 불과하여 권장되지 않는다. 고양이에서 플루옥세틴 반감기는 47시간으로 개보다 훨씬 길어 축적 위험에 주의해야 한다. SSRI 독성 시 구토, 설사, 흥분, 진전이 나타날 수 있으며, 임상 증상을 보이는 비율은 24%로 보고되었다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간질/발작 병력 있는 개에는 금기. 당뇨병 동물에서 혈당 변화 가능성으로 주의 필요. 중증 간 기능 장애 시 감량. 6개월 미만 강아지에서 안전성 미확립. MAOI와 병용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "허가 외 사용. 경피 투여는 생체이용률이 낮아 권장되지 않음. 반감기가 길어 약물 축적 주의. 행동 변화, 식욕부진, 설사 등 이상반응 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐 및 정제: 밀폐 용기에 실온(20~25°C) 보관; 15~30°C 범위 허용. 씹는 정제 용기에서 건조제 제거 금지. 경구 액제: 밀폐된 차광 용기에 실온 보관.",
+    "forms": [
+      "플루옥세틴 씹는 정제 8 mg, 16 mg, 32 mg, 64 mg (Reconcile®, 수의용)",
+      "플루옥세틴 HCl 경구 정제 10 mg, 20 mg (인체용)",
+      "플루옥세틴 HCl 경구 캡슐 10 mg, 20 mg, 40 mg (Prozac®, 인체용)",
+      "플루옥세틴 HCl 경구 서방형 캡슐 90 mg (인체용)",
+      "플루옥세틴 HCl 경구 액제 20 mg/5 mL (4 mg/mL) (Prozac®, 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루옥세틴은 선택적 세로토닌 재흡수 억제제(SSRI)로, 개의 분리불안 치료에 FDA 승인된 수의용 제품(Reconcile®)이 있다. 고양이와 말에서는 허가 외로 사용된다. MAOI와의 병용은 세로토닌 증후군 위험으로 절대 금기이며, 플루옥세틴 중단 후 MAOI 시작 전 6주 휴약 기간이 필요하다. 노르플루옥세틴의 긴 반감기(개 49시간, 고양이 52시간)로 인해 약물 상호작용 및 중단 시 주의가 필요하다. 효능 평가까지 4~8주가 소요될 수 있다.",
+    "indications": "개: 분리불안(FDA 승인, 행동교정 병행), 공격성, 강박/상동 행동, 불안 장애(허가 외). 고양이: 소변 마킹, 분리불안, 공격성, 부적절한 배변(허가 외). 말: 마구간 안정 및 행동 관련 문제(허가 외).",
+    "client_info": "이 약은 반드시 행동교정 프로그램과 함께 사용해야 합니다. 첫 주에 일부 개선이 보일 수 있으나, 완전한 효과 판정까지 수 주가 걸릴 수 있습니다. 음식과 함께 또는 공복에 투여할 수 있으며, 공복 투여 후 구토 시 이후 투여는 음식과 함께 하십시오. 수의사의 지시 없이 갑자기 투약을 중단하지 마십시오. 가장 흔한 부작용은 졸음과 식욕 감소입니다. 발작이나 공격성 등 심각한 부작용 발생 시 즉시 수의사에게 연락하십시오. 과거 2주 이내 벼룩·진드기 방지 목걸이를 착용한 경우 반드시 수의사에게 알리고, 이 약 투여 중에는 수의사와 상담 없이 해당 제품을 사용하지 마십시오. 약을 다른 동물이나 어린이의 손에 닿지 않는 곳에 보관하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min (estimated from CNS detection time)",
+      "timing_profile.t_max_hr (horse data used as proxy)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:21:57.912019+00:00",
+    "reviewer": null
+  }
+}

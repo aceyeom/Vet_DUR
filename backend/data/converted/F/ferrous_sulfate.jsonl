@@ -1,0 +1,560 @@
+{
+  "id": "ferrous_sulfate",
+  "drug_identity": {
+    "name_ko": "황산제일철",
+    "name_en": "Ferrous Sulfate",
+    "active_ingredient": "Ferrous Sulfate",
+    "brand_names": [
+      "Feosol",
+      "FeroSul",
+      "Enfamil Fer-In-Sol",
+      "Fer-Gen-Sol"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Deferoxamine",
+    "reversal_evidence": "Deferoxamine은 흡수된 철을 킬레이트화하는 데 유용합니다. 과량 투여 시 응급 처치로 사용됩니다.",
+    "off_label_note": "수의학적으로 FDA 승인된 제품이 없으며, 개와 고양이에서 철 결핍성 빈혈 치료 및 에포에틴/다르베포에틴 보조 요법으로 오프라벨 사용됩니다.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Drop"
+    ],
+    "available_strengths": [
+      {
+        "value": 325,
+        "unit": "mg"
+      },
+      {
+        "value": 220,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 44,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "철은 거의 폐쇄 시스템에서 대사됩니다. 헤모글로빈 파괴로 유리된 철은 체내에서 재사용되며, 모발·손발톱 성장, 정상 피부 탈락, 위장관 탈락을 통해 소량만 손실됩니다. CYP 효소 관련 대사 경로는 보고되지 않았습니다."
+    },
+    "extra_information": "철은 주로 십이지장과 근위 공장에서 흡수됩니다. 흡수 후 즉시 트랜스페린에 결합되어 골수로 운반되고 헤모글로빈에 통합됩니다. 식이, 철 저장량, 적혈구 생성 정도, 용량에 따라 흡수율이 달라집니다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 과량 투여 시 간 독성(전격성 간부전) 및 위장관 독성이 보고됨. 치료 용량에서는 주로 위장관 자극이 주된 부작용임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "ataxia",
+          "coma",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 운동실조, 혼수, 우울증 등 신경계 증상이 보고됨. 치료 용량에서는 직접적인 뇌 부담 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hemoglobin",
+          "erythropoiesis",
+          "transferrin",
+          "RBC"
+        ],
+        "index": 2,
+        "evidence": "철은 헤모글로빈 및 미오글로빈 형성에 필수적이며, 트랜스페린에 결합되어 골수로 운반됨. 혈액 지표(CBC, RBC 지수) 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 치료 용량에서 신장 부담은 낮은 것으로 판단됨."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "fulminant hepatic failure",
+          "hepatic"
+        ],
+        "index": 3,
+        "evidence": "과량 투여 시 전격성 간부전이 보고됨. 치료 용량에서도 간 대사 관련 주의가 필요함."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "peripheral vascular collapse",
+          "hypotension",
+          "vasomotor collapse"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 말초혈관 허탈, 저혈압, 혈관운동 허탈이 보고됨. 치료 용량에서는 심장 직접 독성 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "ataxia",
+          "coma",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 신경계 증상 가능. 고양이는 경구 철 제품을 잘 견디지 못하는 것으로 알려져 있음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hemoglobin",
+          "erythropoiesis",
+          "transferrin",
+          "RBC"
+        ],
+        "index": 2,
+        "evidence": "철은 헤모글로빈 형성에 필수적. 고양이에서 에포에틴/다르베포에틴 보조 요법으로 사용됨."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "fulminant hepatic failure",
+          "hepatic"
+        ],
+        "index": 3,
+        "evidence": "과량 투여 시 전격성 간부전 가능. 고양이 특이적 간 독성 데이터는 제한적임."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "peripheral vascular collapse",
+          "hypotension",
+          "vasomotor collapse"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 혈관계 허탈 가능. 치료 용량에서는 심장 직접 독성 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "급성 철 중독 시 임상 증상은 섭취 후 30분 이내에 나타날 수 있으나 수 시간 지연될 수도 있음. 흡수 후 즉시 트랜스페린에 결합됨. 반감기 및 생체이용률에 대한 구체적인 수치는 본 모노그래프에 기재되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 대부분의 상호작용은 흡수 감소(chelation 또는 결합)에 의한 것으로, 투여 간격 조절로 관리 가능.",
+  "drug_interactions": [
+    {
+      "drug": "Alendronate (Bisphosphonates)",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "chelation"
+      ],
+      "evidence": "Oral iron may reduce the absorption of oral bisphosphonates; administer at least 2 hours apart."
+    },
+    {
+      "drug": "Antacids (Aluminum- or Magnesium-containing)",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "binding"
+      ],
+      "evidence": "Aluminum- or magnesium-containing antacids may bind and decrease oral iron absorption; administer at least 2 hours apart."
+    },
+    {
+      "drug": "Calcium Supplements / Calcium-containing Antacids",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "binding"
+      ],
+      "evidence": "Calcium supplements and antacids may bind and decrease oral iron absorption; administer at least 2 hours apart."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "delayed response",
+        "iron deficiency anemia"
+      ],
+      "evidence": "Chloramphenicol may delay the response to iron administration; avoid use in patients with iron deficiency anemia."
+    },
+    {
+      "drug": "Fluoroquinolones (e.g., enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "chelation"
+      ],
+      "evidence": "Iron may reduce the absorption of oral fluoroquinolones; administer 2 to 4 hours apart."
+    },
+    {
+      "drug": "H2-Receptor Antagonists (e.g., famotidine, ranitidine)",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction"
+      ],
+      "evidence": "H2-receptor antagonists may decrease iron absorption."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "chelation"
+      ],
+      "evidence": "Oral iron may reduce the absorption of levothyroxine; administer at least 4 hours apart."
+    },
+    {
+      "drug": "Mycophenolic Acid",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "decreased efficacy"
+      ],
+      "evidence": "Concurrent use may result in decreased mycophenolate efficacy; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "chelation"
+      ],
+      "evidence": "Oral iron can decrease the absorption of penicillamine; administer at least 1 hour apart."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (e.g., omeprazole)",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction"
+      ],
+      "evidence": "Proton pump inhibitors may decrease iron absorption."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 2,
+      "keywords": [
+        "absorption reduction",
+        "chelation",
+        "binding"
+      ],
+      "evidence": "Oral iron preparations can bind to orally administered tetracyclines, decreasing the absorption of both compounds."
+    },
+    {
+      "drug": "Vitamin C",
+      "severity": 1,
+      "keywords": [
+        "enhanced absorption"
+      ],
+      "evidence": "Vitamin C may enhance the absorption of iron."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "철 결핍성 빈혈 또는 에포에틴/다르베포에틴 치료 보조 (오프라벨)",
+          "value": "11",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "기저 혈액 손실이 원인인 경우 치료 전 교정 필요. RBC 지수 정상화에 수개월 소요될 수 있음.",
+          "evidence": "오프라벨. 권장 용량: 11 mg/kg 또는 100–300 mg/dog PO 1일 1회."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "철 결핍성 빈혈 또는 에포에틴/다르베포에틴 치료 보조 (오프라벨) - 고정 용량",
+          "value": "100 - 300",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "기저 혈액 손실이 원인인 경우 치료 전 교정 필요.",
+          "evidence": "오프라벨. 권장 용량: 11 mg/kg 또는 100–300 mg/dog PO 1일 1회."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "철 결핍성 빈혈 또는 에포에틴/다르베포에틴 치료 보조 (오프라벨)",
+          "value": "50 - 100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이는 경구 철 제품을 잘 견디지 못함. 주사용 철 덱스트란이 더 일반적으로 사용됨. 기저 혈액 손실이 원인인 경우 치료 전 교정 필요.",
+          "evidence": "오프라벨. 통상 권장 용량: 50–100 mg/cat PO 1일 1회; 용량 범위 30–200 mg/cat/day PO."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "철 결핍성 빈혈 또는 에포에틴/다르베포에틴 치료 보조 (오프라벨) - 확장 용량 범위",
+          "value": "30 - 200",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이는 경구 철 제품을 잘 견디지 못함. 주사용 철 덱스트란이 더 일반적으로 사용됨.",
+          "evidence": "오프라벨. 용량 범위 30–200 mg/cat/day PO."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없음. 과량 투여 시 전격성 간부전 위험이 있으므로 간 질환 환자에서 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "철 제품 성분에 대한 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to iron"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈철소증 (Hemosiderosis)",
+      "match_terms": [
+        "hemosiderosis",
+        "iron overload"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈색소증 (Hemochromatosis)",
+      "match_terms": [
+        "hemochromatosis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "용혈성 빈혈 (Hemolytic Anemia)",
+      "match_terms": [
+        "hemolytic anemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "위장관 궤양성 질환",
+      "match_terms": [
+        "GI ulcer",
+        "gastrointestinal ulceration",
+        "peptic ulcer"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "철은 헤모글로빈 및 미오글로빈 형성과 산소 운반 및 이용에 필수적입니다. 철 결핍이 존재할 때 철 투여는 철 결핍의 신체적 징후와 이차적으로 감소된 헤모글로빈 농도를 교정합니다.",
+    "common_extra_effects": [
+      "위장관 불편감",
+      "변비",
+      "오심",
+      "설사",
+      "흑색 변 (대용량 투여 시)",
+      "과량 투여 시: 출혈성 구토, 복통, 말초혈관 허탈, 저혈압, 청색증, 운동실조, 혼수, 전격성 간부전"
+    ],
+    "dog_mechanism": "개에서 철 결핍성 빈혈 치료 및 에포에틴/다르베포에틴 보조 요법으로 사용됨. 황산제일철은 중량 대비 20% 원소 철 함유 (325 mg 황산제일철 = 65 mg 원소 철).",
+    "dog_extra_effects": [
+      "경미한 위장관 자극",
+      "변비",
+      "오심",
+      "설사"
+    ],
+    "cat_mechanism": "고양이에서 경구 철 제품에 대한 내성이 낮음. 주사용 철 덱스트란이 더 일반적으로 사용됨. 에포에틴/다르베포에틴 보조 요법으로 사용 가능.",
+    "cat_extra_effects": [
+      "경구 철 제품 불내성",
+      "위장관 자극",
+      "오심",
+      "구토"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 철 결핍성 빈혈 치료에 경구 황산제일철을 사용할 수 있으나, 주사용 철 덱스트란이 더 일반적으로 사용됩니다. 권장 용량은 11 mg/kg 또는 100–300 mg/마리 PO 1일 1회입니다. 기저 혈액 손실이 원인인 경우 반드시 교정해야 합니다. CBC 및 혈청 철 지표를 정기적으로 모니터링하십시오.",
+    "cat": "고양이는 경구 철 제품을 잘 견디지 못하므로 주사용 철 덱스트란이 선호됩니다. 경구 투여가 필요한 경우 50–100 mg/마리 PO 1일 1회(범위: 30–200 mg/마리/일)를 사용할 수 있습니다. 위장관 부작용 모니터링이 중요합니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "위장관 자극 가능성이 있으므로 음식과 함께 투여 권장. 혈철소증, 혈색소증, 용혈성 빈혈 환자에서 주의 필요. 과량 투여는 생명을 위협할 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 경구 철 제품을 잘 견디지 못함. 주사용 철 덱스트란이 더 일반적으로 사용됨. 경구 투여 시 위장관 부작용 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 보관. 정제: 15°C–30°C (59°F–86°F) 보관. 액체 제제: 20°C–25°C (68°F–77°F) 보관. 습기 및 빛에 노출 시 갈색-황색 제2철 화합물로 산화되므로 주의.",
+    "forms": [
+      "경구 정제 (325 mg, 65 mg 원소 철)",
+      "경구 엘릭서/액체 (220 mg/5 mL, 300 mg/5 mL)",
+      "경구 드롭 (15 mg 철/mL, 5 mg 철/20 mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "황산제일철은 철 결핍성 빈혈 치료 및 에포에틴/다르베포에틴 보조 요법에 사용되는 경구 철 보충제입니다. FDA 승인 수의학 제품은 없으며 오프라벨로 사용됩니다. 가장 흔한 부작용은 위장관 자극이며, 과량 투여는 생명을 위협할 수 있습니다. 고양이는 경구 철 제품에 대한 내성이 낮아 주사용 철 덱스트란이 선호됩니다. 용량 표기 시 황산제일철 용량과 원소 철 용량을 혼동하지 않도록 주의가 필요합니다.",
+    "indications": "개와 고양이에서 철 결핍성 빈혈 치료 (오프라벨), 에포에틴(에리스로포이에틴) 또는 다르베포에틴 치료 시 보조 요법 (오프라벨). 철은 헤모글로빈 및 미오글로빈 형성에 필수적이며, 철 결핍으로 인한 빈혈에만 효과적입니다.",
+    "client_info": "이 약은 위장관 자극을 최소화하기 위해 음식과 함께 투여할 수 있습니다. 단, 유제품(치즈 포함)과 함께 투여하지 마십시오. 부작용으로 변비, 설사, 구토, 오심이 나타날 수 있습니다. 흑색 타르 변이나 혈성 구토가 나타나면 즉시 수의사에게 연락하십시오. 이 약은 다른 동물과 어린이의 손이 닿지 않는 곳에 보관하십시오. 우발적인 과량 투여는 매우 독성이 강할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific PK parameters (half-life, Tmax, bioavailability)",
+      "CYP enzyme interactions",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding data",
+      "Veterinary species-specific PK studies"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/41.jsonl",
+    "extracted_at": "2026-03-11T01:56:43.194007+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "id": "etomidate",
+  "drug_identity": {
+    "name_ko": "에토미데이트",
+    "name_en": "Etomidate",
+    "active_ingredient": "Etomidate",
+    "brand_names": [
+      "Amidate",
+      "Hypnomidate",
+      "Radenarcon",
+      "Sibul"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 개·고양이에서 마취 유도 목적으로 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 가수분해(hydrolysis) 또는 글루쿠론산화(glucuronidation)를 통해 비활성 대사체로 신속히 대사됨. 대부분의 약물 및 대사체는 소변으로 배설됨."
+    },
+    "extra_information": "개·고양이에서의 약동학 데이터 없음. 사람 데이터 기준: 간 기능 또는 신 기능 저하 시 소실 반감기가 유의하게 증가할 수 있음. 주사제에 포함된 프로필렌 글리콜 담체는 간 기능 장애 환자에서 문제가 될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 약동학 데이터 없음; 사람 데이터 및 부작용 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "hypnosis",
+          "seizures",
+          "myoclonus",
+          "GABA receptor"
+        ],
+        "index": 1,
+        "evidence": "GABA 수용체 작용을 통한 CNS 억제 및 최면 유발. 근간대경련, 안구 운동, 경련 보고됨."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hemolysis",
+          "hemoglobinuria",
+          "intravascular hemolysis",
+          "propylene glycol"
+        ],
+        "index": 2,
+        "evidence": "프로필렌 글리콜 담체로 인한 용혈 가능성. 에토미데이트 주입을 받은 개 2마리에서 혈색소뇨 및 혈관내 용혈 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "pigmenturia",
+          "hemoglobinuria",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "대부분의 약물 및 대사체가 소변으로 배설됨. 색소뇨 부작용 보고. 신 기능 저하 시 반감기 증가 가능."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "propylene glycol",
+          "liver dysfunction",
+          "hydrolysis",
+          "glucuronidation"
+        ],
+        "index": 4,
+        "evidence": "간에서 신속히 대사됨. 간 기능 장애 시 프로필렌 글리콜 담체가 문제가 될 수 있으며 반감기 증가 가능."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "minimal hemodynamic changes",
+          "decreased arterial blood pressure",
+          "arrhythmias"
+        ],
+        "index": 5,
+        "evidence": "다른 마취제에 비해 심혈관계 영향 최소. 단기적 저혈압 가능. 부정맥은 사람에서 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "hypnosis",
+          "myoclonus",
+          "GABA receptor"
+        ],
+        "index": 1,
+        "evidence": "GABA 수용체 작용을 통한 CNS 억제 및 최면 유발. 근간대경련 등 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hemolysis",
+          "propylene glycol",
+          "cats"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 프로필렌 글리콜 담체로 인한 용혈이 특히 우려됨. 희석 투여 권장."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "pigmenturia",
+          "renal elimination"
+        ],
+        "index": 3,
+        "evidence": "대부분의 약물 및 대사체가 소변으로 배설됨. 신 기능 저하 시 반감기 증가 가능."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "propylene glycol",
+          "liver dysfunction"
+        ],
+        "index": 4,
+        "evidence": "간에서 신속히 대사됨. 간 기능 장애 시 프로필렌 글리콜 담체 문제 및 반감기 증가 가능."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "minimal hemodynamic changes",
+          "decreased arterial blood pressure"
+        ],
+        "index": 5,
+        "evidence": "다른 마취제에 비해 심혈관계 영향 최소. 단기적 저혈압 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.25,
+      "max": 5.0,
+      "mean": 3.125,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 75,
+    "evidence": "사람 데이터: 최면 지속 시간 3~5분(용량 의존적). 소실 반감기 1.25~5시간. 혈장 단백 결합률 75%. 개·고양이 약동학 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "CNS and Respiratory Depressants (barbiturates, opiates, anesthetics)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "additive effect"
+      ],
+      "evidence": "에토미데이트와 병용 시 CNS 및 호흡 억제 효과가 상가적으로 나타날 수 있음."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "anesthetic potentiation",
+        "respiratory depression"
+      ],
+      "evidence": "베라파밀은 에토미데이트의 마취 및 호흡 억제 효과를 강화시키는 것으로 보고됨."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (오프라벨, 일반적 범위)",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "유도 목적으로만 사용; 유지 마취에 사용 금지",
+          "evidence": "적절한 전처치 필요. 최대 4 mg/kg IV까지 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (벤조디아제핀 ± 저용량 케타민 전처치 후)",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "미다졸람 등 벤조디아제핀 ± 저용량 케타민 전처치 후 저용량 사용 가능",
+          "evidence": "벤조디아제핀 전처치 시 부작용 감소 및 유도 용량 감소 가능."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (오프라벨, 일반적 범위)",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "유도 목적으로만 사용; 고양이에서 프로필렌 글리콜로 인한 용혈 위험 주의",
+          "evidence": "적절한 전처치 필요. 희석 투여 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (벤조디아제핀 ± 저용량 케타민 전처치 후)",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "미다졸람 등 벤조디아제핀 ± 저용량 케타민 전처치 후 저용량 사용 가능",
+          "evidence": "벤조디아제핀 전처치 시 부작용 감소 및 유도 용량 감소 가능."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신 기능 저하 환자에서 소실 반감기가 유의하게 증가할 수 있음. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 환자에서 소실 반감기가 유의하게 증가할 수 있으며, 주사제의 프로필렌 글리콜 담체가 문제가 될 수 있음. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "에토미데이트 과민증",
+      "match_terms": [
+        "hypersensitivity to etomidate",
+        "etomidate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질 기능 저하증 (특히 패혈성 쇼크)",
+      "match_terms": [
+        "adrenocortical insufficiency",
+        "septic shock",
+        "hypoadrenocorticism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안과 수술 (개)",
+      "match_terms": [
+        "ocular surgery",
+        "intraocular pressure",
+        "IOP"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신 기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "kidney disease",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "수유 중인 환자",
+      "match_terms": [
+        "nursing",
+        "lactation"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "CNS의 GABA 수용체에 작용하여 염화물 전도도를 증가시키고, 시냅스 후 뉴런의 과분극을 유발하여 최면 및 CNS 억제를 일으킴.",
+    "common_extra_effects": [
+      "IV 주사 부위 통증",
+      "정맥염",
+      "구토",
+      "역류",
+      "과다침분비",
+      "근간대경련(myoclonus)",
+      "안구 운동",
+      "무호흡",
+      "빈호흡",
+      "색소뇨",
+      "수술 후 구역",
+      "부신피질 기능 억제",
+      "단기적 저혈압",
+      "저환기"
+    ],
+    "dog_mechanism": "GABA 수용체 작용을 통한 최면 유발. 다른 마취제에 비해 심혈관계 영향 최소.",
+    "dog_extra_effects": [
+      "프로필렌 글리콜로 인한 혈관내 용혈 및 혈색소뇨",
+      "에토미데이트/미다졸람 병용 시 동공축소(miosis) 및 안압 상승",
+      "침흘림, 구역질, 복부 경련",
+      "프로포폴에 비해 회복 지연 및 불량한 회복 질"
+    ],
+    "cat_mechanism": "GABA 수용체 작용을 통한 최면 유발.",
+    "cat_extra_effects": [
+      "프로필렌 글리콜로 인한 용혈 위험 증가 (개보다 고양이에서 더 우려됨)",
+      "근간대경련",
+      "과다침분비"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에토미데이트는 심혈관 기능 저하 또는 중증 환자의 마취 유도에 유용한 대안제임. 프로포폴과 비교 시 수축기 및 평균 동맥압이 더 높게 유지되나, 회복이 더 길고 질이 낮을 수 있음. 안과 수술 시 안압 상승 및 동공축소 유발 가능성으로 주의 필요. 코르티솔 생성 억제 효과는 투여 후 2~6시간 지속될 수 있으므로 중증 환자에서는 글루코코르티코이드 보충을 고려해야 함.",
+    "cat": "고양이에서 프로필렌 글리콜 담체로 인한 용혈 위험이 개보다 높음. 희석 투여(예: 정맥 라인에 주입) 권장. 코르티솔 기능 억제는 투여 후 최대 5.5시간까지 지속될 수 있음. 적절한 전처치(벤조디아제핀 등)가 부작용 감소에 도움이 됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "부신피질 기능 억제, 안과 수술 시 안압 상승, 프로필렌 글리콜로 인한 용혈 가능성, 간·신 기능 저하 시 반감기 증가에 주의. 유도 목적으로만 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "프로필렌 글리콜로 인한 용혈 위험이 개보다 높음. 희석 투여 권장. 부신피질 기능 억제(최대 5.5시간). 적절한 전처치 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "달리 표시되지 않는 한 실온 보관, 빛 차단.",
+    "forms": [
+      "Etomidate Injection 2 mg/mL (10 mL, 20 mL 단회용 바이알)",
+      "Etomidate Injection 2 mg/mL (10 mL, 20 mL 앰플)",
+      "Etomidate Injection 2 mg/mL (20 mL Abboject® 주사기)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에토미데이트는 비바르비투레이트계 주사용 마취제로, 심혈관 기능 저하 또는 중증 환자의 마취 유도에 알팍살론 또는 프로포폴의 대안으로 사용될 수 있음. 심혈관계 영향이 최소화되어 있으나, 부신피질 기능 억제(코르티솔 생성 억제)가 주요 우려 사항임. 수의학적으로 승인된 제품 없음(오프라벨 사용). 마약류 아님. 대형견에서 비용이 상대적으로 높음.",
+    "indications": "소동물(개, 고양이)에서 전신마취 유도제로 오프라벨 사용. 특히 기존 심장 기능 장애 또는 중증 환자에서 알팍살론 또는 프로포폴의 대안. 페럿 및 소형 포유류(토끼 등)에서도 심혈관 불안정 환자의 마취 유도에 오프라벨 사용.",
+    "client_info": "에토미데이트는 강력한 진정-최면제로, 반드시 적절한 환자 모니터링이 가능한 환경에서 전문가에 의해서만 사용되어야 합니다. 투여 후 구토, 근육 떨림, 침 흘림 등의 부작용이 나타날 수 있으며, 부신 기능에 일시적인 영향을 줄 수 있습니다. 중증 환자의 경우 스테로이드 보충이 필요할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability",
+      "Specific renal/hepatic dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:32:46.711793+00:00",
+    "reviewer": null
+  }
+}

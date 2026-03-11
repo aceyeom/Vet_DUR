@@ -1,0 +1,643 @@
+{
+  "id": "heparin_ufh",
+  "drug_identity": {
+    "name_ko": "헤파린 (미분획)",
+    "name_en": "Unfractionated Heparin",
+    "active_ingredient": "Heparin Sodium",
+    "brand_names": [
+      "Tubex",
+      "Carpuject"
+    ],
+    "allergy_class": null,
+    "class": "Anticoagulant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Protamine",
+    "reversal_evidence": "프로타민은 헤파린의 항응고 효과를 역전시킬 수 있음. 과량 투여 시 사용 가능.",
+    "off_label_note": "수의용 허가 제품 없음. 인체용 제품을 동물에게 적용하는 오프라벨 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 5000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 10000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 20000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 10,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 100,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "헤파린의 대사는 완전히 밝혀지지 않았으며, 간에서 부분적으로 대사되고 세망내피계(reticuloendothelial system)에 의해 불활성화되는 것으로 알려져 있음."
+    },
+    "extra_information": "개에서 SC 투여 후 생체이용률은 약 50%. 피브리노겐, 저밀도 지단백, 글로불린에 광범위하게 단백 결합됨. 태반을 통과하지 않으며 유즙으로 분비되지 않음. 개에서 300 units/kg SC 단회 투여 후 항-Xa 활성 최고치는 2~3시간 후 관찰되며, 혈장 헤파린 농도는 투여 후 1~6시간 동안 치료 범위 내에 있음. 고양이에서 250 units/kg SC 투여 시 4시간 후 목표 항-Xa 활성 달성."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 출혈이 주요 부작용이며 간에서 부분 대사됨. 혈액계 영향(혈소판감소증, 빈혈)이 가장 두드러짐. 수의 종별 특이적 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "출혈"
+        ],
+        "index": -1,
+        "evidence": "뇌출혈 가능성은 이론적으로 존재하나 본문에서 직접 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "출혈",
+          "혈소판감소증",
+          "빈혈",
+          "항응고"
+        ],
+        "index": 1,
+        "evidence": "출혈이 가장 흔한 부작용이며 빈혈 및 혈소판감소증을 유발할 수 있음. 항응고 작용이 주요 기전으로 혈액계에 직접적 영향."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈뇨",
+          "신기능 장애"
+        ],
+        "index": -1,
+        "evidence": "혈뇨가 과량 투여 시 나타날 수 있으며, 신기능 장애 환자에서 항-Xa 모니터링이 특히 유용하다고 언급됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "간 대사",
+          "AST 상승",
+          "ALT 상승",
+          "간독성"
+        ],
+        "index": 1,
+        "evidence": "간에서 부분 대사됨. AST 및 ALT 상승이 보고되었으며 간독성 여부는 불명확함. 간질환 환자에서 출혈 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈관경련"
+        ],
+        "index": -1,
+        "evidence": "치료 시작 수일 후 혈관경련 반응이 드물게 보고됨(인체 데이터). 직접적 심장 독성은 언급되지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "출혈"
+        ],
+        "index": -1,
+        "evidence": "뇌출혈 가능성은 이론적으로 존재하나 본문에서 직접 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "출혈",
+          "혈소판감소증",
+          "빈혈",
+          "항응고"
+        ],
+        "index": 1,
+        "evidence": "출혈이 가장 흔한 부작용이며 빈혈 및 혈소판감소증을 유발할 수 있음. 고양이 동맥혈전색전증(FATE) 치료에 사용됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈뇨",
+          "신기능 장애"
+        ],
+        "index": -1,
+        "evidence": "혈뇨가 과량 투여 시 나타날 수 있으며, 신기능 장애 환자에서 항-Xa 모니터링이 특히 유용하다고 언급됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사",
+          "AST 상승",
+          "ALT 상승"
+        ],
+        "index": 1,
+        "evidence": "간에서 부분 대사됨. AST 및 ALT 상승이 보고됨(주로 인체 데이터). 간질환 환자에서 출혈 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈관경련"
+        ],
+        "index": -1,
+        "evidence": "치료 시작 수일 후 혈관경련 반응이 드물게 보고됨(인체 데이터). 직접적 심장 독성은 언급되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 2.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": null,
+    "evidence": "IV 직접 볼루스 투여 시 즉시 항응고 활성 시작. SC 투여 시 최대 1시간 소요. 개에서 300 units/kg SC 투여 후 항-Xa 활성 최고치는 2~3시간 후. 개에서 SC 투여 후 생체이용률 약 50%. 반감기는 본문에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 헤파린의 항응고 효과를 부분적으로 상쇄하는 약물도 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가",
+        "항혈소판"
+      ],
+      "evidence": "Aspirin may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가",
+        "항혈소판"
+      ],
+      "evidence": "Clopidogrel may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "Dextran",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가"
+      ],
+      "evidence": "Dextran may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "Hetastarch",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가"
+      ],
+      "evidence": "Hetastarch may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가",
+        "GI 궤양"
+      ],
+      "evidence": "Nonsteroidal anti-inflammatory drugs may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "SSRIs (fluoxetine, sertraline 등)",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가",
+        "세로토닌"
+      ],
+      "evidence": "Selective serotonin reuptake inhibitors may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가",
+        "항응고"
+      ],
+      "evidence": "Warfarin may increase the risk for hemorrhage when used with heparin."
+    },
+    {
+      "drug": "Antihistamines",
+      "severity": 1,
+      "keywords": [
+        "항응고 효과 감소"
+      ],
+      "evidence": "Antihistamines may partially counteract heparin's anticoagulant effects."
+    },
+    {
+      "drug": "Nitroglycerin (IV)",
+      "severity": 1,
+      "keywords": [
+        "항응고 효과 감소"
+      ],
+      "evidence": "IV nitroglycerin may partially counteract heparin's anticoagulant effects."
+    },
+    {
+      "drug": "Propylene Glycol",
+      "severity": 1,
+      "keywords": [
+        "항응고 효과 감소"
+      ],
+      "evidence": "Propylene glycol may partially counteract heparin's anticoagulant effects."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 1,
+      "keywords": [
+        "항응고 효과 감소"
+      ],
+      "evidence": "Digoxin may partially counteract heparin's anticoagulant effects."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 1,
+      "keywords": [
+        "항응고 효과 감소"
+      ],
+      "evidence": "Tetracyclines may partially counteract heparin's anticoagulant effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "IMHA 혈전예방 (SC)",
+          "value": "150 - 300",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 항-Xa 활성 달성을 위해 최대 566 units/kg까지 필요할 수 있음. 개별 반응 매우 다양.",
+          "evidence": "Extra-label. 일부 연구에서 150~566 units/kg SC q6h 범위 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "IMHA 혈전예방 (IV 볼루스 후 CRI)",
+          "value": "100",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV 볼루스 후 900 units/kg/day IV CRI 유지",
+          "evidence": "Extra-label. 볼루스 100 units/kg IV 후 900 units/kg/day CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "IMHA 혈전예방 (IV CRI, 부하용량 후 유지)",
+          "value": "20 - 50",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하용량 100 units/kg IV 후 20~50 units/kg/hour CRI. 5 units/kg/hour 단위로 서서히 증량. 중단 시 50 units/kg/day씩 3~4일에 걸쳐 감량.",
+          "evidence": "Extra-label. CRI는 중증 환자에서 일관된 항응고 효과 및 aPTT 연장에 더 효과적."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혈전예방 일반 (IV 볼루스 후 CRI)",
+          "value": "100",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV 볼루스 후 480~900 units/kg/day IV CRI 유지",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혈전예방 일반 (SC)",
+          "value": "150 - 300",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "동맥혈전색전증 (초기 IV 후 SC 유지)",
+          "value": "200 - 300",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 IV 투여 후 200~250 units/kg SC q6~8h 유지",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "파종성 혈관내 응고(DIC) (SC)",
+          "value": "75 - 100",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "사용 자체가 논란이 있으며 최적 용량 불명확.",
+          "evidence": "Extra-label. 사용 논란 있음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "고양이 동맥혈전색전증(FATE) 혈전예방 (저용량 SC)",
+          "value": "50 - 100",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 고양이는 최대 475 units/kg까지 필요할 수 있음. 개별 약동학 변이 큼.",
+          "evidence": "Extra-label. 고양이에서는 SC 경로만 연구됨. 결과 기반 연구 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 동맥혈전색전증(FATE) 혈전예방 (고용량 SC)",
+          "value": "200 - 300",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 고양이는 최대 475 units/kg까지 필요할 수 있음.",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 동맥혈전색전증(FATE) 초기 IV 후 SC 유지",
+          "value": "250 - 375",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 IV 투여 후 150~250 units/kg SC q6~8h 유지",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혈전예방 일반 (SC)",
+          "value": "250",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 출혈 위험이 증가할 수 있으며, 항-Xa 모니터링이 특히 유용하다고 언급됨. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간질환 환자에서 출혈 위험이 증가할 수 있음. 구체적인 용량 조절 지침은 제시되지 않음. AST/ALT 상승이 보고되었으며 간독성 여부는 불명확함."
+  },
+  "contraindications": [
+    {
+      "condition": "헤파린 과민반응",
+      "match_terms": [
+        "heparin hypersensitivity",
+        "drug allergy heparin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 혈소판감소증",
+      "match_terms": [
+        "severe thrombocytopenia",
+        "platelet count < 30000"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 30.0,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "조절 불가능한 출혈 또는 응고장애",
+      "match_terms": [
+        "coagulopathy",
+        "uncontrollable bleeding",
+        "active hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 위험 증가 (고혈압, GI 궤양, 간질환, 혈소판감소증, 노령)",
+      "match_terms": [
+        "hypertension",
+        "GI ulcer",
+        "hepatic disease",
+        "thrombocytopenia",
+        "geriatric"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "근육주사 금지",
+      "match_terms": [
+        "IM injection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "헤파린은 항트롬빈(AT)에 결합하여 구조적 변화를 유발하고, AT가 활성화된 응고인자(특히 Xa인자 및 IIa인자/트롬빈)에 결합하는 속도를 가속화하여 응고 연쇄반응에서의 전응고 활성을 억제함. 또한 XIII인자(피브린 안정화 인자) 활성화를 억제하여 안정적인 피브린 혈전 형성을 방지함. 지단백 리파아제 방출을 증가시켜 순환 지질 제거를 촉진함.",
+    "common_extra_effects": [
+      "출혈",
+      "빈혈",
+      "혈소판감소증",
+      "주사 부위 통증 및 혈종",
+      "AST/ALT 상승",
+      "반동성 고지혈증",
+      "고칼륨혈증",
+      "알도스테론 합성 억제",
+      "지연성 일시적 탈모",
+      "피부 괴사",
+      "혈관경련 반응",
+      "골다공증 (장기 고용량 투여 시)"
+    ],
+    "dog_mechanism": "개에서 항트롬빈을 통한 Xa인자 및 트롬빈 억제. SC 투여 시 생체이용률 약 50%.",
+    "dog_extra_effects": [
+      "출혈",
+      "빈혈",
+      "혈소판감소증",
+      "주사 부위 혈종 및 통증"
+    ],
+    "cat_mechanism": "고양이에서 항트롬빈을 통한 Xa인자 및 트롬빈 억제. 약동학적 개체 변이가 큼.",
+    "cat_extra_effects": [
+      "출혈",
+      "빈혈",
+      "혈소판감소증",
+      "주사 부위 혈종 및 통증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 IMHA, 폐혈전색전증, DIC 등의 혈전색전성 질환에 혈전예방 목적으로 사용됨. SC 투여 시 생체이용률 약 50%. 항-Xa 활성 모니터링(목표: 0.35~0.7 units/mL)이 권장되며, aPTT보다 신뢰성이 높을 수 있음. 중증 환자에서는 IV CRI가 일관된 항응고 효과를 위해 선호됨. 용량 변경 시 aPTT가 크게 변할 수 있으므로 낮은 용량에서 시작하여 5 units/kg/hour 단위로 서서히 증량 권장.",
+    "cat": "고양이 동맥혈전색전증(FATE) 혈전예방에 사용됨. SC 경로만 연구됨. 약동학적 개체 변이가 매우 크며 일부 고양이는 최대 475 units/kg까지 필요할 수 있음. 결과 기반 연구가 없어 용량 권장사항이 매우 다양함. 항-Xa 활성 모니터링(목표: 0.35~0.7 units/mL)이 합리적인 것으로 제안됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "출혈 위험이 있는 환자(고혈압, GI 궤양, 간질환, 혈소판감소증, 노령)에서 주의 필요. IM 투여 금지. 항-Xa 활성 및 aPTT 모니터링 권장. 용량 오류 방지를 위해 'unit'을 완전히 표기할 것."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "약동학적 개체 변이가 크므로 모니터링 필수. SC 경로만 연구됨. 출혈 위험 환자에서 주의 필요. 결과 기반 용량 지침 부재."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15~30°C) 보관. 냉동 금지. 과도한 열 노출 피할 것.",
+    "forms": [
+      "헤파린 나트륨 주사액: 1000 units/mL, 5000 units/mL, 10,000 units/mL, 20,000 units/mL",
+      "헤파린 나트륨 단위용량 주사액: 1000~20,000 units/dose",
+      "헤파린 나트륨 + 0.9% 염화나트륨 주사액",
+      "헤파린 나트륨 + 0.45% 염화나트륨 주사액",
+      "헤파린 나트륨 + 5% 포도당 주사액",
+      "헤파린 나트륨 잠금 세척(Lock Flush) 주사액: 10 units/mL, 100 units/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "헤파린(미분획)은 개, 고양이, 말에서 혈전색전성 질환의 혈전예방 및 보조 치료에 사용되는 비경구 항응고제입니다. 수의용 허가 제품은 없으며 인체용 제품을 오프라벨로 사용합니다. 가장 흔한 부작용은 출혈이며, 프로타민으로 역전 가능합니다. 개에서 항-Xa 활성 모니터링(목표: 0.35~0.7 units/mL)이 권장됩니다. 용량 오류 방지를 위해 'unit'을 완전히 표기해야 합니다. IM 투여는 혈종 형성 위험으로 금기입니다.",
+    "indications": "승인 적응증: 없음(수의용 허가 제품 없음). 오프라벨 적응증: 면역매개 용혈성 빈혈(IMHA) 혈전예방, 폐혈전색전증, 동맥혈전색전증, 파종성 혈관내 응고(DIC), 고양이 동맥혈전색전증(FATE), 말에서 경정맥 혈전정맥염·DIC·제엽염 예방·복강내 유착 예방.",
+    "client_info": "이 약은 피부 아래(피하)에 주사해야 합니다. 올바른 주사 방법을 반드시 숙지하세요. 하루에 여러 번 주사가 필요할 수 있습니다. 소변이나 대변에 혈액이 보이거나 코나 잇몸에서 출혈이 있으면 즉시 수의사에게 연락하세요. 동물이 기력이 없거나, 호흡 곤란, 보행 장애, 뒷다리 마비 증상을 보이면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific half-life values (dog/cat)",
+      "CYP metabolic pathway",
+      "Renal elimination fraction",
+      "Protein binding percentage",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/0.jsonl",
+    "extracted_at": "2026-03-10T13:32:14.921957+00:00",
+    "reviewer": null
+  }
+}

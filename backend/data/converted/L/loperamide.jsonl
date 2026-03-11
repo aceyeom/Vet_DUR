@@ -1,0 +1,691 @@
+{
+  "id": "loperamide",
+  "drug_identity": {
+    "name_ko": "로페라미드",
+    "name_en": "Loperamide",
+    "active_ingredient": "Loperamide",
+    "brand_names": [
+      "Imodium",
+      "Imodium A-D",
+      "Difixin"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "Naloxone may reverse CNS effects of loperamide overdose; repeated doses may be required.",
+    "off_label_note": "수의학적 사용은 FDA 승인 없이 오프라벨로 사용됨. 개에서 비감염성 난치성 설사 치료에 주로 사용되며, 고양이에서는 논란이 있음.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.13,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C8",
+        "CYP3A4"
+      ],
+      "inhibitors": [
+        "CYP2B11",
+        "CYP2D15",
+        "CYP3A12"
+      ],
+      "inducers": [],
+      "pathway_evidence": "인간에서 CYP450에 의해 간에서 대사되며 광범위한 초회통과 대사를 보임. 개에서 CYP2B11, CYP2D15, CYP3A12 이소효소를 억제할 수 있음. 담즙 배설을 통해 대변으로 제거됨."
+    },
+    "extra_information": "개에서 MDR1 정상 동형접합체(MDR1 normal/normal)의 경구 생체이용률은 46%, 최고 농도 도달 시간은 투여 후 1시간, 반감기는 약 10시간. MDR1 돌연변이 동형접합체(MDR1 mutant/mutant)에서는 생체이용률 67%, 최고 농도 도달 시간 3.6시간, 반감기 약 12시간. 로페라미드는 P-당단백질 기질로, MDR1 돌연변이 개에서는 CNS로부터의 배출이 감소하여 CNS 독성 위험이 증가함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 수의학적 종별 PK 데이터가 제한적임. MDR1 돌연변이 개에서 CNS 부담이 현저히 증가함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "mydriasis",
+          "CNS effects",
+          "MDR1 mutation",
+          "P-glycoprotein"
+        ],
+        "index": 1,
+        "evidence": "MDR1 돌연변이 개에서 심각한 CNS 억제, 운동실조, 산동, 타액분비가 단회 0.1 mg/kg PO 투여 후 발생 가능. 정상 개에서도 진정 및 CNS 효과가 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "bradycardia"
+        ],
+        "index": 2,
+        "evidence": "과다복용 시 서맥이 보고됨. 치료 용량에서 혈액 독성에 대한 직접적 언급은 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 담즙 배설을 통해 주로 제거됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass metabolism",
+          "hepatic encephalopathy"
+        ],
+        "index": 3,
+        "evidence": "간에서 광범위한 초회통과 대사가 이루어짐. 간 기능 장애 환자에서 초회통과 대사 감소로 혈중 농도 증가 가능. 간성 뇌증 환자에서 극도의 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bradycardia",
+          "QT prolongation"
+        ],
+        "index": 4,
+        "evidence": "과다복용 시 서맥 보고. QT 연장 약물과의 상호작용 가능성 언급. 인간에서 고용량 시 심장독성 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "excitatory behavior",
+          "mydriasis",
+          "lethargy",
+          "vomiting"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 흥분 행동, 변비가 부작용으로 보고됨. 과다복용 시 구토, 기면, 산동이 가장 흔한 증상."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 간 대사에 대한 구체적 데이터는 없으나, 간에서 대사되는 약물로 간 기능 장애 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 10.0,
+      "max": 12.0,
+      "mean": 11.0,
+      "species": "dog"
+    },
+    "f_percent": 46,
+    "protein_binding_percent": null,
+    "evidence": "개(MDR1 정상 동형접합체)에서 경구 생체이용률 46%, Tmax 1시간, 반감기 약 10시간. MDR1 돌연변이 동형접합체에서는 생체이용률 67%, Tmax 3.6시간, 반감기 약 12시간. 인간에서 최고 농도 도달 시간 2.5~5시간, 반감기 약 11시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 로페라미드는 P-당단백질 기질이며 인간 CYP2C8 및 CYP3A4 이소효소의 기질임. 개에서 CYP2B11, CYP2D15, CYP3A12를 억제할 수 있음.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Amiodarone inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    },
+    {
+      "drug": "Carvedilol",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Carvedilol inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    },
+    {
+      "drug": "CYP2B11 Substrates (ketamine, midazolam, progesterone, propofol)",
+      "severity": 2,
+      "keywords": [
+        "CYP2B11 inhibition",
+        "increased substrate concentration"
+      ],
+      "evidence": "Loperamide can inhibit CYP2B11 metabolism in dogs, potentially increasing blood concentrations of substrates such as ketamine, midazolam, progesterone, and propofol."
+    },
+    {
+      "drug": "CYP2D15 Substrates (imipramine, metoprolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "CYP2D15 inhibition",
+        "increased substrate concentration"
+      ],
+      "evidence": "Loperamide can inhibit CYP2D15 metabolism in dogs, potentially increasing blood concentrations of substrates such as imipramine, metoprolol, and propranolol."
+    },
+    {
+      "drug": "CYP3A12 Substrates (cyclosporine, erythromycin, medetomidine, tacrolimus)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A12 inhibition",
+        "increased substrate concentration"
+      ],
+      "evidence": "Loperamide can inhibit CYP3A12 metabolism in dogs, potentially increasing blood concentrations of substrates such as cyclosporine, erythromycin, medetomidine, and tacrolimus."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration"
+      ],
+      "evidence": "Loperamide may increase serum desmopressin concentrations."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Erythromycin inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    },
+    {
+      "drug": "Gemfibrozil",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration"
+      ],
+      "evidence": "Gemfibrozil may increase loperamide plasma concentrations."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Ketoconazole inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    },
+    {
+      "drug": "Itraconazole",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Itraconazole inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    },
+    {
+      "drug": "Moxidectin",
+      "severity": 2,
+      "keywords": [
+        "reduced clearance",
+        "increased AUC",
+        "increased plasma concentration"
+      ],
+      "evidence": "Loperamide reduced moxidectin clearance and increased moxidectin plasma concentration and AUC."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Quinidine inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    },
+    {
+      "drug": "QT-Prolongation Agents",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "additive effect"
+      ],
+      "evidence": "Loperamide may enhance the QT-prolonging effect of other QT-prolonging agents."
+    },
+    {
+      "drug": "Sulfamethoxazole/Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "first-pass metabolism inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Sulfamethoxazole/Trimethoprim increases loperamide plasma concentrations due to inhibition of first-pass metabolism."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased plasma concentration"
+      ],
+      "evidence": "Verapamil inhibits P-glycoprotein, potentially increasing loperamide plasma concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 2.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "지사제 (라벨 용량, FDA 미승인): 체중 4.5~11.4 kg",
+          "value": "1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "24시간 이내 최대 3회, 최대 3일 치료",
+          "evidence": "라벨 용량(FDA 미승인): 체중 4.5~11.4 kg 개에 1 mg/dog q8h PRN"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "지사제 (라벨 용량, FDA 미승인): 체중 11.8~18.2 kg",
+          "value": "2",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "24시간 이내 최대 3회, 최대 3일 치료",
+          "evidence": "라벨 용량(FDA 미승인): 체중 11.8~18.2 kg 개에 2 mg/dog q8h PRN"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "지사제 (라벨 용량, FDA 미승인): 체중 18.6~27.3 kg",
+          "value": "4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "24시간 이내 최대 3회, 최대 3일 치료",
+          "evidence": "라벨 용량(FDA 미승인): 체중 18.6~27.3 kg 개에 4 mg/dog q8h PRN"
+        },
+        {
+          "logic_type": "linear",
+          "context": "지사제 (오프라벨, 일화적 용량 범위)",
+          "value": "0.08 - 0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "필요 시 투여; 최대 0.2 mg/kg PO 3~4회/일까지 보고됨",
+          "evidence": "오프라벨 일화적 용량: 0.08~0.1 mg/kg PO TID PRN; 최대 0.2 mg/kg PO TID~QID까지 보고됨"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지사제 (오프라벨, 일화적 용량 범위) - 사용 논란 있음",
+          "value": "0.04 - 0.16",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 0.16,
+          "duration_note": "단기 사용; 흥분 행동 등 부작용으로 치료가 제한될 수 있음. 2 mg 정제의 1/4 또는 1/2 사용 가능하나 정확한 용량 투여를 위해 경구 액제 필요",
+          "evidence": "오프라벨 일화적 용량: 0.04~0.16 mg/kg PO q12h. 고양이에서 사용은 논란이 있으며 흥분 행동 유발 가능."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적인 언급 없음. 로페라미드는 주로 담즙 배설을 통해 제거되므로 신장 기능 장애 시 용량 조절이 필요하지 않을 수 있으나, 명시적 권고사항 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 장애 환자에서 초회통과 대사가 감소하여 혈중 농도가 증가할 수 있으므로 주의하여 사용. 간성 뇌증 환자에서는 극도의 주의 필요(간성 혼수 유발 가능). 구체적인 용량 조절 권고사항은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "MDR1 유전자 돌연변이 (ABCB1-1delta) 동형접합체",
+      "match_terms": [
+        "MDR1 mutant/mutant",
+        "ABCB1-1delta homozygous",
+        "collie",
+        "Shetland sheepdog",
+        "Australian shepherd"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "감염성 설사 또는 독소 섭취로 인한 설사",
+      "match_terms": [
+        "infectious diarrhea",
+        "toxin ingestion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "로페라미드 과민증",
+      "match_terms": [
+        "hypersensitivity to loperamide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간성 뇌증",
+      "match_terms": [
+        "hepatic encephalopathy",
+        "hepatic coma"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "호흡기 질환 또는 급성 호흡 기능 장애",
+      "match_terms": [
+        "respiratory disease",
+        "pulmonary edema",
+        "respiratory dysfunction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두부 손상 또는 두개내압 상승",
+      "match_terms": [
+        "head injury",
+        "increased intracranial pressure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 복부 질환 (장폐색 등)",
+      "match_terms": [
+        "bowel obstruction",
+        "acute abdominal conditions"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능저하증",
+      "match_terms": [
+        "hypothyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신피질기능저하증 (애디슨병)",
+      "match_terms": [
+        "hypoadrenocorticism",
+        "Addison's disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "MDR1 유전자 돌연변이 이형접합체",
+      "match_terms": [
+        "MDR1 mutant/normal",
+        "ABCB1-1delta heterozygous"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "herding breeds"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "로페라미드는 P-당단백질 기질로, MDR1 돌연변이 동형접합체(MDR1 mutant/mutant) 개에서는 CNS로부터의 배출에 필요한 P-당단백질 기능 상실로 인해 심각한 CNS 억제, 운동실조, 산동, 타액분비가 단회 0.1 mg/kg PO 투여 후 발생 가능. 이형접합체(MDR1 mutant/normal)에서도 감수성 증가. 콜리, 셰틀랜드 쉽독, 오스트레일리안 셰퍼드 등 목양견 품종에서 고위험."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "장의 원형근 및 종주근의 뮤-오피오이드 수용체에 결합하여 GI 운동성 및 과도한 GI 추진력을 감소시킴. 콜레라 독소, 프로스타글란딘 E2 및 칼슘이 이차 전달자인 설사에 의해 유발되는 장 분비를 감소시킴. 점막 흡수 증진 및 항문 괄약근 긴장도 증가. 진통 활성 없음.",
+    "common_extra_effects": [
+      "변비",
+      "복부팽만",
+      "진정",
+      "타액분비",
+      "마비성 장폐색",
+      "독성 거대결장",
+      "췌장염",
+      "CNS 효과 (진정, 운동실조)",
+      "서맥",
+      "저체온"
+    ],
+    "dog_mechanism": "뮤-오피오이드 수용체를 통한 GI 운동성 감소. MDR1 돌연변이 개에서는 P-당단백질 기능 상실로 CNS 내 약물 축적 위험.",
+    "dog_extra_effects": [
+      "타액분비",
+      "변비",
+      "복부팽만",
+      "진정",
+      "마비성 장폐색",
+      "독성 거대결장",
+      "췌장염",
+      "CNS 억제 (MDR1 돌연변이 개)",
+      "운동실조",
+      "산동"
+    ],
+    "cat_mechanism": "뮤-오피오이드 수용체를 통한 GI 운동성 감소. 고양이에서 흥분 행동 유발 기전은 명확하지 않음.",
+    "cat_extra_effects": [
+      "흥분 행동",
+      "변비",
+      "구토",
+      "기면",
+      "산동"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 비감염성 난치성 설사 치료에 주로 사용됨. MDR1 유전자 돌연변이(ABCB1-1delta) 동형접합체 개에서는 금기이며, 이형접합체에서는 감량 투여. 콜리, 셰틀랜드 쉽독, 오스트레일리안 셰퍼드 등 목양견 품종에서 MDR1 검사 미실시 시 대체 지사제 고려 권장. 항암제(토세라닙) 유발 설사 치료 및 파클리탁셀 유발 GI 부작용 예방(마로피탄트와 병용)에 유용할 수 있음. 소형견에서 과다복용 방지를 위해 용량 계산에 주의 필요.",
+    "cat": "고양이에서의 사용은 논란이 있음. 단기 설사 관리에 일화적으로 사용되나, 흥분 행동 및 변비 등의 부작용으로 치료가 제한될 수 있음. 정확한 용량 투여를 위해 경구 액제 사용 권장. 소형 고양이에서 과다복용 방지를 위해 용량 계산에 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1 돌연변이 동형접합체 개에서 금기. 이형접합체 및 미검사 고위험 품종에서 주의. 간 기능 장애, 호흡기 질환, 간성 뇌증, 두부 손상, 급성 복부 질환, 갑상선기능저하증, 부신피질기능저하증 환자에서 주의 또는 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 사용은 논란이 있으며 흥분 행동 유발 가능. 단기 사용 시 주의 깊은 모니터링 필요. 소형 고양이에서 과다복용 위험."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C-25°C; 68°F-77°F) 보관, 빛을 차단한 밀폐 용기에 보관. 경구 액제는 다른 용매로 희석하지 않도록 권장.",
+    "forms": [
+      "Loperamide HCl Oral Liquid 2 mg/mL (수의용, OTC, FDA 미승인)",
+      "Loperamide HCl Tablets 2 mg - Difixin® (수의용, OTC)",
+      "Loperamide HCl Oral Liquid 1 mg/5 mL (0.2 mg/mL) - Imodium A-D, generic (인체용, OTC)",
+      "Loperamide HCl Oral Liquid 1 mg/7.5 mL (0.13 mg/mL) - generic (인체용, OTC)",
+      "Loperamide HCl Capsules 2 mg - Imodium A-D, generic (인체용, OTC/Rx)",
+      "Loperamide HCl Tablets 2 mg - Imodium A-D, generic (인체용, OTC/Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로페라미드는 개에서 비감염성 난치성 설사 치료에 사용되는 오피오이드 GI 운동성 조절제입니다. MDR1 유전자 돌연변이(ABCB1-1delta) 동형접합체 개에서는 심각한 CNS 독성 위험으로 금기이며, 콜리·셰틀랜드 쉽독·오스트레일리안 셰퍼드 등 목양견 품종에서는 MDR1 검사 미실시 시 대체 지사제 사용을 권장합니다. 고양이에서는 흥분 행동 유발 가능성으로 사용이 논란이 있습니다. 날록손으로 CNS 효과를 역전시킬 수 있습니다.",
+    "indications": "개에서 비감염성 난치성 설사(오프라벨). 항암제(토세라닙) 유발 설사 치료 보조(오프라벨). 파클리탁셀 유발 GI 부작용 예방(마로피탄트와 병용, 오프라벨). 고양이에서 단기 설사 관리(오프라벨, 논란 있음). 토끼, 설치류 등 소형 포유류에서 설사 치료(오프라벨).",
+    "client_info": "이 약은 설사 치료에 사용됩니다. 로페라미드는 일반적으로 부작용이 적고 잘 견디는 약이지만, 특정 유전자 돌연변이(MDR1; ABCB1-1delta라고도 함)를 가진 개에서는 독성을 일으킬 수 있습니다. 이 돌연변이는 콜리, 셰틀랜드 쉽독, 오스트레일리안 셰퍼드 등 '흰 발' 품종에서 흔히 발견됩니다. 설사가 지속되거나 동물이 무기력해 보이거나 고열이 발생하면 즉시 수의사에게 연락하십시오. 로페라미드는 처방전 없이 구입할 수 있는 일반의약품이지만, 수의사와 상담 없이 동물에게 투여하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment recommendations",
+      "Protein binding data for dogs/cats",
+      "Cat-specific pharmacokinetic data",
+      "Onset of action data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.f_percent (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates (veterinary-specific)",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:38:31.240019+00:00",
+    "reviewer": null
+  }
+}

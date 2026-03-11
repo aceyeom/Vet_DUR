@@ -1,0 +1,501 @@
+{
+  "id": "famotidine",
+  "drug_identity": {
+    "name_ko": "파모티딘",
+    "name_en": "Famotidine",
+    "active_ingredient": "Famotidine",
+    "brand_names": [
+      "Pepcid",
+      "Pepcid AC",
+      "Pepcid RPD"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Susp",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.33,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "파모티딘은 시메티딘이나 라니티딘과 달리 간 사이토크롬 P450 효소계를 억제하지 않는 것으로 알려져 있다. 경구 투여 시 약 1/3은 소변으로 미변화체로 배설되고 나머지는 주로 간에서 대사된 후 소변으로 배설된다. IV 투여 시 약 2/3가 미변화체로 배설된다."
+    },
+    "extra_information": "개와 고양이에서의 구체적인 PK 데이터는 문헌에 충분히 기술되어 있지 않다. 말에서 단회 IV 투여 후 반감기는 2~3시간이었으며, 경구 생체이용률은 13%로 낮았다. 소(성우)에서 0.4 mg/kg IV 투여 후 반감기는 3.33시간이었다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 주로 인체 데이터 및 간접적 수의학 데이터에 근거함. 개/고양이 종별 특이적 PK 연구 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS signs (confusion, agitation) — rare, human data"
+        ],
+        "index": 1,
+        "evidence": "인체에서 드물게 CNS 증상(혼란, 흥분)이 보고됨. 개에서는 직접적 근거 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "tachycardia",
+          "agranulocytosis",
+          "pancytopenia",
+          "leukopenia",
+          "intravascular hemolysis"
+        ],
+        "index": 2,
+        "evidence": "빠른 IV 주입 시 서맥 가능. 인체에서 무과립구증, 범혈구감소증, 백혈구감소증 드물게 보고. 고양이에서 IV 투여 시 혈관내 용혈 일화적 보고 있으나 후향적 연구에서 확인되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction",
+          "dose reduction"
+        ],
+        "index": 3,
+        "evidence": "신장으로 주로 배설(경구 시 약 1/3, IV 시 약 2/3 미변화체). 신기능 저하 시 용량 감소 권고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "elevated liver enzymes",
+          "elevated bilirubin"
+        ],
+        "index": 2,
+        "evidence": "간에서 일부 대사됨. 인체에서 드물게 간효소 상승 및 빌리루빈 상승 보고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "arrhythmias",
+          "hypotension",
+          "AV block"
+        ],
+        "index": 2,
+        "evidence": "빠른 IV 주입 시 서맥 위험. 인체에서 부정맥, 저혈압, AV 차단 드물게 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS signs — rare, human data"
+        ],
+        "index": 1,
+        "evidence": "인체에서 드물게 CNS 증상 보고. 고양이에서 직접적 근거 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "intravascular hemolysis",
+          "bradycardia",
+          "agranulocytosis"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 IV 투여 시 혈관내 용혈 일화적 보고 있음(후향적 연구에서는 확인 안 됨). 빠른 IV 주입 시 서맥 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction",
+          "dose reduction"
+        ],
+        "index": 3,
+        "evidence": "신장으로 주로 배설. 신기능 저하 시 용량 감소 권고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "elevated liver enzymes"
+        ],
+        "index": 2,
+        "evidence": "간에서 일부 대사됨. 인체에서 드물게 간효소 상승 보고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bradycardia",
+          "arrhythmias",
+          "AV block"
+        ],
+        "index": 2,
+        "evidence": "빠른 IV 주입 시 서맥 위험. 인체에서 부정맥, AV 차단 드물게 보고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 3.33,
+      "mean": 2.67,
+      "species": "unknown"
+    },
+    "f_percent": 40,
+    "protein_binding_percent": 18,
+    "evidence": "인체 경구 생체이용률 약 40~50%. 쥐에서 혈장단백결합 약 15~20%. 말에서 IV 단회 투여 후 반감기 2~3시간, 경구 생체이용률 13%. 소(성우)에서 IV 투여 후 반감기 3.33시간. 개/고양이 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "gastric pH increase"
+      ],
+      "evidence": "Famotidine increases gastric pH, which may decrease absorption of azole antifungals. Administer azole 1 hour before famotidine if both are required."
+    },
+    {
+      "drug": "Cefpodoxime",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Famotidine may decrease absorption of cefpodoxime. Separating doses by 2 hours may alleviate this effect."
+    },
+    {
+      "drug": "Cefuroxime",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Famotidine may decrease absorption of cefuroxime. Separating doses by 2 hours may alleviate this effect."
+    },
+    {
+      "drug": "Dichlorphenamide",
+      "severity": 1,
+      "keywords": [
+        "increased famotidine exposure"
+      ],
+      "evidence": "Co-administration with dichlorphenamide may increase famotidine exposure."
+    },
+    {
+      "drug": "Iron Salts, Oral",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Famotidine may decrease absorption of oral iron. Iron should be administered at least 1 hour before famotidine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 (로딩 도스, 오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 5분에 걸쳐 천천히 투여",
+          "evidence": "1 mg/kg IV 로딩 도스 후 8 mg/kg/day CRI로 최적 제산 효과 기대"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 CRI (오프라벨)",
+          "value": "8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "CRI (지속 정맥 주입)",
+          "evidence": "로딩 도스 후 8 mg/kg/day CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "신기능 저하 시 1일 1회 투여 고려. 14일 이상 반복 투여 시 효과 감소 가능.",
+          "evidence": "오프라벨. 14일 반복 투여 시 위내 pH에 대한 효과 감소 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "신기능 저하 시 1일 1회 투여 고려",
+          "evidence": "오프라벨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 IV (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 5분에 걸쳐 천천히 투여. 신기능 저하 시 1일 1회 투여 고려.",
+          "evidence": "오프라벨"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "위산 분비 억제 (오프라벨)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "경구 용량은 5 mg 단위로 반올림 권장 (예: 고양이 1마리당 5 mg). 14일 이상 반복 투여 시 효과 감소 가능. 신기능 저하 시 1일 1회 투여 고려.",
+          "evidence": "오프라벨. 14일 투여 시 위내 pH 효과 감소 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 SC (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "신기능 저하 시 1일 1회 투여 고려",
+          "evidence": "오프라벨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "위산 분비 억제 IV (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 5분에 걸쳐 천천히 투여. 신기능 저하 시 1일 1회 투여 고려. 고양이에서 IV 투여 시 혈관내 용혈 일화적 보고 있으나 후향적 연구에서 확인 안 됨.",
+          "evidence": "오프라벨. 5분 이상 천천히 투여 시 안전한 것으로 보고됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 환자에서는 용량 감소 또는 투여 간격 연장(1일 1회 투여)을 고려해야 한다. 구체적인 크레아티닌 역치는 명시되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간기능 저하에 대한 용량 조절 권고사항이 본문에 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "파모티딘 과민증",
+      "match_terms": [
+        "hypersensitivity to famotidine",
+        "famotidine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "위벽 세포의 H2 수용체에서 히스타민을 경쟁적으로 억제하여 기저 상태 및 음식, 펜타가스트린, 히스타민, 인슐린에 의해 자극된 위산 분비를 감소시킨다. 위 배출 시간, 췌장 또는 담즙 분비, 하부 식도 압력에는 영향을 미치지 않는다.",
+    "common_extra_effects": [
+      "빠른 IV 주입 시 서맥",
+      "구역, 구토",
+      "변비, 설사",
+      "복부 불편감",
+      "두통, 어지러움",
+      "발열, 피로",
+      "부정맥, 저혈압, AV 차단 (드물게)",
+      "간효소 상승, 빌리루빈 상승 (드물게)",
+      "과민성 피부 반응 (드물게)",
+      "CNS 증상: 혼란, 흥분 (드물게)",
+      "무과립구증, 범혈구감소증, 백혈구감소증 (매우 드물게, 인체)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "IV 고용량(5~200 mg/kg)에서 구토, 불안, 점막 창백, 구강 및 귀 발적",
+      "더 높은 용량에서 저혈압, 빈맥, 허탈"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "IV 투여 시 혈관내 용혈 일화적 보고 (후향적 연구에서 확인 안 됨)",
+      "5분 이상 천천히 IV 투여 시 안전한 것으로 보고됨"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 파모티딘 1 mg/kg을 12시간마다 14일간 반복 투여 시 위내 pH에 대한 효과가 감소하는 것이 보고되었다. 오메프라졸이 파모티딘보다 위산 억제 효과가 우수하다. 파모티딘과 판토프라졸 병용은 판토프라졸 단독 투여보다 위내 pH 증가에 있어 우월하지 않았다. 헬리코박터 감염 치료 시 삼중 항생제 요법에 파모티딘을 추가해도 박멸률이 개선되지 않았다.",
+    "cat": "고양이에서 14일간 투여 시 위내 pH에 대한 효과가 감소하여 장기 투여 시 효과가 줄어드는 것이 관찰되었다. IV 투여 시 혈관내 용혈에 대한 일화적 보고가 있으나, 56마리 입원 고양이를 대상으로 한 후향적 연구에서는 용혈 증거가 없었으며 5분 이상 천천히 투여 시 안전한 것으로 결론지었다. 경구 용량은 5 mg 단위로 반올림하는 것이 합리적이다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 시 용량 감소 필요. 14일 이상 반복 투여 시 효과 감소 가능. 빠른 IV 주입 시 서맥 위험. 플루옥세틴 또는 푸로세미드와 혼동하지 않도록 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "IV 투여 시 혈관내 용혈 일화적 보고 있음(5분 이상 천천히 투여 권장). 14일 이상 투여 시 효과 감소. 신기능 저하 시 용량 감소 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐된 차광 용기에 실온(20~25°C) 보관. 경구 현탁액 분말 및 현탁액: 밀폐된 차광 용기에 25°C 보관(15~30°C 허용). 재조제 후 30°C 이하에서 30일간 안정; 냉동 금지. 주사제: 냉장(2~8°C) 보관. 희석 후 실온에서 48시간 안정.",
+    "forms": [
+      "경구 정제 (일반, 필름코팅, 씹는 정제): 10 mg, 20 mg, 40 mg",
+      "경구 현탁액 분말: 재조제 시 8 mg/mL",
+      "주사제: 10 mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "파모티딘은 H2 수용체 길항제로 위산 분비를 억제한다. 수의학적 승인 제품은 없으며 오프라벨로 사용된다. 개와 고양이 모두에서 오메프라졸이 위산 억제 효과가 더 우수하다. 14일 이상 반복 투여 시 효과가 감소할 수 있다(빠른 내성). 빠른 IV 주입 시 서맥 위험이 있으므로 최소 5분에 걸쳐 천천히 투여해야 한다. 고양이에서 IV 투여 시 혈관내 용혈 일화적 보고가 있으나 후향적 연구에서는 확인되지 않았다. 신기능 저하 시 용량 감소 또는 투여 간격 연장이 필요하다. 시메티딘과 달리 CYP450 효소를 억제하지 않아 약물 상호작용이 적다.",
+    "indications": "위궤양, 제4위 궤양, 십이지장 궤양의 치료 및 예방; 스트레스성 또는 약물 유발 미란성 위염; 식도염; 십이지장-위 역류; 식도 역류. 마취 중 식도 역류 예방을 위한 단기 사용. 필요 시(PRN) 즉각적인 증상 완화 목적으로 사용 가능. 모두 오프라벨 사용.",
+    "client_info": "이 약은 위궤양을 치료하거나 예방하기 위해 사용됩니다. 수의사의 지시에 따라 투여하세요. 용량을 빠뜨리면 증상이 재발할 수 있습니다. 이 약은 하루 첫 번째 식사 전에 투여하는 것이 가장 효과적입니다. 빈속에 투여 후 구토나 불편함을 보이면 소량의 음식과 함께 투여하세요. 구토가 지속되면 수의사에게 연락하세요. 파모티딘은 처방전 없이 구입할 수 있지만, 수의사의 권고 없이 동물에게 투여하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Specific renal dose adjustment thresholds",
+      "Hepatic dose adjustment",
+      "CYP substrate/inhibitor/inducer profile (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction (dog/cat specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/40.jsonl",
+    "extracted_at": "2026-03-11T01:42:26.688843+00:00",
+    "reviewer": null
+  }
+}

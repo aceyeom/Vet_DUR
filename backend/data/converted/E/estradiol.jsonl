@@ -1,0 +1,639 @@
+{
+  "id": "estradiol",
+  "drug_identity": {
+    "name_ko": "에스트라디올",
+    "name_en": "Estradiol",
+    "active_ingredient": "Estradiol cypionate",
+    "brand_names": [
+      "ECP",
+      "Depo-Estradiol",
+      "Delestrogen",
+      "DepoGen",
+      "Dura-Estrin",
+      "E-Cypionate",
+      "Estra-D",
+      "Estrace",
+      "Estro-Cyp",
+      "Estroject",
+      "depGynogen",
+      "Femtrace",
+      "Gynodiol"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 대부분 허가 외 사용(extra-label)이며, 식용 동물에 대한 사용은 FDA에 의해 금지되어 있음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "에스트로겐의 제거는 주로 간 대사를 통해 이루어지며, 에스트로겐과 그 대사산물은 주로 소변으로 배설되지만 담즙으로도 배설되어 장간 순환을 거친다."
+    },
+    "extra_information": "수의학적 종에서의 약동학에 관한 구체적인 정보는 확인되지 않았다. 인간에서 유성 용액의 IM 투여 후 신속히 흡수되며 수일에 걸쳐 흡수가 지속된다. 에스테르화 에스트로겐(예: 에스트라디올)은 IM 투여 후 흡수가 지연된다. 에스트로겐은 체내에 분포하며 지방 조직에 축적된다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터 없음; 주로 인간 데이터 및 Plumb's 부작용 기술에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 직접적인 뇌 독성은 언급되지 않았으나, 골수억제 및 전신 독성의 간접적 영향 가능성이 있음."
+      },
+      "blood": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "myelotoxicity",
+          "thrombocytopenia",
+          "leukopenia",
+          "aplastic anemia",
+          "blood dyscrasias",
+          "normochromic normocytic anemia"
+        ],
+        "index": 5,
+        "evidence": "개에서 에스트로겐은 골수에 독성을 나타내며 혈액 이상(혈소판감소증, 백혈구감소증, 재생불량성 빈혈)을 유발할 수 있다. 이는 치명적일 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematuria"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 혈뇨가 보고되었으나, 직접적인 신독성에 대한 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic dysfunction"
+        ],
+        "index": 3,
+        "evidence": "에스트로겐은 주로 간에서 대사되며, 인간에서 간 기능 장애 시 금기이다. 간 효소(ALT, AST, ALP) 모니터링이 권장됨."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "thrombosis"
+        ],
+        "index": 1,
+        "evidence": "인간에서 동맥 또는 심부정맥 혈전증 병력 시 금기이나, 개에서의 직접적인 심장 독성 언급은 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 뇌 독성은 언급되지 않았음."
+      },
+      "blood": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "myelotoxicity",
+          "thrombocytopenia",
+          "leukopenia",
+          "aplastic anemia",
+          "blood dyscrasias"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 에스트로겐은 골수에 독성을 나타내며 혈액 이상을 유발할 수 있다. 치명적인 재생불량성 빈혈로 진행될 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "에스트로겐은 주로 간에서 대사되며, 간 기능 장애 시 주의가 필요함."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 심장 독성 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "수의학적 종에서의 약동학 데이터가 없음. 인간에서 유성 용액 IM 투여 후 신속히 흡수되며 수일에 걸쳐 흡수가 지속됨. 에스테르화 에스트로겐은 IM 투여 후 흡수가 지연됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulants (heparins, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect reduction",
+        "thrombosis risk"
+      ],
+      "evidence": "Concurrent use may diminish anticoagulant effect."
+    },
+    {
+      "drug": "Ascorbic Acid",
+      "severity": 1,
+      "keywords": [
+        "increased estrogen concentration"
+      ],
+      "evidence": "Ascorbic acid may increase estrogen concentration."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased estrogen concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Azole antifungals may increase estrogen concentration."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "enhanced glucocorticoid effect",
+        "altered protein binding",
+        "decreased metabolism"
+      ],
+      "evidence": "Enhanced glucocorticoid effects may result if estrogens are used concomitantly with corticosteroids. Estrogens may alter protein binding and/or decrease metabolism of corticosteroids; dose adjustment may be necessary."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine concentration"
+      ],
+      "evidence": "Estrogens may increase cyclosporine serum concentration."
+    },
+    {
+      "drug": "Other Estrogens (diethylstilbestrol)",
+      "severity": 2,
+      "keywords": [
+        "additive estrogen effects"
+      ],
+      "evidence": "Possible additive effects. Do not use with other estrogens; concomitant use has not been evaluated."
+    },
+    {
+      "drug": "Hypoglycemic Agents (glipizide, insulin, metformin)",
+      "severity": 2,
+      "keywords": [
+        "increased blood glucose",
+        "reduced hypoglycemic effect"
+      ],
+      "evidence": "Estrogens may increase blood glucose concentration, potentially reducing efficacy of hypoglycemic agents."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "diminished thyroid hormone effect",
+        "increased TBG"
+      ],
+      "evidence": "Estrogens may diminish the therapeutic effect of levothyroxine; an increase in levothyroxine dose may be needed. Monitor thyroid status."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased estrogen concentration"
+      ],
+      "evidence": "Macrolide antibiotics may increase estrogen concentration."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen concentration"
+      ],
+      "evidence": "Mitotane may decrease estrogen concentration if administered concomitantly."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen concentration",
+        "enzyme induction"
+      ],
+      "evidence": "Phenobarbital may decrease estrogen concentration if administered concomitantly."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen concentration",
+        "enzyme induction"
+      ],
+      "evidence": "Rifampin may decrease estrogen concentration if administered concomitantly."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen concentration",
+        "enzyme induction"
+      ],
+      "evidence": "St. John's Wort may decrease estrogen concentration if administered concomitantly."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "increased theophylline concentration"
+      ],
+      "evidence": "Estrogens may increase theophylline concentration."
+    },
+    {
+      "drug": "Thyroid Hormones",
+      "severity": 1,
+      "keywords": [
+        "altered thyroxine concentration",
+        "altered thyrotropin concentration"
+      ],
+      "evidence": "Possible alteration of thyroxine and thyrotropin serum concentrations."
+    },
+    {
+      "drug": "Ursodiol",
+      "severity": 2,
+      "keywords": [
+        "diminished ursodiol efficacy"
+      ],
+      "evidence": "Estrogens may diminish ursodiol efficacy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "ferret"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 관한 구체적인 수의학적 지침이 없음. 에스트로겐은 주로 간에서 대사되고 소변으로 배설되므로 신기능 저하 시 주의가 필요할 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "인간에서 간 기능 장애 또는 간 질환 시 금기이다. 에스트로겐은 주로 간에서 대사되므로 간 기능 저하 시 사용을 피해야 함."
+  },
+  "contraindications": [
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to estradiol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애/간 질환",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "에스트로겐 의존성 종양/유방암",
+      "match_terms": [
+        "breast cancer",
+        "estrogen-dependent neoplasia",
+        "mammary neoplasia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "원인 불명의 비정상 생식기 출혈",
+      "match_terms": [
+        "abnormal genital bleeding",
+        "vaginal bleeding unknown etiology"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동맥 또는 심부정맥 혈전증/폐색전증 병력",
+      "match_terms": [
+        "arterial thrombosis",
+        "deep vein thrombosis",
+        "DVT",
+        "pulmonary embolism"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부갑상선기능저하증",
+      "match_terms": [
+        "hypoparathyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "페럿",
+      "match_terms": [
+        "ferret"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수억제/혈액 이상",
+      "match_terms": [
+        "myelosuppression",
+        "bone marrow suppression",
+        "aplastic anemia",
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "에스트라디올은 가장 활성이 강한 내인성 에스트로겐으로, 에스트로겐 수용체에 결합하여 여성 생식기관의 정상적인 성장 및 발달, 이차 성징의 발달 및 유지에 관여한다. 자궁경부 점막의 세포 높이 증가 및 분비 촉진, 질 점막 비후, 자궁내막 증식, 자궁 긴장도 증가를 유발한다. 골격계에서는 칼슘 침착 증가, 골단판 조기 폐쇄, 골 형성 증가를 일으킨다. 뇌하수체에서 성선자극호르몬 분비에 영향을 미쳐 수유, 배란, 안드로겐 분비를 억제할 수 있다.",
+    "common_extra_effects": [
+      "골수독성 (혈소판감소증, 백혈구감소증, 재생불량성 빈혈)",
+      "낭성 자궁내막 증식증",
+      "자궁축농증",
+      "유방 종양 유발",
+      "수컷에서 여성화",
+      "암컷에서 발정 징후",
+      "나트륨 및 수분 저류",
+      "혈전증 위험 증가"
+    ],
+    "dog_mechanism": "개에서 에스트로겐은 골수에 독성을 나타내며 혈액 이상을 유발할 수 있다. 초기에는 혈소판증가증 및/또는 백혈구증가증이 나타날 수 있으나, 점차 혈소판감소증 및 백혈구감소증이 발생한다.",
+    "dog_extra_effects": [
+      "골수독성",
+      "혈소판감소증",
+      "백혈구감소증",
+      "정상색소성 정상적혈구성 빈혈",
+      "재생불량성 빈혈 (치명적 가능)",
+      "낭성 자궁내막 증식증",
+      "자궁축농증",
+      "수컷에서 여성화",
+      "암컷에서 발정 징후 (7-10일 지속)",
+      "식욕부진",
+      "창백한 점막",
+      "운동 불내성",
+      "외음부 부종",
+      "질 출혈",
+      "호흡 곤란",
+      "혈뇨",
+      "흑색변",
+      "발열",
+      "비출혈",
+      "점상출혈"
+    ],
+    "cat_mechanism": "고양이에서도 에스트로겐은 골수에 독성을 나타내며 혈액 이상을 유발할 수 있다.",
+    "cat_extra_effects": [
+      "골수독성",
+      "혈소판감소증",
+      "백혈구감소증",
+      "재생불량성 빈혈 (치명적 가능)",
+      "낭성 자궁내막 증식증",
+      "자궁축농증",
+      "발정 징후"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에스트라디올은 골수독성으로 인해 혈액 이상을 유발할 수 있으며, 이는 치명적인 재생불량성 빈혈로 진행될 수 있다. 에스트로겐 반응성 요실금 치료에는 더 안전한 에스트로겐(예: 디에틸스틸베스트롤, 에스트리올)이 선호된다. 에스트라디올의 소동물 낙태제로서의 사용은 더 이상 권장되지 않는다. 만성 치료 또는 고용량 사용 시 CBC 및 간 효소 모니터링이 필요하다.",
+    "cat": "고양이에서 에스트라디올은 골수독성으로 인해 혈액 이상을 유발할 수 있으며, 치명적인 재생불량성 빈혈로 진행될 수 있다. 페럿에서는 골수에 극도로 독성이 강하므로 사용을 피해야 한다. 만성 치료 또는 고용량 사용 시 CBC 및 간 효소 모니터링이 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 에스트라디올은 골수독성, 낭성 자궁내막 증식증, 자궁축농증 등 심각한 부작용을 유발할 수 있다. 에스트로겐 반응성 요실금 치료에는 더 안전한 대안이 있으므로 사용을 피하는 것이 권장된다. 사용 시 CBC 및 간 효소 정기 모니터링이 필요하다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 에스트라디올은 골수독성으로 인해 혈액 이상을 유발할 수 있으며, 치명적인 재생불량성 빈혈로 진행될 수 있다. 사용 시 CBC 및 간 효소 정기 모니터링이 필요하다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛 차단 용기에 실온(20°C-25°C [68°F-77°F])에서 보관; 동결 금지. 상업적으로 이용 가능한 주사 용액은 식물성 오일(주로 면실유)의 멸균 용액이며, 클로로부탄올을 방부제로 포함할 수 있음.",
+    "forms": [
+      "Estradiol Cypionate in Oil for Injection: 5 mg/mL (5 mL vials)",
+      "Estradiol Valerate in Oil for Injection: 10 mg/mL, 20 mg/mL, 40 mg/mL (5 mL multidose vials)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에스트라디올은 가장 활성이 강한 내인성 에스트로겐으로, 주로 말에서 발정 유도, 발정 동기화, 배란 유도, 비임신 암말의 비유 유도, 태반염 치료, 에스트로겐 반응성 요실금 치료에 사용된다. 개와 고양이에서는 골수독성으로 인한 심각한 혈액 이상(혈소판감소증, 백혈구감소증, 재생불량성 빈혈) 위험이 있어 사용이 제한적이다. 식용 동물에 대한 사용은 FDA에 의해 금지되어 있다. NIOSH는 에스트로겐을 직업적 위험 약물로 분류하므로 취급 시 적절한 개인보호장비(PPE) 착용이 필요하다.",
+    "indications": "【허가 적응증】말에서 발정 행동 및 수용성 향상(난소절제 암말), 이행기 암말에서 배란 촉진. 【허가 외 사용】말에서 발정 동기화(프로게스테론 병용), 비임신 암말의 비유 유도(돔페리돈 병용), 상행성 태반염 치료, 에스트로겐 반응성 요실금 치료. 개와 고양이에서 역사적으로 에스트로겐 반응성 요실금 치료 및 낙태제로 사용되었으나, 현재는 더 안전한 대안이 권장됨.",
+    "client_info": "주사용 에스트로겐은 반드시 수의사에 의해서만 투여되어야 합니다. 이 호르몬은 암말에서 발정(열) 유도 및 요실금의 장기 치료에 사용됩니다. 임신 동물에는 절대 사용하지 마십시오 - 유산을 유발할 수 있습니다. 동물이 식욕 감소, 창백한 잇몸, 무기력증, 질 출혈 또는 기타 질 분비물, 외음부 부종, 호흡 곤란, 혈뇨, 검은 변, 발열, 코피, 피부 또는 잇몸의 멍이 나타나면 즉시 수의사에게 연락하십시오. 임신 중이거나 모유 수유 중인 여성은 이 약을 취급할 때 주의해야 합니다. 취급 시 일회용 장갑을 착용하십시오. 식용 동물에 에스트라디올을 사용하는 것은 불법입니다. 치료 중에는 정기적인 혈액 검사를 포함한 수의사 검진이 필요합니다. 이 약은 NIOSH에서 위험 약물로 분류되어 있으므로 취급 시 개인보호장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages (Horses only)",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dosages (Dog)",
+      "Dosages (Cat)",
+      "Veterinary pharmacokinetics data",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "Renal dose adjustment guidelines",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:23:03.592255+00:00",
+    "reviewer": null
+  }
+}

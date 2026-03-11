@@ -1,0 +1,515 @@
+{
+  "id": "acyclovir",
+  "drug_identity": {
+    "name_ko": "아시클로버",
+    "name_en": "Acyclovir",
+    "active_ingredient": "Acyclovir",
+    "brand_names": [
+      "Zovirax",
+      "Sitavig",
+      "Acic",
+      "Aciclobene",
+      "Aciclotyrol",
+      "Acivir",
+      "Acyrax",
+      "Cicloviral",
+      "Geavir",
+      "Herpotern",
+      "Isavir",
+      "Nycovir",
+      "Supraviran",
+      "Viclovir",
+      "Virherpes",
+      "Viroxy",
+      "Xorox"
+    ],
+    "allergy_class": null,
+    "class": "Antiretroviral",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 영역에서 허가된 제품 없음. 조류(PsHV-1), 개(헤르페스바이러스, 파보바이러스 예방), 말(EHV)에 오프라벨로 사용됨. 고양이에서는 독성 위험으로 사용 금지.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Susp",
+      "Inj",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 800,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주로 간에서 대사되며, 신장을 통해 배설됨. 신세뇨관에서 결정화 가능성 있음. CYP 관련 정보는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개에서 경구 생체이용률은 용량 의존적: 20 mg/kg 이하에서 약 80%, 50 mg/kg에서 약 50%로 감소. 개와 고양이의 소실 반감기는 약 3시간. Quaker 잉꼬에서 IV/IM 투여 후 소실 반감기 약 40분, IM 생체이용률 90%. 말에서 경구 생체이용률 4% 미만."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개/고양이 종별 독성 데이터 및 Plumb's 기재 내용을 근거로 평가. 고양이는 골수억제, 신세뇨관 괴사, 간 괴사 위험으로 사용 금기.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "encephalopathic changes",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "비경구 투여 시 드물게 뇌병증성 변화 보고. 지도부딘 병용 시 CNS 억제 가능성."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "thrombophlebitis"
+        ],
+        "index": 1,
+        "evidence": "비경구 투여 시 혈전정맥염 가능성 보고."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "acute renal failure",
+          "nephrotoxicity",
+          "crystalluria",
+          "renal tubular necrosis",
+          "renal insufficiency"
+        ],
+        "index": 2,
+        "evidence": "IV 급속 투여 시 급성 신부전 위험. 188.7 mg/kg 과용량 투여 개에서 결정뇨 및 신수치 상승 보고. 신독성 약물 병용 시 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "기존 간 기능 장애 환자에서 주의 사용 권고. 개에서 간독성 직접 보고는 없으나 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "encephalopathic changes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 사용 금기이나, 비경구 투여 시 뇌병증성 변화 가능성 존재."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 골수억제 위험이 높아 사용 금기로 명시됨."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "renal tubular necrosis",
+          "nephrotoxicity",
+          "acute renal failure"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 신세뇨관 괴사 위험으로 사용 금기. 생체이용률 낮고 독성 위험 높음."
+      },
+      "liver": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "hepatic necrosis",
+          "hepatic toxicity"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 간 괴사 위험으로 사용 금기로 명시됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 3.0,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": null,
+    "evidence": "개에서 20 mg/kg 이하 경구 투여 시 생체이용률 약 80%, 50 mg/kg에서 약 50%. 소실 반감기 약 3시간(개, 고양이). 인간에서 경구 생체이용률 약 20%. 단백결합률은 낮다고 기술되어 있으나 수치 미기재."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: contraindicated/avoid→3, moderate→2, minor→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminophylline/Theophylline",
+      "severity": 2,
+      "keywords": [
+        "theophylline concentration increase",
+        "drug level monitoring"
+      ],
+      "evidence": "Concurrent use may increase theophylline concentrations. Monitor theophylline levels."
+    },
+    {
+      "drug": "Meperidine",
+      "severity": 3,
+      "keywords": [
+        "normeperidine accumulation",
+        "lethargy",
+        "agitation",
+        "seizures"
+      ],
+      "evidence": "Concurrent use may increase meperidine and normeperidine concentrations, increasing risk for lethargy, agitation, and seizures. Avoid combination."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentrations",
+        "renal impairment",
+        "toxicity monitoring"
+      ],
+      "evidence": "Concurrent oral administration may increase concentrations of both acyclovir and mycophenolate. Greatest risk in patients with impaired renal function. Use cautiously and monitor."
+    },
+    {
+      "drug": "Nephrotoxic Medications (aminoglycosides, amphotericin B, cyclosporine)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concurrent IV acyclovir with nephrotoxic medications may increase nephrotoxicity potential. Amphotericin B may potentiate antiviral effects but also increases nephrotoxicity risk."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "renal clearance inhibition",
+        "increased acyclovir exposure"
+      ],
+      "evidence": "Concurrent use may increase acyclovir exposure by inhibiting renal clearance."
+    },
+    {
+      "drug": "Zidovudine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive CNS effects"
+      ],
+      "evidence": "Concurrent use with zidovudine may cause additional CNS depression."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "신생아 개 헤르페스바이러스 감염 보조 치료 (오프라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "QID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간",
+          "evidence": "Adjunctive treatment of neonatal canine herpesvirus infection (extra-label): 10 mg/kg PO every 6 hours for 5 days."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 파보바이러스(CPV) 예방 (오프라벨, 소규모 실험적 연구)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간",
+          "evidence": "Prophylaxis for canine parvovirus (CPV) infections in puppies (extra-label): 20 mg/kg IV every 8 hours for 5 days in a small experimentally induced CPV-2 infection study."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 부전 환자에서 용량 감량 권고(인간 기준). 수의과 환자에서 구체적 기준치는 명시되지 않음. 장기 또는 IV 치료 시 BUN, 혈청 크레아티닌 모니터링 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간 기능 장애 환자에서 주의 사용 권고. 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "고양이 전체",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "아시클로버 또는 관련 항바이러스제 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "acyclovir allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "acute kidney injury",
+        "renal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질 이상",
+      "match_terms": [
+        "electrolyte abnormalities",
+        "hyponatremia",
+        "hyperkalemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "퓨린(구아닌) 유사체로, 바이러스 티미딘 키나아제에 의해 활성형 삼인산 형태로 전환된 후 바이러스 DNA에 삽입되어 바이러스 DNA 복제를 억제함.",
+    "common_extra_effects": [
+      "혈전정맥염 (비경구 투여 시)",
+      "급성 신부전",
+      "뇌병증성 변화 (드묾)",
+      "위장관 장애 (구토, 설사, 식욕부진)",
+      "조직 괴사 (조류에서 IM 투여 시)"
+    ],
+    "dog_mechanism": "개에서 헤르페스바이러스 및 파보바이러스에 대한 항바이러스 활성. 경구 생체이용률은 용량 의존적(20 mg/kg 이하: 약 80%, 50 mg/kg: 약 50%).",
+    "dog_extra_effects": [
+      "위장관 장애",
+      "급성 신부전 (고용량 또는 IV 투여 시)",
+      "결정뇨 (과용량 시)"
+    ],
+    "cat_mechanism": "고양이 헤르페스바이러스 1형(FHV-1)에 대해 경미한 효능이 있으나, 독성 위험으로 사용 금기.",
+    "cat_extra_effects": [
+      "골수억제",
+      "간 괴사",
+      "신세뇨관 괴사"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 신생아 헤르페스바이러스 감염 보조 치료 및 파보바이러스 예방 목적으로 오프라벨 사용됨. 경구 생체이용률은 용량에 따라 다르며, 장기 또는 IV 치료 시 신기능 모니터링이 필수적임. 과용량(150 mg/kg 이상) 시 급성 신손상 가능성이 있으므로 위장관 오염 제거를 고려해야 함.",
+    "cat": "고양이에서는 골수억제, 간 괴사, 신세뇨관 괴사의 위험으로 절대 사용 금기. 고양이 헤르페스바이러스 1형(FHV-1) 치료에는 팜시클로버(famciclovir) 등 독성이 낮은 대체 항바이러스제를 사용해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 장애, 탈수, 간기능 장애, 전해질 이상 환자에서 주의 사용. IV 투여 시 1시간에 걸쳐 천천히 주입하고, 약물 농도를 7 mg/mL 이하로 희석해야 함. 장기 또는 IV 치료 시 BUN, 크레아티닌 모니터링 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "골수억제, 간 괴사, 신세뇨관 괴사 위험으로 고양이에서 절대 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐 및 정제: 차광 밀폐 용기에 실온(15-25°C) 보관. 현탁액 및 멸균 분말: 실온(20-25°C) 보관, 냉장 금지. 재구성 후 12시간 이내 사용. 미사용 주사액은 폐기.",
+    "forms": [
+      "경구 정제 400 mg, 800 mg",
+      "경구 캡슐 200 mg",
+      "경구 현탁액 40 mg/mL",
+      "주사액 50 mg/mL (IV 전용)",
+      "동결건조 분말 500 mg (재구성용)",
+      "구강점막 정제 50 mg (Sitavig)",
+      "국소 크림/연고 5%"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아시클로버는 퓨린 유사체 항바이러스제로, 수의과 영역에서는 주로 조류의 PsHV-1(Pacheco's Disease) 치료 및 예방에 사용됨. 개에서는 신생아 헤르페스바이러스 보조 치료 및 파보바이러스 예방 목적으로 오프라벨 사용 가능. 고양이에서는 골수억제, 간 괴사, 신세뇨관 괴사 위험으로 절대 사용 금기. IV 투여 시 신독성 위험이 있으므로 반드시 천천히 주입해야 하며, 신기능 모니터링이 필수적임.",
+    "indications": "조류: PsHV-1(Pacheco's Disease) 치료 및 예방 (오프라벨). 개: 신생아 헤르페스바이러스 감염 보조 치료, 파보바이러스 예방 (오프라벨, 소규모 연구). 말: 말 헤르페스바이러스 감염 (오프라벨, IV). 고양이: 사용 금기.",
+    "client_info": "이 약물의 부작용은 주로 위장관 문제(설사, 구토, 식욕부진)로 나타납니다. 조류의 경우 물이나 씨앗, 땅콩버터에 섞어 투여합니다. 이 약을 복용하는 동안 정기적인 혈액검사(신장 기능 등)가 필요하므로 예약된 검진을 빠짐없이 받으시기 바랍니다. 고양이에게는 절대 투여하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds for veterinary patients",
+      "Hepatic dose adjustment thresholds",
+      "Protein binding percentage",
+      "t_max_hr",
+      "onset_min",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/60.jsonl",
+    "extracted_at": "2026-03-11T08:04:39.480993+00:00",
+    "reviewer": null
+  }
+}

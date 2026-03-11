@@ -1,0 +1,853 @@
+{
+  "id": "furosemide",
+  "drug_identity": {
+    "name_ko": "푸로세미드",
+    "name_en": "Furosemide",
+    "active_ingredient": "Furosemide",
+    "brand_names": [
+      "Disal",
+      "Lasix",
+      "Salix"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Diuretic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 12.5,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Plumb's 모노그래프에 CYP 대사 경로에 대한 구체적인 언급 없음. 주로 신장을 통해 미변화체로 배설되는 것으로 알려져 있음."
+    },
+    "extra_information": "개: 경구 생체이용률 약 77%, 단백결합률 90% 이상, 반감기 약 1~1.5시간. 고양이: 경구 생체이용률 약 50%, 반감기 약 1.2시간(경구), 2.25시간(IV). IV 투여 시 분포용적 227 mL/kg, 청소율 149 mL/kg/hour."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장: 이뇨제 작용 기전, 전신성 아조테미아 위험, 신독성 상호작용 다수. 간: 간기능 저하 시 주의 필요. 심장: 심부전 치료제로 심장 부하 간접 영향. 혈액: 전해질 이상 및 혈액학적 이상 보고. 뇌: 과량 투여 시 신경학적 영향 가능.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "coma",
+          "seizures",
+          "restlessness"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 기면, 혼수, 경련 등 신경학적 영향 보고됨. 일반 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hyponatremia",
+          "hypokalemia",
+          "hypochloremia",
+          "hypocalcemia",
+          "hypomagnesemia",
+          "hematologic effects"
+        ],
+        "index": 2,
+        "evidence": "저나트륨혈증, 저칼륨혈증, 저염소혈증, 저칼슘혈증, 저마그네슘혈증 등 전해질 이상 및 혈액학적 이상 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "prerenal azotemia",
+          "renal toxicity",
+          "acute kidney injury",
+          "oliguria",
+          "renal parenchyma calcification"
+        ],
+        "index": 3,
+        "evidence": "전신성 아조테미아 가능, 만성 과량 투여 시 신실질 석회화 및 반흔 형성 보고. 신독성 약물과 병용 시 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "impaired hepatic function",
+          "hepatic coma"
+        ],
+        "index": 2,
+        "evidence": "간기능 저하 환자에서 간성 혼수 유발 가능. 간기능 저하 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "cardiovascular collapse",
+          "hypotension",
+          "congestive heart failure"
+        ],
+        "index": 2,
+        "evidence": "심부전 치료에 사용되나 과량 투여 시 심혈관계 허탈 가능. 저혈압 위험(ACE억제제 병용 시)."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "coma",
+          "seizures",
+          "restlessness"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 신경학적 영향 가능. 고양이는 이뇨 효과에 더 민감하므로 주의 필요."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hyponatremia",
+          "hypokalemia",
+          "hypochloremia",
+          "electrolyte abnormalities"
+        ],
+        "index": 2,
+        "evidence": "전해질 이상 위험. 고양이는 다른 종에 비해 이뇨 효과에 더 민감하다고 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "prerenal azotemia",
+          "acute kidney injury",
+          "oliguria"
+        ],
+        "index": 3,
+        "evidence": "전신성 아조테미아 가능. 고양이 급성 신손상 치료에 사용되나 GFR 개선 효과는 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "impaired hepatic function",
+          "hepatic coma"
+        ],
+        "index": 2,
+        "evidence": "간기능 저하 시 간성 혼수 유발 가능. 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "cardiovascular collapse",
+          "hypotension",
+          "congestive heart failure"
+        ],
+        "index": 2,
+        "evidence": "심부전 치료에 사용. 과량 투여 시 심혈관계 허탈 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 2.25,
+      "mean": 1.5,
+      "species": "dog"
+    },
+    "f_percent": 77,
+    "protein_binding_percent": 90,
+    "evidence": "개: 경구 생체이용률 약 77%, IV 투여 시 발현 약 5분, IM/PO 투여 시 약 30~60분. 단백결합률 90% 이상. 반감기 약 1~1.5시간(개), 1.2~2.25시간(고양이). 고양이 IV 투여 시 분포용적 227 mL/kg, 청소율 149 mL/kg/hour."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: contraindicated→3, major→3, moderate→2, minor→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "volume depletion",
+        "sodium depletion"
+      ],
+      "evidence": "Diuretic-induced volume or sodium depletion 상태에서 ACE 억제제 병용 시 저혈압 위험 증가."
+    },
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity",
+        "deafness"
+      ],
+      "evidence": "신독성 및 이독성(완전 청각 소실 포함) 위험 증가. 일반 용량에서도 발생 가능."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "hypokalemia"
+      ],
+      "evidence": "루프 이뇨제는 신독성 및 저칼륨혈증 위험을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Cephalosporins (cefazolin, cefovecin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "신독성 위험 증가."
+    },
+    {
+      "drug": "Cisplatin",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity",
+        "deafness"
+      ],
+      "evidence": "신독성 및 이독성(완전 청각 소실 포함) 위험 증가. 일반 용량에서도 발생 가능."
+    },
+    {
+      "drug": "Corticosteroids (fludrocortisone, prednisone)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "hypokalemia"
+      ],
+      "evidence": "위장관 궤양 및 저칼륨혈증 위험 증가."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "hyperuricemia"
+      ],
+      "evidence": "고요산혈증 위험 증가."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "저나트륨혈증 위험 증가."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "digoxin toxicity"
+      ],
+      "evidence": "푸로세미드 유발 저칼륨혈증이 디곡신 독성 가능성을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 1,
+      "keywords": [
+        "insulin requirements altered"
+      ],
+      "evidence": "푸로세미드가 인슐린 요구량을 변화시킬 수 있음."
+    },
+    {
+      "drug": "Nondepolarizing Muscle Relaxants (atracurium, tubocurarine)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade prolongation"
+      ],
+      "evidence": "푸로세미드가 신경근 차단을 연장시킬 수 있음."
+    },
+    {
+      "drug": "NSAIDs (carprofen, firocoxib, flunixin, meloxicam, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "acute kidney injury"
+      ],
+      "evidence": "급성 신손상 위험 증가."
+    },
+    {
+      "drug": "Oxytetracycline",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "신독성 위험 증가."
+    },
+    {
+      "drug": "Polymyxin B",
+      "severity": 2,
+      "keywords": [
+        "acute kidney injury"
+      ],
+      "evidence": "급성 신손상 위험 증가."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "reduced uricosuric effect"
+      ],
+      "evidence": "푸로세미드가 프로베네시드의 요산 배설 촉진 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Salicylates (aspirin)",
+      "severity": 1,
+      "keywords": [
+        "reduced salicylate excretion"
+      ],
+      "evidence": "루프 이뇨제가 살리실산염의 배설을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "potentiated effects"
+      ],
+      "evidence": "푸로세미드가 석시닐콜린의 효과를 강화시킬 수 있음."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "enhanced pharmacologic effects"
+      ],
+      "evidence": "푸로세미드와 병용 시 테오필린의 약리 효과가 강화될 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "부종(심부전, 폐부종, 복수) 치료 - 주사 (FDA 승인)",
+          "value": "2.75 - 5.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.5,
+          "duration_note": "6~8시간 간격으로 1~2회/일. 반응에 따라 용량 조절.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "부종(심부전, 폐부종, 복수) 치료 - 경구 (FDA 승인)",
+          "value": "2.2 - 5.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.5,
+          "duration_note": "6~8시간 간격으로 1~2회/일. 반응에 따라 용량 조절.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 심인성/폐부종 - 단계적 IV 투여 (CHF stage C)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "초기 2 mg/kg IV 후 매 1시간마다 2 mg/kg IV 반복, 4시간 내 최대 8 mg/kg까지.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 심인성/폐부종 - 볼루스 투여",
+          "value": "1 - 4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 12.0,
+          "duration_note": "1~2시간마다 반복, 최대 일일 용량 12 mg/kg.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 심인성/폐부종 - CRI",
+          "value": "0.66 - 1",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 볼루스 투여 후 CRI 시작. 12~24시간 이상 지속 시 심한 체액 감소 주의.",
+          "evidence": "Extra-label 용량 (단위: mg/kg/hour)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "CHF 만성 경구 치료",
+          "value": "1 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "경증: 1 mg/kg q24h 시작, 중증: 최대 5 mg/kg q8h. 일반적 시작 용량: 2 mg/kg q12h.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "사구체 질환 동반 폐부종 또는 고칼륨혈증",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 1 mg/kg q6~12h IV/IM, 반응 불충분 시 0.5~1 mg/kg씩 증량 또는 2~15 μg/kg/min CRI로 전환(초기 부하 용량 2 mg/kg IV 후).",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "중등도~중증 고칼슘혈증 보조 치료",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "사용 전 체액 보충 필수. q8~12h IV, SC, 또는 PO.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 보조 치료",
+          "value": "1 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "q8~24h PO. 표준 병용 요법에 반응하지 않는 부종 동반 고혈압 개에서 보조 치료로 고려.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "핍뇨성 급성 신손상",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.5~1 mg/kg/hour IV CRI 또는 초기 볼루스 1~2 mg/kg IV(반응 없으면 최대 4 mg/kg) 후 0.1~2 mg/kg/hour CRI.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "사이클로포스파미드 유발 출혈성 방광염 예방",
+          "value": "0.5 - 2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 2.2,
+          "duration_note": "화학요법 기간 동안 매일 PO 및 IV 투여. 0.5 mg/kg PO q12h도 효과적.",
+          "evidence": "Extra-label 용량"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "부종(심부전, 폐부종, 복수) 치료 - 주사 (FDA 승인)",
+          "value": "2.75 - 5.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.5,
+          "duration_note": "6~8시간 간격으로 1~2회/일. 반응에 따라 용량 조절.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "부종(심부전, 폐부종, 복수) 치료 - 경구 (FDA 승인)",
+          "value": "2.2 - 5.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.5,
+          "duration_note": "6~8시간 간격으로 1~2회/일. 반응에 따라 용량 조절.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 급성 심인성/폐부종 - 비경구 투여",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "1~2시간마다 반복. 호흡수 감소 시작 시 즉시 용량 감량. 개보다 약간 낮은 용량 권장.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "CHF 만성 경구 치료",
+          "value": "1 - 7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 7.0,
+          "duration_note": "q2~3일 1 mg/kg부터 q8~12h 2 mg/kg까지 다양. 최대 7 mg/kg q12h 보고. 실제로 많은 고양이가 6.25 mg(12.5 mg 정제 1/2) 단위로 투여.",
+          "evidence": "Extra-label 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "핍뇨성 급성 신손상",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.25~1 mg/kg/hour IV CRI 또는 볼루스 1~2 mg/kg IV 후 효과 확인 시 0.25~1 mg/kg/hour CRI 시작.",
+          "evidence": "Extra-label 용량"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "무뇨증 환자에서 금기. 진행성 신질환에서 아조테미아 및 핍뇨 악화 시 투약 중단 권고. 신독성 약물과 병용 시 주의. 구체적인 크레아티닌 역치 또는 용량 조절 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 환자에서 간성 혼수 유발 가능. 간성 혼수 환자에서 금기. 간기능 저하 시 주의 사용 권고. 구체적인 용량 조절 방법은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "무뇨증",
+      "match_terms": [
+        "anuria",
+        "무뇨"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간성 혼수",
+      "match_terms": [
+        "hepatic coma",
+        "간성 혼수"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "과민반응"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration",
+        "탈수"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "bun",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심각한 전해질 고갈",
+      "match_terms": [
+        "electrolyte depletion",
+        "전해질 고갈"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "간기능 저하"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "진행성 신질환",
+      "match_terms": [
+        "progressive renal disease",
+        "CKD",
+        "만성 신질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "당뇨병"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질 또는 수분 균형 이상",
+      "match_terms": [
+        "electrolyte imbalance",
+        "water balance abnormality"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "술폰아미드 과민반응",
+      "match_terms": [
+        "sulfonamide hypersensitivity",
+        "술폰아미드 과민"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 특정 유전적 감수성 또는 품종 특이적 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "헨레 고리 상행각 수질부에서 NA⁺-K⁺-2Cl⁻ 공동수송체 활성을 억제하여 전해질 재흡수를 감소시키는 루프 이뇨제. 원위 세뇨관에서 칼륨 배설 증가, 근위 세뇨관에서 전해질 수송에 직접 영향. 탄산탈수효소에는 영향 없으며 알도스테론을 길항하지 않음.",
+    "common_extra_effects": [
+      "저나트륨혈증",
+      "저염소혈증",
+      "저칼륨혈증",
+      "저칼슘혈증",
+      "저마그네슘혈증",
+      "대사성 알칼리증",
+      "이독성(청각 손실)",
+      "위장관 장애(오심, 구토, 설사)",
+      "허약감",
+      "불안",
+      "전신성 아조테미아",
+      "고혈당증",
+      "혈액학적 이상",
+      "SC 주사 부위 궤양성 피부 병변"
+    ],
+    "dog_mechanism": "개에서 칼륨 배설은 나트륨에 비해 훨씬 적게 영향받음. 저나트륨혈증이 저칼륨혈증보다 더 우려됨. 신정맥 확장 및 일시적 GFR 증가 유발. 1~4 mg/kg IV/PO 투여 시 좌심방압 용량 비례적 감소. 10~12 mg/kg 고용량에서 흉관 림프 흐름 증가.",
+    "dog_extra_effects": [
+      "22 mg/kg IV 이상에서 청각 손실",
+      "SC 주사 부위 궤양성 피부 병변",
+      "만성 과량 투여(10 mg/kg, 6개월) 시 신실질 석회화 및 반흔"
+    ],
+    "cat_mechanism": "고양이는 다른 종에 비해 이뇨 효과에 더 민감함. 고용량 IV 치료 시 이독성 특히 주의.",
+    "cat_extra_effects": [
+      "고용량 IV 치료 시 이독성(청각 손실) 위험 증가",
+      "이뇨 효과에 대한 높은 민감성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률은 약 77%이며 단백결합률은 90% 이상입니다. 반감기는 약 1~1.5시간입니다. SC 투여 시 궤양성 피부 병변 발생 사례가 보고되어 있으므로 주의가 필요합니다. 22 mg/kg IV 이상의 고용량에서 청각 손실이 발생할 수 있습니다. 심부전 치료 시 가능한 최저 유효 용량을 사용하는 것이 목표입니다. 토르세미드에 비해 1/10~1/20의 역가를 가집니다.",
+    "cat": "고양이는 다른 종에 비해 이뇨 효과에 더 민감하므로 개보다 약간 낮은 용량을 사용하는 것이 권장됩니다. 경구 생체이용률은 약 50%이며 반감기는 경구 투여 시 약 1.2시간, IV 투여 시 약 2.25시간입니다. 고용량 IV 치료 시 이독성(청각 손실) 위험이 특히 높습니다. 호흡수가 감소하기 시작하면 즉시 용량을 크게 줄여야 합니다. 실제 임상에서 많은 고양이가 6.25 mg(12.5 mg 정제 1/2) 단위로 투여받습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "전해질 또는 수분 균형 이상, 간기능 저하, 진행성 신질환, 당뇨병 환자에서 주의 사용. SC 투여 시 궤양성 피부 병변 가능. 신독성/이독성 약물과 병용 시 주의. 임신 동물에서 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 이뇨 효과에 더 민감함. 고용량 IV 치료 시 이독성 특히 주의. 호흡수 감소 시 즉시 용량 감량 필요. SC 투여 시 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(25°C 이하)에서 보관. 정제는 습기 차단 및 차광 밀폐 용기에 보관. 경구 용액은 실온 보관, 빛 및 동결 차단, 개봉 후 90일 이내 사용. 주사제는 실온 보관(냉장 시 침전 형성 가능하나 가온 시 재용해됨). 산성 pH에서 불안정하며 알칼리 조건에서 매우 안정적.",
+    "forms": [
+      "Furosemide Tablets 12.5 mg (Salix, Disal, generic)",
+      "Furosemide Tablets 50 mg (Salix, Disal, generic)",
+      "Furosemide Oral Solution 10 mg/mL in 60 mL (generic)",
+      "Furosemide Injection 50 mg/mL in 50 mL and 100 mL vials (Disal Injection, Salix Injection, generic)",
+      "Furosemide Oral Tablets 20 mg (Lasix, generic)",
+      "Furosemide Oral Tablets 40 mg (Lasix, generic)",
+      "Furosemide Oral Tablets 80 mg (Lasix, generic)",
+      "Furosemide Oral Solution 10 mg/mL (generic)",
+      "Furosemide Oral Solution 40 mg/5 mL (8 mg/mL) (generic)",
+      "Furosemide Injection 10 mg/mL (generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "푸로세미드는 개, 고양이, 말, 소 등 다양한 동물종에서 사용되는 루프 이뇨제입니다. 주요 적응증은 울혈성 심부전, 폐부종, 고칼슘혈증, 급성 신손상, 고칼륨혈증 보조 치료입니다. 개에서 FDA 승인 용량은 2.75~5.5 mg/kg IV/IM/PO이며, 심부전 치료 시 가능한 최저 유효 용량 사용이 권장됩니다. 고양이는 이뇨 효과에 더 민감하므로 개보다 약간 낮은 용량을 사용합니다. 전해질 이상(특히 저나트륨혈증, 저염소혈증), 탈수, 이독성에 주의가 필요합니다. 무뇨증, 간성 혼수, 임신 동물에서 금기입니다.",
+    "indications": "승인 적응증: 개·고양이에서 심부전 관련 부종(폐울혈, 복수), 소에서 분만 후 유방 부종. 허가 외 적응증: 고칼슘혈증, 급성 신손상, 고칼륨혈증 보조 치료, 전신 고혈압 보조 치료, 사이클로포스파미드 유발 출혈성 방광염 예방(개), 말에서 운동 유발 폐출혈(EIPH) 예방.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토가 있으면 다음 용량은 소량의 음식과 함께 주세요. 이 약을 복용하는 동안 동물은 평소보다 소변을 더 자주 볼 것입니다. 항상 신선한 물을 충분히 제공하고, 소변 횟수를 줄이기 위해 물을 제한하지 마세요. 수의사의 지시에 따라 동물의 호흡수를 기록하고, 이상이 있으면 즉시 연락하세요. 허약감, 청각 손실, 쓰러짐, 머리 기울임, 소변 감소, 빠른 심박수가 관찰되면 즉시 수의사에게 연락하세요. 정기적인 추적 검사를 빠짐없이 받으세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.onset_min (cat)",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:38:33.465314+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "id": "filgrastim",
+  "drug_identity": {
+    "name_ko": "필그라스팀",
+    "name_en": "Filgrastim",
+    "active_ingredient": "Filgrastim",
+    "brand_names": [
+      "Neupogen",
+      "Nivestym",
+      "Releuko",
+      "Zarxio",
+      "Filgen",
+      "Gran",
+      "Granulen",
+      "Granulokine",
+      "Neutromax"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 사용되는 모든 적응증은 허가 외(extra-label) 사용이며, 수의용 허가 제품은 없음. 인간 유래 재조합 DNA 제품으로 항체 형성 위험이 있음.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 300,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 300,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "필그라스팀은 비간성(non-hepatic) 대사 경로를 거치며 신장으로 배설됨. CYP 효소 관련 정보는 출처 문헌에 기재되지 않음."
+    },
+    "extra_information": "피하주사 후 빠르게 흡수되어 골수, 간, 신장, 부신에 가장 높은 농도로 분포됨. 개 및 고양이에 대한 종 특이적 약동학 데이터는 문헌에 기재되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 인간 데이터 위주이며 수의학적 종 특이 PK 연구 없음. 신장 배설 및 분포 데이터 기반으로 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "뇌에 대한 직접적인 부담 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "neutrophil production",
+          "hematopoietic",
+          "splenomegaly",
+          "capillary leak syndrome"
+        ],
+        "index": 1,
+        "evidence": "골수 및 혈액 세포 생성에 직접 작용하며, 비장비대, 모세혈관 누출 증후군 등 혈액계 부작용이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "glomerulonephritis",
+          "highest concentrations in kidneys"
+        ],
+        "index": 2,
+        "evidence": "신장 배설 경로이며 신장에 높은 농도로 분포. 인간에서 사구체신염 보고됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "highest concentrations in liver"
+        ],
+        "index": 3,
+        "evidence": "간에 높은 농도로 분포되나 간 독성에 대한 직접적 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "인간에서 저혈압 보고됨. 심장 직접 독성 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "뇌에 대한 직접적인 부담 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "neutrophil neutralizing antibodies",
+          "severe neutropenia",
+          "hematopoietic",
+          "immune response"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 항체 형성으로 인한 심각한 호중구감소증 위험이 특히 강조됨. 단기 펄스 요법(3~5일)이 항체 형성 최소화에 도움이 될 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "glomerulonephritis",
+          "highest concentrations in kidneys"
+        ],
+        "index": 2,
+        "evidence": "신장 배설 경로이며 신장에 높은 농도로 분포. 인간에서 사구체신염 보고됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "highest concentrations in liver"
+        ],
+        "index": 3,
+        "evidence": "간에 높은 농도로 분포되나 간 독성에 대한 직접적 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "인간에서 저혈압 보고됨. 심장 직접 독성 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 3.5,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 반감기 약 3.5시간. 피하주사 후 빠르게 흡수됨. 개 및 고양이에서의 Tmax, 생체이용률 데이터는 문헌에 기재되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antineoplastic Agents",
+      "severity": 2,
+      "keywords": [
+        "neutropenia",
+        "chemotherapy timing",
+        "24-hour window"
+      ],
+      "evidence": "Filgrastim should not be used within 24 hours before or after antineoplastic drug administration due to risk of exacerbating neutropenia."
+    },
+    {
+      "drug": "Bleomycin",
+      "severity": 2,
+      "keywords": [
+        "pulmonary toxicity"
+      ],
+      "evidence": "Concurrent use of filgrastim with bleomycin may increase the risk for pulmonary toxicity."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "pulmonary toxicity"
+      ],
+      "evidence": "Concurrent use of filgrastim with cyclophosphamide may increase the risk for pulmonary toxicity."
+    },
+    {
+      "drug": "Vincristine",
+      "severity": 2,
+      "keywords": [
+        "peripheral neuropathy"
+      ],
+      "evidence": "Concurrent use of filgrastim with vincristine may increase the risk for peripheral neuropathy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "호중구감소증 보조 치료 (허가 외)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "자가항체 형성 방지를 위해 최대 5일 이내 펄스 요법 권장",
+          "evidence": "Plumb's: 동물에서의 용량 전략에 대한 합의 또는 근거 없음. 가장 일반적으로 5–10 µg/kg SC 매일 권장됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "호중구감소증 보조 치료 (허가 외)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "호중구감소증 기간 동안 3~5일 단기 펄스 요법이 항체 형성 최소화에 도움이 될 수 있음",
+          "evidence": "Plumb's: 고양이 연구에서 3~5일 단기 펄스 용량이 안전하고 호중구 중화 항체 형성을 최소화할 수 있음을 시사함."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 배설 경로이나 문헌에 신기능 저하 시 용량 조절에 대한 명시적 권고사항 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "비간성 대사 경로이며 문헌에 간기능 저하 시 용량 조절에 대한 명시적 권고사항 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "필그라스팀 과민반응",
+      "match_terms": [
+        "hypersensitivity to filgrastim",
+        "allergic reaction to filgrastim"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "필그라스팀 항체 형성으로 인한 호중구감소증",
+      "match_terms": [
+        "antibodies to filgrastim",
+        "filgrastim-induced neutropenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 백혈병 또는 골수이형성 증후군",
+      "match_terms": [
+        "acute leukemia",
+        "myelodysplastic syndrome",
+        "MDS"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "항암화학요법 투여 전후 24시간 이내",
+      "match_terms": [
+        "chemotherapy",
+        "antineoplastic"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "재조합 인간 과립구 집락 자극 인자(G-CSF)로, 골수에서 호중구-과립구 계열 전구세포의 증식, 분화 및 활성화를 촉진함. 호중구 전구세포 수 증가, 호중구 생산 속도 증가, 성숙 시간 단축을 유도함.",
+    "common_extra_effects": [
+      "주사 부위 자극",
+      "골 또는 근골격계 통증 (인간)",
+      "비장비대 (비장 파열 포함, 인간)",
+      "사구체신염 (인간)",
+      "모세혈관 누출 증후군 (인간)",
+      "저혈압 (인간)",
+      "골수섬유증",
+      "수질 조직구증",
+      "항체 형성으로 인한 심각한 호중구감소증"
+    ],
+    "dog_mechanism": "인간 유래 제품이나 골수 효과는 종 특이적이지 않음. 개에서 자가항체 형성 위험이 있으며, 개 유래 G-CSF 예비 연구에서는 자가항체 형성이 관찰되지 않음.",
+    "dog_extra_effects": [
+      "항체 형성으로 인한 호중구감소증",
+      "주사 부위 자극"
+    ],
+    "cat_mechanism": "인간 유래 제품이나 골수 효과는 종 특이적이지 않음. 고양이에서 호중구 중화 항체 형성 위험이 있으며, 3~5일 단기 펄스 요법이 항체 형성 최소화에 도움이 될 수 있음.",
+    "cat_extra_effects": [
+      "호중구 중화 항체 형성",
+      "심각한 호중구감소증",
+      "주사 부위 자극"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서의 사용은 허가 외이며, 자가항체 형성 방지를 위해 최대 5일 이내 펄스 요법을 권장함. 개 유래 G-CSF 예비 연구에서는 자가항체 형성이 관찰되지 않았음. 항암화학요법 투여 전후 24시간 이내에는 사용을 피해야 함. 비용, 항체 형성 가능성, 항생제 단독 치료 대비 사망률 감소 근거 부족으로 사용이 논란이 됨.",
+    "cat": "고양이에서의 사용은 허가 외이며, 인간 유래 제품에 대한 면역 반응으로 내인성 및 외인성 G-CSF 모두에 대한 항체가 형성되어 심각한 호중구감소증이 발생할 수 있음. 호중구감소증 기간 동안 3~5일 단기 펄스 요법이 안전하고 항체 형성을 최소화할 수 있다는 연구 결과가 있음. 비용 및 항체 형성 위험에 대해 보호자에게 충분히 설명해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "인간 유래 제품으로 항체 형성 위험이 있으며, 자가항체 형성 시 생명을 위협하는 호중구감소증이 발생할 수 있음. 최대 5일 펄스 요법 권장. 급성 백혈병 및 골수이형성 증후군 환자에서 사용 논란."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 호중구 중화 항체 형성 위험이 특히 강조됨. 3~5일 단기 펄스 요법이 항체 형성 최소화에 도움이 될 수 있음. 비용 및 항체 형성 위험에 대해 보호자에게 충분히 설명 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관(2°C-8°C). 실온에서 최대 24시간 보관 가능. 동결 금지, 진탕 금지, 빛으로부터 보호. 5% 포도당 주사액으로 희석 가능(5 µg/mL 미만으로 희석 금지). 생리식염수로 희석 금지(침전 형성 가능).",
+    "forms": [
+      "Filgrastim Injection 300 µg/mL (1 mL, 1.6 mL 단회용 바이알)",
+      "Filgrastim Injection 300 µg/0.5 mL (0.5 mL, 0.8 mL 프리필드 시린지)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "필그라스팀은 재조합 인간 G-CSF로, 골수에서 호중구 계열 전구세포의 증식·분화·활성화를 촉진하는 조혈 촉진제입니다. 수의용 허가 제품은 없으며 모든 동물 적응증은 허가 외 사용입니다. 인간 유래 제품이므로 항체 형성으로 인한 심각한 호중구감소증 위험이 있으며, 자가항체 형성 방지를 위해 최대 5일 이내 펄스 요법을 권장합니다. 항암화학요법 투여 전후 24시간 이내에는 사용을 피해야 합니다. 바이오시밀러 제품은 FDA에서 상호교환 가능으로 인정되지 않으므로 처방 시 제품명을 명시해야 합니다.",
+    "indications": "개, 고양이, 말, 알파카에서의 호중구감소증 합병증(예: 감염) 보조 치료 (모두 허가 외). 골수에 과립구 전구세포가 존재하고 내인성 사이토카인 반응이 불충분하다고 판단될 때만 사용. 항암화학요법 유발 호중구감소증의 기간 및 중증도 감소.",
+    "client_info": "이 약은 백혈구(호중구) 수를 증가시키는 주사제입니다. 인간 유전자로 만든 약이기 때문에 동물의 몸에서 이 약에 대한 항체가 생길 수 있으며, 이 경우 오히려 백혈구 수가 심각하게 감소하는 생명을 위협하는 상황이 발생할 수 있습니다. 이러한 위험을 줄이기 위해 보통 5일 이내의 단기 치료를 권장합니다. 약값이 비쌀 수 있으며, 항생제 단독 치료와 비교하여 사망률을 낮춘다는 근거가 충분하지 않습니다. 치료 중 정기적인 혈액 검사가 필요합니다. 궁금한 점이 있으시면 담당 수의사에게 문의하시기 바랍니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability",
+      "Protein binding",
+      "Tmax",
+      "Onset of action (minutes)",
+      "Renal dose adjustment recommendations",
+      "Hepatic dose adjustment recommendations",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/41.jsonl",
+    "extracted_at": "2026-03-11T02:00:08.424112+00:00",
+    "reviewer": null
+  }
+}

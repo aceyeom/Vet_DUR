@@ -1,0 +1,668 @@
+{
+  "id": "melatonin",
+  "drug_identity": {
+    "name_ko": "멜라토닌",
+    "name_en": "Melatonin",
+    "active_ingredient": "Melatonin",
+    "brand_names": [
+      "PrimeX",
+      "Regulin",
+      "Ferretonin",
+      "Dermatonin"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "FDA 승인은 밍크의 모피 성숙 주기 촉진(SC 임플란트)에 한정됨. 개, 고양이, 말, 양, 염소, 페럿에서의 사용은 모두 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Chewable",
+      "Oral Liquid",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg"
+      },
+      {
+        "value": 2.7,
+        "unit": "mg"
+      },
+      {
+        "value": 5.4,
+        "unit": "mg"
+      },
+      {
+        "value": 8.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "value": 12.0,
+        "unit": "mg"
+      },
+      {
+        "value": 18.0,
+        "unit": "mg"
+      },
+      {
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "value": 24.0,
+        "unit": "mg"
+      },
+      {
+        "value": 0.25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.33,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 대사되며, 간부전 환자에서는 금기로 간주됨(사람 기준). 신장 기능 저하 시 주의 사용 권고(사람 기준)."
+    },
+    "extra_information": "고양이에서 경구 투여 시 순환 반감기는 약 45분으로 계산됨. 사람에서 반감기는 20~50분이며, 10 mg/day 이하 장기 투여 후에도 24시간 내 혈중 농도가 기저치로 회복됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학적 종별 PK 데이터가 제한적이므로 사람 데이터 및 단편적 수의학 보고를 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depressant",
+          "sleep disorders",
+          "cognitive dysfunction"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정(sedation) 및 수면 장애 치료 목적으로 사용되며, CNS 억제 효과가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "immune-mediated hemolytic anemia",
+          "free radical scavenger"
+        ],
+        "index": 1,
+        "evidence": "면역매개성 용혈성 빈혈의 보조 치료로 사용 제안됨. 항산화(free radical scavenger) 효과 보고."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal impairment caution"
+        ],
+        "index": -1,
+        "evidence": "사람에서 신장 기능 저하 시 주의 사용 권고. 개에서 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic insufficiency",
+          "liver dysfunction",
+          "idiopathic vacuolar hepatopathy",
+          "cleared by liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사·청소되며, 간부전 시 금기. 개에서 특발성 공포성 간병증(idiopathic vacuolar hepatopathy) 치료에 사용됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "사람에서 빈맥(tachycardia) 보고가 있으나 개에서 심장 관련 직접 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "sedation",
+          "sleep disorders",
+          "CNS depressant"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 수면 장애 치료 목적으로 사용되며, CNS 억제 효과가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "free radical scavenger"
+        ],
+        "index": -1,
+        "evidence": "항산화 효과가 보고되나 고양이 혈액계에 대한 직접 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal impairment caution"
+        ],
+        "index": -1,
+        "evidence": "사람에서 신장 기능 저하 시 주의 사용 권고. 고양이에서 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic insufficiency",
+          "liver dysfunction",
+          "cleared by liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사·청소되며, 간부전 시 금기(사람 기준). 고양이에서도 동일한 주의가 권고됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.33,
+      "max": 0.83,
+      "mean": 0.58,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "사람에서 반감기 20~50분(0.33~0.83시간). 고양이에서 경구 투여 시 순환 반감기 약 45분으로 계산됨. 개에서의 PK 데이터는 출처에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "sedation potentiation"
+      ],
+      "evidence": "Melatonin may potentiate the effects of benzodiazepines, increasing CNS depression and sedation."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased melatonin concentration",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Cimetidine may increase melatonin plasma concentrations, potentially enhancing effects and adverse reactions."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade potentiation"
+      ],
+      "evidence": "Melatonin may potentiate the effects of succinylcholine, increasing neuromuscular blockade duration."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk",
+        "anticoagulation"
+      ],
+      "evidence": "Concurrent use of melatonin with warfarin may increase the risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "탈모 치료(Alopecia-X, 계절성 옆구리 탈모, 모낭 이형성증 등) - 경구",
+          "value": "3 - 12",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "계절성 옆구리 탈모는 최소 2개월, Alopecia-X는 최대 반응 평가를 위해 4개월 치료",
+          "evidence": "체중에 따라 1일 2~3회 투여. 허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "탈모 치료 - 경구 (대안 용량)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 총 용량을 2~3회로 분할 투여",
+          "evidence": "허가 외 사용. 1 mg/kg/day를 2~3회 분할."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "탈모 치료 - SC 임플란트 (체중 9 kg 미만)",
+          "value": "8",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "연 1~2회 재투여 필요할 수 있음",
+          "evidence": "체중 9 kg 미만: 8 mg 임플란트 1개. 허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "탈모 치료 - SC 임플란트 (체중 9~18 kg)",
+          "value": "12",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "연 1~2회 재투여 필요할 수 있음",
+          "evidence": "체중 9~18 kg: 12 mg 임플란트 1개. 허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "탈모 치료 - SC 임플란트 (체중 18 kg 초과)",
+          "value": "18",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "연 1~2회 재투여 필요할 수 있음",
+          "evidence": "체중 18 kg 초과: 18 mg 임플란트 1개. 허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수면 장애, 공포증 - 경구",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "실용적으로 1 mg 단위로 반올림. 취침 30분 전 1~9 mg/dog 단회 투여로 충분할 수 있음",
+          "evidence": "허가 외 사용. 초기 0.1 mg/kg 1~3회/일."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "스트레스 상황 - 진료 전 진정 (체중 5 kg 미만)",
+          "value": "1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "스트레스 상황 최소 2시간 전 투여. 아세프로마진(OTM), 가바펜틴 ± 트라조돈과 병용",
+          "evidence": "체중 5 kg 미만: 1 mg. 허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "스트레스 상황 - 진료 전 진정 (체중 5~15 kg)",
+          "value": "1.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "스트레스 상황 최소 2시간 전 투여",
+          "evidence": "체중 5~15 kg: 1.5 mg. 허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "스트레스 상황 - 진료 전 진정 (체중 15~50 kg)",
+          "value": "3",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "스트레스 상황 최소 2시간 전 투여",
+          "evidence": "체중 15~50 kg: 3 mg. 허가 외 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "스트레스 상황 - 진료 전 진정 (체중 50 kg 초과)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "스트레스 상황 최소 2시간 전 투여",
+          "evidence": "체중 50 kg 초과: 5 mg. 허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전 진정",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 2시간 전 투여. 프로포폴 유도 요구량 감소 효과 보고.",
+          "evidence": "허가 외 사용. 신뢰도 높은 개에서 프로포폴 요구량 감소 보고."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "특발성 공포성 간병증(Idiopathic vacuolar hepatopathy)",
+          "value": "3",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "15 kg 초과 개는 더 높은 용량이 필요할 수 있음",
+          "evidence": "허가 외 사용. 3 mg/dog q12h."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "수면 장애 / 야간 활동 - 경구",
+          "value": "1.5 - 6",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "취침 전 투여",
+          "evidence": "허가 외 사용. 1.5~6 mg/cat 취침 전."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수면 장애 / 야간 활동 - 경구 (대안)",
+          "value": "3 - 12",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 3~12 mg/cat q12~24h."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "발정 억제 - SC 임플란트",
+          "value": "18",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~4개월간 발정 억제 효과. 무발정 발정간기 중 투여.",
+          "evidence": "허가 외 사용. 18 mg/cat SC 임플란트."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "발정 억제 - 경구",
+          "value": "4 - 30",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 4~30 mg/cat 1일 1회."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "사람에서 신장 기능 저하 시 주의 사용 권고. 개·고양이에서 구체적인 용량 조정 기준은 출처에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "사람에서 간부전 시 금기로 간주됨(간에서 대사·청소). 개·고양이에서도 간기능 저하 시 사용을 피하거나 주의해야 함."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to melatonin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "liver dysfunction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "성적으로 미성숙한 동물 (임플란트)",
+      "match_terms": [
+        "sexually immature",
+        "juvenile"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "뇌혈관 질환, 우울증, 신경계 질환",
+      "match_terms": [
+        "cerebrovascular disease",
+        "depression",
+        "neurologic disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "멜라토닌은 트립토판 유도체로, 송과선에서 자연 생성되는 호르몬임. 광주기 의존성 털갈이, 모발 성장, 털 색깔의 신경내분비 조절에 관여함. 성호르몬 농도 조절, 코르티솔 생성 억제, 모낭의 에스트로겐 수용체 차단, 프로락틴 및 멜라노사이트 자극 호르몬 분비 조절 등의 기전이 제안됨. 항에스트로겐 특성으로 에스트로겐 의존성 종양 세포의 유사분열 반응을 감소시킴. 혈청 프로락틴, 성장호르몬 농도를 증가시키며, 장기 사용 시 황체형성호르몬(LH) 농도를 감소시킬 수 있음. 자유 라디칼 소거제(free radical scavenger)로도 작용함.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "수면 패턴 변화",
+      "성호르몬 분비 및 생식 기능에 영향",
+      "체중 증가",
+      "무기력(lethargy)",
+      "혈당 증가(사람)",
+      "저체온증(사람)",
+      "빈맥(사람)",
+      "혼돈(사람)",
+      "두통(사람)",
+      "소양증(사람)"
+    ],
+    "dog_mechanism": "개에서 탈모(Alopecia-X, 계절성 옆구리 탈모, 모낭 이형성증 등) 치료에 사용됨. 모발 재성장 효능은 가변적이며 공식 임상시험 데이터 부족.",
+    "dog_extra_effects": [
+      "진정(sedation)",
+      "성호르몬 분비 및 생식 기능에 영향",
+      "SC 임플란트 부위 무균성 농양"
+    ],
+    "cat_mechanism": "고양이에서 발정 억제 및 수면 장애 치료에 사용됨. 임플란트는 무발정 발정간기 중 투여 시 발정간기를 약 60~120일 연장함.",
+    "cat_extra_effects": [
+      "진정(sedation)",
+      "발정 억제"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 멜라토닌은 Alopecia-X(노르딕 견종), 계절성 옆구리 탈모, 모낭 이형성증 등 다양한 탈모 질환에 허가 외로 사용됨. 모발 재성장 효능은 가변적이며, 치료 시작 전 탈모의 근본 원인을 규명하는 것이 중요함. 수면 장애, 인지기능 장애 증후군, 공포증, 불안 치료에도 사용됨. 경구 투여 시 이상반응은 드물며 주로 진정 효과가 나타남. SC 임플란트는 무균성 농양과 관련될 수 있음. 갑상선 호르몬(T3, T4) 총 농도를 감소시킬 수 있으나 유리형(free T3, free T4)에는 영향 없음.",
+    "cat": "고양이에서 멜라토닌은 수면 장애 및 발정 억제 목적으로 허가 외 사용됨. 무발정 발정간기 중 임플란트 투여 시 발정간기를 약 60~120일 연장함. 수컷 고양이에서 임플란트는 약 120일간 정자 수 및 질을 가역적으로 감소시키며, 임플란트 후 약 140일에 정상으로 회복됨. 경구 투여 시 순환 반감기는 약 45분으로 계산됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "임신 중 또는 수유 중인 개에서 주의 사용. 간기능 저하 시 사용 금기. 성적으로 미성숙한 동물에서 임플란트 사용 시 주의. 진정 효과로 인해 뇌혈관 질환, 우울증, 신경계 질환 병력이 있는 경우 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "임신 중 또는 수유 중인 고양이에서 주의 사용. 간기능 저하 시 사용 금기. 성적으로 미성숙한 동물에서 임플란트 사용 시 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "별도 표시가 없는 한 밀폐 용기에 실온 보관.",
+    "forms": [
+      "Melatonin implant 2.7 mg (PrimeX, OTC) - 밍크용 FDA 승인",
+      "Melatonin implant 2.7 mg, 5.4 mg (Ferretonin, OTC) - 페럿용",
+      "Melatonin implant 8 mg, 12 mg, 18 mg, 24 mg (Dermatonin, OTC) - 개, 고양이, 양, 염소, 스컹크, 소, 말용",
+      "Melatonin implant 18 mg (Regulin) - 양(영국, 호주/뉴질랜드), 염소(호주/뉴질랜드)용",
+      "Melatonin Capsules, Tablets, Chewable Tablets, Disintegrating Oral Tablets, Gummies, Extended-Release Tablets, Sublingual Tablets: 0.2~20 mg (사람용, OTC)",
+      "Melatonin Oral Solution: 0.25 mg/mL, 0.33 mg/mL, 1 mg/mL (사람용, OTC)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "멜라토닌은 송과선에서 자연 생성되는 호르몬으로, 밍크의 모피 성숙 주기 촉진에만 FDA 승인됨. 개·고양이에서는 탈모, 수면 장애, 발정 억제 등에 허가 외로 사용됨. 이상반응은 매우 드물며 주로 진정 효과가 나타남. 간부전 시 금기이며, 임신 동물에서 주의 사용 필요. 갑상선 호르몬 및 코르티솔, 프로게스테론, 에스트라디올 검사 결과에 영향을 줄 수 있음.",
+    "indications": "▶ FDA 승인: 밍크의 모피 성숙 주기 촉진(SC 임플란트)\n▶ 허가 외(개): 탈모(Alopecia-X, 계절성 옆구리 탈모, 모낭 이형성증, 색소 희석 탈모, 클리핑 후 탈모), 수면 장애, 인지기능 장애 증후군, 특발성 공포성 간병증, 공포증, 불안, 수술 전 진정, 부신피질기능항진증 보조 치료, 면역매개성 용혈성 빈혈 보조 치료\n▶ 허가 외(고양이): 수면 장애, 발정 억제\n▶ 허가 외(말): 계절성 두부 진탕 증후군\n▶ 허가 외(양, 염소): 번식 시기 조절, 조기 발정 유도\n▶ 허가 외(페럿): 부신 종양 관련 임상 증상 완화 보조 치료",
+    "client_info": "▶ 탈모 치료 시 효과는 개체마다 다를 수 있으며, 최대 효과를 확인하려면 최소 4개월간 투여가 필요합니다.\n▶ 경구 제제는 음식과 함께 또는 공복에 투여할 수 있습니다.\n▶ 이 약은 일반적으로 잘 견디며, 졸음이 나타날 수 있습니다.\n▶ SC 임플란트 부위에 무균성 농양이 생길 수 있으니 이상 소견 발견 시 수의사에게 알려주세요.\n▶ 갑상선 호르몬 검사 등 혈액 검사 전에 멜라토닌 투여 사실을 반드시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed veterinary PK data (dog/cat t_max, bioavailability, protein binding)",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/62.jsonl",
+    "extracted_at": "2026-03-11T08:42:40.805391+00:00",
+    "reviewer": null
+  }
+}

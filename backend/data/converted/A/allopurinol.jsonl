@@ -1,0 +1,570 @@
+{
+  "id": "allopurinol",
+  "drug_identity": {
+    "name_ko": "알로퓨리놀",
+    "name_en": "Allopurinol",
+    "active_ingredient": "Allopurinol",
+    "brand_names": [
+      "Zyloprim"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품(Zyloprim®)을 동물에 오프라벨로 사용. 개의 요산 요석 치료/예방 및 리슈만편모충증 보조치료, 조류·파충류의 통풍 치료에 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "알로퓨리놀은 잔틴 산화효소(xanthine oxidase)에 의해 활성 대사체인 옥시퓨리놀(oxypurinol)로 전환됨. 혈장 단백 결합 없음. 알로퓨리놀 및 옥시퓨리놀 모두 유즙으로 분비됨."
+    },
+    "extra_information": "개에서 경구 생체이용률 약 90%(인간과 유사). 알로퓨리놀 혈청 반감기 약 2시간, 옥시퓨리놀 약 4시간. 달마시안에서 흡수율 개체 간 변동 있으며, 경구 투여 후 1~3시간 내 최고 혈중 농도 도달, 소실 반감기 약 2.7시간. 전신 흡수는 양호하나 CNS 투과는 제한적. 고용량 투여 시 비선형 흡수 나타남."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 수의학적 종별 PK 데이터 제한적. 인체 데이터 및 Plumb's 기술 내용 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS penetration limited"
+        ],
+        "index": 1,
+        "evidence": "CNS 투과가 제한적이라고 명시되어 있어 뇌 부담은 낮음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "CBC monitoring"
+        ],
+        "index": 2,
+        "evidence": "인체에서 골수 억제 부작용 보고. 정기적 CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "renal mineralization",
+          "urolithiasis",
+          "renal dysfunction",
+          "xanthinuria",
+          "renal excretion"
+        ],
+        "index": 3,
+        "evidence": "신장 석회화 및 요석증이 개의 6%에서 보고됨. 신기능 장애 환자에서 용량 감량 필요. 잔틴뇨증 보고. 옥시퓨리놀의 신장 배설."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "hepatitis",
+          "ALT/AST elevations"
+        ],
+        "index": 4,
+        "evidence": "간효소 상승 및 간염이 부작용으로 보고됨. 간기능 장애 환자에서 주의 사용 권장."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "myocardial ischemia"
+        ],
+        "index": 5,
+        "evidence": "실험실 조건에서 심근 허혈 보호 효과 연구됨. 임상적 심장 부담 근거 미흡."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS penetration limited"
+        ],
+        "index": 1,
+        "evidence": "개와 유사하게 CNS 투과 제한적으로 추정되나 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bone marrow suppression"
+        ],
+        "index": 2,
+        "evidence": "인체 데이터 기반 골수 억제 가능성. 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "urolithiasis",
+          "xanthinuria"
+        ],
+        "index": 3,
+        "evidence": "신기능 장애 환자에서 주의 사용 권장. 고양이 특이적 신독성 데이터는 제한적이나 동일 기전 적용."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "hepatic dysfunction"
+        ],
+        "index": 4,
+        "evidence": "간기능 장애 시 주의 사용 권장. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 부담 관련 근거 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 2.7,
+      "mean": 2.35,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 0,
+    "evidence": "개에서 경구 생체이용률 약 90%. 달마시안에서 경구 투여 후 1~3시간 내 최고 혈중 농도 도달. 알로퓨리놀 반감기 약 2~2.7시간(개). 혈장 단백 결합 없음. 활성 대사체 옥시퓨리놀 반감기 약 4시간(개)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 이론적 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Aluminum Hydroxide",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "알루미늄 하이드록사이드가 알로퓨리놀의 흡수를 감소시킬 수 있음."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hypersensitivity reaction"
+      ],
+      "evidence": "인체에서 병용 시 알로퓨리놀에 대한 과민반응 위험 증가 가능. 수의학적 의의 불명확."
+    },
+    {
+      "drug": "Aminopenicillins (amoxicillin, ampicillin)",
+      "severity": 2,
+      "keywords": [
+        "hypersensitivity reaction"
+      ],
+      "evidence": "인체에서 병용 시 알로퓨리놀에 대한 과민반응 위험 증가 가능. 수의학적 의의 불명확."
+    },
+    {
+      "drug": "Azathioprine / Mercaptopurine",
+      "severity": 3,
+      "keywords": [
+        "increased mercaptopurine concentration",
+        "thioguanine nucleotides",
+        "immunosuppression toxicity"
+      ],
+      "evidence": "알로퓨리놀이 머캅토퓨린(아자티오프린의 활성 대사체) 혈중 농도를 증가시키고 활성 티오구아닌 뉴클레오타이드 형성을 촉진. 면역억제제 용량을 초기 25~33% 감량 고려."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "bone marrow suppression"
+      ],
+      "evidence": "병용 시 골수 억제 위험 증가."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine concentration"
+      ],
+      "evidence": "알로퓨리놀 병용 시 사이클로스포린 혈중 농도 증가 가능."
+    },
+    {
+      "drug": "Diuretics (chlorothiazide, furosemide, hydrochlorothiazide)",
+      "severity": 1,
+      "keywords": [
+        "increased allopurinol concentration"
+      ],
+      "evidence": "이뇨제가 알로퓨리놀 혈중 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Theophylline / Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased metabolism",
+        "increased theophylline levels"
+      ],
+      "evidence": "알로퓨리놀이 테오필린/아미노필린의 대사를 억제하여 혈중 농도 증가 가능."
+    },
+    {
+      "drug": "Uricosuric Agents (probenecid, sulfinpyrazone)",
+      "severity": 1,
+      "keywords": [
+        "increased oxypurinol renal excretion",
+        "reduced xanthine oxidase inhibition"
+      ],
+      "evidence": "옥시퓨리놀의 신장 배설 증가로 잔틴 산화효소 억제 효과 감소 가능. 고요산혈증 치료 시 혈중 요산 감소에 상가 효과 가능."
+    },
+    {
+      "drug": "Urinary Acidifiers (ammonium chloride, methionine)",
+      "severity": 2,
+      "keywords": [
+        "reduced uric acid solubility",
+        "urolithiasis"
+      ],
+      "evidence": "소변 내 요산 용해도 감소로 요석증 유발 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "raptor_red_tailed_hawk"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "요산 요석 용해 (오프라벨)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 4주. 저퓨린, 알칼리화, 이뇨 식이와 병용.",
+          "evidence": "Plumb's: 15 mg/kg PO q12h for up to 4 weeks."
+        },
+        {
+          "logic_type": "linear",
+          "context": "요산 요석 예방 (오프라벨)",
+          "value": "5 - 7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 투여 시 저퓨린 식이 및 충분한 수분 섭취 병행. 고용량 장기 투여 시 잔틴 요석 위험.",
+          "evidence": "Plumb's: 5–7 mg/kg PO q12–24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "요산 요석 예방 (오프라벨) - 24시간 간격",
+          "value": "5 - 7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 투여 시 저퓨린 식이 및 충분한 수분 섭취 병행.",
+          "evidence": "Plumb's: 5–7 mg/kg PO q12–24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 - 메글루민 안티모니에이트 병용 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "6~12개월. 메글루민 안티모니에이트 75–100 mg/kg SC SID 1~2개월 병용.",
+          "evidence": "Plumb's: 10–15 mg/kg PO BID for 6–12 months plus meglumine antimoniate."
+        },
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 - 밀테포신 병용 (오프라벨)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "6~12개월. 밀테포신 2 mg/kg PO SID 4주 병용.",
+          "evidence": "Plumb's: 10–15 mg/kg PO BID for 6–12 months plus miltefosine."
+        },
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 - 단독요법 (오프라벨)",
+          "value": "5 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~24개월. 신기능 장애 개에서는 5 mg/kg BID로 시작.",
+          "evidence": "Plumb's: 5–20 mg/kg PO q12h for 2–24 months as monotherapy."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 (오프라벨)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 투여.",
+          "evidence": "Plumb's: 10–20 mg/kg PO q12 or 24h long-term."
+        },
+        {
+          "logic_type": "linear",
+          "context": "리슈만편모충증 (오프라벨) - 24시간 간격",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 투여.",
+          "evidence": "Plumb's: 10–20 mg/kg PO q12 or 24h long-term."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 용량 감량 및 모니터링 강화 필요. 리슈만편모충증 치료 시 신기능 장애 개에서 5 mg/kg BID로 시작 권장. 인체에서 신기능 장애 시 심각한 부작용 위험 증가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 환자에서 주의 사용 및 모니터링 강화 권장. 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "이전 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to allopurinol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "문맥혈관 이상(개)",
+      "match_terms": [
+        "portovascular anomaly",
+        "portosystemic shunt"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "붉은꼬리매(Red-tailed hawk) 및 기타 맹금류",
+      "match_terms": [
+        "red-tailed hawk",
+        "raptor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [
+      "Dalmatian"
+    ],
+    "gene": null,
+    "evidence": "달마시안은 요산 대사 이상으로 요산 요석 발생 위험이 높아 알로퓨리놀 사용 대상이 됨. 그러나 특정 유전자 변이에 의한 약물 감수성 차이는 명시되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "잔틴 산화효소(xanthine oxidase) 억제를 통해 옥시퓨린(하이포잔틴, 잔틴)의 요산으로의 전환을 차단하여 혈중 및 소변 내 요산 농도를 감소시킴. 리슈만편모충에 대해서는 원충에 흡수되어 독성 화합물(4-amino-pyrazole-pyrimidine)로 대사되어 RNA에 삽입됨으로써 원충을 사멸시킴.",
+    "common_extra_effects": [
+      "오심(nausea)",
+      "구토(vomiting)",
+      "식욕부진(anorexia)",
+      "설사(diarrhea)",
+      "피부 발진(rash)",
+      "간효소 상승(ALT/AST elevation)",
+      "잔틴뇨증(xanthinuria)",
+      "잔틴 요석(xanthine urolithiasis)",
+      "신장 석회화(renal mineralization)",
+      "골수 억제(bone marrow suppression, 인체)",
+      "중증 피부 반응(severe dermatologic reactions, 인체)",
+      "간염(hepatitis, 인체)",
+      "혈관염(vasculitis, 인체)"
+    ],
+    "dog_mechanism": "잔틴 산화효소 억제로 요산 생성 감소. 리슈만편모충 치료 시 원충 내 독성 대사체 형성.",
+    "dog_extra_effects": [
+      "잔틴 요석(저퓨린 식이 미병행 시)",
+      "잔틴뇨증(리슈만편모충증 치료 시)",
+      "신장 석회화 및 요석증(6% 보고)",
+      "구토(44 mg/kg 이상 과량 투여 시)",
+      "떨림(trembling, 과량 투여 시)"
+    ],
+    "cat_mechanism": "잔틴 산화효소 억제. 리슈만편모충 치료 시 원충 내 독성 대사체 형성.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 주요 적응증은 요산 요석(특히 달마시안) 치료/예방 및 리슈만편모충증 보조치료. 저퓨린 식이 병행 시 부작용 드묾. 30 mg/kg/day 초과 장기 투여 시 잔틴 요석 위험. 문맥혈관 이상 개에서는 효과 없음. 신기능 장애 시 5 mg/kg BID로 시작 권장.",
+    "cat": "고양이에서는 주로 리슈만편모충증 치료에 오프라벨로 사용. 10–20 mg/kg PO q12–24h 장기 투여. 고양이 특이적 안전성 및 약동학 데이터 제한적."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 장애 시 주의 사용 및 용량 감량 필요. 장기 고용량 투여 시 잔틴 요석 위험. 저퓨린 식이 병행 권장. 정기적 CBC, 혈청 화학검사, 요검사 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 장애 시 주의 사용. 고양이 특이적 안전성 데이터 제한적. 정기적 모니터링 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 밀폐 용기에 보관, 빛 차단. 조제 현탁액은 5°C 및 25°C에서 최소 60일간 95% 이상 역가 유지.",
+    "forms": [
+      "알로퓨리놀 경구정: 100 mg, 300 mg (Zyloprim®, 제네릭)",
+      "조제 경구 현탁액: 20 mg/mL (Ora-Plus® + Ora-Sweet® 기반 즉석 조제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "알로퓨리놀은 잔틴 산화효소 억제제로, 개의 요산 요석 치료/예방 및 리슈만편모충증 보조치료에 주로 사용됨. 수의학적 승인 제품 없으며 모두 오프라벨 사용. 장기 투여 시 저퓨린 식이 병행 필수. 신기능 및 간기능 장애 환자에서 주의 사용. 붉은꼬리매에서 금기. 아자티오프린/머캅토퓨린과의 병용은 독성 위험으로 용량 조정 필수.",
+    "indications": "【승인 적응증】없음(수의학적 승인 제품 없음). 【오프라벨 적응증】개: 요산 요석 용해 및 예방(특히 달마시안), 리슈만편모충증 보조치료. 고양이: 리슈만편모충증. 조류: 통풍. 파충류(도마뱀, 이구아나): 통풍.",
+    "client_info": "구토가 발생하면 음식과 함께 투여하세요. 이 약을 복용하는 동안 항상 신선한 물을 충분히 제공하세요. 개에서 장기 투여 시 저퓨린 식이가 권장됩니다. 피부 발진, 비정상적인 피로감, 눈 흰자위의 황변이 관찰되면 즉시 수의사에게 연락하세요. 조류나 파충류의 음수에 사용하는 경우 매일 새로운 용액을 만들어 주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (empty)",
+      "Cat-specific pharmacokinetics",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat)",
+      "timing_profile.f_percent (cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/53.jsonl",
+    "extracted_at": "2026-03-11T05:48:14.315133+00:00",
+    "reviewer": null
+  }
+}

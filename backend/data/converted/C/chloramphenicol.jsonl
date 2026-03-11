@@ -1,0 +1,784 @@
+{
+  "id": "chloramphenicol",
+  "drug_identity": {
+    "name_ko": "클로람페니콜",
+    "name_en": "Chloramphenicol",
+    "active_ingredient": "Chloramphenicol",
+    "brand_names": [
+      "Chloromycetin",
+      "Viceton"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP2B11"
+      ],
+      "inducers": [],
+      "pathway_evidence": "클로람페니콜은 주로 간에서 글루쿠론산 포합(glucuronidation)을 통해 대사된다. 개에서 CYP2B11 억제제로 확인되었으며, 다른 CYP 동종효소도 억제할 가능성이 있다. 고양이는 글루쿠론산 포합 능력이 낮아 약 25%가 소변으로 미변화체로 배설된다."
+    },
+    "extra_information": "개에서 분포용적(Vd)은 1.6–1.8 L/kg, 고양이에서 2.4 L/kg. 혈장 단백 결합률은 약 30–60%. 개에서 소변으로 미변화체 배설이 적어(~5–15%) 하부 요로감염 치료에는 적합하지 않을 수 있음. 고양이는 글루쿠론산 포합 능력 저하로 반감기가 더 길고 부작용 위험이 높음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간: 주요 대사 장기, 간효소 상승 보고. 신장: 주요 배설 장기(대사체 ~90% 신장 배설). 혈액/골수: 골수억제, 혈소판감소증, 빈혈 보고. 뇌: CSF 침투 우수(혈청의 최대 50%). 심장: 기니피그에서 ECG 변화 보고, 개/고양이에서 직접적 심독성 근거 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CSF penetration",
+          "CNS distribution"
+        ],
+        "index": 1,
+        "evidence": "뇌척수액 농도가 혈청의 최대 50%(수막 비염증 시), 염증 시 더 높음. CSF 최고 농도 도달까지 4–6시간 지연 가능."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "myelosuppression",
+          "anemia",
+          "neutropenia",
+          "thrombocytopenia",
+          "lymphocytopenia"
+        ],
+        "index": 2,
+        "evidence": "용량 의존적 가역적 골수억제가 모든 종에서 보고됨. 초기 징후로 골수 세포 공포화, 림프구감소증, 호중구감소증 포함. 개에서 빈혈, 혈소판감소증 보고."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal insufficiency",
+          "dose accumulation"
+        ],
+        "index": 3,
+        "evidence": "대사체의 약 90%가 신장으로 배설됨. 신기능 저하 시 약물 축적 가능. 신부전 시 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation",
+          "increased liver enzymes",
+          "CYP2B11 inhibitor",
+          "hepatic failure"
+        ],
+        "index": 4,
+        "evidence": "주요 대사 장기. 개에서 간효소 상승(6%) 보고. CYP2B11 억제. 간부전 시 약물 축적 위험. 간기능 저하 시 투여 간격 연장 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 직접적인 심독성 근거 없음. 기니피그에서 ECG 변화(P파 단축, P-R 간격, QRS 복합체 단축) 보고되었으나 개에서의 임상적 의의는 불명확."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CSF penetration",
+          "CNS distribution"
+        ],
+        "index": 1,
+        "evidence": "뇌척수액 침투 우수(혈청의 최대 50%). 고양이에서 반감기가 길어 CNS 노출 시간 증가 가능."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "bone marrow hypoplasia",
+          "thrombocytopenia",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "고양이는 글루쿠론산 포합 능력 저하로 반감기가 길어 골수억제 위험이 더 높음. 고용량 장기 투여(50 mg/kg q12h, 2–3주) 시 골수형성저하증 보고. 혈소판감소증 보고."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "unchanged urine excretion",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "고양이는 글루쿠론산 포합 능력 저하로 약 25%가 소변으로 미변화체 배설. 신기능 저하 시 축적 위험."
+      },
+      "liver": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "glucuronidation deficiency",
+          "hepatic metabolism",
+          "hepatic failure",
+          "CYP inhibition"
+        ],
+        "index": 4,
+        "evidence": "고양이는 글루쿠론산 포합 능력이 현저히 낮아 간 대사 부담 증가. 간부전 시 투여 금기에 준하는 주의 필요. 다른 약물의 간 대사에도 영향."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 심독성 근거 없음. 기니피그 ECG 변화 보고 있으나 고양이에서의 임상적 의의 불명확."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": 1.1,
+      "max": 5.0,
+      "mean": 2.4,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 45,
+    "evidence": "경구 투여 후 약 30분 내 최고 혈청 농도 도달. 개에서 반감기 1.1–5시간(평균 약 2.4시간), 고양이에서 4–8시간. 혈장 단백 결합률 약 30–60%(중간값 45% 사용). 경구 현탁액은 말과 공복 고양이에서 최고 혈청 농도가 유의하게 낮음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. 고양이는 간 대사 억제 효과에 특히 민감함.",
+  "drug_interactions": [
+    {
+      "drug": "Acetaminophen",
+      "severity": 2,
+      "keywords": [
+        "increased chloramphenicol concentration",
+        "metabolism inhibition"
+      ],
+      "evidence": "One human study reported increased chloramphenicol serum concentrations with concurrent acetaminophen; subsequent studies contradicted this. No veterinary data available."
+    },
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin, streptomycin)",
+      "severity": 1,
+      "keywords": [
+        "antibacterial antagonism"
+      ],
+      "evidence": "May cause antibacterial antagonism; clinical significance is unclear."
+    },
+    {
+      "drug": "Anti-Anemia Drugs (epoetin, folic acid, iron, vitamin B12)",
+      "severity": 2,
+      "keywords": [
+        "delayed hematopoietic response"
+      ],
+      "evidence": "Chloramphenicol may delay hematopoietic response to anti-anemia drugs."
+    },
+    {
+      "drug": "Aspirin and Other Salicylates (bismuth subsalicylate)",
+      "severity": 2,
+      "keywords": [
+        "delayed hepatic metabolism",
+        "salicylate toxicity"
+      ],
+      "evidence": "Chloramphenicol may delay hepatic metabolism of salicylates and potentiate toxicity."
+    },
+    {
+      "drug": "Beta-Lactam Antibiotics (cephalosporins, penicillins)",
+      "severity": 1,
+      "keywords": [
+        "antibacterial antagonism"
+      ],
+      "evidence": "May cause antibacterial antagonism; clinical significance is unclear."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "reduced chloramphenicol metabolism",
+        "increased toxicity risk"
+      ],
+      "evidence": "Cimetidine may reduce the metabolism of chloramphenicol, increasing the risk for toxicity."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "reduced active metabolite formation",
+        "reduced efficacy",
+        "additive myelosuppression"
+      ],
+      "evidence": "Chloramphenicol may reduce formation of the active cyclophosphamide metabolite and reduce efficacy. Additive myelosuppression may occur."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine toxicity"
+      ],
+      "evidence": "Chloramphenicol may increase the risk for cyclosporine toxicity."
+    },
+    {
+      "drug": "Dipyrone",
+      "severity": 2,
+      "keywords": [
+        "additive myelosuppression"
+      ],
+      "evidence": "Concurrent use may increase the risk for myelosuppression."
+    },
+    {
+      "drug": "Glipizide",
+      "severity": 2,
+      "keywords": [
+        "decreased sulfonylurea metabolism",
+        "hypoglycemia"
+      ],
+      "evidence": "Chloramphenicol may decrease sulfonylurea metabolism and increase the risk for hypoglycemia."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 2,
+      "keywords": [
+        "prolonged anesthetic effect"
+      ],
+      "evidence": "Chloramphenicol may prolong ketamine effects. One dog study with xylazine/ketamine did not show prolonged anesthesia."
+    },
+    {
+      "drug": "Levamisole",
+      "severity": 3,
+      "keywords": [
+        "fatality",
+        "avoid combination"
+      ],
+      "evidence": "Fatalities have been reported after concomitant levamisole and chloramphenicol administration; avoid using these agents together."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 2,
+      "keywords": [
+        "delayed hepatic metabolism"
+      ],
+      "evidence": "Chloramphenicol may delay hepatic metabolism of lidocaine."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 2,
+      "keywords": [
+        "inhibited hepatic metabolism",
+        "increased methadone effect"
+      ],
+      "evidence": "Chloramphenicol inhibits hepatic metabolism and increases methadone effects."
+    },
+    {
+      "drug": "Midazolam",
+      "severity": 2,
+      "keywords": [
+        "prolonged effect"
+      ],
+      "evidence": "Chloramphenicol may prolong midazolam effects."
+    },
+    {
+      "drug": "Myelosuppressive Drugs (azathioprine, interferons, methimazole, toceranib)",
+      "severity": 2,
+      "keywords": [
+        "additive bone marrow depression"
+      ],
+      "evidence": "Concurrent use may cause additive bone marrow depression."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "inhibited metabolism",
+        "prolonged opioid effect"
+      ],
+      "evidence": "Chloramphenicol can significantly inhibit metabolism and prolong opioid effects."
+    },
+    {
+      "drug": "Pentobarbital",
+      "severity": 2,
+      "keywords": [
+        "prolonged anesthesia",
+        "CYP inhibition"
+      ],
+      "evidence": "Chloramphenicol has been demonstrated to prolong the duration of pentobarbital anesthesia by 120% in dogs and 260% in cats."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "inhibited phenobarbital metabolism",
+        "decreased chloramphenicol concentration",
+        "bidirectional interaction"
+      ],
+      "evidence": "Chloramphenicol may inhibit phenobarbital metabolism; phenobarbital may decrease chloramphenicol concentrations. Does not apply to ophthalmic formulation."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "inhibited metabolism",
+        "decreased chloramphenicol concentration"
+      ],
+      "evidence": "Similar interaction as phenobarbital; chloramphenicol may inhibit primidone/phenobarbital metabolism."
+    },
+    {
+      "drug": "Propofol",
+      "severity": 2,
+      "keywords": [
+        "prolonged anesthesia"
+      ],
+      "evidence": "Chloramphenicol may prolong propofol anesthesia."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased chloramphenicol concentration"
+      ],
+      "evidence": "Rifampin may decrease serum chloramphenicol concentrations."
+    },
+    {
+      "drug": "Voriconazole",
+      "severity": 2,
+      "keywords": [
+        "increased voriconazole concentration"
+      ],
+      "evidence": "Chloramphenicol may increase voriconazole concentration."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "food_animals"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 GI, 폐, 요로 세균 감염 (FDA 승인 용량)",
+          "value": "55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "QID",
+          "max_dose_mg_kg": 55.0,
+          "duration_note": "임상 증상 소실 또는 해열 후 3–5일 지속",
+          "evidence": "FDA 승인 라벨 용량 (NADA #055-059)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용)",
+          "value": "25 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "임상 증상 소실 또는 해열 후 3–5일 지속",
+          "evidence": "Extra-label; 일부 감염에서 60 mg/kg q8h까지 필요할 수 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용, 주사 포함)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 60.0,
+          "duration_note": "IV 투여 시 최소 1분 이상에 걸쳐 투여",
+          "evidence": "Extra-label; 일부 감염에서 60 mg/kg q8h까지 필요할 수 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용, SC/IM)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 60.0,
+          "duration_note": null,
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용, IM)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 60.0,
+          "duration_note": null,
+          "evidence": "Extra-label"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용)",
+          "value": "12.5 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "14일 이상 장기 투여 시 CBC 모니터링 필요",
+          "evidence": "Extra-label; 실제로는 50 mg/마리(mg/kg 아님) PO q12h로 투여하는 경우 많음"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 감염 (비라벨 외용, 고정 용량)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg가 아닌 마리당 고정 용량으로 투여",
+          "evidence": "Extra-label; 실용적 투여 방법"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용, 주사)",
+          "value": "12.5 - 20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용, IM)",
+          "value": "12.5 - 20",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (비라벨 외용, SC)",
+          "value": "12.5 - 20",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "Extra-label"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 약물 축적 가능. 신부전 동물에서 용량 조절이 필요할 수 있음. 구체적인 크레아티닌 역치나 조절 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "extend_interval",
+    "note": "간기능 저하 시 약물 축적 가능하여 투여 간격 연장 필요. 간부전 시에는 다른 효과적인 항생제가 없는 경우에만 사용하며, 투여 간격을 연장해야 함."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "chloramphenicol hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 혈액학적 이상",
+      "match_terms": [
+        "hematologic disorder",
+        "anemia",
+        "bone marrow suppression",
+        "thrombocytopenia",
+        "neutropenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic failure",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신생아 동물",
+      "match_terms": [
+        "neonate",
+        "newborn",
+        "young kitten"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "nursing",
+        "lactation"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식용 동물",
+      "match_terms": [
+        "food animal",
+        "livestock",
+        "poultry",
+        "dairy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "MDR1/ABCB1 돌연변이와의 연관성은 본 모노그래프에 명시되지 않음. 대형견에서 말초신경병증(후지 허약)이 더 자주 인식되나, 이는 임상 증상 인식의 용이성 때문일 가능성이 높으며 실제 발생률 증가와는 구별됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "50S 리보솜 소단위에 결합하여 세균 단백질 합성을 억제하는 시간 의존적 정균 항생제. 고농도 또는 일부 감수성 균에 대해서는 살균 효과. 포유류 세포(특히 골수)의 미토콘드리아 리보솜에도 친화성을 가져 가역적 골수억제 유발 가능.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "우울증",
+      "가역적 골수억제(용량 의존적)",
+      "골수 세포 공포화",
+      "림프구감소증",
+      "호중구감소증",
+      "혈소판감소증",
+      "간효소 상승",
+      "말초신경병증(후지 허약)"
+    ],
+    "dog_mechanism": "개에서 CYP2B11 억제제로 작용하여 다른 약물의 간 대사를 억제할 수 있음. 분포용적 1.6–1.8 L/kg.",
+    "dog_extra_effects": [
+      "GI 증상(47%)",
+      "기면(14%)",
+      "떨림(8%)",
+      "간효소 상승(6%)",
+      "빈혈",
+      "헐떡임",
+      "공격성",
+      "후지 허약(말초신경병증, 특히 대형견)"
+    ],
+    "cat_mechanism": "고양이는 글루쿠론산 포합 능력이 낮아 반감기가 4–8시간으로 길고, 약 25%가 소변으로 미변화체 배설됨. 부작용 위험이 개보다 높음.",
+    "cat_extra_effects": [
+      "골수형성저하증(고용량 장기 투여 시)",
+      "혈소판감소증",
+      "GI 증상",
+      "기면",
+      "식욕부진"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 항생제(NADA #055-059). 세균성 폐렴, 개 호흡기 질환 복합체, 안구 감염, 중이염, 요로감염, 메티실린 내성 포도상구균 감염, 세균성 전립선염에 사용. 소변으로 미변화체 배설이 적어 하부 요로감염에는 적합하지 않을 수 있음. 대형견에서 후지 허약(말초신경병증) 주의. 14일 이상 장기 투여 시 CBC 모니터링 권장.",
+    "cat": "고양이에서는 비라벨 외용으로만 사용. 헤모바르토넬라증, 클라미디아증, 안구 감염, 요로감염에 사용. 글루쿠론산 포합 능력 저하로 반감기가 길고 부작용 위험이 높음. 개와 용량이 현저히 다름(12.5–20 mg/kg q12h 또는 50 mg/마리 q12h). 14일 이상 장기 투여 시 골수억제 위험 증가. 신생아 고양이에서 특히 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 혈액학적 이상, 간/신기능 저하, 임신, 신생아 동물에서 주의 사용. 14일 이상 장기 투여 시 CBC 모니터링 권장. NIOSH 위험 약물로 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 글루쿠론산 포합 능력 저하로 부작용 위험이 더 높음. 개와 용량이 현저히 다름. 14일 이상 장기 투여 시 골수억제 위험 증가. 신생아 고양이에서 특히 주의. 고용량(50 mg/kg q12h) 장기 투여 시 골수형성저하증 보고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐 용기에 25°C 이하 건조한 곳 보관. 소듐 숙시네이트 주사용 분말: 20–25°C 보관. 재구성 후 용액은 실온에서 30일, 냉동 시 6개월 안정. 혼탁해지면 폐기.",
+    "forms": [
+      "경구 정제 250 mg, 500 mg, 1 g (Viceton®)",
+      "주사용 분말 1 g 바이알 (소듐 숙시네이트, 재구성 시 100 mg/mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로람페니콜은 광범위 항균 스펙트럼을 가진 항생제로, 눈, CNS, 전립선 등 조직 침투력이 우수합니다. 다른 항균제가 효과적이지 않을 때만 사용해야 하며, 식용 동물에서의 사용은 FDA에 의해 금지되어 있습니다. 개에서 FDA 승인 용량은 55 mg/kg PO q6h이며, 고양이에서는 12.5–20 mg/kg q12h(또는 50 mg/마리 q12h)로 용량이 현저히 다릅니다. 골수억제(가역적, 용량 의존적), GI 부작용, 간독성 위험이 있으며, 14일 이상 장기 투여 시 CBC 모니터링이 필요합니다. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용이 필요합니다. CYP2B11 억제제로 다수의 약물 상호작용이 있으며, 레바미솔과의 병용은 치명적일 수 있어 금기입니다.",
+    "indications": "개(FDA 승인): 세균성 폐렴, 개 호흡기 질환 복합체, 안구 감염, 중이염, 요로감염(감수성 세균). 비라벨 외용: 메티실린 내성 포도상구균 감염, 세균성 전립선염. 고양이(비라벨): 헤모바르토넬라증, 클라미디아증, 안구 감염, 요로감염. 말, 토끼, 기니피그, 페럿, 조류, 파충류 등 다양한 종에서 비라벨 외용으로 사용.",
+    "client_info": "이 약을 다룰 때는 반드시 장갑을 착용하고, 특히 입, 코, 눈 주변에 약이 닿지 않도록 주의하세요. 정제를 분쇄하지 마세요. 약이 효과를 발휘하려면 수의사가 처방한 대로 정확히 투여해야 합니다. 투여를 빠뜨리면 치료 효과가 떨어질 수 있습니다. 이 약은 매우 쓴맛이 있으므로 음식과 함께 투여하는 것이 좋습니다. 가장 흔한 부작용은 위장 장애, 구토, 설사입니다. 고양이는 심각한 부작용이 발생할 가능성이 더 높습니다. 이 약은 식용 동물(달걀을 낳는 닭, 유제품 동물 포함)에는 사용이 금지되어 있습니다. NIOSH에서 위험 약물로 분류한 약물이므로 취급 시 개인 보호 장비 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific oral bioavailability percentage",
+      "Exact renal dose adjustment thresholds",
+      "Exact hepatic dose adjustment thresholds",
+      "CYP substrate profile (only inhibitor CYP2B11 stated)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "timing_profile.half_life_hr (cat-specific object)",
+      "genetic_sensitivity.affected_breeds"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:35:47.913885+00:00",
+    "reviewer": null
+  }
+}

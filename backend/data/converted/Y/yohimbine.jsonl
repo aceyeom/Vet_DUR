@@ -1,0 +1,485 @@
+{
+  "id": "yohimbine",
+  "drug_identity": {
+    "name_ko": "요힘빈",
+    "name_en": "Yohimbine",
+    "active_ingredient": "Yohimbine hydrochloride",
+    "brand_names": [
+      "Yobine",
+      "Antagonil",
+      "Aphrodyne",
+      "Dayto Himbin",
+      "Yocon",
+      "Yohimex"
+    ],
+    "allergy_class": null,
+    "class": "Reversal Agent",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 90%가 간에서 주로 수산화(hydroxylation)에 의해 대사됨. 말에서도 수산화 대사체 2종 확인. 주요 대사체인 11-hydroxy yohimbine은 약리활성이 있을 수 있음. 소변에서 투여 후 최대 96시간까지 hydroxy-yohimbine 검출 가능."
+    },
+    "extra_information": "개에서 분포용적(Vdss) 약 4.5 L/kg, 총 체내 청소율 약 30 mL/min/kg, 반감기 약 1.5~2시간. 말에서 분포용적 평균 3.2 L/kg, 청소율 평균 13.6 mL/kg/min, 반감기 4.4시간. 중추신경계 침투가 빠르며, 자일라진 역전 시 작용 발현은 일반적으로 3분 이내."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 말 PK 데이터 일부 존재하나 고양이 종별 데이터는 제한적. 간 대사(수산화), 신장 배설, CNS 자극 효과 근거로 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "CNS excitement",
+          "seizures",
+          "muscle tremors",
+          "rapid CNS penetration"
+        ],
+        "index": 1,
+        "evidence": "CNS를 빠르게 침투하며 CNS 흥분, 근육 떨림, 과량 투여 시 발작 유발 가능. 중추 알파-2 수용체 차단으로 교감신경 활성 증가."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension",
+          "platelet aggregation inhibition",
+          "hyperemic mucous membranes"
+        ],
+        "index": 2,
+        "evidence": "빈맥, 고혈압, 점막 충혈 유발 가능. 시험관 내 연구에서 혈소판 콜라겐 유도 응집 억제 확인(임상적 의의 불명확)."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "antidiuresis",
+          "renal disease contraindication"
+        ],
+        "index": 3,
+        "evidence": "항이뇨 효과 보고. 인간에서 신장 질환 시 금기. 신장 배설 경로 포함."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hydroxylation",
+          "90% liver metabolized"
+        ],
+        "index": 4,
+        "evidence": "인간에서 90%가 간에서 수산화에 의해 대사됨. 주요 대사 기관으로 간 부담 존재."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased cardiac rate",
+          "hypertension",
+          "cardiovascular effects"
+        ],
+        "index": 5,
+        "evidence": "심박수 증가, 고혈압 유발 가능. 심혈관계 알파-2 수용체 차단으로 교감신경 활성 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "CNS excitement",
+          "muscle tremors",
+          "more likely in small animal species"
+        ],
+        "index": 1,
+        "evidence": "소형 동물에서 부작용 발생 가능성이 더 높다고 명시됨. CNS 흥분, 근육 떨림 가능."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "hypertension",
+          "hyperemic mucous membranes",
+          "more likely in small animal species"
+        ],
+        "index": 2,
+        "evidence": "소형 동물에서 빈맥, 고혈압, 점막 충혈 발생 가능성 높음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "antidiuresis",
+          "renal disease contraindication"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 자일라진 및 메데토미딘 유발 이뇨를 길항함이 연구로 확인됨. 항이뇨 효과 존재."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hydroxylation"
+        ],
+        "index": 4,
+        "evidence": "간 대사 경로 추정(인간 데이터 기반). 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "tachycardia",
+          "increased cardiac rate",
+          "more likely in small animal species"
+        ],
+        "index": 5,
+        "evidence": "소형 동물에서 심박수 증가 및 심혈관 부작용 발생 가능성 높음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 3,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.5,
+      "max": 2.0,
+      "mean": 1.75,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 반감기 1.5~2시간(문헌 보고). 자일라진 역전 시 작용 발현 일반적으로 3분 이내. 말에서 반감기 4.4시간. 경구 생체이용률 및 단백결합률 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 치명적/금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antihypertensives (ACE inhibitors, calcium channel blockers, hydralazine)",
+      "severity": 2,
+      "keywords": [
+        "reduced antihypertensive efficacy",
+        "sympathomimetic",
+        "alpha-2 antagonism"
+      ],
+      "evidence": "Yohimbine reduces the effectiveness of antihypertensive medications including ACE inhibitors, calcium channel blockers (e.g., amlodipine), and hydralazine."
+    },
+    {
+      "drug": "Detomidine",
+      "severity": 2,
+      "keywords": [
+        "altered pharmacokinetics",
+        "increased peak plasma levels",
+        "reduced clearance"
+      ],
+      "evidence": "In horses, prior detomidine administration decreased yohimbine clearance and volume of distribution, resulting in increased yohimbine peak plasma levels and potential for adverse effects."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 3,
+      "keywords": [
+        "fatal combination",
+        "cardiovascular collapse"
+      ],
+      "evidence": "Concurrent administration of high doses (1 mg/kg IV each) was uniformly fatal in dogs."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "serotonergic",
+        "mood-altering"
+      ],
+      "evidence": "In humans, yohimbine is not recommended with antidepressants or mood-altering agents; hypertension has been reported with tricyclic antidepressants."
+    },
+    {
+      "drug": "Alpha-2-adrenergic antagonists",
+      "severity": 2,
+      "keywords": [
+        "additive CNS stimulation",
+        "pharmacodynamic interaction"
+      ],
+      "evidence": "Use with caution with other alpha-2-adrenergic antagonists or drugs that can cause CNS stimulation due to additive effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "자일라진 역전 (FDA 승인 용량)",
+          "value": "0.11",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 정맥 투여",
+          "evidence": "FDA 승인 라벨 용량. NADA# 140-866."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아미트라즈 독성 역전 또는 예방 (비라벨 사용, 아티파메졸 불가 시)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "비라벨 사용. 아티파메졸 불가 시 대안."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아미트라즈 독성 역전 또는 예방 (비라벨 사용, 아티파메졸 불가 시, IM)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "비라벨 사용. 일부 임상의는 아티파메졸 50 µg/kg IM과 병용 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "자일라진 함유 마취 조합 역전 (비라벨 사용)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "시술 종료 시 투여",
+          "evidence": "비라벨 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "인간에서 신장 질환 시 금기. 동물에서 구체적인 용량 조정 기준은 명시되지 않았으나 신장 질환 환자에서 주의 사용 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 대사 약물이나 간 기능 저하 시 용량 조정에 대한 구체적 정보 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "요힘빈 과민증",
+      "match_terms": [
+        "hypersensitivity to yohimbine",
+        "yohimbine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "convulsions"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파-2 아드레날린 수용체 경쟁적 길항제. 중추 및 말초 알파-2 수용체를 차단하여 교감신경 유출(노르에피네프린)을 증가시키고, 자일라진 등 알파-2 작용제의 효과를 역전시킴.",
+    "common_extra_effects": [
+      "일시적 불안 또는 CNS 흥분",
+      "근육 떨림",
+      "타액 분비 증가",
+      "고혈압",
+      "빈맥",
+      "호흡수 증가",
+      "점막 충혈",
+      "항이뇨 효과",
+      "고인슐린혈증 효과",
+      "혈소판 응집 억제(시험관 내)"
+    ],
+    "dog_mechanism": "자일라진 및 기타 알파-2 작용제의 효과를 경쟁적으로 길항. 과량 투여(0.55 mg/kg, 권장량의 5배) 시 발작 및 근육 떨림 유발 가능.",
+    "dog_extra_effects": [
+      "발작(과량 투여 시)",
+      "근육 떨림",
+      "CNS 흥분",
+      "빈맥",
+      "고혈압"
+    ],
+    "cat_mechanism": "자일라진 및 메데토미딘 유발 이뇨를 길항. 항구토 효과 보고. 소형 동물에서 부작용 발생 가능성 높음.",
+    "cat_extra_effects": [
+      "CNS 흥분",
+      "근육 떨림",
+      "빈맥",
+      "고혈압",
+      "점막 충혈"
+    ]
+  },
+  "species_notes": {
+    "dog": "FDA 승인 약물(NADA# 140-866)로 자일라진 역전에 사용. 권장 용량 0.11 mg/kg IV 천천히 투여. 아미트라즈 독성 역전에도 비라벨로 사용 가능. 과량 투여(0.55 mg/kg) 시 발작 및 근육 떨림 발생 가능. 요힘빈의 알파-2 길항 효과가 작용제 효과보다 먼저 소실될 수 있으므로 모니터링 필요.",
+    "cat": "비라벨 사용. 자일라진 함유 마취 조합 역전에 0.5 mg/kg IV 사용. 소형 동물에서 부작용(CNS 흥분, 빈맥, 고혈압 등) 발생 가능성이 더 높으므로 주의 필요. 자일라진 및 메데토미딘 유발 이뇨 길항 효과 확인됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 질환 및 발작 장애 환자에서 주의 사용. 역전 효과가 작용제 효과보다 먼저 소실될 수 있음. 과량 투여 시 발작 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "소형 동물에서 부작용 발생 가능성 높음. 비라벨 사용. 신장 질환 및 발작 장애 환자에서 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C-30°C, 59°F-86°F) 보관, 빛과 열로부터 차단.",
+    "forms": [
+      "Yohimbine Sterile Solution for Injection 2 mg/mL, 20 mL vials (Yobine®, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "요힘빈은 알파-2 아드레날린 수용체 길항제로, 개에서 자일라진 역전에 FDA 승인된 약물입니다(Yobine® 2 mg/mL). 자일라진 외 기타 알파-2 작용제 및 아미트라즈 독성 역전에도 사용됩니다. 작용 발현은 3분 이내로 빠르나, 역전 효과가 작용제 효과보다 먼저 소실될 수 있어 지속적인 모니터링이 필요합니다. 신장 질환 및 발작 장애 환자에서 주의가 필요하며, 소형 동물과 말에서 부작용 발생 가능성이 높습니다.",
+    "indications": "승인 적응증: 개에서 자일라진 역전(FDA 승인). 비라벨 사용: 기타 알파-2 작용제(메데토미딘, 데토미딘 등) 역전, 아미트라즈 독성 역전 및 예방, 고양이·말·소·라마·돼지·조류·토끼·설치류에서 알파-2 작용제 역전.",
+    "client_info": "이 약물은 반드시 수의사에 의해서만 사용되어야 합니다. 투여 후 동물의 의식 수준, 심박수, 호흡수를 주의 깊게 관찰하십시오. 역전 효과가 원래 진정제의 효과보다 먼저 끝날 수 있으므로, 동물이 완전히 회복될 때까지 안전한 환경에서 관리해야 합니다. 불안, 떨림, 과도한 흥분 등의 증상이 나타나면 즉시 수의사에게 알리십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Oral bioavailability (F%)",
+      "Protein binding",
+      "Cat-specific pharmacokinetics",
+      "Renal dose adjustment thresholds",
+      "Hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/8.jsonl",
+    "extracted_at": "2026-03-10T15:51:22.049658+00:00",
+    "reviewer": null
+  }
+}

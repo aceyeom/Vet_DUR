@@ -1,0 +1,361 @@
+{
+  "id": "dexrazoxane",
+  "drug_identity": {
+    "name_ko": "덱스라족산",
+    "name_en": "Dexrazoxane",
+    "active_ingredient": "Dexrazoxane",
+    "brand_names": [
+      "Zinecard",
+      "Cardioxane",
+      "Eucardion"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인간용 제품(Zinecard®)을 개에서 독소루비신 심장독성 예방 및 혈관외 유출 치료에 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "덱스라족산은 주로 소변으로 미변화체 및 대사산물로 배설된다. 활성 대사산물로 가수분해되어 세포내 철을 킬레이트화한다."
+    },
+    "extra_information": "개에서 2-구획 개방 모델에 적합. 정상상태 분포용적 0.67 L/kg, 말단 반감기 약 1.2시간, 청소율 약 11 mL/kg/분. 청소율은 용량 비의존적이며 조직 및 단백질 결합이 낮다. 고양이에서의 약동학 데이터 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서의 수의학적 PK 데이터 존재. 고양이 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "myelosuppression",
+          "CBC monitoring"
+        ],
+        "index": 1,
+        "evidence": "골수억제(myelosuppression)가 주요 부작용으로 보고되며, 다른 골수억제제와 병용 시 상가적 효과 발생. 기저치 및 주기적 CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "urinary excretion",
+          "hemodialysis"
+        ],
+        "index": 1,
+        "evidence": "주로 신장을 통해 미변화체 및 대사산물로 배설됨. 과량투여 시 혈액투석으로 제거 가능성 언급."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hydrolysis"
+        ],
+        "index": -1,
+        "evidence": "활성 대사산물로 가수분해되나 간 대사에 대한 구체적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardioprotection",
+          "echocardiogram"
+        ],
+        "index": 1,
+        "evidence": "심장독성 예방 목적으로 사용되며, 심장보호 효과 모니터링을 위해 심초음파 및 ECG 권장. 직접적 심장 독성은 보고되지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서의 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서의 유효성 및 안전성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서의 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서의 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서의 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.2,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 말단 반감기 약 1.2시간. 단백질 결합 낮음. 경구 생체이용률 데이터 없음(정맥 투여 전용)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Myelosuppressive Agents",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "additive"
+      ],
+      "evidence": "Additive myelosuppression may occur when dexrazoxane is used with other myelosuppressive agents including anthracyclines."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "독소루비신 혈관외 유출 치료 (오프라벨) - 독소루비신 용량의 10배",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈관외 유출 후 3시간 이내(가능한 경우) 투여, 24시간 및 48시간 후 반복 투여",
+          "evidence": "후향적 증례 연구(개 4마리). 독소루비신 용량의 10배를 혈관외 유출 후 3시간 이내 IV 투여 시 국소 조직 손상을 유의하게 감소시킴."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "독소루비신 혈관외 유출 치료 (오프라벨) - 체표면적 기반 용량 (인간 권장량 적용)",
+          "value": "1000",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈관외 유출 후 6시간 이내 투여(1일차), 2일차 반복, 3일차 500 mg/m² IV 투여. 단위는 mg/m²(체표면적 기준).",
+          "evidence": "인간 환자 권장량이나 수의 환자에게 적용 가능할 수 있음. 새로운 주입 부위에서 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "독소루비신 유발 심근병증 예방 (오프라벨) - 독소루비신 용량의 10배",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "독소루비신 주입 10분 전에 5~10분에 걸쳐 IV 투여. 독소루비신 투여 시마다 반복.",
+          "evidence": "기존 심장 질환, 수축 기능 저하, 누적 독소루비신 용량 180 mg/m² 이상, 또는 심초음파 이상 소견이 있는 개에서 사용. 1~2회 투여 시 안전하고 내약성 양호."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적 권장사항 없음. 주로 신장으로 배설되므로 신기능 저하 시 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 용량 조절에 대한 구체적 권장사항 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "비-안트라사이클린 화학요법 단독 사용",
+      "match_terms": [
+        "non-anthracycline chemotherapy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "teratogenic"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "덱스라족산은 활성 대사산물로 가수분해되어 세포내 철을 킬레이트화함으로써 안트라사이클린-철 복합체 자유 라디칼 형성을 억제하며, 이는 안트라사이클린 유발 심근병증 및 혈관외 유출 손상의 주요 원인으로 여겨짐.",
+    "common_extra_effects": [
+      "골수억제(myelosuppression) - 안트라사이클린 관련 골수억제와 상가적",
+      "고환 위축(개, 통상 용량 13주 투여 시)",
+      "최기형성(랫트 및 토끼에서 인간 투여량보다 낮은 용량에서 확인)"
+    ],
+    "dog_mechanism": "개에서 2-구획 개방 모델 약동학. 철 킬레이트화를 통해 독소루비신 유발 심장독성 및 혈관외 유출 조직 손상 억제.",
+    "dog_extra_effects": [
+      "골수억제",
+      "고환 위축(통상 용량 13주 투여 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 독소루비신 심장독성 예방 및 혈관외 유출 치료에 오프라벨로 사용. 혈관외 유출 발생 후 6시간 이내(가능하면 3시간 이내) 투여가 중요하므로 독소루비신을 투여하는 수의사는 덱스라족산을 즉시 사용 가능한 상태로 보유할 것을 권장. 독소루비신 용량의 10배를 IV 투여. 심장보호 목적으로 사용 시 심초음파 및 ECG 모니터링 필요.",
+    "cat": "고양이에서의 유효성 및 안전성은 알려져 있지 않음. 현재 고양이에 대한 용량 권장사항 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "안트라사이클린 항암제와 병용 시에만 사용. 골수억제 모니터링 필요. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비(PPE) 착용 필요. 생식 독성(고환 위축) 가능성."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서의 유효성 및 안전성 미확립. 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미재구성 바이알: 25°C(77°F) 보관, 15~30°C(59~86°F) 허용. 재구성 후: 실온 또는 냉장 보관 시 6시간 안정. 6시간 후 미사용 용액 폐기. 재구성 후 0.9% 생리식염수 또는 5% 포도당으로 1.3~5 mg/mL 농도로 희석 가능.",
+    "forms": [
+      "Dexrazoxane Lyophilized Powder for Injection 250 mg (단회용 바이알, 25 mL 젖산나트륨 주사액 포함)",
+      "Dexrazoxane Lyophilized Powder for Injection 500 mg (단회용 바이알, 50 mL 젖산나트륨 주사액 포함, 방부제 무함유)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "덱스라족산은 독소루비신(안트라사이클린) 유발 심장독성 예방 및 혈관외 유출 조직 손상 치료에 사용되는 해독제입니다. 개에서 오프라벨로 사용되며, 고양이에서의 안전성은 확립되지 않았습니다. 혈관외 유출 발생 시 6시간 이내 투여가 핵심이며, 독소루비신을 투여하는 임상에서는 즉시 사용 가능하도록 비치할 것을 권장합니다. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비 착용이 필수입니다.",
+    "indications": "【허가 외 사용(개)】 ① 독소루비신 혈관외 유출 치료: 혈관외 유출 후 6시간 이내(가능하면 3시간 이내) 독소루비신 용량의 10배를 IV 투여, 24시간 및 48시간 후 반복. ② 독소루비신 유발 심근병증 예방: 기존 심장 질환, 수축 기능 저하, 누적 독소루비신 용량 180 mg/m² 이상, 또는 심초음파 이상 소견이 있는 개에서 독소루비신 주입 10분 전 독소루비신 용량의 10배를 IV 투여.",
+    "client_info": "이 약물은 NIOSH(미국 국립산업안전보건연구원)에서 위험 약물로 분류하고 있습니다. 취급 시 반드시 장갑 등 개인보호장비를 착용하시고, 피부나 점막에 접촉된 경우 즉시 비누와 물로 충분히 세척하십시오. 독소루비신 혈관외 유출이 발생한 경우 6시간 이내에 투여해야 효과적이므로, 이상 징후(주사 부위 부종, 통증, 발적 등)가 나타나면 즉시 담당 수의사에게 연락하십시오. 이 약은 항암 화학요법과 함께 사용되므로 골수억제로 인한 감염 위험이 증가할 수 있습니다. 정기적인 혈액 검사가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Oral bioavailability",
+      "Protein binding percentage",
+      "Onset of action",
+      "T_max",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Cat dosage",
+      "Cat pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/39.jsonl",
+    "extracted_at": "2026-03-11T01:18:23.789075+00:00",
+    "reviewer": null
+  }
+}

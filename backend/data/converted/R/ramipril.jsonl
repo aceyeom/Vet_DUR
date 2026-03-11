@@ -1,0 +1,638 @@
+{
+  "id": "ramipril",
+  "drug_identity": {
+    "name_ko": "라미프릴",
+    "name_en": "Ramipril",
+    "active_ingredient": "Ramipril",
+    "brand_names": [
+      "Altace",
+      "Vasotop",
+      "Cardase",
+      "Delix",
+      "Ramase",
+      "Triatec"
+    ],
+    "allergy_class": "ACE inhibitor",
+    "class": "ACE Inhibitor",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 허가 제품 없음. 영국에서는 개의 심부전 치료에 허가된 제품(Vasotop®) 존재. 개와 고양이에서의 사용은 엑스트라라벨(extra-label)임.",
+    "dosage_form": [
+      "Tab",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.25,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "라미프릴은 프로드럭으로, 간에서 탈에스테르화(de-esterification)를 통해 활성형인 라미프릴라트(ramiprilat)로 전환됨. 고양이에서 방사성 표지 라미프릴 경구 투여 시 85~89%가 대변으로, 약 10%가 소변으로 배설됨."
+    },
+    "extra_information": "개에서 경구 투여 후 라미프릴은 신속히 라미프릴라트로 전환됨. 0.25 mg/kg/day 투여 시 라미프릴라트의 생체이용률은 약 6.7%. 중등도 신기능 저하(GFR 58% 감소) 개에서도 용량 조절이 불필요한 것으로 보고됨. 고양이에서 0.125~1 mg/kg 1일 1회 9일 투여 시 라미프릴 최고 혈중 농도는 약 0.5시간, 라미프릴라트 최고 혈중 농도는 투여 후 1~1.5시간에 도달. 반감기는 약 20시간이며 주로 대변으로 배설됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 라미프릴은 간에서 활성형으로 전환되는 프로드럭이며, 신장 및 간 기능 이상 시 주의 필요. 고양이 데이터는 제한적이며 주로 고양이 PK 연구 및 영국 허가 라벨 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension",
+          "weakness",
+          "apathy",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "저혈압으로 인한 무기력(apathy) 및 운동실조(ataxia) 가능성이 보고됨. 직접적인 CNS 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hypotension",
+          "CBC monitoring"
+        ],
+        "index": 2,
+        "evidence": "고칼륨혈증 및 저혈압 가능성. CBC 모니터링 권장. 직접적인 혈액독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal function monitoring",
+          "renal impairment",
+          "renal blood flow",
+          "proteinuria",
+          "GFR"
+        ],
+        "index": 3,
+        "evidence": "신기능 모니터링 권장(기저치 및 투여 7일 후). 중등도 신기능 저하 개에서 용량 조절 불필요하나 신기능 변화 가능성 있음. ACE 억제제는 사구체 질환에서 단백뇨 감소 및 신기능 보존에 도움."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "prodrug",
+          "hepatic conversion",
+          "hepatic dysfunction",
+          "cholestatic jaundice",
+          "liver enzymes monitoring"
+        ],
+        "index": 4,
+        "evidence": "라미프릴은 간에서 활성형으로 전환되는 프로드럭. 간기능 저하 시 전환 감소 가능. ACE 억제제는 드물게 담즙정체성 황달 및 전격성 간괴사 유발 가능(사람). 간효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "heart failure",
+          "hypotension",
+          "cardiac index",
+          "pulmonary vascular resistance"
+        ],
+        "index": 5,
+        "evidence": "심부전 치료에 사용되며 말초혈관저항, 폐혈관저항, 평균동맥압 감소 효과. 저혈압 위험 있으나 직접적인 심장독성은 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension",
+          "weakness",
+          "apathy",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "저혈압으로 인한 무기력 및 운동실조 가능성. 직접적인 CNS 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "고칼륨혈증 및 저혈압 가능성. 고양이에서의 혈액독성 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal function monitoring",
+          "urinary excretion",
+          "proteinuria"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 방사성 표지 라미프릴의 약 10%가 소변으로 배설. 신기능 모니터링 권장. ACE 억제제로서 신기능 보존 효과 기대."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "prodrug",
+          "hepatic conversion",
+          "fecal excretion",
+          "liver enzymes monitoring"
+        ],
+        "index": 4,
+        "evidence": "간에서 활성형으로 전환되는 프로드럭. 고양이에서 85~89%가 대변으로 배설. 간기능 저하 시 전환 감소 가능. 간효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypertension treatment",
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "고양이 동맥성 고혈압 치료에 사용. 저혈압 위험 있으나 직접적인 심장독성은 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.25,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 20.0,
+      "species": "cat"
+    },
+    "f_percent": 7,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 라미프릴 반감기 약 20시간. 라미프릴라트 최고 혈중 농도는 투여 후 1~1.5시간. 개에서 라미프릴라트 생체이용률 약 6.7%(0.25 mg/kg/day 기준). 고양이에서 음식에 의한 흡수 영향 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs, e.g., losartan, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "hyperkalemia",
+        "renal dysfunction",
+        "dual RAAS blockade"
+      ],
+      "evidence": "Dual blockade of the RAAS system associated with increased risk for hypotension, hyperkalemia, and renal dysfunction. ONTARGET trial found no benefit with dual therapy but increased renal dysfunction."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption"
+      ],
+      "evidence": "Reduced oral absorption of ramipril may occur; separate dosing by at least 2 hours."
+    },
+    {
+      "drug": "Antihypertensive Agents/Vasodilators (e.g., amlodipine, hydralazine, prazosin, sildenafil)",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension and other adverse effects."
+    },
+    {
+      "drug": "Baclofen",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent administration may increase the risk for hypotension."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Cabergoline",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may lead to additive hypotension."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "neurologic dysfunction"
+      ],
+      "evidence": "Use with ACE inhibitors has caused neurologic dysfunction in 2 human patients."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, fludrocortisone, predniso(lo)ne)",
+      "severity": 2,
+      "keywords": [
+        "reduced antihypertensive effect"
+      ],
+      "evidence": "May decrease the antihypertensive effects of ACE inhibitors."
+    },
+    {
+      "drug": "Darbepoetin Alfa",
+      "severity": 2,
+      "keywords": [
+        "erythropoietin interference"
+      ],
+      "evidence": "ACE inhibitors may interfere with erythropoietin."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration"
+      ],
+      "evidence": "Digoxin concentration may increase 15-30% when ACE inhibitors are added; monitor serum digoxin concentration."
+    },
+    {
+      "drug": "Diphenhydramine",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Disopyramide",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia"
+      ],
+      "evidence": "Hypoglycemic effects may be enhanced."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concomitant diuretics may cause hypotension if used with ramipril; titrate dosages carefully."
+    },
+    {
+      "drug": "Doxepin",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Glycerin, Oral",
+      "severity": 1,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Heparin / Low Molecular Weight Heparins (e.g., dalteparin, enoxaparin)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia"
+      ],
+      "evidence": "Concurrent use may increase the risk for hyperkalemia."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "reduced antihypertensive efficacy"
+      ],
+      "evidence": "May reduce the clinical efficacy of ramipril when used as an antihypertensive agent."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, hydrocodone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Potassium or Potassium-Sparing Diuretics (e.g., spironolactone)",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia"
+      ],
+      "evidence": "Hyperkalemia may develop. UK product label states ramipril should not be used with potassium-sparing diuretics."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "reduced renal excretion",
+        "enhanced toxicity"
+      ],
+      "evidence": "Can decrease renal excretion of ramipril and possibly enhance the clinical and toxic effects of the drug."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 4.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심부전 (Heart failure, extra-label)",
+          "value": "0.125",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.25,
+          "duration_note": "폐울혈 중증도에 따라 0.25 mg/kg PO SID로 증량 가능",
+          "evidence": "Plumb's Veterinary Drug Handbook: Initially 0.125 mg/kg PO once daily; may increase to 0.25 mg/kg PO once daily depending on severity of pulmonary congestion."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신성 고혈압 (Systemic hypertension, extra-label)",
+          "value": "0.125",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.25,
+          "duration_note": "14일째 수축기혈압(SBP)이 160 mmHg 초과 시 0.25 mg/kg PO SID로 증량 가능 (최대 63일까지 연구됨)",
+          "evidence": "Plumb's Veterinary Drug Handbook: Initially 0.125 mg/kg PO once daily; if SBP still above 160 mmHg on Day 14, increase to 0.25 mg/kg PO once daily up to Day 63."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "개에서 중등도 신기능 저하(GFR 58% 감소) 시에도 용량 조절이 불필요한 것으로 보고됨. 사람에서는 신기능 저하 시 용량 감량 권장. 신기능 모니터링(기저치 및 투여 7일 후) 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "라미프릴은 간에서 활성형(라미프릴라트)으로 전환되는 프로드럭으로, 간기능 저하 시 전환이 감소할 수 있음. 사람에서는 간기능 저하 시 용량 감량 권장. 수의 환자에서의 구체적 용량 조절 지침은 없으나 간기능 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "ACE 억제제 과민반응",
+      "match_terms": [
+        "ACE inhibitor hypersensitivity",
+        "ramipril hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 심장 질환 (대동맥/대동맥하 협착, 폐쇄성 비대성 심근병증)",
+      "match_terms": [
+        "aortic stenosis",
+        "subaortic stenosis",
+        "hypertrophic obstructive cardiomyopathy",
+        "HOCM"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "칼륨보존성 이뇨제 병용",
+      "match_terms": [
+        "potassium-sparing diuretic",
+        "spironolactone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증/탈수",
+      "match_terms": [
+        "hypovolemia",
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "혈관 협착",
+      "match_terms": [
+        "vascular stenosis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "라미프릴은 프로드럭으로 간에서 활성형인 라미프릴라트로 전환됨. 라미프릴라트는 안지오텐신-I이 안지오텐신-II(강력한 혈관수축제)로 전환되는 것을 경쟁적으로 억제함(ACE 억제). 이로 인해 안지오텐신-II 농도 감소, 알도스테론 분비 감소, 혈장 레닌 활성 증가가 나타남.",
+    "common_extra_effects": [
+      "GI 장애 (식욕부진, 구토, 설사)",
+      "저혈압",
+      "고칼륨혈증",
+      "무기력(weakness)",
+      "혈관부종 (드물게)",
+      "기침 (브라디키닌 축적, 드물게)",
+      "담즙정체성 황달 (드물게, 사람)"
+    ],
+    "dog_mechanism": "경구 투여 후 신속히 라미프릴라트로 전환. 0.25 mg/kg/day 투여 시 라미프릴라트 생체이용률 약 6.7%. 중등도 신기능 저하 개에서도 ACE 활성이 60%를 초과하지 않음.",
+    "dog_extra_effects": [
+      "GI 장애",
+      "저혈압",
+      "고칼륨혈증",
+      "무기력",
+      "혈관부종 (드물게)"
+    ],
+    "cat_mechanism": "0.125~1 mg/kg 1일 1회 투여 시 라미프릴 최고 혈중 농도 약 0.5시간, 라미프릴라트 최고 혈중 농도 1~1.5시간. 반감기 약 20시간. 주로 대변으로 배설(85~89%). 0.125 mg/kg에서 최대 ACE 활성 94% 억제, 24시간 후 55% 억제.",
+    "cat_extra_effects": [
+      "GI 장애",
+      "저혈압",
+      "고칼륨혈증",
+      "무기력"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 라미프릴은 심부전 치료에 사용되나, MMVD로 인한 심부전에서 피모벤단보다 효과가 낮았으며, 피모벤단+푸로세미드 병용에 라미프릴을 추가해도 생존율 개선이 없었음. 영국에서는 개의 심부전 치료에 허가된 제품(Vasotop®)이 있으나 미국에서는 수의용 허가 제품 없음. 과용량(1 g/kg)에서도 경미한 GI 장애만 나타나 비교적 안전한 것으로 보고됨.",
+    "cat": "고양이에서 동맥성 고혈압 치료에 사용됨. 메인쿤 고양이의 심부전 없는 비대성 심근병증에서 유의한 효과를 보이지 않았음. 반감기가 약 20시간으로 길어 1일 1회 투여 가능. 음식에 의한 흡수 영향 없음. 고양이에서의 과용량 정보는 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저혈량증 환자에서 급성 저혈압 위험. 초기 용량을 절반으로 시작하여 1주에 걸쳐 점진적으로 증량 권장. 신기능, 전해질, 혈압 모니터링 필요. 임신 중 사용 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "저혈량증 환자에서 급성 저혈압 위험. 신기능, 전해질, 혈압 모니터링 필요. 임신 중 사용 주의. 고양이에서의 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C-30°C [59°F-86°F]) 보관, 빛 차단, 밀폐 용기 보관.",
+    "forms": [
+      "경구 캡슐 (1.25 mg, 2.5 mg, 5 mg, 10 mg) - 사람용",
+      "정제 (1.25 mg, 2.5 mg, 5 mg) - 일부 국가 수의용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "라미프릴은 장시간 작용형 ACE 억제제로, 개와 고양이의 심부전 및 전신성 고혈압 치료에 사용됨. 미국 내 수의용 허가 제품은 없으나 영국에서는 개의 심부전 치료에 허가됨. 간에서 활성형(라미프릴라트)으로 전환되는 프로드럭이며, 고양이에서 반감기 약 20시간으로 1일 1회 투여 가능. 개에서 MMVD 심부전 치료 시 피모벤단보다 효과가 낮았음. 신기능, 전해질, 혈압 정기 모니터링 필요.",
+    "indications": "【허가 적응증】영국: 개의 심부전 치료 (Vasotop®). 【엑스트라라벨 적응증】개: 심부전, 전신성 고혈압, 만성 신장 질환, 단백뇨성 신병증. 고양이: 전신성 고혈압, 만성 신장 질환, 단백뇨성 신병증.",
+    "client_info": "라미프릴은 개와 고양이의 심부전, 고혈압, 일부 신장 질환 치료에 사용됩니다. 대부분 잘 견디지만 구토, 설사가 나타날 수 있으며, 구토나 식욕 저하 시 음식과 함께 투여하세요. 발진이나 감염 증상(발열 등)이 나타나면 즉시 수의사에게 연락하세요. 처방된 대로 정확히 투여하고, 수의사와 상담 없이 용량을 줄이거나 중단하지 마세요. 투약 중에는 혈압 및 혈액 검사를 위한 정기적인 내원이 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Dog-specific half-life",
+      "Onset of action (minutes)",
+      "Oral bioavailability in dogs (precise)",
+      "Cat-specific renal dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "drug_identity.available_strengths (veterinary tablets)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/32.jsonl",
+    "extracted_at": "2026-03-10T23:06:15.681881+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "id": "polymyxin_b_systemic",
+  "drug_identity": {
+    "name_ko": "폴리믹신 B",
+    "name_en": "Polymyxin B",
+    "active_ingredient": "Polymyxin B sulfate",
+    "brand_names": [],
+    "allergy_class": "polymyxin",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학 승인 제품 없음. 말의 내독소혈증 치료 및 고양이 실험적 내독소혈증 치료에 허가 외(extra-label)로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500000,
+        "unit": "IU"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "폴리믹신 B는 신장으로 배설된다. CYP 효소 대사에 대한 정보는 출처 문헌에 기재되어 있지 않음."
+    },
+    "extra_information": "말에서 6000 units/kg IV 주입(15분) 후 소실 반감기 평균 약 3.3시간. 사람에서 반감기 6시간이며, 무뇨 환자에서 48~72시간으로 연장될 수 있음. 경구 생체이용률 없음. 조직 분포 불량, 혈뇌장벽 통과 안 함. 세포막 인지질에 약 50% 결합."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신독성 및 신장 배설이 명시적으로 언급됨. 신경독성(ataxia, neuromuscular blockade) 언급. 혈액 전해질 이상(저나트륨혈증, 저칼륨혈증 등) 언급. 간독성 관련 데이터 없음. 주로 사람 및 말 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "신경독성(과민성, 무력감, 기면, 운동실조) 및 신경근 차단 위험이 언급됨. 개에 대한 직접 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hyponatremia",
+          "hypokalemia",
+          "hypochloremia",
+          "hypocalcemia",
+          "eosinophilia"
+        ],
+        "index": 2,
+        "evidence": "저나트륨혈증, 저칼륨혈증, 저염소혈증, 저칼슘혈증 및 호산구증가증이 사람에서 보고됨. 개 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal tubule damage",
+          "renal impairment",
+          "renally excreted",
+          "proteinuria",
+          "BUN"
+        ],
+        "index": 3,
+        "evidence": "신세뇨관 손상, 신독성, 신장 배설이 명시적으로 언급됨. 신기능 저하 시 반감기 연장 및 독성 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "thrombophlebitis",
+          "respiratory paralysis"
+        ],
+        "index": 4,
+        "evidence": "투여 부위 혈전정맥염 가능. 호흡 마비 위험 언급. 직접적인 심장독성 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "신경독성 위험은 사람 데이터 기반. 고양이 실험적 내독소혈증 연구에서 직접적 신경독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hyponatremia",
+          "hypokalemia",
+          "eosinophilia"
+        ],
+        "index": 2,
+        "evidence": "전해질 이상은 사람 데이터 기반. 고양이 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "renal tubule damage",
+          "renal impairment",
+          "renally excreted"
+        ],
+        "index": 3,
+        "evidence": "신세뇨관 손상 및 신독성이 명시됨. 고양이 실험 연구에서 신독성 직접 보고는 없으나 신장 배설 약물로 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "thrombophlebitis"
+        ],
+        "index": 4,
+        "evidence": "혈전정맥염 가능. 고양이 직접 심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 3.3,
+      "max": 72.0,
+      "mean": 3.3,
+      "species": "unknown"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": 50,
+    "evidence": "말에서 반감기 평균 약 3.3시간(6000 units/kg IV, 15분 주입). 사람에서 반감기 6시간, 무뇨 환자에서 48~72시간. 경구 생체이용률 없음. 세포막 인지질에 약 50% 결합."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: contraindicated→3, major→3, moderate→2, minor→1. 모든 상호작용은 신독성 또는 신경근 차단 위험 증가 기반.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "nephropathy"
+      ],
+      "evidence": "병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Bisphosphonates (clodronate, pamidronate, zoledronic acid)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "nephropathy"
+      ],
+      "evidence": "병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "nephropathy"
+      ],
+      "evidence": "병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (amphotericin B, carboplatin, cyclosporine, iohexol)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "nephropathy"
+      ],
+      "evidence": "기타 신독성 약물과 병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Neuromuscular Blockers (atracurium, pancuronium, succinylcholine)",
+      "severity": 3,
+      "keywords": [
+        "neuromuscular blockade",
+        "respiratory paralysis"
+      ],
+      "evidence": "신경근 차단 효과 강화 또는 연장, 호흡 마비 위험 증가."
+    },
+    {
+      "drug": "NSAIDs (flunixin, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "nephropathy"
+      ],
+      "evidence": "병용 시 신독성 위험 증가."
+    },
+    {
+      "drug": "Other Polymyxins (colistin – polymyxin E)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "neurotoxicity",
+        "additive toxicity"
+      ],
+      "evidence": "병용 시 독성 위험 증가."
+    },
+    {
+      "drug": "Sodium Citrate",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression"
+      ],
+      "evidence": "병용 시 호흡 억제 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "내독소혈증 관련 임상 증상 완화 (허가 외, 실험적)",
+          "value": "6000",
+          "unit": "IU/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여, 30분에 걸쳐 IV 주입. 추가 임상 연구 필요.",
+          "evidence": "실험적 조건에서 단회 투여로 연구됨. 안전성 및 유효성 검증을 위한 추가 임상 연구 필요."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량이 필요할 수 있음. 사람에서 무뇨 시 반감기 48~72시간으로 연장. 소변량 감소 및 BUN 증가 시 투여 중단 권고(사람 기준). 구체적 수의학적 용량 조정 기준은 문헌에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사 약물이 아니며, 간독성 관련 데이터 없음. 간기능 저하에 따른 용량 조정 필요성은 문헌에 언급되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "폴리믹신 과민증",
+      "match_terms": [
+        "polymyxin hypersensitivity",
+        "polymyxin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "호흡 마비 위험",
+      "match_terms": [
+        "respiratory paralysis",
+        "neuromuscular disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 세포막의 인지질에 결합하여 세포막 투과성을 증가시키고 세포 내 성분 유출 및 세포사를 유발하는 농도 의존성 살균 항생제. 내독소혈증 치료 시 지질다당류(LPS) 성분에 결합하여 불활성화.",
+    "common_extra_effects": [
+      "신세뇨관 손상 (신독성)",
+      "저나트륨혈증",
+      "저칼륨혈증",
+      "저염소혈증",
+      "저칼슘혈증",
+      "혈전정맥염 (투여 부위)",
+      "발열",
+      "발진 및 피부 반응",
+      "호산구증가증",
+      "신경독성 (과민성, 무력감, 기면, 운동실조)",
+      "신경근 차단 (급속 IV 주입 시)",
+      "항생제 관련 설사"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "이용성 폴리믹신 B 국소 적용 후 천포창(pemphigus vulgaris) 1례 보고"
+    ],
+    "cat_mechanism": "실험적 내독소혈증 모델에서 LPS 결합 및 불활성화를 통해 내독소혈증 임상 증상 완화.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 전신 투여에 대한 수의학적 데이터가 거의 없음. 국소(이용성) 폴리믹신 B 적용 후 천포창 1례가 보고됨. 전신 투여 시 신독성 및 신경독성 모니터링이 필수적임.",
+    "cat": "고양이 실험적 내독소혈증 모델에서 6000 units/kg 단회 IV 주입(30분)이 유익한 효과를 보였으나, 자연 발생 내독소혈증에 대한 임상 연구는 없음. 안전성 및 유효성 검증을 위한 추가 연구가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 전신 투여 데이터 부족. 신독성 및 신경독성 위험으로 주의 필요. 입원 환자에서만 사용하고 신기능 및 신경학적 상태를 모니터링해야 함."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "실험적 조건에서만 연구됨. 자연 발생 내독소혈증에 대한 임상 데이터 없음. 신독성 및 신경독성 위험으로 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "재구성 전: 실온(20~25°C) 보관, 빛 차단. 재구성 후: 냉장(2~8°C) 보관, 72시간 이내 사용. 강산성 또는 강알칼리성 용액과 혼합/보관 금지.",
+    "forms": [
+      "폴리믹신 B 황산염 주사용 동결건조 분말 (500,000 units/vial)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "폴리믹신 B는 대부분의 그람음성 간균에 효과적인 농도 의존성 살균 폴리펩타이드 항생제입니다. 수의학에서는 주로 말의 내독소혈증 치료에 항균 이하 용량으로 사용됩니다. 신독성 및 신경독성 등 용량 관련 부작용으로 인해 항균 용량으로의 사용은 드뭅니다. 세계보건기구(WHO)에서 인체 의학에서 최우선 중요 항균제로 지정되어 있어 신중한 사용이 요구됩니다. 투여 부위 혈전정맥염 가능성이 있으며, 입원 환자에서만 사용해야 합니다.",
+    "indications": "말: 내독소혈증 관련 임상 증상 완화 (허가 외). 고양이: 실험적 내독소혈증 모델에서 연구됨 (허가 외, 추가 임상 연구 필요). 사람: 감수성 세균에 의한 패혈증, 균혈증, 요로감염, 호흡기 감염 치료 (더 안전한 항생제 사용 불가 시).",
+    "client_info": "폴리믹신 B는 중증 환자에게만 동물병원에서 직접 투여되는 항생제입니다. 치료 중 또는 치료 후 최대 2개월까지 항생제 관련 설사가 발생할 수 있으므로, 설사가 생기면 즉시 수의사에게 알려주세요. 이 약물은 신장과 신경계에 영향을 줄 수 있어 입원 상태에서 면밀한 모니터링이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdosage/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog dosage (no veterinary data)",
+      "Laboratory Considerations (none noted)",
+      "CYP profile",
+      "Oral bioavailability (veterinary)",
+      "t_max_hr",
+      "onset_min"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "dosage_and_kinetics.dog.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.brand_names"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/20.jsonl",
+    "extracted_at": "2026-03-10T19:19:47.918250+00:00",
+    "reviewer": null
+  }
+}

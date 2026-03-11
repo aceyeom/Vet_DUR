@@ -1,0 +1,494 @@
+{
+  "id": "bupivacaine_liposome",
+  "drug_identity": {
+    "name_ko": "부피바카인 리포솜",
+    "name_en": "Bupivacaine Liposome",
+    "active_ingredient": "Bupivacaine",
+    "brand_names": [
+      "Nocita",
+      "Exparel"
+    ],
+    "allergy_class": "amide local anesthetic",
+    "class": "Analgesic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 13.3,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위하게 대사되어 피페콜로자일리다이드(pipecoloxylidide)로 전환됨. 신장으로 주로 대사산물 형태로 배설됨. 간기능 장애 시 AUC 50% 증가(인체 데이터)."
+    },
+    "extra_information": "개: SC 9 mg/kg 투여 시 Tmax 중앙값 30분, 소실 반감기 36.2시간. 고양이: Tmax 10시간, 투여 후 최대 120시간까지 혈중 검출 가능. 리포솜에서 방출된 후 약리작용 발현."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개/고양이 모두 동물 PK 데이터 일부 존재하나 장기별 부담 데이터는 제한적. 간 대사 및 신장 배설 명시됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "seizures",
+          "tremors",
+          "CNS excitation",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "혈관 내 투여 시 진전, 운동실조, 경련 등 신경계 이상반응 보고됨. 정상 투여 시 CNS 영향 낮음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "arrhythmias",
+          "hypotension",
+          "hypertension",
+          "cardiovascular"
+        ],
+        "index": 1,
+        "evidence": "혈관 내 투여 시 부정맥, 혈압 변동 등 심혈관계 이상반응 가능. 정상 투여 시 발생 가능성 낮음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "isosthenuria",
+          "proteinuria",
+          "renally eliminated",
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "전임상 현장 연구에서 등장뇨±단백뇨 1.6% 보고. 신장으로 배설되므로 신기능 저하 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "increased ALP",
+          "hepatic dysfunction",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위 대사. 전임상 현장 연구에서 ALP 증가 1.6% 보고. 간기능 장애 시 AUC 50% 증가(인체 데이터). 간기능 저하 환자에서 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "arrhythmias",
+          "dysrhythmias",
+          "cardiovascular",
+          "ECG"
+        ],
+        "index": 1,
+        "evidence": "혈관 내 투여 시 부정맥, 혈압 변동 가능. 안전성 연구에서 ECG 이상 없음(정상 용량). 심장 질환 환자에서 안전성 미평가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "seizures",
+          "tremors",
+          "CNS excitation"
+        ],
+        "index": 1,
+        "evidence": "혈관 내 투여 시 신경계 이상반응 가능. 고양이 과용량 연구에서 ECG 이상 없었으나 주사 부위 조직 손상 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular",
+          "arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "혈관 내 투여 시 심혈관계 이상반응 가능. 고양이 과용량 연구에서 ECG 이상 없음."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renally eliminated",
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "신장으로 배설됨. 5개월 미만 또는 신기능 저하 고양이에서 안전성 미평가."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic impairment",
+          "hepatic dysfunction"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위 대사. 간기능 저하 시 AUC 증가 가능(인체 데이터 기반). 간기능 저하 고양이에서 안전성 미평가."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular",
+          "cardiac disease"
+        ],
+        "index": 1,
+        "evidence": "심장 질환 고양이에서 안전성 미평가. 혈관 내 투여 시 심혈관계 이상반응 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 36.2,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 95,
+    "evidence": "개: SC 9 mg/kg 투여 시 Tmax 중앙값 30분(0.5시간), 소실 반감기 36.2시간. 고양이: Tmax 10시간, 120시간까지 혈중 검출. 단백결합률 95%(인체 데이터). 인체: 침윤 후 최고 혈중농도 도달 시간 30분~2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Topical Antiseptics (chlorhexidine, povidone iodine)",
+      "severity": 2,
+      "keywords": [
+        "liposomal disruption",
+        "immediate release"
+      ],
+      "evidence": "Contact with topical antiseptics may disrupt liposomal particles. Wait for antiseptics to dry before administering bupivacaine liposome."
+    },
+    {
+      "drug": "Bupivacaine HCl and Other Amide Local Anesthetics (lidocaine, mepivacaine)",
+      "severity": 3,
+      "keywords": [
+        "additive toxicity",
+        "immediate bupivacaine release",
+        "neurotoxicity",
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase toxic effects. Veterinary label warns against concurrent administration with bupivacaine HCl, lidocaine, or other amide local anesthetics. Human label states other bupivacaine formulations should not be administered within 96 hours following bupivacaine liposome; liposomal bupivacaine may be given 20 minutes or more after local lidocaine administration. Toxic effects are additive."
+    },
+    {
+      "drug": "Hyaluronidase",
+      "severity": 2,
+      "keywords": [
+        "increased local anesthetic toxicity",
+        "adverse effects"
+      ],
+      "evidence": "Hyaluronidase may increase local anesthetic toxicity or increase adverse effects when used with bupivacaine liposome."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 7.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전방십자인대(CCL) 수술 후 국소 진통 - 수술 부위 침윤 (FDA 승인 용량)",
+          "value": "5.3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "절개 봉합 시점에 1회 투여. 진통 효과 최대 72시간 지속 가능. 0.4 mL/kg에 해당.",
+          "evidence": "FDA 승인 라벨 용량. 25게이지 이상 바늘 사용. 희석 시 동량(1:1) 이하의 0.9% NaCl 또는 유산링거액 사용 가능."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "발톱제거술(onychectomy) 후 국소 진통 - 말초신경 차단 (FDA 승인 용량)",
+          "value": "5.3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "앞발 당 5.3 mg/kg (고양이 1마리당 총 10.6 mg/kg). 4점 신경차단법. 희석 금지. 진통 효과 최대 72시간 지속 가능. 0.4 mL/kg/앞발에 해당.",
+          "evidence": "FDA 승인 라벨 용량. 25게이지 이상 바늘 사용. 고양이에서 신경차단 시 희석 금지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "난소자궁절제술(OHE) 후 절개 부위 차단 (비라벨 외용)",
+          "value": "5.4",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.9% NaCl로 5 mL로 희석 후 22게이지 1인치 바늘 사용. 수술 후 최대 68시간 통증 점수 낮게 유지됨.",
+          "evidence": "비라벨(extra-label) 사용. 복직근 초 하방 및 피하층에 분할 주입."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 안전성이 평가되지 않았음. 부피바카인은 신장으로 배설되므로 신기능 저하 시 주의하여 사용할 것. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 저하 환자에서 안전성이 평가되지 않았음. 인체 데이터에서 간기능 장애 시 AUC 50% 증가. 간기능 저하 환자에서 주의하여 사용할 것. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "정맥 내 또는 동맥 내 투여",
+      "match_terms": [
+        "intravascular injection",
+        "IV administration",
+        "intra-arterial"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "관절 내 투여 (연골용해 위험)",
+      "match_terms": [
+        "intra-articular injection",
+        "chondrolysis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "5개월 미만 어린 동물",
+      "match_terms": [
+        "age < 5 months",
+        "young animal",
+        "puppy",
+        "kitten"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease",
+        "arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "kidney disease",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 동물",
+      "match_terms": [
+        "pregnant",
+        "lactating",
+        "breeding"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아미드형 국소마취제. 신경세포막의 나트륨 이온 투과성을 감소시켜 신경 충격의 발생 및 전도를 차단함. 탈분극 속도를 감소시키고 전기적 흥분 역치를 높여 활동전위 전파를 억제함. 리포솜 제형은 약물을 서서히 방출하여 표준 부피바카인 용액보다 긴 마취 지속 시간을 제공함.",
+    "common_extra_effects": [
+      "혈관 내 투여 시 부정맥",
+      "혈관 내 투여 시 혈압 변동(저혈압/고혈압)",
+      "혈관 내 투여 시 진전",
+      "혈관 내 투여 시 경련",
+      "혈관 내 투여 시 운동실조",
+      "오심(인체)",
+      "변비(인체)",
+      "구토(인체)"
+    ],
+    "dog_mechanism": "리포솜에서 서서히 방출된 부피바카인이 수술 부위 조직층에서 나트륨 채널을 차단하여 최대 72시간 진통 효과 제공.",
+    "dog_extra_effects": [
+      "절개 부위 분비물 (3.3%)",
+      "절개 부위 염증 (2.4%)",
+      "구토 (2.4%)",
+      "등장뇨 ± 단백뇨 (1.6%)",
+      "ALP 증가 (1.6%)"
+    ],
+    "cat_mechanism": "말초신경 차단을 통해 발톱제거술 후 최대 72시간 국소 진통 효과 제공.",
+    "cat_extra_effects": [
+      "체온 ≥39.4°C (6.7%)",
+      "수술 부위 감염 (3.3%)",
+      "수술 부위 씹기/핥기 (2.5%)",
+      "설사 (1.7%)"
+    ]
+  },
+  "species_notes": {
+    "dog": "전방십자인대(CCL) 수술 시 절개 봉합 시점에 조직층에 침윤 주사로 투여. 5.3 mg/kg (0.4 mL/kg) 1회 투여. 0.9% NaCl 또는 유산링거액으로 최대 동량(1:1)까지 희석 가능. 진통 효과 최대 72시간 지속. 5개월 미만, 심장/간/신장 질환 환자에서 안전성 미평가.",
+    "cat": "발톱제거술 전 4점 신경차단법으로 투여. 앞발 당 5.3 mg/kg (고양이 1마리당 총 10.6 mg/kg). 희석 금지. 진통 효과 최대 72시간 지속. 5개월 미만, 심장/간/신장 질환 환자에서 안전성 미평가. 과용량 연구에서 주사 부위 조직 손상 및 사지 기능 장애 보고됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "5개월 미만, 심장/간/신장 질환 환자에서 안전성 미평가. 혈관 내 투여 금지. 관절 내 투여 금지(연골용해 위험). 국소마취제 독성 진단 및 처치에 대한 지식 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "5개월 미만, 심장/간/신장 질환 환자에서 안전성 미평가. 신경차단 시 희석 금지. 혈관 내 투여 금지. 과용량 시 주사 부위 조직 손상 및 사지 기능 장애 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미개봉 바이알: 냉장 보관(2~8°C, 36~46°F). 동결 금지. 미개봉 바이알은 실온(20~25°C, 68~77°F)에서 최대 30일 보관 가능. 바이알에서 시린지로 뽑은 후 실온(20~25°C)에서 최대 4시간 보관 가능. 4시간 후 폐기. 바이알 반복 천자 금지.",
+    "forms": [
+      "Bupivacaine Liposome Injectable Suspension 1.3% (13.3 mg/mL) 10 mL 단회용 바이알 (Nocita®)",
+      "Bupivacaine Liposome Injectable Suspension 1.3% (13.3 mg/mL) 20 mL 단회용 바이알 (Nocita®)",
+      "Bupivacaine Liposome Injectable Suspension 1.3% (13.3 mg/mL) 10 mL 단회용 바이알 (Exparel®, 인체용)",
+      "Bupivacaine Liposome Injectable Suspension 1.3% (13.3 mg/mL) 20 mL 단회용 바이알 (Exparel®, 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "부피바카인 리포솜(Nocita®)은 개의 전방십자인대(CCL) 수술 및 고양이의 발톱제거술 후 수술 후 통증 조절을 위해 FDA 승인된 리포솜 제형 국소마취제입니다. 리포솜에서 서서히 방출되어 최대 72시간의 진통 효과를 제공합니다. 다른 부피바카인 제형과 용량 전환 불가. 정맥 내 또는 관절 내 투여 절대 금지. 아미드형 국소마취제(리도카인, 메피바카인 등)와 병용 시 독성 상가 작용 주의.",
+    "indications": "【승인 적응증】개: 전방십자인대(CCL) 수술 시 절개 봉합 시점에 수술 부위 조직층 침윤 주사로 수술 후 국소 진통. 고양이: 발톱제거술 후 국소 진통을 위한 말초신경 차단. 【비라벨 적응증】고양이: 난소자궁절제술 후 절개 부위 차단(연구 보고).",
+    "client_info": "수술 후 72시간 이내에 퇴원하는 경우, 통증 및 감염 징후(분비물, 부종 등)를 주의 깊게 관찰하십시오. 감염이 의심되면 즉시 수의사에게 연락하십시오. 감염이 발생하면 통증 조절 효과가 감소하여 동물이 더 많은 통증을 느낄 수 있습니다. 이 약은 수술 부위에 직접 주사하는 국소마취제로, 최대 72시간 동안 통증을 조절합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific mean)",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "contraindications.lab_trigger.threshold (renal/hepatic)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/51.jsonl",
+    "extracted_at": "2026-03-11T05:00:47.124391+00:00",
+    "reviewer": null
+  }
+}

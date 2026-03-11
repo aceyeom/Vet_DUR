@@ -1,0 +1,805 @@
+{
+  "id": "alfaxalone",
+  "drug_identity": {
+    "name_ko": "알팍살론",
+    "name_en": "Alfaxalone",
+    "active_ingredient": "Alfaxalone",
+    "brand_names": [
+      "Alfaxan",
+      "Alfaxan Multidose",
+      "Alfaxan Multidose IDX",
+      "Saffan"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP450"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개와 고양이 간세포(in vitro) 연구에서 알팍살론은 phase I (cytochrome P450 의존성) 및 phase II (접합 의존성) 대사를 거치는 것으로 확인됨. 두 종 모두 동일한 5가지 phase I 대사체를 형성함. 고양이에서는 알팍살론 황산염 및 알팍살론 글루쿠로나이드가, 개에서는 알팍살론 글루쿠로나이드만 확인됨. 대사체는 간/담즙 및 신장 경로로 배설될 것으로 추정됨."
+    },
+    "extra_information": "개: 2 mg/kg 단회 투여 후 분포용적 ≈2.5 L/kg, 청소율 ≈54 mL/kg/분, 소실 반감기 ≈27분. 그레이하운드에서 아세프로마진+모르핀 전처치 시 반감기 ≈19% 증가, 청소율 ≈24% 감소. 고양이: 분포용적 ≈2 L/kg. 청소율은 용량 의존적(5 mg/kg: 25.1 mL/kg/분, 25 mg/kg: 14.8 mL/kg/분). 소실 반감기는 각각 45.2분 및 76.6분. 고양이에서 비선형 약동학을 보이나 반복 투여 시 임상적으로 유의한 축적은 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 수의학 데이터 기반. 주요 우려 장기: 호흡기(무호흡), 심혈관계(저혈압, 심박수 변화), 간(대사 장기). 신장 직접 독성 근거 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "anesthesia",
+          "sedation",
+          "excitement",
+          "myoclonus",
+          "opisthotonos"
+        ],
+        "index": 1,
+        "evidence": "전신마취 유도 및 유지에 사용되며 CNS 억제가 주된 작용임. 회복 시 흥분, 근경련, 후궁반장 등 신경계 이상반응 보고됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia",
+          "hypertension",
+          "cardiac arrhythmia",
+          "hypoxemia"
+        ],
+        "index": 2,
+        "evidence": "저혈압, 일시적 고혈압, 심박수 변화, 심장 부정맥(주로 저산소혈증/고탄산혈증에 의함) 보고됨. 심박출량 감소 가능."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": -1,
+        "evidence": "신장 직접 독성에 대한 근거 없음. 대사체가 신장 경로로 일부 배설될 수 있으나 임상적 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP450",
+          "hepatic dysfunction",
+          "dose reduction"
+        ],
+        "index": 3,
+        "evidence": "간에서 CYP450 의존성 대사 및 접합 반응을 거침. 유의한 간기능 장애 환자에서 용량 감소 또는 투여 간격 연장 권고됨."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "cardiorespiratory depression",
+          "hypotension",
+          "cardiac arrhythmia",
+          "heart rate"
+        ],
+        "index": 4,
+        "evidence": "심폐 억제, 저혈압, 부정맥 가능. 부티르파놀+미다졸람 병용 시 심장 영향 최소화됨. 펜타닐 병용 시 심박수 유지 또는 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "anesthesia",
+          "sedation",
+          "ataxia",
+          "opisthotonos",
+          "muscle tremors"
+        ],
+        "index": 1,
+        "evidence": "전신마취 유도 및 유지에 사용. 회복 시 운동실조, 근육 떨림, 후궁반장 유사 자세 보고됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hypotension",
+          "hypoxemia",
+          "heart rate decrease",
+          "oxygen saturation"
+        ],
+        "index": 2,
+        "evidence": "덱스메데토미딘과 IM 병용 시 심박수 및 산소포화도 경미한 감소 보고. 저혈압 가능."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": -1,
+        "evidence": "신장 직접 독성에 대한 근거 없음. 대사체가 신장 경로로 일부 배설될 수 있으나 임상적 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP450",
+          "hepatic dysfunction",
+          "dose reduction"
+        ],
+        "index": 3,
+        "evidence": "간에서 CYP450 의존성 대사 및 접합 반응을 거침(알팍살론 황산염, 알팍살론 글루쿠로나이드). 간기능 장애 시 용량 감소 권고."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "cardiorespiratory depression",
+          "heart rate decrease",
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "심폐 억제 가능. 덱스메데토미딘 IM 병용 시 심박수 경미한 감소. 저혈압 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.45,
+      "max": 0.77,
+      "mean": 0.45,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개: 소실 반감기 ≈27분(0.45시간). 고양이: 5 mg/kg 투여 시 반감기 45.2분(0.75시간), 25 mg/kg 투여 시 76.6분(1.28시간). 개에서 IV 투여 후 60초 내 횡와위 발생, 1~2분 내 기관삽관 가능. 고양이에서도 유사한 발현 시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 알팍살론은 다른 IV 전신마취제(프로포폴, 티오펜탈)와 병용 금기. CNS 억제제 병용 시 상가 억제 효과 예상.",
+  "drug_interactions": [
+    {
+      "drug": "Propofol",
+      "severity": 3,
+      "keywords": [
+        "IV anesthetic combination",
+        "cardiorespiratory depression",
+        "contraindicated"
+      ],
+      "evidence": "UK label states alfaxalone should not be used with other intravenous anesthetics including propofol. Additive cardiorespiratory depression risk."
+    },
+    {
+      "drug": "Thiopental",
+      "severity": 3,
+      "keywords": [
+        "IV anesthetic combination",
+        "cardiorespiratory depression",
+        "contraindicated"
+      ],
+      "evidence": "UK label states alfaxalone should not be used with other intravenous anesthetics including thiopental. Additive cardiorespiratory depression risk."
+    },
+    {
+      "drug": "CNS Depressants (general)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "potentiation",
+        "dose adjustment"
+      ],
+      "evidence": "Concomitant use of alfaxalone with other CNS depressants is expected to potentiate the depressant effects of either drug; appropriate dose adjustments should be made."
+    },
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "potentiation",
+        "excitement during recovery"
+      ],
+      "evidence": "Benzodiazepines are listed as compatible premedications but potentiate CNS depression. Premedication with benzodiazepine may increase likelihood of psychomotor excitement during recovery."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "potentiation",
+        "dose sparing"
+      ],
+      "evidence": "Opioids are listed as compatible premedications but potentiate CNS depression. Dose-sparing effect on alfaxalone induction dose observed."
+    },
+    {
+      "drug": "Alpha-2 Adrenergic Agonists",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "potentiation",
+        "dose sparing",
+        "cardiovascular depression"
+      ],
+      "evidence": "Alpha2 agonists (e.g., dexmedetomidine, medetomidine, xylazine) are compatible premedications but potentiate CNS and cardiovascular depression. Significant dose-sparing effect on alfaxalone."
+    },
+    {
+      "drug": "Phenothiazines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "potentiation",
+        "dose sparing"
+      ],
+      "evidence": "Phenothiazines (e.g., acepromazine) are listed as compatible premedications but potentiate CNS depression. Dose-sparing effect on alfaxalone induction dose observed."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "death",
+        "contraindicated in ferrets"
+      ],
+      "evidence": "Alfaxalone is NOT recommended to be used in combination with tramadol in ferrets. Death may result."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (FDA 승인, 전처치 없음)",
+          "value": "1.5 - 4.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.5,
+          "duration_note": "천천히 IV 투여(약 60초), 반응에 따라 적정",
+          "evidence": "FDA 승인 라벨 용량. 전처치 없는 개에서 1.5–4.5 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (FDA 승인, 전처치 있음)",
+          "value": "1.1 - 1.7",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 1.7,
+          "duration_note": "전처치 약물 종류에 따라 23~50% 용량 감소",
+          "evidence": "전처치 약물에 따라 평균 유도 용량: alpha2 작용제 1.1 mg/kg, 벤조디아제핀/오피오이드/아세프로마진 1.7 mg/kg."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - 간헐적 볼루스 (FDA 승인, 전처치 있음)",
+          "value": "1.2 - 1.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "10분당 추가 6~8분 마취 유지",
+          "evidence": "전처치된 개에서 유지 볼루스 1.2–1.4 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - 간헐적 볼루스 (FDA 승인, 전처치 없음)",
+          "value": "1.5 - 2.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "10분당 추가 6~8분 마취 유지",
+          "evidence": "전처치 없는 개에서 유지 볼루스 1.5–2.2 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (extra-label, 전처치 없음)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": null,
+          "evidence": "Extra-label 용량: 전처치 없이 3 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (extra-label, 전처치 있음)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "Extra-label 용량: 전처치 있을 때 2 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - CRI (extra-label, 전처치 있음)",
+          "value": "6 - 7",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg/HOUR CRI",
+          "evidence": "전처치된 개에서 유지 CRI 6–7 mg/kg/HOUR."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - CRI (extra-label, 전처치 없음)",
+          "value": "8 - 9",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg/HOUR CRI",
+          "evidence": "전처치 없는 개에서 유지 CRI 8–9 mg/kg/HOUR."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - CRI (extra-label, 전처치 후)",
+          "value": "0.16 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg/분 CRI; 환자 반응에 따라 조정",
+          "evidence": "전처치 및 유도 후 0.16–0.2 mg/kg/분 IV CRI로 유지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "단기 시술을 위한 진정 - IM (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "덱스메데토미딘 3 μg/kg + 메타돈 0.3 mg/kg IM과 병용; 산소 보충 권장",
+          "evidence": "알팍살론 0.5 또는 1 mg/kg + 덱스메데토미딘 3 μg/kg + 메타돈 0.3 mg/kg IM 병용 시 횡와위 및 진정 제공."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중등도 진정/경마취 - IM (extra-label)",
+          "value": "1 - 2.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.5,
+          "duration_note": "메데토미딘 0.005 mg/kg + 부티르파놀 0.3 mg/kg IM과 병용; 5 mg/kg IM은 극심한 저산소혈증 위험",
+          "evidence": "알팍살론 1–2.5 mg/kg + 메데토미딘 0.005 mg/kg + 부티르파놀 0.3 mg/kg IM 병용 시 기관삽관 가능한 마취 깊이 제공."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (FDA 승인, 전처치 없음)",
+          "value": "2.2 - 9.7",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 9.7,
+          "duration_note": "천천히 IV 투여, 반응에 따라 적정",
+          "evidence": "FDA 승인 라벨 용량. 전처치 없는 고양이에서 2.2–9.7 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (FDA 승인, 전처치 있음)",
+          "value": "2.3 - 3.6",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 3.6,
+          "duration_note": "전처치 약물 종류에 따라 10~43% 용량 감소",
+          "evidence": "전처치 약물에 따라 평균 유도 용량: 벤조디아제핀/오피오이드/페노티아진 2.3 mg/kg, 벤조디아제핀/페노티아진 또는 alpha2 작용제 3.6 mg/kg."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - 간헐적 볼루스 (FDA 승인, 전처치 있음)",
+          "value": "1.1 - 1.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "10분당 추가 7~8분 마취 유지",
+          "evidence": "전처치된 고양이에서 유지 볼루스 1.1–1.3 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - 간헐적 볼루스 (FDA 승인, 전처치 없음)",
+          "value": "1.4 - 1.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "10분당 추가 3~5분 마취 유지",
+          "evidence": "전처치 없는 고양이에서 유지 볼루스 1.4–1.5 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유도 (extra-label)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "전처치 유무와 관계없이",
+          "evidence": "Extra-label 용량: 전처치 유무와 관계없이 5 mg/kg IV."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - CRI (extra-label, 전처치 있음)",
+          "value": "7 - 8",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg/HOUR CRI",
+          "evidence": "전처치된 고양이에서 유지 CRI 7–8 mg/kg/HOUR."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - CRI (extra-label, 전처치 없음)",
+          "value": "10 - 11",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg/HOUR CRI",
+          "evidence": "전처치 없는 고양이에서 유지 CRI 10–11 mg/kg/HOUR."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신마취 유지 - CRI (extra-label, 전처치 후)",
+          "value": "0.16 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg/분 CRI; 환자 반응에 따라 조정",
+          "evidence": "전처치 및 유도 후 0.16–0.2 mg/kg/분 IV CRI로 유지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "단기 시술을 위한 진정 - SC (extra-label, 갑상선기능항진 고양이)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "부티르파놀 0.2 mg/kg과 동일 주사기에 혼합 SC; 최대 진정 45분 후 발현; 혈압 모니터링 권장",
+          "evidence": "갑상선기능항진 고양이에서 알팍살론 3 mg/kg + 부티르파놀 0.2 mg/kg SC 병용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "단기 시술을 위한 진정 - IM (extra-label)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "덱스메데토미딘 10 μg/kg + 부티르파놀 0.2 mg/kg IM과 병용",
+          "evidence": "알팍살론 3 mg/kg + 덱스메데토미딘 10 μg/kg + 부티르파놀 0.2 mg/kg IM 병용 시 중성화 수술 전 진정."
+        },
+        {
+          "logic_type": "linear",
+          "context": "단기 시술을 위한 진정 - IM (extra-label, 저용량)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "덱스메데토미딘 5 μg/kg + 부티르파놀 0.2 mg/kg IM과 병용; 진정 시간 90분",
+          "evidence": "알팍살론 1 mg/kg + 덱스메데토미딘 5 μg/kg + 부티르파놀 0.2 mg/kg IM 병용 시 90분 진정, 우수한 회복 품질."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헌혈을 위한 진정 - IM (extra-label)",
+          "value": "2 - 3",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "부티르파놀 0.2–0.4 mg/kg IM과 병용",
+          "evidence": "건강한 헌혈 고양이에서 알팍살론 2–3 mg/kg + 부티르파놀 0.2–0.4 mg/kg IM."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심초음파를 위한 진정 - IM (extra-label)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "메타돈 0.3 mg/kg ± 케타민 1 mg/kg IM과 병용",
+          "evidence": "알팍살론 2 mg/kg + 메타돈 0.3 mg/kg ± 케타민 1 mg/kg IM 병용 시 심초음파 변수에 임상적으로 유의한 영향 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중등도 진정/경마취 - IM (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "대퇴사두근에 깊은 IM 주사; 대용량으로 인해 불편감 유발 가능",
+          "evidence": "5–10 mg/kg IM. 대부분의 임상의는 주사 용량이 크기 때문에 허용 불가로 판단함."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 대사체가 신장 경로로 일부 배설되나 임상적 신독성 및 용량 조정 근거 부재."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "유의한 간기능 장애 환자에서 마취 유지를 위해 더 낮은 용량 또는 투여 간격 연장이 필요할 수 있음. 노령, 중증 질환, 쇠약 동물에서도 주의 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "알팍살론 또는 구성 성분에 대한 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "anaphylaxis",
+        "allergy to alfaxalone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신마취 또는 진정이 금기인 상태",
+      "match_terms": [
+        "anesthesia contraindicated",
+        "sedation contraindicated"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 IV 전신마취제 동시 사용 (프로포폴, 티오펜탈)",
+      "match_terms": [
+        "propofol",
+        "thiopental",
+        "IV anesthetic combination"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "노령, 중증 질환, 쇠약 동물",
+      "match_terms": [
+        "geriatric",
+        "critically ill",
+        "debilitated"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "지속적 모니터링 및 기도 관리 불가능한 환경",
+      "match_terms": [
+        "no monitoring",
+        "no airway management",
+        "no ventilation support"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "페럿에서 단독 사용 또는 트라마돌과 병용",
+      "match_terms": [
+        "ferret",
+        "tramadol combination"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성에 대한 명시적 언급 없음. 그레이하운드에서 전처치 시 반감기 연장 및 청소율 감소가 보고되었으나 유전적 원인으로 명시되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알팍살론은 신경활성 스테로이드 분자로, GABA 세포 표면 수용체에 결합하여 신경세포막 염화이온 수송을 조절함으로써 전신마취 효과를 나타냄. 진통 효과 없음.",
+    "common_extra_effects": [
+      "호흡 억제/무호흡",
+      "심폐 억제",
+      "저혈압",
+      "일시적 고혈압",
+      "심박수 변화",
+      "심장 부정맥 (주로 저산소혈증/고탄산혈증에 의함)",
+      "저체온증",
+      "안압 상승 (일시적)",
+      "눈물 분비 감소",
+      "회복 시 흥분 (방향감각 상실, 신경과민, 격렬한 움직임)",
+      "발성",
+      "패들링",
+      "떨림",
+      "근경련/근간대경련",
+      "운동실조",
+      "후궁반장 유사 자세",
+      "아나필락시스 (드물게)"
+    ],
+    "dog_mechanism": "GABA 수용체 결합을 통한 전신마취. IV 투여 후 60초 내 횡와위 발생, 1~2분 내 기관삽관 가능. 단회 유도 용량으로 약 5~10분 마취 지속.",
+    "dog_extra_effects": [
+      "무호흡 (전처치 없는 개의 40%에서 발생)",
+      "심폐 억제",
+      "저혈압",
+      "안압 상승",
+      "눈물 분비 감소",
+      "회복 시 흥분, 근경련",
+      "IM 투여 시 일시적 저산소혈증 및 근육 떨림"
+    ],
+    "cat_mechanism": "GABA 수용체 결합을 통한 전신마취. IV 투여 후 60초 내 마취 효과 발현, 1~2분 내 기관삽관 가능. 단회 유도 용량으로 약 15~30분 마취 지속.",
+    "cat_extra_effects": [
+      "무호흡 (전처치 없는 고양이의 16%에서 발생)",
+      "운동실조",
+      "근육 떨림",
+      "후궁반장 유사 자세",
+      "심박수 감소 (덱스메데토미딘 병용 시)",
+      "산소포화도 감소",
+      "저체온증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 마취 유도 및 유지제. 전처치 없이 1.5–4.5 mg/kg IV로 유도. 전처치 시 용량 23~50% 감소. 무호흡 발생률 40%(전처치 없음). 그레이하운드에서 전처치 시 반감기 연장 및 청소율 감소 보고. 빠른 IV 투여 시 심폐 억제 위험 증가. 회복 시 조용한 환경 유지 권장. 진통 효과 없으므로 적절한 진통제 병용 필요. DEA Schedule IV 규제 약물.",
+    "cat": "고양이에서 FDA 승인된 마취 유도 및 유지제. 전처치 없이 2.2–9.7 mg/kg IV로 유도. 전처치 시 용량 10~43% 감소. 무호흡 발생률 16%(전처치 없음). 단회 유도 용량으로 15~30분 마취 지속. IM 투여 시 운동실조, 근육 떨림, 후궁반장 유사 자세 가능. 회복은 조용한 방에서 이루어져야 함. 비선형 약동학을 보이나 반복 투여 시 임상적으로 유의한 축적 없음. 진통 효과 없으므로 적절한 진통제 병용 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "빠른 IV 투여 시 무호흡 및 심폐 억제 위험. 간기능 장애, 노령, 중증 질환, 쇠약 동물에서 주의. 회복 시 흥분 가능. 진통 효과 없음. 10주 미만 강아지에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "빠른 IV 투여 시 무호흡 및 심폐 억제 위험. IM 투여 시 운동실조, 근육 떨림, 후궁반장 유사 자세 가능. 간기능 장애, 노령, 중증 질환, 쇠약 동물에서 주의. 4주 미만 고양이에서 안전성 미확립. 진통 효과 없음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 실온 보관. 15°C~30°C(59°F~86°F) 범위 내 일시적 보관 허용. 방부제 없는 제형: 개봉 후 4°C에서 최대 7일 보관 가능. 방부제 함유 다회용 바이알: 첫 개봉 후 28일 이내 사용. Alfaxan Multidose IDX: 첫 개봉 후 56일 이내 사용. DEA 규정에 따라 견고하게 잠긴 장소에 보관 필요.",
+    "forms": [
+      "Alfaxalone Injection 10 mg/mL (10 mL 다회용 바이알) - Alfaxan Multidose",
+      "Alfaxalone Injection 10 mg/mL (20 mL 다회용 바이알) - Alfaxan Multidose",
+      "Alfaxan Multidose IDX (다종 사용 승인)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "알팍살론(Alfaxan®)은 개와 고양이에서 FDA 승인된 IV 전신마취 유도 및 유지제로, DEA Schedule IV 규제 약물임. GABA 수용체 조절을 통해 마취 효과를 나타내며 진통 효과는 없음. 빠른 IV 투여 시 무호흡 및 심폐 억제 위험이 있으므로 약 60초에 걸쳐 천천히 투여해야 함. 전처치 약물 사용 시 용량을 23~50%(개) 또는 10~43%(고양이) 감소시킬 수 있음. 다른 IV 전신마취제(프로포폴, 티오펜탈)와 병용 금기. 간기능 장애 환자에서 용량 감소 필요. 회복 시 흥분, 근경련, 운동실조 가능하므로 조용한 환경 유지 권장.",
+    "indications": "개와 고양이에서 전신마취 유도 및 유지(FDA 승인). 흡입마취제 전 유도 마취. Extra-label: 고양이, 소형견, 소형 포유류에서 IM 진정/전처치/경마취. 말, 소, 염소, 토끼, 페럿, 파충류, 양서류, 조류, 영장류 등 다양한 종에서 extra-label 사용. Alfaxan Multidose IDX는 파충류, 양서류, 관상어, 조류, 비인간 영장류, 설치류, 족제비과, 유대류, 유제류에서 FDA 인덱스 승인.",
+    "client_info": "이 약물은 전신마취를 위한 주사제로, 반드시 수의사의 감독 하에 적절한 모니터링 장비가 갖춰진 환경에서만 사용됩니다. 마취 후 회복 기간 동안 동물을 조용하고 안정된 환경에 두어야 하며, 자극을 최소화해야 합니다. 이 약물은 진통 효과가 없으므로 통증 관리를 위한 별도의 약물이 필요합니다. 마취 후 완전히 회복될 때까지 음식과 물을 제공하지 마십시오. 회복 중 비틀거림, 근육 떨림, 흥분 등이 나타날 수 있으나 일반적으로 일시적입니다. 이상 증상이 지속되면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Monitoring (listed but minimal detail)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates (specific CYP isoforms not named)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (only 10 mg/mL confirmed)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/53.jsonl",
+    "extracted_at": "2026-03-11T05:43:51.463543+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,792 @@
+{
+  "id": "amiodarone",
+  "drug_identity": {
+    "name_ko": "아미오다론",
+    "name_en": "Amiodarone",
+    "active_ingredient": "Amiodarone",
+    "brand_names": [
+      "Cordarone",
+      "Nexterone",
+      "Pacerone"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개에서 심방세동, 심실부정맥, 샤가스병(T. cruzi 감염) 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 활성 대사체인 desethylamiodarone으로 대사됨. 신장 투석으로 제거되지 않음."
+    },
+    "extra_information": "개에서 단회 경구 투여 시 혈장 반감기 평균 7.5시간이나, 반복 투여 시 3.2일로 증가. 지방 조직 및 심근 세포에 고농도로 축적됨. 말에서 경구 생체이용률 6~34%, 혈장 단백 결합률 96%, 분포용적 31 L/kg."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 말 데이터 일부 존재하나 고양이 데이터는 없음. 간독성, 심장독성, 혈액독성 관련 키워드 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "agitation",
+          "peripheral neuropathy (human)"
+        ],
+        "index": -1,
+        "evidence": "개에서 직접적인 신경독성 보고는 없으나, 사람에서 말초신경병증 보고됨. 개에서 IV 투여 시 흥분(agitation) 보고."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombocytopenia",
+          "positive Coombs test",
+          "regenerative anemia"
+        ],
+        "index": 2,
+        "evidence": "개에서 호중구감소증, 혈소판감소증, 양성 쿰스 검사, 재생성 빈혈이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cyclosporine may increase creatinine"
+        ],
+        "index": -1,
+        "evidence": "직접적인 신독성 보고는 없으나, 사이클로스포린과 병용 시 크레아티닌 상승 가능성 언급됨."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatopathy",
+          "bilirubinemia",
+          "increased hepatic enzymes",
+          "hepatotoxicity",
+          "liver enzyme elevations"
+        ],
+        "index": 1,
+        "evidence": "개에서 간병증(빌리루빈혈증, 간효소 상승) 보고. 도베르만 핀셔에서 간독성 위험 증가. 간효소 이상 시 용량 감량 또는 투약 중단 권고."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "bradycardia",
+          "decreased myocardial contractility",
+          "AV block",
+          "cardiogenic shock"
+        ],
+        "index": 3,
+        "evidence": "개에서 서맥 보고. 실험 조건에서 12.5~15 mg/kg IV 투여 시 심근 수축력 감소. 과용량 시 심인성 쇼크, AV 차단 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 아미오다론 사용에 관한 데이터가 없어 점수 산출 불가."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액독성 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신독성 관련 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간독성 관련 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 7.5,
+      "max": 76.8,
+      "mean": 42.15,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 단회 경구 투여 시 반감기 평균 7.5시간, 반복 투여 시 3.2일(76.8시간). 말에서 경구 생체이용률 6~34%, 혈장 단백 결합률 96%. 사람에서 만성 투여 시 반감기 평균 53일."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. QT 연장 관련 상호작용은 중등도(2) 또는 주요(3)로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, metoprolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "AV block",
+        "increased serum levels"
+      ],
+      "evidence": "Amiodarone may significantly increase serum levels and/or pharmacologic or toxic effects of beta-blockers."
+    },
+    {
+      "drug": "Calcium-Channel Blockers (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "AV block",
+        "sinus arrest"
+      ],
+      "evidence": "Possible potentiation of bradycardia, AV block or sinus arrest."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "increased digoxin concentration",
+        "bradycardia"
+      ],
+      "evidence": "Amiodarone may increase digoxin concentration and risk for bradycardia."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "increased serum levels",
+        "toxicity"
+      ],
+      "evidence": "Amiodarone may significantly increase serum levels and/or pharmacologic or toxic effects of cyclophosphamide."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased serum levels",
+        "increased creatinine",
+        "nephrotoxicity"
+      ],
+      "evidence": "Amiodarone may increase cyclosporine concentration and creatinine levels."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 2,
+      "keywords": [
+        "increased serum levels",
+        "toxicity"
+      ],
+      "evidence": "Amiodarone may significantly increase serum levels and/or pharmacologic or toxic effects of dextromethorphan."
+    },
+    {
+      "drug": "Lidocaine (Systemic)",
+      "severity": 2,
+      "keywords": [
+        "increased serum levels",
+        "toxicity"
+      ],
+      "evidence": "Amiodarone may significantly increase serum levels and/or pharmacologic or toxic effects of systemic lidocaine."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "increased serum levels",
+        "toxicity",
+        "prolonged administration"
+      ],
+      "evidence": "With prolonged amiodarone administration, may increase methotrexate levels and toxicity."
+    },
+    {
+      "drug": "Procainamide",
+      "severity": 3,
+      "keywords": [
+        "increased serum levels",
+        "QT prolongation",
+        "toxicity"
+      ],
+      "evidence": "Amiodarone may significantly increase serum levels of procainamide and also causes additive QT prolongation."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "increased serum levels",
+        "QT prolongation",
+        "toxicity"
+      ],
+      "evidence": "Amiodarone may significantly increase serum levels of quinidine and also causes additive QT prolongation."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 3,
+      "keywords": [
+        "increased anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "Amiodarone may significantly increase the pharmacologic or toxic effects of warfarin, increasing bleeding risk."
+    },
+    {
+      "drug": "Antiarrhythmics (disopyramide, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Additive QT prolongation may lead to cardiac arrhythmias when combined with other antiarrhythmics."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Additive QT prolongation risk. Note: itraconazole is intentionally combined with amiodarone for Chagas disease treatment."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Additive QT prolongation may lead to cardiac arrhythmias."
+    },
+    {
+      "drug": "Fluoroquinolone Antibiotics (moxifloxacin, pradofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Some fluoroquinolones (moxifloxacin, possibly pradofloxacin; NOT enrofloxacin, marbofloxacin) may cause additive QT prolongation."
+    },
+    {
+      "drug": "Macrolide Antibiotics (azithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Additive QT prolongation risk with macrolide antibiotics."
+    },
+    {
+      "drug": "Opioids (buprenorphine, methadone)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Additive QT prolongation risk with certain opioids (buprenorphine, methadone)."
+    },
+    {
+      "drug": "Serotonin HT3 Antagonists (granisetron, ondansetron)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Additive QT prolongation risk with serotonin HT3 antagonists."
+    },
+    {
+      "drug": "General Anesthetics (isoflurane, propofol)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "arrhythmia"
+      ],
+      "evidence": "Increased risks for hypotension or arrhythmias when combined with general anesthetics."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "decreased amiodarone concentration",
+        "reduced efficacy"
+      ],
+      "evidence": "Cholestyramine may decrease amiodarone concentration."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased amiodarone levels",
+        "toxicity"
+      ],
+      "evidence": "Cimetidine may increase amiodarone levels."
+    },
+    {
+      "drug": "Opioids (fentanyl, morphine)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "bradycardia"
+      ],
+      "evidence": "Possible hypotension and bradycardia when combined with opioids such as fentanyl or morphine."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased amiodarone levels",
+        "reduced efficacy"
+      ],
+      "evidence": "Rifampin may decrease amiodarone levels."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "reduced theophylline metabolism",
+        "increased theophylline levels"
+      ],
+      "evidence": "Amiodarone may reduce theophylline metabolism, increasing theophylline levels and toxicity risk."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "high",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 8.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심방세동 또는 심실부정맥 (오프라벨) - 유지 용량",
+          "value": "5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": null,
+          "evidence": "후향적 연구에서 심근 기능 이상을 동반한 부정맥에 효과적인 대안 약물로 평가됨."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "심방세동 또는 심실부정맥 (오프라벨) - 부하 용량",
+          "value": "8 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "1주간 부하 투여 후 5~10 mg/kg SID로 감량",
+          "evidence": "독특한 약동학적 특성으로 인해 초기 부하 용량 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심방세동 또는 심실부정맥 (오프라벨) - 부하 후 유지 용량",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "1주 부하 투여 후 유지",
+          "evidence": "부하 용량 1주 후 유지 용량으로 전환."
+        },
+        {
+          "logic_type": "linear",
+          "context": "불응성 심실빈맥, 상심실빈맥, 심방조동 - IV (polysorbate 80 비함유 제형, Nexterone® 사용)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "10분에 걸쳐 IV 볼루스 투여 후 0.8 mg/kg/hr CRI 6시간, 이후 0.5 mg/kg/hr CRI 유지",
+          "evidence": "17마리 개 대상 연구에서 Nexterone® 사용 시 이상반응 없음 확인."
+        },
+        {
+          "logic_type": "linear",
+          "context": "불응성 심실빈맥, 상심실빈맥 - IV CRI (초기)",
+          "value": "0.8",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "6시간 유지 후 0.5 mg/kg/hr로 감량",
+          "evidence": "IV 볼루스 후 CRI 유지 요법."
+        },
+        {
+          "logic_type": "linear",
+          "context": "불응성 심실빈맥, 상심실빈맥 - IV CRI (유지)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 6시간 CRI 이후 유지",
+          "evidence": "IV 유지 CRI 용량."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "심폐정지 환자 - IV",
+          "value": "3 - 12",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 12.0,
+          "duration_note": "CRI 0.05~18 mg/kg/hr 병행",
+          "evidence": "심폐정지 환자에서 보고된 용량 범위."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "T. cruzi 감염(샤가스병) - 부하 용량 (오프라벨)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "7일간 투여 후 15 mg/kg q24h로 14일 투여, 이후 유지 용량 7.5 mg/kg q24h. 이트라코나졸 병용. 총 12개월 치료.",
+          "evidence": "아미오다론과 이트라코나졸 병용 시 T. cruzi 감염 사망률 및 임상 증상 감소 확인."
+        },
+        {
+          "logic_type": "linear",
+          "context": "T. cruzi 감염(샤가스병) - 유지 용량 (오프라벨)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "부하 투여 후 유지. 총 12개월 치료.",
+          "evidence": "이상반응 발생 시 용량 절반으로 감량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 투석으로 제거되지 않음. 수의학 문헌에서 신기능 저하 시 용량 조절에 대한 명확한 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간효소 이상 발생 시 용량 감량 또는 투약 중단 권고. 간독성은 임상 증상 발현 전에 나타날 수 있으므로 정기적인 간효소 및 빌리루빈 모니터링 필요. 이상 소견은 6~8주 후 회복될 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "Iodine hypersensitivity",
+      "match_terms": [
+        "iodine allergy",
+        "iodine hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Cardiogenic shock",
+      "match_terms": [
+        "cardiogenic shock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Severe sinus node dysfunction / severe sinus bradycardia",
+      "match_terms": [
+        "sinus node dysfunction",
+        "sick sinus syndrome",
+        "severe sinus bradycardia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Second- or third-degree AV block",
+      "match_terms": [
+        "second degree AV block",
+        "third degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Bradycardial syncope",
+      "match_terms": [
+        "bradycardial syncope"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Thyroid dysfunction",
+      "match_terms": [
+        "hypothyroidism",
+        "hyperthyroidism",
+        "thyroid disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Hepatopathy",
+      "match_terms": [
+        "liver disease",
+        "hepatopathy",
+        "elevated liver enzymes"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "Doberman Pinscher with preclinical left ventricular systolic dysfunction",
+      "match_terms": [
+        "Doberman Pinscher",
+        "dilated cardiomyopathy",
+        "systolic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pregnancy",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Lactation / nursing",
+      "match_terms": [
+        "lactation",
+        "nursing",
+        "breastfeeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Doberman Pinscher"
+    ],
+    "gene": null,
+    "evidence": "도베르만 핀셔에서 심실부정맥 치료 시 간독성 및 위장관 독성 위험이 더 높다는 보고가 있음. 전임상 좌심실 수축 기능 이상이 있는 도베르만 핀셔에서는 다른 항부정맥제를 먼저 시도한 후 신중하게 사용할 것을 권고."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "주로 칼륨 채널 차단제로 작용하는 Class III 항부정맥제. 나트륨 채널, 칼슘 채널 및 베타-아드레날린 수용체도 차단. 심근 세포 활동 전위 기간 및 불응기 연장.",
+    "common_extra_effects": [
+      "오심/구토",
+      "식욕부진",
+      "서맥",
+      "간독성 (간효소 상승, 빌리루빈혈증)",
+      "QT 간격 연장",
+      "갑상선 기능 이상 (갑상선 기능 저하증 또는 항진증)",
+      "폐 독성 (폐 침윤, 폐 섬유증)",
+      "말초 신경병증",
+      "각막 침착"
+    ],
+    "dog_mechanism": "칼륨, 나트륨, 칼슘 채널 차단 및 베타 차단 효과를 통해 심근 활동 전위 기간 연장. T. cruzi에 대한 살충 효과는 칼슘 항상성 교란, 스테롤 생성 억제, 프로테아제 크루지파인 차단을 통해 나타남.",
+    "dog_extra_effects": [
+      "구토/식욕부진 (가장 흔한 이상반응)",
+      "간병증 (빌리루빈혈증, 간효소 상승)",
+      "서맥",
+      "호중구감소증",
+      "혈소판감소증",
+      "각막병증 (각막 침착)",
+      "재생성 빈혈",
+      "양성 쿰스 검사",
+      "IV 투여 시 (polysorbate 80 함유 제형): 소양증, 홍반, 피하부종, 두드러기, 흥분, 빈호흡, 저혈압"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 경험이 제한적이므로 다른 덜 독성인 약물이 효과 없을 때만 사용. 도베르만 핀셔에서 간독성 및 위장관 독성 위험 증가. IV 투여 시 반드시 polysorbate 80 비함유 제형(Nexterone®) 사용 권장. 전용 중심정맥 카테터 및 인라인 필터 사용 권고. 간효소 및 빌리루빈 정기 모니터링 필수. 치료 혈중 농도는 사람과 동일한 1~2.5 µg/mL로 추정.",
+    "cat": "고양이에서 아미오다론 사용에 관한 데이터가 없음. 용량 및 안전성 정보 부재."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "독성 가능성 및 제한된 임상 경험으로 인해 다른 약물이 효과 없을 때만 사용. 간독성, 혈액독성, 심장독성 모니터링 필요. 도베르만 핀셔에서 특히 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 사용 데이터 없음. 안전성 및 유효성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐 용기에 실온(20~25°C) 보관, 빛 차단. 주사제: 실온 보관, 빛·냉동·과열 차단. 투여 중 빛 차단 불필요. 경구 현탁액(조제품): 5°C에서 91일간 90% 이상 역가 유지. 빛 차단 보관.",
+    "forms": [
+      "경구 정제: 100 mg, 200 mg, 400 mg",
+      "주사액: 50 mg/mL (3 mL, 9 mL, 18 mL 단회용 바이알; 3 mL 프리필드 시린지)",
+      "주사액 (Nexterone®): 150 mg/100 mL, 360 mg/200 mL 프리필드 IV 백 (polysorbate 80 및 벤질알코올 비함유)",
+      "경구 현탁액 (조제): 5 mg/mL (아미오다론 200 mg 정제 + Ora-Plus® + Ora-Sweet®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아미오다론은 Class III 항부정맥제로, 개에서 심방세동, 불응성 심실부정맥, 샤가스병(T. cruzi 감염) 치료에 오프라벨로 사용됨. 수의학적 허가 제품 없음. 독성 가능성이 높고 임상 경험이 제한적이므로 다른 약물이 효과 없을 때만 사용. 간독성, 혈액독성, 심장독성(서맥, QT 연장) 모니터링 필수. IV 투여 시 반드시 polysorbate 80 비함유 제형(Nexterone®) 사용. 도베르만 핀셔에서 간독성 위험 증가. 약물 상호작용 다수.",
+    "indications": "【허가 외 사용】개: 심방세동, 불응성 심실부정맥(수축 기능 이상 동반), 상심실빈맥, 심방조동, T. cruzi 감염(샤가스병, 이트라코나졸 병용). 말: 심방세동, 상심실빈맥, 심실빈맥의 동율동 전환(IV CRI). 고양이: 데이터 없음.",
+    "client_info": "이 약은 개에서 자주 사용되지 않아 모든 부작용이 알려져 있지 않습니다. 가장 흔한 부작용은 구토와 식욕 감소입니다. 예상치 못한 증상이 나타나면 즉시 수의사에게 연락하세요. 아미오다론은 다른 약물과 상호작용할 수 있으므로, 현재 복용 중인 모든 약물과 보조제를 수의사에게 알려주세요. 정기적인 검진(혈액 검사, 간 기능 검사, 심전도 등)이 필요하므로 예약된 추적 검진을 빠지지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosage",
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Oral bioavailability (dog)",
+      "Protein binding (dog)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_type",
+      "dosage_and_kinetics.cat.dosage_list",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T06:04:22.875294+00:00",
+    "reviewer": null
+  }
+}

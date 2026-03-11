@@ -1,0 +1,513 @@
+{
+  "id": "methenamine",
+  "drug_identity": {
+    "name_ko": "메테나민",
+    "name_en": "Methenamine",
+    "active_ingredient": "Methenamine",
+    "brand_names": [
+      "Hiprex",
+      "Urex",
+      "Aci-Steril",
+      "Mandelamine",
+      "Reflux",
+      "Urocedulamin"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 승인된 제품 없음. 개와 고양이의 재발성 요로감염 예방에 비공식적으로 사용되나 효능을 뒷받침하는 근거가 부족함.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "메테나민은 산성 소변에서 포름알데히드와 암모니아로 가수분해됨. 전신 대사는 최소이며, 투여 후 24시간 이내 70~90%가 소변으로 미변화체 배설됨. 위산에 의해 최대 30%가 위장관 내에서 가수분해될 수 있음."
+    },
+    "extra_information": "개와 고양이에 대한 별도의 약동학 데이터 없음. 인체 데이터에 의존함. 소변 pH가 6.5 미만(이상적으로 5.5 미만)이어야 포름알데히드로 전환되어 항균 효과 발휘. 최고 포름알데히드 농도는 투여 후 약 2시간(장용정은 3~8시간)에 소변에서 나타남."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터 없음; 인체 데이터 및 모노그래프 기술 내용에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 CNS 영향에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematuria"
+        ],
+        "index": 1,
+        "evidence": "대용량 투여 시 혈뇨(hematuria) 보고됨(인체 데이터). 전신 항균 활성은 미미함."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "dysuria",
+          "bladder irritation",
+          "hematuria",
+          "albuminuria"
+        ],
+        "index": 3,
+        "evidence": "신부전 시 금기. 고농도 포름알데히드에 의한 방광 자극, 혈뇨, 단백뇨 가능. 소변으로 70~90% 배설되므로 신장 부담 있음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "severe hepatic impairment",
+          "ammonia production",
+          "increased liver enzymes"
+        ],
+        "index": 2,
+        "evidence": "중증 간장애 시 금기(암모니아 생성). 인체에서 간효소 상승 드물게 보고됨. 간장애 환자에서 주기적 간기능 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 영향에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematuria"
+        ],
+        "index": 1,
+        "evidence": "대용량 투여 시 혈뇨 가능(인체 데이터 외삽). 고양이는 개보다 내약성이 낮다고 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "dysuria",
+          "bladder irritation",
+          "hematuria",
+          "albuminuria"
+        ],
+        "index": 3,
+        "evidence": "신부전 시 금기. 고양이는 내약성이 낮아 방광 자극 및 배뇨통 위험 더 높을 수 있음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "severe hepatic impairment",
+          "ammonia production",
+          "increased liver enzymes"
+        ],
+        "index": 2,
+        "evidence": "중증 간장애 시 금기(암모니아 생성). 고양이에서 별도 데이터 없으나 동일 기전 적용."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 소변 내 최고 포름알데히드 농도는 투여 후 약 2시간(장용정은 3~8시간). 반감기 데이터 없음. 개/고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: contraindicated→3, major→3, moderate→2, minor→1.",
+  "drug_interactions": [
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (acetazolamide, methazolamide)",
+      "severity": 2,
+      "keywords": [
+        "urine alkalinization",
+        "reduced efficacy"
+      ],
+      "evidence": "Carbonic anhydrase inhibitors alkalinize urine, reducing conversion of methenamine to formaldehyde and thereby reducing antibacterial efficacy."
+    },
+    {
+      "drug": "Salicylates (aspirin, bismuth subsalicylate)",
+      "severity": 2,
+      "keywords": [
+        "urine acidification",
+        "reduced salicylate excretion",
+        "increased salicylate concentration"
+      ],
+      "evidence": "Acidified urine from methenamine use may reduce salicylate excretion, potentially increasing salicylate plasma concentrations and toxicity risk."
+    },
+    {
+      "drug": "Sulfonamides (sulfa/trimethoprim, zonisamide)",
+      "severity": 3,
+      "keywords": [
+        "insoluble precipitate",
+        "crystalluria"
+      ],
+      "evidence": "Concurrent use not recommended. Methenamine and sulfonamides may form an insoluble precipitate in urine, risking crystalluria and urinary tract obstruction."
+    },
+    {
+      "drug": "Thiazide Diuretics (hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "urine alkalinization",
+        "reduced efficacy"
+      ],
+      "evidence": "Thiazide diuretics alkalinize urine, reducing conversion of methenamine to formaldehyde and thereby reducing antibacterial efficacy."
+    },
+    {
+      "drug": "Urine Alkalinizing Drugs (calcium/magnesium antacids, citrates, sodium bicarbonate)",
+      "severity": 2,
+      "keywords": [
+        "urine alkalinization",
+        "reduced efficacy"
+      ],
+      "evidence": "Urinary alkalinizing agents raise urine pH above the threshold required for methenamine conversion to formaldehyde, reducing antibacterial efficacy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "재발성 요로감염 예방 (비공식 사용, 근거 부족)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "산성 소변(pH ≤6, 이상적으로 <5.5) 유지 필요. 효능 근거 부족.",
+          "evidence": "일화적 권장 용량; 전향적 연구 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "재발성 요로감염 예방 (비공식 사용, 근거 부족)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "산성 소변(pH ≤6, 이상적으로 <5.5) 유지 필요. 효능 근거 부족.",
+          "evidence": "일화적 권장 용량; 전향적 연구 없음."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "재발성 요로감염 예방 - 고정 용량 (비공식 사용, 근거 부족)",
+          "value": "500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 아닌 고정 용량. 보통 250mg 단위로 반올림. 산성 소변 유지 필요.",
+          "evidence": "일화적 권장 용량; 전향적 연구 없음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "재발성 요로감염 예방 - 고정 용량 (비공식 사용, 근거 부족)",
+          "value": "250",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 아닌 고정 용량. 고양이는 내약성이 낮다고 보고됨. 산성 소변 유지 필요.",
+          "evidence": "일화적 권장 용량; 전향적 연구 없음. 고양이에서 내약성 불량 보고."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전 시 금기. 메테나민은 신장으로 주로 배설되며, 신기능 저하 시 포름알데히드 및 암모니아 축적 위험이 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간장애 시 금기. 암모니아 생성으로 인해 간성 뇌증 악화 위험. 간장애 환자에서 사용 시 주기적 간기능 검사 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "AKI",
+        "azotemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "대사성 산증",
+      "match_terms": [
+        "metabolic acidosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "hepatic failure",
+        "liver failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 탈수",
+      "match_terms": [
+        "severe dehydration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "메테나민 과민증",
+      "match_terms": [
+        "hypersensitivity to methenamine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "설폰아미드 병용",
+      "match_terms": [
+        "sulfonamide",
+        "trimethoprim-sulfa",
+        "zonisamide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "산성 소변(pH <6.5) 환경에서 포름알데히드로 전환되어 비특이적 살균 효과를 나타냄. 포름알데히드는 그람양성균(Staphylococcus aureus, S. epidermidis, Enterococcus spp) 및 그람음성균(E. coli, Enterobacter spp, Klebsiella spp, Proteus spp, Pseudomonas aeruginosa)에 활성을 가짐. 진균성 요로감염에도 활성이 있다고 보고됨.",
+    "common_extra_effects": [
+      "오심(nausea)",
+      "구토(vomiting)",
+      "식욕부진(anorexia)",
+      "배뇨통(dysuria) — 장기 사용 시",
+      "전신 산증(systemic acidosis) — 잠재적",
+      "간효소 상승(increased liver enzymes) — 드물게, 인체",
+      "소양증(pruritus) — 드물게, 인체",
+      "발진(rash) — 드물게, 인체",
+      "방광 자극(bladder irritation) — 대용량",
+      "단백뇨(albuminuria) — 대용량",
+      "혈뇨(hematuria) — 대용량"
+    ],
+    "dog_mechanism": "인체 데이터와 동일한 기전으로 추정. 개에서 메테나민 히푸레이트 600 mg/kg IV 단회 투여 시 명백한 독성 없음.",
+    "dog_extra_effects": [
+      "위장관 자극(GI irritation)",
+      "오심/구토",
+      "식욕부진",
+      "배뇨통(장기 사용 시)"
+    ],
+    "cat_mechanism": "인체 데이터와 동일한 기전으로 추정. 고양이는 개보다 내약성이 낮다고 보고됨.",
+    "cat_extra_effects": [
+      "위장관 자극(GI irritation) — 개보다 심할 수 있음",
+      "오심/구토",
+      "식욕부진",
+      "배뇨통(장기 사용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 재발성 요로감염 예방 목적으로 비공식적으로 사용되나, 효능을 뒷받침하는 전향적 연구가 없음. 소변 pH를 6 이하(이상적으로 5.5 미만)로 유지해야 효과가 있으며, 필요 시 식이 조절 및 소변 산성화제(아스코르브산, 메티오닌, 염화암모늄 등) 병용이 필요함. 과용량 시(600 mg/kg IV) 명백한 독성 없음이 보고됨.",
+    "cat": "고양이는 개보다 메테나민 내약성이 낮다고 보고됨. 위장관 부작용이 더 심할 수 있으며, 임상 사용 시 주의가 필요함. 효능 근거가 매우 부족하므로 사용 전 위험-이익을 신중히 평가해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "효능 근거 부족. 신부전, 중증 간장애, 대사성 산증, 중증 탈수 시 금기. 임신 중 사용 시 사산율 증가 및 자손 체중 감소 보고. 소변 pH 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 개보다 내약성이 낮다고 보고됨. 효능 근거 매우 부족. 신부전, 중증 간장애, 대사성 산증, 중증 탈수 시 금기. 소변 pH 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~30°C(59°F~86°F) 보관. 산성 용매와 혼합 금지(포름알데히드와 암모니아로 가수분해됨). 대부분의 알칼로이드 및 금속염(철, 수은, 은염)과 물리적으로 비혼화성. 암모늄염 또는 알칼리와 접촉 시 변색.",
+    "forms": [
+      "Methenamine Hippurate 경구정 1g",
+      "Methenamine Mandelate 경구정 0.5g",
+      "Methenamine Mandelate 경구정 1g"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메테나민은 산성 소변에서 포름알데히드로 전환되어 항균 효과를 나타내는 요로 방부제입니다. 개와 고양이의 재발성 요로감염 예방에 비공식적으로 사용되나, 효능을 뒷받침하는 근거가 매우 부족합니다. 소변 pH가 6 이하(이상적으로 5.5 미만)이어야 효과가 있으며, 신부전·중증 간장애·대사성 산증·중증 탈수 시 금기입니다. 설폰아미드와 병용 금기(소변 내 불용성 침전 형성). 고양이는 개보다 내약성이 낮습니다.",
+    "indications": "재발성 요로감염(UTI) 예방 — 개와 고양이에서 비공식(extra-label) 사용. 공식 수의학 승인 제품 없음. 효능 근거 부족으로 일상적 사용은 권장되지 않음.",
+    "client_info": "이 약은 위장 자극을 줄이기 위해 음식과 함께 투여하세요. 정제가 크지만 반으로 나눌 수 있습니다. 구토, 오심(아픈 것처럼 행동), 식욕 감소가 흔히 나타날 수 있습니다. 고양이는 개보다 이 약을 잘 견디지 못할 수 있습니다. 이 약이 효과를 발휘하려면 소변이 산성이어야 합니다. 수의사가 소변 산성화를 위해 비타민 C, 메티오닌 등의 약물이나 식이 변경을 권장할 수 있습니다. 약을 복용하는 동안 정기적인 신체검사와 검사실 검사를 위해 수의사를 방문하는 것이 중요합니다. 중요한 추적 방문을 빠뜨리지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK data (dog/cat)",
+      "Half-life data",
+      "Bioavailability data",
+      "Protein binding data",
+      "CYP profile",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/63.jsonl",
+    "extracted_at": "2026-03-11T09:04:00.458021+00:00",
+    "reviewer": null
+  }
+}

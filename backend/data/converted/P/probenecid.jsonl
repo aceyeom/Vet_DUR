@@ -1,0 +1,541 @@
+{
+  "id": "probenecid",
+  "drug_identity": {
+    "name_ko": "프로베네시드",
+    "name_en": "Probenecid",
+    "active_ingredient": "Probenecid",
+    "brand_names": [
+      "Benemid",
+      "Benuryl"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 승인된 제품 없음. 파충류 통풍 치료 및 베타-락탐 항생제 혈중 농도 증가 목적으로 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 간에서 글루쿠론화, 카르복실화, 수산화 대사체로 전환되며, 이 대사체들도 요산 배설 촉진 및 신세뇨관 분비 억제 활성을 가짐. 수의 종에 대한 CYP 경로 정보는 없음."
+    },
+    "extra_information": "개에서 IV 투여 후 분포 반감기 2.3시간, 정상상태 분포용적 0.46 L/kg, 혈장 청소율 0.343 mL/min/kg, 소실 반감기 17.7시간(사람 6.5시간, 양 1.55시간보다 현저히 길다). 개에서 농도 의존적 이상 혈장 단백 결합 특성을 보이며 사람보다 단백 결합률이 낮음. 암말에서 경구 생체이용률 약 90%, 혈장 단백 결합 99.9%, 소실 반감기 약 90~120분."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의 종 특이적 PK 데이터 제한적. 사람 및 개 데이터 혼용. 신독성 및 간독성은 드물게 보고된 부작용 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 CNS 자극 및 경련이 보고됨(사람 사례). 개에서 직접적 뇌 부담 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "heparin interaction"
+        ],
+        "index": 1,
+        "evidence": "사람에서 드물게 골수 억제 보고. 헤파린 효과 증강 상호작용 있음."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal tubular secretion",
+          "urate nephropathy",
+          "nephrotic syndrome",
+          "renal function impairment"
+        ],
+        "index": 2,
+        "evidence": "신세뇨관 분비 억제제로 신기능에 직접 영향. 요산 신증 및 신증후군 드물게 보고. 신기능 저하 시 효능 감소 및 금기."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver metabolism"
+        ],
+        "index": 1,
+        "evidence": "사람에서 드물게 간독성 보고. 간에서 대사됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 부담에 대한 직접적 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적 데이터 없음. 사람 과량 투여 시 CNS 자극 보고 참고."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "bone marrow suppression"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적 데이터 없음. 사람에서 드물게 골수 억제 보고."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal tubular secretion",
+          "urate nephropathy",
+          "nephrotic syndrome"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적 데이터 없음. 신세뇨관 분비 억제 기전상 신장 부담 예상."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적 데이터 없음. 사람에서 드물게 간독성 보고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 부담에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 17.7,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 IV 투여 후 소실 반감기 17.7시간. 암말에서 경구 생체이용률 약 90%, 소실 반감기 90~120분. 사람에서 경구 흡수 빠르고 완전함. 개의 경구 생체이용률 및 Tmax 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 대부분 이론적 또는 사람/동물 보고 기반.",
+  "drug_interactions": [
+    {
+      "drug": "Antineoplastics (rapidly cytolytic)",
+      "severity": 3,
+      "keywords": [
+        "uric acid nephropathy"
+      ],
+      "evidence": "Rapidly cytolytic antineoplastics increase risk of uric acid nephropathy when combined with probenecid."
+    },
+    {
+      "drug": "Aspirin and other salicylates",
+      "severity": 2,
+      "keywords": [
+        "uricosuric antagonism"
+      ],
+      "evidence": "Salicylates antagonize the uricosuric effects of probenecid, reducing therapeutic efficacy."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., lorazepam, oxazepam)",
+      "severity": 2,
+      "keywords": [
+        "prolonged action",
+        "altered onset"
+      ],
+      "evidence": "Probenecid may prolong action or reduce time for onset of action of benzodiazepines."
+    },
+    {
+      "drug": "Beta-Lactam Antibiotics (e.g., penicillins, some cephalosporins)",
+      "severity": 1,
+      "keywords": [
+        "increased serum concentration",
+        "reduced renal excretion"
+      ],
+      "evidence": "Probenecid may increase serum concentrations of beta-lactam antibiotics by reducing renal excretion. This interaction may be intentionally exploited."
+    },
+    {
+      "drug": "Beta-Lactamase Inhibitors (e.g., sulbactam, tazobactam)",
+      "severity": 1,
+      "keywords": [
+        "increased serum concentration",
+        "reduced renal excretion"
+      ],
+      "evidence": "Probenecid may increase serum concentrations of sulbactam and tazobactam (but not clavulanic acid) by reducing renal excretion."
+    },
+    {
+      "drug": "Ciprofloxacin/Enrofloxacin",
+      "severity": 2,
+      "keywords": [
+        "reduced renal tubular secretion",
+        "increased serum concentration"
+      ],
+      "evidence": "Probenecid reduces renal tubular secretion of ciprofloxacin by approximately 50%. In goats, probenecid significantly reduced renal excretion of enrofloxacin."
+    },
+    {
+      "drug": "Dapsone",
+      "severity": 2,
+      "keywords": [
+        "accumulation",
+        "active metabolites"
+      ],
+      "evidence": "Possible accumulation of dapsone or its active metabolites when combined with probenecid."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration"
+      ],
+      "evidence": "Increased serum furosemide concentrations are possible when combined with probenecid."
+    },
+    {
+      "drug": "Heparin",
+      "severity": 2,
+      "keywords": [
+        "increased effect",
+        "prolonged effect"
+      ],
+      "evidence": "Probenecid may increase and prolong heparin's anticoagulant effects."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "increased concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Probenecid may increase methotrexate concentrations and increase the risk for toxicity."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, ketoprofen)",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Probenecid may increase plasma NSAID concentrations and increase the risk for toxicity."
+    },
+    {
+      "drug": "Nitrofurantoin",
+      "severity": 2,
+      "keywords": [
+        "reduced urine concentration",
+        "therapeutic failure",
+        "systemic toxicity"
+      ],
+      "evidence": "Probenecid reduces urine nitrofurantoin concentrations, causing increased risk for therapeutic failure and systemic toxicity."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy"
+      ],
+      "evidence": "Probenecid may reduce penicillamine efficacy."
+    },
+    {
+      "drug": "Oseltamivir",
+      "severity": 1,
+      "keywords": [
+        "increased serum concentration",
+        "reduced renal excretion"
+      ],
+      "evidence": "Probenecid may increase serum oseltamivir concentrations by reducing renal excretion."
+    },
+    {
+      "drug": "Ranitidine",
+      "severity": 1,
+      "keywords": [
+        "increased serum concentration",
+        "reduced renal excretion"
+      ],
+      "evidence": "Probenecid may increase serum ranitidine concentrations by reducing renal excretion."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 3,
+      "keywords": [
+        "reduced hepatic uptake",
+        "increased serum concentration",
+        "toxicity"
+      ],
+      "evidence": "Probenecid may reduce hepatic uptake of rifampin and increase serum concentrations; use together is not recommended as the effect is inconsistent and can lead to toxicity."
+    },
+    {
+      "drug": "Sulfonamides",
+      "severity": 2,
+      "keywords": [
+        "decreased renal elimination",
+        "sulfonamide toxicity"
+      ],
+      "evidence": "Probenecid decreases renal elimination of sulfonamides; free serum concentrations are not increased, so this interaction is not therapeutically beneficial and may increase risks for sulfonamide toxicity."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "bird_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 3.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능이 충분해야 효과적. 신기능 저하 시 효능 감소. 사람에서 크레아티닌 청소율 30 mL/min 미만 시 효과 없을 수 있음. 요산 신증 또는 요산 결석 형성 위험 환자에서 금기."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 대사되며 드물게 간독성 보고. 간질환 환자에서의 용량 조정에 대한 구체적 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "Hypersensitivity to probenecid",
+      "match_terms": [
+        "probenecid allergy",
+        "sulfonamide hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Uric acid renal or bladder calculus formation",
+      "match_terms": [
+        "urate urolithiasis",
+        "uric acid stones",
+        "urate calculi"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Urate nephropathy",
+      "match_terms": [
+        "urate nephropathy",
+        "hyperuricemia nephropathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Severe renal impairment",
+      "match_terms": [
+        "CKD",
+        "renal failure",
+        "creatinine clearance <30 mL/min"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "Receiving rapidly cytolytic chemotherapy",
+      "match_terms": [
+        "chemotherapy",
+        "cytolytic agents",
+        "antineoplastic"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Birds (avian species)",
+      "match_terms": [
+        "bird",
+        "avian",
+        "parrot",
+        "psittacine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "근위 신세뇨관에서 요산 재흡수를 경쟁적으로 억제하여 요산 배설을 증가시키고 혈청 요산 농도를 낮춤. 또한 약산성 유기산(페니실린, 일부 세팔로스포린, 설박탐, 타조박탐, 오셀타미비르 등)의 신세뇨관 분비를 경쟁적으로 억제하여 이들 약물의 혈중 농도를 높임.",
+    "common_extra_effects": [
+      "두통",
+      "식욕부진",
+      "오심",
+      "경미한 구토",
+      "발진",
+      "통풍 발작 초기 악화",
+      "과민반응(드물게)",
+      "골수 억제(드물게)",
+      "간독성(드물게)",
+      "신증후군(드물게)"
+    ],
+    "dog_mechanism": "개에서 신세뇨관 분비 억제 기전은 사람과 유사하나, 소실 반감기가 17.7시간으로 사람(6.5시간)보다 현저히 길어 베타-락탐 항생제 보조제로서의 활용 가능성이 있음.",
+    "dog_extra_effects": [
+      "IV 투여 시 LD50 230 mg/kg(개)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 소실 반감기가 약 17.7시간으로 사람보다 현저히 길어 베타-락탐 항생제의 혈중 농도 증가 및 투여 간격 연장 목적으로 활용 가능성이 있으나, 현재 수의 임상 연구는 매우 제한적임. 포유류(사람 외)에서의 임상 경험이 적으므로 주의 필요.",
+    "cat": "고양이에서의 임상 사용 경험 및 연구 데이터가 거의 없음. 부작용 프로파일이 확립되지 않았으므로 사용 시 각별한 주의가 필요하며, 모체의 이익이 잠재적 위험을 명확히 상회하는 경우에만 사용 고려."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 임상 경험 및 연구 데이터 제한적. 신기능 저하 시 효능 감소 및 금기. 다수의 약물 상호작용 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 부작용 프로파일 미확립. 임상 경험 매우 제한적. 사용 시 면밀한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C-30°C)에서 빛을 차단한 밀폐 용기에 보관. 유효기간은 제조 후 3~5년.",
+    "forms": [
+      "Probenecid Tablets 500 mg (generic, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프로베네시드는 요산 배설 촉진제이자 신세뇨관 분비 억제제로, 수의학에서는 주로 파충류의 통풍(고요산혈증) 치료 및 베타-락탐 항생제의 혈중 농도 증가 목적으로 오프라벨 사용됨. 개에서 소실 반감기가 약 17.7시간으로 사람보다 현저히 길어 항생제 보조제로서의 잠재적 유용성이 있으나 임상 연구는 매우 제한적. 조류에서는 통풍을 악화시킬 수 있어 사용 금기. 다수의 중요한 약물 상호작용이 있으므로 병용 약물 검토 필수.",
+    "indications": "파충류 통풍(고요산혈증) 치료(오프라벨). 베타-락탐 항생제 혈중 농도 증가 및 투여 간격 연장 보조(오프라벨, 말에서 일부 데이터 있음). 수의학적으로 승인된 제품 없음.",
+    "client_info": "이 약은 파충류의 요산 과잉으로 인한 관절 질환(통풍) 치료에 사용될 수 있습니다. 이 약은 매우 많은 약물 상호작용이 있습니다. 현재 투여 중인 모든 약물(비타민, 보조제, 한약 포함)을 수의사와 약사에게 반드시 알려주십시오. 개, 고양이 등 소동물에서의 부작용은 아직 잘 알려져 있지 않습니다. 동물에게 이상 증상이 나타나면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog dosage",
+      "Cat dosage",
+      "CYP profile",
+      "Oral bioavailability (dog/cat)",
+      "Protein binding (dog/cat)",
+      "Tmax (dog/cat)",
+      "Onset of action"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:41:19.457403+00:00",
+    "reviewer": null
+  }
+}

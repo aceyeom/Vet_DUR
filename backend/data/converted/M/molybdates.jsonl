@@ -1,0 +1,368 @@
+{
+  "id": "molybdates",
+  "drug_identity": {
+    "name_ko": "몰리브덴산염",
+    "name_en": "Molybdates",
+    "active_ingredient": "Ammonium Molybdate / Ammonium Tetrathiomolybdate / Choline Tetrathiomolybdate / Sodium Molybdate",
+    "brand_names": [
+      "Molypen",
+      "Molybdene"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "unknown",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "FDA 승인 수의용 또는 인체용 제품 없음. 화학 공급업체에서 원료 구입 가능. 식용 동물 치료 전 FDA CVM에 문의 권장.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "TTM는 간세포에 대한 높은 친화성을 가지며 높은 초회통과효과(first-pass effect)가 낮은 생체이용률의 원인으로 추정됨. 마로피탄트와 TTM 모두 단백질 결합률이 높고 간에서 대사 및 배설됨."
+    },
+    "extra_information": "개에서 TTM 1 mg/kg 단회 IV 및 경구 투여 후: 경구 생체이용률 21 ± 22%, Vdss 1 L/kg, 반감기 약 27시간. 양에서 Vd 0.8 L/kg, 혈청 소실 반감기 약 7시간. 개에서 치료 시 간 내 몰리브덴 상당량 축적 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 양에서의 PK 데이터 일부 존재하나 수의 임상 데이터 제한적. 간 축적 및 CNS/내분비 독성 보고 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS retention (sheep data)",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "양에서 TTM이 CNS에 잔류하여 독성 내분비병증을 유발한 사례 보고. 개에서 기면 부작용 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "IMHA",
+          "thrombocytopenia",
+          "hemolytic anemia",
+          "increased serum copper"
+        ],
+        "index": 2,
+        "evidence": "개에서 TTM 치료 11주차에 추정 면역매개성 용혈성 빈혈(IMHA) 및 혈소판감소증 1례 보고. TTM에 반응하여 혈청 구리 농도 증가 관찰됨."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatic molybdenum accumulation",
+          "increased AST",
+          "high first-pass effect",
+          "hepatically metabolized"
+        ],
+        "index": 3,
+        "evidence": "개에서 치료 시 간 내 몰리브덴 상당량 축적 보고(임상적 의의 불명). 구리 독성증 치료 중 염소에서 AST 상승 관찰. 간에서 대사 및 배설."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 27.0,
+      "species": "dog"
+    },
+    "f_percent": 21,
+    "protein_binding_percent": null,
+    "evidence": "개에서 TTM 1 mg/kg 단회 투여 후 경구 생체이용률 21 ± 22%, 반감기 약 27시간. 양에서 반감기 약 7시간. TTM 및 마로피탄트 모두 단백질 결합률 높음(정확한 수치 미기재)."
+  },
+  "_ddi_note": "Plumb's 약물 상호작용 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 마로피탄트와의 상호작용은 PK 섹션에서 언급됨.",
+  "drug_interactions": [
+    {
+      "drug": "Maropitant",
+      "severity": 2,
+      "keywords": [
+        "increased bioavailability",
+        "protein binding displacement",
+        "hepatic metabolism"
+      ],
+      "evidence": "Maropitant pretreatment in dogs with history of vomiting on TTM may increase TTM bioavailability. Both are highly protein-bound and hepatically metabolized; concurrent use may alter PK of either drug."
+    },
+    {
+      "drug": "Penicillamine (d-penicillamine)",
+      "severity": 1,
+      "keywords": [
+        "copper chelation",
+        "additive effect"
+      ],
+      "evidence": "Both molybdates and penicillamine are copper chelating agents. Concurrent use reported in goats (ammonium molybdate + penicillamine + sodium thiosulfate). Additive copper chelation possible."
+    },
+    {
+      "drug": "Sodium Thiosulfate",
+      "severity": 1,
+      "keywords": [
+        "copper chelation",
+        "combination therapy"
+      ],
+      "evidence": "Ammonium molybdate is frequently combined with sodium thiosulfate for copper toxicosis treatment in food animals. Additive copper-lowering effect."
+    },
+    {
+      "drug": "Zinc",
+      "severity": 1,
+      "keywords": [
+        "copper antagonism",
+        "combination therapy"
+      ],
+      "evidence": "Zinc 150 mg/kg mentioned as potentially useful alongside molybdate and sulfate antagonists for copper toxicosis. Additive copper-lowering effect."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 5.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "구리 연관 만성 간병증 (extra-label) - Ammonium tetrathiomolybdate (TTM)",
+          "value": "0.4 - 0.7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "QID",
+          "max_dose_mg_kg": 0.7,
+          "duration_note": "12주 안전성 및 유효성 연구에서 사용된 용량 범위; 약 0.5 mg/kg QID 권장",
+          "evidence": "12주 안전성 및 유효성 연구에서 투여 용량 0.4–0.7 mg/kg QID"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적인 권고사항 없음. 주로 간에서 대사 및 배설됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 대사 및 배설되며 간 내 몰리브덴 축적이 보고됨. 치료 중 간 효소 기저치 및 주기적 모니터링 권장. 간 기능 저하 시 용량 조절 필요 여부 불명확."
+  },
+  "contraindications": [
+    {
+      "condition": "임신 및 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing",
+        "breast feeding"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic disease",
+        "liver failure",
+        "hepatopathy"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "구리 킬레이트제로서 구리와 비가역적으로 결합하여 배설을 촉진하고, 위장관 내에서 구리와 결합하여 장내 구리 흡수를 억제함.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "기면",
+      "추정 면역매개성 용혈성 빈혈(IMHA)",
+      "혈소판감소증",
+      "간 내 몰리브덴 축적",
+      "AST 상승 (염소)",
+      "불임 및 소모성 질환 (양, 장기 독성)",
+      "독성 내분비병증 (양, CNS/뇌하수체/부신 잔류)"
+    ],
+    "dog_mechanism": "TTM이 구리와 비가역적으로 결합하여 간 구리 농도를 낮추고 조직 구리 저장소를 동원함.",
+    "dog_extra_effects": [
+      "구토 (가장 흔한 부작용)",
+      "식욕부진",
+      "기면",
+      "추정 IMHA",
+      "혈소판감소증",
+      "간 내 몰리브덴 축적",
+      "혈청 구리 농도 일시적 증가"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 TTM은 구리 연관 만성 간병증 치료에 12주 연구에서 간 구리 농도를 효과적으로 낮추는 것으로 나타남. 구토가 가장 흔한 부작용이며, 마로피탄트 전처치가 구토 예방 및 생체이용률 향상에 도움이 될 수 있음. 간 내 몰리브덴 축적의 임상적 의의는 불명확하며 장기 안전성 및 유효성에 대한 추가 연구가 필요함. d-페니실라민 등 기존 치료법과의 비교 연구 필요.",
+    "cat": "고양이에서의 사용에 대한 데이터 없음. 안전성 및 유효성 미확립."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 효소 및 구리 농도(혈청, 간 생검)의 기저치 및 주기적 모니터링 필요. 구토 병력이 있는 개에서 마로피탄트 전처치 고려. 임신/수유 중 사용 시 모체 이익이 태아/자손에 대한 잠재적 위험을 상회하는 경우에만 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 및 유효성 미확립. 사용 전 위험-이익 평가 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "특정 보관 조건 미기재. 암모늄 몰리브덴산염: 무취 백색 결정. TTM: 적색 결정성 분말.",
+    "forms": [
+      "Ammonium molybdate (암모늄 몰리브덴산염) - 백색 결정 분말 (화학 공급업체)",
+      "Ammonium tetrathiomolybdate (TTM) - 적색 결정성 분말 (화학 공급업체)",
+      "Sodium molybdate (나트륨 몰리브덴산염)",
+      "Choline tetrathiomolybdate"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "몰리브덴산염은 구리 킬레이트제로, 주로 식용 동물(특히 양)의 구리 독성증 치료에 사용되며, 개의 구리 연관 만성 간병증에도 investigational 용도로 사용될 수 있습니다. FDA 승인 수의용 또는 인체용 제품이 없으며, 화학 공급업체에서 원료를 구입해야 합니다. 식용 동물 치료 전 FDA CVM에 문의가 권장됩니다. 개에서 TTM은 12주 연구에서 간 구리 농도를 효과적으로 낮추었으나 장기 안전성 데이터가 부족합니다. 구토가 가장 흔한 부작용이며, 마로피탄트 전처치가 도움이 될 수 있습니다.",
+    "indications": "구리 독성증 치료 (식용 동물, 특히 양 - extra-label); 개의 구리 연관 만성 간병증 (extra-label, investigational). 승인된 적응증 없음.",
+    "client_info": "이 약물은 구리 중독 치료를 위해 사용되는 킬레이트제입니다. 현재 공식 승인된 동물용 의약품이 아니므로 수의사의 처방 및 지도 하에만 사용해야 합니다. 개에서 구토가 흔히 발생할 수 있으며, 이 경우 수의사에게 알려주십시오. 치료 중 정기적인 혈액검사(간 효소, 구리 농도)가 필요합니다. 임신 중이거나 수유 중인 동물에서는 수의사와 충분히 상담 후 사용 여부를 결정하십시오. 식용 동물의 경우 도축 전 최소 10일, 착유 전 최소 5일의 휴약 기간이 권장됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Dosages",
+      "Monitoring",
+      "Chemistry/Synonyms",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Drug Interactions (formal section)",
+      "Overdosage/Acute Toxicity",
+      "Client Information (formal section)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths",
+      "dosage_and_kinetics.cat.dosage_list",
+      "half_life_hr (cat)",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/27.jsonl",
+    "extracted_at": "2026-03-10T21:32:16.390597+00:00",
+    "reviewer": null
+  }
+}

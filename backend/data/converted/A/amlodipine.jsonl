@@ -1,0 +1,601 @@
+{
+  "id": "amlodipine",
+  "drug_identity": {
+    "name_ko": "암로디핀",
+    "name_en": "Amlodipine",
+    "active_ingredient": "Amlodipine besylate",
+    "brand_names": [
+      "Norvasc",
+      "Amodip",
+      "Lotrel",
+      "Caduet"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "개와 고양이에서의 전신 고혈압 치료는 extra-label 사용이며, 고양이용 수의 허가 제품(Amodip®)은 영국에서만 허가됨.",
+    "dosage_form": [
+      "Tab",
+      "Chewable",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.25,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "CYP3A4 강력 억제제(예: 케토코나졸, 이트라코나졸)는 암로디핀 혈중 농도를 증가시킬 수 있으며, CYP3A4 유도제(예: 리팜핀)는 농도를 감소시킬 수 있다고 보고됨."
+    },
+    "extra_information": "고양이: 분포용적 약 10 L/kg, 혈장 단백결합률 97%, 총 혈장 청소율 약 2.3 mL/분/kg, 반감기 53시간. 개: 경구 생체이용률 88%, 최고 혈중 농도 도달 시간 4~6시간, 분포용적 25 L/kg, 반감기 7~30시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 평가함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "depression",
+          "seizures (overdose)"
+        ],
+        "index": 1,
+        "evidence": "개에서 과다복용 시 우울증, 경련이 보고됨. 치료 용량에서는 기면이 드물게 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia",
+          "bradycardia",
+          "arrhythmia"
+        ],
+        "index": 2,
+        "evidence": "개에서 저혈압, 빈맥, 서맥, 심장 부정맥이 과다복용 시 보고됨. 치료 용량에서도 저혈압 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "azotemia",
+          "RAAS activation",
+          "glomerular pressure"
+        ],
+        "index": 3,
+        "evidence": "암로디핀 단독 사용 시 RAAS 활성화로 사구체 압력 증가 우려. 신장 질환 동반 시 ACE 억제제 병용 권장."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "hepatic dysfunction",
+          "hepatic failure contraindicated"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위하게 대사됨. 중증 간부전 시 금기. 간 질환 환자에서 주의 사용 권장."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "reduced contractility",
+          "heart rate reduction",
+          "ventricular dysfunction"
+        ],
+        "index": 5,
+        "evidence": "심실 기능 장애 동물에서 심박수 및 수축력 감소 가능. 심장 질환 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "lethargy",
+          "seizures (overdose)"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 과다복용 시 기면 보고. 치료 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia",
+          "hypokalemia",
+          "reflex tachycardia"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 저혈압, 반사성 빈맥, 저칼륨혈증이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "azotemia",
+          "RAAS activation",
+          "proteinuria reduction"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 암로디핀 단독 사용 시 단백뇨 감소 효과 보고. 그러나 RAAS 활성화로 사구체 압력 증가 우려도 있음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "extensively metabolized",
+          "half-life 53 hours",
+          "hepatic dysfunction"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 반감기 53시간으로 간 대사 부담이 큼. 간 기능 장애 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "bradycardia possible",
+          "ventricular dysfunction caution"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 서맥 가능성 있으나 느린 작용 발현으로 임상적으로 드묾. 심실 기능 장애 시 주의."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 240,
+    "t_max_hr": 5.0,
+    "half_life_hr": {
+      "min": 7.0,
+      "max": 53.0,
+      "mean": 30.0,
+      "species": "unknown"
+    },
+    "f_percent": 88,
+    "protein_binding_percent": 97,
+    "evidence": "개: 경구 생체이용률 88%, Tmax 4~6시간, 반감기 7~30시간. 고양이: 단백결합률 97%, 반감기 53시간, 투여 후 4시간 이내 혈압 효과 발현, 약 30시간 지속. 사람: 반감기 약 35시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "혈압 감소",
+        "심박수 감소",
+        "수축력 감소",
+        "심실 기능 장애"
+      ],
+      "evidence": "Concurrent use may reduce blood pressure, heart rate, and contractility, particularly in animals with ventricular dysfunction."
+    },
+    {
+      "drug": "Calcium Channel Blockers, Other (e.g., diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "혈압 감소",
+        "심박수 감소",
+        "수축력 감소",
+        "심실 기능 장애"
+      ],
+      "evidence": "Concurrent use may reduce blood pressure, heart rate, and contractility, particularly in animals with ventricular dysfunction."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "항혈전 효과 감소"
+      ],
+      "evidence": "Amlodipine may decrease the antithrombotic effect of clopidogrel."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Amlodipine may increase cyclosporine concentrations."
+    },
+    {
+      "drug": "CYP3A4 Strong Inhibitors (e.g., ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "암로디핀 혈중 농도 증가",
+        "CYP3A4 억제"
+      ],
+      "evidence": "CYP3A4 strong inhibitors may increase amlodipine concentrations."
+    },
+    {
+      "drug": "CYP3A4 Inducers (e.g., rifampin)",
+      "severity": 2,
+      "keywords": [
+        "암로디핀 혈중 농도 감소",
+        "CYP3A4 유도"
+      ],
+      "evidence": "CYP3A4 inducers may decrease amlodipine concentrations."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 2,
+      "keywords": [
+        "타크로리무스 혈중 농도 증가"
+      ],
+      "evidence": "Amlodipine may increase tacrolimus concentrations."
+    },
+    {
+      "drug": "Hypotensive Agents (e.g., enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "혈압 추가 감소",
+        "상가 효과"
+      ],
+      "evidence": "Antihypertensive combinations may have additive blood pressure lowering effects when used with amlodipine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 6.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 보조 치료 및 불응성 심부전의 후부하 감소 (extra-label)",
+          "value": "0.1 - 0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.25,
+          "duration_note": "낮은 용량부터 시작. 일반적으로 ACE 억제제 치료 후 추가.",
+          "evidence": "Plumb's Dosages: Dogs, adjunctive treatment of systemic hypertension"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고혈압 응급 (extra-label)",
+          "value": "0.2 - 0.4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.6,
+          "duration_note": "최대 0.6 mg/kg/일까지 사용 가능하나 면밀한 모니터링 필요.",
+          "evidence": "Plumb's Dosages: Dogs, hypertensive emergency"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "전신 고혈압 (extra-label; 고정 용량)",
+          "value": "0.625 - 1.25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 0.625 mg/cat으로 시작, 1~3주 후 혈압 재측정. 혈압이 지속 상승 시 최대 2.5 mg/cat/일까지 증량 가능.",
+          "evidence": "Plumb's Dosages: Cats, systemic hypertension (a)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 고혈압 (extra-label; 체중 기반)",
+          "value": "0.125 - 0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "14일 치료 후 충분한 반응이 없으면 용량을 2배로 증량하거나 최대 0.5 mg/kg/일까지 증량 가능.",
+          "evidence": "Plumb's Dosages: Cats, systemic hypertension (b)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "고혈압 응급 (extra-label)",
+          "value": "0.2 - 0.4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.6,
+          "duration_note": "최대 0.6 mg/kg/일까지 사용 가능하나 면밀한 모니터링 필요.",
+          "evidence": "Plumb's Dosages: Cats, hypertensive emergency"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 질환이 고혈압의 흔한 원인이므로 신기능(BUN, 크레아티닌, SDMA) 및 단백뇨를 3~4개월마다 모니터링 권장. 암로디핀 단독 사용 시 RAAS 활성화로 사구체 압력 증가 우려가 있어 ACE 억제제 병용을 고려해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간부전 시 금기. 간 질환 환자에서 주의 사용 권장. 간 기능 장애 및 노령 환자에서 반감기가 연장될 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity to amlodipine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "쇼크",
+      "match_terms": [
+        "shock",
+        "circulatory shock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압",
+      "match_terms": [
+        "hypotension",
+        "documented hypotension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 대동맥 협착",
+      "match_terms": [
+        "severe aortic stenosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간부전",
+      "match_terms": [
+        "severe hepatic failure",
+        "severe liver failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "heart disease",
+        "ventricular dysfunction",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐 고혈압 (개)",
+      "match_terms": [
+        "pulmonary hypertension"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 및 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "디하이드로피리딘계 L형 칼슘 채널 차단제로, 심장 및 혈관 평활근의 전압 의존성 칼슘 채널을 억제하여 말초 세동맥 확장 및 후부하 감소를 유발함.",
+    "common_extra_effects": [
+      "저혈압",
+      "반사성 빈맥",
+      "서맥",
+      "기면",
+      "식욕 감소",
+      "잇몸 과증식(치은 비대)",
+      "말초 부종",
+      "저칼륨혈증",
+      "체중 감소"
+    ],
+    "dog_mechanism": "말초 세동맥 확장제로 작용하여 후부하를 감소시킴. 초기 투여 후 경미한 이뇨 작용이 있음. 고용량 단독 사용 시 RAAS를 활성화할 수 있음.",
+    "dog_extra_effects": [
+      "식욕 감소",
+      "기면",
+      "저혈압",
+      "가역적 잇몸 과증식 (장기 투여 시, 발생률 약 8.5%)",
+      "미만성 말초 부종",
+      "빈맥",
+      "서맥",
+      "심장 부정맥 (과다복용 시)",
+      "폐부종 (과다복용 시)"
+    ],
+    "cat_mechanism": "전신 고혈압 치료에 1차 선택약. 느린 작용 발현으로 인해 저혈압 및 서맥이 임상적으로 드묾. 단독 사용 시 단백뇨 감소 효과 보고.",
+    "cat_extra_effects": [
+      "구토",
+      "식욕 감소",
+      "설사",
+      "기면",
+      "탈수",
+      "저칼륨혈증",
+      "반사성 빈맥",
+      "체중 감소",
+      "질소혈증",
+      "잇몸 과증식 (드묾)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 암로디핀은 일반적으로 만성 신장 질환의 높은 유병률로 인해 RAAS 억제제(ACE 억제제 또는 안지오텐신 수용체 차단제) 치료 후 추가로 사용됨. 폐 고혈압에는 사용하지 않도록 권고됨. 장기 투여 시 잇몸 과증식(발생률 약 8.5%) 및 말초 부종이 보고됨. 텔미사르탄과의 병용이 단독 사용보다 혈압 감소 효과가 더 큰 것으로 보고됨.",
+    "cat": "고양이에서 암로디핀은 전신 고혈압 치료의 1차 선택약으로 간주됨. 고정 용량(0.625~1.25 mg/cat)으로 시작하여 혈압 반응에 따라 증량. 단독 사용으로도 단백뇨 감소 및 생존율 개선 효과가 보고됨. 느린 작용 발현으로 저혈압 및 서맥은 드묾. 저칼륨혈증 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 질환, 간 기능 장애, 저혈압 위험 환자에서 주의 사용. 폐 고혈압에는 사용 비권장. 신장 질환 동반 시 ACE 억제제 병용 고려."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "초기 치료 시 식욕 감소 및 저혈압 가능. 저칼륨혈증, 질소혈증 모니터링 필요. 임신 및 수유 중 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 보관; 15°C~30°C(59°F~86°F) 허용. 밀폐된 차광 용기에 보관. 영국 허가 수의용 씹는 정제를 분할한 경우 블리스터 포장에 반환하여 24시간 이내 폐기. 조제 경구 현탁액은 5°C 및 25°C에서 91일간 90% 이상 역가 유지.",
+    "forms": [
+      "Amlodipine Chewable Tablets 1.25 mg (Amodip®, 영국)",
+      "Amlodipine Oral Tablets 2.5 mg, 5 mg, 10 mg (Norvasc®, generic)",
+      "Compounded oral suspension 1 mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "암로디핀은 개와 고양이의 전신 고혈압 치료에 가장 널리 사용되는 디하이드로피리딘계 칼슘 채널 차단제입니다. 고양이에서는 1차 선택약으로 권장되며, 개에서는 RAAS 억제제 이후 추가 약물로 사용됩니다. 느린 작용 발현으로 고양이에서 저혈압 및 서맥은 드물지만, 초기 치료 시 식욕 감소 및 기면에 주의해야 합니다. 장기 투여 시 잇몸 과증식이 개에서 더 흔하게 발생합니다. 중증 간부전 및 쇼크 환자에서는 금기입니다.",
+    "indications": "개와 고양이의 전신 고혈압 치료(extra-label). 고양이에서는 단독 1차 치료제로 사용 가능하며, 개에서는 ACE 억제제 또는 안지오텐신 수용체 차단제와 병용. 불응성 심부전의 후부하 감소 보조 치료(개, extra-label). 조류의 전신 고혈압(extra-label). 영국에서 고양이용 수의 허가 제품(Amodip® 1.25 mg 씹는 정제) 허가.",
+    "client_info": "암로디핀은 음식과 함께 또는 공복에 투여할 수 있습니다. 용량을 빠뜨리지 마세요 — 혈압 조절이 불량해지고 장기 손상이 발생할 수 있습니다. 부작용은 흔하지 않지만 특히 치료 초기에 식욕 감소와 기력 저하가 나타날 수 있습니다. 잇몸 과증식(잇몸이 두꺼워지는 현상)이 발생할 수 있으며, 개에서 더 흔합니다. 암로디핀은 일반적으로 장기 복용 약물이며, 정기적인 수의사 방문이 필요합니다. 혈압이 정상화되면 대부분의 환자는 3~4개월마다 검진을 받습니다. 정기 검진을 빠뜨리지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific concerns noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "timing_profile.onset_min (cat specific)",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T06:09:52.854720+00:00",
+    "reviewer": null
+  }
+}

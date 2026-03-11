@@ -1,0 +1,463 @@
+{
+  "id": "reserpine",
+  "drug_identity": {
+    "name_ko": "레세르핀",
+    "name_en": "Reserpine",
+    "active_ingredient": "Reserpine",
+    "brand_names": [
+      "Serpasil"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "discontinued",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국에서 인체용 및 동물용 허가 제품 없음. 조제약국을 통해 공급 가능. 말에서 장기 진정 목적으로 엑스트라라벨 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체에서 간 대사 후 주로 대변(30~60%)과 소변(10%)으로 배설됨. 수의 종에서의 CYP 경로는 문헌에 명시되지 않음."
+    },
+    "extra_information": "말에서 단회 2.5 mg IM 투여(0.0045~0.005 mg/kg) 후 최고 혈장 농도는 6시간에 도달하며, 약물은 28~56시간 동안 검출 가능. 경구 투여 시에도 최고 농도는 6시간에 도달하나 Cmax가 낮고(0.2 ng/mL) 변동성이 큼. 반감기는 약 24시간. 반복 투여 시 최대 효과는 5일 후 관찰됨. 세로토닌 흡수 억제는 3일간 지속되고 7일 후 정상화됨. 뇌, 간, 신장, 지방조직에 광범위하게 분포."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 말 데이터 위주이며 개·고양이 특이적 수의 PK 연구 없음. 인체 및 말 데이터에서 추론.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "혈뇌장벽 투과",
+          "중추 모노아민 고갈",
+          "진정",
+          "행동 변화",
+          "추체외로 효과"
+        ],
+        "index": 1,
+        "evidence": "레세르핀은 지질 용해도가 높아 혈뇌장벽을 통과하며, 뇌 아민 및 세로토닌 고갈로 진정 및 행동 변화를 유발함. 개에서의 직접 데이터는 없으나 약리 기전상 뇌 부담이 예상됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "혈소판 응집 증가",
+          "저혈압",
+          "서맥"
+        ],
+        "index": 1,
+        "evidence": "시험관 내 연구에서 레세르핀에 노출된 말 혈소판의 응집 및 부착 증가 보고. 저혈압 및 서맥 유발 가능. 개에서의 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "신장 분포"
+        ],
+        "index": 1,
+        "evidence": "레세르핀은 신장에 광범위하게 분포함. 신독성에 대한 직접적 보고는 없으나 분포 특성상 신장 부담 가능성 있음. 개 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "간 대사",
+          "간 분포"
+        ],
+        "index": 1,
+        "evidence": "레세르핀은 간에서 대사되며 간에 광범위하게 분포함. 개에서의 직접적 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "서맥",
+          "저혈압",
+          "심장 억제"
+        ],
+        "index": 1,
+        "evidence": "교감신경 억제로 인한 서맥 및 저혈압 유발. 퀴니딘과 병용 시 심장 억제 및 부정맥 위험 증가. 개에서의 직접 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "혈뇌장벽 투과",
+          "중추 모노아민 고갈",
+          "진정"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 약리 기전상 뇌 부담 예상되나 고양이에서의 사용 및 연구 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "저혈압",
+          "서맥"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 교감신경 억제 기전상 혈압 및 심박수 영향 가능."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "신장 분포"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 신장 분포 특성에 근거한 추정."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 간 대사 특성에 근거한 추정."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "서맥",
+          "저혈압"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 교감신경 억제 기전상 심장 영향 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 6.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 24.0,
+      "species": "horse"
+    },
+    "f_percent": 50,
+    "protein_binding_percent": null,
+    "evidence": "말에서 IM 및 경구 투여 후 Tmax 6시간. 경구 반감기 약 24시간(말). 인체 경구 생체이용률 약 50%, Tmax 약 2시간. 단백결합률은 문헌에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., furazolidone, methylene blue)",
+      "severity": 3,
+      "keywords": [
+        "고혈압 위기",
+        "저혈압",
+        "금기"
+      ],
+      "evidence": "초기에는 고혈압 위기 위험 증가, 장기 병용 시 저혈압 위험 증가. 병용 금기."
+    },
+    {
+      "drug": "General Anesthetic Agents (e.g., isoflurane, propofol)",
+      "severity": 3,
+      "keywords": [
+        "저혈압 강화",
+        "혈압 저하"
+      ],
+      "evidence": "레세르핀이 전신마취제의 저혈압 효과를 강화할 수 있음. 레세르핀 중단 후 3~4주간 선택적 마취 시술 주의 권고."
+    },
+    {
+      "drug": "Alpha-2 Agonists (e.g., detomidine, xylazine)",
+      "severity": 3,
+      "keywords": [
+        "저혈압 강화",
+        "혈압 저하"
+      ],
+      "evidence": "레세르핀이 알파-2 작용제의 저혈압 효과를 강화할 수 있음. 극도의 주의 필요."
+    },
+    {
+      "drug": "Antihypertensive Agents",
+      "severity": 2,
+      "keywords": [
+        "저혈압 강화"
+      ],
+      "evidence": "레세르핀이 항고혈압제의 저혈압 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "CNS Depressants",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제 강화",
+        "진정 강화"
+      ],
+      "evidence": "레세르핀이 CNS 억제제의 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "서맥",
+        "부가적 서맥"
+      ],
+      "evidence": "병용 시 부가적 서맥 유발 가능."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "기립성 저혈압",
+        "심장 억제",
+        "부정맥"
+      ],
+      "evidence": "저혈압, 기립성 저혈압, 심장 억제 및/또는 부정맥 위험 증가."
+    },
+    {
+      "drug": "Sympathomimetics (e.g., epinephrine, norepinephrine, pseudoephedrine)",
+      "severity": 2,
+      "keywords": [
+        "고혈압",
+        "부정맥"
+      ],
+      "evidence": "고혈압 및 부정맥 위험 증가."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "저혈압 위험 증가 가능."
+    },
+    {
+      "drug": "Insulin and Other Diabetic Agents",
+      "severity": 2,
+      "keywords": [
+        "저혈당 증상 은폐"
+      ],
+      "evidence": "레세르핀이 저혈당과 관련된 임상 징후를 은폐할 수 있음."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 2,
+      "keywords": [
+        "약효 길항"
+      ],
+      "evidence": "세인트존스워트가 레세르핀의 효과를 길항함."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 5.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "문헌에 신기능 저하 시 용량 조절에 대한 명시적 권고 없음. 레세르핀은 신장에 광범위하게 분포하므로 신기능 저하 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "문헌에 간기능 저하 시 용량 조절에 대한 명시적 권고 없음. 레세르핀은 간에서 대사되므로 간기능 저하 환자에서 주의 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to reserpine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압",
+      "match_terms": [
+        "hypotension",
+        "low blood pressure"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "서맥",
+      "match_terms": [
+        "bradycardia",
+        "low heart rate"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "노르에피네프린, 세로토닌, 도파민의 저장 소포 내 수송을 비가역적으로 차단하여 신경전달물질을 고갈시킴. 뇌 아민 및 세로토닌 고갈로 진정 및 행동 변화 유발. 작용 지속 시간이 길며 신경전달물질 재보충에 수일~수주 소요.",
+    "common_extra_effects": [
+      "저혈압",
+      "서맥",
+      "설사",
+      "복통/산통",
+      "근육 떨림/근섬유속성 수축",
+      "추체외로 효과(근긴장이상, 운동이상증, 무동증)",
+      "혈소판 응집 증가(시험관 내)",
+      "진정",
+      "우울증(인체)",
+      "발작(인체)",
+      "약물 유발 파킨슨병(인체)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서의 레세르핀 사용에 대한 공식적인 적응증 또는 용량 권고가 없음. 말에서의 데이터를 기반으로 하며, 개에서의 안전성 및 유효성은 확립되지 않음.",
+    "cat": "고양이에서의 레세르핀 사용에 대한 공식적인 적응증 또는 용량 권고가 없음. 고양이에서의 안전성 및 유효성은 확립되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서의 사용 데이터 없음. 저혈압, 서맥, 중추신경계 억제 등의 부작용 가능성으로 주의 필요. 좁은 치료 지수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 사용 데이터 없음. 저혈압, 서맥, 중추신경계 억제 등의 부작용 가능성으로 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "분말은 20~25°C(68~77°F)의 실온에서 보관하고 빛으로부터 보호. 조제 제품은 제품 라벨에 따라 보관.",
+    "forms": [
+      "조제약국을 통한 분말 및 조제 제품",
+      "미국 내 시판 제품 없음"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "레세르핀은 라우볼피아 알칼로이드 계열의 중추 모노아민 고갈제로, 주로 말에서 장기 진정 목적으로 엑스트라라벨 사용됨. 미국 내 시판 허가 제품 없음(인체용 및 동물용 모두). 좁은 치료 지수를 가지며 저혈압, 서맥, 산통, 설사 등의 부작용 위험이 있음. 대부분의 공인 경기에서 금지 약물로 지정됨. MAOI와의 병용은 절대 금기.",
+    "indications": "말에서의 장기 진정(흥분성 말 또는 강제 마구간 안정이 필요한 말). 과거 페스큐 독성증에 의한 무유증 치료에 사용되었으나 현재는 주로 돔페리돈으로 대체됨. 인체에서는 고혈압 및 정신분열증 치료에 사용되었으나 현재는 더 안전한 대안으로 대체됨.",
+    "client_info": "이 약물은 반드시 수의사가 투여해야 합니다. 레세르핀 사용 전 반드시 수의사와 상담하십시오. 설사, 혈압 저하, 산통 등의 부작용 징후를 모니터링하십시오. 수컷 말에서 음경 탈출(페니스 처짐)이 발생할 수 있습니다. 레세르핀은 대부분의 공인 경기에서 금지 약물입니다. 레세르핀 투여 중단 후 3~4주간은 선택적 마취 시술을 피하도록 수의사가 권고할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog dosage",
+      "Cat dosage",
+      "CYP profile",
+      "Protein binding",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/32.jsonl",
+    "extracted_at": "2026-03-10T23:11:31.039733+00:00",
+    "reviewer": null
+  }
+}

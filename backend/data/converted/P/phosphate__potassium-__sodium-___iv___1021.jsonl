@@ -1,0 +1,522 @@
+{
+  "id": "phosphate_potassium_sodium_iv",
+  "drug_identity": {
+    "name_ko": "인산염 (칼륨-, 나트륨-) 주사",
+    "name_en": "Phosphate (Potassium-, Sodium-), IV",
+    "active_ingredient": "Potassium Phosphate / Sodium Phosphate",
+    "brand_names": [
+      "Magnadex",
+      "Norcalciphos",
+      "Cal-Dextro Special",
+      "Cal-Dextro #2",
+      "CMPK",
+      "Cal-Phos #2"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 FDA 승인된 비경구 인산염 단독 제품은 없으며, 인간용 제품을 오프라벨로 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 3.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.2,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인산염은 신장에서 사구체 여과를 통해 배설되며, 세뇨관에서 최대 80%가 재흡수된다."
+    },
+    "extra_information": "IV 투여된 인산염은 신장에서 제거된다. 사구체 여과 후 세뇨관에서 최대 80%가 재흡수된다. 개와 고양이에 대한 별도의 종 특이적 약동학 데이터는 문헌에 기재되어 있지 않다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설 및 신부전 위험이 명시되어 있음. 개와 고양이 모두 동일한 위험 프로파일 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS disorders",
+          "seizures (human)"
+        ],
+        "index": 1,
+        "evidence": "저인산혈증은 신경근 및 CNS 장애를 유발할 수 있으며, 인간에서 희석되지 않은 급속 IV 투여 시 경련이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hemolytic anemia",
+          "thrombocytopenia",
+          "hyperkalemia",
+          "hypernatremia"
+        ],
+        "index": 2,
+        "evidence": "급성 중증 저인산혈증은 용혈성 빈혈 및 혈소판감소증을 유발할 수 있음. 과보충 시 고칼륨혈증 또는 고나트륨혈증 가능."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal failure",
+          "oliguric renal failure",
+          "renal elimination",
+          "soft tissue mineralization"
+        ],
+        "index": 3,
+        "evidence": "인산염은 신장으로 배설되며, 과보충 시 신부전 및 연조직 석회화 위험이 있음. 핍뇨성 신부전은 금기임."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cirrhotic liver disease"
+        ],
+        "index": 1,
+        "evidence": "간경변 환자에서 저인산혈증으로 인한 기능 저하가 언급됨. 직접적인 간 독성은 보고되지 않음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "cardiac arrest",
+          "hyperkalemia",
+          "digoxin"
+        ],
+        "index": 2,
+        "evidence": "인간에서 급속 IV 투여 시 심장 부정맥 및 심정지 보고. 디곡신 투여 환자에서 고칼륨혈증으로 인한 생명을 위협하는 위험 존재."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS disorders",
+          "seizures (human)"
+        ],
+        "index": 1,
+        "evidence": "저인산혈증은 신경근 및 CNS 장애를 유발할 수 있으며, 인간에서 희석되지 않은 급속 IV 투여 시 경련이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hemolytic anemia",
+          "thrombocytopenia",
+          "hyperkalemia",
+          "hypernatremia"
+        ],
+        "index": 2,
+        "evidence": "급성 중증 저인산혈증은 용혈성 빈혈 및 혈소판감소증을 유발할 수 있음. 과보충 시 고칼륨혈증 또는 고나트륨혈증 가능."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal failure",
+          "oliguric renal failure",
+          "renal elimination",
+          "soft tissue mineralization"
+        ],
+        "index": 3,
+        "evidence": "인산염은 신장으로 배설되며, 과보충 시 신부전 및 연조직 석회화 위험이 있음. 핍뇨성 신부전은 금기임."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cirrhotic liver disease"
+        ],
+        "index": 1,
+        "evidence": "간경변 환자에서 저인산혈증으로 인한 기능 저하가 언급됨. 직접적인 간 독성은 보고되지 않음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "cardiac arrest",
+          "hyperkalemia",
+          "digoxin"
+        ],
+        "index": 2,
+        "evidence": "인간에서 급속 IV 투여 시 심장 부정맥 및 심정지 보고. 디곡신 투여 환자에서 고칼륨혈증으로 인한 생명을 위협하는 위험 존재."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "Plumb's 모노그래프에 반감기, 최고 혈중 농도 도달 시간, 생체이용률 등의 약동학적 수치가 명시되어 있지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril 등)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "potassium phosphate"
+      ],
+      "evidence": "ACE inhibitors used with potassium phosphate may result in hyperkalemia."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia",
+        "heart block",
+        "life-threatening"
+      ],
+      "evidence": "Potassium phosphate must be used with extreme caution in patients taking digoxin; life-threatening hyperkalemia can result. Do not use in digitalized patients with heart block."
+    },
+    {
+      "drug": "Potassium-Sparing Diuretics (spironolactone 등)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "potassium phosphate"
+      ],
+      "evidence": "Potassium-sparing diuretics used with potassium phosphate may result in hyperkalemia."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "저인산혈증 치료 (일반)",
+          "value": "0.01 - 0.03",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈청 인 수치를 4~6시간마다 모니터링하고 혈청 인이 2 mg/dL 이상 유지되도록 주입 속도 조절. 단위는 mmol/kg/hour.",
+          "evidence": "오프라벨. Plumb's: 0.01–0.03 mmol/kg/hour IV CRI 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "당뇨병성 케톤산증(DKA) 치료 시 저인산혈증",
+          "value": "0.03 - 0.12",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "DKA 치료 시 최대 0.12 mmol/kg/hour까지 사용 가능. 보충 인산염의 1/3~1/2을 칼륨 인산염으로 제공 권장. 단위는 mmol/kg/hour.",
+          "evidence": "오프라벨. Plumb's: DKA에서 최대 0.12 mmol/kg/hour 용량 언급."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "저인산혈증 치료 (일반)",
+          "value": "0.01 - 0.03",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈청 인 수치를 4~6시간마다 모니터링하고 혈청 인이 2 mg/dL 이상 유지되도록 주입 속도 조절. 단위는 mmol/kg/hour.",
+          "evidence": "오프라벨. Plumb's: 개/고양이 동일 용량 0.01–0.03 mmol/kg/hour IV CRI 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "당뇨병성 케톤산증(DKA) 치료 시 저인산혈증",
+          "value": "0.03 - 0.12",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "DKA 치료 시 최대 0.12 mmol/kg/hour까지 사용 가능. 단위는 mmol/kg/hour.",
+          "evidence": "오프라벨. Plumb's: DKA에서 최대 0.12 mmol/kg/hour 용량 언급."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "핍뇨성 신부전 환자에서는 금기. 신장 질환 환자에서는 주의하여 사용. 구체적인 크레아티닌 역치 또는 용량 조절 계수는 명시되어 있지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 질환에 대한 구체적인 용량 조절 지침은 명시되어 있지 않음. 간경변 환자에서 저인산혈증으로 인한 기능 저하 위험이 언급됨."
+  },
+  "contraindications": [
+    {
+      "condition": "고인산혈증",
+      "match_terms": [
+        "hyperphosphatemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 저칼슘혈증 또는 고칼슘혈증",
+      "match_terms": [
+        "hypocalcemia",
+        "hypercalcemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "핍뇨성 신부전",
+      "match_terms": [
+        "oliguric renal failure",
+        "acute kidney injury",
+        "AKI"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "조직 괴사",
+      "match_terms": [
+        "tissue necrosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고칼륨혈증 (칼륨 인산염 사용 시)",
+      "match_terms": [
+        "hyperkalemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고나트륨혈증 (나트륨 인산염 사용 시)",
+      "match_terms": [
+        "hypernatremia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "디곡신 투여 중인 환자 (칼륨 인산염 사용 시)",
+      "match_terms": [
+        "digoxin",
+        "digitalis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "인산염은 칼슘 대사, 산-염기 완충, B-비타민 이용, 골 침착, 여러 효소 시스템 등 체내 다양한 기능에 관여하는 필수 전해질이다. IV 투여 시 저인산혈증을 교정하여 이와 관련된 임상 증상을 개선한다.",
+    "common_extra_effects": [
+      "고인산혈증",
+      "저칼슘혈증",
+      "저혈압",
+      "신부전",
+      "연조직 석회화",
+      "고칼륨혈증 (칼륨 인산염)",
+      "고나트륨혈증 (나트륨 인산염)",
+      "경련 (인간, 급속 투여 시)",
+      "심장 부정맥 (인간, 급속 투여 시)",
+      "심정지 (인간, 급속 투여 시)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 저인산혈증 치료 시 0.01–0.03 mmol/kg/hour IV CRI로 투여하며, DKA의 경우 최대 0.12 mmol/kg/hour까지 사용 가능. 반드시 희석 후 투여하고, 칼슘 함유 수액(예: LRS)에 희석하지 않도록 주의. 혈청 인 수치를 4~6시간마다 모니터링하고, 고인산혈증 유발에 주의. 칼륨 인산염 사용 시 전체 수액 요법에서 칼륨 총량을 고려하여 고칼륨혈증 위험을 최소화해야 함.",
+    "cat": "고양이에서도 개와 동일한 용량(0.01–0.03 mmol/kg/hour IV CRI)이 권장되며, DKA의 경우 최대 0.12 mmol/kg/hour까지 사용 가능. 반드시 희석 후 투여하고, 칼슘 함유 수액(예: LRS)에 희석하지 않도록 주의. 혈청 인 수치를 4~6시간마다 모니터링하고, 고인산혈증 유발에 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심장 또는 신장 질환이 있는 개에서 주의하여 사용. 디곡신 투여 중인 환자에서 칼륨 인산염 사용 시 생명을 위협하는 고칼륨혈증 위험. 반드시 희석 후 투여하고 전해질 수치를 면밀히 모니터링해야 함."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심장 또는 신장 질환이 있는 고양이에서 주의하여 사용. 반드시 희석 후 투여하고 전해질 수치를 면밀히 모니터링해야 함."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관, 동결 방지.",
+    "forms": [
+      "칼륨 인산염 주사액: 각 mL당 일염기성 칼륨 인산염 175 mg + 이염기성 칼륨 인산염 300 mg (인 3 mmol, 칼륨 4.7 mEq 제공), 15 mL 바이알",
+      "칼륨 인산염 주사액: 각 mL당 일염기성 칼륨 인산염 224 mg + 이염기성 칼륨 인산염 236 mg (인 3 mmol, 칼륨 4.4 mEq 제공), 15 mL 바이알",
+      "나트륨 인산염 주사액: 각 mL당 일염기성 나트륨 인산염 일수화물 276 mg + 무수 이염기성 나트륨 인산염 142 mg (인 3 mmol, 나트륨 4 mEq 제공), 5 mL, 15 mL, 50 mL 바이알"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "IV 인산염(칼륨- 또는 나트륨-)은 경구 인 섭취가 불가능한 경우 급성 중증 저인산혈증의 교정 또는 예방에 사용됩니다. 혈청 인이 1.5 mg/dL 미만이거나 용혈, 장폐색, 횡문근융해증 등의 임상 증상이 동반된 경우 2 mg/dL 미만일 때 비경구 투여가 권장됩니다. 반드시 희석 후 투여하며, 칼슘 함유 수액(LRS 등)에 희석하지 않도록 주의해야 합니다. 고인산혈증, 저칼슘혈증, 핍뇨성 신부전, 조직 괴사 환자에서는 금기입니다. 수의학적으로 FDA 승인된 단독 비경구 인산염 제품은 없으며 오프라벨로 사용됩니다.",
+    "indications": "저인산혈증 치료 및 예방 (오프라벨): 혈청 인 < 1.5 mg/dL 또는 임상 증상 동반 시 < 2 mg/dL. 당뇨병성 케톤산증(DKA) 관련 저인산혈증. 경구 인 섭취가 불가능한 모든 임상 상황.",
+    "client_info": "이 약은 혈중 인 수치가 위험하게 낮아진 경우 정맥으로 투여하는 전해질 보충제입니다. 반드시 병원에서 희석하여 천천히 투여해야 하며, 투여 중 혈액 검사를 통해 인, 칼슘, 칼륨, 나트륨 수치를 정기적으로 확인합니다. 과다 투여 시 저칼슘혈증, 신부전, 심장 문제 등이 발생할 수 있으므로 수의사의 지시에 따라 면밀히 모니터링하는 것이 중요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Chemistry",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed veterinary pharmacokinetics (half-life, Vd, clearance)",
+      "Species-specific PK data for dog and cat",
+      "Onset of action",
+      "Protein binding data",
+      "Oral bioavailability (IV only product)",
+      "CYP enzyme interactions",
+      "Renal dose adjustment thresholds",
+      "Hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/19.jsonl",
+    "extracted_at": "2026-03-10T19:03:09.846900+00:00",
+    "reviewer": null
+  }
+}

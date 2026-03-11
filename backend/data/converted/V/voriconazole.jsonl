@@ -1,0 +1,725 @@
+{
+  "id": "voriconazole",
+  "drug_identity": {
+    "name_ko": "보리코나졸",
+    "name_en": "Voriconazole",
+    "active_ingredient": "Voriconazole",
+    "brand_names": [
+      "Vfend",
+      "Vfend I.V."
+    ],
+    "allergy_class": "azole antifungal",
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 동물에 오프라벨로 사용. 고양이에서는 최후 수단으로만 사용 권장.",
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C"
+      ],
+      "inhibitors": [
+        "CYP3A"
+      ],
+      "inducers": [],
+      "pathway_evidence": "보리코나졸은 CYP450 2C의 기질이며 CYP450 3A 동종효소의 억제제임. 개에서는 반복 투여 시 간 마이크로솜 효소의 자가유도(autoinduction)가 발생하여 비선형 소실 약동학을 보임. 인간, 토끼, 기니피그에서는 자가유도가 발생하지 않음."
+    },
+    "extra_information": "개: 경구 투여 후 빠르고 거의 완전히 흡수됨. 식이와 함께 투여 시 흡수 감소. 혈장 단백 결합률 51%. 분포용적 약 1.3 L/kg. CSF, 방수, 활액 내 농도는 혈장의 43~53%. 주요 순환 대사체는 N-산화물 대사체(항진균 활성 매우 낮음). 반감기 3.3시간. 반복 투여 시 자가유도 대사로 용량 증가 필요 가능성 있음.\n고양이: 단회 경구 투여(4~6 mg/kg) 시 1.5시간 내 최고 농도 2.2~2.5 µg/mL. 분포용적 1.7~2.1 L/kg. 평균 반감기 43시간. 25 mg/cat 부하 후 12.5 mg/cat 격일 투여 시 2주간 약물 축적 관찰됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 평가. 수의학적 종별 데이터 일부 존재하나 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "neurotoxicosis",
+          "reversible neurotoxicosis",
+          "CNS penetration",
+          "CSF concentration"
+        ],
+        "index": 1,
+        "evidence": "개에서 고농도 보리코나졸은 가역적 신경독성 및 간효소 상승과 관련됨. CSF 내 농도는 혈장의 43~53%로 CNS 침투 확인됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "pyrexia",
+          "infusion reaction"
+        ],
+        "index": 1,
+        "evidence": "IV 주입 후 발열 및 빈맥 보고. 인간에서 빈혈, 백혈구감소증, 혈소판감소증, 범혈구감소증 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "SBECD accumulation",
+          "decreased renal function",
+          "nephrotoxicity"
+        ],
+        "index": 1,
+        "evidence": "IV 제형의 SBECD(설포부틸에테르 베타-사이클로덱스트린 나트륨)는 신기능 저하 환자에서 축적 가능. 인간에서 신독성 드물게 보고됨."
+      },
+      "liver": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "liver enlargement",
+          "hepatic microsomal enzyme induction",
+          "cytochrome P450 increase",
+          "hepatotoxicity"
+        ],
+        "index": 1,
+        "evidence": "개에서 30일 경구 투여 시 간 비대 및 CYP450 간 마이크로솜 효소 2~3배 상승 관찰됨. 자가유도 대사로 인한 간 부담 증가."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "tachypnea",
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "IV 주입 후 빈맥 및 빈호흡 보고. 인간에서 QT 연장, 토르사드 드 포인트 드물게 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "ataxia",
+          "hind limb paresis",
+          "paraplegia",
+          "mydriasis",
+          "decreased pupillary light response",
+          "reduced menace response",
+          "miosis",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 10~13 mg/kg PO 1일 1회 투여 시 운동실조, 하지 마비, 대광반사 소실, 위협반응 감소 등 심각한 신경학적 이상 보고됨. 동공 축소 및 침 흘림도 관찰됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "arrhythmia",
+          "hypokalemia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 부정맥 및 저칼륨혈증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "azotemia",
+          "nephrotoxicity",
+          "SBECD accumulation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 10 mg/kg PO 1일 1회 투여 시 질소혈증(azotemia) 발생 보고됨. IV 제형의 SBECD 축적 위험."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver enzyme elevation"
+        ],
+        "index": 1,
+        "evidence": "인간 데이터에서 간독성(황달, 간기능 이상) 보고됨. 고양이 특이적 간 데이터는 제한적이나 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "arrhythmia",
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 부정맥 보고됨. 인간에서 QT 연장 및 토르사드 드 포인트 드물게 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 3.3,
+      "max": 43.0,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 51,
+    "evidence": "개: 경구 투여 후 최고 농도 도달 시간 약 3시간, 반감기 3.3시간(1개 연구). 고양이: 최고 농도 도달 시간 1.5시간, 평균 반감기 43시간. 말: 반감기 약 13시간. 알파카: 반감기 약 8시간. 히스파니올라 아마존 앵무새: 반감기 약 1시간. 개 혈장 단백 결합률 51%, 분포용적 1.3 L/kg."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기(contraindicated)→3, 심각(serious/major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 상호작용은 해당 없음.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Potential for serious cardiac arrhythmias such as torsade de pointes; concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia",
+        "increased plasma concentration"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of cisapride and increase risk for serious cardiac arrhythmias; use is contraindicated."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 3,
+      "keywords": [
+        "increased plasma concentration",
+        "toxicity"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of doxorubicin; concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 3,
+      "keywords": [
+        "decreased voriconazole concentration",
+        "therapeutic failure",
+        "CYP induction"
+      ],
+      "evidence": "May decrease voriconazole concentrations resulting in therapeutic failure; use together is contraindicated."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Potential for serious cardiac arrhythmias such as torsade de pointes; concurrent use is contraindicated in humans."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 3,
+      "keywords": [
+        "decreased voriconazole concentration",
+        "CYP induction",
+        "therapeutic failure"
+      ],
+      "evidence": "Decreased voriconazole concentrations; use together contraindicated."
+    },
+    {
+      "drug": "Procainamide",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Potential for serious cardiac arrhythmias such as torsade de pointes."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Potential for serious cardiac arrhythmias such as torsade de pointes."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased cyclosporine concentration",
+        "CYP3A inhibition",
+        "dose reduction required"
+      ],
+      "evidence": "Increased cyclosporine concentrations; 50% reduction in cyclosporine dose recommended."
+    },
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "increased benzodiazepine concentration",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Voriconazole may increase benzodiazepine (eg, alprazolam, midazolam) concentrations."
+    },
+    {
+      "drug": "Calcium Channel Blockers",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "CYP3A inhibition",
+        "dose adjustment required"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of calcium channel blockers (eg, amlodipine, diltiazem, verapamil); dosage adjustment may be required."
+    },
+    {
+      "drug": "Fentanyl",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "opioid toxicity",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Voriconazole may increase plasma concentrations of fentanyl and alfentanil; monitor for toxicity and adjust dosage if necessary."
+    },
+    {
+      "drug": "Alfentanil",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "opioid toxicity",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Voriconazole may increase plasma concentrations of alfentanil; monitor for toxicity and adjust dosage if necessary."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 2,
+      "keywords": [
+        "increased R-methadone concentration",
+        "methadone toxicity",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Voriconazole may increase plasma concentrations of R-methadone; monitor for methadone toxicity and adjust dosage if necessary."
+    },
+    {
+      "drug": "Glipizide",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "hypoglycemia risk"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of glipizide and increase risk for hypoglycemia."
+    },
+    {
+      "drug": "Glyburide",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "hypoglycemia risk"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of glyburide and increase risk for hypoglycemia."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "increased AUC",
+        "prednisolone exposure increase",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Potentially increased AUC for prednisolone when used with voriconazole."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "CYP3A inhibition",
+        "toxicity risk"
+      ],
+      "evidence": "Voriconazole may increase plasma concentrations of sildenafil; monitor for toxicity and adjust dosage if necessary."
+    },
+    {
+      "drug": "Vinca Alkaloids",
+      "severity": 2,
+      "keywords": [
+        "increased vinca alkaloid concentration",
+        "neurotoxicity",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Possible increased vinca alkaloid (eg, vinblastine, vincristine) concentrations; monitor for toxicity."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "potentiated anticoagulant effect",
+        "bleeding risk",
+        "CYP inhibition"
+      ],
+      "evidence": "Voriconazole may potentiate warfarin's anticoagulant effects."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "increased bromocriptine concentration",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of bromocriptine."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "increased buspirone concentration",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Voriconazole may increase serum concentrations of buspirone."
+    },
+    {
+      "drug": "Proton Pump Inhibitors",
+      "severity": 1,
+      "keywords": [
+        "increased omeprazole concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Voriconazole may increase omeprazole (and potentially other PPIs) concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "high",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "콕시디오이데스증 (Coccidioidomycosis) - 오프라벨",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. 참고문헌 1 기반."
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 아스페르길루스증 (Systemic aspergillosis) - 오프라벨",
+          "value": "4 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. 참고문헌 19 기반."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부비동 아스페르길루스증 수술 후 진균 플라크 제거 - 오프라벨 (증례 시리즈 n=3)",
+          "value": "2.5 - 3.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. 증례 시리즈(n=3) 기반. 참고문헌 14."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "아스페르길루스증 - 오프라벨 (약동학 연구 기반 부하 용량)",
+          "value": "25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 (mg/cat, NOT mg/kg). 이후 12.5 mg/cat q72h 유지.",
+          "evidence": "오프라벨. 약동학 연구 기반(참고문헌 7). 10 mg/kg PO 1일 1회 투여 시 심각한 독성 보고됨(참고문헌 15, 16). 최후 수단으로만 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "아스페르길루스증 - 오프라벨 (유지 용량)",
+          "value": "12.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "유지 용량 (mg/cat, NOT mg/kg). 부하 용량 25 mg/cat 이후 투여.",
+          "evidence": "오프라벨. 약동학 연구 기반(참고문헌 7). 고양이에서 심각한 이상반응 위험으로 최후 수단으로만 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "IV 제형의 SBECD(설포부틸에테르 베타-사이클로덱스트린 나트륨)는 신기능 저하 환자에서 축적될 수 있음. 신기능 저하 환자에서 IV 제형 사용 시 주의 또는 회피 권장. 경구 제형에 대한 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 환자에서 극도의 주의를 기울여 사용. 기저치 및 주기적 간 화학 패널 모니터링 권장. 구체적 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "보리코나졸 또는 다른 아졸계 항진균제 과민증",
+      "match_terms": [
+        "azole hypersensitivity",
+        "voriconazole allergy",
+        "antifungal allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (심각한 이상반응 위험)",
+      "match_terms": [
+        "feline",
+        "cat"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "부정맥 유발 가능 상태 (proarrhythmic conditions)",
+      "match_terms": [
+        "arrhythmia",
+        "QT prolongation",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하 (IV 제형 SBECD 축적 위험)",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "decreased renal function",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균 세포막의 에르고스테롤 합성에 필요한 CYP450 의존성 라노스테롤 14α-탈메틸화 효소를 억제하여 세포막 투과성 증가 및 세포 내용물 누출을 유발하는 광범위 트리아졸계 항진균제. 아스페르길루스 등 사상균에 대해서는 24-메틸렌 데하이드로라노스테롤 탈메틸화도 추가로 억제.",
+    "common_extra_effects": [
+      "시각 장애 (흐림, 반점, 파상 선)",
+      "발진",
+      "오심, 구토, 설사",
+      "간독성 (황달, 간기능 이상)",
+      "고혈압/저혈압",
+      "빈맥",
+      "말초 부종",
+      "저칼륨혈증",
+      "저마그네슘혈증",
+      "QT 연장",
+      "토르사드 드 포인트",
+      "신독성",
+      "환각",
+      "빈혈",
+      "백혈구감소증",
+      "혈소판감소증",
+      "범혈구감소증",
+      "안구 출혈",
+      "박탈성 피부 반응"
+    ],
+    "dog_mechanism": "플루코나졸의 합성 유도체로 광범위 항진균 활성 보유. 개에서 반복 투여 시 간 마이크로솜 효소 자가유도로 인한 비선형 소실 약동학 발생.",
+    "dog_extra_effects": [
+      "경미~중등도 위장관 이상반응",
+      "간 비대",
+      "CYP450 간 마이크로솜 효소 2~3배 상승",
+      "가역적 신경독성 (고농도 시)",
+      "간효소 상승",
+      "IV 주입 후 발열 및 빈호흡"
+    ],
+    "cat_mechanism": "고양이는 보리코나졸 이상반응에 특히 취약하며 심각한 신경학적, 신장, 안과적 이상반응 발생 위험이 높음.",
+    "cat_extra_effects": [
+      "질소혈증 (azotemia)",
+      "식욕부진",
+      "기력저하",
+      "체중 감소",
+      "피부 약물 반응",
+      "운동실조 (ataxia)",
+      "후지 마비 (hind limb paresis)",
+      "대마비 (paraplegia)",
+      "산동 (mydriasis)",
+      "대광반사 감소 또는 소실",
+      "위협반응 감소",
+      "부정맥",
+      "저칼륨혈증",
+      "동공 축소 (miosis)",
+      "침 흘림 (ptyalism)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 보리코나졸은 반복 투여 시 자가유도 대사(autoinduction)로 인해 비선형 소실 약동학을 보이므로 시간이 지남에 따라 용량 증가가 필요할 수 있음. 치료 목표 혈중 농도는 1~4 µg/mL. 기저치 및 주기적 간 화학 패널과 전해질 모니터링 필수. 고농도에서 가역적 신경독성 발생 가능.",
+    "cat": "고양이는 보리코나졸의 심각한 이상반응(신경독성, 신독성, 안과적 이상)에 매우 취약하므로 최후 수단으로만 사용. 10 mg/kg PO 1일 1회 투여는 심각한 독성과 관련됨. 약동학 연구에서 제안된 용량은 25 mg/cat 부하 후 12.5 mg/cat q72h이나 이 용량에서도 동공 축소 및 침 흘림 등 이상반응 관찰됨. 현재 추가 약동학 및 안전성 연구가 완료될 때까지 사용을 극도로 자제해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 간독성, 자가유도 대사로 인한 비선형 약동학, 고농도 시 신경독성 위험이 있음. 간기능 및 전해질 모니터링 필요. IV 제형 사용 시 주입 반응 주의."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 심각한 신경독성, 신독성, 안과적 이상반응이 다수 보고됨. 최후 수단으로만 사용하며, 사용 시 극도의 주의와 면밀한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 15~30°C 보관. 경구 현탁액 분말(미조제): 냉장(2~8°C) 보관. 조제 후: 15~30°C 밀폐 용기 보관(냉장/냉동 금지), 14일 안정. 주사용 분말: 15~30°C 보관. 재조제 후 즉시 사용 권장; 냉장(2~8°C) 시 24시간 안정. 혼탁하거나 입자 보이면 폐기.",
+    "forms": [
+      "Voriconazole Tablets 50 mg",
+      "Voriconazole Tablets 200 mg",
+      "Voriconazole Powder for Oral Suspension 40 mg/mL (45 g in 75 mL bottle)",
+      "Voriconazole Powder for Injection, Lyophilized 200 mg single-use vial (contains SBECD 3200 mg/vial)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "보리코나졸은 광범위 2세대 트리아졸계 항진균제로 Aspergillus, Cryptococcus, Blastomyces, Coccidioides, Fusarium 등에 효과적임. 수의학적 허가 제품은 없으며 오프라벨로 사용됨. 고양이에서 심각한 신경독성, 신독성, 안과적 이상반응이 보고되어 최후 수단으로만 사용해야 함. 개에서는 자가유도 대사로 인해 시간 경과에 따른 용량 증가가 필요할 수 있음. 치료 혈중 농도 목표: 1~4 µg/mL. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비(PPE) 착용 필요. 다수의 약물 상호작용 주의.",
+    "indications": "개: 콕시디오이데스증, 전신 아스페르길루스증, 부비동 아스페르길루스증 (모두 오프라벨). 고양이: 아스페르길루스증 (오프라벨, 최후 수단). 말: 전신 진균 감염, 구개낭 진균증, 각막진균증 (오프라벨). 조류: 전신 진균 감염, 아스페르길루스증 (오프라벨). 파충류: 전신 진균 감염 (오프라벨).",
+    "client_info": "이 약은 식사 최소 1시간 전 또는 1시간 후에 투여하십시오. 가려움/발진, 눈 흰자위·잇몸·피부의 황달, 식욕 감소, 보행 어려움, 시력 문제 등 이상 증상이 나타나면 즉시 수의사에게 알리십시오. 이 약은 NIOSH에서 위험 약물로 분류하고 있습니다. 특히 임신 중이거나 임신을 계획 중인 경우 취급 시 개인보호장비(PPE) 착용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability percentage (dog)",
+      "CYP substrate specificity beyond CYP2C/3A class level",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr.mean",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:45:01.117498+00:00",
+    "reviewer": null
+  }
+}

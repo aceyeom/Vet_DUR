@@ -1,0 +1,669 @@
+{
+  "id": "spironolactone",
+  "drug_identity": {
+    "name_ko": "스피로노락톤",
+    "name_en": "Spironolactone",
+    "active_ingredient": "Spironolactone",
+    "brand_names": [
+      "Aldactone",
+      "Cardalis",
+      "Aldactazide",
+      "Prilactone"
+    ],
+    "allergy_class": null,
+    "class": "Diuretic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 단일 성분 FDA 승인 수의용 제제 없음. 개에서 심부전, 복수, 고혈압 등에 오프라벨로 사용. 영국에서는 Cardalis(스피로노락톤/베나제프릴 복합제)가 허가됨.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 80,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.18,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "스피로노락톤은 빠르게 대사되어(반감기 1~2시간) 카렌논(canrenone) 등 여러 활성 대사체로 전환됨. 카렌논의 평균 반감기는 약 20시간. 투여량의 약 70%는 대변으로, 18%는 소변으로 배설됨(개 데이터)."
+    },
+    "extra_information": "개에서 공복 시 경구 생체이용률은 약 50%이나 음식과 함께 투여 시 최대 90%까지 증가함. 스피로노락톤 및 활성 대사체 카렌논은 혈장 단백질에 약 98% 결합함. 냉동-해동 시 불안정하여 동물 약동학 연구가 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장: 전해질 이상(고칼륨혈증), 신기능 악화, BUN 상승 등 언급. 간: 복수 치료에 사용되나 간독성 직접 언급 없음. 심장: 심부전 보조치료제로 사용. 뇌: 기면, 운동실조 등 CNS 효과 언급. 혈액: 전해질 이상 언급.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "기면(lethargy)",
+          "운동실조(ataxia)"
+        ],
+        "index": 1,
+        "evidence": "개에서 CNS 효과(기면, 운동실조)가 이상반응으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "고칼륨혈증",
+          "저나트륨혈증",
+          "전해질 이상"
+        ],
+        "index": 2,
+        "evidence": "고칼륨혈증, 저나트륨혈증 등 전해질 이상이 이상반응으로 언급됨. 개에서는 전해질에 유의한 영향이 없는 것으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "BUN 상승",
+          "경증 산증",
+          "고칼륨혈증",
+          "신기능 저하 시 주의"
+        ],
+        "index": 3,
+        "evidence": "신기능 저하 환자에서 BUN 상승, 경증 산증, 고칼륨혈증 위험. 급성 신부전 및 무뇨증에서 금기. 신기능 저하 시 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "간질환 시 주의",
+          "복수 치료"
+        ],
+        "index": 1,
+        "evidence": "간질환 환자에서 주의 사용 권고. 복수 치료에 사용되나 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "심부전 보조치료",
+          "심근 섬유화 억제"
+        ],
+        "index": 2,
+        "evidence": "CHF 보조치료제로 사용. 심근 섬유화, 혈관 리모델링 억제 효과가 인간에서 보고됨. 수의 환자에서의 효과는 논란 중."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "기면(lethargy)",
+          "운동실조(ataxia)"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 CNS 효과(기면, 운동실조)가 이상반응으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "고칼륨혈증",
+          "저나트륨혈증",
+          "칼슘 상승",
+          "인 상승",
+          "총단백 상승"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 스피로노락톤 투여 후 칼륨, 칼슘, 크레아티닌, 인, 총단백 유의하게 상승 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "크레아티닌 상승",
+          "BUN 상승",
+          "신기능 저하 시 주의"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 크레아티닌 평균 0.22 mg/dL 상승 보고. 신기능 저하 시 고칼륨혈증 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "간질환 시 주의"
+        ],
+        "index": 1,
+        "evidence": "간질환 환자에서 주의 사용 권고. 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "심부전 보조치료",
+          "비대성 심근병증"
+        ],
+        "index": 2,
+        "evidence": "고양이 심부전 및 비대성 심근병증(HCM)에서 보조치료로 사용. Maine Coon 고양이 연구에서 이완기 기능 또는 좌심실 질량에 유의한 변화 없었음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 2.0,
+      "mean": 1.5,
+      "species": "human"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 98,
+    "evidence": "인간에서 경구 생체이용률 90% 이상, 최고 혈중 농도 도달 시간 1~2시간. 스피로노락톤 반감기 1~2시간(인간), 활성 대사체 카렌논 반감기 평균 약 20시간. 개에서 공복 시 생체이용률 약 50%, 음식과 함께 투여 시 최대 90%. 단독 사용 시 이뇨 효과는 치료 3일째에 최대 효과 도달."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (enalapril, lisinopril 등)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia is possible but usually clinically irrelevant when combined with ACE inhibitors. Monitor serum potassium."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (irbesartan, telmisartan 등)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia is possible when combined with ARBs."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, carvedilol, propranolol 등)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia is possible when combined with beta-blockers."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증성 대사성 산증"
+      ],
+      "evidence": "Hyperkalemic metabolic acidosis is possible when combined with cholestyramine."
+    },
+    {
+      "drug": "Deoxycorticosterone Pivalate (DOCP)",
+      "severity": 2,
+      "keywords": [
+        "이뇨 효과 감소",
+        "나트륨 배설 효과 감소"
+      ],
+      "evidence": "DOCP may reduce the diuretic and natriuretic effects of spironolactone."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "디곡신 반감기 연장",
+        "디곡신 독성"
+      ],
+      "evidence": "Spironolactone may increase the half-life of digoxin; enhanced monitoring of digoxin serum concentrations and effects is warranted."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "미토탄 효과 감소"
+      ],
+      "evidence": "Spironolactone may blunt the effects of mitotane if given concurrently; very limited information available. Monitor carefully."
+    },
+    {
+      "drug": "Neuromuscular Blockers, Non-Depolarizing (pancuronium, rocuronium, vecuronium 등)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 효과 증가"
+      ],
+      "evidence": "Increase in neuromuscular blockade effects is possible when combined with non-depolarizing neuromuscular blockers."
+    },
+    {
+      "drug": "NSAIDs (carprofen, robenacoxib 등)",
+      "severity": 2,
+      "keywords": [
+        "이뇨 효과 감소",
+        "나트륨 배설 효과 감소",
+        "신기능 저하"
+      ],
+      "evidence": "NSAIDs may reduce diuretic and natriuretic effects of spironolactone. Ensure adequate hydration before using combination. Contraindicated in dogs with renal insufficiency per UK label."
+    },
+    {
+      "drug": "Potassium-Sparing Diuretics (triamterene 등)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia is possible when combined with other potassium-sparing diuretics."
+    },
+    {
+      "drug": "Potassium Supplements",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia is possible when potassium supplements are used concurrently with spironolactone."
+    },
+    {
+      "drug": "Salicylates (aspirin, bismuth subsalicylate 등)",
+      "severity": 1,
+      "keywords": [
+        "이뇨 효과 감소"
+      ],
+      "evidence": "Spironolactone's diuretic effects may be decreased if aspirin or other salicylates are administered concomitantly."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "전임상 점액종성 승모판 질환(MMVD) - 베나제프릴 병용",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 베나제프릴과 병용 시 심부전 발병 지연 효과 입증 실패한 연구에서 사용된 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "보상성 MMVD - ACE 억제제 및 푸로세미드 병용",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "오프라벨. 파일럿 연구에서 스피로노락톤의 이점이 시사되었으나 추가 연구 필요."
+        },
+        {
+          "logic_type": "linear",
+          "context": "MMVD로 인한 울혈성 심부전 보조치료 (a)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "음식과 함께 투여",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "MMVD로 인한 울혈성 심부전 보조치료 (b)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "용량 범위 0.5~4 mg/kg q12~24h 보고됨",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "복수 치료",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "7~10일 내 반응 없으면 3~5일마다 최대 4 mg/kg/day까지 증량",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고혈압 보조치료",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1차 치료제 아님; 단독 사용 시 효과 미미",
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심부전 이뇨제 (푸로세미드 및 ACE 억제제로 조절 안 될 때)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "개 용량 참고하여 사용; 효능 입증 연구 없음",
+          "evidence": "오프라벨. 일화적 보고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심근병증 보조치료",
+          "value": "1.7 - 3.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 3.3,
+          "duration_note": "파일럿 연구; 추가 연구 필요",
+          "evidence": "오프라벨. 파일럿 연구에서 사용된 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고혈압 보조치료",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1차 치료제 아님; 피부 약물 반응으로 사용 제한될 수 있음",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "급성 신부전, 무뇨증에서 금기. 유의한 신기능 저하 환자에서 금기. 경증~중등도 신기능 저하 시 주의 사용. 신기능 저하 환자에서 BUN 상승, 경증 산증, 고칼륨혈증 위험 증가. 신기능 저하 개에서 NSAIDs와 병용 금기(영국 허가사항)."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간질환 환자에서 주의 사용 권고. 복수 치료에 사용되나 간기능 저하 시 모니터링 필요. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "고칼륨혈증",
+      "match_terms": [
+        "hyperkalemia",
+        "고칼륨혈증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "에디슨병(부신기능저하증)",
+      "match_terms": [
+        "Addison's disease",
+        "hypoadrenocorticism",
+        "부신기능저하증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "무뇨증",
+      "match_terms": [
+        "anuria",
+        "무뇨증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 신부전",
+      "match_terms": [
+        "acute renal failure",
+        "acute kidney injury",
+        "급성 신부전"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "유의한 신기능 저하",
+      "match_terms": [
+        "significant renal impairment",
+        "CKD",
+        "신기능 저하"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "간질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "저나트륨혈증",
+      "match_terms": [
+        "hyponatremia",
+        "저나트륨혈증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "성장기 개",
+      "match_terms": [
+        "growing dogs",
+        "성장기"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알도스테론 경쟁적 길항제(미네랄코르티코이드 수용체 길항제). 원위 세뇨관에서 알도스테론을 경쟁적으로 억제하여 나트륨, 염소, 수분 배설 증가 및 칼륨, 암모늄, 인산염 배설 감소. 탄산탈수효소 또는 신장 수송 기전에는 영향 없음.",
+    "common_extra_effects": [
+      "고칼륨혈증",
+      "저나트륨혈증",
+      "탈수",
+      "BUN 상승",
+      "경증 대사성 산증",
+      "식욕부진",
+      "구토",
+      "설사",
+      "기면(lethargy)",
+      "운동실조(ataxia)",
+      "테스토스테론 합성 억제",
+      "에스트라디올 말초 전환 증가",
+      "여성형 유방(인간 남성)"
+    ],
+    "dog_mechanism": "개에서 단독 사용 시 유의한 이뇨 효과 없음. 티아지드 또는 루프 이뇨제와 병용 시 이뇨 효과 극대화. 심근 섬유화, 혈관 리모델링 억제 효과는 수의 환자에서 논란 중.",
+    "dog_extra_effects": [
+      "전해질 이상(개에서는 유의한 영향 적음)",
+      "GI 증상(식욕부진, 구토, 설사)",
+      "기면",
+      "운동실조"
+    ],
+    "cat_mechanism": "고양이에서 심부전 보조치료로 사용. Maine Coon 고양이 HCM 연구에서 이완기 기능 또는 좌심실 질량에 유의한 변화 없었음.",
+    "cat_extra_effects": [
+      "안면 피부염(심각한 이상반응)",
+      "고칼륨혈증",
+      "칼슘 상승",
+      "크레아티닌 상승",
+      "인 상승",
+      "총단백 상승",
+      "식욕부진",
+      "구토"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 스피로노락톤은 주로 MMVD로 인한 CHF 보조치료, 복수, 고혈압에 오프라벨로 사용됨. 단독 이뇨제로는 효과가 제한적이며 루프 이뇨제와 병용 권장. 음식과 함께 투여 시 생체이용률이 50%에서 최대 90%로 증가하므로 식사와 함께 투여 권장. 전해질(특히 칼륨), BUN, 크레아티닌 정기 모니터링 필요. 신기능 저하 개에서 NSAIDs 병용 금기(영국 허가사항). 성장기 개에서는 항안드로겐 효과로 인해 사용 비권장.",
+    "cat": "고양이에서 안면 피부염이 심각한 이상반응으로 보고됨(Maine Coon 연구에서 치료군의 약 1/3 발생). 심부전 및 심근병증 보조치료로 사용되나 효능 입증 연구 부족. 스피로노락톤 투여 후 칼륨, 칼슘, 크레아티닌, 인, 총단백 유의하게 상승 보고됨. 피부 약물 반응이 고혈압 치료에서의 유용성을 제한할 수 있음. 고양이에서 사용 시 이상반응 모니터링 철저히 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 간질환, 고칼륨혈증, 에디슨병, 무뇨증, 급성 신부전 시 주의 또는 금기. 성장기 개에서 항안드로겐 효과로 비권장. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "안면 피부염 위험(약 1/3에서 발생 보고). 전해질 이상(고칼륨혈증 등) 모니터링 필요. 신기능 저하 시 주의. 효능 입증 연구 부족으로 사용 시 신중한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관, 밀폐된 차광 용기에 보관.",
+    "forms": [
+      "스피로노락톤 경구 정제: 25 mg, 50 mg, 100 mg (Aldactone, 제네릭)",
+      "스피로노락톤/하이드로클로로티아지드 경구 정제: 25 mg/25 mg, 50 mg/50 mg (Aldactazide, 제네릭)",
+      "스피로노락톤/베나제프릴 정제: 20 mg/2.5 mg, 40 mg/5 mg, 80 mg/10 mg (Cardalis)",
+      "즉석 조제 경구 현탁액: 체리 시럽, 단순 시럽, 또는 Ora-Sweet/Ora-Plus 혼합물로 조제 가능 (60일 안정성 보고)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "스피로노락톤은 알도스테론 길항제로 칼륨 보존성 이뇨제이며, 개와 고양이의 울혈성 심부전(CHF), 복수, 고혈압 보조치료에 오프라벨로 사용됩니다. 미국 내 단일 성분 FDA 승인 수의용 제제는 없으나 영국에서 Cardalis(스피로노락톤/베나제프릴 복합제)가 허가되어 있습니다. 음식과 함께 투여 시 생체이용률이 크게 증가합니다. 고양이에서 안면 피부염이 심각한 이상반응으로 보고되어 있으며, 고칼륨혈증, 저나트륨혈증 등 전해질 이상 모니터링이 필수적입니다. NIOSH 위험 약물로 분류되어 취급 시 개인보호장비(PPE) 착용이 필요합니다.",
+    "indications": "【승인 적응증】없음(미국 내 단일 성분 수의용 승인 없음). 【오프라벨 적응증】개: MMVD로 인한 CHF 보조치료, 복수, 고혈압 보조치료, 저칼륨혈증 예방. 고양이: CHF 보조치료(푸로세미드 및 ACE 억제제로 조절 안 될 때), 심근병증, 고혈압 보조치료.",
+    "client_info": "이 약을 복용하기 시작하면 평소보다 소변을 더 자주 볼 수 있습니다. 반드시 식사와 함께 투여하세요. 이 약은 혈액 내 전해질(염분) 수치를 변화시킬 수 있으므로 정기적인 혈액 검사가 필요합니다. 검사 일정을 빠지지 마세요. 다음과 같은 증상이 나타나면 즉시 수의사에게 연락하세요: 고양이의 경우 얼굴에 상처나 긁는 행동, 심한 구토나 설사, 극도의 피로감, 걷기 어려움이나 균형 잡기 어려움, 먹거나 마시거나 소변을 보지 않는 경우."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP 대사 경로 상세 정보",
+      "고양이 약동학 데이터",
+      "신기능 저하 시 구체적 용량 조절 기준",
+      "간기능 저하 시 구체적 용량 조절 기준"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/35.jsonl",
+    "extracted_at": "2026-03-11T00:03:16.455125+00:00",
+    "reviewer": null
+  }
+}

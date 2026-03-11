@@ -1,0 +1,456 @@
+{
+  "id": "cetirizine",
+  "drug_identity": {
+    "name_ko": "세티리진",
+    "name_en": "Cetirizine",
+    "active_ingredient": "Cetirizine hydrochloride",
+    "brand_names": [
+      "Zyrtec",
+      "Zyrtec-D"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 개, 고양이, 말에서 모두 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세티리진은 CYP450 시스템의 대사체가 아님. P-당단백질(P-gp) 억제제로 알려져 있음. 인간에서 약 80%가 소변으로 주로 미변화체로 배설됨."
+    },
+    "extra_information": "개: 경구 투여 후 최고 혈중 농도 도달 시간 4~7시간, 소실 반감기 약 10시간. 고양이: 5 mg/cat 경구 투여 시 단백결합률 88%, 분포용적 0.24 L/kg, 청소율 약 0.3 mL/kg/분, 말단 소실 반감기 약 10시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 소화기 이상반응(구토, 과다침분비) 및 졸음이 보고됨. 신장 배설 비율이 높아 신장 부담 존재. 인간에서 간 효소 상승, 간염, 담즙정체 드물게 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "somnolence",
+          "drowsiness",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "고용량 투여 시 소형견에서 졸음이 보고됨. 과다복용 시 CNS 증상(과활동, 기면) 가능."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "urine excretion"
+        ],
+        "index": 2,
+        "evidence": "인간에서 약 80%가 신장으로 배설됨. 심한 신장 기능 저하 시 용량 조절 권고(인간 데이터 기반)."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "liver disease",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "인간에서 간 효소 상승, 간염, 담즙정체 드물게 보고. 간질환 시 소실 지연. 수의학적 데이터 부족."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": -1,
+        "evidence": "과다복용 시 빈맥 가능성 언급. 치료 용량에서 QT 연장 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "somnolence",
+          "drowsiness"
+        ],
+        "index": 1,
+        "evidence": "소동물에서 졸음 가능성 보고. 고양이 특이적 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "urine excretion"
+        ],
+        "index": 2,
+        "evidence": "인간에서 약 80%가 신장으로 배설됨. 고양이에서 신장 배설 비율에 대한 직접 데이터 없으나 유사한 경로 추정."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "인간에서 간질환 시 소실 지연 보고. 고양이 특이적 간 독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 5.5,
+    "half_life_hr": {
+      "min": 10.0,
+      "max": 10.0,
+      "mean": 10.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 88,
+    "evidence": "개: 경구 투여 후 Tmax 4~7시간(중간값 5.5시간), 소실 반감기 약 10시간. 고양이: 단백결합률 88%(5 mg/cat 경구 투여 연구). 인간: Tmax 약 1시간, 단백결합률 93%, 반감기 약 8시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "CNS Depressants (acepromazine, benzodiazepines, opioids)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "sedation"
+      ],
+      "evidence": "Additive CNS depression or sedation is possible when combined with CNS depressants such as acepromazine, benzodiazepines, or opioids."
+    },
+    {
+      "drug": "Ivermectin",
+      "severity": 2,
+      "keywords": [
+        "increased AUC",
+        "increased half-life",
+        "P-glycoprotein"
+      ],
+      "evidence": "Ivermectin administered 12 hours prior to cetirizine significantly increased cetirizine AUC by 60% and elimination half-life by 18% in horses. Administration 90 minutes prior did not produce the same effect. Clinical significance unknown."
+    },
+    {
+      "drug": "P-Glycoprotein Substrates (cyclosporine, digoxin, vincristine)",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "increased substrate exposure"
+      ],
+      "evidence": "Cetirizine has been shown to be a P-glycoprotein inhibitor (not a CYP450 metabolite); caution or avoidance recommended when co-administering with P-glycoprotein substrate drugs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "아토피성 피부염 관련 소양증 (허가 외)",
+          "value": "1 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "급성 악화 전 예방 요법으로 매일 지속 투여 권장",
+          "evidence": "1–4 mg/kg PO once daily with or without food. Cetirizine should be given continuously (daily) as preventive therapy before an acute flare."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "소양증 보조 치료 - 개방 임상시험 기반 (허가 외)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg 아님, 고양이당 5 mg 고정 용량. 41%에서 소양증 감소 보고.",
+          "evidence": "Based on an open trial: 5 mg/cat (NOT mg/kg) PO once daily; 41% of cats had pruritus reduced."
+        },
+        {
+          "logic_type": "linear",
+          "context": "소양증 보조 치료 - 일화적 용량 (허가 외)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 2.5–5 mg/cat (mg/kg 아님) PO q12~24h. 일화적 근거.",
+          "evidence": "Anecdotal: 0.5–1 mg/kg or 2.5–5 mg/cat (NOT mg/kg) PO every 12 to 24 hours."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "수의학 환자에 대한 구체적인 정보 없음. 인간에서 심한 신장 기능 저하 시 용량 조절 또는 회피 권고. 약 80%가 신장으로 배설되므로 신장 기능 저하 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "수의학 환자에 대한 구체적인 정보 없음. 인간에서 간질환 시 소실이 지연됨이 보고되어 간 기능 저하 시 용량 조절 또는 회피 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "세티리진 또는 하이드록시진 과민증",
+      "match_terms": [
+        "hydroxyzine hypersensitivity",
+        "cetirizine hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 신장 기능 저하",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심한 간 기능 저하",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "프로필렌 글리콜 함유 액상 제형 - 고양이",
+      "match_terms": [
+        "propylene glycol toxicity",
+        "cat liquid formulation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자일리톨 함유 구강붕해정 - 개",
+      "match_terms": [
+        "xylitol toxicity",
+        "dog ODT"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "슈도에페드린 복합 제품(Zyrtec-D) - 개, 고양이",
+      "match_terms": [
+        "pseudoephedrine toxicity",
+        "combination product"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "말초 H1 수용체를 선택적으로 차단하는 2세대 비진정성 항히스타민제. 하이드록시진의 대사체. 혈뇌장벽을 거의 통과하지 않음. 항콜린 및 항세로토닌 효과 없음. 호염기구에서 히스타민 유리 감소 효과도 일부 있음.",
+    "common_extra_effects": [
+      "구토",
+      "과다침분비",
+      "졸음(고용량 또는 소형 동물)",
+      "인간: 졸음(13%), 구강건조(5%), 간 효소 상승(드물게), 간염(드물게), 담즙정체(드물게)",
+      "과다복용 시: 과활동, 기면, 구토, 헐떡임, 산동, 빈맥"
+    ],
+    "dog_mechanism": "개에서 히스타민 및 항카닌 IgE 매개 피부 반응(팽진) 억제. 즉각 및 지연 피부 알레르기 반응 예방.",
+    "dog_extra_effects": [
+      "구토",
+      "과다침분비",
+      "졸음(소형견 고용량)"
+    ],
+    "cat_mechanism": "고양이에서 세티리진 또는 사이프로헵타딘은 호산구성 기도 염증(실험적으로 유발된)을 감소시키지 않음.",
+    "cat_extra_effects": [
+      "구토",
+      "과다침분비",
+      "졸음"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아토피성 피부염의 만성 및 급성 악화 치료에는 효과적이지 않은 것으로 보임. 급성 악화 전 예방 요법으로 매일 지속 투여 시 효과적. 자일리톨 함유 구강붕해정 및 슈도에페드린 복합 제품 사용 금지. 피내 알레르기 검사(IDT) 전 최소 2주 전에 투여 중단 필요.",
+    "cat": "개방 임상시험에서 41%의 고양이에서 소양증 감소 보고. 무작위 이중맹검 위약대조 교차 연구에서는 세티리진과 위약 간 임상 및 소양증 점수에 통계적으로 유의한 차이 없음. 프로필렌 글리콜 함유 액상 제형은 고양이에게 독성이 있으므로 사용 금지. 슈도에페드린 복합 제품 사용 금지."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "일반적으로 내약성 양호. 구토, 과다침분비, 졸음 가능. 자일리톨 함유 구강붕해정 및 슈도에페드린 복합 제품 사용 금지. 신장/간 기능 저하 시 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "일반적으로 내약성 양호. 프로필렌 글리콜 함유 액상 제형 독성 위험으로 사용 금지. 슈도에페드린 복합 제품 사용 금지. 임상적 유효성 근거 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 20°C~25°C(68°F~77°F)에서 보관.",
+    "forms": [
+      "세티리진 HCl 필름코팅 경구정: 5 mg, 10 mg (Zyrtec, 제네릭, OTC)",
+      "세티리진 HCl 츄어블정: 5 mg, 10 mg (Zyrtec, OTC)",
+      "세티리진 HCl 경구 시럽/용액: 1 mg/mL (Zyrtec, 제네릭, OTC) - 프로필렌 글리콜 함유 가능",
+      "세티리진 10 mg 액상 젤캡 및 구강붕해정 (자일리톨 함유 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세티리진은 2세대 비진정성 H1 항히스타민제로, 개와 고양이의 히스타민 매개 소양증 및 알레르기 상태의 보조 치료에 허가 외로 사용됨. 항콜린 및 항세로토닌 효과 없음. 개에서 아토피성 피부염의 만성/급성 악화 치료 효과는 제한적이며, 예방적 지속 투여가 권장됨. 고양이에서 무작위 대조 연구에서 위약 대비 유의한 효과 미입증. 프로필렌 글리콜 함유 액상 제형(고양이 독성), 자일리톨 함유 구강붕해정(개 독성), 슈도에페드린 복합 제품 사용 절대 금지. P-당단백질 억제제로 사이클로스포린, 디곡신, 빈크리스틴 등과 상호작용 주의.",
+    "indications": "개: 아토피성 피부염 관련 소양증 예방적 보조 치료(허가 외), 두드러기, 곤충 교상 과민증, 호흡기 알레르기. 고양이: 알레르기성 피부 질환 관련 소양증 보조 치료(허가 외). 말: 항히스타민 치료, 호산구성 각막염(허가 외). 수의학적으로 승인된 제품 없음.",
+    "client_info": "반응이 좋은 동물에서는 항히스타민제를 규칙적으로 지속 투여하세요. 항히스타민제는 알레르겐에 노출되기 전에 사용할 때 더 효과적입니다. 세티리진은 다른 항히스타민제보다 졸음을 덜 유발할 수 있지만, 여전히 졸음이 나타날 수 있습니다. 반드시 세티리진 단일 성분 제품만 사용하세요. 진통제, 충혈완화제 등이 포함된 복합 제품(예: Zyrtec-D)은 동물에게 독성이 있습니다. 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토가 있으면 다음 용량은 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Specific renal dose adjustment thresholds for dogs/cats",
+      "Specific hepatic dose adjustment thresholds for dogs/cats",
+      "Oral bioavailability (F%) for dogs and cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:29:11.113621+00:00",
+    "reviewer": null
+  }
+}

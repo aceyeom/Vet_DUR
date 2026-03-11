@@ -1,0 +1,1107 @@
+{
+  "id": "cyclosporine_systemic",
+  "drug_identity": {
+    "name_ko": "사이클로스포린 (전신)",
+    "name_en": "Cyclosporine (Systemic)",
+    "active_ingredient": "Cyclosporine",
+    "brand_names": [
+      "Atopica",
+      "Cyclavance",
+      "Neoral",
+      "Sandimmune",
+      "Gengraf",
+      "Sigmasporin"
+    ],
+    "allergy_class": null,
+    "class": "Immunosuppressant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Cap",
+      "Oral Liquid",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.01,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주로 간에서 CYP450 시스템(CYP3A로 추정)을 통해 대사되며, 담즙으로 분비되어 대변으로 배설됨. 소변으로의 미변화 배설은 1% 미만. 고양이에서는 장 대사(수산화, 탈메틸화)도 관여함."
+    },
+    "extra_information": "개: 경구 생체이용률 45%(공복 시), 음식 섭취 시 약 20% 감소. 단백결합률 약 90%, 분포용적 7.8 L/kg. 반감기 약 5~12시간. 청소율 3.66~7.1 mL/min/kg. 당뇨병 개에서 청소율 증가 및 반감기 단축. 고양이: 경구 생체이용률 약 25%(매우 가변적), 음식 유무에 관계없이 흡수에 큰 영향 없음. 피하 투여 시 생체이용률 우수. 경피 흡수는 거의 없음. 분포용적 3.3 L/kg, Tmax 1~2시간, Cmax 480 ng/mL. 반감기 약 24시간(범위 6.8~40시간 이상)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 수의학적 데이터 존재. 신독성은 매우 높은 혈중 농도(>3000 ng/mL)에서만 유의미하나 잠재적 위험으로 분류. 간독성은 드물게 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS에 거의 분포하지 않음",
+          "P-gp 기질"
+        ],
+        "index": 1,
+        "evidence": "P-gp 유출 수송체 기질로 CNS 분포가 제한적임. 직접적인 뇌 독성은 보고되지 않음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "혈구 내 축적",
+          "혈전색전증",
+          "thromboxane 증가",
+          "면역억제"
+        ],
+        "index": 2,
+        "evidence": "혈구(과립구 5~12%, 림프구 5~9%)에 고농도 분포. 혈전색전증 드물게 보고. 트롬복산 생성 증가. 면역억제로 인한 감염 위험."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "신독성",
+          "크레아티닌 상승",
+          "BUN 상승",
+          "신부전 주의"
+        ],
+        "index": 3,
+        "evidence": "혈중 농도 >3000 ng/mL에서 신독성 유의미. 당뇨 또는 신부전 환자에서 주의 필요. 크레아티닌 및 BUN 상승 가능. 우발적 IV 투여 후 급성 신손상 보고."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "간독성",
+          "간 고농도 분포",
+          "ALT 상승",
+          "간 대사"
+        ],
+        "index": 4,
+        "evidence": "간에 고농도 분포. 간독성은 드물게 보고되나 IMHA 치료 시 모니터링 권장. 우발적 IV 투여 후 간효소 상승 보고."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "혈압 상승 가능성"
+        ],
+        "index": -1,
+        "evidence": "직접적인 심장 독성은 보고되지 않음. 다르베포에틴과 병용 시 혈압 상승 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "P-gp 기질",
+          "CNS 분포 제한"
+        ],
+        "index": 1,
+        "evidence": "P-gp 기질로 CNS 분포 제한적. 직접적인 뇌 독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "용혈성 요독 증후군",
+          "면역억제",
+          "혈구 내 분포"
+        ],
+        "index": 2,
+        "evidence": "신장 이식 후 용혈성 요독 증후군 보고. 면역억제로 인한 감염(톡소플라즈마증 포함) 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "신독성",
+          "크레아티닌 상승",
+          "신부전 주의",
+          "용혈성 요독 증후군"
+        ],
+        "index": 3,
+        "evidence": "혈중 농도 >3000 ng/mL에서 신독성 유의미. 신부전 환자 주의. 이식 후 용혈성 요독 증후군 보고."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "간독성",
+          "간 지방증",
+          "체중 감소",
+          "간 대사"
+        ],
+        "index": 4,
+        "evidence": "GI 부작용으로 인한 체중 감소가 간 지방증으로 이어질 수 있음(드묾). 간독성 잠재적 우려. 장 대사 관여."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "직접적인 심장 독성 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 5.0,
+      "max": 12.0,
+      "mean": 8.5,
+      "species": "dog"
+    },
+    "f_percent": 45,
+    "protein_binding_percent": 90,
+    "evidence": "개: 경구 생체이용률 45%(공복), 반감기 5~12시간, 단백결합 약 90%, 분포용적 7.8 L/kg. 고양이: 경구 생체이용률 약 25%, Tmax 1~2시간, 반감기 약 24시간(범위 6.8~40시간 이상)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 사이클로스포린은 CYP450 및 P-gp 기질로 다수의 약물 상호작용 존재.",
+  "drug_interactions": [
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "CYP3A 억제",
+        "사이클로스포린 혈중 농도 증가",
+        "독성 위험"
+      ],
+      "evidence": "Ketoconazole significantly increases cyclosporine blood concentration in dogs (up to 75%). Often used intentionally to reduce cyclosporine dose requirements. Monitor cyclosporine levels."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A 억제",
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Fluconazole has variable effects on cyclosporine levels. Itraconazole affects cyclosporine pharmacokinetics in cats but not dogs."
+    },
+    {
+      "drug": "Macrolide Antibiotics (azithromycin, clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A 억제",
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Macrolide antibiotics may increase cyclosporine blood levels and risk for toxicity."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A 억제",
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Calcium channel blockers may increase cyclosporine blood levels."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CYP 유도",
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Phenobarbital may decrease cyclosporine blood levels via CYP induction."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "CYP 유도",
+        "P-gp 유도",
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Rifampin may significantly decrease cyclosporine blood levels."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 2,
+      "keywords": [
+        "CYP 유도",
+        "P-gp 유도",
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "St. John's Wort may decrease cyclosporine levels; this interaction appears significant in dogs."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (acyclovir, aminoglycosides, amphotericin B, colchicine, NSAIDs, trimethoprim, vancomycin)",
+      "severity": 3,
+      "keywords": [
+        "신독성 상가",
+        "신손상"
+      ],
+      "evidence": "Possible additive nephrotoxicity; avoid combination with other nephrotoxic drugs."
+    },
+    {
+      "drug": "Immunosuppressive Agents (azathioprine, corticosteroids)",
+      "severity": 2,
+      "keywords": [
+        "면역억제 상가",
+        "감염 위험",
+        "종양 위험"
+      ],
+      "evidence": "May increase the risk for infection or malignancy when combined with other immunosuppressive agents."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "디곡신 혈중 농도 증가",
+        "독성 위험"
+      ],
+      "evidence": "Cyclosporine may increase digoxin levels with possible toxicity."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "독소루비신 혈중 농도 증가",
+        "독성 위험"
+      ],
+      "evidence": "Cyclosporine can increase doxorubicin and doxorubicinol (active metabolite) levels."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "MTX 혈중 농도 증가",
+        "독성 위험"
+      ],
+      "evidence": "Cyclosporine may increase methotrexate concentrations."
+    },
+    {
+      "drug": "Ivermectin",
+      "severity": 2,
+      "keywords": [
+        "P-gp 억제",
+        "이버멕틴 혈중 농도 증가",
+        "독성 위험"
+      ],
+      "evidence": "Cyclosporine may inhibit P-gp (MDR1) transporter and increase ivermectin concentrations."
+    },
+    {
+      "drug": "Fentanyl",
+      "severity": 2,
+      "keywords": [
+        "펜타닐 독성 위험 증가"
+      ],
+      "evidence": "Concurrent use may increase the risk for fentanyl toxicity."
+    },
+    {
+      "drug": "Vincristine",
+      "severity": 2,
+      "keywords": [
+        "빈크리스틴 혈중 농도 증가"
+      ],
+      "evidence": "Concurrent use may increase vincristine plasma concentrations."
+    },
+    {
+      "drug": "Midazolam",
+      "severity": 2,
+      "keywords": [
+        "미다졸람 청소율 감소",
+        "혈중 농도 증가"
+      ],
+      "evidence": "Concurrent use may decrease midazolam clearance and increase midazolam plasma concentrations."
+    },
+    {
+      "drug": "Morphine",
+      "severity": 2,
+      "keywords": [
+        "모르핀 노출 증가"
+      ],
+      "evidence": "Combination may increase morphine exposure."
+    },
+    {
+      "drug": "Potassium Supplements",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증 위험"
+      ],
+      "evidence": "Increased risk for hyperkalemia with concurrent potassium supplementation."
+    },
+    {
+      "drug": "Spironolactone and Potassium-Sparing Diuretics (triamterene)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증 위험"
+      ],
+      "evidence": "Increased risk for hyperkalemia with potassium-sparing diuretics."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "신기능 저하"
+      ],
+      "evidence": "Case reports in humans of renal function decline with concurrent use."
+    },
+    {
+      "drug": "Oclacitinib",
+      "severity": 2,
+      "keywords": [
+        "면역억제 상가",
+        "감염 위험"
+      ],
+      "evidence": "Concurrent use appears safe short-term (up to 3 weeks), but relatively contraindicated for long-term use due to increased immunosuppression risk, especially when infection is present."
+    },
+    {
+      "drug": "Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 감소",
+        "신독성 위험 증가"
+      ],
+      "evidence": "Trimethoprim may decrease cyclosporine blood levels and may also increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 2,
+      "keywords": [
+        "CYP3A 억제",
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Grapefruit juice and grapefruit juice powder may increase cyclosporine blood levels."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin, marbofloxacin, orbifloxacin, pradofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Fluoroquinolones may increase cyclosporine blood levels."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Amiodarone may increase cyclosporine blood levels and risk for toxicity."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 증가",
+        "콜히친 혈중 농도 증가",
+        "신부전 시 금기"
+      ],
+      "evidence": "Cyclosporine may increase colchicine levels; this combination is contraindicated in human patients with renal impairment."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 2,
+      "keywords": [
+        "혈액독성 위험 증가"
+      ],
+      "evidence": "Increased risk for leflunomide-induced adverse hematologic effects."
+    },
+    {
+      "drug": "Melphalan",
+      "severity": 2,
+      "keywords": [
+        "신손상 위험 증가"
+      ],
+      "evidence": "Increased risk for renal injury with concurrent melphalan use."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "마이코페놀레이트 혈중 농도 감소"
+      ],
+      "evidence": "Concurrent use may reduce levels of mycophenolate."
+    },
+    {
+      "drug": "Darbepoetin",
+      "severity": 2,
+      "keywords": [
+        "혈압 상승",
+        "사이클로스포린 혈중 농도 변화"
+      ],
+      "evidence": "May cause additive increases in blood pressure. May also alter cyclosporine blood concentrations as cyclosporine is bound by red blood cells."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "와파린 효과 감소"
+      ],
+      "evidence": "Cyclosporine may reduce efficacy of warfarin."
+    },
+    {
+      "drug": "Alprazolam",
+      "severity": 2,
+      "keywords": [
+        "알프라졸람 생체이용률 감소"
+      ],
+      "evidence": "Concurrent use may decrease alprazolam bioavailability and pharmacodynamic effects."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 증가"
+      ],
+      "evidence": "Chloramphenicol may increase cyclosporine blood levels."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Terbinafine may decrease cyclosporine blood levels."
+    },
+    {
+      "drug": "Sulfadiazine/Sulfamethoxazole",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Sulfonamides may decrease cyclosporine blood levels."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 2,
+      "keywords": [
+        "CYP 유도",
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Carbamazepine may decrease cyclosporine blood levels via CYP induction."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Cyclophosphamide may decrease cyclosporine blood levels."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Mitotane may decrease cyclosporine blood levels."
+    },
+    {
+      "drug": "Griseofulvin",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 감소"
+      ],
+      "evidence": "Griseofulvin may decrease cyclosporine blood levels."
+    },
+    {
+      "drug": "Vaccinations (modified live vaccines)",
+      "severity": 2,
+      "keywords": [
+        "백신 반응 감소",
+        "면역억제"
+      ],
+      "evidence": "Vaccine response may be delayed or reduced; avoid use of modified live vaccines in patients receiving cyclosporine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "아토피성 피부염 조절 (FDA 승인 라벨 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 30일 매일 투여 후 격일, 주 2회로 감량 가능. 최소 유효 빈도 유지.",
+          "evidence": "Label dosage; FDA-approved: 5 mg/kg (3.3–6.7 mg/kg) PO once daily for 30 days in dogs ≥1.8 kg."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아토피성 피부염 - 케토코나졸 병용 (비라벨)",
+          "value": "2.5 - 3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "케토코나졸 2.5~5 mg/kg PO SID 병용. 가려움 조절 후 최소 유효 용량으로 감량.",
+          "evidence": "Extra-label: cyclosporine 2.5–3 mg/kg PO SID with ketoconazole 2.5–5 mg/kg PO SID for large dogs."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항문 주위 누공 (항문 종기증) (비라벨)",
+          "value": "4 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "증상 조절 후 최소 유효 빈도로 증량 간격 조정.",
+          "evidence": "Extra-label: cyclosporine 4–7.5 mg/kg PO BID when used alone."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항문 주위 누공 - 케토코나졸 병용 (비라벨)",
+          "value": "1 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "케토코나졸 5 mg/kg PO SID 병용.",
+          "evidence": "Extra-label: cyclosporine 1–4 mg/kg PO BID with ketoconazole 5 mg/kg PO SID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 용혈성 빈혈 (IMHA) (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "코르티코스테로이드 보조 치료로 사용.",
+          "evidence": "Extra-label: 5 mg/kg PO q12h as adjunctive treatment to corticosteroids."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지루성 선염, 무균성 결절성 지방층염, 탈모 원형, 만성 발 종기증 등 피부 질환 (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "증상 조절 후 최소 유효 빈도로 간격 조정.",
+          "evidence": "Extra-label: 5 mg/kg PO SID for sebaceous adenitis, sterile nodular panniculitis, alopecia areata, chronic pedal furunculosis, etc."
+        },
+        {
+          "logic_type": "linear",
+          "context": "천포창 엽상형 (난치성) (비라벨)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 사이클로스포린 5~10 mg/kg PO SID + 케토코나졸 5~10 mg/kg PO SID 병용.",
+          "evidence": "Extra-label: cyclosporine 15 mg/kg PO SID or 5–10 mg/kg PO SID with ketoconazole 5–10 mg/kg PO SID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "원판상 루푸스 홍반증, 수포성 피부 루푸스 홍반증 (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 5 mg/kg PO SID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "박리성 피부 루푸스 홍반증 (비라벨)",
+          "value": "2.5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "케토코나졸 5~7 mg/kg PO SID 병용 가능.",
+          "evidence": "Extra-label: cyclosporine 2.5–10 mg/kg PO SID with or without ketoconazole 5–7 mg/kg PO SID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "스테로이드 불응성 염증성 장질환 (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "일부 임상의는 BID 분할 투여 권장.",
+          "evidence": "Extra-label: 5 mg/kg PO SID; some clinicians advocate BID divided dosing for IBD."
+        },
+        {
+          "logic_type": "linear",
+          "context": "특발성 만성 간염 (비라벨)",
+          "value": "2.5 - 12.7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "중앙값 8 mg/kg/day. 생화학적 관해까지 중앙 2.5개월.",
+          "evidence": "Extra-label: median dose 8 mg/kg PO daily, range 2.5–12.7 mg/kg/day."
+        },
+        {
+          "logic_type": "linear",
+          "context": "소아 무균성 육아종성 피부염 및 림프절염 (소아 봉와직염) 난치성 (비라벨)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 10 mg/kg PO SID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신장 이식 면역억제 (비라벨)",
+          "value": "3 - 6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 5~7.5 mg/kg PO SID. 이식 거부 방지 시 10~15 mg/kg PO BID. 치료적 약물 모니터링 권장.",
+          "evidence": "Extra-label: empirical dosages 3–6 mg/kg PO BID or 5–7.5 mg/kg SID; 10–15 mg/kg PO BID for transplant rejection prevention."
+        },
+        {
+          "logic_type": "linear",
+          "context": "원인불명 뇌수막뇌염 (MUE/MUO) (비라벨)",
+          "value": "3 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "합리적인 시작 용량: 5 mg/kg PO q12h.",
+          "evidence": "Extra-label: 3–15 mg/kg PO q12h; reasonable starting dose 5 mg/kg PO q12h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "원발성 면역매개성 다발성 관절염 (IMPA) (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "카프로펜 2.2 mg/kg PO q12h 7일 병용 (진통 목적).",
+          "evidence": "Extra-label: cyclosporine 5 mg/kg PO q12h with carprofen 2.2 mg/kg PO q12h for 7 days."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 (비라벨)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "증례 보고 기반.",
+          "evidence": "Extra-label: 4 mg/kg PO q12h; improved clinical signs in 2 dogs in a case report."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "알레르기성 피부염 (찰과상, 기장성 피부염, 호산구성 플라크, 자가유발 탈모) (FDA 승인 라벨 용량)",
+          "value": "7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 4~6주 또는 임상 증상 해소까지 매일 투여 후 격일 또는 주 2회로 감량. 최소 유효 빈도 사용.",
+          "evidence": "Label dosage; FDA-approved: 7 mg/kg PO SID for minimum 4–6 weeks."
+        },
+        {
+          "logic_type": "linear",
+          "context": "알레르기성 피부염 - 피하 투여 (비라벨)",
+          "value": "2.5 - 5.0",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "격일 투여도 가능. 경구 투여 불가 고양이에 대한 대안.",
+          "evidence": "Extra-label: 2.5–5.0 mg/kg SC SID to every other day for cats that cannot be treated orally."
+        },
+        {
+          "logic_type": "linear",
+          "context": "천포창 복합체 (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단독 또는 글루코코르티코이드 병용.",
+          "evidence": "Extra-label: 5 mg/kg PO q24h alone or in combination with a glucocorticoid."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지루성 선염, 특발성 육아종성 모낭염 및 종기증 (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 5 mg/kg PO SID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역억제 (이식 포함) (비라벨)",
+          "value": "3 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 5~7 mg/kg PO SID. 이식 거부 방지 시 프레드니솔론 0.125~0.25 mg/kg PO q12h 병용. 치료적 약물 모니터링 권장.",
+          "evidence": "Extra-label: 3–4 mg/kg PO q12h or 5–7 mg/kg PO SID; twice-daily with prednisolone for transplant rejection."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 천식 대안 치료 (비라벨)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "증례 보고 기반.",
+          "evidence": "Extra-label: 4 mg/kg PO q12h; reported effective in one case for feline asthma."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 구내염 (비라벨)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 2.5 mg/kg PO BID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "순수 적혈구 무형성증 (비라벨)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "최대 20 mg/kg/day까지 보고됨.",
+          "evidence": "Extra-label: 5–10 mg/kg/day PO; dosage up to 20 mg/kg/day noted."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혈소판감소성 자반증 (비라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "프레드니손 2 mg/kg PO q12h 병용. 증례 보고 기반.",
+          "evidence": "Extra-label: 5 mg/kg PO q12h with prednisone 2 mg/kg PO q12h, from a case report."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 주의하여 사용. 크레아티닌 및 BUN 상승 가능. 신독성은 혈중 농도 >3000 ng/mL에서 유의미. 구체적인 용량 조정 기준은 명시되지 않음. 치료적 약물 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간독성은 드물게 보고됨. IMHA 치료 시 2~3개월마다 생화학 검사 권장. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "cyclosporine hypersensitivity",
+        "polyoxyethylated castor oil allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "악성 종양 또는 악성 신생물 병력",
+      "match_terms": [
+        "malignancy",
+        "neoplasia",
+        "cancer"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "FeLV 또는 FIV 감염 고양이",
+      "match_terms": [
+        "FeLV",
+        "FIV",
+        "feline leukemia virus",
+        "feline immunodeficiency virus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "hyperglycemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "acute kidney injury"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "활동성 감염",
+      "match_terms": [
+        "active infection",
+        "bacterial infection",
+        "fungal infection"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 미달 (개 <1.8 kg, 고양이 <1.4 kg) 또는 6개월 미만",
+      "match_terms": [
+        "underweight",
+        "pediatric",
+        "young animal"
+      ],
+      "severity": "caution",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Border Collie"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "사이클로스포린은 P-gp(MDR1) 기질임. 역사적으로 MDR1 돌연변이 개에서 용량 감량이 권장되지 않았으나, MDR1 이형접합 돌연변이 개에서 과도한 면역억제가 보고된 증례가 있음. 특히 치료 반응이 없거나 예상보다 낮은 용량에서 이차 감염이 발생할 경우 임상적 및 치료적 약물 모니터링 권장."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "칼시뉴린 억제제로서 T세포 사이클로필린에 결합하여 칼시뉴린 매개 T세포 활성화를 차단. T-helper 림프구가 주요 표적이나 T-억제 세포도 영향받음. IL-2, 인터페론-감마 등 사이토카인 생성 및 분비 억제. 호산구, 비만세포, 과립구, 대식세포 기능에 영향. 골수억제 효과 없음.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "연변/설사",
+      "잇몸 과형성",
+      "다모증/과도한 털 빠짐",
+      "유두종증",
+      "포도당 대사 이상/당뇨병",
+      "간독성 (드묾)",
+      "혈전색전증 (드묾)",
+      "기회감염 증가",
+      "신독성 (고농도에서)",
+      "종양 발생 위험 증가 (장기 사용 시)"
+    ],
+    "dog_mechanism": "트롬복산 생성 증가 보고. 저용량 아스피린이 이 효과를 억제함. 피부에 고농도 축적. CNS에는 거의 분포하지 않음(P-gp 기질).",
+    "dog_extra_effects": [
+      "구토 (치료 초기 흔함)",
+      "연변/설사",
+      "잇몸 과형성",
+      "다모증",
+      "건선양 태선양 피부증",
+      "유두종증",
+      "당뇨병",
+      "혈전색전증 (드묾)",
+      "간독성 (드묾)",
+      "세균뇨/요로감염",
+      "Burkholderia cepacia 복합체 피부 감염"
+    ],
+    "cat_mechanism": "장 대사(수산화, 탈메틸화)로 비활성 대사체 생성. 경피 흡수 없음. 피하 투여 시 생체이용률 우수.",
+    "cat_extra_effects": [
+      "구토",
+      "설사",
+      "과다 침 분비",
+      "식욕 감소/식욕부진",
+      "체중 감소 (간 지방증 위험)",
+      "무기력/권태감",
+      "행동 변화",
+      "털 성장 증가",
+      "급성 수포성 각막병증",
+      "잇몸 과형성",
+      "잠복 바이러스 감염 재활성화",
+      "전신 톡소플라즈마증 (치명적 가능)",
+      "용혈성 요독 증후군 (이식 후)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아토피성 피부염에 FDA 승인됨. 항문 주위 누공, IMHA, 염증성 장질환, 다양한 면역매개성 피부 질환 등 다수의 비라벨 적응증에 사용됨. 케토코나졸 병용으로 용량 및 비용 절감 가능. 치료 초기 구토가 흔하나 대부분 자연 소실됨. 공복 투여 권장(식전 1시간 또는 식후 2시간). 캡슐 냉동 30~60분 후 투여로 구토 감소 가능. MDR1 돌연변이 개에서 주의 필요. 아토피 이외 적응증에서 치료적 약물 모니터링 권장.",
+    "cat": "고양이 알레르기성 피부염에 FDA 승인됨. 음식 유무에 관계없이 투여 가능하나 일관된 스케줄 유지 권장. 피하 투여도 효과적인 대안. 경피 흡수 없음. FeLV/FIV 음성 확인 필수. 톡소플라즈마증 위험으로 실내 생활, 생고기 금지, 사냥 금지 필요. 치료 전 톡소플라즈마 역가 검사 권장. 체중 감소 시 간 지방증 위험 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "당뇨병, 신부전 환자에서 주의. MDR1 돌연변이 개에서 과도한 면역억제 가능. 기회감염 및 종양 발생 위험 증가. 생백신 사용 금지. 치료적 약물 모니터링 권장(아토피 이외 적응증)."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "FeLV/FIV 감염 고양이에서 금기. 전신 톡소플라즈마증 위험. 체중 감소로 인한 간 지방증 위험. 기회감염 위험 증가. 치료적 약물 모니터링 권장(이식 등 중증 적응증)."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "수의용 캡슐(Atopica®): 원래 단위 용량 용기에 실온(15~25°C) 보관. 냉동 28일 안정. 수의용 경구 용액: 원래 용기에 15~30°C 보관, 냉장 금지. 개봉 후 2개월~12주 이내 사용. 인체용 Neoral®/Gengraf®: 20~25°C 보관. 20°C 이하에서 겔화 가능(재가온 시 회복). Sandimmune® 경구 용액: 30°C 이하 보관, 냉동 및 냉장 금지, 개봉 후 2개월 이내 사용.",
+    "forms": [
+      "Cyclosporine (Modified) Capsules 10 mg, 25 mg, 50 mg, 100 mg (Atopica®)",
+      "Cyclosporine (Modified) Oral Solution 100 mg/mL (Cyclavance®)",
+      "Cyclosporine (Modified) Oral Solution 100 mg/mL (Atopica® for Cats)",
+      "Cyclosporine Modified Oral Capsules 25 mg, 100 mg (Neoral®, Gengraf®)",
+      "Cyclosporine Modified Oral Solution 100 mg/mL (Neoral®)",
+      "Cyclosporine Oral Solution 100 mg/mL (Sandimmune®)",
+      "Cyclosporine Concentrate for Injection"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "사이클로스포린은 칼시뉴린 억제제 계열의 면역억제제로, 개의 아토피성 피부염 및 고양이의 알레르기성 피부염에 FDA 승인됨. 마이크로에멀전('modified') 제형(Atopica®, Cyclavance®, Neoral®) 사용 강력 권장 — Sandimmune®과 생물학적 동등성 없음. 다수의 약물 상호작용 존재(CYP3A 및 P-gp 기질). 치료 초기 GI 부작용 흔하나 대부분 자연 소실. 아토피 이외 적응증에서 치료적 약물 모니터링 권장. NIOSH 위험 약물로 분류 — 취급 시 개인보호장비 착용 필요.",
+    "indications": "【승인 적응증】 개: 아토피성 피부염 조절. 고양이: 알레르기성 피부염(찰과상, 기장성 피부염, 호산구성 플라크, 자가유발 탈모) 조절. 【비라벨 적응증】 개: 항문 주위 누공, IMHA, 염증성 장질환, 특발성 만성 간염, 지루성 선염, 천포창 엽상형, 루푸스 홍반증, MUE/MUO, 다발성 관절염, 중증근무력증 등 다수 면역매개성 질환. 고양이: 만성 구내염, 천포창, 신장 이식 거부 방지, 순수 적혈구 무형성증, 면역매개성 혈소판감소증, 염증성 장질환, 고양이 천식 등.",
+    "client_info": "【보호자 안내】 ① 수의사 처방대로 정확히 투여하세요. ② 개는 가능하면 공복(식전 1시간 또는 식후 2시간)에 투여하세요. 구토 시 소량의 음식과 함께 또는 캡슐을 30~60분 냉동 후 투여해 보세요. ③ 고양이는 음식과 함께 또는 공복에 투여 가능하나 매일 같은 방식으로 투여하세요. ④ 구토, 식욕 감소, 연변, 설사가 가장 흔한 부작용이며 대부분 자연 소실됩니다. 악화되거나 지속되면 수의사에게 연락하세요. ⑤ 캡슐은 원래 용기에 보관하고 부수거나 열지 마세요. ⑥ 경구 용액 사용 시 투여 사이에 주사기를 씻지 마세요. ⑦ 캡슐이나 경구 용액 취급 시 장갑 착용 후 손을 철저히 씻으세요(NIOSH 위험 약물). ⑧ 효과는 4~6주 후 나타날 수 있습니다. ⑨ 감염 징후(무기력, 식욕 부진) 또는 지속적인 체중 감소 시 즉시 수의사에게 연락하세요. ⑩ 고양이는 실내에서만 생활하고 생고기 섭취 및 사냥을 금지하세요(톡소플라즈마증 예방). ⑪ 면역억제 목적으로 투여 중인 경우 정기적인 혈액 검사를 빠짐없이 받으세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "high",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (cat-specific separate object)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/37.jsonl",
+    "extracted_at": "2026-03-11T00:39:38.675181+00:00",
+    "reviewer": null
+  }
+}

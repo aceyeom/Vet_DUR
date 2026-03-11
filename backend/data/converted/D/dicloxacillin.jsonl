@@ -1,0 +1,445 @@
+{
+  "id": "dicloxacillin",
+  "drug_identity": {
+    "name_ko": "디클록사실린",
+    "name_en": "Dicloxacillin",
+    "active_ingredient": "Dicloxacillin sodium",
+    "brand_names": [
+      "Dicloxin",
+      "Dynapen"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서는 거의 사용되지 않으며, 승인된 수의용 제품 대비 명확한 이점이 없음. FDA Green Book에 개에 대한 승인(Dicloxin® 캡슐)이 등재되어 있으나 현재 미국 내 시판 제품 없음.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "디클록사실린은 활성 및 비활성 대사체로 부분 대사되며, 모화합물과 대사체는 사구체 여과 및 세뇨관 분비를 통해 신속히 소변으로 배설됨. 소량은 담즙 배설을 통해 대변으로 배출됨."
+    },
+    "extra_information": "개에서 경구 생체이용률은 약 23%이며, 단백결합률은 90%임. 개에서 반감기는 0.8~2.6시간, 고양이에서는 약 0.9시간으로 보고됨. 음식과 함께 투여 시 흡수 속도 및 정도가 감소함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 특이적 수의학 PK 데이터가 제한적이므로 텍스트 내 언급된 이상반응 및 분포 정보를 기반으로 평가함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "CNS disturbances"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성(개에서 운동실조) 보고됨. 뇌척수액 내 분포는 최소량."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "leukopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "과민반응으로 혈소판감소증, 백혈구감소증, 호중구감소증, 무과립구증, 빈혈 등 혈액학적 이상 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tubular secretion",
+          "glomerular filtration",
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "사구체 여과 및 세뇨관 분비를 통해 신장으로 주로 배설됨. 신부전 환자에서 CNS 효과 유발 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "partial metabolism",
+          "biliary elimination"
+        ],
+        "index": 1,
+        "evidence": "간에서 부분 대사되며 담즙 배설 경로 존재. 간독성은 없는 것으로 간주되나 간효소 상승 보고됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "tachypnea",
+          "cardiorespiratory disturbances"
+        ],
+        "index": 1,
+        "evidence": "개에서 빈맥, 빈호흡, 부종 등 심폐 이상반응 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS disturbances"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신경독성 데이터 없음. 페니실린 계열 일반적 CNS 이상반응 가능성 존재."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypersensitivity",
+          "thrombocytopenia",
+          "leukopenia"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 혈액학적 데이터 없음. 페니실린 계열 과민반응으로 혈액학적 이상 가능성."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion"
+        ],
+        "index": -1,
+        "evidence": "고양이 반감기 약 0.9시간으로 신장 배설 경로 동일하게 적용됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "partial metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 간독성 데이터 없음. 간효소 상승 가능성은 페니실린 계열 공통 사항."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심폐 이상반응에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.8,
+      "max": 2.6,
+      "mean": 1.7,
+      "species": "dog"
+    },
+    "f_percent": 23,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 경구 생체이용률 약 23%, 단백결합률 90%. 개 반감기 0.8~2.6시간, 고양이 반감기 약 0.9시간. 인간에서 반감기 24~48분, 생체이용률 35~76%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 1,
+      "keywords": [
+        "synergism",
+        "in vitro inactivation"
+      ],
+      "evidence": "In vitro에서 S. aureus에 대한 상승 효과 보고. 단, 베타락탐계는 in vitro(및 신부전 환자 in vivo)에서 아미노글리코사이드를 불활성화할 수 있어 혈청 농도가 위음성으로 낮게 측정될 수 있음."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "reduced levels",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Dicloxacillin may reduce cyclosporine levels; monitor cyclosporine concentrations."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "increased concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Dicloxacillin may increase methotrexate concentration and risk of toxic effects."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "reduced active metabolite",
+        "decreased efficacy"
+      ],
+      "evidence": "Dicloxacillin may reduce formation of the active mycophenolate metabolite, possibly decreasing mycophenolate efficacy."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased serum levels",
+        "prolonged half-life"
+      ],
+      "evidence": "Probenecid competitively blocks tubular secretion of dicloxacillin, increasing serum levels and half-life."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "bacteriostatic-bactericidal interaction"
+      ],
+      "evidence": "Theoretical antagonism between bacteriostatic tetracyclines and bactericidal dicloxacillin; concurrent use usually not recommended."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased warfarin efficacy",
+        "anticoagulation"
+      ],
+      "evidence": "Dicloxacillin may cause decreased warfarin efficacy; monitor anticoagulation status."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "페니실리나제 생성 포도상구균에 의한 농피증 (FDA 승인 라벨 용량)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 55.0,
+          "duration_note": "중증의 경우 최대 55 mg/kg TID까지 사용 가능. 라벨 용량 하한선은 현재 권장량보다 낮은 것으로 간주됨.",
+          "evidence": "FDA 승인 라벨 용량 (Dicloxin® 캡슐)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (extra-label)",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label 용량"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 고용량 페니실린 투여 시 CNS 효과 유발 가능성이 언급됨. 구체적인 용량 조절 지침은 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간독성은 없는 것으로 간주되나 간효소 상승이 보고됨. 구체적인 간기능 저하 시 용량 조절 지침은 모노그래프에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타락탐계 항생제 과민반응 (세팔로스포린, 카바페넴 등)",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "beta-lactam cross-reactivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "패혈증, 쇼크 또는 중증 질환",
+      "match_terms": [
+        "septicemia",
+        "shock",
+        "critical illness"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "베타락탐 항균제로서 세균 세포벽 내 페니실린 결합 단백질(PBP)에 결합하여 펩티도글리칸 합성을 억제함으로써 세포벽 결함 및 삼투압 불안정 구형체를 형성하여 살균 작용을 나타냄. 페니실리나제 내성 페니실린으로 페니실리나제 생성 포도상구균에 효과적임.",
+    "common_extra_effects": [
+      "식욕부진, 구토, 설사 등 위장관 장애",
+      "과민반응 (발진, 발열, 호산구증가증, 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈, 림프절병증, 아나필락시스)",
+      "항생제 관련 설사 및 장내 세균총 변화",
+      "간효소 상승",
+      "신경독성 (고용량 또는 장기 사용 시)"
+    ],
+    "dog_mechanism": "페니실리나제 생성 포도상구균에 의한 감염 치료에 사용. 개에서 경구 생체이용률 약 23%, 단백결합률 90%, 반감기 0.8~2.6시간.",
+    "dog_extra_effects": [
+      "운동실조 (고용량 또는 장기 사용 시 신경독성)",
+      "빈호흡, 호흡곤란",
+      "부종",
+      "빈맥"
+    ],
+    "cat_mechanism": "고양이에서 반감기 약 0.9시간으로 보고됨. 고양이에 대한 승인 용량은 없으나 페니실린 계열 공통 기전 적용.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률이 약 23%로 낮고 반감기가 짧아(0.8~2.6시간) 하루 3회 투여가 필요하며, 보호자 순응도 문제로 수의학에서 거의 사용되지 않음. FDA Green Book에 Dicloxin® 캡슐이 개에 대해 승인으로 등재되어 있으나 현재 미국 내 시판 제품 없음. 공복 투여 권장.",
+    "cat": "고양이에서 반감기는 약 0.9시간으로 보고되나, 승인된 용량이 없으며 수의학적 사용 데이터가 매우 제한적임. 고양이에서의 사용은 extra-label이며 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "패혈증, 쇼크 등 중증 환자에서 경구 투여 금지. 베타락탐계 과민반응 병력 시 주의. 고용량 또는 장기 사용 시 신경독성(운동실조) 가능성. 음식과 함께 투여 시 흡수 감소."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 승인된 용량 없음. 반감기 약 0.9시간으로 짧음. 페니실린 계열 과민반응 및 위장관 이상반응 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F)에서 보관",
+    "forms": [
+      "디클록사실린 나트륨 캡슐 250 mg",
+      "디클록사실린 나트륨 캡슐 500 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디클록사실린은 페니실리나제 생성 포도상구균에 효과적인 경구용 항포도상구균 페니실린임. 낮은 경구 생체이용률(개 약 23%)과 짧은 반감기로 인해 하루 3회 투여가 필요하며, 수의학에서는 승인된 수의용 제품 대비 명확한 이점이 없어 거의 사용되지 않음. WHO 고중요 항균제, OIE 수의학적 매우 중요 항균제로 지정됨.",
+    "indications": "페니실리나제 생성 포도상구균에 의한 소동물의 골, 피부 및 연조직 감염 치료(경구). 메티실린 내성 포도상구균(MRSA/MRSP)에는 효과 없음.",
+    "client_info": "공복에 투여하는 것이 원칙이나, 위장관 부작용(식욕부진, 구토, 설사)이 발생하면 소량의 음식과 함께 투여하세요. 가장 흔한 부작용은 설사, 구토, 식욕감소입니다. 처방된 대로 정확히 투여하고 치료 과정을 완료하는 것이 중요합니다. 동물이 호전된 것처럼 보여도 임의로 투약을 중단하지 마세요. 투약을 빠뜨리거나 조기에 중단하면 치료 실패로 이어질 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP profile",
+      "Renal dose adjustment specifics",
+      "Hepatic dose adjustment specifics",
+      "Cat dosage (approved)",
+      "Onset time",
+      "T_max",
+      "QT prolongation data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/40.jsonl",
+    "extracted_at": "2026-03-11T01:34:22.882708+00:00",
+    "reviewer": null
+  }
+}

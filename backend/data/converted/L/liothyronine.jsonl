@@ -1,0 +1,546 @@
+{
+  "id": "liothyronine",
+  "drug_identity": {
+    "name_ko": "리오티로닌",
+    "name_en": "Liothyronine",
+    "active_ingredient": "Liothyronine sodium",
+    "brand_names": [
+      "Cytomel",
+      "Triostat"
+    ],
+    "allergy_class": null,
+    "class": "Thyroid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 고양이의 갑상선기능항진증 진단을 위한 T3 억제 검사 및 갑상선기능저하증 치료에 사람용 제품을 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mcg"
+      },
+      {
+        "value": 25,
+        "unit": "mcg"
+      },
+      {
+        "value": 50,
+        "unit": "mcg"
+      },
+      {
+        "value": 10,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Plumb's 모노그래프에 CYP 대사 경로에 대한 구체적인 정보가 기재되어 있지 않음. 내인성 갑상선 호르몬(T3)의 합성 형태로, 주로 간에서 대사됨."
+    },
+    "extra_information": "개에서 경구 투여 후 혈장 최고 농도는 2~5시간 후에 도달하며, 혈장 반감기는 약 5~6시간임. 레보티록신과 달리 리오티로닌은 개에서 거의 완전히 흡수되며, 위 내용물이나 장내 세균총 변화에 의한 흡수 영향이 적은 것으로 알려져 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 과용량 시 심장, 간, CNS 독성이 보고됨. 개 PK 데이터 일부 존재; 고양이 종별 PK 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "CNS effects",
+          "agitation",
+          "seizures",
+          "irritability",
+          "insomnia",
+          "tremors"
+        ],
+        "index": 1,
+        "evidence": "과용량 시 CNS 자극(흥분, 경련) 보고됨. 갑상선 호르몬은 중추신경계 발달에 중요한 역할을 함."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "vitamin K-dependent clotting factors",
+          "anticoagulation"
+        ],
+        "index": 1,
+        "evidence": "갑상선 호르몬이 비타민 K 의존성 응고인자의 이화작용을 증가시켜 와파린 병용 시 항응고 효과가 증가할 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "GFR",
+          "creatinine"
+        ],
+        "index": 1,
+        "evidence": "갑상선기능저하 개에서 GFR 감소가 나타날 수 있으며, 정상 갑상선 상태 회복 시 GFR 증가 및 혈청 크레아티닌 감소가 관찰될 수 있음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic dysfunction",
+          "jaundice"
+        ],
+        "index": 1,
+        "evidence": "급성 대량 과용량 시 간 기능 장애(구토, 황달) 보고됨."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "arrhythmias",
+          "tachycardia",
+          "atrial fibrillation",
+          "ventricular tachycardia",
+          "heart failure",
+          "cardiac output"
+        ],
+        "index": 1,
+        "evidence": "심박수 및 심박출량 증가 작용. 과용량 시 동성빈맥, 심방세동, 심실빈맥, 심부전 보고됨. 중증 심장질환 환자에서 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS effects",
+          "agitation",
+          "seizures",
+          "listlessness"
+        ],
+        "index": 1,
+        "evidence": "과용량 시 CNS 효과(흥분, 경련) 보고됨. 일부 고양이는 무기력, 식욕부진 등 무감동성 갑상선기능항진증 증상을 보일 수 있음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "vitamin K-dependent clotting factors",
+          "anticoagulation"
+        ],
+        "index": 1,
+        "evidence": "갑상선 호르몬이 비타민 K 의존성 응고인자의 이화작용을 증가시킴."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 부담에 대한 직접적인 언급 없음. 갑상선기능항진증 치료 후 GFR 변화 가능성은 임상적으로 알려져 있으나 본 모노그래프에서 구체적으로 기술되지 않음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic dysfunction",
+          "jaundice"
+        ],
+        "index": 1,
+        "evidence": "급성 대량 과용량 시 간 기능 장애 보고됨."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "arrhythmias",
+          "tachycardia",
+          "atrial fibrillation",
+          "ventricular tachycardia",
+          "heart failure"
+        ],
+        "index": 1,
+        "evidence": "심장질환 환자에서 금기. 과용량 시 심각한 부정맥 및 심부전 보고됨. T3 억제 검사 목적으로 고양이에서 주로 사용됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.5,
+    "half_life_hr": {
+      "min": 5.0,
+      "max": 6.0,
+      "mean": 5.5,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 경구 투여 후 혈장 최고 농도 도달 시간: 2~5시간. 혈장 반감기: 약 5~6시간. 레보티록신에 비해 거의 완전히 흡수되며 위 내용물 영향이 적음. 고양이 PK 데이터는 본 모노그래프에 기재되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Tricyclic/Tetracyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "CNS stimulation",
+        "cardiac arrhythmias"
+      ],
+      "evidence": "Increased risk for CNS stimulation and cardiac arrhythmias when combined with tricyclic/tetracyclic antidepressants."
+    },
+    {
+      "drug": "Antidiabetic Agents (e.g., glipizide, insulin)",
+      "severity": 2,
+      "keywords": [
+        "increased insulin requirement",
+        "glucose regulation"
+      ],
+      "evidence": "Liothyronine may increase requirements for insulin or oral antidiabetic agents."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "binding"
+      ],
+      "evidence": "Cholestyramine may reduce liothyronine absorption; doses should be separated by at least 4 hours."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced digoxin concentration"
+      ],
+      "evidence": "Potential for reduced digoxin concentrations when liothyronine is administered concurrently."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 2,
+      "keywords": [
+        "tachycardia",
+        "hypertension"
+      ],
+      "evidence": "Concurrent use of ketamine and liothyronine may cause tachycardia and hypertension."
+    },
+    {
+      "drug": "Sympathomimetics (e.g., epinephrine, norepinephrine)",
+      "severity": 2,
+      "keywords": [
+        "sympathomimetic potentiation",
+        "cardiovascular effects"
+      ],
+      "evidence": "Liothyronine may potentiate the sympathomimetic effects of epinephrine and norepinephrine."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased anticoagulation",
+        "vitamin K-dependent clotting factors",
+        "catabolism"
+      ],
+      "evidence": "Thyroid hormones increase the catabolism of vitamin K-dependent clotting factors, potentially increasing anticoagulation effects in patients on warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "갑상선기능저하증 (오프라벨)",
+          "value": "4 - 6",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 조절 달성 후 1일 2회로 감량 가능; 증상 재발 시 q8h로 복귀. 투여 후 혈청 T3 농도를 기준으로 용량 조정.",
+          "evidence": "Plumb's 오프라벨 용량. 초기 용량 4~6 µg/kg PO q8h."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "갑상선기능항진증 진단을 위한 T3 억제 검사 (오프라벨)",
+          "value": "25",
+          "unit": "mcg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 7회 투여. 기저 T3 및 T4 측정 후 투여 시작; 마지막 투여 2~4시간 후 T3 및 T4 재측정.",
+          "evidence": "Plumb's 오프라벨 용량. 25 µg/마리(체중 기준 아님) PO q8h × 7회."
+        },
+        {
+          "logic_type": "linear",
+          "context": "갑상선기능저하증 (오프라벨)",
+          "value": "4.4",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 1일 2~3회 투여; 임상 조절 달성 후 1일 2회로 감량 가능; 증상 재발 시 q8h로 복귀. 투여 후 혈청 T3 농도를 기준으로 용량 조정.",
+          "evidence": "Plumb's 오프라벨 용량. 초기 4.4 µg/kg PO 1일 2~3회."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고사항 없음. 갑상선기능저하 개에서 GFR 감소가 나타날 수 있으며, 정상 갑상선 상태 회복 시 GFR 증가 및 혈청 크레아티닌 감소가 관찰될 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고사항 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "중증 심장질환",
+      "match_terms": [
+        "severe cardiac disease",
+        "heart disease",
+        "cardiomyopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전",
+      "match_terms": [
+        "heart failure",
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선중독증",
+      "match_terms": [
+        "thyrotoxicosis",
+        "hyperthyroidism"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "치료되지 않은 부신기능부전",
+      "match_terms": [
+        "untreated adrenal insufficiency",
+        "hypoadrenocorticism",
+        "Addison's disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신기능부전 (치료 중)",
+      "match_terms": [
+        "adrenal insufficiency",
+        "hypoadrenocorticism"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장질환 (경증~중등도)",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 트리요오드티로닌(T3)으로, 갑상선 호르몬 수용체에 결합하여 단백질 합성, 포도당신생합성, 글리코겐 동원 및 이용을 촉진하고, 산소 소비량, 체온, 심박수, 심박출량, 혈액량, 효소계 활성, 성장 및 성숙을 증가시킴.",
+    "common_extra_effects": [
+      "부정맥",
+      "흥분성 증가",
+      "불면증",
+      "진전",
+      "근육 약화",
+      "식욕 증가",
+      "체중 감소",
+      "설사",
+      "피부 발진",
+      "빈맥",
+      "다식증",
+      "다뇨증",
+      "다음증",
+      "과도한 헐떡임"
+    ],
+    "dog_mechanism": "경구 투여 후 2~5시간 내 최고 혈장 농도 도달. 반감기 약 5~6시간. 레보티록신에 비해 거의 완전히 흡수되며 위 내용물 영향이 적음. T3 보충 시 혈청 T4 농도는 낮게 유지되어 시상하부-뇌하수체-갑상선 축의 피드백 조절에 영향을 미칠 수 있음.",
+    "dog_extra_effects": [
+      "의인성 갑상선기능항진증 위험",
+      "빈맥",
+      "다식증",
+      "다뇨증",
+      "다음증",
+      "흥분",
+      "과도한 헐떡임"
+    ],
+    "cat_mechanism": "T3 억제 검사에 주로 사용됨. 정상 갑상선 고양이에서는 외인성 T3 투여 후 T4 농도가 억제되나, 갑상선기능항진증 고양이에서는 억제 실패.",
+    "cat_extra_effects": [
+      "무기력",
+      "식욕부진 (무감동성 갑상선기능항진증)",
+      "빈맥",
+      "흥분",
+      "과도한 헐떡임"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 리오티로닌은 레보티록신에 반응하지 않는 경우(GI 흡수 불량 등)에 한해 오프라벨로 사용할 수 있으나, 일반적으로 권장되지 않음. 1일 3회 투여가 필요하고 의인성 갑상선기능항진증 위험이 높기 때문임. T3 보충 시 혈청 T4 농도는 낮게 유지되므로 TSH 피드백 조절이 불완전할 수 있음. T3/T4 복합 제품도 동일한 이유로 피해야 함.",
+    "cat": "고양이에서 리오티로닌은 주로 갑상선기능항진증 진단을 위한 T3 억제 검사에 사용됨. 25 µg/마리(체중 기준 아님) PO q8h × 7회 투여 후 T3 및 T4 농도를 측정함. 정상 갑상선 고양이에서는 T4가 1.5 µg/dL 미만이거나 기저치의 50% 이상 감소해야 함. 갑상선기능항진증 고양이는 억제에 실패함. 투여 전후 T3 측정으로 복약 순응도 및 흡수 여부를 확인할 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 일반적으로 권장되지 않음. 레보티록신 불응 시에만 오프라벨 사용 고려. 의인성 갑상선기능항진증 위험, 1일 3회 투여 필요, 심장질환/부신기능부전/당뇨병 환자에서 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "T3 억제 검사 목적으로 주로 사용. 갑상선기능저하증 치료 시 오프라벨 사용 가능하나 주의 필요. 심장질환, 부신기능부전, 당뇨병 환자에서 주의하여 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 실온(15°C-30°C) 밀폐 용기 보관. 주사제: 냉장(2°C-8°C) 보관.",
+    "forms": [
+      "Liothyronine Sodium Tablets: 5 µg, 25 µg, 50 µg (Cytomel®, generic)",
+      "Liothyronine Sodium Injection Solution: 10 µg/mL in 1 mL vials (Triostat®, generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "리오티로닌(T3)은 합성 갑상선 호르몬으로, 수의학에서는 주로 고양이의 갑상선기능항진증 진단을 위한 T3 억제 검사에 사용됨. 갑상선기능저하증 치료에는 레보티록신이 1차 선택약이며, 리오티로닌은 레보티록신 불응 시에만 고려함. 개에서는 일반적으로 권장되지 않음(1일 3회 투여 필요, 의인성 갑상선기능항진증 위험). 중증 심장질환, 심부전, 갑상선중독증, 치료되지 않은 부신기능부전 환자에서 금기. 반감기가 짧아(5~6시간) 레보티록신보다 작용 지속 시간이 짧음.",
+    "indications": "【허가 외 사용】 ① 고양이: 갑상선기능항진증 진단을 위한 T3 억제 검사 (25 µg/마리 PO q8h × 7회). ② 고양이: 갑상선기능저하증 치료 (초기 4.4 µg/kg PO 1일 2~3회). ③ 개: 레보티록신 불응성 갑상선기능저하증 치료 (초기 4~6 µg/kg PO q8h). 수의학적 허가 제품 없음; 사람용 제품 오프라벨 사용.",
+    "client_info": "이 약은 수의사가 처방한 대로 정확하게 투여하는 것이 매우 중요합니다. 투여를 빠뜨리거나 치료를 조기에 중단하면 치료 효과가 없을 수 있습니다. 이 약의 가장 흔한 부작용은 갑상선 호르몬 과다 증상으로, 식욕 또는 갈증 증가, 흥분, 과도한 헐떡임 등이 나타날 수 있습니다. 이러한 증상이 나타나면 즉시 수의사에게 연락하십시오. 레보티록신이나 건조 갑상선 제제와 혼동하지 않도록 주의하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat-specific pharmacokinetics",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP metabolic pathway details"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "half_life_hr (cat-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/58.jsonl",
+    "extracted_at": "2026-03-11T07:28:35.727582+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,680 @@
+{
+  "id": "flumethasone",
+  "drug_identity": {
+    "name_ko": "플루메타손",
+    "name_en": "Flumethasone",
+    "active_ingredient": "Flumethasone",
+    "brand_names": [
+      "Flucort",
+      "Anaprime",
+      "Fluosmin",
+      "Cerson",
+      "Locacorten",
+      "Locacortene",
+      "Locorten",
+      "Locortene",
+      "Lorinden"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.0625,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간 대사가 주요 경로로 추정되나 Plumb's 원문에 CYP 효소 정보는 명시되지 않음. 아졸계 항진균제 및 리팜핀과의 상호작용으로 간 대사 경로가 시사됨."
+    },
+    "extra_information": "말(IV 투여 후): 분포용적(정상상태) 5.9 L/kg, 전신 청소율 30.7 mL/kg/min, 소실 반감기 4.8시간. 개·고양이에 대한 별도의 약동학 데이터는 Plumb's 원문에 기재되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개·고양이 특이적 수의학 PK 데이터 부재; 말 데이터 및 글루코코르티코이드 계열 일반 정보에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS effects",
+          "behavioral changes",
+          "depression",
+          "lethargy"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 급성 CNS 증상 보고 사례 있음; 행동 변화(우울, 무기력, 공격성) 부작용으로 기재됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "neutrophilia",
+          "lymphopenia",
+          "hypokalemia",
+          "dyslipidemias",
+          "increased cholesterol"
+        ],
+        "index": 2,
+        "evidence": "호중구증가증(투여 후 4~8시간), 림프구감소증(수 주 지속 가능), 저칼륨혈증, 이상지질혈증 등 혈액 관련 부작용 기재됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "polyuria",
+          "polydipsia",
+          "urine glucose"
+        ],
+        "index": 1,
+        "evidence": "다뇨, 다음 등 신장 관련 증상 보고; 소변 포도당 증가 가능성 기재됨."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "hepatic metabolism",
+          "pancreatitis"
+        ],
+        "index": 3,
+        "evidence": "간 효소 증가, 간 대사 억제 관련 약물 상호작용 다수 기재; 췌장염 부작용 포함."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypokalemia"
+        ],
+        "index": 0,
+        "evidence": "저칼륨혈증으로 인한 간접적 심장 영향 가능성; 직접적 심장독성 기재 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "depression"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 우울 증상이 부작용으로 기재됨; 개보다 부작용 발생 빈도 낮음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypokalemia",
+          "lymphopenia"
+        ],
+        "index": 1,
+        "evidence": "글루코코르티코이드 계열 공통 혈액 영향; 고양이는 개보다 부작용이 적은 경향."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "polyuria",
+          "polydipsia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 다뇨, 다음 부작용 기재됨."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "간 대사 경로 관련 상호작용 기재; 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypokalemia"
+        ],
+        "index": 0,
+        "evidence": "저칼륨혈증으로 인한 간접적 심장 영향 가능성; 직접적 심장독성 기재 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 4.8,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "말(IV 투여 후) 소실 반감기 4.8시간. 개·고양이 약동학 데이터는 Plumb's 원문에 기재되지 않음. 작용 지속 시간은 36~48시간으로 기재됨(장기 작용형 글루코코르티코이드)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concomitant administration with glucocorticoids may cause hypokalemia."
+    },
+    {
+      "drug": "Anticholinesterase Agents (pyridostigmine, neostigmine)",
+      "severity": 2,
+      "keywords": [
+        "muscle weakness",
+        "myasthenia gravis"
+      ],
+      "evidence": "In patients with myasthenia gravis, concomitant glucocorticoid and anticholinesterase agent administration may lead to profound muscle weakness."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "reduced salicylate concentration"
+      ],
+      "evidence": "Glucocorticoids may reduce salicylate blood concentration and increase the risk for GI ulceration/bleeding."
+    },
+    {
+      "drug": "Azole Antifungals (ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid concentration",
+        "adrenal insufficiency",
+        "CYP inhibition"
+      ],
+      "evidence": "May decrease the metabolism of glucocorticoids and increase flumethasone blood concentration; ketoconazole may induce adrenal insufficiency when glucocorticoids are withdrawn."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "hepatic metabolism inhibition",
+        "dosage adjustment"
+      ],
+      "evidence": "Glucocorticoids may inhibit the hepatic metabolism of cyclophosphamide; dosage adjustments may be required."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased blood concentration",
+        "mutual hepatic metabolism inhibition"
+      ],
+      "evidence": "Concomitant administration may increase the blood concentration of each by mutually inhibiting the hepatic metabolism of the other."
+    },
+    {
+      "drug": "Diazepam",
+      "severity": 1,
+      "keywords": [
+        "decreased diazepam concentration"
+      ],
+      "evidence": "Flumethasone may decrease diazepam concentration."
+    },
+    {
+      "drug": "Diuretics, Potassium-Depleting (furosemide, thiazides)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concomitant administration with glucocorticoids may cause hypokalemia."
+    },
+    {
+      "drug": "Ephedrine",
+      "severity": 1,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased flumethasone concentration"
+      ],
+      "evidence": "May increase glucocorticoid metabolism, thereby reducing flumethasone blood concentration."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 1,
+      "keywords": [
+        "potentiated glucocorticoid effect"
+      ],
+      "evidence": "May potentiate the effects of glucocorticoids."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "increased insulin requirement",
+        "hyperglycemia"
+      ],
+      "evidence": "Insulin requirements may increase in patients receiving glucocorticoids."
+    },
+    {
+      "drug": "Macrolide Antibiotics (erythromycin, clarithromycin)",
+      "severity": 2,
+      "keywords": [
+        "decreased glucocorticoid metabolism",
+        "increased flumethasone concentration"
+      ],
+      "evidence": "May decrease the metabolism of glucocorticoids and increase flumethasone blood concentration."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "altered steroid metabolism",
+        "adrenal insufficiency"
+      ],
+      "evidence": "May alter the metabolism of steroids; higher than usual doses of steroids may be necessary to treat mitotane-induced adrenal insufficiency."
+    },
+    {
+      "drug": "NSAIDs (carprofen, flunixin, meloxicam, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "ulcerogenic"
+      ],
+      "evidence": "Administration of ulcerogenic drugs with glucocorticoids may increase the risk for GI ulceration."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased flumethasone concentration"
+      ],
+      "evidence": "May increase the metabolism of glucocorticoids and decrease flumethasone blood concentration."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased flumethasone concentration"
+      ],
+      "evidence": "May increase the metabolism of glucocorticoids and decrease flumethasone blood concentration."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "increased glucocorticoid metabolism",
+        "decreased flumethasone concentration"
+      ],
+      "evidence": "May increase the metabolism of glucocorticoids and decrease flumethasone blood concentration."
+    },
+    {
+      "drug": "Live Attenuated Vaccines",
+      "severity": 3,
+      "keywords": [
+        "immunosuppression",
+        "virus replication",
+        "diminished immune response"
+      ],
+      "evidence": "Patients receiving corticosteroids at immunosuppressive dosages should generally not receive live attenuated-virus vaccines as virus replication may be augmented."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "근골격계 염증, 피부질환, 알레르기 상태 (경구)",
+          "value": "0.0625 - 0.25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "개별 동물의 크기, 질병 단계 및 중증도에 따라 조정. 분할 투여. 미국 내 정제 제품 더 이상 판매되지 않음.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #030-415)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "근골격계 염증, 알레르기 상태, 쇼크 (비경구)",
+          "value": "0.0625 - 0.25",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 반복 투여 가능. IM 또는 SC로도 투여 가능.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #030-414)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "관절 내 투여 (관절염 등)",
+          "value": "0.166 - 1",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "관절 크기 및 질병 중증도에 따라 조정. 관절 내 주사.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #030-414)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "병변 내 투여",
+          "value": "0.125 - 1",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "병변 크기 및 위치에 따라 조정. 병변 내 주사.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #030-414)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "급성 및 만성 피부질환 관련 소양증, 자극, 염증 조절 (경구)",
+          "value": "0.03125 - 0.125",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "개별 동물에 따라 조정. 분할 투여. 미국 내 정제 제품 더 이상 판매되지 않음.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #030-415)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "급성 및 만성 피부질환 관련 소양증, 자극, 염증 조절 (비경구)",
+          "value": "0.03125 - 0.125",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 반복 투여 가능. IM 또는 SC로도 투여 가능.",
+          "evidence": "FDA 승인 라벨 용량 (NADA #030-414)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 원문에 신장 기능 저하 시 용량 조정에 대한 명시적 권고사항 없음. 다뇨/다음 등 신장 관련 부작용 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "Plumb's 원문에 간 기능 저하 시 구체적 용량 조정 권고 없음. 간 효소 증가 부작용 및 다수의 간 대사 관련 약물 상호작용이 기재되어 있어 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "임신 말기 (마지막 삼분기)",
+      "match_terms": [
+        "pregnancy",
+        "last trimester",
+        "임신"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신 진균 감염",
+      "match_terms": [
+        "systemic fungal infection",
+        "진균증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "특발성 혈소판감소증 (IM 투여 시)",
+      "match_terms": [
+        "idiopathic thrombocytopenia",
+        "ITP",
+        "혈소판감소증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "과민반응"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신 질환의 만성 코르티코스테로이드 치료 (지속 방출형 주사제)",
+      "match_terms": [
+        "chronic corticosteroid therapy",
+        "sustained-release injectable"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "당뇨"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "수유 중인 동물",
+      "match_terms": [
+        "nursing dam",
+        "lactation",
+        "수유"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 원문에 유전적 감수성 또는 특정 품종 위험에 대한 기재 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "장기 작용형 글루코코르티코이드로서 항염증, 면역억제, 항알레르기 효과를 나타냄. 하이드로코르티손 대비 약 15배 강력하며, 1.3 mg이 프레드니손 약 5 mg에 해당. 무기질코르티코이드 활성은 거의 없음. 작용 지속 시간 36~48시간.",
+    "common_extra_effects": [
+      "쿠싱 증후군 유사 증상 (장기 투여 시)",
+      "저칼륨혈증",
+      "혈청 콜레스테롤 증가",
+      "소변 포도당 증가",
+      "TSH 억제, T3/T4 감소",
+      "호중구증가증 (투여 후 4~8시간)",
+      "림프구감소증",
+      "피부 내 반응 억제",
+      "성장 지연 (어린 동물)"
+    ],
+    "dog_mechanism": "개에서 근골격계 염증, 피부질환, 알레르기 상태에 FDA 승인 적응증. 항염증 및 면역억제 효과.",
+    "dog_extra_effects": [
+      "위장관 궤양 및 출혈",
+      "다음, 다식, 다뇨",
+      "둔하고 건조한 피모",
+      "체중 증가",
+      "헐떡임(panting)",
+      "구토, 설사",
+      "간 효소 증가",
+      "췌장염",
+      "이상지질혈증",
+      "당뇨병 악화 또는 유발",
+      "근육 소모",
+      "행동 변화 (우울, 무기력, 공격성)"
+    ],
+    "cat_mechanism": "고양이에서 급성 및 만성 피부질환 관련 소양증, 자극, 염증 조절에 FDA 승인 적응증. 개보다 높은 용량이 필요하나 부작용 발생 빈도는 낮음.",
+    "cat_extra_effects": [
+      "다음, 다뇨, 다식 및 체중 증가 (간헐적)",
+      "설사",
+      "우울",
+      "장기 고용량 투여 시 쿠싱 증후군 유사 증상"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 적응증은 근골격계 염증, 피부질환, 알레르기 상태임. 급성 투여 시에도 위장관 궤양이 발생할 수 있으므로 주의 필요. 소형 동물에서는 더 이상 일반적으로 사용되지 않음. 용량은 mg/kg이 아닌 개체당 mg으로 처방됨에 유의. 정제 제품은 미국 내 더 이상 판매되지 않음.",
+    "cat": "고양이에서 FDA 승인된 적응증은 급성 및 만성 피부질환임. 개보다 높은 용량이 필요하나 부작용 발생 빈도는 낮은 경향. 용량은 mg/kg이 아닌 개체당 mg으로 처방됨에 유의. 정제 제품은 미국 내 더 이상 판매되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "위장관 궤양, 간 효소 증가, 당뇨병 악화, 쿠싱 증후군 유사 증상 등 다양한 부작용 가능. 장기 투여 시 부신 기능 억제 위험. 임신 말기 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "개보다 부작용 발생 빈도 낮으나 장기 고용량 투여 시 쿠싱 증후군 유사 증상 가능. 임신 말기 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제: 실온 보관, 동결 금지. 정제: 실온 보관.",
+    "forms": [
+      "Flumethasone Injection 0.5 mg/mL (100 mL vials) - Flucort Solution",
+      "Flumethasone Suspension 2 mg/mL - Anaprime Suspension (관절 내 투여, 말)",
+      "Flumethasone Tablets 0.0625 mg - Flucort (미국 내 더 이상 판매되지 않음)",
+      "Flumethasone Suspension 2 mg/mL - Fluosmin Suspension (개)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루메타손은 장기 작용형 글루코코르티코이드로 하이드로코르티손 대비 약 15배 강력하며, 무기질코르티코이드 활성은 거의 없음. 작용 지속 시간 36~48시간. 소형 동물에서는 더 이상 일반적으로 사용되지 않음. 용량은 반드시 mg/kg이 아닌 개체당 mg으로 처방해야 함. 임신 말기, 전신 진균 감염, 특발성 혈소판감소증(IM 투여 시) 금기. 장기 투여 시 쿠싱 증후군 유사 증상 주의.",
+    "indications": "개: 근골격계 염증(관절염, 추간판 증후군, 근염 등), 피부질환(소양증, 외이염 포함), 알레르기 상태(두드러기, 곤충 교상) — FDA 승인. 고양이: 급성 및 만성 피부질환 관련 소양증, 자극, 염증 — FDA 승인. 말: 근골격계 염증, 알레르기 상태 — FDA 승인.",
+    "client_info": "이 약은 가능한 가장 낮은 용량으로 가장 짧은 기간 동안 사용하는 것이 목표입니다. 수의사의 지시를 정확히 따르고, 수의사와 상담 없이 임의로 투약을 중단하지 마십시오(심각한 부작용이 발생할 수 있습니다). 개에서는 위장관 궤양, 천공, 출혈이 발생할 수 있으므로 식욕 저하, 고열, 흑색 타르 변, 혈성 구토(커피 찌꺼기 모양) 발생 시 즉시 수의사에게 연락하십시오. 가능하면 음식과 함께 투여하십시오. 현재 투여 중인 모든 약물(비타민, 보조제, 한약 포함)을 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog/Cat specific pharmacokinetics",
+      "CYP enzyme profile",
+      "Oral bioavailability data",
+      "Protein binding data",
+      "Renal dose adjustment recommendations",
+      "Hepatic dose adjustment recommendations",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:15:41.226755+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "id": "niacinamide",
+  "drug_identity": {
+    "name_ko": "니아시나마이드",
+    "name_en": "Niacinamide",
+    "active_ingredient": "Niacinamide",
+    "brand_names": [],
+    "allergy_class": null,
+    "class": "Immunosuppressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 OTC 제품을 개 에서 테트라사이클린계 항생제와 병용하여 면역매개성 피부질환 치료에 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 여러 대사산물로 대사된 후 소변으로 배설됨. 생리적 용량에서는 소량만 미변화체로 배설되나, 용량 증가 시 미변화체 배설 비율 증가."
+    },
+    "extra_information": "개에서의 구체적인 PK 데이터는 문헌에 기재되지 않음. 경구 투여 후 흡수 양호하며 체내 조직에 광범위하게 분포함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학 종별 PK 데이터 부재; 부작용 및 금기 정보에서 추론.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizure",
+          "CNS"
+        ],
+        "index": 1,
+        "evidence": "발작 병력이 있는 개에서 사용 주의 또는 회피 권고; 발작 빈도 증가에 대한 일화적 보고 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "IgE",
+          "mast cell"
+        ],
+        "index": 1,
+        "evidence": "IgE 유도 히스타민 유리 및 비만세포 탈과립 억제 작용; 직접적인 혈액독성 보고 없음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urine excretion"
+        ],
+        "index": 1,
+        "evidence": "대사산물 및 미변화체가 소변으로 배설됨. 신독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "liver enzymes",
+          "liver disease",
+          "hepatic metabolism"
+        ],
+        "index": 2,
+        "evidence": "간에서 대사됨. 간효소 수치 상승이 부작용으로 보고됨. 간질환 시 금기(인체 기준). 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적 영향 언급 없음. 니아신과 달리 니아시나마이드는 심혈관계에 영향을 미치지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 용량 또는 부작용 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "Plumb's 모노그래프에 반감기, Tmax, 생체이용률, 단백결합률에 대한 구체적 수치 기재 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Insulin / Oral Antidiabetic Agents (e.g., glipizide, metformin)",
+      "severity": 2,
+      "keywords": [
+        "glycemic control",
+        "insulin resistance"
+      ],
+      "evidence": "당뇨 환자에서 니아시나마이드 투여 후 인슐린 또는 경구 혈당강하제 용량 증가가 필요한 경우 보고됨. 수의 환자에서의 임상적 의의는 불명확."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "무균성 염증성/자가면역성 피부질환 보조치료 (체중 10 kg 이하) — 테트라사이클린 병용",
+          "value": "250",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과 발현까지 6~8주 소요 가능. 효과 확인 후 BID로 감량 후 점진적 감량 고려.",
+          "evidence": "오프라벨. 체중 10 kg 이하 개: 니아시나마이드 250 mg/마리(mg/kg 아님) PO TID + 테트라사이클린 250 mg/마리 PO TID."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "무균성 염증성/자가면역성 피부질환 보조치료 (체중 10 kg 초과) — 테트라사이클린 병용",
+          "value": "500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "효과 발현까지 6~8주 소요 가능. 효과 확인 후 BID로 감량 후 점진적 감량 고려.",
+          "evidence": "오프라벨. 체중 10 kg 초과 개: 니아시나마이드 500 mg/마리(mg/kg 아님) PO TID + 테트라사이클린 500 mg/마리 PO TID."
+        },
+        {
+          "logic_type": "linear",
+          "context": "무균성 염증성/자가면역성 피부질환 보조치료 — 대안적 mg/kg 용량 (일부 임상의 사용)",
+          "value": "45",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "테트라사이클린 45 mg/kg PO q8h 병용.",
+          "evidence": "오프라벨. 일부 임상의가 제안한 대안 용량: 니아시나마이드 45 mg/kg PO q8h + 테트라사이클린 45 mg/kg PO q8h."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신기능 저하 시 용량 조정에 대한 구체적 권고 없음. 신장으로 배설되므로 중증 신부전 시 주의 필요할 수 있으나 명시적 지침 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "인체에서 간질환 시 금기. 개에서도 간질환이 있는 경우 사용을 피하거나 주의하도록 권고됨. 간효소 수치 기저치 측정 및 주기적 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "liver disease",
+        "hepatic disease",
+        "hepatitis",
+        "cirrhosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "활동성 소화성 궤양",
+      "match_terms": [
+        "peptic ulcer",
+        "gastric ulcer",
+        "GI ulcer"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to niacinamide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 병력",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "seizure history"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중 (테트라사이클린 병용 시)",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "IgE 유도 히스타민 유리 및 비만세포 탈과립 억제; 포스포디에스테라제 억제; 프로테아제 유리 감소; 테트라사이클린과 병용 시 항체-항원 복합체에 의한 보체 활성화 이후 백혈구 화학주성 억제.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "무기력증",
+      "간효소 수치 상승 (드물게)",
+      "혈당 조절 이상 (당뇨 환자)",
+      "발작 빈도 증가 (일화적 보고)"
+    ],
+    "dog_mechanism": "테트라사이클린과 병용 시 면역매개성 피부질환에서 면역조절 효과 발휘. IgE 매개 히스타민 유리 차단 및 비만세포 탈과립 억제가 주요 기전.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "무기력증",
+      "간효소 수치 상승",
+      "발작 빈도 증가 (일화적)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 테트라사이클린(테트라사이클린, 독시사이클린, 미노사이클린)과 병용하여 원판상 홍반성 루푸스(DLE), 무균성 육아종/화농성 육아종 증후군, 천포창 복합체, 혈관염 등 다양한 무균성 염증성 및 자가면역성 피부질환 치료에 사용됨. 효과 발현까지 6~8주 소요될 수 있음. 발작 병력이 있는 개에서는 주의 또는 회피 권고. 음식과 함께 투여 시 위장관 부작용 감소 가능. 피내 또는 혈청 알레르기 검사 전 1~2주 전 투약 중단 필요.",
+    "cat": "고양이에 대한 용량 및 안전성 데이터가 Plumb's 모노그래프에 기재되어 있지 않음. 고양이에서의 사용은 권장되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 병력, 간질환, 당뇨병이 있는 개에서 주의 필요. 간효소 기저치 측정 및 주기적 모니터링 권장. 임신/수유 중 테트라사이클린 병용 시 안전성 미확립."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에 대한 용량 및 안전성 데이터 없음. 사용 권장하지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 실온 보관. 강알칼리 또는 강산과 비혼화성.",
+    "forms": [
+      "니아시나마이드 정제 100 mg (OTC, 인체용)",
+      "니아시나마이드 정제 500 mg (OTC, 인체용)",
+      "니아시나마이드 캡슐 100 mg (OTC, 인체용)",
+      "니아시나마이드 캡슐 500 mg (OTC, 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "니아시나마이드는 테트라사이클린계 항생제(테트라사이클린, 독시사이클린, 미노사이클린)와 병용하여 개의 다양한 무균성 염증성 및 자가면역성 피부질환(DLE, 천포창, 혈관염 등) 치료에 오프라벨로 사용되는 면역조절제입니다. 수의학적 허가 제품은 없으며 인체용 OTC 제품을 사용합니다. 효과 발현까지 6~8주가 소요될 수 있으며, 발작 병력·간질환·당뇨병이 있는 환자에서는 주의가 필요합니다. 니아신(niacin)과 혼동하지 않도록 주의하십시오.",
+    "indications": "【오프라벨 적응증 (개)】 원판상 홍반성 루푸스(DLE), 피부 수포성 홍반성 루푸스, 무균성 육아종/화농성 육아종 증후군, 무균성 결절성 지방층염, 피부 반응성 조직구증, 천포창 복합체, 점막 천포창, 특발성 대칭성(루포이드) 조갑이영양증/조갑염, 중족골 누공, 혈관염, 비강 인중 동맥염, 피지선염, 피부근염, 결절성 육아종성 결막염, 만성 궤양성 치주 구내염(CUPS). 테트라사이클린계 항생제와 반드시 병용 사용.",
+    "client_info": "이 약은 개에서 테트라사이클린 항생제와 함께 다양한 심각한 피부 질환 및 자가면역 질환 치료에 사용됩니다. 처음에는 보통 하루 3회 투여합니다. 효과가 나타나기까지 최대 6~8주가 걸릴 수 있으므로 인내심을 갖고 꾸준히 투여해 주십시오. 부작용은 드물지만 구토, 설사, 식욕 감소가 가장 흔하며, 음식과 함께 투여하면 위장관 부작용을 줄일 수 있습니다. 테트라사이클린과 병용 시 무기력증, 드물게 간 문제가 발생할 수 있습니다. 구매 시 니아시나마이드(niacinamide)와 니아신(niacin)을 혼동하지 않도록 주의하십시오. 정기적인 재진 검사를 빠짐없이 받으시기 바랍니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (veterinary species-specific PK data)",
+      "Half-life",
+      "Tmax",
+      "Bioavailability",
+      "Protein binding",
+      "Renal dose adjustment",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "species_flags.washout_period_days",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/28.jsonl",
+    "extracted_at": "2026-03-10T21:55:24.303335+00:00",
+    "reviewer": null
+  }
+}

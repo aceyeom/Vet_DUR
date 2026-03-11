@@ -1,0 +1,592 @@
+{
+  "id": "amantadine",
+  "drug_identity": {
+    "name_ko": "아만타딘",
+    "name_en": "Amantadine",
+    "active_ingredient": "Amantadine",
+    "brand_names": [
+      "Symmetrel",
+      "Endantadine",
+      "GOCOVRI",
+      "Osmolex"
+    ],
+    "allergy_class": null,
+    "class": "Analgesic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 적응증(만성 통증, 신경병성 통증)은 모두 엑스트라라벨 사용이며, 수의용 허가 제품은 없음. FDA는 닭·칠면조·오리에 대한 엑스트라라벨 사용을 금지함.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아만타딘은 주로 신장을 통해 원형으로 배설됨. 간 대사에 대한 구체적 정보는 Plumb's에 기재되지 않음."
+    },
+    "extra_information": "개: 경구 생체이용률 매우 높음. 그레이하운드에서 2.8 mg/kg 경구 투여 시 최고혈중농도 271 ng/mL, Tmax 1~4시간, 반감기 4.9시간. 신장 배설. 고양이: 경구 생체이용률 매우 높음, Tmax 약 2시간, 정상상태 분포용적 약 4.3 L/kg, 평균 청소율 8.2 mL/min/kg, 반감기 5.5~6시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 약물로 신장 부담이 가장 높음. 개에서 진전, 불안, 운동실조 등 CNS 독성 보고. 심장 독성은 인간 과량투여 데이터에서만 확인됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "agitation",
+          "tremors",
+          "anxiety",
+          "ataxia",
+          "seizure threshold",
+          "CNS stimulatory"
+        ],
+        "index": 1,
+        "evidence": "개에서 초기 치료 시 흥분(agitation) 보고. 과량투여 시 진전, 불안, 운동실조 발생. 아만타딘은 발작 역치를 낮출 수 있음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 직접적인 수의학적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renally eliminated",
+          "renal dysfunction",
+          "renal impairment",
+          "urinary acidification"
+        ],
+        "index": 2,
+        "evidence": "아만타딘은 주로 신장으로 배설됨. 신기능 저하 시 청소율 감소 및 반감기 연장. 과량투여 시 신기능 장애 보고."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic disease"
+        ],
+        "index": -1,
+        "evidence": "간질환 환자에서 주의 사용 권고(인간 데이터). 간 대사 관련 수의학적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "arrhythmias",
+          "QT prolonging",
+          "cardiac dysfunction",
+          "tachycardia"
+        ],
+        "index": -1,
+        "evidence": "인간 과량투여 시 부정맥, 고혈압, 빈맥 보고. QT 연장 약물과의 상호작용 주의. 개에서 직접적인 심장 독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "behavioral effects",
+          "seizure threshold",
+          "CNS"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 15 mg/kg 이상 시 행동 이상 보고. 독성 용량은 30 mg/kg. 부작용 프로파일은 아직 완전히 규명되지 않음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "혈액 독성에 대한 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renally eliminated",
+          "renal dysfunction"
+        ],
+        "index": 2,
+        "evidence": "고양이에서도 신장 배설이 주요 경로. 신기능 저하 시 축적 위험."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간 관련 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolonging",
+          "arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적인 심장 독성 데이터 없음. QT 연장 약물 병용 시 주의 필요."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.5,
+    "half_life_hr": {
+      "min": 4.9,
+      "max": 6.0,
+      "mean": 5.45,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 67,
+    "evidence": "개: Tmax 1~4시간, 반감기 4.9시간(그레이하운드). 고양이: Tmax 약 2시간, 반감기 5.5~6시간. 단백결합률 67%는 인간 데이터. 경구 생체이용률은 개·고양이 모두 '매우 높음'으로 기술되나 정확한 수치 미기재."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Drugs (e.g., atropine, glycopyrrolate, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement",
+        "additive anticholinergic effects"
+      ],
+      "evidence": "Amantadine may enhance anticholinergic effects of these drugs."
+    },
+    {
+      "drug": "Antihistamines (e.g., diphenhydramine, hydroxyzine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement"
+      ],
+      "evidence": "Amantadine may enhance anticholinergic effects of antihistamines."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (e.g., acetazolamide)",
+      "severity": 2,
+      "keywords": [
+        "increased amantadine concentration",
+        "reduced renal clearance"
+      ],
+      "evidence": "Carbonic anhydrase inhibitors may increase amantadine plasma concentration."
+    },
+    {
+      "drug": "CNS Stimulants (e.g., caffeine, methylphenidate, selegiline)",
+      "severity": 2,
+      "keywords": [
+        "CNS stimulation",
+        "additive stimulatory effects"
+      ],
+      "evidence": "Concomitant use may increase amantadine's CNS stimulatory effects."
+    },
+    {
+      "drug": "Glucagon",
+      "severity": 1,
+      "keywords": [
+        "anticholinergic",
+        "GI adverse effects"
+      ],
+      "evidence": "Amantadine's anticholinergic effects may increase GI adverse effects of glucagon."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement"
+      ],
+      "evidence": "Amantadine may enhance anticholinergic effects of phenothiazines."
+    },
+    {
+      "drug": "Quinidine / Quinine",
+      "severity": 2,
+      "keywords": [
+        "reduced renal clearance",
+        "increased amantadine concentration"
+      ],
+      "evidence": "Quinidine and quinine may reduce renal clearance of amantadine, increasing plasma levels."
+    },
+    {
+      "drug": "QT Prolonging Drugs (e.g., amiodarone, cisapride, procainamide, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "arrhythmia risk"
+      ],
+      "evidence": "Concurrent use with QT-prolonging drugs may increase the risk for arrhythmias."
+    },
+    {
+      "drug": "Sulfa-/Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "decreased excretion",
+        "increased amantadine concentration"
+      ],
+      "evidence": "Sulfa/trimethoprim may decrease excretion of amantadine, yielding higher blood concentrations."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "seizure risk",
+        "CNS effects",
+        "sedation"
+      ],
+      "evidence": "Concomitant use may increase seizure risk; tramadol at high doses has caused seizures and amantadine can lower seizure threshold. Monitor for sedation or neurologic adverse effects."
+    },
+    {
+      "drug": "Triamterene",
+      "severity": 2,
+      "keywords": [
+        "decreased excretion",
+        "increased amantadine concentration"
+      ],
+      "evidence": "Triamterene may decrease excretion of amantadine, yielding higher blood concentrations."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement"
+      ],
+      "evidence": "TCAs may enhance the anticholinergic effects of amantadine."
+    },
+    {
+      "drug": "Urinary Acidifiers (e.g., methionine, ammonium chloride, ascorbic acid)",
+      "severity": 1,
+      "keywords": [
+        "increased excretion",
+        "decreased amantadine concentration"
+      ],
+      "evidence": "Urinary acidifiers may increase excretion of amantadine, reducing plasma levels."
+    },
+    {
+      "drug": "Urinary Alkalinizers (e.g., sodium bicarbonate, potassium citrate)",
+      "severity": 2,
+      "keywords": [
+        "decreased excretion",
+        "increased amantadine concentration"
+      ],
+      "evidence": "Urinary alkalinizers may decrease excretion of amantadine, increasing plasma levels."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 통증 및 신경병성 통증의 보조 진통 (엑스트라라벨)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "낮은 용량부터 시작하여 필요 시 천천히 증량. 약동학 연구에 따르면 q12h 투여가 더 효과적일 수 있음.",
+          "evidence": "Plumb's Dosages 섹션: 3–5 mg/kg PO SID (엑스트라라벨). 약동학적 데이터는 q12h 투여를 지지함."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 통증 및 신경병성 통증의 보조 진통 - 약동학 기반 권장 (엑스트라라벨)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "약동학 연구에 근거한 대안적 투여 간격. 통증 사이클 해소에 수 주 소요될 수 있음.",
+          "evidence": "약동학 연구(그레이하운드, 반감기 4.9시간)에 근거하여 q12h 투여 간격 재평가 권고."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 통증 및 신경병성 통증의 보조 진통 (엑스트라라벨)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "낮은 용량부터 시작. 약동학 연구에 따르면 q12h 투여가 더 효과적일 수 있음. 고양이에서 GI 부작용이 개보다 더 흔할 수 있음.",
+          "evidence": "Plumb's Dosages 섹션: 개/고양이 동일 용량 기재. 고양이 반감기 5.5~6시간으로 q12h 투여 지지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 통증 및 신경병성 통증의 보조 진통 - 약동학 기반 권장 (엑스트라라벨)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "고양이 약동학 데이터(반감기 5.5~6시간)에 근거한 대안적 투여 간격.",
+          "evidence": "고양이 약동학 연구: 반감기 5.5~6시간, 정상상태 분포용적 4.3 L/kg."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "아만타딘은 주로 신장으로 배설되므로 신기능 저하 시 용량 조절이 필요할 수 있음. 인간에서 신기능 저하 시 청소율 감소 및 반감기 2배 연장 보고. 말기 신부전 환자에서는 금기(인간 데이터). 수의학적 구체적 기준치는 미기재."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간질환 환자에서 주의 사용 권고(인간 데이터). 수의학적 구체적 용량 조절 기준은 미기재."
+  },
+  "contraindications": [
+    {
+      "condition": "말기 신부전",
+      "match_terms": [
+        "end-stage renal disease",
+        "ESRD",
+        "신부전"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "아만타딘 또는 리만타딘 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "rimantadine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "신장질환",
+        "신부전"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "간질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "발작"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF",
+        "심부전"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "NMDA 수용체 길항제: 글루타메이트/아스파르테이트의 NMDA 수용체 결합을 억제하여 만성 통증 및 중추 감작을 완화. 또한 도파민 농도 증가, 항콜린 작용, 인플루엔자 A M2 단백질 억제를 통한 항바이러스 효과.",
+    "common_extra_effects": [
+      "흥분(agitation)",
+      "고창증(flatulence)",
+      "묽은 변(loose stools)",
+      "설사(diarrhea)",
+      "진전(tremors)",
+      "불안(anxiety)",
+      "운동실조(ataxia)",
+      "과다침흘림(hypersalivation)",
+      "구토(vomiting)"
+    ],
+    "dog_mechanism": "NMDA 수용체 길항을 통해 만성 통증 및 신경병성 통증에 대한 보조 진통 효과 제공. 단독 사용보다 NSAID, 오피오이드, 가바펜틴과 병용 시 효과적.",
+    "dog_extra_effects": [
+      "흥분(agitation) - 특히 치료 초기",
+      "고창증(flatulence)",
+      "묽은 변(loose stools)",
+      "설사(diarrhea)",
+      "과량투여 시: 진전, 불안, 운동실조, 과다침흘림, 구토"
+    ],
+    "cat_mechanism": "개와 동일한 NMDA 수용체 길항 기전. 고양이에서의 부작용 프로파일은 아직 완전히 규명되지 않음.",
+    "cat_extra_effects": [
+      "GI 부작용(개보다 더 흔할 수 있음)",
+      "행동 이상(15 mg/kg 이상 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률이 매우 높으며, 초기 치료 시 흥분, 고창증, 묽은 변, 설사가 발생할 수 있음. 약동학 연구(반감기 4.9시간)에 근거하여 q12h 투여가 더 효과적일 수 있음. 단독 사용보다 NSAID, 오피오이드, 가바펜틴과 병용 권장. 소형 동물에서 정확한 용량 투여를 위해 조제가 필요할 수 있음. 과량투여 시 진전, 불안, 운동실조, 과다침흘림, 구토 발생 가능.",
+    "cat": "고양이에서 경구 생체이용률이 매우 높고 반감기는 5.5~6시간. GI 부작용이 개보다 더 흔할 수 있음. 독성 용량은 30 mg/kg이며 15 mg/kg 이상에서 행동 이상 보고. 부작용 프로파일이 아직 완전히 규명되지 않아 주의 깊은 모니터링 필요. 소형 동물에서 정확한 용량 투여를 위해 조제가 필요할 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 흥분, GI 부작용 보고. 신장 배설 약물로 신기능 저하 시 주의. 발작 역치 저하 가능성. 과량투여 위험성 높음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 GI 부작용이 개보다 더 흔할 수 있음. 독성 용량(30 mg/kg) 주의. 부작용 프로파일 미완전 규명. 신장 배설 약물로 신기능 저하 시 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제, 캡슐, 경구 용액은 밀폐된 차광 용기에 실온(20~25°C, 허용 범위 15~30°C) 보관. 액제는 동결 금지.",
+    "forms": [
+      "아만타딘 HCl 경구 정제 100 mg (제네릭, Rx)",
+      "아만타딘 HCl 경구 캡슐 100 mg (제네릭, Rx)",
+      "아만타딘 HCl 경구 용액/시럽 50 mg/5mL (10 mg/mL), 480 mL (제네릭, Rx)",
+      "아만타딘 HCl 서방형 경구 정제/캡슐 (Osmolex ER, GOCOVRI) - 즉방형과 직접 대체 불가, 수의 환자 연구 없음"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아만타딘은 NMDA 수용체 길항제로, 소동물의 만성 통증 및 신경병성 통증에 대한 보조 진통제로 사용됨. 단독 사용보다 NSAID, 오피오이드, 가바펜틴과 병용 시 효과적. 약동학 연구에 따르면 q12h 투여가 기존 q24h보다 효과적일 수 있음. 수의용 허가 제품 없음(엑스트라라벨 사용). 과량투여 시 심각한 독성 발생 가능. 닭·칠면조·오리에 대한 엑스트라라벨 사용은 FDA에 의해 금지됨.",
+    "indications": "【보조 진통】만성 통증, 신경병성 통증(오피오이드 단독으로 충분한 진통 효과를 얻지 못하거나 고용량 오피오이드에 불내성인 경우). 골육종 관련 통증의 조기 개입. 【항바이러스】인플루엔자 A(현재 내성 문제로 권장되지 않음). 【인간 적응증】파킨슨 증후군, 약물 유발 추체외로 증상(수의학적 적용 없음).",
+    "client_info": "수의사의 지시에 따라 정확히 투여하세요. 이 약의 효과는 1주일 이상 지나야 나타날 수 있습니다. 치료 초기에 묽은 변, 가스, 설사, 약간의 흥분이 나타날 수 있습니다. 이러한 증상이 심하거나 지속되면 수의사에게 연락하세요. 과량투여는 매우 위험할 수 있으므로 다른 반려동물과 어린이의 손이 닿지 않는 곳에 보관하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no interactions identified)",
+      "Compatibility/Compounding Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T05:55:54.251018+00:00",
+    "reviewer": null
+  }
+}

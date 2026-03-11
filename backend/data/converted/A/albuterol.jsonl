@@ -1,0 +1,619 @@
+{
+  "id": "albuterol",
+  "drug_identity": {
+    "name_ko": "알부테롤",
+    "name_en": "Albuterol",
+    "active_ingredient": "Albuterol (Salbutamol)",
+    "brand_names": [
+      "Proventil",
+      "Ventolin",
+      "Proventil HFA",
+      "Ventolin HFA",
+      "ProAir HFA",
+      "Combivent Respimat",
+      "DuoNeb",
+      "AeroHippus",
+      "Equine Haler",
+      "Aerokat"
+    ],
+    "allergy_class": null,
+    "class": "Bronchodilator",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 제품을 개, 고양이, 말, 소에서 적응증 외(extra-label)로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 8,
+        "unit": "mg"
+      },
+      {
+        "value": 90,
+        "unit": "mcg"
+      },
+      {
+        "value": 0.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.083,
+        "unit": "%"
+      },
+      {
+        "value": 0.021,
+        "unit": "%"
+      },
+      {
+        "value": 0.042,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위하게 대사되며, 주요 비활성 대사체는 albuterol 4'-O-sulfate임. 동물에서의 CYP 경로는 명시되지 않음."
+    },
+    "extra_information": "개와 고양이에서의 약동학은 충분히 연구되지 않음. 인체 데이터 기준: 경구 흡입 후 5분 이내, 경구 투여 후 30분 이내 효과 발현. 분무 흡입 시 전신 흡수율 20% 미만. 혈액-뇌 장벽은 통과하지 않으나 태반은 통과함. 말에서 racemic albuterol의 기관지확장 효과는 30~60분 지속."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인체 및 말 데이터 기반이며, 개·고양이 특이적 수의학 PK 연구는 부재함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS excitement",
+          "nervousness",
+          "dizziness",
+          "CNS stimulation",
+          "tremors"
+        ],
+        "index": 1,
+        "evidence": "CNS 흥분(긴장, 어지러움, 진전)이 부작용으로 보고됨. 혈액-뇌 장벽은 통과하지 않으나 교감신경 자극 효과로 CNS 증상 발생 가능."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hypokalemia",
+          "tachycardia",
+          "arrhythmia",
+          "hyperglycemia",
+          "hyperlactatemia"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증, 빈맥, 부정맥, 고혈당, 고젖산혈증이 과다복용 시 보고됨. 흡입기를 물어뜯은 개에서 81% 빈맥 발생."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "polyuria",
+          "polydipsia"
+        ],
+        "index": 1,
+        "evidence": "과다복용 시 다뇨/다음이 보고됨. 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "extensively metabolized in the liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 직접적 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "QT prolongation",
+          "premature ventricular complexes",
+          "cardiac arrhythmia"
+        ],
+        "index": 3,
+        "evidence": "빈맥(81%), 부정맥(3.4%), QT 연장, 심실 조기수축이 보고됨. 고용량 시 beta-1 수용체 자극으로 심장 부작용 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CNS excitement",
+          "nervousness",
+          "tremors"
+        ],
+        "index": 1,
+        "evidence": "교감신경 자극에 의한 CNS 흥분 부작용 가능. 고양이 특이적 뇌 관련 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypokalemia",
+          "tachycardia",
+          "hyperglycemia"
+        ],
+        "index": 1,
+        "evidence": "저칼륨혈증, 빈맥, 고혈당이 부작용으로 보고됨. 고양이 특이적 혈액 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 직접적 신장 부담 관련 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "extensively metabolized in the liver"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 고양이 특이적 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmia",
+          "cardiac arrhythmia"
+        ],
+        "index": 2,
+        "evidence": "빈맥 및 부정맥이 부작용으로 보고됨. 고양이에서 장기 사용 시 기도 염증 악화 가능성도 언급됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.7,
+      "max": 5.0,
+      "mean": 3.85,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 경구 흡입 후 5분 이내 효과 발현, 경구 투여 후 30분. 반감기 2.7~5시간(인체 경구 투여). 분무 흡입 시 전신 흡수율 20% 미만. 개·고양이 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 중증도 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Adrenergic Blocking Agents (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "bronchodilation blockade"
+      ],
+      "evidence": "Beta-blockers may antagonize the bronchodilatory actions of albuterol."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "cardiac arrhythmia",
+        "hypokalemia"
+      ],
+      "evidence": "Albuterol may increase the risk for cardiac arrhythmias when used with digoxin."
+    },
+    {
+      "drug": "Diuretics",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Hypokalemia caused by diuretics may be acutely exacerbated by albuterol use."
+    },
+    {
+      "drug": "Inhaled Anesthetics (e.g., isoflurane)",
+      "severity": 2,
+      "keywords": [
+        "ventricular arrhythmia",
+        "cardiac sensitization"
+      ],
+      "evidence": "Albuterol may predispose patients to ventricular arrhythmias, particularly those with preexisting cardiac disease."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "vascular potentiation",
+        "hypertension",
+        "sympathomimetic"
+      ],
+      "evidence": "MAOIs may potentiate the vascular effects of albuterol; concurrent use should be avoided."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "enhanced blockade"
+      ],
+      "evidence": "Concurrent use may result in enhanced neuromuscular blockade."
+    },
+    {
+      "drug": "Sympathomimetic Amines (e.g., phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "cardiovascular adverse effects",
+        "additive sympathomimetic"
+      ],
+      "evidence": "Use with albuterol may increase the risk for developing adverse cardiovascular effects."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 3,
+      "keywords": [
+        "decreased theophylline concentration",
+        "CNS stimulation",
+        "hypokalemia",
+        "cardiac arrhythmia",
+        "sudden death"
+      ],
+      "evidence": "Combination may result in decreased theophylline concentrations, additive CNS stimulation, increased risk for hypokalemia and cardiac arrhythmias; sudden death has occurred in laboratory animals."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "vascular potentiation",
+        "cardiovascular effects"
+      ],
+      "evidence": "Tricyclic antidepressants may potentiate the vascular effects of albuterol."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "기관지수축에 대한 기관지확장제 (적응증 외)",
+          "value": "0.02 - 0.05",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "낮은 용량부터 시작하여 효능 및 부작용 평가 후 조정. q8h~q12h 범위로 투여.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label. 0.02–0.05 mg/kg (20–50 µg/kg) PO every 8 to 12 hours."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "고양이 천식의 간헐적 단기 치료를 위한 기관지확장제 (적응증 외)",
+          "value": "90",
+          "unit": "mcg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "1 puff(90 µg)를 5~15분 간격으로 최대 3회 반복 가능. 장기 사용 금지; 적절한 스페이서 및 마스크(예: Aerokat®) 사용 필요.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label. 1 puff (90 µg) may be repeated up to 3 times every 5 to 15 minutes."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "기관지경검사, 기관지폐포세척(BAL), 기관내 세척 관련 기관지수축 (적응증 외)",
+          "value": "200",
+          "unit": "mcg",
+          "route": "Inh",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "알부테롤 200 µg + 이프라트로피움 40 µg 복합 MDI 2 puff를 진정 전 스페이서 챔버를 통해 투여.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label. Albuterol plus ipratropium combination MDI, 2 puffs prior to sedation."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 간에서 광범위하게 대사되므로 간 기능 저하 환자에서 주의가 필요할 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "알부테롤 또는 기타 교감신경흥분제에 대한 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "sympathomimetic allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 부정맥 또는 심장 질환",
+      "match_terms": [
+        "cardiac arrhythmia",
+        "heart disease",
+        "cardiac dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "hyperglycemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma",
+        "increased intraocular pressure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼륨혈증",
+      "match_terms": [
+        "hypokalemia",
+        "low potassium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 경구 제형)",
+      "match_terms": [
+        "pregnancy",
+        "gestation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음. 그레이하운드에서 알부테롤 독성 후 급성 비외상성 횡문근융해증 1건 보고됨(품종 특이적 유전 위험과는 무관)."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "Beta-2 아드레날린 수용체 선택적 자극제(교감신경흥분제). 기관지 평활근, 혈관 평활근, 위장관 및 자궁 조직의 beta-2 수용체를 자극하여 기관지 평활근 이완, 기도 저항 감소, 혈관확장, 자궁수축 억제(tocolysis) 및 비만세포에서 기관지수축 매개체 방출 억제를 유발함. 권장 용량에서는 심장의 beta-1 수용체를 상대적으로 회피함.",
+    "common_extra_effects": [
+      "빈맥(tachycardia)",
+      "진전(tremors)",
+      "CNS 흥분(긴장, 어지러움)",
+      "일시적 저칼륨혈증",
+      "고혈당",
+      "심장 부정맥",
+      "역설적 기관지수축(paradoxical bronchospasm)",
+      "즉각적 과민반응",
+      "폐부종",
+      "QT 간격 연장(과다복용 시)"
+    ],
+    "dog_mechanism": "개에서 진성 기관지수축은 드물지만, 기관지수축 발생 시 알부테롤이 유용한 치료제가 될 수 있음. 흡입기를 물어뜯어 과다 노출 시 심각한 독성 발생 가능.",
+    "dog_extra_effects": [
+      "빈맥(81%)",
+      "빈호흡(33%)",
+      "우울(21%)",
+      "구토(19%)",
+      "저칼륨혈증(21%)",
+      "부정맥(3.4%)",
+      "다뇨/다음",
+      "산동",
+      "고젖산혈증",
+      "횡문근융해증(그레이하운드 1건 보고)"
+    ],
+    "cat_mechanism": "고양이 천식의 급성 구조 치료에 주로 사용됨. S형 알부테롤(racemic 형태에 포함)이 기도 염증을 증가시킬 수 있으므로 장기 사용은 권장되지 않음.",
+    "cat_extra_effects": [
+      "기도 염증 악화 가능성(S형 알부테롤)",
+      "흡입기 작동 소리(쉿 소리)에 대한 거부감",
+      "약물/부형제 맛에 대한 거부감",
+      "빈맥",
+      "진전"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 진성 기관지수축은 드물며, 알부테롤은 적응증 외로 사용됨. 흡입기를 물어뜯어 과다 노출되는 경우가 흔하며, 이 경우 빈맥, 저칼륨혈증, 부정맥 등 심각한 독성이 발생할 수 있음. 심장 부정맥 치료 시 propranolol 또는 esmolol 같은 beta-차단제를 사용할 수 있으며, 진전에는 diazepam을 사용할 수 있음. 반동성 고칼륨혈증에 주의하며 칼륨 보충을 시행함.",
+    "cat": "고양이 천식의 급성 구조 치료에 주로 사용됨. Aerokat® 같은 적절한 스페이서와 마스크를 사용하여 흡입 투여함. S형 알부테롤이 기도 염증을 악화시킬 수 있으므로 장기 사용은 피하고, 장기 염증 조절에는 흡입 코르티코스테로이드(예: fluticasone)를 권장함. 상태 천식(status asthmaticus)에는 주사용 terbutaline이 더 빠른 반응을 보일 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 적응증 외 사용. 심장 부정맥, 당뇨, 녹내장, 갑상선기능항진증, 고혈압, 저칼륨혈증, 발작 장애 환자에서 주의 사용. 흡입기 물어뜯기로 인한 과다 노출 위험 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 적응증 외 사용. 급성 구조 치료에만 사용하고 장기 사용 금지. S형 알부테롤에 의한 기도 염증 악화 가능성 있음. 심장 질환, 갑상선기능항진증 환자에서 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제품: 2°C~30°C(36°F~86°F) 밀폐 용기에 보관. 흡입 에어로졸: 실온(15°C~25°C) 보관, 48.9°C(120°F) 이상 노출 금지(캐니스터 폭발 위험). 분무용 용액: 냉장 또는 실온(2°C~25°C) 보관. 변색된 용액은 폐기. 모든 제품 빛 차단 보관.",
+    "forms": [
+      "경구정 2 mg, 4 mg",
+      "서방형 경구정 4 mg, 8 mg",
+      "경구 시럽 2 mg/5 mL",
+      "흡입 에어로졸 90 µg/puff (MDI)",
+      "분무용 흡입 용액 0.083% (2.5 mg/3 mL), 0.021% (0.63 mg/3 mL), 0.042% (1.25 mg/3 mL), 0.5% (5 mg/mL)",
+      "알부테롤+이프라트로피움 복합 MDI 및 분무용 용액",
+      "건조분말 흡입기(DPI)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "알부테롤은 선택적 beta-2 아드레날린 수용체 작용제로, 주로 고양이 천식 및 말의 중증 기도 질환에서 기관지확장제로 사용됨. 수의과 승인 제품은 없으며 모두 적응증 외 사용임. 개에서는 흡입기를 물어뜯어 과다 노출되는 사고가 흔하며, 빈맥·저칼륨혈증·부정맥 등 심각한 독성을 유발할 수 있음. 고양이에서는 급성 구조 치료에만 사용하고 장기 사용은 피해야 하며, 장기 염증 조절에는 흡입 코르티코스테로이드를 사용해야 함. QT 연장 및 저칼륨혈증 모니터링이 필요함.",
+    "indications": "고양이 천식의 급성 기관지수축 구조 치료(흡입), 개의 기관지수축(경구), 말의 중증 기도 질환(SEA) 급성 치료 및 전신마취 중 저산소혈증 개선, 소의 미숙아 호흡곤란증후군(분무). 모두 적응증 외(extra-label) 사용.",
+    "client_info": "동물의 상태가 악화되거나 갑자기 아파 보이면 즉시 수의사에게 연락하세요. 에어로졸 제품 사용 시 캐니스터를 잘 흔든 후 스페이서/마스크에 연결하여 사용하세요. 처음 사용하거나 오랫동안 사용하지 않은 경우 먼저 프라이밍(시험 분사)을 하세요. 캐니스터를 불꽃 근처에서 사용하거나 48.9°C(120°F) 이상의 온도에 노출시키지 마세요(폭발 위험). 어린이와 동물의 손이 닿지 않는 곳에 보관하세요. 고양이에게 Aerokat® 같은 스페이서와 마스크를 사용할 때는 며칠에 걸쳐 천천히 적응시키고, 마스크를 주둥이에 밀착시켜 4~6회 호흡 동안 유지하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP enzyme profile",
+      "Oral bioavailability (veterinary)",
+      "Protein binding data (veterinary)",
+      "t_max data (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/61.jsonl",
+    "extracted_at": "2026-03-11T08:14:36.289105+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,860 @@
+{
+  "id": "quinidine",
+  "drug_identity": {
+    "name_ko": "퀴니딘",
+    "name_en": "Quinidine",
+    "active_ingredient": "Quinidine",
+    "brand_names": [
+      "Duraquin",
+      "Quinaglute",
+      "Quinalan",
+      "Quinate"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 제품(퀴니딘 설페이트 정, 퀴니딘 글루코네이트 서방정)을 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 324,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.2,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 수산화(hydroxylation)에 의해 대사됨. 투여량의 약 20%가 24시간 이내에 소변으로 미변화체로 배설됨. 산성 소변(pH 6 미만)은 신장 배설을 증가시키고 반감기를 단축시킴."
+    },
+    "extra_information": "개: 분포용적 ≈2.9 L/kg, 혈청 반감기 ≈5.6시간. 고양이: 분포용적 ≈2.2 L/kg, 혈청 반감기 ≈1.9시간. 단백결합률 82~92%. 뇌를 제외한 모든 체조직에 신속히 분포됨. 모유로 분비되며 태반을 통과함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학 데이터 일부 존재. 심장독성, 저혈압, 간 대사, 신장 배설 관련 키워드 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizures (overdose)",
+          "CNS depression (overdose)",
+          "confusion (overdose)"
+        ],
+        "index": 1,
+        "evidence": "과량투여 시 경련, 혼돈, 기면 등 CNS 증상이 보고됨. 정상 용량에서는 뇌 부담이 낮음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "blood dyscrasias (aurothioglucose interaction)",
+          "QRS widening",
+          "QT prolongation",
+          "AV block",
+          "ventricular tachycardia"
+        ],
+        "index": 2,
+        "evidence": "QRS 연장, QT 연장, 다형성 심실빈맥, AV 차단 등 혈액/심혈관계 부작용이 개에서 보고됨. 혈액 이상(혈액 불균형) 위험도 상호작용으로 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal insufficiency accumulation",
+          "renal excretion 20%",
+          "urinary acidification affects clearance",
+          "oliguria (overdose)"
+        ],
+        "index": 3,
+        "evidence": "신부전 시 약물 축적 및 독성 위험. 투여량의 20%가 신장으로 배설. 과량투여 시 핍뇨 보고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic first-pass effect",
+          "liver hydroxylation",
+          "hepatic insufficiency accumulation",
+          "phenobarbital induces hepatic enzymes"
+        ],
+        "index": 4,
+        "evidence": "간에서 수산화에 의해 주로 대사됨. 간부전 시 축적 및 독성 위험. 간 효소 유도제(페노바르비탈, 리팜핀)에 의해 반감기 50% 단축 가능."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "negative inotropism",
+          "QRS widening",
+          "QT prolongation",
+          "AV block",
+          "multiform ventricular tachycardia",
+          "hypotension",
+          "cardiotoxicity"
+        ],
+        "index": 5,
+        "evidence": "개에서 음성 변력 작용, QRS/QT 연장, AV 차단, 다형성 심실빈맥, 저혈압 등 심혈관계 부작용이 명확히 보고됨. 심장독성이 주요 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS depression (overdose)"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 경구 투여는 일반적으로 사용되지 않음. 과량투여 시 CNS 증상 가능성은 있으나 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation",
+          "AV block"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 경구 투여는 일반적으로 사용되지 않음. 심혈관계 부작용 가능성은 있으나 고양이 특이적 임상 데이터 부족."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal insufficiency accumulation",
+          "renal excretion 20%"
+        ],
+        "index": -1,
+        "evidence": "고양이 반감기 ≈1.9시간으로 개보다 짧음. 신부전 시 축적 가능성 있으나 고양이 특이적 임상 데이터 부족."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic first-pass effect",
+          "liver hydroxylation",
+          "hepatic insufficiency accumulation"
+        ],
+        "index": -1,
+        "evidence": "간 대사(수산화)가 주요 경로. 고양이 분포용적 ≈2.2 L/kg. 간부전 시 축적 가능성 있으나 고양이 특이적 임상 데이터 부족."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "QT prolongation",
+          "AV block",
+          "cardiotoxicity",
+          "negative inotropism"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 경구 투여는 일반적으로 사용되지 않음. 심장독성 가능성은 있으나 고양이 특이적 임상 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 5.6,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 87,
+    "evidence": "단백결합률 82~92%(중간값 87% 사용). 개 반감기 ≈5.6시간, 고양이 ≈1.9시간, 말 ≈8.1시간. 경구 투여 후 GI에서 거의 완전히 흡수되나 간 초회통과효과로 전신 생체이용률 감소. 서방형 제제는 흡수가 더 느림."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)/심각→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "quinidine concentration increase",
+        "cardiotoxicity"
+      ],
+      "evidence": "Amiodarone may significantly increase quinidine concentrations and risk for cardiotoxicity."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 3,
+      "keywords": [
+        "cardiotoxicity",
+        "QT prolongation"
+      ],
+      "evidence": "Increased risk for cardiotoxicity. Combination contraindicated in humans."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QTc prolongation"
+      ],
+      "evidence": "Concurrent use increases risk for QTc interval prolongation."
+    },
+    {
+      "drug": "Fluoroquinolone Antibiotics (ciprofloxacin, enrofloxacin)",
+      "severity": 3,
+      "keywords": [
+        "cardiotoxicity",
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use increases risk for cardiotoxicity."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 3,
+      "keywords": [
+        "cardiotoxicity",
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine, doxepin, imipramine)",
+      "severity": 3,
+      "keywords": [
+        "QTc prolongation",
+        "tricyclic toxicity"
+      ],
+      "evidence": "Increased risk for QTc interval prolongation and tricyclic adverse effects."
+    },
+    {
+      "drug": "Procainamide",
+      "severity": 3,
+      "keywords": [
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity."
+    },
+    {
+      "drug": "Lidocaine / Mexiletine",
+      "severity": 3,
+      "keywords": [
+        "cardiotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk for cardiotoxicity."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "digoxin concentration increase",
+        "AV conduction",
+        "toxicity"
+      ],
+      "evidence": "Digoxin concentrations may increase considerably in patients stabilized on digoxin that receive quinidine. Some cardiologists recommend decreasing the digoxin dose by 1/2 when adding quinidine. TDM of both drugs may be warranted."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Ondansetron",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Hydroxyzine",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase the risk for QT interval prolongation."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase risk for QT interval prolongation."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "decreased clearance",
+        "increased half-life",
+        "hypotension"
+      ],
+      "evidence": "Possible decreased clearance and increased elimination half-life of quinidine; increased risk for hypotension."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "decreased clearance",
+        "increased half-life"
+      ],
+      "evidence": "Possible decreased clearance and increased elimination half-life of quinidine."
+    },
+    {
+      "drug": "Antihypertensive Agents (amlodipine, enalapril, sildenafil, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive hypotensive effect"
+      ],
+      "evidence": "Quinidine may potentiate hypotensive effects of antihypertensive agents."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "cardiac depression",
+        "additive cardiac depressant"
+      ],
+      "evidence": "Additive cardiac depressant effects may be seen with concurrent use."
+    },
+    {
+      "drug": "Dexamethasone",
+      "severity": 2,
+      "keywords": [
+        "increased volume of distribution",
+        "increased half-life"
+      ],
+      "evidence": "In dogs, dexamethasone increased quinidine volume of distribution (49% to 78%) and elimination half-life (1.5 to 2.3 times)."
+    },
+    {
+      "drug": "Phenobarbital / Primidone",
+      "severity": 2,
+      "keywords": [
+        "hepatic enzyme induction",
+        "reduced quinidine half-life"
+      ],
+      "evidence": "May induce hepatic enzymes that metabolize quinidine, reducing quinidine serum half-life by 50%."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "hepatic enzyme induction",
+        "reduced quinidine half-life"
+      ],
+      "evidence": "May induce hepatic enzymes that metabolize quinidine, reducing quinidine serum half-life by 50%."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "hepatic microsomal enzyme inhibition",
+        "quinidine concentration increase"
+      ],
+      "evidence": "Cimetidine may increase quinidine concentrations by inhibiting hepatic microsomal enzymes."
+    },
+    {
+      "drug": "Acetazolamide",
+      "severity": 2,
+      "keywords": [
+        "reduced quinidine clearance",
+        "urinary alkalinization"
+      ],
+      "evidence": "May reduce quinidine clearance."
+    },
+    {
+      "drug": "Urinary Alkalinizers (carbonic anhydrase inhibitors, thiazide diuretics, sodium bicarbonate, antacids)",
+      "severity": 2,
+      "keywords": [
+        "decreased renal excretion",
+        "prolonged half-life"
+      ],
+      "evidence": "Drugs that alkalinize the urine may decrease the excretion of quinidine, prolonging its half-life."
+    },
+    {
+      "drug": "Urinary Acidifiers (methionine, ammonium chloride)",
+      "severity": 2,
+      "keywords": [
+        "increased renal excretion",
+        "decreased serum concentration"
+      ],
+      "evidence": "Drugs that acidify the urine may increase the excretion of quinidine and decrease serum concentration."
+    },
+    {
+      "drug": "Anticholinesterases (pyridostigmine, neostigmine)",
+      "severity": 2,
+      "keywords": [
+        "antagonism of anticholinesterase effect",
+        "myasthenia gravis"
+      ],
+      "evidence": "Quinidine may antagonize the effects of anticholinesterases in patients with myasthenia gravis."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (succinylcholine, tubocurarine, atracurium)",
+      "severity": 2,
+      "keywords": [
+        "increased neuromuscular blockade"
+      ],
+      "evidence": "Quinidine may increase the neuromuscular blocking effects of these drugs."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased bleeding risk",
+        "coumarin anticoagulant"
+      ],
+      "evidence": "Coumarin anticoagulants with quinidine may increase the likelihood of bleeding problems."
+    },
+    {
+      "drug": "Aurothioglucose",
+      "severity": 2,
+      "keywords": [
+        "blood dyscrasias"
+      ],
+      "evidence": "Concurrent use increases risk for blood dyscrasias."
+    },
+    {
+      "drug": "Antacids (aluminum-, calcium-, or magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "delayed oral absorption"
+      ],
+      "evidence": "May delay oral absorption of quinidine; separate dosages."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 2,
+      "keywords": [
+        "increased colchicine concentration"
+      ],
+      "evidence": "Quinidine may increase colchicine concentrations."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "increased doxorubicin exposure"
+      ],
+      "evidence": "Concurrent use may increase doxorubicin exposure."
+    },
+    {
+      "drug": "Morphine",
+      "severity": 2,
+      "keywords": [
+        "increased morphine exposure"
+      ],
+      "evidence": "Concurrent use may increase morphine exposure."
+    },
+    {
+      "drug": "Paroxetine",
+      "severity": 2,
+      "keywords": [
+        "increased paroxetine concentration",
+        "paroxetine toxicity"
+      ],
+      "evidence": "Concurrent use may increase paroxetine plasma concentrations and risk for paroxetine toxicity."
+    },
+    {
+      "drug": "Vincristine",
+      "severity": 2,
+      "keywords": [
+        "increased vincristine concentration"
+      ],
+      "evidence": "Concurrent use may increase vincristine plasma concentrations."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "PVCs 또는 심실빈맥 (즉시방출형 제제, 오프라벨)",
+          "value": "6 - 16",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "QID",
+          "max_dose_mg_kg": 16.0,
+          "duration_note": null,
+          "evidence": "즉시방출형 제제: 6–16 mg/kg PO q6h (오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "PVCs 또는 심실빈맥 (서방형 제제, 오프라벨)",
+          "value": "6 - 16",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 16.0,
+          "duration_note": null,
+          "evidence": "서방형 제제: 6–16 mg/kg PO q8h (오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "기저 심장질환 없는 개에서 심방세동의 동율동 전환 (오프라벨)",
+          "value": "6 - 11",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "QID",
+          "max_dose_mg_kg": 11.0,
+          "duration_note": "일부 개는 치료 첫 24시간 내에 전환됨. 빠른 심실 반응 발생 시 디곡신 또는 베타차단제 병용 가능.",
+          "evidence": "퀴니딘 글루코네이트 6–11 mg/kg IM q6h (오프라벨)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 약물 축적 및 독성 위험이 있으므로 주의하여 사용. 구체적인 용량 조절 기준은 명시되지 않음. 용량 감량 고려 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간부전 환자에서 약물 축적 및 독성 위험이 있으므로 주의하여 사용. 구체적인 용량 조절 기준은 명시되지 않음. 용량 감량 고려 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "quinidine hypersensitivity",
+        "drug allergy quinidine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 근무력증",
+      "match_terms": [
+        "myasthenia gravis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "완전 AV 차단 (AV 접합부 또는 심실 고유 박동기 동반)",
+      "match_terms": [
+        "complete AV block",
+        "AV junctional pacemaker",
+        "idioventricular pacemaker"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심실내 전도 장애 (현저한 QRS 확장 동반)",
+      "match_terms": [
+        "intraventricular conduction defect",
+        "QRS widening"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "디지탈리스 중독 관련 부정맥 또는 AV 전도 장애",
+      "match_terms": [
+        "digitalis intoxication",
+        "digoxin toxicity arrhythmia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이탈 기전에 의한 비정상 리듬",
+      "match_terms": [
+        "escape mechanism arrhythmia",
+        "aberrant ectopic impulse"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "모든 형태의 AV 차단",
+      "match_terms": [
+        "AV block"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "교정되지 않은 저칼륨혈증",
+      "match_terms": [
+        "hypokalemia",
+        "low potassium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저산소증 또는 산-염기 불균형",
+      "match_terms": [
+        "hypoxia",
+        "acid-base imbalance"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신부전",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "kidney failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "Class IA 항부정맥제. 활동전위 탈분극(phase 0) 시 빠른 나트륨 채널을 차단하여 심근 흥분성, 전도 속도, 수축력을 억제함. 활동전위 지속시간 및 유효 불응기를 연장하여 재진입 현상을 방지하고 전도 시간을 증가시킴. 항콜린 작용으로 미주신경 긴장도를 감소시켜 AV 전도를 촉진할 수 있음.",
+    "common_extra_effects": [
+      "저혈압",
+      "QRS 연장",
+      "QT 연장",
+      "AV 차단",
+      "음성 변력 작용",
+      "다형성 심실빈맥",
+      "식욕부진",
+      "구토",
+      "설사",
+      "허약",
+      "경련 (과량투여 시)",
+      "핍뇨 (과량투여 시)"
+    ],
+    "dog_mechanism": "Class IA 항부정맥제로서 나트륨 채널 차단 및 항콜린 작용을 통해 심방세동 및 심실 부정맥을 치료함.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "허약",
+      "저혈압 (특히 IV 급속 투여 시)",
+      "음성 변력 작용",
+      "QRS 연장",
+      "QT 연장",
+      "AV 차단",
+      "다형성 심실빈맥"
+    ],
+    "cat_mechanism": "Class IA 항부정맥제. 고양이에서 경구 투여는 일반적으로 사용되지 않음.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 퀴니딘은 심실 부정맥(PVC, 심실빈맥), 난치성 상심실성 빈맥, WPW 증후군 관련 상심실성 부정맥 치료에 사용됨. 심방세동의 동율동 전환에도 사용되나 다른 약물이 더 효과적인 경우가 많아 장기 사용은 감소 추세임. 치료 혈청 농도는 2~7 µg/mL로 알려져 있으며, 5 µg/mL 초과 시 부작용, 10 µg/mL 초과 시 독성으로 간주됨. 혈청 농도 모니터링 권장.",
+    "cat": "고양이에서 퀴니딘 경구 투여는 일반적으로 사용되지 않음. 고양이 특이적 용량 데이터가 없으며, 사용 시 극도의 주의가 필요함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 GI 부작용, 저혈압, 심혈관계 독성(QRS/QT 연장, AV 차단, 다형성 심실빈맥) 위험이 있음. 신부전, 간부전, 울혈성 심부전, 저칼륨혈증 환자에서 주의 사용. ECG 및 혈청 농도 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 경구 투여는 일반적으로 사용되지 않음. 반감기가 ≈1.9시간으로 짧아 PK 특성이 다름. 사용 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛에 노출 시 갈색으로 변색되므로 차광 밀폐 용기에 보관. 주사용 퀴니딘 글루코네이트는 무색 투명한 용액만 사용.",
+    "forms": [
+      "퀴니딘 설페이트 정제 200 mg, 300 mg (일반의약품, Rx)",
+      "퀴니딘 글루코네이트 서방정 324 mg (일반의약품, Rx)",
+      "퀴니딘 글루코네이트 주사제 (현재 단종)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "퀴니딘은 Class IA 항부정맥제로, 주로 말의 심방세동 약물적 심율동전환에 사용되며 소동물(특히 개)에서는 심실 부정맥 및 상심실성 빈맥 치료에 오프라벨로 사용됨. 고양이에서 경구 투여는 일반적으로 권장되지 않음. 치료 범위가 좁아 혈청 농도 모니터링이 필요하며(개: 2~7 µg/mL), QT 연장, AV 차단, 다형성 심실빈맥 등 심각한 심혈관계 부작용 위험이 있음. 약물 상호작용이 매우 많으므로 병용 약물 검토 필수.",
+    "indications": "승인 적응증(수의과 승인 제품 없음, 오프라벨 사용): 개-심실 부정맥(PVC, 심실빈맥), 난치성 상심실성 빈맥, WPW 증후군 관련 상심실성 부정맥, 심방세동의 동율동 전환; 말-심방세동의 약물적 심율동전환(주요 적응증). 고양이에서 경구 투여는 일반적으로 사용되지 않음.",
+    "client_info": "경구 제제는 하루 종일 균등한 간격으로 투여해야 합니다. 위장 장애(식욕부진, 구토, 설사)는 음식과 함께 투여하면 감소할 수 있습니다. 서방형 경구 제제는 씹거나 부수지 마십시오. 동물의 상태가 악화되거나 독성 증상(구토, 설사, 허약감)이 나타나면 즉시 수의사에게 연락하십시오. 이 약물은 치료 범위가 좁아 정기적인 혈액 검사 및 심전도 모니터링이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability percentage",
+      "Time to peak plasma concentration (Tmax)",
+      "Onset of action (minutes)",
+      "CYP enzyme profile",
+      "Cat dosage data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/32.jsonl",
+    "extracted_at": "2026-03-10T23:02:25.449534+00:00",
+    "reviewer": null
+  }
+}

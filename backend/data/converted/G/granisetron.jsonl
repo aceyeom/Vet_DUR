@@ -1,0 +1,528 @@
+{
+  "id": "granisetron",
+  "drug_identity": {
+    "name_ko": "그라니세트론",
+    "name_en": "Granisetron",
+    "active_ingredient": "Granisetron",
+    "brand_names": [
+      "Kytril",
+      "Aludal",
+      "Eumetic",
+      "Granicip",
+      "Granitron",
+      "Kevatril",
+      "Rigmoz",
+      "Setron"
+    ],
+    "allergy_class": null,
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 개와 고양이에서 구토 치료 및 항암화학요법 전 예방 목적으로 오프라벨 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Patch"
+    ],
+    "available_strengths": [
+      {
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.2,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 탈메틸화(demethylation) 및 산화(oxidation) 후 포합(conjugation)을 통해 대사됨. 20% 미만이 소변으로 미변화체로 배설되며, 나머지는 소변 및 대변으로 대사체로 배설됨."
+    },
+    "extra_information": "개와 고양이에 대한 약동학 데이터 없음. 인간 데이터만 존재함. 경구 생체이용률은 간 초회통과 대사로 인해 약 60%임. 반감기는 약 1~30시간으로 개인차가 크며, 암 환자에서 더 길게 나타남."
+  },
+  "organ_burden_logic": {
+    "note": "점수는 모노그래프에서 언급된 키워드 기반으로 산출됨. 개/고양이 종별 수의학적 PK 데이터 없음; 인간 데이터 및 부작용 프로파일 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "chemoreceptor trigger zone",
+          "CNS",
+          "somnolence"
+        ],
+        "index": 1,
+        "evidence": "5-HT3 수용체가 CNS 화학수용체 유발대(CTZ)에 존재하며, 인간에서 졸음(somnolence)이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "arrhythmias",
+          "hypotension",
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "인간에서 드물게 부정맥, 저혈압 등 심혈관계 부작용 보고. QT 연장 약물 상호작용 존재."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination",
+          "urine"
+        ],
+        "index": 1,
+        "evidence": "20% 미만이 신장으로 미변화체 배설. 신기능 저하 시 용량 조절 불필요하다고 명시됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "first-pass metabolism",
+          "liver metabolism",
+          "demethylation",
+          "oxidation",
+          "conjugation"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 초회통과 대사로 경구 생체이용률 60%. 간기능 저하 시에도 용량 조절 불필요하다고 명시됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "arrhythmias",
+          "chest pain",
+          "QT prolongation",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "인간에서 드물게 부정맥, 흉통, 저혈압 보고. 여러 약물과 QT 연장 상호작용 존재."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "chemoreceptor trigger zone",
+          "CNS",
+          "5-HT3"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 항암화학요법 관련 구토는 주로 CTZ의 5-HT3 수용체 활성화에 의한 것으로 알려짐."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "arrhythmias",
+          "hypotension",
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "인간에서 드물게 심혈관계 부작용 보고. 고양이 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination",
+          "urine"
+        ],
+        "index": 1,
+        "evidence": "20% 미만이 신장으로 배설. 신기능 저하 시 용량 조절 불필요하다고 명시됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "first-pass metabolism",
+          "liver metabolism",
+          "demethylation",
+          "oxidation",
+          "conjugation"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 고양이 특이 데이터 없음; 인간 데이터 기반."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "arrhythmias",
+          "chest pain",
+          "QT prolongation",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "인간에서 드물게 심혈관계 부작용 보고. 고양이 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 1.0,
+      "max": 30.0,
+      "mean": 15.5,
+      "species": "human"
+    },
+    "f_percent": 60,
+    "protein_binding_percent": 65,
+    "evidence": "인간 데이터: 경구 투여 후 약 2시간에 최고 혈중 농도 도달. 생체이용률 60% (초회통과 대사). 혈장 단백 결합률 약 65%. 반감기 1~30시간으로 개인차 큼. 개/고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 및 세로토닌 증후군 위험 약물은 severity 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Apomorphine",
+      "severity": 3,
+      "keywords": [
+        "profound hypotension"
+      ],
+      "evidence": "Concurrent use can cause profound hypotension. Contraindicated combination."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may result in increased risk for QT-interval prolongation. Contraindicated in humans."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may result in increased risk for QT-interval prolongation. Contraindicated in humans."
+    },
+    {
+      "drug": "Fluoroquinolone Antibiotics",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase the risk for QT interval prolongation (e.g., enrofloxacin)."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "metabolism inhibition",
+        "QT prolongation"
+      ],
+      "evidence": "May inhibit the metabolism of granisetron and increase the risk for QT-interval prolongation."
+    },
+    {
+      "drug": "Macrolide Antibiotics",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase the risk for QT interval prolongation (e.g., clarithromycin)."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "Concurrent use may increase the risk for QT interval prolongation."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome with MAOIs (e.g., amitraz, linezolid, selegiline)."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "reduced efficacy"
+      ],
+      "evidence": "Phenobarbital can induce the metabolism of granisetron, potentially reducing its efficacy."
+    },
+    {
+      "drug": "Serotonergic Agents",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome with other serotonergic agents (e.g., clomipramine, fentanyl, fluoxetine, mirtazapine, tramadol, trazodone)."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 3.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (오프라벨) - 단회 IV 투여",
+          "value": "0.02 - 0.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.4,
+          "duration_note": null,
+          "evidence": "단회 0.02~0.4 mg/kg IV 투여가 개에서 효능을 보임 (문헌 보고)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (오프라벨) - 반복 투여",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": null,
+          "evidence": "0.1~0.5 mg/kg PO 또는 IV, 12~24시간 간격 투여가 제안됨. IV 투여가 PO보다 효과적일 수 있음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (오프라벨) - 반복 투여",
+          "value": "0.1 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": null,
+          "evidence": "0.1~0.5 mg/kg PO 또는 IV, 12~24시간 간격 투여가 제안됨. IV 투여가 PO보다 효과적일 수 있음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (오프라벨) - IM 투여",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "TID",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": null,
+          "evidence": "고양이에서 1 mg/kg IM 1일 3회 투여가 보고됨 (문헌 보고)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 조절이 필요하지 않다고 명시됨 (인간 데이터 기반)."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간기능 저하 환자에서 용량 조절이 필요하지 않다고 명시됨 (인간 데이터 기반)."
+  },
+  "contraindications": [
+    {
+      "condition": "Apomorphine-induced vomiting",
+      "match_terms": [
+        "apomorphine",
+        "apomorphine-induced emesis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Hypersensitivity to granisetron",
+      "match_terms": [
+        "granisetron hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Progressive ileus or gastric distention",
+      "match_terms": [
+        "ileus",
+        "gastric distention",
+        "GI obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pregnancy",
+      "match_terms": [
+        "pregnancy",
+        "gravid",
+        "gestation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5-HT3(세로토닌3) 수용체를 선택적으로 차단하여 항구토 효과를 나타냄. 수용체는 CNS 화학수용체 유발대(CTZ), 미주신경 말단, 장신경계에 분포함.",
+    "common_extra_effects": [
+      "두통",
+      "복통",
+      "변비 또는 설사",
+      "무력증(asthenia)",
+      "졸음(somnolence)",
+      "과민반응(드물게)",
+      "부정맥(드물게)",
+      "흉통(드물게)",
+      "저혈압(드물게)"
+    ],
+    "dog_mechanism": "개에서는 장신경 및 미주신경 수용체가 구토 유발에 더 중요할 수 있음. 아포모르핀 유발 구토는 예방하지 못함.",
+    "dog_extra_effects": [],
+    "cat_mechanism": "고양이에서 항암화학요법 관련 구토는 주로 CTZ의 5-HT3 수용체 활성화에 의한 것으로 알려짐.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 단회 0.02~0.4 mg/kg IV 투여가 효능을 보였으며, 0.1~0.5 mg/kg PO 또는 IV q12~24h 투여가 제안됨. IV 투여가 경구 투여보다 효과적일 수 있음. 아포모르핀 유발 구토에는 효과 없음. 수의학에서 사용 경험이 제한적임.",
+    "cat": "고양이에서 1 mg/kg IM 1일 3회 투여가 보고됨. 항암화학요법 관련 구토 예방에 사용 가능. 수의학에서 사용 경험이 매우 제한적이며, 안전성 프로파일이 완전히 확립되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의학에서 사용 경험이 제한적이어서 포괄적인 부작용 프로파일이 알려져 있지 않음. 진행성 장폐색 또는 위 팽창 징후를 가릴 수 있으므로 주의 필요. 아포모르핀과 병용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "수의학에서 사용 경험이 매우 제한적이며 안전성이 완전히 확립되지 않음. 모체의 이익이 잠재적 위험을 상회할 때만 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 보관, 밀폐 용기, 차광 보관. 주사액은 냉동 금지. 다회용 바이알 개봉 후 30일 이내 사용.",
+    "forms": [
+      "경구정 1 mg (HCl로서 1.12 mg)",
+      "주사액 0.1 mg/mL (단회용 바이알)",
+      "주사액 1 mg/mL (단회용 1 mL 및 다회용 4 mL 바이알)",
+      "경피 패치 (수의학적 사용 정보 없음)",
+      "서방형 피하주사액 (수의학적 사용 정보 없음)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "그라니세트론은 5-HT3 수용체 길항제 계열의 항구토제로, 심한 구토 치료 및 시스플라틴 등 항암제 투여 전 구토 예방에 사용됨. 수의학에서 허가된 제품은 없으나 오프라벨로 사용됨. 개와 고양이에서 내약성이 양호한 것으로 보이나 사용 경험이 제한적임. QT 연장 위험 약물과의 병용 시 주의 필요. MAOI 및 세로토닌성 약물과의 병용은 세로토닌 증후군 위험으로 금기에 준함.",
+    "indications": "심한 구토 치료 (오프라벨), 항암화학요법(특히 시스플라틴) 전 구토 예방 (오프라벨). 온단세트론, 돌라세트론 등 다른 5-HT3 길항제의 대안으로 사용 가능.",
+    "client_info": "이 약은 주로 입원 치료 중 또는 항암화학요법 외래 방문 시 사용됩니다. 경구로 외래에서 사용하는 경우, 구토가 조절되지 않거나 투약 후 약을 토해낸 경우 즉시 수의사에게 연락하십시오. 임신 중인 동물에서는 이익이 위험을 상회할 때만 사용합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Therapeutic Drug Monitoring",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction (dog/cat specific)",
+      "organ_burden_logic.dog (veterinary data)",
+      "organ_burden_logic.cat (veterinary data)",
+      "effects_and_mechanisms.dog_extra_effects",
+      "effects_and_mechanisms.cat_extra_effects"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/0.jsonl",
+    "extracted_at": "2026-03-10T13:22:31.921097+00:00",
+    "reviewer": null
+  }
+}

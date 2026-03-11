@@ -1,0 +1,616 @@
+{
+  "id": "azathioprine",
+  "drug_identity": {
+    "name_ko": "아자티오프린",
+    "name_en": "Azathioprine",
+    "active_ingredient": "Azathioprine",
+    "brand_names": [
+      "Imuran",
+      "Azasan"
+    ],
+    "allergy_class": null,
+    "class": "Immunosuppressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 모든 동물 용량은 허가 외(extra-label) 사용임. 인간용 제품(Imuran®, Azasan®)을 동물에 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아자티오프린은 6-머캅토퓨린(6-MP)으로 빠르게 대사되며, 이후 간 및 위장관에서 추가 대사됨. 주요 대사 경로 중 하나는 티오퓨린 메틸트랜스퍼라제(TPMT)임. 미변화체로의 신장 배설은 최소량. CYP 관련 경로는 본문에 명시되지 않음."
+    },
+    "extra_information": "고양이는 TPMT 활성이 낮아 골수억제에 매우 민감함. 개는 인간과 유사하게 TPMT 활성이 가변적이며, 이로 인해 일부 견종에서 골수독성 발생 가능성이 높음. 자이언트 슈나우저는 TPMT 활성이 낮고, 알래스칸 말라뮤트는 높음. 단백결합률은 아자티오프린 및 6-MP 모두 약 30%. 반감기는 약 2시간으로 추정됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 본문에서 언급된 독성 및 약동학 정보를 근거로 함. 수의학적 종별 PK 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "meningoencephalomyelitis",
+          "CNS indication"
+        ],
+        "index": 1,
+        "evidence": "뇌수막뇌척수염(MUE) 치료에 사용되나, 직접적인 뇌 독성은 보고되지 않음. 적응증으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "leukopenia",
+          "thrombocytopenia",
+          "anemia",
+          "bone marrow suppression"
+        ],
+        "index": 4,
+        "evidence": "개에서 골수억제(주로 백혈구감소증) 발생률 약 8% 보고. 빈혈 및 혈소판감소증도 관찰됨. 수개월 치료 후 발생 가능. 과립구 수 <1000/µL 또는 WBC <5000/µL 시 투약 중단 권고."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "renal elimination"
+        ],
+        "index": 2,
+        "evidence": "신장 기능 이상 시 주의 사용 권고. 대사산물이 신장으로 배설되나 미변화체 배설은 최소량. 직접적 신독성은 본문에 명시되지 않음."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "ALT",
+          "ALP",
+          "hepatic disease",
+          "liver enzymes"
+        ],
+        "index": 3,
+        "evidence": "개에서 아자티오프린 치료 시 ALT/ALP 상승 발생률 약 15% 보고(치료 첫 수주 내). 간독성은 특이체질성(용량 비의존적)으로 보임. 간질환 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "본문에 심장 독성 또는 심장 관련 영향에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌 관련 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "myelosuppression",
+          "TPMT deficiency",
+          "bone marrow suppression",
+          "highly sensitive"
+        ],
+        "index": 4,
+        "evidence": "고양이는 TPMT 결핍으로 인해 아자티오프린의 골수억제 효과에 매우 민감함. 일반적으로 고양이에서의 사용은 권장되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal dysfunction"
+        ],
+        "index": 1,
+        "evidence": "신장 기능 이상 시 주의 사용 권고. 고양이 특이적 신독성 데이터는 본문에 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic disease"
+        ],
+        "index": 2,
+        "evidence": "간독성 가능성이 있으며 간질환 환자에서 주의 사용 권고. 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "본문에 고양이에서 심장 관련 영향에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 2.0,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 30,
+    "evidence": "반감기는 약 2시간으로 추정(가변적). 아자티오프린 및 6-MP의 단백결합률은 약 30%. 경구 흡수는 불량. 임상적 면역억제 효과는 투여 후 최대 5주까지 나타나지 않을 수 있음. Tmax 및 경구 생체이용률(F%)은 본문에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 이론적 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "hematologic toxicity",
+        "myelosuppression"
+      ],
+      "evidence": "ACE 억제제와 병용 시 혈액학적 독성 위험 증가."
+    },
+    {
+      "drug": "Allopurinol",
+      "severity": 3,
+      "keywords": [
+        "decreased hepatic metabolism",
+        "azathioprine toxicity",
+        "dose reduction required"
+      ],
+      "evidence": "알로퓨리놀이 아자티오프린의 간 대사를 감소시킴. 인간에서 병용 시 아자티오프린 용량을 통상 용량의 1/4~1/3로 감량 필요."
+    },
+    {
+      "drug": "Aminosalicylates (e.g., mesalamine, olsalazine, sulfasalazine)",
+      "severity": 2,
+      "keywords": [
+        "azathioprine toxicity",
+        "myelosuppression"
+      ],
+      "evidence": "아미노살리실레이트 병용 시 아자티오프린 독성 위험 증가."
+    },
+    {
+      "drug": "Myelosuppressive Agents (e.g., cyclophosphamide, leflunomide, sulfa-/trimethoprim)",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "hematologic toxicity",
+        "additive myelosuppression"
+      ],
+      "evidence": "다른 골수억제제와 병용 시 간독성 및 혈액학적 독성 위험 증가."
+    },
+    {
+      "drug": "NonDepolarizing Muscle Relaxants (e.g., pancuronium, tubocurarine)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade inhibition",
+        "reversal of neuromuscular block"
+      ],
+      "evidence": "아자티오프린이 비탈분극성 근이완제의 신경근 차단 효과를 억제하거나 역전시킬 수 있음."
+    },
+    {
+      "drug": "Purine Antagonists (e.g., mercaptopurine, mycophenolate, thioguanine)",
+      "severity": 2,
+      "keywords": [
+        "additive toxicity",
+        "similar mechanism"
+      ],
+      "evidence": "동일 작용 기전으로 인해 독성 위험 증가."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "reduced vaccine efficacy",
+        "enhanced adverse effects"
+      ],
+      "evidence": "백신 효능 감소 및 백신 부작용 증가 가능성."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "reduced anticoagulant effect"
+      ],
+      "evidence": "와파린의 항응고 효과 감소 가능성."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "high",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "면역억제 - 일반 초기 용량",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "1~4주간 매일 투여 후 격일 투여로 감량",
+          "evidence": "허가 외 사용. 초기 2 mg/kg PO q24h 1~4주, 이후 0.5~2 mg/kg PO 격일로 감량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역억제 - 유지 용량",
+          "value": "0.5 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "초기 치료 후 격일 투여로 유지",
+          "evidence": "허가 외 사용. 유지 용량으로 0.5~2 mg/kg PO 격일 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "염증성 장질환(IBD)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "2주간 매일 투여 후 격일 2 mg/kg으로 2~4주, 이후 격일 1 mg/kg으로 감량. 효과 발현까지 2~6주 소요.",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 용혈성 빈혈(IMHA) / 면역매개성 혈소판감소증(IMT)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "글루코코르티코이드와 병용. 2~3주간 매일 투여 후 격일로 감량.",
+          "evidence": "허가 외 사용. 50 mg/m² 용량도 사용 가능."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "면역매개성 용혈성 빈혈(IMHA) / 면역매개성 혈소판감소증(IMT) - 체표면적 기준",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~3주간 매일 투여 후 격일로 감량. (단위: mg/m²)",
+          "evidence": "허가 외 사용. 50 mg/m² PO q24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 보조 치료",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "2주간 매일 투여 후 48시간마다 투여. WBC <4000/µL 또는 호중구 <1000/µL 시 중단.",
+          "evidence": "허가 외 사용. 비반응성 환자에서 보조 치료."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항문주위 누공(항문 종기증)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "누공 크기/수/염증 감소 또는 WBC <5000/µL, 호중구 <3500/µL, 혈소판 <160,000/µL까지 매일 투여. 이후 격일 2 mg/kg 12주, 이후 격일 1 mg/kg 12개월.",
+          "evidence": "허가 외 사용. 프레드니손 병용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 간염 관련 염증 감소",
+          "value": "2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.2,
+          "duration_note": "코르티코스테로이드와 병용. 1~2주 후 격일 투여로 감량.",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 사구체 질환 보조 치료",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "1~2주간 매일 투여 후 격일 1~2 mg/kg으로 감량.",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "면역매개성 다발성 관절염",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "2주간 매일 투여 후 격일 0.5 mg/kg 유지 용량으로 감량.",
+          "evidence": "허가 외 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "원인불명 뇌수막뇌척수염(MUE)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "코르티코스테로이드와 병용. 2주간 매일 투여 후 격일로 감량.",
+          "evidence": "허가 외 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신장 기능 이상 환자에서 주의 사용 권고. 구체적인 용량 조절 기준은 본문에 명시되지 않음. 신부전 환자에서는 사용을 피하거나 면밀한 모니터링 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": 2.0,
+    "adjustment_type": "reduce_dose",
+    "note": "간독성 발생 시(ALT가 치료 전 기저치 대비 2배 이상 증가) 용량 조절 필요. 간질환 환자에서 주의 사용 권고. 한 연구에서 아자티오프린 치료 개의 15%에서 간독성 발생 시 용량 조절이 필요했음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 기왕력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to azathioprine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 이상",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 기능 이상",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (TPMT 결핍)",
+      "match_terms": [
+        "cat",
+        "feline",
+        "TPMT deficiency"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "백혈구감소증",
+      "match_terms": [
+        "leukopenia",
+        "WBC < 5000",
+        "neutropenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": 5000,
+        "unit": "x10^3/uL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Giant Schnauzer",
+      "Alaskan Malamute"
+    ],
+    "gene": "TPMT (Thiopurine Methyltransferase)",
+    "evidence": "개는 인간과 유사하게 TPMT 활성이 가변적임. 자이언트 슈나우저는 TPMT 활성이 낮아 골수독성 위험이 높고, 알래스칸 말라뮤트는 TPMT 활성이 높음. 고양이는 전반적으로 TPMT 활성이 낮아 골수억제에 매우 민감함. 단, 한 연구에서 개의 적혈구 TPMT 활성과 약물 독성 간의 유의한 상관관계는 확인되지 않았음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "퓨린 길항제(purine antagonist) 항대사물질. 핵산에 통합되어 DNA/RNA 합성을 방해하고 복제 과정을 종료시킴. 세포 대사 교란 및 T 림프구의 CD28 공동자극 신호를 세포자멸사(apoptosis) 유도 신호로 전환시킴으로써 면역억제 효과를 나타냄. 지연형 과민반응 및 세포성 면역에 더 강한 효과를 보임.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "설사",
+      "골수억제(백혈구감소증, 혈소판감소증, 빈혈)",
+      "췌장염",
+      "간독성(ALT/ALP 상승)",
+      "감염 위험 증가",
+      "장기 사용 시 종양 발생 위험 증가(림프종, 피부암)"
+    ],
+    "dog_mechanism": "아자티오프린은 6-머캅토퓨린(6-MP)으로 빠르게 대사되어 림프구 및 적혈구에 흡수됨. 면역억제 효과는 투여 후 최대 5주까지 나타나지 않을 수 있음.",
+    "dog_extra_effects": [
+      "골수억제(발생률 약 8%, 주로 백혈구감소증)",
+      "간독성(ALT/ALP 상승, 발생률 약 15%)",
+      "췌장염",
+      "구토, 식욕부진, 설사"
+    ],
+    "cat_mechanism": "고양이는 TPMT 활성이 낮아 아자티오프린 대사가 저하되고, 독성 대사산물이 축적되어 심각한 골수억제가 발생할 수 있음.",
+    "cat_extra_effects": [
+      "심각한 골수억제",
+      "백혈구감소증",
+      "혈소판감소증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아자티오프린은 다양한 면역매개성 질환(IMHA, IMT, IBD, 다발성 관절염, MUE, 항문주위 누공, 만성 간염, 사구체 질환, 중증근무력증 등)에 허가 외로 사용됨. 코르티코스테로이드와 병용하여 각 약물의 용량을 줄이고 부작용을 최소화하는 전략이 일반적임. 치료 시작 후 2주마다 CBC 및 혈청 화학 검사(ALT, ALP 포함) 모니터링 필요. WBC <5000/µL 또는 호중구 <1000/µL 시 투약 중단 고려. TPMT 활성이 가변적이므로 일부 견종에서 골수독성 위험이 높을 수 있음.",
+    "cat": "고양이는 TPMT 결핍으로 인해 아자티오프린의 골수억제 효과에 매우 민감하여 일반적으로 사용이 권장되지 않음. 고양이에서의 사용은 극히 드물며, 사용 시 면밀한 모니터링이 필수적임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 골수억제(약 8%), 간독성(약 15%), 췌장염, GI 부작용 위험이 있음. 정기적인 CBC 및 간효소 모니터링 필수. 임신 중 사용 금지. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필요. 아지스로마이신과의 처방 오류 주의."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이는 TPMT 결핍으로 인해 심각한 골수억제 위험이 매우 높음. 일반적으로 고양이에서의 사용은 권장되지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 20~25°C(68~77°F) 밀폐 용기에 차광 보관. 주사용 분말: 실온, 차광 보관. 재조제 후 24시간 이내 사용(보존제 없음). 알칼리성 pH에서 6-MP로 가수분해됨. 경구 현탁액(조제품): 5°C 및 25°C에서 60일간 90% 이상 역가 유지. 최적 안정성 pH: 5.5~6.5.",
+    "forms": [
+      "아자티오프린 정제 50 mg (Azasan®, Imuran®, 제네릭)",
+      "아자티오프린 정제 75 mg (Azasan®)",
+      "아자티오프린 정제 100 mg (Azasan®)",
+      "아자티오프린 나트륨 주사 100 mg/바이알 (제네릭)",
+      "아자티오프린 경구 현탁액 50 mg/mL (조제품)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아자티오프린은 퓨린 길항제 면역억제제로, 개에서 다양한 면역매개성 질환 치료에 허가 외로 사용됨. 주요 부작용은 골수억제(백혈구감소증, 혈소판감소증)와 간독성이며, 정기적인 CBC 및 간효소 모니터링이 필수적임. 고양이는 TPMT 결핍으로 인해 골수억제에 매우 민감하여 사용이 권장되지 않음. 임상적 면역억제 효과는 투여 후 최대 5주까지 나타나지 않을 수 있음. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비 착용 필요.",
+    "indications": "개: 면역매개성 용혈성 빈혈(IMHA), 면역매개성 혈소판감소증(IMT), 염증성 장질환(IBD), 면역매개성 다발성 관절염, 원인불명 뇌수막뇌척수염(MUE), 항문주위 누공, 만성 간염, 면역매개성 사구체 질환, 중증근무력증 보조 치료, MHC 일치 신장 동종이식 거부반응 예방(사이클로스포린과 병용). 페럿: 염증성 장질환(허가 외). 말: 면역억제(허가 외). 모든 동물 적응증은 허가 외 사용임.",
+    "client_info": "이 약은 심각한 독성(약물 관련 종양, 사망 포함)을 유발할 수 있으므로 정기적인 검사(혈액 검사, 간 기능 검사)가 반드시 필요합니다. 검사 일정을 절대 빠뜨리지 마세요. 위장 부작용을 줄이기 위해 음식과 함께 투여할 수 있습니다. 효과가 나타나기까지 최대 6주가 걸릴 수 있습니다. 임산부는 이 약을 취급하지 마세요. 약을 다룰 때는 손을 씻거나 일회용 장갑을 착용하세요. 수의사의 지시 없이 임의로 투약을 중단하지 마세요(갑작스러운 중단은 질병 재발을 유발할 수 있습니다). 발열, 활동 감소, 멍, 출혈, 구토, 식욕 저하, 눈 흰자위/잇몸/피부의 황달 증상이 나타나면 즉시 수의사에게 연락하세요. 이 약은 NIOSH에서 위험 약물로 분류하고 있습니다. 취급 시 개인 보호 장비 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Doses",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none listed)",
+      "Specific renal dose adjustment thresholds",
+      "CYP enzyme profile",
+      "Oral bioavailability (F%)",
+      "Tmax data",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/50.jsonl",
+    "extracted_at": "2026-03-11T04:36:24.882545+00:00",
+    "reviewer": null
+  }
+}

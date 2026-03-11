@@ -1,0 +1,500 @@
+{
+  "id": "cefotaxime",
+  "drug_identity": {
+    "name_ko": "세포탁심",
+    "name_en": "Cefotaxime",
+    "active_ingredient": "Cefotaxime sodium",
+    "brand_names": [
+      "Claforan"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의 종에 대해 FDA 승인된 세포탁심 제품은 없으며, 임상에서 비승인(extra-label) 용도로 사용됨. 식품 생산 동물에 대한 extra-label 사용은 FDA에 의해 금지됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      },
+      {
+        "value": 10000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세포탁심은 간에서 부분적으로 대사되어 일부 항균 활성을 가진 desacetylcefotaxime으로 전환되며, 이후 간에서 비활성 대사체로 추가 분해됨. 세포탁심 및 대사체는 주로 소변으로 배설됨. 신세뇨관 분비가 신장 배설에 관여함."
+    },
+    "extra_information": "개: 정상상태 분포용적 480 mL/kg, 총 체내 청소율 10.5 mL/분/kg (IV). 혈청 소실 반감기: IV 45분, IM 50분, SC 103분. 생체이용률: IM 약 87%, SC 약 100%. 고양이: 총 체내 청소율 약 3 mL/분/kg (IV), 혈청 소실 반감기 약 1시간. 생체이용률: IM 93~98%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의 종 특이적 PK 데이터 일부 존재(개, 고양이). 고용량/장기 사용 시 신독성(세뇨관 괴사), 신경독성, 간염 등이 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS penetration"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성 가능성 보고. 뇌수막 염증 시 CSF 내 치료 농도 도달 가능."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "positive Coombs test",
+          "eosinophilia"
+        ],
+        "index": 2,
+        "evidence": "고용량/장기 사용 시 호중구감소증, 무과립구증, 혈소판감소증, 직접 쿰스 검사 양성 보고. 면역학적 기전 관여."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tubular necrosis",
+          "interstitial nephritis",
+          "renal elimination",
+          "nephrotoxicity"
+        ],
+        "index": 3,
+        "evidence": "고용량/장기 사용 시 세뇨관 괴사 및 간질성 신염 보고. 주로 신장으로 배설되며 신기능 저하 시 용량 조절 필요. 아미노글리코사이드 등 신독성 약물과 병용 시 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatitis",
+          "liver metabolism"
+        ],
+        "index": 2,
+        "evidence": "고용량/장기 사용 시 간염 보고(면역학적 기전). 간에서 부분 대사됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "인간에서 중심정맥을 통한 급속 투여(1분 미만) 시 잠재적으로 생명을 위협하는 부정맥 가능성 보고. 수의 환자에서의 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS penetration"
+        ],
+        "index": 1,
+        "evidence": "고용량/장기 사용 시 신경독성 가능성. 뇌수막 염증 시 CSF 내 치료 농도 도달 가능."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "positive Coombs test"
+        ],
+        "index": 2,
+        "evidence": "고용량/장기 사용 시 혈액학적 이상 가능성. 면역학적 기전 관여."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "tubular necrosis",
+          "interstitial nephritis",
+          "renal elimination",
+          "nephrotoxicity"
+        ],
+        "index": 3,
+        "evidence": "고용량/장기 사용 시 세뇨관 괴사 및 간질성 신염 보고. 주로 신장으로 배설. 신기능 저하 시 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatitis",
+          "liver metabolism"
+        ],
+        "index": 2,
+        "evidence": "고용량/장기 사용 시 간염 가능성. 간에서 부분 대사됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "인간에서 급속 IV 투여 시 부정맥 가능성 보고. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.75,
+      "max": 1.72,
+      "mean": 0.83,
+      "species": "dog"
+    },
+    "f_percent": 87,
+    "protein_binding_percent": 27,
+    "evidence": "개: IV 반감기 45분(0.75시간), IM 50분(0.83시간), SC 103분(1.72시간). 생체이용률 IM 약 87%, SC 약 100%. 고양이: 반감기 약 1시간, IM 생체이용률 93~98%. 인간 혈장 단백 결합률 13~40%(중간값 약 27%)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (e.g., gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "synergy"
+      ],
+      "evidence": "Concurrent use may increase risk of nephrotoxicity; monitor renal function. However, aminoglycosides and cephalosporins may have synergistic or additive actions against some gram-negative bacteria (Enterobacteriaceae). Do not mix in same solution."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., amphotericin B, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive"
+      ],
+      "evidence": "Concurrent use with cephalosporins could potentially cause additive nephrotoxicity. Use together cautiously and monitor renal function closely."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "tubular secretion",
+        "increased serum levels",
+        "prolonged half-life"
+      ],
+      "evidence": "Probenecid competitively blocks tubular secretion of most cephalosporins, increasing serum levels and serum half-lives."
+    },
+    {
+      "drug": "Vitamin K Antagonists (e.g., warfarin)",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect",
+        "bleeding"
+      ],
+      "evidence": "Cephalosporins may enhance the anticoagulant effects of vitamin K antagonists."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label) - 간헐적 주입",
+          "value": "20 - 80",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "뇌수막염 치료 시 용량 범위의 상한을 사용. 투여 간격은 q6h~q12h 범위로 다양하게 보고됨.",
+          "evidence": "Plumb's: 20–80 mg/kg IV, SC, or IM every 6 to 12 hours. 일반적 일화적 용량 40–50 mg/kg q8h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label) - 간헐적 주입",
+          "value": "20 - 80",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "투여 간격은 q6h~q12h 범위로 다양하게 보고됨.",
+          "evidence": "Plumb's: 20–80 mg/kg IV, SC, or IM every 6 to 12 hours."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label) - 간헐적 주입",
+          "value": "20 - 80",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "투여 간격은 q6h~q12h 범위로 다양하게 보고됨.",
+          "evidence": "Plumb's: 20–80 mg/kg IV, SC, or IM every 6 to 12 hours."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 감염 치료 (extra-label) - 지속 속도 주입(CRI)",
+          "value": "3.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 IV 부하 용량 3.2 mg/kg 후 5 mg/kg/시간 CRI 유지.",
+          "evidence": "Plumb's: initial IV load of 3.2 mg/kg IV followed by 5 mg/kg/hour IV CRI."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label) - 간헐적 주입",
+          "value": "20 - 80",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "뇌수막염 치료 시 용량 범위의 상한을 사용. 투여 간격은 q6h~q12h 범위로 다양하게 보고됨.",
+          "evidence": "Plumb's: 개/고양이 동일 용량 권고. 20–80 mg/kg IV, SC, or IM every 6 to 12 hours."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label) - 간헐적 주입",
+          "value": "20 - 80",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "투여 간격은 q6h~q12h 범위로 다양하게 보고됨.",
+          "evidence": "Plumb's: 개/고양이 동일 용량 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label) - 간헐적 주입",
+          "value": "20 - 80",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "투여 간격은 q6h~q12h 범위로 다양하게 보고됨.",
+          "evidence": "Plumb's: 개/고양이 동일 용량 권고."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 감염 치료 (extra-label) - 지속 속도 주입(CRI)",
+          "value": "3.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 IV 부하 용량 3.2 mg/kg 후 5 mg/kg/시간 CRI 유지.",
+          "evidence": "Plumb's: initial IV load of 3.2 mg/kg IV followed by 5 mg/kg/hour IV CRI."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 환자는 용량 조절이 필요할 수 있음. 구체적인 조절 기준(크레아티닌 수치, 조절 계수)은 모노그래프에 명시되지 않음. 신기능 저하 환자에서 집중적인 신장 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 명시적 권고 없음. 간에서 부분 대사되나 주 배설 경로는 신장임."
+  },
+  "contraindications": [
+    {
+      "condition": "세팔로스포린 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "cephalosporin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제(페니실린, 세파마이신, 카바페넴) 과민반응",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity",
+        "carbapenem allergy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 세포벽 합성 억제(페니실린 결합 단백질 결합). 살균성, 시간 의존성 항균제. 그람 양성 및 그람 음성 세균에 대한 광범위한 항균 스펙트럼 보유.",
+    "common_extra_effects": [
+      "주사 부위 통증 및 염증",
+      "발진",
+      "설사",
+      "오심 및 구토",
+      "과민반응(발진, 발열, 호산구증가증, 림프절병증, 아나필락시스)",
+      "항생제 관련 설사(장내 세균총 변화)",
+      "혈전정맥염(IV 투여 시)",
+      "무균 농양(IM 투여 시)",
+      "고용량/장기 사용 시: 신경독성, 호중구감소증, 무과립구증, 혈소판감소증, 간염, 직접 쿰스 검사 양성, 간질성 신염, 세뇨관 괴사"
+    ],
+    "dog_mechanism": "세균 세포벽 합성 억제. 뇌수막 염증 시 고용량에서 CSF 내 치료 농도 도달 가능.",
+    "dog_extra_effects": [
+      "주사 부위 통증",
+      "과민반응",
+      "설사",
+      "고용량/장기 사용 시 신독성, 혈액학적 이상"
+    ],
+    "cat_mechanism": "세균 세포벽 합성 억제. 뇌수막 염증 시 고용량에서 CSF 내 치료 농도 도달 가능.",
+    "cat_extra_effects": [
+      "주사 부위 통증",
+      "과민반응",
+      "설사",
+      "고용량/장기 사용 시 신독성, 혈액학적 이상"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 세포탁심은 extra-label로 사용됨. IV 반감기 약 45분으로 짧아 q6~8h 투여가 필요함. SC 투여 시 반감기가 약 103분으로 연장됨. 뇌수막염 치료 시 용량 범위의 상한을 사용할 것. IM 투여 시 통증 유발 가능. IV 투여 시 최소 3~5분에 걸쳐 천천히 투여할 것. 아미노글리코사이드와 동일 용액에 혼합 금지.",
+    "cat": "고양이에서 세포탁심은 extra-label로 사용됨. 반감기 약 1시간, IM 생체이용률 93~98%. 개와 동일한 용량 범위가 권고됨. IM 투여 시 통증 유발 가능. IV 투여 시 최소 3~5분에 걸쳐 천천히 투여할 것. 신기능 모니터링 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 시 용량 조절 필요. 베타-락탐 과민반응 병력 시 주의. IM 투여 시 통증. IV 급속 투여 시 부정맥 위험(인간 데이터). 고용량/장기 사용 시 신독성, 혈액학적 이상 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하 시 용량 조절 필요. 베타-락탐 과민반응 병력 시 주의. IM 투여 시 통증. 고용량/장기 사용 시 신독성, 혈액학적 이상 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 멸균 분말: 20°C~25°C(68°F~77°F) 보관, 빛 차단. 분말 또는 용액의 변색은 역가 손실을 의미할 수 있음. pH 7.5 초과 용액(탄산수소나트륨)에서 불안정. 재조제 용액: 22°C(71.6°F) 이하에서 12~24시간(농도 의존적), 5°C(41°F) 이하 원용기 보관 시 7~10일, 냉동 시 13주 안정.",
+    "forms": [
+      "Cefotaxime Sodium Powder for Injection 500 mg vial",
+      "Cefotaxime Sodium Powder for Injection 1 g vial",
+      "Cefotaxime Sodium Powder for Injection 2 g vial",
+      "Cefotaxime Sodium Powder for Injection 10 g vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세포탁심은 3세대 세팔로스포린 계열의 주사용 항생제로, 수의 종에 대한 FDA 승인 제품은 없으나 임상에서 extra-label로 사용됨. 그람 양성 및 그람 음성 세균에 대한 광범위한 항균 스펙트럼을 가지며, 뇌수막 염증 시 CSF 내 치료 농도 도달 가능. 반감기가 짧아(개 IV 45분) 빈번한 투여가 필요함. WHO 및 OIE에서 인의 및 수의학에서 최우선 중요 항균제로 지정됨. 식품 생산 동물에 대한 extra-label 사용은 FDA에 의해 금지됨.",
+    "indications": "감수성 세균에 의한 골/관절 감염, CNS 감염(뇌수막염), 수술 예방, 세균성 패혈증의 경험적 치료. 장내세균과(Enterobacterales), Klebsiella spp., E. coli, Salmonella spp., 일부 혐기성균(Bacteroides fragilis, Clostridium spp. 등) 감염. Pseudomonas aeruginosa, MRSA, ESBL 생성 균주에는 효과 없음.",
+    "client_info": "이 약은 주사로만 투여되며, 동물병원에서 수의사의 지시에 따라 사용됩니다. 근육 주사 시 통증이 발생할 수 있습니다. 치료 중 설사, 발진, 부종 등의 이상 반응이 나타나면 즉시 수의사에게 알려주세요. 처방된 치료 기간을 반드시 완료하고, 임의로 투약을 중단하지 마세요. 신장 기능이 저하된 동물은 추가적인 모니터링이 필요할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Client Information Sheet",
+      "Monitoring (detailed parameters)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/22.jsonl",
+    "extracted_at": "2026-03-10T20:03:56.270154+00:00",
+    "reviewer": null
+  }
+}

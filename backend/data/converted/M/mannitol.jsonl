@@ -1,0 +1,639 @@
+{
+  "id": "mannitol",
+  "drug_identity": {
+    "name_ko": "만니톨",
+    "name_en": "Mannitol",
+    "active_ingredient": "Mannitol",
+    "brand_names": [
+      "Osmitrol"
+    ],
+    "allergy_class": null,
+    "class": "Diuretic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 150,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.9,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "만니톨의 7~10%만 대사되며, 나머지는 신장을 통해 변화 없이 배설된다."
+    },
+    "extra_information": "만니톨은 사구체에서 자유롭게 여과되며 세뇨관에서 거의 재흡수되지 않는다. 혈액-뇌 장벽 및 혈액-방수 장벽을 통과하지 않으나, 고용량 투여, 산증, 또는 장벽 손상 시에는 통과할 수 있다. 소 및 양에서의 반감기는 40~60분으로 보고되어 있다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설 의존성이 높고, 과용량 시 급성 신손상 위험이 있음. 심혈관계(폐부종, 울혈성 심부전) 및 CNS 부작용도 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "lethargy",
+          "coma",
+          "CNS effects",
+          "cerebral edema",
+          "rebound cerebral edema"
+        ],
+        "index": 1,
+        "evidence": "CNS 부작용(기면, 혼수)이 보고되어 있으며, 반복 투여 시 반동성 뇌부종 위험이 있음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "platelet function",
+          "coagulation",
+          "pseudoagglutination",
+          "hemolysis",
+          "electrolyte imbalance"
+        ],
+        "index": 1,
+        "evidence": "개에서 만니톨이 전혈 응고 및 혈소판 기능에 영향을 미치는 것이 in vitro에서 확인됨. 전해질 불균형(고나트륨혈증, 저칼륨혈증) 위험."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "acute kidney injury",
+          "nephrotoxicity",
+          "osmolality >320 mOsm/L",
+          "renal elimination",
+          "oliguria",
+          "anuria"
+        ],
+        "index": 2,
+        "evidence": "삼투압이 320 mOsm/L 초과 시 급성 신손상 위험. 신장을 통해 90% 이상 배설되며, 신기능 저하 시 반감기 연장. 아미노글리코사이드, 사이클로스포린, 이뇨제와 병용 시 신독성 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 부담에 대한 직접적인 언급 없음. 7~10%만 대사되므로 간 부담은 최소."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "pulmonary edema",
+          "congestive heart failure",
+          "tachycardia",
+          "volume overload"
+        ],
+        "index": 1,
+        "evidence": "폐부종, 울혈성 심부전, 빈맥 등 심혈관계 부작용이 보고됨. 핍뇨 환자에서 용량 과부하 위험."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "lethargy",
+          "coma",
+          "CNS effects",
+          "rebound cerebral edema"
+        ],
+        "index": 1,
+        "evidence": "CNS 부작용(기면, 혼수)이 보고되어 있으며, 반복 투여 시 반동성 뇌부종 위험이 있음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "electrolyte imbalance",
+          "pseudoagglutination",
+          "hemolysis"
+        ],
+        "index": 1,
+        "evidence": "전해질 불균형 및 혈액 제제와 병용 시 가성응집/용혈 위험."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "acute kidney injury",
+          "nephrotoxicity",
+          "osmolality >320 mOsm/L",
+          "renal elimination"
+        ],
+        "index": 2,
+        "evidence": "삼투압이 320 mOsm/L 초과 시 급성 신손상 위험. 신장을 통해 90% 이상 배설. 고삼투압 상태에서 사용 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 부담에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "pulmonary edema",
+          "congestive heart failure",
+          "tachycardia",
+          "volume overload"
+        ],
+        "index": 1,
+        "evidence": "폐부종, 울혈성 심부전, 빈맥 등 심혈관계 부작용이 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.67,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "성인 인간에서 반감기 약 100분(≈1.67시간). 소 및 양에서는 40~60분. 이뇨 효과는 투여 후 1~3시간 내 발생. 경구 흡수는 불량."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Mannitol may increase the nephrotoxic effect of aminoglycosides."
+    },
+    {
+      "drug": "Blood Products",
+      "severity": 2,
+      "keywords": [
+        "pseudoagglutination",
+        "hemolysis"
+      ],
+      "evidence": "Concurrent administration through the same set may cause pseudoagglutination or hemolysis."
+    },
+    {
+      "drug": "Bromides",
+      "severity": 1,
+      "keywords": [
+        "enhanced excretion"
+      ],
+      "evidence": "Mannitol may enhance urinary bromide excretion."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "Concurrent use may increase the risk for hyponatremia."
+    },
+    {
+      "drug": "Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use of mannitol with diuretics may increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Hypotensive Agents (amlodipine, enalapril, sildenafil, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase risk for hypotension."
+    },
+    {
+      "drug": "Sotalol",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "hypokalemia",
+        "hypomagnesemia"
+      ],
+      "evidence": "Mannitol's effects on potassium and magnesium may increase the risk for QT prolongation when administered with sotalol."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "삼투성 이뇨 (라벨 용량; FDA 미승인)",
+          "value": "1.5 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "30분에 걸쳐 투여",
+          "evidence": "라벨 용량이나 FDA 승인은 아님"
+        },
+        {
+          "logic_type": "linear",
+          "context": "핍뇨성 급성 신손상 (extra-label)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "10~20분에 걸쳐 서서히 IV 볼루스. 반복 볼루스는 4~6시간마다. 일일 총 용량 2 g/kg 초과 금지 권장",
+          "evidence": "Extra-label; 권장 범위 0.25~1 g/kg IV, 10~40분 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "핍뇨성 급성 신손상 - CRI (extra-label)",
+          "value": "60 - 120",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "상당한 이뇨 발생 시 시간당 CRI로 전환 가능",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "국소 약물에 반응하지 않는 급성 녹내장 보조 치료 (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "10~20분에 걸쳐 서서히 투여. 투여 후 1~4시간 음수 제한 권장. 범위 0.5~2 g/kg, 20~30분 투여",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "뇌부종으로 인한 두개내압 상승 보조 치료 (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "15~20분에 걸쳐 IV 또는 IO 투여. 필요 시 6~8시간마다 반복 볼루스. CRI는 이 적응증에 권장하지 않음",
+          "evidence": "Extra-label"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "삼투성 이뇨 (라벨 용량; FDA 미승인)",
+          "value": "1.5 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "30분에 걸쳐 투여",
+          "evidence": "라벨 용량이나 FDA 승인은 아님"
+        },
+        {
+          "logic_type": "linear",
+          "context": "핍뇨성 급성 신손상 (extra-label)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "10~20분에 걸쳐 서서히 IV 볼루스. 반복 볼루스는 4~6시간마다. 일일 총 용량 2 g/kg 초과 금지 권장",
+          "evidence": "Extra-label; 개/고양이 공통 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "국소 약물에 반응하지 않는 급성 녹내장 보조 치료 (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "10~20분에 걸쳐 서서히 투여. 투여 후 1~4시간 음수 제한 권장",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "뇌부종으로 인한 두개내압 상승 보조 치료 (extra-label)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "15~20분에 걸쳐 IV 또는 IO 투여. 필요 시 6~8시간마다 반복 볼루스. CRI는 권장하지 않음",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "신기능 저하가 최소인 안정적인 고양이에서 칼슘 옥살산 요석 배출 시도 (extra-label)",
+          "value": "1.5 - 2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "IV 수액 이뇨 목적으로 사용",
+          "evidence": "Extra-label; 신기능 저하가 최소인 안정적인 고양이에서만 사용"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "무뇨증 환자에서는 금기. 신기능 저하 시 반감기가 연장될 수 있음. 삼투압이 320 mOsm/L 초과 시 급성 신손상 위험. 핍뇨/무뇨 또는 질소혈증 발생 시 투여 중단."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사는 7~10%에 불과하며, 간기능 저하에 따른 용량 조정에 대한 구체적인 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "무뇨증 (Anuria)",
+      "match_terms": [
+        "anuria",
+        "무뇨"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심한 저혈량증 (Severe Hypovolemia)",
+      "match_terms": [
+        "hypovolemia",
+        "저혈량증"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 폐울혈/폐부종 (Severe Pulmonary Congestion/Edema)",
+      "match_terms": [
+        "pulmonary edema",
+        "pulmonary congestion",
+        "폐부종",
+        "폐울혈"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 탈수 (Severe Dehydration)",
+      "match_terms": [
+        "dehydration",
+        "탈수"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전 (Heart Failure)",
+      "match_terms": [
+        "heart failure",
+        "congestive heart failure",
+        "심부전"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고삼투압 상태 (Hyperosmolar State)",
+      "match_terms": [
+        "hyperosmolar hyperglycemia",
+        "ethylene glycol toxicity",
+        "고삼투압"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이차성 녹내장 (Secondary Glaucoma - uveitis, neoplasia)",
+      "match_terms": [
+        "secondary glaucoma",
+        "uveitis",
+        "이차성 녹내장"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질/산-염기 불균형 미교정",
+      "match_terms": [
+        "electrolyte imbalance",
+        "acid-base imbalance"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "삼투성 이뇨제. IV 투여 후 사구체에서 자유롭게 여과되고 세뇨관에서 거의 재흡수되지 않아 삼투압을 높여 수분 재흡수를 억제함. 나트륨, 염소, 중탄산염, 요산, 요소의 배설도 증가. 뇌부종 감소, 두개내압 저하, 자유 라디칼 소거 효과, 신세뇨관 팽창 억제, 신혈류 및 사구체 여과율 증가 효과도 있음.",
+    "common_extra_effects": [
+      "전해질 불균형 (고나트륨혈증, 저칼륨혈증, 가성저나트륨혈증)",
+      "산-염기 불균형 (대사성 산증)",
+      "용량 고갈 또는 핍뇨 환자에서 용량 과부하",
+      "오심, 구토",
+      "폐부종",
+      "울혈성 심부전",
+      "빈맥",
+      "급성 신손상 (삼투압 >320 mOsm/L)",
+      "기면",
+      "혼수",
+      "반동성 뇌부종 (반복 투여 시)",
+      "혈액-뇌 장벽 및 혈액-방수 장벽 투과성 증가 (반복/고용량 투여 시)",
+      "주사 부위 반응 (vesicant)"
+    ],
+    "dog_mechanism": "개에서 만니톨은 전혈 응고 및 혈소판 기능에 영향을 미치는 것이 in vitro에서 확인됨 (임상적 의의는 불확실).",
+    "dog_extra_effects": [
+      "혈소판 기능 저하 (in vitro)",
+      "응고 기능 변화 (in vitro, 임상적 의의 불확실)"
+    ],
+    "cat_mechanism": "신기능 저하가 최소인 안정적인 고양이에서 칼슘 옥살산 요석 배출을 위한 IV 수액 이뇨 목적으로 사용된 사례 있음.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 만니톨은 삼투성 이뇨, 급성 녹내장, 뇌부종, 핍뇨성 급성 신손상 등에 사용됨. In vitro에서 혈소판 기능 및 응고에 영향을 미칠 수 있으나 임상적 의의는 불확실. 뇌부종 치료 시 CRI보다 간헐적 볼루스 투여가 권장됨. 일일 총 용량 2 g/kg 초과 금지 권장.",
+    "cat": "고양이에서도 개와 동일한 적응증으로 사용 가능. 신기능 저하가 최소인 안정적인 고양이에서 칼슘 옥살산 요석 배출을 위한 IV 수액 이뇨 목적으로 사용된 사례 있음. 고삼투압 상태(예: 에틸렌 글리콜 중독)에서는 혈관 내 고삼투압을 악화시킬 수 있으므로 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "무뇨증, 심한 저혈량증, 폐부종 시 금기. 저혈량 환자에서 등장성 결정질 수액 및/또는 콜로이드 병용 권장. 전해질, 신기능, 수분 상태, 혈압, 신경학적 상태 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "무뇨증, 심한 저혈량증, 폐부종 시 금기. 고삼투압 상태에서 주의. 전해질, 신기능, 수분 상태 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~30°C(59°F~86°F) 보관. 동결 금지. 15% 초과 농도에서 저온 시 결정 형성 가능. 결정 형성 시 60°C(140°F)로 가온하여 용해 후 체온으로 냉각 후 투여. 용해 불가 시 폐기.",
+    "forms": [
+      "Mannitol Injection 5% (50 mg/mL) - Osmitrol",
+      "Mannitol Injection 10% (100 mg/mL) - Osmitrol",
+      "Mannitol Injection 15% (150 mg/mL) - Osmitrol, generic",
+      "Mannitol Injection 20% (200 mg/mL) - Osmitrol, generic; 수의용 라벨 제품 포함",
+      "Mannitol Injection 25% (250 mg/mL) - generic"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "만니톨은 삼투성 이뇨제로, 핍뇨성 급성 신손상, 뇌부종(두개내압 상승), 급성 녹내장, 일부 독소(아스피린, 바르비투레이트, 브롬화물, 에틸렌 글리콜)의 요중 배설 촉진에 사용됩니다. 무뇨증, 심한 저혈량증, 폐부종 환자에서는 금기입니다. 투여 전 전해질·산-염기 불균형을 반드시 교정해야 하며, 투여 중 소변량, 전해질, 신기능, 혈압, 신경학적 상태를 철저히 모니터링해야 합니다. 결정 형성 방지를 위해 투여 전 용액을 가온하고 인라인 IV 필터(5 마이크론) 사용을 권장합니다.",
+    "indications": "승인 적응증(수의용 라벨, FDA 미승인): 개에서 삼투성 이뇨. 허가 외 사용: 핍뇨성 급성 신손상, 뇌부종/두개내압 상승, 국소 약물에 반응하지 않는 급성 녹내장, 일부 독소의 요중 배설 촉진, 신기능 저하가 최소인 안정적인 고양이에서 칼슘 옥살산 요석 배출 시도.",
+    "client_info": "만니톨은 반드시 동물병원 전문 의료진에 의해 적절한 모니터링 환경에서만 투여되어야 합니다. 가정에서 투여할 수 없는 약물입니다. 투여 중 소변량 감소, 호흡 곤란, 부종, 의식 저하 등의 증상이 나타나면 즉시 담당 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary species-specific PK studies (dog/cat)",
+      "CYP enzyme profile",
+      "Oral bioavailability data",
+      "Protein binding data",
+      "Tmax data",
+      "Specific creatinine thresholds for dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "half_life_hr (dog/cat specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/61.jsonl",
+    "extracted_at": "2026-03-11T08:20:08.220366+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,640 @@
+{
+  "id": "epirubicin",
+  "drug_identity": {
+    "name_ko": "에피루비신",
+    "name_en": "Epirubicin",
+    "active_ingredient": "Epirubicin",
+    "brand_names": [
+      "Ellence"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Dexrazoxane",
+    "reversal_evidence": "Dexrazoxane는 에피루비신 혈관 외 유출 치료 및 심장 독성 예방에 사용될 수 있음 (FDA 승인, 인체 기준)",
+    "off_label_note": "수의학적 사용에 대한 공식 승인 없음; 독소루비신의 대체제로 개와 고양이에서 오프라벨로 사용됨",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주로 간 및 기타 조직에서 aldo-keto reductase에 의해 대사되어 활성 대사체인 epirubicinol(모체 활성의 약 10%)로 전환됨. 에피루비신과 대사체는 주로 담즙 및 대변으로 배설되며, 소량은 소변으로 배설됨."
+    },
+    "extra_information": "개와 고양이에서의 약동학 데이터는 공개된 자료가 없음. 인체 데이터에 의하면 IV 투여 후 빠르게 광범위하게 분포하나 CSF에는 거의 침투하지 않음. 적혈구에 농축됨. 삼중 소실 양상을 보임 (반감기: 3분, 2.5시간, 33시간)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개/고양이 수의학적 PK 데이터 없음; 인체 데이터 및 독소루비신 유사성에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CSF 침투 미미"
+        ],
+        "index": -1,
+        "evidence": "인체 데이터에서 CSF에 거의 침투하지 않는 것으로 보고됨. 직접적인 뇌 독성 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "골수억제",
+          "호중구감소",
+          "적혈구 농축"
+        ],
+        "index": 1,
+        "evidence": "골수억제(호중구 감소, 혈소판 감소 포함)가 주요 부작용으로 보고됨. 적혈구에 농축됨."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "신독성",
+          "LOAEL 0.4 mg/kg/day",
+          "표적 장기"
+        ],
+        "index": 2,
+        "evidence": "연구견 6주 반복 IV 독성 연구에서 신장이 표적 장기로 확인됨 (LOAEL 0.4 mg/kg/day). 고양이에서 잠재적 신독성 언급."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "간 대사",
+          "간기능 장애 주의",
+          "용량 조정"
+        ],
+        "index": 3,
+        "evidence": "주로 간에서 대사됨. 간기능 장애 환자에서 용량 조정 필요 가능성 언급. 투여 전 간기능 평가 권장."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "심장독성",
+          "심근병증",
+          "심부전",
+          "누적 용량 제한"
+        ],
+        "index": 4,
+        "evidence": "심장독성이 주요 부작용으로 보고됨. 최대 누적 용량 240 mg/m² 권장. 독소루비신보다 심장독성 가능성이 낮을 수 있으나 여전히 모니터링 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CSF 침투 미미"
+        ],
+        "index": -1,
+        "evidence": "인체 데이터에서 CSF에 거의 침투하지 않는 것으로 보고됨. 고양이 특이적 뇌 독성 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "골수억제",
+          "호중구감소"
+        ],
+        "index": 1,
+        "evidence": "골수억제가 예상되는 부작용으로 언급됨 (독소루비신과 유사). 고양이 특이적 데이터 제한적."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "신독성",
+          "신기능 모니터링",
+          "잠재적 신독성"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 독소루비신(및 잠재적으로 에피루비신)이 잠재적 신독성 물질로 명시됨. 치료 전후 신기능 모니터링 권장."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "간 대사",
+          "간기능 장애 주의"
+        ],
+        "index": 3,
+        "evidence": "주로 간에서 대사됨. 간기능 장애 환자에서 주의 필요. 고양이 특이적 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "심장독성",
+          "누적 용량 제한"
+        ],
+        "index": 4,
+        "evidence": "심장독성 가능성 언급. 독소루비신보다 낮을 수 있으나 고양이 특이적 데이터 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.05,
+      "max": 33.0,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 77,
+    "evidence": "인체 데이터: 삼중 소실 양상 - 1상 반감기 약 3분, 2상 약 2.5시간, 3상 약 33시간. 단백결합률 77%. 개/고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/회피→3, 주요→3, 중등도→2, 경미→1. 독소루비신 또는 에피루비신에 대해 보고되었거나 이론적으로 예상되는 상호작용 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Antineoplastic Agents, Other",
+      "severity": 2,
+      "keywords": [
+        "독성 상승",
+        "골수억제 증가"
+      ],
+      "evidence": "Other antineoplastic agents may potentiate the toxic effects of epirubicin/doxorubicin."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "심부전 위험 증가"
+      ],
+      "evidence": "Calcium channel blockers may result in an increased risk for heart failure when used with epirubicin."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 3,
+      "keywords": [
+        "에피루비신 혈중 농도 증가",
+        "독성 위험"
+      ],
+      "evidence": "Cimetidine can increase epirubicin levels; avoid using together."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 3,
+      "keywords": [
+        "독소루비신 혈중 농도 증가",
+        "활성 대사체 증가",
+        "독성 위험"
+      ],
+      "evidence": "Cyclosporine can increase doxorubicin and doxorubicinol (active metabolite) levels. Avoid using together."
+    },
+    {
+      "drug": "Glucosamine",
+      "severity": 2,
+      "keywords": [
+        "항종양 효과 감소"
+      ],
+      "evidence": "Glucosamine may reduce doxorubicin effectiveness; use together is not recommended in humans."
+    },
+    {
+      "drug": "Immunosuppressive Agents, Other (e.g., leflunomide, tacrolimus)",
+      "severity": 2,
+      "keywords": [
+        "면역억제 효과 증강"
+      ],
+      "evidence": "Immunosuppressant effects may be enhanced when combined with other immunosuppressive agents."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 3,
+      "keywords": [
+        "독소루비신 혈중 농도 증가",
+        "활성 대사체 증가",
+        "독성 위험"
+      ],
+      "evidence": "Ketoconazole can increase doxorubicin and doxorubicinol (active metabolite) levels and lead to toxicity. Avoid using together."
+    },
+    {
+      "drug": "Paclitaxel",
+      "severity": 2,
+      "keywords": [
+        "에피루비신 독성 증가"
+      ],
+      "evidence": "Paclitaxel can increase epirubicin toxicity."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "독소루비신 소실 증가",
+        "혈중 농도 감소"
+      ],
+      "evidence": "Phenobarbital may increase elimination and reduce blood levels of doxorubicin."
+    },
+    {
+      "drug": "Spinosad",
+      "severity": 3,
+      "keywords": [
+        "독소루비신 혈중 농도 증가",
+        "활성 대사체 증가",
+        "독성 위험"
+      ],
+      "evidence": "Spinosad can increase doxorubicin and doxorubicinol (active metabolite) levels and lead to toxicity. Avoid using together."
+    },
+    {
+      "drug": "Streptozocin",
+      "severity": 2,
+      "keywords": [
+        "독소루비신 대사 억제"
+      ],
+      "evidence": "Streptozocin may inhibit doxorubicin metabolism."
+    },
+    {
+      "drug": "Vaccines (live or live-attenuated)",
+      "severity": 3,
+      "keywords": [
+        "면역억제",
+        "활성 감염 위험"
+      ],
+      "evidence": "Live or live-attenuated vaccines may result in active infections in immunocompromised patients receiving epirubicin."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "독소루비신 혈중 농도 증가"
+      ],
+      "evidence": "Verapamil may increase doxorubicin levels."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가"
+      ],
+      "evidence": "Increased risk for bleeding when epirubicin is used with warfarin."
+    },
+    {
+      "drug": "Zidovudine",
+      "severity": 2,
+      "keywords": [
+        "호중구감소 위험 증가"
+      ],
+      "evidence": "Increased risk for neutropenia when epirubicin is used with zidovudine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "일반 항종양 용량 (독소루비신 대체, 체중 10 kg 이상)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 누적 용량 240 mg/m² (mg/kg 아님). 단위: mg/m² (NOT mg/kg)",
+          "evidence": "Plumb's: 30 mg/m² IV, 자유 흐름 라인에서 최소 3~5분에 걸쳐 투여. 단위는 mg/m²임에 주의."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "일반 항종양 용량 (체중 10 kg 미만 소형견)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 누적 용량 240 mg/m² (mg/kg 아님) 준수",
+          "evidence": "Plumb's: 체중 10 kg 미만 소형견은 1 mg/kg IV 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "림프종 (오프라벨, 후향적 연구, CEOP-C 또는 CEOP-25 프로토콜)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주차 및 9주차 투여 (프로토콜에 따름). 단위: mg/m² (NOT mg/kg)",
+          "evidence": "후향적 연구: 에피루비신 30 mg/m² 또는 1 mg/kg IV (10 kg 미만), 4주차 및 9주차 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비장 혈관육종 (오프라벨, 후향적 연구, 비장절제술 후 보조요법)",
+          "value": "30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 4~6회 치료. 단위: mg/m² (NOT mg/kg)",
+          "evidence": "후향적 연구: 비장절제술 후 에피루비신 30 mg/m² IV, 3주 간격으로 최대 4~6회."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "조직구성 육종 (오프라벨, 후향적 연구, 로무스틴 병용 또는 단독 구제요법)",
+          "value": "25 - 30",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "10 kg 미만 개는 1 mg/kg 투여. 단위: mg/m² (NOT mg/kg)",
+          "evidence": "후향적 연구: 에피루비신 25~30 mg/m² IV; 10 kg 미만은 1 mg/kg."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "주사 부위 육종 (오프라벨, 수술 전 신보조요법)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q21d",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술적 절제 전 3회 투여. 단위: mg/m² (NOT mg/kg)",
+          "evidence": "한 연구에서 고양이에게 에피루비신 25 mg/m² IV, 21일 간격으로 3회 투여 후 수술적 절제 시행."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "고양이에서 잠재적 신독성이 언급되어 치료 전후 신기능(요검사, BUN, 크레아티닌) 모니터링 권장. 개에서 6주 반복 독성 연구에서 신장이 표적 장기로 확인됨 (LOAEL 0.4 mg/kg/day). 명시적인 신기능 저하 시 용량 조정 지침은 제공되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 장애 환자에서 용량 조정이 필요할 수 있음. 투여 전 간기능 평가 권장. 구체적인 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "골수억제 (호중구 감소증)",
+      "match_terms": [
+        "myelosuppression",
+        "neutropenia",
+        "호중구감소"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "neutrophils",
+        "threshold": 1500.0,
+        "unit": "cells/uL"
+      }
+    },
+    {
+      "condition": "중증 심근 기능 부전 / 심근병증 / 심부전",
+      "match_terms": [
+        "cardiomyopathy",
+        "heart failure",
+        "myocardial insufficiency"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "최근 심근경색",
+      "match_terms": [
+        "myocardial infarction",
+        "MI"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 부정맥",
+      "match_terms": [
+        "severe arrhythmia",
+        "arrhythmia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "최대 누적 안트라사이클린 용량 도달",
+      "match_terms": [
+        "cumulative anthracycline dose",
+        "maximum cumulative dose",
+        "doxorubicin cumulative"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "간기능 저하"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "고요산혈증 / 고요산뇨증",
+      "match_terms": [
+        "hyperuricemia",
+        "hyperuricuria"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "근육 내 또는 피하 투여",
+      "match_terms": [
+        "IM injection",
+        "SC injection",
+        "subcutaneous",
+        "intramuscular"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Australian Shepherd",
+      "Shetland Sheepdog",
+      "Long-haired Whippet"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "P-당단백질이 독소루비신 및 에피루비신을 능동 수송함. MDR1 돌연변이(ABCB1-1delta) 감수성 견종에서 독성 위험 증가. Washington State University 수의임상약리학연구소는 독소루비신 용량을 25~30% 감량 권장; 에피루비신에도 유사한 경험적 용량 조정 전략 고려 권장."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "DNA 합성, DNA 의존성 RNA 합성 및 단백질 합성 억제. 세포 주기 전반에 걸쳐 작용하며 일부 면역억제 활성도 보유. 독소루비신의 반합성 입체이성질체로 유사한 작용 기전을 가짐.",
+    "common_extra_effects": [
+      "골수억제 (호중구감소, 혈소판감소)",
+      "심장독성 (심근병증, 심부전)",
+      "탈모",
+      "위장관염 (구토, 설사)",
+      "구내염",
+      "히스타민 매개 과민반응 (두드러기, 안면 부종, 구토, 부정맥, 저혈압)",
+      "혈관 외 유출 시 심각한 조직 궤양 및 괴사",
+      "요산 증가 (혈중 및 뇨중)",
+      "소변 오렌지-적색 변색 (투여 후 1~2일)"
+    ],
+    "dog_mechanism": "독소루비신과 유사한 기전. 개에서 독소루비신보다 심장독성 가능성이 낮을 수 있으나 GI 부작용 발생률이 더 높을 수 있음.",
+    "dog_extra_effects": [
+      "구역/구토 (투여 후 72시간 이내)",
+      "설사 (투여 후 약 4~5일)",
+      "골수억제 나디르 (치료 후 7~10일)",
+      "털 코트 변화 (지저분함, 광택 소실)",
+      "지속 성장 털 견종에서 심각한 탈모 가능",
+      "MDR1 돌연변이 견종에서 골수억제 및 GI 독성 증가"
+    ],
+    "cat_mechanism": "독소루비신과 유사한 기전으로 추정. 고양이에서 잠재적 신독성 주의.",
+    "cat_extra_effects": [
+      "잠재적 신독성",
+      "히스타민 매개 과민반응 (1례 보고)",
+      "골수억제 (예상)"
+    ]
+  },
+  "species_notes": {
+    "dog": "에피루비신은 독소루비신의 대체제로 개에서 오프라벨로 사용됨. 림프종, 비장 혈관육종, 조직구성 육종에 대한 후향적 연구 데이터 존재. 독소루비신과 유사한 효능을 보이며 심장독성은 낮을 수 있으나 GI 부작용 발생률이 더 높을 수 있음. MDR1 돌연변이 감수성 견종(콜리, 오스트레일리안 셰퍼드, 셸티, 장모 휘핏)에서 용량 25~30% 감량 고려. 심근병증 소인 견종(도베르만 핀셔, 그레이트 데인, 로트와일러, 복서)은 심장 모니터링 강화 필요. 투여 전 간기능 평가 필수.",
+    "cat": "에피루비신은 고양이 주사 부위 육종에서 사용된 사례가 있음 (25 mg/m² IV, 21일 간격, 3회). 고양이에서 잠재적 신독성이 있으므로 치료 전후 신기능(요검사, BUN, 크레아티닌) 모니터링 필수. 히스타민 매개 과민반응이 1례 보고됨. 수의학적 데이터가 매우 제한적이므로 수의 종양 전문의 자문 강력 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1 돌연변이 감수성 견종에서 독성 위험 증가. 심근병증 소인 견종에서 심장 모니터링 강화 필요. 간기능 장애 시 용량 조정 고려. 혈관 외 유출 방지 필수. 최대 누적 용량(240 mg/m²) 초과 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "잠재적 신독성으로 인해 치료 전후 신기능 모니터링 필수. 수의학적 데이터 매우 제한적. 과민반응 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "동결건조 분말: 25°C(77°F) 보관, 15~30°C 허용. 재구성 용액: 2~8°C에서 빛 차단 시 24시간 안정, 또는 25°C 일반 조명 조건에서 24시간 안정. 시판 용액: 2~8°C 냉장 보관, 동결 금지, 빛 차단 보관. 냉장고에서 꺼낸 후 또는 고무 마개 첫 천공 후 24시간 이내 사용. 2 mg/mL 농도의 주사용 멸균수 용액은 플라스틱 주사기에서 4°C 보관 시 최소 43일 안정.",
+    "forms": [
+      "Epirubicin HCl for Injection 2 mg/mL (25 mL vial)",
+      "Epirubicin HCl for Injection 2 mg/mL (100 mL vial)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에피루비신은 안트라사이클린계 항종양제로, 개와 고양이에서 독소루비신의 잠재적 대체제로 사용될 수 있습니다. 수의학적 사용 데이터가 제한적이므로 수의 종양 전문의 자문이 강력히 권장됩니다. 독소루비신보다 심장독성이 낮을 수 있으나 GI 부작용이 더 많을 수 있습니다. MDR1 돌연변이 감수성 견종에서 용량 감량이 필요하며, 고양이에서는 신독성 모니터링이 필수입니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비 착용이 필요합니다.",
+    "indications": "개: 림프종(오프라벨), 비장 혈관육종(오프라벨, 비장절제술 후 보조요법), 조직구성 육종(오프라벨). 고양이: 주사 부위 육종(오프라벨, 수술 전 신보조요법). 모든 적응증이 오프라벨이며 수의학적 승인 없음.",
+    "client_info": "이 약물은 강력한 항암제로 심각한 부작용이 발생할 수 있습니다. 동물이 심한 무기력증, 비정상적인 출혈(혈변 포함), 멍이 드는 증상을 보이면 즉시 수의사에게 연락하십시오. 투여 후 1~2일간 소변이 오렌지-적색으로 변할 수 있으나 해롭지 않습니다. 투여 후 2~5일간 가벼운 식욕 부진과 간헐적 구토가 흔히 나타날 수 있습니다. 치료받은 동물의 소변이나 대변에 피부가 닿지 않도록 하십시오. 치료받은 동물이 사람의 피부를 핥지 않도록 하십시오. 이 약물은 NIOSH에서 위험 약물로 분류하므로 취급 시 개인보호장비를 착용하십시오. 정기적인 혈액 검사 및 추적 검진을 빠짐없이 받으십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics (dog/cat)",
+      "Specific renal dose adjustment guidelines",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T18:05:46.626779+00:00",
+    "reviewer": null
+  }
+}

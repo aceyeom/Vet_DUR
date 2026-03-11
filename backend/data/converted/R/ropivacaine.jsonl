@@ -1,0 +1,676 @@
+{
+  "id": "ropivacaine",
+  "drug_identity": {
+    "name_ko": "로피바카인",
+    "name_en": "Ropivacaine",
+    "active_ingredient": "Ropivacaine hydrochloride",
+    "brand_names": [
+      "Naropin"
+    ],
+    "allergy_class": "amide local anesthetic",
+    "class": "Analgesic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 모든 동물 적용은 허가 외(extra-label) 사용이며, 인간용 제품(Naropin®)을 사용함.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 7.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP1A2"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 CYP1A2에 의해 간에서 대사되며, 주로 대사산물 형태로 소변으로 배설됨. 시프로플록사신/엔로플록사신 및 테오필린이 로피바카인 대사를 저해할 수 있음."
+    },
+    "extra_information": "개에서 경막외 투여(약 1.5 mg/kg) 후 최고 동맥 농도는 5~10분 이내에 도달하며, 소실 반감기는 약 200분, 청소율은 약 25 mL/분/kg임. IV 투여 후 소실 반감기는 약 26분, 청소율은 41 mL/분/kg임. 인간에서 단백결합률은 약 95%(알파-1-산 당단백질)이며, 경막외 투여 후 반감기는 약 4시간, IV 투여 후 성인 반감기는 약 1.8시간임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 심혈관 독성(저혈압, 서맥, AV 차단, QRS 확장), CNS 독성(흥분, 진정, 경련), 간 대사, 신장 배설 등 본문 언급 근거로 평가. 수의과 종별 PK 데이터는 개에 한해 일부 존재함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS excitation",
+          "restlessness",
+          "tremors",
+          "drowsiness",
+          "loss of consciousness",
+          "convulsions",
+          "CNS depression"
+        ],
+        "index": 2,
+        "evidence": "CNS 흥분(불안, 진전) 및 억제(졸음, 의식 소실), 경련이 독성 시 보고됨. 개에서 경련 유발 평균 용량은 4.9 mg/kg."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hypotension",
+          "bradycardia",
+          "AV block",
+          "QRS widening",
+          "cardiac arrest",
+          "ventricular arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "심혈관 독성(저혈압, 서맥, AV 차단, QRS 확장, 심정지)이 보고됨. 리도카인보다 심장 독성이 크고 부피바카인보다는 낮음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "urinary retention",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "신장 질환 환자에서 주의 사용 권고. 소변 정체가 부작용으로 보고됨. 주로 대사산물이 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP1A2",
+          "hepatic disease caution"
+        ],
+        "index": 3,
+        "evidence": "간에서 CYP1A2에 의해 대사됨. 간 질환 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hypotension",
+          "bradycardia",
+          "AV block",
+          "decreased cardiac output",
+          "QRS widening",
+          "cardiac arrest",
+          "ventricular arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "심혈관 독성이 주요 부작용으로 보고됨. 건강한 비글에서 경막외 로피바카인으로 인한 심한 저혈압으로 사망 사례 보고. 리도카인보다 심장 독성 크고 부피바카인보다 낮음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "CNS excitation",
+          "CNS depression",
+          "convulsions"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 CNS 데이터는 없으나, 아미드계 국소마취제 계열 효과로 CNS 독성 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypotension",
+          "bradycardia",
+          "cardiac toxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 심혈관 데이터는 없으나, 계열 효과로 심혈관 독성 가능성 있음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal disease caution"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신장 데이터 없음. 신장 질환 시 주의 권고는 일반적 계열 권고임."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic disease caution"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 간 대사 데이터 없음. 간 질환 시 주의 권고는 일반적 계열 권고임."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "cardiac toxicity",
+          "hypotension",
+          "bradycardia"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 심장 독성 데이터 없음. 계열 효과로 심혈관 독성 가능성 있음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 10,
+    "t_max_hr": 0.17,
+    "half_life_hr": {
+      "min": 0.43,
+      "max": 3.33,
+      "mean": 1.88,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 95,
+    "evidence": "개에서 경막외 투여 후 최고 동맥 농도 도달 시간 5~10분(0.08~0.17시간). 경막외 투여 후 소실 반감기 약 200분(3.33시간), IV 투여 후 약 26분(0.43시간). 말초 신경 차단 시 진통 발현은 약 10분 후. 인간에서 단백결합률 약 95%. 경구 생체이용률 데이터 없음(주사제)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 에피네프린 함유 제품과의 상호작용은 별도 항목으로 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "cardiac toxicity",
+        "additive cardiotoxicity"
+      ],
+      "evidence": "Amiodarone may increase the risk for cardiac toxicity when used with ropivacaine."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "ACE inhibitors increase the risk for bradycardia and hypotension when combined with ropivacaine."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, esmolol, propranolol, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "reduced clearance",
+        "increased plasma concentration"
+      ],
+      "evidence": "Beta-blockers may increase serum ropivacaine concentrations by reducing ropivacaine clearance."
+    },
+    {
+      "drug": "Ciprofloxacin/Enrofloxacin",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "impaired metabolism"
+      ],
+      "evidence": "Ciprofloxacin/enrofloxacin may impair ropivacaine metabolism via CYP1A2 inhibition, increasing plasma concentrations."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "CYP1A2 inhibition",
+        "impaired metabolism"
+      ],
+      "evidence": "Theophylline may impair ropivacaine metabolism, increasing plasma concentrations."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 3,
+      "keywords": [
+        "severe hypertension",
+        "epinephrine interaction"
+      ],
+      "evidence": "Use with epinephrine-containing ropivacaine products may produce severe, prolonged hypertension."
+    },
+    {
+      "drug": "Ergot Alkaloids (bromocriptine, pergolide)",
+      "severity": 3,
+      "keywords": [
+        "severe hypertension",
+        "epinephrine interaction"
+      ],
+      "evidence": "Use with epinephrine-containing ropivacaine products may produce severe, prolonged hypertension."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (selegiline, linezolid, amitraz)",
+      "severity": 3,
+      "keywords": [
+        "severe hypertension",
+        "epinephrine interaction"
+      ],
+      "evidence": "Use with epinephrine-containing ropivacaine products may produce severe, prolonged hypertension."
+    },
+    {
+      "drug": "Vasopressors (dobutamine, norepinephrine)",
+      "severity": 3,
+      "keywords": [
+        "severe hypertension",
+        "epinephrine interaction"
+      ],
+      "evidence": "Use with epinephrine-containing ropivacaine products may produce severe, prolonged hypertension."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "국소 진통(일반 권장 용량, 허가 외)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "국소 차단을 위한 일반 권장 용량 2 mg/kg"
+        },
+        {
+          "logic_type": "linear",
+          "context": "국소 진통 - 신경주위 투여(0.75% 용액, 허가 외)",
+          "value": "0.75",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "0.75% 로피바카인 용액으로 신경주위 투여 0.75 mg/kg; 덱스메데토미딘 0.1 µg/kg 병용 시 유사한 진통 효과"
+        },
+        {
+          "logic_type": "linear",
+          "context": "안구주위 주사(peribulbar injection, 1% 용액, 허가 외)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "1% 로피바카인 용액으로 3 mg/kg (0.3 mL/kg) 안구주위 주사; 초음파 유도 주사 권장"
+        },
+        {
+          "logic_type": "linear",
+          "context": "종창 국소마취(tumescent local anesthesia, 0.05~0.1% 용액, 허가 외)",
+          "value": "15",
+          "unit": "ml/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "유방절제술 후 7시간 진통 효과; 8~12°C에서 10분에 걸쳐 주입",
+          "evidence": "0.05% 및 0.1% 로피바카인 용액(젖산링거액 희석)을 15 mL/kg으로 10분간 주입"
+        },
+        {
+          "logic_type": "linear",
+          "context": "복강내 투여 - 난소자궁절제술(1% 용액 희석, 허가 외)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "복강 개방 후, 난소 경부 및 자궁 결찰 전 투여; 최종 농도 0.25%, 최종 용량 1.2 mL/kg",
+          "evidence": "1% 로피바카인을 0.9% 생리식염수로 희석하여 최종 농도 0.25%, 1.2 mL/kg으로 복강내 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "복강내 투여 - 난소자궁절제술(0.75% 용액 희석, 허가 외)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "복강 봉합 직전 투여; 0.75% 용액을 멸균수로 0.5%로 희석",
+          "evidence": "0.75% 로피바카인을 멸균수로 희석하여 0.5% 용액으로 복강내 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 및 마취(일반 범위, 허가 외)",
+          "value": "0.2 - 1.65",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단독 또는 오피오이드(메타돈, 모르핀), 알파-2 작용제(자일라진) 병용",
+          "evidence": "경막외 투여 범위 0.2~1.65 mg/kg; 단독 또는 병용 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 - 모르핀 병용(1% 용액, 허가 외)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "L7-S1 경막외 투여; 보존제 없는 모르핀 0.2 mg/kg 병용; 총 용량 1 mL/4.5 kg, 최대 10 mL",
+          "evidence": "1% 로피바카인 0.2 mg/kg + 보존제 없는 모르핀 0.2 mg/kg 경막외 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 - 메타돈 병용(0.75% 용액, 허가 외)",
+          "value": "1.65",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "메타돈 0.1 mg/kg 병용; 이소플루란 및 펜타닐 요구량 감소, 술후 진통 연장",
+          "evidence": "0.75% 로피바카인 1.65 mg/kg + 메타돈 0.1 mg/kg 경막외 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 - 부토르파놀 병용(0.75% 용액, 허가 외)",
+          "value": "2.175",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부토르파놀 0.1 mg/kg 병용; 최종 총 용량 0.3 mL/kg; 16마리 중 12마리에서 마취 없이 난소자궁절제술 가능",
+          "evidence": "0.75% 로피바카인 2.175 mg/kg + 부토르파놀 0.1 mg/kg 경막외 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 - 모르핀 ± 자일라진 병용(허가 외)",
+          "value": "0.75",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "모르핀 0.1 mg/kg ± 자일라진 0.1 mg/kg 병용",
+          "evidence": "로피바카인 0.75 mg/kg + 모르핀 0.1 mg/kg ± 자일라진 0.1 mg/kg 경막외 투여"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "국소 진통(일반 권장 용량, 허가 외)",
+          "value": "1.5 - 2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "국소 차단을 위한 일반 권장 용량 1.5~2 mg/kg"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 및 마취(1% 용액, 허가 외)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "L7-S1 경막외 공간 투여",
+          "evidence": "1% 로피바카인 2 mg/kg을 L7-S1 경막외 공간에 투여"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 - 모르핀 병용(허가 외)",
+          "value": "1.95",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "모르핀 0.1 mg/kg 병용; 술후 진통제 요구량 감소",
+          "evidence": "로피바카인 1.95 mg/kg + 모르핀 0.1 mg/kg 경막외 투여로 술후 진통제 요구량 감소"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 주의 사용 권고되나, 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 질환 환자에서 주의 사용 권고됨. CYP1A2에 의한 간 대사로 인해 간 기능 저하 시 혈중 농도 상승 가능. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "아미드계 국소마취제 과민반응",
+      "match_terms": [
+        "amide local anesthetic hypersensitivity",
+        "ropivacaine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "kidney disease",
+        "renal impairment",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심혈관 기능 저하",
+      "match_terms": [
+        "cardiovascular disease",
+        "cardiac impairment",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압(에피네프린 함유 제품)",
+      "match_terms": [
+        "hypertension",
+        "high blood pressure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "측부 순환 없는 말단 부위(에피네프린 함유 제품)",
+      "match_terms": [
+        "digit anesthesia",
+        "ear anesthesia",
+        "nose anesthesia",
+        "penile anesthesia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "나트륨 이온 채널 차단을 통해 신경세포막의 전기적 흥분성, 탈분극 및 활동전위 전파를 억제함. 운동, 감각, 자율신경 섬유의 충격 생성 및 전도를 차단함. 부피바카인보다 운동 차단이 적음.",
+    "common_extra_effects": [
+      "저혈압",
+      "서맥",
+      "AV 차단",
+      "심박출량 감소",
+      "QRS 확장",
+      "호흡수 감소",
+      "CNS 흥분(불안, 진전)",
+      "CNS 억제(졸음, 의식 소실)",
+      "오심",
+      "구토",
+      "발열",
+      "요저류",
+      "일과성 호너 증후군",
+      "운동실조(경막외 투여 시)",
+      "관절연골용해(관절내 지속 주입 시)"
+    ],
+    "dog_mechanism": "나트륨 채널 차단을 통한 국소 및 부위 마취/진통. 경막외 투여 후 3~15분 내 진통 발현, 3~5시간 지속. 말초 신경 차단 시 약 10분 후 발현, 약 3.5시간 지속.",
+    "dog_extra_effects": [
+      "심한 저혈압(경막외 투여 시 사망 사례 보고)",
+      "경련(평균 유발 용량 4.9 mg/kg)",
+      "운동실조"
+    ],
+    "cat_mechanism": "나트륨 채널 차단을 통한 국소 및 부위 마취/진통. 고양이 특이적 기전 데이터는 제한적임.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 에피네프린은 로피바카인의 발현 시간에 영향을 미치지 않으나 작용 지속 시간을 약간 연장할 수 있음. 경막외 투여 후 소실 반감기 약 200분, IV 투여 후 약 26분. 경련 유발 평균 용량은 4.9 mg/kg. 건강한 비글에서 경막외 로피바카인으로 인한 심한 저혈압으로 사망 사례가 보고된 바 있어 주의 필요. 모든 사용은 허가 외(extra-label)임.",
+    "cat": "고양이에서 국소 차단 권장 용량은 1.5~2 mg/kg이며, 경막외 투여 시 2 mg/kg(1% 용액)을 L7-S1에 투여함. 모르핀 병용 시 술후 진통제 요구량이 감소함. 고양이 특이적 PK 데이터는 제한적이며, 모든 사용은 허가 외(extra-label)임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 질환, 신장 질환, 심혈관 기능 저하 환자에서 주의 사용. 충분한 모니터링 및 응급 처치 자원(기관삽관, 인공호흡) 필수. 경막외 투여 시 사망 사례 보고 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간 질환, 신장 질환, 심혈관 기능 저하 환자에서 주의 사용. 충분한 모니터링 및 응급 처치 자원 필수. 고양이 특이적 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20~25°C(68~77°F)의 실온에서 보관; 15~30°C(59~86°F) 범위 내 일시적 보관 허용.",
+    "forms": [
+      "로피바카인 염산염 주사액 0.2% (2 mg/mL)",
+      "로피바카인 염산염 주사액 0.5% (5 mg/mL)",
+      "로피바카인 염산염 주사액 0.75% (7.5 mg/mL)",
+      "로피바카인 염산염 주사액 1% (10 mg/mL)",
+      "10 mL, 20 mL, 30 mL, 100 mL 단회용 앰플, 병, 바이알"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "로피바카인은 아미드계 국소마취제로, 발현 시간이 약 20분으로 지연되고 작용 지속 시간은 3~5시간으로 중간 정도임. 부피바카인보다 운동 차단이 적고 심장 독성이 낮으나 리도카인보다는 높음. 수의과 승인 제품은 없으며 모든 동물 적용은 허가 외 사용임. 심혈관 및 CNS 독성이 주요 위험이며, 경험 있는 임상의만 사용해야 하고 응급 처치 자원이 반드시 준비되어 있어야 함. 지질 유제 요법이 과량 투여 시 유익할 수 있음.",
+    "indications": "수술, 진단 또는 치료 시술을 위한 국소 또는 부위 진통/마취. 경막외 및 척수 마취. 안구 국소마취(점안). 오피오이드 또는 알파-2 작용제와 병용 시 진통 지속 시간 연장 가능. 전신마취의 MAC 절약 효과. 개, 고양이, 말, 소, 돼지, 양/염소에서 허가 외 사용.",
+    "client_info": "이 약물은 전문 의료진만이 사용할 수 있으며, 적절한 환자 모니터링이 가능한 환경에서만 투여되어야 합니다. 이 약은 일시적인 감각 소실을 유발합니다. 주사 부위는 수 시간 동안 정상적인 기능을 하지 못할 수 있습니다. 이상 반응이 나타나면 즉시 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Monitoring (partial)",
+      "Cat-specific pharmacokinetics",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "timing_profile.onset_min (cat-specific)",
+      "timing_profile.t_max_hr (cat-specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.cat.brain.index",
+      "organ_burden_logic.cat.blood.index",
+      "organ_burden_logic.cat.kidney.index",
+      "organ_burden_logic.cat.liver.index",
+      "organ_burden_logic.cat.heart.index",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/33.jsonl",
+    "extracted_at": "2026-03-10T23:29:36.915396+00:00",
+    "reviewer": null
+  }
+}

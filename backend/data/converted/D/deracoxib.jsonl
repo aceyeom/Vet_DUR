@@ -1,0 +1,680 @@
+{
+  "id": "deracoxib",
+  "drug_identity": {
+    "name_ko": "데라콕시브",
+    "name_en": "Deracoxib",
+    "active_ingredient": "Deracoxib",
+    "brand_names": [
+      "Deramaxx"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "NSAID",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 12,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "데라콕시브는 간에서 4가지 주요 대사체로 대사되며, 대사체 및 미변화 약물은 주로 대변으로 배설된다. 일부 대사체는 신장을 통해 배설된다."
+    },
+    "extra_information": "개에서 경구 투여 후 생체이용률은 90% 이상이며, 최고 혈청 농도 도달 시간은 약 2시간이다. 분포용적은 1.5 L/kg이며 혈장 단백 결합률은 90% 이상이다. 반감기는 용량 의존적: 약 8 mg/kg 이하에서 약 3시간(청소율 약 5 mL/분/kg), 20 mg/kg에서 약 19시간(청소율 약 1.7 mL/분/kg). 고양이에서 경구 투여 후 최고 농도(0.28 µg/mL)는 약 3.6시간 후 도달하며, 소실 반감기는 약 8시간이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 특이적 수의학 PK 데이터 일부 존재. 신장 및 간 독성은 과용량 연구 및 이상반응 보고에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "lethargy",
+          "weakness",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "신경계 이상반응(무기력, 허약, 경련)이 보고되었으나 직접적인 뇌 축적 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "anemia",
+          "thrombocytopenia",
+          "platelet aggregation"
+        ],
+        "index": 1,
+        "evidence": "혈소판 응집 감소, 빈혈, 혈소판감소증이 이상반응으로 보고됨. 혈소판 기능에 대한 영향이 연구에서 확인됨."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "azotemia",
+          "renal tubular degeneration",
+          "focal tubular necrosis",
+          "elevated BUN",
+          "hyposthenuria",
+          "polydipsia",
+          "polyuria",
+          "chronic kidney disease"
+        ],
+        "index": 2,
+        "evidence": "6개월 안전성 연구에서 6 mg/kg/일 초과 시 용량 의존적 신세뇨관 변성/재생 소견. 8 mg/kg/일에서 10마리 중 1마리, 10 mg/kg/일에서 10마리 중 3마리에서 세뇨관 괴사 확인. BUN 상승 및 저비중뇨 보고."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased hepatic enzymes",
+          "changes in total protein"
+        ],
+        "index": 1,
+        "evidence": "간 효소 상승 및 총 단백 변화가 이상반응으로 보고됨. 과용량 연구(25–100 mg/kg/일, 14일)에서 간 병변은 관찰되지 않았으나 임상 모니터링 권고됨."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachypnea"
+        ],
+        "index": 0,
+        "evidence": "서맥 및 빈호흡이 이상반응으로 보고되었으나 직접적인 심장 독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용이 승인되지 않으며 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용이 승인되지 않으며 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "not recommended for cats"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 사용이 권장되지 않음. PK 데이터(반감기 약 8시간)만 존재하며 신장 안전성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용이 승인되지 않으며 간 관련 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 사용이 승인되지 않으며 심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 19.0,
+      "mean": 3.0,
+      "species": "dog"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 경구 투여 후 생체이용률 >90%, Tmax 약 2시간. 반감기는 용량 의존적(~8 mg/kg: 약 3시간; 20 mg/kg: 약 19시간). 혈장 단백 결합률 ≥90%. 고양이에서 Tmax 약 3.6시간, 반감기 약 8시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 본 약물에 해당 없음.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "reduced blood pressure effect",
+        "renal blood flow reduction",
+        "nephrotoxicity"
+      ],
+      "evidence": "NSAIDs can reduce antihypertensive effects of ACE inhibitors. Combined use may increase risk for renal injury due to reduced renal blood flow."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs; e.g., irbesartan, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "reduced blood pressure effect",
+        "renal blood flow reduction",
+        "nephrotoxicity"
+      ],
+      "evidence": "NSAIDs can reduce antihypertensive effects of ARBs. Combined use may increase risk for renal injury due to reduced renal blood flow."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "Concurrent use may increase risk for GI toxicity including ulceration and bleeding."
+    },
+    {
+      "drug": "Beta-Adrenergic Blockers (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "increased blood pressure"
+      ],
+      "evidence": "Concurrent use may result in increased blood pressure."
+    },
+    {
+      "drug": "Corticosteroids (e.g., prednis(ol)one)",
+      "severity": 3,
+      "keywords": [
+        "GI ulceration",
+        "GI perforation",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "Concurrent use significantly increases risk for GI toxicity including ulceration and perforation. Concomitant use is not recommended."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum digoxin levels"
+      ],
+      "evidence": "NSAIDs may increase serum digoxin levels, potentially leading to toxicity."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 2,
+      "keywords": [
+        "increased deracoxib adverse effects",
+        "reduced diuretic efficacy",
+        "reduced saluretic effect"
+      ],
+      "evidence": "Concurrent use increases risk for deracoxib adverse effects. NSAIDs may reduce saluretic and diuretic effects of furosemide."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 2,
+      "keywords": [
+        "increased plasma levels",
+        "drug level elevation"
+      ],
+      "evidence": "Fluconazole has increased plasma levels of celecoxib in humans and could similarly affect deracoxib levels in dogs."
+    },
+    {
+      "drug": "Fluoroquinolones (e.g., enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "seizure risk"
+      ],
+      "evidence": "Concurrent use may result in an increased risk for seizures."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "serious toxicity",
+        "methotrexate toxicity"
+      ],
+      "evidence": "Serious toxicity has occurred when NSAIDs were used concomitantly with methotrexate. Use together with extreme caution."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., aminoglycosides, amphotericin B)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "renal injury"
+      ],
+      "evidence": "Concurrent use may enhance the risk for nephrotoxicity development."
+    },
+    {
+      "drug": "Other NSAIDs (e.g., carprofen)",
+      "severity": 3,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "Multiple NSAIDs should not be administered concurrently due to significantly increased risk for GI toxicity."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use may increase risk for bleeding."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "GI toxicity"
+      ],
+      "evidence": "May increase the risk for GI toxicity based on a case report."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use may result in an increased risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 (FDA 승인 라벨 용량)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요에 따라 지속 투여 가능",
+          "evidence": "FDA-approved label dosage for osteoarthritis pain and inflammation in dogs."
+        },
+        {
+          "logic_type": "linear",
+          "context": "치과 수술 후 통증 및 염증 조절 (FDA 승인 라벨 용량)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 3일",
+          "evidence": "FDA-approved label dosage for postoperative dental surgery pain and inflammation in dogs."
+        },
+        {
+          "logic_type": "linear",
+          "context": "정형외과 수술 후 통증 및 염증 조절 (FDA 승인 라벨 용량)",
+          "value": "3 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 7일 초과 금지",
+          "evidence": "FDA-approved label dosage for postoperative orthopedic surgery pain and inflammation in dogs."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의하여 사용할 것을 권고함. 구체적인 용량 조절 기준은 명시되지 않았으나, 신장 기능 장애, 탈수, 저혈량증, 저혈압 환자에서는 사용을 피하거나 극도로 주의해야 함. 정기적인 BUN, 크레아티닌 모니터링 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 환자에서 주의하여 사용할 것을 권고함. 구체적인 용량 조절 기준은 명시되지 않았으나, 간 효소 상승 및 총 단백 변화가 이상반응으로 보고되어 정기적인 간 기능 모니터링이 필요함."
+  },
+  "contraindications": [
+    {
+      "condition": "NSAID 또는 데라콕시브 과민증",
+      "match_terms": [
+        "NSAID hypersensitivity",
+        "drug allergy",
+        "deracoxib hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "설폰아미드 과민증 (교차반응 가능)",
+      "match_terms": [
+        "sulfonamide allergy",
+        "sulfa allergy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 궤양성 질환",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "GI ulcerative disease"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 기능 장애",
+      "match_terms": [
+        "cardiovascular disease",
+        "heart disease",
+        "cardiac dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "chronic kidney disease",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "탈수, 저혈량증, 저혈압",
+      "match_terms": [
+        "dehydration",
+        "hypovolemia",
+        "hypotension"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이뇨제 병용 투여",
+      "match_terms": [
+        "diuretic therapy",
+        "furosemide",
+        "concurrent diuretic"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "체중 5.7 kg 미만 또는 4개월령 미만 개",
+      "match_terms": [
+        "small dog",
+        "puppy",
+        "young dog",
+        "age < 4 months",
+        "weight < 5.7 kg"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "COX-2 선택적 억제를 통해 통증 및 염증에 기여하는 프로스타글란딘 생성을 억제함. 치료 용량에서 COX-1을 상대적으로 보존하여 이론적으로 위장관 및 신장 기능 유지에 기여하는 프로스타글란딘을 보호함. 단, 고용량에서는 선택성이 소실됨.",
+    "common_extra_effects": [
+      "구토",
+      "식욕부진",
+      "체중 감소",
+      "설사",
+      "흑색변",
+      "혈변",
+      "혈구토",
+      "위장관 궤양 및 천공",
+      "질소혈증",
+      "다음증",
+      "다뇨증",
+      "요로감염",
+      "혈뇨",
+      "요실금",
+      "만성 신장 질환",
+      "빈혈",
+      "혈소판감소증",
+      "간 효소 상승",
+      "총 단백 변화",
+      "무기력",
+      "허약",
+      "경련",
+      "빈호흡",
+      "서맥",
+      "기침",
+      "발열",
+      "안면/주둥이 부종",
+      "두드러기",
+      "피부염"
+    ],
+    "dog_mechanism": "개에서 치료 용량 시 주로 COX-2를 억제하며 COX-1을 보존함. 혈소판 기능에 일부 영향을 미칠 수 있음(ADP 유도 혈소판 응집 감소 보고).",
+    "dog_extra_effects": [
+      "신세뇨관 변성/재생 (고용량, 장기 투여 시)",
+      "세뇨관 괴사 (고용량 시)",
+      "BUN 상승",
+      "저비중뇨",
+      "혈소판 응집 감소"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "데라콕시브는 개에서 FDA 승인된 COX-2 선택적 NSAID로, 골관절염 및 수술 후 통증 관리에 사용됨. 체중 5.7 kg 미만 또는 4개월령 미만 개에서는 정확한 용량 투여가 어려워 사용을 피해야 함. 방광 이행세포암종의 보조 치료 및 비장 혈관육종 치료에 유망성이 보고됨. 반감기는 용량 의존적이므로 고용량 투여 시 약물 축적에 주의 필요. 정기적인 CBC, 혈청 화학 검사(BUN, 크레아티닌, 간 효소), 요검사 모니터링 권고.",
+    "cat": "데라콕시브는 고양이에서 승인되지 않았으며 사용이 권장되지 않음. 고양이에서의 PK 데이터(반감기 약 8시간)는 존재하나 안전성 및 유효성 데이터가 부족함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 장애, 간기능 장애, 심혈관 질환, 위장관 궤양성 질환, 탈수, 저혈량증, 저혈압, 이뇨제 병용 투여 환자에서 주의 필요. 체중 5.7 kg 미만 또는 4개월령 미만 개에서 사용 주의. 임신 또는 수유 중인 동물에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "데라콕시브는 고양이에서 승인되지 않았으며 사용이 권장되지 않음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "시판 중인 츄어블 정제는 15°C~30°C(59°F~86°F) 실온에서 보관. 동물과 어린이의 손이 닿지 않는 곳에 보관.",
+    "forms": [
+      "Deracoxib Chewable (scored) Tablets 12 mg",
+      "Deracoxib Chewable (scored) Tablets 25 mg",
+      "Deracoxib Chewable (scored) Tablets 75 mg",
+      "Deracoxib Chewable (scored) Tablets 100 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "데라콕시브(Deramaxx®)는 개에서 FDA 승인된 COX-2 선택적 NSAID로, 골관절염 관련 통증/염증(1–2 mg/kg SID, 지속 투여), 치과 수술 후 통증(1–2 mg/kg SID, 최대 3일), 정형외과 수술 후 통증(3–4 mg/kg SID, 최대 7일)에 사용됨. 고양이에서는 사용 금지. 위장관 궤양, 신독성, 간독성 위험이 있으므로 정기적인 모니터링 필수. 다른 NSAID 또는 코르티코스테로이드와 병용 금지.",
+    "indications": "【승인 적응증 (개)】 골관절염 관련 통증 및 염증 조절 (1–2 mg/kg PO SID, 지속 투여) | 치과 수술 후 통증 및 염증 조절 (1–2 mg/kg PO SID, 최대 3일) | 정형외과 수술 후 통증 및 염증 조절 (3–4 mg/kg PO SID, 최대 7일)\n【오프라벨 적응증】 방광 이행세포암종의 보조 치료 (피록시캄 대안으로 사용 가능) | 개 비장 혈관육종 치료 (유망성 보고)",
+    "client_info": "데라콕시브는 개의 정형외과 및 치과 수술 후 통증, 그리고 골관절염 관련 통증과 염증 치료에 사용되는 NSAID 계열 소염진통제입니다.\n\n【투여 방법】 음식과 함께 또는 공복에 투여 가능하나, 음식과 함께 투여 시 위장 문제 발생 가능성이 낮아집니다. 공복 투여 후 구토 또는 불편감이 있으면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요.\n\n【주의 사항】 다음 증상이 나타나면 즉시 투약을 중단하고 수의사에게 연락하세요: 식욕 감소, 지속적인 구토 또는 설사, 행동 또는 활동 수준의 변화, 음수량 또는 배뇨 습관의 변화, 잇몸/피부/눈 흰자위의 황달.\n\n【보관】 츄어블 정제는 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 치료 중에는 항상 신선한 물을 충분히 제공하고 탈수를 피하세요.\n\n【병용 금지】 수의사의 승인 없이 다른 소염진통제(NSAID) 또는 스테로이드 계열 약물을 함께 투여하지 마세요.\n\n【정기 검진】 간 및 신장 기능 확인을 위한 정기적인 혈액 검사가 필요합니다. 중요한 추적 검진을 빠뜨리지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme profile",
+      "Onset of action (minutes)",
+      "Human-labeled products"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "genetic_sensitivity.evidence"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/38.jsonl",
+    "extracted_at": "2026-03-11T01:01:35.872816+00:00",
+    "reviewer": null
+  }
+}

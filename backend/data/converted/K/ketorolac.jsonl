@@ -1,0 +1,618 @@
+{
+  "id": "ketorolac",
+  "drug_identity": {
+    "name_ko": "케토롤락",
+    "name_en": "Ketorolac",
+    "active_ingredient": "Ketorolac tromethamine",
+    "brand_names": [
+      "Toradol"
+    ],
+    "allergy_class": null,
+    "class": "NSAID",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 개에서 단기 진통 목적으로 사람용 제품을 오프라벨로 사용. FDA 승인 수의용 NSAID 사용이 권장됨.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 30,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "케토롤락은 주로 글루쿠론산 포합(glucuronidation) 및 수산화(hydroxylation)를 통해 대사되며, 미변화체 및 대사산물은 주로 소변으로 배설된다."
+    },
+    "extra_information": "개에서 0.5 mg/kg IV 투여 후 분포용적은 약 1 L/kg이며, 평균 소실 반감기는 약 11시간이다. 경구 투여 시 최고 혈중 농도 도달 시간은 약 50분이며, 경구 생체이용률은 약 50~75%이다. 정상 개에서 소실 반감기는 4~8시간으로 보고된다. 신기능 저하 시 소실 시간이 연장된다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 수의학 데이터 일부 존재. 고양이는 0.7 mg/kg에서 신독성 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "혈뇌장벽 통과 미미"
+        ],
+        "index": -1,
+        "evidence": "케토롤락은 혈뇌장벽을 통과하지 않는 것으로 보고되어 뇌 부담은 낮다."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "혈소판 응집 억제",
+          "출혈 위험"
+        ],
+        "index": 1,
+        "evidence": "COX-1 억제로 인한 혈소판 응집 억제 및 출혈 위험이 보고됨. 혈장 단백 결합률 99%."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "신독성",
+          "일시적 질소혈증",
+          "신기능 저하 시 반감기 연장"
+        ],
+        "index": 2,
+        "evidence": "정상 개의 20%에서 난소자궁절제술 전 케토롤락 투여 후 일시적 질소혈증 관찰. 신기능 저하 시 소실 시간 연장. 신독성 가능."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "간독성 가능"
+        ],
+        "index": 1,
+        "evidence": "다른 NSAID와 마찬가지로 간독성 가능성이 언급됨. 주요 대사 기관은 간."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "체액 저류",
+          "심부전 주의"
+        ],
+        "index": 1,
+        "evidence": "심부전 동물에서 체액 저류를 유발할 수 있어 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌 관련 직접 데이터 없음. 혈뇌장벽 통과 미미."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "혈소판 억제"
+        ],
+        "index": -1,
+        "evidence": "COX-1 억제로 인한 혈소판 억제 가능성. 고양이 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "신독성",
+          "0.7 mg/kg에서 신독성"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 0.7 mg/kg의 낮은 용량에서도 신독성이 발생한 것으로 보고됨. 고양이에서 사용 금기."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "간독성 가능"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 간독성 데이터 없으나 NSAID 계열 특성상 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.83,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 8.0,
+      "mean": 6.0,
+      "species": "dog"
+    },
+    "f_percent": 63,
+    "protein_binding_percent": 99,
+    "evidence": "개에서 경구 투여 후 최고 혈중 농도 도달 시간 약 50분(≈0.83시간), 경구 생체이용률 50~75%(중간값 63%), 혈장 단백 결합률 99%. 정상 개에서 소실 반감기 4~8시간. 0.5 mg/kg IV 투여 후 평균 반감기 약 11시간으로도 보고됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., enalapril)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "renal risk"
+      ],
+      "evidence": "Increased risk for nephrotoxicity when combined with ACE inhibitors."
+    },
+    {
+      "drug": "Alprazolam",
+      "severity": 2,
+      "keywords": [
+        "hallucinations",
+        "CNS effect"
+      ],
+      "evidence": "Hallucinations reported in some human patients taking alprazolam with ketorolac."
+    },
+    {
+      "drug": "Aminoglycosides (e.g., gentamicin, amikacin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Increased risk for nephrotoxicity when combined with aminoglycosides."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs, e.g., telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Increased risk for nephrotoxicity when combined with ARBs."
+    },
+    {
+      "drug": "Anticoagulants (e.g., heparin, LMWH, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "anticoagulation"
+      ],
+      "evidence": "Increased risk for bleeding when combined with anticoagulants."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 3,
+      "keywords": [
+        "GI bleeding",
+        "GI adverse effects"
+      ],
+      "evidence": "Increased likelihood of GI adverse effects (blood loss); this combination is contraindicated in humans."
+    },
+    {
+      "drug": "Bisphosphonates, Oral (e.g., alendronate)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration"
+      ],
+      "evidence": "May increase the risk for GI ulceration."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, predniso(lo)ne)",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects",
+        "GI ulceration"
+      ],
+      "evidence": "Concomitant administration with NSAIDs may significantly increase the risks for GI adverse effects."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "May increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin levels",
+        "prolonged half-life"
+      ],
+      "evidence": "May increase the digoxin serum concentration and half-life."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic efficacy",
+        "nephrotoxicity"
+      ],
+      "evidence": "May decrease diuretic efficacy and increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 2,
+      "keywords": [
+        "increased NSAID levels"
+      ],
+      "evidence": "May increase NSAID (ketorolac) plasma levels."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "serious toxicity",
+        "methotrexate toxicity"
+      ],
+      "evidence": "Serious toxicity has occurred when NSAIDs have been used concomitantly with methotrexate; use together with extreme caution."
+    },
+    {
+      "drug": "Muscle Relaxants, Nondepolarizing (e.g., atracurium)",
+      "severity": 2,
+      "keywords": [
+        "potentiation of muscle relaxant effects"
+      ],
+      "evidence": "Ketorolac may potentiate the effects of nondepolarizing muscle relaxants."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen)",
+      "severity": 3,
+      "keywords": [
+        "therapeutic duplication",
+        "increased adverse effects"
+      ],
+      "evidence": "Therapeutic duplication; increased risk for adverse effects. This combination is contraindicated in humans."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 3,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "May increase the risk for bleeding; this combination is contraindicated in humans."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 3,
+      "keywords": [
+        "increased ketorolac levels",
+        "prolonged half-life"
+      ],
+      "evidence": "May cause a significant increase in serum levels and half-life of ketorolac. This combination is contraindicated in humans."
+    },
+    {
+      "drug": "SSRIs (e.g., fluoxetine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Increased risk for bleeding when combined with SSRIs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "수술 후 진통 (오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일 이내 사용 권장. 수술 중 효과 제한적이므로 수술 후에만 사용 고려.",
+          "evidence": "Plumb's: 0.5 mg/kg IV or IM preoperatively, may repeat every 6 hours. Extra-label."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수술 후 진통 (오프라벨)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3일 이내 사용 권장.",
+          "evidence": "Plumb's: 0.5 mg/kg IV or IM preoperatively, may repeat every 6 hours. Extra-label."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 소실 시간이 연장되며, 진행성 신질환 또는 신부전 위험이 있는 동물에서는 금기. 신기능 저하 환자에서는 사용을 피해야 한다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "진행성 간기능 장애 동물에서는 금기. 간질환 병력이 있는 동물에서는 상대적 금기."
+  },
+  "contraindications": [
+    {
+      "condition": "활동성 또는 과거 위장관 궤양/출혈",
+      "match_terms": [
+        "GI ulcer",
+        "GI bleeding",
+        "gastric ulcer",
+        "peptic ulcer"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "진행성 신질환 또는 신부전 위험",
+      "match_terms": [
+        "renal failure",
+        "advanced renal disease",
+        "CKD",
+        "AKI",
+        "volume depletion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "진행성 간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "뇌혈관 출혈 또는 출혈 장애",
+      "match_terms": [
+        "cerebrovascular bleeding",
+        "bleeding disorder",
+        "coagulopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "약물 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "NSAID allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액학적 질환 병력",
+      "match_terms": [
+        "hematologic disease",
+        "anemia",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "심부전",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "노령 동물",
+      "match_terms": [
+        "geriatric",
+        "senior",
+        "elderly"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX-1 및 COX-2) 억제를 통한 프로스타글란딘 합성 저해로 진통, 항염증, 해열 효과 발휘.",
+    "common_extra_effects": [
+      "위장관 궤양 및 천공",
+      "혈소판 응집 억제",
+      "신독성",
+      "간독성",
+      "체액 저류"
+    ],
+    "dog_mechanism": "COX-1 및 COX-2 억제. 일부 다른 NSAID보다 강력한 진통 효과 가능.",
+    "dog_extra_effects": [
+      "위장관 궤양 (만성 사용 시 흔함)",
+      "일시적 질소혈증 (정상 개의 약 20%에서 보고)",
+      "혈소판 억제",
+      "신독성",
+      "간독성"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "0.7 mg/kg의 낮은 용량에서도 신독성 발생 보고"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 케토롤락은 단기 수술 후 진통에 오프라벨로 사용되나, FDA 승인 수의용 NSAID 사용이 권장된다. 위장관 독성으로 인해 3일 이상 사용은 권장되지 않으며, 미소프로스톨 및/또는 수크랄페이트 병용을 고려해야 한다. 사용 전 CBC 및 혈청 화학 검사를 실시하고, 이상 반응 발생 시 반복 검사한다.",
+    "cat": "고양이에서는 0.7 mg/kg의 낮은 용량에서도 신독성이 보고되어 사용이 금기이다. 고양이에게는 투여하지 않는다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 위장관 독성 위험이 높아 3일 이내 단기 사용만 권장. 신기능, 간기능, 혈액 검사 모니터링 필요. 미소프로스톨 및/또는 수크랄페이트 병용 고려."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 0.7 mg/kg의 낮은 용량에서도 신독성 발생 보고. 고양이에서 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제 및 주사제 모두 빛을 차단하여 실온(20~25°C, 68~77°F)에서 보관. 정제는 과도한 습기로부터 보호. 주사제는 일반적인 IV 용액에서 최소 48시간 안정.",
+    "forms": [
+      "케토롤락 트로메타민 정제 10 mg (제네릭, Rx)",
+      "케토롤락 트로메타민 주사제 15 mg/mL (1 mL, 2 mL 단회용 바이알, 10 mL 다회용 바이알, 제네릭, Rx)",
+      "케토롤락 트로메타민 주사제 30 mg/mL (1 mL, 2 mL 단회용 바이알, 10 mL 다회용 바이알, 제네릭, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "케토롤락은 단기 진통 목적으로 주로 사용되는 NSAID로, 개에서 수술 후 통증 관리에 오프라벨로 사용된다. 수의과 승인 제품이 없으며, FDA 승인 수의용 NSAID 사용이 우선 권장된다. 위장관 독성이 주요 문제로, 3일 이상 사용은 권장되지 않는다. 고양이에서는 낮은 용량에서도 신독성이 보고되어 사용이 금기이다. COX-1 및 COX-2를 모두 억제하며, 혈소판 응집 억제, 신독성, 간독성 가능성이 있다.",
+    "indications": "개에서 경증~중등도 통증의 단기 치료(수술 후 진통, 오프라벨). 설치류(마우스, 랫트)에서 진통(오프라벨). 건강한 말에서 안전성 및 유효성 확인되었으나 페닐부타존 또는 플루닉신보다 우월하지 않음.",
+    "client_info": "이 약은 개나 소형 포유류의 단기 통증 치료에 사용되는 사람용 소염진통제입니다. 고양이에게는 절대 사용하지 마십시오. 위장 장애를 줄이기 위해 음식과 함께 투여하십시오. 며칠 이상 사용 시 구토, 궤양, 출혈 등 위장관 부작용이 발생할 가능성이 높습니다. 간, 신장, 혈액 이상도 발생할 수 있습니다. 식욕 저하, 구토, 설사, 검은 변, 혈변, 또는 동물이 기운이 없어 보이면 즉시 수의사에게 알리십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat-specific dosage",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/57.jsonl",
+    "extracted_at": "2026-03-11T07:01:26.069240+00:00",
+    "reviewer": null
+  }
+}

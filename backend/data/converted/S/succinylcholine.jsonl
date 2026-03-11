@@ -1,0 +1,774 @@
+{
+  "id": "succinylcholine",
+  "drug_identity": {
+    "name_ko": "석시닐콜린",
+    "name_en": "Succinylcholine",
+    "active_ingredient": "Succinylcholine chloride",
+    "brand_names": [
+      "Anectine",
+      "Quelicin",
+      "Quelicin-1000"
+    ],
+    "allergy_class": null,
+    "class": "Muscle Relaxant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Neostigmine (phase II block only); mechanical ventilation for overdose",
+    "reversal_evidence": "아세틸콜린에스테라제 억제제(예: 네오스티그민)는 phase II 차단을 길항할 수 있으나 phase I 차단은 연장시킬 수 있음. 과량 투여 시 기계적 환기가 필요함.",
+    "off_label_note": "수의학적으로 승인된 제품 없음. 개, 고양이, 말, 돼지, 파충류에서 extra-label로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "혈장 슈도콜린에스테라제(pseudocholinesterase)에 의해 석시닐모노콜린과 콜린으로 가수분해됨. 10%는 신장을 통해 미변화체로 배설됨. 석시닐모노콜린은 부분적으로 신장으로 배설되며 신기능 저하 시 축적될 수 있음."
+    },
+    "extra_information": "개는 단회 IV 투여 후 약 20분의 연장된 작용 지속 시간을 보이며, 이는 다른 종과 구별되는 특이반응임. 반추동물은 슈도콜린에스테라제가 결핍되어 있어 금기임. 석시닐모노콜린은 석시닐콜린의 약 1/20 신경근 차단 활성을 가지며, 축적 시 장기간 무호흡을 유발할 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터 제한적. 주로 인체 데이터 및 Plumb's 기술 내용 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "fasciculations",
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "신경근 차단제로 중추신경계에 직접 작용하지 않으나, 근육 탈분극(근섬유속축)을 유발함. 진통 또는 마취 효과 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "arrhythmias",
+          "bradycardia",
+          "tachycardia",
+          "myoglobinemia"
+        ],
+        "index": 3,
+        "evidence": "근육세포에서 갑작스러운 칼륨 유출로 고칼륨혈증 및 부정맥 유발 가능. 미오글로빈혈증/미오글로빈뇨 보고됨. 심박수 및 혈압 변화(서맥, 빈맥, 고혈압, 저혈압) 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "myoglobinuria",
+          "renal dysfunction",
+          "succinylmonocholine accumulation"
+        ],
+        "index": 2,
+        "evidence": "미오글로빈뇨가 신장 손상을 유발할 수 있음. 석시닐모노콜린이 신기능 저하 시 축적됨. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "severe liver disease",
+          "pseudocholinesterase",
+          "hepatic dysfunction"
+        ],
+        "index": 2,
+        "evidence": "중증 간질환은 금기. 간기능 장애 시 주의 사용. 슈도콜린에스테라제는 간에서 생성되므로 간질환 시 약물 대사 지연 가능."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "arrhythmias",
+          "hypertension",
+          "hypotension",
+          "cardiac arrest"
+        ],
+        "index": 4,
+        "evidence": "심혈관 부작용(서맥, 빈맥, 고혈압, 저혈압, 부정맥) 보고됨. 고칼륨혈증으로 인한 심정지 위험. 디지털리스 투여 환자에서 부정맥 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neuromuscular blockade"
+        ],
+        "index": 1,
+        "evidence": "신경근 차단제로 중추신경계에 직접 작용하지 않음. 진통 또는 마취 효과 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "arrhythmias",
+          "myoglobinemia"
+        ],
+        "index": 3,
+        "evidence": "고칼륨혈증 및 부정맥 유발 가능. 미오글로빈혈증/미오글로빈뇨 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "myoglobinuria",
+          "renal dysfunction",
+          "succinylmonocholine accumulation"
+        ],
+        "index": 2,
+        "evidence": "미오글로빈뇨로 인한 신장 손상 가능. 석시닐모노콜린 축적 위험. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "severe liver disease",
+          "pseudocholinesterase",
+          "hepatic dysfunction"
+        ],
+        "index": 2,
+        "evidence": "중증 간질환은 금기. 간기능 장애 시 주의 사용. 슈도콜린에스테라제 생성 감소로 약물 대사 지연 가능."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "arrhythmias",
+          "hypertension",
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "심혈관 부작용(서맥, 빈맥, 고혈압, 저혈압, 부정맥) 보고됨. 고칼륨혈증으로 인한 심정지 위험."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 약 60초 이내에 완전한 근육 이완 발현. 인체에서 단회 IV 투여 후 효과는 2~3분 지속되며 10분 내 소실. 개에서는 약 20분의 연장된 작용 지속 시간. IM 투여 시 2~3분 내 발현, 10~30분 지속. 반감기는 문헌에 명시되지 않음(초단시간 작용제)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 규칙에 따라 severity 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcholinesterase Inhibitors (neostigmine, pyridostigmine)",
+      "severity": 2,
+      "keywords": [
+        "phase I block prolongation",
+        "phase II block antagonism",
+        "neuromuscular blockade"
+      ],
+      "evidence": "May prolong depolarizing phase I block but may antagonize phase II block."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "electrolyte imbalance",
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May increase succinylcholine's effects by causing electrolyte imbalances."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia",
+        "arrhythmia",
+        "potassium outflux"
+      ],
+      "evidence": "Succinylcholine may cause a sudden outflux of potassium from muscle cells, causing arrhythmias in digitalized patients."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "sinus arrest"
+      ],
+      "evidence": "Potential for increased incidences of bradycardia and sinus arrest."
+    },
+    {
+      "drug": "Thiazide Diuretics (hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "electrolyte imbalance",
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "May increase succinylcholine's effects by causing electrolyte imbalances."
+    },
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Inhalation Anesthetics (desflurane, isoflurane)",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Antiarrhythmics (quinidine, lidocaine, procainamide)",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (atenolol)",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Chloroquine",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade",
+        "pseudocholinesterase inhibition"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Magnesium Salts",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors",
+      "severity": 3,
+      "keywords": [
+        "prolonged neuromuscular blockade",
+        "pseudocholinesterase inhibition"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Organophosphates",
+      "severity": 3,
+      "keywords": [
+        "prolonged neuromuscular blockade",
+        "pseudocholinesterase inhibition",
+        "apnea"
+      ],
+      "evidence": "Succinylcholine should not be used if organophosphate agents have been given or applied recently. May markedly prolong neuromuscular blockade."
+    },
+    {
+      "drug": "Oxytocin",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Pancuronium",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    },
+    {
+      "drug": "Terbutaline",
+      "severity": 2,
+      "keywords": [
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "May increase or prolong neuromuscular blockade if used concurrently with succinylcholine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "ruminant_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "신경근 차단 (extra-label)",
+          "value": "0.3 - 0.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "오늘날 거의 사용되지 않음. 개에서 약 20분의 연장된 작용 지속 시간 보임.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "신경근 차단 (extra-label)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "오늘날 거의 사용되지 않음.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use (reference 1)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신경근 차단 (extra-label, 대체 용량)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "오늘날 거의 사용되지 않음.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use (reference 8)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의 사용 권고. 석시닐모노콜린이 신기능 저하 시 축적되어 장기간 무호흡을 유발할 수 있음. 구체적인 용량 조절 기준은 문헌에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간질환은 금기. 간기능 장애 시 슈도콜린에스테라제 생성 감소로 약물 대사가 지연될 수 있어 주의 사용 권고. 구체적인 용량 조절 기준은 문헌에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe liver disease",
+        "hepatic failure",
+        "liver failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "만성 빈혈",
+      "match_terms": [
+        "chronic anemia",
+        "anemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "만성 영양실조",
+      "match_terms": [
+        "chronic malnourishment",
+        "malnutrition"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "두개내압 상승",
+      "match_terms": [
+        "increased intracranial pressure",
+        "ICP elevation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장 또는 안구 관통 손상",
+      "match_terms": [
+        "glaucoma",
+        "penetrating eye injury",
+        "ocular trauma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "악성 고열 소인",
+      "match_terms": [
+        "malignant hyperthermia",
+        "MH predisposition"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CPK 상승을 동반한 근병증",
+      "match_terms": [
+        "increased CPK",
+        "myopathy",
+        "creatine phosphokinase elevation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고칼륨혈증",
+      "match_terms": [
+        "hyperkalemia",
+        "elevated potassium"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": "mEq/L"
+      }
+    },
+    {
+      "condition": "외상성 창상 또는 화상",
+      "match_terms": [
+        "traumatic wounds",
+        "burns",
+        "burn injury"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전해질 불균형",
+      "match_terms": [
+        "electrolyte imbalance",
+        "hypokalemia",
+        "hyponatremia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심혈관 기능 장애",
+      "match_terms": [
+        "cardiovascular dysfunction",
+        "heart disease",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐기능 장애",
+      "match_terms": [
+        "pulmonary dysfunction",
+        "respiratory disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "반추동물",
+      "match_terms": [
+        "ruminant",
+        "cattle",
+        "sheep",
+        "goat",
+        "bovine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유기인산염 최근 투여",
+      "match_terms": [
+        "organophosphate exposure",
+        "organophosphate treatment"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "유전적 감수성에 대한 구체적인 정보는 문헌에 명시되지 않음. 슈도콜린에스테라제 결핍은 유전적 요인일 수 있으나 특정 품종에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "운동 종판의 니코틴성 콜린성 수용체에 결합하여 탈분극을 유발하는 초단시간 작용 탈분극성 골격근 이완제. 충분한 양의 석시닐콜린이 남아있는 동안 신경근 차단이 지속되며 이완성 마비로 나타남.",
+    "common_extra_effects": [
+      "근육통",
+      "악성 고열",
+      "과도한 타액 분비",
+      "고칼륨혈증",
+      "발진",
+      "미오글로빈혈증/미오글로빈뇨",
+      "서맥",
+      "빈맥",
+      "고혈압",
+      "저혈압",
+      "부정맥"
+    ],
+    "dog_mechanism": "개에서 단회 IV 투여 후 약 20분의 연장된 작용 지속 시간을 보이는 특이반응이 있음.",
+    "dog_extra_effects": [
+      "연장된 신경근 차단 (약 20분)",
+      "근섬유속축",
+      "무호흡"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "근섬유속축",
+      "무호흡",
+      "신경근 차단"
+    ]
+  },
+  "species_notes": {
+    "dog": "개는 단회 IV 투여 후 약 20분의 연장된 작용 지속 시간을 보이는 특이반응이 있음. 권장 용량은 0.3~0.4 mg/kg IV이나 오늘날 거의 사용되지 않음. 아트라쿠리움, 베쿠로니움, 로쿠로니움 등 부작용이 적은 비탈분극성 제제로 대체됨.",
+    "cat": "고양이에서 권장 용량은 0.2 mg/kg IV 또는 1 mg/kg IV이나 오늘날 거의 사용되지 않음. 비탈분극성 신경근 차단제로 대체 권장. 적절한 마취 하에서만 사용해야 하며 호흡 보조 장비가 반드시 준비되어야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 연장된 작용 지속 시간(약 20분)의 특이반응이 있음. 신경근 차단 모니터링 및 호흡 보조 장비 필수. 고칼륨혈증, 전해질 불균형, 심혈관 질환 환자에서 극도의 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 extra-label 사용. 적절한 마취 하에서만 사용. 호흡 보조 장비 및 신경근 차단 역전제 준비 필수. 신기능, 간기능 장애 환자에서 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관 (2°C-8°C, 36°F-46°F). 일부 제조사는 다회 투여 바이알을 실온에서 최대 2주간 보관 가능하며 유의한 역가 손실 없다고 명시함.",
+    "forms": [
+      "Succinylcholine Chloride Injection 20 mg/mL (Anectine, Quelicin)",
+      "Succinylcholine Chloride Injection 100 mg/mL (Quelicin-1000)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "석시닐콜린은 수술, 진단 시술, 기계적 환기 중 단기 근육 이완을 위해 사용되는 초단시간 작용 탈분극성 신경근 차단제입니다. 진통 또는 마취 효과가 없으므로 반드시 적절한 마취 하에서만 사용해야 합니다. 개에서 약 20분의 연장된 작용 지속 시간이 나타나는 특이반응이 있습니다. 반추동물에서는 슈도콜린에스테라제 결핍으로 인해 금기입니다. 고위험 약물로 분류되며, 호흡 보조 장비, 역전제, 숙련된 인력이 반드시 준비되어야 합니다. 아트라쿠리움, 베쿠로니움, 로쿠로니움 등 비탈분극성 제제로 대부분 대체되었습니다.",
+    "indications": "수술, 진단 시술, 기계적 환기 중 단기 근육 이완 (extra-label). 기관내 삽관 보조 (인체 적응증). 개, 고양이, 말, 돼지, 파충류에서 extra-label로 사용. 수의학적으로 승인된 제품 없음.",
+    "client_info": "이 약물은 전문 수의료 인력만이 사용할 수 있는 고위험 신경근 차단제입니다. 근육을 완전히 마비시키므로 반드시 마취 상태에서만 투여되어야 하며, 호흡 보조 장비가 항상 준비되어 있어야 합니다. 투여 후 환자는 호흡을 스스로 할 수 없으므로 기계적 환기가 필요합니다. 이 약물은 통증 완화나 진정 효과가 없습니다. 부작용으로 심박수 변화, 혈압 변화, 근육통, 악성 고열 등이 발생할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific half-life values",
+      "Veterinary species-specific PK studies",
+      "Oral bioavailability data",
+      "Protein binding data",
+      "CYP enzyme interactions",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:01:23.140067+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,682 @@
+{
+  "id": "clonazepam",
+  "drug_identity": {
+    "name_ko": "클로나제팜",
+    "name_en": "Clonazepam",
+    "active_ingredient": "Clonazepam",
+    "brand_names": [
+      "Klonopin",
+      "Antelepsin",
+      "Clonagin",
+      "Clonapam",
+      "Clonax",
+      "Clonex",
+      "Diocam",
+      "Epitril",
+      "Iktorivil",
+      "Kenoket",
+      "Kriadex",
+      "Neuryl",
+      "Paxam",
+      "Rivatril",
+      "Rivotril",
+      "Solfidin"
+    ],
+    "allergy_class": "benzodiazepine",
+    "class": "Anticonvulsant",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Flumazenil",
+    "reversal_evidence": "플루마제닐은 심한 호흡 억제 또는 CNS 억제를 역전시키기 위해 사용할 수 있으나, 반감기가 짧아 반복 투여가 필요할 수 있으며, 간질 환자에서 발작을 유발할 수 있음.",
+    "off_label_note": "수의과 승인 제품 없음. 개와 고양이에서 항경련제 및 항불안제로 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.125,
+        "unit": "mg"
+      },
+      {
+        "value": 0.25,
+        "unit": "mg"
+      },
+      {
+        "value": 0.5,
+        "unit": "mg"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg"
+      },
+      {
+        "value": 2.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 간에서 여러 대사체로 대사되어 소변으로 배설됨. 개에서는 포화 동역학(saturation kinetics)을 나타내며 제거율이 용량 의존적임."
+    },
+    "extra_information": "개에서 경구 생체이용률은 20~60%로 가변적이나 흡수는 빠름. 단백결합률 약 82%. CNS로 빠르게 분포. 포화 동역학을 나타냄. 사람에서 최고 혈청 농도는 경구 투여 후 약 3시간에 도달하며 반감기는 19~40시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 특이적 수의학 PK 데이터 제한적. 사람 데이터 및 모노그래프 기술 내용 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "anticonvulsant",
+          "anxiolytic",
+          "limbic",
+          "thalamic",
+          "hypothalamic"
+        ],
+        "index": 1,
+        "evidence": "클로나제팜은 CNS 피질하 수준(변연계, 시상, 시상하부)을 억제하여 항경련, 항불안, 진정 효과를 나타냄. 개에서 진정 및 운동실조가 주요 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "anemia",
+          "leukopenia",
+          "thrombocytopenia"
+        ],
+        "index": 2,
+        "evidence": "사람에서 빈혈, 백혈구감소증, 혈소판감소증 등 혈액학적 이상이 보고됨. 개에서 직접적 혈액 독성 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장 기능 저하 시 주의 사용 권고. 벤조디아제핀 수용체가 신장에 존재하나 직접적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "liver disease",
+          "hepatic impairment",
+          "liver enzymes",
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "유의한 간 기능 장애 시 금기. 간에서 대사됨. 사람에서 일시적 간효소 상승 보고. 개에서 간 독성 직접 데이터는 제한적이나 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "대량 과다복용 시 저혈압 가능. 벤조디아제핀 수용체가 심장에 존재하나 직접적 심독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "ataxia",
+          "anticonvulsant",
+          "anxiolytic"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정 및 운동실조가 부작용으로 보고됨. CNS 억제 효과는 개와 유사."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "anemia",
+          "leukopenia",
+          "thrombocytopenia"
+        ],
+        "index": 2,
+        "evidence": "사람에서 혈액학적 이상 보고. 고양이 특이적 혈액 독성 데이터는 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장 기능 저하 시 주의 사용 권고. 고양이 특이적 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic necrosis",
+          "liver disease",
+          "hepatic impairment",
+          "liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 급성 간괴사가 다이아제팜 경구 투여 후 보고됨. 클로나제팜도 유사한 부작용을 유발할 수 있으나 다이아제팜보다 가능성이 낮은 것으로 여겨짐. 기저치 및 주기적 간 패널 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "대량 과다복용 시 저혈압 가능. 고양이 특이적 심독성 데이터는 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 19.0,
+      "max": 40.0,
+      "mean": 29.5,
+      "species": "human"
+    },
+    "f_percent": 40,
+    "protein_binding_percent": 82,
+    "evidence": "개에서 경구 생체이용률 20~60%(평균 약 40%), 단백결합률 약 82%. 사람에서 최고 혈청 농도 약 3시간, 반감기 19~40시간. 개에서 반감기 데이터는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anesthetic Agents (alfaxalone, dexmedetomidine, isoflurane, propofol)",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "respiratory depression"
+      ],
+      "evidence": "Additive sedation or respiratory depression may occur with concurrent use."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, glycopyrrolate)",
+      "severity": 1,
+      "keywords": [
+        "anticholinergic potentiation"
+      ],
+      "evidence": "Anticholinergic effects may be potentiated with concurrent use."
+    },
+    {
+      "drug": "Antidepressants (amitriptyline, clomipramine, mirtazapine)",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may decrease the risk for CNS and/or respiratory depression (protective interaction noted)."
+    },
+    {
+      "drug": "Antihypertensive Agents (amlodipine, benazepril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension and orthostasis."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased clonazepam levels",
+        "CYP inhibition"
+      ],
+      "evidence": "Azole antifungals may increase clonazepam plasma levels, increasing risk of adverse effects."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "Additive CNS depression may occur with concurrent use."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 2,
+      "keywords": [
+        "decreased clonazepam concentrations",
+        "enzyme induction"
+      ],
+      "evidence": "Concurrent use may result in decreased clonazepam concentrations."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (acetazolamide, dichlorphenamide, methazolamide)",
+      "severity": 2,
+      "keywords": [
+        "hypoxia response inhibition"
+      ],
+      "evidence": "Clonazepam may interfere with the beneficial effects of CAIs by inhibiting responses to hypoxia."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine metabolism"
+      ],
+      "evidence": "Cimetidine may decrease metabolism of benzodiazepines, increasing plasma levels."
+    },
+    {
+      "drug": "Danazol",
+      "severity": 2,
+      "keywords": [
+        "increased clonazepam concentrations"
+      ],
+      "evidence": "Danazol may increase clonazepam concentrations."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin levels",
+        "toxicity risk"
+      ],
+      "evidence": "Concurrent use may increase digoxin levels, increasing the risk for toxicity. Digoxin levels should be closely monitored."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "increased clonazepam levels"
+      ],
+      "evidence": "Diltiazem may increase levels of clonazepam. Monitor for overextension of pharmacologic effect."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "decreased benzodiazepine metabolism"
+      ],
+      "evidence": "Erythromycin may decrease the metabolism of benzodiazepines, increasing plasma levels."
+    },
+    {
+      "drug": "Opioids (buprenorphine, fentanyl, methadone, morphine, tramadol)",
+      "severity": 3,
+      "keywords": [
+        "profound sedation",
+        "respiratory depression"
+      ],
+      "evidence": "Concomitant use may result in profound sedation and respiratory depression."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased clonazepam concentrations",
+        "additive CNS depression"
+      ],
+      "evidence": "Phenobarbital may decrease clonazepam concentrations. Additive CNS depression may also occur."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression"
+      ],
+      "evidence": "Additive CNS depression may occur with concurrent use."
+    },
+    {
+      "drug": "Phenytoin",
+      "severity": 2,
+      "keywords": [
+        "decreased clonazepam concentrations"
+      ],
+      "evidence": "Phenytoin may decrease clonazepam concentrations."
+    },
+    {
+      "drug": "Propantheline",
+      "severity": 1,
+      "keywords": [
+        "decreased clonazepam concentrations"
+      ],
+      "evidence": "Concurrent propantheline use with orally disintegrating clonazepam tablets may decrease clonazepam concentrations."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased benzodiazepine effect"
+      ],
+      "evidence": "Rifampin may induce hepatic microsomal enzymes and decrease the pharmacologic effects of benzodiazepines."
+    },
+    {
+      "drug": "Valproic Acid / Divalproex",
+      "severity": 3,
+      "keywords": [
+        "teratogenesis",
+        "protein binding displacement",
+        "metabolism inhibition",
+        "excessive sedation"
+      ],
+      "evidence": "Concurrent use may increase risk of teratogenesis and may displace benzodiazepines from protein binding sites and inhibit metabolism. Monitor for excessive sedation; avoid combination in pregnancy."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "decreased anxiolytic effect"
+      ],
+      "evidence": "Yohimbine may decrease therapeutic effects of anxiolytic drugs including clonazepam."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 6.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항불안제 (오프라벨)",
+          "value": "0.1 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 2.2,
+          "duration_note": "장기 사용 후 중단 시 점진적으로 감량. 최대 2.2 mg/kg q6h까지 보고됨.",
+          "evidence": "Plumb's: 대부분 0.1–1 mg/kg PO 하루 2~3회, 최대 2.2 mg/kg q6h 보고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "발작 또는 수면장애 보조 치료 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "장기 사용 후 중단 시 점진적으로 감량. q6h 또는 최대 2 mg/kg q12h까지 보고됨.",
+          "evidence": "Plumb's: 대부분 0.5–1 mg/kg PO 하루 2~3회, 최대 2 mg/kg q12h 또는 q6h 보고."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항불안제 (오프라벨)",
+          "value": "0.02 - 0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 0.25,
+          "duration_note": "장기 사용 후 중단 시 점진적으로 감량.",
+          "evidence": "Plumb's: 대부분 0.02–0.25 mg/kg PO 하루 최대 2회."
+        },
+        {
+          "logic_type": "linear",
+          "context": "발작 보조 치료 (오프라벨)",
+          "value": "0.02 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "장기 사용 후 중단 시 점진적으로 감량.",
+          "evidence": "Plumb's: 대부분 0.02–0.5 mg/kg PO 하루 최대 2회."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 시 주의 사용 권고되나 구체적인 용량 조정 지침은 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "유의한 간 기능 장애 시 금기. 간에서 대사되므로 간 기능 저하 환자에서 주의 또는 회피 필요. 구체적 용량 조정 수치는 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "벤조디아제핀 과민반응",
+      "match_terms": [
+        "benzodiazepine hypersensitivity",
+        "drug allergy benzodiazepine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 협우각 녹내장",
+      "match_terms": [
+        "narrow angle glaucoma",
+        "acute angle closure glaucoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 간 기능 장애",
+      "match_terms": [
+        "liver disease",
+        "hepatic failure",
+        "hepatic dysfunction",
+        "significant liver disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증근무력증",
+      "match_terms": [
+        "myasthenia gravis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "공격적 성향 환자",
+      "match_terms": [
+        "aggression",
+        "aggressive behavior"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자일리톨 함유 ODT 제제 (개)",
+      "match_terms": [
+        "xylitol",
+        "ODT xylitol dog"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "벤조디아제핀 수용체에 결합하여 GABA 활성을 증가시키고 CNS 피질하 수준(변연계, 시상, 시상하부)을 억제함으로써 항불안, 진정, 골격근 이완, 항경련 효과를 나타냄.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "흥분(paradoxical excitement)",
+      "과활동(hyperactivity)",
+      "방향감각 상실(disorientation)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "식욕 증가(increased appetite)",
+      "저혈압(hypotension, 과다복용 시)",
+      "호흡 억제(respiratory depression, 과다복용 시)"
+    ],
+    "dog_mechanism": "개에서 포화 동역학(saturation kinetics)을 나타내며 제거율이 용량 의존적. 경구 생체이용률 20~60%로 가변적. 수 주 내 항경련 효과에 대한 내성 발생 가능.",
+    "dog_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "흥분(agitation)",
+      "구토(vomiting)",
+      "항경련 효과에 대한 내성(tolerance to anticonvulsant effect)"
+    ],
+    "cat_mechanism": "고양이에서 경구 분산정(ODT) 사용으로 투약이 용이할 수 있음. 다이아제팜보다 간독성 가능성이 낮은 것으로 여겨지나 급성 간괴사 위험 존재.",
+    "cat_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "흥분(agitation)",
+      "급성 간괴사(acute hepatic necrosis, 가능성)",
+      "식욕 증가(increased appetite)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 클로나제팜은 주로 단기 보조 항경련제로 사용되며, 수 주 내에 항경련 효과에 대한 내성이 발생할 수 있음. 용량 조정으로 효능을 회복할 수 있음. 자일리톨 함유 ODT 제제는 개에서 주의 사용 필요. 장기 고용량 사용 후 갑작스러운 중단은 간질 지속증을 유발할 수 있으므로 점진적 감량 필요.",
+    "cat": "고양이에서 항불안 및 항경련 목적으로 사용 가능. 다이아제팜 경구 투여 후 급성 간괴사가 보고된 바 있으며, 클로나제팜도 유사한 부작용을 유발할 수 있으나 가능성은 낮은 것으로 여겨짐. 기저치 및 주기적 간 패널 모니터링 권고. ODT 제제(0.125 mg)로 소용량 투약이 용이함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 항경련 효과에 대한 내성 발생 가능(수 주 내). 자일리톨 함유 ODT 주의. 공격적 환자에서 주의 사용. 장기 사용 후 점진적 감량 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 급성 간괴사 가능성(다이아제팜보다 낮으나 존재). 기저치 및 주기적 간 패널 모니터링 권고. 장기 사용 후 점진적 감량 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐된 차광 용기에 실온(20~25°C) 보관. ODT: 15~30°C 허용. Schedule IV 규정에 따라 잠금 장치가 있는 안전한 장소에 보관. 컴파운딩 현탁액(0.1 mg/mL): 5°C 및 25°C에서 60일간 90% 이상 역가 유지, 차광 보관.",
+    "forms": [
+      "경구정제 (0.5 mg, 1 mg, 2 mg)",
+      "경구 분산정/ODT (0.125 mg, 0.25 mg, 0.5 mg, 1 mg, 2 mg)",
+      "컴파운딩 경구 현탁액 (0.1 mg/mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로나제팜은 벤조디아제핀계 항경련제로, 개에서 단기 보조 항경련 치료 및 항불안제로, 고양이에서 장기 보조 항경련 치료 및 항불안제로 사용됨. 수의과 승인 제품 없음(오프라벨). 미국 Schedule IV 규제 약물. NIOSH 위험 약물로 분류. 개에서 수 주 내 내성 발생 가능. 고양이에서 간독성 모니터링 필요. 갑작스러운 중단 금지.",
+    "indications": "【승인 적응증】없음(수의과 승인 제품 없음). 【오프라벨 적응증】개: 단기 보조 항경련 치료(간질), 수면장애, 항불안(분리불안, 공포증 등). 고양이: 장기 보조 항경련 치료(간질), 항불안.",
+    "client_info": "이 약은 발작 조절 및 불안 완화를 위해 사용됩니다. 진정 및 방향감각 상실을 유발할 수 있어 작업견의 수행 능력에 영향을 줄 수 있습니다. 천둥 공포증 등 불안 유발 상황 약 1시간 전에 투여하세요. 발작 치료 시 규칙적으로 투여하는 것이 매우 중요합니다. 음식과 함께 또는 공복에 투여 가능하며, 공복 투여 후 구토 시 소량의 음식과 함께 투여하세요. 피부, 잇몸, 눈 흰자위가 노랗게 변하면 즉시 수의사에게 연락하세요(황달 징후). 고양이에서 식욕이 증가할 수 있습니다. 임신 중이거나 임신을 계획 중인 보호자는 취급 시 장갑 착용을 권장합니다. 절대 갑자기 투약을 중단하지 마세요. 이 약은 Schedule IV 규제 약물입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat half-life)",
+      "Renal dose adjustment specifics",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "timing_profile.onset_min"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/26.jsonl",
+    "extracted_at": "2026-03-10T21:18:01.843959+00:00",
+    "reviewer": null
+  }
+}

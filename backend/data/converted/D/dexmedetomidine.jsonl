@@ -1,0 +1,806 @@
+{
+  "id": "dexmedetomidine",
+  "drug_identity": {
+    "name_ko": "덱스메데토미딘",
+    "name_en": "Dexmedetomidine",
+    "active_ingredient": "Dexmedetomidine",
+    "brand_names": [
+      "Dexdomitor",
+      "Sileo",
+      "Precedex",
+      "Cepedex",
+      "Dexvetidine",
+      "Sedadex"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Atipamezole",
+    "reversal_evidence": "아티파메졸은 덱스메데토미딘의 진정, 생리적 효과 및 진통 효과를 역전시킬 수 있음. 역전 후 추가 진통제가 필요할 수 있음.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.09,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 수산화(hydroxylation) 및 글루쿠론산화(glucuronidation)를 통해 대사됨. CYP450 효소계는 최소한의 역할만 함(인간 데이터). 대사는 간 혈류에 의존함. 활성 대사체 없음. 대사체는 주로 소변, 일부는 대변으로 배설됨."
+    },
+    "extra_information": "개: IM 투여 후 생체이용률 60%, 최고 혈장 농도 도달 시간 약 35분, 분포용적 0.9 L/kg, 소실 반감기 약 40~50분. 구강점막 겔(Sileo®) 평균 생체이용률 28%, 단백결합률 93%, 최고 농도 도달 시간 약 0.6시간, 반감기 0.5~3시간. 고양이: IM 투여 후 최고 혈장 농도 약 17 ng/mL (약 15분), 분포용적 2.2 L/kg, 소실 반감기 약 1시간. 이소플루란 마취 고양이에서 5분 IV 주입 후 청소율 6.3 mL/min/kg, 소실 반감기 198분."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 심혈관계(서맥, 혈관수축, 혈압 이상), CNS(진정, 진통), 신장(이뇨), 간(주요 대사 기관) 부담이 문헌에 명시됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "anxiolysis",
+          "analgesia",
+          "paradoxical excitation"
+        ],
+        "index": 1,
+        "evidence": "CNS 억제(진정, 항불안, 진통) 효과가 주요 약리 작용으로 명시됨. 역설적 흥분 및 발작 역치 저하 가능성 언급."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "bradycardia",
+          "vasoconstriction",
+          "hypertension",
+          "hypotension",
+          "AV block",
+          "arrhythmia",
+          "platelet aggregation inhibition"
+        ],
+        "index": 2,
+        "evidence": "서맥, 혈관수축, 일시적 고혈압 후 저혈압, 2도 AV 차단, 부정맥(SVT, PVC) 등 심혈관 부작용이 광범위하게 보고됨. ADP 유도 혈소판 응집 억제 가능성 언급."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "diuresis",
+          "urination",
+          "renal disease contraindication"
+        ],
+        "index": 3,
+        "evidence": "이뇨 효과가 약리 작용으로 명시됨. 신장 질환 시 금기(상대적)로 언급됨."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic blood flow dependent",
+          "liver disease contraindication"
+        ],
+        "index": 4,
+        "evidence": "간에서 수산화를 통해 주로 대사되며 간 혈류에 의존함. 간 질환 시 금기(상대적)로 언급됨."
+      },
+      "heart": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "vasoconstriction",
+          "cardiovascular disease contraindication",
+          "arrhythmia",
+          "cardiac output"
+        ],
+        "index": 5,
+        "evidence": "서맥, AV 차단, 혈관수축, 부정맥 등 심장에 대한 직접적인 부작용이 광범위하게 보고됨. 심혈관 질환 시 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "anxiolysis",
+          "analgesia",
+          "emesis (central alpha-2 stimulation)"
+        ],
+        "index": 1,
+        "evidence": "CNS 억제(진정, 진통) 효과가 주요 약리 작용. 구토는 중추 알파-2 수용체 자극에 의해 매개됨. 고양이에서 구토 발생률 57~68%로 높음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "bradycardia",
+          "vasoconstriction",
+          "hypertension",
+          "hypotension",
+          "AV block",
+          "arrhythmia"
+        ],
+        "index": 2,
+        "evidence": "서맥, 혈관수축, 혈압 이상, 부정맥 등 심혈관 부작용이 고양이에서도 보고됨. 과용량 시 접합부 탈출 부정맥 발생."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "diuresis",
+          "urination",
+          "renal disease contraindication"
+        ],
+        "index": 3,
+        "evidence": "이뇨 효과 및 신장 질환 시 금기(상대적) 언급."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic blood flow dependent",
+          "liver disease contraindication"
+        ],
+        "index": 4,
+        "evidence": "간에서 수산화를 통해 주로 대사되며 간 혈류에 의존함. 간 질환 시 금기(상대적) 언급."
+      },
+      "heart": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "bradycardia",
+          "AV block",
+          "vasoconstriction",
+          "cardiovascular disease contraindication",
+          "junctional escape arrhythmia"
+        ],
+        "index": 5,
+        "evidence": "서맥, AV 차단, 혈관수축, 접합부 탈출 부정맥 등 심장 부작용이 고양이에서 명시됨. 심혈관 질환 시 금기."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": 0.58,
+    "half_life_hr": {
+      "min": 0.67,
+      "max": 0.83,
+      "mean": 0.75,
+      "species": "dog"
+    },
+    "f_percent": 60,
+    "protein_binding_percent": 93,
+    "evidence": "개 IM 투여: 생체이용률 60%, 최고 농도 도달 약 35분(0.58시간), 소실 반감기 40~50분(0.67~0.83시간). 구강점막 겔: 생체이용률 28%, 단백결합 93%, 반감기 0.5~3시간. 고양이 IM: 최고 농도 약 15분. 진정/진통 발현 5~15분, 최대 효과 30분."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 마취 전문의 상담 권고.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (e.g., enalapril)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "Additive hypotensive effects may occur when combined with ACE inhibitors."
+    },
+    {
+      "drug": "Acepromazine",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "anesthetic sparing"
+      ],
+      "evidence": "Additive effects; dose reduction of one or both agents may be required. General anesthetic requirements may be reduced by 30–60%."
+    },
+    {
+      "drug": "Amlodipine",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "Additive hypotensive effects may occur."
+    },
+    {
+      "drug": "Anesthetics (e.g., alfaxalone, isoflurane, ketamine, propofol, enflurane)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "anesthetic sparing",
+        "seizure threshold"
+      ],
+      "evidence": "Additive effects; dose reduction may be required. Anesthetic requirements reduced by 30–60%. Dexmedetomidine lowered seizure threshold in cats anesthetized with enflurane."
+    },
+    {
+      "drug": "Atropine / Glycopyrrolate",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "tachycardia",
+        "arrhythmia",
+        "increased cardiac work"
+      ],
+      "evidence": "Concurrent use can significantly increase arterial blood pressure, heart rate, cardiac work, and arrhythmia risk. Use together is not recommended in dogs and probably other species."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "anesthetic sparing"
+      ],
+      "evidence": "Additive effects; dose reduction of one or both agents may be required. General anesthetic requirements may be reduced by 30–60%."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (e.g., atenolol, esmolol, metoprolol)",
+      "severity": 2,
+      "keywords": [
+        "enhanced AV block",
+        "bradycardia"
+      ],
+      "evidence": "AV-blocking and bradycardic effects may be enhanced."
+    },
+    {
+      "drug": "Epinephrine",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "arrhythmia"
+      ],
+      "evidence": "Epinephrine possesses alpha-agonist effects and could cause or exacerbate hypertension and arrhythmias; should not be used to treat cardiac effects caused by dexmedetomidine."
+    },
+    {
+      "drug": "Opioids (e.g., butorphanol, morphine, tramadol, buprenorphine)",
+      "severity": 2,
+      "keywords": [
+        "additive sedation",
+        "additive analgesia",
+        "anesthetic sparing"
+      ],
+      "evidence": "Additive effects; dose reduction may be required. Anesthetic requirements reduced by 30–60%. Sedation with buprenorphine and dexmedetomidine is less predictable and of slower onset but longer duration than with butorphanol."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "Additive hypotensive effects may occur."
+    },
+    {
+      "drug": "Telmisartan",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "Additive hypotensive effects may occur."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "partial reversal"
+      ],
+      "evidence": "Effects may be partially reversed by yohimbine, but atipamezole is preferred for full reversal of dexmedetomidine's effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "진정 및 진통 (FDA 승인, BSA 기반)",
+          "value": "375",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준 투여. 체중 2 kg 미만 정확한 투여 불가.",
+          "evidence": "FDA 승인 라벨: 375 µg/m² BSA IV"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "진정 및 진통 (FDA 승인, BSA 기반)",
+          "value": "500",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준 투여. 투여 후 15분 안정 유지. 진정/진통 발현 5~15분, 최대 효과 30분.",
+          "evidence": "FDA 승인 라벨: 500 µg/m² BSA IM"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "마취 전처치 (FDA 승인, BSA 기반)",
+          "value": "125 - 375",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 시술 종류 및 마취 방법에 따라 용량 조절. 마취 유도제 용량 30~60%, 흡입 마취제 40~60% 감량 가능.",
+          "evidence": "FDA 승인 라벨: 125–375 µg/m² BSA IM (마취 전처치)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소음 혐오증 치료 - 구강점막 겔 (Sileo®, FDA 승인)",
+          "value": "125",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 소음 자극 30~60분 전 또는 불안 첫 징후 시 투여. 최소 2시간 간격으로 재투여. 1회 소음 이벤트당 최대 5회.",
+          "evidence": "FDA 승인 라벨 (Sileo®): 125 µg/m² BSA 구강점막 투여"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "노령견 및 신/간 기능 이상 개의 마취 전처치 (extra-label, 'doggie magic' 프로토콜)",
+          "value": "62.5",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 오피오이드 및 ± 케타민과 동량 혼합 투여.",
+          "evidence": "Extra-label: 62.5 µg/m² IM (노령견, 신/간 기능 이상)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "ASA II-III 방사선 촬영 진정 (extra-label)",
+          "value": "125",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 오피오이드 및 케타민과 동량 혼합.",
+          "evidence": "Extra-label: 125 µg/m² IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소수술, Penn hip/OFA 방사선 촬영 (extra-label)",
+          "value": "250",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 오피오이드 및 케타민과 동량 혼합.",
+          "evidence": "Extra-label: 250 µg/m² IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신마취 유도 (OHE, 중성화, 복부수술) (extra-label)",
+          "value": "375",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 오피오이드 및 케타민과 동량 혼합. 5~8분 내 측와위. 기관삽관 후 이소플루란 0.5% 또는 세보플루란 1% 유지 가능.",
+          "evidence": "Extra-label: 375 µg/m² IM (전신마취 유도)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "극도로 난폭한 개 보정 (extra-label, 드물게 사용)",
+          "value": "500",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준. 오피오이드 및 케타민과 동량 혼합. 고용량으로 드물게 사용.",
+          "evidence": "Extra-label: 500 µg/m² IM (극도로 난폭한 개)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "알팍살론 병용 마취 (extra-label)",
+          "value": "3",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "메타돈 0.3 mg/kg, 알팍살론 0.5~1 mg/kg과 병용 IM 투여.",
+          "evidence": "Extra-label: 덱스메데토미딘 3 µg/kg + 메타돈 0.3 mg/kg + 알팍살론 0.5–1 mg/kg IM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수술 후 통증 관리 IV CRI 부하 용량 (extra-label)",
+          "value": "25",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "BSA(µg/m²) 기준 부하 용량 후 25 µg/m²/시간 CRI 24시간 유지.",
+          "evidence": "Extra-label: 25 µg/m² IV 부하 후 25 µg/m²/시간 CRI"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 통증 관리 IV CRI (extra-label, µg/kg 기준)",
+          "value": "1 - 2",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 후 0.72~1 µg/kg/시간 CRI 유지.",
+          "evidence": "Extra-label: 1–2 µg/kg IV 부하 후 0.72–1 µg/kg/시간 CRI"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "진정, 진통 및 마취 전처치 (FDA 승인)",
+          "value": "40",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 후 15분 안정 유지. 진정/진통 발현 5~15분, 최대 효과 30분.",
+          "evidence": "FDA 승인 라벨: 40 µg/kg IM"
+        },
+        {
+          "logic_type": "linear",
+          "context": "경도 진정 / 마취 전처치 (extra-label, 단독 투여)",
+          "value": "5 - 15",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV, IM, 또는 SC 투여 가능.",
+          "evidence": "Extra-label: 경도 진정 5–15 µg/kg"
+        },
+        {
+          "logic_type": "linear",
+          "context": "중등도 진정 (extra-label, 단독 투여)",
+          "value": "20 - 30",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV, IM, 또는 SC 투여 가능.",
+          "evidence": "Extra-label: 중등도 진정 20–30 µg/kg"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "심도 진정 (extra-label, 단독 투여)",
+          "value": "40",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV, IM, 또는 SC 투여 가능.",
+          "evidence": "Extra-label: 심도 진정 40 µg/kg"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "난소자궁적출술 중 CRI (extra-label)",
+          "value": "0.5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 0.5 µg/kg IV 후 0.5 µg/kg/시간 CRI. 이소플루란 유지 요구량 감소.",
+          "evidence": "Extra-label: 0.5 µg/kg IV 부하 후 0.5 µg/kg/시간 CRI (OHE)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구토 유도 (extra-label)",
+          "value": "6 - 18",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 3.5 µg/kg IV. 진정으로 인한 흡인 위험 주의.",
+          "evidence": "Extra-label: 구토 유도 6–18 µg/kg IM 또는 3.5 µg/kg IV"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "부프레노르핀 병용 진정 (extra-label)",
+          "value": "40",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부프레노르핀 20 µg/kg과 병용. IM 또는 OTM(구강점막) 투여 가능. IM이 더 신뢰성 높음.",
+          "evidence": "Extra-label: 덱스메데토미딘 40 µg/kg + 부프레노르핀 20 µg/kg IM 또는 OTM"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "알팍살론 또는 케타민 병용 중성화 수술 (extra-label)",
+          "value": "10",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부토르파놀 0.2 mg/kg + 알팍살론 3 mg/kg 또는 케타민 5 mg/kg과 병용 IM.",
+          "evidence": "Extra-label: 덱스메데토미딘 10 µg/kg + 부토르파놀 0.2 mg/kg + 알팍살론 3 mg/kg 또는 케타민 5 mg/kg IM"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신장 질환 시 금기(상대적)로 명시됨. 단, 효과가 역전 가능하므로 일부 마취과 전문의는 상대적 금기로 간주함. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간 질환 시 금기(상대적). 인간에서 간 기능 장애 환자에서 용량 감량 필요 명시. 대사가 간 혈류에 의존하므로 간 질환 시 청소율 감소 예상. 구체적 수의학적 용량 조절 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "cardiac disease",
+        "bradycardia",
+        "hypotension",
+        "hypoxia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호흡기 질환",
+      "match_terms": [
+        "respiratory disorder",
+        "respiratory disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "쇼크 / 심한 쇠약",
+      "match_terms": [
+        "shock",
+        "severe debilitation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "kidney disease",
+        "renal disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "liver disease",
+        "hepatic disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to dexmedetomidine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 CNS 임상 증상 (혼미)",
+      "match_terms": [
+        "obtundation",
+        "severe CNS signs"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소아 환자 (심박출량 심박수 의존)",
+      "match_terms": [
+        "pediatric",
+        "puppy < 16 weeks",
+        "kitten < 12 weeks"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파-2 아드레날린 수용체 작용제. 알파-2 대 알파-1 선택성 1620:1. CNS 억제(진정, 항불안), 말초 및 관상동맥 혈관수축, 서맥, 호흡 억제, 이뇨, 저체온, 진통, 근이완, 인슐린 분비 억제(고혈당), 장 운동 감소 유발.",
+    "common_extra_effects": [
+      "서맥(bradycardia)",
+      "혈관수축(vasoconstriction)",
+      "일시적 고혈압 후 저혈압",
+      "2도 AV 차단",
+      "부정맥(SVT, PVC, 접합부 탈출 박동)",
+      "호흡 억제/저환기",
+      "저체온증",
+      "구토",
+      "배뇨",
+      "고혈당",
+      "동공 반응 감소 또는 소실",
+      "눈물 분비 감소",
+      "창백하거나 청색증 점막",
+      "역설적 흥분(드물게)",
+      "폐부종(드물게)",
+      "무호흡(드물게)",
+      "순환 부전으로 인한 사망(드물게)"
+    ],
+    "dog_mechanism": "알파-2 수용체 작용을 통한 CNS 억제, 혈관수축, 서맥, 진통, 이뇨 효과. 메데토미딘보다 약 2배 강력.",
+    "dog_extra_effects": [
+      "구토 발생률 12~25%",
+      "눈물 분비 초기 감소 후 증가(약 8시간 지속 가능)",
+      "안압 감소",
+      "근육 수축 또는 떨림"
+    ],
+    "cat_mechanism": "알파-2 수용체 작용을 통한 CNS 억제, 혈관수축, 서맥, 진통. 구토는 중추 알파-2 수용체 자극에 의해 매개됨.",
+    "cat_extra_effects": [
+      "구토 발생률 57~68%로 매우 높음",
+      "과용량 시 접합부 탈출 부정맥",
+      "ADP 유도 혈소판 응집 억제(임상적 유의성 불명확)",
+      "눈물 분비 감소"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 진정/진통/마취 전처치제. BSA(µg/m²) 기반 용량 권장. 소음 혐오증 치료를 위한 구강점막 겔(Sileo®) FDA 승인. 구토 발생률 12~25%. 눈 보호를 위해 안과용 연고 사용 권장. 16주 미만 강아지에서 평가되지 않음. 노령견은 나이가 아닌 건강 상태에 따라 용량 결정. 아티파메졸로 역전 가능.",
+    "cat": "고양이에서 FDA 승인된 진정/진통/마취 전처치제(40 µg/kg IM). 구토 발생률 57~68%로 매우 높음. 구토 유도 목적으로 extra-label 사용 가능하나 흡인 위험 주의. 12주 미만 고양이에서 평가되지 않음. 이소플루란 마취 중 소실 반감기 198분으로 개보다 길 수 있음. 아티파메졸로 역전 가능."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심혈관 질환, 호흡기 질환, 신/간 질환, 쇼크, 심한 쇠약 시 금기(상대적). 소아 및 노령견 주의. 충분한 모니터링 및 환자 지원 시설 필요. 눈물 분비 감소로 안과용 연고 사용 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "심혈관 질환, 호흡기 질환, 신/간 질환, 쇼크, 심한 쇠약 시 금기(상대적). 구토 유도 목적 사용 시 흡인 위험. 소아 및 노령 고양이 주의. 충분한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제: 실온(15~30°C) 보관, 동결 금지. 첫 개봉 후 90일 이내 사용. 구강점막 겔(Sileo®): 20~25°C 보관(15~30°C 허용), 개봉 후 4주 이내 사용.",
+    "forms": [
+      "덱스메데토미딘 HCl 0.5 mg/mL (500 µg/mL) 주사액 10 mL 다회용 바이알 (Dexdomitor®)",
+      "덱스메데토미딘 HCl 0.1 mg/mL (100 µg/mL) 주사액 10 mL 다회용 바이알 (Dexdomitor® 0.1)",
+      "덱스메데토미딘 구강점막 겔 0.09 mg/mL 3 mL 투여 시린지 (Sileo®)",
+      "덱스메데토미딘 HCl 농축 주사액 100 µg/mL 2 mL 단회용 바이알 및 4 mL 다회용 바이알 (Precedex®, 인체용)",
+      "덱스메데토미딘 HCl 0.9% NaCl 주입액 4 µg/mL 20 mL 및 50 mL (Precedex®, 인체용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "덱스메데토미딘은 개와 고양이에서 FDA 승인된 가역적 알파-2 아드레날린 수용체 작용제로, 진정, 진통 및 마취 전처치에 사용됩니다. 아티파메졸로 효과를 역전시킬 수 있으나 진통 효과도 함께 역전됩니다. 심혈관 부작용(서맥, 혈관수축, 혈압 이상)이 주요 우려 사항이며, 심혈관 질환 환자에서는 금기입니다. 구강점막 겔(Sileo®)은 개의 소음 혐오증 치료에 승인되었습니다. 취급 시 반드시 불침투성 장갑을 착용해야 합니다.",
+    "indications": "개와 고양이: 임상 검사, 임상 시술, 소수술, 소치과 시술을 위한 진정 및 진통; 전신마취 전처치(FDA 승인). 개: 소음 혐오증 치료(Sileo® 구강점막 겔, FDA 승인); 수의과 검진 전 공포/불안 감소(extra-label). 고양이: 구토 유도(extra-label, 단 더 효과적인 구토제 존재). 소형 포유류 및 말: 다양한 진정/마취 프로토콜(extra-label).",
+    "client_info": "주사 투여 시: 수의사의 전문적인 감독 하에 사용되며, 진정 효과가 완전히 사라질 때까지 음식과 물을 제공하지 마십시오. 구강점막 겔(Sileo®) 사용 시: 임신 중인 경우 취급을 피하십시오. 피부, 점막, 눈을 통해 흡수될 수 있으므로 반드시 불침투성 일회용 장갑을 착용하십시오. 피부에 접촉 시 비누와 물로 충분히 씻고, 눈에 들어간 경우 15분간 물로 세척하십시오. 실수로 삼킨 경우 즉시 의사의 진료를 받으십시오. 약을 개의 뺨과 잇몸 사이에 투여하십시오. 투여 후 15분 이내에 음식, 간식, 물을 주지 마십시오. 이전 투여 후 최소 2시간 후에 재투여할 수 있으며, 한 번의 소음 이벤트 동안 최대 5회까지 투여 가능합니다. 개가 이전 투여로 아직 졸려 보이면 재투여하지 마십시오. 부작용으로 기력 저하, 졸음, 서맥, 의식 저하, 호흡 저하, 균형 장애, 저혈압, 근육 떨림이 나타날 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "high",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/39.jsonl",
+    "extracted_at": "2026-03-11T01:16:52.746359+00:00",
+    "reviewer": null
+  }
+}

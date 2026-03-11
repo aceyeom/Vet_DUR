@@ -1,0 +1,574 @@
+{
+  "id": "fluorouracil",
+  "drug_identity": {
+    "name_ko": "플루오로우라실",
+    "name_en": "Fluorouracil",
+    "active_ingredient": "Fluorouracil",
+    "brand_names": [
+      "Adrucil",
+      "Carac",
+      "Efudex",
+      "Fluoroplex",
+      "Tolak"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용임. 수의과 종양 전문의 상담 및 최신 종양학 참고문헌 참조 권장.",
+    "dosage_form": [
+      "Inj",
+      "Topical",
+      "Oint"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.5,
+        "unit": "%"
+      },
+      {
+        "value": 1,
+        "unit": "%"
+      },
+      {
+        "value": 5,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.15,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP2C9"
+      ],
+      "inducers": [],
+      "pathway_evidence": "플루오로우라실은 주로 간에서 대사되며, CYP2C9 기질의 대사를 억제할 수 있다. 약 15%는 신장을 통해 미변화체로 배설되고, 나머지는 폐 및 소변을 통해 배설된다."
+    },
+    "extra_information": "개와 고양이에 대한 종별 약동학 데이터는 문헌에 명시되지 않음. 인간 데이터 기준: IV 투여 후 혈장 반감기 약 15분, 종양 세포·장 점막·간·골수에 주로 분포."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인간 및 개 데이터 기반; 고양이는 절대 금기로 별도 표기. 골수억제, 신경독성, GI 독성, 간 대사 등 언급된 키워드를 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures",
+          "encephalopathy"
+        ],
+        "index": 1,
+        "evidence": "개에서 신경독성(발작) 보고됨. 인간에서 고암모니아혈증성 뇌병증 사례 있음."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "myelosuppression",
+          "bone marrow suppression",
+          "all cell lines"
+        ],
+        "index": 0,
+        "evidence": "용량 의존적 골수억제가 개에서 주요 독성으로 보고됨. 모든 혈구 계열에 영향."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal impairment",
+          "urine excretion"
+        ],
+        "index": 2,
+        "evidence": "15%가 신장으로 미변화체 배설. 심한 신장 장애 시 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "liver metabolism",
+          "hepatic impairment",
+          "alkaline phosphatase",
+          "transaminase",
+          "bilirubin"
+        ],
+        "index": 3,
+        "evidence": "주로 간에서 대사. 심한 간 장애 시 주의 사용 권고. ALP, 혈청 트랜스아미나제, 빌리루빈 상승 가능."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "heart failure"
+        ],
+        "index": 4,
+        "evidence": "인간에서 심부전 사례 보고됨. 개에서의 직접적 심장 독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 95,
+        "triggered_keywords": [
+          "severe neurotoxicity",
+          "fatal",
+          "seizures",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 심각하고 잠재적으로 치명적인 신경독성 발생. 절대 금기."
+      },
+      "blood": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "myelosuppression",
+          "all cell lines",
+          "fatal"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 심각한 용량 의존적 골수억제 보고. 소량 섭취로도 사망 가능."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "multi-organ failure"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 다장기부전 징후 보고. 신장 관련 직접 데이터는 제한적."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "multi-organ failure",
+          "liver metabolism"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 다장기부전 보고. 간 대사 약물이나 고양이 특이 간 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "multi-organ failure"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 다장기부전 보고. 심장 특이 데이터는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.25,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 IV 투여 후 혈장 반감기 약 15분(0.25시간). 고양이에서 섭취 후 30분~6시간 내 임상 증상 발현 보고. 개/고양이 종별 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: contraindicated→3, major→3, moderate→2, minor→1. 명시된 상호작용만 포함.",
+  "drug_interactions": [
+    {
+      "drug": "CYP2C9 Substrates (e.g., diclofenac)",
+      "severity": 2,
+      "keywords": [
+        "CYP2C9 inhibition",
+        "decreased metabolism"
+      ],
+      "evidence": "Fluorouracil may decrease the metabolism of CYP2C9 substrates, potentially increasing their plasma concentrations and toxicity."
+    },
+    {
+      "drug": "Folic Acid / Leucovorin",
+      "severity": 2,
+      "keywords": [
+        "increased toxicity",
+        "enhanced fluorouracil effect"
+      ],
+      "evidence": "Folic acid and leucovorin may increase the toxic effects of fluorouracil."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 3,
+      "keywords": [
+        "myelosuppression",
+        "infection risk",
+        "washout required"
+      ],
+      "evidence": "Concurrent or sequential use without washout may increase risk for myelosuppression and infections; avoid combination when possible."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "increased fluorouracil concentration",
+        "toxicity risk"
+      ],
+      "evidence": "Metronidazole may increase fluorouracil plasma concentration and risk for toxicity."
+    },
+    {
+      "drug": "Myelosuppressive Agents (e.g., antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "Concurrent use with other bone marrow depressant medications may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "diminished vaccine efficacy",
+        "enhanced adverse effects"
+      ],
+      "evidence": "Fluorouracil may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "유방암, 피부 편평세포암, GI 선암, 항문낭 선암, 비강 선암 (단독 또는 병용)",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회(weekly) 투여. mg/m2 단위임 — mg/kg와 혼동 금지.",
+          "evidence": "150 mg/m2 IV weekly (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "유방암, 피부 편평세포암, GI 선암, 항문낭 선암, 비강 선암 (단독 또는 병용) — 체중 기반 대안 용량",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "주 1회(weekly) 투여.",
+          "evidence": "5–10 mg/kg IV weekly (extra-label)"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "중피종(Mesothelioma) — 초기 4주 후 격주 유지",
+          "value": "150 - 200",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 4주간 주 1회, 이후 2주마다 투여. mg/m2 단위.",
+          "evidence": "150–200 mg/m2 IV weekly for 4 weeks, then every 2 weeks (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "연조직 육종 — 수술 후 절개 부위 주사",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 흉터 또는 개방 창상의 여러 부위에 22게이지 바늘로 균일하게 주사. mg/m2 단위.",
+          "evidence": "150 mg/m2 injected along surgical scar or parallel sites (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "다양한 암종 — 카보플라틴 병용",
+          "value": "150",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "플루오로우라실 투여 1시간 후 카보플라틴 200 mg/m2 IV 10분간 투여. mg/m2 단위.",
+          "evidence": "Fluorouracil 150 mg/m2 IV slow push followed by carboplatin 200 mg/m2 IV (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "심한 신장 장애 환자에서 주의 사용 권고. 구체적인 용량 조정 기준은 명시되지 않음. 고양이는 절대 금기."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "심한 간 장애 환자에서 주의 사용 권고. 구체적인 용량 조정 기준은 명시되지 않음. ALP, 트랜스아미나제, 빌리루빈 상승 가능."
+  },
+  "contraindications": [
+    {
+      "condition": "고양이 (모든 형태)",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "과민반응 (알려진 경우)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수 억제",
+      "match_terms": [
+        "bone marrow suppression",
+        "myelosuppression",
+        "pancytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "불량한 영양 상태",
+      "match_terms": [
+        "poor nutritional state",
+        "malnutrition",
+        "cachexia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 감염",
+      "match_terms": [
+        "serious infection",
+        "sepsis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 신장 장애",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심한 간 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "피리미딘 유사체 항대사물질. 세포 내에서 활성 단일인산염 및 삼인산염 대사체로 전환되어 DNA 및 RNA 합성을 방해하고, 세포 성장을 억제하며 세포 사멸을 촉진한다.",
+    "common_extra_effects": [
+      "용량 의존적 골수억제",
+      "GI 독성 (설사, GI 궤양/탈락, 구내염)",
+      "신경독성 (발작)",
+      "ALP, 혈청 트랜스아미나제, 빌리루빈, LDH 상승",
+      "심부전 (인간)",
+      "중증 점막염/구내염/식도인두염 (인간)",
+      "고암모니아혈증성 뇌병증 (인간)"
+    ],
+    "dog_mechanism": "피리미딘 유사체로 DNA/RNA 합성 억제. 개에서 용량 의존적 골수억제, GI 독성, 신경독성(발작) 유발.",
+    "dog_extra_effects": [
+      "용량 의존적 골수억제",
+      "설사",
+      "GI 궤양/탈락",
+      "구내염",
+      "발작(신경독성)"
+    ],
+    "cat_mechanism": "고양이에서 심각하고 잠재적으로 치명적인 신경독성 유발. 절대 금기.",
+    "cat_extra_effects": [
+      "급성 오심/구토",
+      "출혈성 설사",
+      "복통",
+      "GI 탈락",
+      "운동실조",
+      "심각하고 반응하지 않는 발작",
+      "심각한 용량 의존적 골수억제",
+      "심각한 대사성 산증",
+      "다장기부전",
+      "사망"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 모든 용량은 허가 외(extra-label) 사용이며, 수의과 종양 전문의 상담이 강력히 권장된다. mg/m2와 mg/kg 용량을 혼동하지 않도록 주의해야 한다. 독성 용량은 5 mg/kg부터 시작하며, 40 mg/kg 이상은 균일하게 치명적이다. IV LD50은 31.5 mg/kg. 치료 중 CBC(혈소판 포함) 및 혈청 화학 검사를 정기적으로 모니터링해야 한다.",
+    "cat": "고양이에서는 어떠한 형태로도 절대 사용 금지. 소량 섭취로도 사망 가능하며, 임상 증상은 섭취 후 30분~6시간 내 발현되고 7시간 내 사망이 보고되었다. 국소 도포 부위를 핥는 것만으로도 치명적인 독성이 발생할 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 매우 좁은 치료 지수를 가지며, 암 화학요법 경험이 있는 임상의만 사용해야 한다. NIOSH 위험 약물로 분류되어 적절한 PPE 착용 필요. 골수억제, GI 독성, 신경독성 모니터링 필수."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 어떠한 형태로도 절대 사용 금지. 심각하고 잠재적으로 치명적인 신경독성 발생. 국소 도포 부위 접촉만으로도 치명적 독성 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제: 20°C~25°C(68°F~77°F) 보관. 동결 및 빛 노출 금지. 색 변화 발생 시 60°C까지 가온하여 용해 가능; 체온으로 냉각 후 투여. 침전물이 용해되지 않으면 폐기. 제조사 권고: 개봉 후 4시간 이내 사용, 희석 용액은 즉시 투여.",
+    "forms": [
+      "Fluorouracil Solution for Injection 50 mg/mL (10 mL, 20 mL, 50 mL, 100 mL vials) — Adrucil®, generic",
+      "Fluorouracil Cream 0.5%, 1%, 5% (30g, 40g tubes) — generic",
+      "Fluorouracil Topical Solution"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루오로우라실(5-FU)은 피리미딘 유사체 항종양제로, 개에서 유방암·피부 편평세포암·GI 선암·항문낭 선암·비강 선암 등에 사용된다. 매우 좁은 치료 지수를 가지며, 수의과 종양 전문의 감독 하에만 사용해야 한다. 고양이에서는 어떠한 형태로도 절대 금기이며, 소량 노출로도 치명적이다. NIOSH 위험 약물로 분류되어 취급 시 적절한 PPE 착용이 필수적이다. 용량 의존적 골수억제, GI 독성, 신경독성(발작)이 주요 부작용이다.",
+    "indications": "【개】 유방암(사이클로포스파미드 및/또는 독소루비신 병용 AC/FAC 프로토콜), 피부 편평세포암, GI 선암, 항문낭 선암, 비강 선암, 중피종, 연조직 육종(수술 후 절개 부위 주사), 다양한 암종(카보플라틴 병용). 【말】 편평세포암, 흑색종, 육종(종양 내 주사 또는 국소 도포). 모든 수의학적 사용은 허가 외(extra-label).",
+    "client_info": "플루오로우라실은 항암(항종양) 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 동물이 약을 투여받은 날과 그 후 며칠 동안은 소변, 대변, 구토물 등 모든 체액을 일회용 장갑을 착용하고 처리하십시오. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. 피부에 바르는 경우 일회용 장갑을 착용하고 사용 후 즉시 손을 씻으십시오. 투여 부위에 접촉하지 않도록 주의하십시오. 플루오로우라실은 고양이에게 절대 사용해서는 안 됩니다. 골수 억제가 발생할 수 있으며, 치료 후 수 주 내에 가장 심하게 나타납니다. 출혈, 멍, 발열(감염 징후), 또는 동물이 쉽게 피로해하면 즉시 수의사에게 연락하십시오. 비정상적인 출혈, 멍, 우울증, 감염, 호흡 곤란, 배뇨 변화 등 독성 징후가 나타나면 즉시 보고하십시오. 이 약물은 신경계(발작, 경련)와 위장관(구토, 위장 장애)에 매우 독성이 강할 수 있습니다. NIOSH에서 위험 약물로 분류하고 있으므로 취급 시 개인 보호 장비 사용에 대해 수의사 또는 약사와 상담하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability data",
+      "Protein binding data",
+      "t_max data",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:19:44.920853+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,717 @@
+{
+  "id": "mirtazapine",
+  "drug_identity": {
+    "name_ko": "미르타자핀",
+    "name_en": "Mirtazapine",
+    "active_ingredient": "Mirtazapine",
+    "brand_names": [
+      "Remeron",
+      "Mirataz",
+      "Remeron SolTab"
+    ],
+    "allergy_class": null,
+    "class": "Antidepressant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "경구 정제 형태는 개와 고양이에서 식욕 촉진제 및 항구토제로 허가 외 사용됨. 경피 제형(Mirataz®)은 고양이 체중 감소 관리에 FDA 승인됨.",
+    "dosage_form": [
+      "Tab",
+      "Oint",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 7.5,
+        "unit": "mg"
+      },
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 45,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.75,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2D6",
+        "CYP1A2",
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "미르타자핀은 CYP2D6, CYP1A2, CYP3A4에 의해 대사되며, 8-수산화 후 포합, N-산화, 탈메틸화 후 포합 등의 경로를 거침. 고양이는 글루쿠론산 포합 능력이 제한되어 약물 제거가 느림. 미르타자핀은 이들 사이토크롬에 대한 억제 효과는 미미함."
+    },
+    "extra_information": "개(비글)에서 평균 반감기 6.17시간, 평균 청소율 1193 mL/kg/시간(20 mg/dog PO). 고양이에서 저용량(1.88 mg) 반감기 9.2시간, 고용량(3.75 mg) 반감기 15.9시간; 고양이에서 선형 약동학을 보이지 않음. CKD 고양이에서 평균 반감기 15.2시간, 48시간 간격 투여 권장. 고양이 간질환 시 최고 농도 도달 시간 지연(1시간→4시간), 반감기 연장(7시간→14시간). 경피 제형 고양이 생체이용률 약 65%, 반복 투여 시 최고 농도 도달 약 2시간, 반감기 21~27시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 종별 PK 데이터 일부 존재. 간 대사 주경로, 신장 배설 75%(인체 데이터). 고양이 간효소 상승 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "orthostatic hypotension",
+          "alpha-2 antagonism"
+        ],
+        "index": 1,
+        "evidence": "진정 효과(H1 길항), 기립성 저혈압(α1 길항), CNS 억제 가능성이 보고됨. 개에서 직접적인 뇌 독성 데이터는 없으나 약리 기전상 CNS 영향 있음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "thrombocytopenia",
+          "neutropenia",
+          "leukopenia"
+        ],
+        "index": 1,
+        "evidence": "인체에서 혈액 이상(혈구감소증, 호중구감소증, 혈소판감소증) 드물게 보고됨. 개에서 직접 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal impairment",
+          "renal elimination",
+          "dose reduction"
+        ],
+        "index": 1,
+        "evidence": "인체에서 신장 배설 75%, 신기능 저하 시 제거율 30~50% 감소. 개에서 신기능 저하 시 용량 감량 권고."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP2D6",
+          "CYP1A2",
+          "CYP3A4",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "간에서 다중 CYP 경로로 대사됨. 간기능 저하 시 청소율 최대 30% 감소(인체). 개에서 직접 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QT prolongation",
+          "tachycardia",
+          "orthostatic hypotension"
+        ],
+        "index": 1,
+        "evidence": "QT 간격 연장 보고됨. 기립성 저혈압 가능성. 개에서 직접 심장 독성 데이터는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "sedation",
+          "vocalization",
+          "agitation",
+          "ataxia",
+          "tremors",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 발성(56%), 흥분(31%), 비정상 보행/운동실조(16.7%), 진전(14.3%), 기면(10.7%) 등 CNS 관련 이상반응 다수 보고됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "blood dyscrasias"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 혈액 이상 직접 보고 없음. 인체 데이터에서 드물게 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "CKD",
+          "renal impairment",
+          "extended dosing interval",
+          "glucuronidation"
+        ],
+        "index": 1,
+        "evidence": "고양이는 글루쿠론산 포합 능력 제한으로 약물 제거 느림. CKD 고양이에서 반감기 15.2시간, 48시간 간격 투여 권장. 신기능 저하 시 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "liver enzyme elevation",
+          "hepatic disease",
+          "glucuronidation",
+          "prolonged half-life"
+        ],
+        "index": 1,
+        "evidence": "일부 고양이에서 간효소 상승 보고됨. 간질환 시 반감기 연장(7→14시간), 최고 농도 도달 지연. 글루쿠론산 포합 제한으로 간 부담 증가."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "tachycardia",
+          "QT prolongation",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 빈맥(10.7%), 고혈압 보고됨. QT 간격 연장 가능성 있음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 6.17,
+      "max": 27.0,
+      "mean": 15.2,
+      "species": "cat"
+    },
+    "f_percent": 65,
+    "protein_binding_percent": 85,
+    "evidence": "고양이 경피 제형 생체이용률 약 65%. 인체 경구 생체이용률 약 50%. 단백 결합률: 인체/토끼 약 85%, 마우스/랫드/개 약 70~72%. 고양이 저용량 반감기 9.2시간, 고용량 15.9시간, CKD 고양이 15.2시간, 경피 제형 21~27시간. 개 반감기 6.17시간. 인체 반감기 20~40시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 병용은 세로토닌 증후군 위험으로 중증도 3(금기) 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, methylene blue, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "contraindicated",
+        "14-day washout"
+      ],
+      "evidence": "MAOI와 병용 또는 14일 이내 사용은 세로토닌 증후군 위험으로 금기."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, fluvoxamine)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "미르타자핀과 병용 시 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "미르타자핀과 병용 시 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "미르타자핀과 병용 시 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Serotonergic Agents (e.g., buspirone, metoclopramide, ondansetron, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "미르타자핀과 병용 시 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Buprenorphine",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "미르타자핀과 병용 시 세로토닌 증후군 위험 증가 가능."
+    },
+    {
+      "drug": "Butorphanol",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "미르타자핀과 병용 시 세로토닌 증후군 위험 증가 가능."
+    },
+    {
+      "drug": "CNS Depressants (e.g., acepromazine, antihistamines, gabapentin)",
+      "severity": 2,
+      "keywords": [
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "미르타자핀과 병용 시 진정 및 CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Opioids (e.g., morphine)",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia",
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "미르타자핀과 병용 시 저나트륨혈증, 진정, CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam, midazolam)",
+      "severity": 1,
+      "keywords": [
+        "motor impairment",
+        "additive CNS effects"
+      ],
+      "evidence": "병용 시 미르타자핀 혈중 농도에 미치는 영향은 미미하나, 운동 기능 장애 가능성 있음."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased mirtazapine exposure",
+        "CYP inhibition"
+      ],
+      "evidence": "시메티딘은 미르타자핀 노출을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Clonidine",
+      "severity": 2,
+      "keywords": [
+        "blood pressure increase"
+      ],
+      "evidence": "미르타자핀과 병용 시 혈압 상승 가능."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "reduced efficacy"
+      ],
+      "evidence": "사이프로헵타딘은 미르타자핀의 효과를 상쇄할 수 있음."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 2,
+      "keywords": [
+        "hyponatremia"
+      ],
+      "evidence": "미르타자핀과 병용 시 저나트륨혈증 위험 증가."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "increased mirtazapine exposure",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "에리스로마이신은 미르타자핀 노출을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "increased mirtazapine exposure",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "케토코나졸은 미르타자핀 노출을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "prolonged prothrombin time",
+        "bleeding risk"
+      ],
+      "evidence": "미르타자핀과 병용 시 프로트롬빈 시간(PT) 연장 가능."
+    },
+    {
+      "drug": "Anticholinergic Medications",
+      "severity": 1,
+      "keywords": [
+        "additive anticholinergic effects"
+      ],
+      "evidence": "미르타자핀의 약한 항콜린 작용이 항콜린 약물과 상가 효과를 나타낼 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 3.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "식욕 촉진 및/또는 항구토 (허가 외)",
+          "value": "3.75 - 30",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "개 체중에 따라 용량 결정(mg/kg 아님); 최대 30 mg/dog/일 초과 금지",
+          "evidence": "일화적 용량 3.75~30 mg/dog PO q24h (체중에 따라 다름; mg/kg 아님). 또는 1.1~1.3 mg/kg PO q24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "식욕 촉진 및/또는 항구토 (허가 외, 대안 용량)",
+          "value": "1.1 - 1.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 30 mg/dog/일 초과 금지",
+          "evidence": "대안 용량: 1.1~1.3 mg/kg PO q24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항암 치료 유발 식욕부진",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "항암 치료 유발 식욕부진: 0.5 mg/kg PO q24h."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "체중 감소 관리 (FDA 승인 경피 제형)",
+          "value": "2",
+          "unit": "mg",
+          "route": "Top",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일 치료; 귀 내측 이개에 1.5인치 리본(약 2 mg/cat) 도포; 좌우 귀 교대 적용",
+          "evidence": "Mirataz® 경피 연고: 귀 내측 이개에 1.5인치 리본(약 2 mg/cat) q24h, 14일간."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "식욕 촉진 및/또는 항구토 - 건강한 고양이 (허가 외)",
+          "value": "1.88",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "7.5 mg 정제의 1/4 또는 15 mg 정제의 1/8 (mg/kg 아님)",
+          "evidence": "건강한 고양이: 1.88 mg/cat PO q24h (mg/kg 아님)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "식욕 촉진 및/또는 항구토 - 만성 신장 또는 간질환 고양이 (허가 외)",
+          "value": "1.88",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "7.5 mg 정제의 1/4 또는 15 mg 정제의 1/8 (mg/kg 아님); CKD 또는 간질환 시 48시간 간격",
+          "evidence": "CKD 또는 간질환 고양이: 1.88 mg/cat PO q48h (mg/kg 아님)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항암 치료 유발 식욕부진",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "q24~72h",
+          "evidence": "항암 치료 유발 식욕부진: 0.5 mg/kg PO q24~72h."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 약물 제거율 30~50% 감소(인체 데이터). CKD 고양이에서 48시간 간격 투여 권장. 신기능 저하 환자는 용량 감량 및 면밀한 모니터링 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 저하 시 청소율 최대 30% 감소(인체). 고양이 간질환 시 반감기 연장(7→14시간). 간질환 고양이에서 48시간 간격 투여 권장. 간질환 환자는 용량 감량 및 면밀한 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "미르타자핀 과민증",
+      "match_terms": [
+        "hypersensitivity to mirtazapine",
+        "mirtazapine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAOI 투여 후 14일 이내",
+      "match_terms": [
+        "MAOI",
+        "selegiline",
+        "amitraz",
+        "linezolid",
+        "methylene blue"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하 / 신부전",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 질환 / 뇌혈관 질환",
+      "match_terms": [
+        "cardiac disease",
+        "cerebrovascular disease",
+        "hypotension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액 이상 (백혈구감소증, 호중구감소증, 혈소판감소증)",
+      "match_terms": [
+        "leukopenia",
+        "neutropenia",
+        "thrombocytopenia",
+        "blood dyscrasia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "hyperglycemia"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요폐 / 전립선 비대 / 폐쇄각 녹내장 / 안압 상승 / 위장관 폐색",
+      "match_terms": [
+        "urinary retention",
+        "prostatic hypertrophy",
+        "closed-angle glaucoma",
+        "increased intraocular pressure",
+        "GI obstruction",
+        "ileus"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "중추 시냅스전 알파-2 수용체 길항 → 노르에피네프린 방출 증가; 5-HT2, 5-HT3, H1 수용체 길항 → 항구토, 식욕 촉진, 진정 효과; 말초 α1-아드레날린 수용체 및 무스카린 수용체 중등도 길항.",
+    "common_extra_effects": [
+      "진정/기면",
+      "식욕 촉진",
+      "항구토",
+      "기립성 저혈압",
+      "QT 간격 연장",
+      "혈액 이상(드물게)",
+      "저나트륨혈증(드물게)",
+      "항콜린 효과(약함)"
+    ],
+    "dog_mechanism": "개에서 위 배출 가속화 및 결장 통과 촉진 효과 확인됨(소장 통과에는 영향 없음).",
+    "dog_extra_effects": [
+      "위 배출 가속화",
+      "결장 통과 촉진"
+    ],
+    "cat_mechanism": "고양이에서 5-HT3 길항을 통한 항구토 효과 및 식욕 촉진 효과. 글루쿠론산 포합 능력 제한으로 약물 축적 가능성 있음.",
+    "cat_extra_effects": [
+      "발성(56%)",
+      "흥분(31%)",
+      "구토(26.2%)",
+      "비정상 보행/운동실조(16.7%)",
+      "안절부절(14.3%)",
+      "진전/떨림(14.3%)",
+      "과다 침 분비(13%)",
+      "빈호흡(11.9%)",
+      "빈맥(10.7%)",
+      "기면(10.7%)",
+      "간효소 상승",
+      "경피 제형 적용 부위 반응(홍반, 딱지, 잔류물, 약 10%)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 미르타자핀의 약동학 및 효능 데이터는 제한적임. 식욕 촉진 및 항구토 목적으로 허가 외 사용됨. 용량은 체중에 따라 3.75~30 mg/dog PO q24h (mg/kg 아님) 또는 1.1~1.3 mg/kg PO q24h. 최대 용량 30 mg/dog/일 초과 금지. 항암 치료 유발 식욕부진에는 0.5 mg/kg PO q24h 사용 가능. 세로토닌 증후군 가능성에 대한 약물 상호작용 확인 필수.",
+    "cat": "고양이에서 경피 제형(Mirataz®)은 체중 감소 관리에 FDA 승인됨. 경구 정제는 식욕 촉진 및 항구토 목적으로 허가 외 사용. 고양이는 글루쿠론산 포합 능력이 제한되어 약물 제거가 느리므로 연장된 투여 간격 필요. CKD 또는 간질환 고양이에서는 48시간 간격 투여 권장. 고용량(3.75 mg/cat)은 저용량(1.88 mg/cat)보다 행동 변화 등 이상반응이 더 많음. 간효소 모니터링 권장. 경피 제형 적용 후 2시간 동안 다른 동물 및 사람의 접촉 금지; 취급 시 장갑 착용 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 약동학 데이터 제한적. 세로토닌 증후군 가능성, MAOI 병용 금기. 심장 질환, 신기능 저하, 간질환 시 주의. 최대 용량 30 mg/dog/일 초과 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 글루쿠론산 포합 능력 제한으로 약물 축적 가능. CKD/간질환 시 48시간 간격 투여. 고용량 시 행동 변화 등 이상반응 증가. 간효소 모니터링 필요. 경피 제형 취급 시 장갑 착용 및 접촉 제한 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경피 연고: 25°C(77°F) 보관, 개봉 후 30일 이내 사용. 코팅 정제 및 구강 붕해정: 20~25°C(68~77°F) 보관(15~30°C 허용), 빛과 습기 차단. 구강 붕해정은 블리스터에서 꺼낸 즉시 사용, 보관 불가.",
+    "forms": [
+      "Mirtazapine Transdermal Ointment 100 mg/tube (5 g tube, 20 mg/g); Mirataz® (Rx)",
+      "Mirtazapine Oral Tablets 7.5 mg, 15 mg, 30 mg, 45 mg; Remeron®, generic (Rx)",
+      "Mirtazapine Orally Disintegrating Tablets 15 mg, 30 mg, 45 mg; Remeron SolTab®, generic (Rx)",
+      "Mirtazapine 10 mg/mL Oral Suspension (조제 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "미르타자핀은 테트라사이클릭 항우울제로, 고양이 체중 감소 관리에 경피 제형(Mirataz®)이 FDA 승인됨. 개와 고양이에서 식욕 촉진제 및 항구토제로 허가 외 사용됨. 주요 이상반응은 진정이며, 고양이에서 발성 및 애정 표현 증가가 나타날 수 있음. 세로토닌 증후군 위험이 있으므로 병용 약물 확인 필수. MAOI와의 병용 또는 14일 이내 사용은 절대 금기. 고양이는 글루쿠론산 포합 능력 제한으로 CKD/간질환 시 48시간 간격 투여 권장. 경피 제형 취급 시 장갑 착용 필수.",
+    "indications": "【승인 적응증】 고양이 체중 감소 관리 (경피 제형, FDA 승인). 【허가 외 적응증】 개와 고양이에서 식욕 촉진 및 항구토 (만성 신장 질환 포함); 항암 치료 유발 오심/구토 및 식욕부진.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토가 있으면 소량의 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하세요. 고양이에서 흔한 부작용으로 발성, 행동 변화, 진전/떨림이 있을 수 있습니다. 과도한 졸음이나 발성이 나타나면 수의사에게 알려주세요. 경피 제형을 사용할 때는 반드시 장갑을 착용하고, 귀 이개 안쪽(귀 안쪽 피부)에 바르세요(귀 안으로 넣지 마세요). 약 바른 후 손을 비누와 물로 씻으세요. 투여 후 2시간 동안 다른 사람이나 동물이 처치 부위에 접촉하지 않도록 하세요. 구강 붕해정을 사용할 경우, 손을 건조하게 한 후 정제를 혀 아래에 놓고 입을 몇 초간 다물어 녹도록 하세요. 녹은 후 물을 주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific concerns noted)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "cyp_profile.substrates (veterinary-specific CYP data)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog.brain.index",
+      "organ_burden_logic.dog.blood.index",
+      "organ_burden_logic.dog.kidney.index",
+      "organ_burden_logic.dog.liver.index",
+      "organ_burden_logic.dog.heart.index",
+      "genetic_sensitivity.has_genetic_risk (breed-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/26.jsonl",
+    "extracted_at": "2026-03-10T21:24:34.392835+00:00",
+    "reviewer": null
+  }
+}

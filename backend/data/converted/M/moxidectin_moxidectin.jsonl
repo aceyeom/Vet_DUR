@@ -1,0 +1,643 @@
+{
+  "id": "moxidectin",
+  "drug_identity": {
+    "name_ko": "목시덱틴",
+    "name_en": "Moxidectin",
+    "active_ingredient": "Moxidectin",
+    "brand_names": [
+      "Cydectin",
+      "ProHeart 6",
+      "ProHeart 12",
+      "Quest",
+      "Quest Plus",
+      "Advantage Multi",
+      "Bravecto Plus",
+      "Simparica Trio",
+      "Advocate",
+      "Barrier",
+      "ComboCare",
+      "Coraxis",
+      "Imoxi",
+      "Midamox",
+      "Parasedge Multi"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj",
+      "Topical",
+      "Oral Liquid",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 10.0,
+        "unit": "%"
+      },
+      {
+        "value": 2.5,
+        "unit": "%"
+      },
+      {
+        "value": 1.0,
+        "unit": "%"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 20.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "대동물(말, 소)에서는 간에서 대사되어 담즙으로 배설됨. 소동물(개, 고양이)에서의 대사 경로는 알려져 있지 않음."
+    },
+    "extra_information": "개와 고양이에서 목시덱틴의 대사는 알려져 있지 않음. 지용성이 이버멕틴의 100배로 분포용적(Vd)이 매우 높을 것으로 예상됨. 체지방이 매우 낮은 동물(신생아, 악액질 동물)에서는 혈청 농도가 정상 체형 동물보다 훨씬 높을 수 있음. 고양이에서 국소 도포 후 최고 혈중 농도 도달 시간은 1~5일이며, 소실 반감기는 20~30일임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이에서 대사 경로가 불명확하여 대동물 데이터를 참고함. 간 대사/담즙 배설 확인됨(대동물). 신독성 직접 언급 없음. 신경계 독성(고용량) 및 간효소 상승 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "seizures",
+          "CNS depression",
+          "tremors",
+          "coma"
+        ],
+        "index": 1,
+        "evidence": "고용량 투여 시 신경독성(운동실조, 경련, 혼수) 보고됨. MDR1 돌연변이 개에서 위험 증가. 혈뇌장벽 통과 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "anaphylaxis",
+          "autoimmune hemolytic disease",
+          "hypoproteinemia",
+          "hyperbilirubinemia"
+        ],
+        "index": 2,
+        "evidence": "ProHeart 6 오염 사건 당시 자가면역성 용혈성 빈혈, 저단백혈증, 고빌리루빈혈증 보고됨(오염 물질에 의한 것으로 추정)."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated BUN",
+          "elevated creatinine"
+        ],
+        "index": 3,
+        "evidence": "BUN 및 크레아티닌 상승이 드문 이상반응으로 보고됨. 신기능 장애 개에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatopathy",
+          "liver disease",
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "간효소 상승 및 간병증이 드문 이상반응으로 보고됨. 간기능 장애 개에서 주의 사용 권고. 대동물에서 간 대사 확인됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "ataxia",
+          "tremors",
+          "seizures",
+          "neurologic adverse effects"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 국소 도포 과다 투여 시 운동실조, 진전 보고됨. Bravecto Plus(플루라라너 포함)는 신경계 이상반응과 관련됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성에 대한 직접적인 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 간 대사 경로는 불명확하나 대동물 데이터 기반으로 간 부담 가능성 있음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 240.0,
+    "half_life_hr": {
+      "min": 480.0,
+      "max": 720.0,
+      "mean": 600.0,
+      "species": "cat"
+    },
+    "f_percent": 11,
+    "protein_binding_percent": null,
+    "evidence": "개(주사제): 투여 후 7~14일에 최고 혈중 농도 도달, 반감기 50일(1200시간). 고양이(국소 도포): 최고 혈중 농도 도달 1~5일, 소실 반감기 20~30일. 알파카: SC 투여 후 반감기 약 12일, 경구 생체이용률 SC 대비 11%. 반감기 값은 고양이 기준(20~30일)으로 설정함."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 목시덱틴에 대한 특이적 약물상호작용은 보고되지 않았으며, 관련 화합물인 이버멕틴의 상호작용 데이터를 기반으로 함.",
+  "drug_interactions": [
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "potentiation"
+      ],
+      "evidence": "목시덱틴이 벤조디아제핀의 효과를 증강시킬 수 있음; 사람에서 병용 투여 비권장."
+    },
+    {
+      "drug": "P-Glycoprotein Inhibitors (Amiodarone, Carvedilol, Clarithromycin, Cyclosporine, Diltiazem, Erythromycin, Itraconazole, Ketoconazole, Quinidine, Spinosad, Spironolactone, Tamoxifen, Verapamil)",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1 mutation",
+        "neurotoxicity"
+      ],
+      "evidence": "P-당단백질 억제제와 병용 시 주의 필요. MDR1 돌연변이 위험 견종(콜리, 오스트레일리안 셰퍼드, 셸티, 장모 휘핏 등)에서는 신경독성 위험 증가."
+    },
+    {
+      "drug": "Vaccines",
+      "severity": 2,
+      "keywords": [
+        "anaphylaxis",
+        "immune-mediated reaction"
+      ],
+      "evidence": "ProHeart 6 또는 ProHeart 12와 백신 동시 투여 시 아나필락시스 및 기타 면역매개 반응 위험 증가 보고됨."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 125.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 예방 (ProHeart 6, 6개월 지속형 주사제)",
+          "value": "0.17",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "6개월마다 투여 (0.05 mL/kg 구성된 현탁액)",
+          "evidence": "FDA 승인 라벨 용량. ProHeart 6."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 예방 (ProHeart 12, 12개월 지속형 주사제)",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "12개월마다 투여 (0.05 mL/kg 구성된 현탁액)",
+          "evidence": "FDA 승인 라벨 용량. ProHeart 12."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 예방, 구충 (Advantage Multi, 목시덱틴 2.5%/이미다클로프리드 10% 국소 도포)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 국소 도포",
+          "evidence": "FDA 승인 라벨 용량. Advantage Multi for Dogs."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 예방, 벼룩/진드기 구제, 구충 (Simparica Trio, 목시덱틴/피란텔/사롤라너 경구 씹는 정제)",
+          "value": "24",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 경구 투여",
+          "evidence": "FDA 승인 라벨 용량. Simparica Trio."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 모낭충증 (extra-label, 경구)",
+          "value": "0.2 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "MDR1 돌연변이 검사 후 사용 권장. 첫날 50 µg/kg 시험 용량으로 시작하여 매일 50 µg/kg씩 증량. 미국에서는 경구 제형 미판매.",
+          "evidence": "Extra-label 용량. 경구 제형 미국 내 미판매."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개 모낭충증 (extra-label, Advantage Multi 국소 도포 주 1회)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 라벨 권장량에 따라 주 1회 도포 (경증 및 유년기 발병 모낭충증)",
+          "evidence": "Extra-label 용량. Advantage Multi for Dogs 주 1회 도포."
+        },
+        {
+          "logic_type": "linear",
+          "context": "안구 텔라지아 칼리파에다 (extra-label, Advantage Multi 국소 도포)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 투여 후 28일 후 반복 투여",
+          "evidence": "Extra-label 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 예방, 구충, 귀 진드기 치료 (Advantage Multi for Cats, 목시덱틴 1%/이미다클로프리드 10% 국소 도포)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 국소 도포",
+          "evidence": "FDA 승인 라벨 용량. Advantage Multi for Cats."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심장사상충 예방, 구충, 벼룩/진드기 구제 (Bravecto Plus, 목시덱틴/플루라라너 국소 도포)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2개월마다 1회 국소 도포",
+          "evidence": "FDA 승인 라벨 용량. Bravecto Plus for Cats."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 폐충증 (Aelurostrongylus abstrusus) (extra-label, Advantage Multi for Cats 국소 도포)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 간격으로 1~3회 도포 또는 월 1회 도포",
+          "evidence": "Extra-label 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고양이 옴 (Notoedric mange) (extra-label, Advantage Multi for Cats 국소 도포)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중별 라벨 권장량에 따라 투여",
+          "evidence": "Extra-label 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애 개에서 주의 사용 권고됨(BUN, 크레아티닌 상승이 드문 이상반응으로 보고됨). 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 개에서 주의 사용 권고됨(간효소 상승, 간병증이 드문 이상반응으로 보고됨). 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to moxidectin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "쇠약, 병약, 저체중 동물",
+      "match_terms": [
+        "debilitated",
+        "underweight",
+        "cachectic",
+        "poor body condition"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "MDR1 돌연변이 (고용량 투여 시)",
+      "match_terms": [
+        "MDR1 mutation",
+        "ABCB1-1delta",
+        "collie",
+        "Australian shepherd"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경련 또는 신경계 질환 병력 (Simparica Trio 또는 Bravecto Plus 사용 시)",
+      "match_terms": [
+        "seizure history",
+        "neurologic disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 알레르기 질환 (ProHeart 주사제 사용 시)",
+      "match_terms": [
+        "food allergy",
+        "atopy",
+        "flea allergy dermatitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Australian Shepherd",
+      "Shetland Sheepdog",
+      "Long-haired Whippet",
+      "White feet breeds"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "라벨 용량(경구 최대 3 µg/kg/월, 국소 2500 µg/kg/월)에서는 MDR1 돌연변이 개에서도 안전한 것으로 확인됨. 고용량 투여 시 MDR1 돌연변이 개에서 신경독성 위험 증가. P-당단백질 억제제 병용 시 위험 증가."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "밀베마이신 계열 항기생충제로, 선충 및 절지동물의 신경계에서 글루타메이트 개폐 염화물 이온 채널에 결합하여 막 투과성을 증가시키고 신경세포(선충) 및 근육세포(절지동물)의 전기적 활성을 억제하여 마비 및 사멸을 유발함. 또한 시냅스 전 뉴런에서 GABA 방출을 증강시켜 억제성 신경전달을 강화함.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "무기력/기면",
+      "식욕부진",
+      "운동실조",
+      "신경과민",
+      "근육 진전",
+      "경련",
+      "아나필락시스",
+      "주사 부위 반응",
+      "간효소 상승",
+      "BUN/크레아티닌 상승"
+    ],
+    "dog_mechanism": "개에서 심장사상충 예방, 구충, 외부기생충 구제에 사용됨. MDR1 돌연변이 개에서 고용량 투여 시 혈뇌장벽 통과로 신경독성 위험 증가.",
+    "dog_extra_effects": [
+      "무기력",
+      "구토",
+      "운동실조",
+      "식욕부진",
+      "설사",
+      "신경과민",
+      "근육 쇠약",
+      "갈증 증가",
+      "소양증",
+      "아나필락시스",
+      "경련",
+      "간병증",
+      "자가면역성 용혈성 빈혈 (오염 제품 관련)",
+      "저단백혈증",
+      "고빌리루빈혈증"
+    ],
+    "cat_mechanism": "고양이에서 심장사상충 예방, 구충, 귀 진드기, 벼룩 구제에 사용됨. 국소 도포 후 반감기 20~30일.",
+    "cat_extra_effects": [
+      "행동 변화 (흥분, 과도한 그루밍, 숨기, 빙빙 돌기)",
+      "불편감 (긁기, 비비기, 머리 흔들기)",
+      "무기력",
+      "과다 침 분비",
+      "다음증",
+      "기침/구역질",
+      "발열",
+      "빈호흡",
+      "식욕 감소",
+      "구토",
+      "혈변",
+      "과잉행동",
+      "운동실조",
+      "진전",
+      "도포 부위 반응 (탈모, 소양증, 병변, 홍반)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 심장사상충 예방 및 구충제. ProHeart 6(6개월) 및 ProHeart 12(12개월) 지속형 주사제, Advantage Multi(월 1회 국소 도포), Simparica Trio(월 1회 경구) 제형 사용 가능. 라벨 용량에서는 MDR1 돌연변이 개에서도 안전하나 고용량 투여 시 신경독성 위험. ProHeart 투여 전 RiskMAP 교육 이수 필요. 모낭충증 치료에 extra-label로 사용 가능하나 이소옥사졸린 계열이 현재 우선 권장됨.",
+    "cat": "고양이에서 FDA 승인된 심장사상충 예방, 구충, 귀 진드기, 벼룩/진드기 구제제. Advantage Multi for Cats(월 1회 국소 도포) 및 Bravecto Plus(2개월마다 국소 도포) 제형 사용 가능. 9주 미만 또는 0.91 kg 미만 고양이에는 사용 금지. 국소 도포 제품 경구 섭취 시 과다 침 분비, 진전, 구토 등 이상반응 발생 가능. 고양이 폐충증 및 옴 치료에 extra-label로 사용 가능."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1 돌연변이 위험 견종에서 고용량 투여 시 신경독성 위험. 기존 알레르기 질환, 신/간기능 장애, 심장사상충 양성 개에서 주의 사용. ProHeart 투여 시 백신과 동시 투여 주의. 투여 후 30분 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "9주 미만 또는 0.91 kg 미만 고양이에 사용 금지. 국소 도포 제품 경구 섭취 방지 필요. Bravecto Plus(플루라라너 포함) 사용 시 신경계 질환 병력 고양이에서 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "지속형 주사제(ProHeart): 25°C 이하 보관, 빛 노출 최소화. 조제 후 ProHeart 6은 냉장(2~8°C) 4주, ProHeart 12는 냉장(2~8°C) 8주 안정. 소동물용 국소 도포액: 4~25°C 보관, 과도한 열/냉기 피함. 말용 경구 겔: 실온(15~30°C) 보관, 동결 금지. 소용 국소 도포액: 25°C 이하 보관. 양용 주사제/경구 드렌치: 25°C 이하, 빛 차단 보관.",
+    "forms": [
+      "Moxidectin 10% 지속형 주사제 (ProHeart 6, ProHeart 12)",
+      "Moxidectin 2.5%/이미다클로프리드 10% 국소 도포액 (Advantage Multi for Dogs)",
+      "Moxidectin 1%/이미다클로프리드 10% 국소 도포액 (Advantage Multi for Cats)",
+      "Moxidectin 1.4%/플루라라너 28% 국소 도포액 (Bravecto Plus for Cats)",
+      "Moxidectin/피란텔/사롤라너 경구 씹는 정제 (Simparica Trio)",
+      "Moxidectin 0.5% 국소 도포액 (Cydectin Pour-On for Cattle)",
+      "Moxidectin 10 mg/mL 주사액 (Cydectin Injectable for Cattle)",
+      "Moxidectin 1 mg/mL 경구 드렌치 (Cydectin Oral Drench for Sheep)",
+      "Moxidectin 20 mg/mL 경구 겔 (Quest for Horses)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "목시덱틴은 밀베마이신 계열의 광범위 항기생충제로, 개·고양이·말·소·양·페럿에 FDA 승인됨. 개에서는 ProHeart 6(6개월) 및 ProHeart 12(12개월) 지속형 주사제, Advantage Multi(월 1회 국소), Simparica Trio(월 1회 경구) 제형이 승인됨. 라벨 용량에서는 MDR1 돌연변이 개에서도 안전하나 고용량 투여 시 신경독성 위험. ProHeart 투여 전 RiskMAP 교육 이수 필수. 지용성이 매우 높아 체지방 감소 동물에서 혈중 농도 상승 위험. P-당단백질 억제제 병용 시 주의 필요.",
+    "indications": "개: 심장사상충 예방, 구충(구충, 편충, 회충), 벼룩/진드기 구제, 옴, 모낭충증(extra-label). 고양이: 심장사상충 예방, 구충, 귀 진드기, 벼룩/진드기 구제, 폐충증(extra-label), 옴(extra-label). 말: 위장관 기생충(대형/소형 원충, 회충, 요충, 위저충, 봇파리 유충 등) 구제. 소: 위장관 선충, 폐충, 소 피부기생충(진드기, 이, 뿔파리) 구제. 양: 위장관 선충 구제.",
+    "client_info": "ProHeart 주사제를 맞은 경우, 수의사가 FDA 요구 RiskMAP 프로그램에 따라 안내를 제공합니다. 투여 후 24시간 동안 반려동물을 주의 깊게 관찰하세요. 국소 도포 제품은 자극된 피부에 바르지 마세요. 도포 후 30분(Advantage Multi) ~ 2시간(Bravecto Plus) 동안 어린이가 접촉하지 않도록 하세요. 도포 후 30분간 반려동물이 도포 부위를 핥지 못하도록 하고, 다른 반려동물과 분리하세요. 제품을 삼킨 경우 우울, 침 흘림, 동공 확대, 운동 실조, 헐떡임, 근육 진전 등 심각한 부작용이 발생할 수 있습니다. 도포 후 손을 깨끗이 씻으세요. 목시덱틴은 수생 생물에 독성이 있으므로 수계 오염을 방지하세요. 국소 도포 제품은 인화성이 있으므로 화기 근처에서 사용하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile (소동물)",
+      "Protein binding data",
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Oral bioavailability in dogs and cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/27.jsonl",
+    "extracted_at": "2026-03-10T21:39:59.699643+00:00",
+    "reviewer": null
+  }
+}

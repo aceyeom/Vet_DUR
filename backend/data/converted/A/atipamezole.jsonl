@@ -1,0 +1,500 @@
+{
+  "id": "atipamezole",
+  "drug_identity": {
+    "name_ko": "아티파메졸",
+    "name_en": "Atipamezole",
+    "active_ingredient": "Atipamezole hydrochloride",
+    "brand_names": [
+      "Antisedan",
+      "Revertidine"
+    ],
+    "allergy_class": null,
+    "class": "Reversal Agent",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아티파메졸은 간에서 대사되어 소변으로 배설되는 화합물로 전환됨. CYP 관련 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개에서 IM 투여 후 약 10분 이내에 최고 혈장 농도에 도달함. 평균 혈장 소실 반감기는 약 2~3시간. 말에서는 설하 데토미딘 겔 투여 후 평균 청소율 25 mL/kg/min, 반감기 53분."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 종별 수의학적 PK 데이터가 제한적이므로 임상 보고 및 부작용 정보를 기반으로 평가함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "excitation",
+          "tremors",
+          "sedation reversal"
+        ],
+        "index": 1,
+        "evidence": "진정 및 진통 효과를 역전시키며, 흥분·떨림 등 CNS 관련 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hypotension",
+          "hypertension",
+          "blood pressure fluctuation"
+        ],
+        "index": 1,
+        "evidence": "일시적인 혈압 변동(저혈압 후 고혈압)이 보고됨. 과다 투여 시 공막 혈관 확장 관찰."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "urine elimination"
+        ],
+        "index": 0,
+        "evidence": "대사산물이 소변으로 배설되나, 신독성에 대한 직접적 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "ALT elevation"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사됨. 과다 투여 시 혈청 ALT 및 크레아틴 키나제 상승이 보고됨."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "heart rate increase",
+          "blood pressure"
+        ],
+        "index": 1,
+        "evidence": "알파-2 길항 작용으로 심박수 및 호흡수 증가, 혈압 변동이 나타날 수 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "excitation",
+          "sedation reversal",
+          "tremors"
+        ],
+        "index": 1,
+        "evidence": "진정 역전 시 흥분 및 떨림이 나타날 수 있음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "severe arterial hypotension"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 심각한 동맥 저혈압이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 관련 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 0,
+        "evidence": "간 대사 경로는 개와 유사하나 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "heart rate increase",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "심박수 증가 및 심각한 저혈압 위험이 고양이에서 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.17,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 3.0,
+      "mean": 2.5,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개에서 IM 투여 후 약 10분(≈0.17시간) 이내 최고 혈장 농도 도달. 평균 반감기 2~3시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-2-Adrenergic Agonists (amitraz, brimonidine, clonidine, detomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "competitive antagonism",
+        "reversal of sedation",
+        "reversal of analgesia"
+      ],
+      "evidence": "Atipamezole competitively blocks alpha-2 receptors, reducing toxic or therapeutic effects of alpha-2 agonists. This is the intended pharmacological action when used as a reversal agent."
+    },
+    {
+      "drug": "Alpha-1-Adrenergic Antagonists (prazosin)",
+      "severity": 1,
+      "keywords": [
+        "alpha-1 partial blockade",
+        "reduced prazosin effect"
+      ],
+      "evidence": "Atipamezole is relatively specific for alpha-2 receptors but can partially block alpha-1 receptors at high doses, potentially reducing the effects of prazosin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "IV 또는 IM 덱스메데토미딘/메데토미딘 역전 (FDA 승인 라벨 용량 - IV 투여 역전)",
+          "value": "3750",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단위 주의: µg/m² (NOT µg/kg). IV 투여된 덱스메데토미딘 또는 메데토미딘 역전 시 사용.",
+          "evidence": "FDA 승인 라벨 용량. 3750 µg/m² IM."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "IM 덱스메데토미딘/메데토미딘 역전 (FDA 승인 라벨 용량 - IM 투여 역전)",
+          "value": "5000",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단위 주의: µg/m² (NOT µg/kg). IM 투여된 덱스메데토미딘 또는 메데토미딘 역전 시 사용.",
+          "evidence": "FDA 승인 라벨 용량. 5000 µg/m² IM."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "CPR 중 알파-2 작용제 역전 (extra-label)",
+          "value": "100",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "덱스메데토미딘 10 µg/kg 기준 용량. 더 높은 용량 투여 시 비례하여 증량.",
+          "evidence": "Extra-label. CPR 프로토콜 기반."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "경구 점막 알파-2 작용제 역전 - 데토미딘 버컬 겔 (extra-label)",
+          "value": "100",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "데토미딘 버컬 겔 투여 150분 후 투여 시 약 6~9분 내 역전 효과.",
+          "evidence": "Extra-label. 실험적 조건 하 보고."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "경구 점막 덱스메데토미딘 역전 (extra-label, 증례 보고)",
+          "value": "0.04 - 0.16",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.16,
+          "duration_note": "2마리 개 증례 보고 기반.",
+          "evidence": "Extra-label. 증례 보고."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "아미트라즈 독성 역전 (extra-label)",
+          "value": "50",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "q4h",
+          "max_dose_mg_kg": null,
+          "duration_note": "아미트라즈의 반감기가 아티파메졸보다 길어 4~6시간마다 반복 투여 필요할 수 있음.",
+          "evidence": "Extra-label."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "메데토미딘 역전 - 투여 용량 기반 (extra-label)",
+          "value": "equal volume to medetomidine administered",
+          "unit": "ml/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여된 메데토미딘 용량과 동일한 용량(mL)으로 IM 투여.",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "CPR 중 덱스메데토미딘/메데토미딘 역전 (extra-label)",
+          "value": "100",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "덱스메데토미딘 10 µg/kg 기준. 더 높은 용량 투여 시 비례하여 증량.",
+          "evidence": "Extra-label. CPR 프로토콜 기반."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "덱스메데토미딘 25 µg/kg 다중 진통 프로토콜 역전 (extra-label)",
+          "value": "125",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label. 다중 진통 프로토콜 연구 기반."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "메데토미딘 80 µg/kg 역전 (extra-label)",
+          "value": "200",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "덱스메데토미딘 지속 주입(CRI) 역전 (extra-label)",
+          "value": "15 - 30",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "덱스메데토미딘 CRI 중단 시 투여.",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "구토 유도 목적 자일라진 역전 (extra-label)",
+          "value": "25 - 50",
+          "unit": "mcg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV 투여 시 천천히 주입.",
+          "evidence": "Extra-label."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 간에서 대사되므로 중증 간질환 시 주의가 필요할 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "아티파메졸 과민증",
+      "match_terms": [
+        "hypersensitivity to atipamezole",
+        "atipamezole allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "breeding animals"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "파충류에서 정맥 투여",
+      "match_terms": [
+        "reptile IV administration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알파-2 아드레날린 수용체를 경쟁적으로 차단하여 알파-2 작용제(덱스메데토미딘, 메데토미딘 등)의 효과를 역전시킴.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "과다 침 분비",
+      "떨림",
+      "흥분 또는 불안",
+      "일시적 혈압 변동(저혈압 후 고혈압)",
+      "호흡수 증가",
+      "심박수 증가"
+    ],
+    "dog_mechanism": "알파-2 수용체 경쟁적 길항을 통해 진정, 혈압 저하, 서맥, 진통 효과를 역전시킴. 자일라진의 이뇨 작용도 길항함.",
+    "dog_extra_effects": [
+      "과다 투여 시 헐떡임, 흥분, 떨림, 구토, 묽은 변",
+      "공막 혈관 확장",
+      "주사 부위 근육 손상",
+      "혈청 ALT 및 크레아틴 키나제 상승"
+    ],
+    "cat_mechanism": "알파-2 수용체 경쟁적 길항. 메데토미딘 유발 눈물 분비 감소를 투여 15분 후 역전시킴.",
+    "cat_extra_effects": [
+      "심각한 동맥 저혈압"
+    ]
+  },
+  "species_notes": {
+    "dog": "FDA 승인 역전제로 덱스메데토미딘 및 메데토미딘에 대해 사용됨. 라벨 용량은 µg/m²(체표면적) 단위로 표기되므로 µg/kg와 혼동하지 않도록 주의. 아미트라즈 독성 역전 시 아미트라즈의 반감기가 더 길어 반복 투여가 필요할 수 있음. 역전 후 진통이 소실되므로 비알파-2 계열 진통제(예: 오피오이드) 사전 투여를 고려해야 함.",
+    "cat": "고양이에서는 extra-label 사용. 심각한 동맥 저혈압이 보고되어 있으므로 혈압 모니터링이 필수적임. 역전 후 진통 소실에 대비한 대체 진통제 준비가 필요함. 자일라진 구토 유도 역전 시 IV 투여는 천천히 시행해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "역전이 빠르게 일어날 수 있어 동물이 진정 및 진통에서 깨어나면서 불안하거나 공격적인 행동을 보일 수 있음. 낙상 방지 조치 필요. 알파-2 작용제의 효과가 아티파메졸보다 오래 지속될 수 있어 반복 투여가 필요할 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 심각한 동맥 저혈압이 보고됨. 혈압 및 심박수 모니터링 필수. 역전 후 진통 소실에 대비한 대체 진통제 준비 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~30°C(59°F~86°F) 실온 보관, 빛 차단. 첫 바이알 개봉 후 90일 이내 사용.",
+    "forms": [
+      "Atipamezole HCl 주사액 5 mg/mL, 10 mL 다회 투여 바이알"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아티파메졸은 알파-2 아드레날린 작용제(덱스메데토미딘, 메데토미딘, 자일라진 등)의 역전제로, 개에서 FDA 승인을 받은 수의용 약물입니다. 라벨 용량은 µg/m²(체표면적) 단위로 표기되므로 µg/kg와 혼동하지 않도록 주의가 필요합니다. 역전 효과가 알파-2 작용제보다 먼저 소실될 수 있어 반복 투여가 필요할 수 있습니다. 고양이에서 심각한 동맥 저혈압이 보고되어 있으므로 주의가 필요합니다.",
+    "indications": "개에서 덱스메데토미딘 및 메데토미딘 역전(FDA 승인). Extra-label: 고양이, 말, 소, 양/염소, 낙타류, 조류, 토끼/설치류, 파충류에서 다양한 알파-2 작용제(아미트라즈, 데토미딘, 자일라진 포함) 역전. CPR 중 알파-2 작용제 역전. 아미트라즈 독성 치료.",
+    "client_info": "이 약물은 반드시 수의사 또는 수의 전문가에 의해서만 투여되어야 합니다. 투여 후 구토, 설사, 과다 침 분비, 흥분, 떨림이 나타날 수 있습니다. 부작용이 심하거나 동물병원 퇴원 후에도 지속된다면 즉시 담당 수의사에게 연락하십시오. 역전 후 동물이 갑자기 깨어나면서 불안하거나 공격적인 행동을 보일 수 있으므로 주의하여 관찰하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Oral bioavailability",
+      "Protein binding",
+      "Onset time (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/49.jsonl",
+    "extracted_at": "2026-03-11T04:25:02.355598+00:00",
+    "reviewer": null
+  }
+}

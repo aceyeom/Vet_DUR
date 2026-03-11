@@ -1,0 +1,523 @@
+{
+  "id": "cefuroxime",
+  "drug_identity": {
+    "name_ko": "세푸록심",
+    "name_en": "Cefuroxime",
+    "active_ingredient": "Cefuroxime",
+    "brand_names": [
+      "Ceftin",
+      "Zinacef"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 소동물에서 1세대 세팔로스포린 내성 감염 또는 수술 예방적 항생제로 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 750,
+        "unit": "mg"
+      },
+      {
+        "value": 1500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세푸록심은 주로 신장을 통해 변화 없이 소변으로 배설된다. 간 대사는 최소한이며, CYP 효소 관여에 대한 정보는 Plumb's에 기재되어 있지 않다."
+    },
+    "extra_information": "개에서 IV 투여 후 빠르게 분포되며 분포용적은 약 0.49 L/kg이다. IM 투여 시 소실 반감기 약 1.13시간, 생체이용률 약 80%, 최고혈장농도 23 µg/mL. SC 투여 시 소실 반감기 약 1.04시간, 생체이용률 약 77%, 최고혈장농도 15.4 µg/mL. 청소율은 두 경로 모두 0.34 L/kg/hour."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개에서 독성 연구 및 PK 데이터 존재. 고양이 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS penetration with inflamed meninges",
+          "seizures (overdose)"
+        ],
+        "index": 1,
+        "evidence": "뇌수막 염증 시 CNS 침투 가능. 과량 투여 시 경련 보고(사람). 일반 용량에서는 CNS 부담 낮음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neutrophil reduction",
+          "red blood cell reduction",
+          "prolonged prothrombin time",
+          "thrombocytopenia",
+          "pancytopenia"
+        ],
+        "index": 2,
+        "evidence": "고용량(1600 mg/kg/day) 독성 연구에서 호중구 및 적혈구 경미한 감소, 프로트롬빈 시간 연장 관찰. 임상 용량에서는 드묾."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal excretion",
+          "nephrotoxicity (aminoglycosides)",
+          "interstitial nephritis",
+          "renal impairment dose adjustment"
+        ],
+        "index": 3,
+        "evidence": "주로 신장으로 배설되며, 신기능 저하 시 용량 조절 권장(사람). 아미노글리코사이드 병용 시 신독성 위험 증가. 간질성 신염 드물게 보고."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사 최소. 간 독성 관련 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성 관련 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS penetration with inflamed meninges"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 개 및 사람 데이터 외삽."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neutrophil reduction",
+          "prolonged prothrombin time"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 개 독성 연구 결과 외삽."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal excretion",
+          "nephrotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 신장 배설 경로 동일하게 적용."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 간 독성 관련 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 심장 독성 관련 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 1.04,
+      "max": 1.13,
+      "mean": 1.12,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": null,
+    "evidence": "개에서 IM 투여 시 생체이용률 약 80%, SC 투여 시 약 77%. 소실 반감기 1.04–1.13시간. 사람에서 경구 생체이용률 37%(공복)–52%(식후), 최고혈장농도 도달 시간 2–3시간. 사람 혈장 단백 결합률 35–50%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (e.g., gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "synergistic antibacterial"
+      ],
+      "evidence": "Potential for increased nephrotoxicity with concurrent use; however, may have synergistic/additive activity against gram-negative bacteria (Enterobacteriaceae). Monitor renal function."
+    },
+    {
+      "drug": "Antacids (Aluminum-, Calcium-, or Magnesium-Containing)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption",
+        "oral bioavailability"
+      ],
+      "evidence": "Antacids may decrease serum levels of oral cefuroxime. Separate doses by 1 to 2 hours."
+    },
+    {
+      "drug": "H2-Receptor Antagonists (e.g., famotidine, ranitidine)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "oral bioavailability"
+      ],
+      "evidence": "H2 antagonists may significantly decrease absorption of cefuroxime. Concurrent use is not recommended."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (e.g., amphotericin B, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concurrent use with cephalosporins could potentially cause additive nephrotoxicity. Use cautiously and monitor renal function closely."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "reduced renal excretion",
+        "increased drug levels"
+      ],
+      "evidence": "Probenecid reduces renal excretion of cefuroxime, potentially increasing plasma concentrations."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (e.g., omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "oral bioavailability"
+      ],
+      "evidence": "Cefuroxime absorption may be significantly decreased by PPIs. Concurrent use is not recommended."
+    },
+    {
+      "drug": "Sodium Bicarbonate",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Cefuroxime absorption may be decreased. Separate doses by 1 to 2 hours."
+    },
+    {
+      "drug": "Vitamin K Antagonists (e.g., warfarin)",
+      "severity": 2,
+      "keywords": [
+        "enhanced anticoagulation",
+        "bleeding risk"
+      ],
+      "evidence": "Cephalosporins may enhance the anticoagulant effects of vitamin K antagonists. Monitor coagulation parameters."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (경구, 오프라벨, 일화적 보고)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응에 따라 결정",
+          "evidence": "일화적 보고 기반 (Plumb's 오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염, MIC ≤1 µg/mL (소규모 PK 연구 기반, 오프라벨)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "MIC ≤1 µg/mL인 균에 적용",
+          "evidence": "소규모 PK 연구 기반 (Plumb's 오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염, MIC ≤4 µg/mL (소규모 PK 연구 기반, 오프라벨)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "MIC ≤4 µg/mL인 균에 적용",
+          "evidence": "소규모 PK 연구 기반 (Plumb's 오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염, MIC ≤4 µg/mL (소규모 PK 연구 기반, 오프라벨)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "MIC ≤4 µg/mL인 균에 적용",
+          "evidence": "소규모 PK 연구 기반 (Plumb's 오프라벨)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 예방적 항생제 (오프라벨)",
+          "value": "20 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "수술 약 30분 전(마취 유도 시) 천천히 정맥 투여(최소 3–5분), 수술 중 1.5–3시간마다 반복",
+          "evidence": "오프라벨 (Plumb's)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 (경구, 오프라벨, 일화적 보고 — 개/고양이 공통 기재)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응에 따라 결정",
+          "evidence": "일화적 보고 기반 (Plumb's 오프라벨, 개/고양이 공통)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염, MIC ≤1 µg/mL (오프라벨, 개/고양이 공통 기재)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "MIC ≤1 µg/mL인 균에 적용",
+          "evidence": "소규모 PK 연구 기반 (Plumb's 오프라벨, 개/고양이 공통)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 예방적 항생제 (오프라벨, 개/고양이 공통 기재)",
+          "value": "20 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "수술 약 30분 전 천천히 정맥 투여(최소 3–5분), 수술 중 1.5–3시간마다 반복",
+          "evidence": "오프라벨 (Plumb's, 개/고양이 공통)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "사람에서 중증 신기능 저하 시 용량 조절 권장. 수의 환자에 대한 구체적 기준치는 명시되어 있지 않으나, 신기능 저하 환자에서 강화된 신장 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "세푸록심은 주로 신장으로 배설되며 간 대사가 최소하여 간기능 저하에 따른 용량 조절 필요성은 언급되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "세팔로스포린 또는 페니실린 과민반응",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "penicillin allergy",
+        "beta-lactam allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "acute kidney injury"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제를 통한 시간 의존성 살균 항생제. 2세대 세팔로스포린으로 1세대보다 그람 음성균(E. coli, Klebsiella pneumoniae, Salmonella spp., Enterobacter spp.)에 대한 활성이 강화됨.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "호산구증가증",
+      "과민반응(아나필락시스 포함)",
+      "주사 부위 염증",
+      "혈액학적 이상(혈소판감소증, 범혈구감소증) — 드묾",
+      "간질성 신염 — 드묾",
+      "신경학적 이상(청력 손실, 경련) — 드묾, 주로 과량 투여 시",
+      "위막성 대장염 — 드묾",
+      "중증 피부 반응(TEN, Stevens-Johnson 증후군) — 드묾"
+    ],
+    "dog_mechanism": "개에서 IV/IM/SC 투여 후 빠르게 분포. 분포용적 0.49 L/kg, 소실 반감기 약 1.04–1.13시간. 신장으로 주로 배설.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "고용량에서 호중구 및 적혈구 경미한 감소",
+      "고용량에서 프로트롬빈 시간 연장"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 수의학적 임상 경험이 제한적이다. 6개월 독성 연구(비글, 최대 1600 mg/kg/day 경구)에서 최고 용량에서만 구토 및 체중 증가 억제가 관찰되었으며, 임상 용량에서는 주로 위장관 부작용이 예상된다. PK 연구에 따르면 20 mg/kg IM/IV q11h 또는 SC q12h가 MIC ≤1 µg/mL 균에 효과적이며, MIC ≤4 µg/mL 균에는 q8h 간격이 필요하다.",
+    "cat": "고양이에서의 임상 경험 및 PK 데이터가 매우 제한적이다. 개/고양이 공통으로 오프라벨 용량이 제시되어 있으나, 고양이 특이적 안전성 및 유효성 데이터는 부재하다. 세팔로스포린 특유의 고양이 소변 냄새가 날 수 있으나 정상이다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의학적 허가 없는 오프라벨 사용. 신기능 저하 시 모니터링 강화 필요. 페니실린 과민반응 환자에서 교차 반응 가능성(최대 15%). 임상 경험 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이적 PK 및 안전성 데이터 부재. 오프라벨 사용. 신기능 저하 시 주의. 페니실린 과민반응 환자에서 교차 반응 가능성."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "세푸록심 악세틸 정제: 실온(15–30°C) 밀폐 용기 보관, 과도한 습기 차단. 현탁액 분말: 2–30°C 보관, 재조제 후 냉장(2–8°C) 보관, 10일 후 폐기. 주사용 분말: 실온(15–30°C) 차광 보관. 90 mg/mL로 재조제 시 실온 24시간, 냉장 48시간 안정. IV 용액으로 희석 후 실온 24시간, 냉장 7일 안정. -20°C 냉동 시 최대 6개월 안정(해동 후 재냉동 금지).",
+    "forms": [
+      "Cefuroxime Axetil 필름코팅정 125 mg, 250 mg, 500 mg",
+      "Cefuroxime Axetil 경구 현탁액 25 mg/mL (125 mg/5 mL), 50 mg/mL (250 mg/5 mL)",
+      "Cefuroxime Sodium 주사용 분말 750 mg, 1.5 g, 7.5 g, 225 g"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세푸록심은 2세대 세팔로스포린으로 1세대(세팔렉신, 세파졸린)보다 그람 음성균에 대한 활성이 강화된 항생제입니다. 수의학적 허가 제품은 없으며 소동물에서 오프라벨로 사용됩니다. 1세대 세팔로스포린 내성 감염, 수술 예방적 항생제, 또는 CNS 감염(뇌수막 염증 시)에 유용할 수 있습니다. 임상 경험이 제한적이므로 주의가 필요합니다. WHO 및 OIE에서 중요 항균제로 지정되어 있어 신중한 사용이 요구됩니다.",
+    "indications": "1세대 세팔로스포린 내성 세균 감염 치료(오프라벨), 수술 예방적 항생제(오프라벨), 뇌수막 염증 동반 CNS 감염(오프라벨). 감수성 균: E. coli, Klebsiella pneumoniae, Salmonella spp., Enterobacter spp. 비감수성: MRSA, Pseudomonas spp., Serratia spp., Enterococcus spp., Bacteroides fragilis, ESBL 생성균.",
+    "client_info": "이 약은 음식과 함께 투여하세요. 정제를 분쇄하지 마세요(쓴맛이 납니다). 투약에 어려움이 있으면 수의사에게 연락하세요. 가장 흔한 부작용은 설사, 구토, 식욕부진입니다. 심한 구토/설사 또는 발진/가려움이 나타나면 즉시 수의사에게 연락하세요. 동물이 나아 보여도 수의사가 처방한 기간 동안 반드시 투약을 완료하세요. 세팔로스포린 항생제는 고양이 소변과 비슷한 냄새가 날 수 있으나 정상입니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 58,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific pharmacokinetics",
+      "Veterinary-approved dosing",
+      "CYP enzyme profile",
+      "Protein binding (dog/cat)",
+      "Specific renal dose adjustment thresholds for veterinary patients"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "dosage_and_kinetics.cat (cat-specific PK)",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/23.jsonl",
+    "extracted_at": "2026-03-10T20:23:42.765938+00:00",
+    "reviewer": null
+  }
+}

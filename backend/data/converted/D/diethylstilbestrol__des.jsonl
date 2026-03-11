@@ -1,0 +1,509 @@
+{
+  "id": "diethylstilbestrol",
+  "drug_identity": {
+    "name_ko": "디에틸스틸베스트롤",
+    "name_en": "Diethylstilbestrol",
+    "active_ingredient": "Diethylstilbestrol",
+    "brand_names": [
+      "Apstil",
+      "Boestrol",
+      "Destilbenol",
+      "Distilbene"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 상업용 제품 없음. 조제약국(compounding pharmacy)을 통해서만 입수 가능. 식용 동물에 대한 사용은 FDA에 의해 금지됨.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 주로 글루쿠로나이드 형태로 서서히 대사된 후 소변 및 대변으로 배설됨."
+    },
+    "extra_information": "단위장 동물(monogastric animals)의 위장관에서 잘 흡수됨. 간에서 서서히 대사되며 주로 글루쿠로나이드 형태로 전환된 후 소변과 대변으로 배설됨. 개 및 고양이에 대한 구체적인 PK 데이터는 문헌에 기재되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 골수 독성, 간 대사, 심장/췌장/간 병변(고양이) 등의 근거로 점수 부여. 수의학적 종별 PK 연구 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 중추신경계 영향에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "thrombocytopenia",
+          "leukopenia",
+          "aplastic anemia",
+          "bone marrow depression",
+          "neutropenia",
+          "normocytic normochromic anemia"
+        ],
+        "index": 1,
+        "evidence": "개에서 에스트로겐은 골수 독성을 유발하며, 혈소판감소증, 백혈구감소증, 재생불량성 빈혈 등 심각한 혈액 이상을 초래할 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "excreted in the urine"
+        ],
+        "index": 2,
+        "evidence": "대사산물이 소변으로 배설되나, 신독성에 대한 직접적인 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "slowly metabolized by the liver",
+          "hepatic impairment",
+          "glucuronide"
+        ],
+        "index": 3,
+        "evidence": "간에서 주로 대사되며, 간 기능 장애 환자에서 주의 사용 권고. 간 효소 증가 가능성 언급(인간 데이터)."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 영향에 대한 직접적인 언급 없음. 고양이에서 심장 병변 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 중추신경계 영향에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "bone marrow toxicity",
+          "thrombocytopenia",
+          "leukopenia",
+          "aplastic anemia",
+          "death"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 2.2 mg/kg/일 투여 시 골수 독성으로 사망 보고. 에스트로겐은 고양이 골수에 독성으로 간주됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "excreted in the urine"
+        ],
+        "index": 2,
+        "evidence": "대사산물이 소변으로 배설되나, 신독성에 대한 직접적인 언급은 없음."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatic lesions",
+          "slowly metabolized by the liver"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 DES 매일 투여 시 간 병변 보고됨. 간에서 주로 대사됨."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "cardiac lesions"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 DES 매일 투여 시 심장 병변 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "단위장 동물에서 위장관 흡수가 양호하다고 기술되어 있으나, 구체적인 반감기, Tmax, 생체이용률 수치는 문헌에 기재되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased estrogen concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "Azole antifungals may increase estrogen concentrations by inhibiting hepatic metabolism."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen metabolism",
+        "increased estrogen exposure"
+      ],
+      "evidence": "Cimetidine may decrease the metabolism of estrogens, potentially increasing estrogen concentrations."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "enhanced glucocorticoid effect",
+        "altered protein binding",
+        "decreased corticosteroid metabolism"
+      ],
+      "evidence": "Estrogens may enhance glucocorticoid effects by altering protein binding and/or decreasing corticosteroid metabolism. Dose adjustment of corticosteroids may be necessary."
+    },
+    {
+      "drug": "Erythromycin, Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen metabolism",
+        "increased estrogen exposure"
+      ],
+      "evidence": "Erythromycin and clarithromycin may decrease the metabolism of estrogens."
+    },
+    {
+      "drug": "Other Estrogens",
+      "severity": 2,
+      "keywords": [
+        "additive estrogen effects",
+        "increased toxicity risk"
+      ],
+      "evidence": "Possible additive effects with other estrogens. Concomitant use has not been evaluated and is not recommended."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "decreased levothyroxine efficacy",
+        "increased TBG",
+        "thyroid hormone binding"
+      ],
+      "evidence": "Estrogens may diminish the therapeutic effect of levothyroxine. Monitor thyroid status and adjust levothyroxine dose accordingly."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen concentration",
+        "hepatic enzyme induction"
+      ],
+      "evidence": "Phenobarbital may decrease estrogen concentrations through hepatic enzyme induction."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "hepatic microsomal enzyme induction",
+        "decreased estrogen concentration"
+      ],
+      "evidence": "Rifampin may induce hepatic microsomal enzymes and decrease estrogen concentrations."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "attenuated TCA efficacy",
+        "altered TCA toxicity"
+      ],
+      "evidence": "Concurrent use of estrogens with TCAs may attenuate TCA efficacy and toxicity."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased anticoagulant activity",
+        "increased anticoagulant dose requirement"
+      ],
+      "evidence": "Oral anticoagulant activity of warfarin may be decreased when estrogens are administered concurrently; increases in anticoagulant dosage may be necessary."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "원발성 요도 괄약근 기능 부전(호르몬 반응성 요실금) - 유도 용량",
+          "value": "0.1 - 1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5일간 유도 용량 투여 후 요실금이 조절되는 최저 용량으로 감량 (일반적으로 주 1~3회). 최대 총 용량 1 mg/dog (mg/kg 아님). 권장 용량: 0.02 mg/kg, 최대 1 mg/dog.",
+          "evidence": "Extra-label. 0.1–1 mg/dog (총 용량; mg/kg 아님), 0.02 mg/kg; 최대 총 용량 1 mg/dog. 3~5일 유도 후 최저 유효 용량으로 감량 (주 1~3회). 어려운 경우 phenylpropanolamine과 병용 가능."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 시 용량 조정에 대한 구체적인 지침이 문헌에 기재되지 않음. 대사산물이 소변으로 배설되므로 신기능 저하 환자에서 주의가 필요할 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 장애 환자에서 주의 사용 권고. 간에서 주로 대사되므로 간 기능 저하 시 약물 축적 가능성 있음. 구체적인 용량 조정 지침은 문헌에 기재되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "에스트로겐 과민증",
+      "match_terms": [
+        "estrogen hypersensitivity",
+        "drug allergy DES"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "에스트로겐 감수성 종양",
+      "match_terms": [
+        "estrogen-sensitive neoplasm",
+        "mammary neoplasia",
+        "ovarian tumor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 빈혈 또는 백혈구감소증",
+      "match_terms": [
+        "anemia",
+        "leukopenia",
+        "bone marrow suppression",
+        "aplastic anemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "식용 동물",
+      "match_terms": [
+        "food animal",
+        "livestock"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "합성 비스테로이드성 에스트로겐으로, 에스트로겐 수용체에 결합하여 mRNA 및 단백질 합성에 영향을 미침. 세포 주기 비특이적으로 작용. 요실금에서는 노르에피네프린에 대한 괄약근 감수성 증가를 통해 효과 발휘.",
+    "common_extra_effects": [
+      "혈액 이상(혈소판감소증, 백혈구감소증, 재생불량성 빈혈)",
+      "골수 억제",
+      "낭성 자궁내막 증식증 및 자궁축농증(비중성화 암컷)",
+      "발정 징후",
+      "수컷에서 여성화 및 편평상피 화생",
+      "발암성(유선 종양, 난소 선암종)",
+      "기형 유발성",
+      "췌장, 간, 심장 병변(고양이)",
+      "위장관 장애(구역, 구토)"
+    ],
+    "dog_mechanism": "에스트로겐 수용체 매개 작용. 요실금에서 요도 괄약근의 노르에피네프린 감수성 증가.",
+    "dog_extra_effects": [
+      "혈소판감소증 및 백혈구감소증",
+      "재생불량성 빈혈(치명적 가능)",
+      "낭성 자궁내막 증식증 및 자궁축농증(비중성화 암컷)",
+      "발정 징후(7~10일 지속)",
+      "수컷에서 여성화 및 편평상피 화생",
+      "악성 난소 선암종 유발 가능"
+    ],
+    "cat_mechanism": "에스트로겐 수용체 매개 작용. 고양이에서 골수 독성이 특히 심각함.",
+    "cat_extra_effects": [
+      "골수 독성으로 인한 사망(2.2 mg/kg/일)",
+      "혈소판감소증 및 백혈구감소증",
+      "재생불량성 빈혈",
+      "췌장 병변",
+      "간 병변",
+      "심장 병변"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 주로 호르몬 반응성 요실금(중성화 암컷) 및 양성 전립선 비대증(수컷) 치료에 사용됨. 요실금에 대해 최저 유효 용량으로 사용 시 일반적으로 내약성이 양호함. 그러나 골수 독성 위험으로 인해 기저치 및 월 1회 이상 CBC와 혈소판 수 모니터링이 필수적임. FDA 승인 에스트리올(estriol)의 등장으로 DES 사용은 논란이 있음.",
+    "cat": "고양이에서 DES 매일 투여 시 췌장, 간, 심장 병변이 보고됨. 2.2 mg/kg/일 투여 시 골수 독성으로 사망 사례 있음. 고양이에서의 사용은 심각한 부작용 위험으로 인해 일반적으로 권장되지 않음. 용량 정보 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "골수 독성, 혈액 이상, 발암성, 기형 유발성 위험으로 주의 사용 필요. 최저 유효 용량 사용 및 정기적 혈액 모니터링 필수. 간 기능 장애, 기존 빈혈/백혈구감소증 환자에서 극도의 주의 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 DES 매일 투여 시 췌장, 간, 심장 병변 보고. 2.2 mg/kg/일에서 골수 독성으로 사망. 고양이에서의 사용은 심각한 독성 위험으로 인해 사실상 금기에 준함."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~30°C(59°F~86°F) 실온에서 밀폐 용기에 보관. 조제약국의 별도 지시가 없는 한 위 조건 준수.",
+    "forms": [
+      "조제 경구 제제(compounded oral preparation) - 미국 내 상업용 제품 없음",
+      "조제약국을 통해서만 입수 가능"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디에틸스틸베스트롤(DES)은 합성 비스테로이드성 에스트로겐으로, 개에서 호르몬 반응성 요실금 및 양성 전립선 비대증 치료에 사용됨. 미국 내 상업용 제품이 없어 조제약국을 통해서만 입수 가능하며, FDA 승인 에스트리올의 등장으로 사용이 논란이 됨. 골수 독성(혈소판감소증, 백혈구감소증, 재생불량성 빈혈), 발암성, 기형 유발성 등 심각한 부작용 위험이 있음. NIOSH에서 위험 약물로 분류하여 취급 시 개인보호장비(PPE) 착용 필수. 식용 동물에 대한 사용은 FDA에 의해 금지됨.",
+    "indications": "【승인 적응증】없음(수의용 및 인체용 모두 상업적 제품 없음). 【비승인(extra-label) 적응증】개: 호르몬 반응성 요실금(중성화 암컷), 양성 전립선 비대증(수컷). 【더 이상 권장되지 않는 적응증】교배 후 임신 예방(개, 고양이) - 심각한 부작용으로 권장 중단.",
+    "client_info": "【보호자 안내사항】임산부는 DES를 절대 취급하지 마십시오. 반드시 장갑을 착용하고 취급 후 손을 씻으십시오. 음식과 함께 또는 공복에 투여 가능합니다. 공복 투여 후 구토나 불편함이 있으면 다음 투여 시 소량의 음식과 함께 주십시오. 구토가 지속되면 수의사에게 연락하십시오. 요실금 치료 시 최저 유효 용량으로 사용하면 일반적으로 내약성이 양호합니다. 심각한 부작용 모니터링을 위해 정기적인 혈액 검사가 반드시 필요합니다. 검사 일정을 놓치지 마십시오. 다음 증상이 나타나면 즉시 수의사에게 연락하십시오: 무기력증, 설사, 구토, 멍(타박상), 외음부의 비정상적인 분비물, 유두 주변의 비정상적인 성장이나 부종, 과도한 음수 및 배뇨, 비정상적인 출혈."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonym",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific PK parameters (half-life, Tmax, bioavailability, protein binding)",
+      "Renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Cat dosage",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "species_flags.washout_period_days",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/40.jsonl",
+    "extracted_at": "2026-03-11T01:36:10.783311+00:00",
+    "reviewer": null
+  }
+}

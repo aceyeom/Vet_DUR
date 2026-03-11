@@ -1,0 +1,590 @@
+{
+  "id": "fluralaner",
+  "drug_identity": {
+    "name_ko": "플루랄라너",
+    "name_en": "Fluralaner",
+    "active_ingredient": "Fluralaner",
+    "brand_names": [
+      "Bravecto",
+      "Bravecto 1-Month",
+      "Bravecto Plus"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Chewable",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 45,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 112,
+        "unit": "mg"
+      },
+      {
+        "value": 112.5,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 280,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 560,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 1400,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "플루랄라너는 거의 대사되지 않으며, 변화되지 않은 형태로 대변을 통해 배설된다. 고양이에서 간 추출률은 약 0.3%로 추정된다."
+    },
+    "extra_information": "개에서 경구 투여 후 반감기는 평균 9~16일이며, 국소 투여 후 최고 혈중 농도는 7~42일 사이에 도달하고 반감기는 14~29일이다. 고양이에서 국소 투여 후 최고 혈중 농도는 7~21일 사이에 도달하고 반감기는 11~13일이다. 고양이에서 혈장 단백 결합률이 높다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 플루랄라너는 대사가 거의 없고 대변으로 배설되므로 신장 및 간 부담은 낮다. 신경계 이상반응(근육 떨림, 운동실조, 발작)이 보고되어 뇌 점수가 부여됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizures",
+          "ataxia",
+          "muscle tremors",
+          "neurologic adverse effects"
+        ],
+        "index": 1,
+        "evidence": "FDA는 이소옥사졸린 계열 약물이 개에서 근육 떨림, 운동실조, 발작 등 신경계 이상반응을 유발할 수 있다고 경고하였다."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "highly protein bound"
+        ],
+        "index": 2,
+        "evidence": "혈장 단백 결합률이 높아 다른 단백 결합 약물과의 상호작용 가능성이 있다."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설에 대한 직접적인 언급 없음. 대변으로 배설되므로 신장 부담은 낮은 것으로 판단된다."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatic extraction ratio"
+        ],
+        "index": 3,
+        "evidence": "간 추출률이 낮고 대사가 거의 없으나, 고양이 Bravecto Plus 임상시험에서 ALT 상승이 보고된 바 있다."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "enlarged heart"
+        ],
+        "index": -1,
+        "evidence": "번식 안전성 연구에서 일부 강아지에서 심장 비대가 관찰되었으나 임상적 의의는 불명확하다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizures",
+          "ataxia",
+          "tremors",
+          "neurologic adverse effects"
+        ],
+        "index": 1,
+        "evidence": "FDA는 이소옥사졸린 계열 약물이 고양이에서도 근육 떨림, 운동실조, 발작 등 신경계 이상반응을 유발할 수 있다고 경고하였다. 현장 연구에서 운동실조 및 떨림이 보고되었다."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "highly protein bound",
+          "plasma proteins"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 혈장 단백 결합률이 높다고 명시되어 있다."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설에 대한 직접적인 언급 없음. 대변으로 배설되므로 신장 부담은 낮은 것으로 판단된다."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated ALT",
+          "hepatic extraction ratio"
+        ],
+        "index": 3,
+        "evidence": "Bravecto Plus 사전승인 현장시험에서 ALT가 참고범위 상한(100 IU/L)의 2배 이상 상승한 사례가 보고되었다. 간 추출률은 약 0.3%로 낮다."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 이상반응에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 480,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 216.0,
+      "max": 384.0,
+      "mean": 300.0,
+      "species": "dog"
+    },
+    "f_percent": 25,
+    "protein_binding_percent": null,
+    "evidence": "경구 및 국소 투여 후 생체이용률은 약 25%이며, 음식과 함께 투여 시 약 2~2.5배 증가한다. 개에서 경구 투여 후 반감기는 9~16일(평균 약 12.5일). 개에서 벼룩에 대한 작용 발현은 벼룩 흡혈 후 8시간 이내, 진드기는 12시간 이내. 고양이에서는 벼룩 12시간, 진드기 48시간 이내."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 플루랄라너의 약물 상호작용은 주로 고단백 결합 약물과의 일시적 혈중 농도 증가에 관한 것으로, 임상적 의의는 낮은 것으로 평가된다.",
+  "drug_interactions": [
+    {
+      "drug": "Highly Protein Bound Drugs (e.g., maropitant, NSAIDs, warfarin)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "transient concentration increase",
+        "increased clearance"
+      ],
+      "evidence": "플루랄라너와 고단백 결합 약물(마로피탄트, NSAIDs, 와파린 등)의 병용 시 각 약물의 혈중 유리 농도가 일시적으로 증가할 수 있다. 그러나 유리 약물 농도 증가는 청소율 증가를 통해 평형을 이루므로 임상적으로 문제가 될 가능성은 낮다."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 62.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 및 진드기 치료/예방 (Bravecto® 씹는 정제 또는 국소 용액, 12주 간격)",
+          "value": "25 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "12주마다 투여 (Amblyomma americanum 진드기는 8주마다). 음식과 함께 투여.",
+          "evidence": "FDA 승인 라벨 용량. 최소 25 mg/kg, 체중 구간별 112.5~1400 mg 정제 투여."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 및 진드기 치료/예방 (Bravecto® 1-Month 씹는 정제, 월 1회)",
+          "value": "10 - 22.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": 22.5,
+          "duration_note": "매월 투여. 체중 최소 2 kg, 생후 8주 이상 (A. americanum은 6개월 이상).",
+          "evidence": "FDA 승인 라벨 용량. 최소 10 mg/kg, 체중 구간별 45~560 mg 정제 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전신성 모낭충증 (extra-label)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여. 투여 28일 후 진드기 수 99% 이상 감소.",
+          "evidence": "Extra-label 사용. 단회 경구 투여 후 56일 및 84일째 진드기 미검출."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Ixodes holocyclus 감염 (extra-label)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여로 최소 115일간 진드기 감염 예방.",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Linognathus setosus 감염 (extra-label)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여 후 28일 이내 감염 소멸 및 완전한 피부 회복.",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Otodectes cynotis 감염 (extra-label)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 경구 또는 국소 투여 후 14~28일 이내 임상적·기생충학적 완치.",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Sarcoptes scabiei var canis 감염 (extra-label)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 경구 또는 국소 투여. 투여 14일 후 피부 소파 검사 음성.",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Triatoma infestans (Trypanosoma cruzi 매개체) 감염 (extra-label)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여 후 7~8주간 99% 이상 살충 효과. 일부 연구에서 최대 7개월 효과 보고.",
+          "evidence": "Extra-label 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 및 진드기 치료/예방 (Bravecto® 국소 용액, 단독 제제, 12주 간격)",
+          "value": "40 - 90",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 90.0,
+          "duration_note": "12주마다 국소 투여 (Dermacentor variabilis 진드기는 8주마다). 생후 6개월 이상, 체중 최소 1.2 kg.",
+          "evidence": "FDA 승인 라벨 용량. 최소 40 mg/kg, 체중 구간별 112.5~500 mg 투여."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "벼룩 및 진드기 치료/예방, 심장사상충 예방, 장내 기생충 치료 (Bravecto® Plus 국소 용액, 8주 간격)",
+          "value": "40 - 95",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 95.0,
+          "duration_note": "8주마다 국소 투여. 플루랄라너 최소 40 mg/kg + 목시덱틴 최소 2 mg/kg. 생후 6개월 이상, 체중 최소 1.2 kg.",
+          "evidence": "FDA 승인 라벨 용량 (Bravecto Plus)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Demodex gatoi, Demodex cati 감염 (extra-label)",
+          "value": "26 - 34",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 경구 투여 (112.5 mg 정제 1정/마리).",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Lynxacarus radovsky 감염 (extra-label)",
+          "value": "25 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 경구 투여 후 28일 이내 진드기 100% 소멸, 14일째 임상 호전.",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Otodectes cynotis 감염 (extra-label)",
+          "value": "40",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 국소 투여 후 14~28일 이내 임상적·기생충학적 완치.",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "Ixodes holocyclus 감염 (extra-label)",
+          "value": "40",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 국소 투여 후 48시간 이내 진드기 100% 사멸, 84일간 효과 유지.",
+          "evidence": "Extra-label 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 관한 구체적인 언급 없음. 약물이 대변으로 배설되므로 신장 부담은 낮을 것으로 예상되나, 공식적인 권고사항은 없다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 관한 구체적인 언급 없음. 간 추출률이 매우 낮고(0.3%) 대사가 거의 없으나, 고양이 Bravecto Plus 사용 시 ALT 상승이 보고된 바 있어 모니터링이 권장된다."
+  },
+  "contraindications": [
+    {
+      "condition": "발작 또는 간질 병력",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "seizure history"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신경계 질환 병력",
+      "match_terms": [
+        "neurologic disorder",
+        "neurological disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장사상충 감염 또는 감염 여부 불명 (Bravecto Plus 사용 시)",
+      "match_terms": [
+        "heartworm positive",
+        "heartworm unknown status",
+        "Dirofilaria immitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "피부 자극 부위에 국소 적용",
+      "match_terms": [
+        "skin irritation",
+        "irritated skin"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 유전자 돌연변이(ABCB1-1delta)에 대해 동형접합인 콜리에서 라벨 용량의 3배를 투여한 연구에서 이상반응이 관찰되지 않았다. 따라서 MDR1 돌연변이 품종에서 임상적으로 유의한 위험은 없는 것으로 판단된다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "플루랄라너는 이소옥사졸린계 살충·살비제로, 곤충 신경세포의 GABA 및 글루타메이트 개폐 염소 이온 채널을 억제하여 포유류 신경세포에 비해 곤충 신경세포에 높은 선택성을 나타낸다. 억제로 인해 통제되지 않는 신경 활성이 유발되어 벼룩과 진드기의 마비 및 사망을 초래한다.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕 감소",
+      "무기력",
+      "근육 떨림",
+      "운동실조",
+      "발작",
+      "과다 침 분비",
+      "탈모",
+      "소양증"
+    ],
+    "dog_mechanism": "개에서 벼룩 흡혈 후 8시간 이내, 진드기 흡혈 후 12시간 이내에 작용이 나타난다.",
+    "dog_extra_effects": [
+      "구토 (가장 흔한 이상반응)",
+      "식욕 감소",
+      "과다 침 분비",
+      "무기력",
+      "설사",
+      "탈모",
+      "소양증",
+      "근육 떨림",
+      "운동실조",
+      "발작"
+    ],
+    "cat_mechanism": "고양이에서 벼룩 흡혈 후 12시간 이내, 진드기 흡혈 후 48시간 이내에 작용이 나타난다.",
+    "cat_extra_effects": [
+      "구토",
+      "소양증",
+      "설사",
+      "탈모",
+      "식욕 감소",
+      "무기력",
+      "운동실조",
+      "떨림",
+      "건성 피부",
+      "ALT 상승 (Bravecto Plus 사용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개와 생후 6개월 이상의 강아지(체중 최소 2 kg)에서 FDA 승인. 씹는 정제는 반드시 음식과 함께 투여해야 생체이용률이 2~2.5배 증가한다. 전신성 모낭충증, 옴, 귀 진드기 등 다양한 외부 기생충 감염에 대한 extra-label 사용 근거가 있다. 발작 또는 신경계 질환 병력이 있는 개에서는 주의하여 사용한다.",
+    "cat": "고양이와 생후 6개월 이상의 새끼 고양이(체중 최소 1.2 kg)에서 FDA 승인 (국소 용액). 번식, 임신, 수유 중인 고양이에서의 안전성은 확립되지 않았다. Bravecto Plus 사용 시 심장사상충 감염 여부를 확인하고, 감염 양성이거나 감염 여부가 불명확한 경우 주의하여 사용한다. 고양이에서 혈장 단백 결합률이 높다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 또는 간질 병력이 있는 개에서 주의하여 사용. FDA는 이소옥사졸린 계열 약물이 신경계 이상반응(근육 떨림, 운동실조, 발작)을 유발할 수 있다고 경고. 번식 안전성 연구에서 일부 강아지에서 사지 기형, 심장 비대, 비장 비대, 구개열이 관찰되었으므로 임신 중 사용 시 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "발작 또는 신경계 질환 병력이 있는 고양이에서 주의하여 사용. 번식, 임신, 수유 중인 고양이에서의 안전성 미확립. Bravecto Plus 사용 시 심장사상충 감염 여부 불명 또는 양성인 고양이에서 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "씹는 정제는 30°C(86°F) 이하에서 보관. 국소 용액은 25°C(77°F) 이하에서 보관. 습기 차단을 위해 원래 포장재에 보관. 국소 용액은 고인화성이므로 열, 불꽃, 점화원으로부터 멀리 보관.",
+    "forms": [
+      "Fluralaner 씹는 정제 (개용): 112 mg, 250 mg, 500 mg, 1000 mg, 1400 mg; Bravecto®",
+      "Fluralaner 씹는 정제 (개용, 월 1회): 45 mg, 100 mg, 200 mg, 400 mg, 560 mg; Bravecto® 1-Month",
+      "Fluralaner 280 mg/mL 국소 용액 (개용): 112 mg, 250 mg, 500 mg, 1000 mg, 1400 mg; Bravecto® topical solution for dogs",
+      "Fluralaner 280 mg/mL 국소 용액 (고양이용): 112.5 mg, 250 mg, 500 mg; Bravecto® topical solution for cats",
+      "Fluralaner 28% (280 mg/mL) + Moxidectin 1.4% (14 mg/mL) 국소 용액 (고양이용): 0.4 mL, 0.9 mL, 1.8 mL; Bravecto® Plus topical solution for cats"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루랄라너(Bravecto®)는 이소옥사졸린계 살충·살비제로, 개와 고양이에서 벼룩 및 진드기 감염의 치료 및 예방에 FDA 승인된 약물이다. 개에서는 씹는 정제(12주 또는 월 1회) 및 국소 용액, 고양이에서는 국소 용액(단독 또는 목시덱틴 복합제)으로 사용된다. 약물은 거의 대사되지 않고 대변으로 배설되며, 반감기가 길어 장기간 효과가 유지된다. FDA는 이소옥사졸린 계열 약물이 신경계 이상반응(근육 떨림, 운동실조, 발작)을 유발할 수 있다고 경고하였으므로, 신경계 질환 병력이 있는 동물에서는 주의하여 사용해야 한다.",
+    "indications": "【승인 적응증 - 개】 벼룩(Ctenocephalides felis) 감염 치료 및 예방; 진드기(Ixodes scapularis, Dermacentor variabilis, Rhipicephalus sanguineus) 감염 치료 및 조절(12주); Amblyomma americanum 진드기 감염 치료 및 조절(8주); 벼룩 알레르기 피부염 치료 보조. 【승인 적응증 - 고양이】 벼룩(C. felis) 감염 치료 및 예방; I. scapularis 진드기 감염 치료 및 조절(12주); D. variabilis 진드기 감염 치료 및 조절(8주); 심장사상충 예방, 장내 기생충 치료(Bravecto Plus). 【Extra-label 사용】 전신성 모낭충증, Sarcoptes scabiei, Otodectes cynotis, Linognathus setosus, Ixodes holocyclus, Triatoma infestans (개); Demodex gatoi/cati, Lynxacarus radovsky, Otodectes cynotis, Ixodes holocyclus (고양이); Psoroptes cuniculi (토끼); Caparinia tripilis (고슴도치).",
+    "client_info": "【보호자 안내사항】\n• 이 약과 모든 약은 다른 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 의도치 않은 노출을 방지하기 위해 사용 전까지 원래 포장재에 보관하세요.\n• 씹는 정제는 반드시 식사와 함께 투여하세요.\n• 국소 용액(개용)은 도포 후 3일간 목욕이나 수영을 피하세요.\n• 자극받은 피부에는 바르지 마세요. 도포 부위가 마를 때까지 도포 부위를 만지거나 어린이가 접촉하지 않도록 하세요. 도포 후 4일 이내에 도포 부위와 밀접 접촉한 사람에서 피부 자극이 보고된 바 있습니다. 우려되는 경우 의사에게 문의하세요.\n• 국소 제품을 취급하는 동안 음식을 먹거나 음료를 마시거나 흡연하지 마세요. 국소 제품은 인화성이 있으므로 열, 불꽃, 불꽃 튀김 또는 기타 점화원으로부터 멀리 하세요.\n• 사용 후 즉시 비누와 물로 손을 깨끗이 씻으세요.\n• 떨림, 보행 장애, 발작 등 신경계 이상반응을 포함한 부작용이 나타나면 즉시 수의사에게 알리세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding percentage (dog)",
+      "Specific t_max_hr (oral, dog)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:24:13.520998+00:00",
+    "reviewer": null
+  }
+}

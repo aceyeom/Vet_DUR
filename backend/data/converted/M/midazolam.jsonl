@@ -1,0 +1,732 @@
+{
+  "id": "midazolam",
+  "drug_identity": {
+    "name_ko": "미다졸람",
+    "name_en": "Midazolam",
+    "active_ingredient": "Midazolam",
+    "brand_names": [
+      "Versed",
+      "Nayzilam"
+    ],
+    "allergy_class": "benzodiazepine",
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Flumazenil",
+    "reversal_evidence": "플루마제닐은 미다졸람의 효과를 길항하며, 조류에서 0.1 mg/kg IV, 말에서 0.01 mg/kg IV로 사용된 임상 사례가 보고됨. 과량 투여 시 지지 요법이 더 적합할 수 있음.",
+    "off_label_note": "수의용 허가 제품 없음. 인체용 제품을 동물에 엑스트라라벨로 사용함.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.95,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A12",
+        "CYP3A26",
+        "CYP2B11"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 CYP3A12(주), CYP3A26(부), CYP2B11 이소효소에 의해 간에서 대사됨. 인체에서는 CYP3A4 및 CYP3A5가 주요 대사 경로임. 인체 약물상호작용을 수의 종에 그대로 적용하는 것은 주의가 필요함."
+    },
+    "extra_information": "개에서 IM 투여 후 생체이용률 약 47%, 최고 혈장 농도 도달 시간 약 7~8분. 평균 소실 반감기 77분(개). 인체에서 미다졸람은 수산화 대사체의 포합체로 거의 전량 신장으로 배설됨. 활성 대사체 알파-하이드록시미다졸람의 반감기는 약 1~1.5시간이며 신장 기능 저하 시 연장됨. 인체 소실 반감기 약 2시간이며 유의한 간 기능 장애 시 거의 2배로 증가함. 단백 결합률 94~97%(인체)."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 인체 PK 데이터 기반. 고양이 종 특이적 PK 데이터 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "anticonvulsant",
+          "blood-brain barrier",
+          "limbic",
+          "thalamic",
+          "hypothalamic"
+        ],
+        "index": 1,
+        "evidence": "미다졸람은 피질하 CNS(변연계, 시상, 시상하부)를 억제하며 혈뇌장벽을 빠르게 통과함. 항경련, 진정, 근이완 효과 발현."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "protein-bound",
+          "thrombophlebitis"
+        ],
+        "index": 2,
+        "evidence": "단백 결합률 94~97%(인체). IV CRI 시 혈전정맥염 가능성이 디아제팜보다 낮음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal impairment",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "인체에서 수산화 대사체의 포합체로 거의 전량 신장 배설. 신장 기능 저하 시 활성 대사체 반감기 연장. 신장 질환 시 주의 권고."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP3A12",
+          "CYP2B11",
+          "hepatic dysfunction",
+          "hepatic impairment"
+        ],
+        "index": 4,
+        "evidence": "간에서 CYP3A12, CYP2B11에 의해 대사됨. 간 기능 장애 시 소실 반감기 연장 및 효과 지속 가능. 간 질환 시 주의 권고."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hypotension",
+          "cardiovascular depression",
+          "heart rate"
+        ],
+        "index": 5,
+        "evidence": "단독 사용 시 심폐 기능에 유의한 영향 없으나, 다른 약물과 병용 시 저혈압 및 심박수 변화 가능. 케타민 병용 시 심박수 및 혈압 증가 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "excited behavior",
+          "disinhibition",
+          "blood-brain barrier"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 단독 사용 시 흥분/탈억제 반응 발생 가능. 진정제/안정제와 병용 권고. 혈뇌장벽 빠르게 통과."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "protein-bound"
+        ],
+        "index": 2,
+        "evidence": "단백 결합률 높음(인체 94~97%). 고양이 종 특이적 혈액 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "신장 배설 경로 동일하게 적용 가능. 고양이 종 특이적 신장 PK 데이터 없음. 신장 질환 시 주의 권고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic dysfunction"
+        ],
+        "index": 4,
+        "evidence": "간 대사 경로 동일하게 적용 가능. 간 기능 장애 시 효과 지속 가능. 고양이 종 특이적 간 PK 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular depression",
+          "hypotension"
+        ],
+        "index": 5,
+        "evidence": "단독 사용 시 심폐 기능에 유의한 영향 없으나 병용 시 저혈압 가능. 고양이 종 특이적 심장 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 3,
+    "t_max_hr": 0.13,
+    "half_life_hr": {
+      "min": 1.28,
+      "max": 1.28,
+      "mean": 1.28,
+      "species": "dog"
+    },
+    "f_percent": 47,
+    "protein_binding_percent": 96,
+    "evidence": "개에서 IM 투여 후 생체이용률 약 47%, 최고 혈장 농도 도달 시간 약 7~8분(0.13시간). 평균 소실 반감기 77분(1.28시간, 개). 인체 단백 결합률 94~97%(평균 96%). 인체 소실 반감기 약 2시간. 고양이 종 특이적 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 인체 CYP3A4 기반 상호작용을 개에 직접 적용 시 주의 필요(개는 CYP3A12/CYP2B11 기질).",
+  "drug_interactions": [
+    {
+      "drug": "Anesthetic Agents (alfaxalone, etomidate, isoflurane, propofol)",
+      "severity": 2,
+      "keywords": [
+        "마취 요구량 감소",
+        "용량 감소"
+      ],
+      "evidence": "Midazolam reduces anesthetic requirements when combined with alfaxalone, etomidate, isoflurane, or propofol."
+    },
+    {
+      "drug": "Antihypertensive Agents (amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "저혈압",
+        "기립성 저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension and orthostasis; blood pressure monitoring recommended."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole, voriconazole, fluconazole)",
+      "severity": 2,
+      "keywords": [
+        "미다졸람 혈중 농도 증가",
+        "과도한 진정"
+      ],
+      "evidence": "May increase midazolam concentration; excessive sedation may occur. In healthy dogs given oral fluconazole, clearance of IV midazolam was ~50% slower and duration of sedative effect was increased."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (dichlorophenamide, methazolamide)",
+      "severity": 3,
+      "keywords": [
+        "저산소 호흡 반응 억제",
+        "병용 금기"
+      ],
+      "evidence": "Benzodiazepines may interfere with the beneficial effects of CAIs by inhibiting respiratory responses to hypoxia; this combination should be avoided."
+    },
+    {
+      "drug": "CNS Depressant Agents (buspirone, cannabidiol, gabapentin, methocarbamol, trazodone)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제 증가",
+        "용량 조절 필요"
+      ],
+      "evidence": "Combination may increase the risk for CNS depression; monitoring and dose adjustment needed."
+    },
+    {
+      "drug": "Hepatic Enzyme Inhibitors (cimetidine, erythromycin, isoniazid)",
+      "severity": 2,
+      "keywords": [
+        "미다졸람 대사 감소",
+        "과도한 진정"
+      ],
+      "evidence": "Metabolism of midazolam may be decreased, and excessive sedation may occur."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "신경독성 증가",
+        "뇌병증"
+      ],
+      "evidence": "Concurrent use may increase the risk for ifosfamide-induced neurotoxic effects; careful monitoring needed, and discontinuation of both drugs may be necessary if signs of encephalopathy occur."
+    },
+    {
+      "drug": "Nondepolarizing Neuromuscular Blockers (atracurium, rocuronium)",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 효과 변화",
+        "호흡 모니터링"
+      ],
+      "evidence": "Concurrent use may potentiate, attenuate, or have no effect on neuromuscular blockade; respiratory status should be monitored."
+    },
+    {
+      "drug": "Opioids (butorphanol, fentanyl, hydromorphone)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제 증가",
+        "호흡 억제 증가"
+      ],
+      "evidence": "Combination may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Phenobarbital, Primidone",
+      "severity": 2,
+      "keywords": [
+        "간 효소 유도",
+        "벤조디아제핀 효과 감소",
+        "CNS 억제 가산"
+      ],
+      "evidence": "May induce hepatic microsomal enzymes and decrease the pharmacologic effects of benzodiazepines; additive CNS depression is possible."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "간 효소 유도",
+        "벤조디아제핀 효과 감소"
+      ],
+      "evidence": "May induce hepatic microsomal enzymes and decrease the pharmacologic effects of benzodiazepines."
+    },
+    {
+      "drug": "Theophylline, Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "벤조디아제핀 효과 감소",
+        "테오필린 중단 시 독성 위험"
+      ],
+      "evidence": "Concurrent use may decrease the levels and effectiveness of benzodiazepines. Withdrawing theophylline from a stable patient may increase the risk for benzodiazepine toxicity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine, imipramine)",
+      "severity": 2,
+      "keywords": [
+        "삼환계 항우울제 혈중 농도 증가",
+        "CNS 억제 증가",
+        "호흡 억제"
+      ],
+      "evidence": "Midazolam may increase the levels of TCAs; clinical significance is not known. Concurrent use may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 1,
+      "keywords": [
+        "항불안 효과 감소"
+      ],
+      "evidence": "Yohimbine may decrease the therapeutic effects of anxiolytic drugs including midazolam."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "수술 전 투약/공동 유도제 (엑스트라라벨)",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.3,
+          "duration_note": "다른 전처치제 또는 공동 유도제와 병용",
+          "evidence": "다른 전처치제(케타민, 아세프로마진, 오피오이드, 알파-2 작용제)와 병용 시 0.1~0.3 mg/kg SC, IM, IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전 투약/공동 유도제 (엑스트라라벨)",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "다른 전처치제 또는 공동 유도제와 병용; 일부 프로토콜에서 0.5 mg/kg IM까지 사용",
+          "evidence": "0.1~0.3 mg/kg IM 또는 0.5 mg/kg IM (모르핀 0.5 mg/kg과 병용 또는 아세프로마진 추가)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전 투약/공동 유도제 (엑스트라라벨)",
+          "value": "0.1 - 0.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.4,
+          "duration_note": "다른 전처치제 또는 공동 유도제와 병용",
+          "evidence": "0.1~0.4 mg/kg IV; 일부 프로토콜에서 1 mg/kg IM(알파잘론 5 mg/kg, 모르핀 0.4 mg/kg과 병용)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 지속 상태 치료 - IV 또는 IM (엑스트라라벨)",
+          "value": "0.07 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "반응 없을 시 최대 2회 반복 가능; 경련 재발 시 재볼루스 후 CRI 고려",
+          "evidence": "대부분의 임상의는 0.1~0.3 mg/kg 권고; 범위 0.07~0.5 mg/kg IM 또는 IV; IM 용량이 IV보다 높을 수 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 지속 상태 치료 - IM (엑스트라라벨)",
+          "value": "0.07 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "반응 없을 시 최대 2회 반복 가능",
+          "evidence": "범위 0.07~0.5 mg/kg IM; IM 용량이 IV보다 높을 수 있음"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "간질 지속 상태 치료 - 비강 내 투여 (엑스트라라벨)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 재투여; 비강 어댑터 사용; 경련 조절 70~75%, 중앙값 33~47초 내 경련 소실",
+          "evidence": "0.2 mg/kg 비강 내 투여; 직장 내 디아제팜보다 효과적이며 IV 미다졸람보다 빠른 경련 조절"
+        },
+        {
+          "logic_type": "linear",
+          "context": "간질 지속 상태 치료 - 지속 정맥 주입 (엑스트라라벨)",
+          "value": "0.25 - 0.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 2.5,
+          "duration_note": "시간당 CRI; 범위 0.1~2.5 mg/kg/hour; 낮은 용량부터 시작하여 경련 조절될 때까지 증량; 77% 경련 조절",
+          "evidence": "0.25~0.4 mg/kg/hour IV CRI (범위 0.1~2.5 mg/kg/hour)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "수술 전 투약/공동 유도제 (엑스트라라벨)",
+          "value": "0.1 - 0.3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "다른 전처치제와 병용; 부토르파놀과 병용 시 노령 또는 매우 아픈 고양이에만 사용 권고",
+          "evidence": "0.1~0.3 mg/kg SC, IM, IV; 일부 프로토콜에서 0.5 mg/kg IM"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전 투약/공동 유도제 (엑스트라라벨)",
+          "value": "0.08 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "다른 전처치제와 병용",
+          "evidence": "0.08~0.5 mg/kg IV; 알파잘론 0.25 mg/kg IV 후 1분 뒤 미다졸람 0.08 mg/kg IV 또는 프로포폴 후 0.2~0.5 mg/kg IV"
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 전 투약/공동 유도제 - IM (엑스트라라벨)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.5,
+          "duration_note": "케타민, 덱스메데토미딘 등과 병용",
+          "evidence": "0.25 mg/kg IM (케타민 5~7 mg/kg, 덱스메데토미딘 40 µg/kg과 병용) 또는 0.5 mg/kg IM (케타민 14 mg/kg과 병용)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "IV 카테터 삽입을 위한 진정 (엑스트라라벨)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "알파잘론 1.5 mg/kg, 하이드로모르폰 0.1 mg/kg과 동일 주사기에 혼합하여 척추 근육에 IM 투여",
+          "evidence": "미다졸람 0.2 mg/kg + 알파잘론 1.5 mg/kg + 하이드로모르폰 0.1 mg/kg IM; 장시간 진정이 필요한 경우 유용"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 질환 시 주의 권고. 활성 대사체 알파-하이드록시미다졸람의 반감기가 신장 기능 저하 시 연장됨(인체 데이터). 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 장애 시 소실 반감기가 거의 2배로 증가하며 효과가 지속될 수 있음(인체 데이터). 울혈성 심부전 또는 간 기능 장애 동물에서 약물 배설이 느려질 수 있음. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "벤조디아제핀 과민반응",
+      "match_terms": [
+        "benzodiazepine hypersensitivity",
+        "drug allergy benzodiazepine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 폐쇄각 녹내장",
+      "match_terms": [
+        "acute narrow-angle glaucoma",
+        "angle-closure glaucoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "치료받지 않은 개방각 녹내장",
+      "match_terms": [
+        "open-angle glaucoma untreated"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "쇼크 또는 혼수 상태",
+      "match_terms": [
+        "shock",
+        "coma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "유의한 호흡 억제",
+      "match_terms": [
+        "respiratory depression",
+        "COPD",
+        "respiratory compromise"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "노령 또는 쇠약한 동물",
+      "match_terms": [
+        "geriatric",
+        "debilitated"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 (특히 임신 1기)",
+      "match_terms": [
+        "pregnancy",
+        "first trimester"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중인 동물",
+      "match_terms": [
+        "nursing",
+        "lactation"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 MDR1 또는 기타 유전적 감수성에 관한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "피질하 CNS(변연계, 시상, 시상하부)를 억제하여 항불안, 진정, 골격근 이완, 항경련 효과를 나타냄. 세로토닌 길항, GABA 활성 증가/촉진, CNS 내 아세틸콜린 방출 감소 등이 기전으로 제시됨. 벤조디아제핀 특이적 수용체는 포유류 뇌, 신장, 간, 폐, 심장에 존재함.",
+    "common_extra_effects": [
+      "호흡 억제",
+      "저혈압",
+      "역설적 흥분/탈억제",
+      "저체온증",
+      "혈전정맥염(IV CRI 시)",
+      "기억 장애",
+      "오심/구토",
+      "딸꾹질",
+      "주사 부위 통증"
+    ],
+    "dog_mechanism": "개에서 CYP3A12(주), CYP3A26(부), CYP2B11에 의해 간에서 대사됨. 인체 CYP3A4 기반 상호작용을 그대로 적용하지 않도록 주의.",
+    "dog_extra_effects": [
+      "흥분(패들링, 근간대성 경련) - 특히 아세프로마진+모르핀 전처치 후 IV 투여 시",
+      "저체온증 - 유도 후 5분 이내",
+      "저혈압",
+      "색소뇨(하이드로모르폰 전처치 + 미다졸람/에토미데이트 유도 시)",
+      "역설적 행동(메데토미딘 병용 시 높은 빈도)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "흥분/탈억제 반응 - 단독 사용 시 더 빈번",
+      "불안, 공격성, 보정 어려움 - 부토르파놀 병용 시",
+      "고혈당증 - 메데토미딘 병용 시"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 단독 사용 시 예측 가능한 진정 효과를 제공하지 않으며 흥분 또는 불쾌감이 나타날 수 있음. 오피오이드, 케타민, 아세프로마진, 덱스메데토미딘 등과 병용 시 더 신뢰할 수 있는 진정 효과를 나타냄. 비강 내 투여(0.2 mg/kg)는 간질 지속 상태 치료에 효과적이며 직장 내 디아제팜보다 우수함. IM 투여 후 생체이용률 약 47%, 평균 소실 반감기 77분. 에토미데이트와 병용 시 안내압 상승 및 동공 축소 유발 가능하므로 안과 수술 시 주의.",
+    "cat": "고양이는 단독 사용 시 흥분/탈억제 반응이 개보다 더 빈번하게 발생하므로 반드시 진정제/안정제와 병용해야 함. 부토르파놀과 병용 시 불안, 공격성, 보정 어려움이 나타날 수 있으며 노령 또는 매우 아픈 고양이에만 사용 권고. 고양이 종 특이적 PK 데이터 없음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 단독 사용 시 예측 불가능한 진정 효과 및 흥분 반응 가능. 간/신장 질환, 노령, 쇠약, 호흡 억제, 쇼크, 혼수 시 주의. 에토미데이트 병용 시 안과 수술 주의. 메데토미딘 병용 시 역설적 행동 빈도 높음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 단독 사용 시 흥분/탈억제 반응이 더 빈번하므로 반드시 진정제와 병용. 부토르파놀 병용은 노령 또는 매우 아픈 고양이에만 권고. 간/신장 질환, 노령, 쇠약 시 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(15°C~30°C) 보관, 빛 차단. 냉동 후 해동 시 물리적 안정성 유지. pH 3~3.6에서 안정. DEA Schedule IV(C-IV) 규정에 따라 잠금 장치가 있는 견고한 장소에 보관. 미사용 또는 낭비된 규제 약물의 폐기는 관련 법규 준수.",
+    "forms": [
+      "Midazolam HCl Injection 1 mg/mL",
+      "Midazolam HCl Injection 5 mg/mL",
+      "Midazolam HCl Syrup 2 mg/mL",
+      "Midazolam HCl Nasal Spray (5 mg 단위, Nayzilam®)",
+      "Compounded oral suspension (injectable solution 희석)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "미다졸람은 벤조디아제핀 계열의 주사용 진정제로, 주로 수술 전 전처치 및 공동 유도제로 사용됨. 디아제팜과 달리 IM 투여 및 비강 내 투여가 가능하며, 간질 지속 상태 치료에도 활용됨. 수의용 허가 제품은 없으며 인체용 제품을 엑스트라라벨로 사용함. DEA Schedule IV 규제 약물. 플루마제닐로 효과 역전 가능. 고양이에서 단독 사용 시 흥분 반응 주의. 호흡 억제가 가장 중요한 부작용.",
+    "indications": "수술 전 전처치 및 공동 유도제(개, 고양이, 말, 반추동물, 조류, 토끼, 설치류 등), 간질 지속 상태 치료(개: IV, IM, 비강 내), 불안 완화, 근이완. 모든 수의 적응증은 엑스트라라벨 사용임.",
+    "client_info": "이 약은 집에서 주사로 투여하지 마십시오. 안전한 사용을 위해 특별한 의료 모니터링이 필요합니다. 개의 경련을 멈추기 위해 코에 투여하는 경우, 수의사의 지시를 정확히 따르고 즉시 수의사에게 연락하십시오. 이 약은 규제 약물(마약류)이므로 안전하게 보관하고 처방전 없이 타인에게 제공하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific pharmacokinetics",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability in cats",
+      "QT prolongation data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates (cat-specific CYP isoforms)",
+      "metabolism_and_clearance.renal_elimination_fraction (veterinary species)",
+      "species_flags.qt_prolongation"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/65.jsonl",
+    "extracted_at": "2026-03-11T09:33:10.095291+00:00",
+    "reviewer": null
+  }
+}

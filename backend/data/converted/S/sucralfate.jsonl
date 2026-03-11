@@ -1,0 +1,567 @@
+{
+  "id": "sucralfate",
+  "drug_identity": {
+    "name_ko": "수크랄페이트",
+    "name_en": "Sucralfate",
+    "active_ingredient": "Sucralfate",
+    "brand_names": [
+      "Carafate",
+      "Sulcrate",
+      "Cytogard"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용이며, 인체용 제품만 존재함. 소동물에서의 효과에 대한 근거는 제한적임.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.01,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "수크랄페이트는 위장관 내에서 염산과 반응하여 수크로스 황산염으로 전환되며, 대부분 대변으로 배설됨. 전신 흡수는 극히 미미하며, 흡수된 소량은 소변으로 미변화 상태로 배설됨."
+    },
+    "extra_information": "개와 고양이에서 정제를 물에 녹여 투여하면 약물 분산이 증가함. 개 대변에서 정제 조각이 관찰된 바 있어 투여 전 분쇄 및 현탁 권장. 신부전 환자에서 소량의 알루미늄이 축적될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "수크랄페이트는 국소 작용 약물로 전신 흡수가 극히 미미함. 장기 부담 점수는 알려진 부작용 및 임상 보고를 기반으로 산정. 신부전 환자에서 알루미늄 축적 가능성 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "전신 흡수가 거의 없어 뇌에 대한 직접적 영향 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "aluminum absorption"
+        ],
+        "index": -1,
+        "evidence": "소량의 알루미늄이 흡수될 수 있으나 임상적으로 유의한 혈액 독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "aluminum accumulation",
+          "renal failure",
+          "worsening azotemia"
+        ],
+        "index": 1,
+        "evidence": "신부전 환자에서 알루미늄 축적 가능성이 있으며, CKD 고양이에서 요독증 악화가 보고됨. 신기능 저하 환자에서 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 보고 없음. 전신 흡수 미미."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적 영향 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "전신 흡수가 거의 없어 뇌에 대한 직접적 영향 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "aluminum absorption"
+        ],
+        "index": -1,
+        "evidence": "소량의 알루미늄이 흡수될 수 있으나 임상적으로 유의한 혈액 독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "aluminum accumulation",
+          "renal failure",
+          "worsening azotemia",
+          "CKD decompensation"
+        ],
+        "index": 1,
+        "evidence": "CKD 고양이 5마리 중 3마리에서 구토, 식욕부진, 변비, 요독증 악화 등 임상적 악화가 보고됨. CKD 고양이에서 사용 시 각별한 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성에 대한 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적 영향 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": 5,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 대부분 위장관 내에서 국소 작용하며, 궤양 부위 결합 지속 시간은 최대 6시간. 전신 흡수는 극히 미미(무시할 수준). 대부분 48시간 이내 대변으로 배설됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 수크랄페이트는 주로 경구 흡수 저해(chelation/binding) 기전으로 다수 약물과 상호작용함.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids, Aluminum Containing",
+      "severity": 2,
+      "keywords": [
+        "aluminum accumulation",
+        "additive absorption",
+        "renal insufficiency"
+      ],
+      "evidence": "Additive aluminum absorption may occur, particularly in patients with renal insufficiency. Also can decrease sucralfate effectiveness; separate administration by 30 minutes."
+    },
+    {
+      "drug": "Antacids, Calcium/Magnesium Containing",
+      "severity": 1,
+      "keywords": [
+        "decreased sucralfate effectiveness",
+        "absorption separation"
+      ],
+      "evidence": "Can decrease sucralfate effectiveness; administration should be separated by 30 minutes."
+    },
+    {
+      "drug": "Alendronate (and other oral bisphosphonates)",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "chelation"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of alendronate and other oral bisphosphonates; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Ciprofloxacin (and other oral fluoroquinolones except enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "chelation"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of ciprofloxacin and other oral fluoroquinolones (except enrofloxacin); separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Diclofenac",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of diclofenac; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "narrow therapeutic index"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of digoxin; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Enteral Feeding",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption",
+        "administration timing"
+      ],
+      "evidence": "Administration should be separated by at least 1 hour from enteral feeding."
+    },
+    {
+      "drug": "Ferrous Sulfate",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "chelation"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of ferrous sulfate; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of furosemide; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of ketoconazole; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Lanthanum",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of lanthanum; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "thyroid hormone"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of levothyroxine; administration should be separated by at least 4 hours."
+    },
+    {
+      "drug": "Macrolide Antibiotics (azithromycin, clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of macrolide antibiotics; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "chelation"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of penicillamine; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Tetracyclines (doxycycline, minocycline, tetracycline)",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "chelation"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of tetracyclines; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "narrow therapeutic index"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of theophylline; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Vitamins, Fat Soluble",
+      "severity": 1,
+      "keywords": [
+        "decreased oral absorption"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of fat-soluble vitamins; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased oral absorption",
+        "anticoagulation"
+      ],
+      "evidence": "Sucralfate may impair oral absorption of warfarin; separate administration by at least 2 hours."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (e.g., omeprazole)",
+      "severity": 1,
+      "keywords": [
+        "no additive benefit",
+        "gastroduodenal injury"
+      ],
+      "evidence": "Concurrent use of sucralfate with PPIs does not enhance treatment of gastroduodenal injury in small animal species per consensus panel."
+    },
+    {
+      "drug": "Histamine H2 Receptor Antagonists (e.g., ranitidine)",
+      "severity": 1,
+      "keywords": [
+        "no additive benefit",
+        "gastroduodenal injury"
+      ],
+      "evidence": "Concurrent use of sucralfate with H2 blockers does not enhance treatment of gastroduodenal injury in small animal species per consensus panel."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "소형견(토이 브리드) - 식도염, 위궤양, 십이지장궤양, 요독성 위염 등 위장관 점막 보호 (허가 외)",
+          "value": "250 - 500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1g 정제의 1/4~1/2 용량. 투여 전 정제를 분쇄하여 소량의 물에 현탁하여 투여 권장. 하루 2~4회 투여.",
+          "evidence": "Plumb's Dosages: 소형견 및 고양이 250-500 mg/동물(g/kg 아님) PO 하루 2-4회"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "대형견 - 식도염, 위궤양, 십이지장궤양, 요독성 위염 등 위장관 점막 보호 (허가 외)",
+          "value": "1000",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1g/동물(g/kg 아님). 투여 전 정제를 분쇄하여 소량의 물에 현탁하여 투여 권장. 하루 2~4회 투여.",
+          "evidence": "Plumb's Dosages: 대형견 1g/동물(g/kg 아님) PO 하루 2-4회"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "식도염, 위궤양, 십이지장궤양, 요독성 위염 등 위장관 점막 보호 (허가 외)",
+          "value": "250 - 500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1g 정제의 1/4~1/2 용량(g/kg 아님). 투여 전 정제를 분쇄하여 소량의 물에 현탁하여 투여 권장. 하루 2~4회 투여. CKD 고양이에서 임상적 악화 보고 있어 주의 필요.",
+          "evidence": "Plumb's Dosages: 소형견 및 고양이 250-500 mg/동물(g/kg 아님) PO 하루 2-4회"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신부전 환자에서 소량의 알루미늄이 축적될 수 있음. CKD 고양이에서 구토, 식욕부진, 변비, 요독증 악화 등 임상적 악화가 보고됨(5마리 중 3마리). 신기능 저하 환자에서는 사용을 피하거나 매우 신중하게 사용해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 대사가 거의 없으며 간 독성에 대한 보고 없음. 간기능 저하 시 용량 조절 필요성에 대한 근거 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "수크랄페이트 과민증",
+      "match_terms": [
+        "hypersensitivity to sucralfate",
+        "sucralfate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 운동 저하 (변비 위험)",
+      "match_terms": [
+        "decreased GI motility",
+        "constipation",
+        "GI obstruction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "만성 신장 질환 (고양이)",
+      "match_terms": [
+        "CKD",
+        "chronic kidney disease",
+        "renal failure",
+        "renal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "당뇨병 (현탁액 사용 시)",
+      "match_terms": [
+        "diabetes mellitus",
+        "hyperglycemia"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "수크랄페이트는 위장관 내에서 국소적으로 작용함. 위산(염산)과 반응하여 페이스트 형태의 복합체를 형성하고, 궤양 부위의 단백질성 삼출물(알부민, 피브리노겐)에 우선적으로 결합하여 보호 장벽을 형성함. 펩신 활성 억제, 담즙산 결합, 프로스타글란딘 E2 및 I2 자극을 통한 세포 보호 효과도 있음.",
+    "common_extra_effects": [
+      "변비",
+      "구토 (고양이에서 보고)",
+      "불쾌한 맛으로 인한 기호성 저하",
+      "알루미늄 흡수 (신부전 환자에서 축적 가능)",
+      "고혈당증 (당뇨 환자에서 드물게 보고, 현탁액 사용 시)"
+    ],
+    "dog_mechanism": "개에서도 동일한 국소 작용 기전. 정제 조각이 대변에서 관찰된 바 있어 투여 전 분쇄 및 현탁 권장.",
+    "dog_extra_effects": [
+      "변비",
+      "기호성 저하"
+    ],
+    "cat_mechanism": "고양이에서도 동일한 국소 작용 기전. CKD 고양이에서 임상적 악화 위험이 있음.",
+    "cat_extra_effects": [
+      "구토",
+      "식욕부진",
+      "변비",
+      "요독증 악화 (CKD 고양이)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 수크랄페이트는 식도염, 위궤양, 십이지장궤양, 요독성 위염 등에 경험적으로 사용됨. 소형견은 250-500 mg/동물, 대형견은 1 g/동물로 하루 2-4회 투여. 정제는 반드시 분쇄 후 소량의 물에 현탁하여 투여할 것. 다른 약물과 동시 투여 시 흡수 저해 가능성이 있으므로 수크랄페이트 투여 2시간 전에 다른 약물을 먼저 투여해야 함. 소동물에서의 효과에 대한 근거는 제한적임.",
+    "cat": "고양이에서 구토가 보고되어 있으며, CKD 고양이 5마리 중 3마리에서 구토, 식욕부진, 변비, 요독증 악화 등 임상적 악화가 보고됨. CKD 고양이에서는 사용을 피하거나 매우 신중하게 사용해야 함. 소형견과 동일하게 250-500 mg/동물로 하루 2-4회 투여. 정제 분쇄 후 현탁 투여 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "위장관 운동 저하가 우려되는 경우 주의 사용. 다른 약물과의 흡수 상호작용에 주의. 신부전 환자에서 알루미늄 축적 가능성."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "구토 부작용 보고 있음. CKD 고양이에서 임상적 악화(구토, 식욕부진, 변비, 요독증 악화) 보고로 CKD 환자에서는 사용 회피 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐 용기에 실온(15-30°C) 보관. 현탁액: 조절된 실온(20-25°C) 보관, 냉동 금지. 조제 현탁액(200 mg/mL): 냉장 보관 시 14일간 안정.",
+    "forms": [
+      "수크랄페이트 정제 1 g (Carafate®, 제네릭)",
+      "수크랄페이트 현탁액 1 g/10 mL (Carafate®, 제네릭)",
+      "조제 현탁액 200 mg/mL (1 g 정제 20개를 증류수 100 mL에 현탁)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "수크랄페이트는 위장관 궤양 및 식도염 치료에 사용되는 국소 작용 위장관 점막 보호제임. 전신 흡수가 극히 미미하여 전신 부작용은 드물지만, 고양이에서 구토가 보고되고 CKD 고양이에서 임상적 악화가 보고됨. 다수의 약물과 흡수 상호작용이 있으므로 다른 약물은 수크랄페이트 투여 2시간 전에 투여해야 함. 소동물에서의 효과에 대한 근거는 제한적이며, 소동물 식도 손상 예방 및 치료에 대한 근거도 약함.",
+    "indications": "식도염, 위궤양, 십이지장궤양, 요독성 위염, 약물(아스피린 등) 유발 위 미란 예방 (모두 허가 외 사용). 인체에서는 신부전 이차성 고인산혈증에도 사용되나 고양이 CKD에서는 효과 없고 부작용 위험 있음.",
+    "client_info": "이 약은 가능하면 공복에 투여하고, 다른 약물과 동시에 투여하지 마세요. 다른 약물이 있다면 수크랄페이트 투여 2시간 전에 먼저 투여하세요. 정제는 미지근한 물에 녹여서 투여하는 것이 좋습니다. 하루 여러 번 투여해야 효과적입니다. 현탁액은 투여 전 잘 흔들어 주세요. 대부분의 동물에서 잘 견디지만, 변비가 생길 수 있고 일부 고양이에서는 구토가 나타날 수 있습니다. 이상 증상이 나타나면 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Formal veterinary PK studies (dog/cat)",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Onset/Tmax data",
+      "Half-life data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:03:11.605294+00:00",
+    "reviewer": null
+  }
+}

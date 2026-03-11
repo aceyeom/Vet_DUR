@@ -1,0 +1,493 @@
+{
+  "id": "piperacillin_tazobactam",
+  "drug_identity": {
+    "name_ko": "피페라실린/타조박탐",
+    "name_en": "Piperacillin/Tazobactam",
+    "active_ingredient": "Piperacillin sodium / Tazobactam sodium",
+    "brand_names": [
+      "Zosyn",
+      "Tazobac",
+      "Tazocin"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. 세균 배양 및 감수성 검사 결과에 근거하여 사용 권장.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.25,
+        "unit": "mg"
+      },
+      {
+        "value": 3.375,
+        "unit": "mg"
+      },
+      {
+        "value": 4.5,
+        "unit": "mg"
+      },
+      {
+        "value": 40.5,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.68,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "피페라실린은 간에서 부분적으로 탈에틸 대사체로 대사되며, 주로(68%) 신장을 통해 활성 세뇨관 분비 및 사구체 여과로 미변화체로 배설됨. 담즙으로도 일부 배설됨. 타조박탐의 약동학은 피페라실린과 유사한 양상을 보임."
+    },
+    "extra_information": "개에서 피페라실린이 타조박탐의 신장 청소율을 감소시키는 것으로 보고되었으며, 이는 세뇨관 분비 경쟁에 의한 것으로 추정됨. 암말에서 피페라실린의 소실 반감기는 약 7시간, IM 생체이용률 86%, 단백결합률 약 19%로 보고됨. 수의학 종에 대한 정보는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학 종별 PK 데이터가 제한적이므로 인체 데이터 및 개 독성 연구를 참고함. 점수는 보고된 이상반응 및 약동학 정보에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "매우 고용량 투여 시 신경독성(경련) 가능성이 보고됨. 신기능 저하 환자에서 위험 증가."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "bleeding",
+          "platelet",
+          "coagulation"
+        ],
+        "index": 1,
+        "evidence": "피페라실린이 혈소판에 드물게 영향을 미쳐 출혈 위험이 있음. 항응고제 병용 시 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "renal failure",
+          "dose adjustment"
+        ],
+        "index": 2,
+        "evidence": "주로 신장으로 배설(68%). 신기능 저하 시 용량 조절 필요. 반코마이신 병용 시 급성 신손상 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glycogen granules",
+          "smooth endoplasmic reticulum"
+        ],
+        "index": 1,
+        "evidence": "개에서 400 mg/kg/일 이상 투여 시 간세포 내 글리코겐 과립 및 활면소포체 증가 등 일시적 간 변화 관찰됨. 약물 중단 후 대부분 회복됨."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "sodium content",
+          "cardiac failure"
+        ],
+        "index": 1,
+        "evidence": "고용량 투여 시 나트륨 함량으로 인해 심부전 또는 고나트륨혈증 환자에서 악영향 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고용량 시 신경독성(경련) 가능성. 고양이 특이 데이터 없음; 개/인체 데이터 외삽."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "bleeding",
+          "platelet"
+        ],
+        "index": 1,
+        "evidence": "피페라실린의 혈소판 영향으로 인한 출혈 위험. 고양이 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "dose adjustment"
+        ],
+        "index": 2,
+        "evidence": "신장 배설 주도. 신기능 저하 시 용량 조절 필요. 고양이 특이 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 부분 대사. 고양이 특이 독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "sodium content",
+          "cardiac failure"
+        ],
+        "index": 1,
+        "evidence": "고용량 시 나트륨 함량으로 인한 심혈관계 영향 가능. 고양이 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 19,
+    "evidence": "인체에서 IM 투여 후 약 30분에 최고 혈중 농도 도달. 인체 소실 반감기 약 1시간. 암말에서 반감기 약 7시간, 단백결합률 약 19%, IM 생체이용률 86%. 경구 흡수 불량으로 반드시 비경구 투여 필요. 개/고양이 특이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin, tobramycin)",
+      "severity": 2,
+      "keywords": [
+        "synergy",
+        "inactivation",
+        "renal failure"
+      ],
+      "evidence": "In vitro studies show synergistic/additive activity against certain bacteria. However, beta-lactams can inactivate aminoglycosides in vitro and in vivo in renal failure or with massive penicillin doses. Amikacin is most resistant to inactivation. Monitor aminoglycoside serum levels carefully."
+    },
+    {
+      "drug": "Anticoagulants (heparin, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "platelet",
+        "coagulation"
+      ],
+      "evidence": "Piperacillin may rarely affect platelets; increased monitoring of coagulation parameters is recommended when used with heparin or warfarin."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "toxicity"
+      ],
+      "evidence": "Piperacillin may increase methotrexate serum concentrations, potentially increasing methotrexate toxicity."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "reduced tubular secretion",
+        "increased systemic concentration"
+      ],
+      "evidence": "Probenecid can reduce renal tubular secretion of both piperacillin and tazobactam, maintaining higher systemic concentrations for longer. Clinical significance in veterinary patients requires further investigation."
+    },
+    {
+      "drug": "Vancomycin",
+      "severity": 3,
+      "keywords": [
+        "acute kidney injury",
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use of piperacillin/tazobactam and vancomycin is associated with increased risk for acute kidney injury."
+    },
+    {
+      "drug": "Vecuronium",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "prolonged paralysis"
+      ],
+      "evidence": "Piperacillin may prolong neuromuscular blockade of vecuronium."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "guinea_pig",
+      "chinchilla",
+      "hamster"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "세균성 패혈증 (오프라벨)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q6h",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "30분에 걸쳐 IV 주입",
+          "evidence": "Plumb's Dosages: 40–50 mg/kg IV over 30 minutes every 6 hours (extra-label, references 5–7)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "세균성 패혈증 로딩 후 CRI (오프라벨)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "로딩 용량 후 3.2 mg/kg/시간 CRI 유지",
+          "evidence": "Plumb's Dosages: 3 mg/kg IV loading dose followed by 3.2 mg/kg/hour IV CRI (extra-label, reference 7)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "세균성 패혈증 (오프라벨)",
+          "value": "40 - 50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q6h",
+          "max_dose_mg_kg": 50.0,
+          "duration_note": "30분에 걸쳐 IV 주입. 개/고양이 동일 용량 제시됨.",
+          "evidence": "Plumb's Dosages: DOGS/CATS listed together — 40–50 mg/kg IV over 30 minutes every 6 hours (extra-label, references 5–7)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "세균성 패혈증 로딩 후 CRI (오프라벨)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "로딩 용량 후 3.2 mg/kg/시간 CRI 유지",
+          "evidence": "Plumb's Dosages: DOGS/CATS listed together — 3 mg/kg IV loading dose followed by 3.2 mg/kg/hour IV CRI (extra-label, reference 7)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신기능이 현저히 저하된 환자에서는 투여 빈도 감소(용량 조절)가 필요할 수 있음. 구체적인 크레아티닌 역치 또는 조절 계수는 본문에 명시되지 않음. 신기능 저하 환자에서 신경독성 및 출혈 위험 증가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 용량 조절에 대한 명시적 권고사항 없음. 간에서 부분 대사되나 주 배설 경로는 신장임."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린/세팔로스포린/베타-락타마제 억제제 과민반응",
+      "match_terms": [
+        "penicillin allergy",
+        "cephalosporin allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전 또는 고나트륨혈증",
+      "match_terms": [
+        "cardiac failure",
+        "hypernatremia",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "decreased renal function",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "토끼, 기니피그, 친칠라, 햄스터",
+      "match_terms": [
+        "rabbit",
+        "guinea pig",
+        "chinchilla",
+        "hamster"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "피페라실린은 세균의 세포벽 합성 및 격막 형성을 억제하는 살균성 확장 스펙트럼 아실아미노페니실린임. 타조박탐은 베타-락타마제에 비가역적으로 결합하여 피페라실린의 베타-락탐 고리를 가수분해로부터 보호하고 스펙트럼을 확장함.",
+    "common_extra_effects": [
+      "과민반응 (두드러기, 발진, 아나필락시스)",
+      "위장관 이상 (구역, 구토, 설사, 변비)",
+      "혈전정맥염 (IV 주사 부위)",
+      "항생제 관련 설사 (장내 미생물 변화)",
+      "출혈 (혈소판 기능 영향, 드묾)",
+      "신경독성/경련 (매우 고용량 또는 신기능 저하 시)",
+      "피부 반응 (발진, 소양증)",
+      "Clostridioides difficile 중복감염 (드묾)"
+    ],
+    "dog_mechanism": "개에서 피페라실린이 타조박탐의 신장 청소율을 감소시킴 (세뇨관 분비 경쟁). 400 mg/kg/일 이상 투여 시 일시적 간 변화(간세포 내 글리코겐 과립, 활면소포체 증가) 관찰되나 대부분 가역적.",
+    "dog_extra_effects": [
+      "일시적 간 변화 (고용량 시)",
+      "신경독성/경련 (매우 고용량 또는 신기능 저하 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 피페라실린/타조박탐은 세균성 패혈증에 오프라벨로 사용됨. 40–50 mg/kg을 6시간마다 30분에 걸쳐 IV 주입하거나, 3 mg/kg 로딩 후 3.2 mg/kg/시간 CRI로 투여. 신기능 저하 시 용량 조절 필요. 반코마이신 병용 시 급성 신손상 위험 증가에 주의. 800 mg/kg/일까지 6개월 투여 시 심각한 독성 없었으나, 400 mg/kg/일 이상에서 일시적 간 변화 관찰됨.",
+    "cat": "고양이에서도 개와 동일한 용량(40–50 mg/kg IV q6h)이 제시되어 있으나, 고양이 특이 PK 및 안전성 데이터는 매우 제한적임. 오프라벨 사용이며 배양 및 감수성 검사 결과에 근거하여 사용 권장. 신기능 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 시 용량 조절 필요. 심부전 또는 고나트륨혈증 환자에서 고용량 사용 시 주의. 반코마이신 병용 시 급성 신손상 위험. 아미노글리코사이드 병용 시 상호작용 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이 안전성 데이터 제한적. 신기능 모니터링 필요. 개와 동일한 주의사항 적용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 바이알 및 ADD-Vantage 바이알: 실온(20–25°C) 보관. 냉동 프리믹스 용액: -20°C에서 냉동 보관, 냉장(2–8°C) 또는 실온(20–25°C)에서만 해동(열탕 또는 전자레인지 해동 금지). 해동 후 실온에서 24시간, 냉장 시 14일 안정. 재구성 후 바이알은 즉시 사용 권장; 실온 24시간, 냉장 48시간 이내 사용. IV 백(50–150 mL)은 실온 24시간, 냉장 1주일 안정.",
+    "forms": [
+      "Piperacillin Sodium and Tazobactam Injection (powder for solution): 2.25 g, 3.375 g, 4.5 g, 40.5 g vials",
+      "Piperacillin Sodium and Tazobactam Injection (solution in D5W): 2.25 g/50 mL, 3.375 g/50 mL, 4.5 g/100 mL (Galaxy container, frozen)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피페라실린/타조박탐은 광범위 스펙트럼 페니실린계 항생제와 베타-락타마제 억제제의 복합 제제로, 그람양성균, 그람음성균(Pseudomonas, Enterobacter 포함), 혐기성균에 대한 광범위한 항균 활성을 가짐. 수의학적 허가 제품은 없으며 오프라벨로 사용됨. 반드시 비경구(IV) 투여해야 하며, 입원 환경에서 적절한 모니터링 하에 사용해야 함. 신기능 저하 환자에서 용량 조절 필요. 반코마이신 병용 시 급성 신손상 위험 증가에 주의.",
+    "indications": "세균 배양 및 감수성 검사에 근거한 세균 감염 치료(세균성 패혈증 포함). 그람음성균 또는 혼합 호기성/혐기성 감염이 우려되는 수술 예방적 항생제 투여. 오프라벨 사용.",
+    "client_info": "피페라실린/타조박탐은 심각한 세균 감염 치료를 위해 사용되는 항생제입니다. 반드시 정맥 주사(링거)로 투여해야 하며, 동물병원에서 충분한 모니터링이 가능한 환경에서만 사용됩니다. 투여 중 이상 반응(알레르기 반응, 설사, 경련 등)이 나타나면 즉시 수의사에게 알려주세요. 처방된 치료 기간을 반드시 완료하고, 임의로 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 58,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Cat-specific dosing data",
+      "CYP enzyme profile",
+      "Oral bioavailability (dog/cat)",
+      "Specific renal dose adjustment thresholds (dog/cat)",
+      "Hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat (cat-specific PK/dosing)",
+      "organ_burden_logic.cat (cat-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/19.jsonl",
+    "extracted_at": "2026-03-10T19:11:10.917797+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,773 @@
+{
+  "id": "propantheline",
+  "drug_identity": {
+    "name_ko": "프로판텔린",
+    "name_en": "Propantheline",
+    "active_ingredient": "Propantheline bromide",
+    "brand_names": [
+      "Pro-Banthine",
+      "Propan B"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "discontinued",
+    "has_reversal": true,
+    "reversal_agent": "Physostigmine",
+    "reversal_evidence": "과다복용 시 physostigmine 사용이 논란이 있으나, 극도의 흥분 또는 생명을 위협하는 빈맥 시 사용 가능. 성인 용량: 2 mg IV 서서히 투여; 소동물에서는 0.02 mg/kg 서서히 IV 투여 권장.",
+    "off_label_note": "미국 내 수의용 및 인체용 제품 모두 시판 중단. 모든 소동물 적응증은 엑스트라라벨 사용임.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.05,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주로 위장관 및/또는 간에서 가수분해에 의해 비활성 대사체로 대사됨. 경구 투여량의 5% 미만이 소변으로 미변화체로 배설됨."
+    },
+    "extra_information": "개에서 흡수가 가변적이므로 환자별 용량 조정이 필요함. 4급 암모늄 화합물로 지질 용해도가 낮아 CNS 및 안구로의 침투가 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터 부재; 인체 데이터 및 약리학적 추론에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "quaternary ammonium",
+          "poor CNS penetration"
+        ],
+        "index": 1,
+        "evidence": "4급 암모늄 구조로 인해 CNS 침투가 최소화됨. 아트로핀 대비 CNS 부작용이 적음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia",
+          "heart rate elevation"
+        ],
+        "index": 2,
+        "evidence": "심박수 증가 및 빈맥이 부작용으로 보고됨. 혈액 내 직접적 독성 근거는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal disease caution",
+          "urinary hesitancy"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 환자에서 주의 사용 권고. 경구 투여량의 5% 미만이 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic disease caution"
+        ],
+        "index": 2,
+        "evidence": "주로 위장관 및 간에서 대사됨. 간 질환 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "tachyarrhythmias",
+          "cardiac insufficiency"
+        ],
+        "index": 3,
+        "evidence": "빈맥 및 부정맥이 부작용으로 보고됨. 심부전, 빈맥성 부정맥 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "quaternary ammonium",
+          "poor CNS penetration"
+        ],
+        "index": 1,
+        "evidence": "4급 암모늄 구조로 인해 CNS 침투가 최소화됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 2,
+        "evidence": "빈맥이 부작용으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal disease caution",
+          "urinary hesitancy"
+        ],
+        "index": 1,
+        "evidence": "신장 질환 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic disease caution"
+        ],
+        "index": 2,
+        "evidence": "간에서 대사됨. 간 질환 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "tachycardia",
+          "tachyarrhythmias"
+        ],
+        "index": 3,
+        "evidence": "빈맥 및 부정맥이 부작용으로 보고됨. 고양이에서 구토 및 과다침흘림도 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.6,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 경구 투여 후 최고 혈중 농도 도달 시간 1~2시간, 반감기 1.6시간. 개에서의 흡수는 가변적. 음식 섭취 시 흡수량 감소."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antihistamines, first generation (e.g., diphenhydramine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement",
+        "additive antimuscarinic"
+      ],
+      "evidence": "1세대 항히스타민제는 프로판텔린의 항콜린 작용을 강화할 수 있음."
+    },
+    {
+      "drug": "Antiarrhythmics, Type 1 (e.g., procainamide, quinidine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement"
+      ],
+      "evidence": "Type 1 항부정맥제는 프로판텔린의 활성을 강화할 수 있음."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., diazepam)",
+      "severity": 1,
+      "keywords": [
+        "anticholinergic enhancement"
+      ],
+      "evidence": "벤조디아제핀은 프로판텔린의 활성을 강화할 수 있음."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "프로판텔린은 시메티딘의 흡수를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "increased intraocular pressure"
+      ],
+      "evidence": "장기 사용 시 안압(IOP) 상승 가능."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum digoxin levels"
+      ],
+      "evidence": "프로판텔린은 혈청 디곡신 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Nitrates (e.g., nitroglycerin, nitroprusside)",
+      "severity": 2,
+      "keywords": [
+        "potentiated adverse effects"
+      ],
+      "evidence": "질산염 제제는 프로판텔린의 부작용을 강화할 수 있음."
+    },
+    {
+      "drug": "Nitrofurantoin",
+      "severity": 1,
+      "keywords": [
+        "enhanced action"
+      ],
+      "evidence": "프로판텔린은 니트로푸란토인의 작용을 강화할 수 있음."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, hydrocodone, meperidine, morphine)",
+      "severity": 2,
+      "keywords": [
+        "additive anticholinergic effects"
+      ],
+      "evidence": "오피오이드와 병용 시 항콜린 효과가 상가될 수 있음."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "anticholinergic enhancement"
+      ],
+      "evidence": "페노티아진은 프로판텔린의 활성을 강화할 수 있음. 과다복용 시 페노티아진 사용 금지."
+    },
+    {
+      "drug": "Prokinetic Agents (e.g., cisapride, metoclopramide)",
+      "severity": 2,
+      "keywords": [
+        "decreased prokinetic effect",
+        "GI motility antagonism"
+      ],
+      "evidence": "프로판텔린은 위장관 운동 촉진제의 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Sympathomimetics (e.g., phenylpropanolamine)",
+      "severity": 1,
+      "keywords": [
+        "enhanced action"
+      ],
+      "evidence": "프로판텔린은 교감신경 흥분제의 작용을 강화할 수 있음."
+    },
+    {
+      "drug": "Ranitidine",
+      "severity": 1,
+      "keywords": [
+        "delayed absorption",
+        "increased peak serum level",
+        "increased bioavailability"
+      ],
+      "evidence": "프로판텔린은 라니티딘의 흡수를 지연시키지만 최고 혈중 농도를 증가시킴. 병용 시 라니티딘의 상대적 생체이용률이 약 23% 증가할 수 있음."
+    },
+    {
+      "drug": "Thiazide Diuretics (e.g., hydrochlorothiazide)",
+      "severity": 1,
+      "keywords": [
+        "enhanced action"
+      ],
+      "evidence": "프로판텔린은 티아지드 이뇨제의 작용을 강화할 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "배뇨근 과반사, 절박성 요실금 (엑스트라라벨)",
+          "value": "7.5 - 30",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 증상을 조절할 수 있는 최저 용량 사용",
+          "evidence": "7.5–30 mg/dog (mg/kg 아님) PO q8–24h"
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 비감염성 설사 (엑스트라라벨)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 투여",
+          "evidence": "2.5 mg/kg PO 2~3회/일"
+        },
+        {
+          "logic_type": "linear",
+          "context": "구토 억제 (엑스트라라벨, 권장도 낮음)",
+          "value": "0.25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 투여. 다른 항구토제에 비해 효과 낮음.",
+          "evidence": "0.25 mg/kg PO 2~3회/일 제안됨. 위장관 운동 변화 부작용 있음."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "동성 서맥, 불완전 AV 차단 단기 치료 (엑스트라라벨)",
+          "value": "7.5 - 30",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개선은 부분적이고 일시적인 경우가 많음. q8–12h 투여.",
+          "evidence": "7.5–30 mg/dog (mg/kg 아님) PO q8–12h"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "배뇨근 과반사, 절박성 요실금 (엑스트라라벨)",
+          "value": "5 - 7.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "용량 범위 다양: 5–7.5 mg/cat q8h 또는 7.5 mg/cat q3일. 임상 증상을 조절할 수 있는 최저 용량 사용.",
+          "evidence": "5–7.5 mg/cat (mg/kg 아님) PO q8h 또는 7.5 mg/cat PO q3일"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "동성 서맥, 불완전 AV 차단 단기 치료 (엑스트라라벨)",
+          "value": "7.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개선은 부분적이고 일시적인 경우가 많음. q8–12h 투여.",
+          "evidence": "7.5 mg/cat (mg/kg 아님) PO q8–12h"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 주의 사용 권고되나, 구체적인 용량 조정 지침은 제시되지 않음. 경구 투여량의 5% 미만이 신장으로 배설됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 질환 환자에서 주의 사용 권고되나, 구체적인 용량 조정 지침은 제시되지 않음. 주로 위장관 및 간에서 대사됨."
+  },
+  "contraindications": [
+    {
+      "condition": "항콜린제 과민반응",
+      "match_terms": [
+        "anticholinergic hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증 또는 심부전에 의한 빈맥",
+      "match_terms": [
+        "thyrotoxicosis",
+        "cardiac insufficiency tachycardia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심근 허혈",
+      "match_terms": [
+        "myocardial ischemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 출혈 중 불안정한 심장 상태",
+      "match_terms": [
+        "unstable cardiac status",
+        "acute hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 폐쇄 질환",
+      "match_terms": [
+        "GI obstructive disease",
+        "GI obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "마비성 장폐색",
+      "match_terms": [
+        "paralytic ileus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 궤양성 대장염",
+      "match_terms": [
+        "severe ulcerative colitis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "폐쇄성 요로 질환",
+      "match_terms": [
+        "obstructive uropathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 근무력증 (항콜린 부작용 역전 목적 제외)",
+      "match_terms": [
+        "myasthenia gravis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 감염",
+      "match_terms": [
+        "GI infection"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "자율신경 병증",
+      "match_terms": [
+        "autonomic neuropathy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "빈맥성 부정맥",
+      "match_terms": [
+        "tachyarrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전립선 비대",
+      "match_terms": [
+        "prostatic hypertrophy",
+        "BPH"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식도 역류",
+      "match_terms": [
+        "esophageal reflux",
+        "GERD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고령 또는 소아 환자",
+      "match_terms": [
+        "geriatric",
+        "pediatric"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "무스카린성 수용체 길항제(항무스카린제). 아트로핀과 유사한 작용을 가진 4급 암모늄 화합물로, 부교감신경 차단을 통해 위장관 경련 억제, 분비 억제, 방광 배뇨근 과반사 억제 효과를 나타냄. CNS 및 안구로의 침투가 제한적.",
+    "common_extra_effects": [
+      "구강 건조",
+      "안구 건조",
+      "배뇨 곤란",
+      "빈맥",
+      "변비",
+      "고용량 시 장폐색(ileus)",
+      "고온 환경에서 열사병 위험"
+    ],
+    "dog_mechanism": "아트로핀과 유사한 항무스카린 작용. 4급 구조로 인해 CNS 부작용이 아트로핀보다 적음.",
+    "dog_extra_effects": [
+      "구강 건조",
+      "안구 건조",
+      "배뇨 곤란",
+      "빈맥",
+      "변비",
+      "고용량 시 장폐색"
+    ],
+    "cat_mechanism": "아트로핀과 유사한 항무스카린 작용. 4급 구조로 인해 CNS 부작용이 아트로핀보다 적음.",
+    "cat_extra_effects": [
+      "구토",
+      "과다침흘림(hypersalivation)",
+      "구강 건조",
+      "빈맥",
+      "변비"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 흡수가 가변적이므로 환자별 용량 조정이 필요함. 배뇨근 과반사, 절박성 요실금, 만성 비감염성 설사, 동성 서맥 치료에 엑스트라라벨로 사용됨. 감염성 설사에는 사용 금지(위장관 운동 저하로 병원체 체류 연장 위험).",
+    "cat": "고양이에서 구토 및 과다침흘림이 보고됨. 용량 범위가 다양하므로 임상 증상을 조절할 수 있는 최저 용량을 사용할 것. 배뇨근 과반사 및 서맥 치료에 엑스트라라벨로 사용됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 질환, 신장 질환, 고혈압, CHF, 빈맥성 부정맥, 전립선 비대, 식도 역류, 고령 또는 소아 환자에서 주의 사용. 위장관 감염 환자에서는 극도의 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 구토 및 과다침흘림 보고됨. 간 질환, 신장 질환, 심장 질환 환자에서 주의 사용. 임상 증상을 조절할 수 있는 최저 용량 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 실온 20~25°C(68~77°F), 밀폐 차광 용기에 보관. 재구성용 건조 분말(Propan B®): 25°C(77°F) 이하 보관, 차광. 조제 후 용액은 10일 이내 사용.",
+    "forms": [
+      "Propantheline Bromide 15 mg 정제 (인체용, 시판 중단)",
+      "Propantheline Bromide 300 mg 재구성용 멸균 분말 (IV용, 10 mL 바이알, Propan B®, 호주)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프로판텔린은 4급 암모늄 항무스카린제로, 아트로핀과 유사한 작용을 가지나 CNS 및 안구 부작용이 적음. 소동물에서 배뇨근 과반사/절박성 요실금, 만성 비감염성 설사, 항콜린 반응성 서맥 치료에 엑스트라라벨로 사용됨. 말에서는 직장 검사 및 수술 시 결장 연동 억제 목적으로 IV 사용. 미국 내 수의용 및 인체용 제품 모두 시판 중단 상태. 개에서 흡수가 가변적이므로 환자별 용량 조정 필요. 위장관 폐쇄, 마비성 장폐색, 녹내장, 중증 근무력증 등에서 금기.",
+    "indications": "【승인 적응증】없음(미국 내 시판 중단). 【엑스트라라벨 적응증】개/고양이: 배뇨근 과반사, 절박성 요실금; 만성 비감염성 설사; 동성 서맥, 불완전 AV 차단. 말: 직장 검사/수술 시 결장 연동 억제, 급성 경련성 산통, 직장 이완.",
+    "client_info": "이 약은 빈 속에 투여하는 것이 좋으나, 투여 후 구토가 발생하면 소량의 음식과 함께 투여해 보세요. 구토가 지속되면 수의사에게 연락하세요. 부작용으로 구강 건조, 안구 건조, 배뇨/배변 곤란, 빠른 심박수가 나타날 수 있으며, 고양이에서는 구토와 침 흘림이 나타날 수 있습니다. 구강 건조는 혀에 소량의 물을 10~15분간 적셔주면 완화될 수 있습니다. 며칠째 대변을 보지 못하면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary species-specific PK data",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Oral bioavailability (F%) in dogs/cats",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:50:59.907458+00:00",
+    "reviewer": null
+  }
+}

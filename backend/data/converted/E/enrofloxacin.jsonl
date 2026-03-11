@@ -1,0 +1,850 @@
+{
+  "id": "enrofloxacin",
+  "drug_identity": {
+    "name_ko": "엔로플록사신",
+    "name_en": "Enrofloxacin",
+    "active_ingredient": "Enrofloxacin",
+    "brand_names": [
+      "Baytril",
+      "Baytril 100",
+      "Baytril 100-CA1",
+      "Zobuxa",
+      "Enroflox",
+      "Enroflox-100",
+      "Enroquin",
+      "Enrosite"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Chewable",
+      "Drop"
+    ],
+    "available_strengths": [
+      {
+        "value": 22.7,
+        "unit": "mg"
+      },
+      {
+        "value": 68.0,
+        "unit": "mg"
+      },
+      {
+        "value": 136.0,
+        "unit": "mg"
+      },
+      {
+        "value": 22.7,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.325,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP1A2",
+        "CYP2E1",
+        "CYP3A4"
+      ],
+      "inducers": [
+        "CYP1A2"
+      ],
+      "pathway_evidence": "돼지에서 엔로플록사신은 CYP1A2 발현 및 활성을 유도하고 CYP2E1 및 CYP3A4를 억제하였다. 건강한 비글의 간 마이크로솜에서 엔로플록사신과 시프로플록사신은 CYP1A 활성을 억제하였으나, 임상적으로 유의한 약물 상호작용은 시프로플록사신에서 더 가능성이 높은 것으로 나타났다."
+    },
+    "extra_information": "개에서 경구 생체이용률은 약 80%로 시프로플록사신의 약 2배이다. 엔로플록사신은 대부분의 종에서 10~40%가 활성 대사체인 시프로플록사신으로 전환된다. 이중 배설 경로(신장 및 간)로 인해 중등도 신기능 장애가 있는 개는 반감기가 약간 연장되고 혈청 농도가 높아질 수 있으나 용량 조절이 필요하지 않을 수 있다. 개에서 반감기는 2~5시간, 고양이에서는 6시간이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 및 간 이중 배설, 신장 세뇨관 분비 및 사구체 여과를 통한 15~50% 미변화 배설, 담즙·신장·간에 고농도 분포, 간효소 상승 보고 등을 근거로 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "seizures",
+          "ataxia",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "개에서 드물게 운동실조, 발작, 우울, 무기력, 신경과민이 보고되었으며, CNS 자극 가능성이 있어 발작 장애 환자에서 주의가 필요하다."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hematocrit decrease",
+          "crystalluria"
+        ],
+        "index": 1,
+        "evidence": "일부 인간에서 헤마토크릿 감소가 보고되었으며, 수의 환자에서의 임상적 관련성은 불명확하다. 결정뇨 가능성이 있다."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "glomerular filtration",
+          "crystalluria",
+          "renal insufficiency"
+        ],
+        "index": 2,
+        "evidence": "약물의 15~50%가 신장을 통해 미변화 형태로 배설되며(세뇨관 분비 및 사구체 여과), 신기능 부전 환자에서 반감기 연장 및 혈청 농도 상승이 가능하다. 결정뇨 위험이 있으며, 탈수 시 주의가 필요하다."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic elimination",
+          "elevated hepatic enzymes",
+          "hepatic insufficiency",
+          "bile"
+        ],
+        "index": 2,
+        "evidence": "간 및 신장 이중 배설 경로를 가지며, 담즙에 고농도 분포한다. 개에서 드물게 간효소 상승이 보고되었으며, 간기능 부전 환자에서 용량 간격 조절이 필요할 수 있다."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "QT prolongation",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "희석되지 않은 IV 급속 투여 시 심장 부정맥 및 저혈압 위험이 있다. 인간에서 QT 간격 연장 가능성이 보고되었으며, 이는 엔로플록사신에도 적용될 수 있다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "seizures",
+          "ataxia",
+          "depression",
+          "vocalization"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 드물게 운동실조, 발작, 우울/무기력, 발성, 공격성이 보고되었다."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "crystalluria"
+        ],
+        "index": -1,
+        "evidence": "결정뇨 가능성이 있으나 고양이 특이적 혈액 독성 데이터는 제한적이다."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal insufficiency",
+          "retinal degeneration",
+          "ABCG2 transporter"
+        ],
+        "index": 2,
+        "evidence": "신기능 장애가 있는 고양이에서는 사용이 권장되지 않는다. 혈액-망막 장벽의 ABCG2 수송체 이상으로 인해 망막에 약물이 축적되어 망막 변성 및 실명이 발생할 수 있다. 신장 배설 경로가 주요 경로이다."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic elimination",
+          "elevated hepatic enzymes"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 드물게 간효소 상승이 보고되었으며, 간 및 신장 이중 배설 경로를 가진다."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "인간에서 QT 간격 연장 가능성이 보고되었으며, 이는 고양이에도 적용될 수 있으나 고양이 특이적 데이터는 제한적이다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 5.0,
+      "mean": 3.5,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": 27,
+    "evidence": "개에서 경구 생체이용률 약 80%, 최고 혈장 농도의 50%는 투여 후 15분 이내에 달성되며 Cmax는 투여 후 1시간 이내에 발생한다. 개에서 단백 결합률은 약 27%이다. 개에서 분포 용적은 약 3~4 L/kg이다. 개에서 반감기 2~5시간, 고양이에서 6시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 인간 또는 동물에서 보고되었거나 이론적인 상호작용을 포함하며, 시프로플록사신 또는 엔로플록사신에 적용되는 상호작용 모두 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Aluminum-, Calcium-, and Magnesium-Containing Oral Products (antacids)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "킬레이션"
+      ],
+      "evidence": "May bind to enrofloxacin and prevent oral absorption; doses should be separated by at least 2 hours."
+    },
+    {
+      "drug": "Aminoglycosides",
+      "severity": 1,
+      "keywords": [
+        "상승 효과",
+        "Pseudomonas"
+      ],
+      "evidence": "Synergism may occur against some bacteria (particularly Pseudomonas aeruginosa), but this is unpredictable."
+    },
+    {
+      "drug": "Third-generation cephalosporins (cefpodoxime, ceftiofur)",
+      "severity": 1,
+      "keywords": [
+        "상승 효과"
+      ],
+      "evidence": "Synergism may occur against some bacteria, but this is unpredictable."
+    },
+    {
+      "drug": "Doxycycline",
+      "severity": 1,
+      "keywords": [
+        "상승 효과"
+      ],
+      "evidence": "Synergism may occur against some bacteria, but this is unpredictable."
+    },
+    {
+      "drug": "Extended-spectrum penicillins",
+      "severity": 1,
+      "keywords": [
+        "상승 효과"
+      ],
+      "evidence": "Synergism may occur against some bacteria, but this is unpredictable."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 1,
+      "keywords": [
+        "상승 효과",
+        "혐기성균"
+      ],
+      "evidence": "In vitro synergy reported when used with clindamycin against Peptostreptococcus spp, Lactobacillus spp, and Bacteroides fragilis."
+    },
+    {
+      "drug": "Blood Glucose Lowering Agents (insulins, sulfonylureas)",
+      "severity": 2,
+      "keywords": [
+        "저혈당",
+        "혈당 강하 효과 증강"
+      ],
+      "evidence": "Fluoroquinolones may enhance the hypoglycemic effect of blood glucose lowering agents."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "건염",
+        "건 파열"
+      ],
+      "evidence": "Concomitant use with fluoroquinolones may increase risk for tendinitis and tendon rupture."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "신독성 증가",
+        "대사 억제"
+      ],
+      "evidence": "Fluoroquinolones may exacerbate nephrotoxicity and reduce the metabolism of cyclosporine."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "노출 증가",
+        "독성 증가"
+      ],
+      "evidence": "Enrofloxacin may increase doxorubicin exposure."
+    },
+    {
+      "drug": "Flunixin",
+      "severity": 2,
+      "keywords": [
+        "AUC 증가",
+        "반감기 연장",
+        "상호 PK 상호작용"
+      ],
+      "evidence": "In dogs, flunixin increases the AUC and elimination half-life of enrofloxacin, and enrofloxacin increases the AUC and elimination half-life of flunixin."
+    },
+    {
+      "drug": "Iron (oral)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "Concomitant administration may decrease fluoroquinolone absorption; doses should be separated by at least 2 hours."
+    },
+    {
+      "drug": "Zinc (oral)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "Concomitant administration may decrease fluoroquinolone absorption; doses should be separated by at least 2 hours."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "갑상선 호르몬 효능 감소"
+      ],
+      "evidence": "Ciprofloxacin (active metabolite) may decrease levothyroxine efficacy."
+    },
+    {
+      "drug": "Mycophenolate Mofetil",
+      "severity": 2,
+      "keywords": [
+        "마이코페놀산 노출 감소"
+      ],
+      "evidence": "Ciprofloxacin may decrease mycophenolic acid exposure."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "MTX 농도 증가",
+        "독성 위험 증가"
+      ],
+      "evidence": "Concomitant administration may increase MTX concentrations and increase risk for toxicity."
+    },
+    {
+      "drug": "Nitrofurantoin",
+      "severity": 2,
+      "keywords": [
+        "항균 활성 길항"
+      ],
+      "evidence": "May antagonize the antimicrobial activity of fluoroquinolones; concomitant use is not recommended."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "세뇨관 분비 차단",
+        "혈청 농도 증가",
+        "반감기 연장"
+      ],
+      "evidence": "May block renal tubular secretion of ciprofloxacin and may increase ciprofloxacin serum concentration and elimination half-life; monitor for increased adverse effects."
+    },
+    {
+      "drug": "QT Interval Prolongation Drugs (azithromycin, chlorpromazine, cisapride, fluconazole, fluoxetine, ketoconazole, methadone, ondansetron, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT 연장",
+        "부정맥"
+      ],
+      "evidence": "Combination with ciprofloxacin/enrofloxacin may increase risk for QT prolongation; concurrent use of cisapride and ciprofloxacin is contraindicated in humans."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "실데나필 혈청 농도 증가",
+        "부작용 증가"
+      ],
+      "evidence": "Concomitant use with ciprofloxacin may increase sildenafil serum concentrations and adverse effects."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 1,
+      "keywords": [
+        "흡수 영향"
+      ],
+      "evidence": "In dogs, sucralfate can affect absorption of ciprofloxacin but does not appear to affect enrofloxacin absorption."
+    },
+    {
+      "drug": "Theophylline / Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "테오필린 혈중 농도 증가"
+      ],
+      "evidence": "Enrofloxacin may increase theophylline blood concentrations; in dogs, theophylline concentrations may be increased by approximately 30% to 50%."
+    },
+    {
+      "drug": "Tilmicosin",
+      "severity": 2,
+      "keywords": [
+        "엔로플록사신 대사 감소"
+      ],
+      "evidence": "Tilmicosin may decrease enrofloxacin metabolism."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "항응고 효과 증가",
+        "출혈 위험"
+      ],
+      "evidence": "Concomitant use may increase anticoagulant effects of warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (FDA 승인 경구 용량)",
+          "value": "5 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "임상 증상 소실 후 최소 2~3일 추가 투여; 최대 30일. 5일 이내 개선이 없으면 진단 재평가.",
+          "evidence": "FDA 승인 경구 정제 라벨 용량"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (FDA 승인 주사 용량, 초회 IM)",
+          "value": "2.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.5,
+          "duration_note": "1회 IM 투여 후 경구 엔로플록사신으로 전환",
+          "evidence": "FDA 승인 2.27% (22.7 mg/mL) 주사제 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균 감염 (허가 외 주사 용량)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "감수성, 감염 부위 및 중증도에 따라 선택; SC 투여 시 반드시 희석, IV 투여 시 천천히 투여",
+          "evidence": "허가 외 사용; 2.27% (22.7 mg/mL) 주사제 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "하부 요로 감염 (허가 외)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "다른 항생제에 내성인 세균성 방광염에 한해 사용 권장",
+          "evidence": "허가 외 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (허가 외, 단기 요법)",
+          "value": "18 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "3일 투여; 아목시실린+클라불라네이트 14일 치료와 동등한 효과",
+          "evidence": "허가 외 사용"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신우신염 (허가 외)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": null,
+          "evidence": "허가 외 사용; 신우신염 1차 선택약으로 권장"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "육아종성 대장염 (엔로플록사신 감수성 E. coli, 허가 외)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "8주",
+          "evidence": "허가 외 사용"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "캄필로박터증 (허가 외)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "치료 중 내성 발생 가능",
+          "evidence": "허가 외 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "세균성 피부 감염 (허가 외)",
+          "value": "5 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "Pseudomonas 감염 시 고용량 필요; 심부 농피증에서는 2차 선택약으로 권장",
+          "evidence": "허가 외 사용"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (FDA 승인 경구 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "임상 증상 소실 후 최소 2~3일 추가 투여; 최대 30일. 농도 의존성 항생제이므로 1일 1회 투여 권장.",
+          "evidence": "FDA 승인 라벨 용량; 5 mg/kg/일 초과 시 망막 독성 위험"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균 감염 (허가 외 주사 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "5 mg/kg 이하로 제한; 개용 주사제(2.27%, 22.7 mg/mL) 사용",
+          "evidence": "허가 외 사용; IV 투여 시 희석 필요"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "중증 신기능 장애 환자에서는 약물 축적을 방지하기 위해 투여 간격 조절이 필요할 수 있다. 중등도 신기능 장애가 있는 개는 반감기가 약간 연장되고 혈청 농도가 높아질 수 있으나 용량 조절이 필요하지 않을 수 있다. 고양이에서는 신기능 장애 시 사용이 권장되지 않는다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "extend_interval",
+    "note": "중증 간기능 장애 환자에서는 약물 축적을 방지하기 위해 투여 간격 조절이 필요할 수 있다."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "enrofloxacin hypersensitivity",
+        "fluoroquinolone allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소형 및 중형견 2~8개월령 (성장기 연골 손상 위험)",
+      "match_terms": [
+        "young dog",
+        "growing dog",
+        "puppy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 신기능 장애",
+      "match_terms": [
+        "feline renal insufficiency",
+        "cat CKD",
+        "cat renal failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "Streptococcus canis 감염 (또는 배제되지 않은 경우)",
+      "match_terms": [
+        "Streptococcus canis",
+        "necrotizing fasciitis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "탈수",
+      "match_terms": [
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 장애",
+      "match_terms": [
+        "severe renal impairment",
+        "renal failure",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간기능 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "고양이 5 mg/kg/일 초과 용량",
+      "match_terms": [
+        "feline high dose enrofloxacin",
+        "cat retinal toxicity"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식용 동물 (허가 외 사용 금지)",
+      "match_terms": [
+        "food animal",
+        "cattle",
+        "swine",
+        "extra-label food animal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "고양이 (ABCG2 수송체 변이)"
+    ],
+    "gene": "ABCG2",
+    "evidence": "고양이에서 망막 독성은 혈액-망막 장벽의 ABCG2 수송체의 아미노산 변화로 인해 광반응성 플루오로퀴놀론이 고양이 망막에 축적되어 발생하는 것으로 알려져 있다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 DNA 자이라제(II형 토포이소머라제)를 억제하여 DNA 초나선 형성 및 DNA 합성을 방해하는 농도 의존성 살균 항생제. 그람 음성 간균 및 구균에 광범위한 항균 스펙트럼을 가지며, 혐기성균에는 효과가 없다.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "결정뇨",
+      "과민반응",
+      "CNS 자극",
+      "발작",
+      "운동실조",
+      "광과민성",
+      "관절 연골 이상 (성장기 동물)",
+      "QT 간격 연장 (인간)"
+    ],
+    "dog_mechanism": "개에서 경구 생체이용률 약 80%로 시프로플록사신의 약 2배. 분포 용적 약 3~4 L/kg. 단백 결합률 약 27%. 반감기 2~5시간. 10~40%가 활성 대사체 시프로플록사신으로 전환.",
+    "dog_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "간효소 상승 (드물게)",
+      "운동실조 (드물게)",
+      "발작 (드물게)",
+      "우울/무기력 (드물게)",
+      "신경과민 (드물게)",
+      "IV 투여 시 구토",
+      "심장 부정맥 (급속 IV 투여 시)",
+      "저혈압 (급속 IV 투여 시)",
+      "비만세포 탈과립 (급속 IV 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서 반감기 약 6시간. 혈액-망막 장벽의 ABCG2 수송체 이상으로 인해 망막에 약물 축적 가능. 5 mg/kg/일 초과 시 망막 독성 위험.",
+    "cat_extra_effects": [
+      "산동",
+      "망막 변성",
+      "실명 (5 mg/kg/일 초과 시)",
+      "구토 (드물게)",
+      "식욕부진 (드물게)",
+      "간효소 상승 (드물게)",
+      "설사 (드물게)",
+      "운동실조 (드물게)",
+      "발작 (드물게)",
+      "우울/무기력 (드물게)",
+      "발성 (드물게)",
+      "공격성 (드물게)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 엔로플록사신은 FDA 승인 경구 및 IM 경로로 사용 가능하다. 경구 생체이용률(약 80%)이 시프로플록사신보다 우수하고 예측 가능하다. 성장기 소형 및 중형견(2~8개월)에서는 사용이 금기이며, 대형견은 12개월, 초대형견은 18개월까지 사용을 피해야 한다. 희석되지 않은 IV 급속 투여는 심장 부정맥, 저혈압, 구토, 비만세포 탈과립 위험이 있어 피해야 한다. 공복 투여가 권장되나 구토 시 소량의 음식과 함께 투여 가능(유제품 제외).",
+    "cat": "고양이에서 엔로플록사신은 FDA 승인 경구 경로로만 사용 가능하며, 최대 용량은 5 mg/kg/일로 제한된다. 이 용량을 초과하면 망막 변성 및 실명이 발생할 수 있으며, 이는 비가역적일 수 있다. 산동은 망막 변성의 초기 징후일 수 있으므로 즉시 수의사에게 연락해야 한다. 신기능 장애가 있는 고양이에서는 사용이 권장되지 않는다. 더 높은 용량이 필요한 중증 감염에서는 프라도플록사신 등 다른 플루오로퀴놀론 사용을 고려해야 한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "성장기 동물에서 관절 연골 이상 위험. 발작 장애, 신기능 또는 간기능 부전, 탈수 환자에서 주의 필요. IV 급속 투여 시 심혈관계 부작용 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "5 mg/kg/일 초과 시 망막 독성 및 실명 위험. 신기능 장애 고양이에서 사용 금기. 산동 발생 시 즉시 투여 중단 및 수의사 상담 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 정제: 25°C 미만 밀폐 용기 보관(일부 제품은 30°C까지 허용). 개용 주사제(2.27%): 25°C 이하 차광 보관, 냉동 금지, 첫 바이알 개봉 후 90일 또는 최대 20회 천자 후 폐기. 대동물용 주사제(10%): 20~30°C 차광 보관, 냉장 및 냉동 금지, 첫 바이알 개봉 후 30일 또는 최대 30회 바늘 천자 또는 4회 투약 장치 천자 후 폐기.",
+    "forms": [
+      "경구 맛있는 정제 22.7 mg, 68 mg, 136 mg (Baytril Taste Tabs, Zobuxa)",
+      "경구 소프트 츄어블 정제 22.7 mg, 68 mg, 136 mg",
+      "경구 필름코팅 정제 22.7 mg, 68 mg, 136 mg (Baytril)",
+      "주사제 22.7 mg/mL (2.27%) 20 mL 바이알 (Baytril, 개용)",
+      "주사제 100 mg/mL 100 mL 및 250 mL 병 (Baytril 100, 소·돼지용)",
+      "주사제 100 mg/mL 250 mL 병 (Baytril 100-CA1, 조건부 승인)",
+      "이용 제제 (엔로플록사신 + 은 설파디아진): Baytril Otic"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "엔로플록사신은 광범위 스펙트럼 플루오로퀴놀론 항생제로, 개(경구 및 IM)와 고양이(경구)에서 FDA 승인을 받았다. 농도 의존성 살균 작용을 하며, 그람 음성균에 특히 효과적이나 혐기성균에는 효과가 없다. 고양이에서 5 mg/kg/일 초과 시 망막 독성 및 실명 위험이 있어 반드시 용량 제한을 준수해야 한다. 성장기 동물에서 관절 연골 이상 위험이 있으므로 사용을 피해야 한다. WHO 및 OIE에서 인간 및 수의학 분야의 최우선 중요 항생제로 지정되어 있어 신중한 사용이 요구된다.",
+    "indications": "개: 엔로플록사신 감수성 세균 감염(요로 감염, 피부 감염, 호흡기 감염, 위장관 감염 등). 고양이: 엔로플록사신 감수성 세균 감염(최대 5 mg/kg/일). 소: 소 호흡기 질환(BRD), 아나플라즈마증(조건부 승인). 돼지: 돼지 호흡기 질환(SRD), 이유자돈 대장균증. 허가 외: 말, 뉴월드 낙타류, 조류, 페럿, 토끼, 설치류, 파충류 등.",
+    "client_info": "엔로플록사신은 공복에 투여하는 것이 가장 좋습니다. 구토나 불편함이 있으면 소량의 음식과 함께 투여하되, 유제품, 제산제, 철분 함유 식품은 피하세요. 필름코팅 정제는 분쇄하지 마세요(쓴맛으로 복용 거부 가능). 칼슘, 철분, 마그네슘, 알루미늄, 아연이 함유된 다른 약물이나 비타민과 동시에 투여하지 마세요(최소 2시간 간격 필요). 성장기, 임신 중, 수유 중인 동물에서 관절 이상이 발생할 수 있습니다. 가장 흔한 부작용은 구토, 메스꺼움, 설사입니다. 고양이에서는 처방된 용량을 절대 초과하지 마세요. 실명이 발생할 수 있습니다. 고양이의 동공이 커지면 즉시 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min (고양이 특이적)",
+      "timing_profile.t_max_hr (고양이 특이적)",
+      "timing_profile.half_life_hr (고양이 별도 객체 필요)",
+      "timing_profile.f_percent (고양이 특이적)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "organ_burden_logic.dog.blood.index",
+      "organ_burden_logic.cat.heart.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T17:58:24.949163+00:00",
+    "reviewer": null
+  }
+}

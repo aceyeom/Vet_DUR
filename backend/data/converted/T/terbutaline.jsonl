@@ -1,0 +1,612 @@
+{
+  "id": "terbutaline",
+  "drug_identity": {
+    "name_ko": "터부탈린",
+    "name_en": "Terbutaline",
+    "active_ingredient": "Terbutaline sulfate",
+    "brand_names": [
+      "Brethine"
+    ],
+    "allergy_class": null,
+    "class": "Bronchodilator",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 인체용 제제를 동물에게 오프라벨로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.6,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체 데이터: 주로 소변으로 미변화체 배설(60%), 간에서 불활성 황산염 포합체로 대사됨. 수의과 CYP 데이터 없음."
+    },
+    "extra_information": "개에서 IV, SC, PO 투여 후 95% 이상이 24시간 내 배설됨. SC 투여 시 최고 혈청 농도는 약 30분 내 도달; PO 투여 시 2~6시간 내 도달. 말에서 경구 생체이용률 1% 미만; IV 투여 시 평균 체류 시간 약 30분."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의과 종별 PK 데이터 제한적; 인체 및 개 데이터 혼용. 심장(빈맥, 부정맥), 신장(배설 경로), 간(대사), 뇌(CNS 흥분) 관련 키워드 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CNS excitement",
+          "nervousness",
+          "seizures",
+          "CNS stimulation"
+        ],
+        "index": 1,
+        "evidence": "CNS 흥분(신경과민), 과량 투여 시 경련 가능성이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmias",
+          "hypokalemia",
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 부정맥, 저칼륨혈증 위험이 보고됨. 심장 부정맥 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "excreted in urine",
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "주요 배설 경로가 신장(미변화체 60%). 개에서 IV/SC/PO 투여 후 95% 이상 24시간 내 신장 배설."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "metabolized in the liver",
+          "sulfate conjugate"
+        ],
+        "index": 1,
+        "evidence": "간에서 불활성 황산염 포합체로 대사됨(인체 데이터)."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac arrhythmias",
+          "increased heart rate",
+          "ventricular arrhythmias",
+          "beta-1 stimulation"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 심실 부정맥, 심박수 증가가 보고됨. 고용량에서 베타-1 수용체 자극 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "CNS excitement",
+          "nervousness",
+          "CNS stimulation"
+        ],
+        "index": 1,
+        "evidence": "CNS 흥분(신경과민) 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "tachycardia",
+          "arrhythmias",
+          "hypokalemia"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 부정맥, 저칼륨혈증 위험이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "excreted in urine",
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "주요 배설 경로가 신장. 고양이 종별 데이터 없으나 인체/개 데이터 외삽."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "metabolized in the liver",
+          "sulfate conjugate"
+        ],
+        "index": 1,
+        "evidence": "간에서 불활성 황산염 포합체로 대사됨(인체 데이터)."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac arrhythmias",
+          "increased heart rate"
+        ],
+        "index": 1,
+        "evidence": "빈맥, 심박수 증가, 부정맥 위험이 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": 33,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: SC 투여 후 15분 내 작용 발현, 최고 효과 30~60분, 지속 최대 4시간. 경구 생체이용률 33~50%. 개에서 SC 투여 후 최고 혈청 농도 약 30분; PO 투여 시 2~6시간. 반감기는 Plumb's에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 규칙에 따라 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Inhalation Anesthetics (e.g., isoflurane)",
+      "severity": 2,
+      "keywords": [
+        "ventricular arrhythmias",
+        "cardiac disease"
+      ],
+      "evidence": "흡입 마취제와 병용 시 특히 기존 심장 질환 환자에서 심실 부정맥 위험 증가. 주의하여 사용."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (e.g., propranolol)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "bronchodilation blockade"
+      ],
+      "evidence": "베타 차단제는 터부탈린의 기관지 확장 작용을 길항할 수 있음."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "cardiac arrhythmias"
+      ],
+      "evidence": "디기탈리스 배당체와 병용 시 심장 부정맥 위험 증가."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "베타 작용제는 이뇨제와 병용 시 저칼륨혈증 위험 증가."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "vascular effects potentiation"
+      ],
+      "evidence": "MAOI는 터부탈린의 혈관 효과를 강화할 수 있음. 병용 금기 수준의 주의 필요."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "enhanced neuromuscular blockade"
+      ],
+      "evidence": "병용 시 신경근 차단 효과 증강 가능."
+    },
+    {
+      "drug": "Other Sympathomimetics (e.g., phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "cardiovascular adverse effects",
+        "additive sympathomimetic"
+      ],
+      "evidence": "다른 교감신경 흥분제와 병용 시 심혈관계 부작용 위험 증가."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 3,
+      "keywords": [
+        "decreased theophylline concentrations",
+        "cardiac arrhythmias",
+        "sudden death"
+      ],
+      "evidence": "테오필린 농도 감소 가능. 병용 시 심장 부정맥 유발 가능; 인체에서 급사 보고됨."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "vascular effects potentiation"
+      ],
+      "evidence": "삼환계 항우울제는 터부탈린의 혈관 효과를 강화할 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "서맥성 부정맥 (오프라벨)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개선은 대개 부분적이고 일시적임",
+          "evidence": "오프라벨. 개선은 보통 부분적이고 일시적."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고칼륨혈증 (오프라벨)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~10분에 걸쳐 천천히 투여",
+          "evidence": "오프라벨. 5~10분에 걸쳐 서서히 IV 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소기도 허탈/질환에 대한 기관지 확장 (오프라벨)",
+          "value": "0.625 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2주 시험 투여 후 효과 및 부작용에 따라 지속 여부 결정. mg/dog (mg/kg 아님)",
+          "evidence": "오프라벨. 기도 허탈에서의 효능은 논란 있음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "조기 분만 억제 (자궁수축 억제제, 오프라벨)",
+          "value": "0.03",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "예정 분만일 48시간 전 투여 중단. 자궁수축 측정으로 용량 조절 권장.",
+          "evidence": "오프라벨. 정상 임신의 조기 분만 병력이 있는 암캐에서 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "비허혈성 지속발기증 (오프라벨)",
+          "value": "1.25 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "다른 보존적 치료와 병용. mg/dog (mg/kg 아님)",
+          "evidence": "오프라벨. 윤활, 진통 등 보존적 치료와 병용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "천식 지속상태 (기관지 확장, 오프라벨)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "15~30분 내 호흡수 또는 호흡 노력 50% 감소 반응 확인. IM 또는 서서히 IV 투여 가능.",
+          "evidence": "오프라벨. 알부테롤 MDI를 사용할 수 없는 고양이의 급성 천식 가정 관리에 사용 가능."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "기관 세척 또는 BAL 전 기관지 경련 예방 (오프라벨)",
+          "value": "0.625",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "시술 12~24시간 전부터 투여, 마지막 용량은 마취 유도 2~4시간 전. mg/cat (mg/kg 아님)",
+          "evidence": "오프라벨. 경구 투여 불가 시 0.01 mg/kg IM 또는 SC 대체 가능."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "서맥성 부정맥 (오프라벨)",
+          "value": "0.625",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개선은 대개 부분적이고 일시적임. mg/cat (mg/kg 아님)",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "고칼륨혈증 (오프라벨)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~10분에 걸쳐 천천히 투여",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "조기 분만 억제 (자궁수축 억제제, 오프라벨)",
+          "value": "0.03",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "예정 분만일 48시간 전 투여 중단. 자궁수축 측정으로 용량 조절 권장.",
+          "evidence": "오프라벨. 정상 임신의 조기 분만 병력이 있는 암고양이에서 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 주요 배설 경로가 신장이므로 신부전 환자에서 주의 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's에 간 기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to terbutaline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고혈압",
+      "match_terms": [
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환 (특히 부정맥 동반)",
+      "match_terms": [
+        "cardiac disease",
+        "arrhythmia",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "베타-2 아드레날린 수용체 선택적 자극제로, 기관지 평활근 이완, 기도 저항 감소, 혈관 확장, 자궁 수축 억제(자궁수축 억제), 비만세포에서 기관지 수축 매개체 방출 억제. Na+K+ATPase 효소계 활성화를 통해 칼륨의 세포 내 이동 촉진.",
+    "common_extra_effects": [
+      "빈맥(심박수 증가)",
+      "진전(떨림)",
+      "CNS 흥분(신경과민)",
+      "어지러움",
+      "저칼륨혈증(일시적)",
+      "저혈압",
+      "과량 투여 시: 부정맥, 고혈압, 발열, 근육 진전, 구토, 산동, 경련"
+    ],
+    "dog_mechanism": "베타-2 수용체 자극을 통한 기관지 확장; 서맥성 부정맥 및 고칼륨혈증 치료에도 사용.",
+    "dog_extra_effects": [
+      "빈맥",
+      "진전",
+      "CNS 흥분",
+      "저칼륨혈증"
+    ],
+    "cat_mechanism": "베타-2 수용체 자극을 통한 기관지 확장; 고양이 천식의 보조 치료제로 주로 사용.",
+    "cat_extra_effects": [
+      "빈맥",
+      "진전",
+      "CNS 흥분",
+      "저칼륨혈증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 기도 허탈/질환에 대한 기관지 확장제로서의 효능은 논란이 있으며, 일부 환자에서만 유용할 수 있음. 사용 시 1~2주 시험 투여 후 효과 및 부작용을 평가하여 지속 여부 결정 권장. 서맥성 부정맥 및 고칼륨혈증 치료에도 오프라벨로 사용됨. IV 볼루스 투여 금지; 불가피한 경우 서서히 투여.",
+    "cat": "고양이 천식에서 코르티코스테로이드 치료의 보조제로 주로 사용. 알부테롤 MDI를 사용할 수 없는 급성 천식 고양이의 가정 관리(SC 또는 IM)에 사용 가능. 기관 세척 또는 BAL 전 기관지 경련 예방 목적으로도 사용. 고정 용량(mg/cat)으로 투여하며 mg/kg 용량과 혼동 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "당뇨병, 갑상선 기능 항진증, 고혈압, 발작 장애, 녹내장, 심장 질환(특히 부정맥 동반) 환자에서 주의 사용. IV 볼루스 투여 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "당뇨병, 갑상선 기능 항진증, 고혈압, 발작 장애, 녹내장, 심장 질환(특히 부정맥 동반) 환자에서 주의 사용. 임신 중 사용 시 태아 빈맥 및 신생아 저혈당 위험."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 실온(20~25°C, 68~77°F) 보관, 빛 차단. 변색된 용액 사용 금지. 개봉된 주사제 잔량 폐기.",
+    "forms": [
+      "터부탈린 정제: 2.5 mg, 5 mg (제네릭, Rx)",
+      "터부탈린 주사제: 1 mg/mL, 1 mL 단회용 바이알 (제네릭, Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "터부탈린은 베타-2 아드레날린 수용체 선택적 작용제로, 개와 고양이에서 기관지 확장제, 자궁수축 억제제, 서맥성 부정맥 및 고칼륨혈증 치료에 오프라벨로 사용됨. 수의과 승인 제품 없음. IV 볼루스 투여 금지. 고정 용량(mg/dog, mg/cat)과 체중 기반 용량(mg/kg)을 혼동하지 않도록 주의 필요. 심장 질환, 당뇨, 갑상선 기능 항진증 환자에서 주의 사용.",
+    "indications": "승인 적응증: 없음(수의과 승인 제품 없음). 오프라벨 적응증: 개·고양이의 기관지 경련(폐 질환, 기관지 허탈, 만성 기관지염, 천식), 서맥성 부정맥, 고칼륨혈증, 조기 분만 억제(자궁수축 억제). 고양이 천식의 보조 치료. 말에서 무한증(anhidrosis) 진단(피내 주사). 조류 및 파충류에서 호흡기 질환 보조 치료.",
+    "client_info": "이 약은 심박수를 증가시키고 흥분을 유발할 수 있습니다. 임신한 동물에서 분만을 지연시킬 수 있습니다. 동물의 상태가 악화되거나 갑자기 아파 보이면 즉시 수의사에게 연락하십시오. 과량 투여는 심각할 수 있으므로 어린이와 동물의 손이 닿지 않는 곳에 보관하십시오. mg/kg 용량과 mg/마리(고정 용량)를 혼동하지 않도록 처방전을 주의 깊게 확인하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific CYP metabolism data",
+      "Half-life data (dog/cat)",
+      "Protein binding data (dog/cat)",
+      "Renal dose adjustment recommendations",
+      "Hepatic dose adjustment recommendations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/46.jsonl",
+    "extracted_at": "2026-03-11T03:20:55.813287+00:00",
+    "reviewer": null
+  }
+}

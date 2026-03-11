@@ -1,0 +1,528 @@
+{
+  "id": "cefazolin",
+  "drug_identity": {
+    "name_ko": "세파졸린",
+    "name_en": "Cefazolin",
+    "active_ingredient": "Cefazolin sodium",
+    "brand_names": [
+      "Ancef",
+      "Kefzol",
+      "Zolicef"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음; 모든 동물 적용은 허가 외(extra-label) 사용임",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      },
+      {
+        "value": 10000,
+        "unit": "mg"
+      },
+      {
+        "value": 20000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "세파졸린은 신장에서 변화 없이 그대로 배설되며, 간 대사를 거치지 않는다. 개에서 약 64%의 청소율이 신세뇨관 분비에 의한 것으로 보고됨."
+    },
+    "extra_information": "개: Vdss 700 mL/kg, 총 체내 청소율 10.4 mL/kg/min, 반감기 45~70분. 일부 연구에서 25 mg/kg IV 투여 시 Vdss 400 mL/kg, 청소율 150 mL/kg/hr, 반감기 3시간 보고. 혈장 단백 결합률 16~28%. 고양이: 20 mg/kg IV 단회 투여 시 Cp(0) 134.8 μg/mL, Vdss 290 mL/kg, 반감기 1.2시간; 투여 후 6시간 이내 84% 배설."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 약물로 신장 부담이 가장 높음. 고용량/장기 사용 시 드물게 신독성, 간독성, 혈액독성 보고. 수의학적 종별 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "seizures",
+          "neurotoxicity",
+          "subarachnoid"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 지주막하 공간 주입 시 경련 유발 가능성 보고됨. 개에서 요추 척수조영술 중 지주막하 공간에 잘못 주입 후 간질 지속 상태 사례 보고."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "positive Coombs test"
+        ],
+        "index": 2,
+        "evidence": "고용량 또는 장기 사용 시 드물게 호중구감소증, 무과립구증, 혈소판감소증, 쿰스 검사 양성 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "nephrotoxicity",
+          "interstitial nephritis",
+          "tubular necrosis",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "신장에서 변화 없이 배설되며 약 64%가 세뇨관 분비. 신기능 저하 시 반감기 연장. 고용량/장기 사용 시 드물게 간질성 신염, 세뇨관 괴사 보고. 신기능 저하 환자에서 용량 조절 필요."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatitis"
+        ],
+        "index": 4,
+        "evidence": "고용량 또는 장기 사용 시 드물게 간염 보고됨. 간 대사는 거의 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "thrombophlebitis"
+        ],
+        "index": 5,
+        "evidence": "IV 투여 후 혈전정맥염 가능성 보고됨. 직접적인 심장 독성은 보고되지 않음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고용량 시 신경독성 가능성은 class effect로 존재하나, 고양이 특이적 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neutropenia",
+          "thrombocytopenia"
+        ],
+        "index": 2,
+        "evidence": "고용량 또는 장기 사용 시 드물게 혈액 이상 가능. 고양이 특이적 데이터 제한적."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "nephrotoxicity",
+          "renal insufficiency",
+          "dose adjustment"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 신기능 저하 시 경험적 용량 조절 권고(CrCL 기준). 신장 배설 약물로 신기능 저하 시 반감기 연장 예상. 고양이 특이적 신독성 데이터는 제한적이나 class effect 존재."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hepatitis"
+        ],
+        "index": 4,
+        "evidence": "고용량 또는 장기 사용 시 드물게 간염 가능. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "thrombophlebitis"
+        ],
+        "index": 5,
+        "evidence": "IV 투여 후 혈전정맥염 가능성. 직접적인 심장 독성 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 0.75,
+      "max": 1.17,
+      "mean": 0.96,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 22,
+    "evidence": "개: IM 투여 후 최고 혈중 농도 도달 시간 30~90분, 반감기 45~70분(0.75~1.17시간). 일부 연구에서 반감기 3시간 보고(25 mg/kg IV). 혈장 단백 결합률 16~28%(평균 약 22%). 고양이: 20 mg/kg IV 단회 투여 시 반감기 1.2시간. 경구 투여 시 흡수 거의 없음(비경구 투여 필수)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concurrent use with parenteral aminoglycosides may cause additive nephrotoxicity. Well-documented only with cephaloridine (no longer marketed); caution advised with cefazolin."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concurrent use with amphotericin B (nephrotoxic drug) may cause additive nephrotoxicity. Caution advised."
+    },
+    {
+      "drug": "Furosemide",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "additive renal toxicity"
+      ],
+      "evidence": "Concurrent use with furosemide may cause additive nephrotoxicity. Caution advised."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased serum levels",
+        "prolonged half-life"
+      ],
+      "evidence": "Probenecid competitively blocks tubular secretion of cefazolin, increasing serum levels and prolonging serum half-life."
+    },
+    {
+      "drug": "Vitamin K Antagonists (e.g., warfarin)",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant enhancement",
+        "bleeding risk"
+      ],
+      "evidence": "Cephalosporins may enhance the anticoagulant effects of vitamin K antagonists such as warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "hamster",
+      "guinea_pig"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "수술 예방적 항생제 투여 (extra-label)",
+          "value": "20 - 22",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q90-120min",
+          "max_dose_mg_kg": null,
+          "duration_note": "절개 30~60분 전 투여 후 창상 봉합까지 90~120분마다 반복",
+          "evidence": "Plumb's Dosages: Dogs/Cats, surgical prophylaxis (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label)",
+          "value": "15 - 35",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "일반적 용량 20 mg/kg q8h; IV는 3~5분에 걸쳐 천천히 투여",
+          "evidence": "Plumb's Dosages: Dogs/Cats, susceptible infections (extra-label) option a"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 - IM 또는 SC (extra-label)",
+          "value": "15 - 35",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "IM은 대근육에 주사; q6~8h 간격",
+          "evidence": "Plumb's Dosages: Dogs/Cats, susceptible infections (extra-label) option a"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "지속 속도 주입(CRI) - 감수성 감염 (extra-label)",
+          "value": "1.3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 1.3 mg/kg IV 천천히 투여 후 1.2 mg/kg/hr CRI 유지",
+          "evidence": "Plumb's Dosages: Dogs/Cats, susceptible infections (extra-label) option b - loading dose"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "수술 예방적 항생제 투여 (extra-label)",
+          "value": "20 - 22",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q90-120min",
+          "max_dose_mg_kg": null,
+          "duration_note": "절개 30~60분 전 투여 후 창상 봉합까지 90~120분마다 반복",
+          "evidence": "Plumb's Dosages: Dogs/Cats, surgical prophylaxis (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "감수성 감염 치료 (extra-label)",
+          "value": "15 - 35",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "일반적 용량 20 mg/kg q8h; IV는 3~5분에 걸쳐 천천히 투여",
+          "evidence": "Plumb's Dosages: Dogs/Cats, susceptible infections (extra-label) option a"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신기능 저하 고양이 - CrCL ≥0.15 mL/kg/min (혈청 크레아티닌 최대 5.5 mg/dL) (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "CrCL ≥0.15 mL/kg/min 시 q12h; 인체 데이터에서 외삽된 권고사항",
+          "evidence": "Plumb's Dosages: Dogs/Cats, susceptible infections (extra-label) option c - renal insufficiency"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신기능 저하 고양이 - CrCL <0.15 mL/kg/min (혈청 크레아티닌 8.5 mg/dL 이상) (extra-label)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "CrCL <0.15 mL/kg/min 시 q24h로 빈도 감소; 인체 데이터에서 외삽된 권고사항",
+          "evidence": "Plumb's Dosages: Dogs/Cats, susceptible infections (extra-label) option c - severe renal insufficiency"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": 5.5,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "고양이: CrCL ≥0.15 mL/kg/min(혈청 크레아티닌 최대 약 5.5 mg/dL)이면 q12h, CrCL <0.15 mL/kg/min(혈청 크레아티닌 약 8.5 mg/dL 이상)이면 q24h로 투여 간격 연장. 인체 데이터에서 외삽된 권고사항. 개에서는 구체적 용량 조절 지침 없음; 중증 신질환 시 주의 필요. 신기능 저하 시 반감기 유의하게 연장될 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "세파졸린은 간 대사를 거치지 않고 신장에서 변화 없이 배설되므로 간기능 저하 시 용량 조절은 일반적으로 불필요함."
+  },
+  "contraindications": [
+    {
+      "condition": "세팔로스포린 과민반응 병력",
+      "match_terms": [
+        "cephalosporin hypersensitivity",
+        "cephalosporin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "베타-락탐 항생제(페니실린, 세파마이신, 카바페넴) 과민반응 병력",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity",
+        "carbapenem allergy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": 5.5,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "소형 포유류(햄스터, 기니피그) 투여",
+      "match_terms": [
+        "guinea pig",
+        "hamster",
+        "small mammal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제: 세균 세포질막의 페니실린 결합 단백질(PBP; 카르복시펩티다제, 트랜스펩티다제, 엔도펩티다제)에 결합하여 무코펩티드 합성을 억제함으로써 삼투압적으로 불안정한 구형체(spheroplast)를 형성하고 세균을 살균함. 시간 의존성 항생제로 MIC 이상 유지 시간이 치료 효과의 핵심 인자.",
+    "common_extra_effects": [
+      "과민반응(발진, 발열, 호산구증가증, 림프절병증, 아나필락시스)",
+      "IM 주사 부위 통증",
+      "혈전정맥염(IV 투여 시)",
+      "무균 농양(드물게)",
+      "고용량/장기 사용 시: 신경독성, 호중구감소증, 무과립구증, 혈소판감소증, 간염, 쿰스 검사 양성, 간질성 신염, 세뇨관 괴사",
+      "경련(매우 고용량 또는 지주막하 주입 시)"
+    ],
+    "dog_mechanism": "시간 의존성 살균 항생제. 포도상구균 감염 시 투여 간격의 40% 이상, 연쇄상구균 감염 시 약 60% 이상 MIC 초과 유지 필요.",
+    "dog_extra_effects": [
+      "IM 투여 후 30~90분에 최고 혈중 농도 도달",
+      "췌장 조직 내 침투 불량",
+      "지주막하 공간 주입 시 간질 지속 상태 보고(사례 보고)"
+    ],
+    "cat_mechanism": "시간 의존성 살균 항생제. 20 mg/kg IV 투여 후 혈장 농도가 최대 4시간 동안 2 μg/mL 이상 유지됨.",
+    "cat_extra_effects": [
+      "20 mg/kg IV 단회 투여 후 6시간 이내 84% 배설",
+      "조직:혈장 농도비 0.18~0.58"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 세파졸린은 수술 예방 및 감수성 감염 치료에 허가 외(extra-label)로 사용됨. 수술 예방 시 절개 30~60분 전 20~22 mg/kg IV 투여 후 창상 봉합까지 90~120분마다 반복 투여. 감수성 감염 치료 시 15~35 mg/kg q6~8h 또는 CRI 프로토콜 사용 가능. IV 투여 시 3~5분에 걸쳐 천천히 주입. IM 투여 시 대근육에 주사. 신기능 저하 시 용량 조절 고려 필요하나 개에서의 구체적 지침은 없음.",
+    "cat": "고양이에서 세파졸린은 허가 외(extra-label)로 사용됨. 20 mg/kg IV 단회 투여 시 반감기 1.2시간, 투여 후 6시간 이내 84% 배설. 신기능 저하 고양이에서 경험적 용량 조절 권고: CrCL ≥0.15 mL/kg/min(혈청 크레아티닌 최대 약 5.5 mg/dL)이면 20 mg/kg q12h, CrCL <0.15 mL/kg/min(혈청 크레아티닌 약 8.5 mg/dL 이상)이면 20 mg/kg q24h. 이 권고사항은 인체 데이터에서 외삽된 것임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하 시 용량 조절 고려. 베타-락탐 과민반응 병력 시 주의. 고용량 IV 급속 투여 시 경련 위험. IM 주사 시 대근육에 투여."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하 시 경험적 용량 조절 권고(인체 데이터 외삽). 베타-락탐 과민반응 병력 시 주의. 수유 중인 어미에서 주의하여 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사용 분말: 실온(20~25°C) 보관, 15~30°C 노출 허용, 40°C 이상 피할 것. 냉동 용액: -20°C 이하 보관. 해동 후 실온에서 48시간, 냉장 시 30일 안정. 재냉동 금지. 재조제 후 실온 24시간, 냉장(5°C) 10일 안정. 재조제 즉시 냉동 시 -20°C에서 최소 12주 안정. 분말 또는 용액의 갈변은 역가에 영향 없음. 빛으로부터 보호.",
+    "forms": [
+      "Cefazolin Sodium Powder for Injection: 500 mg, 1 g, 2 g, 10 g, 20 g vials",
+      "Cefazolin Sodium Powder for Injection: 100 g, 300 g flex containers",
+      "Cefazolin Sodium for Injection (Iso-osmotic IV infusion): 1 g in 4% dextrose, 2 g in 3% dextrose, 50 mL plastic containers or duplex bags"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "세파졸린은 1세대 세팔로스포린 계열의 비경구 항생제로, 수의학에서 수술 예방(특히 정형외과 수술) 및 그람 양성균 감수성 감염 치료에 허가 외(extra-label)로 널리 사용됨. 시간 의존성 살균 항생제로 MIC 이상 혈중 농도 유지 시간이 치료 효과의 핵심. 신장에서 변화 없이 배설되므로 신기능 저하 시 용량 조절 필요. 베타-락탐 과민반응 병력 환자에서 교차 반응 가능성 주의. 고용량 급속 IV 투여 시 경련 위험. 소형 포유류(햄스터, 기니피그)에서 항생제 유발 장염 위험으로 사용 금기.",
+    "indications": "수술 예방적 항생제(특히 정형외과 수술, 포도상구균이 주요 원인인 수술 부위 감염 예방), 그람 양성균 및 일부 그람 음성균(Proteus mirabilis, 일부 E. coli, Klebsiella spp, Pasteurella spp 등) 감수성 감염 치료. 장구균, 녹농균, 리케차, 마이코박테리아, 마이코플라스마, 진균, 바이러스에는 효과 없음. 메티실린 내성 포도상구균(MRSA) 및 ESBL 생성 장내세균에도 효과 없음.",
+    "client_info": "이 약은 주사제로만 투여되며, 경구 투여 시 흡수되지 않습니다. 수술 전 예방 목적 또는 세균 감염 치료를 위해 수의사의 처방에 따라 사용됩니다. 주사 부위 통증이 생길 수 있으며, 드물게 알레르기 반응(발진, 발열, 심한 경우 아나필락시스)이 나타날 수 있습니다. 이전에 페니실린이나 세팔로스포린 계열 항생제에 알레르기 반응이 있었다면 반드시 수의사에게 알려주세요. 신장 기능이 저하된 경우 용량 조절이 필요할 수 있습니다. 처방된 투여 일정을 정확히 지켜주시고, 임의로 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "genetic_sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/22.jsonl",
+    "extracted_at": "2026-03-10T19:58:41.415498+00:00",
+    "reviewer": null
+  }
+}

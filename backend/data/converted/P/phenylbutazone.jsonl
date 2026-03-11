@@ -1,0 +1,593 @@
+{
+  "id": "phenylbutazone",
+  "drug_identity": {
+    "name_ko": "페닐부타존",
+    "name_en": "Phenylbutazone",
+    "active_ingredient": "Phenylbutazone",
+    "brand_names": [
+      "Butazolidin",
+      "Bute"
+    ],
+    "allergy_class": null,
+    "class": "NSAID",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 200,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "말 CYP3A97이 페닐부타존을 옥시페닐부타존으로 전환하는 것으로 보고됨. 주요 대사산물은 옥시페닐부타존(활성) 및 감마-하이드록시페닐부타존."
+    },
+    "extra_information": "개에서 반감기는 약 2~6시간. 말에서 IV 투여 후 말단 반감기 10.9시간, PO 페이스트 투여 후 13.4시간, PO 정제 투여 후 15.1시간. 말에서 완전 배설까지 최대 2개월 소요. 알칼리성 소변에서 더 빠르게 배설됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 말 중심 데이터이나 개 관련 독성 정보도 포함. 신장 및 간 독성 관련 키워드 다수 확인됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "seizures",
+          "tremors",
+          "ataxia",
+          "CNS stimulation"
+        ],
+        "index": 1,
+        "evidence": "개에서 과다복용 시 진전, 경련, 운동실조 보고됨. 경동맥 내 주사 시 CNS 자극 및 경련 유발 가능."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "blood dyscrasias",
+          "leukopenia",
+          "anemia",
+          "agranulocytosis",
+          "aplastic anemia",
+          "decreased platelet aggregation"
+        ],
+        "index": 2,
+        "evidence": "개에서 혈액 이상(혈액 이상증, 백혈구 감소증, 빈혈) 보고됨. 혈소판 응집 감소 작용 있음."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "azotemia",
+          "renal papillary necrosis",
+          "decreased renal blood flow",
+          "decreased GFR",
+          "renal dysfunction",
+          "increased creatinine",
+          "increased BUN"
+        ],
+        "index": 3,
+        "evidence": "개에서 신장 혈류 감소 및 나트륨·수분 저류 유발 가능. 혈청 크레아티닌 또는 BUN 상승 시 치료 중단 권고."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver injury"
+        ],
+        "index": 4,
+        "evidence": "개에서 간독성 보고됨. 페노바르비탈 병용 시 간독성 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "tachycardia",
+          "fluid retention",
+          "edema"
+        ],
+        "index": 5,
+        "evidence": "개에서 과다복용 시 빈맥 보고됨. 나트륨·수분 저류로 인한 부종 가능성 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 CNS 영향 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 신장 독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 간독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 심장 영향 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1440,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 6.0,
+      "mean": 4.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 99,
+    "evidence": "개에서 반감기 약 2~6시간. 말에서 혈장 단백 결합 99% 초과. 치료 효과는 24시간 이상 지속될 수 있음(COX 비가역적 결합으로 인해)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/피해야 함→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "renal dysfunction",
+        "decreased ACEI efficacy"
+      ],
+      "evidence": "Combined use may increase risk for renal dysfunction and/or decrease efficacy of the ACEI."
+    },
+    {
+      "drug": "Anticoagulants (enoxaparin, heparin, rivaroxaban, warfarin)",
+      "severity": 3,
+      "keywords": [
+        "bleeding",
+        "anticoagulation"
+      ],
+      "evidence": "May increase risk for bleeding. Avoid combination."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "hepatotoxicity"
+      ],
+      "evidence": "May increase the risk for GI ulceration or bleeding and risk for hepatotoxicity."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "renal dysfunction"
+      ],
+      "evidence": "May increase risk for renal dysfunction."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "prolonged digoxin half-life",
+        "arrhythmia",
+        "digoxin toxicity"
+      ],
+      "evidence": "Phenylbutazone may increase serum digoxin concentrations, prolong digoxin half-life, and increase risk for adverse effects related to digoxin toxicity (arrhythmias, GI adverse effects)."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide, torsemide)",
+      "severity": 2,
+      "keywords": [
+        "renal toxicity"
+      ],
+      "evidence": "May increase risk for renal toxicity."
+    },
+    {
+      "drug": "Potassium-Sparing Diuretics (spironolactone)",
+      "severity": 2,
+      "keywords": [
+        "decreased diuretic efficacy",
+        "hyperkalemia",
+        "nephrotoxicity"
+      ],
+      "evidence": "May decrease diuretic and antihypertensive efficacy; increased risk for hyperkalemia and nephrotoxicity."
+    },
+    {
+      "drug": "Hepatotoxic Drugs (acetaminophen, chlorpromazine, isoniazid)",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity"
+      ],
+      "evidence": "May increase risk for hepatotoxicity."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "methotrexate toxicity"
+      ],
+      "evidence": "May increase risk for methotrexate toxicity, especially with higher methotrexate doses. Avoid combination."
+    },
+    {
+      "drug": "Misoprostol",
+      "severity": 2,
+      "keywords": [
+        "CNS adverse effects",
+        "ataxia"
+      ],
+      "evidence": "May result in CNS adverse effects (e.g., ataxia)."
+    },
+    {
+      "drug": "NSAIDs (firocoxib, flunixin)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "renal toxicity"
+      ],
+      "evidence": "May increase the potential for GI ulceration and renal toxicity."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "hematologic adverse reactions",
+        "renal adverse reactions"
+      ],
+      "evidence": "May increase the risk for hematologic and/or renal adverse reactions."
+    },
+    {
+      "drug": "Penicillin G",
+      "severity": 1,
+      "keywords": [
+        "increased penicillin half-life"
+      ],
+      "evidence": "Phenylbutazone may increase plasma half-life of penicillin G."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "May increase risk for bleeding."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased phenylbutazone half-life",
+        "hepatotoxicity"
+      ],
+      "evidence": "May result in decreased phenylbutazone half-life and increased risk for hepatotoxicity."
+    },
+    {
+      "drug": "SSRIs (fluoxetine, paroxetine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "May increase risk for bleeding."
+    },
+    {
+      "drug": "Sulfonamides (sulfa-trimethoprim, sulfadimethoxine)",
+      "severity": 2,
+      "keywords": [
+        "protein displacement",
+        "increased sulfonamide adverse effects"
+      ],
+      "evidence": "Phenylbutazone could potentially displace sulfonamides from plasma proteins, increasing the risk for adverse effects."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "May increase risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "max_capped",
+          "context": "근골격계 질환의 항염증 치료 (FDA 승인 용량)",
+          "value": "14.7",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 800 mg/일(체중 무관). 최저 유효 용량으로 감량.",
+          "evidence": "FDA-approved label dose. Maximum 800 mg/dog/day regardless of weight."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "기존 신장 질환이 있는 환자에서 신중하게 사용. 혈청 크레아티닌 또는 BUN 상승 시 즉시 치료 중단 권고. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간독성 보고 있음. 간 기능 이상 환자에서 주의 사용. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액학적 또는 골수 이상",
+      "match_terms": [
+        "hematologic abnormality",
+        "bone marrow abnormality",
+        "aplastic anemia",
+        "agranulocytosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "기존 위장관 궤양",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "EGUS"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "CHF",
+        "congestive heart failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식용 동물 (유제품 젖소 포함)",
+      "match_terms": [
+        "food animal",
+        "dairy cattle"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX) 억제를 통한 프로스타글란딘 합성 감소. 진통, 항염증, 해열, 경미한 요산 배설 촉진 작용. COX에 비가역적으로 결합하여 반감기보다 긴 치료 효과 지속.",
+    "common_extra_effects": [
+      "위장관 미란 및 궤양",
+      "저알부민혈증",
+      "설사",
+      "식욕부진",
+      "질소혈증",
+      "신장 유두 괴사",
+      "혈소판 응집 감소",
+      "나트륨 및 수분 저류",
+      "부종"
+    ],
+    "dog_mechanism": "COX 억제를 통한 프로스타글란딘 합성 감소. 개에서 신장 혈류 감소 및 나트륨·수분 저류 유발 가능.",
+    "dog_extra_effects": [
+      "혈액 이상증",
+      "간독성",
+      "백혈구 감소증",
+      "빈혈",
+      "진전",
+      "경련",
+      "운동실조",
+      "구토",
+      "빈호흡",
+      "빈맥"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 페닐부타존은 FDA 승인을 받았으나, 적절한 정제 크기의 부재와 더 안전한 NSAID의 가용성으로 인해 사용이 권장되지 않음. 혈액 이상증 및 간독성 위험이 있으므로 만성 치료 시 정기적인 CBC 모니터링 필요. 최대 용량은 체중에 관계없이 800 mg/일.",
+    "cat": "고양이에 대한 용량 정보가 없으며, 페닐부타존은 고양이에서 승인되지 않음. 사용을 피하고 더 안전한 대안을 선택할 것."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 혈액 이상증, 간독성, 신독성 위험이 있음. 더 안전한 NSAID 대안이 있으므로 사용을 피하는 것이 권장됨. 사용 시 정기적인 CBC, 신장 기능 검사, 간 기능 검사 모니터링 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에 대한 안전성 및 용량 데이터 없음. 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제품: 15°C~30°C(59°~86°F) 밀폐 용기 보관. 주사제: 냉장 보관 2°C~8°C(36°F~46°F).",
+    "forms": [
+      "페닐부타존 정제: 100 mg, 200 mg, 1 g",
+      "페닐부타존 경구 분말: 10 g 분말 중 1 g",
+      "페닐부타존 페이스트 경구 주사기: 6 g, 12 g, 20 g/주사기",
+      "페닐부타존 과립: 패키지당 8 g",
+      "페닐부타존 주사액: 100 mg/mL, 200 mg/mL (100 mL 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "페닐부타존은 주로 말의 통증 및 염증 치료에 사용되는 NSAID입니다. 개에서 FDA 승인을 받았으나 더 안전한 대안이 있어 사용이 권장되지 않습니다. 위장관 궤양, 신독성, 혈액 이상증 위험이 있으며, 식용 동물에서의 사용은 금지되어 있습니다. 주사제는 반드시 정맥 내(IV)로만 투여해야 합니다.",
+    "indications": "말의 근골격계 통증 및 염증 치료(FDA 승인). 개의 근골격계 질환 항염증 치료(FDA 승인, 그러나 더 안전한 대안 권장). 반추동물의 수술 통증 완화(허가 외 사용, 단 식용 동물 사용 금지).",
+    "client_info": "이 약은 음식과 함께 투여하면 효과가 가장 좋습니다. 주사제는 반드시 정맥(혈관)으로만 투여해야 합니다. 부작용으로 입/위장 궤양, 신장 손상, 식욕 감소, 사지 부종이 나타날 수 있습니다. 식욕 감소, 구강 병변, 우울증, 혈청 크레아티닌 또는 BUN 증가 등의 증상이 나타나면 즉시 수의사에게 연락하십시오. 이 약은 식용 동물에게 사용해서는 안 됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosage",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability (F%)",
+      "t_max_hr"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "cyp_profile.substrates"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/18.jsonl",
+    "extracted_at": "2026-03-10T18:56:15.988417+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,729 @@
+{
+  "id": "pradofloxacin",
+  "drug_identity": {
+    "name_ko": "프라도플록사신",
+    "name_en": "Pradofloxacin",
+    "active_ingredient": "Pradofloxacin",
+    "brand_names": [
+      "Veraflox"
+    ],
+    "allergy_class": "fluoroquinolone",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Susp",
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 15,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.4,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주로 글루쿠론산화(glucuronidation) 및 황산화(sulfation)를 통해 대사됨. 개에서 투여량의 약 85%가 24시간 내 소변으로 배설되며, 40%는 미변화체, 나머지는 주로 글루쿠로나이드 대사체로 배설됨. 고양이에서는 24시간 내 70%가 소변으로 배설되나 미변화체는 약 10%에 불과함."
+    },
+    "extra_information": "개: 경구 투여 후 약 2시간에 최고 혈장 농도 도달. 분포용적 >2 L/kg, 혈장 단백 결합률 약 35%. 청소율 0.24 L/hr/kg, 혈장 소실 반감기 약 8시간. 백혈구 내 PK-PD 값이 혈장 대비 5배 높음. 연골, 간, 신장에서 최고 조직 농도 확인.\n고양이: 경구 투여 후 1~2시간 내 최고 혈장 농도 도달. 경구 현탁액 생체이용률 약 60%, 정제 약 70%. 5 mg/kg 공복 투여 시 최고 농도 2.1 μg/mL; 음식과 함께 투여 시 최고 농도 50% 감소, 총 흡수량 약 25% 감소. 혈장 단백 결합률 약 30%. 청소율 0.27 L/hr/kg, 말단 반감기 3~8시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 수의학 PK 데이터 일부 존재. 조직 농도(연골, 간, 신장)는 개 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS disorder",
+          "epilepsy",
+          "CSF concentration"
+        ],
+        "index": 1,
+        "evidence": "CSF 농도는 낮은 편이나, CNS 장애(간질) 환자에서 주의 사용 권고. 발작 병력 동물에서 NSAIDs와 병용 시 CNS 약력학적 상호작용 가능."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "myelosuppression",
+          "thrombocytopenia",
+          "leukopenia",
+          "neutropenia",
+          "lymphopenia"
+        ],
+        "index": 2,
+        "evidence": "개 안전성 연구에서 27 mg/kg 이상 고용량 투여 시 혈소판감소증 및 백혈구감소증 관찰. 권장 용량에서는 발생하지 않았으나 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "renal excretion",
+          "renal excretory capacity",
+          "urine excretion 85%"
+        ],
+        "index": 3,
+        "evidence": "투여량의 약 85%가 24시간 내 소변으로 배설됨. 신기능 저하 환자에서 주의 사용 권고. 과량 투여 시 신장 배설 능력 일시적 과부하 가능."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "glucuronidation",
+          "sulfation",
+          "liver concentration",
+          "hepatic function"
+        ],
+        "index": 2,
+        "evidence": "주요 대사 경로가 간에서의 글루쿠론산화 및 황산화. 조직 농도 측정 시 간에서 최고 농도 확인. 심한 간기능 저하 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "QT prolongation",
+          "proarrhythmic",
+          "arrhythmia",
+          "bradycardia",
+          "heart failure"
+        ],
+        "index": 2,
+        "evidence": "개에서 QT 간격 연장 가능성 및 부정맥 유발 가능성 보고. 저갑상선증, 서맥, 전해질 불균형, 심부전 등 위험인자 동반 시 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS disorder",
+          "epilepsy"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 기존 CNS 장애(간질) 시 주의 사용 권고. 영국 라벨에서는 간질이 금기사항으로 명시됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "leukopenia",
+          "neutropenia",
+          "lymphopenia",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "건강한 고양이에서 7일 초과 투여 시 가역적 백혈구감소증, 호중구감소증, 림프구감소증 발생. 7일 이내 권장 용량에서는 잘 내약됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "urine excretion 70%",
+          "renal function"
+        ],
+        "index": 2,
+        "evidence": "투여량의 약 70%가 24시간 내 소변으로 배설됨. 신기능 저하 고양이에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "glucuronidation",
+          "hepatic function"
+        ],
+        "index": 2,
+        "evidence": "고양이에서도 글루쿠론산화가 주요 대사 경로. 심한 간기능 저하 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "arrhythmia"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 부정맥 관련 언급은 제한적. 개에서 주로 QT 연장 및 부정맥 위험 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 3.0,
+      "max": 8.0,
+      "mean": 5.5,
+      "species": "cat"
+    },
+    "f_percent": 60,
+    "protein_binding_percent": 30,
+    "evidence": "개: t_max 약 2시간, 반감기 약 8시간, 단백 결합률 약 35%. 고양이: t_max 1~2시간, 반감기 3~8시간(변동 보고), 경구 현탁액 생체이용률 약 60%, 정제 약 70%, 단백 결합률 약 30%. 고양이 반감기 평균값(5.5시간)을 기준으로 washout 산출."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids (Aluminum-, Calcium-, or Magnesium-Containing)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "May bind to pradofloxacin and prevent its absorption; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "대사 억제",
+        "quinolone metabolism interference"
+      ],
+      "evidence": "Cimetidine has been shown to interfere with the metabolism of quinolones; use with care when used concurrently."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "건염",
+        "건 파열",
+        "tendonitis",
+        "tendon rupture"
+      ],
+      "evidence": "May enhance the toxic effect of quinolones, specifically the risk for tendonitis and tendon rupture."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 3,
+      "keywords": [
+        "신독성 악화",
+        "대사 감소",
+        "nephrotoxicity"
+      ],
+      "evidence": "Fluoroquinolones may exacerbate the nephrotoxicity and reduce the metabolism of cyclosporine. Concurrent use should be avoided."
+    },
+    {
+      "drug": "Dairy Products",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "May bind to pradofloxacin and prevent its absorption; do not administer with dairy products."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "생체이용률 증가",
+        "digoxin toxicity"
+      ],
+      "evidence": "Concurrent use should be avoided, as pradofloxacin may increase the oral bioavailability of digoxin."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 2,
+      "keywords": [
+        "AUC 증가",
+        "반감기 연장",
+        "CNS 상호작용",
+        "발작"
+      ],
+      "evidence": "Flunixin shown to increase AUC and elimination half-life of enrofloxacin and vice versa. Fluoroquinolones should not be used with NSAIDs in animals with history of seizures due to potential CNS pharmacodynamic interactions."
+    },
+    {
+      "drug": "Glyburide",
+      "severity": 3,
+      "keywords": [
+        "저혈당",
+        "severe hypoglycemia"
+      ],
+      "evidence": "Severe hypoglycemia is possible with concurrent use of glyburide with pradofloxacin."
+    },
+    {
+      "drug": "Iron (oral)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "Decreased pradofloxacin absorption; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Zinc (oral)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "Decreased pradofloxacin absorption; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Lanthanum",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "May decrease pradofloxacin absorption."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "혈중 농도 증가",
+        "독성"
+      ],
+      "evidence": "Concurrent use may increase methotrexate levels with resultant toxicity."
+    },
+    {
+      "drug": "Nitrofurantoin",
+      "severity": 2,
+      "keywords": [
+        "항균 길항",
+        "antimicrobial antagonism"
+      ],
+      "evidence": "May antagonize the antimicrobial activity of fluoroquinolones; concomitant use is not recommended."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "세뇨관 분비 차단",
+        "혈중 농도 증가",
+        "반감기 연장"
+      ],
+      "evidence": "Blocks tubular secretion of ciprofloxacin and may increase blood level and half-life of pradofloxacin."
+    },
+    {
+      "drug": "QT-Prolonging Agents (cisapride, sotalol, quinidine, erythromycin, ondansetron)",
+      "severity": 3,
+      "keywords": [
+        "QT 연장",
+        "부정맥",
+        "proarrhythmic"
+      ],
+      "evidence": "May enhance the QT-prolonging effect of pradofloxacin."
+    },
+    {
+      "drug": "Sevelamer",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "May decrease pradofloxacin absorption."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "흡수 억제",
+        "chelation"
+      ],
+      "evidence": "May inhibit absorption of pradofloxacin; separate doses by at least 2 hours."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "혈중 농도 증가",
+        "대사 억제"
+      ],
+      "evidence": "Pradofloxacin may increase theophylline blood concentration by altering its metabolism; theophylline dosage should be reduced when used concurrently with quinolones."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "창상 감염, 표재성/심부 농피증(S. pseudintermedius), 급성 요로감염(E. coli, S. pseudintermedius), 치주 조직 중증 감염 보조 치료 (extra-label)",
+          "value": "3 - 4.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.5,
+          "duration_note": "감염의 성질 및 중증도, 치료 반응에 따라 결정",
+          "evidence": "미국 FDA 미승인(extra-label); 영국/유럽 승인 라벨 기준"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "피부 감염(창상 및 농양) - FDA 승인 적응증 (Pasteurella multocida, Streptococcus canis, Staphylococcus aureus, S. felis, S. pseudintermedius)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "7일 연속 투여. 3~4일 내 개선 없으면 진단 재평가",
+          "evidence": "FDA 승인 라벨 (NADA 141-344)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바르토넬라증 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "28~42일. 1일 1회 대용량 투여가 1일 2회보다 선호됨. 다른 항생제와 병용 필요",
+          "evidence": "Extra-label; 동시 투여 시 Jarisch-Herxheimer 유사 반응 주의"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바르토넬라증 - BID 옵션 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "28~42일. SID 투여가 선호됨",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Mycoplasma haemofelis (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "14일",
+          "evidence": "Extra-label; 혈액 내 M. haemofelis 제거 가능한 유일한 항생제로 보고됨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 상기도 감염 - 경구 현탁액 (extra-label)",
+          "value": "5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "상기도 감염: 5일",
+          "evidence": "Extra-label; 영국 라벨 기준"
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 상기도 감염 - 경구 정제 (extra-label)",
+          "value": "3 - 4.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.5,
+          "duration_note": "상기도 감염: 5일",
+          "evidence": "Extra-label; 영국 라벨 기준"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 주의 사용 권고되나, 구체적인 용량 조절 기준은 명시되지 않음. 투여량의 상당 부분이 신장으로 배설되므로 신기능 저하 시 모니터링 강화 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "심한 간기능 저하 시 주의 사용 권고되나, 구체적인 용량 조절 기준은 명시되지 않음. 간이 주요 대사 기관이므로 간기능 저하 시 모니터링 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "플루오로퀴놀론 과민증",
+      "match_terms": [
+        "fluoroquinolone hypersensitivity",
+        "quinolone allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "nursing"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "12주 미만 고양이",
+      "match_terms": [
+        "kitten under 12 weeks",
+        "young kitten"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "12개월 미만 개 (대부분 품종) / 18개월 미만 대형견",
+      "match_terms": [
+        "puppy under 12 months",
+        "giant breed under 18 months",
+        "immature dog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 관절 연골 병변",
+      "match_terms": [
+        "articular cartilage lesion",
+        "joint cartilage damage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 장애 (간질) - 개",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder",
+        "CNS disorder"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심한 간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver failure",
+        "severe hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "부정맥 소인 (개)",
+      "match_terms": [
+        "arrhythmia",
+        "QT prolongation",
+        "electrolyte imbalance",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "면역저하 고양이 (FeLV/FIV 감염)",
+      "match_terms": [
+        "FeLV",
+        "FIV",
+        "immunocompromised cat",
+        "feline leukemia virus",
+        "feline immunodeficiency virus"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에서 MDR1/ABCB1 유전자 감수성 또는 특정 품종 유전적 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "DNA 자이라제(gyrase) 및 토포이소머라제 IV 억제를 통해 DNA 초나선화 및 DNA 합성을 방해하는 농도 의존적 살균성 3세대 플루오로퀴놀론 항생제. 그람 양성 호기성균 및 혐기성균에 대한 강화된 활성을 가지며, 그람 음성균 활성은 다른 플루오로퀴놀론과 유사함.",
+    "common_extra_effects": [
+      "설사/무른 변",
+      "구토",
+      "오심",
+      "광과민성(광감작)",
+      "관절 연골 이상(미성숙 동물)",
+      "골수억제(혈소판감소증, 백혈구감소증, 호중구감소증, 림프구감소증)"
+    ],
+    "dog_mechanism": "개에서 농도 의존적 살균 작용. 백혈구 내 PK-PD 값이 혈장 대비 5배 높음. 연골, 간, 신장에서 최고 조직 농도.",
+    "dog_extra_effects": [
+      "QT 간격 연장",
+      "부정맥(위험인자 동반 시)",
+      "골수억제(고용량 27 mg/kg 이상 시)"
+    ],
+    "cat_mechanism": "고양이에서 농도 의존적 살균 작용. 최고 농도가 MIC의 10배 이상일 때 임상적 효능과 연관됨. 망막 독성 없음(엔로플록사신과 달리).",
+    "cat_extra_effects": [
+      "가역적 백혈구감소증(7일 초과 투여 시)",
+      "호중구감소증(7일 초과 투여 시)",
+      "림프구감소증(7일 초과 투여 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "미국 FDA에서는 개에 대해 승인되지 않았으나, 영국 및 유럽에서는 승인됨. 미국에서 개에 사용 시 extra-label에 해당함. 고용량(27 mg/kg 이상)에서 골수억제 관찰되었으나 권장 용량(3~4.5 mg/kg)에서는 발생하지 않음. 개에서 QT 연장 및 부정맥 위험 주의. 12개월 미만(대부분 품종) 또는 18개월 미만 대형견에서 사용 금기. 돼지 간 유래 인공 쇠고기 향 함유 정제 사용 시 돼지 제품 과민 개체 주의.",
+    "cat": "미국 FDA 승인 약물(NADA 141-344). 피부 감염(창상 및 농양)에 대해 7.5 mg/kg SID 7일 투여가 승인됨. 12주 미만 고양이에서 사용 금기. 엔로플록사신과 달리 망막 독성 없음. 7일 초과 투여 시 가역적 골수억제 가능. 음식과 함께 투여 시 흡수 감소(최고 농도 50%, 총 흡수량 25% 감소)하므로 공복 투여 권장. Mycoplasma haemofelis를 혈액에서 제거할 수 있는 유일한 항생제로 보고됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "미국 FDA 미승인(extra-label 사용). 12개월 미만 개 및 18개월 미만 대형견 금기. CNS 장애(간질) 개 금기. 부정맥 소인 개에서 주의. 신기능/간기능 저하 시 주의. 권장 용량에서는 일반적으로 잘 내약됨."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "FDA 승인 약물이나 12주 미만 고양이, 임신/수유 중 금기. 7일 초과 투여 시 골수억제 위험. FeLV/FIV 감염 고양이에서 안전성 미확립. 음식과 함께 투여 시 흡수 감소."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 현탁액: 30°C(86°F) 이하 원용기에 밀봉 보관; 개봉 후 60일간 안정(영국 라벨: 3개월). 경구 정제: 특별한 보관 조건 불필요; 개봉 후 빛과 습기로부터 보호.",
+    "forms": [
+      "경구 현탁액 25 mg/mL (15 mL, 30 mL 병)",
+      "경구 정제 15 mg",
+      "경구 정제 60 mg",
+      "경구 정제 120 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프라도플록사신은 3세대 플루오로퀴놀론 항생제로, 기존 수의용 플루오로퀴놀론 대비 그람 양성 호기성균 및 혐기성균에 대한 강화된 활성을 가짐. 미국에서는 고양이 피부 감염에 대해 FDA 승인됨(NADA 141-344). 개에서는 FDA 미승인(extra-label). 고양이에서 엔로플록사신과 달리 망막 독성 없음. Mycoplasma haemofelis를 혈액에서 제거할 수 있는 유일한 항생제로 보고됨. 7일 초과 투여 시 골수억제 위험. WHO 및 OIE에서 최우선 중요 항균제로 지정됨.",
+    "indications": "【고양이 - FDA 승인】 Pasteurella multocida, Streptococcus canis, Staphylococcus aureus, S. felis, S. pseudintermedius에 의한 피부 감염(창상 및 농양). 【고양이 - Extra-label】 세균성 요로감염, 바르토넬라증, Mycoplasma haemofelis, 상기도 감염, 고양이 나병 증후군(다른 항마이코박테리아 약물과 병용). 【개 - Extra-label (미국 외 승인)】 창상 감염, 표재성/심부 농피증, 급성 요로감염, 치주 조직 중증 감염 보조 치료.",
+    "client_info": "이 약은 세균 감염 치료를 위한 항생제입니다. 수의사의 처방대로 정확히 투여하십시오. 액체 형태 사용 시 매번 투여 전 용기를 잘 흔들고, 제공된 주사기로 정확한 용량을 측정하십시오. 공복에 투여하는 것이 가장 좋으나, 구토나 불편함이 있으면 소량의 음식과 함께 투여하십시오(유제품, 제산제, 철분 함유 식품은 피하십시오). 증상이 호전되어 보여도 처방된 전체 치료 기간을 완료하십시오. 어린 동물이나 임신/수유 중인 동물에서는 뼈 성장 저해 또는 관절 이상을 유발할 수 있습니다. 가장 흔한 부작용은 구토, 오심, 설사입니다. 털이 얇은 부위(코 등)는 투여 후 직사광선 노출을 피하십시오. 정기적인 추적 검진을 빠짐없이 받으십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific concerns noted)",
+      "Compatibility/Compounding Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.half_life_hr (dog-specific mean not explicitly stated as single value)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "genetic_sensitivity.affected_breeds",
+      "species_flags.mdr1_sensitive"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/20.jsonl",
+    "extracted_at": "2026-03-10T19:29:54.884924+00:00",
+    "reviewer": null
+  }
+}

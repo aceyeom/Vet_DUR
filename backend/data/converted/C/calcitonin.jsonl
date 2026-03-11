@@ -1,0 +1,386 @@
+{
+  "id": "calcitonin",
+  "drug_identity": {
+    "name_ko": "칼시토닌",
+    "name_en": "Calcitonin",
+    "active_ingredient": "Calcitonin salmon",
+    "brand_names": [
+      "Miacalcin",
+      "Calcimar"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품(칼시토닌 살몬 주사제)을 개, 파충류 등에 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "신장, 혈액 및 말초 조직에서 빠르게 대사되는 것으로 알려져 있음. 경구 투여 시 위장관에서 파괴됨."
+    },
+    "extra_information": "경구 투여 시 위장관에서 파괴되므로 반드시 비경구 투여해야 함. 개에서 작용 지속 시간이 매우 짧으며, 수일간 치료 후 내성(tachyphylaxis)이 발생할 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장에서 주로 대사되며, 위장관 부작용(구토, 식욕부진) 및 저칼슘혈증 위험이 보고됨. 수의학적 종별 PK 데이터 부족.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "paresthesias"
+        ],
+        "index": -1,
+        "evidence": "인체에서 말초 감각이상이 보고되나 개에서 직접적인 신경계 영향 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypocalcemia",
+          "calcium"
+        ],
+        "index": 1,
+        "evidence": "과다 투여 시 저칼슘혈증 유발 가능. 혈중 칼슘 농도에 직접적인 영향을 미침."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal metabolism",
+          "tubular reabsorption",
+          "renal excretion"
+        ],
+        "index": 2,
+        "evidence": "신장에서 주로 대사되며, 세뇨관 재흡수 억제를 통해 칼슘, 인, 나트륨 등의 신장 배설을 촉진함."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사에 대한 직접적인 언급 없음. 간 부담 낮음으로 추정."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 영향 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 영향에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypocalcemia",
+          "calcium"
+        ],
+        "index": 1,
+        "evidence": "과다 투여 시 저칼슘혈증 유발 가능. 혈중 칼슘 농도에 직접적인 영향을 미침."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal metabolism",
+          "tubular reabsorption",
+          "renal excretion"
+        ],
+        "index": 2,
+        "evidence": "신장에서 주로 대사되며, 세뇨관 재흡수 억제를 통해 칼슘 등의 신장 배설을 촉진함."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사에 대한 직접적인 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 영향 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: IV 투여 시 즉각적 효과 발현. IM/SC 투여 시 15분 이내 발현, 약 4시간에 최대 효과. IM/SC 주사 후 작용 지속 시간 6~12시간. 경구 투여 시 위장관에서 파괴되어 생체이용률 0%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Calcium-Containing Products",
+      "severity": 2,
+      "keywords": [
+        "efficacy reduction",
+        "antagonism"
+      ],
+      "evidence": "Calcium-containing products may interfere with the efficacy of calcitonin."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "decreased lithium concentration",
+        "loss of efficacy"
+      ],
+      "evidence": "Concurrent use may result in decreased lithium concentrations and loss of lithium efficacy."
+    },
+    {
+      "drug": "Pamidronate",
+      "severity": 1,
+      "keywords": [
+        "no additive benefit",
+        "combination use"
+      ],
+      "evidence": "Although used together in human medicine, studies do not show any benefit when used together in dogs."
+    },
+    {
+      "drug": "Vitamin D Analogues",
+      "severity": 2,
+      "keywords": [
+        "efficacy reduction",
+        "antagonism"
+      ],
+      "evidence": "Vitamin D analogues (e.g., calcitriol, cholecalciferol) may interfere with the efficacy of calcitonin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "비타민 D 독성/고칼슘혈증 (오프라벨)",
+          "value": "4 - 6",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 투여. 수일 후 내성 발생 가능. 비용, 투여 빈도, 제한적 효능으로 인해 일상적 권장은 하지 않음.",
+          "evidence": "Plumb's 오프라벨 용량: 4–6 units/kg SC 하루 2~3회"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장에서 주로 대사되나, 신기능 저하 시 구체적인 용량 조절 지침이 모노그래프에 명시되어 있지 않음. BUN 및 크레아티닌 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 대사에 대한 언급 없음. 간기능 저하 시 용량 조절 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (Hypersensitivity)",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "allergic reaction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저칼슘혈증 (Hypocalcemia) — 고칼슘혈증 이외의 적응증 사용 시",
+      "match_terms": [
+        "hypocalcemia",
+        "low calcium"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "calcium",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "어린 동물 (Young animals)",
+      "match_terms": [
+        "young animal",
+        "juvenile",
+        "pediatric"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "파골세포(osteoclast)의 골 흡수를 억제하고, 세뇨관에서 칼슘, 인, 나트륨, 마그네슘, 칼륨, 염소의 재흡수를 감소시켜 신장 배설을 촉진함. 공장(jejunum)에서 수분, 나트륨, 칼륨, 염소의 분비를 증가시킴.",
+    "common_extra_effects": [
+      "식욕부진 (anorexia)",
+      "구토 (vomiting)",
+      "설사 (diarrhea)",
+      "주사 부위 부종 및 통증",
+      "주사 부위 발적",
+      "말초 감각이상 (peripheral paresthesias)",
+      "저칼슘혈증 (과다 투여 시)",
+      "알레르기 반응 (드물게)",
+      "내성/빠른 내성 발현 (tachyphylaxis)"
+    ],
+    "dog_mechanism": "파골세포 억제를 통한 골 흡수 억제 및 신장에서의 칼슘 배설 촉진으로 고칼슘혈증 조절.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "내성 발현 (tachyphylaxis) — 수일간 치료 후 일부 개에서 발생"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 칼시토닌의 작용 지속 시간이 매우 짧고 비용이 높으며, 수일간 치료 후 내성(tachyphylaxis)이 발생할 수 있어 일상적 사용은 권장되지 않음. 비타민 D 독성 관련 고칼슘혈증 치료 시 파미드로네이트가 선호될 수 있음. 어린 동물은 성체에 비해 최대 100배 더 민감할 수 있으므로 주의 필요. 칼시트리올(calcitriol)과 혼동하지 않도록 주의.",
+    "cat": "고양이에 대한 구체적인 용량 정보가 모노그래프에 명시되어 있지 않음. 소동물에서 고칼슘혈증의 보조 치료로 사용될 수 있으나, 고양이 특이적 데이터 부족. 사용 시 면밀한 모니터링 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 식욕부진, 구토 보고됨. 내성 발현 가능. 어린 개는 성체보다 최대 100배 더 민감. 비용 및 제한적 효능으로 인해 일상적 사용 권장되지 않음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 특이적 데이터 부족. 소동물에서 보조 치료로 사용 가능하나 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관 (2°C–8°C / 36°F–46°F)",
+    "forms": [
+      "칼시토닌 살몬 주사제: 200 units/mL, 2 mL 바이알 (Miacalcin®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "칼시토닌은 파골세포 억제 호르몬으로, 주로 개와 파충류의 고칼슘혈증 보조 치료에 사용됨. 수의학적 승인 제품은 없으며 인체용 제품을 오프라벨로 사용. 개에서 작용 지속 시간이 매우 짧고(6~12시간), 수일 후 내성 발현 가능. 비용이 높아 실제 임상 사용이 제한적임. 칼시트리올(calcitriol)과 혼동 주의.",
+    "indications": "【승인 적응증】 없음 (수의학적 승인 제품 없음)\n【오프라벨 적응증】\n- 개: 비타민 D 독성/콜레칼시페롤 관련 고칼슘혈증 보조 치료 (4–6 IU/kg SC, 하루 2~3회)\n- 파충류(녹색 이구아나): 고칼슘혈증 (1.5 IU/kg SC q8h, 수액 병용)\n- 파충류: 영양성 이차성 부갑상선기능항진증 (50 IU/kg IM, 주 1회, 2~3회)",
+    "client_info": "이 약은 혈중 칼슘 수치를 낮추기 위해 사용되는 호르몬 주사제입니다. 반드시 주사로만 투여해야 하며, 먹는 약으로는 효과가 없습니다. 치료 초기에는 구토나 식욕 저하가 나타날 수 있습니다. 어린 동물은 이 약에 훨씬 더 민감하게 반응할 수 있으므로 수의사의 지시에 따라 정확한 용량을 투여해야 합니다. 이 약은 '칼시트리올(calcitriol)'과 이름이 비슷하지만 전혀 다른 약이므로 혼동하지 않도록 주의하십시오. 치료 중 혈중 칼슘 수치를 정기적으로 확인해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific dosage",
+      "CYP profile",
+      "Half-life (veterinary)",
+      "Protein binding",
+      "Renal dose adjustment guidelines",
+      "Hepatic dose adjustment guidelines",
+      "Oral bioavailability (veterinary)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "dosage_and_kinetics.cat.dosage_list",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/52.jsonl",
+    "extracted_at": "2026-03-11T05:15:43.476301+00:00",
+    "reviewer": null
+  }
+}

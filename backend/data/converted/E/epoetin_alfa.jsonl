@@ -1,0 +1,513 @@
+{
+  "id": "epoetin_alfa",
+  "drug_identity": {
+    "name_ko": "에포에틴 알파",
+    "name_en": "Epoetin Alfa",
+    "active_ingredient": "Epoetin Alfa",
+    "brand_names": [
+      "Epogen",
+      "Procrit",
+      "Eprex",
+      "Retacrit"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 허가된 제품 없음. 개와 고양이의 만성 신장 질환 관련 빈혈 및 골수억제 장애에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 2000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 3000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 4000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 10000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 20000,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 40000,
+        "unit": "IU/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "약물의 대사 경로는 알려져 있지 않음. 만성 신장 질환 환자에서 반감기가 정상 신기능 환자보다 약 20% 연장됨. 프로베네시드가 신세뇨관 배설을 감소시키는 것으로 보고됨."
+    },
+    "extra_information": "건강한 개에서 에포에틴 알파의 소실 반감기는 약 7시간으로, 다르베포에틴보다 약 3배 짧음. Tmax는 약 4시간이며 그 외 약동학적 수치는 가변적임. 적혈구용적률(PCV) 교정에는 초기 PCV 및 사용 용량에 따라 2~8주가 소요될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 모두 고혈압, 발작, 적혈구증가증, 혈액 점도 증가 등의 이상반응이 보고됨. 수의학적 종별 장기 특이 PK 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizures",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "고혈압에 의한 이차적 발작이 보고됨. 뇌에 대한 직접적인 독성은 언급되지 않음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "polycythemia",
+          "high blood viscosity",
+          "pure red cell aplasia",
+          "autoantibodies",
+          "PRCA"
+        ],
+        "index": 0,
+        "evidence": "적혈구증가증, 혈액 점도 증가, 순수 적혈구 무형성증(PRCA), 중화 항체 형성 등 혈액 관련 이상반응이 주요 우려 사항임. 약 70%의 개/고양이에서 항-rHuEPO 항체 형성, 최대 30%에서 PRCA 발생."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "chronic kidney disease",
+          "renal tubular excretion"
+        ],
+        "index": 2,
+        "evidence": "만성 신장 질환 환자에서 반감기 연장(약 20%). 신장 질환이 적응증이나 직접적 신독성은 보고되지 않음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 관련 이상반응 또는 간 대사에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypertension",
+          "increased cardiac output",
+          "cardiovascular events"
+        ],
+        "index": 3,
+        "evidence": "40~50%의 환자에서 전신 고혈압 발생. 혈액 점도 증가 및 심박출량 증가로 인한 고혈압. 기저 심장 질환이 만성 신장 질환 및 고혈압으로 악화될 수 있음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizures",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "고혈압에 의한 이차적 발작이 보고됨. 고양이의 50%에서 고혈압 발생."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "polycythemia",
+          "high blood viscosity",
+          "pure red cell aplasia",
+          "autoantibodies",
+          "PRCA"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 에포에틴 알파 투여 시 PRCA 발생률 25~40%로 보고됨. 항체 형성률 약 70%. 혈액 관련 이상반응이 가장 중요한 우려 사항."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "chronic kidney disease"
+        ],
+        "index": 2,
+        "evidence": "만성 신장 질환이 주요 적응증이나 직접적 신독성은 보고되지 않음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 관련 이상반응 또는 간 대사에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypertension",
+          "increased cardiac output"
+        ],
+        "index": 3,
+        "evidence": "고양이의 50%에서 고혈압 발생 보고. 혈액 점도 증가 및 심박출량 증가로 인한 고혈압."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 7.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "건강한 개에서 소실 반감기 약 7시간, Tmax 약 4시간. 비경구 투여 후에만 흡수됨. 만성 신장 질환 환자에서 반감기 약 20% 연장."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Androgens (e.g., danazol)",
+      "severity": 1,
+      "keywords": [
+        "erythroid progenitor sensitivity",
+        "therapeutic synergy"
+      ],
+      "evidence": "Androgens may increase the sensitivity of erythroid progenitors to epoetin alfa; this interaction has been used for therapeutic effect. Not confirmed in well-controlled studies."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "blood pressure increase",
+        "cyclosporine level alteration",
+        "RBC binding"
+      ],
+      "evidence": "May cause additive increases in blood pressure and may alter cyclosporine blood levels, as cyclosporine is bound by RBCs."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 1,
+      "keywords": [
+        "decreased bleeding time"
+      ],
+      "evidence": "Use with epoetin alfa can decrease bleeding times."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "reduced renal tubular excretion"
+      ],
+      "evidence": "Probenecid has been demonstrated to reduce the renal tubular excretion of epoetin alfa; clinical significance remains unclear."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 관련 빈혈 보조 치료 - 초기 용량",
+          "value": "100",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 PCV 도달 시까지(일반적으로 3~4주). 3주마다 이상 용량 조정 금지. 8~12주 내 적절한 조절이 안 되면 3~4주마다 25~50 units/kg씩 증량 가능(주 3회 유지).",
+          "evidence": "오프라벨. 145 units/kg 주 3회 초과 시 에포에틴 저항성 평가 필요."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 관련 빈혈 보조 치료 - 유지 용량",
+          "value": "50 - 100",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1~2회 투여. PCV 모니터링 지속. 철분 보충 강력 권장.",
+          "evidence": "오프라벨. 유지 용량으로 주 1~2회 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 관련 빈혈 보조 치료 - 초기 용량",
+          "value": "100",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 PCV 도달 시까지(일반적으로 3~4주). 3주마다 이상 용량 조정 금지. 8~12주 내 적절한 조절이 안 되면 3~4주마다 25~50 units/kg씩 증량 가능(주 3회 유지).",
+          "evidence": "오프라벨. 목표 PCV: 25% 초과."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 관련 빈혈 보조 치료 - 유지 용량",
+          "value": "50 - 100",
+          "unit": "IU/kg",
+          "route": "SC",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1~2회 투여. PCV 모니터링 지속. 철분 보충 강력 권장.",
+          "evidence": "오프라벨. 유지 용량으로 주 1~2회 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "만성 신장 질환 환자에서 반감기가 정상 신기능 환자보다 약 20% 연장됨. 명시적인 용량 조정 권고사항은 없으나 신기능 모니터링 필요. 이 약물은 신장 질환 치료를 위해 사용되므로 신기능 저하 자체가 금기가 아님."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간 관련 용량 조정에 대한 정보 없음. 대사 경로 불명."
+  },
+  "contraindications": [
+    {
+      "condition": "조절되지 않는 고혈압",
+      "match_terms": [
+        "uncontrolled hypertension",
+        "systemic hypertension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "에포에틴 알파 과민증",
+      "match_terms": [
+        "hypersensitivity to epoetin alfa"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "순수 적혈구 무형성증(PRCA) 병력",
+      "match_terms": [
+        "pure red cell aplasia",
+        "PRCA",
+        "anti-EPO antibodies"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중등도~중증 고혈압",
+      "match_terms": [
+        "moderate hypertension",
+        "severe hypertension"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "철분 결핍",
+      "match_terms": [
+        "iron deficiency",
+        "iron depletion"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "PCV 20~22% 미만 또는 임상 증상 발현 전",
+      "match_terms": [
+        "PCV < 20%",
+        "PCV < 22%",
+        "lethargy",
+        "exercise intolerance"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": 22.0,
+        "unit": "%"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "에리스로포이에틴(EPO)은 신장에서 생성되는 호르몬으로 적혈구 생성을 조절함. 빈혈 및 저산소증 조건에서 신세뇨관 주위 간질 세포에 의해 분비되어 적혈구 전구세포의 증식, 성숙 및 생존을 촉진함. 결과적으로 적혈구 질량과 혈액의 산소 운반 능력이 증가함.",
+    "common_extra_effects": [
+      "전신 고혈압 (환자의 40~50%)",
+      "중화 항체 형성 (약 70%의 개/고양이)",
+      "순수 적혈구 무형성증(PRCA) (최대 30%)",
+      "발작",
+      "적혈구증가증",
+      "혈액 점도 증가",
+      "철분 고갈",
+      "주사 부위 국소 반응",
+      "발열",
+      "식욕부진",
+      "관절통",
+      "점막피부 궤양",
+      "포도막염",
+      "구토"
+    ],
+    "dog_mechanism": "재조합 인간 에리스로포이에틴(rHuEPO)이 개의 EPO 수용체에 결합하여 적혈구 생성을 자극함. 개의 EPO와 인간 EPO의 아미노산 상동성은 81.3%임.",
+    "dog_extra_effects": [
+      "고혈압 (40%)",
+      "항-rHuEPO 항체 형성",
+      "PRCA (25~30%)",
+      "발작",
+      "적혈구증가증"
+    ],
+    "cat_mechanism": "재조합 인간 에리스로포이에틴(rHuEPO)이 고양이의 EPO 수용체에 결합하여 적혈구 생성을 자극함. 고양이의 EPO와 인간 EPO의 아미노산 상동성은 83.3%임.",
+    "cat_extra_effects": [
+      "고혈압 (50%)",
+      "항-rHuEPO 항체 형성",
+      "PRCA (25~40%)",
+      "발작",
+      "포도막염",
+      "점막피부 궤양"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에포에틴 알파는 만성 신장 질환 관련 빈혈 치료에 오프라벨로 사용됨. 목표 PCV는 30% 초과 또는 10% 이상 증가. 약 70%에서 항체 형성, 25~30%에서 PRCA 발생 가능. 다르베포에틴이 면역원성이 낮고 투여 빈도가 적어 일차 선택약으로 권장되는 경우가 많음. 철분 보충 병행 강력 권장. 145 units/kg 주 3회 초과 시 저항성 평가 필요.",
+    "cat": "고양이에서 에포에틴 알파는 만성 신장 질환 관련 빈혈 치료에 오프라벨로 사용됨. 목표 PCV는 25% 초과. 고양이의 50%에서 고혈압, 25~40%에서 PRCA 발생 가능. 70마리 이상의 CKD 고양이를 치료한 경험에 따르면 약 60~65%만이 적절한 반응을 보임. 다르베포에틴이 일차 선택약으로 권장되는 경우가 많음. 포도막염 및 점막피부 궤양이 고양이에서 특히 보고됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 고혈압(40%), 항체 형성(70%), PRCA(25~30%) 등 심각한 이상반응 가능. 정기적인 CBC, PCV, 혈압, 철분 수치 모니터링 필수. 임상 증상 발현 또는 PCV 20~22% 미만 시에만 치료 시작 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 고혈압(50%), 항체 형성(70%), PRCA(25~40%) 등 심각한 이상반응 가능. 정기적인 CBC, PCV, 혈압, 철분 수치 모니터링 필수. 임상 증상 발현 또는 PCV 20~22% 미만 시에만 치료 시작 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관(2~8°C, 36~46°F). 동결 금지. 변색 또는 이물질 존재 시 사용 금지. 단백질 변성 방지를 위해 흔들지 말 것. 빛으로부터 보호(24시간 이내 광노출은 효능에 영향 없음). 다른 약물과 혼합하거나 동일 IV 라인 사용 금지.",
+    "forms": [
+      "Epoetin Alfa 주사액 (보존제 포함, 인간 알부민 함유): 10,000 units/mL 2mL 다회용 바이알, 20,000 units/mL 1mL 다회용 바이알 - Epogen, Procrit",
+      "Epoetin Alfa 주사액 (보존제 없음, 인간 알부민 함유): 2,000/3,000/4,000/10,000/40,000 units/mL 1mL 바이알 - Epogen, Procrit",
+      "Epoetin Alfa-epbx 주사액 (보존제 포함, 아미노산 함유): 10,000 units/mL 2mL 다회용 바이알, 20,000 units/mL 1mL 다회용 바이알 - Retacrit",
+      "Epoetin Alfa-epbx 주사액 (보존제 없음, 아미노산 함유): 2,000/3,000/4,000/10,000/40,000 units/mL 1mL 바이알 - Retacrit"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에포에틴 알파는 재조합 인간 에리스로포이에틴(rHuEPO)으로, 개와 고양이의 만성 신장 질환(CKD) 관련 빈혈 및 골수억제 장애에 오프라벨로 사용됨. 수의학적으로 허가된 제품은 없음. 주요 이상반응으로 전신 고혈압(40~50%), 중화 항체 형성(약 70%), 순수 적혈구 무형성증(PRCA, 최대 30~40%)이 있음. 다르베포에틴이 면역원성이 낮고 약동학적으로 유리하여 일차 선택약으로 권장되는 경우가 많음. 철분 보충 병행이 필수적이며, 정기적인 CBC, PCV, 혈압, 철분 수치 모니터링이 필요함. PCV 20~22% 미만 또는 임상 증상(기력 저하, 운동 불내성) 발현 시에만 치료 시작 권장.",
+    "indications": "승인 적응증(인간): 만성 신장 질환 관련 빈혈, 화학요법 유발 빈혈, 수술 전 자가 헌혈. 오프라벨(수의): 개/고양이의 말기 만성 신장 질환 관련 빈혈, 골수억제 장애, 골수이형성증. 페럿: 빈혈 보조 치료. 토끼: 빈혈 보조 치료.",
+    "client_info": "에포에틴 알파는 만성 신장 질환으로 인한 빈혈(적혈구 부족) 치료에 사용되는 주사제입니다. 가정에서 투여하는 경우, 주사 방법과 부위를 정확히 숙지하십시오. 효과가 나타나기까지 수 주가 걸릴 수 있습니다. 주사 부위 피부 반응, 발작(경련), 기력 저하, 관절통(보행 어려움), 구강 궤양(과도한 침 흘림으로 나타날 수 있음), 식욕 감소가 관찰되면 즉시 수의사에게 연락하십시오. 이 약물을 투여하는 동안 정기적인 검진과 혈액 검사가 반드시 필요합니다. 중요한 추적 방문을 빠지지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 65,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway",
+      "Oral bioavailability",
+      "Protein binding",
+      "Onset of action (minutes)",
+      "Cat-specific pharmacokinetics",
+      "Hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T18:07:49.611004+00:00",
+    "reviewer": null
+  }
+}

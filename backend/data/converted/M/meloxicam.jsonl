@@ -1,0 +1,862 @@
+{
+  "id": "meloxicam",
+  "drug_identity": {
+    "name_ko": "멜록시캄",
+    "name_en": "Meloxicam",
+    "active_ingredient": "Meloxicam",
+    "brand_names": [
+      "Metacam",
+      "Alloxate",
+      "Inflacam",
+      "Loxicom",
+      "M-eloxyn",
+      "Meloxadin",
+      "Meloxidolor",
+      "Meloxidyl",
+      "Meloximed",
+      "Ostilox",
+      "Recocam",
+      "Rheumocam",
+      "Zeleris",
+      "Mobic",
+      "Vivlodex"
+    ],
+    "allergy_class": null,
+    "class": "NSAID",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Cap",
+      "Susp",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 7.5,
+        "unit": "mg"
+      },
+      {
+        "value": 15.0,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C9"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "In humans, meloxicam is a CYP2C9 substrate. Extensively biotransformed in the liver to several metabolites with no pharmacologic activity; majority eliminated in feces with significant enterohepatic recirculation."
+    },
+    "extra_information": "개: 경구 및 피하 투여 후 거의 완전히 흡수됨. 분포용적 0.3 L/kg, 혈장단백결합률 약 97%, 소실반감기 평균 24시간(범위 12~36시간). 대변으로 주로 배설되며 장간순환이 유의하게 발생함. 고양이: 피하 투여 후 거의 완전히 흡수됨. 최고혈중농도 도달시간 약 1.5시간, 혈장단백결합률 97%, 분포용적 약 0.27 L/kg, 전신청소율 약 130 mL/hr/kg, 소실반감기 약 15시간. 주요 대사경로는 산화이며 주요 배설경로는 대변임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 평가함. 신장 및 간 독성은 문헌에 명시되어 있으며, 위장관 독성이 가장 흔한 이상반응으로 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS toxicity (fluoroquinolone interaction)"
+        ],
+        "index": -1,
+        "evidence": "직접적인 뇌 독성은 보고되지 않았으나, 플루오로퀴놀론과 병용 시 CNS 독성 위험 증가가 언급됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "platelet function",
+          "bleeding",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "혈소판 기능에 영향을 줄 수 있으며, 항응고제 및 메토트렉세이트 병용 시 골수억제 위험이 있음. 건강한 개에서 소규모 연구에서는 혈소판 영향이 관찰되지 않았음."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "azotemia",
+          "elevated creatinine",
+          "renal failure",
+          "nephrotoxicity",
+          "renal toxicity"
+        ],
+        "index": 3,
+        "evidence": "신독성은 정상 신혈류를 가진 동물에서는 낮으나, 저혈압, 고용량, 저혈량증, 나트륨 결핍, 흡입마취 시 위험 증가. 승인 후 보고에서 질소혈증, 크레아티닌 상승, 신부전이 보고됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatotoxicity",
+          "idiosyncratic hepatotoxicity"
+        ],
+        "index": 3,
+        "evidence": "특발성 간독성이 드물게 발생함. 승인 후 보고에서 간효소 상승 및 간독성이 보고됨. 급성 투여 연구에서는 간독성이 관찰되지 않았음."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac function",
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "심장 기능 저하 동물에서 주의 사용이 권고됨. 직접적인 심장 독성 보고는 없으나 저혈압 위험과 관련됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "behavior changes",
+          "lethargy"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 행동 변화 및 무기력이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "anemia",
+          "bleeding"
+        ],
+        "index": 2,
+        "evidence": "임상시험에서 일부 고양이에서 치료 후 빈혈이 발생함."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "acute renal failure",
+          "death",
+          "renal damage",
+          "elevated BUN"
+        ],
+        "index": 4,
+        "evidence": "반복 투여 시 급성 신부전 및 사망과 관련됨. FDA 박스 경고 포함. 수술 전 투여 시 저혈압 에피소드로 인한 신손상 위험 증가. 임상시험에서 BUN 상승 보고됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 간독성에 대한 직접적인 데이터는 제한적이나, 개에서 특발성 간독성이 드물게 보고됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "cardiac function"
+        ],
+        "index": -1,
+        "evidence": "심장 기능 저하 고양이에서 주의 사용이 권고됨. 직접적인 심장 독성 보고는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": 12.0,
+      "max": 36.0,
+      "mean": 24.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 97,
+    "evidence": "개: 경구 투여 후 최고혈중농도 도달시간 약 4~8시간, 피하 투여 후 2.5시간. 소실반감기 평균 24시간(범위 12~36시간). 혈장단백결합률 약 97%. 고양이: 피하 투여 후 최고혈중농도 도달시간 약 1.5시간, 소실반감기 약 15시간, 혈장단백결합률 97%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출함. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1. 달리 명시되지 않는 한 병용이 반드시 금기는 아니나 적절한 모니터링 필요.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "blood pressure reduction",
+        "antihypertensive effect reduction"
+      ],
+      "evidence": "NSAIDs can reduce the blood pressure-lowering effects of ACE inhibitors."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "increased meloxicam concentration",
+        "CYP2C9 inhibition"
+      ],
+      "evidence": "Amiodarone may increase meloxicam plasma concentrations."
+    },
+    {
+      "drug": "Amlodipine",
+      "severity": 1,
+      "keywords": [
+        "blood pressure reduction",
+        "antihypertensive effect reduction"
+      ],
+      "evidence": "Some NSAIDs can reduce the blood pressure-lowering effects of amlodipine."
+    },
+    {
+      "drug": "Inhalant Anesthetics (isoflurane, sevoflurane)",
+      "severity": 2,
+      "keywords": [
+        "renal hypotension",
+        "NSAID renal toxicity"
+      ],
+      "evidence": "Inhalant anesthetics may increase risk for renal hypotension and NSAID renal toxicity."
+    },
+    {
+      "drug": "Angiotensin-II Receptor Blockers (telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "blood pressure reduction",
+        "antihypertensive effect reduction"
+      ],
+      "evidence": "Some NSAIDs can reduce the blood pressure-lowering effects of ARBs."
+    },
+    {
+      "drug": "Anticoagulants (heparins, rivaroxaban, warfarin)",
+      "severity": 3,
+      "keywords": [
+        "bleeding",
+        "anticoagulation"
+      ],
+      "evidence": "Concurrent use increases chance for bleeding."
+    },
+    {
+      "drug": "Bisphosphonates (alendronate)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration"
+      ],
+      "evidence": "Bisphosphonates may increase risk for GI ulceration when used with meloxicam."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "antiplatelet"
+      ],
+      "evidence": "Concurrent use increases chance for bleeding."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 3,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "Concurrent use may increase risk for GI toxicity (ulceration, bleeding, vomiting, diarrhea); avoid use with NSAIDs."
+    },
+    {
+      "drug": "Cyclosporine (systemic)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "cyclosporine toxicity"
+      ],
+      "evidence": "Concurrent use may result in increased risk for cyclosporine nephrotoxicity."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "digoxin toxicity"
+      ],
+      "evidence": "NSAIDs may increase serum digoxin concentrations."
+    },
+    {
+      "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic efficacy",
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may result in reduced diuretic efficacy and possible nephrotoxicity."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 2,
+      "keywords": [
+        "increased meloxicam concentration",
+        "CYP2C9 inhibition"
+      ],
+      "evidence": "Fluconazole has increased plasma concentrations of celecoxib in humans and could also affect meloxicam concentrations in dogs."
+    },
+    {
+      "drug": "Fluoroquinolones (enrofloxacin, marbofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "increased fluoroquinolone concentration",
+        "CNS toxicity"
+      ],
+      "evidence": "Meloxicam may increase fluoroquinolone concentrations, increasing risk for CNS toxicity."
+    },
+    {
+      "drug": "Leflunomide",
+      "severity": 2,
+      "keywords": [
+        "increased meloxicam exposure",
+        "hepatotoxicity"
+      ],
+      "evidence": "Leflunomide may increase meloxicam exposure; risk for leflunomide hepatotoxicity may be increased."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "myelosuppression",
+        "nephropathy",
+        "hepatotoxicity",
+        "GI toxicity"
+      ],
+      "evidence": "Concomitant NSAID use with methotrexate may increase risk for myelosuppression, nephropathy, hepatotoxicity, and GI toxicity; use together with extreme caution."
+    },
+    {
+      "drug": "Nephrotoxic Drugs (aminoglycosides, amphotericin B, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may enhance risk for nephrotoxicity."
+    },
+    {
+      "drug": "NSAIDs (carprofen)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration",
+        "GI bleeding",
+        "vomiting",
+        "diarrhea"
+      ],
+      "evidence": "Concurrent use may increase risk for GI toxicity (ulceration, bleeding, vomiting, diarrhea)."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "Pentoxifylline may increase risk for bleeding when used with meloxicam."
+    },
+    {
+      "drug": "Salicylates (aspirin, bismuth subsalicylate)",
+      "severity": 2,
+      "keywords": [
+        "GI toxicity",
+        "bleeding"
+      ],
+      "evidence": "Concurrent use may increase risk for GI toxicity and bleeding."
+    },
+    {
+      "drug": "SSRIs (fluoxetine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "serotonin"
+      ],
+      "evidence": "Concurrent use may result in an increased risk for bleeding."
+    },
+    {
+      "drug": "Sulfonamides (sulfamethoxazole)",
+      "severity": 2,
+      "keywords": [
+        "inhibited meloxicam metabolism",
+        "increased meloxicam exposure",
+        "toxicity"
+      ],
+      "evidence": "Sulfonamides may inhibit meloxicam metabolism, increasing meloxicam exposure and risk for toxicity."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "Concurrent use may increase risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 5.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 - 초회 용량 (FDA 승인)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초회 1일 투여 후 유지용량으로 전환",
+          "evidence": "FDA 승인 라벨 용량. 0.2 mg/kg PO/IV/SC 초회 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 - 초회 용량 (FDA 승인, SC)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초회 1일 투여 후 유지용량으로 전환",
+          "evidence": "FDA 승인 라벨 용량. 0.2 mg/kg SC 초회 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 - 초회 용량 (FDA 승인, IV)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초회 1일 투여 후 유지용량으로 전환",
+          "evidence": "FDA 승인 라벨 용량. 0.2 mg/kg IV 초회 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "골관절염 관련 통증 및 염증 조절 - 유지 용량 (FDA 승인)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개별 반응에 따라 최소 유효 용량으로 최단 기간 사용",
+          "evidence": "FDA 승인 라벨 유지 용량. 초회 투여 다음날부터 0.1 mg/kg PO q24h."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "정형외과 수술, 난소자궁절제술, 거세 관련 수술 후 통증 및 염증 조절 (FDA 승인)",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.3,
+          "duration_note": "단회 투여만 허용; 추가 멜록시캄 또는 다른 NSAID 투여 금지",
+          "evidence": "FDA 승인 라벨 용량. 단회 SC 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 경증~중등도 통증 및 염증 예방 (extra-label, 수술 전 투여)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "수술 전 단회 투여; 이후 24시간 후 경구 현탁액 0.05 mg/kg q24h로 최대 4회 추가 투여 가능 (총 5일)",
+          "evidence": "Extra-label (미국 기준). 수술 전 0.2 mg/kg SC 단회 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "수술 후 경증~중등도 통증 및 염증 예방 - 경구 유지 (extra-label)",
+          "value": "0.05",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "초회 SC 투여 24시간 후부터 최대 4회 경구 투여 (총 5일)",
+          "evidence": "Extra-label (미국 기준). 초회 SC 투여 후 경구 유지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 근골격계 질환 관련 통증 및 염증 완화 - 초회 용량 (extra-label)",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.2,
+          "duration_note": "초회 투여 후 유지용량으로 전환; 14일 후 임상적 개선이 없으면 중단",
+          "evidence": "Extra-label (미국 기준). 급성 질환 초회 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 근골격계 질환 관련 통증 및 염증 완화 - 초회 용량 (extra-label)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.1,
+          "duration_note": "초회 투여 후 유지용량으로 전환; 14일 후 임상적 개선이 없으면 중단",
+          "evidence": "Extra-label (미국 기준). 만성 질환 초회 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "근골격계 질환 관련 통증 및 염증 완화 - 유지 용량 (extra-label)",
+          "value": "0.05",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "최저 유효 용량으로 적정; 일부 고양이는 2~3일마다 투여로도 통증 완화 가능",
+          "evidence": "Extra-label (미국 기준). 유지 용량 0.05 mg/kg PO q24h."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신장 기능 저하 동물에서 주의 사용 권고. 고양이에서 반복 투여 시 급성 신부전 및 사망과 관련됨. 저혈압, 고용량, 저혈량증, 나트륨 결핍, 흡입마취 시 신독성 위험 증가. 인체 라벨에서는 경증~중등도 신장 장애 시 용량 조정 불필요하다고 명시되어 있으나, 수의 환자에서는 신장 기능 저하 시 사용을 피하거나 극도로 주의해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 동물에서 주의 사용 권고. 인체 라벨에서는 경증~중등도 간장 장애 시 용량 조정 불필요하다고 명시. 만성 사용 시 기저치 및 주기적 간 화학 패널 모니터링 권고. 간효소 상승 시 간기능 검사(혈청 담즙산 등) 시행 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "멜록시캄 과민증",
+      "match_terms": [
+        "hypersensitivity to meloxicam",
+        "NSAID allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 위장관 궤양 또는 출혈",
+      "match_terms": [
+        "GI ulcer",
+        "GI bleeding",
+        "gastrointestinal ulceration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이에서 반복 NSAID 투여",
+      "match_terms": [
+        "repeated NSAID use in cats",
+        "feline NSAID repeated dose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 기능 저하",
+      "match_terms": [
+        "cardiac impairment",
+        "heart failure",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈성 질환",
+      "match_terms": [
+        "hemorrhagic disorder",
+        "coagulopathy",
+        "bleeding disorder"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "글루코코르티코이드 병용",
+      "match_terms": [
+        "concurrent corticosteroid use",
+        "glucocorticoid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 6개월 미만 강아지 (미국 라벨 기준)",
+      "match_terms": [
+        "puppy under 6 months",
+        "young dog"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 4개월 미만 고양이",
+      "match_terms": [
+        "kitten under 4 months",
+        "young cat"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈압 또는 저혈량증",
+      "match_terms": [
+        "hypotension",
+        "hypovolemia",
+        "sodium depletion"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX) 억제 및 프로스타글란딘 합성 억제를 통한 진통, 항염증, 해열 작용. COX-2 선택적(COX-2 preferential)이나 고용량에서는 COX-2 특이성이 감소함.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "위장관 궤양",
+      "혈변",
+      "신독성",
+      "질소혈증",
+      "크레아티닌 상승",
+      "신부전",
+      "간효소 상승",
+      "특발성 간독성 (드물게)",
+      "혈소판 기능 영향",
+      "소양증"
+    ],
+    "dog_mechanism": "COX-2 선택적 NSAID로 프로스타글란딘 합성 억제를 통해 골관절염 관련 통증 및 염증을 조절함.",
+    "dog_extra_effects": [
+      "구토",
+      "연변",
+      "설사",
+      "식욕부진",
+      "위장관 궤양",
+      "혈변",
+      "간효소 상승",
+      "특발성 간독성 (드물게)",
+      "소양증",
+      "질소혈증",
+      "크레아티닌 상승",
+      "신부전",
+      "혈관염 (드물게)"
+    ],
+    "cat_mechanism": "COX-2 선택적 NSAID로 수술 후 통증 및 염증 조절에 사용됨. 반복 투여 시 신독성 위험이 높음.",
+    "cat_extra_effects": [
+      "BUN 상승",
+      "치료 후 빈혈",
+      "주사 부위 통증 (드물게)",
+      "구토",
+      "설사",
+      "식욕부진",
+      "행동 변화",
+      "무기력",
+      "급성 신부전 (반복 투여 시)",
+      "사망 (반복 투여 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 NSAID로 골관절염 관련 통증 및 염증 조절에 사용됨. 초회 용량 0.2 mg/kg PO/IV/SC 투여 후 유지 용량 0.1 mg/kg PO q24h로 전환. 4.5 kg 미만 소형견에서는 음식에 섞어 투여하며 직접 구강 투여 금지. 장기 사용 시 위장관 보호제(PPI, H2 차단제, 미소프로스톨) 병용을 고려할 수 있으나 효과는 입증되지 않음. 만성 사용 시 기저치 및 주기적 신장·간 화학 패널 모니터링 필요. 특발성 간독성이 드물게 보고됨.",
+    "cat": "고양이에서 단회 SC 투여(0.3 mg/kg)는 FDA 승인됨(정형외과 수술, 난소자궁절제술, 거세 관련 수술 후 통증 조절). 미국 FDA는 반복 투여에 대해 박스 경고를 발령하였으며, 반복 투여 시 급성 신부전 및 사망과 관련됨. 일부 국가에서는 저용량 장기 사용이 허가되어 있으며, ISFM/AAFP 가이드라인은 만성 통증 관리에서 치료 이점이 위험을 상회할 수 있다고 제안함. 수술 전 투여 시 저혈압 에피소드로 인한 신손상 위험 증가에 주의. 생후 4개월 미만 고양이에서 안전성 미확립."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장, 간, 심장 기능 저하 동물에서 주의 사용. 활동성 위장관 궤양 또는 출혈 시 사용 금지. 글루코코르티코이드 병용 시 극도 주의. 저혈압, 저혈량증, 나트륨 결핍, 흡입마취 시 신독성 위험 증가. 4.5 kg 미만 소형견에서 용량 측정 주의."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "반복 투여 시 급성 신부전 및 사망과 관련됨. FDA 박스 경고 발령. 미국에서는 단회 SC 투여만 FDA 승인. 수술 전 투여 시 저혈압으로 인한 신손상 위험 증가. 생후 4개월 미만 고양이에서 안전성 미확립."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제 및 경구 액제는 실온(20°C~25°C)에서 보관. 경구 현탁액은 15°C~30°C 범위 내 보관 허용. 영국 라벨 경구 현탁액은 개봉 후 6개월 유효기간.",
+    "forms": [
+      "멜록시캄 경구 현탁액 0.5 mg/mL (0.02 mg/drop) - 수의용",
+      "멜록시캄 경구 현탁액 1.5 mg/mL (0.05 mg/drop) - 수의용",
+      "멜록시캄 주사액 5 mg/mL - 수의용",
+      "멜록시캄 정제 7.5 mg - 인체용",
+      "멜록시캄 정제 15 mg - 인체용",
+      "멜록시캄 캡슐 5 mg - 인체용",
+      "멜록시캄 캡슐 10 mg - 인체용",
+      "멜록시캄 경구 현탁액 7.5 mg/5 mL - 인체용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "멜록시캄은 COX-2 선택적 NSAID로 개에서 골관절염 관련 통증 및 염증 조절에 FDA 승인됨. 고양이에서는 단회 SC 투여만 FDA 승인되며, 반복 투여 시 급성 신부전 및 사망 위험으로 FDA 박스 경고가 발령됨. 주요 이상반응은 위장관 및 신장 관련이며, 개에서 특발성 간독성이 드물게 보고됨. 장기 사용 시 신장·간 기능 모니터링 필수.",
+    "indications": "개: 골관절염 관련 통증 및 염증 조절 (FDA 승인). 고양이: 정형외과 수술, 난소자궁절제술, 거세 관련 수술 후 통증 및 염증 조절 단회 투여 (FDA 승인). 고양이 만성 통증 관리 (일부 국가 허가, 미국에서는 extra-label). 말, 소, 소형 반추동물, 낙타과, 돼지, 조류, 페럿, 소형 포유류, 파충류에서 extra-label 사용.",
+    "client_info": "경구 액제 사용 시 투여 전 충분히 흔들고 용량을 정확히 측정하세요. 음식과 함께 투여하세요. 4.5 kg 미만 소형견은 소량의 음식에 섞어 투여하고 직접 구강 투여는 피하세요. 대부분의 동물은 멜록시캄을 잘 견디지만, 드물게 위궤양, 신장 및 간 문제가 발생할 수 있습니다(특히 고양이). 다음 증상이 나타나면 즉시 수의사에게 연락하세요: 식욕 감소, 구토, 배변 변화, 행동 또는 활동 변화, 허약감(비틀거림, 어색한 움직임), 경련, 공격성, 음수량 변화, 배뇨 변화(빈도, 색, 냄새), 잇몸·피부·눈 흰자위의 황달. 이 약은 어린이와 동물의 손이 닿지 않는 곳에 보관하세요(특히 꿀 맛 경구 액제). 정기적인 혈액 검사로 간 및 신장 이상반응을 모니터링해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 82,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "timing_profile.t_max_hr (cat)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/62.jsonl",
+    "extracted_at": "2026-03-11T08:47:51.619179+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "id": "amoxicillin",
+  "drug_identity": {
+    "name_ko": "아목시실린",
+    "name_en": "Amoxicillin",
+    "active_ingredient": "Amoxicillin",
+    "brand_names": [
+      "Amoxi-Tabs",
+      "Amoxi-Drops",
+      "Bimox",
+      "Amoxi-Mast",
+      "Amoxil",
+      "Trimox",
+      "Moxatag"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Inj",
+      "Cap",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      },
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 62.5,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 875,
+        "unit": "mg"
+      },
+      {
+        "value": 775,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.85,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "아목시실린은 주로 신장을 통해 변화 없이 세뇨관 분비 방식으로 배설된다. 일부는 가수분해에 의해 페니실로산(비활성)으로 대사된 후 소변으로 배설된다. CYP 효소 관련 대사 경로는 보고되지 않았다."
+    },
+    "extra_information": "개에서 경구 투여 후 생체이용률은 64~77%이며, 최대 혈장 농도(11~21 µg/mL)는 약 1.38~2시간 후 도달한다. 고양이에서 10 mg/kg 경구 투여 시 최대 혈장 농도 5.89 µg/mL에 1.69시간 후 도달하며 생체이용률은 약 77%이다. 개에서 분포용적은 0.28~0.71 L/kg, 고양이에서는 0.86 L/kg이다. 개에서 단백결합률은 약 13%이다. 고양이에서 소실 반감기는 약 1.25시간이며 청소율은 0.45 L/hour/kg이다. 아조테믹 만성신장질환 고양이에서 아목시실린-클라불란산 투여 시 소변 내 아목시실린 농도가 유의하게 낮고 혈청 농도는 다소 높았다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신장 배설이 주된 경로이며 신독성 직접 보고는 없으나 신장 부담이 높음. 간독성은 드물게 간효소 상승 보고. 뇌독성은 고용량/장기 사용 시 신경독성(운동실조) 보고. 혈액독성은 과민반응으로 혈소판감소증, 호중구감소증 등 보고.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "high doses"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성(개에서 운동실조) 보고됨. 일반 용량에서는 드묾."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis",
+          "leukopenia",
+          "anemia",
+          "eosinophilia"
+        ],
+        "index": 2,
+        "evidence": "과민반응으로 혈소판감소증, 호중구감소증, 무과립구증, 백혈구감소증, 빈혈, 호산구증가증 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "renal disease"
+        ],
+        "index": 3,
+        "evidence": "주로 신장 세뇨관 분비를 통해 배설됨. 신장질환 환자에서 혈청 농도 상승 및 소변 농도 감소 보고. 직접적 신독성은 보고되지 않음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "페니실린 사용 시 간효소 상승이 드물게 보고됨. 직접적 간독성은 없는 것으로 간주됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "개에서 빈맥이 부작용으로 보고됨. 직접적 심독성은 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "high doses"
+        ],
+        "index": 1,
+        "evidence": "고용량/장기 사용 시 신경독성 가능성. 고양이 특이적 데이터는 제한적."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia",
+          "agranulocytosis"
+        ],
+        "index": 2,
+        "evidence": "과민반응으로 혈액학적 이상 가능. 고양이 특이적 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "azotemic chronic kidney disease",
+          "tubular secretion"
+        ],
+        "index": 3,
+        "evidence": "아조테믹 만성신장질환 고양이에서 소변 내 아목시실린 농도 유의하게 낮고 혈청 농도 다소 높음. 신장 배설이 주된 경로."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "간효소 상승이 드물게 보고됨. 고양이 특이적 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적 부작용 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.69,
+    "half_life_hr": {
+      "min": 0.91,
+      "max": 1.52,
+      "mean": 1.215,
+      "species": "dog"
+    },
+    "f_percent": 71,
+    "protein_binding_percent": 13,
+    "evidence": "개에서 경구 투여 후 생체이용률 64~77%(중간값 약 71%), 최대 혈장 농도 도달 시간 1.38~2시간. 고양이에서 생체이용률 약 77%, Tmax 1.69시간. 개에서 소실 반감기 0.91~1.52시간. 고양이에서 소실 반감기 약 1.25시간. 단백결합률 개에서 약 13%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin 등)",
+      "severity": 2,
+      "keywords": [
+        "inactivation",
+        "in vitro antagonism",
+        "chronic kidney disease"
+      ],
+      "evidence": "Beta-lactam antibiotics can inactivate aminoglycosides in vitro and in vivo in patients with chronic kidney disease. May cause falsely decreased aminoglycoside serum concentrations."
+    },
+    {
+      "drug": "Bacteriostatic Antimicrobials (chloramphenicol, erythromycin, macrolides, sulfonamides, tetracyclines)",
+      "severity": 2,
+      "keywords": [
+        "in vitro antagonism",
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "Evidence of in vitro antagonism between beta-lactam antibiotics and bacteriostatic antibiotics. Clinical significance is unclear but concurrent use has generally not been recommended."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "decreased renal excretion",
+        "increased MTX concentration",
+        "toxicity"
+      ],
+      "evidence": "Amoxicillin may decrease the renal excretion of methotrexate, causing increased MTX concentrations and potential MTX toxic effects."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "decreased active metabolite",
+        "reduced drug concentration"
+      ],
+      "evidence": "Amoxicillin may decrease mycophenolate concentrations by decreasing concentrations of mycophenolate's active metabolite."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased serum concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "Probenecid competitively blocks the tubular secretion of most penicillins, thereby increasing serum concentrations and serum half-lives."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased bleeding risk"
+      ],
+      "evidence": "Concurrent use of amoxicillin with warfarin may increase risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "guinea_pig",
+      "chinchilla",
+      "hamster",
+      "small_mammals"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "호흡기, 비뇨생식기, 위장관, 연조직 감염 (FDA 승인 라벨 용량)",
+          "value": "11",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일 또는 모든 임상 증상 소실 후 48시간. 5일 내 호전 없으면 진단 재검토.",
+          "evidence": "FDA-approved label dosage for dogs (Amoxi-Tabs, Bimox)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 감염 (비라벨 외용)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 22.0,
+          "duration_note": "적응증 및 임상 반응에 따라 결정",
+          "evidence": "Extra-label use for systemic infections in dogs"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (비라벨 외용)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "3~5일 권장",
+          "evidence": "Extra-label; recent recommendations for sporadic bacterial cystitis"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (비라벨 외용, q12h 옵션)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "3~5일 권장",
+          "evidence": "Extra-label; recent recommendations for sporadic bacterial cystitis"
+        },
+        {
+          "logic_type": "linear",
+          "context": "재발성 세균성 방광염 (비라벨 외용)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "3~5일; 지속성 또는 재발성 감염의 경우 1~2주 고려",
+          "evidence": "Extra-label; recurrent bacterial cystitis (2+ episodes/6 months or 3+/12 months)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "보렐리아증(라임병) (비라벨 외용)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "30일",
+          "evidence": "Extra-label for Borreliosis (Lyme disease) in dogs"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중요법 (비라벨 외용) - 프로토콜 a",
+          "value": "11",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주; 메트로니다졸 15.4 mg/kg q8h + 비스무스 서브살리실레이트 0.22 mL/kg q4~6h 병용",
+          "evidence": "Extra-label triple therapy for Helicobacter spp gastritis in dogs"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중요법 (비라벨 외용) - 프로토콜 b",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주; 메트로니다졸 10 mg/kg q12h + 비스무스 서브살리실레이트 체중별 용량 q12h 병용",
+          "evidence": "Extra-label triple therapy for Helicobacter spp gastritis in dogs"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중요법 (비라벨 외용) - 프로토콜 c",
+          "value": "22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주; 메트로니다졸 11~15 mg/kg q12h + 비스무스 서브살리실레이트 0.22 mL/kg q6~8h 병용",
+          "evidence": "Extra-label triple therapy for Helicobacter spp gastritis in dogs"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "상부 호흡기, 비뇨생식기, 위장관, 피부 및 연조직 감염 (FDA 승인 라벨 용량 - 고정 용량)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일 또는 모든 임상 증상 소실 후 48시간. 5일 내 호전 없으면 진단 재검토.",
+          "evidence": "FDA-approved label dosage for cats: 50 mg/cat (NOT mg/kg) once daily"
+        },
+        {
+          "logic_type": "linear",
+          "context": "상부 호흡기, 비뇨생식기, 위장관, 피부 및 연조직 감염 (FDA 승인 라벨 용량 - 체중 기반)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 22.0,
+          "duration_note": "5~7일 또는 모든 임상 증상 소실 후 48시간",
+          "evidence": "FDA-approved label dosage for cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "전신 감염 (비라벨 외용)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 22.0,
+          "duration_note": "적응증 및 임상 반응에 따라 결정",
+          "evidence": "Extra-label use for systemic infections in cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (비라벨 외용)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "3~5일",
+          "evidence": "Extra-label for sporadic bacterial cystitis in cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "산발성 세균성 방광염 (비라벨 외용, q12h 옵션)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "3~5일",
+          "evidence": "Extra-label for sporadic bacterial cystitis in cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "재발성 세균성 방광염 (비라벨 외용)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "3~5일; 지속성 또는 재발성 감염의 경우 1~2주 고려",
+          "evidence": "Extra-label for recurrent bacterial cystitis in cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 삼중요법 (비라벨 외용)",
+          "value": "11 - 22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 22.0,
+          "duration_note": "3주; 메트로니다졸 11~15.4 mg/kg q8~12h + 비스무스 서브살리실레이트 0.22 mL/kg q4~8h 병용",
+          "evidence": "Extra-label triple therapy for Helicobacter spp gastritis in cats"
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 사중요법 (비라벨 외용)",
+          "value": "10 - 20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": 20.0,
+          "duration_note": "2주; 메트로니다졸 10 mg/kg BID + 비스무스 서브살리실레이트 1/4정 BID ± H2 차단제 또는 오메프라졸 병용",
+          "evidence": "Extra-label quadruple therapy for Helicobacter spp gastritis in cats"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장질환 환자에서 고용량 비경구 페니실린 투여 시 CNS 부작용 유발 가능. 아조테믹 만성신장질환 고양이에서 혈청 아목시실린 농도 상승 보고. 신장 기능 저하 시 용량 감량 또는 투여 간격 연장 고려 권장되나 구체적 역치는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "아목시실린은 주로 신장으로 배설되며 간독성은 없는 것으로 간주됨. 간질환에 대한 용량 조정 지침은 모노그래프에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응 병력",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 베타-락탐 항생제(세팔로스포린, 세파마이신, 카바페넴) 과민반응 병력",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "beta-lactam cross-reactivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "패혈증, 쇼크 또는 중증 질환 (경구 투여 시)",
+      "match_terms": [
+        "septicemia",
+        "shock",
+        "severe illness"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "토끼, 기니피그, 친칠라, 햄스터 및 기타 소형 포유류",
+      "match_terms": [
+        "rabbit",
+        "guinea pig",
+        "chinchilla",
+        "hamster",
+        "small mammal",
+        "pocket pet"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제를 통한 살균 작용. 베타-락탐 항생제는 세균 세포막의 페니실린 결합 단백질(PBP; 카르복시펩티다제, 트랜스펩티다제, 엔도펩티다제)에 결합하여 무코펩티드 합성을 억제하고, 결함 있는 세포벽과 삼투압적으로 불안정한 구형체를 형성하여 세균을 사멸시킨다. 시간 의존성 살균제.",
+    "common_extra_effects": [
+      "식욕부진, 구토, 설사 (위장관 부작용)",
+      "과민반응 (발진, 발열, 호산구증가증, 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈, 림프절병증, 아나필락시스)",
+      "항생제 관련 설사 및 장내 세균총 변화",
+      "신경독성 (고용량/장기 사용 시 운동실조)",
+      "간효소 상승 (드묾)",
+      "빈호흡, 호흡곤란, 부종, 빈맥 (개에서 보고)"
+    ],
+    "dog_mechanism": "아목시실린은 개에서 경구 투여 후 64~77%의 생체이용률을 보이며, 암피실린보다 혈청 농도가 1.5~3배 높다. 시간 의존성 살균제로 T>MIC가 치료 효과의 핵심 지표이다.",
+    "dog_extra_effects": [
+      "장내 세균총 변화 (그람음성균 및 내성 장내세균과 증가)",
+      "빈맥, 빈호흡, 호흡곤란, 부종",
+      "운동실조 (고용량/장기 사용 시)"
+    ],
+    "cat_mechanism": "고양이에서 경구 투여 후 생체이용률 약 77%, Tmax 1.69시간. 아조테믹 만성신장질환 고양이에서 혈청 농도 상승 및 소변 농도 감소 주의.",
+    "cat_extra_effects": [
+      "위장관 부작용 (구토, 설사, 식욕부진)",
+      "과민반응"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 경구 아목시실린은 호흡기, 비뇨생식기, 위장관, 연조직 감염 및 세균성 피부염에 사용된다. 비라벨 용도로 전신 감염, 세균성 방광염, 라임병, 헬리코박터 위염 삼중요법에도 활용된다. 건강한 개에서 경구 아목시실린 투여 시 장내 세균총이 변화하여 내성 장내세균과 균종이 증가할 수 있음에 주의한다. FDA 승인 라벨 용량(11 mg/kg BID)은 현재 대부분의 임상의에게 일관된 효능을 보장하지 않는 것으로 간주된다.",
+    "cat": "고양이에서 FDA 승인된 경구 아목시실린은 상부 호흡기, 비뇨생식기, 위장관, 피부 및 연조직 감염에 사용된다. 라벨 용량은 50 mg/고양이(체중 기반 아님) 또는 11~22 mg/kg 1일 1회이나, 비라벨 용도로 q8h 투여가 권장되기도 한다. 아조테믹 만성신장질환 고양이에서 혈청 농도 상승 및 소변 농도 감소가 보고되므로 신장 기능 모니터링이 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "패혈증/쇼크 시 경구 흡수 저하로 비경구 투여 권장. 고용량/장기 사용 시 신경독성 주의. 장내 세균총 변화 및 내성균 증식 가능성 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "아조테믹 만성신장질환 고양이에서 혈청 농도 상승 주의. 패혈증/쇼크 시 비경구 투여 권장. 위장관 부작용 발생 시 음식과 함께 투여 고려."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "캡슐, 정제, 경구 현탁액 분말: 실온(15~30°C) 밀폐 용기 보관. 재조제 후 경구 현탁액: 실온 또는 냉장 보관 가능(냉장 권장); 미사용분은 14일 후 폐기. 유방내 주사기: 24°C(75°F) 이하 보관.",
+    "forms": [
+      "경구 정제: 50 mg, 100 mg, 150 mg, 200 mg, 400 mg (Amoxi-Tabs, Bimox)",
+      "경구 현탁액 분말: 50 mg/mL (재조제 후) (Amoxi-Drops, Bimox)",
+      "유방내 주사기: 62.5 mg/10 mL (Amoxi-Mast)",
+      "인체용 씹는 정제: 125 mg, 200 mg, 250 mg, 400 mg (Amoxil)",
+      "인체용 경구 정제: 500 mg, 875 mg (Amoxil)",
+      "인체용 캡슐: 250 mg, 500 mg (Amoxil)",
+      "인체용 경구 현탁액: 125 mg/5 mL, 200 mg/5 mL, 250 mg/5 mL, 400 mg/5 mL (Amoxil, Trimox)",
+      "인체용 서방정: 775 mg (Moxatag)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아목시실린은 개와 고양이에서 FDA 승인된 아미노페니실린계 살균 항생제로, 암피실린과 동일한 항균 스펙트럼을 가진다. 베타-락타마제 생성 세균에는 효과가 없으며, 베타-락타마제 억제제(클라불란산 등)와 병용 시 스펙트럼이 확장된다. 시간 의존성 항생제로 T>MIC가 치료 효과의 핵심이다. 가장 흔한 부작용은 위장관 관련 증상이며, 과민반응은 드물게 발생한다. WHO 및 OIE에서 인수공통 중요 항균제로 지정되어 있어 신중한 사용이 요구된다.",
+    "indications": "【승인 적응증 (개/고양이)】 호흡기 감염, 비뇨생식기 감염(방광염), 위장관 감염, 연조직 감염(농양, 열상, 창상), 세균성 피부염. 【비라벨 적응증】 전신 감염, 재발성 세균성 방광염, 보렐리아증(라임병, 개), 헬리코박터 위염 삼중/사중요법, 조류 감염, 페럿 헬리코박터 위염, 고슴도치 감염, 파충류 감염. 【소 승인】 비유 중 젖소 유방염(유방내 주입).",
+    "client_info": "• 경구 현탁액은 냉장 보관이 권장되나 필수는 아닙니다. 재조제 후 14일이 지난 미사용분은 버려주세요.\n• 이 약은 음식과 함께 또는 공복에 투여할 수 있으나, 위장관 부작용(식욕 저하, 구역, 구토)이 우려될 경우 음식과 함께 투여하세요.\n• 가장 흔한 부작용은 설사, 구토, 식욕 감소입니다.\n• 처방된 대로 정확히 투여하고 반려동물이 호전된 것처럼 보여도 전체 치료 과정을 완료하는 것이 중요합니다. 용량을 빠뜨리거나 조기에 중단하면 치료 실패로 이어질 수 있습니다.\n• 아목시실린은 토끼, 기니피그, 친칠라, 햄스터, 설치류 또는 기타 소형 포유류에게 투여하면 생명을 위협하는 설사가 발생할 수 있으므로 절대 투여하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdosage/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment guidelines",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/55.jsonl",
+    "extracted_at": "2026-03-11T06:13:57.484976+00:00",
+    "reviewer": null
+  }
+}

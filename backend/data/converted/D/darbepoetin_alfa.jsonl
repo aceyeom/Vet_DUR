@@ -1,0 +1,483 @@
+{
+  "id": "darbepoetin_alfa",
+  "drug_identity": {
+    "name_ko": "다베포에틴 알파",
+    "name_en": "Darbepoetin Alfa",
+    "active_ingredient": "Darbepoetin Alfa",
+    "brand_names": [
+      "Aranesp",
+      "Nespo"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인간용 제품(Aranesp®)을 개와 고양이의 만성신장질환 관련 빈혈 치료에 허가 외(extra-label)로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mcg"
+      },
+      {
+        "value": 25,
+        "unit": "mcg"
+      },
+      {
+        "value": 40,
+        "unit": "mcg"
+      },
+      {
+        "value": 60,
+        "unit": "mcg"
+      },
+      {
+        "value": 100,
+        "unit": "mcg"
+      },
+      {
+        "value": 150,
+        "unit": "mcg"
+      },
+      {
+        "value": 200,
+        "unit": "mcg"
+      },
+      {
+        "value": 300,
+        "unit": "mcg"
+      },
+      {
+        "value": 500,
+        "unit": "mcg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Unknown",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "광범위하게 대사되나 구체적인 대사 경로는 명시되지 않음. 신세뇨관 분비가 일부 관여할 수 있음(프로베네시드 상호작용 참조)."
+    },
+    "extra_information": "개에서 IV 투여 시 소실 반감기 25시간(에포에틴의 3.5배). 고양이에 대한 PK 정보 없음. 인간에서 SC 투여 시 생체이용률 약 37%, 분포 반감기 약 1.4시간, IV 투여 후 말단 소실 반감기 평균 21시간, SC 투여 후 70시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 PK 데이터(IV 반감기 25시간) 존재; 고양이 PK 데이터 없음. 심혈관계(고혈압, 혈전증), 혈액계(적혈구 증가증, PRCA), 신경계(발작) 부작용 근거로 점수 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "seizures",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "개에서 발작 발생률 15% 보고(고혈압 이차성). 고혈압으로 인한 신경계 영향 가능."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "polycythemia",
+          "PRCA",
+          "pure red cell aplasia",
+          "anti-epoetin antibody",
+          "erythropoiesis"
+        ],
+        "index": 0,
+        "evidence": "적혈구 생성 자극제로 혈액계에 직접 작용. 적혈구 증가증, 순수 적혈구 무형성증(PRCA) 위험. 개에서 PRCA 발생률 약 6% 보고."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "chronic kidney disease",
+          "renal tubular excretion"
+        ],
+        "index": 2,
+        "evidence": "만성신장질환 환자에서 사용되는 약물로 신장 부담 간접적 관련. 프로베네시드가 EPO의 신세뇨관 분비를 감소시킨다는 보고 있음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성 또는 간 관련 부작용에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypertension",
+          "increased blood viscosity",
+          "cardiac output",
+          "cardiovascular events"
+        ],
+        "index": 3,
+        "evidence": "개에서 고혈압 발생률 최대 50% 보고. 혈액 점도 증가 및 심박출량 증가로 인한 심혈관계 부담. 인간에서 심근경색, 뇌졸중, 정맥 혈전증 위험 증가 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "seizures",
+          "hypertension"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 고혈압 및 발작 위험 보고됨(개와 유사한 기전). 고양이 특이적 PK 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "polycythemia",
+          "PRCA",
+          "pure red cell aplasia",
+          "anti-epoetin antibody",
+          "erythropoiesis"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 에포에틴 또는 다베포에틴 치료 시 약 60~65%만 적절한 반응. PRCA 위험 존재. 에포에틴 대비 PRCA 발생률 낮음(<10%)."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "chronic kidney disease"
+        ],
+        "index": 2,
+        "evidence": "만성신장질환 고양이에서 사용. 신장 관련 직접 독성 언급 없으나 기저 질환으로 인한 간접적 관련성 있음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 독성 또는 간 관련 부작용에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hypertension",
+          "increased blood viscosity",
+          "cardiac output"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 고혈압 발생률 최대 50% 보고. 혈액 점도 증가 및 심박출량 증가로 인한 심혈관계 부담."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 25.0,
+      "species": "dog"
+    },
+    "f_percent": 37,
+    "protein_binding_percent": null,
+    "evidence": "개에서 IV 투여 시 소실 반감기 25시간(Plumb's 직접 인용). 생체이용률 37%는 인간 CKD 환자 SC 투여 데이터. 고양이 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 에포에틴(관련 화합물)에서 보고되거나 이론적으로 예측된 상호작용 포함. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Androgens (e.g., danazol, testosterone)",
+      "severity": 1,
+      "keywords": [
+        "erythroid progenitor sensitivity",
+        "additive erythropoiesis"
+      ],
+      "evidence": "Androgens may increase the sensitivity of erythroid progenitors to darbepoetin; this interaction has been used for therapeutic effect. Not confirmed in well-controlled studies."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "blood pressure",
+        "cyclosporine blood levels",
+        "red blood cell binding"
+      ],
+      "evidence": "May cause additive increases in blood pressure. Darbepoetin may alter cyclosporine blood levels as cyclosporine is bound by red blood cells."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 1,
+      "keywords": [
+        "renal tubular excretion",
+        "EPO clearance"
+      ],
+      "evidence": "Probenecid has been demonstrated to reduce the renal tubular excretion of EPO; clinical significance remains unclear."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 5.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성신장질환 관련 빈혈에서 적혈구 생성 자극 (허가 외)",
+          "value": "0.5 - 0.8",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 PCV 도달 후 투여 간격을 14일 또는 21일로 연장 가능. 21일 초과 간격은 장기적으로 효과적인 목표 PCV 유지가 어려울 수 있음. 철분 보충 권장.",
+          "evidence": "Plumb's 직접 인용 (extra-label). 높은 용량(0.8 µg/kg)이 더 효과적인 것으로 보임."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "만성신장질환 관련 빈혈에서 적혈구 생성 자극 (허가 외) - 주요 권장 용량",
+          "value": "1",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 PCV 도달 후 투여 간격을 14일 또는 21일로 연장 가능. 철분 보충 권장.",
+          "evidence": "Plumb's 직접 인용 (extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성신장질환 관련 빈혈에서 적혈구 생성 자극 (허가 외) - 대안적 용량 범위",
+          "value": "0.25 - 1.5",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 PCV 도달 후 투여 간격을 14일 또는 21일로 연장 가능. 철분 보충 권장.",
+          "evidence": "Plumb's 인용 - 다른 문헌에서 제시된 범위."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "만성신장질환 환자에서 사용되는 약물이나 신기능에 따른 구체적인 용량 조절 지침은 명시되지 않음. 신장 기능 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간기능에 따른 용량 조절에 대한 정보 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "항에포에틴 항체 확인된 경우",
+      "match_terms": [
+        "anti-epoetin antibody",
+        "pure red cell aplasia",
+        "PRCA"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 고혈압",
+      "match_terms": [
+        "uncontrolled hypertension",
+        "hypertension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "에리스로포이에틴 또는 다베포에틴 치료 후 발생한 순수 적혈구 무형성증",
+      "match_terms": [
+        "pure red cell aplasia",
+        "PRCA",
+        "erythropoietin-induced PRCA"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "철분 결핍",
+      "match_terms": [
+        "iron deficiency",
+        "low ferritin"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "PCV 20% 이상인 무증상 빈혈",
+      "match_terms": [
+        "PCV > 20%",
+        "asymptomatic anemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": 20.0,
+        "unit": "%"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "과당화된 합성 인간 재조합 에리스로포이에틴 유사체로, 내인성 에리스로포이에틴과 동일한 기전으로 조혈 전구 줄기세포와 상호작용하여 적혈구 생성을 자극함.",
+    "common_extra_effects": [
+      "항에포에틴 항체 형성 및 순수 적혈구 무형성증(PRCA)",
+      "주사 부위 반응",
+      "적혈구 증가증(polycythemia)",
+      "고혈압",
+      "발작",
+      "철분 결핍",
+      "구토 및/또는 설사"
+    ],
+    "dog_mechanism": "에포에틴 대비 EPO 수용체 결합 활성이 4배 낮으나, PK 연구에서 13~14배 더 강력한 효능을 보임. IV 투여 시 소실 반감기 25시간.",
+    "dog_extra_effects": [
+      "고혈압 (36%)",
+      "발작 (15%)",
+      "구토 및/또는 설사 (9%)",
+      "순수 적혈구 무형성증 (6%)"
+    ],
+    "cat_mechanism": "개와 유사한 기전으로 작용하나 고양이 특이적 PK 데이터 없음. 에포에틴 또는 다베포에틴 치료 시 약 60~65%에서 적절한 반응.",
+    "cat_extra_effects": [
+      "고혈압 (최대 50%)",
+      "순수 적혈구 무형성증",
+      "발작"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 CKD 관련 빈혈 치료에 허가 외로 사용. 0.5~0.8 µg/kg SC 주 1회 투여로 시작하며, 85%의 개에서 PCV ≥30% 달성 보고. 목표 PCV 도달 후 투여 간격 연장(14일 또는 21일) 가능. 고혈압(36%), 발작(15%), 위장관 증상(9%), PRCA(6%) 등의 부작용 모니터링 필요. 철분 보충 병행 권장. PCV 주 1회 이상 모니터링 및 혈압 정기 측정 필요.",
+    "cat": "고양이에서 CKD 관련 빈혈 치료에 허가 외로 사용. 1 µg/kg SC 주 1회 투여가 주요 권장 용량이나 0.25~1.5 µg/kg 범위도 보고됨. 약 60~65%에서만 적절한 반응. 고혈압(최대 50%), PRCA, 발작 등의 부작용 모니터링 필요. 망상적혈구 수치가 효능을 반영하지 않을 수 있음. 철분 보충 병행 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "항에포에틴 항체 확인 시 사용 금지. 고혈압, 발작, PRCA 등 부작용 모니터링 필요. 철분 결핍 시 효능 저하. PCV 주 1회 이상 및 혈압 1~2개월마다 모니터링 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "항에포에틴 항체 확인 시 사용 금지. 고혈압(최대 50%), PRCA, 발작 등 부작용 모니터링 필요. 망상적혈구 수치가 효능을 반영하지 않을 수 있음. 철분 보충 병행 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관(2~8°C, 36~46°F), 빛 차단. 동결 또는 진탕 금지.",
+    "forms": [
+      "Darbepoetin Alfa 주사액 (방부제 무함유, 알부민 무함유) - Aranesp® (Rx)",
+      "단회용 프리필드 시린지: 10 µg/0.4 mL, 25 µg/0.42 mL, 40 µg/0.4 mL, 60 µg/0.3 mL, 100 µg/0.5 mL, 150 µg/0.3 mL, 200 µg/0.4 mL, 300 µg/0.6 mL, 500 µg/1 mL",
+      "단회용 바이알: 25 µg/1 mL, 40 µg/1 mL, 60 µg/1 mL, 100 µg/1 mL, 200 µg/1 mL, 300 µg/1 mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "다베포에틴 알파는 과당화된 합성 인간 재조합 에리스로포이에틴 유사체로, 개와 고양이의 만성신장질환(CKD) 관련 빈혈 치료에 허가 외로 사용됩니다. 에포에틴 알파 대비 3배 긴 반감기(개에서 25시간)로 투여 빈도를 줄일 수 있으며, 면역원성이 낮을 수 있습니다. 수의학적 허가 제품은 없으며, 경마 규정상 Class 1 물질로 지정되어 있습니다. 고혈압(최대 50%), 발작, PRCA 등 심각한 부작용 모니터링이 필수적입니다.",
+    "indications": "【허가 외 사용】개와 고양이의 만성신장질환(CKD)과 관련된 정색소성 정구성 비재생성 빈혈 치료. PCV 20% 미만이거나 빈혈 관련 임상 증상이 있을 때 치료 시작 권장. 에포에틴 알파의 대안으로 사용 가능(더 긴 반감기, 낮은 면역원성).",
+    "client_info": "이 약은 신부전(만성신장질환)으로 인한 빈혈(적혈구 부족) 치료를 위해 피부 아래(피하) 주사로 투여하는 약입니다. 효과가 나타나기까지 수 주가 걸릴 수 있습니다. 수의사가 정기적인 혈액 검사와 혈압 측정을 통해 반응을 면밀히 모니터링해야 하므로 예약된 추적 방문을 빠짐없이 지켜주세요. 주사 부위의 피부 반응을 집에서 관찰해 주세요. 경련(발작), 시력 상실(가구에 부딪힘), 전반적인 컨디션 저하, 기력 감소, 보행 불능, 식욕 부진이 나타나면 즉시 수의사에게 연락하세요. 이 약은 면역계가 약물에 대한 항체를 형성하여 효과가 감소할 수 있으며, 수의사가 혈액 검사로 이를 모니터링합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (cat-specific)",
+      "CYP metabolism pathway",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding data (veterinary)",
+      "Onset of action (minutes)",
+      "T_max (hours)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (cat)",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/38.jsonl",
+    "extracted_at": "2026-03-11T00:56:19.577255+00:00",
+    "reviewer": null
+  }
+}

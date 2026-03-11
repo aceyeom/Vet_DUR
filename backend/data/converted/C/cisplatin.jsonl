@@ -1,0 +1,533 @@
+{
+  "id": "cisplatin",
+  "drug_identity": {
+    "name_ko": "시스플라틴",
+    "name_en": "Cisplatin",
+    "active_ingredient": "Cisplatin",
+    "brand_names": [
+      "Platinol",
+      "Platinol-AQ"
+    ],
+    "allergy_class": "platinum",
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음; 개에서 다양한 종양 치료에 사람용 제품을 오프라벨로 사용함. 고양이에서 전신 투여는 금기.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "시스플라틴은 CYP 효소 대사에 대한 정보가 Plumb's에 기재되어 있지 않음. 주로 신장을 통해 유리 백금 형태로 배설됨."
+    },
+    "extra_information": "개에서 투여 후 48시간 이내에 투여량의 약 80%가 유리 백금 형태로 소변으로 회수됨. 간, 폐, 난소, 자궁, 신장에 고농도로 분포함. 단백결합률 90%."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 독성 보고 및 약동학 분포 데이터를 근거로 함. 개 데이터 우선; 고양이 전신 투여 금기로 고양이 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "seizures",
+          "peripheral neuropathies",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "개에서 발작 및 말초 신경병증이 부작용으로 보고됨. 사람에서 누적 신경독성 보고."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "myelosuppression",
+          "thrombocytopenia",
+          "granulocytopenia",
+          "anaphylactic reactions"
+        ],
+        "index": 1,
+        "evidence": "골수억제(혈소판감소증, 과립구감소증)가 주요 부작용으로 보고됨. 과민반응도 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "nephrotoxicity",
+          "dose-limiting",
+          "cumulative",
+          "renal impairment",
+          "80% renally excreted"
+        ],
+        "index": 1,
+        "evidence": "신독성은 용량 제한 독성이며 누적적임. 투여량의 약 80%가 신장으로 배설됨. 강제 식염수 이뇨 요법 필요."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased liver enzymes",
+          "concentrates in liver"
+        ],
+        "index": 1,
+        "evidence": "간에 고농도 분포하며 간효소 수치 상승이 부작용으로 보고됨."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias"
+        ],
+        "index": 1,
+        "evidence": "QT 연장 가능성이 약물 상호작용 항목에서 언급됨. 직접적인 심장독성 데이터는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 전신 투여 금기로 뇌 독성 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 전신 투여 금기로 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 전신 투여 금기로 신장 독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 전신 투여 금기로 간 독성 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 전신 투여 금기로 심장 독성 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.33,
+      "max": 80.0,
+      "mean": null,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 90,
+    "evidence": "개에서 이중 소실 프로파일: 초기 반감기 약 20~50분, 말기 반감기 약 60~80시간. 경구 생체이용률 데이터 없음(IV 투여)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (e.g., gentamicin)",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "신독성 및 이독성 위험 증가. 가능하면 시스플라틴 투여 후 최소 2주 후에 아미노글리코사이드 투여."
+    },
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "신독성 위험 증가 가능성."
+    },
+    {
+      "drug": "Carboplatin",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "카보플라틴으로 사전 치료받은 환자에서 시스플라틴 투여 후 신경독성 또는 이독성 위험 증가."
+    },
+    {
+      "drug": "Furosemide (loop diuretics)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "신독성 및 이독성 위험 증가 가능성."
+    },
+    {
+      "drug": "Iohexol",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "신독성 위험 증가 가능성."
+    },
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "다른 골수억제제와 병용 시 골수억제 상가 효과. 가능하면 병용 피할 것."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, flunixin, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "신독성 위험 증가 가능성."
+    },
+    {
+      "drug": "Polymyxin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "ototoxicity"
+      ],
+      "evidence": "신독성 및 이독성 위험 증가 가능성."
+    },
+    {
+      "drug": "QT Prolonging Agents (e.g., acepromazine, amiodarone, cisapride, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmias",
+        "torsade de pointes"
+      ],
+      "evidence": "QT 간격 연장, 심장 부정맥, 토르사드 드 포인트 위험 증가 가능성."
+    },
+    {
+      "drug": "Tigilanol Tiglate",
+      "severity": 3,
+      "keywords": [
+        "antineoplastic combination",
+        "avoid"
+      ],
+      "evidence": "티길라놀 티글레이트 투여 프로토콜은 다른 항종양제와의 병용을 허용하지 않음. 병용 금기."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "vaccine efficacy"
+      ],
+      "evidence": "골수억제제는 백신 효능을 감소시키고 백신 부작용을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Verdinexor",
+      "severity": 2,
+      "keywords": [
+        "glutathione S-transferase inhibition",
+        "increased drug concentration"
+      ],
+      "evidence": "글루타치온 S-전이효소의 경쟁적 억제로 인해 두 약물의 혈청 농도가 증가할 수 있음. 가능하면 병용 피할 것."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "잠재적으로 감수성 있는 암종 및 육종 (오프라벨)",
+          "value": "50 - 60",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q3-5weeks",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용 (mg/kg 아님). 20분~수 시간에 걸쳐 천천히 IV 투여. 투여 전후 식염수 이뇨 요법 필수.",
+          "evidence": "50–60 mg/m2 IV over 20 minutes to several hours every 3 to 5 weeks. 오프라벨 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "종양성 흉수의 완화적 조절을 위한 강내 투여 (오프라벨)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q3-4weeks",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/m2 단위 사용. 0.9% NaCl 10 mL/kg/hr IV 4시간 전처치 후 시행. 250 mL/m2 총 용량으로 희석. 흉수 소실 후 4회 치료 후 중단.",
+          "evidence": "50 mg/m2 강내 투여, 3~4주 간격 반복. 오프라벨 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "기존에 유의한 신기능 장애가 있는 환자에서 시스플라틴은 금기임. 혈청 크레아티닌이 정상 참고 범위를 초과하면 예정된 치료를 연기해야 함. 투여 전후 충분한 수화 및 강제 이뇨 요법 필수."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "Plumb's에 간기능 장애 시 용량 조절에 대한 명시적 권고사항 없음. 간효소 수치 상승이 부작용으로 보고되므로 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "고양이 전신 투여",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "골수억제",
+      "match_terms": [
+        "myelosuppression",
+        "neutropenia",
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 100.0,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "시스플라틴 또는 백금 함유 화합물 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy",
+        "platinum",
+        "carboplatin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "울혈성 심부전",
+      "match_terms": [
+        "congestive heart failure",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "DNA 내 및 DNA 간 교차결합(cross-linking)을 유발하여 단일 및 이중 가닥 DNA 절단, DNA 복제·RNA 전사·단백질 합성 억제를 통해 세포사멸 및 종양 성장 억제를 유도하는 무기 백금 함유 항종양제.",
+    "common_extra_effects": [
+      "구토 (투여 후 6시간 이내 발생, 1~6시간 지속)",
+      "신독성 (용량 제한 독성, 누적적)",
+      "이독성 (고주파 영구 청력 손실, 이명)",
+      "골수억제 (혈소판감소증, 과립구감소증)",
+      "식욕부진",
+      "설사 (출혈성 설사 포함)",
+      "발작",
+      "말초 신경병증",
+      "전해질 이상 (저칼륨혈증, 저마그네슘혈증)",
+      "고요산혈증",
+      "간효소 수치 상승",
+      "과민반응",
+      "탈모 (지속적으로 자라는 털을 가진 품종에서 더 흔함)",
+      "사망"
+    ],
+    "dog_mechanism": "개에서 이중 소실 프로파일을 보임. 초기 반감기 약 20~50분, 말기 반감기 약 60~80시간. 투여량의 약 80%가 48시간 이내 소변으로 배설됨.",
+    "dog_extra_effects": [
+      "구토 (가장 흔한 부작용)",
+      "신독성 (강제 식염수 이뇨로 감소 가능)",
+      "이독성",
+      "골수억제",
+      "발작",
+      "말초 신경병증",
+      "털 코트 변화 (푸들, 테리어, 아프간 하운드, 올드 잉글리시 쉽독 등에서 탈모 가능)"
+    ],
+    "cat_mechanism": "고양이에서 전신 투여 금기. 심각한 용량 관련 폐독성(호흡곤란, 흉수, 폐부종, 종격동 부종, 사망) 발생.",
+    "cat_extra_effects": [
+      "폐독성 (호흡곤란, 흉수, 폐부종, 종격동 부종)",
+      "사망 (투여 후 2~4일 이내)",
+      "병변 내 투여 시 주사 부위 육종 발생 보고"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 편평세포암종, 이행세포암종, 난소암종, 골육종, 비강암종, 갑상선 선암종 등 다양한 종양 치료에 사용됨. 이행세포암종에서 NSAIDs 병용 시 효능 향상 가능. 투여 전후 식염수 강제 이뇨 요법 필수. 최소 치사량은 2.5 mg/kg(약 80 mg/m2)으로 보고됨. 수의 종양 전문의 협진 강력 권장.",
+    "cat": "고양이에서 전신 투여는 절대 금기. 심각한 폐독성으로 투여 후 2~4일 이내 사망 가능. 병변 내 화학요법은 주사 부위 육종 발생 위험이 있음. 불완전 절제된 주사 부위 육종에서 종양 변연부 병변 내 투여(전신 투여 아님)에 대한 제한적 보고 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신독성, 골수억제, 이독성, 신경독성 등 심각한 부작용 가능. 투여 전 CBC, 전해질, 신기능/간기능 검사 필수. 강제 이뇨 요법 시행. 울혈성 심부전 환자에서 주의. 고도 구토 유발 약물로 항구토제 전처치 필요."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "전신 투여 절대 금기. 심각한 폐독성으로 사망 가능."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20°C~25°C(68°F~77°F) 보관. 냉장 금지(침전물 형성 가능). 빛으로부터 보호. 희석 후 24시간 이내 투여. 개봉 후 형광등 하에서 실온 7일, 차광 시 28일 안정. 알루미늄 함유 기구와 접촉 금지.",
+    "forms": [
+      "Cisplatin Injection 1 mg/mL (50 mL, 100 mL, 200 mL 다회 투여 바이알)",
+      "Cisplatin 동결건조 분말 주사제 10 mg, 50 mg 바이알",
+      "병변 내 주사용 조제 제형 (조제 약국)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "시스플라틴은 개에서 다양한 암종 및 육종 치료에 사용되는 백금 계열 항종양제입니다. 고양이에서 전신 투여는 심각한 폐독성으로 인해 절대 금기입니다. 주요 독성으로는 신독성(용량 제한), 구토, 이독성, 골수억제가 있습니다. 투여 전후 강제 식염수 이뇨 요법이 필수적이며, 수의 종양 전문의 협진이 강력히 권장됩니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 개인보호장비 착용이 필요합니다.",
+    "indications": "개(오프라벨): 편평세포암종, 이행세포암종, 난소암종, 골육종, 비강암종, 갑상선 선암종. 종양성 흉수의 완화적 조절(강내 투여). 말(오프라벨): 피부 종양(사르코이드) 병변 내 주사. 고양이: 전신 투여 금기; 불완전 절제 주사 부위 육종에서 병변 내 투여만 제한적으로 보고됨.",
+    "client_info": "시스플라틴은 항암(항종양) 약물입니다. 이 약물과 그 부산물은 접촉하는 사람과 다른 동물에게 위험할 수 있습니다. 치료 당일과 치료 후 며칠 동안 반려동물의 모든 배설물(소변, 대변, 오염된 모래), 혈액, 구토물은 반드시 일회용 장갑을 착용하고 처리하십시오. 가능하면 치료받은 개를 마당의 별도 구역에 두십시오. 반려동물 배설물은 즉시 치우고, 이중 비닐봉지에 밀봉하여 일반 쓰레기통에 버리십시오. 집 안에서 사고(구토, 소변, 대변)가 발생하면 종이 타월로 최대한 흡수한 후 이중 봉지에 담아 버리고, 희석된 표백제 용액으로 해당 부위를 청소하십시오. 가장 흔한 부작용은 구토와 신장 독성입니다. 골수 억제가 발생할 수 있으며, 치료 후 수 주 이내에 가장 심하게 나타납니다. 출혈, 멍, 발열, 쉽게 피로해짐, 호흡 곤란 등의 증상이 나타나면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "CYP enzyme profile",
+      "Oral bioavailability data",
+      "T-max data",
+      "Onset of action data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr.mean",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/25.jsonl",
+    "extracted_at": "2026-03-10T20:57:58.563468+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,670 @@
+{
+  "id": "neostigmine",
+  "drug_identity": {
+    "name_ko": "네오스티그민",
+    "name_en": "Neostigmine",
+    "active_ingredient": "Neostigmine methylsulfate",
+    "brand_names": [
+      "Bloxiverz",
+      "Prostigmin",
+      "Prostigmina",
+      "Stiglyn"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Atropine",
+    "reversal_evidence": "콜린성 위기 발생 시 네오스티그민 투여를 중단하고 아트로핀으로 치료한다. 기계적 환기 보조가 필요할 수 있다.",
+    "off_label_note": "수의용 승인 제품 없음. 인체용 제품(Bloxiverz®, Prostigmin®)을 동물에 오프라벨로 사용. 개에서 중증근무력증 진단·치료 및 비탈분극성 신경근 차단제 역전에 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.8,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 대사되고 콜린에스테라제에 의해 가수분해되어 약한 활성을 가진 3-OH PTM으로 전환된다. 비경구 투여 시 24시간 내 약 80%가 소변으로 배설되며, 이 중 50%는 미변화체로 배설된다(인체 데이터)."
+    },
+    "extra_information": "개에서 IV 투여 후 순환계에서 빠르게 제거된다. 분포용적 약 150 mL/kg, 청소율 약 6.9 mL/분/kg. 고양이에 대한 약동학 데이터는 보고되지 않았다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 주로 인체 데이터 및 개 데이터 일부 활용. 고양이 특이적 수의학 PK 연구 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "agitation",
+          "restlessness",
+          "paralysis",
+          "CNS signs"
+        ],
+        "index": 1,
+        "evidence": "과용량 시 흥분, 불안, 마비 등 CNS 징후가 보고됨. 4급 암모늄 화합물로 혈뇌장벽 통과가 제한적이나 과용량 시 중추 영향 가능."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "cardiac arrhythmias",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "서맥, 빈맥, 심장 부정맥, 저혈압 등 심혈관계 부작용이 보고됨. 콜린성 효과로 인한 심박수 및 혈압 변화."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination",
+          "urinary excretion"
+        ],
+        "index": 1,
+        "evidence": "약물의 약 80%가 신장으로 배설됨(인체 데이터). 직접적 신독성 보고는 없으나 신장 배설 부담 존재."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "cholinesterase hydrolysis"
+        ],
+        "index": 1,
+        "evidence": "간에서 대사되고 콜린에스테라제에 의해 가수분해됨. 직접적 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiac arrhythmias",
+          "hypotension",
+          "bronchospasm"
+        ],
+        "index": 2,
+        "evidence": "무스카린성 효과로 서맥, 심장 부정맥, 저혈압 유발 가능. 빠른 투여 시 서맥 및 저혈압 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "agitation",
+          "restlessness"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 개 및 인체 데이터에서 과용량 시 CNS 징후 보고됨을 근거로 추정."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiac arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 콜린성 기전에 의한 심혈관계 영향 추정."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 인체 데이터 기반 신장 배설 부담 추정."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 간 대사 경로는 인체 데이터 기반 추정."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiac arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 데이터 없음. 콜린성 기전에 의한 서맥 및 부정맥 위험 추정."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 10,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 20,
+    "evidence": "인체 데이터: 비경구 투여 후 10~30분 내 연동운동 효과 시작, 최대 4시간 지속. 반감기 약 1시간. 혈장 단백 결합률 15~25%. 개에서 IV 투여 후 순환계에서 빠르게 제거됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Atropine",
+      "severity": 2,
+      "keywords": [
+        "muscarinic antagonism",
+        "cholinergic crisis masking"
+      ],
+      "evidence": "Atropine antagonizes the muscarinic effects of neostigmine. Concurrent use should be done cautiously as atropine can mask early signs of cholinergic crisis."
+    },
+    {
+      "drug": "Beta-Blockers (atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "myasthenia gravis worsening"
+      ],
+      "evidence": "Beta-blockers may increase risk for bradycardia or hypotension and may worsen clinical signs of myasthenia gravis, reducing efficacy of neostigmine."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "anticholinesterase activity reduction",
+        "rebound effect"
+      ],
+      "evidence": "Corticosteroids may decrease anticholinesterase activity of neostigmine; after stopping corticosteroid therapy, neostigmine may cause increased anticholinesterase activity."
+    },
+    {
+      "drug": "Dexpanthenol",
+      "severity": 1,
+      "keywords": [
+        "additive cholinergic effect"
+      ],
+      "evidence": "Theoretically, dexpanthenol may have additive effects when used with neostigmine."
+    },
+    {
+      "drug": "Magnesium (parenteral)",
+      "severity": 2,
+      "keywords": [
+        "skeletal muscle depression",
+        "anticholinesterase antagonism"
+      ],
+      "evidence": "Parenteral magnesium therapy may antagonize anticholinesterase therapy due to direct depressant effect on skeletal muscle."
+    },
+    {
+      "drug": "Depolarizing Muscle Relaxants (succinylcholine, decamethonium)",
+      "severity": 2,
+      "keywords": [
+        "Phase I block prolongation"
+      ],
+      "evidence": "Neostigmine may prolong the Phase I block of depolarizing muscle relaxants such as succinylcholine and decamethonium."
+    },
+    {
+      "drug": "Nondepolarizing Neuromuscular Blocking Agents (pancuronium, tubocurarine, vecuronium, atracurium)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade reversal",
+        "antagonism"
+      ],
+      "evidence": "Neostigmine antagonizes the actions of nondepolarizing neuromuscular blocking agents. This is the basis for its use as a reversal agent."
+    },
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "nondepolarizing blockade enhancement",
+        "reversal difficulty"
+      ],
+      "evidence": "Aminoglycosides possess mild nondepolarizing blocking effects; blockade may be difficult to reverse with neostigmine in their presence."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade enhancement",
+        "reversal difficulty"
+      ],
+      "evidence": "Tetracyclines can enhance the blockade of neuromuscular blocking agents; this blockade is difficult to reverse with neostigmine."
+    },
+    {
+      "drug": "Lincomycin",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade enhancement",
+        "reversal difficulty"
+      ],
+      "evidence": "Lincomycin can enhance the blockade of neuromuscular blocking agents; this blockade is difficult to reverse with neostigmine."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade enhancement",
+        "reversal difficulty"
+      ],
+      "evidence": "Clindamycin can enhance the blockade of neuromuscular blocking agents; this blockade is difficult to reverse with neostigmine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 진단 (오프라벨)",
+          "value": "0.01 - 0.05",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "IV 투여 시 1분에 걸쳐 천천히 투여. 15~30분 내 임상적 개선이 있으면 진단에 시사적.",
+          "evidence": "후향적 연구 기반 오프라벨 용량. SC, IM, IV 모두 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 치료 - 경구 피리도스티그민 투여 불가 시 (오프라벨)",
+          "value": "0.04",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.04,
+          "duration_note": "피리도스티그민을 사용할 수 없거나 역류 동물에서 경구 투여가 불가능한 경우 사용. 현재 인체용 제품은 IV 투여만 허가됨.",
+          "evidence": "오프라벨. SC도 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "정형외과 수술 경막외 보조 진통 (오프라벨)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 종료 시 모르핀 0.1 mg/kg과 함께 경막외 투여. 통증 점수 개선 및 구조 진통제 투여 횟수 감소 보고.",
+          "evidence": "오프라벨. 경막외 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신경근 차단 역전 (오프라벨) - 용량 범위 A",
+          "value": "0.01 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.1,
+          "duration_note": "1분에 걸쳐 IV 투여. 아트로핀 0.02 mg/kg IV 또는 글리코피롤레이트 0.01 mg/kg IV와 병용.",
+          "evidence": "오프라벨. TOF 모니터링 숙련자만 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "신경근 차단 역전 (오프라벨) - 용량 범위 B",
+          "value": "0.02 - 0.07",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.07,
+          "duration_note": "아트로핀 0.03 mg/kg IV와 병용. 역전 시간 5~10분, 고용량일수록 빠름.",
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 진단 (오프라벨)",
+          "value": "0.01 - 0.05",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "IV 투여 시 1분에 걸쳐 천천히 투여. 15~30분 내 임상적 개선이 있으면 진단에 시사적.",
+          "evidence": "개/고양이 공통 오프라벨 용량으로 기재됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증근무력증 치료 - 경구 피리도스티그민 투여 불가 시 (오프라벨)",
+          "value": "0.04",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 0.04,
+          "duration_note": "피리도스티그민을 사용할 수 없거나 역류 동물에서 경구 투여가 불가능한 경우 사용.",
+          "evidence": "개/고양이 공통 오프라벨 용량으로 기재됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 약물의 약 80%가 신장으로 배설되므로 신부전 환자에서 주의가 필요할 수 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "복막염",
+      "match_terms": [
+        "peritonitis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "장관 또는 요로의 기계적 폐색",
+      "match_terms": [
+        "intestinal obstruction",
+        "urinary tract obstruction",
+        "mechanical obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "콜린에스테라제 억제제 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "cholinesterase inhibitor allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 콜린에스테라제 억제제 투여 중",
+      "match_terms": [
+        "cholinesterase inhibitor",
+        "concurrent anticholinesterase"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중인 동물",
+      "match_terms": [
+        "lactating",
+        "nursing"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소화성 궤양",
+      "match_terms": [
+        "peptic ulcer",
+        "gastric ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기관지 천식",
+      "match_terms": [
+        "bronchial asthma",
+        "asthma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 부정맥",
+      "match_terms": [
+        "cardiac arrhythmia",
+        "arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "최근 방광 또는 장관 수술",
+      "match_terms": [
+        "recent bladder surgery",
+        "recent intestinal surgery",
+        "postoperative"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 말기",
+      "match_terms": [
+        "late pregnancy",
+        "near term pregnancy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아세틸콜린에스테라제와 경쟁적으로 결합하여 카르바밀-에스테르 복합체를 형성함으로써 아세틸콜린 분해를 억제하고 아세틸콜린을 축적시킨다. 이로 인해 장관 및 골격근 긴장도 증가, 타액선 및 땀샘 자극, 기관지 수축, 요관 수축, 동공 축소, 서맥 등의 효과가 나타난다. 또한 골격근에 대한 직접적인 콜린모방 효과도 있다.",
+    "common_extra_effects": [
+      "오심",
+      "구토",
+      "설사",
+      "과도한 타액 분비 및 침 흘림",
+      "발한",
+      "동공 축소(축동)",
+      "눈물 분비 증가",
+      "기관지 분비물 증가",
+      "서맥 또는 빈맥",
+      "심장 부정맥",
+      "기관지 경련",
+      "저혈압",
+      "근육 경련",
+      "극도의 쇠약",
+      "흥분",
+      "불안",
+      "마비"
+    ],
+    "dog_mechanism": "아세틸콜린에스테라제 억제를 통한 콜린성 효과. 골격근에 대한 직접적 콜린모방 효과도 있음. 대사성 산증 환자에서 효과가 감소할 수 있음.",
+    "dog_extra_effects": [
+      "콜린성 위기 (0.05 mg/kg SC 투여 후 증례 보고)",
+      "서맥",
+      "저혈압",
+      "기관지 경련"
+    ],
+    "cat_mechanism": "아세틸콜린에스테라제 억제를 통한 콜린성 효과. 고양이 특이적 기전 데이터 없음.",
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 중증근무력증 진단 및 치료, 비탈분극성 신경근 차단제 역전에 오프라벨로 사용된다. 콜린성 위기와 중증근무력증 위기를 혼동하지 않도록 주의해야 한다. 0.05 mg/kg SC 투여 후 콜린성 위기가 발생한 증례가 보고되어 있으므로 용량 선택에 신중을 기해야 한다. 신경근 차단 역전 시 TOF 모니터링에 숙련된 전문가만 사용해야 하며, 아트로핀 또는 글리코피롤레이트와 병용 투여한다.",
+    "cat": "고양이에서의 사용은 개/고양이 공통 용량으로 기재되어 있으나 고양이 특이적 데이터는 부족하다. 중증근무력증 진단 및 치료에 오프라벨로 사용될 수 있다. 콜린성 부작용 모니터링이 필수적이다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의용 승인 제품 없음. 오프라벨 사용. 콜린성 위기 위험이 있으며, 0.05 mg/kg SC 투여 후 콜린성 위기 발생 증례 보고 있음. 간질, 소화성 궤양, 기관지 천식, 심장 부정맥, 갑상선 기능 항진증 환자에서 주의 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "수의용 승인 제품 없음. 오프라벨 사용. 고양이 특이적 안전성 데이터 부족. 콜린성 부작용 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C-25°C; 68°F-77°F) 보관. 15°C-30°C(59°F-86°F) 범위 내 보관 허용. 빛 차단, 동결 금지.",
+    "forms": [
+      "Neostigmine Methylsulfate Injection 0.5 mg/mL, 10 mL vial",
+      "Neostigmine Methylsulfate Injection 1 mg/mL, 10 mL vial"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "네오스티그민은 아세틸콜린에스테라제 억제제로, 개에서 중증근무력증 진단·치료 및 비탈분극성 신경근 차단제 역전에 오프라벨로 사용된다. 수의용 승인 제품은 없으며 인체용 제품을 사용한다. 콜린성 위기 위험이 있으므로 반드시 수의 전문가의 면밀한 모니터링 하에 투여해야 한다. 콜린성 위기 발생 시 아트로핀으로 치료한다. 복막염, 기계적 장폐색/요로폐색, 수유 중인 동물에는 금기이다.",
+    "indications": "【오프라벨】개: 중증근무력증 진단(0.01-0.05 mg/kg SC/IM/IV), 중증근무력증 치료(0.04 mg/kg IM/SC q6h), 비탈분극성 신경근 차단제 역전(0.01-0.1 mg/kg IV), 정형외과 수술 경막외 보조 진통(5 µg/kg 경막외). 【FDA 승인】말, 소, 양, 돼지: 연동운동 유도, 방광 배뇨, 골격근 수축 자극(1 mg/45.3 kg SC).",
+    "client_info": "이 약물은 반드시 수의사의 직접 감독 하에 동물병원에서만 투여되어야 합니다. 집에서 보호자가 투여해서는 안 됩니다. 투여 후 과도한 침 흘림, 구토, 설사, 근육 떨림, 호흡 곤란 등의 증상이 나타나면 즉시 수의사에게 알려주십시오. 이 약물은 비용이 상당히 높을 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies for cats",
+      "Renal dose adjustment recommendations",
+      "Hepatic dose adjustment recommendations",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list[reversal]",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/28.jsonl",
+    "extracted_at": "2026-03-10T21:53:48.292293+00:00",
+    "reviewer": null
+  }
+}

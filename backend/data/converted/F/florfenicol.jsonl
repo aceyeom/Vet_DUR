@@ -1,0 +1,473 @@
+{
+  "id": "florfenicol",
+  "drug_identity": {
+    "name_ko": "플로르페니콜",
+    "name_en": "Florfenicol",
+    "active_ingredient": "Florfenicol",
+    "brand_names": [
+      "NuFlor",
+      "NuFlor-S",
+      "Nuflor Gold",
+      "Aquaflor",
+      "Florcon",
+      "Florvio",
+      "Longcor",
+      "Norfenicol",
+      "NuFlor-S",
+      "Resflor Gold"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "개와 고양이에서의 용량 기준이 확립되어 있지 않으며, 개에서 경구 흡수 후 반감기가 짧아 임상적 사용이 제한될 수 있음. 소, 돼지, 어류에 대해 FDA 승인된 약물임.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 300,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 23,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "닭과 토끼 연구에서 CYP3A 및 P-당단백질이 플로르페니콜의 약동학에 관여하는 것으로 나타남. CYP3A 기질, 유도제 또는 억제제와의 약물 상호작용 가능성이 있음."
+    },
+    "extra_information": "개: SC 주사 후 흡수 불량, 반감기 5시간 미만. IV 투여 시 총 체내 청소율 약 1 L/kg/시간. 경구 생체이용률 약 95%이나 반감기 1.25시간으로 빠르게 소실됨. 고양이: 100 mg/mL 용액 IM 또는 PO 투여 시 흡수 양호, 반감기 5시간 미만."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 과용량 연구 및 독성 데이터에서 추출. 개와 고양이에 대한 수의학적 종 특이적 PK 데이터가 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CNS vacuolation"
+        ],
+        "index": 1,
+        "evidence": "개에서 30 또는 100 mg/kg/일 경구 투여 13주 후 CNS 공포화(vacuolation) 관찰됨."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hematopoietic toxicity",
+          "bone marrow suppression"
+        ],
+        "index": 2,
+        "evidence": "개에서 과용량 투여 시 조혈 독성 관찰됨. 일부 종에서 심각한 골수 억제 가능성 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal tubule dilation"
+        ],
+        "index": 3,
+        "evidence": "개에서 30 또는 100 mg/kg/일 경구 투여 13주 후 신세뇨관 확장 관찰됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "소 과용량 연구에서 간 효소(LDH, GGT, ALT, AST) 상승 관찰됨. 개에서의 직접적 간독성 데이터는 제한적임."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 독성에 대한 직접적인 데이터 없음. 개 데이터에서 유추."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "bone marrow suppression"
+        ],
+        "index": 1,
+        "evidence": "일부 종에서 심각한 골수 억제 가능성 보고됨. 고양이 특이적 데이터는 제한적임."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신독성에 대한 직접적인 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간독성에 대한 직접적인 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.25,
+      "max": 18.0,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": 95,
+    "protein_binding_percent": 13,
+    "evidence": "소: 혈청 반감기 평균 18시간(개체 간 변이 큼), 혈청 단백 결합률 약 13%, 분포용적 약 0.7 L/kg. 돼지: 경구 흡수율 24~97%, 분포용적 약 1 L/kg, 반감기 2.2시간. 개: 경구 생체이용률 약 95%, 반감기 1.25시간. 고양이: 반감기 5시간 미만."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 플로르페니콜에 대한 특이적 약물 상호작용은 확인되지 않았으나, 클로람페니콜과 유사하게 작용할 수 있음. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Penicillins",
+      "severity": 2,
+      "keywords": [
+        "bactericidal antagonism",
+        "50S ribosome binding"
+      ],
+      "evidence": "Florfenicol may antagonize the bactericidal activity of penicillins by binding to the 50S ribosome. This antagonism has not been demonstrated in vivo and combinations have been used successfully clinically."
+    },
+    {
+      "drug": "Aminoglycosides",
+      "severity": 2,
+      "keywords": [
+        "bactericidal antagonism",
+        "50S ribosome binding"
+      ],
+      "evidence": "Florfenicol may antagonize the bactericidal activity of aminoglycosides. This antagonism has not been demonstrated in vivo and combinations have been used successfully clinically."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "50S ribosomal antagonism"
+      ],
+      "evidence": "Erythromycin binds to the 50S ribosomal subunit and may potentially antagonize the activity of florfenicol or vice versa. Clinical significance has not been determined."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 2,
+      "keywords": [
+        "50S ribosomal antagonism"
+      ],
+      "evidence": "Clindamycin binds to the 50S ribosomal subunit and may potentially antagonize the activity of florfenicol or vice versa. Clinical significance has not been determined."
+    },
+    {
+      "drug": "Lincomycin",
+      "severity": 2,
+      "keywords": [
+        "50S ribosomal antagonism"
+      ],
+      "evidence": "Lincomycin binds to the 50S ribosomal subunit and may potentially antagonize the activity of florfenicol or vice versa. Clinical significance has not been determined."
+    },
+    {
+      "drug": "Tylosin",
+      "severity": 2,
+      "keywords": [
+        "50S ribosomal antagonism"
+      ],
+      "evidence": "Tylosin binds to the 50S ribosomal subunit and may potentially antagonize the activity of florfenicol or vice versa. Clinical significance has not been determined."
+    },
+    {
+      "drug": "CYP3A substrates",
+      "severity": 2,
+      "keywords": [
+        "CYP3A",
+        "P-glycoprotein",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Studies in chickens and rabbits indicate CYP3A and P-glycoproteins are involved in florfenicol pharmacokinetics; drug interactions with CYP3A substrates, inducers, or inhibitors are possible."
+    },
+    {
+      "drug": "CYP3A inhibitors",
+      "severity": 2,
+      "keywords": [
+        "CYP3A",
+        "P-glycoprotein",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Studies in chickens and rabbits indicate CYP3A and P-glycoproteins are involved in florfenicol pharmacokinetics; CYP3A inhibitors may alter florfenicol exposure."
+    },
+    {
+      "drug": "CYP3A inducers",
+      "severity": 2,
+      "keywords": [
+        "CYP3A",
+        "P-glycoprotein",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "Studies in chickens and rabbits indicate CYP3A and P-glycoproteins are involved in florfenicol pharmacokinetics; CYP3A inducers may reduce florfenicol exposure."
+    },
+    {
+      "drug": "P-glycoprotein substrates",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein",
+        "pharmacokinetic interaction"
+      ],
+      "evidence": "P-glycoproteins are involved in florfenicol pharmacokinetics; interactions with P-gp substrates, inducers, or inhibitors are possible."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 저하 시 용량 조절에 대한 구체적인 정보가 없음. 개에서 과용량 투여 시 신세뇨관 확장이 관찰되었으므로 신질환 환자에서 주의가 필요함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간기능 저하 시 용량 조절에 대한 구체적인 정보가 없음. 과용량 투여 시 간 효소 상승이 보고되었으므로 간질환 환자에서 주의가 필요함."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to florfenicol"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "번식용 동물",
+      "match_terms": [
+        "breeding animal",
+        "reproductive age"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "정맥 내 투여",
+      "match_terms": [
+        "IV administration",
+        "intravenous"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "말(equine)",
+      "match_terms": [
+        "horse",
+        "equine"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 중",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "닭과 토끼 연구에서 P-당단백질(P-gp)이 플로르페니콜의 약동학에 관여하는 것으로 나타남. MDR1 돌연변이 품종에서 P-gp 기질 약물의 노출이 증가할 수 있음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "50S 리보솜에 결합하여 세균 단백질 합성을 억제하는 시간 의존성 광범위 항생제. 주로 정균 작용을 하나 일부 세균에 대해서는 살균 작용을 함.",
+    "common_extra_effects": [
+      "식욕부진",
+      "수분 섭취 감소",
+      "설사",
+      "주사 부위 반응",
+      "아나필락시스",
+      "고환 변성 및 위축(개, 마우스, 랫트)",
+      "골수 억제(과용량 시)"
+    ],
+    "dog_mechanism": "50S 리보솜 결합을 통한 세균 단백질 합성 억제",
+    "dog_extra_effects": [
+      "CNS 공포화(과용량 시)",
+      "조혈 독성(과용량 시)",
+      "신세뇨관 확장(과용량 시)",
+      "고환 변성 및 위축"
+    ],
+    "cat_mechanism": "50S 리보솜 결합을 통한 세균 단백질 합성 억제",
+    "cat_extra_effects": [
+      "위장관 부작용 가능성",
+      "골수 억제 가능성(과용량 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 플로르페니콜은 SC 주사 후 흡수가 불량하며, 경구 생체이용률은 약 95%이나 반감기가 1.25시간으로 매우 짧아 임상적 사용이 제한됨. 주사제를 경구로 사용한 사례가 있으나 효능 데이터가 부족함. 용량 기준이 확립되어 있지 않음. 과용량 투여 시 CNS 공포화, 조혈 독성, 신세뇨관 확장이 관찰됨. 고환 변성 및 위축이 보고됨.",
+    "cat": "고양이에서 100 mg/mL 용액의 IM 또는 PO 투여 시 흡수가 양호하며 반감기는 5시간 미만임. MIC 2 mg/mL 초과 시간은 IM 12시간, PO 18시간이며, MIC 8 mg/mL 초과 시간은 IM 10시간, PO 6시간임. 용량 기준이 확립되어 있지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 용량 기준이 확립되어 있지 않음. 과용량 시 CNS 독성, 조혈 독성, 신독성 위험. 고환 변성 및 위축 보고됨. 번식용 동물에 사용 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 용량 기준이 확립되어 있지 않음. 흡수는 양호하나 반감기가 짧음. 일부 종에서 골수 억제 가능성이 있으므로 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제: 제조사에 따라 다르나 일반적으로 2°C~30°C(36°F~86°F) 보관. 개봉 후 폐기 기한은 30일~6개월로 제품마다 다름. 경구 용액(돼지용): 2°C~26°C(36°F~77°F) 보관. 플루닉신 복합제: 30°C 이하 보관, 개봉 후 28일 이내 사용.",
+    "forms": [
+      "Florfenicol Injection 300 mg/mL (NuFlor)",
+      "Florfenicol Injection 300 mg/mL (NuFlor-S, 돼지용)",
+      "Florfenicol Injection 300 mg/mL (Nuflor Gold)",
+      "Florfenicol 2.3% (23 mg/mL) Concentrate Solution (NuFlor Concentrate Solution, Florcon, Florvio)",
+      "Florfenicol 300 mg/mL + Flunixin 16.5 mg/mL Injection (Resflor Gold)",
+      "Aquaflor (메기/연어 사료 첨가용)",
+      "Nuflor Type A Medicated Article (돼지 사료 첨가용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플로르페니콜은 소, 돼지, 어류에 FDA 승인된 광범위 항생제로, 50S 리보솜 결합을 통해 세균 단백질 합성을 억제합니다. 정맥 내(IV) 투여는 절대 금지입니다. 번식용 동물 및 임신 동물에 사용을 피해야 합니다. 클로람페니콜과 달리 재생불량성 빈혈 위험은 낮은 것으로 보이나, 과용량 시 골수 억제 가능성이 있습니다. 개와 고양이에서의 용량 기준은 확립되어 있지 않습니다. WHO 고중요 항균제, OIE 수의학적 매우 중요 항균제로 지정되어 있습니다.",
+    "indications": "소: 소 호흡기 질환(BRD), 소 지간 봉와직염(족부 부패), 감염성 소 각결막염(IBK, 허가 외). 돼지: 돼지 호흡기 질환(SRD). 양/염소: 호흡기 질환 복합체(허가 외). 낙타류: 감수성 병원체 감염(허가 외). 개/고양이: 용량 기준 미확립, 허가 외 사용 사례 있으나 효능 데이터 부족.",
+    "client_info": "이 약은 근육(IM) 또는 피하(SC) 주사로 투여합니다. 절대로 정맥(IV)에 주사하지 마십시오. 근육 주사 후 28일 이상 지속되는 국소 조직 반응이 발생할 수 있으며, 도축 시 손실로 이어질 수 있습니다. 목 이외의 부위에 주사하면 반응이 더 심할 수 있습니다. 소에서 도축 전 휴약 기간은 IM 주사 후 28일, SC 주사 후 38일입니다. 돼지(음수 투여)는 16일입니다. 20개월 이상의 젖소에는 사용하지 마십시오. 임신 중인 분은 이 약을 취급할 때 장갑을 착용하거나 가능하면 취급을 피하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "additive_class",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog/Cat approved dosage",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Specific CYP metabolism data for dogs/cats",
+      "Onset time",
+      "T_max",
+      "Protein binding for dogs/cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.protein_binding_percent (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:05:37.094940+00:00",
+    "reviewer": null
+  }
+}

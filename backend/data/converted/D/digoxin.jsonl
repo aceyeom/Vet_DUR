@@ -1,0 +1,892 @@
+{
+  "id": "digoxin",
+  "drug_identity": {
+    "name_ko": "디곡신",
+    "name_en": "Digoxin",
+    "active_ingredient": "Digoxin",
+    "brand_names": [
+      "Lanoxin"
+    ],
+    "allergy_class": null,
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Digoxin immune Fab",
+    "reversal_evidence": "Digoxin immune Fab (디곡신 특이 IgG 항체)는 생명을 위협하는 디곡신 독성 치료에 사용 가능하며, 개에서 협죽도(올리앤더) 배당체 독성 치료에 성공적으로 사용된 사례가 보고됨.",
+    "off_label_note": "수의용 라벨 제품은 미국에서 더 이상 상업적으로 유통되지 않음. 현재 사용되는 모든 제품은 인체용 라벨 제품을 동물에게 적용하는 오프라벨 사용임.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.125,
+        "unit": "mg"
+      },
+      {
+        "value": 0.25,
+        "unit": "mg"
+      },
+      {
+        "value": 0.25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.05,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.85,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "디곡신은 주로 신장에서 사구체 여과 및 세뇨관 분비를 통해 배설되며, 대사는 최소한으로 이루어짐. P-당단백질(P-gp) 펌프가 디곡신을 능동 수송함. CYP 효소 관련 대사 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개에서 경구 정제 생체이용률 약 58%, 경구 엘릭서 약 71%. 고양이에서 정제 투여 시 음식이 흡수량을 50% 감소시킬 수 있음. 개와 고양이에서 반감기는 매우 가변적이며, 개 30~42시간, 고양이 약 33시간으로 보고됨. 복수액에는 잘 분포되지 않으므로 복수가 있는 동물에서는 용량 조정이 필요할 수 있음. 지방 조직에는 소량만 분포하므로 제지방 체중을 기준으로 용량을 계산해야 함."
+  },
+  "organ_burden_logic": {
+    "note": "점수는 트리거된 키워드의 가중치 합산으로 계산됨. 개와 고양이 모두 수의학적 종별 데이터가 일부 존재하나, 독성 및 분포 데이터 위주임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lowest concentrations in brain"
+        ],
+        "index": 1,
+        "evidence": "뇌에서의 농도가 가장 낮다고 명시됨. 신경학적 부작용은 사람에서는 흔하나 동물에서는 드물거나 감지되지 않음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "plasma protein binding 20-30%",
+          "narrow therapeutic index",
+          "serum concentration monitoring"
+        ],
+        "index": 2,
+        "evidence": "치료 농도에서 혈장 단백질 결합률 약 20~30%. 좁은 치료 지수로 인해 혈중 농도 모니터링이 강력히 권장됨. 개의 목표 혈청 트로프 농도 0.5~1.2 ng/mL."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "highest concentrations in kidneys",
+          "renal excretion",
+          "glomerular filtration",
+          "tubular secretion",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "신장에서 가장 높은 농도가 발견됨. 주요 배설 경로는 신장(사구체 여과 및 세뇨관 분비). 신장 질환 환자에서 극도의 주의 필요하며 용량 조정 필수."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "high concentrations in liver",
+          "enterohepatic recirculation"
+        ],
+        "index": 2,
+        "evidence": "간에서 높은 농도가 발견됨. 장간 순환이 일부 존재하여 독성 시 반복 활성탄 투여가 유익할 수 있음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "highest concentrations in heart",
+          "cardiac arrhythmia",
+          "AV block",
+          "ventricular bigeminy",
+          "inotropic effect"
+        ],
+        "index": 3,
+        "evidence": "심장에서 높은 농도가 발견됨. 심장 독성 부작용(거의 모든 유형의 부정맥)이 보고됨. 양성 변력 효과 및 AV 전도 억제가 주요 작용 기전."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "lowest concentrations in brain"
+        ],
+        "index": 1,
+        "evidence": "뇌에서의 농도가 가장 낮다고 명시됨. 신경학적 부작용은 고양이에서 드물거나 감지되지 않음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "cats relatively sensitive to digoxin toxicity",
+          "narrow therapeutic index",
+          "serum concentration monitoring"
+        ],
+        "index": 2,
+        "evidence": "고양이는 디곡신 독성에 상대적으로 민감함. 목표 혈청 농도 0.9~2 ng/mL. 독성은 2.4 ng/mL 이상에서도 관찰됨."
+      },
+      "kidney": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "highest concentrations in kidneys",
+          "renal excretion",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "신장에서 가장 높은 농도가 발견됨. 주요 배설 경로는 신장. 신장 질환 고양이에서 극도의 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "high concentrations in liver",
+          "enterohepatic recirculation"
+        ],
+        "index": 2,
+        "evidence": "간에서 높은 농도가 발견됨. 장간 순환 일부 존재."
+      },
+      "heart": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "highest concentrations in heart",
+          "cardiac arrhythmia",
+          "relatively contraindicated in HCM",
+          "ventricular arrhythmogenesis"
+        ],
+        "index": 3,
+        "evidence": "심장에서 높은 농도가 발견됨. 고양이 비대성 심근병증에서 상대적 금기(동적 유출로 폐쇄 악화 및 심실 부정맥 유발 가능성). 독성 시 심장 부작용 위험 높음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 30.0,
+      "max": 42.0,
+      "mean": 36.0,
+      "species": "dog"
+    },
+    "f_percent": 58,
+    "protein_binding_percent": 25,
+    "evidence": "개에서 경구 정제 생체이용률 약 58%, 경구 엘릭서 약 71%. 경구 엘릭서 투여 후 최고 혈청 농도 도달 시간 약 45~60분, 경구 정제 투여 후 약 90분. 혈장 단백질 결합률 약 20~30%(평균 25% 사용). 개 반감기 30~42시간, 고양이 약 33시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/생명위협→3, 주요/심각→3, 중등도→2, 경미→1. 디곡신은 좁은 치료 지수를 가지므로 병용 약물 추가 시 강화된 모니터링 권장.",
+  "drug_interactions": [
+    {
+      "drug": "Beta-Blockers (atenolol, carvedilol, propranolol)",
+      "severity": 3,
+      "keywords": [
+        "AV conduction depression",
+        "complete heart block"
+      ],
+      "evidence": "AV 전도에 대한 부가적 억제 효과로 완전 심장 차단 가능성 있음."
+    },
+    {
+      "drug": "Calcium (IV)",
+      "severity": 3,
+      "keywords": [
+        "arrhythmia",
+        "cardiovascular collapse"
+      ],
+      "evidence": "병용 시 부정맥 및 심혈관 허탈의 심각한 위험. 경구 칼슘은 경구 디곡신 흡수를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Calcium-Channel Blockers (diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "AV conduction depression",
+        "additive negative chronotropy"
+      ],
+      "evidence": "AV 전도에 대한 부가적 억제 효과. 데이터는 상충됨. 개에서 딜티아젬과의 안전하고 효과적인 병용이 입증됨."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 3,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "병용 시 디곡신 용량을 50% 감량하는 것이 원칙. 디곡신 혈중 농도 증가."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "increased digoxin concentration",
+        "decreased elimination",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가, 배설률 감소, 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Potassium-depleting drugs (amphotericin B, furosemide, thiazides, glucocorticoids, laxatives)",
+      "severity": 3,
+      "keywords": [
+        "hypokalemia",
+        "digitalis toxicity",
+        "electrolyte imbalance"
+      ],
+      "evidence": "저칼륨혈증 유발로 디곡신 독성 위험 증가. 저마그네슘혈증도 동일한 위험 초래."
+    },
+    {
+      "drug": "Spironolactone",
+      "severity": 2,
+      "keywords": [
+        "digoxin toxicity enhancement or reduction"
+      ],
+      "evidence": "디곡신의 독성 효과를 강화하거나 감소시킬 수 있음(양방향 상호작용)."
+    },
+    {
+      "drug": "Thyroid Supplements",
+      "severity": 2,
+      "keywords": [
+        "digoxin dose adjustment required"
+      ],
+      "evidence": "갑상선 보충 요법을 받는 디곡신 투여 환자는 디곡신 용량 조정이 필요할 수 있음."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Chloramphenicol (dogs)",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "개에서 디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Macrolide antibiotics (azithromycin, clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Ketoconazole; Itraconazole",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Tetracyclines (minocycline, oxytetracycline)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Telmisartan",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "특히 알프라졸람, 디아제팜이 디곡신 혈청 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Anticholinergics (atropine, glycopyrrolate, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Gentamicin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "PPIs (omeprazole, pantoprazole)",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration",
+        "reduced absorption"
+      ],
+      "evidence": "디곡신 흡수 및 장간 순환을 감소시켜 혈청 농도 저하."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 1,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "경구 디곡신에 한해 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Phenytoin",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "디곡신 혈청 농도를 감소시킬 수 있음. 심실 부정맥 치료에도 사용 가능."
+    },
+    {
+      "drug": "Penicillamine",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "투여 경로와 무관하게 디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "St John's Wort",
+      "severity": 2,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Colchicine",
+      "severity": 2,
+      "keywords": [
+        "enhanced colchicine adverse effects"
+      ],
+      "evidence": "사람에서 콜히친의 부작용을 강화할 수 있음."
+    },
+    {
+      "drug": "Albuterol (systemic)",
+      "severity": 1,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Aluminum/Magnesium-containing antacids",
+      "severity": 1,
+      "keywords": [
+        "decreased digoxin serum concentration",
+        "reduced absorption"
+      ],
+      "evidence": "경구 디곡신 흡수를 감소시켜 혈청 농도 저하."
+    },
+    {
+      "drug": "Neomycin (oral)",
+      "severity": 1,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "경구 네오마이신이 디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Sulfasalazine",
+      "severity": 1,
+      "keywords": [
+        "decreased digoxin serum concentration"
+      ],
+      "evidence": "디곡신 혈청 농도를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Clonidine",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Octreotide",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "toxicity"
+      ],
+      "evidence": "디곡신 혈청 농도 증가 및 독성 효과 강화 가능."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "high"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_hcm"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 7.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심방세동 및 CHF (정상 신기능) - 초기 용량",
+          "value": "0.0025 - 0.005",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 0.25 mg/dog(체중 무관) 1일 2회 초과 금지. 독성 징후 및 효능 모니터링, 혈청 디곡신 농도 측정하여 용량 조정.",
+          "evidence": "오프라벨. 중앙값 용량 0.004 mg/kg PO q12h. 필요 시 0.011 mg/kg까지 증량 가능."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "심방세동 및 CHF - 체중 20 kg 초과 대형견 대안 용량",
+          "value": "0.22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "체표면적(mg/m²) 기준 용량. 최대 0.25 mg/dog 1일 2회 초과 금지.",
+          "evidence": "오프라벨. 체중 20 kg(44 lb) 초과 개에서 체표면적 기준 0.22 mg/m² 대안 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "확장성 심근병증 (ACE 억제제 및 푸로세미드 병용)",
+          "value": "0.003",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨. 에날라프릴 및 푸로세미드 병용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "확장성 심근병증 - 대안 용량",
+          "value": "0.008 - 0.011",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 총 용량 기준.",
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "확장성 심근병증 또는 심방세동 - 체중 3 kg 미만",
+          "value": "0.03125",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.125 mg 정제의 1/4 격일 투여. 비대성 심근병증에는 일반적으로 금기.",
+          "evidence": "오프라벨. 알코올 기반 엘릭서보다 정제가 더 잘 耐容됨."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "확장성 심근병증 또는 심방세동 - 체중 3~6 kg",
+          "value": "0.03125",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.125 mg 정제의 1/4 1일 1회 투여. 비대성 심근병증에는 일반적으로 금기.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "확장성 심근병증 또는 심방세동 - 체중 6 kg 초과",
+          "value": "0.03125",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.125 mg 정제의 1/4 1일 1회~12시간마다 투여. 비대성 심근병증에는 일반적으로 금기.",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": 0.375,
+    "note": "신장 질환 환자에서 정상 용량의 1/4~1/2로 시작하고 혈청 디곡신 농도를 모니터링해야 함. 디곡신은 주로 신장으로 배설되므로 신기능 저하 시 용량 조정 필수. 저칼륨혈증 및 저마그네슘혈증은 디곡신 투여 전 교정 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "디곡신은 주로 신장으로 배설되며 간 대사는 최소한임. Plumb's에 간 기능 저하에 따른 용량 조정 권고사항이 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "심실세동",
+      "match_terms": [
+        "ventricular fibrillation",
+        "VF"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "디지탈리스 중독",
+      "match_terms": [
+        "digitalis intoxication",
+        "digoxin toxicity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "영구 심박조율기 없는 3도 AV 차단",
+      "match_terms": [
+        "third-degree AV block",
+        "complete heart block"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 비대성 심근병증",
+      "match_terms": [
+        "feline hypertrophic cardiomyopathy",
+        "HCM",
+        "cat HCM"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "renal dysfunction",
+        "CKD",
+        "renal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "저칼륨혈증",
+      "match_terms": [
+        "hypokalemia",
+        "low potassium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "potassium",
+        "threshold": null,
+        "unit": "mEq/L"
+      }
+    },
+    {
+      "condition": "저마그네슘혈증",
+      "match_terms": [
+        "hypomagnesemia",
+        "low magnesium"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "복잡성 심실 부정맥",
+      "match_terms": [
+        "ventricular tachycardia",
+        "complex ventricular arrhythmia",
+        "frequent ventricular arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "대동맥하 협착증",
+      "match_terms": [
+        "subaortic stenosis",
+        "SAS"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "MDR1-mutant breeds"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "P-당단백질 펌프가 디곡신을 능동 수송함. Washington State University 임상 약리학 실험실은 MDR1 유전자 변이 개에서 용량 감량을 권장하지 않으나 치료적 약물 모니터링을 권장함. MDR1 변이를 가진 콜리에서 디곡신 독성 1례가 보고됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "심근 세포에서 Na⁺-K⁺-ATPase를 억제하여 세포 내 Na⁺ 증가 및 K⁺ 감소를 유발하고, 이차적으로 Ca²⁺ 가용성을 증가시켜 양성 변력 효과를 나타냄. AV 결절에서 전도 속도를 감소시키고 유효 불응기를 연장하여 심박수를 조절함.",
+    "common_extra_effects": [
+      "심장 부정맥 (거의 모든 유형)",
+      "완전 또는 불완전 AV 차단",
+      "심실 이단맥",
+      "ST 분절 변화",
+      "발작성 심실 또는 심방 빈맥",
+      "다초점 심실 조기 수축",
+      "경미한 위장관 장애",
+      "식욕부진",
+      "체중 감소",
+      "구토",
+      "설사"
+    ],
+    "dog_mechanism": "개에서 심방세동 및 CHF 관리에 주로 사용. 딜티아젬과 병용 시 심실 박동수 조절에 더 효과적. 개는 고양이에 비해 높은 혈청 디곡신 농도에 더 내성이 있음.",
+    "dog_extra_effects": [
+      "심장 부정맥",
+      "심부전 악화",
+      "위장관 장애 (식욕부진, 구토, 설사)",
+      "체중 감소"
+    ],
+    "cat_mechanism": "고양이는 디곡신 독성에 상대적으로 민감함. 비대성 심근병증에서는 동적 유출로 폐쇄 악화 및 심실 부정맥 유발 가능성으로 상대적 금기. 정제가 알코올 기반 엘릭서보다 더 잘 耐容됨.",
+    "cat_extra_effects": [
+      "타액 분비",
+      "구토",
+      "식욕부진",
+      "우울",
+      "심장 부정맥",
+      "PR 간격 증가",
+      "ST 분절 상승",
+      "서맥"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 디곡신은 주로 신기능이 정상인 확장성 심근병증 또는 점액종성 승모판 질환에 동반된 빠른 심방세동 관리에 사용됨(종종 딜티아젬과 병용). 현재 대부분의 심장 전문의는 피모벤단이 양성 변력제로서 디곡신을 대체하였으므로 심부전의 1차 치료제로 사용하지 않음. 혈청 디곡신 농도 목표: 트로프 0.5~1.2 ng/mL. 최대 용량 0.25 mg/dog(체중 무관) 1일 2회 초과 금지. MDR1 변이 개에서 치료적 약물 모니터링 필수.",
+    "cat": "고양이는 디곡신 독성에 상대적으로 민감하므로 극도의 주의가 필요함. 비대성 심근병증에는 상대적 금기. 확장성 심근병증 또는 심방세동에만 제한적으로 사용. 알코올 기반 엘릭서보다 정제가 더 잘 耐容됨. 음식이 정제 흡수를 50% 감소시킬 수 있으므로 공복 투여 권장. 혈청 디곡신 농도 목표: 0.9~2 ng/mL."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신장 질환, 복잡성 심실 부정맥, 심부전, 대동맥하 협착증 환자에서 극도의 주의 필요. MDR1 변이 개에서 치료적 약물 모니터링 권장. 저칼륨혈증 및 저마그네슘혈증 교정 후 투여. 복수 또는 비만 환자에서 제지방 체중 기준 용량 계산."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 디곡신 독성에 상대적으로 민감함. 비대성 심근병증에서 상대적 금기. 정제 투여 시 음식이 흡수를 50% 감소시킬 수 있음. 혈청 디곡신 농도 정기 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 20~25°C(68~77°F) 보관, 빛 차단. pH 5~8에서 안정적이나 pH 3 미만에서 가수분해됨.",
+    "forms": [
+      "Digoxin 경구 정제: 125 µg(0.125 mg), 250 µg(0.25 mg); Lanoxin®, 제네릭",
+      "Digoxin 주사액: 250 µg/mL(0.25 mg/mL); Lanoxin®, 제네릭",
+      "Digoxin 소아용 주사액: 100 µg/mL(0.1 mg/mL) 1 mL 앰플",
+      "Digoxin 경구 용액: 50 µg/mL(0.05 mg/mL), 100 µg/mL(0.1 mg/mL); 제네릭"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "디곡신은 심방세동, 심방조동, 상심실성 빈맥 및 울혈성 심부전 치료에 사용되는 강심 배당체임. 현재 수의 심장학에서의 역할은 주로 심방세동에서의 심박수 조절로 제한되며, 양성 변력제로서의 역할은 피모벤단으로 대체됨. 좁은 치료 지수를 가지므로 혈청 디곡신 농도 모니터링이 강력히 권장됨. 신장으로 주로 배설되므로 신기능 저하 환자에서 용량 조정 필수. 고양이 비대성 심근병증에서 상대적 금기. 다수의 약물 상호작용 가능성 존재.",
+    "indications": "승인 적응증(오프라벨): 개에서 확장성 심근병증 또는 점액종성 승모판 질환에 동반된 빠른 심방세동(종종 딜티아젬 병용), 고양이에서 확장성 심근병증 또는 심방세동(비대성 심근병증 제외). 말에서 CHF 및 심방 부정맥, 페럿에서 확장성 심근병증에 동반된 심부전 보조 치료, 소에서 상심실성 빈맥.",
+    "client_info": "디곡신은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 다음 용량은 소량의 음식과 함께 투여하세요. 구토가 지속되면 수의사에게 연락하세요. 디곡신 부작용은 대개 용량이 너무 높을 때 발생합니다. 식욕 감소, 구토, 설사, 무기력, 행동 변화, 허탈 등의 증상이 나타나면 즉시 수의사에게 연락하세요. 디곡신 독성은 매우 심각할 수 있습니다. 혈중 디곡신 농도 및 전해질 정기 모니터링이 중요하므로 정기 검진을 빠지지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "high",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Exact renal elimination fraction (quantified)",
+      "Onset of action (minutes)",
+      "Cat-specific bioavailability data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent (cat)",
+      "timing_profile.half_life_hr (cat-specific object)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/40.jsonl",
+    "extracted_at": "2026-03-11T01:38:56.426309+00:00",
+    "reviewer": null
+  }
+}

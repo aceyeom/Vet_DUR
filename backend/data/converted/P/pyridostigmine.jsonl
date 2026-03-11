@@ -1,0 +1,613 @@
+{
+  "id": "pyridostigmine",
+  "drug_identity": {
+    "name_ko": "피리도스티그민",
+    "name_en": "Pyridostigmine",
+    "active_ingredient": "Pyridostigmine bromide",
+    "brand_names": [
+      "Mestinon",
+      "Regonol",
+      "Distinon",
+      "Gravitor",
+      "Kalymin"
+    ],
+    "allergy_class": "bromide",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Atropine",
+    "reversal_evidence": "아트로핀 황산염은 과도한 콜린성 효과를 차단하기 위해 즉시 사용 가능해야 하며, 과다복용 시 치료에 사용된다.",
+    "off_label_note": "수의과 승인 제품 없음. 개와 고양이의 중증 근무력증 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 60,
+        "unit": "mg"
+      },
+      {
+        "value": 180,
+        "unit": "mg"
+      },
+      {
+        "value": 12,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "피리도스티그민은 콜린에스테라제에 의해 가수분해되고 간에서 대사되며(투여 용량의 약 25%), 대부분은 소변으로 미변화 형태로 배설된다."
+    },
+    "extra_information": "경구 생체이용률은 약 10~20%로 매우 낮다. 음식에 의해 흡수가 지연될 수 있으며, 서방형 정제는 일반 정제보다 흡수가 불규칙할 수 있다. 신부전 환자에서는 배설 반감기가 연장된다. 사람에서 경구 용량은 IV 용량의 약 30배이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 사람 PK 데이터 기반; 수의과 종별 PK 연구 없음. 피리도스티그민은 4차 암모늄 구조로 인해 권장 용량에서 뇌로 분포하지 않음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects at overdose",
+          "does not cross into CNS at recommended doses"
+        ],
+        "index": -1,
+        "evidence": "권장 용량에서는 뇌로 분포하지 않으나, 과다복용 시 CNS 효과 가능."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "hypotension",
+          "cardiac arrest",
+          "cardiospasm"
+        ],
+        "index": 1,
+        "evidence": "심혈관계 부작용(서맥, 빈맥, 저혈압, 심정지)이 보고되어 있어 혈액/심혈관계 부담이 있음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "excreted unchanged in urine",
+          "renal failure prolonged elimination",
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "대부분 소변으로 미변화 배설; 신부전 시 반감기 연장; 신장애 환자에서 감량 필요."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "metabolized by the liver",
+          "25% of dose"
+        ],
+        "index": 1,
+        "evidence": "투여 용량의 약 25%가 간에서 대사됨."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "cardiospasm",
+          "hypotension",
+          "cardiac arrest"
+        ],
+        "index": 1,
+        "evidence": "콜린성 과잉 시 서맥, 빈맥, 심정지 등 심장 부작용 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects at overdose"
+        ],
+        "index": -1,
+        "evidence": "권장 용량에서는 뇌로 분포하지 않으나, 과다복용 시 CNS 효과 가능. 고양이 특이 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "hypotension",
+          "cardiac arrest"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음; 사람/개 데이터 외삽."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "excreted unchanged in urine",
+          "renal failure prolonged elimination"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음; 신장 배설 경로는 동일하게 적용될 것으로 추정."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "metabolized by the liver"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음; 간 대사 약 25% 추정."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "tachycardia",
+          "cardiospasm",
+          "cardiac arrest"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이 데이터 없음; 콜린성 심장 부작용 위험 동일하게 적용."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.5,
+      "max": 3.0,
+      "mean": 2.25,
+      "species": "human"
+    },
+    "f_percent": 15,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 발현 시간은 일반적으로 1시간 이내. 반감기는 사람에서 약 1.5~3시간. 경구 생체이용률 약 10~20%(중간값 15% 사용). 단백결합률은 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents (e.g., atropine, diphenhydramine)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "Concurrent use may reduce efficacy of both agents."
+    },
+    {
+      "drug": "Beta-Blockers (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "heart rate"
+      ],
+      "evidence": "May result in adverse effects in heart rate or blood pressure."
+    },
+    {
+      "drug": "Bethanechol",
+      "severity": 2,
+      "keywords": [
+        "additive cholinergic effects",
+        "salivation",
+        "diarrhea",
+        "micturition"
+      ],
+      "evidence": "Additive cholinergic effects (e.g., salivation, diarrhea, micturition) are possible."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "decreased anticholinesterase activity",
+        "rebound effect on discontinuation"
+      ],
+      "evidence": "May decrease the anticholinesterase activity of pyridostigmine. After stopping corticosteroid therapy, drugs like pyridostigmine may cause increased anticholinesterase activity."
+    },
+    {
+      "drug": "Dexpanthenol",
+      "severity": 1,
+      "keywords": [
+        "additive effects",
+        "theoretical"
+      ],
+      "evidence": "Theoretically, dexpanthenol may have additive effects when used with pyridostigmine."
+    },
+    {
+      "drug": "Drugs With Neuromuscular Blocking Ability (e.g., aminoglycoside antibiotics)",
+      "severity": 2,
+      "keywords": [
+        "neuromuscular blockade",
+        "increased pyridostigmine dose required"
+      ],
+      "evidence": "May necessitate increased dosages of pyridostigmine in treating or diagnosing myasthenic patients."
+    },
+    {
+      "drug": "Magnesium (parenteral)",
+      "severity": 2,
+      "keywords": [
+        "skeletal muscle depression",
+        "increased pyridostigmine dose required"
+      ],
+      "evidence": "Parenteral magnesium can have a depressant effect on skeletal muscle, necessitating increased dosages of pyridostigmine."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents, Depolarizing (e.g., succinylcholine, decamethonium)",
+      "severity": 2,
+      "keywords": [
+        "prolonged phase I block",
+        "depolarizing muscle relaxant"
+      ],
+      "evidence": "Pyridostigmine may prolong the phase I block of depolarizing muscle relaxants."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents, NonDepolarizing (e.g., pancuronium, tubocurarine, vecuronium, atracurium)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "nondepolarizing neuromuscular blockade reversal"
+      ],
+      "evidence": "Pyridostigmine antagonizes the actions of nondepolarizing neuromuscular blocking agents."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "recurrent paralysis",
+        "increased pyridostigmine dose required"
+      ],
+      "evidence": "Recurrent paralysis may occur when quinidine is administered during recovery from use of nondepolarizing neuromuscular blocking agents, necessitating increased dosages of pyridostigmine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증 근무력증 보조 치료 (경구, 연하 가능한 경우)",
+          "value": "0.2 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "음식과 함께 투여. 낮은 용량에서 시작하여 근력 최대화 및 부작용 최소화를 위해 신중히 적정.",
+          "evidence": "오프라벨. 60mg 정제의 1/4 단위로 반올림하거나 경구 액제 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 근무력증 보조 치료 (경구, 연하 가능한 경우) - q12h 옵션",
+          "value": "0.2 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "음식과 함께 투여. 낮은 용량에서 시작하여 신중히 적정.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 근무력증 보조 치료 (연하 불가능한 중증 환자, IV CRI)",
+          "value": "0.01 - 0.03",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 용량(mg/kg/hour)으로 투여. 연하 가능해질 때까지 사용.",
+          "evidence": "오프라벨. 연하 불가능한 중증 환자에 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "중증 근무력증 (드물게 사용, 개와 유사하게 투여)",
+          "value": "0.2 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "개와 유사하게 투여 가능하나 고양이에서는 드물게 사용됨.",
+          "evidence": "오프라벨. 고양이에서 드물게 사용; 개와 유사한 용량 적용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장애 환자에서 낮은 용량이 필요할 수 있음. 신부전 시 배설 반감기가 연장됨. 구체적인 용량 조정 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 대사는 투여 용량의 약 25%이나, 간장애 시 용량 조정에 대한 구체적인 권고사항은 본문에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (항콜린에스테라제 계열 또는 브롬화물)",
+      "match_terms": [
+        "hypersensitivity",
+        "bromide allergy",
+        "anticholinesterase hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요로 또는 위장관의 기계적(물리적) 폐색",
+      "match_terms": [
+        "urinary obstruction",
+        "GI obstruction",
+        "mechanical obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기관지경련성 질환",
+      "match_terms": [
+        "bronchospasm",
+        "asthma",
+        "bronchospastic disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질",
+      "match_terms": [
+        "epilepsy",
+        "seizure disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증",
+      "match_terms": [
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "서맥 또는 기타 부정맥",
+      "match_terms": [
+        "bradycardia",
+        "arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "미주신경 긴장 항진증",
+      "match_terms": [
+        "vagotonia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 궤양 질환",
+      "match_terms": [
+        "GI ulcer",
+        "peptic ulcer",
+        "gastric ulcer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장애",
+      "match_terms": [
+        "renal impairment",
+        "renal failure",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아세틸콜린에스테라제와 직접 경쟁하여 아세틸콜린 가수분해를 억제함으로써 콜린성 시냅스에 아세틸콜린이 축적되어 콜린성 활성을 증가시킨다. 4차 암모늄 구조로 인해 권장 용량에서는 CNS를 통과하지 않는다.",
+    "common_extra_effects": [
+      "위장관 운동 증가",
+      "타액 분비 증가",
+      "배뇨",
+      "복통",
+      "설사",
+      "서맥",
+      "눈물 분비 증가",
+      "기관지 분비물 증가",
+      "기관지경련",
+      "폐부종",
+      "호흡 마비",
+      "축동",
+      "시야 흐림",
+      "빈맥",
+      "심장경련",
+      "저혈압",
+      "심정지",
+      "근육 경련",
+      "발한",
+      "근력 약화"
+    ],
+    "dog_mechanism": "개에서 후천성 중증 근무력증 치료에 주로 사용. 선천성 중증 근무력증보다 후천성에 훨씬 효과적.",
+    "dog_extra_effects": [
+      "콜린성 독성 징후 (과다복용 시)",
+      "콜린성 위기"
+    ],
+    "cat_mechanism": "고양이에서는 드물게 사용되며, 개와 유사한 기전으로 작용.",
+    "cat_extra_effects": [
+      "콜린성 독성 징후 (과다복용 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 중증 근무력증(MG) 치료에 사용되며, 후천성 MG에 선천성 MG보다 훨씬 효과적이다. 경구 투여 시 음식과 함께 제공하며, 낮은 용량에서 시작하여 근력 최대화 및 부작용 최소화를 위해 신중히 적정한다. 연하 불가능한 중증 환자에서는 IV CRI로 투여 가능하다. 콜린성 독성 징후를 정기적으로 모니터링해야 하며, 아트로핀을 즉시 사용 가능한 상태로 유지해야 한다.",
+    "cat": "고양이에서는 드물게 사용되나 개와 유사한 용량으로 투여 가능하다. 고양이 특이적인 PK 데이터가 없으므로 주의 깊은 모니터링이 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기관지경련성 질환, 간질, 갑상선기능항진증, 서맥 또는 부정맥, 미주신경 긴장 항진증, 위장관 궤양 질환, 신장애 환자에서 주의 사용. 아트로핀을 즉시 사용 가능한 상태로 유지. 콜린성 독성 징후 정기 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 드물게 사용됨. 개와 동일한 주의사항 적용. 고양이 특이적 안전성 데이터 부족으로 주의 깊은 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관. 경구 액제와 주사제는 빛과 동결로부터 보호. 정제는 밀폐 용기에 보관. 서방형 정제는 시간이 지나면 얼룩이 생길 수 있으나 효능에는 영향 없음. 주사제는 알칼리성 용액에서 불안정하며 1% 벤질알코올 함유.",
+    "forms": [
+      "Pyridostigmine Bromide Tablets 60 mg (Mestinon, generic)",
+      "Pyridostigmine Bromide Extended-Release Tablets 180 mg (Mestinon, generic)",
+      "Pyridostigmine Bromide Syrup 12 mg/mL (60 mg/5 mL) in 480 mL (Mestinon)",
+      "Pyridostigmine Bromide Injection 5 mg/mL in 2 mL ampules (Regonol)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피리도스티그민은 아세틸콜린에스테라제 억제제로, 개(드물게 고양이)의 중증 근무력증(MG) 치료에 오프라벨로 사용된다. 수의과 승인 제품은 없으며 사람용 제품을 사용한다. 후천성 MG에 선천성 MG보다 훨씬 효과적이다. 부작용은 주로 용량 의존적 콜린성 증상이며, 과다복용 시 콜린성 위기가 발생할 수 있다. 아트로핀을 항상 즉시 사용 가능한 상태로 유지해야 한다. ARCI 클래스 3 물질로 지정되어 있어 동물 경기 참가 시 규정 확인이 필요하다.",
+    "indications": "개와 고양이의 중증 근무력증(MG) 치료 (오프라벨). 후천성 MG에 주로 사용. 연하 가능한 경우 경구 투여, 연하 불가능한 중증 환자에서는 IV CRI 투여 가능.",
+    "client_info": "수의사의 지시에 따라 정확히 투여하세요. 음식과 함께 또는 없이 투여할 수 있으나 매번 동일한 방식으로 투여하세요. 치료 초기에는 용량 조정이 자주 발생할 수 있으며, 이후에도 주기적으로 조정될 수 있습니다. 수의사의 지시 없이 용량을 변경하지 마세요. 투여 시간을 너무 일찍 또는 너무 늦게 하지 않도록 주의하세요. 과도한 침 흘림, 위장관 장애(구역, 구토, 설사), 근력 약화, 호흡 곤란 등의 부작용이 나타나면 즉시 수의사에게 연락하세요. 과다복용은 매우 위험할 수 있으므로 액제는 정확히 측정하여 투여하세요. 어린이와 다른 동물의 손이 닿지 않는 곳에 보관하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none known)",
+      "Veterinary-specific PK studies",
+      "Cat-specific dosing data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list (cat-specific dosing)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/31.jsonl",
+    "extracted_at": "2026-03-10T22:53:13.118024+00:00",
+    "reviewer": null
+  }
+}

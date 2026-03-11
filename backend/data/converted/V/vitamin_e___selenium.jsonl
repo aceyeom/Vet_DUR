@@ -1,0 +1,581 @@
+{
+  "id": "vitamin_e_selenium",
+  "drug_identity": {
+    "name_ko": "비타민 E (± 셀레늄)",
+    "name_en": "Vitamin E ± Selenium",
+    "active_ingredient": "Alpha-tocopherol ± Sodium selenite",
+    "brand_names": [
+      "Elevate W.S.",
+      "Elevate Maintenance Powder",
+      "Elevate SE",
+      "Emulsivit E-300",
+      "Vital E-500",
+      "Equ-SeE",
+      "Mu-Se",
+      "Bo-Se",
+      "E-Se",
+      "Aquasol E",
+      "Nutr-E-Sol",
+      "Vita-Plus E",
+      "Alph E"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "비타민 E 단독 제제는 개의 피부 면역매개 질환, 간질환, 고양이 범지방조직염 등에 허가 외 사용됨. 비타민 E/셀레늄 복합제는 FDA 승인 대상 축종에만 사용해야 함.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Inj",
+      "Oral Liquid",
+      "Drop",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 100,
+        "unit": "IU"
+      },
+      {
+        "value": 200,
+        "unit": "IU"
+      },
+      {
+        "value": 400,
+        "unit": "IU"
+      },
+      {
+        "value": 1000,
+        "unit": "IU"
+      },
+      {
+        "value": 300,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 500,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 68,
+        "unit": "IU/mL"
+      },
+      {
+        "value": 15,
+        "unit": "IU"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "비타민 E는 간에서 글루쿠론산 포합(glucuronidation)을 통해 대사되며 주로 담즙으로 배설됨. 중증 담즙정체성 간질환 또는 지방 흡수장애 시 흡수가 저하될 수 있음."
+    },
+    "extra_information": "흡수 후 베타-지단백질을 통해 순환계로 운반됨. 수용성(수분산성) 경구 제형이 생체이용률이 더 높음. 간 또는 췌장 기능 저하 시 흡수 감소 가능. 모든 조직에 분포하며 지방조직에 저장됨. 태반 통과는 미미함. 셀레늄의 약동학적 파라미터는 문헌에서 확인되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 비타민 E는 간에서 대사되어 담즙으로 배설되므로 간 부담이 있음. 셀레늄 과다 시 신경계, 근육, 소화기 독성 보고됨. 수의 종별 PK 데이터 부족으로 신뢰도 낮음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "selenium toxicity",
+          "ataxia",
+          "blindness"
+        ],
+        "index": 1,
+        "evidence": "셀레늄 과다 투여 시 개에서 식욕부진, 구토, 설사 보고. 신경계 증상(운동실조, 실명)은 주로 다른 축종에서 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "coagulopathy",
+          "bleeding",
+          "hemolysis"
+        ],
+        "index": 2,
+        "evidence": "비타민 E 대량 과다 투여 시 응고장애 유발 가능. 항응고제 및 항혈소판제와 병용 시 출혈 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "nephrotoxicity prevention"
+        ],
+        "index": 3,
+        "evidence": "비타민 E와 실리마린이 겐타마이신 유발 신독성 예방에 일부 효과가 있다는 연구 결과 있음. 직접적 신장 독성은 보고되지 않음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation",
+          "cholestatic liver disease",
+          "hepatopathy"
+        ],
+        "index": 4,
+        "evidence": "간에서 글루쿠론산 포합으로 대사되어 담즙 배설. 중증 담즙정체성 간질환 시 흡수 저하. 간질환 보조치료제로 사용됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "dilated cardiomyopathy"
+        ],
+        "index": 5,
+        "evidence": "확장성 심근병증 개에서 비타민 E 농도 저하 보고되나 보충 효과는 불명확."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 관련 직접 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hemolysis",
+          "coagulopathy"
+        ],
+        "index": 1,
+        "evidence": "비타민 E는 적혈구 용혈 방지 역할. 대량 과다 시 응고장애 가능."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "chronic kidney disease",
+          "oxidative stress"
+        ],
+        "index": 2,
+        "evidence": "만성 신장질환 고양이에서 비타민 E 보충이 빈혈 또는 산화 스트레스를 개선하지 못했다는 연구 결과 있음."
+      },
+      "liver": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation",
+          "pansteatitis"
+        ],
+        "index": 3,
+        "evidence": "간에서 대사. 고양이 범지방조직염 보조치료에 사용됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "dilated cardiomyopathy"
+        ],
+        "index": 4,
+        "evidence": "확장성 심근병증 고양이에서 비타민 E 농도 저하 보고되나 보충 효과 불명확."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "약동학적 파라미터(반감기, Tmax, 생체이용률 등)는 본 모노그래프에 명시되지 않음. 수용성 제형이 지용성 제형보다 생체이용률이 높다고 언급됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticoagulant Agents (heparins, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "coagulopathy"
+      ],
+      "evidence": "Vitamin E may increase the risk of bleeding when used with anticoagulant agents."
+    },
+    {
+      "drug": "Antiplatelet Agents (aspirin, clopidogrel)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "antiplatelet"
+      ],
+      "evidence": "Vitamin E may increase the risk of bleeding when used with antiplatelet agents."
+    },
+    {
+      "drug": "Cholestyramine",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "bile acid sequestrant"
+      ],
+      "evidence": "Cholestyramine may reduce the absorption of orally administered vitamin E."
+    },
+    {
+      "drug": "Iron",
+      "severity": 1,
+      "keywords": [
+        "delayed hematologic response",
+        "iron deficiency anemia"
+      ],
+      "evidence": "Large doses of vitamin E may delay the hematologic response to iron therapy in patients with iron deficiency anemia."
+    },
+    {
+      "drug": "Mineral Oil",
+      "severity": 1,
+      "keywords": [
+        "reduced absorption",
+        "fat-soluble vitamin"
+      ],
+      "evidence": "Mineral oil may reduce the absorption of orally administered vitamin E."
+    },
+    {
+      "drug": "NSAIDs (carprofen, flunixin, meloxicam, phenylbutazone)",
+      "severity": 2,
+      "keywords": [
+        "bleeding",
+        "antiplatelet effect"
+      ],
+      "evidence": "Concurrent use of vitamin E with NSAIDs may increase the risk of bleeding."
+    },
+    {
+      "drug": "Vitamin A",
+      "severity": 1,
+      "keywords": [
+        "enhanced absorption",
+        "synergistic"
+      ],
+      "evidence": "Vitamin E may enhance the absorption, utilization, and storage of vitamin A."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "허혈성 피부병증 (소형견)",
+          "value": "200",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "펜톡시필린 15mg/kg q8h ~ 30mg/kg q12h와 병용",
+          "evidence": "허가 외 사용. 소형견 200 units/dog PO q12h (units/kg 아님)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "허혈성 피부병증 (중형견)",
+          "value": "400",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "펜톡시필린 15mg/kg q8h ~ 30mg/kg q12h와 병용",
+          "evidence": "허가 외 사용. 중형견 400 units/dog PO q12h (units/kg 아님)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "허혈성 피부병증 (대형견)",
+          "value": "600",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "펜톡시필린 15mg/kg q8h ~ 30mg/kg q12h와 병용",
+          "evidence": "허가 외 사용. 대형견 600 units/dog PO q12h (units/kg 아님)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아토피성 피부염",
+          "value": "8.1",
+          "unit": "IU/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 8.1 units/kg PO 1일 1회가 아토피 피부염 임상 증상 점수 개선에 효과적이었음."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "면역매개 피부질환 보조치료 (원판상 홍반성 루푸스, 개 모낭충증, 피부근염)",
+          "value": "200 - 800",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 일화적 근거. 200–800 units/dog (units/kg 아님) PO BID"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "간질환 보조치료 또는 항산화 간보호",
+          "value": "50 - 400",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "수용성(수분산성) 제형 권장",
+          "evidence": "허가 외 사용. 일화적 근거. 50–400 units/dog (units/kg 아님) PO 1일 1회"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "외분비 췌장 질환 관련 토코페롤 결핍",
+          "value": "100 - 400",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1개월 후 1~2주마다 필요 시 투여",
+          "evidence": "허가 외 사용. 100–400 units/dog (units/kg 아님) PO 1일 1회"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "망막 색소 상피 이영양증 (RPED)",
+          "value": "600 - 900",
+          "unit": "EA",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외 사용. 600–900 units/dog (units/kg 아님) PO BID"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "범지방조직염 (pansteatitis)",
+          "value": "10 - 15",
+          "unit": "IU/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "프레드니솔론 2mg/kg/day 1주 후 격일 1~2주 추가 및 식이 변경과 병용. 일부 연구에서 50mg/kg/day 사용.",
+          "evidence": "허가 외 사용. 10–15 units/kg PO 1일 1회. 4마리 고양이 대상 소규모 연구에서 3마리 양호한 임상 반응."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 만성 신장질환 고양이에서 비타민 E 보충이 빈혈 또는 산화 스트레스를 개선하지 못했다는 연구 결과 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 담즙정체성 간질환 또는 지방 흡수장애 시 비타민 E 흡수가 저하될 수 있음. 간 기능 저하 시 용량 조절에 대한 명시적 권고는 없으나 흡수 감소 가능성을 고려해야 함. 수용성 제형 사용 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "응고 장애",
+      "match_terms": [
+        "coagulopathy",
+        "bleeding disorder",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "중증 담즙정체성 간질환",
+      "match_terms": [
+        "cholestatic liver disease",
+        "cholestasis"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alp",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "지방 흡수장애 증후군",
+      "match_terms": [
+        "fat malabsorption",
+        "malabsorption syndrome",
+        "exocrine pancreatic insufficiency"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "비타민 E/셀레늄 복합제 - 비승인 축종 사용",
+      "match_terms": [
+        "unapproved species",
+        "selenium toxicity risk"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비타민 E는 항산화 및 항염증 작용을 가지며, 셀레늄과 함께 황 세포 대사에 관여하고 적혈구 용혈을 방지하며 세포막의 불포화 결합에 대한 과산화효소 작용을 억제함.",
+    "common_extra_effects": [
+      "아나필락토이드 반응",
+      "근육통 (IM 주사 후 일시적)",
+      "응고장애 (대량 과다 투여 시)",
+      "셀레늄 과다 시: 우울, 운동실조, 호흡곤란, 실명, 설사, 근육 약화, 마늘 냄새"
+    ],
+    "dog_mechanism": "항산화 작용을 통해 피부 면역매개 질환, 간질환, 망막 색소 상피 이영양증 등에 보조적 효과. 셀레늄과 병용 시 근육 보호 효과.",
+    "dog_extra_effects": [
+      "식욕부진 (고용량 셀레늄)",
+      "구토 (고용량 셀레늄)",
+      "설사 (고용량 셀레늄)"
+    ],
+    "cat_mechanism": "항산화 작용을 통해 범지방조직염 보조치료에 사용됨.",
+    "cat_extra_effects": [
+      "아나필락토이드 반응 (주사제)"
+    ]
+  },
+  "species_notes": {
+    "dog": "비타민 E는 개의 허혈성 피부병증(펜톡시필린과 병용), 면역매개 피부질환(원판상 홍반성 루푸스, 모낭충증, 피부근염), 간질환 보조치료, 망막 색소 상피 이영양증(특히 잉글리시 코커 스패니얼), 아토피성 피부염 등에 허가 외 사용됨. 경구 투여는 안전 범위가 넓으나 대량 과다 투여 시 응고장애 유발 가능. 수용성 제형이 생체이용률이 더 높을 수 있음.",
+    "cat": "고양이 범지방조직염 보조치료에 사용됨(프레드니솔론 및 식이 변경과 병용). 만성 신장질환 고양이에서 비타민 E 보충이 빈혈 또는 산화 스트레스를 개선하지 못했다는 연구 결과 있음. 확장성 심근병증 고양이에서 비타민 E 농도 저하가 보고되나 보충 효과는 불명확."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "응고 장애 환자에서 주의 사용. 비타민 E/셀레늄 복합제는 FDA 승인 축종에만 사용. 셀레늄 과다 투여 시 독성 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "범지방조직염 치료 시 프레드니솔론 및 식이 변경과 병용 권장. 비타민 E/셀레늄 복합제는 고양이에 대한 FDA 승인 없음. 경구 비타민 E 단독 사용은 비교적 안전."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "비타민 E/셀레늄 주사제는 25°C(77°F) 미만에서 보관; 동결 방지.",
+    "forms": [
+      "경구 액제 (Elevate W.S. 500 units/mL)",
+      "경구 분말 (Elevate Maintenance Powder 1000 units/7g)",
+      "주사제 (Emulsivit E-300: 300 units/mL, 250mL 바이알)",
+      "주사제 (Vital E-500: 500 units/mL, 250mL 바이알)",
+      "비타민 E/셀레늄 경구제 (Equ-SeE: 1mg Se + 220 units VitE/5cc)",
+      "비타민 E/셀레늄 주사제 (Mu-Se: Se 5mg + VitE 68 units/mL)",
+      "비타민 E/셀레늄 주사제 (Bo-Se: Se 1mg + VitE 68 units/mL)",
+      "비타민 E/셀레늄 주사제 (E-Se: Se 2.5mg + VitE 68 units/mL)",
+      "정제 (100, 200, 400 units)",
+      "캡슐 (200, 400, 1000 units)",
+      "점안액/드롭 (Aquasol E: 15 units/0.3mL)",
+      "경구 액제 (Nutr-E-Sol: 400 units/15mL)",
+      "국소 제형"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "비타민 E는 항산화 및 항염증 작용을 가진 지용성 비타민으로, 개의 피부 면역매개 질환(허혈성 피부병증, 원판상 홍반성 루푸스, 모낭충증), 간질환 보조치료, 망막 색소 상피 이영양증, 고양이 범지방조직염 등에 허가 외 사용됨. 셀레늄과의 복합제는 특정 축종(송아지, 돼지, 양, 말)의 셀레늄-토코페롤 결핍 증후군 치료 및 예방에 FDA 승인됨. 경구 비타민 E는 안전 범위가 넓으나 대량 과다 투여 시 응고장애 유발 가능. 셀레늄은 과다 투여 시 매우 독성이 강하므로 주의 필요.",
+    "indications": "【허가 적응증】비타민 E/셀레늄 복합제: 암양 및 어린 양(백근병), 암퇘지·이유자돈·새끼돼지(간괴사, 뽕나무심장병, 백근병), 송아지·번식 암소(백근병), 말(셀레늄-토코페롤 결핍 관련 근염). 【허가 외 사용】개: 허혈성 피부병증(펜톡시필린 병용), 면역매개 피부질환(원판상 홍반성 루푸스, 모낭충증, 피부근염), 간질환 보조치료, 망막 색소 상피 이영양증, 아토피성 피부염, 외분비 췌장 질환 관련 토코페롤 결핍. 고양이: 범지방조직염 보조치료.",
+    "client_info": "비타민 E는 일부 피부, 간, 눈 질환 치료에 사용되며 지시된 용량으로 투여 시 안전합니다. 대량 과다 투여 시 출혈이 발생할 수 있으므로 잇몸 출혈, 기력 저하, 소변 또는 대변에 혈액이 보이면 즉시 수의사에게 연락하십시오. 비타민 E와 셀레늄 주사제를 사용하는 경우, 수의사가 권장하는 용량을 초과하지 마십시오. 셀레늄은 과다 투여 시 독성이 매우 강합니다. 수용성(수분산성) 제형이 흡수율이 더 높을 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Formal PK parameters (half-life, Tmax, bioavailability %)",
+      "Renal dose adjustment recommendations",
+      "Selenium pharmacokinetics",
+      "CYP enzyme interactions",
+      "Protein binding data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:42:26.090587+00:00",
+    "reviewer": null
+  }
+}

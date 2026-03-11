@@ -1,0 +1,585 @@
+{
+  "id": "vinblastine",
+  "drug_identity": {
+    "name_ko": "빈블라스틴",
+    "name_en": "Vinblastine",
+    "active_ingredient": "Vinblastine sulfate",
+    "brand_names": [
+      "Velban",
+      "Velbe",
+      "Velsar",
+      "Alkaban",
+      "Blastovin",
+      "Cellblastin",
+      "Cytoblastin",
+      "Ifabla",
+      "Lemblastine",
+      "Periblastine",
+      "Serovin",
+      "Solblastin",
+      "Xintoprost"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음; 인체용 제제를 개 및 고양이에서 허가 외(extra-label)로 사용",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A12"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 CYP3A12가 빈블라스틴 대사의 주요 사이토크롬 P450 동위효소임이 확인됨. 간에서 광범위하게 대사되며 주로 담즙/대변으로 배설되고 소량이 소변으로 배설됨."
+    },
+    "extra_information": "IV 투여 후 조직으로 빠르게 분포됨. 인간에서 약 75%가 조직 단백질에 결합되며 CNS로는 거의 침투하지 않음. 개에서 CYP3A12가 주요 대사 효소임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 독성 프로파일 및 약동학 데이터를 기반으로 평가함. 골수억제(혈액), 간 대사, 신경독성(뇌), 담즙 배설(간) 등을 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "peripheral neurotoxic effects",
+          "loss of deep tendon reflexes"
+        ],
+        "index": 1,
+        "evidence": "고용량에서 빈크리스틴과 유사한 말초 신경독성 유발 가능. 심부건반사 소실, 턱 및 근육통 보고됨."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "nadir 4-9 days",
+          "dose-limiting toxicity"
+        ],
+        "index": 0,
+        "evidence": "골수억제가 주요 용량제한독성. 호중구감소증 나디르는 투여 후 4~9일, 회복은 7~14일. 빈크리스틴보다 골수억제 강함."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "uric acid"
+        ],
+        "index": 3,
+        "evidence": "혈중 및 소변 요산 농도를 유의하게 증가시킬 수 있음(달마시안에서 임상적으로 유의). 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "extensively metabolized by the liver",
+          "hepatic disease",
+          "transaminases",
+          "dose reduction"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사되며 담즙으로 주로 배설됨. 간질환 시 용량 감량 필요. 트랜스아미나제 2~3배 상승 시 50% 감량 권고(인간 기준)."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypertension"
+        ],
+        "index": -1,
+        "evidence": "인간에서 고혈압 보고됨. 개에서 직접적인 심장독성 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "axon swelling",
+          "paranodal demyelination",
+          "paralytic ileus",
+          "constipation"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 신경독성 발생 가능: 변비, 마비성 장폐색, 가역적 축삭 팽창 및 결절주위 탈수초화 보고됨."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "neutropenia",
+          "thrombocytopenia",
+          "anemia"
+        ],
+        "index": 1,
+        "evidence": "과용량 고양이 증례에서 호중구감소증, 혈소판감소증, 빈혈 보고됨. 골수억제가 주요 독성."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "uric acid"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 직접적 신독성 언급 없음. 요산 증가 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "extensively metabolized by the liver",
+          "hepatic disease"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 간질환 시 용량 감량 필요."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 75,
+    "evidence": "인간에서 약 75%가 조직 단백질에 결합됨. IV 투여 후 조직으로 빠르게 분포됨. 반감기 수치는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. P-당단백질 억제제 목록은 MDR1 변이 위험 품종에서 특히 주의 필요.",
+  "drug_interactions": [
+    {
+      "drug": "Ototoxic Drugs (eg, cisplatin, carboplatin)",
+      "severity": 2,
+      "keywords": [
+        "ototoxicity",
+        "additive"
+      ],
+      "evidence": "Additive risk for ototoxicity when used concurrently with ototoxic drugs such as cisplatin or carboplatin."
+    },
+    {
+      "drug": "Immunosuppressive Drugs (eg, azathioprine, cyclophosphamide, corticosteroids)",
+      "severity": 2,
+      "keywords": [
+        "immunosuppression",
+        "infection risk"
+      ],
+      "evidence": "Concurrent use with other immunosuppressant drugs may increase the risk for infection."
+    },
+    {
+      "drug": "Macrolide Antibiotics (except azithromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased serum concentration",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Macrolide antibiotics may increase the serum concentration of vinblastine; consider therapy modification."
+    },
+    {
+      "drug": "Myelosuppressive Agents (eg, antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "myelosuppression",
+        "additive",
+        "bone marrow depression"
+      ],
+      "evidence": "Concurrent use with other bone marrow depressant medications may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "diminished vaccine efficacy",
+        "enhanced adverse effects"
+      ],
+      "evidence": "Vinblastine may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds as increased vinblastine exposure may result."
+    },
+    {
+      "drug": "Azole Antifungals (eg, ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "CYP3A inhibition",
+        "MDR1"
+      ],
+      "evidence": "Azole antifungals inhibit P-glycoprotein; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Carvedilol",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Erythromycin; Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1",
+        "macrolide"
+      ],
+      "evidence": "P-glycoprotein inhibitors; also macrolide antibiotics that may increase vinblastine serum concentration. Caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Spironolactone",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Tamoxifen",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "P-glycoprotein inhibition",
+        "MDR1"
+      ],
+      "evidence": "P-glycoprotein inhibitor; caution in MDR1-mutant breeds."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (허가 외) - 림프종, 암종, 비만세포종 등 다양한 종양",
+          "value": "1.5 - 3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2주 간격으로 투여; 단위는 mg/m² (NOT mg/kg). 프로토콜 및 질환에 따라 다름. 방광 이행세포암종에서 초기 3 mg/m² IV 2주마다 사용; 호중구감소증으로 61%에서 감량 필요.",
+          "evidence": "허가 외 사용. 용량은 mg/m²로 표기됨 (1.5–3 mg/m² IV q1–2주). 비만세포종에서 3 mg/m²가 2 mg/m²보다 재발률 낮음."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "항종양제 (허가 외) - 림프종 등 종양 치료 (COP 기반 프로토콜)",
+          "value": "1.5 - 3",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2주 간격으로 투여; 단위는 mg/m² (NOT mg/kg). 고양이 림프종에서 빈크리스틴과 유사한 반응률 보고됨.",
+          "evidence": "허가 외 사용. 용량은 mg/m²로 표기됨 (1.5–3 mg/m² IV q1–2주). 고양이에서 신경독성 위험 모니터링 필요."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조정에 대한 명시적 권고 없음. 주로 담즙/대변으로 배설되므로 신기능 저하의 영향은 제한적일 수 있으나 확인된 데이터 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": 2.0,
+    "adjustment_type": "reduce_dose",
+    "note": "간질환 환자에서 용량 감량 필요. 인간 기준으로 트랜스아미나제가 정상 상한치의 2~3배 상승 시 50% 감량 권고. 수의학적 구체적 기준은 명시되지 않았으나 동일 원칙 적용 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "백혈구감소증 또는 과립구감소증 (질환에 의한 경우 제외)",
+      "match_terms": [
+        "leukopenia",
+        "granulocytopenia",
+        "neutropenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "활동성 세균 감염",
+      "match_terms": [
+        "active bacterial infection",
+        "sepsis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver disease",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": 2.0,
+        "unit": "x ULN"
+      }
+    },
+    {
+      "condition": "MDR1 변이 품종 (콜리 등 목양견)",
+      "match_terms": [
+        "MDR1 mutation",
+        "ABCB1-1delta",
+        "collie",
+        "herding breed"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "teratogen",
+        "embryotoxic"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Australian Shepherd",
+      "Shetland Sheepdog",
+      "Long-haired Whippet",
+      "White feet breeds"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "빈블라스틴은 P-당단백질의 기질임. MDR1 변이(ABCB1-1delta)로 비기능성 단백질을 가진 목양견 품종에서 골수억제 및 GI 독성 위험 증가. Washington State University 수의임상약리학연구소는 변이/정상 또는 변이/변이 개에서 25~30% 용량 감량 및 면밀한 모니터링 권고."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "미세소관 단백질(튜불린)에 결합하여 유사분열 방추사를 억제함으로써 중기(metaphase)에서 세포분열을 차단. 또한 글루탐산 이용 억제, 퓨린 합성, 구연산 회로, 요소 형성을 방해하여 아미노산 대사에도 영향을 미침.",
+    "common_extra_effects": [
+      "오심/구토 (24시간 미만 지속)",
+      "골수억제 (호중구감소증, 혈소판감소증)",
+      "변비",
+      "탈모",
+      "구내염",
+      "장폐색",
+      "부적절한 ADH 분비 증후군(SIADH)",
+      "턱 및 근육통",
+      "심부건반사 소실",
+      "혈관외 유출 시 조직 자극 및 봉와직염",
+      "고요산혈증"
+    ],
+    "dog_mechanism": "빈블라스틴은 튜불린에 결합하여 세포분열을 억제함. 개에서 CYP3A12가 주요 대사 효소임. MDR1 변이 개에서 독성 위험 증가.",
+    "dog_extra_effects": [
+      "호중구감소증 (용량제한독성, 나디르 4~9일)",
+      "GI 독성 (식욕부진, 구토, 설사)",
+      "말초 신경독성 (고용량)",
+      "혈중/소변 요산 증가 (달마시안 주의)"
+    ],
+    "cat_mechanism": "빈블라스틴은 튜불린에 결합하여 세포분열을 억제함. 고양이에서 신경독성 발생 위험이 더 높음.",
+    "cat_extra_effects": [
+      "신경독성 (변비, 마비성 장폐색)",
+      "가역적 축삭 팽창 및 결절주위 탈수초화",
+      "식욕부진 악화",
+      "호중구감소증, 혈소판감소증, 빈혈"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 빈블라스틴은 비만세포종, 림프종, 방광 이행세포암종 등에 사용됨. 호중구감소증이 주요 용량제한독성이며 나디르는 투여 후 4~9일. MDR1 변이 목양견 품종에서는 25~30% 용량 감량 권고. 비만세포종에서 3 mg/m²가 2 mg/m²보다 재발률이 낮다는 소규모 연구 결과 있음. 방광암에서 단독 사용 시 36% 부분반응, 50% 안정병변 보고됨.",
+    "cat": "고양이에서 빈블라스틴은 림프종 치료에 COP 기반 프로토콜로 사용 가능하며 빈크리스틴과 유사한 반응률을 보임. 그러나 고양이는 신경독성(변비, 마비성 장폐색, 가역적 축삭 팽창 및 탈수초화)에 취약하므로 주의 깊은 모니터링이 필요함. 빈크리스틴 대비 GI 부작용 발생률은 낮음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1 변이 품종에서 용량 감량 필요. 간질환 시 용량 감량. 백혈구감소증/과립구감소증 또는 활동성 세균 감염 시 금기. 정기적인 CBC 및 간효소 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 신경독성(변비, 마비성 장폐색, 축삭 팽창, 탈수초화) 위험이 있음. 식욕부진 악화 가능. 정기적인 CBC 및 신경학적 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "2°C~8°C(36°F~46°F) 사이에서 보관하고 빛으로부터 차단. 미사용 제품 및 폐기물은 세포독성 약물에 적합한 절차에 따라 폐기.",
+    "forms": [
+      "Vinblastine Sulfate Injection: 1 mg/mL (10 mL, 25 mL vials)",
+      "Vinblastine Powder for Injection: 10 mg vials"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "빈블라스틴은 빈카 알칼로이드 계열 항종양제로 개와 고양이의 림프종, 암종, 비만세포종 치료에 사용됨. 주요 용량제한독성은 골수억제(호중구감소증)이며 나디르는 투여 후 4~9일. 빈크리스틴보다 골수억제가 강하나 GI 독성은 적음. MDR1 변이 목양견 품종에서 25~30% 용량 감량 필요. 고양이에서 신경독성 위험 있음. 간질환 시 용량 감량 필요. IV 전용 투여(다른 경로 투여 시 치명적). 혈관외 유출 시 즉시 주입 중단 및 온열 처치 필요. 위험 약물로 취급 시 PPE 착용 필수.",
+    "indications": "허가 외(extra-label) 사용: 개와 고양이의 림프종, 암종, 비만세포종. 개의 방광 이행세포암종. 재발성 개 림프종(약 25% 반응률). 고양이 림프종에서 COP 기반 프로토콜의 일부로 사용 가능.",
+    "client_info": "빈블라스틴은 항암(항종양) 약물입니다. 투여 당일 및 이후 수일간 반려동물의 소변, 대변, 구토물 등 모든 체액을 처리할 때 반드시 항암제용 장갑을 착용하십시오. 폐기물은 비닐봉지에 밀봉하여 일반 쓰레기와 함께 버리십시오. 임신 중이거나 임신을 계획 중이거나 수유 중인 분은 반려동물의 배설물 처리를 피하십시오. 오염된 물품(장난감, 식기, 물그릇)은 다른 물품과 분리하여 세척하십시오. 식욕 저하, 구토, 설사가 심하거나 호흡 곤란, 감염 징후(발열, 무기력)가 나타나면 즉시 수의사에게 연락하십시오. 치료 후 약 1주일 이내에 골수 억제가 가장 심하게 나타날 수 있으므로 정기적인 혈액 검사를 빠짐없이 받으십시오. 출혈, 멍, 발열, 극도의 피로감이 나타나면 즉시 수의사에게 연락하십시오. 고양이의 경우 신경 독성으로 인한 심한 변비와 식욕 저하가 나타날 수 있으니 주의 깊게 관찰하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific half-life data (dog/cat)",
+      "Onset of action (minutes)",
+      "T-max data",
+      "Oral bioavailability (N/A - IV only)",
+      "Renal dose adjustment specifics",
+      "CYP inhibitor/inducer profile beyond CYP3A12 substrate"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:35:39.555839+00:00",
+    "reviewer": null
+  }
+}

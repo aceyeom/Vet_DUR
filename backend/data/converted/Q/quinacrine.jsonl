@@ -1,0 +1,435 @@
+{
+  "id": "quinacrine",
+  "drug_identity": {
+    "name_ko": "퀴나크린",
+    "name_en": "Quinacrine",
+    "active_ingredient": "Quinacrine",
+    "brand_names": [],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "human_offlabel",
+    "formulary_status": "discontinued",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 시판 제품 없음. 조제 약국을 통해서만 입수 가능하며, 개와 고양이에서 지아르디아 등 원충 감염의 최후 수단(extra-label)으로 사용됨.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "퀴나크린은 간에서 서서히 대사되며 주로 신장을 통해 천천히 배설된다. 소변 산성화(암모늄 클로라이드)로 신장 배설을 촉진할 수 있다. 약물 중단 후 최대 2개월까지 소변에서 검출될 수 있다."
+    },
+    "extra_information": "퀴나크린은 간, 비장, 폐, 부신에 고농도로 분포한다. CSF 농도는 혈장 농도의 1~5%에 불과하다. 수의 환자에 대한 종별 PK 데이터는 없으며, 인체 데이터를 참고한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간 농축, 신장 배설, CNS 분포 제한 등 텍스트 근거 반영. 수의 종별 PK 연구 없음; 인체 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CSF 1-5%",
+          "CNS excitation (overdose)",
+          "abnormal behaviors"
+        ],
+        "index": 1,
+        "evidence": "CSF 농도는 혈장의 1~5%로 낮으나, 과량 투여 시 CNS 흥분(경련 포함) 및 이상 행동이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "aplastic anemia (human)",
+          "plasma protein binding 80-90%"
+        ],
+        "index": 1,
+        "evidence": "인체에서 고용량 장기 사용 시 재생불량성 빈혈이 드물게 보고됨. 혈장 단백 결합률 80~90%(인체)."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "primarily eliminated by kidneys",
+          "urinary acidification enhances excretion",
+          "detected in urine up to 2 months"
+        ],
+        "index": 2,
+        "evidence": "주로 신장을 통해 배설되며, 약물 중단 후 최대 2개월까지 소변에서 검출됨. 신장 배설 촉진을 위해 소변 산성화가 사용됨."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "concentrated in liver",
+          "hepatic dysfunction caution",
+          "hepatotoxic drugs interaction",
+          "metabolized slowly"
+        ],
+        "index": 3,
+        "evidence": "퀴나크린은 간에 고농도로 축적되며, 간 기능 장애 환자에서 극도의 주의가 필요함. 다른 간독성 약물과의 병용 시 주의 요망."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiac arrhythmias (overdose)",
+          "vascular collapse (overdose)"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 심장 부정맥 및 혈관 허탈이 보고됨. 치료 용량에서의 심장 독성 근거는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CSF 1-5%",
+          "abnormal behaviors"
+        ],
+        "index": 1,
+        "evidence": "CSF 농도는 혈장의 1~5%로 낮으나, 이상 행동이 부작용으로 보고됨. 고양이 특이 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "aplastic anemia (human)",
+          "plasma protein binding 80-90%"
+        ],
+        "index": 1,
+        "evidence": "인체에서 고용량 장기 사용 시 재생불량성 빈혈이 드물게 보고됨. 고양이 특이 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "primarily eliminated by kidneys",
+          "urinary acidification enhances excretion"
+        ],
+        "index": 2,
+        "evidence": "주로 신장을 통해 배설됨. 고양이 특이 PK 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "concentrated in liver",
+          "hepatic dysfunction caution",
+          "metabolized slowly"
+        ],
+        "index": 3,
+        "evidence": "간에 고농도로 축적되며 간 기능 장애 시 극도의 주의 필요. 고양이 특이 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiac arrhythmias (overdose)",
+          "vascular collapse (overdose)"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 심장 부정맥 및 혈관 허탈 보고. 치료 용량에서의 심장 독성 근거 제한적. 고양이 특이 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 120.0,
+      "max": 336.0,
+      "mean": 228.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 85,
+    "evidence": "인체에서 반감기 5~14일(120~336시간). 혈장 단백 결합률 80~90%(인체). 수의 종별 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Ethanol",
+      "severity": 2,
+      "keywords": [
+        "disulfiram-like reaction"
+      ],
+      "evidence": "Quinacrine may cause a disulfiram-like reaction when used with alcohol."
+    },
+    {
+      "drug": "Hepatotoxic Drugs (androgens, azole antifungals, estrogens, NSAIDs)",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "liver concentration"
+      ],
+      "evidence": "Quinacrine concentrates in the liver and should be used cautiously with other hepatotoxic drugs."
+    },
+    {
+      "drug": "Primaquine",
+      "severity": 3,
+      "keywords": [
+        "increased toxicity",
+        "contraindicated"
+      ],
+      "evidence": "Quinacrine increases the toxicity of primaquine; concurrent use is contraindicated."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "high",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 47.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지아르디아 또는 기타 감수성 원충 감염 치료 (최후 수단, extra-label)",
+          "value": "6.6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지아르디아 감염 치료 (최후 수단, extra-label)",
+          "value": "9",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "6일간",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "콕시디아 감염 치료 (최후 수단, extra-label)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "퀴나크린은 주로 신장을 통해 배설되나, 수의 환자에서의 신기능 저하 시 용량 조절에 대한 구체적인 지침은 제시되어 있지 않다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간 기능 장애 환자에서 극도의 주의를 요하며, 간에 고농도로 축적되므로 간 질환 환자에서는 사용을 피하는 것이 권장된다."
+  },
+  "contraindications": [
+    {
+      "condition": "간 기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "정신 장애 (인체 참고)",
+      "match_terms": [
+        "psychotic disorder"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "포르피린증 (인체 참고)",
+      "match_terms": [
+        "porphyria"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "DNA 삽입(intercalation)을 통해 RNA 전사 및 전위를 억제하고, 전자 전달계를 방해하며 숙시네이트 산화 및 콜린에스테라제를 억제함으로써 항원충 효과를 나타낸다.",
+    "common_extra_effects": [
+      "피부 및 소변의 황색 착색 (양성)",
+      "식욕부진",
+      "구역",
+      "구토",
+      "설사",
+      "이상 행동 (파리 물기, 흥분)",
+      "무기력",
+      "소양증",
+      "발열",
+      "과민반응 (인체, 드묾)",
+      "간독성 (인체, 드묾)",
+      "재생불량성 빈혈 (인체, 드묾)",
+      "각막 부종 (인체, 드묾)",
+      "망막병증 (인체, 드묾)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "피부 및 소변의 황색 착색",
+      "식욕부진",
+      "구토",
+      "설사",
+      "이상 행동 (파리 물기, 흥분)",
+      "무기력",
+      "소양증",
+      "발열"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "피부 및 소변의 황색 착색",
+      "식욕부진",
+      "구토",
+      "설사",
+      "이상 행동",
+      "무기력",
+      "소양증",
+      "발열"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 퀴나크린은 지아르디아 또는 기타 원충 감염의 최후 수단 치료제로 사용된다(extra-label). 식사 후 투여하고 충분한 물을 제공해야 한다. 피부 및 소변의 황색 착색은 양성 반응이나, 눈의 황달이 나타나면 즉시 수의사에게 연락해야 한다.",
+    "cat": "고양이에서 퀴나크린은 지아르디아 및 콕시디아 감염의 최후 수단 치료제로 사용된다(extra-label). 식사 후 투여하고 충분한 물을 제공해야 한다. 매우 쓴맛이 있어 음식에 섞어 투여할 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간 기능 장애 환자에서 극도의 주의 필요. 이상 행동, GI 부작용, 황색 착색 등 부작용 모니터링 필요. 미국 내 시판 제품 없음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간 기능 장애 환자에서 극도의 주의 필요. 이상 행동, GI 부작용, 황색 착색 등 부작용 모니터링 필요. 미국 내 시판 제품 없음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제는 밀폐된 차광 용기에 실온 보관. 용액 상태에서는 안정성이 낮으므로 장기 보관 불가. 쓴맛을 가리기 위해 음식에 분쇄하여 혼합 가능.",
+    "forms": [
+      "정제 (Tab) — 조제 약국을 통해서만 입수 가능"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "퀴나크린은 지아르디아 및 기타 원충 감염에 대한 최후 수단 항원충제로, 미국 내 시판 제품이 없어 조제 약국을 통해서만 입수 가능하다. 간에 고농도로 축적되므로 간 기능 장애 환자에서는 사용을 피해야 한다. 피부 및 소변의 황색 착색은 양성 반응이나, 안구 황달 발생 시 즉시 수의사에게 연락해야 한다. 반감기가 매우 길어(5~14일) 약물 중단 후에도 장기간 체내에 잔류한다.",
+    "indications": "개: 지아르디아 또는 기타 감수성 원충 감염 (extra-label, 최후 수단). 고양이: 지아르디아, 콕시디아 감염 (extra-label, 최후 수단). 인체: 항말라리아제, 경증~중등도 원판상 루푸스 에리테마토수스 치료.",
+    "client_info": "이 약은 식사 후에 투여하고, 충분한 신선한 물을 항상 제공하세요. 구토, 설사, 식욕 감소, 이상 행동, 무기력, 가려움증, 발열 등의 부작용 징후를 주의 깊게 관찰하세요. 피부나 소변이 노랗게 변하는 것은 퀴나크린의 염료 특성 때문으로 심각한 문제가 아닙니다. 그러나 눈이 노랗게 변하면 즉시 수의사에게 연락하세요. 이 약은 매우 쓴맛이 있으므로 음식에 섞어 투여할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (partial)",
+      "Compatibility/Compounding Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/32.jsonl",
+    "extracted_at": "2026-03-10T23:00:03.937637+00:00",
+    "reviewer": null
+  }
+}

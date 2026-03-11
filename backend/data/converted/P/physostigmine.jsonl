@@ -1,0 +1,542 @@
+{
+  "id": "physostigmine",
+  "drug_identity": {
+    "name_ko": "피조스티그민",
+    "name_en": "Physostigmine",
+    "active_ingredient": "Physostigmine salicylate",
+    "brand_names": [
+      "Antilirium",
+      "Anticholium"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Atropine, Pralidoxime (2-PAM)",
+    "reversal_evidence": "콜린성 위기 발생 시 아트로핀 IV 투여; 프랄리독심(2-PAM)은 신경절 및 골격근 효과 역전에 유용할 수 있음",
+    "off_label_note": "수의과 승인 제품 없음. 개에서 이버멕틴 독성 진단 보조 및 기면증 검사, 말에서 이소플루란 마취 후 회복 개선, 소에서 독초(tall larkspur) 중독 치료에 엑스트라라벨로 사용됨",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.01,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "투여된 약물의 대부분은 콜린에스테라제에 의한 가수분해로 빠르게 대사됨. 극소량만 소변으로 미변화 형태로 배설됨."
+    },
+    "extra_information": "개에서 평균 소실 반감기는 약 30분. 피하조직 및 점막에서 빠르게 흡수됨. IV 투여 후 5분 이내, IM 투여 후 약 25분에 최대 효과 발현. 약리학적 효과 지속시간은 30분~5시간(평균 30~60분). 0.1 mg/kg IV 투여 후 2분에 혈장 콜린에스테라제 최대 억제(78%), 45분에도 60% 억제 유지."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 수의학적 PK 데이터 제한적. 콜린성 효과(서맥, 기관지수축, 발작 등) 및 CNS 침투성을 근거로 점수 부여.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "혈뇌장벽 통과",
+          "CNS 억제",
+          "발작",
+          "섬망"
+        ],
+        "index": 1,
+        "evidence": "피조스티그민은 3차 아민으로 혈뇌장벽을 통과하여 중추 및 말초 아세틸콜린에스테라제를 억제함. 고용량에서 발작 유발 가능."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "서맥",
+          "저혈압",
+          "무수축",
+          "빈맥"
+        ],
+        "index": 2,
+        "evidence": "콜린성 위기 시 서맥, 빈맥, 저혈압, 무수축 등 심혈관계 이상 발생 가능. 혈장 콜린에스테라제 억제 확인됨."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 극소량만 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "가수분해 대사"
+        ],
+        "index": -1,
+        "evidence": "콜린에스테라제에 의한 가수분해로 주로 대사됨. 간독성에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "서맥",
+          "무수축",
+          "심혈관 질환 금기"
+        ],
+        "index": 3,
+        "evidence": "콜린성 위기 시 서맥, 무수축 발생 가능. 심혈관 질환 환자에서 금기. 빠른 IV 투여 시 서맥 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "혈뇌장벽 통과",
+          "CNS 억제",
+          "발작"
+        ],
+        "index": 1,
+        "evidence": "피조스티그민은 혈뇌장벽을 통과하여 중추 콜린에스테라제를 억제함. 고양이 IV LD50 0.66 mg/kg으로 독성 위험 높음."
+      },
+      "blood": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "서맥",
+          "저혈압",
+          "무수축"
+        ],
+        "index": 2,
+        "evidence": "고양이 IV LD50 0.66 mg/kg. 콜린성 위기 시 심혈관계 이상 발생 가능."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "가수분해 대사"
+        ],
+        "index": -1,
+        "evidence": "콜린에스테라제에 의한 가수분해로 주로 대사됨. 간독성에 대한 직접적 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "서맥",
+          "무수축",
+          "심혈관 질환 금기"
+        ],
+        "index": 3,
+        "evidence": "고양이 IV LD50 0.66 mg/kg. 콜린성 위기 시 서맥, 무수축 발생 가능. 심혈관 질환 환자에서 금기."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": 0.08,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.5,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "IV 투여 후 5분 이내 최대 효과 발현, IM 투여 후 약 25분. 개에서 평균 소실 반감기 약 30분(0.5시간). 약리학적 효과 지속시간 30분~5시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergics (atropine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "효과 길항",
+        "콜린에스테라제 억제 감소"
+      ],
+      "evidence": "Concurrent use may diminish the effects of physostigmine and the anticholinergic agent."
+    },
+    {
+      "drug": "Tricyclic/Tetracyclic Antidepressants (clomipramine, mirtazapine)",
+      "severity": 2,
+      "keywords": [
+        "효과 길항",
+        "콜린성 위기 위험"
+      ],
+      "evidence": "Concurrent use may diminish the effects of physostigmine and the anticholinergic agent. Use in TCA/TeCA overdose increases risk of cholinergic crisis."
+    },
+    {
+      "drug": "Choline Esters (bethanechol, carbachol, methacholine)",
+      "severity": 2,
+      "keywords": [
+        "상가 독성",
+        "콜린성 효과 증가"
+      ],
+      "evidence": "Concurrent use may cause additive adverse effects; monitor for signs of toxicity."
+    },
+    {
+      "drug": "Inhalation Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "신경근 차단 역전 효능 감소"
+      ],
+      "evidence": "The efficacy of anticholinesterases in reversing neuromuscular blockade may be impaired by inhalation anesthetics."
+    },
+    {
+      "drug": "Organophosphates",
+      "severity": 3,
+      "keywords": [
+        "상가 독성",
+        "콜린성 위기"
+      ],
+      "evidence": "May cause additive adverse effects. Combined cholinesterase inhibition can precipitate cholinergic crisis."
+    },
+    {
+      "drug": "Succinylcholine",
+      "severity": 3,
+      "keywords": [
+        "신경근 차단 연장",
+        "혈장 콜린에스테라제 억제"
+      ],
+      "evidence": "May increase succinylcholine concentrations and prolong neuromuscular blockade; avoid concurrent use."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "이버멕틴 독성 진단 보조 (CNS 효과 일시적 역전)",
+          "value": "1",
+          "unit": "mg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "1회 투여 (mg/kg 아님, 개당 1 mg 고정 용량)",
+          "evidence": "엑스트라라벨. 출처: Plumb's Veterinary Drug Handbook."
+        },
+        {
+          "logic_type": "linear",
+          "context": "기면증/탈력발작 유발 검사",
+          "value": "0.025 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 0.1,
+          "duration_note": "저용량부터 시작 권장; 투여 후 15분 이내 탈력발작 유발 가능",
+          "evidence": "엑스트라라벨. 출처: Plumb's Veterinary Drug Handbook."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 구체적인 언급 없음. 극소량만 신장으로 배설되므로 신장 기능 저하 시 임상적 영향은 제한적일 수 있으나 공식 권고사항 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 용량 조절에 대한 구체적인 언급 없음. 콜린에스테라제에 의한 가수분해로 주로 대사되므로 간 기능 저하의 영향은 불명확함."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 (피조스티그민 또는 아황산염)",
+      "match_terms": [
+        "hypersensitivity",
+        "sulfite allergy",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기관지수축성 질환 (천식)",
+      "match_terms": [
+        "asthma",
+        "bronchospasm",
+        "reactive airway disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "괴저 (gangrene)",
+      "match_terms": [
+        "gangrene"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "DM"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심혈관 질환",
+      "match_terms": [
+        "cardiovascular disease",
+        "heart disease",
+        "cardiac disease"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 또는 요로의 기계적 폐색",
+      "match_terms": [
+        "GI obstruction",
+        "urinary obstruction",
+        "mechanical obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "미주신경 긴장 상태 (vagotonic state)",
+      "match_terms": [
+        "vagotonic state",
+        "vagal tone"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "삼환계/사환계 항우울제 과다복용",
+      "match_terms": [
+        "TCA overdose",
+        "tricyclic antidepressant overdose",
+        "tetracyclic antidepressant overdose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신생아 동물 (벤질알코올 함유)",
+      "match_terms": [
+        "neonatal",
+        "newborn"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "항콜린성 독성 부재 시 사용",
+      "match_terms": [
+        "no anticholinergic toxicity"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "아세틸콜린에스테라제를 가역적으로 억제하여 수용체 부위에서 아세틸콜린의 효과를 연장시킴. 3차 아민으로 혈뇌장벽을 통과하여 중추 및 말초 모두에서 작용함.",
+    "common_extra_effects": [
+      "축동(miosis)",
+      "기관지수축",
+      "과다침흘림(hypersalivation)",
+      "근육 약화",
+      "발한(땀샘 보유 종에서)",
+      "서맥",
+      "빈맥",
+      "저혈압",
+      "무수축",
+      "오심",
+      "구토",
+      "설사",
+      "탈분극성 신경근 차단",
+      "폐부종",
+      "호흡 마비",
+      "발작",
+      "과민반응"
+    ],
+    "dog_mechanism": "개에서 이버멕틴 독성 진단 보조 및 기면증 유발 검사에 사용. 혈뇌장벽 통과로 중추 콜린에스테라제 억제.",
+    "dog_extra_effects": [
+      "축동",
+      "기관지수축",
+      "과다침흘림",
+      "근육 약화",
+      "콜린성 위기 (고용량)"
+    ],
+    "cat_mechanism": "고양이에서 IV LD50 0.66 mg/kg으로 독성 위험이 높음. 수의과 용량 권고사항 없음.",
+    "cat_extra_effects": [
+      "콜린성 위기",
+      "서맥",
+      "발작",
+      "호흡 마비"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 이버멕틴 독성 진단 보조(1 mg/개 IV 1회) 및 기면증/탈력발작 유발 검사(0.025~0.1 mg/kg IV)에 엑스트라라벨로 사용됨. 반감기가 약 30분으로 짧아 효과가 일시적임. 아트로핀을 즉시 사용 가능한 상태로 준비해야 함. 빠른 IV 투여 시 서맥, 과다침흘림, 발작 위험 증가.",
+    "cat": "고양이에서 IV LD50이 0.66 mg/kg으로 독성 위험이 매우 높음. 수의과 승인 용량 없으며 사용 시 극도의 주의 필요. 더 안전한 대안(네오스티그민, 피리도스티그민)을 우선 고려할 것."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 엑스트라라벨 사용. 콜린성 위기 위험으로 직접 감시 하에 투여 필요. 아트로핀 즉시 사용 가능 상태 유지. 빠른 IV 투여 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이 IV LD50 0.66 mg/kg으로 독성 위험 높음. 수의과 용량 권고사항 없음. 사용 시 극도의 주의 필요하며 더 안전한 대안 우선 고려."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "40°C(104°F) 이하, 가급적 15~30°C(59~86°F) 보관. 빛과 동결로부터 보호. 약간 이상의 변색이 있는 주사액은 사용 금지.",
+    "forms": [
+      "Physostigmine Salicylate Injection 1 mg/mL (벤질알코올 2% 및 0.1% 소듐 메타바이설파이트 함유) 1 mL 앰플"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피조스티그민은 아세틸콜린에스테라제 억제제로, 혈뇌장벽을 통과하여 중추 및 말초에서 작용합니다. 개에서 이버멕틴 독성 진단 보조 및 기면증 검사에 사용되며, 말에서 이소플루란 마취 후 회복 개선, 소에서 독초(tall larkspur) 중독 치료에 엑스트라라벨로 사용됩니다. 반감기가 약 30분으로 매우 짧으며, 콜린성 위기 위험으로 인해 직접 감시 하에 투여해야 합니다. 수의과 승인 제품은 없으며, 더 안전한 대안이 있는 경우 사용을 권장하지 않습니다.",
+    "indications": "개: 이버멕틴 독성 진단 보조(엑스트라라벨), 기면증/탈력발작 유발 검사(엑스트라라벨). 말: 기면증/탈력발작 진단 검사(엑스트라라벨), 이소플루란 마취 후 회복 개선(엑스트라라벨). 소: tall larkspur(Delphinium barbeyi) 중독 치료(엑스트라라벨). 항콜린성 독성 치료에 사용 가능하나 더 안전한 대안 존재.",
+    "client_info": "이 약물은 반드시 병원 내에서 수의사의 직접 감시 하에 투여됩니다. 투여 중 및 투여 후 심박수, 혈압, 호흡 등을 면밀히 모니터링합니다. 부작용(과다침흘림, 근육 약화, 동공 축소, 설사 등)이 나타날 수 있으며, 심각한 경우 즉각적인 처치가 필요합니다. 효과는 일반적으로 30~60분 지속됩니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Cat dosage",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/19.jsonl",
+    "extracted_at": "2026-03-10T19:04:54.159887+00:00",
+    "reviewer": null
+  }
+}

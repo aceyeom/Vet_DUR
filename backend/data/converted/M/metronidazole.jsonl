@@ -1,0 +1,824 @@
+{
+  "id": "metronidazole",
+  "drug_identity": {
+    "name_ko": "메트로니다졸",
+    "name_en": "Metronidazole",
+    "active_ingredient": "Metronidazole",
+    "brand_names": [
+      "Flagyl",
+      "Flagyl 375"
+    ],
+    "allergy_class": "nitroimidazole",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국 내 수의용 라벨 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. 식용 동물에는 FDA에 의해 사용 금지.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Inj",
+      "Susp",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 375,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "메트로니다졸은 주로 간에서 여러 경로를 통해 대사되며, 대사산물과 미변화 약물이 소변 및 대변으로 배설된다. 고양이에서 글루쿠론산 포합이 대사 경로 중 하나로 우려되나, 반감기는 개와 유의미하게 다르지 않다."
+    },
+    "extra_information": "개: 경구 생체이용률 50~100%(평균 높음), 식이와 함께 투여 시 흡수 증가, 경구 투여 후 약 1시간에 최고 혈중 농도 도달. 고양이: 메트로니다졸 벤조에이트의 경구 생체이용률 평균 약 65%, 최고 혈중 농도 도달 시간 1~8시간으로 매우 가변적, 최고 혈청 농도는 개나 사람보다 다소 낮음. 전신 청소율은 고양이(1.53 mL/kg/분)가 개(2.49 mL/kg/분)보다 느림. 말단 소실 반감기는 고양이에서 5~6시간으로 개보다 약간 길지만 유의미한 차이는 아님."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 보고된 이상반응, 금기사항, 약동학 정보를 근거로 평가. 수의학 종별 특이적 PK 데이터가 일부 존재하나 장기별 부담 점수는 임상 보고 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "신경독성",
+          "운동실조",
+          "안진",
+          "발작",
+          "전정계 이상",
+          "소뇌 이상"
+        ],
+        "index": 2,
+        "evidence": "개에서 신경독성이 주요 이상반응으로 보고됨. 고용량(60 mg/kg/일 초과) 또는 장기 중등도~고용량 투여 시 소뇌전정 운동실조, 안진, 발작 등 중추신경계 증상 발생. 후향적 연구에서 중앙 용량 21 mg/kg q12h에서도 신경독성 발생."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "호중구감소증",
+          "혈뇨"
+        ],
+        "index": 1,
+        "evidence": "개에서 호중구감소증 및 혈뇨가 이상반응으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈뇨"
+        ],
+        "index": 1,
+        "evidence": "혈뇨가 이상반응으로 보고되어 신장에 대한 경미한 부담 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "간독성",
+          "간기능 장애",
+          "용량 감량"
+        ],
+        "index": 2,
+        "evidence": "개에서 간독성이 이상반응으로 보고됨. 간기능 장애 시 1일 총 용량을 표준 항혐기성 용량의 1/3로 감량하여 1일 1회 투여 권고. 간질환 동반 시 IBD 치료 용량도 감량 권고(7.5~10 mg/kg BID)."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "서맥"
+        ],
+        "index": -1,
+        "evidence": "과다복용 시 서맥이 보고되었으나 치료 용량에서의 심장 부담에 대한 직접적 근거는 제한적."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS 독성",
+          "신경독성"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 드물게 CNS 독성이 발생할 수 있음. 개보다 발생 빈도는 낮으나 주의 필요."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "유전독성",
+          "말초혈액 단핵세포"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 경구 메트로니다졸 7일 투여 후 말초혈액 단핵세포에서 유전독성이 검출되었으며, 투약 중단 6일 후 회복됨. 장기 치료 시 임상적 의의 불명확."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 독성에 대한 직접적 근거는 본문에 기술되지 않음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "간독성",
+          "간기능 장애"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 간독성이 이상반응으로 보고됨. 장기 치료 시 간독성 위험 존재."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 부담에 대한 직접적 근거는 본문에 기술되지 않음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 5.0,
+      "max": 6.0,
+      "mean": 5.5,
+      "species": "cat"
+    },
+    "f_percent": 65,
+    "protein_binding_percent": 20,
+    "evidence": "개: 경구 투여 후 약 1시간에 최고 혈중 농도 도달, 생체이용률 50~100%. 고양이: 메트로니다졸 벤조에이트 평균 생체이용률 약 65%, 반감기 5~6시간. 사람: 혈장 단백 결합률 20% 미만. t_max_hr 및 f_percent는 고양이 데이터 기준."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 본문에 명시되지 않아 포함하지 않음.",
+  "drug_interactions": [
+    {
+      "drug": "Busulfan",
+      "severity": 3,
+      "keywords": [
+        "busulfan 농도 증가",
+        "독성 증가"
+      ],
+      "evidence": "Metronidazole may result in increased busulfan concentrations and toxicity."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "대사 억제",
+        "혈중 농도 증가",
+        "용량 관련 이상반응"
+      ],
+      "evidence": "Cimetidine may decrease the metabolism of metronidazole and increase the likelihood of dose-related adverse effects."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "cyclosporine 농도 증가"
+      ],
+      "evidence": "Use with metronidazole may increase cyclosporine concentrations."
+    },
+    {
+      "drug": "Ethanol",
+      "severity": 2,
+      "keywords": [
+        "disulfiram 유사 반응",
+        "오심",
+        "구토",
+        "복통"
+      ],
+      "evidence": "Ethanol may induce a disulfiram-like reaction (nausea, vomiting, cramps) when given with metronidazole."
+    },
+    {
+      "drug": "Fluorouracil (5-FU)",
+      "severity": 3,
+      "keywords": [
+        "5-FU 농도 증가",
+        "독성 증가"
+      ],
+      "evidence": "Metronidazole may result in increased fluorouracil levels and toxicity."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "활성 대사산물 형성 감소",
+        "면역억제 효과 감소"
+      ],
+      "evidence": "Metronidazole may reduce formation of the active mycophenolate metabolite."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "대사 촉진",
+        "혈중 농도 감소"
+      ],
+      "evidence": "Phenobarbital may increase the metabolism of metronidazole, thereby decreasing blood concentrations."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "대사 촉진",
+        "혈중 농도 감소"
+      ],
+      "evidence": "Primidone may increase the metabolism of metronidazole, thereby decreasing blood concentrations."
+    },
+    {
+      "drug": "QT Prolongation Drugs (amiodarone, cisapride, procainamide, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "QT 연장",
+        "부정맥"
+      ],
+      "evidence": "Concurrent use with QT-prolonging drugs may increase risk for QT prolongation."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 3,
+      "keywords": [
+        "PT 연장",
+        "항응고 효과 증가",
+        "출혈 위험"
+      ],
+      "evidence": "Metronidazole may prolong PT in patients receiving warfarin or other coumarin anticoagulants. Concurrent use should be avoided if possible; otherwise, monitoring with prothrombin times should be intensified."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지아르디아증 (Giardiasis) - 펜벤다졸 병용",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간, 펜벤다졸 50 mg/kg SID와 병용",
+          "evidence": "오프라벨. CAPC 권고: 1차 선택은 펜벤다졸 단독, 병용 시 임상 증상 및 낭포 배출 해소에 더 효과적일 수 있음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지아르디아증 (Giardiasis)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일; 1일 2회 분할 투여 가능",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "기타 원충 감염 (Entamoeba histolytica, Pentatrichomonas hominis)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "8일간",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수술 전 예방적 항생제 (직장결장 수술)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 약 1시간 전 30~60분에 걸쳐 투여 완료. 통상 세파졸린과 병용.",
+          "evidence": "오프라벨. 수의학에서 합의된 용량 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혐기성 감염 - 경증",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혐기성 감염 - 중증 (패혈증)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "클로스트리디움 장염 - 경구",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "클로스트리디움 장염 - 정맥",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간, 경구 투여 불가 시",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "클로스트리디움 장염",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일; 1일 2회 분할 투여 가능",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "염증성 장질환(IBD) 보조 치료",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "간질환 동반 시 7.5~10 mg/kg BID로 감량. 장기 치료 시 신경독성 및 간독성 위험.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 (삼제 요법 a)",
+          "value": "15.4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간, 아목시실린 11 mg/kg q8h + 비스무스 서브살리실레이트 0.22 mL/kg q4~6h 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 (삼제 요법 b)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주간, 아목시실린 15 mg/kg q12h + 비스무스 서브살리실레이트 체중별 용량 q12h 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 (삼제 요법 c)",
+          "value": "11 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간, 아목시실린 22 mg/kg q12h + 비스무스 서브살리실레이트 0.22 mL/kg q6~8h 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "바베시아 깁소니 대체 치료 (아토바쿠온+아지스로마이신 실패 후)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "30~90일간, 클린다마이신 25 mg/kg BID + 독시사이클린 5 mg/kg SID 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "간성 뇌증",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "지아르디아증 (Giardiasis)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간. 메트로니다졸 벤조에이트가 고양이에서 더 잘 용인됨.",
+          "evidence": "오프라벨. CAPC 권고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "지아르디아증 (Giardiasis)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일; 1일 2회 분할 투여 가능",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "트리코모나스증 (Tritrichomonas foetus, Pentatrichomonas hominis)",
+          "value": "30 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~14일. T. foetus 감염 제거율은 로니다졸보다 낮음.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "수술 전 예방적 항생제 (직장결장 수술)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 약 1시간 전 30~60분에 걸쳐 투여 완료. 통상 세파졸린과 병용.",
+          "evidence": "오프라벨. 수의학에서 합의된 용량 없음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 (삼제 요법 a)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14일간, 클라리스로마이신 7.5 mg/kg BID + 아목시실린 20 mg/kg BID 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 (삼제 요법 b)",
+          "value": "11 - 15.4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "3주간, 아목시실린 11~22 mg/kg q8h + 비스무스 서브살리실레이트 0.22 mL/kg q4~8h 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 위염 (삼제 요법 c)",
+          "value": "10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주간, 아목시실린 10~20 mg/kg TID + 비스무스 서브살리실레이트 1/4정/고양이 BID ± H2 차단제 또는 오메프라졸 병용",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혐기성 감염 - 경증",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "또는 15~25 mg/kg SID. 실용적으로 250 mg 정제의 1/4(62.5 mg)을 경구 투여.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "혐기성 감염 - 중증 (패혈증)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "클로스트리디움 장염 - 고정 용량",
+          "value": "62.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5일간 (mg/kg 아님, 고양이 고정 용량)",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "클로스트리디움 장염",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~7일; 1일 2회 분할 투여 가능",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "염증성 장질환(IBD) 보조 치료",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "장기 치료 시 신경독성 및 간독성 위험. 실용적으로 250 mg 정제의 1/4(62.5 mg) 사용.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "간성 뇌증",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "본문에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 약물 및 대사산물이 소변과 대변으로 배설되므로 중증 신부전 시 모니터링 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 장애가 있는 동물에서는 1일 총 용량을 표준 항혐기성 용량의 1/3로 감량하여 1일 1회 투여 권고. 영국 제품 라벨에서 간 질환은 금기사항으로 명시됨."
+  },
+  "contraindications": [
+    {
+      "condition": "니트로이미다졸 과민증",
+      "match_terms": [
+        "nitroimidazole hypersensitivity",
+        "metronidazole allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 (특히 임신 초기 3주)",
+      "match_terms": [
+        "pregnancy",
+        "first trimester"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "수유 중",
+      "match_terms": [
+        "lactation",
+        "nursing",
+        "breastfeeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식용 동물",
+      "match_terms": [
+        "food animal",
+        "food-producing animal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고용량 투여 (개: 60 mg/kg/일 초과)",
+      "match_terms": [
+        "high dose",
+        "neurotoxicity risk"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "본문에 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "혐기성 세균의 세포막을 통과하여 DNA와 상호작용, DNA 가닥 절단을 유발하여 단백질 합성 억제 및 세포 사멸을 초래하는 농도 의존성 살균제. 원충에 대한 항원충 작용 기전은 불명확. 세포 매개 면역 억제 작용도 일부 있음.",
+    "common_extra_effects": [
+      "신경독성 (운동실조, 안진, 발작, 전정계 이상)",
+      "간독성",
+      "오심, 구토, 식욕부진, 설사",
+      "무기력, 쇠약",
+      "호중구감소증",
+      "혈뇨",
+      "기형 유발 가능성 (특히 임신 초기)"
+    ],
+    "dog_mechanism": "혐기성 세균 및 원충에 대한 농도 의존성 살균/살원충 작용. 세포 매개 면역 억제를 통한 IBD 치료 효과 가능성.",
+    "dog_extra_effects": [
+      "신경독성 (소뇌전정 운동실조, 안진, 발작, 고유감각 결손)",
+      "간독성",
+      "호중구감소증",
+      "혈뇨",
+      "오심, 구토, 식욕부진, 설사",
+      "무기력, 쇠약",
+      "드물게 피부 혈관염"
+    ],
+    "cat_mechanism": "혐기성 세균 및 원충에 대한 살균/살원충 작용.",
+    "cat_extra_effects": [
+      "구토",
+      "식욕부진",
+      "간독성",
+      "드물게 CNS 독성",
+      "유전독성 (말초혈액 단핵세포, 임상적 의의 불명확)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 메트로니다졸은 지아르디아증, 혐기성 감염, IBD 보조 치료 등에 광범위하게 사용됨. 1일 총 용량이 60 mg/kg를 초과하지 않도록 주의. 후향적 연구에서 21 mg/kg q12h에서도 신경독성(소뇌전정 운동실조, 안진) 발생 보고. 신경독성 발생 시 투약 중단 후 중앙 3일 내 회복. 다이아제팜이 CNS 독성 완화에 사용된 사례 있음. 급성 비특이적 설사에 대한 사용 근거는 제한적이며 장내 미생물총에 유의미한 영향을 줄 수 있어 무분별한 사용 자제 권고.",
+    "cat": "고양이에서 메트로니다졸 벤조에이트가 메트로니다졸 USP보다 기호성이 좋아 선호됨. 경구 생체이용률 평균 약 65%이나 개체 간 변이 큼. 최고 혈중 농도 도달 시간이 1~8시간으로 매우 가변적. 전신 청소율이 개보다 느리나 반감기는 유의미하게 길지 않음(5~6시간). 7일 투여 후 말초혈액 단핵세포에서 유전독성 검출 보고(투약 중단 6일 후 회복). 실용적으로 250 mg 정제의 1/4(62.5 mg)을 경구 투여하는 경우 많음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간기능 장애, 임신, 수유 중인 개에서 주의 사용. 1일 총 용량 60 mg/kg 초과 금지. 신경독성 징후(운동실조, 안진 등) 모니터링 필요. 장기 치료 시 신경독성 및 간독성 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간기능 장애, 임신, 수유 중인 고양이에서 주의 사용. 메트로니다졸 벤조에이트 사용 시 용량 환산 필요(1 mg 메트로니다졸 = 1.6 mg 메트로니다졸 벤조에이트). 유전독성 가능성 있으나 임상적 의의 불명확."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "30°C(86°F) 미만에서 보관, 빛 차단. 분할 정제의 유효기간은 3일. 메트로니다졸 벤조에이트 현탁액은 빛 차단 용기에 냉장 또는 실온 보관.",
+    "forms": [
+      "경구 정제: 250 mg, 500 mg (Flagyl®, 제네릭)",
+      "경구 캡슐: 375 mg (Flagyl 375®, 제네릭)",
+      "경구 현탁액: 50 mg/mL, 150 mL (포도 향, 제네릭)",
+      "주사액: 500 mg/100 mL 생리식염수 프리믹스 (제네릭)",
+      "메트로니다졸 벤조에이트 조제 현탁액 (80 mg/mL, 메트로니다졸 50 mg/mL 상당)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "메트로니다졸은 혐기성 세균 및 원충(지아르디아, 트리코모나스, 아메바 등)에 효과적인 항생제/항원충제입니다. 미국 내 수의용 라벨 제품은 없으며 인체용 제품을 오프라벨로 사용합니다. 식용 동물에는 FDA에 의해 사용이 금지되어 있습니다. 개에서 1일 총 용량 60 mg/kg 초과 시 신경독성 위험이 높으며, 후향적 연구에서 21 mg/kg q12h에서도 신경독성이 보고되었습니다. 간기능 장애 시 용량을 표준 용량의 1/3로 감량하여 1일 1회 투여해야 합니다. 고양이에서는 메트로니다졸 벤조에이트가 기호성이 좋아 선호됩니다. 와파린, 5-FU, 부설판과의 병용은 독성 증가 위험으로 가능한 피해야 합니다.",
+    "indications": "승인 적응증(영국): 개·고양이의 지아르디아 및 클로스트리디움에 의한 위장관 감염, 비뇨생식기·구강·인후·피부의 혐기성 세균 감염. 오프라벨(미국): 지아르디아증, 트리코모나스증, 발란티디움 콜리 감염, 혐기성 감염(전신 및 장관), 클로스트리디움 장염, IBD 보조 치료, 헬리코박터 위염(삼제 요법), 간성 뇌증, 수술 전 예방적 항생제(직장결장 수술), 바베시아 깁소니 대체 치료.",
+    "client_info": "이 약은 반드시 음식과 함께 투여하세요. 신경계 이상 증상(비틀거림, 눈 떨림, 발작 등)이 나타나면 즉시 수의사에게 알리세요. 임신 중이거나 수유 중인 동물에게는 투여하지 마세요. 이 약은 식용 동물(식용 닭, 젖소 등 포함)에는 사용이 금지되어 있습니다. 임산부나 이 약에 알레르기가 있는 분은 약을 직접 만지지 않도록 주의하세요. 매우 쓴 맛이 있으므로 캡슐에 넣거나 기호성 좋은 음식에 숨겨서 투여하는 것이 도움이 될 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile (substrates/inhibitors/inducers)",
+      "Renal dose adjustment explicit recommendation",
+      "Onset of action (minutes)",
+      "Protein binding (veterinary species-specific)",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "genetic_sensitivity.has_genetic_risk"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/64.jsonl",
+    "extracted_at": "2026-03-11T09:26:59.171856+00:00",
+    "reviewer": null
+  }
+}

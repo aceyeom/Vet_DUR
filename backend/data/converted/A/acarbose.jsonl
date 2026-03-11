@@ -1,0 +1,535 @@
+{
+  "id": "acarbose",
+  "drug_identity": {
+    "name_ko": "아카보스",
+    "name_en": "Acarbose",
+    "active_ingredient": "Acarbose",
+    "brand_names": [
+      "Precose",
+      "Glucobay",
+      "Asucrose",
+      "Glicobase",
+      "Glucor",
+      "Glumida",
+      "Prandase"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 개와 고양이에서 당뇨병 보조 치료 목적으로 오프라벨 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.04,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "장내 세균총에 의해 대부분 대사됨. 흡수된 소량(개 약 4%, 인간 약 2%)은 신장으로 배설됨."
+    },
+    "extra_information": "개에서 경구 투여량의 약 4%가 흡수되며, 나머지는 장내 세균총에 의해 대사됨. 심한 신기능 장애 환자에서 혈청 농도가 정상의 약 5배에 달할 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터 제한적. 인체 데이터 및 Plumb's 기술 내용 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신경계 영향에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypoglycemia"
+        ],
+        "index": 1,
+        "evidence": "다른 혈당강하제와 병용 시 저혈당 위험 증가 가능성 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "renal elimination"
+        ],
+        "index": 2,
+        "evidence": "신기능 장애 시 혈청 농도 약 5배 상승. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic transaminases",
+          "liver disease"
+        ],
+        "index": 3,
+        "evidence": "인간에서 고용량 장기 투여 시 간 트랜스아미나제 상승 드물게 보고. 중증 간질환 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신경계 영향에 대한 직접적 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypoglycemia"
+        ],
+        "index": 1,
+        "evidence": "다른 혈당강하제와 병용 시 저혈당 위험 증가 가능성 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal dysfunction",
+          "chronic kidney disease"
+        ],
+        "index": 2,
+        "evidence": "신기능 장애 시 주의 사용 권고. 진행성 만성 신장 질환 고양이에서 식욕 저하로 효과 없을 수 있음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic transaminases",
+          "liver disease"
+        ],
+        "index": 3,
+        "evidence": "인간에서 고용량 장기 투여 시 간 트랜스아미나제 상승 드물게 보고. 중증 간질환 시 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": 4,
+    "protein_binding_percent": null,
+    "evidence": "개에서 경구 투여량의 약 4%가 흡수됨. 반감기 데이터는 Plumb's에 기재되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Activated Charcoal",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "intestinal adsorbent"
+      ],
+      "evidence": "Intestinal adsorbents may reduce the efficacy of acarbose."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "reduced blood concentration"
+      ],
+      "evidence": "Acarbose may reduce digoxin blood concentrations."
+    },
+    {
+      "drug": "Hyperglycemic Agents (calcium channel blockers, corticosteroids, estrogens, phenothiazines, thiazides, thyroid hormones)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "hyperglycemia"
+      ],
+      "evidence": "Hyperglycemic agents may reduce or negate the effects of acarbose."
+    },
+    {
+      "drug": "Hypoglycemic Agents (insulin, sulfonylureas)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia",
+        "additive effect"
+      ],
+      "evidence": "Concurrent use with hypoglycemic agents may increase the risk for hypoglycemia."
+    },
+    {
+      "drug": "Pancreatin, Pancrelipase, or Amylase",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "exogenous enzyme"
+      ],
+      "evidence": "Exogenous enzyme formulations may reduce the efficacy of acarbose."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 보조 치료 (초기 용량, 오프라벨)",
+          "value": "12.5 - 25",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 후 반응 불충분 시 50 mg/dog BID로 증량 가능. 체중 10-25 kg 초과 시 100 mg/dog BID까지 증량 고려 가능.",
+          "evidence": "식사 시(직전)에만 투여. mg/kg이 아닌 mg/dog 단위 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 보조 치료 (반응 불충분 시 증량, 오프라벨)",
+          "value": "50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 용량으로 2주 후 반응 불충분 시 적용.",
+          "evidence": "mg/kg이 아닌 mg/dog 단위 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 보조 치료 (체중 10-25 kg 초과 대형견, 반응 불충분 시, 오프라벨)",
+          "value": "100",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 10-25 kg 초과 시 반응 불충분할 경우 고려.",
+          "evidence": "mg/kg이 아닌 mg/dog 단위 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 보조 치료 (오프라벨)",
+          "value": "12.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "식사와 함께 투여. 저탄수화물 식이를 거부하는 고양이에서 가장 효과적.",
+          "evidence": "mg/kg이 아닌 mg/cat 단위 사용. 저탄수화물 식이를 먹는 건강한 고양이에서는 효과 없다는 연구 결과 있음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의 사용 권고. 심한 신기능 장애 시 혈청 농도가 정상의 약 5배에 달할 수 있음. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "중증 간질환 시 주의 사용 권고. 간 트랜스아미나제 모니터링 권장. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity to acarbose"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병성 케톤산증",
+      "match_terms": [
+        "diabetic ketoacidosis",
+        "DKA"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "염증성 장질환",
+      "match_terms": [
+        "inflammatory bowel disease",
+        "IBD"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "결장 궤양",
+      "match_terms": [
+        "colonic ulceration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부분 장폐색 또는 폐색 소인",
+      "match_terms": [
+        "partial intestinal obstruction",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "소화 또는 흡수 장애를 동반한 만성 장질환",
+      "match_terms": [
+        "chronic intestinal disease",
+        "malabsorption",
+        "maldigestion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저체중",
+      "match_terms": [
+        "underweight",
+        "low body weight"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "과도한 장내 가스 형성이 해로운 상태",
+      "match_terms": [
+        "excessive GI gas formation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "renal failure",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "췌장 알파-아밀라제 및 소장 알파-글루코시다제를 경쟁적으로 억제하여 복합 탄수화물 및 이당류의 포도당으로의 소화를 지연시킴. 이로 인해 식후 혈당 상승 및 인슐린 요구량 감소.",
+    "common_extra_effects": [
+      "방귀(flatulence)",
+      "연변(soft stools)",
+      "설사(diarrhea)",
+      "체중 감소(weight loss, 개에서)",
+      "간 트랜스아미나제 상승(드물게, 인간에서 고용량 장기 투여 시)"
+    ],
+    "dog_mechanism": "알파-글루코시다제 억제를 통한 식후 혈당 상승 억제. 단독 사용 시 혈당 조절 불충분할 가능성 높음.",
+    "dog_extra_effects": [
+      "연변 또는 수양성 변",
+      "설사",
+      "체중 감소"
+    ],
+    "cat_mechanism": "알파-글루코시다제 억제를 통한 식후 혈당 및 인슐린 AUC 감소. 저탄수화물 식이를 거부하는 고양이에서 가장 효과적.",
+    "cat_extra_effects": [
+      "방귀",
+      "연변",
+      "설사"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 오프라벨로 사용되며, 초기 용량은 12.5-25 mg/dog(mg/kg 아님) BID로 식사 직전 투여. 2주 후 반응 불충분 시 50 mg/dog BID, 체중 10-25 kg 초과 시 100 mg/dog BID까지 증량 가능. 혈당 조절 불량 원인 불명 시 고려할 수 있으나, 단독 사용으로는 충분한 혈당 조절이 어려움.",
+    "cat": "고양이에서 오프라벨로 사용되며, 12.5 mg/cat(mg/kg 아님) BID로 식사와 함께 투여. 저탄수화물 식이를 거부하고 아카보스 투여 후 단시간 내에 식사를 마치는 고양이에서 가장 효과적. 진행성 만성 신장 질환으로 식욕이 저하된 고양이에서는 효과 없을 수 있음. 건강한 고양이에서 식후 포도당 AUC 5-7.5%, 인슐린 AUC 35-45% 감소 보고."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 장애 및 중증 간질환 시 주의 사용. 고용량에서 위장관 부작용(설사, 체중 감소) 발생 가능성 높음. 단독 사용으로는 혈당 조절 불충분."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 장애 및 중증 간질환 시 주의 사용. 위장관 부작용(방귀, 연변, 설사) 발생 가능. 저탄수화물 식이를 먹는 고양이에서는 효과 없을 수 있음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 이하에서 보관하고 습기로부터 보호.",
+    "forms": [
+      "경구 정제 25 mg",
+      "경구 정제 50 mg",
+      "경구 정제 100 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아카보스는 알파-글루코시다제 억제제로, 식후 혈당 상승을 억제하는 항고혈당제입니다. 개와 고양이에서 경증~중등도 고혈당(250-350 mg/dL) 또는 인슐린 의존성 당뇨병의 보조 치료로 오프라벨 사용됩니다. 수의학적 허가 제품은 없으며, 단독 사용으로는 혈당 조절이 불충분할 가능성이 높습니다. 주요 부작용은 용량 의존적 위장관 증상(방귀, 연변, 설사)이며, 식사 직전에 투여해야 효과적입니다.",
+    "indications": "개와 고양이의 비인슐린 의존성 당뇨병에서 경증~중등도 고혈당 감소, 인슐린 의존성 당뇨병의 보조 치료, 인슐린 활성 피크가 너무 이른 경우의 보조 치료 (모두 오프라벨).",
+    "client_info": "이 약은 반드시 식사 직전에 투여하세요. 정제는 반으로 나누거나 분쇄하여 음식에 섞어 투여할 수 있습니다. 가장 흔한 부작용은 설사와 가스(방귀)입니다. 아카보스 자체는 저혈당을 유발하지 않지만, 인슐린 등 다른 혈당강하제와 함께 사용 시 저혈당 위험이 증가할 수 있습니다. 경련, 쓰러짐, 뒷다리 약화, 근육 떨림, 비틀거림, 무기력, 우울 등 저혈당 증상이 나타나면 즉시 수의사에게 연락하세요. 약효가 나타나기까지 최대 2주가 걸릴 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (partial)",
+      "Veterinary PK studies"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.protein_binding_percent",
+      "species_flags.washout_period_days",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/60.jsonl",
+    "extracted_at": "2026-03-11T07:53:08.563037+00:00",
+    "reviewer": null
+  }
+}

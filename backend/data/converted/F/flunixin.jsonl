@@ -1,0 +1,569 @@
+{
+  "id": "flunixin",
+  "drug_identity": {
+    "name_ko": "플루닉신",
+    "name_en": "Flunixin",
+    "active_ingredient": "Flunixin meglumine",
+    "brand_names": [
+      "Banamine",
+      "Banamine Paste",
+      "Banamine-S",
+      "Banamine Transdermal",
+      "Resflor Gold",
+      "Hexasol",
+      "Flumeglumine",
+      "Finadyne",
+      "Flu-Nix",
+      "Flunixamine",
+      "Flunixiject",
+      "Flunizine",
+      "Prevail",
+      "Suppressor",
+      "Vedagesic"
+    ],
+    "allergy_class": null,
+    "class": "NSAID",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "미국에서는 말, 소, 돼지에 FDA 승인. 개와 고양이에서의 사용은 더 안전한 FDA 승인 NSAID가 있으므로 권장되지 않음. 다른 국가에서는 개에 승인된 경우도 있음.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1500,
+        "unit": "mg"
+      },
+      {
+        "value": 16.5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "말에서 제거는 주로 담즙 배설을 통한 간 경로로 이루어짐. 소에서도 담즙 배설을 통해 제거됨."
+    },
+    "extra_information": "개에서 혈장 단백 결합률 92%, 반감기 약 3.7시간(IV). 말에서 경구 생체이용률 80%, 최고 혈청 농도 도달 시간 30분. 소에서 혈장 단백 결합률 99% 이상, 반감기 3.1~8.1시간. 분포용적: 말 약 0.15 L/kg, 소 0.78 L/kg."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이에 대한 수의학적 종 특이 PK 데이터 제한적. 개에서 고용량 또는 수술 전 사용 시 신부전 일화 보고 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS stimulation (intra-arterial)"
+        ],
+        "index": 1,
+        "evidence": "동맥 내 주사 시 CNS 자극(히스테리아), 운동실조, 과호흡, 근육 약화 보고. 정상 투여 경로에서는 CNS 영향 미미."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hematologic abnormalities",
+          "hypoproteinemia",
+          "bleeding risk",
+          "warfarin interaction"
+        ],
+        "index": 2,
+        "evidence": "혈액학적 이상, 저단백혈증 가능성. 와파린과 병용 시 출혈 위험 증가. 혈변 및 혈뇨 과용량 시 보고."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal shutdown",
+          "nephrotoxicity",
+          "nephrotoxic agents interaction",
+          "renal disease caution"
+        ],
+        "index": 3,
+        "evidence": "개에서 수술 전 고용량 사용 시 신부전 일화 보고. 신장 질환 환자에서 주의 사용 권고. 아미노글리코사이드 등 신독성 약물과 병용 시 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic disease caution",
+          "biliary excretion"
+        ],
+        "index": 2,
+        "evidence": "간 질환 환자에서 주의 사용 권고. 주요 대사 및 배설 경로가 간/담즙임."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "digoxin interaction",
+          "hemodynamics"
+        ],
+        "index": 1,
+        "evidence": "디곡신 혈중 농도 증가 가능. 패혈성 쇼크에서 혈역학 개선 효과 보고. 직접적 심장 독성 보고 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 영향에 대한 직접적 데이터 없음. 사용 자체가 권장되지 않음."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "GI ulceration",
+          "bleeding risk"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 직접적 혈액 독성 데이터 부족. NSAID 계열 약물로서 출혈 위험 존재."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal disease caution",
+          "nephrotoxicity"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 더 안전한 대안 약물 권장. 조류에서 신독성 보고됨. 고양이에서 신기능 저하 위험 추정."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic disease caution"
+        ],
+        "index": 1,
+        "evidence": "간 질환 환자에서 주의 사용 권고. 고양이 특이적 간 독성 데이터 부족."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 영향에 대한 직접적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 120,
+    "t_max_hr": 0.5,
+    "half_life_hr": {
+      "min": 1.6,
+      "max": 4.2,
+      "mean": 3.7,
+      "species": "dog"
+    },
+    "f_percent": 80,
+    "protein_binding_percent": 92,
+    "evidence": "말에서 경구 투여 후 평균 생체이용률 80%, 최고 혈청 농도 30분 내 도달. 작용 발현 2시간 이내, 최대 반응 12~16시간, 작용 지속 최대 30시간. 개 반감기(IV) 약 3.7시간, 혈장 단백 결합률 92%. 말 반감기 1.6~4.2시간, 소 3.1~8.1시간, 돼지 6~8시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. 플루닉신에 대한 약물 상호작용 연구는 충분히 이루어지지 않았으며, 대부분 다른 NSAID 계열 약물에서 보고되거나 이론적으로 추정된 상호작용임.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "혈압 강하 효과 감소"
+      ],
+      "evidence": "Some NSAIDs can reduce the blood pressure-lowering effects of ACE inhibitors."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "NSAID 혈중 농도 감소",
+        "GI 출혈 위험 증가"
+      ],
+      "evidence": "Concurrent use may decrease plasma NSAID levels and increase likelihood of GI adverse effects including blood loss."
+    },
+    {
+      "drug": "Corticosteroids (dexamethasone, prednisolone)",
+      "severity": 2,
+      "keywords": [
+        "GI 독성 위험 증가"
+      ],
+      "evidence": "Concurrent use may increase the risk for GI toxicity."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "사이클로스포린 혈중 농도 증가",
+        "신독성 위험 증가"
+      ],
+      "evidence": "NSAIDs may increase cyclosporine blood levels and increase the risk for nephrotoxicity."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "디곡신 혈중 농도 증가"
+      ],
+      "evidence": "NSAIDs may increase serum levels of digoxin; use with caution in patients with severe cardiac failure."
+    },
+    {
+      "drug": "Fluoroquinolones (enrofloxacin, moxifloxacin)",
+      "severity": 2,
+      "keywords": [
+        "AUC 증가",
+        "반감기 연장",
+        "상호 약동학적 상호작용"
+      ],
+      "evidence": "Enrofloxacin shown in dogs to increase AUC and elimination half-life of flunixin, and flunixin increases AUC and elimination half-life of enrofloxacin. Flunixin significantly increased moxifloxacin elimination half-life and total drug exposure (AUC)."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "이뇨 효과 감소",
+        "나트륨 배설 효과 감소"
+      ],
+      "evidence": "NSAIDs may reduce the saluretic and diuretic effects of furosemide."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "심각한 독성"
+      ],
+      "evidence": "Serious toxicity has occurred when NSAIDs have been used concomitantly with methotrexate; use together with caution."
+    },
+    {
+      "drug": "Nephrotoxic Agents (aminoglycosides, amphotericin B, cisplatin)",
+      "severity": 2,
+      "keywords": [
+        "신독성 위험 증가"
+      ],
+      "evidence": "Potential for increased risk for nephrotoxicity if used with NSAIDs."
+    },
+    {
+      "drug": "Oxytetracycline",
+      "severity": 2,
+      "keywords": [
+        "옥시테트라사이클린 청소율 증가"
+      ],
+      "evidence": "Flunixin increased clearance of oxytetracycline in dairy goats."
+    },
+    {
+      "drug": "Phenylbutazone",
+      "severity": 2,
+      "keywords": [
+        "플루닉신 청소율 증가",
+        "프로스타글란딘 억제 연장"
+      ],
+      "evidence": "Phenylbutazone administration 24 hours prior to flunixin increased flunixin clearance. Flunixin administration prior to phenylbutazone prolonged suppression of prostaglandin E2 and thromboxane B2."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "NSAID 혈중 농도 증가",
+        "반감기 연장"
+      ],
+      "evidence": "May cause a significant increase in serum levels and half-life of some NSAIDs."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "출혈 위험 증가"
+      ],
+      "evidence": "Use with NSAIDs may increase the risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "bird_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진통/해열 (비권장, 역사적 사용; 더 안전한 FDA 승인 NSAID 사용 권장)",
+          "value": "0.5 - 1.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.1,
+          "duration_note": "반복 투여 시 독성 위험 증가. 현재 개에서 사용 권장되지 않음.",
+          "evidence": "개에서 역사적으로 진통 및 해열 목적으로 사용되었으나, 현재는 FDA 승인 NSAID로 대체됨. 안과 수술 시 제한적 사용 가능성 언급."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신장 질환 환자에서 주의 사용 권고. 개에서 수술 전 고용량 사용 시 신부전 일화 보고. 조류에서 신독성 보고. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 질환 환자에서 주의 사용 권고. 주요 대사 경로가 간/담즙이므로 간 기능 저하 시 약물 축적 가능. 구체적인 용량 조절 기준은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "anaphylaxis",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "acute kidney injury",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "혈액 질환",
+      "match_terms": [
+        "hematologic disease",
+        "coagulopathy",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "위장관 궤양/미란",
+      "match_terms": [
+        "gastric ulcer",
+        "GI ulcer",
+        "EGUS",
+        "gastric erosion"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "분만 48시간 이내",
+      "match_terms": [
+        "parturition",
+        "periparturient",
+        "labor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조류",
+      "match_terms": [
+        "bird",
+        "avian",
+        "psittacine",
+        "raptor"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "사이클로옥시게나제(COX)의 강력한 억제제로서 프로스타글란딘 합성을 차단하여 진통, 항염증, 해열 효과를 나타냄. 패혈성 쇼크에서 혈역학 개선 효과도 보고됨.",
+    "common_extra_effects": [
+      "위장관 궤양/미란",
+      "저단백혈증",
+      "혈액학적 이상",
+      "과민반응(드문 아나필락시스)",
+      "주사 부위 조직 괴사(IM)",
+      "동맥 내 주사 시 CNS 자극, 운동실조, 과호흡, 근육 약화",
+      "분만 지연 및 사산 위험",
+      "태반 정체 및 자궁내막염(분만 후 24시간 이내 사용 시)"
+    ],
+    "dog_mechanism": "COX 억제를 통한 진통, 항염증, 해열 효과. 개에서 사용은 더 안전한 FDA 승인 NSAID로 대체됨.",
+    "dog_extra_effects": [
+      "구토",
+      "설사",
+      "고용량 또는 만성 사용 시 위장관 궤양",
+      "수술 전 고용량 사용 시 신부전(일화 보고)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "고양이에서 사용 권장되지 않음. 더 안전한 FDA 승인 NSAID 사용 권고."
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 플루닉신 사용은 더 안전하고 FDA 승인된 NSAID의 이용 가능성으로 인해 더 이상 권장되지 않습니다. 역사적으로 진통 및 해열 목적으로 사용되었으며, 안과 수술 시 제한적 사용 가능성이 언급되나 주의가 필요합니다. 개에서 가장 흔한 부작용은 위장관 장애이며, 수술 전 고용량 사용 시 신부전 일화 보고가 있습니다.",
+    "cat": "고양이에서 플루닉신 사용은 권장되지 않습니다. 더 안전하고 FDA 승인된 NSAID 제품이 이용 가능합니다. 고양이에서의 안전성 및 용량 데이터가 충분하지 않으므로 사용을 피해야 합니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 더 안전한 FDA 승인 NSAID 사용 권장. 사용 시 위장관 독성, 신독성 주의. 고용량 또는 수술 전 사용 시 신부전 위험."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 사용 권장되지 않음. 더 안전한 FDA 승인 NSAID 사용 권고."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "모든 플루닉신 제품은 2°C~30°C(36°F~86°F) 사이에 보관. 경피 용액은 최초 개봉 후 6개월 이내 사용. 주사용 바이알은 최초 천자 후 28일 이내 사용, 최대 10회 천자 가능. Resflor Gold®는 30°C 이상 보관 금지, 바이알 개봉 후 28일 이내 사용.",
+    "forms": [
+      "Flunixin Meglumine for Injection 50 mg/mL (50 mL, 100 mL, 250 mL vials)",
+      "Flunixin Meglumine Oral Paste 1500 mg/syringe (30 g syringes)",
+      "Flunixin Meglumine for Injection 50 mg/mL (100 mL vials, swine)",
+      "Flunixin Transdermal Solution 50 mg/mL (100 mL, 250 mL, 1 L bottles)",
+      "Flunixin 16.5 mg/mL + Florfenicol 300 mg/mL Injection (Resflor Gold)",
+      "Flunixin 20 mg/mL + Oxytetracycline 300 mg/mL Injection (Hexasol)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루닉신(Banamine®)은 주로 대동물(말, 소, 돼지)에서 사용되는 수의학 전용 NSAID입니다. 미국에서 말, 소, 돼지에 FDA 승인. 개와 고양이에서는 더 안전한 FDA 승인 NSAID가 있으므로 사용이 권장되지 않습니다. 말에서 산통 치료 시 내독소혈증 또는 장 괴사와 관련된 행동 및 심폐 징후를 가릴 수 있으므로 주의가 필요합니다. 초기 용량에 반응이 없으면 추가 투여는 효과가 없을 가능성이 높습니다.",
+    "indications": "【FDA 승인 적응증】말: 근골격계 질환의 염증 및 통증 완화, 산통 관련 내장 통증 완화. 소: 소 호흡기 질환(BRD) 관련 발열 조절, 내독소혈증, 급성 유방염, 내독소혈증의 염증 조절, 발굽 썩음병 관련 통증(경피 제형). 돼지: 돼지 호흡기 질환 관련 발열 조절. 【비승인(오프라벨) 사용】말: 제엽염, 포도막염(망아지), 결장염, 호흡기 질환. 소: 급성 호흡기 질환, 급성 대장균성 유방염, 통증. 양/염소: 진통. 페럿: 진통/항염증. 토끼/설치류: 진통. 개: 안과 수술 시 제한적 사용 가능성(주의 필요).",
+    "client_info": "【보호자 안내사항】\n• IM 주사 시 돼지를 제외하고 목 근육에 주사하지 마십시오.\n• 소에서 IM 경로는 비승인(오프라벨) 사용이며, 도축 시 식용 조직에 잔류물이 검출될 수 있습니다. IM 사용 후에는 더 긴 휴약 기간이 필요합니다.\n• 도축을 위해 출하될 소에는 플루닉신을 사용하지 마십시오.\n• 경피 용액은 피부가 젖어 있거나 투여 후 6시간 이내에 젖을 가능성이 있는 경우 사용하지 마십시오.\n• 경피 용액은 심각하고 잠재적으로 비가역적인 눈 손상 또는 피부 자극을 유발할 수 있습니다. 장갑과 적절한 눈 보호대를 착용하고, 피부 접촉을 방지하는 의복을 착용하십시오. 눈에 우발적으로 접촉된 경우 즉시 물로 씻고 의료 도움을 받으십시오.\n• 개와 고양이에서는 더 안전한 승인된 약물이 있으므로 플루닉신 사용을 피하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Dog-specific approved dosage",
+      "Cat-specific dosage",
+      "CYP enzyme profile",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Human-labeled products"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat.dosage_list",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/42.jsonl",
+    "extracted_at": "2026-03-11T02:17:45.719560+00:00",
+    "reviewer": null
+  }
+}

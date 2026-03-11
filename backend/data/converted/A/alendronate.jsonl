@@ -1,0 +1,507 @@
+{
+  "id": "alendronate",
+  "drug_identity": {
+    "name_ko": "알렌드로네이트",
+    "name_en": "Alendronate",
+    "active_ingredient": "Alendronate sodium",
+    "brand_names": [
+      "Fosamax",
+      "Adronat",
+      "Alendros",
+      "Arendal",
+      "Onclast",
+      "Fosamax Plus D"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용은 모두 허가 외(extra-label) 사용이며, 소동물에서의 경험이 매우 제한적임. 현재 수의용 허가 제품 없음.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 35,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 70,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "알렌드로네이트는 대사되지 않음(not metabolized). 흡수된 약물은 뼈에 빠르게 분포되거나 신장을 통해 배설됨. 뼈에 축적된 약물은 매우 느리게 제거됨."
+    },
+    "extra_information": "개에서 경구 생체이용률은 2% 미만이며, 고양이에서의 약동학 데이터는 없음. 혈장 단백 결합은 개에서 높지 않은 것으로 보고되나 랫드에서는 높음. 혈장 농도는 치료 용량 투여 후 사실상 검출 불가능. 개에서 말단 소실 반감기는 약 1000일로 추정되며, 인간에서는 약 10년으로 추정됨. 뼈에 통합된 후에는 더 이상 활성을 나타내지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터가 매우 제한적이므로 인간 데이터 및 단편적 보고를 참고함. 뼈에 주로 분포하며 신장으로 배설됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "musculoskeletal pain"
+        ],
+        "index": -1,
+        "evidence": "개에서 뇌 관련 직접적 독성 보고 없음. 근골격계 통증이 잠재적 부작용으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypocalcemia",
+          "hypophosphatemia"
+        ],
+        "index": -1,
+        "evidence": "과용량 시 저칼슘혈증 및 저인산혈증이 보고됨. 치료 용량에서도 혈청 칼슘 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal elimination",
+          "nephrotoxicity",
+          "renal dysfunction",
+          "renal impairment"
+        ],
+        "index": 2,
+        "evidence": "흡수된 약물은 신장으로 배설됨. 중증 신기능 저하(CrCl < 35 mL/min) 환자에서 사용 비권장. 아미노글리코사이드 병용 시 신독성 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "알렌드로네이트는 대사되지 않으므로 간 부담이 낮음. 간 관련 독성 보고 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 관련 직접적 독성 보고 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌 관련 직접적 독성 보고 없음."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypocalcemia"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 이온화 칼슘 모니터링 권장. 저칼슘혈증 위험 존재."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal impairment"
+        ],
+        "index": 2,
+        "evidence": "흡수된 약물은 신장으로 배설됨. 고양이에서의 신독성 데이터는 제한적이나 신기능 저하 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "알렌드로네이트는 대사되지 않으므로 간 부담이 낮음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적 독성 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 24000.0,
+      "species": "dog"
+    },
+    "f_percent": 2,
+    "protein_binding_percent": null,
+    "evidence": "개에서 경구 생체이용률 2% 미만. 인간에서는 1% 미만. 음식 섭취 시 생체이용률이 무시할 수 있는 수준으로 감소. 개에서 말단 소실 반감기 약 1000일(≈24000시간)로 추정. 인간에서는 약 10년. 혈장 농도는 치료 용량 후 사실상 검출 불가."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 대부분의 상호작용은 이론적(theoretical) 또는 인간/동물에서 보고된 것임.",
+  "drug_interactions": [
+    {
+      "drug": "Aminoglycosides (amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "hypocalcemia",
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may increase risk of hypocalcemia and nephrotoxicity. Use cautiously and monitor for signs of hypocalcemia."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "GI toxicity",
+        "renal impairment"
+      ],
+      "evidence": "Theoretically increased risk for GI toxicity and renal impairment; however, data are lacking."
+    },
+    {
+      "drug": "Calcium, Aluminum, Magnesium, or other polyvalent cation-containing oral products",
+      "severity": 3,
+      "keywords": [
+        "decreased bioavailability",
+        "chelation"
+      ],
+      "evidence": "Likely to significantly decrease oral bioavailability of alendronate. Patients should receive nothing by mouth other than water for 2 hours before and 30 minutes after oral administration."
+    },
+    {
+      "drug": "Loop Diuretics (furosemide)",
+      "severity": 2,
+      "keywords": [
+        "hypocalcemia",
+        "renal function"
+      ],
+      "evidence": "Concurrent use may increase risk for hypocalcemia. Monitor calcium levels and renal function."
+    },
+    {
+      "drug": "Estrogens (diethylstilbestrol, estradiol)",
+      "severity": 1,
+      "keywords": [
+        "bone density",
+        "additive effect"
+      ],
+      "evidence": "Concurrent use may increase effects on bone density."
+    },
+    {
+      "drug": "H2 Receptor Antagonists (famotidine, ranitidine)",
+      "severity": 2,
+      "keywords": [
+        "increased drug levels"
+      ],
+      "evidence": "Concurrent use may increase levels of both drugs."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "GI toxicity",
+        "renal impairment"
+      ],
+      "evidence": "Theoretically increased risk for GI toxicity and renal impairment; data are lacking. Use together cautiously and monitor renal function and GI toxicity signs."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (omeprazole, pantoprazole)",
+      "severity": 3,
+      "keywords": [
+        "decreased efficacy",
+        "reduced alendronate effect"
+      ],
+      "evidence": "Concurrent use may decrease effects of alendronate. Avoid combination."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "불응성 고칼슘혈증 또는 골종양 관련 통증 감소 (extra-label)",
+          "value": "10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "공복 상태에서 투여. 개별 체중 기반 mg/kg 용량이 아닌 고정 용량(10 mg/dog).",
+          "evidence": "Plumb's: 10 mg/dog (NOT mg/kg) PO once daily on an empty stomach."
+        },
+        {
+          "logic_type": "linear",
+          "context": "불응성 고칼슘혈증 또는 골종양 관련 통증 감소 (extra-label)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "공복 상태에서 투여.",
+          "evidence": "Plumb's: 2 mg/kg PO once daily on an empty stomach."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "특발성 고칼슘혈증 (extra-label)",
+          "value": "5 - 10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 5–10 mg/cat 주 1회 시작; 대부분 10 mg/cat/주로 시작. 6개월 관찰 기간 동안 일부 고양이는 15–20 mg/주로 증량. 투여 후 6 mL 수돗물 경구 투여 후 비강 주위에 버터 도포하여 타액 분비 유도 권장.",
+          "evidence": "Plumb's: Initially 5–10 mg/cat (NOT mg/kg) PO once weekly. Most cats started at 10 mg/cat weekly. Some cats increased to 15–20 mg/week by end of 6-month period."
+        },
+        {
+          "logic_type": "linear",
+          "context": "치아 흡수 병변 (extra-label)",
+          "value": "9",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 2회 투여. 치아 흡수 진행을 늦추거나 억제함.",
+          "evidence": "Plumb's: 9 mg/kg PO twice per week slowed or arrested the progression of tooth resorption."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "인간에서 중증 신기능 저하(CrCl < 35 mL/min) 환자에서 사용 비권장. 개와 고양이에서의 구체적인 신기능 기반 용량 조절 기준은 명시되지 않음. 신기능 저하 환자에서는 사용을 피하거나 극도로 주의하여 사용할 것."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "알렌드로네이트는 간에서 대사되지 않으므로 간기능 저하에 따른 용량 조절은 필요하지 않을 것으로 예상됨. 그러나 수의학적 데이터 부재."
+  },
+  "contraindications": [
+    {
+      "condition": "알렌드로네이트 과민반응",
+      "match_terms": [
+        "hypersensitivity to alendronate",
+        "bisphosphonate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "식도 이상 (협착, 이완불능증 등 식도 배출 지연)",
+      "match_terms": [
+        "esophageal stricture",
+        "achalasia",
+        "esophageal abnormality"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "severe renal dysfunction",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "저칼슘혈증",
+      "match_terms": [
+        "hypocalcemia",
+        "low ionized calcium"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "뼈 하이드록시아파타이트에 결합하여 파골세포 기능을 억제함으로써 골 흡수를 감소시킴. 이차적으로 세포자멸사 촉진, 파골세포 생성 억제, 혈관신생 억제, 암세포 증식 억제 효과도 있음.",
+    "common_extra_effects": [
+      "상부 위장관 자극 및 미란",
+      "식도염, 식도 궤양",
+      "구토",
+      "식욕부진",
+      "저칼슘혈증",
+      "저인산혈증",
+      "비정형 골절",
+      "근골격계 통증",
+      "턱뼈 괴사(드물게)"
+    ],
+    "dog_mechanism": "파골세포 기능 억제를 통한 골 흡수 감소. 골종양에서의 통증 감소 및 골육종 보조 치료에 활용.",
+    "dog_extra_effects": [
+      "구토",
+      "식욕부진",
+      "식도 자극 또는 궤양 (일화적 보고)"
+    ],
+    "cat_mechanism": "파골세포 기능 억제를 통한 골 흡수 감소. 특발성 고칼슘혈증 및 치아 흡수 병변 치료에 활용.",
+    "cat_extra_effects": [
+      "턱뼈 괴사 (1례 보고)",
+      "식도 자극 가능성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서의 사용 경험이 매우 제한적임. 불응성 고칼슘혈증 또는 골종양 관련 통증 감소에 사용될 수 있으나 모두 허가 외 사용임. 투여 후 30분간 산책 또는 운동을 통해 식도 문제 발생 위험을 줄일 수 있음. 혈청 이온화 칼슘을 정기적으로 모니터링해야 함.",
+    "cat": "고양이에서 특발성 고칼슘혈증 및 치아 흡수 병변 치료에 사용된 보고가 있음. 투여 후 6 mL 수돗물을 경구 투여하고 비강 주위에 버터를 발라 타액 분비를 유도하여 식도 통과 시간을 단축시키는 것이 권장됨. 고양이에서 턱뼈 괴사 1례가 보고된 바 있음. 이온화 칼슘을 월 1회 모니터링 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서의 사용 경험이 매우 제한적이며 현재 수의학적으로 실험적 사용으로 간주됨. 식도 자극/궤양 위험, 저칼슘혈증, 신독성 위험에 주의. 공복 상태에서 투여 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 사용 경험이 제한적이며 실험적 사용으로 간주됨. 턱뼈 괴사 1례 보고. 식도 자극 위험 감소를 위한 특별한 투여 방법 필요. 이온화 칼슘 정기 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "알렌드로네이트 정제는 밀폐 용기에 실온(20–25°C, 68–77°F) 보관; 15–30°C(59–86°F) 범위 허용. 경구 용액은 실온 보관; 냉동 금지.",
+    "forms": [
+      "경구 정제: 5, 10, 35, 40, 70 mg (발포정 포함)",
+      "경구 용액: 70 mg/75 mL (라즈베리 향)",
+      "Fosamax Plus D: 70 mg + 비타민 D3 (70 mcg 또는 140 mcg)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "알렌드로네이트는 경구 비스포스포네이트계 골 흡수 억제제로, 파골세포 기능을 억제하여 골 흡수를 감소시킵니다. 소동물에서의 사용 경험이 매우 제한적이며 모두 허가 외 사용입니다. 경구 생체이용률이 매우 낮으므로(2% 미만) 반드시 공복 상태에서 물과 함께 투여해야 합니다. 식도 자극/궤양 위험이 있으며, 저칼슘혈증 교정 후 사용해야 합니다. 혈청 이온화 칼슘을 정기적으로 모니터링해야 합니다.",
+    "indications": "【허가 외 사용】 개: 불응성 고칼슘혈증, 골종양 관련 통증 감소, 골육종 보조 치료. 고양이: 특발성 고칼슘혈증, 치아 흡수 병변 진행 억제. 수의용 허가 제품 없음.",
+    "client_info": "【보호자 안내】\n• 정제를 부수거나 쪼개지 마세요(수의사 지시가 없는 한).\n• 반드시 공복 상태에서 물과 함께 투여해야 합니다. 투여 후 최소 30분간 음식을 주지 마세요.\n• 투여 후 물을 충분히 마시게 하여 식도 문제를 예방하세요.\n• 구토나 불편함을 보이면 투여 후 산책이나 운동을 시키거나, 물을 마시게 하거나, 입술에 버터를 발라 타액 분비를 유도하세요(고양이의 경우 비강 주위에 버터 도포).\n• 가능한 부작용: 구토, 식욕부진, 식도/목 궤양, 골통증. 이상 증상 발견 시 즉시 수의사에게 연락하세요.\n• 정기적인 추적 검사(혈청 칼슘 등)가 필수적입니다. 검사 일정을 놓치지 마세요.\n• 수의사 지시 없이 임의로 투약을 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 45,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific veterinary PK values for cats",
+      "CYP enzyme profile",
+      "Protein binding percentage (dog/cat)",
+      "Onset of action",
+      "T_max",
+      "Oral bioavailability exact value for cats",
+      "Renal dose adjustment thresholds for dogs/cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.f_percent (cat)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "drug_identity.allergy_class"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/61.jsonl",
+    "extracted_at": "2026-03-11T08:16:24.581889+00:00",
+    "reviewer": null
+  }
+}

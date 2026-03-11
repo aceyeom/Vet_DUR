@@ -1,0 +1,710 @@
+{
+  "id": "tiletamine_zolazepam",
+  "drug_identity": {
+    "name_ko": "틸레타민/졸라제팜",
+    "name_en": "Tiletamine/Zolazepam",
+    "active_ingredient": "Tiletamine HCl / Zolazepam HCl",
+    "brand_names": [
+      "Telazol",
+      "Tilzolan",
+      "Tzed",
+      "Zoletil"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Flumazenil (zolazepam component only; use with caution as tiletamine effects will be unmasked)",
+    "reversal_evidence": "Flumazenil은 졸라제팜 성분을 역전시킬 수 있으나, 틸레타민 효과가 강화되므로 일반적으로 권장되지 않음. 과량 투여 시 지지 요법 및 기계적 환기 권장.",
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.04,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 약물의 4% 미만이 소변으로 미변화 형태로 배설됨. 돼지에서 졸라제팜 3종 대사체 및 틸레타민 1종 대사체가 소변, 혈장, 마이크로솜 배양에서 확인됨. 구체적인 CYP 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개: 틸레타민 반감기 1.25~2.5시간, 졸라제팜 반감기 1.5시간. 틸레타민 효과가 졸라제팜보다 길어 회복 시 흥분 가능. 고양이: 틸레타민 반감기 2.5시간, 졸라제팜 반감기 4.5시간. 졸라제팜 효과가 더 길어 회복 시 진정 지속. 신기능 저하 시 마취 지속 시간 및 회복 시간 연장 가능."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이 각각 Plumb's 수의학 데이터 기반. 신장: 신독성/신부전 언급, 간: 간대사 언급, 심장: 빈맥/심정지/혈압 변화 언급, 뇌: 해리성 마취/경련/신경학적 이상 언급, 혈액: 직접적 혈액독성 언급 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "dissociative anesthetic",
+          "athetoid movements",
+          "muscle rigidity",
+          "seizure activity",
+          "agitated recovery",
+          "hypertonia"
+        ],
+        "index": 1,
+        "evidence": "해리성 마취제로 뇌에 직접 작용. 아테토이드 운동, 근육 강직, 경련 활동, 흥분성 회복이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "직접적인 혈액독성 언급 없음. 혈압 변화(고혈압 또는 저혈압) 가능성 있으나 혈액 자체에 대한 독성은 보고되지 않음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "prolonged recovery",
+          "less than 4% excreted unchanged in urine",
+          "renal dysfunction"
+        ],
+        "index": 2,
+        "evidence": "신기능 저하 시 마취 지속 시간 및 회복 시간 연장. 신기능 저하 동물에서 용량 감량 권장. 뉴질랜드 흰 토끼에서 신독성 보고(개에서는 직접 언급 없으나 주의 필요)."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "주로 간에서 대사됨. 간독성에 대한 직접적 언급은 없으나 간이 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "cardiac arrest",
+          "hypertension",
+          "hypotension",
+          "cardiac depression"
+        ],
+        "index": 4,
+        "evidence": "개에서 지속적 빈맥(30분 지속) 흔함. 심정지, 고혈압 또는 저혈압, 폐부종 보고. 페노티아진과 병용 시 심장 억제 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "dissociative anesthetic",
+          "athetoid movements",
+          "neurologic abnormalities",
+          "seizures",
+          "prolonged recovery"
+        ],
+        "index": 1,
+        "evidence": "해리성 마취제로 뇌에 직접 작용. 대형 고양이과에서 경련, 지속적 회복, 영구적 신경학적 이상 보고. 졸라제팜 효과가 더 길어 회복 시 진정 지속."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "직접적인 혈액독성 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "prolonged recovery"
+        ],
+        "index": 2,
+        "evidence": "신기능 저하 시 마취 지속 시간 및 회복 시간 연장 가능. 용량 감량 권장."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 3,
+        "evidence": "주로 간에서 대사됨. 간독성에 대한 직접적 언급은 없음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "decreased blood pressure",
+          "cardiac arrest",
+          "hypertension",
+          "hypotension"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 IV 투여 후 일시적 혈압 감소 후 기저치 이상으로 상승. 심정지, 고혈압 또는 저혈압 보고."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 8,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.25,
+      "max": 2.5,
+      "mean": 1.875,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "개: IM 투여 후 평균 발현 시간 7.5분, 수술 마취 평균 지속 시간 약 27분, 회복 시간 평균 약 4시간. 틸레타민 반감기 1.25~2.5시간, 졸라제팜 반감기 1.5시간. 고양이: IM 투여 후 발현 시간 5~12분, 마취 지속 시간 약 21~60분, 회복 시간 1~5.5시간. 틸레타민 반감기 2.5시간, 졸라제팜 반감기 4.5시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 케타민 및 미다졸람 관련 상호작용도 포함(틸레타민/졸라제팜에 적용 가능성 있음).",
+  "drug_interactions": [
+    {
+      "drug": "Inhalational Anesthetics (isoflurane, sevoflurane)",
+      "severity": 2,
+      "keywords": [
+        "dose reduction required",
+        "CNS depression"
+      ],
+      "evidence": "Tiletamine/zolazepam과 병용 시 흡입 마취제 용량 감량 필요. 미다졸람 관련 상호작용으로도 확인됨."
+    },
+    {
+      "drug": "Barbiturates (phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "dose reduction required",
+        "CNS depression"
+      ],
+      "evidence": "Tiletamine/zolazepam과 병용 시 바르비투레이트 용량 감량 필요. 미다졸람과 병용 시 피크 농도 및 AUC 감소 가능."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "prolonged anesthesia",
+        "species-specific effect"
+      ],
+      "evidence": "고양이에서 클로람페니콜이 마취를 평균 약 30분 연장시킴. 개에서는 회복 시간에 영향 없음."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression",
+        "cardiac depression"
+      ],
+      "evidence": "페노티아진과 병용 시 호흡 및 심장 억제 증가 가능."
+    },
+    {
+      "drug": "Neuromuscular Blockers (succinylcholine, tubocurarine)",
+      "severity": 2,
+      "keywords": [
+        "enhanced respiratory depression",
+        "prolonged neuromuscular blockade"
+      ],
+      "evidence": "케타민 관련 상호작용: 신경근 차단제와 병용 시 호흡 억제 강화 또는 연장 가능."
+    },
+    {
+      "drug": "Thyroid Hormones",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "tachycardia"
+      ],
+      "evidence": "케타민 관련 상호작용: 갑상선 호르몬과 병용 시 고혈압 및 빈맥 유발 가능(인체 보고). 베타차단제(프로프라놀롤)가 이 효과 치료에 유용할 수 있음."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased midazolam concentration",
+        "CYP inhibition"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 아졸계 항진균제가 미다졸람(졸라제팜 유사) 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Calcium Channel Blockers (diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "increased midazolam concentration"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 칼슘 채널 차단제가 미다졸람 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 1,
+      "keywords": [
+        "increased midazolam concentration"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 시메티딘이 미다졸람 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "CNS Depressants",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression",
+        "CNS depression"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 기타 CNS 억제제와 병용 시 호흡 억제 위험 증가."
+    },
+    {
+      "drug": "Macrolides (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased midazolam concentration"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 마크로라이드계 항생제가 미다졸람 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "increased hypnotic effect",
+        "hypotension"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 오피오이드가 미다졸람의 최면 효과를 증가시킬 수 있음. 메페리딘과 병용 시 저혈압 보고."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased midazolam concentration",
+        "CYP induction"
+      ],
+      "evidence": "미다졸람 관련 상호작용: 리팜핀이 미다졸람의 피크 농도 및 AUC를 감소시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit_new_zealand_white"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "진단 목적 보정 (FDA 승인 라벨 용량)",
+          "value": "6.6 - 9.9",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 9.9,
+          "duration_note": "단기 처치용",
+          "evidence": "FDA 승인 라벨 용량. 대부분의 적응증에 필요한 용량보다 높을 수 있으므로 낮은 용량 고려 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "단기 소처치 (FDA 승인 라벨 용량)",
+          "value": "9.9 - 13.2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 26.4,
+          "duration_note": "보충 용량 필요 시 초기 용량 미만으로 투여; 총 용량 26.4 mg/kg 초과 금지",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (FDA 승인 라벨 용량)",
+          "value": "2.2 - 4.4",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.4,
+          "duration_note": "30~45초에 걸쳐 천천히 투여. 60초 후 마취 깊이 불충분 시 추가 투여 가능; 총 IV 용량 4.4 mg/kg 초과 금지. 흡입 마취제로 마취 유지.",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 유도 (비라벨 용량)",
+          "value": "3 - 4.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 4.5,
+          "duration_note": "이소플루란 마취 후 유지",
+          "evidence": "비라벨(extra-label) 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "공격적(다루기 어려운) 개 보정 (비라벨 용량)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "오피오이드, 고용량 메데토미딘, 미다졸람 조합으로 충분한 진정이 안 될 경우에만 사용. 일화적으로 오피오이드(모르핀, 하이드로모르폰)와 병용 시 5 mg/kg IM",
+          "evidence": "비라벨(extra-label) 용량."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "치과 처치, 농양 치료, 이물 제거 등 (FDA 승인 라벨 용량)",
+          "value": "9.7 - 11.9",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 11.9,
+          "duration_note": "단기 처치용",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경도~중등도 진통이 필요한 소처치 (열상, 거세 등) (FDA 승인 라벨 용량)",
+          "value": "10.6 - 12.5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 12.5,
+          "duration_note": null,
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "난소자궁적출술 및 발톱제거술 (FDA 승인 라벨 용량)",
+          "value": "14.3 - 15.8",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 72.0,
+          "duration_note": "보충 용량 필요 시 초기 용량 미만으로 투여; 총 용량 72 mg/kg 초과 금지",
+          "evidence": "FDA 승인 라벨 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경도 통증 완화가 필요한 처치 (비라벨 용량)",
+          "value": "2 - 5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "부토르파놀 2.5 mg 및 덱스메데토미딘 2.5 mL와 혼합 IM 투여 가능",
+          "evidence": "비라벨(extra-label) 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경도 통증 완화가 필요한 처치 (비라벨 용량, IM)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "부토르파놀 2.5 mg 및 덱스메데토미딘 2.5 mL와 혼합 IM 투여 가능",
+          "evidence": "비라벨(extra-label) 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중등도~중증 통증 완화가 필요한 처치 (비라벨 용량)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "메타돈 0.2 mg/kg IM과 병용. 아세프로마진-메타돈 조합 대비 우수한 진정 및 유사한 회복 제공.",
+          "evidence": "비라벨(extra-label) 용량."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "헌혈 전 건강한 고양이 진정 (비라벨 용량)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": null,
+          "evidence": "비라벨(extra-label) 용량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "구강 점막 투여 (비라벨 용량, 실험적)",
+          "value": "10 - 15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 15.0,
+          "duration_note": "실험 조건에서 건강한 고양이 보정에 효과적",
+          "evidence": "비라벨(extra-label) 용량. 구강 점막 투여(OTM)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "공격적인 고양이 보정 (일화적)",
+          "value": "3 - 5",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": 5.0,
+          "duration_note": "오피오이드(하이드로모르폰)와 병용 시 깊은 진정 유발",
+          "evidence": "일화적(anecdotal) 용량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 동물에서 마취 지속 시간 및 회복 시간이 연장될 수 있음. 노령 또는 쇠약한 동물, 신기능 저하 동물에서 용량 감량 권장. 구체적인 용량 조정 계수는 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's에 간기능 저하에 따른 구체적인 용량 조정 지침이 명시되지 않음. 간이 주요 대사 기관이므로 간기능 저하 시 주의 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "췌장 질환",
+      "match_terms": [
+        "pancreatitis",
+        "pancreatic disease",
+        "exocrine pancreatic insufficiency"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 심장 질환",
+      "match_terms": [
+        "severe cardiac disease",
+        "heart failure",
+        "cardiomyopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 폐 질환",
+      "match_terms": [
+        "severe pulmonary disease",
+        "respiratory failure",
+        "pneumonia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid",
+        "cesarean section"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "뉴질랜드 흰 토끼",
+      "match_terms": [
+        "New Zealand white rabbit",
+        "rabbit"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "노령 또는 쇠약한 동물",
+      "match_terms": [
+        "geriatric",
+        "debilitated",
+        "cachexia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's에 특정 유전적 감수성 언급 없음. 뉴질랜드 흰 토끼에서 신독성이 보고되었으나 유전적 기전은 명시되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "틸레타민은 해리성 마취제(케타민과 화학적으로 유사)이며, 졸라제팜은 벤조디아제핀계 진정제임. 두 약물의 조합은 케타민/디아제팜 또는 케타민/미다졸람 조합과 유사한 약리 작용을 나타냄.",
+    "common_extra_effects": [
+      "호흡 억제",
+      "일시적 무호흡",
+      "빈맥",
+      "고혈압 또는 저혈압",
+      "과도한 타액 분비 및 기관지/기도 분비물 증가",
+      "아테토이드 운동",
+      "근육 강직",
+      "근육 경련",
+      "고긴장증",
+      "청색증",
+      "심정지",
+      "폐부종",
+      "경련 활동",
+      "발성",
+      "불규칙하거나 지연된 회복",
+      "저체온증",
+      "IM 주사 후 통증",
+      "회복 시 구토"
+    ],
+    "dog_mechanism": "개에서 지속적 빈맥 후 혈압 감소가 나타나나 심박출량은 일반적으로 유지됨. 틸레타민 효과가 졸라제팜보다 길어 회복 시 흥분 및 아테토이드 운동 가능. 안압에 임상적 영향 없음.",
+    "dog_extra_effects": [
+      "지속적 빈맥(30분)",
+      "혈압 감소",
+      "흥분성 회복",
+      "권장 용량에서 불충분한 마취 보고",
+      "무호흡성 호흡"
+    ],
+    "cat_mechanism": "고양이에서 IV 투여 후 일시적(약 1분) 혈압 감소 후 기저치 이상으로 상승. 졸라제팜 효과가 틸레타민보다 길어 회복 시 진정 지속. 비강 내 및 IM 투여 시 안압에 영향 없음.",
+    "cat_extra_effects": [
+      "IM 주사 후 통증(용액의 낮은 pH로 인해)",
+      "회복 시 진정 지속",
+      "삽관 어려움(연하 반사 유지)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 라벨 용량은 대부분의 적응증에 필요한 것보다 높을 수 있으므로 낮은 비라벨 용량 사용을 고려해야 함. 틸레타민 효과가 졸라제팜보다 길어 회복 시 흥분 및 아테토이드 운동이 나타날 수 있음. 빈맥이 흔하며 30분간 지속될 수 있음. 회복이 고양이보다 거칠 수 있음. 안과용 윤활제 적용 필요.",
+    "cat": "고양이에서도 라벨 용량은 대부분의 상황에 필요한 것보다 높을 수 있으므로 낮은 비라벨 용량 사용을 고려해야 함. 졸라제팜 효과가 틸레타민보다 길어 회복 시 진정이 지속됨. IM 주사 후 통증이 있을 수 있음(낮은 pH). 연하 반사가 유지되어 삽관이 어려울 수 있으며, 국소 리도카인 또는 로쿠로늄 IV 사용으로 삽관 용이. 대형 고양이과(호랑이 등)에서는 경련, 지연 회복, 영구적 신경학적 이상, 사망 가능성으로 주의 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 노령, 쇠약한 개에서 용량 감량 필요. 빈맥 및 흥분성 회복 주의. 충분한 모니터링 및 환자 지원 시설(삽관, 환기) 갖춘 상황에서만 사용. 안과용 윤활제 적용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 저하, 노령, 쇠약한 고양이에서 용량 감량 필요. IM 주사 후 통증 주의. 삽관 어려움 대비 필요. 안과용 윤활제 적용 필요. 대형 고양이과에서는 사용 회피 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "미재구성 바이알: 실온(20°C-25°C) 보관. 재구성 후: 실온에서 7일, 냉장 시 56일 보관 가능. 무색~연한 호박색의 맑은 용액만 사용. DEA Schedule III(C-III) 통제 물질로 견고하게 건축되고 안전하게 잠긴 구역에 보관.",
+    "forms": [
+      "틸레타민 HCl 250 mg(유리 염기 기준) + 졸라제팜 HCl 250 mg(유리 염기 기준) 동결건조 분말/바이알 (5 mL 바이알). 5 mL 멸균 희석액(멸균 주사용수) 첨가 시 각 약물 50 mg/mL (합계 100 mg/mL) 농도 생성."
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "틸레타민/졸라제팜(Telazol®)은 해리성 마취제(틸레타민)와 벤조디아제핀(졸라제팜)의 고정 비율 복합 제제로, 케타민/디아제팜 조합과 유사하나 작용 시간이 더 길다. 개와 고양이에서 FDA 승인된 수의용 마취제/진정제이며 DEA Schedule III 통제 물질이다. 개에서는 틸레타민 효과가 졸라제팜보다 길어 회복 시 흥분이 나타날 수 있고, 고양이에서는 반대로 졸라제팜 효과가 더 길어 회복 시 진정이 지속된다. 췌장 질환, 중증 심폐 질환, 임신, 뉴질랜드 흰 토끼에서 금기. 신기능 저하 시 용량 감량 필요. 투여 후 안과용 윤활제 적용 필수. 체온 모니터링 필요(저체온증 유발 가능).",
+    "indications": "개: 마취 유도, 진단 목적 보정, 단기 소처치(약 30분). 고양이: 보정 또는 근육 이완을 동반한 마취. 비라벨: 말, 반추동물, 돼지, 페럿, 소형 포유류, 파충류 등 다양한 종에서 사용. 공격적인 동물 보정, 혈액 채취 전 진정 등.",
+    "client_info": "이 약물은 수의사 또는 수의 전문가만이 투여할 수 있는 마취제입니다. 임신 중이거나 임신이 의심되는 여성은 이 제품을 취급하지 않아야 합니다. 투여 후 동물의 눈이 열린 상태로 유지되므로 각막 건조 방지를 위해 안과용 윤활제를 적용합니다. 회복 중 동물의 체온, 호흡, 심박수를 면밀히 모니터링해야 합니다. 회복 시간은 개체마다 다를 수 있으며, 개에서는 평균 약 4시간, 고양이에서는 1~5.5시간이 소요될 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile",
+      "Oral bioavailability (F%)",
+      "Protein binding",
+      "Hepatic dose adjustment guidelines",
+      "Specific creatinine thresholds for dose adjustment",
+      "t_max_hr"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/47.jsonl",
+    "extracted_at": "2026-03-11T03:41:34.083571+00:00",
+    "reviewer": null
+  }
+}

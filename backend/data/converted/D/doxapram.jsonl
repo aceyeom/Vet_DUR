@@ -1,0 +1,706 @@
+{
+  "id": "doxapram",
+  "drug_identity": {
+    "name_ko": "독사프람",
+    "name_en": "Doxapram",
+    "active_ingredient": "Doxapram hydrochloride",
+    "brand_names": [
+      "Dopram-V",
+      "Dopram",
+      "Docatone",
+      "Doxapril",
+      "Respiram"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 20,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서 독사프람은 빠르게 대사되며, 대부분 대사산물로 투여 후 24~48시간 이내에 소변 및 대변으로 배설됨. 소량의 대사산물은 투여 후 최대 120시간까지 배설될 수 있음. CYP 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "개와 고양이에 대한 공개된 약동학 데이터는 거의 없음. 말에서 IV 투여 시 단백결합률 76~85%, 분포용적 중앙값 1.2 L/kg, 생물학적 반감기 중앙값 약 2~3시간, 혈장 청소율 중앙값 10.6~10.9 mL/분/kg. 신생 양(생후 2~6일)에서 2.5 mg/kg IV 투여 후 말단 반감기 5.2시간, 청소율 9 mL/kg/분, Cmax 3.1 mg/L, 겉보기 분포용적 1.2 L/kg."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개와 고양이에 대한 수의학적 종별 PK 데이터가 제한적이므로 인체 및 동물 실험 데이터를 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "seizures",
+          "cerebral blood flow reduction",
+          "CNS excitation"
+        ],
+        "index": 1,
+        "evidence": "독사프람은 용량 증가 시 중추 호흡 중추 및 뇌척수 전반을 자극하며, 실험동물에서 뇌혈류 감소가 보고됨. 발작 및 전반적 CNS 흥분이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypertension",
+          "arrhythmias",
+          "tachycardia",
+          "catecholamine release",
+          "hemolysis"
+        ],
+        "index": 2,
+        "evidence": "카테콜아민 방출 증가, 고혈압, 부정맥, 빈맥이 보고됨. 급속 IV 주입 시 용혈 위험이 있음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal function impairment"
+        ],
+        "index": 3,
+        "evidence": "신기능 장애가 독사프람에 대한 반응을 변화시킬 수 있다고 언급됨. 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "hepatic function impairment"
+        ],
+        "index": 4,
+        "evidence": "간기능 장애가 독사프람에 대한 반응을 변화시킬 수 있다고 언급됨. 개에서 빠른 간 대사가 보고됨."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "increased myocardial oxygen demand",
+          "arrhythmias",
+          "hypertension",
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "실험동물에서 심근 산소 요구량 증가가 보고됨. 고혈압, 부정맥, 빈맥이 부작용으로 보고됨. 심혈관 기능 장애 환자에서 금기."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "seizures",
+          "cerebral blood flow reduction"
+        ],
+        "index": 1,
+        "evidence": "개와 동일한 CNS 자극 기전이 적용됨. 고양이 신생아에서 사용 시 논란이 있으며 뇌혈류 감소 위험이 있음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hypertension",
+          "arrhythmias",
+          "catecholamine release",
+          "hemolysis"
+        ],
+        "index": 2,
+        "evidence": "카테콜아민 방출 증가, 고혈압, 부정맥이 보고됨. 급속 IV 주입 시 용혈 위험."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal function impairment"
+        ],
+        "index": 3,
+        "evidence": "신기능 장애가 반응을 변화시킬 수 있다고 언급됨. 고양이 특이적 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic function impairment"
+        ],
+        "index": 4,
+        "evidence": "간기능 장애가 반응을 변화시킬 수 있다고 언급됨. 고양이 특이적 간 대사 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "increased myocardial oxygen demand",
+          "arrhythmias",
+          "hypertension",
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "심근 산소 요구량 증가, 부정맥, 고혈압이 보고됨. 고양이 신생아에서 사용 시 심혈관 위험 고려 필요."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 2,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 3.0,
+      "mean": 2.5,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 80,
+    "evidence": "IV 주사 후 발현 시간은 인간 및 동물에서 보통 2분 이내. 반감기는 말에서 중앙값 약 2~3시간(범위 사용). 단백결합률은 말에서 76~85%(중앙값 ~80% 사용). 개와 고양이에 대한 직접적인 PK 데이터는 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 승압 효과 가산으로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Inhalant Anesthetics (e.g., halothane)",
+      "severity": 2,
+      "keywords": [
+        "catecholamine sensitization",
+        "arrhythmia",
+        "epinephrine release"
+      ],
+      "evidence": "Doxapram may increase epinephrine release; use should be delayed ≈10 minutes after discontinuation of anesthetic agents that sensitize the myocardium to catecholamines (e.g., halothane). Not applicable to isoflurane."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "additive pressor effect",
+        "hypertension"
+      ],
+      "evidence": "Additive pressor effects may occur when doxapram is used concurrently with MAOIs."
+    },
+    {
+      "drug": "Muscle Relaxants (e.g., guaifenesin, methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "masking effect",
+        "muscle relaxation"
+      ],
+      "evidence": "Doxapram may mask the effects of muscle relaxant drugs."
+    },
+    {
+      "drug": "Neuromuscular Blockers (e.g., pancuronium, vecuronium)",
+      "severity": 2,
+      "keywords": [
+        "masking residual effects",
+        "neuromuscular blockade"
+      ],
+      "evidence": "Doxapram may temporarily mask residual effects of neuromuscular blockers."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., dopamine, epinephrine, phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "additive pressor effect",
+        "hypertension"
+      ],
+      "evidence": "Additive pressor effects may occur when doxapram is used with sympathomimetic agents."
+    },
+    {
+      "drug": "Theophylline / Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "skeletal muscle hyperactivity",
+        "agitation",
+        "hyperactivity"
+      ],
+      "evidence": "Additive skeletal muscle activity, agitation, and hyperactivity may occur with concurrent use."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "low"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "가스 마취 중/후 호흡 자극 및 각성 촉진 (FDA 승인)",
+          "value": "1.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 15~20분 후 반복 가능",
+          "evidence": "Label dosage; FDA-approved for use with gas anesthesia"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바르비투레이트 마취 중/후 호흡 자극 및 각성 촉진 (FDA 승인)",
+          "value": "5.5 - 11",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 15~20분 후 반복 가능",
+          "evidence": "Label dosage; FDA-approved for use with barbiturate anesthesia"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신생 강아지 제왕절개 또는 난산 후 호흡 개시 (FDA 승인)",
+          "value": "1 - 5",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/puppy (mg/kg 아님). SC, SL, 또는 제대정맥 투여. 필요 시 15~20분 후 반복 가능. 주의: 인간에서 신생아에 대한 일상적 사용은 더 이상 권장되지 않음.",
+          "evidence": "Label dosage; FDA-approved for neonatal puppies"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신생아 호흡 기능 자극 (허가 외)",
+          "value": "0.1",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "0.1 mL (2 mg)/신생아 (mL/kg 아님). IV, IM, SL 투여. 산소 치료 후 저빈도, 헐떡임, 불규칙 호흡 패턴을 보이는 신생아에게 가장 유익할 가능성 높음.",
+          "evidence": "Extra-label; anecdotal/referenced dosage for neonates"
+        },
+        {
+          "logic_type": "linear",
+          "context": "후두 기능 평가 (허가 외)",
+          "value": "0.25 - 2.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "호흡 자극 및 내재적 후두 운동 증가 목적",
+          "evidence": "Extra-label; multiple referenced studies for laryngeal function assessment"
+        },
+        {
+          "logic_type": "linear",
+          "context": "아세프로마진의 진정 효과 감소 (허가 외)",
+          "value": "1.25",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "아세프로마진 0.05 mg/kg IM 투여 30분 후 투여",
+          "evidence": "Extra-label; study with 10 dogs"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "가스 마취 중/후 호흡 자극 및 각성 촉진 (FDA 승인)",
+          "value": "1.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 15~20분 후 반복 가능",
+          "evidence": "Label dosage; FDA-approved for use with gas anesthesia"
+        },
+        {
+          "logic_type": "linear",
+          "context": "바르비투레이트 마취 중/후 호흡 자극 및 각성 촉진 (FDA 승인)",
+          "value": "5.5 - 11",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "필요 시 15~20분 후 반복 가능",
+          "evidence": "Label dosage; FDA-approved for use with barbiturate anesthesia"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "신생 고양이 제왕절개 또는 난산 후 호흡 개시 (FDA 승인)",
+          "value": "1 - 2",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kitten (mg/kg 아님). SC 또는 설하 투여. 필요 시 15~20분 후 반복 가능. 주의: 인간에서 신생아에 대한 일상적 사용은 더 이상 권장되지 않음.",
+          "evidence": "Label dosage; FDA-approved for neonatal kittens"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애가 독사프람에 대한 반응을 변화시킬 수 있다고 언급되어 있으나, 구체적인 용량 조절 지침은 제시되지 않음. 신기능 장애 환자에서 주의 사용 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애가 독사프람에 대한 반응을 변화시킬 수 있다고 언급되어 있으나, 구체적인 용량 조절 지침은 제시되지 않음. 간기능 장애 환자에서 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "Hypersensitivity to doxapram",
+      "match_terms": [
+        "doxapram hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Mechanical ventilation",
+      "match_terms": [
+        "mechanical ventilation",
+        "ventilator support"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Seizure disorders",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "convulsions"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Head trauma",
+      "match_terms": [
+        "head trauma",
+        "traumatic brain injury"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Decompensated heart failure",
+      "match_terms": [
+        "decompensated heart failure",
+        "CHF",
+        "congestive heart failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Severe hypertension",
+      "match_terms": [
+        "severe hypertension",
+        "hypertensive crisis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Airway obstruction",
+      "match_terms": [
+        "airway obstruction",
+        "upper airway obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pulmonary embolism",
+      "match_terms": [
+        "pulmonary embolism",
+        "PE"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pneumothorax",
+      "match_terms": [
+        "pneumothorax"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Asthma history",
+      "match_terms": [
+        "asthma",
+        "bronchospasm"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Arrhythmias or tachycardia",
+      "match_terms": [
+        "arrhythmia",
+        "tachycardia",
+        "cardiac arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Cerebral edema or increased CSF pressure",
+      "match_terms": [
+        "cerebral edema",
+        "increased intracranial pressure",
+        "elevated CSF pressure"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pheochromocytoma",
+      "match_terms": [
+        "pheochromocytoma"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Hyperthyroidism",
+      "match_terms": [
+        "hyperthyroidism",
+        "thyrotoxicosis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Renal impairment",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "kidney disease",
+        "renal insufficiency"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "Hepatic impairment",
+      "match_terms": [
+        "liver disease",
+        "hepatic failure",
+        "hepatic insufficiency"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "말초 화학수용체(경동맥체)를 직접 자극하여 카테콜아민 및 기타 신경전달물질 방출을 유도함. 용량 증가 시 중추 호흡 중추 및 뇌척수 전반을 자극하여 전반적인 CNS 흥분을 일으킴. 호흡 자극으로 1회 호흡량 증가 및 호흡수 약간 증가, 산소 소비량 및 이산화탄소 생성 증가.",
+    "common_extra_effects": [
+      "고혈압",
+      "부정맥",
+      "발작",
+      "과호흡(호흡성 알칼리증)",
+      "심근 산소 요구량 증가",
+      "뇌혈류 감소",
+      "빈맥",
+      "구토",
+      "골격근 과활동",
+      "혈전정맥염(단일 주사 부위 장기 사용 시)",
+      "용혈(급속 IV 주입 시)"
+    ],
+    "dog_mechanism": "개에서 독사프람은 빠르게 대사되며 대부분 대사산물로 24~48시간 이내에 소변 및 대변으로 배설됨.",
+    "dog_extra_effects": [
+      "마취 심도 감소(수술 중 사용 시)",
+      "신생아에서 심근 산소 요구량 증가 및 뇌혈류 감소 위험"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "신생아에서 심근 산소 요구량 증가 및 뇌혈류 감소 위험"
+    ]
+  },
+  "species_notes": {
+    "dog": "독사프람은 개에서 가스 마취 및 바르비투레이트 마취 후 호흡 자극 및 각성 촉진에 FDA 승인됨. 신생 강아지에서 제왕절개 또는 난산 후 호흡 개시에도 승인되어 있으나, 심근 산소 요구량 증가 및 뇌혈류 감소 위험으로 인해 이 목적의 사용은 논란이 있음. 후두 기능 평가 및 아세프로마진 진정 효과 감소에 허가 외 사용됨. 바르비투레이트(예: 펜토바르비탈)에 의한 호흡 억제는 역전시키지 못함. LD50(IV): 40~100 mg/kg.",
+    "cat": "독사프람은 고양이에서 가스 마취 및 바르비투레이트 마취 후 호흡 자극 및 각성 촉진에 FDA 승인됨. 신생 고양이에서 제왕절개 또는 난산 후 호흡 개시에도 승인되어 있으나, 심근 산소 요구량 증가 및 뇌혈류 감소 위험으로 인해 이 목적의 사용은 논란이 있음. 신생아에서 반복 IV 투여 시 제품 내 벤질알코올 함유로 주의 필요. LD50(IV): 40~100 mg/kg."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 및 간기능 장애 시 반응 변화 가능. 신생아에서 사용 논란. 뇌부종, 증가된 CSF 압력, 갈색세포종, 갑상선기능항진증 환자에서 극도의 주의 필요. 단일 IV 주사 부위 장기 사용 시 혈전정맥염 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "신기능 및 간기능 장애 시 반응 변화 가능. 신생아에서 사용 논란. 반복 IV 투여 시 벤질알코올 함유 제품 주의. 뇌부종, 증가된 CSF 압력, 갈색세포종, 갑상선기능항진증 환자에서 극도의 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20~25°C, 68~77°F) 보관. 동결 금지.",
+    "forms": [
+      "Doxapram HCl for Injection 20 mg/mL, 20 mL 다회용 바이알 (Dopram-V, Respiram)",
+      "Doxapram HCl for Injection 20 mg/mL, 20 mL 다회용 바이알 (Dopram) [인체용]"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "독사프람은 CNS/호흡 자극제로, 마취 중/후 호흡 자극 및 각성 촉진, 신생 강아지·고양이의 호흡 개시(제왕절개 또는 난산 후), 소동물의 후두 기능 평가에 사용됨. 안전역이 좁으며, 고혈압·부정맥·발작·과호흡 등의 부작용이 보고됨. 신생아에서의 사용은 심근 산소 요구량 증가 및 뇌혈류 감소 위험으로 논란이 있음. 기계적 환기 대체제로 사용해서는 안 됨. MAOI와 병용 시 승압 효과 가산으로 위험.",
+    "indications": "FDA 승인(개, 고양이, 말): 마취 중/후 호흡 자극 및 각성 촉진; 신생 강아지·고양이의 제왕절개 또는 난산 후 호흡 개시. 허가 외: 소동물 후두 기능 평가; 아세프로마진 진정 효과 감소; CNS 억제제(예: 방사선 불투과성 조영제, CNS 억제 약물)에 의한 호흡 억제 치료; 조류·소형 포유류·파충류의 응급 호흡 억제 치료.",
+    "client_info": "이 약물은 반드시 동물병원 내 입원 환경 또는 수의사의 직접적인 전문 감독 하에서만 사용되어야 합니다. 가정에서 사용하기 위한 약물이 아닙니다. 신생 강아지나 고양이에게 사용 시 심장 및 뇌에 대한 잠재적 위험이 있으므로 수의사와 충분히 상담하시기 바랍니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed dog/cat pharmacokinetics",
+      "CYP metabolic pathway",
+      "Oral bioavailability data",
+      "Specific renal/hepatic dose adjustment guidelines"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/15.jsonl",
+    "extracted_at": "2026-03-10T17:37:32.546997+00:00",
+    "reviewer": null
+  }
+}

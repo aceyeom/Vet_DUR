@@ -1,0 +1,591 @@
+{
+  "id": "clonidine",
+  "drug_identity": {
+    "name_ko": "클로니딘",
+    "name_en": "Clonidine",
+    "active_ingredient": "Clonidine hydrochloride",
+    "brand_names": [
+      "Catapres",
+      "Duraclon"
+    ],
+    "allergy_class": null,
+    "class": "Sedative",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Atipamezole, Yohimbine",
+    "reversal_evidence": "과다복용 시 아티파메졸 또는 요힘빈이 심혈관 효과 역전에 사용될 수 있으나, 임상 증상이 최대 48시간 지속될 수 있어 다회 투여가 필요할 수 있음.",
+    "off_label_note": "수의학적 승인 제품 없음. 모든 동물 적응증은 허가 외(extra-label) 사용임.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Patch"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.1,
+        "unit": "mg"
+      },
+      {
+        "value": 0.2,
+        "unit": "mg"
+      },
+      {
+        "value": 0.3,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 500,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.6,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "투여량의 최대 60%가 소변으로 미변화체로 배설되며, 나머지는 간에서 대사됨. 활성 대사체(p-hydroxyclonidine) 1종 확인됨."
+    },
+    "extra_information": "고양이에서 클로니딘은 2-구획 개방 모델을 나타내며 조직으로 빠르게 분포함. 개에서의 약동학 데이터는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "점수는 모노그래프에서 언급된 키워드 및 임상 효과에 기반하여 산출됨. 수의학적 종별 PK 데이터가 제한적이므로 주로 인체 데이터 및 임상 보고를 참조함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "ataxia",
+          "aggressive behavior",
+          "seizure threshold"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, 공격적 행동, 운동실조가 보고됨. 뇌간의 알파-2 수용체 자극을 통해 중추신경계 교감신경 출력을 감소시킴. 척수 내 진통 효과도 있음."
+      },
+      "blood": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "collapse",
+          "blood pressure"
+        ],
+        "index": 2,
+        "evidence": "개에서 서맥, 저혈압, 허탈이 보고됨. 심박수 및 혈압 감소가 주요 심혈관 효과임."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal insufficiency",
+          "renal elimination",
+          "renal vascular resistance"
+        ],
+        "index": 3,
+        "evidence": "신기능 부전 환자에서 반감기 연장 가능. 투여량의 60%가 신장으로 배설됨. 신혈관 저항 감소 효과 있음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "active metabolite"
+        ],
+        "index": 4,
+        "evidence": "나머지 40%가 간에서 대사되며 활성 대사체(p-hydroxyclonidine)가 생성됨."
+      },
+      "heart": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiac rate",
+          "AV block",
+          "cardiovascular disease"
+        ],
+        "index": 5,
+        "evidence": "심박수 감소, 서맥이 주요 부작용으로 보고됨. 심한 심혈관 질환 환자에서 주의 사용 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "sedation",
+          "CNS depression",
+          "ataxia",
+          "2-compartment model"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 2-구획 모델로 조직 내 빠른 분포가 확인됨. 진정 및 운동실조가 예상 부작용임."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension"
+        ],
+        "index": 2,
+        "evidence": "고양이에서도 서맥 및 저혈압이 예상 부작용으로 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "신기능 부전 시 용량 조절 필요. 신장 배설 비율이 높음(60%)."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 4,
+        "evidence": "간에서 부분적으로 대사됨."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "bradycardia",
+          "cardiac rate"
+        ],
+        "index": 5,
+        "evidence": "고양이에서도 심박수 감소 및 서맥이 예상 부작용임."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 12.0,
+      "max": 16.0,
+      "mean": 14.0,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 경구 투여 후 최고 혈장 농도 도달 시간 1~3시간. 경막외 투여 후 최대 진통 효과 30~60분 이내. 정상 신기능 인체에서 반감기 12~16시간. 고용량 또는 신기능 저하 시 반감기 연장 가능. 수의학적 종별 PK 데이터 제한적."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 병용 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antihypertensive Drugs (amlodipine, enalapril, hydralazine, sildenafil, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension",
+        "blood pressure reduction"
+      ],
+      "evidence": "클로니딘과 병용 시 부가적 저혈압 효과 가능. 혈압 모니터링 필요."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (propranolol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "rebound hypertension",
+        "withdrawal"
+      ],
+      "evidence": "클로니딘과 병용 시 서맥 악화 가능. 클로니딘 중단 시 베타차단제를 먼저 중단해야 반동성 고혈압 예방 가능."
+    },
+    {
+      "drug": "Calcium Channel Blockers (diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "sinus bradycardia",
+        "AV block",
+        "heart rate"
+      ],
+      "evidence": "동성 서맥 및 완전 방실 차단 위험 증가. 혈압 및 심박수 면밀한 모니터링 필요."
+    },
+    {
+      "drug": "CNS Depressant Drugs (barbiturates, opioids)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "sedation",
+        "additive effect"
+      ],
+      "evidence": "클로니딘이 다른 CNS 억제제의 작용을 악화시킬 수 있음."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "additive effect"
+      ],
+      "evidence": "부가적 서맥 가능. 혈압 및 심박수 면밀한 모니터링 필요."
+    },
+    {
+      "drug": "Glucocorticoids (dexamethasone, prednisolone)",
+      "severity": 1,
+      "keywords": [
+        "fluid retention",
+        "sodium retention",
+        "reduced antihypertensive effect"
+      ],
+      "evidence": "수분 및 나트륨 저류로 인해 클로니딘의 항고혈압 효과 감소 가능."
+    },
+    {
+      "drug": "Prazosin",
+      "severity": 1,
+      "keywords": [
+        "reduced antihypertensive effect"
+      ],
+      "evidence": "프라조신이 클로니딘의 항고혈압 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Stimulants (doxapram)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "tachycardia"
+      ],
+      "evidence": "병용 시 고혈압 및 빈맥 위험 증가. 맥박 및 혈압 모니터링 필요."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 3,
+      "keywords": [
+        "severe hypertension",
+        "antihypertensive blockade",
+        "corneal opacities",
+        "withdrawal"
+      ],
+      "evidence": "TCA가 클로니딘의 항고혈압 효과를 차단하고 심한 고혈압 위험 증가. 각막 혼탁 위험 증가. 가능하면 병용 피해야 함. 병용 시 혈압 면밀 모니터링 필요. 두 약물 모두 점진적으로 중단해야 함."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 2.9
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "상황적 공포, 공포증, 분리불안의 보조 치료 (허가 외)",
+          "value": "0.01 - 0.05",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 0.05,
+          "duration_note": "유발 사건 약 1.5~2시간 전 필요 시 동일 용량 사용 가능. 중앙 유효 용량 0.017~0.026 mg/kg.",
+          "evidence": "개방 임상 시험에서 공포 기반 행동 문제에 효과적임이 시사됨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "경막외 진통 (허가 외) - 고정 용량",
+          "value": "150",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "마취 유도 직후 투여. 단위 주의: µg/dog (체중 기준 아님)",
+          "evidence": "마취 유도 직후 150 µg/dog (µg/kg 아님) 경막외 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 (허가 외) - 리도카인 병용",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "리도카인 1% (2.5 mg/kg)와 병용. 이소플루란 보충 필요.",
+          "evidence": "리도카인과 병용 경막외 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 전 투약 (허가 외)",
+          "value": "6 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "에토미데이트/할로탄 마취 전 투여.",
+          "evidence": "에토미데이트/할로탄 마취 전 IV 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "성장호르몬 결핍 진단 (허가 외)",
+          "value": "10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 전 및 15, 30, 45, 60, 120분 후 혈장 GH 농도 측정. 검사 전 실험실 프로토콜 확인 필요.",
+          "evidence": "정상 개는 클로니딘 투여 후 GH 농도 10 ng/mL 이상 도달해야 함."
+        },
+        {
+          "logic_type": "linear",
+          "context": "난치성 염증성 장질환의 보조 지사제 치료 (허가 외)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 투여. CRTZ의 알파-2 수용체 활성화로 구토 유발 가능.",
+          "evidence": "난치성 IBD 보조 치료로 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "난치성 염증성 장질환의 보조 지사제 치료 (허가 외) - SC",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 투여.",
+          "evidence": "난치성 IBD 보조 치료로 SC 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "난치성 염증성 장질환의 보조 지사제 치료 (허가 외) - 4차 치료",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "프로스타글란딘 합성효소 억제제, 오피오이드 작용제, 5-HT3 길항제 사용 후 4차 치료로 사용. 하루 2~3회.",
+          "evidence": "고양이 난치성 IBD에서 4차 치료로 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "난치성 염증성 장질환의 보조 지사제 치료 (허가 외) - PO",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "하루 2~3회 투여.",
+          "evidence": "고양이 난치성 IBD에서 경구 투여."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 부전 환자에서 용량 감량이 필요할 수 있음. 신기능 저하 시 반감기가 연장될 수 있음. 구체적인 용량 조절 기준은 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 구체적인 언급 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "클로니딘 과민증",
+      "match_terms": [
+        "hypersensitivity to clonidine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 심혈관 질환 (전도 장애, 심부전)",
+      "match_terms": [
+        "severe cardiovascular disease",
+        "conduction disturbance",
+        "heart failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 부전",
+      "match_terms": [
+        "renal insufficiency",
+        "renal failure",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "뇌간의 알파-2 아드레날린 수용체를 자극하여 중추신경계로부터의 교감신경 출력을 감소시키고, 혈압, 심박수, 말초 혈관 저항을 낮춤. 척수의 시냅스 전 및 접합 후 알파-2 수용체에서 중추 진통 효과 발휘. 위장관에서 수분 및 전해질 흡수 증가.",
+    "common_extra_effects": [
+      "일시적 고혈당",
+      "구강 건조",
+      "변비",
+      "진정",
+      "공격적 행동",
+      "저혈압",
+      "허탈",
+      "서맥",
+      "운동실조",
+      "구토"
+    ],
+    "dog_mechanism": "개에서 뇌간 알파-2 수용체 자극을 통한 교감신경 억제. 척수 내 진통 효과. 성장호르몬 방출 촉진(지속 투여 시 효과 소실).",
+    "dog_extra_effects": [
+      "서맥",
+      "저혈압",
+      "진정",
+      "공격적 행동",
+      "허탈",
+      "운동실조"
+    ],
+    "cat_mechanism": "고양이에서 2-구획 개방 모델로 조직 내 빠른 분포. 알파-2 수용체 자극을 통한 교감신경 억제.",
+    "cat_extra_effects": [
+      "진정",
+      "서맥",
+      "저혈압",
+      "운동실조"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 클로니딘은 마취 전 투약, 경막외 진통 보조, 공포 기반 행동 문제 보조 치료, 성장호르몬 결핍 및 갈색세포종 진단, 난치성 IBD 보조 지사제로 사용될 수 있음. IV 투여 시 진정, 공격적 행동, 저혈압, 허탈, 서맥(아트로핀 반응성) 등의 부작용이 15~60분간 지속될 수 있음. 경막외 및 IM 투여 후에도 서맥과 저혈압이 보고됨. 과다복용 시 아티파메졸 또는 요힘빈으로 역전 가능하나 다회 투여가 필요할 수 있음.",
+    "cat": "고양이에서 클로니딘은 주로 난치성 IBD의 4차 보조 지사제로 사용됨. 고양이에서 2-구획 개방 모델로 조직 내 빠른 분포가 확인됨. 수의학적 사용 경험이 매우 제한적이며, 진정 및 저혈압이 주요 부작용으로 예상됨. 수유 중인 고양이에서 주의 사용 또는 대체 수유 고려 필요."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심한 심혈관 질환, 전도 장애, 심부전, 신기능 부전 환자에서 주의 사용. 장기 사용 후 갑작스러운 중단 시 금단 증상 가능. 2~4일에 걸쳐 점진적 감량 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "수의학적 사용 경험이 매우 제한적. 진정 및 저혈압 모니터링 필요. 수유 중인 고양이에서 주의 사용."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 밀폐된 차광 용기에 실온(25°C, 77°F) 보관; 15~30°C(59~86°F) 범위 허용. 경막외용 보존제 무첨가 주사제: 20~25°C(68~77°F) 조절된 실온 보관. 보존제 미함유로 미사용 주사제는 폐기.",
+    "forms": [
+      "클로니딘 HCl 경막외용 주사제: 100 µg/mL 및 500 µg/mL (사용 전 희석 필요), 보존제 무첨가, 10 mL 바이알",
+      "클로니딘 HCl 경구 정제: 0.1 mg, 0.2 mg, 0.3 mg",
+      "클로니딘 서방형 정제",
+      "클로니딘 경피 패치"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로니딘은 중추 작용성 알파-2 아드레날린 작용제로, 개와 고양이에서 마취 전 투약, 경막외 진통 보조, 공포 기반 행동 문제 보조 치료, 성장호르몬 결핍 진단, 난치성 IBD 보조 지사제로 허가 외 사용됨. 수의학적 사용 경험이 제한적이며, 안전 역폭이 좁음. 주요 부작용으로 서맥, 저혈압, 진정, 허탈이 있으며, 과다복용 시 아티파메졸 또는 요힘빈으로 역전 가능. 장기 사용 후 갑작스러운 중단은 금단 증상을 유발할 수 있으므로 2~4일에 걸쳐 점진적으로 감량해야 함.",
+    "indications": "허가 외 적응증: (1) 개의 상황적 공포, 공포증, 분리불안 보조 치료 (행동 수정 훈련과 병용), (2) 개와 소의 마취 전 투약 및 경막외 진통 보조, (3) 개의 성장호르몬 결핍(저성장호르몬증) 진단, (4) 개의 갈색세포종 진단, (5) 개와 고양이의 난치성 IBD 보조 지사제 치료. 수의학적 승인 제품 없음.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 다음 투여 시 소량의 음식과 함께 주세요. 구토가 지속되면 수의사에게 연락하세요. 개와 고양이에서 사용 경험이 제한적입니다. 졸음과 혈압 저하(허약감, 허탈)가 가장 흔한 부작용입니다. 이상 증상이 나타나면 즉시 수의사에게 알려주세요. 공포 기반 행동 문제 치료 시 유발 사건 90분~2시간 전에 투여하며, 용량은 낮게 시작하여 부작용과 효과에 따라 조절합니다. 매일 투여하는 경우 수의사의 지시 없이 용량을 변경하거나 투여를 중단하지 마세요. 갑작스러운 중단은 금단 증상을 유발할 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK studies (dog/cat specific)",
+      "Oral bioavailability (veterinary species)",
+      "Protein binding data",
+      "CYP enzyme profile",
+      "Specific hepatic dose adjustment",
+      "Specific renal dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (veterinary species)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/26.jsonl",
+    "extracted_at": "2026-03-10T21:20:08.834295+00:00",
+    "reviewer": null
+  }
+}

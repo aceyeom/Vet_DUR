@@ -1,0 +1,918 @@
+{
+  "id": "ivermectin",
+  "drug_identity": {
+    "name_ko": "이버멕틴",
+    "name_en": "Ivermectin",
+    "active_ingredient": "Ivermectin",
+    "brand_names": [
+      "Heartgard",
+      "Ivomec",
+      "Eqvalan",
+      "Equimax",
+      "Zimecterin Gold",
+      "Iverhart Max",
+      "Stromectol",
+      "Sklice",
+      "Soolantra",
+      "Xeno 50-Mini",
+      "Xeno 450"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid",
+      "Chewable",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 68,
+        "unit": "mcg"
+      },
+      {
+        "value": 136,
+        "unit": "mcg"
+      },
+      {
+        "value": 272,
+        "unit": "mcg"
+      },
+      {
+        "value": 55,
+        "unit": "mcg"
+      },
+      {
+        "value": 165,
+        "unit": "mcg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 1.87,
+        "unit": "%"
+      },
+      {
+        "value": 0.08,
+        "unit": "%"
+      },
+      {
+        "value": 5,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 3,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.05,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4",
+        "CYP2D6",
+        "CYP2E1"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 이버멕틴은 주로 CYP3A4에 의해 대사되며, 부분적으로 CYP2D6 및 CYP2E1에 의해 대사된다. 소변으로의 배설은 5% 미만(모체 화합물 또는 대사산물)이며, 주로 대변으로 배설된다."
+    },
+    "extra_information": "개: 경구 생체이용률 95%, 분포용적 2.5~5.3 L/kg, 소실 반감기 2~4일. 고양이: SC 투여 후 분포용적 9.8 L/kg, 소실 반감기 2.5일. MDR1 돌연변이(ABCB1-1delta)를 가진 동물은 결함 있는 P-당단백질(P-gp) 수송체를 생성하여 이버멕틴이 CNS로 진입하고 신경독성 위험이 증가한다. 이버멕틴은 혈장 단백질에 약 90% 결합하며, 대부분의 조직에 잘 분포하지만 CSF로는 쉽게 침투하지 않는다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신경독성(CNS), 간 대사, 신장 배설 최소, 심혈관 억제(과량 시) 등을 고려. 수의학적 종별 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "CNS toxicity",
+          "ataxia",
+          "tremors",
+          "mydriasis",
+          "seizures",
+          "MDR1 mutation"
+        ],
+        "index": 1,
+        "evidence": "MDR1 돌연변이 개에서 CNS 신경독성 위험이 높음. 고용량 시 운동실조, 진전, 산동, 발작 등 신경계 이상 반응 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "shock-like reaction",
+          "microfilariae"
+        ],
+        "index": 2,
+        "evidence": "심사상충 양성 개에서 미세사상충 사멸로 인한 쇼크 유사 반응 가능. 혈액 독성은 직접적이지 않음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설은 5% 미만으로 신장 부담은 낮음. 신독성에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "oxidative pathways",
+          "CYP3A4"
+        ],
+        "index": 3,
+        "evidence": "간에서 산화 경로를 통해 대사됨. 간 독성에 대한 직접적 언급은 없으나 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "cardiovascular depression"
+        ],
+        "index": 4,
+        "evidence": "과량 투여 시 심혈관 억제 가능성 언급. 일반 용량에서는 심장 독성 보고 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "mydriasis",
+          "tremors",
+          "rear limb paresis",
+          "disorientation",
+          "blindness"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 대량 과용량 시 신경계 증상(산동, 진전, 후지 마비, 방향감각 상실, 실명) 보고. 일반적으로 안전 마진이 넓으나 새끼 고양이는 더 민감함."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 독성에 대한 직접적 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설은 5% 미만으로 신장 부담은 낮음. 고양이에서 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "oxidative pathways"
+        ],
+        "index": 3,
+        "evidence": "간에서 산화 경로를 통해 대사됨. 고양이에서 간 독성에 대한 직접적 언급은 없으나 주요 대사 기관임."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiovascular depression"
+        ],
+        "index": 4,
+        "evidence": "과량 투여 시 심혈관 억제 가능성 언급. 일반 용량에서는 심장 독성 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 48.0,
+      "max": 96.0,
+      "mean": 72.0,
+      "species": "dog"
+    },
+    "f_percent": 95,
+    "protein_binding_percent": 90,
+    "evidence": "개: 경구 생체이용률 95%, 소실 반감기 2~4일(48~96시간). 고양이: SC 투여 후 소실 반감기 2.5일(60시간). 혈장 단백질 결합률 약 90%. SC 투여 시 경구 투여보다 전반적 약물 노출(AUC)이 높으나 경구 흡수가 더 빠름."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. P-gp 억제제 목록은 MDR1 돌연변이 위험 품종에서 특히 중요. 심장사상충 예방 단독 용량에서는 대부분의 상호작용이 임상적으로 유의하지 않을 수 있음.",
+  "drug_interactions": [
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "CNS potentiation",
+        "sedation"
+      ],
+      "evidence": "이버멕틴이 벤조디아제핀의 효과를 강화할 수 있음; 인간에서 병용 투여 권장하지 않음."
+    },
+    {
+      "drug": "Gabapentin",
+      "severity": 2,
+      "keywords": [
+        "CNS potentiation"
+      ],
+      "evidence": "이버멕틴이 가바펜틴의 효과를 강화할 수 있음; 인간에서 병용 투여 권장하지 않음."
+    },
+    {
+      "drug": "Ketamine",
+      "severity": 2,
+      "keywords": [
+        "reptile toxicity"
+      ],
+      "evidence": "파충류에서 케타민 투여 후 10일 이내에 이버멕틴을 사용하지 않도록 권장됨."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "reduced exposure",
+        "reduced efficacy"
+      ],
+      "evidence": "미토탄이 이버멕틴 노출 및 효능을 감소시킬 수 있음."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CNS potentiation",
+        "reduced ivermectin concentration"
+      ],
+      "evidence": "이버멕틴이 페노바르비탈의 효과를 강화할 수 있음; 페노바르비탈은 이버멕틴 혈장 농도 및 전반적 약물 노출을 감소시킴. 인간에서 병용 투여 권장하지 않음."
+    },
+    {
+      "drug": "Pregabalin",
+      "severity": 2,
+      "keywords": [
+        "CNS potentiation"
+      ],
+      "evidence": "이버멕틴이 프레가발린의 효과를 강화할 수 있음; 인간에서 병용 투여 권장하지 않음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased prothrombin time",
+        "increased INR",
+        "bleeding risk"
+      ],
+      "evidence": "이버멕틴 병용 시 프로트롬빈 시간/INR이 증가할 수 있음."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration",
+        "neurotoxicity"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음. MDR1 돌연변이 위험 품종에서 특히 주의 필요."
+    },
+    {
+      "drug": "Azithromycin",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Carvedilol",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Cetirizine",
+      "severity": 1,
+      "keywords": [
+        "P-gp inhibition",
+        "increased cetirizine AUC"
+      ],
+      "evidence": "말에서 이버멕틴 전처치(12시간 전)가 세티리진의 혈장 AUC, 평균 체류 시간, 말단 반감기를 유의하게 증가시킴. 세티리진의 넓은 치료 지수로 인해 임상적 유의성은 낮을 것으로 판단됨."
+    },
+    {
+      "drug": "Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "CYP3A4 inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 및 CYP3A4 억제제로서 이버멕틴의 CNS 침투 및 혈중 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "CYP3A4 inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 및 CYP3A4 억제제로서 이버멕틴의 CNS 침투 및 혈중 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Fluoxetine",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "CYP3A4 inhibition",
+        "increased ivermectin exposure"
+      ],
+      "evidence": "P-gp 및 CYP3A4 억제를 통해 이버멕틴 노출을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Itraconazole",
+      "severity": 3,
+      "keywords": [
+        "P-gp inhibition",
+        "CYP3A4 inhibition",
+        "neurotoxicity"
+      ],
+      "evidence": "P-gp 및 CYP3A4 억제제. 적어도 하나의 참고문헌에서 개에서 케토코나졸과 이버멕틴을 절대 병용하지 말 것을 권고함."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 3,
+      "keywords": [
+        "P-gp inhibition",
+        "CYP3A4 inhibition",
+        "neurotoxicity"
+      ],
+      "evidence": "P-gp 및 CYP3A4 억제제. 적어도 하나의 참고문헌에서 개에서 케토코나졸과 이버멕틴을 절대 병용하지 말 것을 권고함."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Pentazocine",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Paroxetine",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Solanum spp (nightshades)",
+      "severity": 2,
+      "keywords": [
+        "P-gp alteration",
+        "neurotoxicity"
+      ],
+      "evidence": "나이트쉐이드를 섭취하고 경구 이버멕틴을 투여받은 말에서 신경독성이 발생함. Solanum spp가 말 또는 다른 포유류에서 P-gp를 변화시킬 수 있다고 제안됨."
+    },
+    {
+      "drug": "Spinosad",
+      "severity": 3,
+      "keywords": [
+        "P-gp inhibition",
+        "altered pharmacokinetics",
+        "blood-brain barrier permeability",
+        "neurotoxicity"
+      ],
+      "evidence": "스피노사드는 강력한 개 P-gp 억제제. 고용량 extra-label 이버멕틴과 병용하지 않도록 권장됨. 건강한 비글에서 스피노사드가 이버멕틴 약동학을 변화시키고 혈액-뇌 장벽 투과성을 증가시켜 신경독성 위험을 높일 수 있음."
+    },
+    {
+      "drug": "Spironolactone",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "St. John's Wort",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "P-gp inhibition",
+        "increased ivermectin CNS penetration"
+      ],
+      "evidence": "P-gp 억제제로서 이버멕틴의 CNS 침투를 증가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "chelonian",
+      "indigo_snake",
+      "crocodilian",
+      "skink"
+    ],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 15.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심사상충 예방 (FDA 승인 라벨 용량)",
+          "value": "6",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "연중 투여 권장; 계절 투여 시 전파 시작 1개월 전부터 전파 종료 후 최대 6개월까지",
+          "evidence": "FDA 승인. 최소 용량 6 µg/kg PO 월 1회."
+        },
+        {
+          "logic_type": "linear",
+          "context": "성충 심사상충 감염 보조 치료 (extra-label)",
+          "value": "6",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 프로토콜 1일차부터 30일마다 반복",
+          "evidence": "미국 심사상충 학회 가이드라인에 따른 라벨 용량으로 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "미세사상충 각막염 (extra-label)",
+          "value": "100 - 300",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "프레드니솔론 1 mg/kg/day PO 5~6일 및 사이클로스포린 안과용 연고 1일 2회 병용",
+          "evidence": "Extra-label 사용."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "전신성 모낭충증 (extra-label) - 용량 증량 프로토콜",
+          "value": "50 - 600",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "목표 용량 600 µg/kg/day. 1일차 50 µg/kg, 2일차 100 µg/kg, 3일차 150 µg/kg, 4일차 200 µg/kg, 5일차 300 µg/kg, 이후 3~7일마다 100 µg/kg씩 증량. 음성 피부 소파 검사 2회(4~6주 간격) 후 4주까지 치료 지속. 수개월 치료 필요할 수 있음. MDR1 돌연변이 품종에 사용 금지.",
+          "evidence": "Extra-label. MDR1 돌연변이 또는 감수성 품종에 사용 금지."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개선충증, 털진드기증 (extra-label) - SC",
+          "value": "200 - 400",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 간격으로 3회 투여. 피부 소파 검사 음성이고 치료적 시험 시행 또는 2번째 주사 후 양성이면 3번째 주사 투여.",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "개선충증, 털진드기증 (extra-label) - PO",
+          "value": "200 - 400",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "주 1회 4회 투여",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "귀 진드기증 (extra-label) - SC",
+          "value": "300",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 간격으로 투여 또는 100 µg/mL 농도로 귀당 0.5 mL 국소 적용 1~2회",
+          "evidence": "Extra-label."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비강 진드기 (extra-label)",
+          "value": "300",
+          "unit": "mcg/kg",
+          "route": "SC",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2주 간격으로 2~3회 투여",
+          "evidence": "Extra-label."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심사상충 예방 및 구충 (FDA 승인 라벨 용량)",
+          "value": "24",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "생후 8주부터 시작. 심사상충 유행 지역의 모든 고양이에게 심사상충 계절 동안 투여.",
+          "evidence": "FDA 승인. 최소 월 예방 용량 24 µg/kg PO."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심사상충 감염 감소 (extra-label, 성충 부담 감소)",
+          "value": "24",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "2년간 월 1회 투여로 충체 부담 감소 가능",
+          "evidence": "미국 심사상충 학회 가이드라인 참조."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 신장 배설이 5% 미만으로 신장 기능 저하 시 용량 조정이 필요하지 않을 수 있으나 공식적 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 이버멕틴은 간에서 주로 대사되므로 심각한 간 기능 저하 시 주의가 필요할 수 있으나 공식적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "이버멕틴 과민증",
+      "match_terms": [
+        "ivermectin hypersensitivity",
+        "avermectin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MDR1 돌연변이 품종 (고용량 사용 시)",
+      "match_terms": [
+        "MDR1 mutation",
+        "ABCB1-1delta",
+        "collie",
+        "sheltie",
+        "Australian shepherd",
+        "long-haired whippet"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "거북류 (chelonians)",
+      "match_terms": [
+        "chelonian",
+        "turtle",
+        "tortoise"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "인디고 뱀 (indigo snake)",
+      "match_terms": [
+        "indigo snake",
+        "Drymarchon"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "악어류 (crocodilians)",
+      "match_terms": [
+        "crocodilian",
+        "crocodile",
+        "alligator"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "스킨크 (skinks)",
+      "match_terms": [
+        "skink"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 6주 미만 강아지",
+      "match_terms": [
+        "puppy under 6 weeks",
+        "neonatal dog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심사상충 검사 미실시 개",
+      "match_terms": [
+        "heartworm test not current",
+        "heartworm positive dog"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심사상충 양성 개 (미세사상충 구제 용량 사용 시)",
+      "match_terms": [
+        "heartworm positive",
+        "microfilaremia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Collie",
+      "Shetland Sheepdog",
+      "Australian Shepherd",
+      "Long-haired Whippet",
+      "Border Collie",
+      "Old English Sheepdog",
+      "German Shepherd"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 돌연변이(ABCB1-1delta)를 가진 개는 결함 있는 P-당단백질(P-gp) 수송체를 생성하여 이버멕틴이 CNS로 진입하고 신경독성 위험이 증가한다. 120 µg/kg 이상의 단일 용량에서 신경학적 이상 반응이 나타날 수 있으며, 300 µg/kg에서 생명을 위협하는 신경독성이 발생할 수 있다. 심사상충 예방 용량(6 µg/kg)에서는 MDR1 상태에 관계없이 독성이 관찰되지 않는다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "이버멕틴은 무척추동물의 신경 및 근육 세포 내 글루타메이트 개폐 염화물 이온 채널에 결합하여 염화물 이온에 대한 세포 투과성을 증가시킨다. 결과적인 세포 과분극은 기생충의 마비 및 사멸을 유발한다. 포유류는 글루타메이트 개폐 염화물 이온 채널이 없으며, 이버멕틴은 다른 염화물 이온 채널에 대한 친화성이 낮다. GABA 개폐 염화물 채널에도 활성을 가질 수 있다.",
+    "common_extra_effects": [
+      "신경독성 (운동실조, 진전, 산동, 발작)",
+      "구토",
+      "설사",
+      "심혈관 억제 (과량 시)",
+      "호흡 억제 (과량 시)",
+      "실명 (과량 시)"
+    ],
+    "dog_mechanism": "개에서 MDR1 돌연변이(ABCB1-1delta)가 있는 경우 P-gp 수송체 결함으로 이버멕틴이 CNS로 과도하게 침투하여 신경독성 위험이 증가한다.",
+    "dog_extra_effects": [
+      "신경독성 (MDR1 돌연변이 품종에서 특히 위험)",
+      "운동실조",
+      "진전",
+      "산동",
+      "발작",
+      "심사상충 양성 개에서 쇼크 유사 반응 (미세사상충 구제 용량 사용 시)",
+      "구토",
+      "설사"
+    ],
+    "cat_mechanism": "고양이에서 이버멕틴은 일반적으로 넓은 안전 마진을 가지나, 새끼 고양이는 더 민감하다. 대량 과용량 시 CNS 독성이 발생할 수 있다.",
+    "cat_extra_effects": [
+      "흥분",
+      "발성",
+      "식욕부진",
+      "산동",
+      "후지 마비",
+      "진전",
+      "방향감각 상실",
+      "실명",
+      "두부 압박",
+      "벽 오르기",
+      "안구운동 위협 반사 소실",
+      "동공 대광 반사 지연 및 불완전"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 이버멕틴은 심사상충 예방에 FDA 승인되어 있으며, 최소 용량은 6 µg/kg PO 월 1회이다. MDR1 돌연변이(ABCB1-1delta)를 가진 품종(콜리, 셸티, 오스트레일리안 셰퍼드 등)에서는 심사상충 예방 용량 이상의 고용량 사용 시 심각한 신경독성이 발생할 수 있으므로 유전자 검사 후 사용 여부를 결정해야 한다. 심사상충 양성 개에서 미세사상충 구제 용량으로 사용하면 쇼크 유사 반응이 발생할 수 있으므로 피해야 한다. 모낭충증 등 외부 기생충 치료에 extra-label로 사용 시 이속사졸린계 약물이 더 넓은 스펙트럼을 가지므로 대체 고려가 필요하다.",
+    "cat": "고양이에서 이버멕틴은 심사상충 예방 및 구충 제거에 FDA 승인되어 있으며, 최소 월 예방 용량은 24 µg/kg PO이다. 고양이는 일반적으로 이버멕틴에 대한 안전 마진이 넓으나(성묘 750 µg/kg까지 이상 반응 없음), 새끼 고양이는 더 민감하다(300 µg/kg에서 유의한 임상 증상 발생). 대량 과용량 시 신경계 증상이 나타날 수 있으며, 증상은 수일에 걸쳐 감소하고 대부분 2~4주 내에 완전히 회복된다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "MDR1 돌연변이 품종에서 고용량 사용 시 심각한 신경독성 위험. 심사상충 예방 용량에서는 안전. 심사상충 양성 개에서 미세사상충 구제 용량 사용 금지. 생후 6주 미만 강아지에 사용 금지."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "일반적으로 안전 마진이 넓으나 새끼 고양이는 더 민감함. 대량 과용량 시 신경계 독성 발생 가능. 지지 요법 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛으로부터 보호하여 보관. 제조사 별도 지시가 없는 한 실온(20°C-25°C [68°F-77°F]) 보관; 대부분의 제품에서 15°C~30°C(59°F~86°F) 범위 허용. 용액은 인화성이므로 열, 불꽃, 화염 또는 기타 점화원으로부터 멀리 보관. 이버멕틴 1% 경구 용액(말용 튜브 구충제)은 1:20 및 1:40 희석 시 밀폐 용기에서 실온, 차광 보관 시 72시간 안정.",
+    "forms": [
+      "경구 정제 (일반 또는 츄어블): 68 µg, 136 µg, 272 µg (Heartgard®, 제네릭) - 개용",
+      "경구 츄어블 정제: 55 µg, 165 µg (Heartgard® for Cats) - 고양이용",
+      "주사제: 10 mg/mL (1%) (Ivomec® 1% Injection for Cattle and Swine, 제네릭) - 소, 돼지용",
+      "경구 페이스트: 1.87% (Eqvalan®) - 말용",
+      "경구 용액: 0.08% (Ivomec® Drench for Sheep) - 양용",
+      "국소 도포제 (Pour-on): 5 mg/mL (Ivomec® Pour-on for Cattle, 제네릭) - 소용",
+      "스팟온 용액: 50 µg, 450 µg/피펫 (Xeno® 50-Mini, Xeno® 450)",
+      "복합 제품: Ivermectin/Clorsulon 주사제 (Ivomec® Plus)",
+      "복합 제품: Ivermectin/Pyrantel 경구 정제 (Heartgard® Plus, 제네릭)",
+      "복합 제품: Ivermectin/Pyrantel/Praziquantel 경구 정제 (Iverhart Max®, 제네릭)",
+      "복합 제품: Ivermectin 1.87%/Praziquantel 14.03% 경구 페이스트 (Equimax®)",
+      "복합 제품: Ivermectin 1.55%/Praziquantel 7.75% 경구 시린지 (Zimecterin® Gold)",
+      "인체용 정제: 3 mg (Stromectol®)",
+      "인체용 국소 로션: 0.5% (Sklice®)",
+      "인체용 국소 크림: 1% (Soolantra®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "이버멕틴은 광범위 항기생충제로, 개와 고양이에서 심사상충 예방에 FDA 승인되어 있다. MDR1 돌연변이(ABCB1-1delta)를 가진 품종(콜리, 셸티, 오스트레일리안 셰퍼드 등)에서 심사상충 예방 용량 이상 사용 시 심각한 CNS 신경독성이 발생할 수 있으므로 유전자 검사 후 사용 여부를 결정해야 한다. P-당단백질(P-gp) 억제제와의 병용 시 이버멕틴의 CNS 침투가 증가하여 신경독성 위험이 높아진다. 거북류, 인디고 뱀, 악어류, 스킨크에는 절대 금기이다. 과용량 시 IV 지질 에멀전이 신경독성 치료에 성공적으로 사용된 사례가 있다.",
+    "indications": "개: 심사상충 예방(FDA 승인), 성충 심사상충 감염 보조 치료(extra-label), 미세사상충 각막염(extra-label), 전신성 모낭충증(extra-label), 개선충증(extra-label), 털진드기증(extra-label), 귀 진드기증(extra-label), 비강 진드기(extra-label). 고양이: 심사상충 예방 및 구충 제거(FDA 승인). 말: 대형 및 소형 원충, 요충, 회충, 털벌레, 대구 위충, 목 실충, 봇파리, 폐충, 장 실충, 여름 창상(FDA 승인). 소: 위장관 회충, 폐충, 소 구더기, 흡혈 이, 진드기, 뿔파리(FDA 승인). 돼지: 위장관 회충, 체성 회충 유충, 폐충, 이, 옴 진드기(FDA 승인). 양: 위장관 회충, 폐충, 비강 봇파리(FDA 승인). 순록: 워블(FDA 승인). 아메리카 들소: 구더기(FDA 승인).",
+    "client_info": "이버멕틴은 반려동물의 심사상충 예방 및 기생충 치료에 사용되는 약물입니다. 심사상충 예방약은 반드시 30일마다 투여해야 하며, 늦거나 빠진 투여는 치료 실패를 초래할 수 있습니다. 음식과 함께 또는 없이 투여할 수 있으며, 빈속에 투여 후 구토 시 음식과 함께 투여하세요. 콜리, 셸티, 오스트레일리안 셰퍼드 등 특정 품종은 이버멕틴에 더 민감할 수 있으므로 수의사에게 반드시 알려주세요. 동물이 무기력, 허약, 비틀거림, 실명, 발작, 과도한 침 흘림, 구토 등의 증상을 보이면 즉시 수의사에게 연락하세요. 말용 제품을 개에게 투여하지 마세요 - 과용량은 심각한 독성을 유발할 수 있습니다. 사용하지 않은 제품은 물고기와 야생동물에 독성이 있으므로 소각 또는 승인된 매립지에 폐기하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Onset of action",
+      "Time to peak plasma concentration (Tmax)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates (veterinary-specific)",
+      "organ_burden_logic.dog.blood.index",
+      "organ_burden_logic.cat.blood.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/57.jsonl",
+    "extracted_at": "2026-03-11T06:50:41.587456+00:00",
+    "reviewer": null
+  }
+}

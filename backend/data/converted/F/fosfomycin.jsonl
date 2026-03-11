@@ -1,0 +1,375 @@
+{
+  "id": "fosfomycin",
+  "drug_identity": {
+    "name_ko": "포스포마이신",
+    "name_en": "Fosfomycin",
+    "active_ingredient": "Fosfomycin",
+    "brand_names": [
+      "Monurol"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개에서 다제내성 요로감염 치료에 사람용 제품(Monurol®)을 오프라벨로 사용.",
+    "dosage_form": [
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 3000,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.38,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "포스포마이신 트로메타민은 흡수 후 유리산 형태로 신속히 전환되며, 주로 미변화체로 소변을 통해 배설된다(사람에서 경구 투여량의 38%). CYP 대사 경로는 보고되지 않음."
+    },
+    "extra_information": "개에서 포스포마이신 이나트륨(조제품) 경구 투여 시 최고 혈중 농도 도달 시간 약 2시간, 생체이용률 약 29%, 말단 반감기 약 2시간. IV 투여 시 분포용적(정상상태) 약 0.7 L/kg, 단백결합 최소, 청소율 약 15 mL/kg/시간. 포스포마이신 트로메타민 80 mg/kg PO 급여 시 생체이용률 약 100%(식후), 공복 시 약 66%, 반감기 약 2.5시간. 소변 내 반감기 10시간, 12시간 동안 소변 농도 660 µg/mL 이상 유지."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 고양이에서 신독성이 명확히 문서화됨(세뇨관 괴사). 개에서는 주로 GI 부작용. 사람 데이터 일부 참조.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "minimal protein binding"
+        ],
+        "index": -1,
+        "evidence": "단백결합이 최소로 보고되어 혈액 내 유리형 약물 비율이 높으나, 혈액독성에 대한 직접적 언급은 없음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "unchanged drug in urine",
+          "renal impairment increases half-life"
+        ],
+        "index": 2,
+        "evidence": "주요 배설 경로가 신장(미변화체). 사람에서 신기능 저하 시 반감기 현저히 증가하며 용량 감량 권고. 개에서 신기능 저하 시 구체적 권고 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "간 대사에 대한 직접적 언급 없음. 주로 미변화체로 신장 배설."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 관련 영향에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액독성에 대한 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 95,
+        "triggered_keywords": [
+          "nephrotoxic",
+          "tubular necrosis",
+          "disappearance of tubular cells",
+          "significant increases in serum creatinine",
+          "contraindicated"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 포스포마이신(칼슘염 또는 나트륨염) 20 mg/kg PO 또는 IV 1일 2회 3일 투여 시 모든 고양이(n=25)에서 혈청 크레아티닌 유의한 증가, 세뇨관 괴사, 세뇨관 세포 소실, 호산성 비구조물질 재배열 관찰. 고양이에서 금기."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 영향에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 2.5,
+      "mean": 2.25,
+      "species": "dog"
+    },
+    "f_percent": 29,
+    "protein_binding_percent": null,
+    "evidence": "개에서 포스포마이신 이나트륨(조제품) 경구 투여 시 생체이용률 약 29%, Tmax 약 2시간, 반감기 약 2시간. 포스포마이신 트로메타민 80 mg/kg PO 식후 투여 시 생체이용률 약 100%, 반감기 약 2.5시간. 단백결합은 최소(minimal)로 보고됨. 반감기 범위 2.0–2.5시간, 평균 2.25시간 사용."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Prokinetic GI Agents (e.g., metoclopramide, bethanechol, cisapride, domperidone, ranitidine, laxatives)",
+      "severity": 2,
+      "keywords": [
+        "decreased serum concentration",
+        "decreased urine concentration",
+        "increased GI motility"
+      ],
+      "evidence": "GI 운동 촉진제는 포스포마이신의 혈청 및 소변 농도를 감소시킬 수 있음. 투여 시간을 분리하면 상호작용을 최소화하는 데 도움이 될 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "high",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "다제내성 세균에 의한 세균성 방광염 (오프라벨)",
+          "value": "40 - 80",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 80.0,
+          "duration_note": "대부분의 감염에서 3~5일 치료로 충분하나, 지속성 또는 재발성 감염의 경우 7~14일 치료가 필요할 수 있음. 식사와 함께 투여.",
+          "evidence": "오프라벨. 다른 항생제에 내성이 문서화되고 포스포마이신 감수성이 확인된 세균에 의한 감염에 한정 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "조직 관련 감염 (예: 전립선염, 신우신염; 오프라벨)",
+          "value": "40",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 40.0,
+          "duration_note": "식사와 함께 투여.",
+          "evidence": "오프라벨. 데이터 및 임상 경험 제한적."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "사람에서 신기능 저하 시 반감기가 현저히 증가하여 용량 감량이 권고됨. 수의 환자에서 신기능 저하 시 구체적인 권고 데이터 없음. 고양이에서는 신독성으로 인해 사용 금기."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간기능 저하 시 용량 조정에 대한 데이터 없음. 주로 신장으로 미변화체 배설."
+  },
+  "contraindications": [
+    {
+      "condition": "고양이 (모든 고양이)",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "포스포마이신 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to fosfomycin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균의 phosphoenolpyruvate transferase를 비가역적으로 억제하여 세포벽 펩티도글리칸 합성의 첫 단계(UDP-N-아세틸무라민산 형성)를 차단. 또한 요로상피세포에 대한 세균 부착을 감소시킴. 시간 의존성 살균 항생제.",
+    "common_extra_effects": [
+      "설사",
+      "식욕부진",
+      "오심(사람)"
+    ],
+    "dog_mechanism": "시간 의존성 살균 작용. 소변 내 반감기 10시간, 12시간 동안 다제내성 E. coli MIC90(1.5 µg/mL) 초과 농도 유지.",
+    "dog_extra_effects": [
+      "경증~중등도 설사",
+      "식욕저하/식욕부진"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "신독성(세뇨관 괴사, 혈청 크레아티닌 상승) — 사용 금기"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 다제내성 요로감염(방광염, 전립선염, 신우신염) 치료에 오프라벨로 사용. 다른 항생제에 내성이 문서화되고 포스포마이신 감수성이 확인된 경우에만 사용 권고. 식사와 함께 투여 시 생체이용률이 향상됨(약 100%). 항생제 투여 종료 후 5~7일 후 소변 재검사 및 세균 배양 권고. WHO 및 OIE에서 중요 항균제로 지정되어 있으므로 신중하게 사용해야 함.",
+    "cat": "고양이에서 포스포마이신은 신독성(세뇨관 괴사)이 문서화되어 있어 절대 금기. 칼슘염 또는 나트륨염 20 mg/kg PO 또는 IV 1일 2회 3일 투여 시 모든 고양이(n=25)에서 혈청 크레아티닌 유의한 증가 및 신세뇨관 괴사 관찰됨. 고양이에게 투여하지 말 것."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 주요 부작용은 GI 관련(설사, 식욕부진). 신기능 저하 시 반감기 증가 가능성 있으나 수의 환자에서 구체적 권고 없음. 다제내성 세균 감염에 한정 사용 권고. WHO/OIE 중요 항균제로 지정."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 신독성(세뇨관 괴사, 혈청 크레아티닌 상승)이 명확히 문서화되어 절대 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "포스포마이신 트로메타민 과립: 실온(25°C [77°F]) 보관, 15°C~30°C(59°F~86°F) 범위 허용. 물에 용해 후 즉시 복용(뜨거운 물 사용 금지).",
+    "forms": [
+      "Fosfomycin Tromethamine 3 g/packet (경구용 과립, 희석 후 복용) — Monurol® (Rx)",
+      "포스포마이신 나트륨 주사제 (미국 외 국가에서 이용 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "포스포마이신은 다제내성 세균에 의한 개의 요로감염 치료에 사용되는 인산계 항균제입니다. 수의학적 허가 제품은 없으며 오프라벨로 사용됩니다. 고양이에서는 신독성(세뇨관 괴사)이 명확히 문서화되어 절대 금기입니다. WHO 및 OIE에서 중요 항균제로 지정되어 있어 다른 항생제에 내성이 확인된 경우에만 사용해야 합니다. 식사와 함께 투여 시 생체이용률이 향상됩니다.",
+    "indications": "【허가 적응증】 없음(수의학적 허가 제품 없음). 【오프라벨 적응증】 개에서 다른 항생제에 내성이 문서화된 다제내성 세균에 의한 세균성 방광염, 전립선염, 신우신염 등 비뇨생식기 감염. 포스포마이신 감수성이 확인된 경우에 한함. E. coli, Enterococcus faecalis, Proteus spp., Klebsiella spp., Enterobacter spp., 포도상구균 등에 활성.",
+    "client_info": "이 약은 동물에서 임상 경험이 제한적입니다. 부작용(설사, 식욕저하 등)이 나타나면 즉시 수의사에게 알려주세요. 처방대로 정확히 투여하고 치료 과정을 완료하는 것이 중요합니다. 반드시 음식과 함께 투여하세요. 이 약은 고양이에게 절대 투여하지 마세요. 투약 완료 후 5~7일 후에 재검사를 위해 반드시 동물병원을 방문하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (no specific concerns noted)",
+      "Hepatic dose adjustment data",
+      "Veterinary renal dose adjustment data",
+      "Cat pharmacokinetics",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:32:57.424686+00:00",
+    "reviewer": null
+  }
+}

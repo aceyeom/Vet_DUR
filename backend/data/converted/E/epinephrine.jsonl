@@ -1,0 +1,818 @@
+{
+  "id": "epinephrine",
+  "drug_identity": {
+    "name_ko": "에피네프린",
+    "name_en": "Epinephrine",
+    "active_ingredient": "Epinephrine",
+    "brand_names": [
+      "Adrenalin",
+      "EpiPen",
+      "Twinject",
+      "Adrenaclick",
+      "Auvi-Q",
+      "Symjepi",
+      "EpiPen Jr"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.3,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.15,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "에피네프린은 간 및 기타 조직에서 모노아민 산화효소(MAO)와 카테콜-O-메틸트랜스퍼라제(COMT)에 의해 비활성 대사산물(3-메톡시-4-하이드록시만델산 및 메타네프린)로 대사된 후 글루쿠론산 또는 황산염과 결합하여 소변으로 배설됩니다."
+    },
+    "extra_information": "에피네프린은 경구 투여 시 위장관 및 간에서 빠르게 대사되어 효과가 없습니다. SC 주사 후 작용 발현은 일반적으로 5~10분 이내이며, IV 투여 후에는 즉각적이고 강렬한 효과가 나타납니다. 혈액-뇌 장벽을 통과하지 않습니다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 과량 투여 시 신부전, 심장 부정맥, 폐부종 등이 보고됨. 주로 인체 데이터에서 외삽된 정보이며 수의학적 종별 PK 연구는 제한적입니다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈액-뇌 장벽 통과 안 함",
+          "뇌출혈(과량 투여 시)"
+        ],
+        "index": 1,
+        "evidence": "에피네프린은 혈액-뇌 장벽을 통과하지 않으나, 과량 투여 시 혈압 상승으로 인한 뇌출혈 위험이 있습니다."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "빈맥",
+          "부정맥",
+          "고혈압",
+          "젖산 산증"
+        ],
+        "index": 2,
+        "evidence": "빈맥, 부정맥, 고혈압, 젖산 산증 등의 혈액/심혈관계 이상반응이 보고되어 있습니다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "신부전(과량 투여 시)",
+          "소변 생성 모니터링"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 시 신부전이 발생할 수 있으며, 모니터링 항목에 소변 생성이 포함되어 있습니다."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사",
+          "MAO",
+          "COMT"
+        ],
+        "index": 2,
+        "evidence": "에피네프린은 간에서 MAO 및 COMT에 의해 대사됩니다. 직접적인 간독성 보고는 없으나 대사 부담이 있습니다."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "빈맥",
+          "부정맥",
+          "폐부종",
+          "심근 산소 소비 증가",
+          "심실세동 전 리듬"
+        ],
+        "index": 3,
+        "evidence": "심박수 및 수축력 증가, 심근 산소 소비 증가, 부정맥, 폐부종 등 심장에 대한 직접적인 영향이 명시되어 있습니다. 심실세동 전 리듬 환자에서 극도의 주의가 필요합니다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "혈액-뇌 장벽 통과 안 함",
+          "뇌출혈(과량 투여 시)"
+        ],
+        "index": 1,
+        "evidence": "에피네프린은 혈액-뇌 장벽을 통과하지 않으나, 과량 투여 시 혈압 상승으로 인한 뇌출혈 위험이 있습니다."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "빈맥",
+          "부정맥",
+          "고혈압",
+          "젖산 산증"
+        ],
+        "index": 2,
+        "evidence": "빈맥, 부정맥, 고혈압, 젖산 산증 등의 혈액/심혈관계 이상반응이 보고되어 있습니다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "신부전(과량 투여 시)",
+          "소변 생성 모니터링"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 시 신부전이 발생할 수 있으며, 모니터링 항목에 소변 생성이 포함되어 있습니다."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "간 대사",
+          "MAO",
+          "COMT"
+        ],
+        "index": 2,
+        "evidence": "에피네프린은 간에서 MAO 및 COMT에 의해 대사됩니다. 직접적인 간독성 보고는 없으나 대사 부담이 있습니다."
+      },
+      "heart": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "빈맥",
+          "부정맥",
+          "폐부종",
+          "심근 산소 소비 증가"
+        ],
+        "index": 3,
+        "evidence": "심박수 및 수축력 증가, 심근 산소 소비 증가, 부정맥, 폐부종 등 심장에 대한 직접적인 영향이 명시되어 있습니다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 5,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "SC 주사 후 작용 발현은 일반적으로 5~10분 이내이며, IV 투여 후에는 즉각적입니다. 반감기는 본문에 명시되지 않았으나 비교적 짧은 것으로 알려져 있습니다."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-2 Adrenergic Agonists (detomidine, dexmedetomidine, medetomidine, xylazine)",
+      "severity": 3,
+      "keywords": [
+        "alpha-agonist overlap",
+        "cardiac effects",
+        "contraindicated for cardiac reversal"
+      ],
+      "evidence": "Epinephrine possesses alpha-agonist effects and should NOT be used to treat cardiac effects caused by alpha-2-adrenergic agonists."
+    },
+    {
+      "drug": "Alpha-Adrenergic Antagonists (phenoxybenzamine, phentolamine, prazosin)",
+      "severity": 2,
+      "keywords": [
+        "epinephrine reversal",
+        "pressor effect reduction",
+        "alpha-1 blockade"
+      ],
+      "evidence": "May reverse the pressor effects of epinephrine due to alpha-1 blockade (epinephrine reversal)."
+    },
+    {
+      "drug": "Halogenated Inhalant Anesthetics (isoflurane, sevoflurane)",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia risk",
+        "cardiac sensitization"
+      ],
+      "evidence": "Increased risk for developing arrhythmias when epinephrine is administered to patients that have received a halogenated anesthetic agent; propranolol may be used in these cases."
+    },
+    {
+      "drug": "Antihistamines (chlorpheniramine, diphenhydramine)",
+      "severity": 1,
+      "keywords": [
+        "potentiation",
+        "enhanced epinephrine effect"
+      ],
+      "evidence": "Certain antihistamines may potentiate the effects of epinephrine."
+    },
+    {
+      "drug": "Beta-Adrenergic Antagonists (atenolol, propranolol, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "antagonism of bronchodilation",
+        "antagonism of cardiac effects"
+      ],
+      "evidence": "May potentiate hypertension and antagonize epinephrine's cardiac and bronchodilating effects by blocking the beta effects of epinephrine."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "arrhythmia risk",
+        "digitalis glycoside interaction"
+      ],
+      "evidence": "Increased risk for arrhythmias may occur if epinephrine is used concurrently with digitalis glycosides."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "enhanced epinephrine effect"
+      ],
+      "evidence": "Levothyroxine may potentiate the effects of epinephrine."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "pressor potentiation",
+        "MAO inhibition",
+        "hypertensive crisis risk"
+      ],
+      "evidence": "MAOIs may potentiate the pressor effects of epinephrine, potentially leading to severe hypertension."
+    },
+    {
+      "drug": "Nitrates (nitroglycerin)",
+      "severity": 2,
+      "keywords": [
+        "epinephrine reversal",
+        "pressor effect reduction"
+      ],
+      "evidence": "Nitrates may reverse the pressor effects of epinephrine."
+    },
+    {
+      "drug": "Oxytocic Agents",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "additive pressor effect"
+      ],
+      "evidence": "Hypertension may result if epinephrine is used with oxytocic agents."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "epinephrine reversal",
+        "alpha-1 blockade",
+        "pressor effect reduction"
+      ],
+      "evidence": "May reverse the pressor effects of epinephrine due to alpha-1 blockade by the phenothiazine (epinephrine reversal)."
+    },
+    {
+      "drug": "Reserpine",
+      "severity": 2,
+      "keywords": [
+        "pressor potentiation"
+      ],
+      "evidence": "Reserpine may potentiate the pressor effects of epinephrine."
+    },
+    {
+      "drug": "Other Sympathomimetic Agents (albuterol, dobutamine, isoproterenol, phenylpropanolamine, terbutaline)",
+      "severity": 3,
+      "keywords": [
+        "increased toxicity",
+        "additive sympathomimetic effects"
+      ],
+      "evidence": "Epinephrine should not be administered with other sympathomimetic agents as increased toxicity may result."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "enhanced epinephrine effect"
+      ],
+      "evidence": "Tricyclic antidepressants may potentiate the effects of epinephrine."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "아나필락시스 쇼크 (허가 용량, FDA 미승인)",
+          "value": "0.1 - 0.5",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량(mg/kg 아님), 1 mg/mL 용액 사용",
+          "evidence": "허가 라벨 용량; FDA 미승인. 0.1–0.5 mL (총 용량) IM 또는 SC, 에피네프린 1 mg/mL 용액 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "아나필락시스 쇼크 (허가 용량, FDA 미승인)",
+          "value": "0.1 - 0.5",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량(mg/kg 아님), 1 mg/mL 용액 사용",
+          "evidence": "허가 라벨 용량; FDA 미승인. 0.1–0.5 mL (총 용량) IM 또는 SC, 에피네프린 1 mg/mL 용액 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 / 무수축 - 저용량 (허가 외)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q3h",
+          "max_dose_mg_kg": null,
+          "duration_note": "CPR 초기, 3~5분마다 (기본 소생술 2사이클마다 1회 투여 권장)",
+          "evidence": "RECOVER CPR Initiative Part 7 기반. IV 또는 IO 투여, 3~5분마다 반복."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 / 무수축 - 고용량 (허가 외)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "CPR 10분 이상 지속 후 고려",
+          "evidence": "RECOVER CPR Initiative Part 7 기반. 장시간 CPR 후 고용량 투여 고려."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 - 기관내 투여 저용량 (허가 외)",
+          "value": "0.02",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV/IO 접근 불가 시, 생리식염수 또는 멸균수로 희석 후 기관내 카테터로 투여",
+          "evidence": "IV/IO 접근 불가 시 기관내 투여 고려. 저용량 0.02 mg/kg."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 - 기관내 투여 고용량 (허가 외)",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "Inh",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "IV/IO 접근 불가 시, 생리식염수 또는 멸균수로 희석 후 기관내 카테터로 투여",
+          "evidence": "IV/IO 접근 불가 시 기관내 투여 고려. 고용량 0.2 mg/kg."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아나필락시스 초기 치료 (허가 외)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.01,
+          "duration_note": "1 mg/mL 용액 사용; 40 kg 미만 최대 0.3 mg, 40 kg 이상 최대 0.5 mg (총 용량). 5~15분마다 반복 가능. SC 경로 피할 것.",
+          "evidence": "허가 외. 초기 0.01 mg/kg IM, 1 mg/mL 용액 사용. 쇼크 발생 시 0.05 µg/kg/분 IV CRI로 전환."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아나필락시스 - 쇼크 발생 시 IV CRI (허가 외)",
+          "value": "0.05",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 반응에 따라 용량 조절",
+          "evidence": "쇼크 발생 시 0.05 µg/kg/분 서서히 IV 주입, 임상 반응에 따라 조절."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 관련 저혈압 (허가 외)",
+          "value": "0.125 - 2",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "다른 치료에 반응하지 않을 때만 고려. 조직 산소 요구량 증가 및 내장 혈관 수축 위험.",
+          "evidence": "허가 외. 0.125–2 µg/kg/분 CRI."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "국소마취제 효과 연장 (허가 외)",
+          "value": "5",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "국소마취제 20 mL에서 0.1 mL 제거 후 에피네프린 1 mg/mL 용액 0.1 mL 첨가 (최종 농도 약 5 µg/mL)",
+          "evidence": "허가 외. 국소마취제에 에피네프린 5 µg/mL 농도로 첨가하여 혈관 수축 유도."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "아나필락시스 쇼크 (허가 용량, FDA 미승인)",
+          "value": "0.1 - 0.5",
+          "unit": "mg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량(mg/kg 아님), 1 mg/mL 용액 사용",
+          "evidence": "허가 라벨 용량; FDA 미승인. 0.1–0.5 mL (총 용량) IM 또는 SC, 에피네프린 1 mg/mL 용액 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "아나필락시스 쇼크 (허가 용량, FDA 미승인)",
+          "value": "0.1 - 0.5",
+          "unit": "mg",
+          "route": "SC",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "총 용량(mg/kg 아님), 1 mg/mL 용액 사용",
+          "evidence": "허가 라벨 용량; FDA 미승인. 0.1–0.5 mL (총 용량) IM 또는 SC, 에피네프린 1 mg/mL 용액 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 / 무수축 - 저용량 (허가 외)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q3h",
+          "max_dose_mg_kg": null,
+          "duration_note": "CPR 초기, 3~5분마다 (기본 소생술 2사이클마다 1회 투여 권장)",
+          "evidence": "RECOVER CPR Initiative Part 7 기반. IV 또는 IO 투여, 3~5분마다 반복."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심폐소생술 / 무수축 - 고용량 (허가 외)",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "CPR 10분 이상 지속 후 고려",
+          "evidence": "RECOVER CPR Initiative Part 7 기반. 장시간 CPR 후 고용량 투여 고려."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아나필락시스 초기 치료 (허가 외)",
+          "value": "0.01",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "PRN",
+          "max_dose_mg_kg": 0.01,
+          "duration_note": "1 mg/mL 용액 사용; 40 kg 미만 최대 0.3 mg, 40 kg 이상 최대 0.5 mg (총 용량). 5~15분마다 반복 가능. SC 경로 피할 것.",
+          "evidence": "허가 외. 초기 0.01 mg/kg IM, 1 mg/mL 용액 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "마취 관련 저혈압 (허가 외)",
+          "value": "0.125 - 2",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "다른 치료에 반응하지 않을 때만 고려",
+          "evidence": "허가 외. 0.125–2 µg/kg/분 CRI."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "본문에 신장 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없습니다. 과량 투여 시 신부전이 발생할 수 있으므로 신기능 모니터링이 권장됩니다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "본문에 간 기능 저하 시 용량 조절에 대한 명시적 권고사항이 없습니다. 에피네프린은 간에서 대사되나 생명을 위협하는 상황에서는 절대적 금기가 없습니다."
+  },
+  "contraindications": [
+    {
+      "condition": "폐쇄각 녹내장",
+      "match_terms": [
+        "closed-angle glaucoma",
+        "녹내장"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "에피네프린 과민증",
+      "match_terms": [
+        "epinephrine hypersensitivity",
+        "에피네프린 알레르기"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "비아나필락시스성 원인에 의한 쇼크",
+      "match_terms": [
+        "non-anaphylactic shock",
+        "cardiogenic shock",
+        "hypovolemic shock"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "흡입 마취제를 이용한 전신마취 중",
+      "match_terms": [
+        "halogenated inhalant anesthesia",
+        "isoflurane",
+        "sevoflurane"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "분만 중 (제2기 지연 가능)",
+      "match_terms": [
+        "parturition",
+        "labor",
+        "분만"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "확장성 심근병증 또는 관상동맥 부전",
+      "match_terms": [
+        "dilated cardiomyopathy",
+        "DCM",
+        "coronary insufficiency",
+        "cardiac dilatation"
+      ],
+      "severity": "relative",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 항진증",
+      "match_terms": [
+        "thyrotoxicosis",
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 또는 조절되지 않는 당뇨병",
+      "match_terms": [
+        "uncontrolled diabetes",
+        "acute diabetes"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 고혈압",
+      "match_terms": [
+        "uncontrolled hypertension",
+        "hypertension"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심실세동 전 심장 리듬",
+      "match_terms": [
+        "prefibrillatory cardiac rhythm",
+        "ventricular fibrillation risk"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증 (체액 보충 대체 불가)",
+      "match_terms": [
+        "hypovolemia",
+        "volume depletion"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "내인성 카테콜아민으로 알파 및 베타 아드레날린 수용체에 작용합니다. 저용량(0.01 mg/kg IV)에서는 베타-1 수용체를 자극하여 심박수 및 수축력을 증가시키고, 베타-2 수용체 활성화로 말초 혈관 저항을 감소시킵니다. 고용량(0.1 mg/kg)에서는 알파-1 아드레날린 효과로 말초 혈관 저항이 증가합니다. 기관지 평활근을 이완시키고, 히스타민 효과를 길항하며, 혈당을 상승시킵니다.",
+    "common_extra_effects": [
+      "떨림(tremors)",
+      "흥분(excitability)",
+      "구토(vomiting)",
+      "고혈압(hypertension)",
+      "빈맥(tachycardia)",
+      "부정맥(arrhythmias)",
+      "폐부종(pulmonary edema)",
+      "고혈당(hyperglycemia)",
+      "행동 변화(불안, 흥분)",
+      "젖산 산증(lactic acidosis, 장기 사용 또는 과량 투여 시)",
+      "주사 부위 조직 괴사 및 탈락(반복 SC 주사 시)"
+    ],
+    "dog_mechanism": "개에서 저용량 IV 투여 시 베타-1 수용체 자극으로 심박출량 증가, 고용량에서 알파-1 효과로 말초 혈관 저항 증가. 심근 산소 소비량 증가.",
+    "dog_extra_effects": [
+      "심장 부정맥",
+      "폐부종",
+      "조직 괴사(말초 정맥 외삽 또는 반복 SC 주사 시)"
+    ],
+    "cat_mechanism": "개와 유사한 기전. 인체 라벨에서 외삽된 정보이며 수의학적 종별 적용이 가정됩니다.",
+    "cat_extra_effects": [
+      "심장 부정맥",
+      "폐부종",
+      "조직 괴사(말초 정맥 외삽 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에피네프린은 주로 아나필락시스 치료 및 심폐소생술에 사용됩니다. RECOVER CPR 가이드라인에 따라 저용량(0.01 mg/kg IV/IO)을 CPR 초기에 3~5분마다 투여하고, 10분 이상 지속 시 고용량(0.1 mg/kg)을 고려합니다. 아나필락시스 시 IM 투여가 권장되며 SC 경로는 피해야 합니다. 말초 정맥 투여 시 외삽에 의한 조직 괴사 위험이 있으므로 가능하면 중심 정맥을 통해 투여하십시오. 농도 혼동(1 mg/mL vs 0.1 mg/mL)에 주의하십시오.",
+    "cat": "고양이에서도 개와 동일한 적응증(아나필락시스, 심폐소생술)으로 사용됩니다. 용량 및 투여 경로는 개와 동일하게 적용됩니다. 고양이는 호흡 곤란이 아나필락시스의 주요 증상일 수 있습니다. 흡입 마취제 사용 중 투여 시 부정맥 위험이 증가하므로 주의가 필요합니다. 농도 혼동에 각별히 주의하십시오."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "생명을 위협하는 상황에서는 절대적 금기가 없으나, 심실세동 전 리듬, 흡입 마취 중, 저혈량증, 갑상선 기능 항진증, 조절되지 않는 고혈압/당뇨 환자에서 주의가 필요합니다. 농도 혼동(1 mg/mL vs 0.1 mg/mL) 방지에 주의하십시오."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "생명을 위협하는 상황에서는 절대적 금기가 없으나, 심실세동 전 리듬, 흡입 마취 중, 저혈량증 환자에서 주의가 필요합니다. 농도 혼동 방지에 주의하십시오."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "에피네프린 HCl 주사제는 15°C~30°C(59°F~86°F)에서 빛을 차단한 밀폐 용기에 보관하십시오. 빛과 공기에 노출되면 산화로 인해 색이 변합니다. 분홍색 또는 갈색이거나 침전물이 있는 경우 사용하지 마십시오. 사전 충전 자동주사기는 실온에서 보관하며 냉장 보관하지 마십시오. 극단적인 온도 변화가 있는 차량 내 보관을 피하십시오.",
+    "forms": [
+      "에피네프린 HCl 주사액 1 mg/mL (1 mL 앰플, 주사기, 10 mL/30 mL/50 mL/100 mL 바이알) - 수의용",
+      "에피네프린 HCl 주사액 0.1 mg/mL (10 mL 주사기 및 바이알) - 인체용",
+      "에피네프린 HCl 주사액 0.3 mg/0.3 mL (사전 충전 단회용 주사기 또는 이중 용량 자동주사기) - 인체용",
+      "에피네프린 HCl 주사액 0.15 mg/0.15 mL (단회용 또는 이중 용량 자동주사기) - 인체용",
+      "에피네프린 HCl 주사액 0.15 mg/0.3 mL - 인체용",
+      "에피네프린 비타르트산염 흡입용 분말(에어로졸), 국소 용액, 분무용 용액 - 인체용",
+      "안과용 제제 - 인체용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에피네프린은 알파 및 베타 아드레날린 수용체 작용제로, 아나필락시스 치료 및 심폐소생술에 1차 선택약입니다. 생명을 위협하는 상황에서는 절대적 금기가 없습니다. 농도 혼동(1 mg/mL vs 0.1 mg/mL) 방지가 매우 중요합니다. 심폐소생술 시 RECOVER CPR 가이드라인을 따르며, 저용량(0.01 mg/kg IV/IO)을 3~5분마다 투여합니다. 아나필락시스 시 IM 투여가 권장되며 SC 경로는 피해야 합니다. 말초 정맥 투여 시 외삽에 의한 조직 괴사 위험이 있으므로 가능하면 중심 정맥을 사용하십시오. 다수의 약물 상호작용이 가능하므로 병용 약물 확인이 필요합니다.",
+    "indications": "수의학에서 에피네프린의 주요 적응증: (1) 아나필락시스 치료 - 허가 용량(FDA 미승인) 및 허가 외 용량 모두 사용 가능. (2) 심폐소생술 - 무수축 및 심폐정지 시 RECOVER CPR 가이드라인에 따라 사용. (3) 마취 유발 저혈압 - 다른 치료에 반응하지 않는 경우 CRI로 사용. (4) 국소마취제 효과 연장 - 국소마취제에 저농도(5 µg/mL)로 첨가하여 혈관 수축 유도. (5) 파충류에서 흡입 마취 후 회복 시간 단축(허가 외). 개, 고양이, 소, 말, 양, 돼지에 대해 수의용 라벨이 있습니다.",
+    "client_info": "에피네프린 투여는 즉각적인 수의학적 치료를 대체할 수 없습니다. 투여 후 가능한 빨리 수의사의 진료를 받으십시오. 심각한 알레르기 반응의 초기 증상(쓰러짐, 창백한 잇몸, 호흡 곤란, 얼굴 부종, 구토, 설사)을 인지하는 방법을 숙지하십시오. 이 약을 항상 쉽게 접근할 수 있는 곳에 보관하십시오(목줄, 케이지 등에 부착 권장). 수의사의 지시에 따라 정확하게 투여하고, 사용 전에 주사기 작동 방법을 미리 숙지하십시오. 주사 부위를 부드럽게 마사지하면 흡수가 빨라집니다. 사전 충전 자동주사기는 실온에서 보관하며 냉장 보관하지 마십시오. 변색(분홍색 또는 진한 노란색)되거나 부유물이 있는 경우 사용하지 마십시오. 유효기간을 확인하고 만료 전에 교체하십시오. 사용한 주사기 및 바늘의 안전한 폐기 방법에 대해 수의사 또는 약사에게 문의하십시오. 실수로 사람에게 주사된 경우 즉시 응급 의료 서비스를 받으십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (half-life not explicitly stated)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP enzyme profile",
+      "Protein binding",
+      "Oral bioavailability (F%)",
+      "t_max_hr"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/16.jsonl",
+    "extracted_at": "2026-03-10T18:03:18.046792+00:00",
+    "reviewer": null
+  }
+}

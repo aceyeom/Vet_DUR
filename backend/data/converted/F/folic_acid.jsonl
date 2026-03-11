@@ -1,0 +1,472 @@
+{
+  "id": "folic_acid",
+  "drug_identity": {
+    "name_ko": "엽산",
+    "name_en": "Folic Acid",
+    "active_ingredient": "Folic Acid",
+    "brand_names": [
+      "Folvite"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품은 없으며, 인체용 제품을 동물에게 적용하는 오프라벨 사용임. 엽산 결핍 치료 및 예방 목적으로 개, 고양이, 말 등에 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 0.4,
+        "unit": "mg"
+      },
+      {
+        "value": 0.8,
+        "unit": "mg"
+      },
+      {
+        "value": 1.0,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "엽산은 주로 간과 혈장에서 테트라하이드로엽산(활성형)으로 전환됨. 체내 필요량을 초과하는 경우 대사산물 또는 미변화체로 소변을 통해 배설됨."
+    },
+    "extra_information": "엽산은 주로 근위 소장에서 담체 매개 확산으로 흡수됨. 적혈구 및 뇌척수액 내 농도는 혈청보다 현저히 높을 수 있음. 간장내 재순환(enterohepatic recirculation)이 일어남. 개와 고양이에 대한 종 특이적 약동학 데이터는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인체 데이터에 근거하며, 수의학적 종 특이 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects (high dose, human)"
+        ],
+        "index": -1,
+        "evidence": "매우 고용량(인체 기준 15mg/일)에서 드물게 CNS 효과(불면, 흥분, 혼란) 보고됨. 개에서의 직접적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "erythropoiesis",
+          "megaloblastic anemia",
+          "CBC"
+        ],
+        "index": 1,
+        "evidence": "정상 적혈구 생성에 필수적이며, 결핍 시 거대적아구성 빈혈 유발 가능. CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal excretion",
+          "urine"
+        ],
+        "index": 1,
+        "evidence": "과잉 엽산은 소변으로 배설됨. 신독성 보고 없음. 신장 부담은 낮음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic conversion",
+          "stored in liver",
+          "enterohepatic recirculation"
+        ],
+        "index": 1,
+        "evidence": "엽산은 주로 간에서 활성형으로 전환되고 저장됨. 간장내 재순환이 일어남."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적 부담 또는 독성 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS effects (high dose, human)"
+        ],
+        "index": -1,
+        "evidence": "매우 고용량에서 드물게 CNS 효과 보고됨(인체 데이터). 고양이에서의 직접적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "erythropoiesis",
+          "megaloblastic anemia",
+          "CBC"
+        ],
+        "index": 1,
+        "evidence": "정상 적혈구 생성에 필수적이며, 결핍 시 거대적아구성 빈혈 유발 가능. CBC 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal excretion",
+          "urine"
+        ],
+        "index": 1,
+        "evidence": "과잉 엽산은 소변으로 배설됨. 신독성 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic conversion",
+          "stored in liver",
+          "enterohepatic recirculation"
+        ],
+        "index": 1,
+        "evidence": "엽산은 주로 간에서 활성형으로 전환되고 저장됨. 간장내 재순환이 일어남."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적 부담 또는 독성 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인체에서 합성 엽산은 경구 투여 후 거의 완전히 흡수됨. 식이 엽산의 생체이용률은 약 50%. 최고 혈중 농도는 1시간 이내 도달. 반감기 데이터는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "delayed response",
+        "folate antagonism"
+      ],
+      "evidence": "Chloramphenicol may delay the therapeutic response to folic acid."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "dihydrofolate reductase inhibition",
+        "folate utilization"
+      ],
+      "evidence": "Methotrexate inhibits dihydrofolate reductase and may interfere with folic acid utilization."
+    },
+    {
+      "drug": "Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "dihydrofolate reductase inhibition",
+        "folate utilization"
+      ],
+      "evidence": "Trimethoprim inhibits dihydrofolate reductase and may interfere with folic acid utilization."
+    },
+    {
+      "drug": "Ormetoprim",
+      "severity": 2,
+      "keywords": [
+        "dihydrofolate reductase inhibition",
+        "folate utilization"
+      ],
+      "evidence": "Ormetoprim inhibits dihydrofolate reductase and may interfere with folic acid utilization."
+    },
+    {
+      "drug": "Pyrimethamine",
+      "severity": 2,
+      "keywords": [
+        "dihydrofolate reductase inhibition",
+        "folate utilization"
+      ],
+      "evidence": "Pyrimethamine inhibits dihydrofolate reductase and may interfere with folic acid utilization."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased serum levels",
+        "drug level monitoring"
+      ],
+      "evidence": "Folic acid may decrease phenobarbital serum levels; monitor therapy."
+    },
+    {
+      "drug": "Primidone",
+      "severity": 2,
+      "keywords": [
+        "folate deficiency risk"
+      ],
+      "evidence": "Primidone may increase the risk for folate deficiency."
+    },
+    {
+      "drug": "Sulfasalazine",
+      "severity": 2,
+      "keywords": [
+        "folate deficiency risk"
+      ],
+      "evidence": "Sulfasalazine may increase the risk for folate deficiency."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "엽산 결핍 (염증성 장질환, 췌장 외분비 부전 관련) - 오프라벨",
+          "value": "400 - 1000",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "용량은 개체당 고정 용량(NOT mg/kg): 400 µg ~ 1 mg/마리. 일부 문헌에서 2~5 mg/마리/일 권장. IBD 치료 시 코발라민(B12)과 병용 권장.",
+          "evidence": "오프라벨. 소동물에서 일반적으로 권장되는 PO 용량은 400 µg ~ 1 mg/마리(NOT mg/kg) 1일 1회이며, 2~5 mg/마리(NOT mg/kg) PO 1일 1회도 보고됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "엽산 결핍 (염증성 장질환, 췌장 외분비 부전 관련) - 오프라벨",
+          "value": "400 - 1000",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "용량은 개체당 고정 용량(NOT mg/kg): 400 µg ~ 1 mg/마리. IBD 치료 시 코발라민(B12)과 병용 권장.",
+          "evidence": "오프라벨. 소동물에서 일반적으로 권장되는 PO 용량은 400 µg ~ 1 mg/마리(NOT mg/kg) 1일 1회."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고용량 설파/트리메토프림 장기 투여 시 (Nocardia spp. 치료) - 오프라벨",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "용량은 개체당 고정 용량(NOT mg/kg): 2 mg/마리 1일 1회.",
+          "evidence": "오프라벨. 고용량 설파/트리메토프림 장기 투여 고양이에서 2 mg/마리(NOT mg/kg) PO 1일 1회 권장."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조절에 대한 명시적 권고 없음. 과잉 엽산은 소변으로 배설되므로 신기능 저하 시 주의가 필요할 수 있으나 구체적 기준 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 명시적 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "엽산 과민반응",
+      "match_terms": [
+        "folic acid hypersensitivity",
+        "folate allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "악성 빈혈(비타민 B12 결핍 관련 빈혈) 미배제 상태",
+      "match_terms": [
+        "pernicious anemia",
+        "cobalamin deficiency",
+        "B12 deficiency"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "엽산 및 코발라민 수치 미확인 상태에서의 치료 용량 투여 (개)",
+      "match_terms": [
+        "enteropathy",
+        "IBD",
+        "folate level unknown"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "디하이드로엽산 환원효소에 의해 테트라하이드로엽산(5-메틸테트라하이드로엽산)으로 환원되어 퓨린 및 피리미딘 뉴클레오타이드 합성(DNA 합성)에 필요한 조효소로 작용. 정상 적혈구 생성 유지에도 필수적.",
+    "common_extra_effects": [
+      "과민반응 (드물게, 인체)",
+      "위장관 증상 (드물게, 인체)",
+      "CNS 효과 - 불면, 흥분, 혼란 (매우 고용량, 인체에서 드물게)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 만성 소장 질환 또는 외분비 췌장 부전 시 저코발라민혈증이 저엽산혈증보다 더 흔함. 장병증 관련 엽산 수치는 증가, 정상, 감소 모두 가능하므로 치료 전 엽산 및 코발라민 수치 확인 필수. 그레이하운드에서 저엽산혈증과 고호모시스테인혈증의 연관성이 보고됨. 퍼그 및 치와와에서 임신 중 엽산 보충이 구개열 발생률 감소와 관련될 수 있음.",
+    "cat": "고양이에서 만성 소장 질환 또는 외분비 췌장 부전 시 저코발라민혈증이 저엽산혈증보다 더 흔함. Nocardia spp. 감염 치료를 위한 고용량 설파/트리메토프림 장기 투여 시 엽산 보충(2 mg/마리/일 PO) 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "치료 용량 투여 전 반드시 엽산 및 코발라민 수치를 확인해야 함. 악성 빈혈 배제 후 투여. 비경구 제품에 알루미늄 및/또는 벤질알코올이 포함될 수 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "치료 용량 투여 전 반드시 엽산 및 코발라민 수치를 확인해야 함. 악성 빈혈 배제 후 투여. 비경구 제품에 알루미늄 및/또는 벤질알코올이 포함될 수 있음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 20~25°C(68~77°F)의 밀폐 용기에 보관, 빛과 습기 차단. 주사제: 20~25°C(68~77°F)에서 빛 차단 보관. 동결 금지.",
+    "forms": [
+      "엽산 정제: 0.4 mg, 0.8 mg, 1 mg (OTC/Rx)",
+      "엽산 캡슐: 0.8 mg, 5 mg, 20 mg (OTC)",
+      "엽산 주사제: 5 mg/mL, 10 mL 바이알 (Rx)",
+      "조제 경구 용액: 1 mg/mL 또는 0.05 mg/mL (실온 30일 안정)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "엽산(비타민 B9)은 DNA 합성 및 정상 적혈구 생성에 필수적인 수용성 B군 비타민임. 소장 염증성 질환, 외분비 췌장 부전, 디하이드로엽산 환원효소 억제제(트리메토프림, 피리메타민 등) 장기 투여, 또는 식이 결핍으로 인한 엽산 결핍 치료에 사용됨. 수의학적으로 승인된 제품은 없으며 오프라벨로 사용됨. 안전 범위가 넓고 독성이 낮음. 치료 전 반드시 엽산 및 코발라민(B12) 수치를 확인해야 하며, 악성 빈혈을 배제한 후 투여해야 함.",
+    "indications": "엽산 결핍 치료 및 예방: 소장 염증성 질환(IBD), 외분비 췌장 부전, 디하이드로엽산 환원효소 억제제(트리메토프림, 오르메토프림, 피리메타민, 메토트렉세이트) 장기 투여 시. 임신 중 신경관 결손 예방(인체). 퍼그·치와와 임신견에서 구개열 예방 목적(오프라벨). 모든 적응증이 수의학적 오프라벨 사용임.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편함이 있으면 소량의 음식과 함께 투여하세요. 구토가 지속되면 수의사에게 연락하세요. 소장 질환이나 췌장 부전으로 인한 엽산 결핍 치료 시 평생 모니터링과 주기적인 보충 치료가 필요할 수 있습니다. 정기적인 수의사 방문을 빠뜨리지 마세요. 임의로 투약을 중단하거나 용량을 변경하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Half-life data",
+      "Bioavailability (dog/cat)",
+      "Protein binding data",
+      "CYP enzyme profile",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.onset_min",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:29:45.523805+00:00",
+    "reviewer": null
+  }
+}

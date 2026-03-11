@@ -1,0 +1,399 @@
+{
+  "id": "clofazimine",
+  "drug_identity": {
+    "name_ko": "클로파지민",
+    "name_en": "Clofazimine",
+    "active_ingredient": "Clofazimine",
+    "brand_names": [
+      "Lamprene",
+      "Clofozine",
+      "Hansepran",
+      "Lamcoin",
+      "Lampren"
+    ],
+    "allergy_class": null,
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 사용에 대한 공식 승인 없음. 미국에서는 나병 치료 목적으로만 제한적으로 입수 가능하며, 수의 환자에 대한 사용 지위는 불확실함(2021년 기준).",
+    "dosage_form": [
+      "Cap",
+      "Oint"
+    ],
+    "available_strengths": []
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "담즙 배설이 주요 배설 경로로 추정되며, 객담·피지·땀을 통한 배설도 일부 기여함. 국내 동물에서의 약동학 데이터 없음."
+    },
+    "extra_information": "개와 고양이에서의 약동학은 공식적으로 연구된 바 없음. 인체 데이터에 의하면 경구 생체이용률 45~70%, 고지질 용해성으로 지방 조직 및 세망내피계에 분포. 조직 내 반감기 최소 70일. CNS/CSF 투과 없음."
+  },
+  "organ_burden_logic": {
+    "note": "점수는 모노그래프에서 언급된 키워드 기반으로 산출. 동물 종별 약동학 데이터 부재로 인체 데이터 및 임상 보고를 참조함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "CNS effects <1%"
+        ],
+        "index": -1,
+        "evidence": "인체에서 CNS 이상반응이 1% 미만으로 보고됨. 개에서 CNS 투과 없음이 언급됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "discoloration of body fluids"
+        ],
+        "index": -1,
+        "evidence": "체액 변색(갈색-흑색) 보고. 혈액 독성에 대한 직접적 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신독성에 대한 직접적 언급 없음. 담즙 배설이 주경로."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "increased liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "개에서 클로파지민과 리팜핀 병용 시 간독성 발생 보고. 인체에서도 간효소 상승 보고(<1%). 모니터링 권고."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "QT 연장 유발 약물과의 상호작용으로 심각한 심부정맥 위험 증가 가능성 언급."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "CNS effects <1%"
+        ],
+        "index": -1,
+        "evidence": "인체에서 CNS 이상반응 1% 미만. 고양이 특이 CNS 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "discoloration of body fluids"
+        ],
+        "index": -1,
+        "evidence": "체액 변색 보고. 혈액 독성 직접 언급 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신독성 직접 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "increased liver enzymes"
+        ],
+        "index": -1,
+        "evidence": "인체에서 간효소 상승 보고(<1%). 고양이에서 간독성 직접 보고 없으나 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac arrhythmias"
+        ],
+        "index": -1,
+        "evidence": "QT 연장 유발 약물과의 상호작용으로 심각한 심부정맥 위험 증가 가능성 언급."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1680.0,
+      "max": null,
+      "mean": 1680.0,
+      "species": "human"
+    },
+    "f_percent": 58,
+    "protein_binding_percent": null,
+    "evidence": "인체 데이터: 경구 생체이용률 45~70%(평균 약 58%). 조직 내 반감기 최소 70일(1680시간). 동물 약동학 데이터 없음. 식이와 함께 복용 시 흡수 증가."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids",
+      "severity": 2,
+      "keywords": [
+        "reduced absorption",
+        "decreased plasma concentration"
+      ],
+      "evidence": "Antacids may reduce clofazimine plasma concentrations."
+    },
+    {
+      "drug": "Dapsone",
+      "severity": 1,
+      "keywords": [
+        "reduced anti-inflammatory effect"
+      ],
+      "evidence": "Weak evidence suggests dapsone may reduce the anti-inflammatory effects of clofazimine; clinical significance is unclear."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 1,
+      "keywords": [
+        "altered distribution",
+        "reduced skin levels",
+        "increased plasma levels"
+      ],
+      "evidence": "Isoniazid may reduce clofazimine levels in the skin and increase amounts in plasma and urine; clinical significance is unclear."
+    },
+    {
+      "drug": "QT Prolonging Agents (e.g., amiodarone, cisapride, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmia"
+      ],
+      "evidence": "Concurrent use with QT-prolonging agents may increase the risk of QT interval prolongation and serious cardiac arrhythmias."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 350.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "M. avium-intracellulare complex 감염, 일부 비결핵 마이코박테리아 감염(특히 급속 성장형), 개 나병양 육아종 증후군 (extra-label)",
+          "value": "4 - 8",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 8.0,
+          "duration_note": "4주, 통상 다제 병용 요법의 일환으로 사용",
+          "evidence": "Plumb's Veterinary Drug Handbook 용량 섹션 (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "M. avium-intracellulare complex 감염, 고양이 나병, 기타 비결핵 마이코박테리아 감염 (extra-label) — mg/kg 기준",
+          "value": "4 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "4주, 통상 다제 병용 요법의 일환으로 사용. q24h~q48h 간격",
+          "evidence": "Plumb's Veterinary Drug Handbook 용량 섹션 (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "M. avium-intracellulare complex 감염, 고양이 나병, 기타 비결핵 마이코박테리아 감염 (extra-label) — 고정 용량 기준",
+          "value": "25 - 50",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주, 통상 다제 병용 요법의 일환으로 사용. q24h~q48h 간격",
+          "evidence": "Plumb's Veterinary Drug Handbook 용량 섹션 (extra-label) — mg/cat (NOT mg/kg)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조정에 대한 명시적 언급 없음. 담즙 배설이 주경로이므로 신기능 저하의 영향은 제한적일 수 있으나 확인된 데이터 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "개에서 클로파지민과 리팜핀 병용 시 간독성 발생 보고. 간기능 모니터링 권고. 명시적 용량 조정 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "기존 위장관 질환 (설사, 복통)",
+      "match_terms": [
+        "diarrhea",
+        "abdominal pain",
+        "GI disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "마이코박테리아 DNA에 결합하여 성장을 억제하는 서서히 작용하는 살균제. 항염증 및 면역억제 효과도 있으나 기전 불명확. 페나진 계열 적색 염료로 조직, 피부, 체액 변색 유발.",
+    "common_extra_effects": [
+      "피부, 눈, 체액 변색 (분홍~갈색-흑색)",
+      "위장관 증상 (통증, 오심, 구토, 설사) — 용량 의존적",
+      "간효소 상승 (<1%, 인체)",
+      "CNS 이상반응 (<1%, 인체)",
+      "광과민 반응 (고양이 1례 보고)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [
+      "피부, 눈, 체액 변색",
+      "위장관 증상",
+      "간독성 (리팜핀 병용 시 보고)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "피부, 눈, 체액 변색",
+      "위장관 증상",
+      "광과민 반응 (1례 보고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 클로파지민은 M. avium complex 감염, 급속 성장형 비결핵 마이코박테리아 감염, 개 나병양 육아종 증후군에 다제 병용 요법의 일환으로 사용됨(extra-label). 리팜핀과 병용 시 간독성 발생 보고가 있으므로 간기능 모니터링 권고. 피부 및 체액 변색이 발생할 수 있음.",
+    "cat": "고양이에서 M. avium complex 감염, 고양이 나병, 기타 비결핵 마이코박테리아 감염에 사용됨(extra-label). 용량은 4~10 mg/kg 또는 25~50 mg/cat(mg/kg 아님)으로 q24~48h 투여. 광과민 반응 1례 보고. 피부 및 체액 변색 발생 가능."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 위장관 질환 환자에서 주의 사용 권고. 리팜핀 병용 시 간독성 위험. 간기능 모니터링 권고. 임상 경험 매우 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "광과민 반응 1례 보고. 기존 위장관 질환 환자에서 주의 사용 권고. 임상 경험 매우 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 보관, 습기 차단, 30°C(86°F) 미만 온도 유지.",
+    "forms": [
+      "경구 캡슐 (미세결정형, 왁스 매트릭스 기제)",
+      "국소 연고 (조제 제제 — 캡슐 내용물 40개를 바셀린 연고 100g에 혼합)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로파지민은 비결핵 마이코박테리아 감염(M. avium complex, 나병양 질환 등) 치료를 위한 다제 병용 요법에 사용되는 항마이코박테리아 항생제입니다. 수의학적 임상 경험이 매우 제한적이며, 미국에서는 입수가 어렵습니다. 피부·눈·체액 변색(분홍~갈색-흑색)이 대부분의 환자에서 발생하며, 치료 종료 후 수개월~수년간 지속될 수 있습니다. 위장관 이상반응은 용량 의존적입니다. 개에서 리팜핀 병용 시 간독성 보고가 있으므로 간기능 모니터링이 필요합니다. QT 연장 유발 약물과의 병용 시 심각한 심부정맥 위험이 증가합니다.",
+    "indications": "소동물에서 비결핵 마이코박테리아 감염(M. avium complex, 개 나병양 육아종 증후군, 고양이 나병 등)에 대한 다제 병용 요법의 일환으로 사용(모두 extra-label). 인체에서는 나병(리팜핀, 답손과 병용) 및 MAC 치료에 사용됨.",
+    "client_info": "이 약은 반드시 음식과 함께 투여하십시오. 투약 후 반려동물의 피부가 분홍색~갈색으로 변할 수 있으며, 눈물·소변·대변 등 체액이 갈색-흑색으로 변색될 수 있습니다. 이 변색은 치료 종료 후에도 수개월간 지속될 수 있으므로 놀라지 마십시오. 위장관 증상(구토, 설사, 복통)이 나타나면 수의사에게 알려주십시오. 이 약은 입수가 어려울 수 있으며, 반드시 다른 항생제와 병용하여 사용합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary pharmacokinetics (dog/cat)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP profile",
+      "Protein binding",
+      "T_max",
+      "Onset",
+      "Available strengths"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/26.jsonl",
+    "extracted_at": "2026-03-10T21:13:10.363709+00:00",
+    "reviewer": null
+  }
+}

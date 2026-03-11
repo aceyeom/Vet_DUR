@@ -1,0 +1,498 @@
+{
+  "id": "sarolaner",
+  "drug_identity": {
+    "name_ko": "사롤라너",
+    "name_en": "Sarolaner",
+    "active_ingredient": "Sarolaner",
+    "brand_names": [
+      "Simparica",
+      "Simparica TRIO",
+      "Revolution Plus"
+    ],
+    "allergy_class": null,
+    "class": "Antiparasitic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Chewable",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "value": 120,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "대사는 최소한으로 이루어지며, 주요 배설 경로는 담즙을 통한 미변화 약물의 분변 배설로 추정됨."
+    },
+    "extra_information": "개에서 경구 투여 후 흡수는 광범위하고 신속함. 공복 시 평균 경구 생체이용률 86%, 급식 시 107%. 정상 상태 분포 용적 2.81 L/kg (IV 2 mg/kg 투여 후). 혈장 단백 결합률 ≥99.9%. 청소율 낮음 (0.12 mL/분/kg). 평균 반감기 10~12일. 대사는 최소한으로 이루어짐."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 신경계 이상반응(진전, 운동실조, 발작) 보고됨. 주로 담즙 배설로 간 부담 존재. 신장 배설 분율 미보고.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "muscle tremors",
+          "ataxia",
+          "seizures",
+          "neurologic adverse effects",
+          "disorientation",
+          "convulsions"
+        ],
+        "index": 1,
+        "evidence": "FDA 경고: 이소옥사졸린 계열 약물은 근육 진전, 운동실조, 발작 등 신경계 이상반응 가능성 있음. 과용량 시 경련, 진전, 비정상적 두부 협응 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "plasma protein binding"
+        ],
+        "index": 2,
+        "evidence": "혈장 단백 결합률 ≥99.9%로 매우 높음. 혈액 독성 관련 직접적 보고는 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설 분율이 명시되지 않음. 주요 배설 경로는 담즙/분변이며 신장 부담에 대한 직접적 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "biliary excretion",
+          "minimal metabolism"
+        ],
+        "index": 3,
+        "evidence": "주요 배설 경로는 담즙을 통한 미변화 약물의 분변 배설. 대사는 최소한이나 간을 통한 배설이 주경로임."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성 또는 심장 관련 이상반응에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "neurologic adverse effects",
+          "muscle tremors",
+          "ataxia",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "FDA 경고: 이소옥사졸린 계열 약물은 고양이에서도 신경계 이상반응(근육 진전, 운동실조, 발작) 가능성 있음. 고양이 단독 약동학 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 관련 이상반응 보고 없음. 고양이 단독 PK 데이터 부재."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 관련 이상반응 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "biliary excretion"
+        ],
+        "index": 2,
+        "evidence": "담즙 배설이 주요 경로로 추정되나 고양이 특이적 데이터 없음. 고양이에서는 세라멕틴/사롤라너 복합제로만 사용됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 관련 이상반응 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 180,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 240,
+      "max": 288,
+      "mean": 264,
+      "species": "dog"
+    },
+    "f_percent": 86,
+    "protein_binding_percent": 99,
+    "evidence": "공복 시 경구 생체이용률 86%, 급식 시 107%. 평균 반감기 10~12일(240~288시간). 벼룩은 투여 3시간 후부터 사망 시작. 혈장 단백 결합률 ≥99.9%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 사롤라너 단독 또는 사롤라너/세라멕틴 병용 시 임상적으로 유의한 약물 상호작용은 현재까지 보고되지 않음. 복합제(목시덱틴/피란텔 포함) 관련 상호작용은 해당 모노그래프 참조.",
+  "drug_interactions": [
+    {
+      "drug": "Ivermectin",
+      "severity": 1,
+      "keywords": [
+        "lethargy",
+        "ataxia",
+        "neurologic signs"
+      ],
+      "evidence": "단일 현장 연구에서 사롤라너와 이버멕틴/피란텔 파모에이트 병용 투여 1일 후 개 1마리에서 기력저하, 자세 변경 시 운동실조, 제3안검 돌출, 식욕부진 발생. 1일 후 자연 회복. 단일 증례로 인과관계 불명확."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_oral_single_agent"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 55.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "벼룩 및 진드기 구제 (FDA 승인 라벨 용량, 단독제)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 투여, 연중 지속 권장",
+          "evidence": "FDA 승인 최소 권장 용량 2 mg/kg PO 월 1회. 체중 1.3 kg 이상, 생후 6개월 이상 개에 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "외부기생충 치료 (extra-label): 귀 진드기(Otodectes cynotis)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "30일 간격으로 1~2회 투여",
+          "evidence": "Extra-label: 2~4 mg/kg PO로 Otodectes cynotis 치료 효과 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "외부기생충 치료 (extra-label): 전신성 모낭충증(Demodex canis)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "3~5회 월 1회 투여로 기생충학적 완치 달성",
+          "evidence": "Extra-label: 임상 환자에서 3~5회 월 1회 투여로 완치. 실험적 감염에서는 2회 투여 후 완치."
+        },
+        {
+          "logic_type": "linear",
+          "context": "외부기생충 치료 (extra-label): 개선충증(Sarcoptes scabiei)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "30일 간격으로 2회 투여로 100% 기생충학적 완치",
+          "evidence": "Extra-label: 2회 투여(30일 간격)로 100% 기생충학적 완치 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "진드기 매개 질병 예방 (extra-label): Babesia canis, Borrelia burgdorferi, Anaplasma phagocytophilum",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "실험실 조건에서 단회 투여로 전파 예방",
+          "evidence": "Extra-label: 실험실 조건에서 단회 투여로 Babesia canis, Borrelia burgdorferi, Anaplasma phagocytophilum 전파 예방."
+        },
+        {
+          "logic_type": "linear",
+          "context": "복합제(사롤라너/목시덱틴/피란텔) - 심장사상충 예방 및 벼룩·진드기·회충·구충 구제 (FDA 승인)",
+          "value": "1.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Monthly",
+          "max_dose_mg_kg": null,
+          "duration_note": "월 1회 투여, 식사 여부 무관. 생후 8주 이상, 체중 1.3 kg 이상 개에 사용.",
+          "evidence": "FDA 승인 복합제(Simparica TRIO): 사롤라너 최소 1.2 mg/kg, 목시덱틴 24 µg/kg, 피란텔 5 mg/kg PO 월 1회."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 주요 배설 경로가 담즙/분변이므로 신장 부담은 낮을 것으로 추정되나 공식 권고 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "모노그래프에 간 기능 저하 시 용량 조절에 대한 명시적 권고 없음. 담즙 배설이 주요 경로이므로 간 기능 저하 시 주의가 필요할 수 있으나 공식 권고 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "체중 1.3 kg 미만",
+      "match_terms": [
+        "저체중",
+        "소형견"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 6개월 미만 (단독제)",
+      "match_terms": [
+        "어린 강아지",
+        "6개월 미만"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "생후 8주 미만 (복합제)",
+      "match_terms": [
+        "어린 강아지",
+        "8주 미만"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 또는 신경계 질환 병력 (복합제 사용 시)",
+      "match_terms": [
+        "발작",
+        "간질",
+        "신경계 질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 동물",
+      "match_terms": [
+        "임신",
+        "수유",
+        "번식용"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이에서 단독 경구 제제 사용",
+      "match_terms": [
+        "고양이",
+        "단독 경구"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "MDR1 유전자 돌연변이(ABCB1-1delta)에 대해 동형접합인 콜리에서 라벨 용량의 3배 투여 시 이상반응 없었음. 단독제 5배 용량에서도 임상 증상 없음. 단, 복합제(목시덱틴 포함) 5배 용량 투여 시 아버멕틴 감수성 증상(운동실조, 근육 연축, 산동) 발생. MDR1 돌연변이 자체가 사롤라너 단독에 대한 위험 요인은 아니나 복합제 사용 시 주의 필요."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "이소옥사졸린 계열 살충제/살비제로, 곤충 및 진드기의 신경근 접합부에서 GABA 및 글루타메이트 수용체를 억제하여 비조절 신경근 활성을 유발하고 기생충을 사멸시킴. 니코틴성 또는 기타 GABAergic 살충제(네오니코티노이드, 피프롤, 밀베마이신, 아버멕틴, 사이클로디엔)의 알려진 결합 부위와는 상호작용하지 않음.",
+    "common_extra_effects": [
+      "구토",
+      "설사",
+      "식욕부진",
+      "기력저하",
+      "근육 진전",
+      "운동실조",
+      "발작",
+      "방향감각 상실",
+      "과다침흘림",
+      "의식 고유감각 저하",
+      "위협반응 소실 또는 감소"
+    ],
+    "dog_mechanism": "경구 투여 후 광범위하고 신속하게 흡수됨. 벼룩은 투여 3시간 후부터 사망 시작, 8시간 내 96.2% 이상 감소, 24시간 내 100% 효과. 진드기는 투여 48시간 후 초기 감염에 대해 99% 이상 효과.",
+    "dog_extra_effects": [
+      "구토 (현장 연구)",
+      "설사 (현장 연구)",
+      "식욕부진",
+      "기력저하",
+      "근육 진전",
+      "운동실조",
+      "발작",
+      "방향감각 상실",
+      "과다침흘림",
+      "의식 고유감각 저하",
+      "위협반응 소실",
+      "경련 (과용량 시)"
+    ],
+    "cat_mechanism": "고양이에서는 세라멕틴/사롤라너 국소 스팟온 제제로만 사용. 단독 경구 제제는 고양이에 승인되지 않음.",
+    "cat_extra_effects": [
+      "신경계 이상반응 가능성 (FDA 경고)"
+    ]
+  },
+  "species_notes": {
+    "dog": "사롤라너는 생후 6개월 이상, 체중 1.3 kg 이상의 개에서 FDA 승인된 월 1회 경구 씹는 정제 외부기생충 구제제입니다. 벼룩 및 진드기 구제에 승인되었으며, 모낭충증, 개선충증, 귀 진드기 치료에 extra-label로 사용됩니다. MDR1 돌연변이 콜리에서 단독제는 안전하나 목시덱틴 포함 복합제 사용 시 주의가 필요합니다. 발작 또는 신경계 질환 병력이 있는 개에서는 복합제 사용 시 주의하십시오.",
+    "cat": "사롤라너 단독 경구 제제는 고양이에 승인되지 않습니다. 고양이(생후 8주 이상, 체중 1.3 kg 이상)에서는 세라멕틴/사롤라너 국소 스팟온 복합제(Revolution Plus)를 사용하십시오. FDA는 이소옥사졸린 계열 약물이 고양이에서도 신경계 이상반응(근육 진전, 운동실조, 발작)을 유발할 수 있다고 경고하고 있습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 또는 신경계 질환 병력이 있는 개에서 주의 필요. 이소옥사졸린 계열 약물은 신경계 이상반응(근육 진전, 운동실조, 발작) 가능성 있음. 복합제 사용 전 심장사상충 음성 확인 필요. 임신·수유·번식용 동물에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "사롤라너 단독 경구 제제는 고양이에 금기. 고양이에서는 세라멕틴/사롤라너 국소 복합제만 승인됨."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "30°C(86°F) 이하에서 보관. 일시적으로 40°C(104°F)까지 허용.",
+    "forms": [
+      "Simparica® 씹는 정제 (단독제): 5 mg, 10 mg, 20 mg, 40 mg, 80 mg, 120 mg (1정, 3정, 6정 포장)",
+      "Simparica TRIO® 씹는 정제 (복합제, 개용): 사롤라너 3/6/12/24/48/72 mg + 목시덱틴 0.06/0.12/0.24/0.48/0.96/1.44 mg + 피란텔 파모에이트 12.5/25/50/100/200/300 mg",
+      "Revolution® Plus 국소 스팟온 용액 (고양이용): 세라멕틴 60 mg/mL + 사롤라너 10 mg/mL, 0.25 mL, 0.5 mL, 1 mL 튜브"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "사롤라너는 이소옥사졸린 계열의 월 1회 경구 외부기생충 구제제로, 개에서 벼룩 및 진드기 구제에 FDA 승인되었습니다. 벼룩은 투여 3시간 후부터 사망 시작, 24시간 내 100% 효과. 진드기는 48시간 내 99% 이상 효과. Extra-label로 모낭충증, 개선충증, 귀 진드기 치료에도 사용됩니다. 복합제(Simparica TRIO)는 심장사상충 예방, 회충·구충 구제 효과도 있습니다. FDA는 이소옥사졸린 계열 약물의 신경계 이상반응(근육 진전, 운동실조, 발작) 가능성을 경고하고 있습니다. MDR1 돌연변이 콜리에서 단독제는 안전하나 복합제 사용 시 주의 필요.",
+    "indications": "【승인 적응증】 개에서 벼룩(Ctenocephalides felis) 감염 치료 및 예방; 진드기(Amblyomma americanum, A. maculatum, Dermacentor variabilis, Ixodes scapularis, Rhipicephalus sanguineus) 감염 치료 및 조절 (월 1회, 생후 6개월 이상, 체중 1.3 kg 이상). 복합제(Simparica TRIO): 심장사상충 예방, 벼룩·진드기 구제, 회충·구충 치료 (생후 8주 이상, 체중 1.3 kg 이상). 【Extra-label 적응증】 전신성 모낭충증(Demodex canis), 개선충증(Sarcoptes scabiei), 귀 진드기(Otodectes cynotis), 진드기 매개 질병(Babesia canis, Borrelia burgdorferi, Anaplasma phagocytophilum) 예방.",
+    "client_info": "【보호자 안내】 ① 치료는 연중 어느 때나 시작할 수 있으며, 벼룩과 진드기가 연중 발생하는 지역에서는 중단 없이 매월 투여하십시오. ② 복합제(Simparica TRIO) 투여 전 반드시 심장사상충 음성 검사를 받으십시오. ③ 씹는 정제는 기호성이 좋아 대부분의 개가 자발적으로 섭취합니다. 자발 섭취를 거부할 경우 사료와 함께 급여할 수 있습니다. ④ 반드시 전체 용량을 섭취하도록 하고, 투여 후 몇 분간 지켜보아 일부를 뱉어내지 않는지 확인하십시오. ⑤ 사롤라너는 벼룩과 진드기가 동물을 물고 흡혈한 후에 사멸시킵니다. 기존에 있던 벼룩 알은 부화 후 흡혈해야 사멸됩니다. ⑥ 이 약은 다른 동물과 어린이의 손이 닿지 않는 곳에 보관하고, 투여 직전까지 원래 포장 상태로 보관하십시오. ⑦ 진전, 보행 이상, 발작 등의 부작용이 나타나면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (detailed parameters)",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP enzyme profile",
+      "Cat-specific pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_type",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths (cat topical full profile)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/34.jsonl",
+    "extracted_at": "2026-03-10T23:34:02.286440+00:00",
+    "reviewer": null
+  }
+}

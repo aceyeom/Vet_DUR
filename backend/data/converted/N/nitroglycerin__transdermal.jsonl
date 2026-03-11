@@ -1,0 +1,476 @@
+{
+  "id": "nitroglycerin_transdermal",
+  "drug_identity": {
+    "name_ko": "니트로글리세린 (경피)",
+    "name_en": "Nitroglycerin, Transdermal",
+    "active_ingredient": "Nitroglycerin",
+    "brand_names": [
+      "Nitro-bid",
+      "Nitro-Dur"
+    ],
+    "allergy_class": "nitrate",
+    "class": "Cardiac",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서는 인간용 제품(Nitro-bid® 연고, Nitro-Dur® 패치)을 소동물 심부전 보조 치료에 오프라벨로 사용함. 수의용 허가 제품 없음.",
+    "dosage_form": [
+      "Topical",
+      "Patch",
+      "Oint"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.0,
+        "unit": "%"
+      },
+      {
+        "value": 0.1,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.3,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.4,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.6,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 0.8,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "니트로글리세린은 간에서 대사되며, 최소 2개의 대사체가 혈관확장 활성을 가지고 모체 약물보다 긴 반감기를 가짐. CYP 경로는 본 출처에 명시되지 않음."
+    },
+    "extra_information": "경피 연고는 피부를 통해 흡수되며, 작용 발현은 보통 1시간 이내, 지속 시간은 2~12시간. 개와 고양이에서 6~8시간마다 투여. 경피 패치는 환자 간 생체이용률 차이가 큼. 연고를 잇몸에 도포 시에도 흡수 가능하다고 보고됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 주로 인간 PK 데이터 기반이며, 수의학 종별 PK 연구 자료 부족. 간 대사 및 저혈압 유발 가능성 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypotension",
+          "cerebral hemorrhage caution",
+          "headache"
+        ],
+        "index": 1,
+        "evidence": "저혈압으로 인한 뇌혈류 감소 가능성 및 두개내 출혈 환자에서 주의 사용 권고. 두통이 부작용으로 언급됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypotension",
+          "platelet function depression",
+          "venodilation"
+        ],
+        "index": 1,
+        "evidence": "정맥 확장으로 인한 혈압 저하 및 아스피린 병용 시 혈소판 기능 억제 상가 효과 가능."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "심한 저혈압 발생 시 신관류 감소 가능성이 있으나, 직접적인 신독성은 언급되지 않음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "니트로글리세린은 간에서 대사됨. 간 부담이 있으나 직접적인 간독성은 보고되지 않음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "preload reduction",
+          "afterload reduction",
+          "myocardial oxygen demand"
+        ],
+        "index": 1,
+        "evidence": "전부하 및 후부하 감소, 심근 산소 요구량 감소 효과. 심부전 보조 치료 목적으로 사용되며 직접적인 심독성은 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hypotension",
+          "cerebral hemorrhage caution"
+        ],
+        "index": 1,
+        "evidence": "저혈압으로 인한 뇌혈류 감소 가능성. 두개내 출혈 환자에서 주의 사용 권고."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypotension",
+          "venodilation"
+        ],
+        "index": 1,
+        "evidence": "정맥 확장으로 인한 혈압 저하 가능성. 고양이에서도 동일한 기전 적용."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": -1,
+        "evidence": "심한 저혈압 발생 시 신관류 감소 가능성이 있으나, 직접적인 신독성은 언급되지 않음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism"
+        ],
+        "index": 1,
+        "evidence": "간 대사 약물. 직접적인 간독성은 보고되지 않음."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "preload reduction",
+          "afterload reduction"
+        ],
+        "index": 1,
+        "evidence": "전부하 및 후부하 감소 효과. 고양이 심부전 보조 치료에 사용."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.017,
+      "max": 0.067,
+      "mean": 0.042,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 반감기 1~4분(0.017~0.067시간). 경피 연고 작용 발현 1시간 이내, 지속 시간 2~12시간. 경피 패치는 환자 간 생체이용률 차이 큼. 개·고양이 종별 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Acetylcysteine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "enhanced vasodilation"
+      ],
+      "evidence": "Concurrent use may result in enhanced hypotension."
+    },
+    {
+      "drug": "Antihypertensive Drugs (e.g., amlodipine, enalapril, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "additive hypotension"
+      ],
+      "evidence": "Use with other antihypertensive drugs may cause additive hypotensive effects."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 2,
+      "keywords": [
+        "increased nitroglycerin concentration",
+        "platelet function depression"
+      ],
+      "evidence": "Concurrent use may result in increased nitroglycerin concentrations and additive platelet function depression."
+    },
+    {
+      "drug": "Phenothiazines (e.g., acepromazine)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "Phenothiazines may increase hypotensive effects of nitroglycerin."
+    },
+    {
+      "drug": "Sildenafil (and other PDE inhibitors)",
+      "severity": 3,
+      "keywords": [
+        "profound hypotension",
+        "contraindicated"
+      ],
+      "evidence": "May profoundly increase risk for hypotension. Concurrent use is contraindicated in humans."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "급성 심부전 보조 치료 (경피 연고, 오프라벨)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "처음 24~48시간 동안 사용. 소형견: 1/4~1/2인치; 중형견: 1/2~1인치; 대형견: 1~2인치. 또는 10kg당 0.5인치. 귀 안쪽, 서혜부, 겨드랑이에 도포.",
+          "evidence": "Plumb's: 소형견 1/4~1/2인치, 중형견 1/2~1인치, 대형견 1~2인치, 6~12시간마다. 대안: 10kg당 0.5인치."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "급성 심부전 보조 치료 (경피 연고, 오프라벨)",
+          "value": "0.125 - 0.25",
+          "unit": "mg/kg",
+          "route": "Top",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "처음 24~48시간 동안 사용. 1/8~1/4인치를 귀 안쪽, 서혜부, 겨드랑이에 도포.",
+          "evidence": "Plumb's: 고양이 1/8~1/4인치, 6~12시간마다, 처음 24~48시간."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "출처에 신기능 저하 시 용량 조절에 대한 명시적 권고 없음. 저혈압 발생 시 신관류 감소 가능성 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "출처에 간기능 저하 시 용량 조절에 대한 명시적 권고 없음. 간에서 대사되므로 심한 간부전 시 주의가 필요할 수 있으나 구체적 지침 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "중증 빈혈",
+      "match_terms": [
+        "severe anemia",
+        "빈혈"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "니트레이트 과민증",
+      "match_terms": [
+        "nitrate hypersensitivity",
+        "nitroglycerin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "뇌출혈 또는 두부 외상",
+      "match_terms": [
+        "cerebral hemorrhage",
+        "head trauma",
+        "뇌출혈",
+        "두부외상"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "이뇨제 유발 저혈량증 또는 기타 저혈압 상태",
+      "match_terms": [
+        "hypovolemia",
+        "hypotension",
+        "저혈압",
+        "저혈량증"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "PDE 억제제(실데나필 등) 병용",
+      "match_terms": [
+        "sildenafil",
+        "PDE inhibitor",
+        "tadalafil"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "혈관 평활근(주로 정맥)을 이완시켜 전부하(좌심실 이완기말 압력)를 감소시킴. 고용량에서는 세동맥에도 작용하여 후부하 감소. 심근 산소 요구량 및 심장 부담 감소, 관상동맥 순환 개선.",
+    "common_extra_effects": [
+      "도포 부위 발진",
+      "저혈압",
+      "두통 (인간에서 흔함, 동물에서도 가능)",
+      "내성 발생 (48~72시간 연속 사용 시)"
+    ],
+    "dog_mechanism": "정맥 확장을 통한 전부하 감소 및 심부전 보조 치료. 개에서 경피 연고 또는 구강 점막 도포로 흡수 가능.",
+    "dog_extra_effects": [
+      "도포 부위 발진",
+      "저혈압",
+      "48~72시간 후 내성 발생"
+    ],
+    "cat_mechanism": "정맥 확장을 통한 전부하 감소 및 심인성 부종 보조 치료. 고양이에서 귀 안쪽 도포가 일반적.",
+    "cat_extra_effects": [
+      "도포 부위 발진",
+      "저혈압",
+      "48~72시간 후 내성 발생"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경피 니트로글리세린은 급성 심부전의 보조 치료로 사용되며, 반드시 루프 이뇨제(예: 푸로세미드)와 병용해야 함. 체중에 따라 용량을 조절하며(소형견 1/4~1/2인치, 중형견 1/2~1인치, 대형견 1~2인치), 귀 안쪽, 서혜부, 겨드랑이에 도포. 48~72시간 이상 연속 사용 시 내성이 발생하므로 장기 사용은 권장되지 않음. 말에서 발굽 혈류 증가 목적의 사용은 효과 없음.",
+    "cat": "고양이에서 1/8~1/4인치를 귀 안쪽에 도포하며, 6~12시간마다 투여. 급성 심부전 보조 치료 목적으로만 사용하며 루프 이뇨제와 병용 필수. 효능에 대한 근거가 제한적이나 해를 끼칠 가능성은 낮음. 48~72시간 이상 사용 시 내성 발생."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "저혈압, 뇌출혈, 두부 외상, 저혈량증 환자에서 주의 사용. 도포 시 장갑 착용 필수. 48~72시간 연속 사용 시 내성 발생. 도포 부위 발진 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "저혈압, 뇌출혈, 두부 외상, 저혈량증 환자에서 주의 사용. 도포 시 장갑 착용 필수. 48~72시간 연속 사용 시 내성 발생. 도포 부위 발진 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경피 연고는 실온 보관, 뚜껑을 단단히 닫아 보관. 기타 제형은 각 제품 설명서 참조.",
+    "forms": [
+      "니트로글리세린 경피 연고 2% (30g, 60g 튜브, 1g 단위 포일 패킷) - Nitro-bid®",
+      "니트로글리세린 경피 패치: 0.1, 0.2, 0.3, 0.4, 0.6, 0.8 mg/시간 - Nitro-Dur®"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "니트로글리세린 경피제는 소동물 심부전 보조 치료에 오프라벨로 사용되는 정맥 확장제입니다. 반드시 루프 이뇨제와 병용해야 하며, 48~72시간 이상 연속 사용 시 내성이 빠르게 발생합니다. 수의학에서 효능 근거는 제한적이나 해를 끼칠 가능성은 낮습니다. 도포 시 반드시 장갑을 착용하고, 사람 피부에 접촉되지 않도록 주의해야 합니다. PDE 억제제(실데나필 등)와의 병용은 금기입니다.",
+    "indications": "【승인 적응증】 없음 (수의용 허가 제품 없음). 【오프라벨 사용】 개·고양이의 급성 심부전 및 심인성 부종 보조 치료 (경피 연고 또는 패치). 인간에서는 협심증, 급성 고혈압, 레이노 증후군 치료에도 사용됨. 말에서 제엽염 시 발굽 혈류 증가 목적 사용은 효과 없음.",
+    "client_info": "【보호자 안내】\n• 연고 용량은 인치(inch) 단위로 측정하며, 제품에 동봉된 측정지를 사용하세요.\n• 약을 바를 때 반드시 비투과성 장갑을 착용하세요. 사람 피부에 닿으면 저혈압이 생길 수 있습니다.\n• 연고를 바른 부위를 만지거나 쓰다듬지 마세요.\n• 도포 부위를 매번 바꿔주세요 (귀 안쪽, 서혜부, 겨드랑이 등).\n• 발진이 생긴 부위에는 발진이 사라질 때까지 다시 바르지 마세요.\n• 발진이 지속되거나 동물의 상태가 악화되면 즉시 수의사에게 연락하세요.\n• 이 약은 폭발이나 화재 위험이 없습니다.\n• 정기적인 혈압 검사를 위해 수의사 방문을 빠뜨리지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP metabolic pathway details",
+      "Veterinary species-specific PK data",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Protein binding data",
+      "Oral bioavailability (F%)",
+      "T_max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/28.jsonl",
+    "extracted_at": "2026-03-10T22:01:50.401464+00:00",
+    "reviewer": null
+  }
+}

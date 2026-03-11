@@ -1,0 +1,1373 @@
+{
+  "id": "amitriptyline",
+  "drug_identity": {
+    "name_ko": "아미트리프틸린",
+    "name_en": "Amitriptyline",
+    "active_ingredient": "Amitriptyline",
+    "brand_names": [
+      "Elavil"
+    ],
+    "allergy_class": "tricyclic antidepressant",
+    "class": "Antidepressant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 모든 동물 적응증은 허가 외(extra-label) 사용임. 인간용 제네릭 정제만 시판됨.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 150,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4",
+        "CYP2C9",
+        "CYP2D6"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 CYP3A4, 2C9, 2D6의 기질임. 간에서 활성 대사체인 노르트리프틸린(nortriptyline)으로 대사됨. 고양이는 글루쿠론산 포합 능력이 낮아 TCA에 더 민감할 수 있음."
+    },
+    "extra_information": "개에서 경구 생체이용률은 매우 낮음(그레이하운드에서 단회 4 mg/kg 경구 투여 시 약 6%). 음식과 함께 투여 시 흡수 증가. 경구 투여 후 최고 혈중 농도 도달 시간: 개 1~2시간, 고양이 1~2시간. 혈장 단백질 결합률 높음. 개(12마리 잡종견)에서 아미트리프틸린 반감기 4.5시간, 노르트리프틸린 반감기 12.3시간. 그레이하운드에서 아미트리프틸린 평균 말단 반감기 4~10시간, 노르트리프틸린 6.2~9.6시간. 고양이에서 경피(PLO 겔) 흡수는 불량함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 각 장기별 이상반응 및 약동학 데이터에서 트리거 키워드를 추출하여 점수화. 수의학 종별 데이터가 일부 존재하나 인간 데이터도 참조함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "sedation",
+          "seizure threshold reduction",
+          "CNS depression",
+          "hyperexcitability",
+          "anticholinergic CNS effects",
+          "serotonin syndrome risk"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, 과흥분, 드물게 경련 발생 보고. TCA는 발작 역치를 낮출 수 있음. 세로토닌 증후군 위험. CNS 침투 확인됨."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bone marrow suppression",
+          "thrombocytopenia",
+          "neutropenia",
+          "bleeding risk"
+        ],
+        "index": 2,
+        "evidence": "혈액학적 이상반응(골수 억제)이 드물게 보고됨. 고양이에서 혈소판감소증, 호중구감소증 보고. NSAID 병용 시 출혈 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "urinary retention",
+          "renal disorder caution"
+        ],
+        "index": 3,
+        "evidence": "신장 질환 동물에서 주의 사용 권고. 요저류 이상반응 보고. 신장 제거 분율은 명시되지 않음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "first-pass metabolism",
+          "hepatic disorder caution",
+          "CYP substrate"
+        ],
+        "index": 4,
+        "evidence": "간에서 광범위한 초회 통과 대사. 간 질환 동물에서 주의 사용 권고. CYP3A4/2C9/2D6 기질로 간 대사 부담 높음."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "QT prolongation",
+          "cardiac dysrhythmias",
+          "cardiotoxicity",
+          "cardiac rhythm disorder caution",
+          "QRS widening"
+        ],
+        "index": 5,
+        "evidence": "과용량 시 심독성(평균 누적 용량 36 mg/kg IV에서 심독성 발생). QTc 연장 가능성. ECG 이상(QRS 확장, PR 간격 연장, T파 변화) 보고. 심장 리듬 장애 동물에서 주의 사용."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "sedation",
+          "ataxia",
+          "disorientation",
+          "seizure",
+          "epileptiform EEG",
+          "anticholinergic CNS effects",
+          "serotonin syndrome risk"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 진정, 운동실조, 방향감각 상실 보고. 표준 용량에서 EEG상 간질양 병리 소견. 고용량(20~25 mg/kg IV)에서 지속적 방전 및 전신 발작 발생."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "thrombocytopenia",
+          "neutropenia"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 혈소판감소증 및 호중구감소증이 이상반응으로 명시적으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "urinary retention",
+          "renal disorder caution"
+        ],
+        "index": 3,
+        "evidence": "고양이에서 요저류 이상반응 보고. 신장 질환 동물에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "glucuronidation deficiency",
+          "hepatic disorder caution",
+          "CYP substrate"
+        ],
+        "index": 4,
+        "evidence": "고양이는 글루쿠론산 포합 능력 저하로 TCA 대사가 느려 독성에 더 민감. 간 질환 동물에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "cardiac conductivity disturbances",
+          "QT prolongation",
+          "cardiac dysrhythmias"
+        ],
+        "index": 5,
+        "evidence": "고양이에서 심장 전도 장애가 이상반응으로 명시됨. QT 연장 위험. 심장 질환 동물에서 주의 사용."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 4.0,
+      "max": 10.0,
+      "mean": 7.0,
+      "species": "dog"
+    },
+    "f_percent": 6,
+    "protein_binding_percent": null,
+    "evidence": "그레이하운드에서 단회 경구 투여(4 mg/kg) 후 생체이용률 약 6%. 개에서 경구 투여 후 Tmax 1~2시간. 개(잡종견)에서 아미트리프틸린 반감기 4.5시간, 그레이하운드에서 4~10시간. 혈장 단백질 결합률 높음(수치 미명시). 고양이에서도 Tmax 1~2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)/회피(avoid)→3, 중등도(moderate)/주의(use cautiously)→2, 경미(minor)→1. MAOI 병용은 생명을 위협하는 세로토닌 증후군 위험으로 중증도 3(금기).",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, furazolidone, linezolid, methylene blue, procarbazine, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "life-threatening",
+        "contraindicated",
+        "14-day washout"
+      ],
+      "evidence": "생명을 위협하는 세로토닌 증후군 위험. 병용 금기. 두 약물 사이에 14일 휴약 기간 필요."
+    },
+    {
+      "drug": "Anesthetic Agents (isoflurane, ketamine)",
+      "severity": 3,
+      "keywords": [
+        "hypotension",
+        "CNS depression",
+        "QT prolongation",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "저혈압, CNS 억제, QT 연장, 토르사드 드 포인트, 사망 위험 증가."
+    },
+    {
+      "drug": "Apomorphine",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 토르사드 드 포인트, 사망 위험 증가."
+    },
+    {
+      "drug": "Domperidone",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmias",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 심장 부정맥, 토르사드 드 포인트, 사망 위험 증가. 도파민 효능 감소. 병용 회피."
+    },
+    {
+      "drug": "Dobutamine/Dopamine",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "tremors",
+        "cardiac dysrhythmias"
+      ],
+      "evidence": "고혈압, 진전, 심장 부정맥 위험 증가. 응급 상황 외 병용 회피."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 토르사드 드 포인트, 사망 위험 증가."
+    },
+    {
+      "drug": "Leuprolide",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 토르사드 드 포인트, 사망 위험 증가."
+    },
+    {
+      "drug": "Macrolides (azithromycin, clarithromycin)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 토르사드 드 포인트, 사망 위험 증가."
+    },
+    {
+      "drug": "Octreotide",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "QT prolongation",
+        "torsade de pointes"
+      ],
+      "evidence": "세로토닌 증후군, QT 연장, 토르사드 드 포인트 위험 증가. 병용 회피."
+    },
+    {
+      "drug": "Potassium Chloride (oral solid dosage forms)",
+      "severity": 3,
+      "keywords": [
+        "upper GI injury"
+      ],
+      "evidence": "경구 고형 제제 병용 시 상부 위장관 손상 위험 증가. 병용 금기."
+    },
+    {
+      "drug": "QT Prolonging Agents (cisapride, procainamide, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmias",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 심장 부정맥, 토르사드 드 포인트, 사망 위험 증가. 일부 약제(퀴니딘)의 항콜린 효과 강화. 병용 회피."
+    },
+    {
+      "drug": "Sulfamethoxazole/Trimethoprim",
+      "severity": 3,
+      "keywords": [
+        "QT prolongation",
+        "torsade de pointes",
+        "death"
+      ],
+      "evidence": "QT 연장, 토르사드 드 포인트, 사망 위험 증가."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 3,
+      "keywords": [
+        "increased amitriptyline concentration",
+        "toxicity"
+      ],
+      "evidence": "아미트리프틸린 혈중 농도 증가. 테르비나핀 중단 후 수 주간 상호작용 지속 가능. 병용 회피."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome",
+        "CNS depression",
+        "anticholinergic intoxication",
+        "constipation",
+        "urinary retention"
+      ],
+      "evidence": "변비, 요저류, CNS 억제, 세로토닌 증후군, 항콜린 중독 증후군 위험 증가. 병용 회피."
+    },
+    {
+      "drug": "Vasopressors (ephedrine, epinephrine, norepinephrine, vasopressin)",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "tremors",
+        "QT prolongation",
+        "cardiac dysrhythmias",
+        "death"
+      ],
+      "evidence": "고혈압, 진전, QT 연장, 심장 부정맥, 사망 위험 증가. 응급 상황 외 병용 회피."
+    },
+    {
+      "drug": "Bethanechol",
+      "severity": 3,
+      "keywords": [
+        "cholinergic antagonism"
+      ],
+      "evidence": "아미트리프틸린이 베타네콜의 콜린성 효과를 길항. 병용 회피."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 3,
+      "keywords": [
+        "CNS depression",
+        "serotonin syndrome"
+      ],
+      "evidence": "CNS 억제 및 세로토닌 증후군 위험 증가. 병용 회피."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가. 일부 문헌에서 TCA와 트라마돌 병용 금지 권고."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 3,
+      "keywords": [
+        "hypertension",
+        "norepinephrine reuptake inhibition"
+      ],
+      "evidence": "노르에피네프린 재흡수 억제로 요힘빈의 승압 효과 강화. 병용 회피."
+    },
+    {
+      "drug": "Alpha-2 Adrenergic Agonists (clonidine, detomidine, dexmedetomidine, medetomidine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "hypertension",
+        "bradycardia"
+      ],
+      "evidence": "CNS 및 호흡 억제, 고혈압, 서맥 위험 증가. TCA가 알파-2 작용제의 항고혈압 효과를 방해할 수 있음. 주의하여 병용."
+    },
+    {
+      "drug": "Amantadine",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation",
+        "ileus",
+        "hyperthermia",
+        "QT prolongation",
+        "anticholinergic intoxication"
+      ],
+      "evidence": "요저류, 변비, 장폐색, 고체온증, QT 연장, 항콜린 중독 증후군 위험 증가. 주의하여 병용."
+    },
+    {
+      "drug": "Anticholinergic Agents (atropine, doxepin, glycopyrrolate, meclizine, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "constipation",
+        "ileus",
+        "urinary retention",
+        "CNS depression",
+        "anticholinergic intoxication"
+      ],
+      "evidence": "변비, 장폐색, 요저류, CNS 억제, 항콜린 중독 증후군 위험 증가."
+    },
+    {
+      "drug": "Antihistamines (cetirizine, chlorpheniramine, diphenhydramine, hydroxyzine)",
+      "severity": 2,
+      "keywords": [
+        "constipation",
+        "ileus",
+        "urinary retention",
+        "CNS depression",
+        "anticholinergic intoxication"
+      ],
+      "evidence": "변비, 장폐색, 요저류, CNS 억제, 항콜린 중독 증후군 위험 증가."
+    },
+    {
+      "drug": "Antihypertensive Agents",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "저혈압 및 기립성 저혈압 위험 상가."
+    },
+    {
+      "drug": "Anthracyclines (doxorubicin)",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 간격에 대한 상가 효과."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "CNS toxicity",
+        "constipation",
+        "ileus",
+        "urinary retention",
+        "QT prolongation"
+      ],
+      "evidence": "CNS 독성, 변비, 장폐색, 요저류, QT 연장 위험 증가."
+    },
+    {
+      "drug": "Barbiturates (thiopental)",
+      "severity": 2,
+      "keywords": [
+        "respiratory depression",
+        "decreased amitriptyline concentration"
+      ],
+      "evidence": "호흡 억제 상가. 아미트리프틸린 혈중 농도 감소 가능."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "anticholinergic effects"
+      ],
+      "evidence": "CNS 및 호흡 억제 위험 증가. 항콜린 효과 상가 가능."
+    },
+    {
+      "drug": "Beta-2 Adrenergic Agonists (albuterol, clenbuterol)",
+      "severity": 2,
+      "keywords": [
+        "arrhythmias",
+        "hypertension",
+        "hyperpyrexia",
+        "QT prolongation"
+      ],
+      "evidence": "부정맥, 고혈압, 고체온증, T파 평탄화, QT 연장 위험 증가. 주의하여 병용."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "serotonin syndrome"
+      ],
+      "evidence": "CNS 및 호흡 억제 강화. 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 2,
+      "keywords": [
+        "decreased amitriptyline concentration",
+        "increased carbamazepine concentration",
+        "reduced anticonvulsant effect"
+      ],
+      "evidence": "CYP450 유도로 아미트리프틸린 농도 감소. 카르바마제핀 농도 증가 가능. 아미트리프틸린이 카르바마제핀의 항경련 효과 감소 가능."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "inhibited hepatic metabolism",
+        "increased toxicity risk"
+      ],
+      "evidence": "아미트리프틸린의 간 대사 억제로 독성 위험 증가."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 2,
+      "keywords": [
+        "decreased amitriptyline efficacy",
+        "CNS depression",
+        "anticholinergic effects"
+      ],
+      "evidence": "세로토닌 농도 감소로 아미트리프틸린 효능 감소. CNS 억제 및 항콜린 효과 상가."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia",
+        "seizure",
+        "coma",
+        "respiratory depression"
+      ],
+      "evidence": "수분 중독 및 저나트륨혈증 위험 증가. 발작, 혼수, 호흡 억제, 사망으로 진행 가능. 전해질 및 신기능 모니터링 필요."
+    },
+    {
+      "drug": "Diazoxide",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "저혈압 및 기립성 저혈압 위험 증가. 초기 치료 또는 용량 증량 시 위험 최대."
+    },
+    {
+      "drug": "Diltiazem",
+      "severity": 2,
+      "keywords": [
+        "increased amitriptyline concentration"
+      ],
+      "evidence": "아미트리프틸린 혈중 농도 증가."
+    },
+    {
+      "drug": "Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmias"
+      ],
+      "evidence": "QT 연장 및 심장 부정맥 위험 증가."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "increased toxicity"
+      ],
+      "evidence": "아미트리프틸린 효과 감소 및 독성 증가 가능. 기전 및 임상적 중요성 미확립."
+    },
+    {
+      "drug": "Fluconazole",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 연장 위험 증가."
+    },
+    {
+      "drug": "Flumazenil",
+      "severity": 2,
+      "keywords": [
+        "seizures",
+        "arrhythmias"
+      ],
+      "evidence": "TCA 과용량 의심 동물에서 플루마제닐 사용 시 발작 및 부정맥 위험 증가."
+    },
+    {
+      "drug": "Hydroxychloroquine",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation"
+      ],
+      "evidence": "QT 연장 위험 증가."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity"
+      ],
+      "evidence": "이포스파미드의 신경독성 증가."
+    },
+    {
+      "drug": "Iohexol",
+      "severity": 2,
+      "keywords": [
+        "seizures",
+        "intrathecal"
+      ],
+      "evidence": "이오헥솔 척수강내 투여 관련 발작 위험 증가."
+    },
+    {
+      "drug": "Levetiracetam",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "CNS 및 호흡 억제 위험 증가."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "serotonin syndrome"
+      ],
+      "evidence": "세로토닌 증후군을 포함한 신경독성 위험 증가."
+    },
+    {
+      "drug": "Methylphenidate",
+      "severity": 2,
+      "keywords": [
+        "increased amitriptyline concentration",
+        "hypertension",
+        "cardiac effects",
+        "serotonin syndrome"
+      ],
+      "evidence": "아미트리프틸린 농도 증가. 고혈압, 심장 효과, CNS 자극, 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "reduced prokinetic effect",
+        "sedation",
+        "CNS depression"
+      ],
+      "evidence": "아미트리프틸린이 메토클로프라미드의 위장관 운동 촉진 효과 감소. 진정 및 CNS 억제 상가."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "QT prolongation",
+        "cardiac arrhythmias",
+        "torsade de pointes"
+      ],
+      "evidence": "QT 연장, 심장 부정맥, 토르사드 드 포인트 위험 증가."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "constipation",
+        "urinary retention",
+        "CNS depression",
+        "serotonin syndrome"
+      ],
+      "evidence": "변비, 요저류, CNS 억제, 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Mitotane",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "decreased amitriptyline exposure"
+      ],
+      "evidence": "미토탄이 CYP3A4를 유도하여 아미트리프틸린 노출 및 효과 감소."
+    },
+    {
+      "drug": "Muscle Relaxants (baclofen, dantrolene, methocarbamol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "muscle tone loss"
+      ],
+      "evidence": "CNS 및 호흡 억제 위험 증가. 바클로펜 병용 시 근긴장 소실 및 기억 장애 보고(인간)."
+    },
+    {
+      "drug": "Nitroglycerin",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis",
+        "reduced topical absorption"
+      ],
+      "evidence": "저혈압 및 기립성 저혈압 위험 증가. 아미트리프틸린이 국소 니트로글리세린 흡수 감소 가능."
+    },
+    {
+      "drug": "Nitroprusside",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "출혈 위험 증가. 다른 위험 인자가 있는 동물에서 특히 주의."
+    },
+    {
+      "drug": "Opioids (buprenorphine, butorphanol, fentanyl, methadone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "constipation",
+        "urinary retention",
+        "CNS depression",
+        "respiratory depression",
+        "serotonin syndrome"
+      ],
+      "evidence": "변비, 요저류, CNS 억제, 호흡 억제, 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Pergolide",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentrations",
+        "CNS depression",
+        "hypotension",
+        "QT prolongation",
+        "anticholinergic intoxication"
+      ],
+      "evidence": "양 약물 농도 증가 가능. CNS 억제, 저혈압, QT 연장, 변비, 장폐색, 요저류, 항콜린 중독 증후군 위험 증가."
+    },
+    {
+      "drug": "Phenoxybenzamine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Physostigmine",
+      "severity": 2,
+      "keywords": [
+        "antagonism of clinical effects"
+      ],
+      "evidence": "아미트리프틸린이 피조스티그민의 임상 효과를 길항."
+    },
+    {
+      "drug": "Pregabalin",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "CNS 억제 위험 증가."
+    },
+    {
+      "drug": "Primidone/Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "reduced anticonvulsant effect",
+        "decreased amitriptyline concentration",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "프리미돈이 아미트리프틸린의 항경련 효과 길항. 간 대사 유도로 아미트리프틸린 농도 감소. CNS 및 호흡 억제 상가."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased amitriptyline concentration",
+        "hepatic metabolism induction"
+      ],
+      "evidence": "간 대사 유도로 아미트리프틸린 농도 감소."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; fluoxetine, paroxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "increased amitriptyline concentration",
+        "serotonin syndrome"
+      ],
+      "evidence": "아미트리프틸린 농도 증가 및 세로토닌 증후군 위험 증가. 수의 행동의학에서 병용 사례 있으나 강화된 모니터링 필요."
+    },
+    {
+      "drug": "Serotonin Receptor Antagonists (dolasetron, ondansetron)",
+      "severity": 2,
+      "keywords": [
+        "serotonin syndrome",
+        "QT prolongation",
+        "torsade de pointes"
+      ],
+      "evidence": "세로토닌 증후군, QT 연장, 토르사드 드 포인트 위험 증가."
+    },
+    {
+      "drug": "Sulfonylureas (glimepiride, glipizide, glyburide)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia"
+      ],
+      "evidence": "불명확한 기전으로 저혈당 효과 증가."
+    },
+    {
+      "drug": "Sympathomimetic Agents (phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "hypertension",
+        "arrhythmias",
+        "tachycardia",
+        "fever"
+      ],
+      "evidence": "고혈압, 부정맥, 빈맥, 발열 위험 증가."
+    },
+    {
+      "drug": "Tamsulosin",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "저혈압 및 기립성 저혈압 위험 증가."
+    },
+    {
+      "drug": "Thyroid Agents (levothyroxine)",
+      "severity": 2,
+      "keywords": [
+        "potentiated effects",
+        "tachycardia",
+        "hypothyroidism",
+        "thyrotoxicosis"
+      ],
+      "evidence": "양 약물 효과 강화. 빈맥, 갑상선기능저하증, 갑상선중독증 위험 증가."
+    },
+    {
+      "drug": "Acetazolamide/Dichlorphenamide",
+      "severity": 1,
+      "keywords": [
+        "increased amitriptyline concentration",
+        "urine alkalinization"
+      ],
+      "evidence": "소변 알칼리화로 아미트리프틸린 농도 증가."
+    },
+    {
+      "drug": "Ammonium Chloride",
+      "severity": 1,
+      "keywords": [
+        "decreased amitriptyline concentration",
+        "urine acidification"
+      ],
+      "evidence": "소변 산성화로 TCA 농도 감소."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 1,
+      "keywords": [
+        "altered anticoagulant effect"
+      ],
+      "evidence": "와파린의 항응고 효과 증가 또는 감소 가능."
+    },
+    {
+      "drug": "Zonisamide",
+      "severity": 1,
+      "keywords": [
+        "CNS depression",
+        "drowsiness"
+      ],
+      "evidence": "CNS 억제 및 졸음 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "moderate",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.5
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "불안 장애(분리불안, 전반적 불안)의 보조 치료 - 초기 용량",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "2~4주 투여 후 반응 평가. 최대 4 mg/kg PO BID까지 1 mg/kg씩 점진적 증량 가능. 중단 시 2~3주에 걸쳐 서서히 감량.",
+          "evidence": "허가 외(extra-label). 행동 교정 및 항불안제 병용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "소양증 보조 치료(기존 치료 실패 후)",
+          "value": "1 - 2.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외(extra-label). 약 33%의 개에서 반응."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성(특히 신경병성) 통증 보조 치료",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "3~4 mg/kg PO q12h까지 시도 가능. 중단 시 2~3주에 걸쳐 서서히 감량.",
+          "evidence": "허가 외(extra-label)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "특발성 방광염 관련 임상 증상 (고정 용량)",
+          "value": "2.5 - 12.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "야간 투여. 5 mg/cat 또는 10 mg/cat 1일 1회 7일 투여는 단기 하부 요로 증상 감소 효과 미입증.",
+          "evidence": "허가 외(extra-label). mg/kg 아닌 고정 용량(mg/cat) 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "특발성 방광염 관련 임상 증상 (체중 기반 용량)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "야간 투여.",
+          "evidence": "허가 외(extra-label)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 장애(불안, 공포, 자해 행동 보조) 보조 치료",
+          "value": "0.5 - 1.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "낮은 용량부터 시작하여 점진적 증량. 중단 시 서서히 감량.",
+          "evidence": "허가 외(extra-label)."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소양증 보조 치료 - 1일 1회 (고정 용량)",
+          "value": "2.5 - 12.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "이상반응 최소화를 위해 2.5 mg/cat 1일 1회부터 시작. 필요 시 조제 필요(생선 또는 대구 간유 향미 첨가).",
+          "evidence": "허가 외(extra-label). mg/kg 아닌 고정 용량(mg/cat) 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "소양증 보조 치료 - 1일 2회 (고정 용량)",
+          "value": "2.5 - 7.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외(extra-label). mg/kg 아닌 고정 용량(mg/cat) 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "만성 통증(신경병성 포함) 보조 치료 - 고정 용량",
+          "value": "2.5 - 12.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "허가 외(extra-label). mg/kg 아닌 고정 용량(mg/cat) 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 통증(신경병성 포함) 보조 치료 - 체중 기반 용량",
+          "value": "1 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q12h~q24h 투여.",
+          "evidence": "허가 외(extra-label)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 질환 동물에서 주의 사용 권고되나 구체적인 용량 조절 지침은 명시되지 않음. 신기능 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 질환 동물에서 주의 사용 권고. 간에서 광범위하게 대사되므로 간 기능 저하 시 약물 축적 가능. 구체적인 용량 조절 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "TCA 또는 아미트리프틸린 과민증",
+      "match_terms": [
+        "TCA hypersensitivity",
+        "amitriptyline allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAOI 병용",
+      "match_terms": [
+        "MAOI concurrent use",
+        "amitraz",
+        "selegiline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 장애",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 질환",
+      "match_terms": [
+        "thyroid disorder",
+        "hypothyroidism",
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요저류",
+      "match_terms": [
+        "urinary retention"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "CKD",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "건성각결막염(KCS)",
+      "match_terms": [
+        "KCS",
+        "keratoconjunctivitis sicca",
+        "dry eye"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "녹내장",
+      "match_terms": [
+        "glaucoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 리듬 장애",
+      "match_terms": [
+        "cardiac arrhythmia",
+        "cardiac rhythm disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신 종양",
+      "match_terms": [
+        "adrenal tumor",
+        "pheochromocytoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 심장 질환(QT 간격 관련)",
+      "match_terms": [
+        "cardiac disease",
+        "pre-existing cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "MDR1/ABCB1 돌연변이 관련 위험은 본 모노그래프에 명시되지 않음. 그레이하운드에서 낮은 생체이용률이 보고되었으나 유전적 기전은 확인되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세로토닌 및 노르에피네프린 재흡수 펌프 차단(신경전달물질 농도 증가), 중추 및 말초 항콜린 작용, 알파-1 아드레날린 수용체 길항, H1 수용체 길항을 통한 비만세포 안정화, 글루타메이트 수용체 및 나트륨 채널 길항. 활성 대사체 노르트리프틸린도 유사한 작용.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "항콜린 효과(변비, 요저류, 구강건조)",
+      "QT 간격 연장",
+      "심장 부정맥",
+      "발작 역치 감소",
+      "세로토닌 증후군(병용 시)",
+      "갑상선 호르몬(tT3, tT4, fT4) 농도 감소",
+      "혈당 변화",
+      "구토/설사",
+      "골수 억제(드물게)"
+    ],
+    "dog_mechanism": "개에서 경구 생체이용률 매우 낮음(약 6%, 그레이하운드). 간에서 활성 대사체 노르트리프틸린으로 대사. 반감기 4.5~10시간.",
+    "dog_extra_effects": [
+      "진정",
+      "과흥분",
+      "드물게 발작",
+      "구토(공복 투여 시 더 빈번)",
+      "설사",
+      "심장 부정맥",
+      "골수 억제",
+      "고혈당증",
+      "저나트륨혈증",
+      "갑상선 호르몬 감소(tT4, fT4)"
+    ],
+    "cat_mechanism": "고양이는 글루쿠론산 포합 능력 저하로 TCA 대사가 느려 독성에 더 민감. 경피(PLO 겔) 흡수 불량.",
+    "cat_extra_effects": [
+      "진정",
+      "과타액분비(hypersalivation)",
+      "요저류",
+      "식욕부진",
+      "혈소판감소증",
+      "호중구감소증",
+      "털 상태 불량",
+      "구토/오심",
+      "운동실조",
+      "방향감각 상실",
+      "심장 전도 장애",
+      "갑상선 호르몬 감소(tT4, fT4)",
+      "EEG상 간질양 병리(표준 용량에서도)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 아미트리프틸린은 불안 장애, 소양증, 신경병성 통증의 보조 치료에 허가 외로 사용됨. 경구 생체이용률이 매우 낮으므로(약 6%) 임상 반응 모니터링이 중요. 음식과 함께 투여 시 흡수 증가. 치료 효과 발현까지 수 주 소요될 수 있음. 중단 시 2~3주에 걸쳐 서서히 감량 필요. 치료 전 기저 CBC, 혈청 화학 검사, 소변 검사, 갑상선 검사(tT4), ECG 권장. 행동 장애에는 FDA 승인 TCA인 클로미프라민이 우선 선택될 수 있음.",
+    "cat": "고양이는 글루쿠론산 포합 능력 저하로 TCA에 더 민감하므로 주의 필요. 경피(PLO 겔) 흡수 불량으로 경구 투여 권장. 특발성 방광염, 행동 장애, 소양증, 신경병성 통증에 허가 외로 사용. 용량은 mg/kg이 아닌 고정 용량(mg/cat)으로 처방하는 경우 많음. 정확한 용량 투여 및 기호성 개선을 위해 조제가 필요할 수 있음(생선 또는 대구 간유 향미). 표준 용량에서도 EEG상 간질양 병리 소견 가능. 치료 전 기저 검사 및 갑상선 검사 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 장애, 심장 질환, 간/신장 질환, 갑상선 질환, 요저류, KCS, 녹내장, 당뇨, 부신 종양 동물에서 주의 사용. 치료 전 기저 검사 및 ECG 권장. MAOI 병용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이는 TCA 대사 능력 저하로 독성에 더 민감. 표준 용량에서도 EEG 이상 가능. 경피 흡수 불량. 혈소판감소증, 호중구감소증 등 혈액학적 이상반응 모니터링 필요. 치료 전 기저 검사 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온 보관",
+    "forms": [
+      "아미트리프틸린 HCl 정제: 10 mg, 25 mg, 50 mg, 75 mg, 100 mg, 150 mg (제네릭, 전문의약품)",
+      "수의학 허가 제품 없음",
+      "필요 시 조제 가능(고양이용 기호성 개선 조제 권장)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아미트리프틸린은 삼환계 항우울제(TCA)로 소동물의 행동 장애, 신경병성 통증, 소양증 보조 치료에 허가 외로 사용됨. 수의학 허가 제품 없음. 주요 이상반응은 진정 및 항콜린 효과. MAOI 병용 절대 금기(세로토닌 증후군 위험). 치료 효과 발현까지 수 주 소요. 중단 시 반드시 서서히 감량(2~3주). 치료 전 기저 갑상선 검사 및 ECG 권장. 고양이는 TCA 대사 능력 저하로 독성에 더 민감하며 경피 흡수 불량. 과용량 시 생명을 위협하는 심독성 및 경련 발생 가능.",
+    "indications": "【허가 외 적응증】 개: 불안 장애(분리불안, 전반적 불안) 보조 치료, 소양증 보조 치료(기존 치료 실패 후), 만성 신경병성 통증 보조 치료. 고양이: 특발성 방광염 관련 증상, 행동 장애(불안, 공포, 자해 행동) 보조 치료, 소양증 보조 치료, 만성 신경병성 통증 보조 치료. 조류: 깃털 뽑기 보조 치료. 수의학 허가 적응증 없음.",
+    "client_info": "이 약은 반드시 음식과 함께 투여하세요. 효과가 나타나기까지 며칠에서 수 주가 걸릴 수 있습니다. 수의사와 상담 없이 갑자기 투약을 중단하지 마세요. 가장 흔한 부작용은 졸음, 구강 건조, 변비입니다. 항상 신선한 물을 충분히 제공하세요. 비정상적인 출혈, 발열, 경련, 매우 빠르거나 불규칙한 심박수 등 심각한 부작용이 나타나면 즉시 수의사에게 연락하세요. 과용량은 매우 위험할 수 있으므로 약을 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 최근 2주 이내에 아미트라즈 성분이 포함된 벼룩·진드기 목걸이를 착용한 경우 반드시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Protein binding percentage (quantified)",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.half_life_hr (cat-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T06:07:57.622364+00:00",
+    "reviewer": null
+  }
+}

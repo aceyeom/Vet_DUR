@@ -1,0 +1,534 @@
+{
+  "id": "chlorambucil",
+  "drug_identity": {
+    "name_ko": "클로람부실",
+    "name_en": "Chlorambucil",
+    "active_ingredient": "Chlorambucil",
+    "brand_names": [
+      "Leukeran",
+      "Chloraminophene",
+      "Linfolysin"
+    ],
+    "allergy_class": "alkylating agent",
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품(Leukeran® 2mg 정)을 동물에게 허가 외 사용함.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 2,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위하게 대사되어 활성 대사체인 페닐아세트산 머스타드(phenylacetic acid mustard)로 전환되며, 이후 추가 대사체로 분해되어 소변으로 배설됨."
+    },
+    "extra_information": "경구 투여 후 빠르고 완전하게 흡수되며 약 1시간 내 최고 혈중 농도에 도달함. 혈장 단백질에 높은 비율로 결합됨. 혈액-뇌 장벽 통과 여부는 불명확하나 신경학적 이상반응이 보고된 바 있음. 반감기는 인체 기준 1.5시간이며 수의학적 PK 데이터는 제한적임."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인체 및 제한적 수의학 데이터에 근거함. 골수억제(혈액독성), 간독성, 신경독성이 주요 독성 프로파일임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizures",
+          "myoclonus"
+        ],
+        "index": 1,
+        "evidence": "개에서 발작으로 의심되는 사례 보고 1건 있음. 혈액-뇌 장벽 통과 여부 불명확하나 신경독성 가능성 존재."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "myelosuppression",
+          "leukopenia",
+          "thrombocytopenia",
+          "anemia",
+          "pancytopenia"
+        ],
+        "index": 0,
+        "evidence": "골수억제(빈혈, 백혈구감소증, 혈소판감소증)가 가장 흔한 주요 이상반응. 나디르는 치료 시작 후 7~14일 이내 발생."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "uric acid nephropathy"
+        ],
+        "index": 3,
+        "evidence": "인체에서 요산 신증 보고. 고양이에서 Fanconi 증후군 보고(클로람부실 + 코르티코스테로이드 병용 시). 수의학적 신독성 직접 데이터 제한적."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatically metabolized"
+        ],
+        "index": 2,
+        "evidence": "한 연구에서 개의 23%에서 간독성 관찰됨. 간에서 광범위하게 대사되므로 간기능 저하 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "facial twitching",
+          "myoclonus",
+          "agitation",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 신경독성(안면 경련, 근간대경련, 흥분, 발작) 증례 보고 1건 있음."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "myelosuppression",
+          "leukopenia",
+          "thrombocytopenia",
+          "anemia",
+          "pancytopenia"
+        ],
+        "index": 0,
+        "evidence": "골수억제가 주요 이상반응으로 고양이에서도 동일하게 적용됨."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "Fanconi syndrome",
+          "uric acid nephropathy"
+        ],
+        "index": 3,
+        "evidence": "클로람부실과 코르티코스테로이드 병용 투여 고양이 4마리에서 후천성 Fanconi 증후군 보고. 3마리는 투약 중단 후 3개월 이내 부분 또는 완전 회복."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatically metabolized"
+        ],
+        "index": 2,
+        "evidence": "간에서 광범위하게 대사됨. 고양이 특이적 간독성 데이터는 제한적이나 간기능 저하 시 주의 필요."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 1.5,
+      "species": "human"
+    },
+    "f_percent": 100,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 빠르고 완전하게 흡수(생체이용률 ~100%). 약 1시간 내 Cmax 도달. 반감기 1.5시간(인체 데이터). 혈장 단백질에 높은 비율로 결합되나 정확한 수치 미기재."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "다른 골수억제 약물과 병용 시 골수억제 상가 효과 발생 가능. 가능한 한 병용 피할 것."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "reduced vaccine efficacy",
+        "enhanced adverse effects"
+      ],
+      "evidence": "클로람부실이 백신 효능을 감소시키고 백신 이상반응을 증가시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "면역억제제 (허가 외)",
+          "value": "1.95 - 4.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "관해 후 격일 투여로 유지. 최저 유효 용량 사용. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 일반적으로 1.95–4.5 mg/m²(NOT mg/kg) 1일 1회. 용량은 2mg 단위로 반올림. 프레드니솔론과 병용 사용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 림프구성 백혈병 (metronomic, 허가 외)",
+          "value": "3 - 6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1~2주 매일 투여 후 격일 투여로 감량. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 3–6 mg/m²(NOT mg/kg) PO 매일 1~2주, 이후 격일 투여. 혈액학적 모니터링 및 종양 반응에 따라 조정."
+        },
+        {
+          "logic_type": "linear",
+          "context": "비만세포종 (metronomic, 허가 외)",
+          "value": "4 - 6",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "8주간 투여. 로무스틴 60–90 mg/m² q21d 3~4회 투여 후 시행. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 4–6 mg/m²(NOT mg/kg) PO q48h, 8주간."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "림프종 및 림프세망 종양 또는 사이클로포스파미드 대체 (허가 외)",
+          "value": "1.4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "사이클로포스파미드와 동일한 스케줄로 대체 투여.",
+          "evidence": "허가 외. 1.4 mg/kg PO 1회, 사이클로포스파미드 스케줄에 맞춰 대체."
+        },
+        {
+          "logic_type": "linear",
+          "context": "Metronomic 항암 (혈관육종, 이행세포암종 등, 허가 외)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "8kg 초과 개: 2mg 단위로 반올림. 8kg 이하 개: 4 mg/m²로 조제. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 4 mg/m²(NOT mg/kg) PO 1일 1회."
+        },
+        {
+          "logic_type": "linear",
+          "context": "염증성 직장 용종 (허가 외)",
+          "value": "2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "프레드니솔론 또는 피로콕시브와 병용. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 평균 초기 용량 2 mg/m²(NOT mg/kg) PO 1일 1회. 닥스훈트 6마리 후향적 연구 기반."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "면역억제제 (허가 외)",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "관해 후 투여 간격 연장(3~4일마다). 4kg 초과: q48h, 4kg 이하: q72h로 2mg 정 투여 가능. 단위는 mg/m²(NOT mg/kg)로도 표기됨(≈1.5–4 mg/m²).",
+          "evidence": "허가 외. 0.1–0.2 mg/kg(≈1.5–4 mg/m²) PO 1일 1회. 프레드니솔론과 병용."
+        },
+        {
+          "logic_type": "linear",
+          "context": "저등급 위장관 림프종/만성 림프구성 백혈병 - 프로토콜 A (허가 외)",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "4일간 투여 후 3주마다 반복. 프레드니솔론 3 mg/kg PO 1일 1회 병용. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 15 mg/m²(NOT mg/kg) PO 1일 1회 × 4일, q3주 반복."
+        },
+        {
+          "logic_type": "linear",
+          "context": "저등급 위장관 림프종/만성 림프구성 백혈병 - 프로토콜 B (허가 외)",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주마다 1회 투여. 프레드니솔론 2 mg/kg PO 1일 1회 병용. 단위는 mg/m²(NOT mg/kg)임에 주의.",
+          "evidence": "허가 외. 20 mg/m²(NOT mg/kg)(2mg 단위 반올림) PO q2주."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "저등급 위장관 림프종/만성 림프구성 백혈병 - 프로토콜 C (허가 외)",
+          "value": "2",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "2~3일(48~72시간)마다 투여. 프레드니솔론 5–10 mg PO q12–24h 병용.",
+          "evidence": "허가 외. 2 mg/마리(NOT mg/m² 또는 mg/kg) PO q48–72h."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조정에 대한 명시적 권고사항 없음. 대사체가 소변으로 배설되므로 신기능 저하 시 주의 필요. 고양이에서 Fanconi 증후군 보고 있어 신기능 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간에서 광범위하게 대사되므로 간기능 저하 환자에서 주의하여 사용할 것을 권고함. 구체적인 용량 조정 수치는 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "클로람부실 또는 다른 알킬화제에 대한 과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "alkylating agent allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 골수 억제",
+      "match_terms": [
+        "bone marrow depression",
+        "pancytopenia",
+        "myelosuppression"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 75000,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "활동성 전신 감염",
+      "match_terms": [
+        "active systemic infection",
+        "sepsis"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "호중구감소증 (호중구 < 2500/µL)",
+      "match_terms": [
+        "neutropenia",
+        "neutrophil count low"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 2500,
+        "unit": "x10^3/uL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "유전적 감수성에 대한 언급 없음. MDR1 민감성 관련 데이터 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "방향족 질소 머스타드 유도체 알킬화제. 암세포 DNA 가닥을 알킬화하여 교차결합 및 세포 자멸사를 유발함. 면역억제 효과는 투약 시작 후 2~4주 후에 나타날 수 있음.",
+    "common_extra_effects": [
+      "골수억제 (빈혈, 백혈구감소증, 혈소판감소증, 범혈구감소증)",
+      "구토, 설사 등 위장관 독성",
+      "간독성",
+      "탈모 및 모발 재성장 지연",
+      "신경독성 (발작, 근간대경련)",
+      "기관지폐 이형성증 및 폐섬유증 (인체)",
+      "요산 신증 (인체)",
+      "이차성 악성종양 (인체)"
+    ],
+    "dog_mechanism": "DNA 알킬화를 통한 항종양 및 면역억제 효과. 면역억제 효과는 투약 시작 후 2~4주 후 발현.",
+    "dog_extra_effects": [
+      "골수억제 (나디르: 치료 시작 후 7~14일)",
+      "간독성 (한 연구에서 23% 발생)",
+      "탈모 및 모발 재성장 지연 (지속 성장 모발 견종에서 더 현저)",
+      "발작 의심 사례 보고",
+      "위장관 독성 (고용량 시 더 흔함)"
+    ],
+    "cat_mechanism": "DNA 알킬화를 통한 항종양 및 면역억제 효과.",
+    "cat_extra_effects": [
+      "골수억제",
+      "신경독성 (안면 경련, 근간대경련, 흥분, 발작) - 증례 보고",
+      "후천성 Fanconi 증후군 (코르티코스테로이드 병용 시 4마리 보고)",
+      "위장관 독성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 클로람부실은 림프구성 백혈병, T세포 림프종, 위장관 림프종, 다발성 골수종, 비만세포종 등 다양한 종양 질환과 면역매개 질환(염증성 장질환, 비미란성 관절염, 면역매개 용혈성 빈혈, 면역매개 피부 질환)에 사용됨. 용량은 mg/m²(NOT mg/kg) 기준이며 2mg 단위로 반올림. Metronomic 요법(4 mg/m² 1일 1회)은 이상반응 발생률이 낮음. 지속 성장 모발 견종(푸들, 테리어, 아프간 하운드, 올드 잉글리시 쉽독)에서 탈모가 더 현저하게 나타남. 간독성이 한 연구에서 23%에서 관찰됨.",
+    "cat": "고양이에서 클로람부실은 주로 저등급 위장관 림프종, 만성 림프구성 백혈병, 면역매개 질환에 대한 2차 면역억제제로 사용됨(글루코코르티코이드 후). 프레드니솔론과 병용이 일반적. 2mg 정 크기로 인해 정확한 용량 조절이 어려울 수 있어 조제가 필요할 수 있음. 코르티코스테로이드 병용 시 후천성 Fanconi 증후군 위험에 주의. 신경독성(발작) 증례 보고 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "기존 골수 억제, 활동성 감염, 간기능 저하 환자에서 주의 사용. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비 착용 필요. 임신 동물에서 최기형성 위험."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "코르티코스테로이드 병용 시 후천성 Fanconi 증후군 위험. 신경독성(발작) 증례 보고. 골수억제 모니터링 필수. NIOSH 위험 약물로 취급 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "차광 밀폐 용기에 냉장 보관(2°C–8°C, 36°F–46°F). 최대 30°C(86°F)에서 1주일까지 보관 가능. 조제 현탁액은 5°C에서 7일간 90% 역가 유지; 실온 보관 시 1일 이내 15% 이상 분해됨.",
+    "forms": [
+      "클로람부실 경구 정제(필름코팅): 2 mg; Leukeran® (Rx)",
+      "조제 경구 현탁액: 2 mg/mL (메틸셀룰로스 1% + 시럽, 냉장 보관 시 7일 안정)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로람부실은 질소 머스타드 유도체 알킬화 항암제 및 면역억제제로, 개·고양이·말에서 다양한 종양 및 면역매개 질환에 허가 외 사용됨. 주요 독성은 골수억제(빈혈, 백혈구감소증, 혈소판감소증)이며 나디르는 치료 시작 후 7~14일. 간독성이 개의 23%에서 보고됨. 고양이에서 코르티코스테로이드 병용 시 후천성 Fanconi 증후군 위험. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 조치 필수. 용량은 반드시 mg/m²(NOT mg/kg) 기준으로 처방하며 2mg 단위로 반올림. 정기적인 CBC 및 혈청 화학 검사 모니터링 필수.",
+    "indications": "항종양: 림프구성 백혈병, T세포 림프종, 위장관 림프종, 다발성 골수종, 림프관육종, 비만세포종, 피부 형질세포증, 진성 적혈구증가증, 대식세포증, 난소 선암종, 혈관육종, 이행세포암종(metronomic). 면역억제: 염증성 장질환, 비미란성 관절염, 면역매개 용혈성 빈혈, 면역매개 피부 질환. 모두 허가 외 사용.",
+    "client_info": "이 약은 골수를 억제할 수 있습니다. 치료 시작 후 수 주 이내에 골수에 가장 큰 영향이 나타날 수 있으므로, 출혈, 멍, 발열(감염 징후), 또는 쉽게 피로해지는 증상이 보이면 즉시 수의사에게 연락하십시오. 구토, 설사 등 위장관 증상이 나타날 수 있습니다. 혈변, 호흡 곤란, 비정상적인 출혈·멍·무기력·감염 징후가 보이면 즉시 수의사에게 연락하십시오. 이 약은 NIOSH에서 위험 약물로 분류합니다. 약을 투여하거나 동물의 배설물을 처리할 때 반드시 장갑을 착용하십시오. 임신 중이거나 임신을 계획 중이거나 수유 중인 분은 이 약을 취급하거나 동물의 배설물을 처리하지 마십시오. 정기적인 혈액 검사(CBC, 혈청 화학)를 빠짐없이 받으십시오. 개에서 탈모 및 모발 재성장 지연이 나타날 수 있으며, 지속 성장 모발 견종(푸들, 테리어 등)에서 더 현저합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Renal dose adjustment specifics",
+      "CYP enzyme profile",
+      "Protein binding percentage (exact value)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (dog/cat specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/24.jsonl",
+    "extracted_at": "2026-03-10T20:33:17.922821+00:00",
+    "reviewer": null
+  }
+}

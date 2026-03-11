@@ -1,0 +1,418 @@
+{
+  "id": "caspofungin",
+  "drug_identity": {
+    "name_ko": "카스포펀진",
+    "name_en": "Caspofungin",
+    "active_ingredient": "Caspofungin acetate",
+    "brand_names": [
+      "Cancidas"
+    ],
+    "allergy_class": null,
+    "class": "Antifungal",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이에서의 침습성 아스페르길루스증 및 파종성 칸디다 감염 치료에 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 70,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.01,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "카스포펀진은 가수분해 및 N-아세틸화를 통해 서서히 대사되며, 자발적인 화학적 분해도 일어난다. 대변과 소변으로 대부분 대사산물 형태로 배설되며, 미변화체로 소변 배설은 1~2%에 불과하다."
+    },
+    "extra_information": "고양이에서 1 mg/kg IV 투여 시 청소율 18 mL/kg/분, 소실 반감기 14.5시간. 사람에서는 경구 흡수가 거의 되지 않아 반드시 IV 투여해야 한다. 단백결합률 97%(주로 알부민). 조직 분포는 36~48시간에 걸쳐 이루어진다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 고양이 PK 데이터 존재; 개는 증례 보고 수준. 간 독성은 사람 및 원숭이 과용량 데이터에서 확인됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "histamine-mediated",
+          "anaphylaxis"
+        ],
+        "index": 1,
+        "evidence": "사람에서 히스타민 매개 반응 및 아나필락시스 보고. 개에서 직접적 혈액 독성 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "소변으로 1~2%만 미변화체 배설. 신장 부담은 낮으나 모니터링 권장."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatic necrosis",
+          "hepatic failure",
+          "subcapsular necrosis"
+        ],
+        "index": 3,
+        "evidence": "사람에서 간효소 상승, 간 괴사, 간부전 보고. 원숭이 과용량 시 간 피막하 괴사 발생. 개에서 직접 데이터 없으나 동일 위험 추정."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia",
+          "blood pressure changes"
+        ],
+        "index": 1,
+        "evidence": "주입 반응으로 빈맥 및 혈압 변화 모니터링 권장. 직접적 심장 독성 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 중추신경계 영향에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "transient fever",
+          "histamine-mediated"
+        ],
+        "index": 1,
+        "evidence": "건강한 고양이에서 일시적 발열 관찰. 히스타민 매개 반응 가능성."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "소변으로 1~2%만 미변화체 배설. 고양이 PK 연구에서 청소율 18 mL/kg/분으로 확인."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatic necrosis",
+          "hepatic failure"
+        ],
+        "index": 3,
+        "evidence": "사람에서 간효소 상승, 간 괴사, 간부전 보고. 고양이에서 기저치 및 주기적 간효소 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia",
+          "blood pressure changes"
+        ],
+        "index": 1,
+        "evidence": "주입 반응으로 빈맥 및 혈압 변화 모니터링 권장."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 10.0,
+      "max": 50.0,
+      "mean": 14.5,
+      "species": "cat"
+    },
+    "f_percent": 0,
+    "protein_binding_percent": 97,
+    "evidence": "고양이: 1 mg/kg IV 1시간 주입 후 최고 농도 14.8 μg/mL(첫 투여), 19.8 μg/mL(정상 상태); 소실 반감기 14.5시간. 사람: 1차 소실 반감기 약 10시간, 2차 소실 반감기 40~50시간. 경구 생체이용률 거의 0%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "elevated liver enzymes"
+      ],
+      "evidence": "Cyclosporine increases caspofungin plasma concentrations and increases the risk of elevated liver enzymes. Monitor liver function closely."
+    },
+    {
+      "drug": "Dexamethasone",
+      "severity": 2,
+      "keywords": [
+        "reduced plasma concentration",
+        "decreased efficacy"
+      ],
+      "evidence": "Dexamethasone reduces caspofungin plasma concentrations, potentially decreasing antifungal efficacy."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "reduced plasma concentration",
+        "decreased efficacy"
+      ],
+      "evidence": "Rifampin reduces caspofungin plasma concentrations, potentially decreasing antifungal efficacy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 3.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "Aspergillus deflectus 치료 (오프라벨, 증례 보고 기반)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 6주 매일 투여 후 주 3회, 이후 3주마다 3일 연속 투여로 감량. 증례 보고 기반.",
+          "evidence": "250 mL 0.9% 생리식염수에 희석하여 1시간에 걸쳐 IV 주입. 증례 보고에서 6주 치료 후 임상적 호전 확인."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "부비동-안와 아스페르길루스증 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "14~22일간 매일 투여. 20 mL 0.9% 생리식염수에 희석하여 1시간 주입.",
+          "evidence": "임상 증례 보고 기반 (참고문헌 6, 7)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부비동-안와 아스페르길루스증 - PK 최적화 용법 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 1 mg/kg IV 후 0.75 mg/kg IV q24h 유지. 2~3주 치료. PK 연구 기반.",
+          "evidence": "PK 연구에서 Cmax:MEC 비율 최적화 확인. 2마리 고양이에서 임상적으로 효과적으로 사용됨 (참고문헌 3, 8)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "부비동-안와 아스페르길루스증 - 대안 용법 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 1 mg/kg IV 후 1 mg/kg IV q72h 유지. PK 연구에서 유사한 Cmax:MEC 비율 확인.",
+          "evidence": "PK 연구 기반 대안 용법 (참고문헌 3)."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "수의학 환자에서 신기능 저하 시 용량 조정에 대한 구체적 정보 없음. 소변으로의 미변화체 배설이 1~2%로 매우 낮아 신장 부담은 적을 것으로 예상되나, 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "사람에서 중등도 간기능 장애 시 용량 조정 권장. 수의학 환자에서 중증 간기능 장애 시 사용 회피 권장. 간효소 상승, 간 괴사, 간부전이 사람에서 보고됨."
+  },
+  "contraindications": [
+    {
+      "condition": "카스포펀진 과민증",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to caspofungin",
+        "echinocandin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 간기능 장애",
+      "match_terms": [
+        "hepatic failure",
+        "severe liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신 초기 (1삼분기)",
+      "match_terms": [
+        "pregnancy",
+        "first trimester"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "에키노칸딘계 항진균제로 베타-글루칸 합성효소를 억제하여 진균 세포벽 구성 성분인 베타-(1,3)-D-글루칸 합성을 차단한다. 포유류 세포에는 베타-(1,3)-D-글루칸이 없어 선택적 독성을 나타낸다.",
+    "common_extra_effects": [
+      "설사",
+      "일시적 발열",
+      "오심",
+      "히스타민 매개 반응 (발진, 안면 부종, 소양증)",
+      "아나필락시스",
+      "주사 부위 반응 (통증, 발적, 정맥염)",
+      "간효소 상승"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "설사",
+      "일시적 발열"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서의 임상 경험은 매우 제한적이며 증례 보고 수준이다. Aspergillus deflectus 감염 증례에서 다른 항진균제 치료 실패 후 카스포펀진 1 mg/kg IV q24h 사용으로 임상적 호전이 보고되었다. 수의학적 PK 데이터가 없으므로 사람 데이터를 참고하여 사용해야 한다.",
+    "cat": "고양이에서 PK 연구가 수행되어 1 mg/kg IV 투여 시 소실 반감기 14.5시간, 청소율 18 mL/kg/분이 확인되었다. 부비동-안와 아스페르길루스증 치료에 임상적으로 사용된 보고가 있다. 최적 용법은 1 mg/kg 부하 용량 후 0.75 mg/kg q24h 유지이며, 대안으로 1 mg/kg q72h도 유사한 PK 프로파일을 보인다. 건강한 고양이에서 설사와 일시적 발열이 관찰되었다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 수의학적 안전성 데이터가 매우 부족하다. 간기능 모니터링, 주입 반응 모니터링이 필요하다. 오프라벨 사용이며 증례 보고 수준의 근거만 존재한다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 PK 데이터는 존재하나 임상 안전성 데이터는 제한적이다. 간효소, CBC, 전해질, 빌리루빈 기저치 및 주기적 모니터링 필요. 주입 반응(발열, 혈압 변화, 빈맥) 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "냉장 보관 (2~8°C). 재구성 후 1시간 이내에 추가 희석 필요. 생리식염수 또는 젖산 링거액에 희석 시 실온(25°C 미만)에서 24시간, 냉장 시 48시간 보관 가능. 포도당 함유 IV 용액에는 안정하지 않음. 다른 약물과 혼합 또는 동시 주입 금지.",
+    "forms": [
+      "Caspofungin Acetate 동결건조 분말 주사제 50 mg (단회용 바이알)",
+      "Caspofungin Acetate 동결건조 분말 주사제 70 mg (단회용 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "카스포펀진은 에키노칸딘계 비경구 항진균제로, 개와 고양이의 침습성 아스페르길루스증 및 파종성 칸디다 감염 치료에 잠재적 유용성이 있다. 수의학적 허가 제품은 없으며 임상 경험이 매우 제한적이다. 반드시 천천히 IV 주입해야 하며(1시간 이상), 간독성 위험이 있어 간기능 모니터링이 필수적이다. 사이클로스포린 병용 시 카스포펀진 혈중 농도 상승 및 간독성 위험 증가에 주의해야 한다.",
+    "indications": "【허가 외 사용】개: Aspergillus deflectus 등 침습성 아스페르길루스증, 파종성 칸디다 감염. 고양이: 부비동-안와 아스페르길루스증, 파종성 칸디다 감염. Cryptococcus neoformans 감염에는 효과 없음(베타-글루칸 합성효소 함량 매우 낮음).",
+    "client_info": "이 약물은 입원 치료 중에만 사용할 수 있는 주사제입니다. 수의학 분야에서 연구적 성격의 약물이며 비용이 높을 수 있습니다. 치료 중 발열, 발진, 구토, 설사 등의 증상이 나타나면 즉시 담당 수의사에게 알려주세요. 정기적인 혈액 검사(간기능, 신기능, 혈구 수치)가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 42,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Veterinary-specific renal dose adjustment",
+      "Veterinary-specific hepatic dose adjustment",
+      "Dog pharmacokinetics"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr (dog)",
+      "timing_profile.half_life_hr (dog)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog (veterinary-specific data)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/53.jsonl",
+    "extracted_at": "2026-03-11T05:39:24.395743+00:00",
+    "reviewer": null
+  }
+}

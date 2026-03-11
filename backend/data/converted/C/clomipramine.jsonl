@@ -1,0 +1,890 @@
+{
+  "id": "clomipramine",
+  "drug_identity": {
+    "name_ko": "클로미프라민",
+    "name_en": "Clomipramine",
+    "active_ingredient": "Clomipramine hydrochloride",
+    "brand_names": [
+      "Clomicalm",
+      "Anafranil",
+      "Clofranil",
+      "Clomav",
+      "Clopram",
+      "Clopress",
+      "Equinorm",
+      "Hydiphen",
+      "Maronil",
+      "Novo-Clopamine",
+      "Placil",
+      "Tranquax",
+      "Zoiral"
+    ],
+    "allergy_class": null,
+    "class": "Antidepressant",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 80,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 75,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.67,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 광범위한 초회통과 효과를 거쳐 활성 대사체인 desmethylclomipramine으로 전환되며, 이후 글루쿠론산 포합에 의해 추가 대사됨. 대사체의 약 2/3는 소변으로, 나머지는 대변으로 배설됨(인체 데이터)."
+    },
+    "extra_information": "개: 경구 생체이용률 17%(광범위한 초회통과 효과), 단회 투여 후 최고 혈중 농도 도달 시간 약 1.5~2시간, 반복 투여 시 약 3~4시간. 식이 섭취 시 생체이용률·최고 농도·AUC 약 20~25% 증가. 분포용적 3.8 L/kg. 혈장 단백 결합률 96%. 클로미프라민 반감기 약 6~7시간, 활성 대사체(desmethylclomipramine) 반감기 약 2시간. 고양이: 개보다 대사 속도가 느리며 개체 간 변이가 큼. 수컷 고양이가 암컷보다 더 느리게 대사할 수 있음. 소규모 PK 연구(n=6)에서 경구 생체이용률 평균 90%, 최고 농도 도달 시간 약 6시간, 반감기 12.3시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 고양이 종별 데이터 일부 존재하나 인체 데이터 보완 포함. 간: 광범위한 초회통과 대사 및 간효소 상승 보고. 뇌: 혈뇌장벽 통과, 진정/기면 부작용. 신장: 대사체 2/3 신장 배설. 혈액: 혈장 단백 결합 96%, ECG 이상 가능성. 심장: QT 연장 위험, 빈맥, 부정맥 보고.",
+    "dog": {
+      "brain": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "혈뇌장벽 통과",
+          "진정",
+          "기면",
+          "발작 위험",
+          "항콜린 효과"
+        ],
+        "index": 2,
+        "evidence": "클로미프라민 및 활성 대사체가 혈뇌장벽을 통과하며, 진정/기면/우울이 주요 부작용으로 보고됨. 발작 역치 저하 위험."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "혈장 단백 결합 96%",
+          "ECG 이상",
+          "QRS 확장",
+          "PR 간격 연장"
+        ],
+        "index": 1,
+        "evidence": "혈장 단백 결합률 96%. ECG에서 QRS 확장, PR 간격 연장, T파 변화 가능성 보고."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "신장 배설 2/3",
+          "소변 정체"
+        ],
+        "index": 1,
+        "evidence": "인체 데이터에서 대사체의 약 2/3가 소변으로 배설됨. 소변 정체가 부작용으로 보고됨."
+      },
+      "liver": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "광범위한 초회통과 대사",
+          "간효소 상승",
+          "간질환 주의"
+        ],
+        "index": 3,
+        "evidence": "개에서 경구 생체이용률 17%로 광범위한 초회통과 효과 확인. 간효소 상승이 주요 부작용으로 보고됨. 기존 간질환 동물에서 주의 요함."
+      },
+      "heart": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "빈맥",
+          "부정맥",
+          "QT 연장",
+          "SA/AV 차단",
+          "심박수 이상"
+        ],
+        "index": 2,
+        "evidence": "과다 투여 시 서맥, SA/AV 차단 보고. QT 연장 위험. 항콜린 효과로 빈맥 가능. 갑상선 보충제 병용 시 심장 부정맥 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "진정",
+          "간질형 병리",
+          "전신 방전",
+          "항콜린 효과",
+          "산동"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 간질형 병리 및 지속적 전신 방전 보고. 진정, 산동 등 부작용이 개보다 더 민감하게 나타남."
+      },
+      "blood": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "혈장 단백 결합 96%",
+          "ECG 이상 가능성"
+        ],
+        "index": 1,
+        "evidence": "혈장 단백 결합률 96%. 소규모 연구에서 유의한 ECG 이상은 확인되지 않았으나 모니터링 권장."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "소변 정체",
+          "신장 배설"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 소변 정체가 주요 부작용으로 보고됨. 대사체의 신장 배설 경로 존재."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "느린 대사",
+          "활성 대사체 축적",
+          "간 대사"
+        ],
+        "index": 3,
+        "evidence": "고양이는 개보다 클로미프라민 대사 속도가 느리며, 활성 대사체(desmethylclomipramine)가 더 오래 축적될 수 있음. 간질환 동물에서 주의 요함."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "빈맥",
+          "항콜린 효과",
+          "QT 연장 위험"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 빈맥이 과다 투여 증상으로 보고됨. 항콜린 효과로 인한 심박수 이상 가능. 소규모 연구에서 유의한 ECG 이상은 없었으나 주의 요함."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.75,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 7.0,
+      "mean": 6.5,
+      "species": "dog"
+    },
+    "f_percent": 17,
+    "protein_binding_percent": 96,
+    "evidence": "개: 경구 생체이용률 17%, 단회 투여 후 Tmax 약 1.5~2시간(반복 투여 시 3~4시간), 반감기 6~7시간, 혈장 단백 결합 96%. 고양이: 생체이용률 90%, Tmax 약 6시간, 반감기 12.3시간(소규모 연구, n=6)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)/심각→3, 중등도(moderate)→2, 경미(minor)→1. MAOI 병용은 세로토닌 증후군 위험으로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, selegiline, furazolidone, linezolid, methylene blue, procarbazine)",
+      "severity": 3,
+      "keywords": [
+        "세로토닌 증후군",
+        "금기",
+        "14일 이내 병용 금지"
+      ],
+      "evidence": "MAOI와의 병용(14일 이내 포함)은 세로토닌 증후군 위험으로 금기."
+    },
+    {
+      "drug": "QT Prolonging Agents (e.g., amiodarone, cisapride, procainamide, quinidine, sotalol)",
+      "severity": 3,
+      "keywords": [
+        "QT 간격 연장",
+        "부정맥"
+      ],
+      "evidence": "QT 연장 위험 및 삼환계 항우울제 부작용 증가."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "QT 간격 연장"
+      ],
+      "evidence": "병용 시 QT 간격 연장 위험 증가."
+    },
+    {
+      "drug": "Fluoroquinolones (e.g., enrofloxacin, marbofloxacin, pradofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "QT 간격 연장"
+      ],
+      "evidence": "병용 시 QT 간격 연장 위험 증가."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, paroxetine, sertraline)",
+      "severity": 3,
+      "keywords": [
+        "세로토닌 증후군"
+      ],
+      "evidence": "병용 시 세로토닌 증후군 위험 증가. 개에서 클로미프라민에서 SSRI로 전환 시 3~4일 휴약 기간 권장."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs; e.g., amitriptyline, doxepin, imipramine)",
+      "severity": 3,
+      "keywords": [
+        "세로토닌 증후군",
+        "항콜린 부작용",
+        "심장 부정맥"
+      ],
+      "evidence": "두 가지 TCA 병용은 세로토닌 증후군, 항콜린 부작용, 심장 부정맥 위험 증가로 피해야 함."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제",
+        "세로토닌 증후군"
+      ],
+      "evidence": "CNS 억제 및 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 2,
+      "keywords": [
+        "세로토닌 증후군"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "변비",
+        "소변 정체",
+        "CNS 억제",
+        "세로토닌 증후군"
+      ],
+      "evidence": "변비, 소변 정체, CNS 억제, 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "세로토닌 증후군",
+        "발작"
+      ],
+      "evidence": "인체에서 세로토닌 증후군 및 발작 위험 증가. 수의 임상적 의의는 불명확하나 병용 금지 권고 문헌 존재."
+    },
+    {
+      "drug": "Trazodone",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제",
+        "세로토닌 증후군"
+      ],
+      "evidence": "부가적 CNS 억제 및 인체에서 세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Pentazocine",
+      "severity": 2,
+      "keywords": [
+        "세로토닌 증후군"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 3,
+      "keywords": [
+        "추체외로 반응",
+        "신경이완제 악성 증후군"
+      ],
+      "evidence": "추체외로 반응 또는 신경이완제 악성 증후군 위험 증가. 인체에서 병용 금기. 수의 환자에서 데이터 없음. 병용 피하거나 보수적 용량 사용 및 면밀한 모니터링 필요."
+    },
+    {
+      "drug": "Opioids (e.g., buprenorphine, butorphanol, fentanyl, meperidine, methadone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제",
+        "호흡 억제",
+        "세로토닌 증후군"
+      ],
+      "evidence": "부가적 CNS 및 호흡 억제. 드물게 인체에서 세로토닌 증후군 보고. 면밀한 모니터링 필요."
+    },
+    {
+      "drug": "Alpha-2-Adrenergic Agonists (e.g., dexmedetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제",
+        "호흡 억제",
+        "서맥"
+      ],
+      "evidence": "CNS 및 호흡 억제, 서맥 위험 증가. 주의하여 병용."
+    },
+    {
+      "drug": "Anticholinergic Agents (e.g., atropine, glycopyrrolate, oxybutynin)",
+      "severity": 2,
+      "keywords": [
+        "항콜린 효과 상가"
+      ],
+      "evidence": "항콜린 효과 상가. 주의하여 병용."
+    },
+    {
+      "drug": "Antihistamines (e.g., cetirizine, chlorpheniramine, diphenhydramine, hydroxyzine)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제",
+        "항콜린 효과 상가",
+        "진정",
+        "빈맥",
+        "장폐색",
+        "산동",
+        "변비"
+      ],
+      "evidence": "CNS 억제 및 항콜린 효과 상가. 병용 피하거나 진정, 빈맥, 장폐색, 산동, 변비 모니터링."
+    },
+    {
+      "drug": "CNS Depressants (e.g., cannabidiol, diazepam, methocarbamol, pregabalin)",
+      "severity": 2,
+      "keywords": [
+        "CNS 억제 상가"
+      ],
+      "evidence": "부가적 CNS 억제 효과. 주의하여 병용."
+    },
+    {
+      "drug": "Barbiturates (e.g., pentobarbital, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "클로미프라민 효능 감소",
+        "부작용 상가"
+      ],
+      "evidence": "클로미프라민 효능 감소 또는 부가적 부작용 가능. 클로미프라민 효능 모니터링."
+    },
+    {
+      "drug": "Anesthetic Agents (e.g., alfaxalone, isoflurane, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "마취 상호작용",
+        "수술 전 중단"
+      ],
+      "evidence": "선택적 수술 전 가능한 한 오래 클로미프라민 중단 권장."
+    },
+    {
+      "drug": "Amlodipine",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "저혈압 위험 증가."
+    },
+    {
+      "drug": "ACE Inhibitors (e.g., benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "저혈압 위험 증가."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs; e.g., telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "저혈압 위험 증가."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "TCA 대사 억제",
+        "독성 위험 증가"
+      ],
+      "evidence": "삼환계 항우울제 대사 억제로 독성 위험 증가."
+    },
+    {
+      "drug": "Cyproheptadine",
+      "severity": 2,
+      "keywords": [
+        "세로토닌 효과 길항"
+      ],
+      "evidence": "삼환계 항우울제의 세로토닌 효과를 길항할 수 있음."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "치료 효과 및 독성 증가"
+      ],
+      "evidence": "레보티록신과 클로미프라민 양쪽의 치료 효과 및 독성 효과 증가 가능."
+    },
+    {
+      "drug": "Sympathomimetic Agents (e.g., albuterol, ephedrine, phenylpropanolamine)",
+      "severity": 2,
+      "keywords": [
+        "부정맥",
+        "고열",
+        "고혈압"
+      ],
+      "evidence": "심장 효과(부정맥, 고열, 고혈압) 위험 증가."
+    },
+    {
+      "drug": "Yohimbine",
+      "severity": 2,
+      "keywords": [
+        "고혈압"
+      ],
+      "evidence": "고혈압 위험 증가."
+    },
+    {
+      "drug": "Flumazenil",
+      "severity": 3,
+      "keywords": [
+        "발작",
+        "부정맥",
+        "TCA 과다 투여"
+      ],
+      "evidence": "TCA 과다 투여가 의심되는 동물에서 플루마제닐 사용 시 발작 및 부정맥 위험 증가."
+    },
+    {
+      "drug": "Serotonin Receptor Antagonists (e.g., dolasetron, ondansetron)",
+      "severity": 2,
+      "keywords": [
+        "세로토닌 증후군"
+      ],
+      "evidence": "세로토닌 증후군 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "분리불안 (FDA 승인 용량)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "행동 교정 프로그램과 병행. 효능 판정에 최대 8주 필요. 중단 시 점진적 감량 권장.",
+          "evidence": "FDA 승인 라벨 용량. 1일 1회 또는 2회 분할 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "분리불안 (FDA 승인 용량, 분할 투여)",
+          "value": "2 - 4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "행동 교정 프로그램과 병행. 효능 판정에 최대 8주 필요. 중단 시 점진적 감량 권장.",
+          "evidence": "FDA 승인 라벨 용량. 1일 1회 또는 2회 분할 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 장애 보조 치료 (초기, 비라벨)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "2주마다 점진적 증량. 효능 판정에 최대 8주 필요.",
+          "evidence": "비라벨 사용. 초기 용량으로 시작하여 점진적 증량."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 장애 보조 치료 (유지, 비라벨)",
+          "value": "3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 3.0,
+          "duration_note": "효능 확립 후 감량 가능.",
+          "evidence": "비라벨 사용. 최대 3 mg/kg SID~BID까지 증량 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "행동 장애 보조 치료 (유지, 비라벨, 최대 내약 용량)",
+          "value": "4",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": 4.0,
+          "duration_note": "한 연구에서 잘 내약됨.",
+          "evidence": "비라벨 사용. 한 연구에서 4 mg/kg BID까지 내약성 확인."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "행동 장애 보조 치료 (소변 스프레이 등, 비라벨)",
+          "value": "0.25 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 1.0,
+          "duration_note": "행동 교정 치료와 병행.",
+          "evidence": "비라벨 사용. 실용적으로 2.5~5 mg/마리(mg/kg 아님) 1일 1회 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "행동 장애 보조 치료 (고정 용량, 비라벨)",
+          "value": "2.5 - 5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "행동 교정 치료와 병행. mg/kg 아닌 마리당 고정 용량.",
+          "evidence": "비라벨 사용. 실용적 고정 용량 2.5~5 mg/마리."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신장 기능 저하 시 용량 조정에 대한 명시적 권고 없음. 대사체의 약 2/3가 신장으로 배설되므로 신장 기능 저하 시 주의 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간질환 동물에서 주의 사용 권고. 광범위한 간 초회통과 대사 및 간효소 상승 부작용 보고. 명시적 용량 조정 권고는 없으나 간질환 시 모니터링 강화 필요."
+  },
+  "contraindications": [
+    {
+      "condition": "클로미프라민 또는 다른 TCA에 과민반응",
+      "match_terms": [
+        "TCA 과민반응",
+        "클로미프라민 알레르기"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MAOI 병용 또는 14일 이내 사용",
+      "match_terms": [
+        "MAOI",
+        "selegiline",
+        "amitraz",
+        "furazolidone",
+        "linezolid"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 병력",
+      "match_terms": [
+        "간질",
+        "발작",
+        "seizure history"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "발작 역치를 낮추는 약물 병용",
+      "match_terms": [
+        "발작 역치 저하 약물"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "종견(수컷 번식견)",
+      "match_terms": [
+        "번식견",
+        "수컷 번식",
+        "male breeding dog"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "간질환",
+        "간부전",
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심장 부정맥",
+      "match_terms": [
+        "부정맥",
+        "cardiac arrhythmia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안압 상승 / 협우각 녹내장",
+      "match_terms": [
+        "녹내장",
+        "안압 상승",
+        "glaucoma",
+        "increased intraocular pressure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 운동 저하",
+      "match_terms": [
+        "장폐색",
+        "GI motility 저하",
+        "decreased GI motility"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "요저류 장애",
+      "match_terms": [
+        "요저류",
+        "urinary retention"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선기능항진증 또는 갑상선 보충제 투여 중",
+      "match_terms": [
+        "갑상선기능항진증",
+        "levothyroxine",
+        "thyroid supplementation"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "6개월 미만 강아지",
+      "match_terms": [
+        "6개월 미만",
+        "어린 강아지"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "신경세포막에서 세로토닌(5-HT) 재흡수를 주로 억제하며, 노르에피네프린 재흡수도 억제함. 활성 대사체(desmethylclomipramine)는 주로 노르아드레날린 재흡수를 억제. 히스타민-1(H1) 수용체 결합, 알파-1 아드레날린 수용체 및 무스카린성 아세틸콜린 수용체 길항 작용도 있음.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "구강 건조",
+      "진정/기면/우울",
+      "간효소 상승",
+      "소변 정체",
+      "변비",
+      "빈맥",
+      "산동",
+      "항콜린 효과"
+    ],
+    "dog_mechanism": "개에서 경구 생체이용률이 17%로 낮으며(광범위한 초회통과 효과), 간에서 활성 대사체(desmethylclomipramine)로 빠르게 전환됨.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "구강 건조",
+      "간효소 상승",
+      "진정/기면/우울",
+      "췌장염(드물게 1례 보고)"
+    ],
+    "cat_mechanism": "고양이는 개보다 클로미프라민 대사 속도가 느리며, 활성 대사체가 더 오래 축적될 수 있음. 수컷 고양이가 암컷보다 더 느리게 대사할 수 있음.",
+    "cat_extra_effects": [
+      "항콜린 효과(구강 건조, 산동, 소변 정체, 변비)",
+      "진정",
+      "설사",
+      "간질형 병리 및 전신 방전(고용량)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 분리불안 치료에 FDA 승인된 유일한 TCA. 행동 교정 프로그램과 병행 시 효과 향상. 발작 병력이 있는 개에서는 금기. 수컷 번식견에서도 금기(고용량 독성 연구에서 고환 저형성 확인). 치료 효과 판정에 최대 8주 소요. 갑상선 기능 검사(tT3, tT4, fT4) 기저치 측정 및 치료 1개월 후, 이후 매년 모니터링 권장. 기저 ECG 검사 권장.",
+    "cat": "고양이에서 비라벨 사용(소변 스프레이, 심인성 탈모 등). 개보다 부작용에 더 민감하며, 특히 항콜린 효과(소변 정체, 변비, 산동)와 진정이 두드러짐. 고양이에서 간질형 병리 및 전신 방전 보고 있어 주의 필요. 갑상선 기능 검사 기저치 측정 권장. 실용적으로 mg/kg보다 마리당 고정 용량(2.5~5 mg/마리) 사용이 권장됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "발작 병력, 수컷 번식견에서 금기. 간질환, 심장 부정맥, 안압 상승, GI 운동 저하, 요저류, 갑상선 보충제 투여 중인 경우 주의. 6개월 미만 강아지에서 안전성 미확립."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "비라벨 사용. 개보다 부작용에 더 민감. 간질형 병리 및 전신 방전 보고. 항콜린 효과, 진정, 설사 등 부작용 모니터링 필요. 갑상선 기능 검사 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "수의용 정제: 건조한 곳, 실온(15~30°C) 원래 밀폐 용기에 보관. 인체용 캡슐: 20~25°C, 밀폐 용기, 습기 차단 보관.",
+    "forms": [
+      "클로미프라민 HCl 경구 정제 5 mg, 20 mg, 40 mg, 80 mg (Clomicalm®, 제네릭) - 수의용",
+      "클로미프라민 경구 캡슐 25 mg, 50 mg, 75 mg (Anafranil®, 제네릭) - 인체용"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "클로미프라민은 개의 분리불안 치료에 FDA 승인된 삼환계 항우울제(TCA)로, 행동 교정 프로그램과 병행 시 효과적입니다. 세로토닌 재흡수 억제가 주요 작용 기전이며, 항콜린 효과도 있습니다. 발작 병력이 있는 개와 수컷 번식견에서는 금기입니다. MAOI(아미트라즈 포함)와의 병용은 절대 금기(세로토닌 증후군). 고양이에서는 비라벨로 소변 스프레이 등에 사용되나 개보다 부작용에 더 민감합니다. 치료 효과 판정에 최대 8주 소요되며, 중단 시 점진적 감량이 필요합니다. 갑상선 기능(tT3, tT4, fT4) 및 ECG 기저치 검사를 치료 전 시행하고 정기적으로 모니터링해야 합니다.",
+    "indications": "【승인 적응증】 개의 분리불안(부적절한 짖음, 파괴적 행동, 부적절한 배변 포함) - 행동 교정 프로그램 병행 시 FDA 승인. 【비라벨 적응증】 개: 강박 장애, 소음 공포증, 상황적 불안/공포증. 고양이: 소변 스프레이, 심인성 탈모(효능 불명확). 조류: 깃털 뽑기 행동.",
+    "client_info": "이 약은 행동 치료와 함께 사용할 때 가장 효과적입니다. 효과가 나타나기까지 몇 주가 걸릴 수 있으므로 인내심을 가지고 투여하세요. 음식과 함께 또는 공복에 투여할 수 있으나, 음식과 함께 투여하면 구토 위험을 줄일 수 있습니다. 가장 흔한 부작용은 졸음/기면, 구강 건조, 변비입니다. 항상 신선한 물을 충분히 제공하세요. 드물지만 심각한 부작용(비정상적 출혈, 발열, 발작, 매우 빠르거나 불규칙한 심박수)이 나타나면 즉시 수의사에게 연락하세요. 과다 투여는 매우 위험할 수 있으므로 약을 동물과 어린이의 손이 닿지 않는 곳에 보관하세요. 지난 2주 이내에 벼룩/진드기 목걸이(아미트라즈 포함)를 사용했다면 반드시 수의사에게 알리고, 새 목걸이 사용 전에도 수의사와 상담하세요. 수의사의 지시 없이 갑자기 투약을 중단하지 마세요. 점진적으로 감량해야 하며, 갑작스러운 중단 시 구토, 불안, 떨림 등 금단 증상이 나타날 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "CYP enzyme profile (substrates/inhibitors/inducers)",
+      "Renal dose adjustment explicit recommendation",
+      "Onset time (onset_min)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/26.jsonl",
+    "extracted_at": "2026-03-10T21:15:55.971704+00:00",
+    "reviewer": null
+  }
+}

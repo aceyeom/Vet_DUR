@@ -1,0 +1,597 @@
+{
+  "id": "ampicillin",
+  "drug_identity": {
+    "name_ko": "암피실린",
+    "name_en": "Ampicillin",
+    "active_ingredient": "Ampicillin",
+    "brand_names": [
+      "Princillin",
+      "Omnipen",
+      "Polyflex",
+      "Ampi-Tab"
+    ],
+    "allergy_class": "beta-lactam",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Inj",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 2000,
+        "unit": "mg"
+      },
+      {
+        "value": 10000,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.85,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "암피실린은 주로 신세뇨관 분비를 통해 신장으로 배설된다. 일부는 가수분해에 의해 페니실로산(비활성)으로 대사된 후 소변으로 배설된다. CYP 효소 관련 대사 경로는 보고되지 않았다."
+    },
+    "extra_information": "개에서 신부전(azotemia) 시 혈장 약물 농도, AUC, 반감기가 증가하는 것이 확인되었다. 고양이에서 분포용적은 0.167 L/kg으로 보고되었다. 개와 고양이에서 반감기는 45~80분으로 보고되었다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 비율, 부작용 프로파일, 약동학 데이터를 근거로 평가. 수의학적 종별 데이터가 일부 존재함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "ataxia",
+          "seizure threshold"
+        ],
+        "index": 1,
+        "evidence": "고용량 또는 장기 사용 시 신경독성(개에서 운동실조)이 보고되었으며, 발작 역치를 낮출 수 있다고 알려져 있다."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia",
+          "eosinophilia"
+        ],
+        "index": 2,
+        "evidence": "과민반응으로 호산구증가증, 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈이 보고되었다."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion",
+          "azotemia",
+          "increased half-life"
+        ],
+        "index": 3,
+        "evidence": "주로 신세뇨관 분비를 통해 신장으로 배설된다. 신부전(azotemia) 개에서 혈장 농도, AUC, 반감기 증가가 확인되어 용량 조절이 필요하다."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "간독성 약물로 분류되지는 않으나, 개에서 간효소 수치 상승이 보고된 바 있다."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "tachycardia",
+          "tachypnea"
+        ],
+        "index": 1,
+        "evidence": "개에서 빈맥, 빈호흡, 부종이 보고되었으나 직접적인 심장독성은 알려져 있지 않다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "neurotoxicity",
+          "seizure threshold"
+        ],
+        "index": 1,
+        "evidence": "고용량 페니실린 계열에서 신경독성이 보고되었으나 고양이 특이적 데이터는 제한적이다."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "neutropenia",
+          "agranulocytosis",
+          "thrombocytopenia",
+          "leukopenia",
+          "anemia"
+        ],
+        "index": 2,
+        "evidence": "과민반응으로 혈액학적 이상(호중구감소증, 혈소판감소증 등)이 보고되었다. 고양이 특이적 데이터는 제한적이다."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal elimination",
+          "tubular secretion"
+        ],
+        "index": 3,
+        "evidence": "주로 신장으로 배설되며, 고양이에서 분포용적은 0.167 L/kg으로 보고되었다. 신부전 시 주의가 필요하다."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "간독성 약물로 분류되지 않으나 간효소 상승 가능성이 있다. 고양이 특이적 데이터는 제한적이다."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 직접적인 부작용 데이터는 보고되지 않았다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.75,
+      "max": 1.33,
+      "mean": 1.04,
+      "species": "dog"
+    },
+    "f_percent": 40,
+    "protein_binding_percent": 20,
+    "evidence": "개와 고양이에서 반감기 45~80분(0.75~1.33시간). 경구 생체이용률은 사람 및 단위장 동물에서 약 30~55%이며, 아목시실린(75~92%)보다 낮아 경구 투여는 권장되지 않는다. 혈장 단백 결합률은 약 20%(주로 알부민). 분포용적: 개 약 0.3 L/kg, 고양이 0.167 L/kg."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Allopurinol",
+      "severity": 1,
+      "keywords": [
+        "skin rash"
+      ],
+      "evidence": "Concurrent use has been implicated in increased occurrences of skin rashes in humans; veterinary significance is unknown."
+    },
+    {
+      "drug": "Aminoglycosides (e.g., amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "in vitro inactivation",
+        "aminoglycoside inactivation"
+      ],
+      "evidence": "Beta-lactam antibiotics can inactivate aminoglycosides in vitro and in vivo in patients with chronic kidney disease."
+    },
+    {
+      "drug": "Atenolol",
+      "severity": 1,
+      "keywords": [
+        "decreased bioavailability"
+      ],
+      "evidence": "Concurrent oral use may decrease atenolol bioavailability."
+    },
+    {
+      "drug": "Bacteriostatic Antimicrobials (e.g., chloramphenicol, erythromycin, macrolides, tetracyclines, sulfonamides)",
+      "severity": 2,
+      "keywords": [
+        "antagonism",
+        "bacteriostatic-bactericidal antagonism"
+      ],
+      "evidence": "In vitro antagonism between beta-lactam antibiotics and bacteriostatic antibiotics has been reported; actual clinical importance is currently in doubt."
+    },
+    {
+      "drug": "Dichlorphenamide",
+      "severity": 2,
+      "keywords": [
+        "hypokalemia"
+      ],
+      "evidence": "Concurrent use may increase hypokalemia risk."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "decreased renal excretion",
+        "increased MTX levels",
+        "toxicity"
+      ],
+      "evidence": "Ampicillin may decrease the renal excretion of methotrexate, causing increased levels and potential toxic effects."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "reduced drug levels",
+        "reduced efficacy"
+      ],
+      "evidence": "Concurrent use may reduce levels or effects of mycophenolate."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "tubular secretion blockade",
+        "increased serum levels",
+        "increased half-life"
+      ],
+      "evidence": "Probenecid competitively blocks tubular secretion of most penicillins, increasing serum levels and serum half-lives."
+    },
+    {
+      "drug": "Proton Pump Inhibitors (e.g., omeprazole, pantoprazole)",
+      "severity": 1,
+      "keywords": [
+        "reduced oral absorption"
+      ],
+      "evidence": "PPIs may reduce absorption of oral ampicillin."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "decreased vitamin K production",
+        "increased bleeding risk"
+      ],
+      "evidence": "Concurrent use may decrease vitamin K production and increase risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "rabbit",
+      "guinea_pig",
+      "chinchilla",
+      "hamster"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "FDA 승인 라벨 용량 (호흡기, 요로, 소화기, 피부 감염) - Ampicillin trihydrate (Polyflex®)",
+          "value": "6.6",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "통상 3일 치료로 충분하나, 무열 또는 임상 증상 소실 후 48~72시간 지속 투여",
+          "evidence": "FDA 승인 라벨 용량이나 현재 대부분의 임상의에게 일관된 효능을 보이지 않는 것으로 간주됨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "패혈증 보조 항생제 치료 또는 감수성 전신 감염 (extra-label) - Ampicillin sodium",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "그람음성균 커버리지 강화를 위해 아미노글리코사이드 또는 플루오로퀴놀론과 병용",
+          "evidence": "Extra-label; 장구균 감염 시 40~100 mg/kg까지 필요할 수 있음"
+        },
+        {
+          "logic_type": "linear",
+          "context": "렙토스피라증 (extra-label) - Ampicillin sodium",
+          "value": "20",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "구토 또는 독시사이클린 경구 투여 불가 시 사용",
+          "evidence": "Extra-label"
+        },
+        {
+          "logic_type": "linear",
+          "context": "Streptococcus canis 감수성 균주에 의한 심내막염 급성 치료 (extra-label) - Ampicillin sodium",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "FDA 승인 라벨 용량 (호흡기, 요로, 소화기, 피부 감염) - Ampicillin trihydrate (Polyflex®)",
+          "value": "6.6",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "통상 3일 치료로 충분하나, 무열 또는 임상 증상 소실 후 48~72시간 지속 투여",
+          "evidence": "FDA 승인 라벨 용량이나 현재 대부분의 임상의에게 일관된 효능을 보이지 않는 것으로 간주됨"
+        },
+        {
+          "logic_type": "linear",
+          "context": "패혈증 보조 항생제 치료 또는 감수성 전신 감염 (extra-label) - Ampicillin sodium",
+          "value": "20 - 40",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "그람음성균 커버리지 강화를 위해 아미노글리코사이드 또는 플루오로퀴놀론과 병용",
+          "evidence": "Extra-label; 장구균 감염 시 40~100 mg/kg까지 필요할 수 있음"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "extend_interval",
+    "adjustment_factor": null,
+    "note": "신부전(azotemia) 개에서 혈장 약물 농도, AUC, 반감기 증가가 확인되었다. 투여 빈도 감소(투여 간격 연장)가 필요할 수 있다. 구체적인 크레아티닌 역치 또는 조정 계수는 명시되지 않았다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "간독성 약물로 분류되지 않으며, 간기능 저하 시 용량 조절에 대한 구체적인 권고사항은 명시되지 않았다."
+  },
+  "contraindications": [
+    {
+      "condition": "페니실린 과민반응 병력",
+      "match_terms": [
+        "penicillin allergy",
+        "beta-lactam allergy",
+        "drug hypersensitivity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "다른 베타-락탐 항생제(세팔로스포린, 세파마이신, 카바페넴) 과민반응 병력",
+      "match_terms": [
+        "cephalosporin allergy",
+        "carbapenem allergy",
+        "beta-lactam hypersensitivity"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신부전 (azotemia)",
+      "match_terms": [
+        "azotemia",
+        "renal failure",
+        "CKD",
+        "acute kidney injury"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "토끼, 기니피그, 친칠라, 햄스터",
+      "match_terms": [
+        "rabbit",
+        "guinea pig",
+        "chinchilla",
+        "hamster"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Ampicillin trihydrate (Polyflex®) 정맥 투여",
+      "match_terms": [
+        "IV administration of trihydrate",
+        "Polyflex IV"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세포벽 합성 억제를 통한 시간 의존성 살균 작용. 페니실린 결합 단백질(PBP)에 결합하여 펩티도글리칸 교차결합을 방해한다. 베타-락타마제 생성 균주에 의해 불활성화될 수 있다.",
+    "common_extra_effects": [
+      "과민반응 (발진, 발열, 호산구증가증, 호중구감소증, 무과립구증, 혈소판감소증, 백혈구감소증, 빈혈, 림프절병증, 아나필락시스)",
+      "소화기 증상 (식욕부진, 구토, 설사)",
+      "항생제 관련 설사 및 장내 세균총 변화",
+      "신경독성 (고용량 또는 장기 사용 시 운동실조, 발작 역치 저하)",
+      "간효소 수치 상승"
+    ],
+    "dog_mechanism": "세포벽 합성 억제. 개에서 신부전 시 반감기 및 AUC 증가.",
+    "dog_extra_effects": [
+      "운동실조 (고용량 또는 장기 사용 시)",
+      "빈맥",
+      "빈호흡",
+      "부종",
+      "간효소 수치 상승"
+    ],
+    "cat_mechanism": "세포벽 합성 억제. 고양이에서 분포용적은 0.167 L/kg으로 개보다 낮다.",
+    "cat_extra_effects": [
+      "소화기 증상 (구토, 설사)",
+      "과민반응"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 흡수율이 낮아(30~55%) 경구 투여는 권장되지 않으며, 아목시실린이 선호된다. 비경구 투여(IV, IM, SC)가 주로 사용된다. Ampicillin trihydrate (Polyflex®)는 IV 투여 금지(아나필락시스 및 급사 위험). 신부전 개에서 용량 조절(투여 간격 연장)이 필요하다. 패혈증, 렙토스피라증, 심내막염 등에 extra-label로 사용된다.",
+    "cat": "고양이에서도 경구 흡수율이 낮아 비경구 투여가 선호된다. Ampicillin trihydrate (Polyflex®)는 IV 투여 금지. 고양이에서 분포용적은 0.167 L/kg으로 보고되었다. 반감기는 45~80분으로 개와 유사하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신부전(azotemia) 개에서 혈장 약물 농도, AUC, 반감기 증가가 확인되어 투여 간격 연장이 필요할 수 있다. Ampicillin trihydrate의 IV 투여는 절대 금기. 발작 역치를 낮출 수 있으므로 발작 위험이 있는 환자에서 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "경구 흡수율이 낮아 비경구 투여가 권장된다. Ampicillin trihydrate의 IV 투여는 절대 금기. 과민반응 발생 시 즉시 투여 중단."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "Ampicillin trihydrate (Polyflex®) 주사용 분말: 25°C 이하 보관(최대 30°C까지 허용). 재조제 후 냉장 보관 시 3개월 안정. Ampicillin sodium 주사용 분말: 실온(15~30°C) 보관. 재조제 후 1시간 이내 사용 권장. 냉장(4°C) 시 안정성 증가: 멸균 주사용수에서 30 mg/mL는 48시간, 20 mg/mL 이하는 72시간 안정. 경구 현탁액: 재조제 후 냉장 14일, 실온 7일 안정.",
+    "forms": [
+      "Ampicillin Trihydrate Injection Powder for Suspension (25 g vials; Polyflex®)",
+      "Ampicillin Sodium Powder for Injection (1 g, 3 g vials)",
+      "Ampicillin Trihydrate Capsules (125 mg, 250 mg, 500 mg; Princillin®)",
+      "Ampicillin Trihydrate Tablets (50 mg, 100 mg; Ampi-Tab®)",
+      "Ampicillin Anhydrous Capsules (125 mg, 250 mg; Omnipen®)",
+      "Ampicillin Trihydrate Soluble Powder (88.2 mg/g; Princillin®)",
+      "Ampicillin Sodium Powder for Injection - Human label (125 mg, 250 mg, 500 mg, 1 g, 2 g, 10 g vials)",
+      "Ampicillin Oral Capsules as trihydrate - Human label (250 mg, 500 mg)",
+      "Ampicillin Powder for Oral Suspension - Human label (125 mg/5 mL, 250 mg/5 mL)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "암피실린은 아미노페니실린 계열의 살균성 항생제로, 세포벽 합성 억제를 통해 작용한다. 개와 고양이에서 경구 흡수율이 낮아(30~55%) 비경구 투여(IV, IM, SC)가 주로 사용되며, 경구 투여 시에는 아목시실린이 선호된다. Ampicillin trihydrate (Polyflex®)는 IV 투여 절대 금기(아나필락시스 및 급사 위험). 베타-락타마제 생성 균주에 의해 불활성화될 수 있어 내성 문제에 주의가 필요하다. 신부전 환자에서 용량 조절이 필요하다. WHO 및 OIE에서 중요 항균제로 지정되어 있어 신중한 사용이 요구된다.",
+    "indications": "감수성 균주에 의한 호흡기 감염, 요로 감염, 소화기 감염, 피부 및 연조직 감염. 패혈증 경험적 치료(그람음성균 커버리지 약물과 병용). 렙토스피라증(독시사이클린 투여 불가 시 대체). Streptococcus canis에 의한 심내막염. 장구균 감염(아미노글리코사이드와 병용 시 상승 효과). 수술 전 예방적 항생제(베타-락타마제 생성 균주에 대한 효능 제한적).",
+    "client_info": "이 약은 피부 아래(피하) 또는 근육에 주사하는 항생제입니다. 절대로 정맥에 주사하지 마십시오(Polyflex® 제형). 주사 방법을 정확히 숙지한 후 투여하십시오. 치료 시작 후 2~3일 내에 감염 증상이 호전되어야 합니다. 호전이 없거나 상태가 악화되면 즉시 수의사에게 연락하십시오. 식용 동물에 투여 시 약물 잔류 휴약 기간을 반드시 준수하십시오(소: 우유 48시간, 도축 6일)."
+  },
+  "_data_quality": {
+    "overall_confidence": 75,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific onset_min data",
+      "t_max_hr data",
+      "Exact renal creatinine threshold for dose adjustment",
+      "Hepatic dose adjustment recommendations",
+      "CYP enzyme profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/55.jsonl",
+    "extracted_at": "2026-03-11T06:20:31.707437+00:00",
+    "reviewer": null
+  }
+}

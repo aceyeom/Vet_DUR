@@ -1,0 +1,573 @@
+{
+  "id": "griseofulvin",
+  "drug_identity": {
+    "name_ko": "그리세오풀빈",
+    "name_en": "Griseofulvin",
+    "active_ingredient": "Griseofulvin",
+    "brand_names": [
+      "Fulvicin",
+      "Gris-PEG"
+    ],
+    "allergy_class": null,
+    "class": "Antifungal",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Susp",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 25,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.01,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 산화적 탈메틸화 및 글루쿠론산 포합을 통해 비활성 대사체인 6-desmethylgriseofulvin으로 대사됨. 고양이는 글루쿠론산 포합 능력이 낮아 대사가 느림. 1% 미만이 소변으로 미변화체로 배설됨."
+    },
+    "extra_information": "개에서 혈청 반감기는 약 47분으로 보고됨. 고양이는 글루쿠론산 포합 능력이 낮아 약물 대사가 느리고 부작용에 더 민감할 수 있음. 마이크로사이즈 제형의 경구 생체이용률은 25~70%로 가변적이며, 지방 식이와 함께 투여 시 흡수가 향상됨. 울트라마이크로사이즈 제형은 마이크로사이즈 대비 1.5배 흡수율이 높음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개의 반감기는 47분(0.78시간)으로 매우 짧음. 간 대사, 피부/모발/손발톱/지방/골격근/간에 농축됨. 고양이는 글루쿠론산 포합 능력 저하로 간 부담 증가 가능성 있음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "ataxia",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "우울증, 운동실조가 부작용으로 보고됨. 중추신경계 영향 가능성 있음."
+      },
+      "blood": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "anemia",
+          "neutropenia",
+          "leukopenia",
+          "thrombocytopenia",
+          "bone marrow depression"
+        ],
+        "index": 2,
+        "evidence": "빈혈, 호중구감소증, 백혈구감소증, 혈소판감소증이 부작용으로 보고됨. 골수 억제 가능성."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음. 1% 미만이 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "liver metabolism",
+          "oxidative demethylation",
+          "glucuronidation"
+        ],
+        "index": 3,
+        "evidence": "간독성이 부작용으로 보고됨. 간에서 산화적 탈메틸화 및 글루쿠론산 포합으로 대사됨. 간에 농축됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "ataxia",
+          "depression"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 우울증, 운동실조가 부작용으로 보고됨. 고양이는 부작용에 더 민감할 수 있음."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "neutropenia",
+          "leukopenia",
+          "bone marrow depression",
+          "panleukopenia",
+          "FIV"
+        ],
+        "index": 2,
+        "evidence": "고양이(특히 새끼 고양이 및 FIV 양성 고양이)에서 골수 억제, 호중구감소증, 범백혈구감소증 위험이 높음. FIV 고양이에서 80~147 mg/kg 투여 시 발열, 식욕부진, 설사, 우울증 및 호중구감소증 발생."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 독성에 대한 직접적인 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "glucuronidation",
+          "slower metabolism"
+        ],
+        "index": 3,
+        "evidence": "고양이는 글루쿠론산 포합 능력이 낮아 대사가 느리고 간 부담이 증가할 수 있음. 간독성이 부작용으로 보고됨."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.78,
+      "species": "dog"
+    },
+    "f_percent": 47,
+    "protein_binding_percent": null,
+    "evidence": "개에서 혈청 반감기 47분(0.78시간) 보고됨. 마이크로사이즈 제형의 경구 생체이용률은 25~70%로 가변적(중간값 약 47% 사용). 투여 후 4시간 이내에 각질층에서 검출됨. 인간에서 반감기는 9~24시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 명시된 상호작용만 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Alcohol (Ethanol)",
+      "severity": 2,
+      "keywords": [
+        "potentiation",
+        "CNS depression"
+      ],
+      "evidence": "Griseofulvin may potentiate the effects of alcohol."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 1,
+      "keywords": [
+        "decreased salicylate concentration"
+      ],
+      "evidence": "Griseofulvin may decrease salicylate concentrations."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "decreased cyclosporine concentration",
+        "immunosuppression"
+      ],
+      "evidence": "Griseofulvin may decrease cyclosporine concentrations."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 2,
+      "keywords": [
+        "decreased estrogen concentration",
+        "hormonal effect"
+      ],
+      "evidence": "Griseofulvin may decrease estrogen concentrations (e.g., estriol)."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "decreased griseofulvin concentration",
+        "enzyme induction"
+      ],
+      "evidence": "Phenobarbital decreases griseofulvin blood concentrations."
+    },
+    {
+      "drug": "Progestins",
+      "severity": 2,
+      "keywords": [
+        "decreased progestin concentration",
+        "hormonal effect"
+      ],
+      "evidence": "Griseofulvin may decrease progestin concentrations (e.g., medroxyprogesterone, megestrol)."
+    },
+    {
+      "drug": "Theophylline/Aminophylline",
+      "severity": 2,
+      "keywords": [
+        "decreased theophylline half-life",
+        "decreased theophylline concentration"
+      ],
+      "evidence": "In some patients, griseofulvin may decrease theophylline half-life and concentrations."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "reduced anticoagulant activity",
+        "bleeding risk"
+      ],
+      "evidence": "Anticoagulant activity of warfarin may be reduced by griseofulvin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "피부사상균증 (FDA 승인 라벨 용량 - 체중별 고정 용량)",
+          "value": "62.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 2.7 kg 이하에 해당. 감염 소실 후 추가 투여 필요.",
+          "evidence": "FDA 승인 라벨 용량. 체중 2.7 kg (6 lb) 이하: 62.5 mg"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "피부사상균증 (FDA 승인 라벨 용량 - 체중별 고정 용량)",
+          "value": "125",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 2.7~8.2 kg에 해당. 감염 소실 후 추가 투여 필요.",
+          "evidence": "FDA 승인 라벨 용량. 체중 2.7~8.2 kg (6~18 lb): 125 mg"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "피부사상균증 (FDA 승인 라벨 용량 - 체중별 고정 용량)",
+          "value": "250",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 8.2~16.4 kg에 해당. 감염 소실 후 추가 투여 필요.",
+          "evidence": "FDA 승인 라벨 용량. 체중 8.2~16.4 kg (18~36 lb): 250 mg"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "피부사상균증 (FDA 승인 라벨 용량 - 체중별 고정 용량)",
+          "value": "375",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 16.4~21.8 kg에 해당. 감염 소실 후 추가 투여 필요.",
+          "evidence": "FDA 승인 라벨 용량. 체중 16.4~21.8 kg (36~48 lb): 375 mg"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "피부사상균증 (FDA 승인 라벨 용량 - 체중별 고정 용량)",
+          "value": "500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "체중 21.8~34.1 kg에 해당. 감염 소실 후 추가 투여 필요.",
+          "evidence": "FDA 승인 라벨 용량. 체중 21.8~34.1 kg (48~75 lb): 500 mg"
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부사상균증 (비라벨 외용 - 마이크로사이즈 제형)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 치유 후 최소 2주, 1주 간격으로 2회 음성 피부 배양 확인까지 치료. 수개월 치료 필요할 수 있음. 지방 식이와 함께 투여.",
+          "evidence": "비라벨 외용 용량. 마이크로사이즈 제형: 50 mg/kg PO 1일 1회 또는 분할 투여."
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부사상균증 (비라벨 외용 - 울트라마이크로사이즈 제형)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 치유 후 최소 2주, 1주 간격으로 2회 음성 피부 배양 확인까지 치료. 수개월 치료 필요할 수 있음. 지방 식이와 함께 투여.",
+          "evidence": "비라벨 외용 용량. 울트라마이크로사이즈 제형: 5~10 mg/kg PO 1일 1회."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "피부사상균증 (비라벨 외용 - 마이크로사이즈 제형, 고양이)",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 치유 후 최소 2주, 1주 간격으로 2회 음성 피부 배양 확인까지 치료. 지방 식이와 함께 투여. FIV 검사 후 투여 결정 필요. 현재 아졸계 항진균제 등 더 효과적이고 독성이 낮은 약물로 대체되는 추세.",
+          "evidence": "비라벨 외용 용량. 마이크로사이즈 제형 일반적 권장 용량. 고양이에서 FDA 승인 제품은 현재 미국 내 판매 중단."
+        },
+        {
+          "logic_type": "linear",
+          "context": "피부사상균증 (비라벨 외용 - 울트라마이크로사이즈 제형, 고양이)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상적 치유 후 최소 2주, 1주 간격으로 2회 음성 피부 배양 확인까지 치료. 지방 식이와 함께 투여. FIV 검사 후 투여 결정 필요.",
+          "evidence": "비라벨 외용 용량. 울트라마이크로사이즈 제형: 5~10 mg/kg PO 1일 1회."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "none",
+    "adjustment_factor": null,
+    "note": "소변으로 1% 미만이 미변화체로 배설되므로 신장 용량 조절에 대한 명시적 권고 없음. 신장 독성에 대한 직접적 언급 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간세포 부전 환자에서 금기. 간에서 주로 대사되므로 간 기능 장애 시 사용 금지."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "griseofulvin hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간세포 부전",
+      "match_terms": [
+        "hepatocellular failure",
+        "liver failure",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "FIV 양성 고양이",
+      "match_terms": [
+        "FIV",
+        "feline immunodeficiency virus"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "새끼 고양이",
+      "match_terms": [
+        "kitten",
+        "young cat"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "유전적 감수성에 대한 직접적인 언급 없음. 고양이의 글루쿠론산 포합 능력 저하는 종 특이적 대사 특성으로, 특정 유전자 변이와 연관된 것은 아님."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "진균의 유사분열 방추 구조를 교란하여 세포 분열의 중기를 정지시키고 핵산 합성을 억제하는 정진균성 항생제. Trichophyton, Microsporum, Epidermophyton 속에 활성을 가짐.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "빈혈",
+      "호중구감소증",
+      "백혈구감소증",
+      "혈소판감소증",
+      "우울증",
+      "운동실조",
+      "간독성",
+      "피부염",
+      "광과민성",
+      "독성 표피 괴사용해"
+    ],
+    "dog_mechanism": "개에서 반감기는 약 47분으로 매우 짧음. 피부, 모발, 손발톱, 지방, 골격근, 간에 농축됨. 투여 후 4시간 이내에 각질층에서 검출됨.",
+    "dog_extra_effects": [
+      "GI 증상(식욕부진, 구토, 설사)이 가장 흔한 부작용",
+      "일반적인 용량에서 GI 증상 외 부작용은 드묾"
+    ],
+    "cat_mechanism": "고양이는 글루쿠론산 포합 능력이 낮아 대사가 느리고 부작용에 더 민감함. FIV 양성 고양이는 호중구감소증 및 골수 억제 위험이 증가함.",
+    "cat_extra_effects": [
+      "골수 억제(특히 새끼 고양이)",
+      "호중구감소증",
+      "범백혈구감소증(FIV 양성 고양이)",
+      "발열",
+      "식욕부진",
+      "설사",
+      "우울증"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 피부사상균증 치료제이나, 현재 미국 내 수의용 제품은 판매 중단 상태. 아졸계 항진균제 및 테르비나핀으로 대체되는 추세. 마이크로사이즈 제형(50 mg/kg/일) 또는 울트라마이크로사이즈 제형(5~10 mg/kg/일)을 지방 식이와 함께 투여. 치료 중 CBC 및 혈액화학 검사 모니터링 권장.",
+    "cat": "고양이에서 FDA 승인되었으나 현재 수의용 제품 판매 중단. 고양이(특히 새끼 고양이)는 부작용에 더 민감하므로 주의 필요. 투여 전 FIV 검사 필수. FIV 양성 고양이에서는 호중구감소증 및 골수 억제 위험이 높아 사용을 피하는 것이 권장됨. 임신 중 사용 금기(최기형성 확인됨). 현재 아졸계 항진균제 등 더 안전한 대안 약물 사용 권장."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "일반적인 용량에서 GI 증상 외 부작용은 드물지만, 치료 중 CBC 및 혈액화학 검사 모니터링 권장. 임신견에서 금기(최기형성 확인됨). 마이크로사이즈와 울트라마이크로사이즈 제형 혼동 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이(특히 새끼 고양이 및 FIV 양성 고양이)는 골수 억제 등 부작용에 더 민감. 투여 전 FIV 검사 필수. 임신 중 금기. 현재 더 안전한 대안 약물 사용 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "20~25°C(68~77°F)에서 보관. 현탁액은 밀폐된 차광 용기에 보관. 마이크로사이즈 정제 및 캡슐은 밀폐 용기에, 울트라마이크로사이즈 정제는 잘 밀폐된 용기에 보관.",
+    "forms": [
+      "그리세오풀빈 마이크로사이즈 정제: 250 mg, 500 mg (인체용, 처방전 필요)",
+      "그리세오풀빈 울트라마이크로사이즈 정제: 125 mg, 250 mg (인체용, 처방전 필요)",
+      "그리세오풀빈 마이크로사이즈 경구 현탁액: 125 mg/5 mL (25 mg/mL), 120 mL 병 (인체용, 처방전 필요)",
+      "그리세오풀빈 마이크로사이즈 분말: 2.5 g/15 g 사쉐 (수의용, 말 전용, 처방전 필요)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "그리세오풀빈은 피부사상균증(Trichophyton, Microsporum, Epidermophyton) 치료에 사용되는 정진균성 항생제입니다. 현재 아졸계 항진균제 및 테르비나핀으로 대체되는 추세이며, 특히 고양이에서는 더 안전한 대안 약물 사용이 권장됩니다. 마이크로사이즈와 울트라마이크로사이즈 제형의 용량이 다르므로 혼동하지 않도록 주의해야 합니다. 임신 동물에서 금기이며, FIV 양성 고양이에서 골수 억제 위험이 높습니다.",
+    "indications": "개, 고양이, 말에서 피부, 모발, 발톱의 피부사상균 감염 치료(FDA 승인). 말에서 Trichophyton equinum 및 Microsporum gypseum 감염 치료(FDA 승인). 실험동물 및 반추동물의 피부사상균 감염 치료(비라벨 외용). Malassezia 등 다른 진균에는 효과 없음.",
+    "client_info": "이 약은 지방이 풍부한 음식(치즈, 크림, 버터, 옥수수 오일 등)과 함께 투여해야 흡수가 잘 됩니다. 식욕 감소, 구토, 설사가 나타나면 즉시 수의사에게 연락하세요. 임신 중인 여성은 이 약을 취급하지 마세요(동물에서 기형 유발이 확인되었으며 사람에서도 위험할 수 있습니다). 치료 중 정기적인 혈액 검사가 필요하므로 예약된 검진을 빠지지 마세요. 새로 자라는 털과 발톱만 피부사상균에 저항성을 갖게 되므로 치료 기간이 수개월 걸릴 수 있습니다. 동물의 환경을 청결히 하여 재감염을 예방하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific dosage (label)",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Onset of action",
+      "T-max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "dosage_and_kinetics.cat.dosage_list (label dose)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/0.jsonl",
+    "extracted_at": "2026-03-10T13:26:23.396318+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "id": "glucagon",
+  "drug_identity": {
+    "name_ko": "글루카곤",
+    "name_en": "Glucagon",
+    "active_ingredient": "Glucagon",
+    "brand_names": [
+      "GlucaGen",
+      "GlucaGen Diagnostic",
+      "GlucaGen HypoKit",
+      "Glucagon Emergency Kit"
+    ],
+    "allergy_class": null,
+    "class": "Hormone",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 인체용 제품을 소동물(개, 고양이), 페럿, 소에 비허가(extra-label)로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "글루카곤은 혈장, 간, 신장에서 분해된다. CYP 효소 관련 대사 경로는 보고되지 않음."
+    },
+    "extra_information": "건강한 비글에서 1 mg SC 투여 시 10분 이내에 혈당이 유의하게 상승하고 20분에 최고치에 도달. IV 투여 후에도 최고 혈당은 약 20분 후 달성. 인간에서 반감기는 약 10분이며 고혈당 효과는 최대 90분 지속."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 수의학적 종별 PK 데이터 제한적; 주로 인체 및 비글 데이터 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "sedation"
+        ],
+        "index": 1,
+        "evidence": "진정(sedation)이 이상반응으로 보고됨. 직접적인 CNS 독성 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypokalemia",
+          "blood glucose",
+          "anticoagulant"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증 가능성, 혈당 변동, 와파린과 병용 시 항응고 효과 증가 보고."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "degraded in kidneys"
+        ],
+        "index": 1,
+        "evidence": "글루카곤은 신장에서 분해됨. 직접적인 신독성 데이터는 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic glycogenolysis",
+          "hepatic gluconeogenesis",
+          "degraded in liver"
+        ],
+        "index": 3,
+        "evidence": "간에서 당원분해 및 당신생 촉진. 간에서 분해됨. 인슐린종 환자에서 인슐린 분비 자극 가능성."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "myocardial oxygen demand",
+          "heart rate",
+          "blood pressure"
+        ],
+        "index": 2,
+        "evidence": "심근 산소 요구량 증가, 심박수 및 혈압 일시적 상승 가능. 심장 질환 환자에서 주의 요함."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "sedation"
+        ],
+        "index": 1,
+        "evidence": "진정이 이상반응으로 보고됨. 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hypokalemia",
+          "blood glucose"
+        ],
+        "index": 2,
+        "evidence": "저칼륨혈증 가능성 및 혈당 변동. 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "degraded in kidneys"
+        ],
+        "index": 1,
+        "evidence": "신장에서 분해됨. 고양이 특이적 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic glycogenolysis",
+          "hepatic gluconeogenesis",
+          "degraded in liver"
+        ],
+        "index": 3,
+        "evidence": "간에서 당원분해 및 당신생 촉진. 간에서 분해됨. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "myocardial oxygen demand",
+          "heart rate",
+          "blood pressure"
+        ],
+        "index": 2,
+        "evidence": "심근 산소 요구량 증가 가능. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 10,
+    "t_max_hr": 0.33,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 0.167,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "건강한 비글에서 SC 1 mg 투여 시 10분 이내 혈당 상승, 20분에 최고치. 인간에서 혈장 반감기 약 10분(0.167시간). 경구 투여 시 장에서 파괴되므로 반드시 비경구 투여 필요."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents (e.g., amitriptyline, atropine, diphenhydramine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects",
+        "enhanced GI toxicity"
+      ],
+      "evidence": "Anticholinergic agents may enhance the GI adverse effects of glucagon."
+    },
+    {
+      "drug": "Beta-Blockers (e.g., atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "heart rate increase",
+        "blood pressure increase"
+      ],
+      "evidence": "Glucagon may transiently increase heart rate and blood pressure when used with beta-blockers."
+    },
+    {
+      "drug": "Glucose-Lowering Agents (e.g., exenatide, glipizide, metformin)",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "opposing effect"
+      ],
+      "evidence": "Glucagon may decrease the efficacy of glucose-lowering agents due to opposing effects on blood glucose."
+    },
+    {
+      "drug": "Indomethacin",
+      "severity": 2,
+      "keywords": [
+        "diminished glucagon effect"
+      ],
+      "evidence": "Indomethacin may diminish the hyperglycemic effect of glucagon."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "opposing effects",
+        "blood glucose"
+      ],
+      "evidence": "Glucagon and insulin have opposing effects on blood glucose; concurrent use requires careful monitoring."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increased",
+        "bleeding risk",
+        "prothrombin activity"
+      ],
+      "evidence": "Anticoagulant effect of warfarin may be increased when glucagon is concurrently administered; effect may be delayed. Monitor for bleeding and prothrombin activity."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "중증 저혈당 치료 - 요법 1: IV 볼루스 후 CRI (extra-label)",
+          "value": "50",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 50 nanogram/kg IV 볼루스 후 10-15 nanogram/kg/min CRI; 필요 시 최대 40 nanogram/kg/min까지 증량. 중단 시 1-2일에 걸쳐 점진적으로 감량.",
+          "evidence": "글루카곤 1 mg을 0.9% 생리식염수 1000 mL에 희석(1000 nanogram/mL 용액). 일부 문헌에서는 5% 덱스트로스만 사용 권장."
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 저혈당 치료 - 요법 2: IV CRI (extra-label)",
+          "value": "5 - 10",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "CRI",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈당 60-100 mg/dL 유지 목표로 조절. 평균 초기 용량 11.8 nanogram/kg/min 사용 보고. 중단 시 1-2일에 걸쳐 점진적으로 감량.",
+          "evidence": "단위: nanogram/kg/min. 혈당 모니터링 필수."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "중증 저혈당 치료 - IV CRI (extra-label, 개와 동일 프로토콜 적용)",
+          "value": "50",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 50 nanogram/kg IV 볼루스 후 10-15 nanogram/kg/min CRI; 필요 시 최대 40 nanogram/kg/min까지 증량. 중단 시 1-2일에 걸쳐 점진적으로 감량.",
+          "evidence": "개와 동일한 용량 프로토콜이 적용되는 것으로 기술됨(DOGS/CATS 섹션). 고양이 특이적 데이터 없음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장에서 분해되나 용량 조절에 대한 명시적 권고사항 없음. 반감기가 매우 짧아 임상적으로 축적 위험은 낮을 것으로 추정."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간에서 분해되나 간기능 저하 시 용량 조절에 대한 명시적 권고사항 없음. 간 글리코겐 저장량이 충분해야 효과 발현 가능."
+  },
+  "contraindications": [
+    {
+      "condition": "갈색세포종 (Pheochromocytoma)",
+      "match_terms": [
+        "pheochromocytoma",
+        "adrenal tumor"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease",
+        "cardiomyopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기아/부신기능부전/만성 저혈당",
+      "match_terms": [
+        "starvation",
+        "adrenal insufficiency",
+        "chronic hypoglycemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "인슐린종 (혈당 모니터링 없이 사용)",
+      "match_terms": [
+        "insulinoma"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "glucose",
+        "threshold": 60.0,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "췌장 알파-2 세포에서 분비되는 호르몬으로, 간 글리코겐 분해(glycogenolysis) 및 당신생(gluconeogenesis)을 촉진하여 혈당을 상승시키고, 위장관 평활근을 이완시킴.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "오심(nausea)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "저칼륨혈증(hypokalemia)",
+      "주사 부위 반응",
+      "과민반응(매우 드묾)",
+      "심박수 및 혈압 일시적 상승",
+      "심근 산소 요구량 증가"
+    ],
+    "dog_mechanism": "건강한 개에서 글루카곤은 인슐린의 간 포도당 생산 억제 활성을 극복할 수 있음. IV(SC 아님) 투여 시 ACTH 및 코르티솔의 일시적 증가 유발.",
+    "dog_extra_effects": [
+      "혈당 상승(SC 투여 10분 이내 시작, 20분에 최고치)",
+      "ACTH 및 코르티솔 일시적 증가(IV 투여 시)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 주요 적응증은 인슐린종(내인성 과잉 인슐린) 또는 인슐린 과다투여로 인한 저혈당 치료. CRI 사용 시 반드시 혈당 모니터링 가능한 환경에서 사용. 베타차단제 과다투여 치료에도 사용 가능하나, 한 연구에서 프로프라놀롤 과다투여 치료 시 인슐린이 글루카곤보다 우수함을 보고. 치료 중단 시 1-2일에 걸쳐 점진적으로 감량 필요.",
+    "cat": "고양이에서 개와 동일한 프로토콜(DOGS/CATS 섹션)이 적용됨. 고양이 특이적 PK 데이터 및 임상 연구는 부재. 혈당 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "갈색세포종 환자에서 금기. 심장 질환 환자에서 주의(심근 산소 요구량 증가). 기아, 부신기능부전, 만성 저혈당 상태에서는 효과 없음. 인슐린종 치료 시 혈당 면밀히 모니터링 필요(약물 중단 후 반동성 저혈당 가능)."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "개와 동일한 주의사항 적용. 고양이 특이적 안전성 데이터 부재."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "재구성 전 분말: 실온 20-25°C(68-77°F) 보관, 냉동 금지, 차광 보관. 재구성 후: 즉시 사용, 미사용분 폐기. 겔 형성 또는 입자 발생 시 폐기.",
+    "forms": [
+      "Glucagon (human rDNA-origin) Powder for Injection: 1 mg (1 unit) with 1 mL diluent in vials and syringes"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "글루카곤은 췌장 호르몬으로, 소동물의 인슐린종 또는 인슐린 과다투여로 인한 중증 저혈당 치료에 주로 사용됩니다. 베타차단제·칼슘채널차단제 과다투여의 심장 증상 치료에도 활용 가능합니다. 수의학적 허가 제품은 없으며 모두 비허가(extra-label) 사용입니다. 반감기가 매우 짧아(약 10분) 지속 정맥 주입(CRI)이 필요하며, 반드시 혈당 모니터링이 가능한 환경에서 사용해야 합니다. 갈색세포종 환자에서는 금기이며, 심장 질환 환자에서는 주의가 필요합니다.",
+    "indications": "【허가 적응증】없음(수의학적 허가 제품 없음). 【비허가 적응증】① 소동물: 인슐린종 또는 인슐린 과다투여로 인한 중증 저혈당 치료(IV CRI), ② 베타차단제·칼슘채널차단제·삼환계 항우울제 과다투여의 심장 증상 치료, ③ 베타차단제 투여 환자의 아나필락시스 치료(에피네프린 병용), ④ 소: 초기 비유기 지방간 증후군 치료(SC 또는 IV CRI), ⑤ 페럿: 인슐린종으로 인한 저혈당 치료(IV CRI).",
+    "client_info": "글루카곤은 혈당을 올리는 호르몬 주사제입니다. 반드시 병원에서 혈당을 지속적으로 확인하면서 투여해야 합니다. 집에서 응급으로 사용하는 것은 가능할 수 있으나, 경구 포도당 투여가 더 적절하고 저렴한 경우가 많습니다. 투여 후 구토, 설사, 졸음이 나타날 수 있습니다. 약을 갑자기 중단하면 혈당이 다시 떨어질 수 있으므로 반드시 수의사의 지시에 따라 서서히 감량해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies (dog/cat)",
+      "CYP enzyme profile",
+      "Renal dose adjustment guidance",
+      "Hepatic dose adjustment guidance",
+      "Oral bioavailability (F%)",
+      "Protein binding data",
+      "Cat-specific dosing evidence"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "timing_profile.half_life_hr (veterinary species)",
+      "renal_dose_adjustment.adjustment_type",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.adjustment_type",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat (species-specific evidence)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/44.jsonl",
+    "extracted_at": "2026-03-11T02:52:03.955904+00:00",
+    "reviewer": null
+  }
+}

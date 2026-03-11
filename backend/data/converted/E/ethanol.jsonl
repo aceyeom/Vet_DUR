@@ -1,0 +1,641 @@
+{
+  "id": "ethanol",
+  "drug_identity": {
+    "name_ko": "에탄올",
+    "name_en": "Ethanol",
+    "active_ingredient": "Ethanol",
+    "brand_names": [
+      "Everclear"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "FDA 승인 제품 없음; 에틸렌 글리콜 중독 치료를 위한 비라벨 사용. 수의학에서 사용 시 조제 또는 비약제학적 등급 제품(보드카, 곡물 알코올) 사용 필요.",
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 5,
+        "unit": "%"
+      },
+      {
+        "value": 7,
+        "unit": "%"
+      },
+      {
+        "value": 10,
+        "unit": "%"
+      },
+      {
+        "value": 20,
+        "unit": "%"
+      },
+      {
+        "value": 40,
+        "unit": "%"
+      },
+      {
+        "value": 70,
+        "unit": "%"
+      },
+      {
+        "value": 95,
+        "unit": "%"
+      },
+      {
+        "value": 96,
+        "unit": "%"
+      },
+      {
+        "value": 100,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "에탄올은 알코올 탈수소효소(alcohol dehydrogenase)에 의해 간에서 대사됨. 에틸렌 글리콜 중독 치료 시 알코올 탈수소효소를 경쟁적으로 억제하여 에틸렌 글리콜의 독성 대사산물 생성을 차단하고, 에틸렌 글리콜은 주로 소변으로 미변환 상태로 배설됨."
+    },
+    "extra_information": "에탄올은 경구 투여 시 잘 흡수되나, 중독 치료 시에는 정맥 투여가 선호됨. 체내에 빠르게 분포하며 혈액-뇌 장벽을 통과함. 만성 신장 질환 동물에서는 미대사 모화합물이 혈액투석 없이는 제거되지 않을 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 에탄올의 CNS 억제, 호흡 억제, 저혈당, 간 독성 악화, 이뇨 효과 등 부작용 및 약리 작용을 근거로 장기 부담 점수를 산정함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "CNS depression",
+          "respiratory depression",
+          "obtundation",
+          "lateral nystagmus",
+          "hypothermia",
+          "blood-brain barrier"
+        ],
+        "index": 1,
+        "evidence": "에탄올은 혈액-뇌 장벽을 통과하여 CNS 억제 및 호흡 억제를 유발함. 고혈중 농도에서 저체온증 및 호흡 정지 위험이 있음. 횡와 안진, 심한 의식 저하 등 과다 복용 징후가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "intravascular hemolysis",
+          "hypoglycemia",
+          "hypocalcemia",
+          "metabolic acidosis"
+        ],
+        "index": 2,
+        "evidence": "혈관 내 용혈, 저혈당, 저칼슘혈증, 대사성 산증이 부작용으로 보고됨. 혈중 에탄올 농도 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "diuresis",
+          "CKD caution",
+          "renal elimination",
+          "fluid and electrolyte"
+        ],
+        "index": 3,
+        "evidence": "에탄올은 ADH(바소프레신)에 영향을 미쳐 이뇨를 촉진함. 만성 신장 질환 동물에서는 미대사 모화합물이 혈액투석 없이 제거되지 않을 수 있어 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic disease",
+          "alcohol dehydrogenase",
+          "exacerbate hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "에탄올은 간 질환을 악화시킬 수 있음. 간에서 알코올 탈수소효소에 의해 주로 대사됨. 간 질환 동물에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "antihypertensive enhancement"
+        ],
+        "index": -1,
+        "evidence": "에탄올은 항고혈압제의 저혈압 효과를 강화할 수 있음. 직접적인 심장 독성에 대한 언급은 없으나 간접적 혈역학적 영향 가능."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "CNS depression",
+          "respiratory depression",
+          "obtundation",
+          "blood-brain barrier"
+        ],
+        "index": 1,
+        "evidence": "개와 동일하게 에탄올은 혈액-뇌 장벽을 통과하여 CNS 억제 및 호흡 억제를 유발함. 고양이에서 에틸렌 글리콜 중독 치료 시 회복 중 억울 및 무기력이 예상됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "intravascular hemolysis",
+          "hypoglycemia",
+          "hypocalcemia",
+          "metabolic acidosis"
+        ],
+        "index": 2,
+        "evidence": "혈관 내 용혈, 저혈당, 저칼슘혈증, 대사성 산증이 부작용으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "diuresis",
+          "CKD caution",
+          "fluid and electrolyte"
+        ],
+        "index": 3,
+        "evidence": "에탄올은 이뇨를 촉진하며, 만성 신장 질환 고양이에서 주의 사용 권고. 에틸렌 글리콜도 이뇨를 유발하므로 수액 및 전해질 관리 필요."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic disease",
+          "alcohol dehydrogenase",
+          "exacerbate hepatic disease"
+        ],
+        "index": 4,
+        "evidence": "에탄올은 간 질환을 악화시킬 수 있음. 간 질환 고양이에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "antihypertensive enhancement"
+        ],
+        "index": -1,
+        "evidence": "에탄올은 항고혈압제의 저혈압 효과를 강화할 수 있음. 직접적인 심장 독성에 대한 언급은 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 에탄올의 반감기, Tmax, 생체이용률, 단백 결합률에 대한 구체적인 수치가 제시되지 않음. 경구 투여 시 잘 흡수되며 체내에 빠르게 분포하고 혈액-뇌 장벽을 통과한다고만 기술됨."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Fomepizole (4-methylpyrazole; 4-MP)",
+      "severity": 3,
+      "keywords": [
+        "alcohol dehydrogenase inhibition",
+        "CNS depression",
+        "coma",
+        "death",
+        "ethanol toxicity"
+      ],
+      "evidence": "Fomepizole inhibits alcohol dehydrogenase, significantly reducing ethanol metabolism. Concurrent use can cause alcohol poisoning (CNS depression, coma, death). Generally not recommended; if both are used, mandatory monitoring of ethanol blood levels is required."
+    },
+    {
+      "drug": "CNS Depressant Drugs (barbiturates, benzodiazepines, phenothiazines, opioid analgesics, antihistamines, tricyclic antidepressants)",
+      "severity": 2,
+      "keywords": [
+        "additive CNS depression",
+        "sedation"
+      ],
+      "evidence": "Ethanol may cause additive CNS depression when used with other CNS depressant drugs."
+    },
+    {
+      "drug": "Bromocriptine",
+      "severity": 2,
+      "keywords": [
+        "adverse effect potentiation"
+      ],
+      "evidence": "Alcohol may increase the severity of adverse effects seen with bromocriptine."
+    },
+    {
+      "drug": "Activated Charcoal",
+      "severity": 2,
+      "keywords": [
+        "absorption inhibition"
+      ],
+      "evidence": "Activated charcoal will inhibit the absorption of orally administered ethanol. Do not use activated charcoal if administering ethanol orally for methanol or ethylene glycol intoxication."
+    },
+    {
+      "drug": "Insulin",
+      "severity": 2,
+      "keywords": [
+        "glucose metabolism",
+        "hypoglycemia"
+      ],
+      "evidence": "Alcohol may affect glucose metabolism and the actions of insulin or oral antidiabetic agents."
+    },
+    {
+      "drug": "Sulfonylureas (glipizide, glyburide)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia"
+      ],
+      "evidence": "Concurrent use of ethanol with sulfonylureas increases the risk for hypoglycemia."
+    },
+    {
+      "drug": "Chlorpropamide",
+      "severity": 2,
+      "keywords": [
+        "disulfiram reaction",
+        "acetaldehyde accumulation",
+        "tachycardia",
+        "vomiting"
+      ],
+      "evidence": "A disulfiram reaction (increased acetaldehyde with tachycardia, vomiting, weakness) may occur if alcohol is used concomitantly with chlorpropamide."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "disulfiram reaction",
+        "acetaldehyde accumulation",
+        "tachycardia",
+        "vomiting"
+      ],
+      "evidence": "A disulfiram reaction (increased acetaldehyde with tachycardia, vomiting, weakness) may occur if alcohol is used concomitantly with metronidazole."
+    },
+    {
+      "drug": "Antihypertensive Agents (amlodipine, enalapril, telmisartan)",
+      "severity": 1,
+      "keywords": [
+        "hypotension",
+        "enhanced antihypertensive effect"
+      ],
+      "evidence": "Ethanol may enhance the hypotensive effect of antihypertensive drugs."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 20% 에탄올 용액 사용 (CRI 선호)",
+          "value": "5.5",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "q4h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5회 처치 후 6시간 간격으로 4회 추가 처치 (각 처치는 1시간에 걸쳐 CRI로 투여)",
+          "evidence": "20% 에탄올 용액 사용; 5.5 mL/kg를 1시간에 걸쳐 IV 투여, 4시간 간격으로 5회 처치 후 6시간 간격으로 4회 추가 처치 (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 7% 에탄올 용액 사용 초기 부하 용량",
+          "value": "8.6",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 부하 용량 후 1.43 mL/kg/hr CRI로 최소 36시간(최적 48시간) 유지",
+          "evidence": "7% 에탄올 용액 사용; 8.6 mL/kg 천천히 IV 투여 후 1.43 mL/kg/hr CRI (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 7% 에탄올 용액 CRI 유지",
+          "value": "1.43",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 36시간, 최적 48시간 유지; EG 검사 음성 전환 시 중단",
+          "evidence": "7% 에탄올 용액 CRI 유지 용량 1.43 mL/kg/hr (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 경구 투여 (IV 불가 시)",
+          "value": "1 - 1.4",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "40% 에탄올 용액(80 proof) 사용; 위 자극으로 구토 가능하므로 희석 권장. 비위관 통해 투여.",
+          "evidence": "40% 에탄올 용액(80 proof) 사용; 1~1.4 mL/kg PO (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "부갑상선 결절의 경피적 초음파 유도 에탄올 절제술",
+          "value": "95",
+          "unit": "%",
+          "route": "Inj",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "결절 중심부에 주입; 목표 주입량은 결절의 측정 부피와 동일. 85% 사례에서 고칼슘혈증 해소.",
+          "evidence": "95% 에탄올을 결절 중심부에 경피 주입 (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 20% 에탄올 용액 사용 (CRI 선호)",
+          "value": "5",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "q6h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5회 처치 후 8시간 간격으로 4회 추가 처치 (각 처치는 1시간에 걸쳐 CRI로 투여)",
+          "evidence": "20% 에탄올 용액 사용; 5 mL/kg를 1시간에 걸쳐 IV 투여, 6시간 간격으로 5회 처치 후 8시간 간격으로 4회 추가 처치 (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 7% 에탄올 용액 사용 초기 부하 용량",
+          "value": "8.6",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "초기 부하 용량 후 1.43 mL/kg/hr CRI로 최소 36시간(최적 48시간) 유지",
+          "evidence": "7% 에탄올 용액 사용; 8.6 mL/kg 천천히 IV 투여 후 1.43 mL/kg/hr CRI (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 7% 에탄올 용액 CRI 유지",
+          "value": "1.43",
+          "unit": "ml/kg",
+          "route": "IV",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 36시간, 최적 48시간 유지; EG 검사 음성 전환 시 중단",
+          "evidence": "7% 에탄올 용액 CRI 유지 용량 1.43 mL/kg/hr (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "에틸렌 글리콜 중독 치료 - 경구 투여 (IV 불가 시)",
+          "value": "1 - 1.4",
+          "unit": "ml/kg",
+          "route": "PO",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "40% 에탄올 용액(80 proof) 사용; 위 자극으로 구토 가능하므로 희석 권장. 비위관 통해 투여.",
+          "evidence": "40% 에탄올 용액(80 proof) 사용; 1~1.4 mL/kg PO (extra-label)"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "갑상선 결절의 경피적 에탄올 절제술",
+          "value": "96",
+          "unit": "%",
+          "route": "Inj",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "주입량은 결절 크기에 따라 결정; 계산된 결절 부피의 50~100%를 목표로 함. 양측 결절 존재 시 한 번에 하나씩만 치료.",
+          "evidence": "96% 에탄올을 결절에 경피 주입 (extra-label)"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "만성 신장 질환 동물에서는 미대사 모화합물(에틸렌 글리콜)이 혈액투석 없이는 제거되지 않을 수 있으므로 주의 사용 권고. 에틸렌 글리콜 중독 치료 시 생명을 위협하는 상황이므로 절대적 금기는 없으나 신중히 사용."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "에탄올은 간 질환을 악화시킬 수 있음. 간 질환 동물에서 주의 사용 권고. 구체적인 용량 조절 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "만성 신장 질환",
+      "match_terms": [
+        "CKD",
+        "chronic kidney disease",
+        "renal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "후두 기능 이상 (고양이 에탄올 절제술 전)",
+      "match_terms": [
+        "laryngeal paralysis",
+        "laryngeal dysfunction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "포메피졸(4-MP) 병용",
+      "match_terms": [
+        "fomepizole",
+        "4-methylpyrazole",
+        "4-MP"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "알코올 탈수소효소(alcohol dehydrogenase)를 경쟁적으로 억제하여 에틸렌 글리콜이 독성 대사산물(글리콜알데히드, 글리콜산, 글리옥실산, 옥살산)로 전환되는 것을 차단함. 에틸렌 글리콜은 주로 소변으로 미변환 상태로 배설됨.",
+    "common_extra_effects": [
+      "CNS 억제",
+      "호흡 억제",
+      "저혈당",
+      "저칼슘혈증",
+      "대사성 산증",
+      "이뇨",
+      "저체온증",
+      "폐부종",
+      "구토 (경구 투여 시)",
+      "흡인 위험 증가",
+      "주사 부위 통증 및 감염",
+      "정맥염",
+      "혈관 내 용혈",
+      "혈관 외 누출"
+    ],
+    "dog_mechanism": "알코올 탈수소효소 경쟁적 억제를 통한 에틸렌 글리콜 독성 대사산물 생성 차단. 경피 주입 시 결절 조직 괴사 유발.",
+    "dog_extra_effects": [
+      "회복 중 억울 및 무기력",
+      "횡와 안진 (과다 복용 시)",
+      "심한 의식 저하 (과다 복용 시)",
+      "발성 장애 (에탄올 절제술 후)"
+    ],
+    "cat_mechanism": "알코올 탈수소효소 경쟁적 억제를 통한 에틸렌 글리콜 독성 대사산물 생성 차단. 경피 주입 시 갑상선/부갑상선 결절 조직 괴사 유발.",
+    "cat_extra_effects": [
+      "회복 중 억울 및 무기력",
+      "발성 장애 (에탄올 절제술 후)",
+      "후두 마비 위험 (에탄올 절제술 후)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 에탄올의 최저 치사 IV 용량은 1600 mg/kg이며, 경구 치사 용량은 5~8 g/kg임. 에틸렌 글리콜 중독 치료 시 포메피졸이 1차 선택약이나, 가용성 및 비용 문제로 에탄올을 사용할 수 있음. CRI 방식이 안정적인 혈중 에탄올 농도 유지에 선호됨. 에틸렌 글리콜 섭취 후 4~8시간 이내에 투여해야 효과적이며, 8시간 이후에는 효과가 거의 없음. 부갑상선 결절의 경피적 에탄올 절제술에도 사용 가능.",
+    "cat": "고양이에서 에틸렌 글리콜 중독 치료 시 고용량 포메피졸이 1차 선택약이나, 가용성 및 비용 문제로 에탄올을 사용할 수 있음. 에탄올 절제술 전 후두 기능 평가가 필수적이며 정상이어야 함(후두 마비 가능성). 갑상선 결절의 경피적 에탄올 절제술에 사용 가능하나 결과가 다양함. 메탄올 중독에는 에탄올 사용이 권장되지 않음(CNS 억제 악화 및 메탄올 배설 지연)."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "만성 신장 질환 및 간 질환 동물에서 주의 사용. 포메피졸과 병용 금기. 혈관 외 누출 주의. 혈중 에탄올 농도, CNS/호흡 억제 정도, 체온, 수액/전해질/혈당 상태 모니터링 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "만성 신장 질환 및 간 질환 고양이에서 주의 사용. 에탄올 절제술 전 후두 기능 평가 필수. 포메피졸과 병용 금기. 혈관 외 누출 주의. 혈중 에탄올 농도, CNS/호흡 억제 정도, 체온, 수액/전해질/혈당 상태 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "극도의 열이나 냉동으로부터 보호. 용액이 맑지 않으면 사용하지 말 것. 에탄올은 많은 약물을 침전시킬 수 있으므로 호환성이 확인되지 않은 다른 약물을 에탄올 주입 용액에 혼합하지 말 것.",
+    "forms": [
+      "수의용 FDA 승인 제품 없음",
+      "인체용 FDA 승인 제품 없음 (5% 및 10% 에탄올/5% 덱스트로스 IV 용액은 단종됨)",
+      "영국: Dehydrated Alcohol (absolute alcohol) BP for Injection, Ethanol BP 100% v/v; 2 mL, 5 mL, 10 mL, 20 mL, 50 mL 앰플 (Martindale Pharma)",
+      "조제 또는 상업용 보드카(40% [80 proof] 또는 50% [100 proof]) 또는 곡물 알코올(Everclear; 95% [190 proof])을 적절한 IV 용액으로 희석하여 사용 가능"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "에탄올은 에틸렌 글리콜 중독 치료의 2차 선택약으로, 알코올 탈수소효소를 경쟁적으로 억제하여 독성 대사산물 생성을 차단함. 포메피졸(4-MP)이 1차 선택약이나 가용성 및 비용 문제 시 에탄올 사용 가능. FDA 승인 제품이 없으므로 조제 또는 비약제학적 등급 제품 사용 필요. CNS 억제, 호흡 억제, 저혈당, 이뇨 등 부작용 모니터링 필수. 포메피졸과 병용은 일반적으로 금기. 에틸렌 글리콜 섭취 후 4~8시간 이내 투여 시 효과적.",
+    "indications": "주요 적응증: 에틸렌 글리콜 중독 치료 (개, 고양이 - extra-label). 기타 적응증: 개 및 고양이의 부갑상선/갑상선 결절 경피적 에탄올 절제술 (extra-label), 말의 원위 족근관절 골관절염에서 강직 촉진 (extra-label), 말의 점액 용해제 (에어로졸, extra-label). 메탄올 중독에는 개와 고양이에서 권장되지 않음.",
+    "client_info": "에탄올은 반드시 수의사의 감독 하에 병원 환경에서 투여되어야 합니다. FDA 승인 에탄올 제품이 없으므로 응급 상황에서는 비약제학적 등급 에탄올(보드카, 곡물 알코올 등)을 사용할 수 있으며, 이에 대한 보호자 동의가 필요합니다. 치료 중 반려동물은 억울하고 무기력해 보일 수 있으며, 이는 치료의 정상적인 과정입니다. 혈중 에탄올 농도, 호흡 상태, 체온, 혈당 등을 지속적으로 모니터링합니다. 에틸렌 글리콜 중독 치료 시 포메피졸이 더 선호되는 치료법임을 알려드립니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability/Preparation",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics (detailed - half-life, Tmax, bioavailability, protein binding not quantified)",
+      "CYP profile",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "species_flags.washout_period_days",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/17.jsonl",
+    "extracted_at": "2026-03-10T18:28:55.214744+00:00",
+    "reviewer": null
+  }
+}

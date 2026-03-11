@@ -1,0 +1,636 @@
+{
+  "id": "piroxicam",
+  "drug_identity": {
+    "name_ko": "피록시캄",
+    "name_en": "Piroxicam",
+    "active_ingredient": "Piroxicam",
+    "brand_names": [
+      "Feldene"
+    ],
+    "allergy_class": "NSAID",
+    "class": "NSAID",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 승인 제품 없음. 개와 고양이에서 방광 이행세포암종 등 종양 보조치료 및 항염증 목적으로 사람용 제품을 오프라벨로 사용함.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C9"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 CYP2C9에 의한 간 대사 후 대사산물이 주로 소변으로 배설됨. 개와 고양이에서의 CYP 경로는 명시되지 않음."
+    },
+    "extra_information": "개: 경구 생체이용률 100%, 최고 혈장 농도 도달 시간 약 3시간, 분포용적 약 0.3 L/kg, 총 체내 청소율 0.066 L/시간, 소실 반감기 약 40시간. 고양이: 경구 생체이용률 약 80%, 최고 혈장 농도 도달 시간 약 3시간, IV 또는 PO 투여 후 소실 반감기 약 12~13시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 각각의 이상반응 및 약동학 데이터를 근거로 평가함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS effects",
+          "headache",
+          "dizziness",
+          "neurologic effects (overdose)"
+        ],
+        "index": 1,
+        "evidence": "사람에서 두통, 어지럼증 등 CNS 이상반응이 보고되었으며, 과량투여 시 단위위 동물에서 신경학적 영향 가능성이 언급됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "GI bleeding",
+          "platelet aggregation inhibition",
+          "bleeding disorders",
+          "hematocrit decrease"
+        ],
+        "index": 2,
+        "evidence": "혈소판 응집 억제, GI 출혈 위험, 개에서 GI 궤양 및 출혈 보고. 고령 개에서 이상반응 위험 증가."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal papillary necrosis",
+          "reduced renal function",
+          "hyperkalemia",
+          "nephrotoxicity",
+          "renal toxicity"
+        ],
+        "index": 3,
+        "evidence": "개에서 사후 신유두 괴사 확인. 신기능 저하, 고칼륨혈증 가능성. 시스플라틴 병용 시 신독성 증가 위험."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "elevated liver enzymes",
+          "hepatic biotransformation"
+        ],
+        "index": 4,
+        "evidence": "간 효소 상승이 이상반응으로 보고됨. 간에서 CYP2C9에 의해 대사됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "heart failure",
+          "peripheral edema",
+          "compromised cardiac function"
+        ],
+        "index": 5,
+        "evidence": "심부전 및 말초 부종이 사람에서 보고됨. 심기능이 심각하게 저하된 환자에서 주의 사용 권고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 CNS 이상반응에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "GI effects",
+          "vomiting",
+          "anorexia",
+          "diarrhea",
+          "hematocrit decrease",
+          "gastric erosions"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 구토(약 15~20%), 식욕부진, 설사, 위 미란, 빈혈(헤마토크릿 감소) 보고."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "renal toxicity",
+          "prolonged use"
+        ],
+        "index": 3,
+        "evidence": "장기 사용 시 신독성 가능성 언급. 고양이에서 신기능 모니터링 권고."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "elevated liver enzymes"
+        ],
+        "index": 4,
+        "evidence": "고양이에서 간 효소 상승이 문서화됨."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 이상반응에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 3.0,
+    "half_life_hr": {
+      "min": 12.0,
+      "max": 40.0,
+      "mean": 26.0,
+      "species": "dog"
+    },
+    "f_percent": 100,
+    "protein_binding_percent": 99,
+    "evidence": "개: 경구 생체이용률 100%, Tmax 약 3시간, 반감기 약 40시간. 고양이: 경구 생체이용률 약 80%, Tmax 약 3시간, 반감기 약 12~13시간. 혈장 단백 결합률 99%(사람 기준). 반감기 mean은 개(40시간)와 고양이(12.5시간)의 중간값으로 설정하지 않고, 개 데이터를 기준으로 함."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "ACE Inhibitors (eg, benazepril, enalapril)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "antihypertensive"
+      ],
+      "evidence": "Concurrent piroxicam use may reduce ACE inhibitor efficacy."
+    },
+    {
+      "drug": "Aminoglycosides (eg, amikacin, gentamicin)",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Increased risk for nephrotoxicity when used concurrently."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARB; eg, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "antihypertensive"
+      ],
+      "evidence": "Concurrent piroxicam use may reduce ARB efficacy."
+    },
+    {
+      "drug": "Anticoagulants (eg, enoxaparin, heparin, rivaroxaban, warfarin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "Increased risk for bleeding when used concurrently."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 3,
+      "keywords": [
+        "bleeding",
+        "GI adverse effects",
+        "decreased piroxicam levels"
+      ],
+      "evidence": "Increased risk for bleeding; plasma levels of piroxicam could decrease; increased likelihood of GI adverse effects. Concomitant administration is not recommended."
+    },
+    {
+      "drug": "Bisphosphonates, Oral (eg, alendronate)",
+      "severity": 2,
+      "keywords": [
+        "GI ulceration"
+      ],
+      "evidence": "May increase the risk for GI ulceration."
+    },
+    {
+      "drug": "Cisplatin",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "renal toxicity"
+      ],
+      "evidence": "Piroxicam may potentiate the renal toxicity of cisplatin when used in combination."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "Increased risk for bleeding."
+    },
+    {
+      "drug": "Corticosteroids (eg, dexamethasone, predniso(lo)ne)",
+      "severity": 2,
+      "keywords": [
+        "GI adverse effects",
+        "GI ulceration"
+      ],
+      "evidence": "Concomitant administration with NSAIDs may significantly increase the risk for GI adverse effects."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may result in increased risk for cyclosporine nephrotoxicity."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased digoxin concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "Concurrent use may result in increased serum concentration of digoxin and prolonged digoxin half-life."
+    },
+    {
+      "drug": "Diuretics (eg, furosemide)",
+      "severity": 2,
+      "keywords": [
+        "reduced diuretic efficacy",
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may result in reduced diuretic efficacy and possible nephrotoxicity."
+    },
+    {
+      "drug": "Highly Protein Bound Drugs (eg, oral anticoagulants, phenytoin, salicylates, sulfonamides, sulfonylurea antidiabetics)",
+      "severity": 1,
+      "keywords": [
+        "protein displacement",
+        "increased serum levels"
+      ],
+      "evidence": "Piroxicam is highly protein bound (99%) and could theoretically displace other highly bound drugs; temporary increase in serum levels may occur. Not shown to be of clinical concern."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "bone marrow suppression",
+        "nephrotoxicity",
+        "serious toxicity"
+      ],
+      "evidence": "Serious toxicity (eg, bone marrow suppression, nephrotoxicity) has occurred when NSAIDs were used concomitantly with methotrexate; use together with extreme caution."
+    },
+    {
+      "drug": "SSRIs (eg, fluoxetine, paroxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "Concurrent use may result in an increased risk for bleeding."
+    },
+    {
+      "drug": "Tacrolimus",
+      "severity": 3,
+      "keywords": [
+        "acute renal failure",
+        "nephrotoxicity"
+      ],
+      "evidence": "Concurrent use may result in acute renal failure."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (eg, amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "bleeding"
+      ],
+      "evidence": "Concurrent use may result in increased risk for bleeding."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "high",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 8.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "종양 질환 보조치료 (방광 이행세포암종 등)",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "음식과 함께 투여 권장. GI 이상반응 시 q48h로 변경 가능. 미소프로스톨 병용 고려.",
+          "evidence": "Extra-label: 0.3 mg/kg PO with food once daily (preferred, if tolerated) or once every other day."
+        },
+        {
+          "logic_type": "linear",
+          "context": "종양 질환 보조치료 (GI 이상반응 시 격일 투여)",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "GI 이상반응이 있는 경우 격일 투여.",
+          "evidence": "Extra-label: 0.3 mg/kg PO once every other day (every 48 hours)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "특발성 림프형질세포성 비염(LPR) 보조치료",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최소 6개월 이상, 경우에 따라 무기한 치료 필요. 2주 내 임상적 개선 시 독시사이클린 투여 빈도 감소.",
+          "evidence": "Extra-label: 0.3 mg/kg PO once a day for idiopathic lymphoplasmacytic rhinitis."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "방광 이행세포암종 보조치료",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 0.3 mg/kg PO every 48 hours (every other day)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "구강 편평세포암종(OSCC) 및 기타 종양 보조치료",
+          "value": "0.13 - 0.41",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 0.13–0.41 mg/kg PO daily for OSCC and solid tumors."
+        },
+        {
+          "logic_type": "linear",
+          "context": "구강 편평세포암종(OSCC) 격일 투여",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Extra-label: 0.3 mg/kg PO every 48 hours for OSCC."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항염증/진통 (단기)",
+          "value": "1",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "최대 7일",
+          "evidence": "Extra-label: 1 mg/cat (NOT mg/kg) PO once a day for a maximum of 7 days."
+        },
+        {
+          "logic_type": "linear",
+          "context": "특발성 만성 비부비동염",
+          "value": "0.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "매일 또는 격일 투여.",
+          "evidence": "Extra-label: 0.3 mg/kg PO once daily or every other day for idiopathic chronic rhinosinusitis."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 신독성 위험이 있으므로 주의 또는 회피 권고. 고양이에서 장기 사용 시 신독성 가능성 명시. 구체적인 크레아티닌 역치나 용량 조절 계수는 본문에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 효소 상승이 이상반응으로 보고됨. 만성 사용 시 간 효소 모니터링 권고. 구체적인 용량 조절 지침은 본문에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "피록시캄 또는 다른 NSAIDs에 과민반응",
+      "match_terms": [
+        "NSAID hypersensitivity",
+        "aspirin allergy",
+        "NSAID allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 또는 과거력의 위장관 궤양 질환",
+      "match_terms": [
+        "GI ulcer",
+        "gastric ulcer",
+        "peptic ulcer",
+        "GI bleeding"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "출혈 장애",
+      "match_terms": [
+        "bleeding disorder",
+        "coagulopathy",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "심각한 심기능 저하",
+      "match_terms": [
+        "heart failure",
+        "cardiac dysfunction",
+        "CHF"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "CKD",
+        "renal failure",
+        "renal insufficiency",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "프로스타글란딘 합성 억제(COX 억제)를 통한 항염증, 진통, 해열 작용. 면역계 조절 및 항혈관신생 효과를 통한 항종양 작용. 혈소판 응집 억제 및 신기능에 영향.",
+    "common_extra_effects": [
+      "GI 궤양 및 출혈",
+      "구토, 식욕부진, 설사",
+      "간 효소 상승",
+      "신기능 저하",
+      "혈소판 응집 억제",
+      "말초 부종",
+      "고칼륨혈증"
+    ],
+    "dog_mechanism": "프로스타글란딘 합성 억제. 면역계 조절 및 항혈관신생 효과를 통한 항종양 작용.",
+    "dog_extra_effects": [
+      "GI 궤양 및 출혈 (1 mg/kg/일에서도 심각한 궤양 및 복막염 보고)",
+      "신유두 괴사 (사후 확인)",
+      "간 효소 상승",
+      "CNS 이상반응 (두통, 어지럼증)",
+      "이명",
+      "고칼륨혈증",
+      "심부전",
+      "말초 부종",
+      "고령 개에서 이상반응 위험 증가"
+    ],
+    "cat_mechanism": "프로스타글란딘 합성 억제. 항종양 보조 효과.",
+    "cat_extra_effects": [
+      "구토 (약 15~20%에서 발생, 가장 흔한 이상반응)",
+      "식욕부진",
+      "설사",
+      "위 미란",
+      "간 효소 상승",
+      "헤마토크릿 감소 (일일 투여 7~14일 후 일화적 보고)",
+      "장기 사용 시 신독성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 피록시캄은 주로 방광 이행세포암종 등 종양 질환의 보조치료에 사용됩니다. 치료 창이 좁아 1 mg/kg/일 투여에서도 심각한 GI 궤양 및 복막염이 보고되었으므로, 반드시 음식과 함께 0.3 mg/kg/일 용량으로 투여해야 합니다. 고령 개에서 이상반응 위험이 증가합니다. GI 이상반응이 있는 경우 격일 투여 또는 미소프로스톨 병용을 고려하십시오. 만성 사용 시 간 효소 및 신기능 모니터링이 필요합니다.",
+    "cat": "고양이에서 피록시캄은 방광 이행세포암종 및 구강 편평세포암종 등 종양 보조치료에 사용됩니다. 구토가 가장 흔한 이상반응(약 15~20%)으로, 특히 치료 초기에 발생합니다. 위 미란, 간 효소 상승, 헤마토크릿 감소가 보고되었습니다. 장기 사용 시 신독성 위험이 있으므로 정기적인 신기능 및 간 효소 모니터링이 필요합니다. 단기 항염증/진통 목적으로는 1 mg/마리(mg/kg 아님) 1일 1회, 최대 7일간 사용할 수 있습니다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "GI 궤양 및 출혈 위험이 높음. 치료 창이 좁아 1 mg/kg/일에서도 심각한 GI 이상반응 보고. 음식과 함께 투여 필수. 신기능 및 간 효소 모니터링 권고. 심기능 저하, 출혈 장애, GI 궤양 병력 시 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "구토, 위 미란, 간 효소 상승, 헤마토크릿 감소 보고. 장기 사용 시 신독성 위험. 정기적인 간 효소 및 신기능 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "30°C(86°F) 미만의 온도에서 밀폐된 차광 용기에 보관. 권장 조건에서 보관 시 제조 후 36개월의 유효기간.",
+    "forms": [
+      "Piroxicam 경구 캡슐 10 mg",
+      "Piroxicam 경구 캡슐 20 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "피록시캄은 옥시캄 계열 NSAID로, 수의과에서는 주로 방광 이행세포암종 등 종양 질환의 보조치료에 오프라벨로 사용됩니다. 수의과 승인 제품은 없으며, 통증 및 염증 치료에는 FDA 승인된 더 안전한 NSAIDs가 우선 권장됩니다. 치료 창이 매우 좁아 GI 궤양 및 출혈 위험이 높으며, 반드시 음식과 함께 투여해야 합니다. 개에서 반감기는 약 40시간, 고양이에서는 약 12~13시간으로 종간 차이가 큽니다. CYP2C9에 의해 간에서 대사됩니다.",
+    "indications": "【승인 적응증】 없음(수의과 승인 제품 없음). 【오프라벨 적응증】 개·고양이: 방광 이행세포암종 보조치료, 구강 편평세포암종, 염증성 유선암, 연조직 육종, 원발성 폐암종, 전염성 성기종양(TVT) 보조치료. 개: 특발성 림프형질세포성 비염(LPR) 보조치료, 퇴행성 관절 질환의 통증 및 염증 완화(더 안전한 대안 존재). 고양이: 특발성 만성 비부비동염, 단기 항염증/진통.",
+    "client_info": "이 약은 위장 장애를 줄이기 위해 반드시 음식과 함께 투여하십시오. 위장관 궤양 및 출혈, 신장 문제(특히 고양이)가 발생할 수 있습니다. 식욕 감소, 구토, 설사, 혈변 등의 증상이 나타나면 즉시 수의사에게 연락하십시오. 장기 투여 시 정기적인 혈액검사(간 효소, 신기능)가 필요합니다. 이 약을 파록세틴(항우울제)과 혼동하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates (veterinary-specific)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity",
+      "drug_identity.available_strengths (veterinary formulations)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/20.jsonl",
+    "extracted_at": "2026-03-10T19:16:12.839844+00:00",
+    "reviewer": null
+  }
+}

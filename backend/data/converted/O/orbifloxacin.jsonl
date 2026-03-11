@@ -1,0 +1,649 @@
+{
+  "id": "orbifloxacin",
+  "drug_identity": {
+    "name_ko": "오르비플록사신",
+    "name_en": "Orbifloxacin",
+    "active_ingredient": "Orbifloxacin",
+    "brand_names": [
+      "Orbax",
+      "Orbax Suspension",
+      "Posatex"
+    ],
+    "allergy_class": "fluoroquinolone",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 22.7,
+        "unit": "mg"
+      },
+      {
+        "value": 68.0,
+        "unit": "mg"
+      },
+      {
+        "value": 30.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.5,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP1A"
+      ],
+      "inducers": [],
+      "pathway_evidence": "오르비플록사신은 개에서 CYP1A 활성을 억제하는 것으로 나타났다. 약 50%는 신장을 통해 미변화체로 배설된다."
+    },
+    "extra_information": "개: Vd=1.2 L/kg, 혈장 단백 결합률 8%, 경구 투여 후 혈청 반감기 약 5.5시간. 고양이: Vd=1.3 L/kg, 혈장 단백 결합률 15%, 반감기 4.5~7.5시간. 고양이에서 현탁액 제형은 정제에 비해 혈중 농도가 낮고 변동이 크다(최고 혈중 농도 3 µg/mL vs 6 µg/mL). 소변 내 농도는 투여 후 최소 24시간 동안 감수성 균의 MIC를 상회한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 신장 배설 비율(50% 미변화체), 이상반응 및 금기사항 텍스트에서 도출. 수의학 종별 PK 데이터 일부 존재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "convulsions",
+          "seizure disorders"
+        ],
+        "index": 1,
+        "evidence": "CNS 장애 동물에서 주의 사용 권고; 경련이 이상반응으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "glucosuria"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 당뇨(glucosuria) 보고. 혈액 독성에 대한 직접적 언급은 없음."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "renal elimination",
+          "50% excreted unchanged",
+          "nephrotoxicity",
+          "tubular secretion"
+        ],
+        "index": 2,
+        "evidence": "약 50%가 신장을 통해 미변화체로 배설됨. 사이클로스포린과 병용 시 신독성 악화 가능. 프로베네시드가 세뇨관 분비를 차단하여 혈중 농도 상승 가능."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic disorders",
+          "CYP1A inhibition"
+        ],
+        "index": 1,
+        "evidence": "간 장애 동물에서 주의 사용 권고. CYP1A 억제로 인한 약물 상호작용 가능성."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "convulsions",
+          "seizure disorders"
+        ],
+        "index": 1,
+        "evidence": "CNS 장애 고양이에서 주의 사용 권고; 경련이 이상반응으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "emesis",
+          "salivation",
+          "lacrimation"
+        ],
+        "index": 1,
+        "evidence": "과량 투여 시 구토, 유연, 눈물 분비 보고. 혈액 독성에 대한 직접적 언급은 없음."
+      },
+      "kidney": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "renal elimination",
+          "50% excreted unchanged"
+        ],
+        "index": 2,
+        "evidence": "약 50%가 신장을 통해 미변화체로 배설됨. 신장 배설이 주요 경로."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hepatic disorders"
+        ],
+        "index": 1,
+        "evidence": "간 장애 고양이에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 4.5,
+      "max": 7.5,
+      "mean": 5.5,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 8,
+    "evidence": "개: 경구 투여 후 2시간에 최고 혈중 농도 도달(7.5 mg/kg PO 시 약 6 µg/mL). 반감기 약 5.5시간. 혈장 단백 결합률 8%. 고양이: 반감기 4.5~7.5시간, 단백 결합률 15%. 말: 경구 생체이용률 약 70%, 반감기 약 3.5~9시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids / Dairy Products (Mg++, Al+++, Ca++ 함유)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "양이온(Mg++, Al+++, Ca++)이 오르비플록사신과 결합하여 흡수를 방해함. 최소 2시간 간격 투여 필요."
+    },
+    {
+      "drug": "Aminoglycosides",
+      "severity": 1,
+      "keywords": [
+        "synergism",
+        "Pseudomonas aeruginosa"
+      ],
+      "evidence": "일부 세균(특히 Pseudomonas aeruginosa)에 대해 상승 효과 가능하나 예측 불가."
+    },
+    {
+      "drug": "3rd-generation Cephalosporins",
+      "severity": 1,
+      "keywords": [
+        "synergism"
+      ],
+      "evidence": "일부 세균에 대해 상승 효과 가능하나 예측 불가."
+    },
+    {
+      "drug": "Extended-spectrum Penicillins",
+      "severity": 1,
+      "keywords": [
+        "synergism"
+      ],
+      "evidence": "일부 세균에 대해 상승 효과 가능하나 예측 불가."
+    },
+    {
+      "drug": "Clindamycin",
+      "severity": 1,
+      "keywords": [
+        "synergism",
+        "anaerobes"
+      ],
+      "evidence": "In vitro에서 Peptostreptococcus spp, Lactobacillus spp, Bacteroides fragilis에 대해 상승 효과 보고."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "대사 억제",
+        "fluoroquinolone metabolism"
+      ],
+      "evidence": "시메티딘이 플루오로퀴놀론 대사를 저해할 수 있음."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 3,
+      "keywords": [
+        "nephrotoxicity",
+        "대사 감소",
+        "금기"
+      ],
+      "evidence": "플루오로퀴놀론이 전신 투여된 사이클로스포린의 신독성을 악화시키고 대사를 감소시킬 수 있음. 제조사는 병용을 금기로 명시."
+    },
+    {
+      "drug": "Flunixin",
+      "severity": 2,
+      "keywords": [
+        "AUC 증가",
+        "반감기 연장",
+        "약동학 상호작용"
+      ],
+      "evidence": "개에서 플루닉신이 엔로플록사신의 AUC 및 반감기를 증가시키고, 엔로플록사신도 플루닉신의 AUC 및 반감기를 증가시킴. 오르비플록사신에서도 유사한 효과가 있을 수 있음."
+    },
+    {
+      "drug": "Glyburide",
+      "severity": 3,
+      "keywords": [
+        "severe hypoglycemia",
+        "저혈당"
+      ],
+      "evidence": "심각한 저혈당 가능성."
+    },
+    {
+      "drug": "Iron (oral)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "경구 철분이 오르비플록사신 흡수를 감소시킴. 최소 2시간 간격 투여 필요."
+    },
+    {
+      "drug": "Zinc (oral)",
+      "severity": 2,
+      "keywords": [
+        "흡수 감소",
+        "chelation"
+      ],
+      "evidence": "경구 아연이 오르비플록사신 흡수를 감소시킴. 최소 2시간 간격 투여 필요."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "메토트렉세이트 혈중 농도 증가",
+        "독성"
+      ],
+      "evidence": "메토트렉세이트 혈중 농도 상승 및 독성 가능성."
+    },
+    {
+      "drug": "Nitrofurantoin",
+      "severity": 2,
+      "keywords": [
+        "항균 길항작용"
+      ],
+      "evidence": "플루오로퀴놀론의 항균 활성을 길항할 수 있어 병용 비권장."
+    },
+    {
+      "drug": "Phenytoin",
+      "severity": 2,
+      "keywords": [
+        "페니토인 혈중 농도 변화"
+      ],
+      "evidence": "오르비플록사신이 페니토인 혈중 농도를 변화시킬 수 있음."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "세뇨관 분비 차단",
+        "혈중 농도 증가",
+        "반감기 연장"
+      ],
+      "evidence": "프로베네시드가 세뇨관 분비를 차단하여 오르비플록사신의 혈중 농도 및 반감기를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "흡수 억제"
+      ],
+      "evidence": "수크랄페이트가 오르비플록사신 흡수를 억제할 수 있음. 최소 2시간 간격 투여 필요."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "테오필린 혈중 농도 증가",
+        "CYP1A 억제"
+      ],
+      "evidence": "오르비플록사신이 테오필린 혈중 농도를 증가시킬 수 있음(CYP1A 억제 기전)."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "와파린 효과 증가",
+        "출혈 위험"
+      ],
+      "evidence": "와파린 효과 증가 가능성."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "low",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "감수성 세균에 의한 피부 및 연조직 감염, UTI (정제, FDA 승인)",
+          "value": "2.5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "UTI: 10일; 기타 감염: 임상 증상 소실 후 2~3일 추가, 최대 30일",
+          "evidence": "FDA 승인 라벨 용량. 농도 의존성 약물이므로 고용량이 선호될 수 있음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "UTI 및 피부·연조직 감염 (현탁액, FDA 승인)",
+          "value": "2.5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "UTI: 10일; 기타 감염: 임상 증상 소실 후 2~3일 추가, 최대 30일",
+          "evidence": "FDA 승인 라벨 용량 (현탁액 제형)."
+        },
+        {
+          "logic_type": "linear",
+          "context": "아목시실린(±클라불란산) 및 트리메토프림-설폰아미드가 적절하지 않은 산발성 방광염 (비라벨 외 사용)",
+          "value": "2.5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "3~5일",
+          "evidence": "배양 및 감수성 검사 또는 환자 요인에 근거한 비라벨 외 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "감수성 세균에 의한 피부 및 연조직 감염 (정제, FDA 승인)",
+          "value": "2.5 - 7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "임상 증상 소실 후 2~3일 추가, 최대 30일. 7.5 mg/kg/일 초과 금지.",
+          "evidence": "FDA 승인 라벨 용량. 망막 독성 위험으로 최대 용량 엄수 필요."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "S. aureus, E. coli, P. multocida에 의한 피부 감염 (현탁액, FDA 승인)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "임상 증상 소실 후 2~3일 추가. 7.5 mg/kg/일 초과 금지.",
+          "evidence": "FDA 승인 라벨 용량 (현탁액 제형). 고양이에서 현탁액과 정제는 생물학적 동등성이 없음."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "산발성 방광염 (비라벨 외 사용, 경구 현탁액)",
+          "value": "7.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 7.5,
+          "duration_note": "3~5일",
+          "evidence": "배양 및 감수성 검사 또는 환자 요인에 근거한 비라벨 외 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 구체적인 용량 조정 지침이 명시되어 있지 않음. 그러나 약물의 50%가 신장을 통해 미변화체로 배설되므로 신기능 저하 환자에서 주의가 필요하며 임상적 판단에 따른 용량 조정을 고려해야 함."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "제조사는 간 장애가 있는 동물에서 주의하여 사용할 것을 권고하나, 구체적인 용량 조정 지침은 명시되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "성장기 미성숙 개 (급속 성장 단계)",
+      "match_terms": [
+        "immature dog",
+        "rapid growth phase",
+        "puppy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "퀴놀론계 약물 과민증",
+      "match_terms": [
+        "quinolone hypersensitivity",
+        "fluoroquinolone allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "사이클로스포린 병용",
+      "match_terms": [
+        "cyclosporine",
+        "ciclosporin"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 장애 (경련 장애 포함)",
+      "match_terms": [
+        "seizure disorder",
+        "epilepsy",
+        "CNS disorder"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 장애",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatopathy"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "고양이에서 7.5 mg/kg/일 초과 투여",
+      "match_terms": [
+        "cat retinal toxicity",
+        "feline retinal degeneration"
+      ],
+      "severity": "absolute",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 또는 수유 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "lactation",
+        "breeding"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 DNA 자이라제(II형 토포이소머라제)를 억제하여 DNA 초나선 형성 및 DNA 합성을 방해함으로써 세균 세포 복제를 차단하는 농도 의존성 살균제.",
+    "common_extra_effects": [
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "과다 침 분비(hypersalivation)",
+      "우울/기면(depression/lethargy)",
+      "경련(convulsions)",
+      "설사(diarrhea)"
+    ],
+    "dog_mechanism": "개에서 CYP1A 활성을 억제함. 농도 의존성 살균 효과; 최고 혈중 농도가 MIC의 10배 이상일 때 임상적 효능 달성.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "경미한 체중 감소",
+      "당뇨(glucosuria, 과량 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서 망막에 유해한 영향을 미칠 수 있음. 현탁액 제형은 정제에 비해 생체이용률이 낮고 변동이 큼.",
+    "cat_extra_effects": [
+      "구토(emesis)",
+      "유연(salivation)",
+      "눈물 분비(lacrimation)",
+      "무른 변(soft feces)",
+      "식욕 감소",
+      "실명(blindness, 보고됨)",
+      "망막 변성(retinal degeneration, 고용량 시)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 적응증은 피부·연조직 감염 및 UTI임. 농도 의존성 약물이므로 고용량 1일 1회 투여가 선호됨. 소형·중형견은 생후 2~8개월, 대형·초대형견은 생후 18개월까지 급속 성장기에는 금기. 사이클로스포린과의 병용은 절대 금기. CYP1A 억제로 인해 테오필린, 페니토인 등의 혈중 농도가 상승할 수 있으므로 주의 필요.",
+    "cat": "고양이에서 망막 독성 위험으로 인해 7.5 mg/kg/일을 절대 초과하지 말 것. 정제와 현탁액 제형은 생물학적으로 동등하지 않으며, 현탁액은 최고 혈중 농도가 정제의 절반 수준임(3 µg/mL vs 6 µg/mL). 실명이 보고된 바 있으며, 45 mg/kg/일 이상에서 망막 변성이 관찰됨. 반감기는 4.5~7.5시간으로 개보다 다소 길 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "성장기 미성숙 개에서 관절병증 위험으로 금기. CNS 장애 및 간 장애 동물에서 주의 사용. 사이클로스포린 병용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "망막 독성 위험으로 7.5 mg/kg/일 초과 금지. 현탁액과 정제의 생물학적 비동등성 주의. 실명 보고 사례 있음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "정제: 2~30°C(36~86°F) 보관, 과도한 습기 차단. 경구 현탁액: 2~25°C(36~77°F) 보관, 냉장 불필요, 직립 보관, 사용 전 충분히 흔들 것.",
+    "forms": [
+      "Orbifloxacin 경구 정제: 22.7 mg (녹색) 및 68 mg (파란색) E-Z Break 정제; Orbax®",
+      "Orbifloxacin 경구 현탁액: 30 mg/mL 몰트 향, 20 mL 병; Orbax® Suspension",
+      "Posatex® 이과용 현탁액 (오르비플록사신 + 모메타손 푸로에이트 + 포사코나졸, 개 전용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "오르비플록사신은 개와 고양이의 피부·연조직 감염 및 개의 UTI에 FDA 승인된 플루오로퀴놀론계 항생제입니다. 농도 의존성 살균제로 1일 1회 고용량 투여가 권장됩니다. 고양이에서 망막 독성 위험으로 7.5 mg/kg/일을 절대 초과하지 말아야 하며, 실명이 보고된 바 있습니다. 사이클로스포린과의 병용은 절대 금기입니다. CYP1A 억제로 인한 다수의 약물 상호작용에 주의가 필요합니다. WHO 및 OIE에서 최고 우선순위 중요 항균제로 지정되어 있어 신중한 사용이 요구됩니다.",
+    "indications": "승인 적응증: 개와 고양이의 감수성 세균에 의한 피부·연조직 감염; 개의 세균성 요로감염(UTI). 비라벨 외 사용: 아목시실린 또는 트리메토프림-설폰아미드가 적절하지 않은 산발성 방광염(3~5일); 말의 감수성 감염(5~7.5 mg/kg PO SID); 토끼의 감수성 감염(20 mg/kg PO SID); 일본 메추라기(20 mg/kg PO SID). 신우신염 또는 전립선 감염의 1차 선택약으로 적합. 세균성 모낭염의 2차 치료제.",
+    "client_info": "이 약은 빈속에 투여하는 것이 가장 좋습니다. 투여 후 구토나 불편함을 보이면 소량의 음식과 함께 투여하되, 유제품·제산제·철분 함유 식품은 피하십시오. 칼슘, 철분, 알루미늄이 포함된 다른 약이나 비타민과 동시에 투여하지 마십시오(최소 2시간 간격). 가장 흔한 부작용은 구토, 메스꺼움, 설사입니다. 대변 색이 변할 수 있습니다. 현탁액은 냉장 보관이 필요 없으나 사용 전 충분히 흔들어야 하며, 투여 후 주사기를 헹궈 주십시오. 증상이 좋아 보여도 수의사가 처방한 기간 동안 계속 투여하십시오. 고양이의 경우 시력 변화(실명 가능성)가 나타나면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 78,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment guidelines",
+      "Specific hepatic dose adjustment guidelines",
+      "Oral bioavailability (F%) for dogs and cats",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates",
+      "genetic_sensitivity"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/29.jsonl",
+    "extracted_at": "2026-03-10T22:21:40.440434+00:00",
+    "reviewer": null
+  }
+}

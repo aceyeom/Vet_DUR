@@ -1,0 +1,338 @@
+{
+  "id": "ganciclovir_ophthalmic",
+  "drug_identity": {
+    "name_ko": "간시클로버 점안제",
+    "name_en": "Ganciclovir Ophthalmic",
+    "active_ingredient": "Ganciclovir",
+    "brand_names": [
+      "Zirgan"
+    ],
+    "allergy_class": null,
+    "class": "Antiretroviral",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의 허가 제품 없음. 인체용 0.15% 점안 겔(Zirgan®)을 고양이 FHV-1 및 개 CHV-1 안과 질환에 허가 외(extra-label)로 사용.",
+    "dosage_form": [
+      "Ophthalmic"
+    ],
+    "available_strengths": [
+      {
+        "value": 1.5,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Unknown",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "점안 투여 시 전신 흡수는 최소화되어 있으며, 모노그래프에 CYP 대사 경로에 대한 정보는 기술되어 있지 않음. 전신 투여 시 신장으로 주로 배설되는 것으로 알려져 있음."
+    },
+    "extra_information": "고양이가 그루밍 중 점안 겔을 섭취할 경우 전신 흡수로 인한 골수억제 및 신독성이 발생할 수 있음. 점안 투여 시 전신 노출은 매우 낮음."
+  },
+  "organ_burden_logic": {
+    "note": "점안 투여 기준 장기 부담 점수. 전신 흡수가 최소화되어 있으나, 고양이의 경우 그루밍으로 인한 섭취 시 골수억제 및 신독성 위험이 명시되어 있음. 점수는 모노그래프 내 언급된 독성 키워드를 기반으로 산정.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 뇌 독성에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "개에서 골수억제 가능성이 직접 언급되지는 않았으나, 섭취 시 위험 가능성이 있음. 점안 투여 시 전신 노출 최소."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "nephrotoxicity"
+        ],
+        "index": 1,
+        "evidence": "개에서 신독성이 직접 언급되지는 않았으나, 섭취 시 위험 가능성이 있음. 점안 투여 시 전신 노출 최소."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 심장 독성에 대한 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 뇌 독성에 대한 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "고양이가 그루밍으로 점안 겔을 섭취할 경우 골수억제 발생 가능성이 명시되어 있음. CBC 모니터링 권고."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "nephrotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고양이가 그루밍으로 점안 겔을 섭취할 경우 신독성 발생 가능성이 명시되어 있음. 혈액화학 검사 모니터링 권고."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간독성에 대한 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "점안 투여 시 약동학 데이터가 모노그래프에 기술되어 있지 않음."
+  },
+  "_ddi_note": "모노그래프에 약물 상호작용 섹션이 명시되어 있지 않음. 점안 겔은 다른 약물과 직접 혼합하지 말 것을 권고함. 전신 흡수가 최소화되어 있어 전신적 약물 상호작용 위험은 낮음.",
+  "drug_interactions": [
+    {
+      "drug": "Other ophthalmic medications",
+      "severity": 1,
+      "keywords": [
+        "formulation incompatibility",
+        "sequential administration"
+      ],
+      "evidence": "Ganciclovir ophthalmic gel should not be mixed directly with any other drugs in vitro. Wait 5 minutes before applying other ophthalmic medications."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "개 헤르페스바이러스-1(CHV-1) 각막염 (허가 외)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "각막 �궤양이 치유될 때까지 하루 최대 5회, 이후 7일간 하루 3회",
+          "evidence": "모노그래프에 개에 대한 구체적 용량은 기술되어 있지 않으나, 실험적 CHV-1 감염에서 효능이 확인됨. 고양이 용량 준용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "고양이 헤르페스바이러스-1(FHV-1) 각막염 (허가 외)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Eye",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": "각막 궤양이 치유될 때까지 하루 최대 5회 점안, 이후 7일간 하루 3회 점안",
+          "evidence": "Plumb's 모노그래프 허가 외 용량: 1 drop in affected eye(s) up to 5 times daily until the corneal ulcer has healed, then 3 times daily for 7 days."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "점안 투여 시 전신 흡수가 최소화되어 있어 신기능에 따른 용량 조절 지침이 모노그래프에 기술되어 있지 않음. 고양이가 섭취할 경우 신독성 위험이 있으므로 신기능 모니터링 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "점안 투여 시 간기능에 따른 용량 조절 지침이 모노그래프에 기술되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to ganciclovir"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "구아노신 유도체로, 바이러스 및 세포 티미딘 키나제(TK)에 의해 간시클로버 삼인산염으로 인산화된 후 바이러스 DNA 중합효소를 경쟁적으로 억제하고 DNA 신장을 방해하여 헤르페스 바이러스의 DNA 복제를 억제함.",
+    "common_extra_effects": [
+      "흐린 시야(blurred vision)",
+      "눈 자극(eye irritation)",
+      "점상 각막염(punctate keratitis)",
+      "결막부종(chemosis)",
+      "결막 충혈 및 분비물(conjunctival hyperemia and discharge)"
+    ],
+    "dog_mechanism": "CHV-1에 대한 DNA 복제 억제. 실험적 CHV-1 감염에서 안독성 없이 효능 확인.",
+    "dog_extra_effects": [
+      "눈 자극(eye irritation) — 임상 보고 드묾"
+    ],
+    "cat_mechanism": "FHV-1에 대한 DNA 복제 억제. 시험관 내 효능이 시도포비르, 펜시클로비르보다 2배, 아시클로비르보다 10배 높음.",
+    "cat_extra_effects": [
+      "그루밍으로 인한 섭취 시 골수억제(myelosuppression)",
+      "그루밍으로 인한 섭취 시 신독성(nephrotoxicity)",
+      "눈 자극(eye irritation)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개 헤르페스바이러스-1(CHV-1) 감염에 대한 실험적 연구에서 안독성 없이 효능이 확인되었으나, 수의 허가 제품은 없으며 허가 외 사용임. 말 알파-헤르페스바이러스에 대한 시험관 내 효능도 보고되어 있으나 생체 내 평가는 이루어지지 않음.",
+    "cat": "FHV-1 유발 안표면 질환 치료에 사용. 시험관 내 효능이 유사 항바이러스제보다 우수함. 고양이가 그루밍 중 점안 겔을 섭취하지 않도록 e-collar 착용을 고려해야 함. 섭취 시 골수억제 및 신독성 위험이 있으므로 기저치 및 주기적 CBC, 혈액화학 검사 모니터링 권고."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의 허가 제품 없음. 허가 외 사용. 실험적 CHV-1 연구에서 안독성은 보고되지 않았으나 임상 데이터 제한적."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "그루밍으로 인한 섭취 시 골수억제 및 신독성 위험. e-collar 착용 권고. 임신 동물에서 안전성 미확립. CBC 및 혈액화학 검사 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C-25°C, 68°F-77°F) 보관. 습기 및 직사광선 차단. 냉동 금지.",
+    "forms": [
+      "Ganciclovir 0.15% Ophthalmic Gel (1.5 mg/mL), 5 g tube — Zirgan® (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "간시클로버 점안 겔(Zirgan®)은 고양이 헤르페스바이러스-1(FHV-1) 및 개 헤르페스바이러스-1(CHV-1) 유발 안과 질환에 허가 외로 사용되는 항바이러스 점안제입니다. FHV-1에 대한 시험관 내 효능이 아시클로비르보다 10배, 시도포비르·펜시클로비르보다 2배 높습니다. 고양이가 그루밍 중 섭취할 경우 골수억제 및 신독성이 발생할 수 있으므로 e-collar 착용 및 CBC/혈액화학 검사 모니터링이 필요합니다.",
+    "indications": "고양이 FHV-1 유발 안표면 질환(각막궤양, 각막혈관신생, 결막염 포함) — 허가 외 사용. 개 CHV-1 각막염 — 허가 외 사용. 수의 허가 제품 없음; 인체용 Zirgan® 0.15% 점안 겔 사용.",
+    "client_info": "약을 점안한 후 고양이의 얼굴을 닦아주세요. 고양이가 이 약을 핥지 않도록 주의하세요 — 섭취 시 독성이 발생할 수 있습니다. 필요한 경우 넥카라(e-collar)를 착용시키세요. 점안 후 다른 안약을 사용하기 전에 5분 이상 기다려 주세요. 약병 뚜껑을 사용 후 꼭 닫아두고, 실온(냉동 금지)에서 습기와 직사광선을 피해 보관하세요. 약의 색이 변하거나 혼탁해지거나 입자가 생기면 사용하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Pharmacokinetics",
+      "Drug Interactions",
+      "Overdosage/Acute Toxicity",
+      "Reproductive Safety"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/12.jsonl",
+    "extracted_at": "2026-03-10T16:49:10.412220+00:00",
+    "reviewer": null
+  }
+}

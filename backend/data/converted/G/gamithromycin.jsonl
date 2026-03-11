@@ -1,0 +1,347 @@
+{
+  "id": "gamithromycin",
+  "drug_identity": {
+    "name_ko": "가미스로마이신",
+    "name_en": "Gamithromycin",
+    "active_ingredient": "Gamithromycin",
+    "brand_names": [
+      "Zactran"
+    ],
+    "allergy_class": "macrolide",
+    "class": "Antibiotic",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 150,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "주요 배설 경로는 담즙을 통한 미변화 약물의 배설이다. 혈장 단백 결합률은 26%이다."
+    },
+    "extra_information": "소(cattle): 6 mg/kg SC 투여 후 흡수 완전, 최고 혈장 농도 도달 시간 약 1시간, 분포용적 약 25 L/kg, 혈장 단백 결합 26%, 청소율 712 mL/kg/hr, 소실 반감기 약 51시간(약 3일). 폐포 대식세포 및 폐상피 내층액(PELF) 내 농도가 혈장 농도보다 현저히 높음. 단회 투여 후 PELF에서 7일, BAL 세포 및 폐 조직에서 10~15일 이상 MIC90 이상 유지. 망아지(foals): 6 mg/kg IM 투여 후 최고 혈장 농도 약 1시간, 소실 반감기 약 39시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 소 및 망아지 PK 데이터 존재. 담즙 배설이 주요 경로이며 간 부담이 있음. 신장 배설 분율 미기재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 뇌 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "protein binding"
+        ],
+        "index": -1,
+        "evidence": "혈장 단백 결합 26%로 낮음. 개 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설 분율 미기재. 개 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "biliary excretion",
+          "primary elimination"
+        ],
+        "index": -1,
+        "evidence": "주요 배설 경로가 담즙 배설이므로 간 부담 존재. 개 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에 대한 심장 관련 데이터 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 뇌 관련 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "protein binding"
+        ],
+        "index": -1,
+        "evidence": "혈장 단백 결합 26%로 낮음. 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 배설 분율 미기재. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "biliary excretion",
+          "primary elimination"
+        ],
+        "index": -1,
+        "evidence": "주요 배설 경로가 담즙 배설이므로 간 부담 존재. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": 39.0,
+      "max": 51.0,
+      "mean": 45.0,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 26,
+    "evidence": "소: SC 투여 후 최고 혈장 농도 약 1시간, 소실 반감기 약 51시간. 망아지: IM 투여 후 최고 혈장 농도 약 1시간, 소실 반감기 약 39시간. 평균값은 두 종의 중간값으로 추정."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased clearance",
+        "increased AUC",
+        "drug exposure"
+      ],
+      "evidence": "Rifampin decreases gamithromycin clearance and increases gamithromycin exposure (AUC) in foals. Monitor for increased gamithromycin effects."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 9.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장 용량 조절에 대한 정보가 모노그래프에 기재되어 있지 않음. 주요 배설 경로가 담즙이므로 신기능 저하 시 영향이 적을 수 있으나 확인 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "주요 배설 경로가 담즙 배설이므로 간기능 저하 시 약물 축적 가능성이 있으나 구체적인 용량 조절 지침은 모노그래프에 기재되어 있지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "Macrolide/azalide hypersensitivity",
+      "match_terms": [
+        "macrolide allergy",
+        "azalide allergy",
+        "erythromycin allergy",
+        "clarithromycin allergy",
+        "tulathromycin allergy",
+        "tilmicosin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Lactating dairy cattle (20 months or older)",
+      "match_terms": [
+        "lactating cow",
+        "dairy cattle lactating"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Calves intended for veal processing",
+      "match_terms": [
+        "veal calf"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "Pregnancy (safety not established)",
+      "match_terms": [
+        "pregnancy",
+        "pregnant animal"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "세균 세포막을 투과하여 50S 리보솜 소단위에 결합함으로써 단백질 합성을 억제한다. 30S와 50S 리보솜 간의 전위(translocation) 과정을 억제하여 불완전한 펩타이드 사슬의 조기 분리를 유발한다. 치료 농도에서 주로 정균 작용을 나타낸다. 폐포 대식세포 및 폐상피 내층액(PELF)에 고농도로 축적된다.",
+    "common_extra_effects": [
+      "주사 부위 통증 및 부종 (3~14일, 최대 35일 지속 가능)",
+      "주사 부위 국소 조직 반응",
+      "망아지에서 산통(colic) (45%)",
+      "망아지에서 후지 파행(hind limb lameness) (40%)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에 대한 승인된 적응증 또는 용량 데이터가 없음. 모노그래프에 개 관련 임상 정보 미기재.",
+    "cat": "고양이에 대한 승인된 적응증 또는 용량 데이터가 없음. 모노그래프에 고양이 관련 임상 정보 미기재."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에 대한 안전성 및 유효성 데이터 없음. 사용 시 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에 대한 안전성 및 유효성 데이터 없음. 사용 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 이하에서 보관; 15°C~30°C(59°F~86°F) 범위 내 보관 허용. 최초 개봉 후 18개월 이내 사용(미국 라벨); 개봉 후 28일 이내 사용(영국 라벨). 영하 온도에서 점도가 증가할 수 있으나 주사기 사용에는 영향 없음.",
+    "forms": [
+      "주사용 용액 150 mg/mL (100 mL, 250 mL, 500 mL 병)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "가미스로마이신은 소 호흡기 질환(BRD) 치료를 위해 FDA 승인된 아잘라이드계 마크로라이드 항생제(Zactran®)이다. 단회 SC 투여(6 mg/kg)로 폐 조직 내 7~15일 이상 치료 농도 유지가 가능하다. 망아지, 돼지, 양, 염소에서의 사용은 허가 외(extra-label) 사용이다. 주사 부위 통증 및 부종이 가장 흔한 부작용이며, 망아지에서는 산통 및 파행이 높은 빈도로 보고되었다. 미국 도축 전 휴약 기간은 35일이다. WHO 및 OIE에서 최고 우선순위 항균제로 지정되어 있어 신중한 사용이 요구된다.",
+    "indications": "FDA 승인: 소(비유 중이 아닌 육우 및 젖소)에서 Mannheimia haemolytica, Pasteurella multocida, Histophilus somni, Mycoplasma bovis에 의한 소 호흡기 질환(BRD) 치료 및 고위험군 예방적 관리. 허가 외 사용: 말/망아지(Rhodococcus equi 기관지폐렴), 돼지(세균성 호흡기 질환, Bordetella bronchiseptica 관련 호흡기 질환), 양(Dichelobacter nodosus에 의한 발굽 썩음병), 염소(자연 발생 폐렴).",
+    "client_info": "식용 동물에 사용 시 반드시 휴약 기간(미국: 도축 전 35일)을 준수하십시오. 주사 부위에 통증과 부종이 생길 수 있으나 대부분 수일 내 호전됩니다. 마크로라이드계 항생제(예: 에리스로마이신, 클래리스로마이신)에 알레르기가 있는 사람은 이 약과의 접촉을 피하십시오. 피부나 눈에 노출된 경우 깨끗한 물로 씻어내고, 실수로 자가 주사된 경우 즉시 의사의 진료를 받고 제품 라벨을 의사에게 보여주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Dog dosage",
+      "Cat dosage",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "CYP profile"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "dosage_and_kinetics.dog.dosage_list",
+      "dosage_and_kinetics.cat.dosage_list",
+      "organ_burden_logic.dog",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/44.jsonl",
+    "extracted_at": "2026-03-11T02:42:19.543881+00:00",
+    "reviewer": null
+  }
+}

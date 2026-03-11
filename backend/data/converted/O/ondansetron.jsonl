@@ -1,0 +1,673 @@
+{
+  "id": "ondansetron",
+  "drug_identity": {
+    "name_ko": "온단세트론",
+    "name_en": "Ondansetron",
+    "active_ingredient": "Ondansetron",
+    "brand_names": [
+      "Zofran",
+      "Zofran ODT",
+      "Zuplenz"
+    ],
+    "allergy_class": null,
+    "class": "Antiemetic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 개와 고양이에서 구토 및 오심 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 8,
+        "unit": "mg"
+      },
+      {
+        "value": 0.8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4",
+        "CYP2D6",
+        "CYP1A2"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "사람에서 CYP3A4가 주요 대사 경로이며, CYP2D6 및 CYP1A2도 부분적으로 관여함. 간에서 광범위하게 대사됨. 고양이와 개에서의 CYP 경로는 명시되지 않음."
+    },
+    "extra_information": "고양이: 경구 생체이용률 약 32%, SC 투여 시 75%. 반감기는 IV 약 2시간, PO 약 1.2시간, SC 약 3.2시간. 간질환 고양이에서 청소율 감소가 가장 크게 나타남. 귀 피나에 Lipoderm® 경피 겔 적용 시 혈청 농도 측정 불가. 개: 단회 경구 8mg 투여 후 최고 혈중 농도 도달 시간 1.1시간, 반감기 약 1.3시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 간 대사 약물로 간 부담이 주요하며, QT 연장 및 부정맥 보고로 심장 부담도 존재. 고양이 간질환 시 청소율 감소 명시됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "sedation",
+          "extrapyramidal"
+        ],
+        "index": 1,
+        "evidence": "진정 및 추체외로 증상(머리 흔들기)이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "QT prolongation",
+          "arrhythmia",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "건강한 개에서 QT 연장 보고됨. 저혈압 및 부정맥 가능성 있음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "신장 관련 직접적 독성 언급 없음. 고양이 신질환 시 청소율 감소 보고되었으나 개에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "increased liver enzymes",
+          "first-pass metabolism"
+        ],
+        "index": 1,
+        "evidence": "간에서 광범위하게 대사됨. 간효소 상승이 부작용으로 보고됨. 간기능 장애 시 흡수 증가 및 반감기 연장 가능."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "QT prolongation",
+          "arrhythmia",
+          "torsades de pointes"
+        ],
+        "index": 1,
+        "evidence": "건강한 개에서 QT 연장 보고됨. 사람에서 torsades de pointes 사례 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "sedation",
+          "extrapyramidal"
+        ],
+        "index": 1,
+        "evidence": "진정 및 추체외로 증상이 부작용으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "arrhythmia",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "부정맥 및 저혈압 가능성 있음."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal disease",
+          "reduced clearance"
+        ],
+        "index": 1,
+        "evidence": "신질환 고양이에서 청소율 감소 보고됨. IRIS 단계별 용량 조정 권고됨."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic disease",
+          "reduced clearance",
+          "first-pass metabolism",
+          "increased liver enzymes"
+        ],
+        "index": 1,
+        "evidence": "간질환 고양이에서 청소율 감소가 가장 크게 나타남. 간에서 광범위하게 대사됨. 간효소 상승 보고됨."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "arrhythmia",
+          "QT prolongation"
+        ],
+        "index": 1,
+        "evidence": "부정맥 및 QT 연장 가능성 있음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.1,
+    "half_life_hr": {
+      "min": 1.2,
+      "max": 3.2,
+      "mean": 2.0,
+      "species": "cat"
+    },
+    "f_percent": 32,
+    "protein_binding_percent": 75,
+    "evidence": "고양이: 경구 생체이용률 32%, SC 75%, 반감기 IV 2시간/PO 1.2시간/SC 3.2시간. 개: 경구 투여 후 Tmax 1.1시간, 반감기 약 1.3시간. 단백결합률 75%는 사람 데이터."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/심각→3, 중등도→2, 경미→1. MAOI 및 세로토닌성 약물과의 상호작용은 세로토닌 증후군 위험으로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Apomorphine",
+      "severity": 3,
+      "keywords": [
+        "reduced emetic effect",
+        "severe hypotension",
+        "loss of consciousness"
+      ],
+      "evidence": "Ondansetron may reduce the emetic effect of apomorphine. A human patient developed severe hypotension and loss of consciousness. Use together is contraindicated in humans."
+    },
+    {
+      "drug": "Azole Antifungals (e.g., itraconazole, posaconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP inhibition",
+        "increased ondansetron exposure",
+        "QTc prolongation"
+      ],
+      "evidence": "Azole antifungals may inhibit ondansetron metabolism, increasing exposure and prolonging QTc interval."
+    },
+    {
+      "drug": "Cisplatin",
+      "severity": 2,
+      "keywords": [
+        "reduced plasma concentration"
+      ],
+      "evidence": "Plasma cisplatin concentrations may be decreased when used concurrently with ondansetron."
+    },
+    {
+      "drug": "Cyclophosphamide",
+      "severity": 2,
+      "keywords": [
+        "reduced plasma concentration"
+      ],
+      "evidence": "Plasma cyclophosphamide concentrations may be decreased when used concurrently with ondansetron."
+    },
+    {
+      "drug": "QTc-Prolonging Drugs (e.g., amiodarone, cisapride, procainamide, quinidine, sotalol)",
+      "severity": 2,
+      "keywords": [
+        "additive QTc prolongation",
+        "arrhythmia"
+      ],
+      "evidence": "Theoretically, ondansetron may have additive effects on QTc interval; possible serious arrhythmias may result."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; e.g., amitraz, methylene blue, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome has been reported in humans receiving ondansetron with MAOIs."
+    },
+    {
+      "drug": "Metformin",
+      "severity": 1,
+      "keywords": [
+        "increased metformin concentration"
+      ],
+      "evidence": "Ondansetron may increase the serum concentration of metformin."
+    },
+    {
+      "drug": "P-glycoprotein Inhibitors (e.g., amiodarone, cyclosporine, diltiazem, quinidine)",
+      "severity": 2,
+      "keywords": [
+        "increased ondansetron concentration",
+        "P-glycoprotein"
+      ],
+      "evidence": "In humans, P-gp inhibitors may increase serum concentrations of ondansetron. Veterinary relevance unclear as ondansetron's P-gp substrate status in animals is not confirmed."
+    },
+    {
+      "drug": "Ropinirole",
+      "severity": 1,
+      "keywords": [
+        "reduced emetic effect"
+      ],
+      "evidence": "Ondansetron may reduce the emetic effect of ropinirole."
+    },
+    {
+      "drug": "Serotonergic Drugs (e.g., clomipramine, fluoxetine, mirtazapine, trazodone)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Increased risk for serotonin syndrome has been reported in humans receiving ondansetron with serotonergic drugs."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy"
+      ],
+      "evidence": "In humans, concurrent use may reduce the efficacy of both drugs. Veterinary significance is not known."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": true
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "moderate"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": true,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (일반)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q8h~q12h 간격으로 투여",
+          "evidence": "오프라벨. 일반적으로 사용되는 용량이나 이를 뒷받침하는 연구는 제한적임."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (일반)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV 투여. q8h~q12h 간격",
+          "evidence": "오프라벨. 일반적으로 사용되는 용량이나 이를 뒷받침하는 연구는 제한적임."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항구토제 (소아 권고량에 근접한 저용량)",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "사람 소아 권고량에 근접한 용량",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "항암제 유발 오심 및 구토",
+          "value": "0.3 - 0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "항암제 투여 30분 전 천천히 IV. 필요 시 q8h~q12h 반복 가능",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "파보바이러스 유발 오심 및 구토",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV 투여",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "폐쇄성 수면 무호흡",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "전정 증후군 관련 오심",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "단회 투여",
+          "evidence": "오프라벨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 구토 (일반)",
+          "value": "0.1 - 1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV. q6h~q12h 간격. 경구 투여 시 고용량 및 더 잦은 투여 필요할 수 있음.",
+          "evidence": "오프라벨. 약동학 연구 기반."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 구토 (일반)",
+          "value": "0.1 - 1",
+          "unit": "mg/kg",
+          "route": "SC",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q6h~q12h 간격",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 구토 (일반)",
+          "value": "0.1 - 1",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q6h~q12h 간격",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "급성 구토 (일반)",
+          "value": "0.1 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "q6h~q12h 간격. 경구 생체이용률이 낮으므로 고용량 필요할 수 있음.",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신질환 관련 구토 - IRIS 1~2단계",
+          "value": "0.1 - 0.2",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV, SC, 또는 PO. q6h~q12h 간격",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신질환 관련 구토 - IRIS 3단계",
+          "value": "0.05 - 0.1",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV, SC, 또는 PO. q6h~q12h 간격",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신질환 관련 구토 - IRIS 4단계",
+          "value": "0.025 - 0.05",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 IV, SC, 또는 PO. q6h~q12h 간격",
+          "evidence": "오프라벨."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "덱스메데토미딘/부프레노르핀 전처치 관련 구토 예방",
+          "value": "0.22",
+          "unit": "mg/kg",
+          "route": "IM",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "덱스메데토미딘 및 부프레노르핀과 동일 주사기에 혼합 투여",
+          "evidence": "오프라벨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "고양이 신질환 시 청소율 감소 보고됨. IRIS 단계에 따라 용량 감량 권고 (Stage 3: 50% 감량, Stage 4: 75% 감량 수준). 개에서의 신기능 저하 시 용량 조정에 대한 명시적 데이터 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 장애 시 흡수 증가(초회통과 대사 감소) 및 반감기 연장 가능. 중증 간기능 장애 시 용량 조정이 필요할 수 있음. 고양이 간질환에서 청소율 감소가 가장 크게 나타남."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "allergy to ondansetron",
+        "5-HT3 antagonist allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "장폐색 또는 위 팽창",
+      "match_terms": [
+        "ileus",
+        "gastric distension",
+        "GI obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "QT 연장 위험 환자",
+      "match_terms": [
+        "QT prolongation",
+        "electrolyte abnormality",
+        "cardiac disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "MDR1 유전자 돌연변이 (개)",
+      "match_terms": [
+        "MDR1 mutation",
+        "ABCB1 mutation",
+        "P-glycoprotein deficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Shetland Sheepdog",
+      "Rough Collie",
+      "Smooth Collie",
+      "Australian Shepherd",
+      "Border Collie",
+      "Old English Sheepdog",
+      "German Shepherd"
+    ],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "사람에서 온단세트론은 P-당단백질(MDR1/ABCB1 유전자 산물)의 기질임. 개의 P-당단백질에 의해 수송되는지는 현재 데이터 없음. MDR1 돌연변이 개에서 온단세트론 투여 시 주의 권고됨."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "5-HT3 수용체 길항제. 미주신경 말단(말초)과 화학수용체 유발대(CRTZ, 중추) 모두에서 5-HT3 수용체를 차단하여 항구토 효과를 나타냄. 일반 용량에서 위장관 운동성 또는 통과 시간에 영향을 미치지 않음.",
+    "common_extra_effects": [
+      "변비",
+      "설사",
+      "진정",
+      "추체외로 증상 (머리 흔들기)",
+      "간효소 상승",
+      "부정맥",
+      "저혈압",
+      "QT 연장",
+      "두통 (사람)"
+    ],
+    "dog_mechanism": "5-HT3 수용체 길항을 통한 항구토 효과. 건강한 개에서 QT 연장 보고됨.",
+    "dog_extra_effects": [
+      "QT 연장",
+      "진정",
+      "추체외로 증상"
+    ],
+    "cat_mechanism": "5-HT3 수용체 길항을 통한 항구토 효과. 간질환 고양이에서 청소율 감소 및 반감기 연장.",
+    "cat_extra_effects": [
+      "진정",
+      "추체외로 증상",
+      "간효소 상승"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 온단세트론은 파보바이러스 장염, 항암제 유발 구토, 전정 증후군 관련 오심 등에 오프라벨로 사용됨. 마로피탄트가 온단세트론보다 효과적일 수 있음. 건강한 개에서 QT 연장이 보고되었으므로 심장 질환이 있거나 QT 연장 약물을 병용하는 경우 주의 필요. MDR1 돌연변이 견종에서 주의 요망.",
+    "cat": "고양이에서 경구 생체이용률이 약 32%로 낮아 경구 투여 시 고용량이 필요할 수 있음. SC 투여 시 생체이용률 75%. 간질환 고양이에서 청소율이 가장 크게 감소하므로 용량 조정 필요. 만성 신질환 고양이에서 IRIS 단계에 따른 용량 조정 권고. 귀 피나에 경피 겔 적용 시 혈청 농도 측정 불가하여 이 경로는 권장되지 않음. 덱스메데토미딘/부프레노르핀과 동시 IM 투여 시 구토 발생률 감소 효과 확인됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간기능 장애 시 주의. MDR1 돌연변이 견종에서 주의. QT 연장 위험 있음. 장폐색 마스킹 가능성."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간질환 및 신질환 고양이에서 청소율 감소로 용량 조정 필요. 경구 생체이용률 낮음. 경피 투여 경로 효과 없음."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 제품: 밀폐 차광 용기에 20~25°C 보관 (15~30°C 허용). 경구 붕해정: 원래 포일 블리스터에 보관, 개봉 즉시 투여. 주사제: 2~25°C, 차광 보관. IV 희석액은 실온에서 48시간 안정하나 제조사는 희석 후 24시간 내 사용 권고.",
+    "forms": [
+      "Ondansetron HCl 정제 4mg, 8mg",
+      "Ondansetron 구강붕해정/구강필름 4mg, 8mg",
+      "Ondansetron HCl 경구액 0.8mg/mL",
+      "Ondansetron HCl 주사액 2mg/mL"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "온단세트론은 5-HT3 수용체 길항제로 개와 고양이의 구토 및 오심 치료에 오프라벨로 사용됨. 수의학적 승인 제품 없음. 마로피탄트와 병용 또는 대체 가능. QT 연장 위험 있으므로 심장 질환 환자 및 QT 연장 약물 병용 시 주의. 세로토닌 증후군 위험 약물과 병용 금기. 간질환 및 신질환 환자에서 용량 조정 필요.",
+    "indications": "개: 일반 항구토, 파보바이러스 유발 구토, 항암제 유발 오심/구토, 전정 증후군 관련 오심, 폐쇄성 수면 무호흡 (모두 오프라벨). 고양이: 급성 구토, 만성 신질환 관련 구토 (IRIS 단계별 용량 조정), 마취 전처치 관련 구토 예방 (모두 오프라벨).",
+    "client_info": "이 약은 심한 구토를 치료하거나 예방하기 위해 사용됩니다. 경구 투여 시 음식과 함께 또는 공복에 투여할 수 있습니다. 대부분의 동물에서 잘 견딥니다. 구강붕해정 사용 시 손을 건조하게 유지하고 포장에서 꺼낸 즉시 동물의 혀 위에 올려놓으세요. 구토가 지속되거나 기력 저하, 식욕 부진 등의 증상이 나타나면 수의사에게 연락하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Monitoring (detailed parameters)",
+      "Veterinary CYP profile",
+      "Canine renal dose adjustment (explicit)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates (veterinary)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.half_life_hr (dog specific mean)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/29.jsonl",
+    "extracted_at": "2026-03-10T22:19:27.531828+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,792 @@
+{
+  "id": "pentobarbital",
+  "drug_identity": {
+    "name_ko": "펜토바르비탈",
+    "name_en": "Pentobarbital",
+    "active_ingredient": "Pentobarbital sodium",
+    "brand_names": [
+      "Nembutal",
+      "Somnopentyl"
+    ],
+    "allergy_class": "barbiturate",
+    "class": "Sedative",
+    "source": "kr_vet",
+    "formulary_status": "restricted",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 64.8,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Liver",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "펜토바르비탈은 주로 간에서 산화(oxidation)에 의해 대사된다. 장기 투여 시 간 마이크로솜 효소 유도가 잘 알려져 있다."
+    },
+    "extra_information": "개에서 반감기는 약 8시간이다. 반추동물(특히 염소와 양)은 펜토바르비탈을 빠르게 대사하며, 염소에서 보고된 소실 반감기는 약 0.9시간이다. 사람에서 반감기는 15~50시간이다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 간: 주요 대사 장기 및 효소 유도 언급. 뇌: CNS 억제제, 뇌 고농도 분포 언급. 신장: 과량 투여 시 저혈압 이차성 신장 손상 언급. 심장: 고용량 심장 억제 효과 언급. 혈액: 직접적 혈액독성 언급 없음.",
+    "dog": {
+      "brain": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "CNS depression",
+          "brain highest concentration",
+          "neuroprotective",
+          "cerebral metabolic rate",
+          "seizure"
+        ],
+        "index": 1,
+        "evidence": "개에서 펜토바르비탈은 뇌를 포함한 모든 조직에 빠르게 분포하며, 간·뇌·신장에서 가장 높은 농도를 보인다. CNS 억제제로서 용량 의존적 뇌 억제 효과가 있다."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension",
+          "tachycardia"
+        ],
+        "index": 3,
+        "evidence": "직접적인 혈액독성은 언급되지 않으나, 고용량에서 저혈압 및 빈맥이 보고된다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal impairment",
+          "hypotension",
+          "nephritis contraindicated"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 시 저혈압에 의한 이차성 신장 손상이 발생할 수 있다. 신염 환자에서 대용량 투여는 금기이다."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatic microsomal enzyme induction",
+          "metabolized in liver",
+          "hepatotoxicity with acetaminophen"
+        ],
+        "index": 1,
+        "evidence": "간에서 주로 산화 대사되며, 장기 투여 시 간 마이크로솜 효소 유도가 잘 알려져 있다. 아세트아미노펜과 병용 시 간독성 위험 증가."
+      },
+      "heart": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "tachycardia",
+          "decreased myocardial contractility",
+          "decreased stroke volume",
+          "cardiac arresting effects"
+        ],
+        "index": 2,
+        "evidence": "개에서 빈맥, 심근 수축력 감소, 1회 박출량 감소, 평균 동맥압 및 총 말초 저항 감소가 보고된다. 고용량에서 심장 정지 효과가 있다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "CNS depression",
+          "brain highest concentration",
+          "female cats more susceptible"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 뇌를 포함한 모든 조직에 빠르게 분포한다. 암컷 고양이는 수컷보다 펜토바르비탈 효과에 더 민감한 것으로 알려져 있다."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypotension"
+        ],
+        "index": 3,
+        "evidence": "직접적인 혈액독성은 언급되지 않으나, 고용량에서 저혈압이 발생할 수 있다."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "renal impairment",
+          "hypotension",
+          "renal dysfunction caution"
+        ],
+        "index": 2,
+        "evidence": "과량 투여 시 저혈압에 의한 이차성 신장 손상 가능. 신기능 장애 환자에서 용량 감량 필요."
+      },
+      "liver": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "hepatic microsomal enzyme induction",
+          "metabolized in liver",
+          "hepatic dysfunction caution"
+        ],
+        "index": 1,
+        "evidence": "간에서 주로 산화 대사되며, 장기 투여 시 간 마이크로솜 효소 유도가 발생한다. 간기능 장애 환자에서 용량 감량 필요."
+      },
+      "heart": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "cardiac arresting effects",
+          "hypotension",
+          "cardiac disease caution"
+        ],
+        "index": 2,
+        "evidence": "고용량에서 심장 억제 효과가 있으며, 심장 질환 환자에서 주의가 필요하다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": 0.75,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 8.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 40,
+    "evidence": "사람에서 경구 투여 후 최고 혈장 농도는 30~60분 후 도달. IV 투여 후 작용 발현은 1분 이내. 개에서 반감기 약 8시간. 단백 결합률은 사람 기준 35~45%."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 치명적/금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Acetaminophen",
+      "severity": 2,
+      "keywords": [
+        "hepatotoxicity",
+        "enzyme induction"
+      ],
+      "evidence": "Barbiturates increase risk of hepatotoxicity with acetaminophen, particularly with large doses or long-term barbiturate administration."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 3,
+      "keywords": [
+        "fatality",
+        "seizure exacerbation"
+      ],
+      "evidence": "Fatalities reported when dogs with lidocaine-induced seizures were treated with pentobarbital. Diazepam is recommended instead for lidocaine-induced seizures in dogs."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "increased metabolism"
+      ],
+      "evidence": "Rifampin may induce enzymes that increase the metabolism of barbiturates, reducing pentobarbital effect."
+    },
+    {
+      "drug": "Antihistamines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation"
+      ],
+      "evidence": "Antihistamines may increase the CNS depressant effect of pentobarbital."
+    },
+    {
+      "drug": "Benzodiazepines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation",
+        "respiratory depression"
+      ],
+      "evidence": "Benzodiazepines may increase the effect of pentobarbital via additive CNS depression."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "increased pentobarbital effect",
+        "decreased pentobarbital effect",
+        "bidirectional interaction"
+      ],
+      "evidence": "Chloramphenicol may increase the effect of pentobarbital; conversely, pentobarbital may decrease chloramphenicol serum concentrations."
+    },
+    {
+      "drug": "Opioids",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression",
+        "additive sedation"
+      ],
+      "evidence": "Opioids may increase the CNS and respiratory depressant effects of pentobarbital."
+    },
+    {
+      "drug": "Phenothiazines",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "additive sedation",
+        "decreased phenothiazine levels"
+      ],
+      "evidence": "Phenothiazines may increase the effect of pentobarbital; pentobarbital may also decrease phenothiazine serum concentrations."
+    },
+    {
+      "drug": "Valproic Acid",
+      "severity": 2,
+      "keywords": [
+        "increased pentobarbital effect",
+        "CNS depression"
+      ],
+      "evidence": "Valproic acid may increase the effect of pentobarbital."
+    },
+    {
+      "drug": "Anticoagulants, Oral (Warfarin)",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased anticoagulant effect"
+      ],
+      "evidence": "Pentobarbital (particularly after chronic therapy) may decrease serum concentrations of oral anticoagulants such as warfarin, reducing anticoagulant effect."
+    },
+    {
+      "drug": "Beta-Blockers",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased beta-blocker levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of beta-blockers via hepatic enzyme induction."
+    },
+    {
+      "drug": "Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased antibiotic levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of clarithromycin."
+    },
+    {
+      "drug": "Clonazepam",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased clonazepam levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of clonazepam."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased corticosteroid levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of corticosteroids via hepatic enzyme induction."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased cyclosporine levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of cyclosporine."
+    },
+    {
+      "drug": "Doxorubicin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased doxorubicin levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of doxorubicin."
+    },
+    {
+      "drug": "Doxycycline",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased doxycycline levels",
+        "prolonged effect"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of doxycycline; this effect may persist for weeks after barbiturate discontinuation."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased estrogen levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of estrogens."
+    },
+    {
+      "drug": "Griseofulvin",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased griseofulvin levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of griseofulvin."
+    },
+    {
+      "drug": "Methadone",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased methadone levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of methadone."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased metronidazole levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of metronidazole."
+    },
+    {
+      "drug": "Paroxetine",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased paroxetine levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of paroxetine."
+    },
+    {
+      "drug": "Progestins",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased progestin levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of progestins."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased quinidine levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of quinidine."
+    },
+    {
+      "drug": "Selegiline",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased selegiline levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of selegiline."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased theophylline levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of theophylline."
+    },
+    {
+      "drug": "Tricyclic Antidepressants",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased TCA levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of tricyclic antidepressants."
+    },
+    {
+      "drug": "Verapamil",
+      "severity": 2,
+      "keywords": [
+        "enzyme induction",
+        "decreased verapamil levels"
+      ],
+      "evidence": "Pentobarbital may decrease serum concentrations of verapamil."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "기계 환기 환자의 화학적 억제 유지 (extra-label)",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "환기 이탈 약 12시간 전에 프로포폴 등 단시간 작용 약제로 전환 권장",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "벤조디아제핀 볼루스에 불응하는 난치성 발작 (extra-label)",
+          "value": "3 - 15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 투여; 발작 조절 후 0.5~5 mg/kg/hour CRI 유지, 최소 6시간 조절 후 서서히 감량",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "난치성 발작 조절 후 유지 CRI (extra-label)",
+          "value": "0.5 - 5",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "발작 조절 후 최소 6시간 유지 후 서서히 감량",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "기계 환기 환자의 화학적 억제 유지 (extra-label)",
+          "value": "1 - 3",
+          "unit": "mg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "환기 이탈 약 12시간 전에 프로포폴 등 단시간 작용 약제로 전환 권장",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use (dogs/cats combined dosing)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "벤조디아제핀 볼루스에 불응하는 난치성 발작 (extra-label)",
+          "value": "3 - 15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "천천히 투여; 발작 조절 후 0.5~5 mg/kg/hour CRI 유지, 최소 6시간 조절 후 서서히 감량. 암컷 고양이는 수컷보다 더 민감함에 주의.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 용량 감량이 필요하다고 명시되어 있으나, 구체적인 감량 수치는 제시되지 않음. 신염 환자에서 대용량 투여는 금기."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 장애 환자에서 용량 감량이 필요하다고 명시되어 있으나, 구체적인 감량 수치는 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "과민반응 병력",
+      "match_terms": [
+        "barbiturate hypersensitivity",
+        "drug allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "포르피린증",
+      "match_terms": [
+        "porphyria"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신염 또는 중증 호흡 기능 장애",
+      "match_terms": [
+        "nephritis",
+        "severe respiratory dysfunction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "CKD",
+        "renal disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "저혈량증",
+      "match_terms": [
+        "hypovolemia",
+        "dehydration"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "빈혈",
+      "match_terms": [
+        "anemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "심장 또는 호흡기 질환",
+      "match_terms": [
+        "cardiac disease",
+        "respiratory disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "경계성 부신 기능 저하",
+      "match_terms": [
+        "hypoadrenal function",
+        "hypoadrenocorticism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "cesarean section"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "리도카인 유발 발작",
+      "match_terms": [
+        "lidocaine toxicity",
+        "lidocaine-induced seizures"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "바르비투레이트계 CNS 억제제. GABA 수용체에 GABA 유사 작용을 하며, 아세틸콜린·노르에피네프린·글루타메이트 방출을 억제한다. 고용량에서 신경 말단의 칼슘 흡수를 억제한다. 뇌 대사율 및 산소 소비 감소, 자유 라디칼 제거, 내피세포 및 신경교세포막 안정화를 통한 신경 보호 효과가 있다.",
+    "common_extra_effects": [
+      "호흡 억제",
+      "저혈압",
+      "저체온증",
+      "장 운동 감소",
+      "골격근 이완",
+      "태반 통과 및 모유 분비",
+      "간 마이크로솜 효소 유도 (장기 투여 시)"
+    ],
+    "dog_mechanism": "개에서 빈맥, 심근 수축력 감소, 1회 박출량 감소, 평균 동맥압 및 총 말초 저항 감소를 유발한다. 고용량에서 심장 정지 효과가 있다.",
+    "dog_extra_effects": [
+      "마취 회복 시 흥분 (발작 유사 활동과 혼동 가능)",
+      "저체온증 (27°C 이하 환경 노출 시)",
+      "호흡 억제",
+      "저혈압"
+    ],
+    "cat_mechanism": "고양이에서도 유사한 CNS 억제 효과를 나타낸다. 암컷 고양이는 수컷보다 펜토바르비탈 효과에 더 민감하다.",
+    "cat_extra_effects": [
+      "호흡 억제",
+      "저혈압",
+      "저체온증",
+      "암컷에서 더 강한 감수성"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 마취 회복 시 흥분이 발생할 수 있으며, 이는 발작 활동과 혼동될 수 있다. 리도카인 유발 발작에는 펜토바르비탈 사용이 금기이며, 디아제팜을 우선 사용해야 한다. 경구 LD50은 85 mg/kg, IV LD50은 40~60 mg/kg이다. 펜토바르비탈로 안락사된 동물의 고기를 섭취한 개에서 사망 사례가 보고되어 있다.",
+    "cat": "암컷 고양이는 수컷보다 펜토바르비탈 효과에 더 민감하므로 용량 조절에 주의가 필요하다. 신생아 고양이에서는 CNS 내 농도가 성체보다 최대 6배 높을 수 있어 각별한 주의가 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 마취 회복 시 흥분, 저체온증, 호흡 억제 등의 부작용이 보고된다. 신기능·간기능 장애, 저혈량증, 빈혈, 심장·호흡기 질환 환자에서 주의 사용 및 용량 감량이 필요하다. 리도카인 유발 발작에는 사용 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "암컷 고양이는 수컷보다 더 민감하다. 신생아에서 CNS 농도가 성체보다 최대 6배 높을 수 있다. 호흡 억제 및 저혈압 모니터링이 필수적이다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "주사제는 실온 보관. 수용액은 불안정하므로 침전물이 있으면 사용 금지. 산성 용액에 첨가 금지. DEA Schedule II 약물로 견고하게 건축된 잠금 구역에 보관 필요. 미사용 또는 낭비된 규제 약물의 폐기는 관련 법규에 따름.",
+    "forms": [
+      "Pentobarbital sodium injection 64.8 mg/mL (Somnopentyl® Injection, 동물용, Rx, C-II) — 현재 상업적으로 이용 불가",
+      "Pentobarbital Sodium Injection 50 mg/mL in 2 mL Tubex (Nembutal®, generic, 인체용, Rx, C-II)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "펜토바르비탈은 바르비투레이트계 진정/마취제로, 기계 환기 환자의 화학적 억제 유지 및 난치성 발작 치료에 사용된다. DEA Schedule II 규제 약물이다. 호흡 억제가 주요 부작용이므로 환기 지원 장비가 반드시 준비되어야 한다. IV 투여 시 반드시 천천히 투여해야 하며, 계산 용량의 1/3~1/2을 먼저 볼루스로 투여 후 효과를 확인하고 나머지를 서서히 투여한다. 리도카인 유발 발작에는 사용 금기. 펜토바르비탈(PENTObarbital)과 페노바르비탈(PHENObarbital)을 혼동하지 않도록 주의한다.",
+    "indications": "승인 적응증: 개, 고양이, 말에서 전신 마취제 (현재 상업적으로 이용 불가). 오프라벨 적응증: 기계 환기 환자의 화학적 억제 유지 (1~3 mg/kg/hr IV CRI), 벤조디아제핀에 불응하는 난치성 발작 치료 (3~15 mg/kg IV 서서히), 안락사 (별도 모노그래프 참조).",
+    "client_info": "이 약물은 반드시 입원 환경에서 전문 수의사의 밀접한 감독 하에 사용됩니다. 가정에서 사용하는 약물이 아닙니다. 펜토바르비탈로 안락사된 동물의 고기를 반려동물이 섭취하지 않도록 주의하십시오. 사망 사례가 보고된 바 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Oral bioavailability (veterinary)",
+      "CYP enzyme profile (specific enzymes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "timing_profile.half_life_hr (cat-specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "metabolism_and_clearance.cyp_profile.substrates",
+      "metabolism_and_clearance.cyp_profile.inhibitors",
+      "metabolism_and_clearance.cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/18.jsonl",
+    "extracted_at": "2026-03-10T18:44:34.841253+00:00",
+    "reviewer": null
+  }
+}

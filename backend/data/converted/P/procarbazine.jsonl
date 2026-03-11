@@ -1,0 +1,542 @@
+{
+  "id": "procarbazine",
+  "drug_identity": {
+    "name_ko": "프로카르바진",
+    "name_en": "Procarbazine",
+    "active_ingredient": "Procarbazine hydrochloride",
+    "brand_names": [
+      "Matulane",
+      "Natulan",
+      "Natulanar"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 허가 제품 없음. 개와 고양이의 림프종 및 개의 육아종성 뇌수막염(GME) 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Cap"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Mixed",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.7,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "프로카르바진은 간과 신장에서 거의 완전히 대사되며, 대사산물은 세포독성을 가진다. 투여 후 24시간 이내에 약 70%가 소변으로 배설된다."
+    },
+    "extra_information": "개와 고양이에 대한 특이적 약동학 데이터는 없음. 사람에서 경구 투여 후 완전히 흡수되며, CSF와 혈장 사이에서 빠르게 평형을 이룬다. 혈장 최고 농도는 약 1시간, CSF 최고 농도는 투여 후 약 30~90분에 도달한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개/고양이 특이적 수의학 PK 데이터 없음; 사람 데이터 및 부작용 프로파일 기반.",
+    "dog": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "enters CNS",
+          "CSF equilibration",
+          "sedation",
+          "ataxia",
+          "convulsions"
+        ],
+        "index": 1,
+        "evidence": "프로카르바진은 CNS에 진입하며 CSF와 혈장 간 빠른 평형을 이룬다. CNS 억제, 진정, 운동실조, 경련 등의 CNS 부작용이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression",
+          "thrombocytopenia",
+          "leukopenia",
+          "platelet nadir"
+        ],
+        "index": 1,
+        "evidence": "골수억제(혈소판감소증, 백혈구감소증)가 주요 부작용으로 보고됨. 혈소판 최저점은 약 3~4주에 발생."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "70% urinary excretion",
+          "renal metabolism"
+        ],
+        "index": 1,
+        "evidence": "신장에서 대사되며 대사산물의 약 70%가 소변으로 배설됨. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic metabolism",
+          "hepatic impairment caution"
+        ],
+        "index": 1,
+        "evidence": "간독성이 부작용으로 보고됨. 간에서 거의 완전히 대사되며, 간기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiotoxicity"
+        ],
+        "index": -1,
+        "evidence": "사람에서 심장독성이 보고된 바 있으나, 개에서의 직접적인 근거는 제한적임."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "CNS depression",
+          "enters CNS",
+          "CSF equilibration"
+        ],
+        "index": 1,
+        "evidence": "프로카르바진은 CNS에 진입하며 CSF와 혈장 간 빠른 평형을 이룬다. 고양이에서의 직접적 CNS 부작용 데이터는 제한적이나 사람 데이터 기반으로 위험 존재."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "myelosuppression",
+          "thrombocytopenia",
+          "leukopenia"
+        ],
+        "index": 1,
+        "evidence": "골수억제(혈소판감소증, 백혈구감소증)가 주요 부작용으로 보고됨. 고양이에서도 동일한 모니터링 필요."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "70% urinary excretion",
+          "renal metabolism"
+        ],
+        "index": 1,
+        "evidence": "신장에서 대사되며 대사산물의 약 70%가 소변으로 배설됨. 신기능 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic metabolism",
+          "hepatic impairment caution"
+        ],
+        "index": 1,
+        "evidence": "간독성이 부작용으로 보고됨. 간에서 거의 완전히 대사되며, 간기능 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiotoxicity"
+        ],
+        "index": -1,
+        "evidence": "사람에서 심장독성이 보고된 바 있으나, 고양이에서의 직접적인 근거는 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "human"
+    },
+    "f_percent": 100,
+    "protein_binding_percent": null,
+    "evidence": "사람에서 경구 투여 후 완전 흡수(생체이용률 100%). 혈장 최고 농도 약 1시간, CSF 최고 농도 약 30~90분. 개/고양이 특이적 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. MAOI 활성을 가진 약물과의 상호작용은 중증도 3으로 분류.",
+  "drug_interactions": [
+    {
+      "drug": "Antidepressants (amitriptyline, clomipramine, fluoxetine)",
+      "severity": 3,
+      "keywords": [
+        "MAOI activity",
+        "serotonin syndrome",
+        "concurrent use contraindicated"
+      ],
+      "evidence": "Procarbazine exhibits MAOI activity. Concurrent use with antidepressants is contraindicated due to risk of serious adverse reactions including serotonin syndrome."
+    },
+    {
+      "drug": "CNS Depressant Drugs (barbiturates, opiates, antihistamines, phenothiazines)",
+      "severity": 3,
+      "keywords": [
+        "CNS depression",
+        "coma",
+        "death",
+        "additive CNS depression"
+      ],
+      "evidence": "Procarbazine can cause CNS depression; coma and death have been reported when used with opiates. Use with extreme caution."
+    },
+    {
+      "drug": "Ethanol",
+      "severity": 2,
+      "keywords": [
+        "nausea",
+        "vomiting",
+        "disulfiram-like reaction"
+      ],
+      "evidence": "Concurrent use with ethanol may cause severe nausea and vomiting."
+    },
+    {
+      "drug": "Foods and Supplements With High Tyramine Content (aged cheese, yogurt, pepperoni, ginseng)",
+      "severity": 3,
+      "keywords": [
+        "MAOI activity",
+        "hypertensive crisis",
+        "tyramine"
+      ],
+      "evidence": "Procarbazine exhibits MAOI activity; serious hypertension may result from tyramine-containing foods/supplements."
+    },
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 2,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow depression"
+      ],
+      "evidence": "Concurrent use with other bone marrow depressant medications may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Sympathomimetics (phenylpropanolamine)",
+      "severity": 3,
+      "keywords": [
+        "MAOI activity",
+        "hypertensive crisis",
+        "sympathomimetic"
+      ],
+      "evidence": "Procarbazine exhibits MAOI activity; serious hypertension may result when used with sympathomimetics."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "diminished vaccine efficacy",
+        "enhanced adverse effects",
+        "immunosuppression"
+      ],
+      "evidence": "Procarbazine may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    },
+    {
+      "drug": "Radiation therapy",
+      "severity": 2,
+      "keywords": [
+        "additive myelosuppression"
+      ],
+      "evidence": "Additive myelosuppression may occur in patients undergoing concomitant radiation therapy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "moderate",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "림프종 (1차 T세포 림프종 또는 구제 요법) - MOPP, MPP, LOPP, LPP, BOPP 프로토콜의 일부",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 주기의 첫 14일간 투여. 단위는 mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. 용량은 50 mg/m² PO 매일. 다른 항암제와 병용 프로토콜의 일부로 사용."
+        },
+        {
+          "logic_type": "tiered",
+          "context": "육아종성 뇌수막염(GME) - 프레드니손과 병용",
+          "value": "25 - 50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "첫 1개월 후 격일 투여로 감량 시도. 단위는 mg/m² (NOT mg/kg)",
+          "evidence": "오프라벨. 용량은 25~50 mg/m² PO 1일 1회, 초기에는 프레드니손과 병용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "림프종 구제 요법 - MOPP 프로토콜의 일부",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "치료 주기의 첫 14일간 투여. 단위는 mg/m² (NOT mg/kg). 격일 투여도 가능.",
+          "evidence": "오프라벨. 용량은 50 mg/m² PO 매일 또는 격일. 다른 항암제와 병용 프로토콜의 일부로 사용."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "림프종 구제 요법 - 고정 용량",
+          "value": "10",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "고정 용량 10 mg/마리 (mg/m² 또는 mg/kg 아님). 치료 주기의 첫 14일간.",
+          "evidence": "오프라벨. 10 mg/cat PO 1일 1회로도 보고됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 주의 사용 권고. 구체적인 용량 조절 기준은 명시되지 않음. 대사산물의 약 70%가 소변으로 배설되므로 신기능 저하 시 축적 위험 있음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간기능 장애 환자에서 주의 사용 권고. 프로카르바진은 간에서 거의 완전히 대사되므로 간기능 저하 시 노출 증가 가능. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "약물 과민반응",
+      "match_terms": [
+        "hypersensitivity",
+        "drug allergy",
+        "procarbazine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "골수억제",
+      "match_terms": [
+        "myelosuppression",
+        "bone marrow suppression",
+        "leukopenia",
+        "thrombocytopenia"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": 100.0,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "백혈구감소증",
+      "match_terms": [
+        "leukopenia",
+        "neutropenia",
+        "WBC low"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "wbc",
+        "threshold": 4.0,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "간기능 장애",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal impairment",
+        "kidney disease",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비전형적 알킬화제. 정확한 작용 기전은 완전히 밝혀지지 않았으나, 단백질, RNA, DNA 합성을 억제하는 것으로 알려져 있다. 자동산화되어 과산화수소를 생성하며, 이는 DNA를 직접 손상시킬 수 있다. 또한 MAO 억제 활성을 가진다.",
+    "common_extra_effects": [
+      "골수억제 (혈소판감소증, 백혈구감소증)",
+      "구역, 구토",
+      "설사, 급성 출혈성 설사 증후군",
+      "간독성",
+      "탈모",
+      "CNS 억제/진정",
+      "말초 신경병증",
+      "기형 유발 가능성",
+      "이차 암 발생 위험 (장기)"
+    ],
+    "dog_mechanism": "사람과 동일한 기전으로 작용하는 것으로 추정. 개에서의 특이적 기전 데이터는 없음.",
+    "dog_extra_effects": [
+      "구역, 구토",
+      "간독성",
+      "골수억제 (혈소판감소증, 백혈구감소증) - 혈소판 최저점 약 3~4주",
+      "털 코트 변화 (거칠어짐, 광택 소실)",
+      "지속적으로 자라는 털을 가진 품종(푸들, 테리어, 아프간 하운드, 올드 잉글리시 쉽독)에서 심한 탈모 가능"
+    ],
+    "cat_mechanism": "사람과 동일한 기전으로 작용하는 것으로 추정. 고양이에서의 특이적 기전 데이터는 없음.",
+    "cat_extra_effects": [
+      "구역, 구토",
+      "식욕부진 (격일 투여 또는 항구토제/식욕촉진제 병용으로 완화 가능)",
+      "골수억제",
+      "출혈성 위염"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 프로카르바진은 림프종(MOPP, MPP, LOPP, LPP, BOPP 프로토콜)과 육아종성 뇌수막염(GME) 치료에 오프라벨로 사용된다. 용량은 mg/m²로 계산하며 mg/kg이 아님에 주의. GME 치료 시 첫 1개월 후 격일 투여로 감량을 시도한다. 독성 모니터링을 위해 기저치 및 주간 CBC(특히 혈소판 수)와 간/신장 화학 패널이 필요하다.",
+    "cat": "고양이에서 프로카르바진은 림프종 구제 요법(MOPP 프로토콜)에 오프라벨로 사용된다. 용량은 50 mg/m² PO 매일 또는 격일, 또는 10 mg/마리 PO 1일 1회로 보고된다. 심한 식욕부진 완화를 위해 격일 투여 또는 항구토제/식욕촉진제 병용을 고려할 수 있다. 수유 중인 경우 모유 대신 대용유 사용을 권장한다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "간기능 및 신기능 장애 환자에서 주의 사용. 기존 골수억제 또는 동시 감염이 있는 경우 위험-이익을 신중히 평가. CNS 억제제와 병용 시 극도의 주의 필요. NIOSH 위험 약물로 분류되어 취급 시 적절한 PPE 사용 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "간기능 및 신기능 장애 환자에서 주의 사용. 심한 식욕부진 발생 시 격일 투여 또는 항구토제/식욕촉진제 병용 고려. 수유 중인 경우 대용유 사용 권장. NIOSH 위험 약물로 분류되어 취급 시 적절한 PPE 사용 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 빛을 차단하여 20°C~25°C(68°F~77°F)에서 보관.",
+    "forms": [
+      "Procarbazine HCl 캡슐 50 mg (Matulane®)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "프로카르바진은 비전형적 알킬화제로, 개와 고양이의 림프종 다제 병용 프로토콜(MOPP, MPP, LOPP, LPP, BOPP) 및 개의 육아종성 뇌수막염(GME) 치료에 오프라벨로 사용된다. CNS에 진입하며 MAO 억제 활성을 가진다. 주요 독성으로 골수억제, 간독성, GI 독성이 있다. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용이 필수적이다. 용량은 반드시 mg/m²로 계산해야 하며 mg/kg이 아님에 주의한다.",
+    "indications": "【허가 적응증】없음 (수의학적 허가 제품 없음)\n【오프라벨 적응증】\n- 개: 림프종(T세포 림프종 1차 치료 또는 구제 요법) - MOPP, MPP, LOPP, LPP, BOPP 프로토콜의 일부; 육아종성 뇌수막염(GME)\n- 고양이: 림프종 구제 요법 - MOPP 프로토콜의 일부",
+    "client_info": "프로카르바진은 항암(항종양) 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다.\n\n【취급 주의사항】\n- 프로카르바진을 취급하고 투여할 때는 반드시 장갑을 착용하세요.\n- 약물 투여 당일과 이후 약 72시간 동안, 소변, 대변, 구토물 등 모든 체액을 처리할 때 일회용 장갑을 착용하세요.\n- 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리세요.\n\n【부작용 모니터링】\n- 위장관 독성(궤양, 설사)이 발생할 수 있습니다. 설사가 심하거나 지속되면 수의사에게 연락하세요.\n- 골수 억제로 인해 감염 위험이 증가할 수 있습니다. 치료 후 수 주 내에 골수에 가장 큰 영향이 나타납니다. 혈액 검사를 위한 정기 방문을 빠지지 마세요.\n- 출혈, 멍, 발열(감염 징후)이 보이거나 동물이 쉽게 피로해하면 즉시 수의사에게 연락하세요.\n- 신경 독성으로 인한 무감각, 저림, 파행이 나타날 수 있습니다. 이러한 증상이 의심되면 수의사에게 알리세요.\n- 이 약물은 NIOSH에서 위험 약물로 분류합니다. 취급 시 개인 보호 장비(PPE) 사용에 대해 수의사 또는 약사와 상담하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Half-life data",
+      "Specific renal/hepatic dose adjustment thresholds",
+      "Genetic sensitivity data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days",
+      "metabolism_and_clearance.extra_information"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/21.jsonl",
+    "extracted_at": "2026-03-10T19:45:33.395666+00:00",
+    "reviewer": null
+  }
+}

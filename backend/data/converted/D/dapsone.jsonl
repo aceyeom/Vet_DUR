@@ -1,0 +1,482 @@
+{
+  "id": "dapsone",
+  "drug_identity": {
+    "name_ko": "답손",
+    "name_en": "Dapsone",
+    "active_ingredient": "Dapsone",
+    "brand_names": [
+      "Avlosulfone",
+      "Daps",
+      "Dapsoderm-X",
+      "Dopsan",
+      "Novasulfone",
+      "Servidapsone",
+      "Sulfona"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Antibiotic",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 허가된 제품 없음. 피부 혈관염, 갈색 은둔 거미 교상, Pneumocystis 감염 등에 오프라벨로 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Topical"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "신장을 통해 결합체 및 미확인 대사산물로 주로 배설됨. 모노아세틸 대사산물이 주요 대사체이며, 개에서는 혈장 단백질에 약 60% 결합(인간에서는 거의 완전 결합)."
+    },
+    "extra_information": "개에서 경구 투여 후 빠르고 완전하게 흡수됨. 반감기는 약 6~10시간. 모노아세틸 대사산물은 개에서 약 60% 단백 결합(인간에서는 거의 완전 결합). 인간에서 반감기는 10~50시간으로 매우 가변적."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 PK 데이터 일부 존재; 고양이는 독성 경고만 존재. 간독성, 혈액독성, 신장 배설이 주요 부담 요인.",
+    "dog": {
+      "brain": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "neuropathy",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "신경병증(neuropathy)이 이상반응으로 보고됨. 과다복용 시 발작 및 우울증 가능."
+      },
+      "blood": {
+        "calculated_score": 80,
+        "triggered_keywords": [
+          "methemoglobinemia",
+          "hemolytic anemia",
+          "thrombocytopenia",
+          "neutropenia",
+          "bleeding diathesis",
+          "platelet destruction"
+        ],
+        "index": 0,
+        "evidence": "용량 의존적 메트헤모글로빈혈증, 용혈성 빈혈, 혈소판감소증, 호중구감소증 보고. 개에서 혈소판 및 거핵세포 파괴로 인한 치명적 출혈 소인 사례 보고."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "renal excretion",
+          "conjugates",
+          "metabolites"
+        ],
+        "index": 2,
+        "evidence": "주요 배설 경로가 신장이며 결합체 및 대사산물로 배설됨. 신장 부담 중등도."
+      },
+      "liver": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "hepatotoxicity",
+          "hepatic dysfunction",
+          "liver chemistry"
+        ],
+        "index": 1,
+        "evidence": "간독성이 주요 이상반응으로 명시됨. 기존 간기능 장애 환자에서 주의 사용 권고. 정기적 간 화학 검사 모니터링 필요."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적 언급 없음. 메트헤모글로빈혈증으로 인한 간접적 심혈관 영향 가능성."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "neurotoxicity"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 신경독성 발생률 증가로 인해 사용 비권장."
+      },
+      "blood": {
+        "calculated_score": 85,
+        "triggered_keywords": [
+          "hemolytic anemia",
+          "neurotoxicity",
+          "severe adverse effects"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 용혈성 빈혈 발생률 증가로 인해 사용 비권장. 심각한 이상반응으로 고양이에서 일반적으로 금기."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "renal excretion"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신장 데이터 없음. 신장 배설 경로에 근거한 추정."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 간독성 데이터 없음. 개/인간 데이터에서 간독성 위험 외삽."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 6.0,
+      "max": 10.0,
+      "mean": 8.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 60,
+    "evidence": "개에서 경구 투여 후 빠르고 완전하게 흡수됨. 반감기 6~10시간(개), 10~50시간(인간). 모노아세틸 대사산물의 단백 결합률 약 60%(개)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Clofazimine",
+      "severity": 1,
+      "keywords": [
+        "anti-inflammatory reduction"
+      ],
+      "evidence": "Weak evidence suggests dapsone may reduce the anti-inflammatory effects of clofazimine; clinical significance unclear."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "hematologic toxicity",
+        "bone marrow suppression"
+      ],
+      "evidence": "May increase risk for hematologic reactions occurring with dapsone."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "reduced renal excretion",
+        "increased drug levels"
+      ],
+      "evidence": "May decrease the renal excretion of active metabolites of dapsone, potentially increasing toxicity."
+    },
+    {
+      "drug": "Pyrimethamine",
+      "severity": 2,
+      "keywords": [
+        "hematologic toxicity",
+        "bone marrow suppression"
+      ],
+      "evidence": "May increase risk for hematologic reactions occurring with dapsone."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased plasma concentration",
+        "enzyme induction"
+      ],
+      "evidence": "May decrease plasma dapsone concentrations 7- to 10-fold, potentially reducing efficacy."
+    },
+    {
+      "drug": "Trimethoprim",
+      "severity": 2,
+      "keywords": [
+        "increased plasma concentration",
+        "mutual toxicity"
+      ],
+      "evidence": "May increase plasma concentrations of both drugs and potentially increase each other's toxicity."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "Dapsone may increase anticoagulant effects of warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "high",
+    "gi_ulcer": "low",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 1.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "피부 혈관염 등 피부 질환에 대한 면역조절제 (오프라벨)",
+          "value": "1 - 1.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "관해 후 최저 유효 투여 빈도(예: 1일 1회)로 감량",
+          "evidence": "오프라벨. 피부 혈관염에 대한 근거는 상대적으로 약함. 다른 면역조절제(예: prednis(ol)one)와 병용 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "갈색 은둔 거미(Loxosceles spp) 교상 보조 치료 (오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": "10~14일",
+          "evidence": "오프라벨. 갈색 은둔 거미 교상 보조 치료."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신장이 주요 배설 경로이나 모노그래프에 구체적인 신장 용량 조절 지침이 명시되어 있지 않음. 신장 기능 저하 환자에서 주의 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간기능 장애 환자에서 주의하여 사용하도록 명시됨. 구체적인 용량 조절 지침은 제시되지 않음. 기저치 및 정기적 간 화학 검사 모니터링 권고."
+  },
+  "contraindications": [
+    {
+      "condition": "답손 또는 다른 설폰 약물에 대한 과민반응",
+      "match_terms": [
+        "sulfone hypersensitivity",
+        "dapsone allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 빈혈 또는 기존 혈액 이상",
+      "match_terms": [
+        "severe anemia",
+        "blood dyscrasia",
+        "aplastic anemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "기존 간기능 장애",
+      "match_terms": [
+        "hepatic dysfunction",
+        "liver disease",
+        "hepatitis"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "고양이 (모든 고양이)",
+      "match_terms": [
+        "cat",
+        "feline"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신 중인 동물",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 유전적 감수성 또는 품종 특이적 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "디하이드로엽산 합성 억제(파라-아미노벤조에이트와 디하이드로프테로에이트 합성효소 활성 부위 경쟁). 호중구 화학주성, 보체 활성화, 항체 생산, 리소좀 효소 합성 감소.",
+    "common_extra_effects": [
+      "간독성",
+      "용량 의존적 메트헤모글로빈혈증",
+      "용혈성 빈혈",
+      "혈소판감소증",
+      "호중구감소증",
+      "위장관 이상반응",
+      "신경병증",
+      "피부 약물 발진",
+      "광과민성",
+      "잠재적 발암성"
+    ],
+    "dog_mechanism": "개에서 경구 투여 후 빠르고 완전하게 흡수. 반감기 6~10시간. 모노아세틸 대사산물의 단백 결합률 약 60%.",
+    "dog_extra_effects": [
+      "혈소판 및 거핵세포 파괴로 인한 치명적 출혈 소인 (사례 보고)",
+      "메트헤모글로빈혈증",
+      "용혈성 빈혈",
+      "간독성"
+    ],
+    "cat_mechanism": "고양이에서 신경독성 및 용혈성 빈혈 발생률 증가로 인해 사용 비권장.",
+    "cat_extra_effects": [
+      "신경독성",
+      "용혈성 빈혈",
+      "심각한 이상반응"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 오프라벨로 피부 혈관염(1~1.1 mg/kg PO q8h) 및 갈색 은둔 거미 교상(1 mg/kg PO TID, 10~14일) 치료에 사용됨. 치료 첫 4개월간 2~3주마다 CBC 및 혈소판 수 모니터링 필요. 간 화학 검사 정기 모니터링 권고. 심각한 독성 가능성이 있으므로 주의 깊은 모니터링 필수.",
+    "cat": "고양이에서는 신경독성 및 용혈성 빈혈 발생률 증가로 인해 일반적으로 사용이 권장되지 않음. 고양이에서의 사용은 금기로 간주됨."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "심각한 이상반응(간독성, 혈액독성, 신경병증) 가능성으로 주의 필요. 기저치 및 정기적 CBC, 혈소판, 간 화학 검사 모니터링 필수. 광과민성 주의."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "신경독성 및 용혈성 빈혈 발생률 증가로 인해 고양이에서 사용 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20~25°C, 68~77°F)에서 보관. 컴파운딩 액제(2 mg/mL, Ora-Plus:Ora-Sweet 1:1)는 냉장 또는 실온에서 90일간 안정.",
+    "forms": [
+      "경구 정제 25 mg (scored)",
+      "경구 정제 100 mg (scored)",
+      "국소 겔 제형 (인간용)",
+      "컴파운딩 액제 2 mg/mL (Ora-Plus:Ora-Sweet 1:1)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "답손은 피부 혈관염, 갈색 은둔 거미 교상, Pneumocystis 감염 등에 오프라벨로 사용될 수 있으나, 심각한 이상반응(간독성, 메트헤모글로빈혈증, 용혈성 빈혈, 혈소판감소증, 신경병증) 가능성으로 수의학에서 드물게 사용됨. 고양이에서는 금기. WHO 지정 인간 의학에서 매우 중요한 항균제.",
+    "indications": "【오프라벨】개: 피부 혈관염(면역조절), 갈색 은둔 거미 교상 보조 치료. 말(foal): Pneumocystis jiroveci 폐렴. 수의학 허가 제품 없음.",
+    "client_info": "이 약은 동물에서 사용 경험이 제한적이며 심각한 독성이 발생할 수 있습니다. 치료 중 구토, 설사, 피부 발진, 신경 이상 증상이 나타나면 즉시 수의사에게 연락하십시오. 광과민성이 발생할 수 있으므로 햇빛에 피부가 장시간 노출되지 않도록 주의하십시오. 정기적인 혈액 검사 및 간 기능 검사가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 58,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment guidelines",
+      "Oral bioavailability percentage",
+      "Time to peak plasma concentration (Tmax)",
+      "Onset of action",
+      "CYP enzyme profile",
+      "Cat-specific dosing"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "dosage_and_kinetics.cat.dosage_list"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/38.jsonl",
+    "extracted_at": "2026-03-11T00:54:30.370209+00:00",
+    "reviewer": null
+  }
+}

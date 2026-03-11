@@ -1,0 +1,792 @@
+{
+  "id": "cimetidine",
+  "drug_identity": {
+    "name_ko": "시메티딘",
+    "name_en": "Cimetidine",
+    "active_ingredient": "Cimetidine",
+    "brand_names": [
+      "Tagamet"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 승인된 제품 없음. 모든 동물 적용은 오프라벨 사용임. 인체용 제품(Tagamet® 등)을 사용.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 200,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg"
+      },
+      {
+        "value": 800,
+        "unit": "mg"
+      },
+      {
+        "value": 60,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.48,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [
+        "CYP450"
+      ],
+      "inducers": [],
+      "pathway_evidence": "시메티딘은 간 마이크로솜 CYP450 효소계를 억제하여 다수 약물의 대사를 감소시키고 혈중 반감기를 연장시킨다. 또한 간 혈류를 감소시켜 초회통과효과가 큰 약물의 간 추출을 줄인다."
+    },
+    "extra_information": "개: 경구 생체이용률 약 75~95%; 음식이 생체이용률을 유의하게 감소시킬 수 있음. 혈청 반감기 1.3~1.6시간, 분포용적 1.2 L/kg. 고양이에 대한 별도의 PK 데이터는 모노그래프에 기재되지 않음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 및 고양이 특이적 수의학 PK 데이터가 제한적이므로 인체 데이터 및 부작용 기술을 참고함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS effects",
+          "confusion",
+          "mental confusion"
+        ],
+        "index": 1,
+        "evidence": "인체에서 정신 혼란 등 CNS 부작용이 보고됨. 노령 동물 및 신·간 기능 저하 환자에서 위험 증가."
+      },
+      "blood": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "agranulocytosis",
+          "leukopenia",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "드물게 무과립구증 보고; 골수억제제와 병용 시 백혈구감소증 악화 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "creatinine increase",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "신장으로 주로 배설(경구 48%, 비경구 75%). 초기 치료 시 혈청 크레아티닌 소폭 상승 가능. 신기능 저하 시 반감기 연장."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "increased ALT",
+          "increased AST",
+          "CYP450 inhibition",
+          "hepatic blood flow"
+        ],
+        "index": 4,
+        "evidence": "간에서 대사되며 ALT, AST 상승 보고. CYP450 억제 및 간 혈류 감소로 다약제 상호작용 유발."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "cardiac arrhythmias",
+          "tachycardia"
+        ],
+        "index": 5,
+        "evidence": "급속 IV 투여 시 일시적 심부정맥 가능. 과량 투여 시 빈맥 보고."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS effects",
+          "confusion"
+        ],
+        "index": 1,
+        "evidence": "인체 데이터 기반. 고양이 특이적 CNS 데이터 없음. 노령 또는 신·간 기능 저하 고양이에서 주의 필요."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "methemoglobinemia",
+          "agranulocytosis"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 아세트아미노펜 독성 보조치료 시 메트헤모글로빈혈증 위험 증가 보고. 드물게 무과립구증 가능."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "renal elimination",
+          "creatinine increase",
+          "renal insufficiency"
+        ],
+        "index": 3,
+        "evidence": "신장 배설 경로 동일. 신기능 저하 고양이에서 반감기 연장 및 독성 위험 증가 가능."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "increased ALT",
+          "increased AST",
+          "CYP450 inhibition"
+        ],
+        "index": 4,
+        "evidence": "간 대사 및 CYP450 억제. 간기능 저하 고양이에서 용량 조절 필요."
+      },
+      "heart": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cardiac arrhythmias"
+        ],
+        "index": 5,
+        "evidence": "급속 IV 투여 시 일시적 심부정맥 가능. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 1.3,
+      "max": 1.6,
+      "mean": 1.45,
+      "species": "dog"
+    },
+    "f_percent": 85,
+    "protein_binding_percent": 18,
+    "evidence": "개: 경구 생체이용률 75~95%(평균 약 85%), 반감기 1.3~1.6시간, 분포용적 1.2 L/kg. 인체: 단백결합 15~20%, 평균 반감기 약 2시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1. 시메티딘은 CYP450 억제를 통해 다수 약물의 대사를 감소시킴.",
+  "drug_interactions": [
+    {
+      "drug": "Antacids (aluminum- and/or magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "decreased absorption",
+        "stagger doses"
+      ],
+      "evidence": "Antacids may decrease cimetidine absorption; separate doses by at least 2 hours if possible."
+    },
+    {
+      "drug": "Cefpodoxime",
+      "severity": 2,
+      "keywords": [
+        "decreased antibacterial efficacy"
+      ],
+      "evidence": "Concurrent use may decrease antibacterial efficacy of cefpodoxime."
+    },
+    {
+      "drug": "Cefuroxime",
+      "severity": 2,
+      "keywords": [
+        "decreased antibacterial efficacy"
+      ],
+      "evidence": "Concurrent use may decrease antibacterial efficacy of cefuroxime."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy",
+        "impaired activation"
+      ],
+      "evidence": "Concurrent use may result in decreased clopidogrel efficacy due to impaired metabolism to its active form; clinical significance unclear."
+    },
+    {
+      "drug": "Iron Preparations, Oral (e.g., ferrous sulfate)",
+      "severity": 1,
+      "keywords": [
+        "decreased iron absorption"
+      ],
+      "evidence": "Cimetidine may decrease oral iron absorption."
+    },
+    {
+      "drug": "Itraconazole",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Cimetidine may decrease itraconazole absorption; administer itraconazole at least 2 hours before cimetidine."
+    },
+    {
+      "drug": "Ketoconazole",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption"
+      ],
+      "evidence": "Cimetidine may decrease ketoconazole absorption; administer ketoconazole at least 2 hours before cimetidine."
+    },
+    {
+      "drug": "Myelosuppressive Drugs",
+      "severity": 2,
+      "keywords": [
+        "leukopenia",
+        "myelosuppression"
+      ],
+      "evidence": "Cimetidine may exacerbate leukopenias when used with myelosuppressive agents."
+    },
+    {
+      "drug": "Tolazoline",
+      "severity": 2,
+      "keywords": [
+        "decreased efficacy"
+      ],
+      "evidence": "Concurrent use may result in decreased tolazoline efficacy."
+    },
+    {
+      "drug": "Benzodiazepines (e.g., alprazolam, diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing benzodiazepine metabolism and increasing serum concentrations."
+    },
+    {
+      "drug": "Beta-Blockers (e.g., atenolol, carvedilol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing beta-blocker metabolism and increasing serum concentrations."
+    },
+    {
+      "drug": "Calcium Channel Blockers (e.g., diltiazem, verapamil)",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing metabolism of diltiazem and verapamil (not amlodipine)."
+    },
+    {
+      "drug": "Carbamazepine",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing carbamazepine metabolism."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing chloramphenicol metabolism."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing cisapride metabolism."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 1,
+      "keywords": [
+        "CYP450 inhibition",
+        "species-specific"
+      ],
+      "evidence": "No overall interaction effect found in dogs, but interaction may apply to other species."
+    },
+    {
+      "drug": "Domperidone",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing domperidone metabolism."
+    },
+    {
+      "drug": "Doxepin",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing doxepin metabolism."
+    },
+    {
+      "drug": "Epirubicin",
+      "severity": 3,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased toxicity",
+        "avoid combination"
+      ],
+      "evidence": "Cimetidine inhibits epirubicin metabolism; combination should be avoided due to increased toxicity risk."
+    },
+    {
+      "drug": "Fluorouracil",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing fluorouracil metabolism."
+    },
+    {
+      "drug": "Glipizide/Glyburide",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing glipizide/glyburide metabolism."
+    },
+    {
+      "drug": "Lidocaine",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing lidocaine metabolism."
+    },
+    {
+      "drug": "Loratadine",
+      "severity": 1,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing loratadine metabolism."
+    },
+    {
+      "drug": "Metformin",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing metformin metabolism."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing metronidazole metabolism."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing mirtazapine metabolism."
+    },
+    {
+      "drug": "Opioids (e.g., alfentanil, fentanyl, hydrocodone)",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing opioid metabolism and increasing serum concentrations."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing pentoxifylline metabolism."
+    },
+    {
+      "drug": "Praziquantel",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing praziquantel metabolism."
+    },
+    {
+      "drug": "Procainamide",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing procainamide metabolism."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing quinidine metabolism."
+    },
+    {
+      "drug": "Sildenafil",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing sildenafil metabolism."
+    },
+    {
+      "drug": "Selective Serotonin Reuptake Inhibitors (SSRIs; e.g., fluoxetine, sertraline)",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing SSRI metabolism and increasing serum concentrations."
+    },
+    {
+      "drug": "Tamsulosin",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing tamsulosin metabolism."
+    },
+    {
+      "drug": "Theophylline",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration",
+        "prolonged half-life"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing theophylline metabolism and increasing serum concentrations."
+    },
+    {
+      "drug": "Terbinafine",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing terbinafine metabolism."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased bioavailability"
+      ],
+      "evidence": "Cimetidine increases tramadol bioavailability."
+    },
+    {
+      "drug": "Triamterene",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing triamterene metabolism."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (TCAs; e.g., amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased serum concentration"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing TCA metabolism and increasing serum concentrations."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "CYP450 inhibition",
+        "increased anticoagulant effect",
+        "bleeding risk"
+      ],
+      "evidence": "Cimetidine inhibits hepatic microsomal enzymes, reducing warfarin metabolism and increasing anticoagulant effect."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "식도염, 위염, 궤양 질환 (오프라벨)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 5–10 mg/kg PO every 6 to 8 hours (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "식도염, 위염, 궤양 질환 (오프라벨)",
+          "value": "5 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": null,
+          "evidence": "Plumb's: 5–10 mg/kg PO every 6 to 8 hours (extra-label). 고양이에서 아세트아미노펜 독성 보조치료 목적 사용은 메트헤모글로빈혈증 위험으로 금기로 간주될 수 있음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량이 필요할 수 있음. 인체에서 신부전 시 반감기 연장 및 CNS 부작용(혼란) 위험 증가 보고. 구체적 역치 및 조정 계수는 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 저하 환자에서 용량 감량이 필요할 수 있음. 인체에서 간질환 시 반감기 연장 및 CNS 부작용 위험 증가 보고. 구체적 조정 기준은 모노그래프에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "시메티딘 과민증",
+      "match_terms": [
+        "hypersensitivity to cimetidine",
+        "cimetidine allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "renal failure",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간기능 저하",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver disease",
+        "hepatic failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "노령 환자",
+      "match_terms": [
+        "geriatric",
+        "elderly",
+        "senior"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 아세트아미노펜 독성 보조치료",
+      "match_terms": [
+        "acetaminophen toxicity cat",
+        "paracetamol toxicity cat"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "위벽세포의 H2 수용체에서 히스타민을 경쟁적으로 억제하여 기저 상태 및 음식, 펜타가스트린, 히스타민, 인슐린에 의해 자극된 위산 분비를 감소시킴. 또한 펩신 분비를 감소시키고, 면역조절 효과(억제 T세포 매개 면역억제 역전) 및 약한 항안드로겐 활성을 가짐.",
+    "common_extra_effects": [
+      "정신 혼란(CNS 효과)",
+      "두통(약물 중단 시)",
+      "ALT, AST 상승",
+      "췌장염",
+      "여성형 유방(gynecomastia)",
+      "근육통(myalgia)",
+      "관절통(arthralgia)",
+      "무과립구증(드물게)",
+      "일시적 심부정맥(급속 IV 투여 시)",
+      "주사 부위 통증(IM 투여 시)"
+    ],
+    "dog_mechanism": "H2 수용체 길항을 통한 위산 분비 억제. 면역조절 효과(억제 T세포 매개 면역억제 역전)가 개에서 연구됨.",
+    "dog_extra_effects": [
+      "동물에서 부작용은 일반 용량에서 매우 드문 것으로 보고됨"
+    ],
+    "cat_mechanism": "H2 수용체 길항을 통한 위산 분비 억제.",
+    "cat_extra_effects": [
+      "아세트아미노펜 독성 보조치료 시 메트헤모글로빈혈증 위험 증가"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 경구 생체이용률은 약 75~95%이며 음식이 흡수를 유의하게 감소시킬 수 있음. 반감기 1.3~1.6시간으로 짧아 하루 3~4회 투여가 필요함. 면역조절 목적으로도 연구된 바 있음. 더 효과적이고 투여 빈도가 낮은 신세대 H2 차단제(라니티딘, 파모티딘) 또는 프로톤펌프억제제(오메프라졸)가 선호됨. CYP450 억제로 인한 다약제 상호작용에 주의 필요.",
+    "cat": "고양이에서 아세트아미노펜 독성의 보조치료 목적으로 과거 사용되었으나, 메트헤모글로빈혈증 위험을 증가시킬 수 있어 현재는 금기로 간주됨. 일반적인 위산 억제 목적으로는 신세대 H2 차단제 또는 프로톤펌프억제제가 선호됨. 고양이 특이적 PK 데이터는 모노그래프에 기재되지 않음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 또는 간기능 저하 개, 노령견에서 주의 사용. CNS 부작용(혼란) 위험 증가 가능. 다수의 약물 상호작용 가능성으로 병용약물 검토 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "아세트아미노펜 독성 보조치료 목적 사용은 금기. 신기능 또는 간기능 저하 고양이에서 주의 사용. 고양이 특이적 안전성 데이터 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하고 밀폐 용기에 보관. 실온(20~25°C, 68~77°F) 유지. 조제 경구 현탁액은 4°C(39°F)에서 냉장 보관 시 17일간 90% 이상 역가 유지.",
+    "forms": [
+      "경구 정제: 200 mg, 300 mg, 400 mg, 800 mg",
+      "경구 용액: 300 mg/5 mL (60 mg/mL)",
+      "조제 경구 현탁액: 60 mg/mL (300 mg 정제로부터 조제 가능)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "시메티딘은 원형 H2 수용체 길항제로 위산 분비를 억제하나, 더 효과적이고 투여 빈도가 낮으며 약물 상호작용이 적은 신세대 H2 차단제(라니티딘, 파모티딘) 및 프로톤펌프억제제(오메프라졸)에 의해 대체되고 있음. 수의학에서 공식 승인된 제품 없음(오프라벨 사용). 개에서 반감기가 짧아(1.3~1.6시간) 하루 3~4회 투여 필요. CYP450 억제를 통한 다수의 약물 상호작용 주의 필요. 고양이에서 아세트아미노펜 독성 보조치료 목적 사용은 메트헤모글로빈혈증 위험으로 금기.",
+    "indications": "위궤양, 십이지장궤양, 요독성 위염, 스트레스성/약물 유발 미란성 위염, 식도염, 위식도역류, 가스트린종 및 전신 비만세포증 관련 과분비 상태의 치료 및 예방(모두 오프라벨). 개에서 면역조절 목적으로도 연구됨(오프라벨).",
+    "client_info": "이 약은 위산을 줄이고 위궤양을 치료하거나 예방하는 데 사용됩니다. 하루 2~4회 투여가 필요하며, 용량을 빠뜨리면 증상이 재발할 수 있습니다. 시메티딘은 매우 많은 다른 약물과 상호작용할 수 있으므로, 수의사의 승인 없이 새로운 약을 함께 투여하지 마십시오. 이 약은 처방전 없이 구입할 수 있지만(OTC), 반드시 수의사의 권고에 따라서만 동물에게 투여하십시오. 고양이에서 타이레놀(아세트아미노펜) 중독 치료에는 사용하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat-specific pharmacokinetics",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme subtype specificity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (cat-specific)",
+      "timing_profile.f_percent (cat-specific)",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors (specific CYP subtypes)",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction (cat-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/25.jsonl",
+    "extracted_at": "2026-03-10T20:50:57.414386+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,478 @@
+{
+  "id": "aminocaproic_acid",
+  "drug_identity": {
+    "name_ko": "아미노카프로산",
+    "name_en": "Aminocaproic Acid",
+    "active_ingredient": "Aminocaproic Acid",
+    "brand_names": [
+      "Amicar",
+      "Acepramin",
+      "Capracid",
+      "Capramol",
+      "Caproamin",
+      "Caprolisin",
+      "Epsicaprom",
+      "Hemocaprol",
+      "Hemocid",
+      "Hexalense",
+      "Ipsilon"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 승인된 제품 없음. 인체용 제품을 개 및 말에서 적응증 외(extra-label)로 사용함.",
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 1000,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 1.0,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체에서 주로 신장을 통해 미변화체로 배설됨. 혈장 단백 결합 없음. 심한 신기능 장애 시 청소율이 현저히 감소함."
+    },
+    "extra_information": "개에서 경구 투여(20, 50, 100 mg/kg) 후 최고 혈중 농도는 각각 약 30, 69, 166 µg/mL이며, 최고 농도 도달 시간은 각각 63, 42, 54분, 말단 반감기는 각각 70, 69, 77분이었음. 말에서 70 mg/kg IV 20분 투여 시 제거 반감기는 2.3시간이었음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개 및 말에서 일부 수의학적 PK 데이터 존재. 신장 배설 비율이 높아 신장 부담이 가장 큼. 심근 손상(개) 및 고칼륨혈증 보고 반영.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "seizures",
+          "tonic-clonic"
+        ],
+        "index": 1,
+        "evidence": "과용량 IV 투여 시 일부 개에서 강직-간대 발작이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "hyperfibrinolysis",
+          "thrombosis"
+        ],
+        "index": 2,
+        "evidence": "고칼륨혈증 유발 가능성(특히 신기능 저하 환자). 혈전 형성 위험(DIC 환자에서 금기)."
+      },
+      "kidney": {
+        "calculated_score": 65,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal impairment",
+          "glomerular thrombosis",
+          "hyperkalemia",
+          "unchanged drug"
+        ],
+        "index": 3,
+        "evidence": "주로 신장을 통해 미변화체로 배설됨. 신기능 장애 시 청소율 현저히 감소. 상부 요로 출혈 환자에서 사구체 모세혈관 혈전 및 신우·요관 내 혈전 형성 가능. 신기능 저하 환자에서 고칼륨혈증 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hepatic disease"
+        ],
+        "index": 1,
+        "evidence": "기존 간질환 환자에서 이익이 위험을 상회할 때만 사용 권고. 직접적인 간독성 보고는 없음."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "subendocardial hemorrhage",
+          "fatty degeneration",
+          "bradycardia",
+          "hypotension",
+          "cardiac muscle damage"
+        ],
+        "index": 2,
+        "evidence": "개에서 심내막하 출혈 및 심근 지방 변성 보고. 빠른 IV 투여 시 저혈압 및 서맥 유발 가능. 근육 손상 발생 시 심근 손상 가능성도 고려해야 함."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신경계 영향에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 혈액 관련 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신장 관련 데이터 없음. 인체 데이터 기반으로 신장 배설 예상되나 고양이 특이적 데이터 부재."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 간 관련 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 관련 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 0.9,
+    "half_life_hr": {
+      "min": 1.15,
+      "max": 1.28,
+      "mean": 1.2,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 0,
+    "evidence": "개에서 경구 투여(20–100 mg/kg) 후 말단 반감기 70–77분(약 1.15–1.28시간). 최고 농도 도달 시간 42–63분. 혈장 단백 결합 없음(인체 데이터). 말에서 IV 투여 후 제거 반감기 2.3시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 임상적으로 유의한 상호작용은 보고되지 않음. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Factor IX complex concentrates",
+      "severity": 2,
+      "keywords": [
+        "thrombosis",
+        "coagulation"
+      ],
+      "evidence": "Factor IX 복합 농축제 또는 항억제제 응고제와 병용 시 혈전증 위험 증가."
+    },
+    {
+      "drug": "Anti-inhibitor coagulant concentrates",
+      "severity": 2,
+      "keywords": [
+        "thrombosis",
+        "coagulation"
+      ],
+      "evidence": "항억제제 응고제와 병용 시 혈전증 위험 증가."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "low",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_depleting",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.3
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "그레이하운드 수술 후 지연성 출혈 예방 (항섬유소용해)",
+          "value": "500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "수술 당일 밤부터 5일간",
+          "evidence": "약 15.6–17.5 mg/kg에 해당. 그레이하운드 및 시각하운드에서 수술 후 출혈 예방 목적."
+        },
+        {
+          "logic_type": "linear",
+          "context": "과섬유소용해에 의한 출혈 (증례 보고)",
+          "value": "33",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "증례 보고 기반. 수정 TEG 분석에서 약물 중단 후 섬유소용해 반응 정상화 확인."
+        },
+        {
+          "logic_type": "linear",
+          "context": "우심방 종괴에 의한 심낭 삼출",
+          "value": "50",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "TID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "하루 3–4회 투여. 조제 제형이 심낭 삼출 재발 지연 또는 생존 개선에 유의한 효과 없었음."
+        },
+        {
+          "logic_type": "linear",
+          "context": "활동성 출혈 (종양성 질환, 수술 후 출혈 등)",
+          "value": "17.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "PRN",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "후향적 연구에서 평균 투여량 약 17.5 mg/kg IV."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "퇴행성 척수병증 보조 치료 (효능 불확실)",
+          "value": "500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "무기한 지속",
+          "evidence": "mg/kg 아닌 고정 용량(500 mg/dog). 12마리 후향적 연구에서 모든 개에서 신경학적 증상 악화. 효능 의문시됨."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 장애 환자에서 용량 감량이 필요할 수 있음. 심한 신기능 장애 시 청소율이 현저히 감소함(인체 데이터). 신기능 저하 환자에서 고칼륨혈증 위험 증가."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "기존 간질환 환자에서는 이익이 위험을 상회할 때만 사용 권고. 구체적인 용량 조정 지침은 제시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "파종성 혈관내 응고(DIC)",
+      "match_terms": [
+        "DIC",
+        "disseminated intravascular coagulation",
+        "active intravascular clotting"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "상부 요로 출혈",
+      "match_terms": [
+        "upper urinary tract bleeding",
+        "hematuria"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 질환",
+      "match_terms": [
+        "renal disease",
+        "renal impairment",
+        "CKD",
+        "chronic kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "심장 질환",
+      "match_terms": [
+        "cardiac disease",
+        "heart disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "과섬유소용해 실험실 확인 없이 투여",
+      "match_terms": [
+        "hyperfibrinolysis",
+        "TEG",
+        "thromboelastography"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "플라스미노겐 활성화 물질 억제 및 항플라스민 활성을 통해 섬유소용해를 억제하는 합성 단아미노 카르복실산. 항프로테아제 활성을 통해 마이엘린을 손상시키는 염증 효소 활성화를 감소시키는 것으로 추정됨.",
+    "common_extra_effects": [
+      "GI 자극(약 1%의 개에서 경구 투여 시)",
+      "고칼륨혈증(특히 신기능 저하 환자)",
+      "빠른 IV 투여 시 저혈압",
+      "빠른 IV 투여 시 서맥",
+      "근염 및 골격근 약화(인체에서 드물게)",
+      "근섬유 괴사(인체에서 드물게)"
+    ],
+    "dog_mechanism": "개에서 섬유소용해를 완전히 억제하기 위해 필요한 혈장 농도(511.7 µg/mL)는 인체(122 µg/mL)보다 훨씬 높음.",
+    "dog_extra_effects": [
+      "심내막하 출혈",
+      "심근 지방 변성",
+      "과용량 시 강직-간대 발작"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 섬유소용해 억제에 필요한 혈장 농도가 인체보다 약 4배 높으므로 인체 용량 외삽 시 혈중 농도가 최적 이하일 수 있음. 그레이하운드 등 시각하운드에서 수술 후 출혈 예방에 주로 사용됨. 퇴행성 척수병증 치료 목적 사용은 효능이 불확실하며 모든 연구 대상 개에서 신경학적 증상이 악화됨. 장기 치료 시 크레아틴 키나아제 모니터링 필요.",
+    "cat": "고양이에서의 용량, 안전성, 효능에 대한 데이터가 없음. 사용 시 극도의 주의가 필요하며 수의사의 면밀한 감독 하에 이익-위험 평가 후 결정해야 함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "DIC 환자에서 절대 금기. 신장·심장·간 질환 환자에서 이익이 위험을 상회할 때만 사용. 빠른 IV 투여 금지. 과섬유소용해의 실험실적 확인(TEG 등) 없이 투여 금지. 개에서 심내막하 출혈 및 심근 지방 변성 보고됨."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안전성 및 효능 데이터 없음. 사용 시 주의 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온(20°C–25°C) 보관. 액체 제제 동결 금지. 생리식염수 또는 5% 포도당 희석액(10 및 100 mg/mL)은 4°C 및 23°C에서 7일간 98% 역가 유지. 알데히드 또는 알데히드성 당류 존재 시 변색 발생.",
+    "forms": [
+      "경구 정제: 500 mg, 1000 mg (Amicar®)",
+      "경구 시럽: 250 mg/mL, 237 mL (Amicar®)",
+      "주사제: 250 mg/mL, 20 mL 바이알 (generic)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "아미노카프로산은 과섬유소용해 억제제로, 그레이하운드 등 시각하운드의 수술 후 출혈 예방 및 과섬유소용해에 의한 출혈 치료에 주로 사용됩니다. 수의학적으로 승인된 제품은 없으며 모두 적응증 외 사용입니다. DIC 환자에서는 절대 금기이며, 반드시 과섬유소용해의 실험실적 확인(TEG 등) 후 투여해야 합니다. 개에서 인체보다 약 4배 높은 혈장 농도가 필요하므로 인체 용량 외삽 시 주의가 필요합니다. 빠른 IV 투여는 저혈압 및 서맥을 유발할 수 있습니다.",
+    "indications": "【승인 적응증】없음(수의학적 승인 제품 없음). 【적응증 외 사용】① 그레이하운드/시각하운드 수술 후 지연성 출혈 예방 ② 과섬유소용해에 의한 출혈 치료 ③ 우심방 종괴에 의한 심낭 삼출(효능 불확실) ④ 활동성 출혈(종양성 질환, 수술 후 출혈 등) ⑤ 퇴행성 척수병증 보조 치료(효능 매우 불확실, 권장하지 않음) ⑥ 말: 인두낭 출혈 항섬유소용해 치료.",
+    "client_info": "이 약은 수의학적으로 공식 승인된 약물이 아니며, 수의사의 판단 하에 적응증 외로 사용됩니다. 정기적인 혈액 검사(혈전탄성조영술 등)가 필요하므로 예약된 검진을 빠짐없이 받으시기 바랍니다. 퇴행성 척수병증 치료 목적으로 사용하는 경우, 이 치료의 효능은 아직 충분히 입증되지 않았으며 연구에서 모든 개에서 증상이 악화되었음을 알려드립니다. 투여 중 구토, 설사 등 소화기 증상이나 근육 약화, 비정상적인 행동 변화가 관찰되면 즉시 수의사에게 연락하십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Cat dosages",
+      "CYP enzyme profile",
+      "Oral bioavailability (F%)",
+      "Protein binding (veterinary)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/54.jsonl",
+    "extracted_at": "2026-03-11T05:59:39.923231+00:00",
+    "reviewer": null
+  }
+}

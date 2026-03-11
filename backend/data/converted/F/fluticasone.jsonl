@@ -1,0 +1,449 @@
+{
+  "id": "fluticasone",
+  "drug_identity": {
+    "name_ko": "플루티카손",
+    "name_en": "Fluticasone",
+    "active_ingredient": "Fluticasone propionate",
+    "brand_names": [
+      "Flovent HFA",
+      "Flovent Diskus",
+      "Advair Diskus",
+      "Cutovate",
+      "Flixotide",
+      "Flixonase",
+      "Flutivate"
+    ],
+    "allergy_class": null,
+    "class": "Corticosteroid",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 사용되는 모든 적응증은 허가 외(extra-label) 사용이며, 동물용 허가 제품은 없음. 인체용 흡입 제제를 종별 적합 스페이서 장치와 함께 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 44,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 110,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 220,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "Fluticasone는 CYP3A4 동위효소에 의해 대사되어 약리활성이 거의 없는 대사체를 생성함. 대부분의 약물은 모체 약물 및 대사체 형태로 대변으로 배설됨(인체 데이터)."
+    },
+    "extra_information": "개에서 조류 호흡(tidal breathing) 시 MDI로 투여된 약물이 호흡기에 침착됨이 확인되었으며, 분무화(nebulization) 시 더 많은 약물이 침착됨. 고양이에서 44, 110, 220 µg q12h 용량에서 HPA 축 억제가 유의하게 나타나지 않았으나, 개에서 250 µg BID 흡입 시 35일 후 코르티솔 농도에 유의한 영향이 관찰됨. 인체 PK: 흡입 후 약 30%가 전신 순환으로 흡수, 분포용적 평균 4.2 L/kg, 혈장단백결합률 91%, 정맥 투여 후 말단 반감기 약 8시간."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 주로 인체 데이터 및 제한적 수의학 데이터에 근거함. 흡입 투여로 전신 노출이 낮으나 HPA 축 억제, 간 대사, 담즙 배설이 보고됨.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "HPA axis suppression",
+          "iatrogenic hyperadrenocorticism"
+        ],
+        "index": 1,
+        "evidence": "개에서 흡입 플루티카손 250 µg BID 투여 시 뇌하수체-부신 축 억제 및 의인성 부신피질기능항진증 징후(다음다뇨, 탈모, 복부팽만 등)가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cortisol suppression",
+          "HPA axis suppression"
+        ],
+        "index": 2,
+        "evidence": "개에서 흡입 플루티카손 250 µg BID 35일 투여 후 ACTH 자극 코르티솔 농도에 유의한 영향이 관찰됨. 전신 흡수는 약 30%(인체)."
+      },
+      "kidney": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "polyuria",
+          "polydipsia"
+        ],
+        "index": -1,
+        "evidence": "직접적인 신독성 보고는 없으나, 의인성 부신피질기능항진증의 이차 증상으로 다음다뇨가 보고됨."
+      },
+      "liver": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CYP3A4 metabolism",
+          "hepatomegaly",
+          "fecal excretion"
+        ],
+        "index": 3,
+        "evidence": "플루티카손은 CYP3A4에 의해 간에서 대사되며, 대부분 담즙/대변으로 배설됨. 의인성 부신피질기능항진증 증례에서 간비대가 보고됨."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "panting"
+        ],
+        "index": -1,
+        "evidence": "직접적인 심독성 보고는 없음. 의인성 부신피질기능항진증 증례에서 헐떡임(panting)이 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "HPA axis"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 44, 110, 220 µg q12h 용량에서 HPA 축 억제가 유의하게 나타나지 않았음. 국소 데모덱스증이 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "airway eosinophilia reduction",
+          "cortisol"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 흡입 플루티카손이 기도 호산구증을 유의하게 감소시킴. 시험된 용량에서 HPA 축 억제는 유의하지 않았음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 신독성 관련 보고 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CYP3A4 metabolism",
+          "fecal excretion"
+        ],
+        "index": 2,
+        "evidence": "플루티카손은 CYP3A4에 의해 간에서 대사되며 담즙/대변으로 배설됨(인체 데이터). 고양이 특이적 간 부담 데이터는 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심독성 관련 보고 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 8.0,
+      "species": "human"
+    },
+    "f_percent": 30,
+    "protein_binding_percent": 91,
+    "evidence": "인체 데이터: 흡입 후 약 30% 전신 흡수, 혈장단백결합률 91%, 정맥 투여 후 말단 반감기 약 8시간. 880 µg 투여 시 최고 혈장 농도 0.1~1 ng/mL. 수의학 종별 PK 데이터 없음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 흡입 투여로 인해 전신 혈장 농도가 낮아 임상적으로 유의한 약물 상호작용은 드물다고 제조사가 명시하였으나, CYP3A4 억제제와의 병용 시 주의 필요.",
+  "drug_interactions": [
+    {
+      "drug": "CYP3A4 inhibitors (e.g., ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased fluticasone concentration"
+      ],
+      "evidence": "CYP3A4 억제제(예: 케토코나졸) 병용 시 이론적으로 플루티카손의 전신 농도가 증가할 수 있음. 흡입 투여로 전신 노출이 낮아 임상적 유의성은 낮을 수 있으나 주의 필요."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "만성 기관지 질환 보조 치료 (extra-label)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Inh",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "110–220 µg/puff MDI 사용, 1회 1 puff를 1일 2~4회 투여. 임상 반응에 따라 용량 조절. 시작 시 경구 글루코코르티코이드를 10~14일간 병행하며 점감.",
+          "evidence": "Plumb's extra-label 용량: 110–220 µg/puff MDI, 1 puff 2~4회/일"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "호산구성 기관지폐렴 (extra-label)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Inh",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "100–250 µg/puff MDI 사용, 1회 1 puff를 1일 2회 투여. 임상 반응에 따라 용량 조절.",
+          "evidence": "Plumb's extra-label 용량: 100–250 µg/puff MDI twice daily"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "만성 기관지염, 고양이 천식 (extra-label) - 초기 용량",
+          "value": "1",
+          "unit": "EA",
+          "route": "Inh",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "44 µg/puff 또는 110 µg/puff MDI, 1 puff q12h. 시작 시 경구 글루코코르티코이드를 10~14일간 병행하며 점감.",
+          "evidence": "Plumb's extra-label 용량 1: 44 µg/puff 또는 110 µg/puff MDI, 1 puff q12h"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "만성 기관지염, 고양이 천식 - 중증 (extra-label)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Inh",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "110 µg/puff MDI, 1 puff BID. 중증 질환 시 220 µg MDI로 증량 가능.",
+          "evidence": "Plumb's extra-label 용량 2: 110 µg/puff MDI, 1 puff twice daily; 중증 시 220 µg MDI"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "만성 기관지염, 고양이 천식 - 1일 1회 요법 (extra-label)",
+          "value": "1",
+          "unit": "EA",
+          "route": "Inh",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "250 µg MDI(미국 외 기준; 미국 내 220 µg/puff에 해당) 1일 1회.",
+          "evidence": "Plumb's extra-label 용량 3: 250 µg MDI once daily"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "고양이 특발성 만성 비염 (extra-label)",
+          "value": "2",
+          "unit": "EA",
+          "route": "Inh",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "220 µg/puff MDI, 2 puffs q12h, 경구 프레드니솔론과 병용. 플루티카손 치료가 안정되면 경구 프레드니솔론을 2주마다 25%씩 감량.",
+          "evidence": "Plumb's extra-label 용량: 220 µg/puff MDI, 2 puffs q12h with oral prednisolone"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "Plumb's 모노그래프에 신기능 저하 시 용량 조절에 대한 명시적 권고사항 없음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "Plumb's 모노그래프에 간기능 저하 시 용량 조절에 대한 명시적 권고사항 없음. CYP3A4 대사 약물이므로 중증 간질환 시 이론적으로 노출 증가 가능."
+  },
+  "contraindications": [
+    {
+      "condition": "플루티카손 과민증",
+      "match_terms": [
+        "hypersensitivity to fluticasone",
+        "fluticasone allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 기관지경련 (status asthmaticus)",
+      "match_terms": [
+        "acute bronchospasm",
+        "status asthmaticus"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전신 스테로이드에서 흡입 스테로이드로 전환 시 급성 부신부전 위험",
+      "match_terms": [
+        "systemic steroid withdrawal",
+        "adrenal insufficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "cortisol",
+        "threshold": null,
+        "unit": "µg/dL"
+      }
+    },
+    {
+      "condition": "임신 (기형유발 가능성)",
+      "match_terms": [
+        "pregnancy",
+        "teratogenicity"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "글루코코르티코이드 수용체에 결합하여 강력한 항염증 작용을 나타냄. 덱사메타손보다 인체 글루코코르티코이드 수용체에 대한 친화성이 18배 높음. 흡입 투여로 국소 항염증 효과를 극대화하면서 전신 부작용을 최소화함.",
+    "common_extra_effects": [
+      "HPA 축 억제",
+      "의인성 부신피질기능항진증",
+      "인두염 (인체)",
+      "상기도 감염 (인체)",
+      "역설적 기관지경련 (인체 보고)",
+      "기형유발 가능성 (실험동물 SC 투여 시)"
+    ],
+    "dog_mechanism": "흡입 플루티카손이 기도에 국소적으로 작용하여 만성 기관지 염증을 억제함.",
+    "dog_extra_effects": [
+      "HPA 축 억제 (250 µg BID, 35일 투여 시)",
+      "의인성 부신피질기능항진증 (체중증가, 다음다뇨, 탈모, 피부 얇아짐, 복부팽만, 간비대, 헐떡임)"
+    ],
+    "cat_mechanism": "흡입 플루티카손이 기도 호산구증을 유의하게 감소시키고 기도 염증을 억제함.",
+    "cat_extra_effects": [
+      "국소 데모덱스증 (주둥이/비강 피부)",
+      "시험된 용량(44, 110, 220 µg q12h)에서 HPA 축 억제 유의하지 않음"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 흡입 플루티카손은 만성 기관지 질환 및 호산구성 기관지폐렴의 보조 치료로 사용됨(허가 외). 치료 시작 시 경구 글루코코르티코이드를 10~14일간 병행하며 점감하는 것이 일반적임. AeroDawg 등 종별 적합 스페이서 장치 사용이 필수적이며, MDI 작동 후 7~10회 호흡을 유도해야 함. 250 µg BID 투여 시 HPA 축 억제 및 의인성 부신피질기능항진증이 보고된 바 있어 모니터링이 필요함.",
+    "cat": "고양이에서 흡입 플루티카손은 천식 및 만성 기관지염 치료에 효과적임(허가 외). AeroKat 등 종별 적합 스페이서 장치 사용이 필수적이며, MDI 작동 후 7~10회 호흡을 유도해야 함. 44, 110, 220 µg q12h 용량에서 HPA 축 억제가 유의하지 않았으나, 흡입 코르티코스테로이드 치료 시 주둥이/비강 피부에 국소 데모덱스증이 발생할 수 있음. 경구 프레드니솔론과 비교 시 기도 저항 및 정적 순응도 개선 효과는 경구 투여가 더 강력할 수 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 흡입 플루티카손 고용량(250 µg BID) 투여 시 HPA 축 억제 및 의인성 부신피질기능항진증이 보고됨. 전신 스테로이드에서 전환 시 급성 부신부전 예방을 위해 점진적 감량 필요. 임신 동물에서 기형유발 가능성 있음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 흡입 코르티코스테로이드 치료 시 국소 데모덱스증 발생 가능. 전신 스테로이드에서 전환 시 점진적 감량 필요. 피부 알레르기 검사(IDST) 전 2주 휴약 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "Flovent HFA: 15~30°C(59~86°F) 보관. 냉동, 직사광선, 열원 및 화기 근처 보관 금지. 캐니스터는 마우스피스가 아래를 향하도록 보관.",
+    "forms": [
+      "Fluticasone Propionate 흡입 에어로졸: 44 µg/작동, 110 µg/작동, 220 µg/작동 (Flovent HFA)",
+      "Fluticasone Propionate/Salmeterol 흡입 에어로졸 복합제 (Advair Diskus)",
+      "비강 스프레이 (수의학적 사용 부적합)",
+      "국소 크림 및 연고 (수의학적 사용 부적합)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "플루티카손은 흡입형 글루코코르티코이드로, 전신 부작용을 최소화하면서 기도에 국소 항염증 효과를 제공함. 고양이 천식, 개 및 말의 만성 기도 염증 질환 치료에 사용됨(모두 허가 외). 덱사메타손보다 글루코코르티코이드 수용체 친화성이 18배 높음. 반드시 종별 적합 스페이서 장치(AeroDawg, AeroKat 등)와 함께 사용해야 하며, MDI 작동 후 개/고양이는 7~10회, 말은 3~5회 호흡을 유도해야 함. 치료 시작 시 경구 글루코코르티코이드와 10~14일간 병행 후 점감하는 것이 일반적. 고용량 또는 장기 투여 시 HPA 축 억제 가능성 모니터링 필요.",
+    "indications": "개: 만성 기관지 질환(허가 외), 호산구성 기관지폐렴(허가 외). 고양이: 천식, 만성 기관지염(허가 외), 특발성 만성 비염(허가 외). 말: 중증 말 천식(허가 외). 동물용 허가 제품 없음; 모든 수의학적 사용은 인체용 제품의 허가 외 사용임.",
+    "client_info": "흡입기 사용 전 잘 흔들어 주세요. 캐니스터를 뚫거나 소각하지 마세요. 반드시 해당 동물에 맞는 스페이서 장치(예: AeroDawg, AeroKat)와 함께 사용해야 합니다. 마스크를 동물의 주둥이에 밀착시킨 후 흡입기를 작동하고, 개/고양이는 7~10회, 말은 3~5회 호흡하도록 해주세요. 처음에는 며칠에 걸쳐 장치에 익숙해지도록 하고, 간식이나 칭찬으로 보상해 주세요. 1일 2회 1 puff 사용 시 캐니스터는 약 2개월간 사용 가능합니다. 다음/다뇨, 식욕증가, 탈모, 복부팽만 등의 증상이 나타나면 즉시 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Onset of action (minutes)",
+      "Time to peak plasma concentration (t_max)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (veterinary species)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "cyp_profile.substrates (veterinary confirmation)",
+      "drug_identity.available_strengths (unit clarification for inhaled mcg/actuation)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/43.jsonl",
+    "extracted_at": "2026-03-11T02:26:12.753263+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "id": "vinorelbine",
+  "drug_identity": {
+    "name_ko": "비노렐빈",
+    "name_en": "Vinorelbine",
+    "active_ingredient": "Vinorelbine",
+    "brand_names": [
+      "Navelbine",
+      "Bagovir",
+      "Vinelbine"
+    ],
+    "allergy_class": null,
+    "class": "Antineoplastic Agent",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 개와 고양이에서 다양한 종양 치료에 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Biliary",
+    "renal_elimination_fraction": 0.145,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "CYP3A에 의해 간에서 광범위하게 대사되며, 최소 2개의 활성 대사체가 형성됨. 담즙/대변으로 약 45% 배설, 소변으로 미변화체 11~18% 배설(사람 데이터)."
+    },
+    "extra_information": "개에서 IV 투여 시 빠른 분포 단계가 관찰됨. 단백결합률 90%, 말단 반감기 34.5시간(개). 사람에서는 순환 비노렐빈의 약 85%가 세포 성분에 결합(혈소판 등 75%, 혈장 단백 10%). 폐 조직 농도는 혈장의 300배에 달함. CNS로의 유의미한 침투는 없음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 PK 데이터(반감기, 단백결합) 존재; 고양이는 phase I 연구 데이터 일부 존재. 간 대사 및 담즙 배설이 주요 경로.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "peripheral neuropathy",
+          "ataxia",
+          "neurotoxicity"
+        ],
+        "index": 1,
+        "evidence": "CNS로의 유의미한 침투는 없으나, 말초 신경독성(턱·근육통, 말초 신경병증, 심부건반사 소실) 및 개 1례에서 양측 후지 운동실조 보고됨."
+      },
+      "blood": {
+        "calculated_score": 75,
+        "triggered_keywords": [
+          "myelosuppression",
+          "granulocytopenia",
+          "thrombocytopenia",
+          "neutropenia",
+          "leukopenia"
+        ],
+        "index": 2,
+        "evidence": "개의 32~54%에서 골수억제 발생. 과립구 최저점은 투여 후 7~10일, 회복은 7~14일 후. 혈소판감소증(1~2등급) 7% 보고. 누적 골수억제 가능."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "acute renal injury",
+          "nephrotoxicity"
+        ],
+        "index": 1,
+        "evidence": "고양이 phase I 연구에서 4등급 급성 신손상 5.2% 보고. 암포테리신 B 병용 시 신독성 위험 증가. 소변으로 미변화체 11~18% 배설."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP3A",
+          "liver enzymes elevated",
+          "hepatic cirrhosis",
+          "biliary excretion"
+        ],
+        "index": 2,
+        "evidence": "CYP3A에 의한 광범위한 간 대사 및 담즙 배설(45%). 개 1례에서 간경변 보고, 다른 1례에서 간효소 상승 동반 복통 보고. 간질환 시 용량 감량 필요."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음. 저혈압 위험(암포테리신 B 병용 시)이 간접적으로 언급됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "neurotoxicity"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 신경독성에 대한 직접적 보고 없음. 사람 및 개 데이터에서 말초 신경독성 가능성 언급."
+      },
+      "blood": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "anemia",
+          "neutropenia",
+          "thrombocytopenia",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "고양이 phase I 연구(n=19): 빈혈 32%, 호중구감소증 21%, 혈소판감소증 5.2% 보고."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "acute renal injury",
+          "grade 4"
+        ],
+        "index": 2,
+        "evidence": "고양이 phase I 연구에서 4등급 급성 신손상 5.2% 보고. 임상적으로 유의미한 신독성 위험 존재."
+      },
+      "liver": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "CYP3A",
+          "biliary excretion"
+        ],
+        "index": 1,
+        "evidence": "CYP3A에 의한 간 대사 및 담즙 배설이 주요 경로. 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 34.5,
+      "max": 40.0,
+      "mean": 37.25,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 90,
+    "evidence": "개: 단백결합 90%, 말단 반감기 34.5시간(IV). 사람: 말단 반감기 약 40시간. 경구 생체이용률 데이터 없음(IV 전용 제제)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/치명적→3, 주요/중등도→2, 경미→1. MAOI 상호작용 해당 없음.",
+  "drug_interactions": [
+    {
+      "drug": "Amphotericin B",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "bronchospasm",
+        "hypotension"
+      ],
+      "evidence": "May increase the risk for nephrotoxicity, bronchospasm, and hypotension by an undetermined mechanism."
+    },
+    {
+      "drug": "Antidiuretic Hormone (desmopressin, vasopressin)",
+      "severity": 2,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia"
+      ],
+      "evidence": "May increase the risk for water intoxication and/or hyponatremia."
+    },
+    {
+      "drug": "Azole Antifungals (itraconazole, ketoconazole, voriconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased vinorelbine concentration"
+      ],
+      "evidence": "May increase serum concentration of vinorelbine via CYP3A inhibition; consider reducing the vinorelbine dose."
+    },
+    {
+      "drug": "CYP3A Inhibitors (amiodarone, fluvoxamine, grapefruit juice)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A inhibition",
+        "increased vinorelbine concentration",
+        "toxicity"
+      ],
+      "evidence": "Concurrent use may increase vinorelbine concentration and risk for toxicity."
+    },
+    {
+      "drug": "Heparins (dalteparin, enoxaparin, heparin)",
+      "severity": 2,
+      "keywords": [
+        "bleeding risk"
+      ],
+      "evidence": "Concurrent use may increase the risk for bleeding."
+    },
+    {
+      "drug": "Immunosuppressive Drugs (azathioprine, cyclophosphamide, corticosteroids)",
+      "severity": 2,
+      "keywords": [
+        "infection risk",
+        "immunosuppression"
+      ],
+      "evidence": "Use with other immunosuppressant drugs may increase the risk for infection."
+    },
+    {
+      "drug": "Macrolide Antibiotics (except azithromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased vinorelbine concentration",
+        "CYP3A inhibition"
+      ],
+      "evidence": "Macrolide antibiotics may increase the serum concentration of vinorelbine; consider reducing the vinorelbine dose."
+    },
+    {
+      "drug": "Myelosuppressive Agents (antineoplastics, immunosuppressants, iron chelators)",
+      "severity": 3,
+      "keywords": [
+        "additive myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Concurrent use with other myelosuppressive medications may result in additive myelosuppression; avoid combination when possible."
+    },
+    {
+      "drug": "Neuropathy-inducing Drugs (carboplatin, dapsone, isoniazid, metronidazole, nitrofurantoin)",
+      "severity": 2,
+      "keywords": [
+        "peripheral neuropathy"
+      ],
+      "evidence": "Concurrent use may increase the risk for peripheral neuropathy."
+    },
+    {
+      "drug": "Ototoxic Drugs (aminoglycosides, cisplatin, carboplatin)",
+      "severity": 2,
+      "keywords": [
+        "ototoxicity"
+      ],
+      "evidence": "May cause additive risk for ototoxicity."
+    },
+    {
+      "drug": "Vaccines (live and inactivated)",
+      "severity": 2,
+      "keywords": [
+        "reduced vaccine efficacy",
+        "enhanced adverse effects"
+      ],
+      "evidence": "Vinorelbine may diminish vaccine efficacy and enhance adverse effects of vaccines."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "moderate",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 7.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "종양 질환 (오프라벨) - 초기 용량",
+          "value": "15",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "투여 간격은 통상 1~2주. 내약성에 따라 16~18 mg/m²로 증량 가능. 골수억제 발생 시 10~20% 감량. 단위는 mg/m²(NOT mg/kg).",
+          "evidence": "15 mg/m² (NOT mg/kg) IV, 1~3 mg/mL 희석액으로 6~10분에 걸쳐 투여. 투여 후 IV 라인 플러시. 1~2주 간격 반복."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "종양 질환 (오프라벨) - 초기 용량",
+          "value": "11.5",
+          "unit": "mg/kg",
+          "route": "IV",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "1.5 mg/mL 용액으로 5분에 걸쳐 7일마다 최대 4회 투여. 이후 2주 간격 지속 가능. 골수억제 시 10~25% 감량. 단위는 mg/m²(NOT mg/kg).",
+          "evidence": "11.5 mg/m² (NOT mg/kg) IV, 1.5 mg/mL 용액으로 5분 투여, 7일 간격 최대 4회. Phase I 연구(n=19) 기반."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 구체적인 용량 조정 기준이 명시되어 있지 않음. 소변으로 미변화체 11~18% 배설되므로 중증 신부전 시 주의 필요. 고양이에서 4등급 급성 신손상 보고됨."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간질환 환자에서 용량 감량 필요. 사람 기준: 혈청 빌리루빈 >2 mg/dL 시 50% 감량, >3 mg/dL 시 75% 감량 권장. 간을 포함하는 방사선 치료 중인 환자에서는 사용 회피. 수의학적 구체적 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "기존 백혈구감소증 또는 과립구감소증",
+      "match_terms": [
+        "leukopenia",
+        "granulocytopenia",
+        "neutropenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈소판감소증",
+      "match_terms": [
+        "thrombocytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "활동성 세균 감염",
+      "match_terms": [
+        "active bacterial infection",
+        "sepsis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질환",
+      "match_terms": [
+        "hepatic disease",
+        "liver disease",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "기존 빈혈",
+      "match_terms": [
+        "anemia",
+        "pre-existing anemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "hct",
+        "threshold": null,
+        "unit": "%"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "척수강내 투여",
+      "match_terms": [
+        "intrathecal"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "피하 또는 근육내 투여",
+      "match_terms": [
+        "SC injection",
+        "IM injection"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": "ABCB1 (MDR1)",
+    "evidence": "다른 빈카 알칼로이드(빈블라스틴, 빈크리스틴)는 P-당단백질의 기질이나, 비노렐빈은 P-당단백질의 유의미한 기질이 아닌 것으로 보임. 따라서 MDR1 돌연변이(ABCB1-1delta) 검사의 필요성은 불분명함. 목양견 품종에서의 위험성은 확립되지 않음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "튜불린에 결합하여 유사분열 방추사의 미세소관 형성을 억제하고 미세소관 탈중합을 유발함으로써 중기(metaphase)에서 세포 분열을 차단. 또한 글루탐산 이용 억제, 퓨린 합성·구연산 회로·요소 형성 방해를 통해 아미노산 대사에도 영향을 미침.",
+    "common_extra_effects": [
+      "골수억제 (과립구감소증, 혈소판감소증, 빈혈)",
+      "말초 신경독성 (턱·근육통, 말초 신경병증, 심부건반사 소실)",
+      "위장관 독성 (오심, 구토, 설사)",
+      "혈관외 유출 시 조직 괴사 (vesicant)",
+      "주사 부위 반응 (정맥염, 홍반)",
+      "기형 유발성 및 배아 독성",
+      "요산 증가 (혈중 및 뇨중)"
+    ],
+    "dog_mechanism": "사람과 동일한 기전으로 작용. 개에서 IV 투여 시 빠른 분포 단계 확인.",
+    "dog_extra_effects": [
+      "위장관염 (오심/구토, 설사) - 16~46%",
+      "골수억제 - 32~54%",
+      "혈소판감소증 (1~2등급) - 7%",
+      "간경변 (1례 보고)",
+      "간효소 상승 동반 복통 (1례 보고)",
+      "양측 후지 운동실조 (1례 보고)",
+      "말초 신경독성"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "빈혈 - 32%",
+      "호중구감소증 - 21%",
+      "체중 감소 - 16%",
+      "지속적 구토 - 11%",
+      "혈소판감소증 - 5.2%",
+      "4등급 급성 신손상 - 5.2%"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 혈관육종, 국소 침습성/전이성 피부 비만세포종, 세기관지폐포암종, 원발성 폐암종, 조직구성 육종, 방광암종(피록시캄 병용) 치료에 연구됨. 초기 용량 15 mg/m² IV, 1~2주 간격. 내약성에 따라 16~18 mg/m²로 증량 가능. 골수억제 발생 시 10~20% 감량. 과립구 최저점은 투여 후 7~10일, 회복은 7~14일 후. 빈크리스틴보다 골수억제가 더 강하나 말초 신경독성은 적음.",
+    "cat": "고양이에서의 사용은 제한적이며, 다양한 종양 유형을 대상으로 한 phase I 연구(n=19) 1건만 발표됨. 권장 시작 용량 11.5 mg/m² IV, 7일 간격 최대 4회 투여 후 2주 간격 지속 가능. 주요 부작용으로 빈혈(32%), 호중구감소증(21%), 체중 감소(16%), 지속적 구토(11%), 4등급 급성 신손상(5.2%) 보고됨. 골수억제 시 10~25% 감량."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "골수억제, 위장관 독성, 혈관외 유출 위험에 대한 주의 필요. 간질환 시 용량 감량. 기존 혈구감소증 또는 활동성 감염 시 금기. 투여 전 CBC 및 간효소 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 phase I 연구 데이터만 존재하며 안전성 프로파일이 제한적. 빈혈, 호중구감소증, 급성 신손상 위험. 전문 종양 전문의 상담 강력 권장."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀봉 바이알은 2~8°C(36~46°F) 보관, 차광. 상업용 주사제는 불활성 가스 하에 포장. 0.5~2 mg/mL 희석액은 5~30°C(41~86°F)에서 24시간 안정. 미사용 제품 및 폐기물은 세포독성 약물 처리 절차에 따라 폐기.",
+    "forms": [
+      "Vinorelbine Sulfate Injection 10 mg/mL (1 mL 및 5 mL 바이알)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "비노렐빈은 반합성 빈카 알칼로이드 항종양제로, 개와 고양이에서 다양한 종양 치료에 오프라벨로 사용됨. 주요 독성은 골수억제(개 32~54%)와 위장관 독성(개 16~46%). 고양이에서는 빈혈(32%), 호중구감소증(21%), 급성 신손상(5.2%) 보고. CYP3A 기질로 다수의 약물 상호작용 주의. 혈관외 유출 시 조직 괴사 위험(vesicant). 척수강내·SC·IM 투여 절대 금기. NIOSH 위험 약물로 분류되어 취급 시 PPE 착용 필수.",
+    "indications": "【개】혈관육종, 피부 비만세포종(국소 침습성/전이성), 세기관지폐포암종, 원발성 폐암종, 조직구성 육종, 방광암종(피록시캄 병용) — 모두 오프라벨. 【고양이】다양한 종양 유형 — 오프라벨(phase I 연구 기반). 【사람(허가)】비소세포폐암(1차, 국소 진행성, 전이성), 유방암 등.",
+    "client_info": "비노렐빈은 항암(항종양) 약물입니다. 이 약물은 접촉하는 다른 동물과 사람에게 위험할 수 있습니다. 투여 당일과 이후 며칠간 소변, 대변, 구토물 등 모든 체액을 처리할 때는 반드시 항암제용 장갑을 착용하십시오. 폐기물은 비닐봉지에 밀봉한 후 장갑과 함께 일반 쓰레기통에 버리십시오. 임신 중이거나 임신을 계획 중이거나 수유 중인 분은 동물의 배설물을 처리하지 마십시오. 오염된 물품(장난감, 식기, 물그릇)은 다른 세탁물과 분리하여 세척하십시오. 정기적인 혈액 검사 및 영상 검사를 위한 내원을 빠짐없이 지켜주십시오. 식욕 부진, 구토, 설사가 심하거나 호흡 곤란, 감염 징후(발열, 출혈, 멍, 극심한 피로)가 나타나면 즉시 수의사에게 연락하십시오. 골수 억제는 보통 치료 후 1주일 이내에 가장 심하게 나타납니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "high",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies for cats",
+      "Renal dose adjustment thresholds (veterinary)",
+      "Oral bioavailability data",
+      "Onset of action data",
+      "T-max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "dosage_and_kinetics.dog.dosage_list[0].unit (mg/m² not mg/kg — schema limitation)",
+      "dosage_and_kinetics.cat.dosage_list[0].unit (mg/m² not mg/kg — schema limitation)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:40:20.049567+00:00",
+    "reviewer": null
+  }
+}

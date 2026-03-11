@@ -1,0 +1,637 @@
+{
+  "id": "lisinopril",
+  "drug_identity": {
+    "name_ko": "리시노프릴",
+    "name_en": "Lisinopril",
+    "active_ingredient": "Lisinopril",
+    "brand_names": [
+      "Prinivil",
+      "Zestril",
+      "Qbrelis"
+    ],
+    "allergy_class": null,
+    "class": "ACE Inhibitor",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인체용 제품을 동물에게 오프라벨로 사용. ARCI 클래스 3 물질로 지정됨.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 30,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 1,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Kidney",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "리시노프릴은 에날라프릴과 달리 간에서 활성 대사체로 전환될 필요가 없는 직접 활성형 약물이다. 신장을 통해 배설되며, 신부전 환자에서 반감기가 증가한다."
+    },
+    "extra_information": "개에서 경구 생체이용률은 25~50%이며, 투여 후 약 4시간에 최고 혈중 농도에 도달한다. CNS로의 분포는 불량하다. 태반을 통과하며, 모유 분비 여부는 불명확하다. 신부전 또는 중증 CHF 환자에서 반감기가 증가한다. 고양이에 대한 약동학 정보는 없다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개에서 신장 배설, 신기능 저하 시 반감기 증가, 신기능 부전 유발 가능성 등이 명시됨. 고양이 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS 분포 불량",
+          "뇌혈관 부전 주의"
+        ],
+        "index": 1,
+        "evidence": "CNS로의 분포가 불량하다고 명시됨. 뇌혈관 부전 환자에서 주의 사용 권고."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "저혈압",
+          "고칼륨혈증",
+          "CBC 모니터링"
+        ],
+        "index": 2,
+        "evidence": "저혈압, 고칼륨혈증이 부작용으로 보고됨. 정기적 CBC 모니터링 권고."
+      },
+      "kidney": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "신기능 저하",
+          "신부전 시 반감기 증가",
+          "신기능 부전",
+          "단백뇨 감소",
+          "크레아티닌 모니터링"
+        ],
+        "index": 0,
+        "evidence": "신장을 통해 배설되며, 신부전 시 반감기 증가. 신기능 부전 유발 가능. 신기능 저하 환자에서 용량 감량 필요. 단백뇨 감소 및 신기능 보존 효과도 보고됨."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "간부전 주의"
+        ],
+        "index": 3,
+        "evidence": "간부전 환자에서 주의 사용 권고. 그러나 간에서 대사되지 않는 직접 활성형 약물."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "심부전 치료",
+          "저혈압",
+          "심박출량 증가",
+          "CHF"
+        ],
+        "index": 4,
+        "evidence": "CHF 치료에 사용되며, 총 말초 저항 감소, 심박출량 증가 효과. 중증 CHF 환자에서 치료 시작 시 면밀한 모니터링 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 약동학 정보 없음. 점수 산출 불가."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "저혈압",
+          "고칼륨혈증"
+        ],
+        "index": -1,
+        "evidence": "고양이 과다복용 사례에서 고혈압, 빈맥, 구토가 보고됨. 약동학 데이터 부재로 점수 제한적."
+      },
+      "kidney": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "신기능 부전 가능성",
+          "ACE 억제"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 신장 데이터 없음. ACE 억제제 계열 특성상 신기능 영향 가능성 있음."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "간부전 주의"
+        ],
+        "index": -1,
+        "evidence": "고양이 특이적 간 데이터 없음. 직접 활성형 약물로 간 대사 부담 낮음."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "심부전 치료",
+          "혈압 강하"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 2.5 mg 총량 1일 1회 투여 시 동맥혈압 감소 보고. 고양이 특이적 심장 데이터 제한적."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 4.0,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "dog"
+    },
+    "f_percent": 37,
+    "protein_binding_percent": null,
+    "evidence": "개에서 경구 생체이용률 25~50% (중간값 약 37%). 투여 후 약 4시간에 최고 혈중 농도 도달. 작용 지속 시간은 24시간으로 기술되나 시간이 지남에 따라 효과 감소. 반감기 수치는 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 명시된 상호작용 또는 이론적 상호작용 모두 포함.",
+  "drug_interactions": [
+    {
+      "drug": "Anesthetics",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (e.g., telmisartan)",
+      "severity": 3,
+      "keywords": [
+        "고칼륨혈증",
+        "저혈압",
+        "실신",
+        "급성 신손상"
+      ],
+      "evidence": "Concurrent use of ACE inhibitor with ARB may cause additive effects on the renin-angiotensin system causing hyperkalemia, hypotension, syncope, and acute kidney injury."
+    },
+    {
+      "drug": "Antacids (Aluminum-, Calcium-, or Magnesium-Containing)",
+      "severity": 1,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "Reduced oral absorption of lisinopril may occur; separate dosing by at least 2 hours."
+    },
+    {
+      "drug": "Antihypertensive Agents and Vasodilators (e.g., amlodipine, hydralazine, nitrates, prazosin, sildenafil)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension and other adverse effects; doses should be titrated carefully."
+    },
+    {
+      "drug": "Buspirone",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Cabergoline",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may lead to additive hypotension."
+    },
+    {
+      "drug": "Corticosteroids (e.g., dexamethasone, fludrocortisone, predniso(lo)ne)",
+      "severity": 2,
+      "keywords": [
+        "항고혈압 효과 감소"
+      ],
+      "evidence": "Corticosteroids may decrease the antihypertensive effects of ACE inhibitors."
+    },
+    {
+      "drug": "Darbepoetin; Epoetin",
+      "severity": 2,
+      "keywords": [
+        "적혈구생성 억제"
+      ],
+      "evidence": "ACE inhibitors may interfere with erythropoietin."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "디곡신 혈중 농도 증가"
+      ],
+      "evidence": "Digoxin levels may increase 15–30% when an ACE inhibitor is added; monitor serum digoxin levels."
+    },
+    {
+      "drug": "Diphenhydramine",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Disopyramide",
+      "severity": 2,
+      "keywords": [
+        "저혈당 효과 증강"
+      ],
+      "evidence": "Hypoglycemic effects of disopyramide may be enhanced."
+    },
+    {
+      "drug": "Diuretics (e.g., furosemide)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concomitant diuretics may cause hypotension if used with lisinopril; titrate dosages carefully."
+    },
+    {
+      "drug": "Doxepin",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Glycerin, Oral",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Heparin, Low Molecular Weight Heparins (e.g., dalteparin, enoxaparin)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Concurrent use may increase the risk for hyperkalemia."
+    },
+    {
+      "drug": "Lanthanum",
+      "severity": 1,
+      "keywords": [
+        "흡수 감소"
+      ],
+      "evidence": "Reduced oral absorption of lisinopril may occur; separate dosing by at least 2 hours."
+    },
+    {
+      "drug": "NSAIDs (e.g., carprofen, meloxicam, robenacoxib)",
+      "severity": 2,
+      "keywords": [
+        "항고혈압 효과 감소",
+        "신기능 저하"
+      ],
+      "evidence": "NSAIDs may reduce the clinical efficacy of lisinopril as an antihypertensive; combination may result in decreased renal function."
+    },
+    {
+      "drug": "Opioids (e.g., butorphanol, hydrocodone, morphine)",
+      "severity": 2,
+      "keywords": [
+        "저혈압"
+      ],
+      "evidence": "Concurrent use may increase the risk for hypotension."
+    },
+    {
+      "drug": "Potassium or Potassium-Sparing Diuretics (e.g., spironolactone)",
+      "severity": 2,
+      "keywords": [
+        "고칼륨혈증"
+      ],
+      "evidence": "Hyperkalemia may develop with concurrent use."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "심부전 보조 치료 또는 ACE 억제제가 적응되는 기타 용도",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고. 단회 약동학 연구에서 0.5 mg/kg PO가 에날라프릴 0.5 mg/kg PO와 유사한 ACE 활성 억제 효과를 보임."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심부전 보조 치료 또는 ACE 억제제가 적응되는 기타 용도",
+          "value": "0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고 (1일 1~2회 투여)."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "심부전 보조 치료 또는 ACE 억제제가 적응되는 기타 용도 (오프라벨)",
+          "value": "2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "저나트륨 식이와 병용",
+          "evidence": "2.5 mg 총량 1일 1회 투여 시 저나트륨 식이와 병용하여 동맥혈압 감소 보고."
+        },
+        {
+          "logic_type": "linear",
+          "context": "심부전 보조 치료 또는 ACE 억제제가 적응되는 기타 용도 (오프라벨, 일화적)",
+          "value": "0.25 - 0.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적 보고."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량이 필요할 수 있음. 신부전 시 반감기 증가. 구체적인 용량 조정 기준은 명시되지 않음. 크레아티닌, BUN, 소변 단백질:크레아티닌 비율 모니터링 권고."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간부전 환자에서 주의 사용 권고. 리시노프릴은 직접 활성형 약물로 간 대사가 필요하지 않으나, 간부전 환자에서 주의가 필요하다고 명시됨. 구체적인 용량 조정 지침은 없음."
+  },
+  "contraindications": [
+    {
+      "condition": "ACE 억제제 과민반응",
+      "match_terms": [
+        "ACE inhibitor hypersensitivity",
+        "ACE 억제제 알레르기"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신기능 저하",
+      "match_terms": [
+        "renal insufficiency",
+        "CKD",
+        "신부전",
+        "신기능 저하"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "저나트륨혈증 또는 나트륨 결핍",
+      "match_terms": [
+        "hyponatremia",
+        "sodium depletion",
+        "저나트륨혈증"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "관상동맥 또는 뇌혈관 부전",
+      "match_terms": [
+        "coronary insufficiency",
+        "cerebrovascular insufficiency"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic failure",
+        "간부전",
+        "간질환"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "임신"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "안지오텐신 전환 효소(ACE)를 경쟁적으로 억제하여 안지오텐신-II 생성을 차단함으로써 혈관 확장, 알도스테론 분비 감소, 레닌 활성 증가를 유도한다. 에날라프릴과 달리 간에서 활성 대사체로 전환될 필요가 없는 직접 활성형 약물이다.",
+    "common_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "허약",
+      "저혈압",
+      "신기능 저하",
+      "고칼륨혈증"
+    ],
+    "dog_mechanism": "ACE 억제를 통해 총 말초 저항, 폐혈관 저항, 평균 동맥압 및 우심방압, 폐모세혈관 쐐기압 감소; 심박출량, 박출량, 운동 내성 증가. 사구체 질환에서 단백뇨 감소 및 신기능 보존 효과.",
+    "dog_extra_effects": [
+      "식욕부진",
+      "구토",
+      "설사",
+      "허약",
+      "저혈압",
+      "신기능 저하",
+      "고칼륨혈증"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "고혈압 (과다복용 시)",
+      "빈맥",
+      "구토"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 리시노프릴의 경구 생체이용률은 25~50%이며, 투여 후 약 4시간에 최고 혈중 농도에 도달한다. 작용 지속 시간은 24시간으로 알려져 있으나 시간이 지남에 따라 효과가 감소할 수 있다. 심부전 치료 시 푸로세미드와 병용 시 삶의 질 개선 효과가 입증되었다. 신기능 저하 환자에서는 용량 감량이 필요할 수 있으며, 크레아티닌, BUN, 전해질, 혈압을 정기적으로 모니터링해야 한다. 과다복용 시 저혈압이 주요 우려 사항이며, 27 mg/kg 이상에서 저혈압이 보고되었다.",
+    "cat": "고양이에서의 약동학 정보는 없다. 오프라벨로 사용되며, 2.5 mg 총량 1일 1회 투여 시 저나트륨 식이와 병용하여 동맥혈압 감소 효과가 보고되었다. 일화적으로 0.25~0.5 mg/kg 1일 1회 투여가 사용된다. 218마리 고양이 중 1마리만이 4.9 mg/kg에서 저혈압을 보였으며, 개보다 독성에 덜 민감할 수 있다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "신기능 저하, 저나트륨혈증, 관상동맥/뇌혈관 부전, 간부전 환자에서 주의 사용. 중증 CHF 환자에서 치료 시작 시 면밀한 모니터링 필요. 임신 동물에서 태아 위험성 고려."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 및 효능 데이터가 매우 제한적임. 오프라벨 사용이며, 신기능, 전해질, 혈압 모니터링이 필요하다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "실온에서 밀폐 용기에 보관. 제조사의 별도 지시가 없는 한 실온 보관. 조제 경구 현탁액(1 mg/mL)은 4°C에서 차광 보관 시 91일간 95% 이상의 역가 유지.",
+    "forms": [
+      "리시노프릴 경구 정제: 2.5 mg, 5 mg, 10 mg, 20 mg, 30 mg, 40 mg (Prinivil®, Zestril®)",
+      "리시노프릴 경구 용액: 1 mg/mL (Qbrelis®)",
+      "조제 경구 현탁액: 1 mg/mL (리시노프릴 10 mg 정제 10개를 Ora Plus® 50 mL로 분쇄 후 Ora Sweet®으로 100 mL로 조제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "리시노프릴은 직접 활성형 ACE 억제제로, 간에서 활성 대사체로의 전환이 필요 없다. 개에서 심부전 및 고혈압 치료에 오프라벨로 사용되며, 1일 1회 투여가 가능할 수 있다는 장점이 있다. 그러나 에날라프릴, 베나제프릴에 비해 수의학적 사용 경험 및 발표된 정보가 제한적이다. 신기능 저하 환자에서 용량 감량이 필요하며, 신기능, 전해질, 혈압의 정기적 모니터링이 필수적이다. 고칼륨혈증 유발 가능성이 있으므로 칼륨 보존 이뇨제 또는 ARB와의 병용 시 주의가 필요하다.",
+    "indications": "심부전(CHF) 보조 치료, 고혈압 치료, 만성 신부전 및 단백뇨성 신병증 보조 치료, 승모판 역류 및 좌우 단락 관련 판막 심질환 치료. 모든 수의학적 적응증은 오프라벨 사용임.",
+    "client_info": "리시노프릴은 개와 고양이의 심부전, 고혈압, 일부 신장 질환 치료에 사용됩니다. 대부분의 경우 잘 견디지만 구토나 설사가 발생할 수 있습니다. 구토나 식욕 저하가 문제가 되면 음식과 함께 투여하세요. 발진이나 감염 징후(예: 발열)가 나타나면 즉시 수의사에게 연락하세요. 처방된 대로 정확히 투여하는 것이 매우 중요합니다. 수의사의 지도 없이 용량을 줄이거나 투여를 중단하지 마세요. 리시노프릴 투여 중에는 혈압 측정 및 혈액 검사가 정기적으로 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-labeled products",
+      "Cat pharmacokinetics",
+      "CYP enzyme profile",
+      "Protein binding data",
+      "Specific half-life values",
+      "Renal elimination fraction"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "timing_profile.half_life_hr.mean",
+      "timing_profile.onset_min",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days",
+      "organ_burden_logic.cat.brain.calculated_score"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/59.jsonl",
+    "extracted_at": "2026-03-11T07:33:01.414950+00:00",
+    "reviewer": null
+  }
+}

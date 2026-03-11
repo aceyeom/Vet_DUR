@@ -1,0 +1,829 @@
+{
+  "id": "potassium_citrate",
+  "drug_identity": {
+    "name_ko": "구연산칼륨",
+    "name_en": "Potassium Citrate",
+    "active_ingredient": "Potassium Citrate",
+    "brand_names": [
+      "Urocit-K",
+      "CitraVet",
+      "Nutrived Potassium Citrate Granules",
+      "Citrolith",
+      "Polycitra",
+      "Polycitra-LC",
+      "Polycitra-K",
+      "Cytra-LC",
+      "Cytra-K",
+      "Citra-K Crystals"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의 환자에서의 모든 용법은 허가 외(extra-label) 사용이며, FDA 승인 수의용 제품은 없음. 칼슘 옥살산염 요석 예방, 저칼륨혈증 치료, 만성 신장 질환의 대사성 산증 보조 치료에 사용됨.",
+    "dosage_form": [
+      "Tab",
+      "Oral Liquid",
+      "Chewable"
+    ],
+    "available_strengths": [
+      {
+        "value": 675,
+        "unit": "mg"
+      },
+      {
+        "value": 540,
+        "unit": "mg"
+      },
+      {
+        "value": 1080,
+        "unit": "mg"
+      },
+      {
+        "value": 1620,
+        "unit": "mg"
+      },
+      {
+        "value": 300,
+        "unit": "mg"
+      },
+      {
+        "value": 680,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.05,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "구연산염은 간에서 산화되어 중탄산염을 생성함. 흡수 후 거의 완전히 산화되며, 투여량의 5% 미만이 변화 없이 신장으로 배설됨."
+    },
+    "extra_information": "경구 투여 후 흡수 및 산화가 거의 완전하게 이루어짐. 간 기능 저하 환자에서는 구연산염을 중탄산염으로 대사하는 능력이 감소할 수 있음. 심부전 또는 만성 신부전 환자에서는 칼륨 배설 장애로 인해 고칼륨혈증 위험이 증가함."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 간은 주요 대사 기관(구연산염→중탄산염 전환), 신장은 주요 배설 기관. 고칼륨혈증으로 인한 심장 독성 위험 존재. 수의학적 종별 PK 데이터 부재.",
+    "dog": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서 중추신경계 영향에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "electrolyte monitoring",
+          "serum potassium"
+        ],
+        "index": 1,
+        "evidence": "고칼륨혈증 위험이 명시되어 있으며, 혈청 칼륨 및 중탄산염 모니터링이 권장됨. 심혈관 허탈 또는 근육 마비가 발생할 때까지 무증상으로 나타날 수 있음."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal impairment",
+          "advanced kidney disease",
+          "CKD",
+          "potassium excretion"
+        ],
+        "index": 2,
+        "evidence": "신장 기능 저하 시 칼륨 배설 장애로 고칼륨혈증 위험 증가. 심한 신부전은 금기. 만성 신장 질환 보조 치료에 사용됨."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "citrate metabolism",
+          "oxidized in the liver"
+        ],
+        "index": 3,
+        "evidence": "구연산염은 간에서 중탄산염으로 산화됨. 간 기능 저하 시 대사 능력 감소 가능성 있어 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "cardiovascular collapse",
+          "digoxin toxicity",
+          "severe myocardial damage"
+        ],
+        "index": 4,
+        "evidence": "고칼륨혈증은 심혈관 허탈을 유발할 수 있음. 심한 심근 손상은 금기. 디곡신과 병용 시 심장 독성 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 중추신경계 영향에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "electrolyte monitoring",
+          "serum potassium"
+        ],
+        "index": 1,
+        "evidence": "고양이에서도 고칼륨혈증 위험이 존재하며, 혈청 칼륨 및 중탄산염 모니터링이 권장됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "renal impairment",
+          "advanced kidney disease",
+          "CKD",
+          "potassium excretion"
+        ],
+        "index": 2,
+        "evidence": "만성 신장 질환 관련 저칼륨혈증 및 대사성 산증 치료에 사용됨. 신장 기능 저하 시 고칼륨혈증 위험 증가."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "citrate metabolism",
+          "oxidized in the liver"
+        ],
+        "index": 3,
+        "evidence": "간 기능 저하 시 구연산염의 중탄산염 전환 능력 감소 가능성 있어 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "hyperkalemia",
+          "cardiovascular collapse",
+          "severe myocardial damage"
+        ],
+        "index": 4,
+        "evidence": "고칼륨혈증으로 인한 심혈관 허탈 위험. 심한 심근 손상은 금기."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "경구 투여 후 흡수 및 산화가 거의 완전하게 이루어지며, 투여량의 5% 미만이 변화 없이 배설됨. 구체적인 반감기, Tmax, 생체이용률(%) 데이터는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Aluminum-Containing Phosphate Binders",
+      "severity": 3,
+      "keywords": [
+        "aluminum toxicity",
+        "systemic alkalosis",
+        "advanced kidney disease"
+      ],
+      "evidence": "Increased risk for aluminum toxicity and systemic alkalosis, particularly in patients with advanced kidney disease."
+    },
+    {
+      "drug": "Antacids (bicarbonate or aluminum-containing)",
+      "severity": 2,
+      "keywords": [
+        "systemic alkalosis",
+        "aluminum toxicity",
+        "hypernatremia",
+        "calcium stones"
+      ],
+      "evidence": "Citrate alkalinizers with antacids may cause systemic alkalosis and aluminum toxicity (aluminum antacids). Sodium citrate combined with sodium bicarbonate may cause hypernatremia and calcium stone development in patients with pre-existing uric acid stones."
+    },
+    {
+      "drug": "Anticholinergic Agents (aminopentamide, atropine, oxybutynin, tricyclic antidepressants)",
+      "severity": 2,
+      "keywords": [
+        "reduced GI motility",
+        "prolonged GI transit",
+        "GI erosions",
+        "GI ulceration"
+      ],
+      "evidence": "Anticholinergic drugs may reduce GI motility and prolong GI transit time, increasing the risk for GI erosions or ulceration from potassium citrate tablets."
+    },
+    {
+      "drug": "Antidiarrheal Agents (diphenoxylate, loperamide)",
+      "severity": 2,
+      "keywords": [
+        "prolonged GI transit",
+        "GI erosions",
+        "GI ulceration"
+      ],
+      "evidence": "Prolonged GI transit time may increase the risk for GI erosions or ulceration from extended-release potassium citrate formulations."
+    },
+    {
+      "drug": "Aspirin",
+      "severity": 1,
+      "keywords": [
+        "alkaline urine",
+        "increased salicylate excretion"
+      ],
+      "evidence": "Alkalinized urine can increase the excretion of salicylates."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 3,
+      "keywords": [
+        "hyperkalemia",
+        "digoxin-induced cardiac toxicity"
+      ],
+      "evidence": "Hyperkalemia increases the risk for digoxin-induced cardiac toxicity."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "alkaline urine",
+        "decreased solubility",
+        "crystalluria"
+      ],
+      "evidence": "The solubility of ciprofloxacin and enrofloxacin is decreased in an alkaline environment. Patients with alkaline urine should be monitored for signs of crystalluria."
+    },
+    {
+      "drug": "Lithium",
+      "severity": 2,
+      "keywords": [
+        "alkaline urine",
+        "decreased lithium excretion"
+      ],
+      "evidence": "Alkalinized urine can decrease excretion of lithium, potentially increasing lithium levels."
+    },
+    {
+      "drug": "Methenamine",
+      "severity": 3,
+      "keywords": [
+        "alkaline urine",
+        "reduced efficacy",
+        "acidic urine required"
+      ],
+      "evidence": "Concurrent use with methenamine is not recommended, as it requires an acidic urine for efficacy."
+    },
+    {
+      "drug": "Opioids (butorphanol, morphine, tramadol)",
+      "severity": 2,
+      "keywords": [
+        "prolonged GI transit",
+        "GI erosions",
+        "GI ulceration"
+      ],
+      "evidence": "Opioids may prolong GI transit time, increasing the risk for GI erosions or ulceration from extended-release potassium citrate formulations."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 1,
+      "keywords": [
+        "alkaline urine",
+        "increased phenobarbital excretion"
+      ],
+      "evidence": "Alkalinized urine can increase excretion of phenobarbital."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "alkaline urine",
+        "decreased quinidine excretion"
+      ],
+      "evidence": "Alkalinized urine can decrease excretion of quinidine, potentially increasing quinidine levels."
+    },
+    {
+      "drug": "Sympathomimetic Agents (amphetamines, ephedrine, pseudoephedrine)",
+      "severity": 2,
+      "keywords": [
+        "alkaline urine",
+        "decreased excretion",
+        "increased adverse effects"
+      ],
+      "evidence": "Alkalinized urine can decrease excretion of sympathomimetic agents, increasing the risk for adverse effects."
+    },
+    {
+      "drug": "Tetracyclines",
+      "severity": 1,
+      "keywords": [
+        "alkaline urine",
+        "decreased tetracycline excretion"
+      ],
+      "evidence": "Alkalinized urine can decrease excretion of tetracyclines."
+    },
+    {
+      "drug": "ACE Inhibitors (benazepril, enalapril, lisinopril)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "increased serum potassium"
+      ],
+      "evidence": "ACE inhibitors may lead to increases in serum potassium concentrations (including severe hyperkalemia), particularly in patients with advanced kidney disease."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "increased serum potassium"
+      ],
+      "evidence": "ARBs may lead to increases in serum potassium concentrations (including severe hyperkalemia), particularly in patients with advanced kidney disease."
+    },
+    {
+      "drug": "Heparin",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "increased serum potassium"
+      ],
+      "evidence": "Heparin may lead to increases in serum potassium concentrations (including severe hyperkalemia), particularly in patients with advanced kidney disease."
+    },
+    {
+      "drug": "NSAIDs (carprofen, meloxicam)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "increased serum potassium"
+      ],
+      "evidence": "NSAIDs may lead to increases in serum potassium concentrations (including severe hyperkalemia), particularly in patients with advanced kidney disease."
+    },
+    {
+      "drug": "Potassium-Containing Drugs and Foods",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "increased serum potassium"
+      ],
+      "evidence": "Concurrent use with potassium-containing drugs and foods may lead to increases in serum potassium concentrations (including severe hyperkalemia)."
+    },
+    {
+      "drug": "Potassium-Sparing Diuretics (spironolactone, triamterene)",
+      "severity": 2,
+      "keywords": [
+        "hyperkalemia",
+        "increased serum potassium"
+      ],
+      "evidence": "Potassium-sparing diuretics may lead to increases in serum potassium concentrations (including severe hyperkalemia), particularly in patients with advanced kidney disease."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "moderate",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": "k_sparing",
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "칼슘 옥살산염 요석 형성 억제 보조 치료 (extra-label)",
+          "value": "50 - 75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "소변 pH가 이미 7.5 초과인 경우 사용 금지. 식이 요법과 병행 사용; 일부에서는 하이드로클로로티아지드 병용 권장.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 보조 치료 - 칼륨 보충 및 요알칼리화제 (extra-label)",
+          "value": "40 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈청 칼륨 및 중탄산염 농도를 7~14일마다 모니터링하여 최종 유지 용량 결정. 목표 혈청 중탄산염 농도: 18~24 mmol/L.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use; 0.4–0.6 mEq/kg PO q8–12h로도 표기됨"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "팬코니 증후군 - Gonto 프로토콜의 일부 (extra-label), 혈청 칼륨 K+ = 1.5~2.0 mEq/L",
+          "value": "1620",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "혈청 칼륨 농도에 따라 용량 조정. K+ 1.5~2.0 mEq/L: 15 mEq (1620 mg) q12h",
+          "evidence": "Plumb's Veterinary Drug Handbook, Gonto protocol, extra-label use"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "팬코니 증후군 - Gonto 프로토콜의 일부 (extra-label), 혈청 칼륨 K+ = 2.1~2.75 mEq/L",
+          "value": "1080",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "K+ 2.1~2.75 mEq/L: 10 mEq (1080 mg) q12h",
+          "evidence": "Plumb's Veterinary Drug Handbook, Gonto protocol, extra-label use"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "팬코니 증후군 - Gonto 프로토콜의 일부 (extra-label), 혈청 칼륨 K+ = 2.76~3.75 mEq/L",
+          "value": "540",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "K+ 2.76~3.75 mEq/L: 5 mEq (540 mg) q12h",
+          "evidence": "Plumb's Veterinary Drug Handbook, Gonto protocol, extra-label use"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "칼슘 옥살산염 요석 형성 억제 보조 치료 (extra-label)",
+          "value": "50 - 75",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "고양이에서의 효능은 충분히 확립되지 않음.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 관련 저칼륨혈증 보조 치료 (extra-label) - 체중 기반",
+          "value": "40 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "1일 2~3회 분할 투여. 치료 중 혈청 칼륨 연속 측정에 따라 용량 조정.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "만성 신장 질환 관련 저칼륨혈증 보조 치료 (extra-label) - 후향적 연구 기반",
+          "value": "0.04 - 1.34",
+          "unit": "mcg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mEq/kg 단위: 0.04~1.34 mEq/kg 또는 0.25~2.8 mEq/cat(mEq/kg 아님) PO 1일 1회. 후향적 연구 기반.",
+          "evidence": "Plumb's Veterinary Drug Handbook, retrospective study, extra-label use"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "만성 신장 질환 관련 저칼륨혈증 보조 치료 (extra-label) - 고정 용량",
+          "value": "1 - 4",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mEq/cat(mEq/kg 아님) 단위: 1~4 mEq/cat PO q12h.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        },
+        {
+          "logic_type": "linear",
+          "context": "만성 신장 질환 관련 대사성 산증 보조 치료 (extra-label)",
+          "value": "40 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "신장 식이 요법으로 적절한 산-염기 상태 유지가 불충분할 때 시작. 경구 탄산수소나트륨과 병용 가능. 치료 시작 후 산-염기 상태 연속 측정에 따라 용량 조정. 목표 혈청 중탄산염 농도: 15~24 mmol/L.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label use"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "심한 신부전(azotemia 또는 핍뇨를 동반한 급성 신손상) 및 심한 신장 기능 저하는 금기. 진행성 신장 질환 환자에서는 칼륨 배설 장애로 인한 고칼륨혈증 위험이 증가하므로 주의 사용. 혈청 BUN, 크레아티닌 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 기능 저하 환자에서는 구연산염을 중탄산염으로 대사하는 능력이 감소할 수 있으므로 주의하여 사용. 구체적인 용량 조정 지침은 모노그래프에 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "심한 심근 손상",
+      "match_terms": [
+        "severe myocardial damage",
+        "cardiomyopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 신부전 / 급성 신손상 (azotemia 또는 핍뇨 동반)",
+      "match_terms": [
+        "severe renal impairment",
+        "acute kidney injury",
+        "azotemia",
+        "oliguria",
+        "AKI"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "고칼륨혈증",
+      "match_terms": [
+        "hyperkalemia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "활동성 요로감염과 관련된 칼슘 또는 스트루바이트 요석",
+      "match_terms": [
+        "calcium uroliths",
+        "struvite uroliths",
+        "active UTI",
+        "urolithiasis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "알루미늄 독성",
+      "match_terms": [
+        "aluminum toxicity"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "부신 기능 부전 (저부신피질증)",
+      "match_terms": [
+        "adrenal insufficiency",
+        "hypoadrenocorticism"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 탈수",
+      "match_terms": [
+        "acute dehydration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "조절되지 않는 당뇨병",
+      "match_terms": [
+        "uncontrolled diabetes mellitus",
+        "diabetic ketoacidosis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 궤양",
+      "match_terms": [
+        "GI ulceration",
+        "GI ulcer"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위 배출 지연 / 식도 질환 / 장 폐색 (고형 제형)",
+      "match_terms": [
+        "delayed gastric emptying",
+        "esophageal disease",
+        "intestinal obstruction"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심부전 또는 만성 신부전 (칼륨 배설 장애)",
+      "match_terms": [
+        "heart failure",
+        "chronic renal failure",
+        "impaired potassium excretion"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간 기능 저하",
+      "match_terms": [
+        "hepatic impairment",
+        "liver disease"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "구연산염은 간에서 산화되어 중탄산염을 생성하며, 전신 및 요알칼리화제로 작용함. 흡수된 구연산염의 대사는 알칼리 부하를 생성하여 요 pH를 높이고, 구연산염 청소율에 영향을 미쳐 요 구연산염을 증가시킴. 구연산염은 칼슘과 복합체를 형성하여 요 중 칼슘 옥살산염 농도를 감소시킴. 요알칼리화 효과는 요산의 용해도를 증가시킴.",
+    "common_extra_effects": [
+      "오심(nausea)",
+      "구토(vomiting)",
+      "설사(diarrhea)",
+      "고칼륨혈증(hyperkalemia)",
+      "체액 저류(fluid retention)",
+      "대사성 알칼리증(metabolic alkalosis)",
+      "위장관 궤양/천공(GI ulceration/perforation, 고형 제형)",
+      "쓴맛(bitter taste, 액체 제형)"
+    ],
+    "dog_mechanism": "개에서 구연산칼륨은 칼슘 옥살산염 요석 형성 억제, 저칼륨혈증 치료, 만성 신장 질환의 대사성 산증 보조 치료에 사용됨. 팬코니 증후군에서 Gonto 프로토콜의 일부로 사용됨.",
+    "dog_extra_effects": [
+      "고칼륨혈증(hyperkalemia)",
+      "위장관 장애(GI distress)",
+      "위장관 궤양/천공(GI ulceration/perforation, 고형 제형)"
+    ],
+    "cat_mechanism": "고양이에서 구연산칼륨은 만성 신장 질환 관련 저칼륨혈증 및 대사성 산증 치료, 칼슘 옥살산염 요석 형성 억제에 사용됨. 고양이에서의 효능은 충분히 확립되지 않음.",
+    "cat_extra_effects": [
+      "고칼륨혈증(hyperkalemia)",
+      "위장관 장애(GI distress)",
+      "쓴맛으로 인한 기호성 저하(poor palatability due to bitter taste)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 칼슘 옥살산염 요석 예방을 위한 최적 용량 및 전반적 효능은 완전히 규명되지 않음. 정상 개를 대상으로 한 단일 연구에서 칼슘 옥살산염의 상대적 과포화도(RSS) 및 요 구연산염에 유의한 차이가 없었으나, 미니어처 슈나우저 일부에서 칼슘 옥살산염 RSS 감소 및 요 구연산염 배설 증가가 관찰됨. 팬코니 증후군에서 Gonto 프로토콜의 일부로 광범위하게 사용되나 임상 연구로 평가된 바 없음. 혈청 칼륨 및 중탄산염 농도를 7~14일마다 모니터링하여 최종 유지 용량 결정. 목표 혈청 중탄산염 농도: 18~24 mmol/L.",
+    "cat": "고양이에서 칼슘 옥살산염 요석 예방을 위한 효능은 충분히 확립되지 않음. 만성 신장 질환 관련 저칼륨혈증 및 대사성 산증 치료에 사용됨. 액체 제형은 쓴맛으로 인해 기호성이 낮을 수 있음. 혈청 칼륨 및 중탄산염 농도를 7~14일마다 모니터링하여 최종 유지 용량 결정. 목표 혈청 중탄산염 농도: 15~24 mmol/L."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 심부전, 만성 신부전, 간 기능 저하 환자에서 주의 사용. 고칼륨혈증 위험이 있는 환자(부신 기능 부전, 급성 탈수, 진행성 신장 질환, 조절되지 않는 당뇨병)에서 주의. 정기적인 전해질 및 요 pH 모니터링 필수."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 심부전, 만성 신부전, 간 기능 저하 환자에서 주의 사용. 고칼륨혈증 위험이 있는 환자에서 주의. 액체 제형의 쓴맛으로 인한 기호성 문제 가능. 정기적인 전해질 및 요 pH 모니터링 필수."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 실온(20°C~25°C, 68°F~77°F)에서 보관. 제조사의 별도 권장 사항이 없는 경우.",
+    "forms": [
+      "수의용: 구연산칼륨 정제 675 mg (6.25 mEq 칼륨) - CitraVet®, generic (OTC)",
+      "수의용: 구연산칼륨 및 지방산 과립 - Nutrived® Potassium Citrate Granules (OTC)",
+      "수의용: 구연산칼륨 및 크랜베리 추출물 씹는 정제 680 mg - generic (OTC)",
+      "수의용: 구연산칼륨, 크랜베리 추출물 및 지방산 과립 - generic (OTC)",
+      "인체용: 구연산칼륨 서방정 5 mEq (540 mg), 10 mEq (1080 mg), 15 mEq (1620 mg) - Urocit-K®, generic (Rx)",
+      "인체용: 구연산칼륨/구연산나트륨 복합 정제 - Citrolith® (Rx)",
+      "인체용: 구연산칼륨/구연산나트륨/구연산 시럽 - Polycitra® (Rx)",
+      "인체용: 구연산칼륨/구연산나트륨/구연산 용액 - Polycitra-LC®, Polycitra-K®, Cytra-LC®, Cytra-K® (Rx)",
+      "인체용: 구연산칼륨/구연산 재구성용 결정 - Polycitra-K®, Citra-K Crystals (Rx)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "구연산칼륨은 경구 투여 시 간에서 중탄산염으로 전환되어 전신 및 요알칼리화 효과를 나타내는 약물입니다. 주요 적응증은 칼슘 옥살산염 요석 형성 억제, 저칼륨혈증 치료, 만성 신장 질환의 대사성 산증 보조 치료입니다. 수의 환자에서의 모든 용법은 허가 외(extra-label) 사용이며, FDA 승인 수의용 제품은 없습니다. 고칼륨혈증, 위장관 궤양/천공, 대사성 알칼리증이 주요 부작용이며, 정기적인 전해질 및 요 pH 모니터링이 필수적입니다. 심한 신부전, 심한 심근 손상, 고칼륨혈증, 위장관 궤양은 금기입니다.",
+    "indications": "1) 칼슘 옥살산염 및 요산 요석 형성 억제 보조 치료 (extra-label)\n2) 저칼륨혈증 치료 (extra-label)\n3) 만성 신장 질환의 대사성 산증 보조 치료 (extra-label)\n4) 팬코니 증후군에서 Gonto 프로토콜의 일부로 사용 (extra-label)\n5) 골 건강 개선 (대사성 산증 환자에서 파골세포 활성 억제) (extra-label)",
+    "client_info": "이 약은 칼슘 옥살산염 방광 및 신장 결석 형성을 예방하는 데 사용될 수 있습니다. 만성 신장 질환이 있는 동물에서는 혈중 칼륨 농도를 높이고 체내 산이 축적되는 것을 방지하는 데 사용됩니다.\n\n• 일반적으로 음식과 함께 또는 음식에 섞어서 투여합니다. 각 투여 후 물을 자유롭게 마실 수 있도록 해주세요.\n• 이 약의 사용은 환자 안전과 적절한 치료 효과를 확인하기 위해 정기적인 혈액 검사(전해질, 신장 기능)와 소변 검사가 필요합니다.\n• 구토, 설사, 식욕 부진 등의 위장관 증상이 나타나면 수의사에게 알려주세요.\n• 고형 제형(정제)은 위장관 궤양이나 천공을 유발할 수 있으므로, 위장관 질환이 있는 동물에서는 특히 주의가 필요합니다.\n• 임의로 용량을 변경하거나 투약을 중단하지 마세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific PK parameters (half-life, Tmax, bioavailability %)",
+      "Protein binding data",
+      "CYP enzyme profile",
+      "Veterinary species-specific PK studies",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/25.jsonl",
+    "extracted_at": "2026-03-10T21:00:32.210838+00:00",
+    "reviewer": null
+  }
+}

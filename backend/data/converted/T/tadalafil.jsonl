@@ -1,0 +1,514 @@
+{
+  "id": "tadalafil",
+  "drug_identity": {
+    "name_ko": "타달라필",
+    "name_en": "Tadalafil",
+    "active_ingredient": "Tadalafil",
+    "brand_names": [
+      "Cialis",
+      "Adcirca"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학에서 공식 승인된 제품 없음. 개의 폐동맥 고혈압 및 양성 전립선 비대증 치료에 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      },
+      {
+        "value": 20.0,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.36,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "타달라필은 CYP3A4에 의해 카테콜 대사체로 대사되며, 이후 메틸화 및 글루쿠론산 포합 반응을 거친다. 대사체는 활성이 없는 것으로 알려져 있다. 대변으로 61%, 소변으로 약 36% 배설된다(사람 데이터)."
+    },
+    "extra_information": "건강한 개에서 경구 투여 후 최고 혈장 농도는 약 1.5시간, 반감기는 4.2시간이었다. 비강 내 투여 시 최고 혈장 농도는 약 1.7시간, 반감기는 5.8시간이었다. 사람에서의 반감기(35시간)보다 개에서 훨씬 짧다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 개 특이적 PK 데이터 일부 존재; 고양이 데이터 없음. 사람 데이터 보완 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "cerebellum (PDE5 distribution)"
+        ],
+        "index": 1,
+        "evidence": "PDE5는 소뇌에 분포하는 것으로 알려져 있으나(사람 데이터), 개에서 신경계 부작용은 보고되지 않았다."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "neutrophil decrease",
+          "platelet decrease",
+          "inflammatory signs"
+        ],
+        "index": 2,
+        "evidence": "개 만성 독성 연구(12개월)에서 고용량(사람 동등 용량의 4~18배) 투여 시 2마리에서 호중구 현저 감소 및 혈소판 중등도 감소, 염증 징후가 관찰되었다. 투약 중단 2주 내 회복되었다."
+      },
+      "kidney": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "renal impairment dose reduction",
+          "renal elimination 36%"
+        ],
+        "index": 1,
+        "evidence": "신장으로 약 36% 배설(사람 데이터). 중증 신장 장애 시 용량 감량 권고. 개 특이적 신독성 데이터는 없다."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "CYP3A4 metabolism",
+          "hepatic impairment dose reduction"
+        ],
+        "index": 2,
+        "evidence": "CYP3A4에 의해 간에서 주로 대사됨. 중증 간 장애 시 용량 감량 권고(사람 데이터). 개 특이적 간독성 데이터는 없다."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "pulmonary vasodilation",
+          "hypotension",
+          "decreased diastolic PAP"
+        ],
+        "index": 2,
+        "evidence": "폐동맥 고혈압 치료제로 폐혈관 확장 작용. 저혈압 가능성 있음. 개에서 이완기 폐동맥압 및 평균 폐동맥압 감소 확인."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에 대한 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 4.2,
+      "max": 5.8,
+      "mean": 5.0,
+      "species": "dog"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 94,
+    "evidence": "건강한 개에서 경구 투여 후 Tmax ≈1.5시간, 반감기 4.2시간; 비강 내 투여 시 Tmax ≈1.7시간, 반감기 5.8시간. 단백결합률 94%는 사람 데이터. 경구 생체이용률은 개에서 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기(contraindicated)→3, 주요(major)→3, 중등도(moderate)→2, 경미(minor)→1.",
+  "drug_interactions": [
+    {
+      "drug": "Nitrates (nitroglycerin, isosorbide)",
+      "severity": 3,
+      "keywords": [
+        "hypotension",
+        "vasodilation potentiation",
+        "life-threatening"
+      ],
+      "evidence": "Significant potentiation of vasodilatory effects; life-threatening hypotension possible. Contraindicated."
+    },
+    {
+      "drug": "Nitroprusside Sodium",
+      "severity": 3,
+      "keywords": [
+        "hypotension",
+        "vasodilation potentiation",
+        "life-threatening"
+      ],
+      "evidence": "Significant potentiation of vasodilatory effects; life-threatening hypotension possible."
+    },
+    {
+      "drug": "Alpha-Adrenergic Blockers (tamsulosin, prazosin, acepromazine, phenoxybenzamine)",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "May increase hypotensive effects when combined with tadalafil."
+    },
+    {
+      "drug": "Amlodipine",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "Potential to increase hypotensive effects."
+    },
+    {
+      "drug": "Antihypertensive / Hypotensive Drugs",
+      "severity": 2,
+      "keywords": [
+        "hypotension",
+        "additive vasodilation"
+      ],
+      "evidence": "Potentially could increase hypotensive effects."
+    },
+    {
+      "drug": "Azole Antifungals (ketoconazole, itraconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased AUC",
+        "reduced metabolism"
+      ],
+      "evidence": "May reduce tadalafil metabolism via CYP3A4 inhibition and increase AUC."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased AUC",
+        "reduced metabolism"
+      ],
+      "evidence": "May reduce tadalafil metabolism and increase AUC."
+    },
+    {
+      "drug": "Clarithromycin / Erythromycin",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased bioavailability",
+        "increased AUC"
+      ],
+      "evidence": "May increase tadalafil bioavailability, reduce tadalafil metabolism, and increase AUC."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "decreased tadalafil concentration"
+      ],
+      "evidence": "May decrease tadalafil plasma concentrations via CYP3A4 induction."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "decreased tadalafil concentration"
+      ],
+      "evidence": "May decrease tadalafil plasma concentrations via CYP3A4 induction."
+    },
+    {
+      "drug": "Rivaroxaban",
+      "severity": 1,
+      "keywords": [
+        "P-glycoprotein",
+        "efflux inhibition"
+      ],
+      "evidence": "Tadalafil decreased P-glycoprotein mediated efflux of rivaroxaban in an in vitro model; clinical significance remains unclear."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 1.0
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "폐동맥 고혈압 (오프라벨)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "1-2 mg/kg PO once daily (extra-label)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "폐동맥 고혈압 - 증례 보고 (Yorkshire Terrier, 오프라벨)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "배경 치료(푸로세미드, 스피로노락톤, 베나제프릴, 덱사메타손, 산소)에 추가 투여; 24시간 이내 급격한 임상 개선, 7일 추적 관찰에서 수축기 폐동맥압 최대 26 mmHg 감소",
+          "evidence": "Case report in a Yorkshire terrier: 1 mg/kg PO every 48 hours added to background treatment"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "양성 전립선 비대증 (오프라벨, 실험적)",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "실험적으로 유발된 BPH에서 생화학적 지표 감소 확인; 임상 증상에 대한 효과는 추가 연구 필요",
+          "evidence": "5 mg/dog (NOT mg/kg) PO once daily (extra-label)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "중증 신장 장애 환자에서 용량 감량이 필요할 수 있다(사람 데이터 기반). 개에서의 구체적인 기준치는 보고되지 않았다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간 장애 환자에서 용량 감량이 필요할 수 있다(사람 데이터 기반). 개에서의 구체적인 기준치는 보고되지 않았다."
+  },
+  "contraindications": [
+    {
+      "condition": "유기 질산염 투여 중",
+      "match_terms": [
+        "nitroglycerin",
+        "isosorbide",
+        "organic nitrate"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "타달라필 과민증",
+      "match_terms": [
+        "hypersensitivity to tadalafil"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신장 장애",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "cGMP 특이적 포스포디에스테라제 5형(PDE5)의 선택적 억제제. PDE5 억제를 통해 cGMP 농도를 증가시켜 폐혈관 평활근을 이완시키고 혈관 확장을 유도한다.",
+    "common_extra_effects": [
+      "식욕 감소",
+      "구토",
+      "설사",
+      "서혜부 홍조(피부 홍조)",
+      "소화불량",
+      "오심",
+      "두통",
+      "근육통",
+      "비충혈",
+      "안면 홍조",
+      "시신경병증(드물게)",
+      "경련(드물게)",
+      "Stevens-Johnson 증후군(드물게)",
+      "청력 소실(드물게)"
+    ],
+    "dog_mechanism": "PDE5 억제를 통한 폐혈관 확장. 개에서 이완기 폐동맥압, 평균 폐동맥압 및 삼첨판 역류 감소 확인.",
+    "dog_extra_effects": [
+      "식욕 감소",
+      "위장관 증상",
+      "서혜부 피부 홍조",
+      "고용량에서 호중구 감소",
+      "고용량에서 혈소판 감소",
+      "고용량에서 염증 징후"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": []
+  },
+  "species_notes": {
+    "dog": "개에서 타달라필은 폐동맥 고혈압 치료에 오프라벨로 사용된다. 실리데나필보다 작용 지속 시간이 길어 일부 장점이 있다. 경구 투여 후 Tmax ≈1.5시간, 반감기 4.2시간(사람의 35시간보다 훨씬 짧음). 고용량(사람 동등 용량의 4~18배)에서 호중구 및 혈소판 감소가 보고되었으나 투약 중단 후 2주 내 회복되었다. 양성 전립선 비대증에 대한 사용은 실험적 단계이다.",
+    "cat": "고양이에서의 사용에 대한 데이터가 없다. 안전성 및 유효성이 확립되지 않았다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "수의학적 임상 경험 및 발표된 데이터가 제한적이다. 유기 질산염과 병용 금기. 중증 간·신장 장애 시 용량 감량 필요. 고용량에서 혈액학적 이상 가능성."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서의 안전성 및 유효성 데이터가 없다. 사용 시 주의가 필요하다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "15°C~30°C(59°F~86°F) 실온 보관. 경구 현탁액은 호박색 플라스틱 처방 용기에 실온 보관 시 91일간 안정.",
+    "forms": [
+      "Tadalafil 경구 정제: 2.5 mg, 5 mg, 10 mg, 20 mg (Cialis®, Adcirca® [20 mg only], generic)",
+      "경구 현탁액 5 mg/mL (정제로부터 조제 가능; Ora-Sweet® 및 Ora-Plus® 사용)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "타달라필은 PDE5 억제제로, 개의 폐동맥 고혈압(PAH) 치료에 오프라벨로 사용된다. 실리데나필보다 작용 지속 시간이 길어 1일 1회 투여가 가능하다. 수의학적 임상 데이터가 제한적이므로 주의 깊은 모니터링이 필요하다. 유기 질산염(니트로글리세린, 이소소르비드)과의 병용은 생명을 위협하는 저혈압을 유발할 수 있어 절대 금기이다.",
+    "indications": "【승인 적응증】없음(수의학적 승인 제품 없음). 【오프라벨 사용】개의 폐동맥 고혈압(PAH): 1~2 mg/kg PO SID 또는 1 mg/kg PO q48h. 개의 양성 전립선 비대증(BPH, 실험적): 5 mg/dog PO SID. 【사람 승인 적응증】폐동맥 고혈압, 발기부전.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 처방된 대로 정확히 투여하십시오. 서혜부(사타구니) 부위에 홍조(붉어짐)가 나타날 수 있습니다. 식욕 부진, 구토, 설사도 가능합니다. 이 약은 수의학에서 사용 경험이 많지 않으므로, 다른 부작용이 나타나면 즉시 수의사에게 알려주십시오. 니트로글리세린이나 이소소르비드와 함께 투여하지 마십시오. 심각한 저혈압을 유발할 수 있습니다. 투약 중에는 정기적인 추적 검사를 위해 수의사 방문을 빠뜨리지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Laboratory Considerations (none noted)",
+      "Cat dosage",
+      "Oral bioavailability (dog)",
+      "Onset of action (minutes)"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.f_percent",
+      "dosage_and_kinetics.cat.dosage_list",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "genetic_sensitivity",
+      "organ_burden_logic.cat"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:10:53.066688+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "id": "omeprazole",
+  "drug_identity": {
+    "name_ko": "오메프라졸",
+    "name_en": "Omeprazole",
+    "active_ingredient": "Omeprazole",
+    "brand_names": [
+      "GastroGard",
+      "Prilosec",
+      "UlcerGard",
+      "Peptizole",
+      "Zegerid"
+    ],
+    "allergy_class": null,
+    "class": "GI Protectant",
+    "source": "foreign",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "개, 고양이에서의 사용은 허가 외(extra-label) 사용이며, 말에서만 FDA 승인된 제품이 존재함.",
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 10,
+        "unit": "mg"
+      },
+      {
+        "value": 20,
+        "unit": "mg"
+      },
+      {
+        "value": 40,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 370,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C19",
+        "CYP3A4"
+      ],
+      "inhibitors": [
+        "CYP2C19"
+      ],
+      "inducers": [],
+      "pathway_evidence": "사람에서 오메프라졸은 CYP2C19 및 CYP3A4의 기질이며, CYP2C19 억제제임. 간에서 최소 6가지 대사산물로 광범위하게 대사되며, 주로 소변으로 배설되고 일부는 담즙을 통해 대변으로 배설됨."
+    },
+    "extra_information": "개와 사람에서 정상 간기능 시 혈청 반감기는 평균 약 1시간이나, 치료 효과는 24~72시간 이상 지속될 수 있음. 개에서 최대 위산 감소 효과 발현까지 약 3~5일 소요됨. 간기능 장애 시 초회통과효과가 감소하여 반감기가 연장될 수 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 소화기계 부작용 위주이며, 신장 및 간에 대한 부담이 일부 언급됨. 수의학적 종별 PK 데이터는 제한적임.",
+    "dog": {
+      "brain": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "CNS disturbances",
+          "CSF production reduction"
+        ],
+        "index": 1,
+        "evidence": "CNS 장애가 잠재적 부작용으로 언급됨. 뇌실내 또는 IV 투여 시 CSF 생성 감소 효과가 보고됨."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic abnormalities"
+        ],
+        "index": 1,
+        "evidence": "혈액학적 이상이 드물게 발생할 수 있다고 언급됨(사람에서 드묾)."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "proteinuria",
+          "interstitial nephritis",
+          "renal disease"
+        ],
+        "index": 2,
+        "evidence": "단백뇨가 잠재적 부작용으로 언급됨. 간질성 신염 발생 시 투약 중단 권고. 신장 질환 시 반감기 연장 가능."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "extensively metabolized in the liver",
+          "hepatic dysfunction",
+          "first-pass effect"
+        ],
+        "index": 3,
+        "evidence": "간에서 광범위하게 대사됨. 심각한 간기능 장애 시 초회통과효과 감소 및 반감기 연장으로 용량 조절 필요."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부작용 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "CNS disturbances"
+        ],
+        "index": 1,
+        "evidence": "CNS 장애가 잠재적 부작용으로 언급되나 고양이 특이적 데이터는 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hematologic abnormalities"
+        ],
+        "index": 1,
+        "evidence": "혈액학적 이상이 드물게 발생할 수 있다고 언급됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "proteinuria",
+          "interstitial nephritis",
+          "renal disease"
+        ],
+        "index": 2,
+        "evidence": "단백뇨 및 간질성 신염이 잠재적 부작용으로 언급됨. 신장 질환 시 반감기 연장 가능."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "extensively metabolized in the liver",
+          "hepatic dysfunction"
+        ],
+        "index": 3,
+        "evidence": "간에서 광범위하게 대사됨. 심각한 간기능 장애 시 용량 조절 필요."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장에 대한 직접적인 부작용 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 60,
+    "t_max_hr": 2.0,
+    "half_life_hr": {
+      "min": 0.59,
+      "max": 1.0,
+      "mean": 1.0,
+      "species": "dog"
+    },
+    "f_percent": 10,
+    "protein_binding_percent": 95,
+    "evidence": "사람에서 최고 혈청 농도는 투여 후 0.5~3.5시간 내 도달, 작용 발현은 1시간 이내. 개와 사람에서 정상 간기능 시 혈청 반감기 평균 약 1시간. 말용 경구 페이스트의 생체이용률은 약 10%(유의한 초회통과효과). 사람에서 알부민 및 알파-1 산 당단백질에 약 95% 결합."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1. 별도 언급이 없는 한 병용이 절대 금기는 아니나 추가 모니터링 권장.",
+  "drug_interactions": [
+    {
+      "drug": "Benzodiazepines (alprazolam, diazepam)",
+      "severity": 2,
+      "keywords": [
+        "CYP2C19 inhibition",
+        "altered metabolism",
+        "prolonged CNS effects"
+      ],
+      "evidence": "Omeprazole may potentially alter benzodiazepine metabolism via CYP2C19 inhibition and prolong CNS effects."
+    },
+    {
+      "drug": "Bisphosphonates (alendronate, clodronate)",
+      "severity": 2,
+      "keywords": [
+        "decreased effectiveness",
+        "pH-dependent absorption"
+      ],
+      "evidence": "Omeprazole may decrease the effectiveness of bisphosphonate derivatives."
+    },
+    {
+      "drug": "Cefpodoxime",
+      "severity": 2,
+      "keywords": [
+        "reduced serum concentration",
+        "pH-dependent absorption"
+      ],
+      "evidence": "Serum cefpodoxime concentrations may be reduced by omeprazole."
+    },
+    {
+      "drug": "Cephalexin",
+      "severity": 1,
+      "keywords": [
+        "reduced peak concentration",
+        "delayed absorption",
+        "reduced AUC"
+      ],
+      "evidence": "Omeprazole reduced peak cephalexin concentration and AUC and delayed oral absorption in adult dogs; however, time greater than MIC was not altered."
+    },
+    {
+      "drug": "Clarithromycin",
+      "severity": 2,
+      "keywords": [
+        "increased drug concentrations",
+        "CYP2C19 inhibition"
+      ],
+      "evidence": "Increased concentrations of omeprazole, clarithromycin, and 14-hydroxyclarithromycin are possible with concurrent use."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 2,
+      "keywords": [
+        "inactive metabolite formation",
+        "CYP2C19 inhibition"
+      ],
+      "evidence": "In healthy dogs, concurrent omeprazole increases the formation of an inactive clopidogrel metabolite but without significant alteration of the antiplatelet effect. Pantoprazole should be considered as an alternative."
+    },
+    {
+      "drug": "Clorazepate",
+      "severity": 2,
+      "keywords": [
+        "increased toxicity risk",
+        "altered metabolism"
+      ],
+      "evidence": "Concurrent use with omeprazole may result in an increased risk for clorazepate toxicity."
+    },
+    {
+      "drug": "Cyanocobalamin (oral; vitamin B12)",
+      "severity": 1,
+      "keywords": [
+        "decreased oral absorption",
+        "pH-dependent absorption"
+      ],
+      "evidence": "Omeprazole may decrease the oral absorption of cyanocobalamin."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "reduced metabolism",
+        "increased serum concentrations",
+        "CYP3A4 inhibition"
+      ],
+      "evidence": "Omeprazole may reduce cyclosporine metabolism and increase serum concentrations of cyclosporine."
+    },
+    {
+      "drug": "Digoxin",
+      "severity": 2,
+      "keywords": [
+        "increased bioavailability",
+        "toxicity risk"
+      ],
+      "evidence": "Omeprazole may increase digoxin bioavailability, increasing the risk for toxicity."
+    },
+    {
+      "drug": "Doxycycline",
+      "severity": 2,
+      "keywords": [
+        "decreased bioavailability",
+        "pH-dependent absorption"
+      ],
+      "evidence": "Concurrent use may decrease bioavailability of doxycycline."
+    },
+    {
+      "drug": "Diuretics (furosemide, hydrochlorothiazide)",
+      "severity": 2,
+      "keywords": [
+        "hypomagnesemia",
+        "electrolyte imbalance"
+      ],
+      "evidence": "Concurrent use with diuretics may increase the risk for hypomagnesemia."
+    },
+    {
+      "drug": "Drugs requiring decreased gastric pH for optimal absorption (ketoconazole, itraconazole, iron, ampicillin esters)",
+      "severity": 2,
+      "keywords": [
+        "decreased drug absorption",
+        "pH-dependent absorption"
+      ],
+      "evidence": "Omeprazole may decrease absorption of drugs requiring low gastric pH. pH-dependent medications should be administered 1 hour before omeprazole."
+    },
+    {
+      "drug": "Levothyroxine",
+      "severity": 2,
+      "keywords": [
+        "decreased absorption",
+        "pH-dependent absorption"
+      ],
+      "evidence": "Concurrent use may decrease levothyroxine absorption."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 2,
+      "keywords": [
+        "increased concentrations",
+        "toxicity risk"
+      ],
+      "evidence": "Concurrent use may increase methotrexate concentrations and risk for toxicity."
+    },
+    {
+      "drug": "Mycophenolate",
+      "severity": 2,
+      "keywords": [
+        "reduced peak concentration",
+        "reduced AUC"
+      ],
+      "evidence": "Mycophenolate peak concentration and total exposure (AUC) may be reduced by omeprazole."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "increased toxicity risk",
+        "CYP2C19 inhibition"
+      ],
+      "evidence": "Concurrent use may increase the risk for phenobarbital toxicity."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 2,
+      "keywords": [
+        "decreased omeprazole concentrations",
+        "CYP induction"
+      ],
+      "evidence": "Rifampin may decrease omeprazole serum concentrations."
+    },
+    {
+      "drug": "Voriconazole",
+      "severity": 2,
+      "keywords": [
+        "increased voriconazole concentrations",
+        "CYP2C19 inhibition"
+      ],
+      "evidence": "Concurrent use may increase voriconazole concentrations."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "increased anticoagulant effect",
+        "CYP2C19 inhibition",
+        "PT monitoring"
+      ],
+      "evidence": "Omeprazole may increase the anticoagulant effect of warfarin. Prothrombin time (PT) should be monitored in patients on concurrent warfarin therapy."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.2
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "위장관 궤양 관리/예방 (허가 외)",
+          "value": "1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "4주 이상 투여 시 점진적 감량 권장 (매주 50% 감량)",
+          "evidence": "GI ulcer management/prevention (extra-label): 1 mg/kg PO every 12 hours"
+        },
+        {
+          "logic_type": "linear",
+          "context": "중증 식도염 (허가 외)",
+          "value": "1 - 1.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": null,
+          "evidence": "Severe esophagitis: 1–1.5 mg/kg PO every 12 hours, often in combination with a prokinetic (cisapride) and sucralfate. Some have recommended up to 2 mg/kg every 12 hours."
+        },
+        {
+          "logic_type": "linear",
+          "context": "운동 유발성 위염 예방 (허가 외)",
+          "value": "0.85",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "운동 약 48시간 전부터 투여 시작, 식전 30분 투여",
+          "evidence": "Prevention of exercise-induced gastritis: ~0.85 mg/kg (one 20 mg tablet) every 24 hours, 30 minutes before feeding, beginning ~48 hours before exercise."
+        },
+        {
+          "logic_type": "linear",
+          "context": "헬리코박터 감염/위염 (허가 외) - 아목시실린, 클래리스로마이신 병용",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "21일간 투여",
+          "evidence": "Helicobacter spp infection/gastritis (extra-label): 0.5–1 mg/kg PO every 24 hours with amoxicillin 20 mg/kg PO q12h and clarithromycin 7.5 mg/kg PO q24h for 21 days."
+        },
+        {
+          "logic_type": "linear",
+          "context": "CSF 생성 감소 (허가 외)",
+          "value": "0.5 - 1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 10.0,
+          "duration_note": "수두증 연구에서 10 mg/kg q24h 사용 보고",
+          "evidence": "Decrease CSF production: 0.5–1 mg/kg PO every 24 hours. One study used 10 mg/kg PO every 24 hours in dogs with hydrocephalus."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "위장관 궤양 관리/예방 (허가 외)",
+          "value": "1.1 - 1.3",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "장용정 분할 투여 가능",
+          "evidence": "GI ulcer management/prevention (extra-label): 1.1–1.3 mg/kg PO every 12 hours. Enteric-coated tablets may be split."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신장 질환 시 반감기가 연장될 수 있으며, 중증 신장 질환의 경우 용량 조절이 필요할 수 있음. 간질성 신염 발생 시 투약 중단 권고. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "중증 간기능 장애 시 초회통과효과가 감소하여 반감기가 연장될 수 있으므로 용량 조절이 필요할 수 있음. 구체적인 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "오메프라졸 또는 다른 프로톤 펌프 억제제에 과민반응",
+      "match_terms": [
+        "hypersensitivity to omeprazole",
+        "hypersensitivity to PPI"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간질성 신염",
+      "match_terms": [
+        "interstitial nephritis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간질환",
+      "match_terms": [
+        "severe hepatic disease",
+        "hepatic dysfunction"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "중증 신장 질환",
+      "match_terms": [
+        "severe renal disease",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "치환된 벤즈이미다졸 계열 프로톤 펌프 억제제. 산성 환경에서 설펜아미드 유도체로 활성화되어 위벽세포 분비면의 H+/K+ ATPase에 비가역적으로 결합하여 수소 이온의 위 내 이동을 90~99% 억제함. 기저 및 자극 조건 모두에서 위산 분비를 감소시킴.",
+    "common_extra_effects": [
+      "식욕부진",
+      "복통/산통",
+      "오심",
+      "구토",
+      "고창증",
+      "설사",
+      "혈액학적 이상(드묾)",
+      "단백뇨",
+      "CNS 장애",
+      "위산 과분비 반동(급격한 중단 시)",
+      "저마그네슘혈증(장기 사용 시, 사람)",
+      "골절 위험 증가(장기 사용 시, 사람)",
+      "급성 간질성 신염(사람)"
+    ],
+    "dog_mechanism": "개에서 최대 위산 감소 효과 발현까지 약 3~5일 소요됨. 위 배출 시간이나 내인성 인자 분비에는 영향 없음.",
+    "dog_extra_effects": [
+      "설사(가장 흔한 부작용)",
+      "인두 세균총 변화(임상적 의의 불명확)",
+      "CSF 생성 감소(뇌실내 또는 IV 투여 시)"
+    ],
+    "cat_mechanism": "고양이에서 1일 2회 투여가 1일 1회 투여 또는 라니티딘 1일 2회 투여보다 위 pH를 유의하게 더 높임.",
+    "cat_extra_effects": [
+      "설사(고양이에서는 보고되지 않음)"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 오메프라졸은 위장관 궤양 관리, 식도염, 헬리코박터 감염 치료(삼중 요법), 운동 유발성 위염 예방, CSF 생성 감소 등에 허가 외로 사용됨. 최적 치료 효과를 위해 1일 2회 투여 권장. 4주 이상 투여 시 점진적 감량 필요. 설사가 가장 흔한 부작용임. 4주간 안전하게 사용 가능한 것으로 알려져 있음.",
+    "cat": "고양이에서 오메프라졸은 위장관 궤양 관리 및 중등도~중증 역류성 식도염 치료에 허가 외로 사용됨. 1일 2회 투여가 더 효과적임. 장용정 분할 투여 가능. 만성 신장 질환 고양이에서 1일 1회 투여는 식욕을 유의하게 개선하지 못함."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 일반적으로 내약성이 좋으나, 중증 간/신장 질환 시 용량 조절 필요. 4주 이상 장기 투여 시 점진적 감량 권장. 캡슐/정제를 분쇄하거나 씹지 않도록 주의."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 일반적으로 내약성이 좋으나, 중증 간/신장 질환 시 용량 조절 필요. 장용정 분할은 가능하나 분쇄 또는 씹지 않도록 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "경구 페이스트: 20~25°C(68~77°F) 보관, 15~30°C(59~86°F) 허용; 개봉 후 28일 이내 사용. 정제: 실온, 밀폐 차광 용기에 보관. 캡슐 내 펠릿 분쇄 금지.",
+    "forms": [
+      "오메프라졸 경구 페이스트 2.28g/시린지 (370mg/g) - GastroGard®, UlcerGard®",
+      "오메프라졸 서방성 캡슐 10mg, 20mg, 40mg - Prilosec®",
+      "오메프라졸 서방성 정제 20mg - Prilosec® OTC",
+      "오메프라졸 서방성 경구 현탁액 2.5mg, 10mg 패킷 - Prilosec®",
+      "오메프라졸 현탁액 2mg/mL - First®-Omeprazole",
+      "오메프라졸/탄산수소나트륨 즉방성 캡슐 20mg/1100mg, 40mg/1100mg - Zegerid®",
+      "오메프라졸/탄산수소나트륨 현탁액용 분말 20mg/1680mg, 40mg/1680mg - Zegerid®"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "오메프라졸은 H+/K+ ATPase를 비가역적으로 억제하는 프로톤 펌프 억제제로, 위산 분비를 90~99% 감소시킴. 말에서 FDA 승인되었으며, 개와 고양이에서는 허가 외 사용. 최적 효과를 위해 1일 2회 투여 권장. 4주 이상 투여 시 점진적 감량 필요. CYP2C19 억제제로 다수의 약물 상호작용 주의 필요. 중증 간/신장 질환 시 용량 조절 고려.",
+    "indications": "【승인 적응증】말: 위궤양 치료(4mg/kg PO q24h, 4주) 및 예방(2mg/kg PO q24h). 【허가 외 적응증】개: 위장관 궤양 관리/예방, 중증 역류성 식도염, 헬리코박터 감염(삼중 요법), 운동 유발성 위염 예방, CSF 생성 감소(수두증, 키아리 기형). 고양이: 위장관 궤양 관리/예방, 중등도~중증 역류성 식도염.",
+    "client_info": "이 약은 위궤양 치료 또는 예방을 위해 사용되며, 일반적으로 단기간 사용합니다. 하루 중 첫 번째 식사 전에 투여하면 효과가 가장 좋습니다. 캡슐이나 정제는 분쇄하거나 씹지 않도록 하십시오. 말에게 경구 페이스트를 투여할 때는 입 안에 사료가 없는지 확인한 후 혀 뒤쪽이나 볼 안쪽 깊숙이 투여하십시오. 수의사의 지시 없이 임의로 투약을 중단하지 마십시오. 장기 투여 후 갑자기 중단하면 위산이 일시적으로 증가할 수 있으므로 점진적으로 감량해야 합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific veterinary PK studies for dogs and cats (t_max, Vd, clearance)",
+      "Exact renal/hepatic dose adjustment thresholds",
+      "Oral bioavailability in dogs and cats"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.t_max_hr (dog/cat specific)",
+      "timing_profile.f_percent (dog/cat specific)",
+      "timing_profile.half_life_hr (cat specific)",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "organ_burden_logic.dog.kidney.index",
+      "organ_burden_logic.cat.kidney.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/29.jsonl",
+    "extracted_at": "2026-03-10T22:17:20.449287+00:00",
+    "reviewer": null
+  }
+}

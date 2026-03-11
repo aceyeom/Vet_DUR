@@ -1,0 +1,850 @@
+{
+  "id": "fentanyl_transdermal_patch",
+  "drug_identity": {
+    "name_ko": "펜타닐 경피 패치",
+    "name_en": "Fentanyl, Transdermal Patch",
+    "active_ingredient": "Fentanyl",
+    "brand_names": [
+      "Duragesic",
+      "Ionsys",
+      "Actiq",
+      "Fentora",
+      "Sublimaze",
+      "Fentanest",
+      "Leptanal"
+    ],
+    "allergy_class": null,
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "Naloxone is the agent of choice when treating respiratory and circulatory depression from fentanyl overdose. In massive overdoses, naloxone may need to be repeated.",
+    "off_label_note": "인간용 라벨 펜타닐 패치가 모든 수의학적 종에서 엑스트라-라벨 방식으로 사용됨. 수의학적 라벨 제품 없음.",
+    "dosage_form": [
+      "Patch"
+    ],
+    "available_strengths": [
+      {
+        "value": 12.5,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 25,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 37.5,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 62.5,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 75,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 87.5,
+        "unit": "mcg/mL"
+      },
+      {
+        "value": 100,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인간에서 펜타닐은 CYP3A4의 기질임. 아졸계 항진균제, 마크로라이드 항생제, 딜티아젬, 시메티딘은 펜타닐의 반감기를 증가시키고 청소율을 감소시킬 수 있음. 개에서 케토코나졸은 펜타닐 제거에 유의한 영향을 미치지 않는 것으로 나타남."
+    },
+    "extra_information": "개에서 경피 흡수는 서혜부 피부에서 목과 흉부 피부보다 더 빠르고 지연 시간이 짧음. 고양이는 개보다 치료 농도에 더 빨리 도달하는 경향이 있음. 고양이에서 작용 지속 시간은 일반적으로 개보다 길며, 최소 72시간(보통 104시간 이상) 지속됨. 체온 상승은 흡수를 증가시킴."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터가 제한적이므로 인간 데이터 및 일반 오피오이드 약리학에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "dysphoria",
+          "agitation",
+          "mu-opioid agonist",
+          "limbic system",
+          "spinal cord",
+          "thalamus",
+          "hypothalamus"
+        ],
+        "index": 1,
+        "evidence": "뮤 오피오이드 수용체는 뇌의 통증 조절 영역, 변연계, 시상, 시상하부, 선조체, 중뇌에 고농도로 분포함. CNS 억제, 진정, 불쾌감, 흥분이 주요 이상반응으로 보고됨."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "circulatory depression",
+          "cardiovascular collapse"
+        ],
+        "index": 1,
+        "evidence": "서맥, 저혈압, 순환 억제가 이상반응으로 보고됨. 과다복용 시 심혈관 허탈 가능."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "urine retention",
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "요저류가 이상반응으로 보고됨. 신장 장애 환자에서 주의 사용 권고. 신장 제거 분율은 정량화되지 않음."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "CYP3A4 substrate",
+          "hepatic impairment",
+          "hepatic enzyme inducers"
+        ],
+        "index": 1,
+        "evidence": "펜타닐은 CYP3A4 기질로 간에서 대사됨. 간 장애 환자에서 주의 사용 권고. 간 효소 유도제는 펜타닐 농도를 감소시킬 수 있음."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "circulatory depression",
+          "cardiac depressants"
+        ],
+        "index": 1,
+        "evidence": "서맥, 저혈압, 순환 억제가 주요 이상반응. 다른 심장 억제제와 병용 시 위험 증가. 송아지에서 심장 이상반응 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "dysphoria",
+          "mydriasis",
+          "mu-opioid agonist"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 오피오이드는 산동을 유발할 수 있음. CNS 억제, 진정, 불쾌감이 이상반응으로 보고됨. 뮤 수용체는 뇌의 통증 조절 영역에 고농도로 분포함."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "circulatory depression"
+        ],
+        "index": 1,
+        "evidence": "서맥, 저혈압, 순환 억제가 이상반응으로 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "urine retention",
+          "renal impairment"
+        ],
+        "index": 1,
+        "evidence": "요저류가 이상반응으로 보고됨. 신장 장애 환자에서 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "CYP3A4 substrate",
+          "hepatic impairment"
+        ],
+        "index": 1,
+        "evidence": "펜타닐은 CYP3A4 기질로 간에서 대사됨. 간 장애 환자에서 주의 사용 권고."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "circulatory depression"
+        ],
+        "index": 1,
+        "evidence": "서맥, 저혈압, 순환 억제가 주요 이상반응. 다른 심장 억제제와 병용 시 위험 증가."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 360,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "고양이에서 치료 농도 도달까지 약 6시간 소요. 개에서 치료 농도 도달까지 12~24시간 소요. 고양이에서 작용 지속 시간은 최소 72시간(보통 104시간 이상). 개에서 패치는 48~72시간마다 교체 필요. 반감기는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/주요→3, 중등도→2, 경미→1. MAOI 상호작용은 세로토닌성 약물과의 병용 시 중증도 3으로 설정.",
+  "drug_interactions": [
+    {
+      "drug": "Anticholinergic Agents (acepromazine, amitriptyline, atropine, clomipramine, hyoscyamine)",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for urinary retention, constipation, and CNS and respiratory depression."
+    },
+    {
+      "drug": "Anesthetic Agents (isoflurane, propofol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "May produce bradycardia or hypotension when used concurrently with fentanyl."
+    },
+    {
+      "drug": "Angiotensin Receptor Blockers (ARBs, telmisartan)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase the risk for bradycardia, hypotension, and orthostasis."
+    },
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 inhibition",
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression. A study in dogs showed ketoconazole did not significantly alter fentanyl elimination."
+    },
+    {
+      "drug": "Barbiturates (pentobarbital, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression. Monitor and adjust doses accordingly."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression. Monitor and adjust doses accordingly."
+    },
+    {
+      "drug": "Beta Blockers (atenolol, esmolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "May produce bradycardia or hypotension if used concurrently with fentanyl."
+    },
+    {
+      "drug": "Bethanechol",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the beneficial effects of bethanechol on GI motility; avoid combination."
+    },
+    {
+      "drug": "Calcium Channel Blockers (amlodipine, diltiazem)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "orthostasis",
+        "increased half-life",
+        "decreased clearance"
+      ],
+      "evidence": "Concurrent use may increase the risk for bradycardia, hypotension, and orthostasis. Diltiazem may increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Cannabidiol",
+      "severity": 2,
+      "keywords": [
+        "CNS depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS depression."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 3,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia",
+        "seizures",
+        "coma",
+        "respiratory arrest",
+        "death"
+      ],
+      "evidence": "Concurrent use may increase levels of oral desmopressin and increase the risk for water intoxication and/or hyponatremia, which can progress to seizures, coma, respiratory arrest, and death. Monitor electrolytes and renal function."
+    },
+    {
+      "drug": "Dextromethorphan",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome."
+    },
+    {
+      "drug": "Diuretics (furosemide)",
+      "severity": 1,
+      "keywords": [
+        "decreased diuretic efficacy"
+      ],
+      "evidence": "Opioids may decrease therapeutic effects of diuretics."
+    },
+    {
+      "drug": "Domperidone",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the GI effects of domperidone."
+    },
+    {
+      "drug": "Hepatic Enzyme Inducers (griseofulvin, mitotane, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "decreased fentanyl levels",
+        "reduced efficacy"
+      ],
+      "evidence": "Concurrent use may decrease levels of fentanyl. Monitor clinical response and adjust doses accordingly."
+    },
+    {
+      "drug": "Grapefruit Juice",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "somnolence",
+        "confusion",
+        "hallucinations",
+        "seizures",
+        "coma"
+      ],
+      "evidence": "Concurrent use may increase the risk for neurotoxicity, including somnolence, confusion, hallucinations, blurred vision, urinary incontinence, seizures, and coma. Use cautiously and monitor."
+    },
+    {
+      "drug": "Iohexol (intrathecal)",
+      "severity": 3,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "Concurrent use of opioids with intrathecal iohexol may increase the risk for seizures. Opioids should be withheld for 48 hours before and 24 hours after intrathecal administration of iohexol."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 1,
+      "keywords": [
+        "constipation"
+      ],
+      "evidence": "Concurrent use may increase the risk for constipation."
+    },
+    {
+      "drug": "Macrolide Antibiotics (clarithromycin, erythromycin)",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of fentanyl, leading to prolonged effects and increased risk for respiratory depression."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "anxiety",
+        "confusion",
+        "hypotension",
+        "respiratory depression",
+        "cyanosis",
+        "coma"
+      ],
+      "evidence": "Concurrent use may increase the risk for anxiety, confusion, hypotension, respiratory depression, cyanosis, and coma. MAOIs should be withheld for 14 days prior to administration of opioids; avoid combination."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "prokinetic antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the prokinetic effects of metoclopramide."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (atracurium, pancuronium)",
+      "severity": 2,
+      "keywords": [
+        "tachycardia",
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for tachycardia, bradycardia, and/or hypotension. Use cautiously and monitor."
+    },
+    {
+      "drug": "Serotonergic Agents (fluoxetine, ondansetron)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome; avoid combination."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "seizures",
+        "serotonin syndrome",
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for seizures, serotonin syndrome, urinary retention, and constipation. The risk for CNS and respiratory depression may be additive."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 5kg 미만",
+          "value": "12",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 수술 전 최소 12시간, 가능하면 24시간 전에 부착.",
+          "evidence": "Plumb's 용량 표: 5kg 미만 개에 12 µg/hour 패치 사용. 패치는 48~72시간마다 교체 필요."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 5~10kg",
+          "value": "25",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 수술 전 최소 12시간, 가능하면 24시간 전에 부착.",
+          "evidence": "Plumb's 용량 표: 5~10kg 개에 25 µg/hour 패치 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 10~20kg",
+          "value": "50",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 수술 전 최소 12시간, 가능하면 24시간 전에 부착.",
+          "evidence": "Plumb's 용량 표: 10~20kg 개에 50 µg/hour 패치 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 20~30kg",
+          "value": "75",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 수술 전 최소 12시간, 가능하면 24시간 전에 부착.",
+          "evidence": "Plumb's 용량 표: 20~30kg 개에 75 µg/hour 패치 사용."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 30kg 초과",
+          "value": "100",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q48h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 수술 전 최소 12시간, 가능하면 24시간 전에 부착.",
+          "evidence": "Plumb's 용량 표: 30kg 초과 개에 100 µg/hour 패치 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 4kg 미만",
+          "value": "12",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q72h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 작용 지속 시간은 최소 72시간(보통 104시간 이상). 치료 농도는 부착 후 약 6시간 후 도달.",
+          "evidence": "Plumb's 용량 표: 4kg 미만 고양이에 12 µg/hour 패치 사용. 더 큰 고양이에는 25 µg/hour 패치 사용 가능."
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "수술 후 통증 조절 또는 암성 통증의 완화적 단기 조절 - 체중 4kg 이상",
+          "value": "25",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q72h",
+          "max_dose_mg_kg": null,
+          "duration_note": "단기 암성 통증 조절 시 4~5일마다 교체. 작용 지속 시간은 최소 72시간(보통 104시간 이상).",
+          "evidence": "Plumb's: 더 큰 고양이에는 25 µg/hour 패치 사용 가능."
+        },
+        {
+          "logic_type": "linear",
+          "context": "펜타닐 주입에서 패치로 전환 시 일반 용량 범위",
+          "value": "2 - 2.5",
+          "unit": "mcg/kg",
+          "route": "Top",
+          "frequency": "q72h",
+          "max_dose_mg_kg": null,
+          "duration_note": "용량 범위는 1~5 µg/kg/hour. 패치 부착 후 주입은 8~24시간에 걸쳐 점감 및 중단.",
+          "evidence": "Plumb's: 용량 범위 권장사항은 일반적으로 2~2.5 µg/kg/hour이나 1~5 µg/kg/hour 범위일 수 있음."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "monitor",
+    "adjustment_factor": null,
+    "note": "신장 장애 환자에서 주의 사용 권고. 구체적인 용량 조정 기준은 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간 장애 환자에서 주의 사용 권고. 구체적인 용량 조정 기준은 모노그래프에 명시되지 않음. 간 효소 유도제는 펜타닐 농도를 감소시킬 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "알려진 과민반응 (펜타닐, 다른 오피오이드, 또는 패치 성분)",
+      "match_terms": [
+        "opioid hypersensitivity",
+        "fentanyl allergy",
+        "adhesive allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전갈 독침 (Centruroides spp.)",
+      "match_terms": [
+        "scorpion envenomation",
+        "scorpion sting"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "CNS 또는 호흡 억제",
+      "match_terms": [
+        "CNS depression",
+        "respiratory depression",
+        "bradypnea"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "노령, 쇠약, 또는 병약한 환자",
+      "match_terms": [
+        "geriatric",
+        "debilitated",
+        "ill"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "위장관 폐색",
+      "match_terms": [
+        "GI obstruction",
+        "ileus"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "기존 호흡기 문제",
+      "match_terms": [
+        "respiratory disease",
+        "COPD",
+        "asthma",
+        "brachycephalic"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "신장 장애",
+      "match_terms": [
+        "CKD",
+        "renal failure",
+        "renal impairment",
+        "azotemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "간 장애",
+      "match_terms": [
+        "hepatic disease",
+        "liver failure",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "발열",
+      "match_terms": [
+        "fever",
+        "hyperthermia",
+        "febrile"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "뮤 오피오이드 수용체 작용제. 모르핀보다 약 80~100배 강력함. 뮤 수용체는 뇌의 통증 조절 영역, 척수 후각, 말초 조직에 주로 분포하며 진통, 행복감, 호흡 억제, 신체적 의존성, 축동, 저체온 작용에 기여함.",
+    "common_extra_effects": [
+      "호흡 억제 (서호흡)",
+      "CNS 억제 (진정)",
+      "순환 억제 (서맥, 저혈압)",
+      "패치 부위 발진",
+      "요저류",
+      "변비",
+      "불쾌감",
+      "흥분/초조",
+      "혈청 아밀라제 및 리파제 증가"
+    ],
+    "dog_mechanism": "경피 흡수를 통한 뮤 오피오이드 수용체 작용. 서혜부 피부에서 목과 흉부보다 더 빠르게 흡수됨.",
+    "dog_extra_effects": [
+      "진정",
+      "서맥",
+      "저혈압",
+      "요저류",
+      "변비",
+      "불쾌감",
+      "흥분"
+    ],
+    "cat_mechanism": "경피 흡수를 통한 뮤 오피오이드 수용체 작용. 개보다 치료 농도에 더 빠르게 도달하며 작용 지속 시간이 더 길음.",
+    "cat_extra_effects": [
+      "산동",
+      "진정",
+      "서맥",
+      "저혈압",
+      "요저류",
+      "변비",
+      "불쾌감",
+      "흥분"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 치료 농도 도달까지 12~24시간 소요되므로 수술 전 최소 12시간, 가능하면 24시간 전에 패치를 부착해야 함. 패치는 48~72시간마다 교체 필요. 단기 암성 통증 조절 시 4~5일마다 교체. 서혜부 피부에서 흡수가 더 빠름. 목 주위에 패치가 있는 경우 목줄 사용 금지. 한 연구에서 정형외과 수술 후 24시간 동안 모르핀 IM과 비교했을 때 유의한 통증 조절 이점이 없었으며 비용이 훨씬 더 비쌈.",
+    "cat": "고양이에서 치료 농도는 부착 후 약 6시간 후 도달. 작용 지속 시간은 최소 72시간(보통 104시간 이상)으로 개보다 길음. 오피오이드는 고양이에서 산동을 유발할 수 있으므로 밝은 빛을 피하고 천천히 접근해야 함. 25 µg 패치는 약 10 µg/hour를 제공함. 경부 부위는 패치가 떨어지는 경향이 있어 권장하지 않음. 고양이에서 패치로부터의 펜타닐 전달은 매우 가변적임."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 엑스트라-라벨 사용. 치료 농도 도달까지 12~24시간 소요되어 급성 통증에는 사용 불가. 환자 간 흡수 변동성이 크므로 주사용 구조 진통제를 준비해야 함. 발열, 노령, 쇠약, 신장/간 장애 환자에서 주의 사용."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 엑스트라-라벨 사용. 치료 농도 도달까지 약 6시간 소요. 오피오이드에 의한 산동 발생 시 밝은 빛 노출 주의. 패치로부터의 펜타닐 전달이 매우 가변적이므로 면밀한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(77°F) 미만에서 보관. 냉동 금지. 개봉 즉시 사용. 스케줄 II 규제 약물로 견고하게 건축된 잠금 구역에 보관. 사용한 패치는 약물 반납 프로그램을 통해 처리하거나 변기에 버림.",
+    "forms": [
+      "Fentanyl Transdermal System (Patch): 12.5, 25, 37.5, 50, 62.5, 75, 87.5, 100 µg/hour",
+      "Fentanyl Iontophoretic Transdermal System: 40 µg/dose (Ionsys)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "펜타닐 경피 패치는 수의학 환자에서 엑스트라-라벨로 사용되는 강력한 뮤 오피오이드 작용제임. 모르핀보다 약 80~100배 강력함. 수술 후 통증, 만성 통증(암, 췌장염, 대동맥 혈전색전증, 복막염 관련), 비특이적 광범위 통증 조절에 사용됨. 개에서 치료 농도 도달까지 12~24시간, 고양이에서 약 6시간 소요되므로 급성 통증에는 사용 불가. 체온 상승 및 부착 부위가 흡수에 영향을 미침. 미국에서 스케줄 II 규제 약물. 수의학적 라벨 제품 없음.",
+    "indications": "수술 후 통증 조절, 암성 통증의 완화적 단기 조절, 만성 통증(췌장염, 대동맥 혈전색전증, 복막염 관련), 비특이적 광범위 통증. 개, 고양이, 말, 양, 염소, 알파카, 토끼, 닭 등 다양한 종에서 엑스트라-라벨 사용.",
+    "client_info": "이 약물은 패치 형태의 마약성 진통제입니다. 부착 후 수 시간이 지나야 효과가 나타납니다. 개와 고양이에서 3~5일간 통증 완화 효과가 지속될 수 있습니다. 고용량에서는 진정, 불쾌감(울부짖음, 낑낑거림), 서맥, 변비, 호흡 저하가 나타날 수 있습니다. 동물이 과도하게 진정되거나 패치 부위에 피부 자극이나 발적이 관찰되면 수의사에게 연락하십시오. 발열, 과열, 온찜질은 약물 흡수를 증가시켜 부작용 및 독성 위험을 높일 수 있으므로 주의하십시오. 패치(새것, 부착 중, 사용 후 모두)는 어린이와 다른 동물의 손이 닿지 않는 곳에 보관하십시오. 사용한 패치는 약물 반납 프로그램을 통해 처리하거나(권장) 변기에 버리십시오. 이 약물은 C-II 규제 약물로 재처방 시 새로운 서면 처방전이 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific half-life values for dogs and cats",
+      "Oral bioavailability (not applicable for patch)",
+      "Protein binding percentage",
+      "Quantified renal elimination fraction",
+      "Specific renal/hepatic dose adjustment thresholds"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.half_life_hr",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/41.jsonl",
+    "extracted_at": "2026-03-11T01:54:53.588731+00:00",
+    "reviewer": null
+  }
+}

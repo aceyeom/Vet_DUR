@@ -1,0 +1,929 @@
+{
+  "id": "warfarin",
+  "drug_identity": {
+    "name_ko": "와파린",
+    "name_en": "Warfarin",
+    "active_ingredient": "Warfarin sodium",
+    "brand_names": [
+      "Coumadin",
+      "Jantoven",
+      "Panwarfin"
+    ],
+    "allergy_class": null,
+    "class": "Anticoagulant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": true,
+    "reversal_agent": "Phytonadione (Vitamin K1)",
+    "reversal_evidence": "과량 투여 시 비타민 K1(피토나디온) 및 혈액 제제로 치료. Plumb's 모노그래프에 명시됨.",
+    "off_label_note": "수의학에서 허가된 제품 없음. 주로 개에서 혈전 예방 목적으로 사람용 제품을 오프라벨로 사용.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 1,
+        "unit": "mg"
+      },
+      {
+        "value": 2,
+        "unit": "mg"
+      },
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 3,
+        "unit": "mg"
+      },
+      {
+        "value": 4,
+        "unit": "mg"
+      },
+      {
+        "value": 5,
+        "unit": "mg"
+      },
+      {
+        "value": 6,
+        "unit": "mg"
+      },
+      {
+        "value": 7.5,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [
+        "CYP2C9"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "와파린은 주로 CYP2C9에 의해 간에서 대사되며, 다수의 다른 CYP 효소도 관여함. 비활성 대사체는 소변 및 담즙으로 배설된 후 재흡수되어 소변으로 최종 배설됨."
+    },
+    "extra_information": "고양이에서 S 이성질체의 반감기는 약 23~28시간, R 이성질체는 약 11~18시간. 고양이에서 96% 이상이 혈장 단백질에 결합. 종간 단백질 결합률 차이가 있음."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 출혈 독성, 간 대사, 신장 배설 등 모노그래프 기술 내용을 근거로 평가. 수의학 종별 PK 데이터 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "intracranial hemorrhage",
+          "cerebrovascular hemorrhage"
+        ],
+        "index": 1,
+        "evidence": "두개내 출혈 및 뇌혈관 출혈이 부작용 및 금기증으로 명시됨."
+      },
+      "blood": {
+        "calculated_score": 90,
+        "triggered_keywords": [
+          "hemorrhage",
+          "thrombocytopenia",
+          "anemia",
+          "bleeding",
+          "hematoma",
+          "ecchymoses",
+          "epistaxis",
+          "hematemesis",
+          "hematuria",
+          "melena"
+        ],
+        "index": 0,
+        "evidence": "주요 부작용이 용량 의존적 출혈이며, 혈소판 감소증, 빈혈, 다양한 출혈 증상이 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hematuria",
+          "acute nephritis contraindication",
+          "renal elimination"
+        ],
+        "index": 2,
+        "evidence": "급성 신염이 금기증으로 명시되며, 혈뇨가 부작용으로 보고됨. 대사체가 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic insufficiency contraindication",
+          "liver metabolism",
+          "CYP2C9"
+        ],
+        "index": 3,
+        "evidence": "간부전이 금기증으로 명시됨. 간에서 주로 대사되며 CYP2C9 기질임."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "pericardial effusion contraindication",
+          "pericardial hemorrhage"
+        ],
+        "index": 4,
+        "evidence": "심낭삼출이 금기증으로 명시되며, 심낭 출혈이 부작용으로 보고됨."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "intracranial hemorrhage",
+          "cerebrovascular hemorrhage"
+        ],
+        "index": 1,
+        "evidence": "두개내 출혈 및 뇌혈관 출혈이 부작용 및 금기증으로 명시됨. 고양이에서 사용 비권장."
+      },
+      "blood": {
+        "calculated_score": 95,
+        "triggered_keywords": [
+          "fatal hemorrhage",
+          "hemorrhage",
+          "bleeding",
+          "thrombocytopenia",
+          "anemia"
+        ],
+        "index": 0,
+        "evidence": "고양이에서 치명적 출혈을 포함한 심각한 부작용 발생률이 높아 대부분의 임상의가 사용을 권장하지 않음."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "hematuria",
+          "acute nephritis contraindication"
+        ],
+        "index": 2,
+        "evidence": "급성 신염이 금기증으로 명시되며, 혈뇨가 부작용으로 보고됨."
+      },
+      "liver": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "hepatic insufficiency contraindication",
+          "liver metabolism"
+        ],
+        "index": 3,
+        "evidence": "간부전이 금기증으로 명시됨. 고양이에서 간 대사 확인됨."
+      },
+      "heart": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "pericardial effusion contraindication",
+          "pericardial hemorrhage"
+        ],
+        "index": 4,
+        "evidence": "심낭삼출이 금기증으로 명시되며, 심낭 출혈이 부작용으로 보고됨."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 11,
+      "max": 28,
+      "mean": null,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 99,
+    "evidence": "사람에서 경구 투여 후 빠르고 완전하게 흡수됨. 사람에서 혈장 단백질 결합률 약 99%. 고양이에서 96% 이상 단백질 결합. 고양이 S 이성질체 반감기 23~28시간, R 이성질체 11~18시간. 개에서의 반감기 데이터는 모노그래프에 명시되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 병용금기→3, 주요→3, 중등도→2, 경미→1. 와파린의 항응고 효과를 증가 또는 감소시키는 약물 목록에서 추출함.",
+  "drug_interactions": [
+    {
+      "drug": "Acetaminophen",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Acetaminophen may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Allopurinol",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Allopurinol may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Amiodarone",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect increase",
+        "CYP2C9 inhibition"
+      ],
+      "evidence": "Amiodarone may significantly increase the anticoagulant response of warfarin, likely via CYP2C9 inhibition."
+    },
+    {
+      "drug": "Anabolic Steroids",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Anabolic steroids (e.g., boldenone) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Azole Antifungals",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect increase",
+        "CYP2C9 inhibition"
+      ],
+      "evidence": "Azole antifungals (e.g., fluconazole, itraconazole, voriconazole) may increase the anticoagulant response of warfarin via CYP inhibition."
+    },
+    {
+      "drug": "Cephalosporins",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Cephalosporins (e.g., cefazolin, cefpodoxime, cephalexin) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Chloramphenicol may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Cisapride",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Cisapride may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Clopidogrel",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect increase",
+        "bleeding risk"
+      ],
+      "evidence": "Clopidogrel may increase the anticoagulant response of warfarin and additive bleeding risk."
+    },
+    {
+      "drug": "Danazol",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Danazol may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Omega-3 Fatty Acids",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Omega-3 fatty acids may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Fluoroquinolones",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Fluoroquinolones (e.g., enrofloxacin) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Glucosamine",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Glucosamine may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Heparins",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase",
+        "bleeding risk"
+      ],
+      "evidence": "Unfractionated and low molecular weight heparins may increase the anticoagulant response of warfarin with additive bleeding risk."
+    },
+    {
+      "drug": "Lactulose",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Lactulose may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Macrolide Antibiotics",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Macrolide antibiotics (e.g., azithromycin, clarithromycin, erythromycin) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Metronidazole",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase",
+        "CYP2C9 inhibition"
+      ],
+      "evidence": "Metronidazole may increase the anticoagulant response of warfarin, possibly via CYP2C9 inhibition."
+    },
+    {
+      "drug": "Mirtazapine",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Mirtazapine may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Neomycin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Neomycin may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "NSAIDs",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect increase",
+        "GI ulceration",
+        "bleeding risk"
+      ],
+      "evidence": "NSAIDs (e.g., carprofen, meloxicam, phenylbutazone) may increase the anticoagulant response of warfarin and add GI ulceration and bleeding risk."
+    },
+    {
+      "drug": "Penicillins",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Penicillins (e.g., amoxicillin, dicloxacillin, penicillin G, piperacillin) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Pentoxifylline",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Pentoxifylline may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Proton Pump Inhibitors",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "PPIs (e.g., omeprazole, pantoprazole) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Quinidine",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Quinidine may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Salicylates",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect increase",
+        "GI ulceration",
+        "bleeding risk"
+      ],
+      "evidence": "Salicylates (e.g., aspirin) may increase the anticoagulant response of warfarin and add GI and bleeding risk."
+    },
+    {
+      "drug": "SSRIs",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase",
+        "bleeding risk"
+      ],
+      "evidence": "SSRIs (e.g., fluoxetine, sertraline) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Sulfonamides",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Sulfonamides (including combinations with ormetoprim and trimethoprim) may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Thyroid Medications",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Thyroid medications may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Tramadol may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Vitamin E",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect increase"
+      ],
+      "evidence": "Vitamin E may increase the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Barbiturates",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease",
+        "CYP induction"
+      ],
+      "evidence": "Barbiturates (e.g., phenobarbital) may decrease the anticoagulant response of warfarin via CYP induction."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease"
+      ],
+      "evidence": "Corticosteroids (e.g., dexamethasone) may decrease the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease",
+        "cyclosporine efficacy reduction"
+      ],
+      "evidence": "Cyclosporine may decrease the anticoagulant response of warfarin; additionally, warfarin may reduce cyclosporine efficacy."
+    },
+    {
+      "drug": "Estrogens",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease"
+      ],
+      "evidence": "Estrogens may decrease the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Griseofulvin",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease"
+      ],
+      "evidence": "Griseofulvin may decrease the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Mercaptopurine",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease"
+      ],
+      "evidence": "Mercaptopurine may decrease the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Rifampin",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect decrease",
+        "CYP induction"
+      ],
+      "evidence": "Rifampin is a potent CYP inducer and may significantly decrease the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease",
+        "CYP induction"
+      ],
+      "evidence": "Phenobarbital may decrease the anticoagulant response of warfarin via CYP induction."
+    },
+    {
+      "drug": "Spironolactone",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease"
+      ],
+      "evidence": "Spironolactone may decrease the anticoagulant response of warfarin."
+    },
+    {
+      "drug": "Sucralfate",
+      "severity": 2,
+      "keywords": [
+        "anticoagulant effect decrease",
+        "absorption reduction"
+      ],
+      "evidence": "Sucralfate may decrease the anticoagulant response of warfarin, possibly by reducing absorption."
+    },
+    {
+      "drug": "Vitamin K",
+      "severity": 3,
+      "keywords": [
+        "anticoagulant effect decrease",
+        "pharmacodynamic antagonism"
+      ],
+      "evidence": "Vitamin K directly antagonizes the mechanism of action of warfarin and will decrease anticoagulant response."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": true,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "low",
+    "gi_ulcer": "moderate",
+    "bleeding": "high",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "cat_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "항응고제 (오프라벨) - 초기 용량",
+          "value": "0.05 - 0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "INR 2~3 목표로 용량 조절 필요. 주간 총 용량의 10~15% 범위 내에서 소량씩 조정.",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label dog dosage (reference 4-7)"
+        },
+        {
+          "logic_type": "tiered",
+          "context": "항응고제 (오프라벨) - 부하 용량 후 유지",
+          "value": "0.2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2일간 부하 용량 투여 후 0.1 mg/kg SID로 감량",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label dog dosage (reference 8)"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항응고제 (오프라벨) - 유지 용량",
+          "value": "0.1",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "부하 용량 2일 후 유지 용량으로 전환",
+          "evidence": "Plumb's Veterinary Drug Handbook, extra-label dog dosage (reference 8)"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": []
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "급성 신염이 금기증으로 명시됨. 신장 기능 저하 시 출혈 위험 증가 가능. 구체적인 용량 조절 기준은 모노그래프에 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간부전(hepatic insufficiency)이 금기증으로 명시됨. 와파린은 간에서 주로 대사되므로 간 기능 저하 시 약물 축적 및 출혈 위험 증가."
+  },
+  "contraindications": [
+    {
+      "condition": "기존 출혈 경향 또는 출혈성 질환",
+      "match_terms": [
+        "hemorrhagic diathesis",
+        "bleeding disorder",
+        "coagulopathy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "안구 또는 CNS 수술 예정",
+      "match_terms": [
+        "eye surgery",
+        "CNS surgery",
+        "neurosurgery"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "GI, 호흡기, 비뇨기 활동성 출혈",
+      "match_terms": [
+        "GI bleeding",
+        "hematuria",
+        "hemoptysis",
+        "active bleeding"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "동맥류",
+      "match_terms": [
+        "aneurysm"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 신염",
+      "match_terms": [
+        "acute nephritis",
+        "acute glomerulonephritis"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "뇌혈관 출혈",
+      "match_terms": [
+        "cerebrovascular hemorrhage",
+        "intracranial hemorrhage"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액 이상증",
+      "match_terms": [
+        "blood dyscrasia",
+        "thrombocytopenia",
+        "pancytopenia"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "plt",
+        "threshold": null,
+        "unit": "x10^3/uL"
+      }
+    },
+    {
+      "condition": "조절되지 않는 또는 악성 고혈압",
+      "match_terms": [
+        "uncontrolled hypertension",
+        "malignant hypertension"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간부전",
+      "match_terms": [
+        "hepatic insufficiency",
+        "liver failure",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "심낭삼출",
+      "match_terms": [
+        "pericardial effusion"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "내장 암종",
+      "match_terms": [
+        "visceral carcinoma",
+        "cancer"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "고양이 (일반)",
+      "match_terms": [
+        "feline",
+        "cat"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "모노그래프에 특정 품종 또는 유전적 감수성에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "비타민 K 에폭사이드 환원효소(VKORC1)를 억제하여 응고인자 II, VII, IX, X 및 항응고 단백질 C, S의 합성을 방해하는 간접적 항응고제.",
+    "common_extra_effects": [
+      "용량 의존적 출혈",
+      "빈혈",
+      "혈소판 감소증",
+      "혈종 및 반상출혈",
+      "비출혈(epistaxis)",
+      "혈뇨",
+      "흑색변",
+      "혈변",
+      "관절 내 출혈",
+      "혈흉",
+      "두개내 출혈",
+      "심낭 출혈",
+      "사망"
+    ],
+    "dog_mechanism": "VKORC1 억제를 통한 비타민 K 의존성 응고인자 합성 억제. 기존 응고인자의 고갈은 치료 시작 후 수일에 걸쳐 서서히 발생함.",
+    "dog_extra_effects": [
+      "출혈",
+      "혈뇨",
+      "혈종",
+      "사망"
+    ],
+    "cat_mechanism": "VKORC1 억제를 통한 비타민 K 의존성 응고인자 합성 억제. 고양이에서 S 이성질체 반감기 23~28시간, R 이성질체 11~18시간.",
+    "cat_extra_effects": [
+      "치명적 출혈",
+      "높은 부작용 발생률",
+      "사망률 증가"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 혈전 예방 목적으로 오프라벨 사용됨. 초기 용량 0.05~0.2 mg/kg PO SID로 시작하여 INR 2~3 목표로 조절. 항응고 효과 발현까지 수일 소요되므로 초기에 헤파린 병용이 필요할 수 있음. 정기적인 PT/INR 모니터링 필수. 많은 임상의가 불일치한 항응고 효과, 모니터링 비용, 심각한 출혈 위험으로 인해 사용을 권장하지 않음.",
+    "cat": "고양이에서 와파린 사용은 권장되지 않음. 사망률 증가 및 치명적 출혈을 포함한 심각한 부작용 발생률이 높아 대부분의 임상의가 사용을 금기시함. 고양이에서 S 이성질체 반감기 23~28시간, R 이성질체 11~18시간으로 약물 축적 위험이 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 오프라벨로 사용 가능하나 불일치한 항응고 효과, 빈번한 모니터링 필요, 출혈로 인한 사망 위험으로 인해 주의가 필요함. 많은 임상의가 사용을 권장하지 않음."
+    },
+    "cat": {
+      "status": 2,
+      "evidence": "고양이에서 사망률 증가 및 치명적 출혈을 포함한 심각한 부작용으로 인해 대부분의 임상의가 사용을 금기시함."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 실온(20~25°C, 68~77°F) 보관.",
+    "forms": [
+      "Warfarin Sodium 경구 정제 (scored): 1 mg, 2 mg, 2.5 mg, 3 mg, 4 mg, 5 mg, 6 mg, 7.5 mg, 10 mg"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "와파린은 쿠마린 유도체 항응고제로, 주로 개에서 혈전 예방 목적으로 오프라벨 사용됨. 고양이에서는 사용 비권장. 완전한 항응고 효과 발현까지 수일 소요되며, 이 기간 동안 헤파린 등 추가 항응고제가 필요할 수 있음. 주요 부작용은 용량 의존적 출혈이며 사망 가능. 수많은 약물 상호작용이 존재하며 정기적인 PT/INR 모니터링이 필수적임. NIOSH 위험 약물로 분류됨.",
+    "indications": "개에서 혈전성 질환의 장기 치료 또는 재발 예방 (오프라벨). 수의학에서 허가된 제품 없음. 고양이에서는 사용 비권장. 말에서 제한적으로 사용 보고됨(발굽엽염 보조 치료).",
+    "client_info": "와파린은 다른 약물 및 음식과 상호작용할 수 있어 출혈 위험을 높이거나 항응고 효과를 감소시킬 수 있습니다. 식이 변경이나 새로운 약물(처방전 없이 구입 가능한 약물 및 보충제 포함) 복용 시작 또는 현재 복용 중인 약물 중단 전에 반드시 수의사와 상담하십시오. 동물이 부상이나 상처를 입을 수 있는 상황에 노출되지 않도록 하십시오. 비정상적인 출혈이 관찰되면 즉시 수의사에게 연락하십시오. 올바른 용량을 확인하기 위해 정기적인 혈액 검사가 필요합니다. 중요한 추적 검사를 빠뜨리지 마십시오. 복용을 잊은 경우 같은 날 가능한 한 빨리 복용하십시오. 다음 날 두 배 용량을 복용하지 마십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Dog-specific pharmacokinetic data (half-life, Tmax, bioavailability)",
+      "CYP enzyme profile beyond CYP2C9 substrate",
+      "Onset of action in minutes"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr (dog-specific)",
+      "timing_profile.f_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/7.jsonl",
+    "extracted_at": "2026-03-10T15:47:13.019412+00:00",
+    "reviewer": null
+  }
+}

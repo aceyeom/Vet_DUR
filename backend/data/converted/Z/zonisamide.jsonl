@@ -1,0 +1,499 @@
+{
+  "id": "zonisamide",
+  "drug_identity": {
+    "name_ko": "조니사미드",
+    "name_en": "Zonisamide",
+    "active_ingredient": "Zonisamide",
+    "brand_names": [
+      "Zonegran",
+      "Excegran"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Anticonvulsant",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의과 허가 제품 없음. 인체용 제품(Zonegran®)을 개와 고양이에서 오프라벨로 사용.",
+    "dosage_form": [
+      "Cap",
+      "Susp"
+    ],
+    "available_strengths": [
+      {
+        "value": 25,
+        "unit": "mg"
+      },
+      {
+        "value": 50,
+        "unit": "mg"
+      },
+      {
+        "value": 100,
+        "unit": "mg"
+      },
+      {
+        "value": 10,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": 0.67,
+    "cyp_profile": {
+      "substrates": [
+        "CYP3A4"
+      ],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "인체에서 조니사미드는 CYP3A4의 기질이며, 아세틸화 및 글루쿠론화를 통해 대사된다. 약 2/3는 신장을 통해 미변화체 및 대사체로 배설된다."
+    },
+    "extra_information": "개에서 경구 생체이용률 약 68%, 분포용적 약 0.8 L/kg, 단백결합률 약 40%. 전혈 및 적혈구 내 농도가 혈장보다 높아 RBC 반감기(약 37시간)와 혈장 반감기(단회 투여 시 약 17.2시간, 8주 반복 투여 시 약 23시간)가 상이함. 개에서 5–30 mg/kg PO BID 용량 범위에서 선형 약동학을 보임. 직장 투여(10–30 mg/kg)는 치료 농도에 도달하지 못함. 고양이에서 반감기 약 33시간, 작용 발현 약 4시간, 정상 상태 도달 약 7일."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 수의과 종별 PK 데이터 일부 존재. 간독성(ALT/ALP 상승, 급성 간괴사 보고), 신장(신결석, 세뇨관 산증 보고), 뇌(항경련 작용, 진정/운동실조 부작용), 혈액(호중구감소증 보고) 근거로 점수 산출.",
+    "dog": {
+      "brain": {
+        "calculated_score": 60,
+        "triggered_keywords": [
+          "sedation",
+          "ataxia",
+          "anticonvulsant",
+          "neuronal membrane stabilization",
+          "CNS depression"
+        ],
+        "index": 1,
+        "evidence": "개에서 진정, 운동실조가 가장 흔한 부작용으로 보고됨. 항경련 기전으로 나트륨 및 T형 칼슘 채널 억제를 통해 신경막 안정화."
+      },
+      "blood": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "febrile neutropenia",
+          "blood dyscrasias",
+          "erythema multiforme"
+        ],
+        "index": 3,
+        "evidence": "개에서 발열성 호중구감소증, 다형홍반 증례 보고 있음. 혈액 독성은 드물지만 보고된 바 있음."
+      },
+      "kidney": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "urinary calculi",
+          "acute tubular acidosis",
+          "metabolic acidosis",
+          "nephrolithiasis",
+          "renal impairment"
+        ],
+        "index": 2,
+        "evidence": "개에서 요로결석 및 급성 세뇨관 산증 증례 보고. 탄산탈수효소 억제 활성으로 대사성 산증 위험. 신기능 저하 시 용량 감량 필요."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatopathy",
+          "ALT elevation",
+          "ALP elevation",
+          "acute hepatic necrosis",
+          "idiosyncratic hepatotoxicity",
+          "GLDH elevation"
+        ],
+        "index": 2,
+        "evidence": "개에서 치료 시작 3주 이내 급성 잠재적 생명위협 간병증 발생률 1% 미만. 장기 치료 시 10% 미만에서 ALT/ALP 무증상 상승. 급성 특발성 간괴사 증례 보고."
+      },
+      "heart": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "ventricular septal defect",
+          "cardiomegaly"
+        ],
+        "index": -1,
+        "evidence": "임신 개에서 기형유발 연구에서 심실중격결손 및 심비대 보고되었으나, 성체 치료 시 심장 독성 직접 보고는 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "somnolence",
+          "ataxia",
+          "anticonvulsant",
+          "sedation"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 20 mg/kg/일 투여 시 50%에서 식욕부진, 설사, 구토, 운동실조, 졸음 발생. 과민반응 증후군 증례 보고."
+      },
+      "blood": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "hypersensitivity syndrome"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 과민반응 증후군 1건 보고. 혈액 독성에 대한 직접적 근거는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "metabolic acidosis",
+          "carbonic anhydrase inhibition"
+        ],
+        "index": -1,
+        "evidence": "탄산탈수효소 억제 활성으로 대사성 산증 위험 존재. 고양이에서 신결석 직접 보고는 없으나 기전상 위험 있음."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatopathy",
+          "drug discontinuation"
+        ],
+        "index": -1,
+        "evidence": "고양이에서 간독성 직접 보고는 제한적이나, 식욕부진으로 인한 투약 중단 증례 있음. 체계적 문헌고찰에서 대부분의 고양이는 부작용 없었으나 안전성 근거 수준 낮음."
+      },
+      "heart": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "고양이에서 심장 독성에 대한 직접적 근거 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 240,
+    "t_max_hr": 0.44,
+    "half_life_hr": {
+      "min": 17.2,
+      "max": 37.0,
+      "mean": 23.0,
+      "species": "dog"
+    },
+    "f_percent": 68,
+    "protein_binding_percent": 40,
+    "evidence": "개: 단회 경구 투여 후 Tmax 0.44시간, 혈장 반감기 17.2시간(단회) ~ 23시간(8주 반복), RBC 반감기 약 37시간. 고양이: 작용 발현 약 4시간, 반감기 약 33시간."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "CYP3A Inducers (e.g., dexamethasone, rifampin)",
+      "severity": 2,
+      "keywords": [
+        "CYP3A4 induction",
+        "half-life reduction",
+        "dose adjustment"
+      ],
+      "evidence": "CYP3A 유도제는 조니사미드의 반감기를 단축시켜 용량 조정이 필요할 수 있음."
+    },
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (e.g., acetazolamide)",
+      "severity": 2,
+      "keywords": [
+        "metabolic acidosis",
+        "kidney stone formation",
+        "carbonic anhydrase inhibition"
+      ],
+      "evidence": "탄산탈수효소 억제제와 병용 시 대사성 산증 및 신결석 형성 위험 증가."
+    },
+    {
+      "drug": "Phenobarbital",
+      "severity": 2,
+      "keywords": [
+        "CYP induction",
+        "increased clearance",
+        "decreased AUC",
+        "dose adjustment"
+      ],
+      "evidence": "개에서 페노바르비탈이 조니사미드의 청소율을 증가시키고 최고 농도, 반감기, AUC를 감소시킴. 이 효과는 페노바르비탈 중단 후 최대 10주까지 지속됨. 조니사미드 용량을 최대 50%까지 증량 필요할 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 4.8
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "경련 조절 - 페노바르비탈 미투여 개 (오프라벨)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "페노바르비탈을 투여받지 않는 개에서 5 mg/kg PO q12h로 시작."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경련 조절 - 페노바르비탈 병용 개 (오프라벨)",
+          "value": "7 - 10",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "페노바르비탈을 이미 투여받고 있는 개에서 7–10 mg/kg PO q12h로 시작. 용량 범위의 상한선 투여 권장."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "경련 조절 단독요법 (오프라벨)",
+          "value": "2.5 - 5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "고양이 단독요법으로 2.5–5 mg/kg PO q12h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "페노바르비탈 불응성 고양이 보조 경련 조절 (오프라벨, 일화적)",
+          "value": "5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "일화적으로 5 mg/kg PO q12–24h."
+        },
+        {
+          "logic_type": "linear",
+          "context": "페노바르비탈 불응성 고양이 보조 경련 조절 - 증례 시리즈 (오프라벨)",
+          "value": "6 - 17",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "증례 시리즈에서 6–17 mg/kg PO SID. 고양이에서 긴 반감기(약 33시간)로 인해 5–10 mg/kg PO SID가 적절할 것으로 판단됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 용량 감량이 필요할 수 있음. 구체적인 크레아티닌 역치나 조정 계수는 명시되지 않음. 신결석 및 세뇨관 산증 위험으로 신기능 모니터링 권장."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "monitor",
+    "note": "간독성(ALT, ALP, GLDH 상승, 급성 간괴사) 보고로 기저치 및 주기적 간효소 모니터링 필요. 구체적인 용량 조정 지침은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "설폰아미드 과민반응",
+      "match_terms": [
+        "sulfonamide hypersensitivity",
+        "sulfa allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "renal impairment",
+        "CKD",
+        "renal failure",
+        "kidney disease"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "건성각결막염 또는 설폰아미드 관련 이전 부작용",
+      "match_terms": [
+        "keratoconjunctivitis sicca",
+        "KCS",
+        "dry eye",
+        "sulfonamide adverse effect"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant",
+        "gravid"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에서 특정 유전적 감수성 또는 MDR1 관련 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "나트륨 채널 및 T형 칼슘 채널 억제를 통해 일시적 내향 전류를 감소시키고 신경막을 안정화하며 신경 과동기화를 억제. 세로토닌성 및 도파민성 신경전달을 강화할 수 있음. 탄산탈수효소 억제 활성 및 뇌 내 자유 라디칼 소거 작용.",
+    "common_extra_effects": [
+      "진정(sedation)",
+      "운동실조(ataxia)",
+      "구토(vomiting)",
+      "식욕부진(anorexia)",
+      "간독성(hepatotoxicity)",
+      "요로결석(urinary calculi)",
+      "대사성 산증(metabolic acidosis)",
+      "급성 세뇨관 산증(acute tubular acidosis)",
+      "T4 감소",
+      "ALT/ALP/GLDH 상승"
+    ],
+    "dog_mechanism": "개에서 나트륨 및 T형 칼슘 채널 억제를 통한 항경련 작용. 5–30 mg/kg PO BID 범위에서 선형 약동학.",
+    "dog_extra_effects": [
+      "진정",
+      "운동실조",
+      "구토",
+      "ALP 감소",
+      "ALT/GLDH 상승",
+      "공격성",
+      "식욕부진",
+      "소모증",
+      "T4 및 알부민 감소",
+      "급성 특발성 간괴사",
+      "가성림프종(pseudolymphoma)",
+      "요로결석",
+      "급성 세뇨관 산증",
+      "발열성 호중구감소증",
+      "다형홍반(erythema multiforme)",
+      "이상 행동(갑작스러운 공격성, 불면증, 안절부절)"
+    ],
+    "cat_mechanism": "고양이에서 반감기 약 33시간으로 1일 1회 투여 가능. 가족성 자발성 간질 고양이에서 발작간 EEG 방전 감소.",
+    "cat_extra_effects": [
+      "식욕부진",
+      "설사",
+      "구토",
+      "운동실조",
+      "졸음(somnolence)",
+      "과민반응 증후군"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 단독요법 및 불응성 간질의 보조 치료제로 효과가 입증됨(반응률 58–81%). 페노바르비탈 병용 시 조니사미드 청소율이 증가하므로 용량을 최대 50%까지 증량 필요. 치료 농도 목표: 10–40 µg/mL. 전혈 샘플이 혈장보다 높은 농도를 나타냄. 임신 개에서 기형유발성이 확인되어 있으므로 주의 필요. 치료 시작 후 1개월, 이후 3–6개월마다 CBC 및 혈청 화학 패널(ALT, ALP, BUN, 전해질, 중탄산염) 모니터링 권장.",
+    "cat": "고양이에서 사용 경험은 제한적이며 일화적 성공 보고가 있음. 반감기가 약 33시간으로 길어 1일 1회 투여가 적절할 수 있음. 20 mg/kg/일 투여 시 50%에서 부작용 발생. 안전성 및 유효성 근거 수준이 낮으므로 신중한 모니터링 필요. 과민반응 증후군 증례 보고 있음."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 간독성(ALT/ALP 상승, 급성 간괴사), 요로결석, 대사성 산증, 기형유발성 위험으로 주의 필요. 페노바르비탈 병용 시 용량 조정 필요. NIOSH 위험 약물로 분류."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 안전성 근거 수준 낮음. 20 mg/kg/일에서 50% 부작용 발생. 과민반응 증후군 보고. 식욕부진으로 인한 투약 중단 필요 가능성. 신중한 모니터링 필요."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "25°C(76°F)에서 보관; 15°C–30°C(59°F–86°F) 범위 허용. 건조한 곳에 보관하고 빛으로부터 차단.",
+    "forms": [
+      "캡슐 25 mg (Zonegran®, 제네릭)",
+      "캡슐 50 mg (Zonegran®, 제네릭)",
+      "캡슐 100 mg (Zonegran®, 제네릭)",
+      "조제 현탁액 10 mg/mL (단순 시럽 또는 메틸셀룰로오스 0.5% 기제)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "조니사미드는 개의 불응성 간질에 대한 보조 치료제 또는 단독 치료제로 사용 가능한 항경련제입니다. 개에서 반감기 약 15–23시간(혈장)으로 1일 2회 투여, 고양이에서 반감기 약 33시간으로 1일 1회 투여가 가능합니다. 페노바르비탈 병용 시 조니사미드 용량 증량이 필요할 수 있습니다. 진정, 운동실조, 식욕부진이 흔한 부작용이며, 드물게 간독성, 요로결석, 대사성 산증이 보고됩니다. 임신 개에서 기형유발성이 확인되어 있습니다. NIOSH 위험 약물로 분류되어 취급 시 적절한 보호 장비 착용이 필요합니다.",
+    "indications": "개: 불응성 간질의 단독 또는 보조 치료(오프라벨). 고양이: 경련 조절 단독 또는 보조 치료(오프라벨, 제한적 근거). 수의과 허가 제품 없음.",
+    "client_info": "이 약은 음식과 함께 또는 공복에 투여할 수 있습니다. 공복 투여 후 구토나 불편감이 있으면 음식과 함께 투여하세요. 수의사와 상의 없이 갑자기 투약을 중단하지 마세요. 갑작스러운 중단은 경련을 유발할 수 있습니다. 발작 일지를 작성하여 약의 효과를 확인하세요. 식욕 감소, 과도한 피로, 눈·피부·잇몸의 황달 증상이 나타나면 즉시 수의사에게 연락하세요. 이 약은 NIOSH에서 위험 약물로 분류합니다. 투약 시 장갑을 착용하고 투약 후 손을 깨끗이 씻으세요. 임신 중이거나 임신을 계획 중인 경우 수의사 또는 약사에게 문의하세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "Veterinary-labeled products"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "timing_profile.onset_min (dog)",
+      "cyp_profile.substrates (veterinary-specific)",
+      "genetic_sensitivity.affected_breeds"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/8.jsonl",
+    "extracted_at": "2026-03-10T15:56:58.943195+00:00",
+    "reviewer": null
+  }
+}
