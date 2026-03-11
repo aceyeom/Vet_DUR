@@ -1,8 +1,8 @@
-# VetDUR Frontend Architecture
+# NuvoVet Frontend Architecture
 
 ## Product Overview
 
-VetDUR is a veterinary Drug Utilization Review system that screens multi-drug prescriptions for interactions in companion animals (dogs and cats). The frontend is a mobile-first web application designed to feel like clinical-grade medical software — not a consumer product.
+NuvoVet is a veterinary Drug Utilization Review (DUR) system that screens multi-drug prescriptions for interactions in companion animals (dogs and cats). The frontend is a mobile-first React/Vite web application designed to feel like clinical-grade medical software — not a consumer product.
 
 ---
 
@@ -65,7 +65,7 @@ Loading screen with sequential 6-step database-search animation, then the full r
 
 ### 3. Full System Mode (`/system`)
 
-Password-protected (`vetdur2025`). Same drug input and results UI without the guided flow. Intended for real clinical use once the backend is connected.
+Password-protected (`vetdur2025`). Same drug input and results UI without the guided flow. Drug search is backed by the FastAPI backend (`GET /api/drugs/search`), which searches the full 641-drug JSONL database. Falls back to local static data if the backend is unreachable.
 
 ### 4. Request Full Access (Modal)
 
@@ -161,18 +161,20 @@ Each interaction includes: mechanism, clinical recommendation, alternative sugge
 
 ## Drug Database — Pharmacokinetic Data
 
-25+ drugs with full pharmacological profiles aligned with the backend PostgreSQL schema:
+28 curated drugs in `drugDatabase.js` for the demo and API fallback. The backend serves 641 drugs loaded from JSONL files. Both use the same frontend Drug contract (see `docs/backend_frontend_connection.md`).
 
-**Core fields:** Active substance, drug class, Korean name, CYP enzyme profiles, risk flags, renal elimination, species notes, contraindications, dose/route/frequency.
+Key fields:
 
-**PK parameters (new — aligned with backend `pk_parameters` table):**
+**Core fields:** Active substance, drug class, Korean name, CYP enzyme profiles, risk flags, renal elimination, species notes, contraindications, dose/route/frequency, doseRange, organBurden, washoutPeriodDays.
+
+**PK parameters (`pk` sub-object):**
 - `halfLife` (hours) — drug elimination half-life
 - `timeToPeak` (hours) — time to peak plasma concentration
 - `bioavailability` (0-1) — fraction absorbed
 - `proteinBinding` (0-1) — plasma protein binding
-- `primaryElimination` — renal, hepatic, biliary, or mixed
+- `primaryElimination` — `'hepatic' | 'renal' | 'mixed'`
 
-These fields power the Drug Timeline feature and ensure the frontend data model aligns with the backend schema without requiring a live connection.
+These fields power the Drug Timeline feature and match the JSONL → Drug contract served by the backend.
 
 ---
 
@@ -376,4 +378,84 @@ CSS `@media print` styles for clinical report output:
 - **Formspree** for lead capture form submission
 - **Vercel** for deployment (SPA rewrites configured)
 
-No external UI framework. No state management library. No chart library — PK visualizations use pure SVG. The interaction engine runs entirely client-side for the demo; the full system will connect to the backend PostgreSQL + Python DDI engine.
+No external UI framework. No state management library. No chart library — PK visualizations use pure SVG. The DUR engine runs client-side (`durEngine.js`) for sub-100ms response times in both demo and full system modes.
+
+---
+
+## Backend Connection
+
+The `/system` route connects to a FastAPI backend. See `docs/backend_frontend_connection.md` for the full API contract.
+
+```
+Browser (React/Vite)
+  ├── /demo route    → local static data only (drugDatabase.js, breedProfiles.js)
+  └── /system route  → backend API (lib/api.js → FastAPI)
+        ├── Drug search    → GET /api/drugs/search?q=&species=&limit=
+        ├── Drug lookup    → GET /api/drugs/{id}
+        └── DUR analysis   → POST /api/dur/analyze (optional mirror)
+
+FastAPI (backend/main.py)
+  └── Loads 641 drugs from backend/data/converted/**/*.jsonl at startup
+  └── Maps JSONL schema → frontend Drug contract on every request
+```
+
+### API Client (`src/lib/api.js`)
+
+All backend requests go through `apiFetch()`, which:
+- Reads `VITE_API_URL` (default: `http://localhost:8000`)
+- Wraps every call in `try/catch` — returns `null` on network failure
+- Logs warnings in dev mode only
+
+### Fallback Behavior
+
+- `DrugInput.jsx` falls back to local `searchDrugs()` from `drugDatabase.js` if the API throws
+- DUR analysis always runs client-side via `durEngine.js` regardless of backend availability
+- `/demo` never calls the backend
+
+---
+
+## File Tree (`src/`)
+
+```
+src/
+├── App.jsx                          # Router: /, /demo, /system
+├── main.jsx
+├── index.css
+│
+├── pages/
+│   ├── Landing.jsx                  # Marketing page with 5 live mini-demos
+│   ├── Demo.jsx                     # 4-step guided demo (local data)
+│   └── FullSystem.jsx               # Full clinical UI (API-backed search)
+│
+├── components/
+│   ├── Layout/
+│   │   └── Header.jsx               # Sticky nav with lang toggle
+│   ├── DrugInput.jsx                # Drug search + add (accepts optional async searchFn)
+│   ├── ResultsDisplay.jsx           # DUR results — interaction cards, flags
+│   ├── OrganLoadIndicator.jsx       # Radar/bar organ burden visualization
+│   ├── SeverityBadge.jsx            # Critical/Moderate/Minor/None badge
+│   ├── DrugTimeline.jsx             # SVG pharmacokinetic timeline
+│   ├── AnalysisScreen.jsx           # Loading animation (6 steps)
+│   ├── ConfidenceProvenance.jsx     # Confidence score + source breakdown
+│   ├── ScanExportPDF.jsx            # Scan export button (browser print)
+│   ├── MolecularBackground.jsx      # Animated SVG hero background
+│   ├── RequestAccessModal.jsx       # Lead capture modal (Formspree)
+│   └── NuvovetLogo.jsx              # SVG logo component
+│
+├── data/
+│   ├── drugDatabase.js              # 28 curated drugs (demo + fallback)
+│   ├── drugSearchData.js            # Full search catalog for DrugInput browse mode
+│   ├── breedProfiles.js             # 7 breed clinical cases for demo
+│   └── emrSchema.js                 # EMR field enums (sex, patient status)
+│
+├── utils/
+│   └── durEngine.js                 # Client-side DUR rule engine (9 rules)
+│
+├── lib/
+│   └── api.js                       # Async API client for FastAPI backend
+│
+└── i18n/
+    ├── index.jsx                    # I18nProvider, useI18n hook, LangToggle
+    ├── en.js                        # English translations
+    └── ko.js                        # Korean translations (primary)
+```

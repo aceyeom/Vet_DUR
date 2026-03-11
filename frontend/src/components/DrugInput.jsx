@@ -418,7 +418,10 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
 }
 
 // ── Main DrugInput Component ─────────────────────────────────────
-export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, species, weight = 10, demoMode = false }) {
+// searchFn: optional async (query, species) => Drug[]
+//   When provided (FullSystem), it replaces the local searchDrugs().
+//   When absent (Demo), local static search is used.
+export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, species, weight = 10, demoMode = false, searchFn = null }) {
   const { t, lang } = useI18n();
   const [showSearch, setShowSearch] = useState(false);
   const [query, setQuery] = useState('');
@@ -487,9 +490,21 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
     setSelectedProduct(null);
     if (debounceRef.current) clearTimeout(debounceRef.current);
 
-    debounceRef.current = setTimeout(() => {
+    debounceRef.current = setTimeout(async () => {
       if (value.trim().length >= 1) {
-        const found = searchDrugs(value, species).filter(d => !drugs.some(ex => ex.id === d.id));
+        let found;
+        if (searchFn) {
+          // API-backed search (FullSystem path)
+          try {
+            const apiResults = await searchFn(value, species);
+            found = (apiResults || []).filter(d => !drugs.some(ex => ex.id === d.id));
+          } catch {
+            found = searchDrugs(value, species).filter(d => !drugs.some(ex => ex.id === d.id));
+          }
+        } else {
+          // Local static search (Demo path)
+          found = searchDrugs(value, species).filter(d => !drugs.some(ex => ex.id === d.id));
+        }
         setResults(found);
         setCatalogResults(searchDrugCatalog(value));
         setShowUnknownOption(value.trim().length >= 2 && found.length === 0);
@@ -519,9 +534,22 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   };
 
   // Select from browse mode (catalog product → drugDatabase entry)
-  const handleSelectCatalogProduct = (product) => {
-    const drug = searchDrugs(product.drug_db_id, species).find(d => d.id === product.drug_db_id) ||
-                 searchDrugs(product.english_name_base, species)[0];
+  const handleSelectCatalogProduct = async (product) => {
+    let drug;
+    if (searchFn) {
+      try {
+        const apiRes = await searchFn(product.drug_db_id, species);
+        drug = (apiRes || []).find(d => d.id === product.drug_db_id);
+        if (!drug) {
+          const apiRes2 = await searchFn(product.english_name_base, species);
+          drug = (apiRes2 || [])[0];
+        }
+      } catch { /* fallthrough */ }
+    }
+    if (!drug) {
+      drug = searchDrugs(product.drug_db_id, species).find(d => d.id === product.drug_db_id) ||
+             searchDrugs(product.english_name_base, species)[0];
+    }
     if (!drug) return;
 
     if (product.variants.length > 1) {

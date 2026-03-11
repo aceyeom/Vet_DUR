@@ -15,6 +15,7 @@ import { ResultsDisplay } from '../components/ResultsDisplay';
 import { runFullDURAnalysis } from '../utils/durEngine';
 import { SEX_ENUM, PATIENT_STATUS_ENUM } from '../data/emrSchema';
 import { BREED_DATA } from '../data/breedProfiles';
+import { searchDrugsApi } from '../lib/api';
 
 const SYSTEM_PASSWORD = 'vetdur2025';
 
@@ -941,6 +942,7 @@ export default function FullSystem() {
                   onUpdateDrug={handleUpdateDrug}
                   species={patient.species}
                   weight={patient.weight}
+                  searchFn={searchDrugsApi}
                 />
               </div>
 

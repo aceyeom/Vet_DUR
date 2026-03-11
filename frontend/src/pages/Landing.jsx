@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  ArrowRight, Lock, ChevronDown, Database, Dna, ShieldCheck,
-  FlaskConical, Globe, AlertTriangle, CheckCircle, BookOpen, Zap, Layers,
-  Activity, Calculator, Ban, BarChart2, Download, FileText, Printer
+  ArrowRight, Lock, ChevronDown, Dna, ShieldCheck,
+  FlaskConical, Globe, AlertTriangle, CheckCircle, Zap, Layers,
+  Activity, Ban, Timer, Scale, RefreshCcw
 } from 'lucide-react';
+import { SeverityBadge } from '../components/SeverityBadge';
+import { OrganLoadIndicator } from '../components/OrganLoadIndicator';
 import { NuvovetLogo, NuvovetWordmark } from '../components/NuvovetLogo';
 import { MolecularBackground } from '../components/MolecularBackground';
 import { RequestAccessModal } from '../components/RequestAccessModal';
@@ -86,257 +88,163 @@ function PipelineItem({ number, label, sublabel, delay = 0 }) {
   );
 }
 
-// ── New feature visual cards ─────────────────────────────────────
+// ── Illustrative data for landing page mini-demos ────────────────
+// Dog · 12 kg · Meloxicam + Prednisolone · Elevated creatinine
+// Hardcoded illustrative data is acceptable on the marketing page.
+const DEMO_DRUGS = [
+  {
+    id: 'meloxicam',
+    name: 'Meloxicam',
+    class: 'NSAID',
+    renalElimination: 0.15,
+    hepaticElimination: 0.85,
+    pk: { primaryElimination: 'hepatic' },
+    riskFlags: { bleedingRisk: 'high', giUlcer: 'high', nephrotoxic: 'moderate' },
+  },
+  {
+    id: 'prednisolone',
+    name: 'Prednisolone',
+    class: 'Corticosteroid',
+    renalElimination: 0.20,
+    hepaticElimination: 0.80,
+    pk: { primaryElimination: 'hepatic' },
+    riskFlags: { bleedingRisk: 'moderate', giUlcer: 'moderate' },
+  },
+];
+const DEMO_PATIENT = {
+  flaggedLabs: [
+    { key: 'creatinine', value: '2.4', unit: 'mg/dL', status: 'high' },
+  ],
+};
 
-// Organ Load — animated bar chart
-function OrganLoadVisual({ visible }) {
-  const drugs = [
-    { name: 'Meloxicam', renal: 15, hepatic: 60 },
-    { name: 'Amoxicillin', renal: 60, hepatic: 10 },
-    { name: 'Prednisolone', renal: 20, hepatic: 55 },
-    { name: 'Tramadol', renal: 30, hepatic: 45 },
-  ];
-  const totalRenal = drugs.reduce((s, d) => s + d.renal, 0); // 125
-  const totalHepatic = drugs.reduce((s, d) => s + d.hepatic, 0); // 170
-
+// ── DDI mini-demo — severity badges for the illustrative interaction
+function DDIDemo({ visible }) {
+  const interaction = {
+    severity: { label: 'Critical' },
+    rule: 'NSAID + Corticosteroid GI Risk',
+    drugA: 'Meloxicam',
+    drugB: 'Prednisolone',
+  };
   return (
-    <div className="bg-slate-900 rounded-lg p-3 text-[10px] space-y-2">
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-slate-400 font-medium uppercase tracking-wide text-[9px]">Organ Burden</span>
-        <span className="text-red-400 text-[9px] font-semibold animate-pulse">RENAL HIGH ⚠</span>
-      </div>
-      <div>
-        <div className="flex justify-between text-[9px] mb-0.5">
-          <span className="text-slate-400">Renal</span>
-          <span className="text-red-400 font-bold">{totalRenal}%</span>
+    <div className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+      <div className="bg-red-50 border border-red-200 rounded-lg px-3 py-2.5 mt-2">
+        <div className="flex items-center gap-2 mb-1.5">
+          <SeverityBadge severity={interaction.severity} />
+          <span className="text-[10px] text-slate-500">{interaction.rule}</span>
         </div>
-        <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-red-500 rounded-full transition-all duration-1000"
-            style={{ width: visible ? `${Math.min(totalRenal / 2, 100)}%` : '0%' }}
-          />
-        </div>
-      </div>
-      <div>
-        <div className="flex justify-between text-[9px] mb-0.5">
-          <span className="text-slate-400">Hepatic</span>
-          <span className="text-amber-400 font-semibold">{totalHepatic}%</span>
-        </div>
-        <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-amber-400 rounded-full transition-all duration-1000 delay-200"
-            style={{ width: visible ? `${Math.min(totalHepatic / 2, 100)}%` : '0%' }}
-          />
-        </div>
-      </div>
-      <div className="pt-1 border-t border-slate-700 grid grid-cols-2 gap-1">
-        {drugs.map((d, i) => (
-          <div key={i} className="flex items-center gap-1">
-            <div className="w-1 h-1 rounded-full bg-slate-500 shrink-0" />
-            <span className="text-slate-500 truncate">{d.name}</span>
-          </div>
-        ))}
+        <p className="text-xs font-semibold text-slate-800">{interaction.drugA} + {interaction.drugB}</p>
+        <p className="text-[10px] text-slate-500 mt-0.5 leading-relaxed">
+          GI ulceration risk ×15 vs either drug alone. Add a proton-pump inhibitor.
+        </p>
       </div>
     </div>
   );
 }
 
-// Dose Calculator — interactive slider-like visual
-function DoseCalcVisual({ visible }) {
-  const [position, setPosition] = useState(50);
-  const weight = 28;
-  const minMg = +(2.2 * weight).toFixed(0); // 61.6
-  const maxMg = +(4.4 * weight).toFixed(0); // 123.2
-  const calcMg = Math.round(minMg + (position / 100) * (maxMg - minMg));
-  const tablets = Math.round((calcMg / 50) * 10) / 10;
-
+// ── Organ Load mini-demo — use the actual OrganLoadIndicator component
+function OrganLoadDemo({ visible }) {
   return (
-    <div className="bg-slate-900 rounded-lg p-3 space-y-2.5">
-      <div className="flex justify-between text-[9px]">
-        <span className="text-slate-400">Carprofen · {weight} kg patient</span>
-        <span className="text-blue-400 font-mono">2.2–4.4 mg/kg</span>
-      </div>
-      {/* Slider track */}
-      <div className="relative">
-        <div className="h-3 bg-slate-700 rounded-full relative overflow-hidden">
-          <div
-            className="absolute inset-y-0 left-0 bg-blue-500 rounded-full transition-all duration-100"
-            style={{ width: `${position}%` }}
-          />
-        </div>
-        <input
-          type="range"
-          min={0}
-          max={100}
-          value={position}
-          onChange={e => setPosition(Number(e.target.value))}
-          className="absolute inset-0 w-full opacity-0 cursor-pointer h-3"
-          style={{ top: 0 }}
-        />
-        {/* Thumb indicator */}
-        <div
-          className="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-blue-500 rounded-full shadow pointer-events-none transition-all duration-100"
-          style={{ left: `calc(${position}% - 8px)`, top: '50%' }}
-        />
-      </div>
-      <div className="flex items-center justify-between">
-        <span className="text-[9px] text-slate-500">{minMg} mg min</span>
-        <div className="text-center">
-          <div className="text-[14px] font-bold text-white font-mono">{calcMg} mg</div>
-          <div className="text-[9px] text-blue-400">{tablets} tablets (50mg)</div>
-        </div>
-        <span className="text-[9px] text-slate-500">{maxMg} mg max</span>
+    <div className={`transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
+      <div className="mt-2">
+        <OrganLoadIndicator drugs={DEMO_DRUGS} patientInfo={DEMO_PATIENT} />
       </div>
     </div>
   );
 }
 
-// Species Hardstop — animated alert card
-function HardstopVisual({ visible }) {
+// ── Species & Breed Safety mini-demo
+function SpeciesBreedDemo({ visible }) {
   const [show, setShow] = useState(false);
   useEffect(() => {
     if (!visible) return;
-    const t = setTimeout(() => setShow(true), 600);
+    const t = setTimeout(() => setShow(true), 500);
     return () => clearTimeout(t);
   }, [visible]);
 
   return (
-    <div className="bg-slate-900 rounded-lg p-3 space-y-2">
-      {/* Drug being entered */}
-      <div className="flex items-center gap-2 bg-slate-800 rounded-md px-2.5 py-1.5">
-        <span className="text-[9px] text-slate-400">Drug entry</span>
-        <span className="text-[11px] text-white font-mono ml-auto">Acetaminophen</span>
-        <span className="text-[9px] bg-violet-900 text-violet-300 px-1 py-0.5 rounded">🐈 Cat</span>
-      </div>
-      {/* Alert */}
+    <div className="space-y-1.5 mt-2">
+      {/* Hardstop */}
       <div className={`transition-all duration-500 ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-        <div className="bg-red-950 border border-red-500/50 rounded-md px-2.5 py-2 flex items-start gap-2">
-          <Ban size={12} className="text-red-400 shrink-0 mt-0.5" />
+        <div className="bg-red-950 border border-red-500/50 rounded-lg px-2.5 py-2 flex items-start gap-2">
+          <Ban size={11} className="text-red-400 shrink-0 mt-0.5" />
           <div>
-            <p className="text-[9px] font-bold text-red-400 uppercase tracking-wide mb-0.5">Species Contraindication</p>
-            <p className="text-[9px] text-red-300 leading-relaxed">Acetaminophen is acutely fatal in cats. Cats lack glucuronyl transferase.</p>
+            <p className="text-[9px] font-bold text-red-400 uppercase tracking-wide">Species Hardstop · Cat</p>
+            <p className="text-[9px] text-red-300 leading-relaxed">Acetaminophen is acutely fatal. Cats lack glucuronyl transferase.</p>
           </div>
         </div>
       </div>
-      <div className={`transition-all duration-500 delay-300 ${show ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="text-[9px] text-slate-500 text-center">⚡ Fires before the scan — not after</div>
+      {/* MDR1 */}
+      <div className={`transition-all duration-500 delay-200 ${show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+        <div className="bg-orange-950/60 border border-orange-500/40 rounded-lg px-2.5 py-2">
+          <p className="text-[9px] font-semibold text-orange-400">MDR1 Sensitivity · Ivermectin</p>
+          <p className="text-[9px] text-orange-300/80">Collie/Sheltie/ASD — MDR1 mutation confirmed. CNS toxicity risk. Switch to Selamectin.</p>
+        </div>
       </div>
     </div>
   );
 }
 
-// Confidence Provenance — animated bar breakdown
-function ConfidenceVisual({ visible }) {
+// ── Weight-Adjusted Dosing mini-demo
+function DosingDemo({ visible }) {
+  const weight = 12; // illustrative patient
+  const normalDose = 0.2; // mg/kg
+  const renalFactor = 0.5; // elevated creatinine → halve dose
+  const adjustedDose = normalDose * renalFactor;
+  const normalMg = +(normalDose * weight).toFixed(1);
+  const adjustedMg = +(adjustedDose * weight).toFixed(1);
+
+  return (
+    <div className={`mt-2 bg-slate-900 rounded-lg p-3 space-y-2 transition-all duration-700 delay-100 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="flex justify-between text-[9px] text-slate-400">
+        <span>Meloxicam · <span className="font-semibold text-white">{weight} kg</span></span>
+        <span className="text-amber-400 font-semibold">Creatinine 2.4 ↑</span>
+      </div>
+      <div className="flex gap-2">
+        <div className="flex-1 bg-slate-800 rounded-md p-2 text-center">
+          <div className="text-[8px] text-slate-500 mb-0.5 line-through">Standard dose</div>
+          <div className="text-[13px] font-bold text-slate-400 font-mono line-through">{normalMg} mg</div>
+          <div className="text-[8px] text-slate-600">{normalDose} mg/kg</div>
+        </div>
+        <div className="flex items-center text-slate-600">→</div>
+        <div className="flex-1 bg-emerald-950 border border-emerald-600/40 rounded-md p-2 text-center">
+          <div className="text-[8px] text-emerald-400 mb-0.5">Renal-adjusted</div>
+          <div className="text-[13px] font-bold text-emerald-300 font-mono">{adjustedMg} mg</div>
+          <div className="text-[8px] text-emerald-500">{adjustedDose} mg/kg ×0.5</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Washout Advisor mini-demo
+function WashoutDemo({ visible }) {
   const drugs = [
-    { name: 'Metronidazole', score: 94, source: 'Korean DB', color: 'bg-emerald-500' },
-    { name: 'Cyclosporine', score: 71, source: 'Off-label', color: 'bg-amber-400' },
-    { name: 'Trazodone', score: 52, source: 'Limited lit.', color: 'bg-red-400' },
-  ];
-  const blocks = 10;
-
-  return (
-    <div className="bg-slate-900 rounded-lg p-3 space-y-2">
-      <div className="flex justify-between text-[9px] mb-1">
-        <span className="text-slate-400 uppercase tracking-wide font-medium">Confidence Provenance</span>
-        <span className="text-slate-300 font-bold">74%</span>
-      </div>
-      {drugs.map((d, i) => (
-        <div key={i} className={`transition-all duration-700`} style={{ transitionDelay: `${i * 200}ms` }}>
-          <div className="flex justify-between text-[9px] mb-0.5">
-            <span className="text-slate-400">{d.name}</span>
-            <div className="flex items-center gap-1.5">
-              <span className="text-[8px] text-slate-600">{d.source}</span>
-              <span className="text-slate-300 font-mono">{d.score}%</span>
-            </div>
-          </div>
-          <div className="flex gap-0.5">
-            {Array.from({ length: blocks }).map((_, bi) => (
-              <div
-                key={bi}
-                className={`flex-1 h-2 rounded-sm transition-all duration-500 ${bi < Math.round((d.score / 100) * blocks) ? d.color : 'bg-slate-700'}`}
-                style={{ transitionDelay: visible ? `${i * 150 + bi * 40}ms` : '0ms', opacity: visible ? 1 : 0 }}
-              />
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// PDF Export — document preview
-function PDFExportVisual({ visible }) {
-  return (
-    <div className="bg-slate-900 rounded-lg p-3">
-      {/* Mini document */}
-      <div className={`bg-white rounded-md p-2.5 shadow-lg transition-all duration-700 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-        <div className="flex items-center justify-between mb-2 pb-1.5 border-b border-slate-100">
-          <div className="flex items-center gap-1">
-            <div className="w-2 h-2 bg-slate-900 rounded-sm" />
-            <span className="text-[8px] font-bold text-slate-900 uppercase tracking-wide">NUVOVET</span>
-          </div>
-          <span className="text-[7px] text-slate-400">DUR Report</span>
-        </div>
-        <div className="space-y-1.5">
-          <div className="grid grid-cols-2 gap-1 text-[7px]">
-            <div><span className="text-slate-400">Patient: </span><span className="font-semibold text-slate-700">Buddy · 28kg</span></div>
-            <div><span className="text-slate-400">Date: </span><span className="text-slate-600">2026-03-06</span></div>
-          </div>
-          <div className="bg-red-50 border-l-2 border-red-500 px-1.5 py-1 rounded-r">
-            <span className="text-[7px] text-red-700 font-semibold">Critical: Meloxicam + Prednisolone</span>
-          </div>
-          <div className="bg-amber-50 border-l-2 border-amber-400 px-1.5 py-1 rounded-r">
-            <span className="text-[7px] text-amber-700">Moderate: Metronidazole + Ketoconazole</span>
-          </div>
-          <div className="h-4 border border-dashed border-slate-200 rounded flex items-center justify-center">
-            <span className="text-[6px] text-slate-400">[ Pharmacist signature ]</span>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-center gap-1 mt-2">
-        <Printer size={9} className="text-slate-500" />
-        <span className="text-[9px] text-slate-500">Print-to-PDF · Goes in patient file</span>
-      </div>
-    </div>
-  );
-}
-
-// Pre-Scan Safety Flow
-function SafetyLayerVisual({ visible }) {
-  const steps = [
-    { label: 'Drug entered', color: 'bg-slate-600', delay: 0 },
-    { label: 'Hardstop check', color: 'bg-red-500', delay: 200, alert: true },
-    { label: 'DDI engine', color: 'bg-amber-500', delay: 400 },
-    { label: 'Results', color: 'bg-emerald-500', delay: 600 },
+    { name: 'Tramadol', halfLife: 1.8, washoutDays: 1, serotonin: true },
+    { name: 'Trazodone', halfLife: 3.5, washoutDays: 1, serotonin: true },
   ];
 
   return (
-    <div className="bg-slate-900 rounded-lg p-3">
-      <div className="text-[9px] text-slate-400 mb-3 uppercase tracking-wide font-medium">Pre-Scan Architecture</div>
-      <div className="flex items-center gap-1">
-        {steps.map((step, i) => (
-          <React.Fragment key={i}>
-            <div
-              className={`flex-1 rounded px-1 py-1.5 text-center transition-all duration-500 ${step.color}`}
-              style={{ transitionDelay: visible ? `${step.delay}ms` : '0ms', opacity: visible ? 1 : 0, transform: visible ? 'none' : 'translateY(4px)' }}
-            >
-              <div className="text-[7px] font-medium text-white leading-tight">{step.label}</div>
-              {step.alert && <div className="text-[6px] text-red-200 mt-0.5">⛔ blocks</div>}
-            </div>
-            {i < steps.length - 1 && (
-              <div className={`text-slate-600 text-[8px] shrink-0 transition-opacity duration-300`} style={{ transitionDelay: `${step.delay + 150}ms`, opacity: visible ? 1 : 0 }}>→</div>
-            )}
-          </React.Fragment>
+    <div className={`mt-2 space-y-2 transition-all duration-700 delay-100 ${visible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className="bg-amber-950/60 border border-amber-500/40 rounded-lg px-2.5 py-2">
+        <div className="flex items-center gap-1.5 mb-1">
+          <Timer size={10} className="text-amber-400" />
+          <span className="text-[9px] font-bold text-amber-400 uppercase">Serotonin Risk — Washout Required</span>
+        </div>
+        {drugs.map((d, i) => (
+          <div key={i} className="flex items-center justify-between text-[9px] py-0.5">
+            <span className="text-slate-300">{d.name}</span>
+            <span className="text-slate-400">t½ {d.halfLife}h</span>
+            <span className="text-amber-300 font-semibold">≥{Math.max(1, Math.ceil(d.halfLife * 5 / 24))}d washout</span>
+          </div>
         ))}
-      </div>
-      <div className={`mt-2 text-[8px] text-slate-500 text-center transition-opacity duration-500 delay-700`} style={{ opacity: visible ? 1 : 0 }}>
-        Bright-line toxicity errors are <span className="text-red-400 font-semibold">architecturally separate</span> from interaction warnings
+        <p className="text-[8px] text-amber-400/70 mt-1">Do not start new serotonergic drug during washout window</p>
       </div>
     </div>
   );
 }
 
-function NewFeatureCard({ icon: Icon, title, description, visual: Visual, iconColor = 'text-slate-600', delay = 0 }) {
+// ── Clinical Feature Card with scrollytelling ────────────────────
+function ClinicalFeatureCard({ icon: Icon, title, description, demo: Demo, iconColor = 'text-slate-600', delay = 0 }) {
   const [ref, visible] = useReveal(0.1);
   return (
     <div
@@ -355,7 +263,7 @@ function NewFeatureCard({ icon: Icon, title, description, visual: Visual, iconCo
           <p className="text-xs text-slate-500 leading-relaxed">{description}</p>
         </div>
       </div>
-      {Visual && <Visual visible={visible} />}
+      {Demo && <Demo visible={visible} />}
     </div>
   );
 }
@@ -640,72 +548,64 @@ export default function Landing() {
 
       <SectionDivider />
 
-      {/* ─── Advanced Clinical Intelligence ─────────────────────── */}
+      {/* ─── Clinical Informatics — 5 Real Features ─────────────── */}
       <section className="bg-gradient-to-b from-[#f5f7fb] via-indigo-50/30 to-[#f5f7fb]">
       <div className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
         <RevealSection>
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-900 rounded-full text-xs text-white mb-4">
               <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              {t.landing.newFeaturesLabel}
+              {t.landing.clinicalFeaturesLabel}
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-              {t.landing.newFeaturesTitle}
+              {t.landing.clinicalFeaturesTitle}
             </h2>
             <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-              {t.landing.newFeaturesDesc}
+              {t.landing.clinicalFeaturesDesc}
             </p>
           </div>
         </RevealSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <NewFeatureCard
+          <ClinicalFeatureCard
+            icon={ShieldCheck}
+            title={t.landing.featureDDI}
+            description={t.landing.featureDDIDesc}
+            demo={DDIDemo}
+            iconColor="text-red-600"
+            delay={0}
+          />
+          <ClinicalFeatureCard
             icon={Activity}
             title={t.landing.featureOrganLoad}
             description={t.landing.featureOrganLoadDesc}
-            visual={OrganLoadVisual}
+            demo={OrganLoadDemo}
             iconColor="text-red-500"
-            delay={0}
-          />
-          <NewFeatureCard
-            icon={Calculator}
-            title={t.landing.featureDoseCalc}
-            description={t.landing.featureDoseCalcDesc}
-            visual={DoseCalcVisual}
-            iconColor="text-blue-600"
             delay={100}
           />
-          <NewFeatureCard
-            icon={Ban}
-            title={t.landing.featureHardstops}
-            description={t.landing.featureHardstopsDesc}
-            visual={HardstopVisual}
-            iconColor="text-red-600"
+          <ClinicalFeatureCard
+            icon={Layers}
+            title={t.landing.featureSpeciesBreed}
+            description={t.landing.featureSpeciesBreedDesc}
+            demo={SpeciesBreedDemo}
+            iconColor="text-violet-600"
             delay={200}
           />
-          <NewFeatureCard
-            icon={BarChart2}
-            title={t.landing.featureConfidence}
-            description={t.landing.featureConfidenceDesc}
-            visual={ConfidenceVisual}
-            iconColor="text-amber-600"
+          <ClinicalFeatureCard
+            icon={Scale}
+            title={t.landing.featureDosing}
+            description={t.landing.featureDosingDesc}
+            demo={DosingDemo}
+            iconColor="text-blue-600"
             delay={300}
           />
-          <NewFeatureCard
-            icon={FileText}
-            title={t.landing.featurePDF}
-            description={t.landing.featurePDFDesc}
-            visual={PDFExportVisual}
-            iconColor="text-emerald-600"
+          <ClinicalFeatureCard
+            icon={RefreshCcw}
+            title={t.landing.featureWashout}
+            description={t.landing.featureWashoutDesc}
+            demo={WashoutDemo}
+            iconColor="text-amber-600"
             delay={400}
-          />
-          <NewFeatureCard
-            icon={ShieldCheck}
-            title={t.landing.featureSafetyLayer}
-            description={t.landing.featureSafetyLayerDesc}
-            visual={SafetyLayerVisual}
-            iconColor="text-slate-600"
-            delay={500}
           />
         </div>
       </div>

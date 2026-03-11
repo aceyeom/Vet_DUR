@@ -670,8 +670,33 @@ function normalizeDrugEntry(drug) {
   const renal = Number(drug.renalElimination) || 0;
   const hepatic = Number(drug.hepaticElimination ?? Math.max(1 - renal, 0));
 
+  // Build doseRange from DOSE_RANGES constant defined in DrugInput,
+  // or fall back to single-point defaultDose. This mirrors the backend's doseRange field.
+  const EMBEDDED_DOSE_RANGES = {
+    carprofen:    { dog: [2.2, 4.4], cat: null },
+    meloxicam:    { dog: [0.1, 0.2], cat: [0.05, 0.05] },
+    prednisolone: { dog: [0.5, 2.0], cat: [0.5, 2.0] },
+    metronidazole:{ dog: [10, 25],   cat: [8, 15] },
+    amoxicillin:  { dog: [10, 20],   cat: [10, 20] },
+    enrofloxacin: { dog: [5, 10],    cat: [5, 5] },
+    gabapentin:   { dog: [5, 10],    cat: [5, 10] },
+    tramadol:     { dog: [2, 5],     cat: [2, 4] },
+    phenobarbital:{ dog: [2, 5],     cat: [2, 4] },
+    cyclosporine: { dog: [5, 10],    cat: [5, 7.5] },
+    furosemide:   { dog: [1, 4],     cat: [1, 2] },
+    ketoconazole: { dog: [5, 10],    cat: [5, 10] },
+    maropitant:   { dog: [1, 2],     cat: [1, 1] },
+    omeprazole:   { dog: [0.7, 1],   cat: [0.7, 1] },
+  };
+  const doseRangeEntry = EMBEDDED_DOSE_RANGES[drug.id] || {};
+  const doseRange = {
+    dog: doseRangeEntry.dog ?? (drug.defaultDose?.dog != null ? [drug.defaultDose.dog, drug.defaultDose.dog] : null),
+    cat: doseRangeEntry.cat ?? (drug.defaultDose?.cat != null ? [drug.defaultDose.cat, drug.defaultDose.cat] : null),
+  };
+
   return {
     ...drug,
+    doseRange,
     brandNames: drug.brandNames || [drug.nameKr, drug.name].filter(Boolean),
     dosageForm: drug.dosageForm || inferDosageForm(drug.route),
     availableStrengths: drug.availableStrengths || [],
