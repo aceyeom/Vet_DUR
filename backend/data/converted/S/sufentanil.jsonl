@@ -1,0 +1,680 @@
+{
+  "id": "sufentanil",
+  "drug_identity": {
+    "name_ko": "수펜타닐",
+    "name_en": "Sufentanil",
+    "active_ingredient": "Sufentanil citrate",
+    "brand_names": [
+      "Sufenta",
+      "Fastfen",
+      "Fentaientel"
+    ],
+    "allergy_class": "opioid",
+    "class": "Opioid",
+    "source": "human_offlabel",
+    "formulary_status": "restricted",
+    "has_reversal": true,
+    "reversal_agent": "Naloxone",
+    "reversal_evidence": "과량 투여 시 날록손(naloxone) 투여 및 지지 요법 병행. 수펜타닐의 반감기가 비교적 짧으나 날록손 반복 투여가 필요할 수 있음.",
+    "off_label_note": "수의학적 허가 제품 없음. 개·고양이에서 마취 보조 및 경막외 진통 목적으로 사람용 제제를 오프라벨로 사용.",
+    "dosage_form": [
+      "Inj"
+    ],
+    "available_strengths": [
+      {
+        "value": 50,
+        "unit": "mcg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "수펜타닐은 주로 간과 소장에서 O-탈메틸화(O-demethylation) 및 N-탈알킬화(N-dealkylation)를 통해 대사됨. 모약물 및 대사산물은 주로 소변으로 배설됨. 간 효소 억제제(예: 시메티딘, 딜티아젬, 에리스로마이신, 아졸계 항진균제)는 반감기를 연장하고 청소율을 감소시킬 수 있음."
+    },
+    "extra_information": "이소플루란 마취 고양이에서 수펜타닐 1 µg/kg IV 볼루스 투여 시 정상상태 분포용적 ≈0.77 L/kg, 청소율 ≈17.6 mL/분/kg, 말단 반감기 ≈54분. 사람에서는 IV 투여 후 신속한 작용 발현(1~3분), 혈장 단백 결합률 ≈93%, 말단 반감기 ≈2.5시간, 혈장 청소율 ≈12 mL/분/kg."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 고양이 PK 데이터(반감기, 청소율) 존재; 개 PK 데이터는 LD50 외 제한적. 사람 데이터 보완 적용.",
+    "dog": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "seizures",
+          "respiratory depression",
+          "opioid agonist"
+        ],
+        "index": 1,
+        "evidence": "개에서 과량 투여 시 발작, 혼수, 심정지 보고. 뮤 오피오이드 수용체 작용으로 CNS 억제 및 진정 효과 명확."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "circulatory collapse",
+          "cardiac arrest"
+        ],
+        "index": 1,
+        "evidence": "서맥, 저혈압, 순환 허탈 및 심정지가 과량 투여 시 보고됨. 혈액독성 직접 언급은 없으나 심혈관 영향 존재."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "urinary retention"
+        ],
+        "index": 1,
+        "evidence": "신기능 저하 환자에서 주의 사용 권고. 소변 저류 부작용 보고. 직접적 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "O-demethylation",
+          "N-dealkylation",
+          "hepatic impairment caution",
+          "amylase",
+          "lipase"
+        ],
+        "index": 1,
+        "evidence": "간 및 소장에서 주로 대사됨. 간기능 저하 시 주의 사용 권고. 혈청 아밀라아제·리파아제 수치 상승 가능."
+      },
+      "heart": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "asystole",
+          "cardiac arrest",
+          "cardiac function depression"
+        ],
+        "index": 1,
+        "evidence": "서맥, 저혈압, 심정지, 무수축(asystole) 드물게 보고. 심기능 억제 약물과 병용 시 서맥·저혈압 위험 증가."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 70,
+        "triggered_keywords": [
+          "CNS depression",
+          "sedation",
+          "respiratory depression",
+          "opioid agonist"
+        ],
+        "index": 1,
+        "evidence": "고양이에서 PK 연구 존재(이소플루란 마취 하). 뮤 오피오이드 작용으로 CNS 억제 및 진정 효과 예상."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension"
+        ],
+        "index": 1,
+        "evidence": "고양이 특이 심혈관 데이터 제한적이나 오피오이드 계열 특성상 서맥·저혈압 가능."
+      },
+      "kidney": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "renal impairment caution",
+          "urinary retention"
+        ],
+        "index": 1,
+        "evidence": "신기능 저하 시 주의 권고. 고양이 특이 신독성 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "O-demethylation",
+          "N-dealkylation",
+          "hepatic impairment caution"
+        ],
+        "index": 1,
+        "evidence": "간 대사 약물. 고양이 말단 반감기 ≈54분(이소플루란 마취 하). 간기능 저하 시 주의 권고."
+      },
+      "heart": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "bradycardia",
+          "hypotension",
+          "cardiac function depression"
+        ],
+        "index": 1,
+        "evidence": "고양이 특이 심장 데이터 제한적. 오피오이드 계열 특성상 서맥·저혈압 가능."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 1,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": 0.9,
+      "max": 2.5,
+      "mean": 1.7,
+      "species": "cat"
+    },
+    "f_percent": null,
+    "protein_binding_percent": 93,
+    "evidence": "고양이(이소플루란 마취): 말단 반감기 ≈54분(0.9시간). 사람: 말단 반감기 ≈2.5시간. 작용 발현 1~3분(IV). 혈장 단백 결합 ≈93%(사람). 경구 생체이용률 낮음(수치 미기재)."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도 분류: 금기/치명적→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 스키마 규칙에 따라 severity 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Alpha-2 Receptor Agonists (dexmedetomidine, xylazine)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Anesthetic Agents (alfaxalone, isoflurane, ketamine, propofol)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Anticholinergic Agents (acepromazine, atropine, glycopyrrolate)",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for urinary retention, constipation, and CNS and respiratory depression."
+    },
+    {
+      "drug": "Antihypertensive Agents (atenolol, lisinopril)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension",
+        "orthostasis"
+      ],
+      "evidence": "Concurrent use may increase the risk for bradycardia, hypotension, and orthostasis. Opioids may decrease the therapeutic effects of diuretics."
+    },
+    {
+      "drug": "Benzodiazepines (diazepam, midazolam)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression."
+    },
+    {
+      "drug": "Bethanechol",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the beneficial effects of bethanechol on GI motility. Avoid combination."
+    },
+    {
+      "drug": "CNS Depressants (methocarbamol, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for CNS and/or respiratory depression. Monitor and adjust dosages accordingly."
+    },
+    {
+      "drug": "Desmopressin",
+      "severity": 2,
+      "keywords": [
+        "water intoxication",
+        "hyponatremia",
+        "seizures",
+        "coma",
+        "respiratory arrest"
+      ],
+      "evidence": "Concurrent use may increase levels of oral desmopressin and increase the risk for water intoxication and/or hyponatremia, which can progress to seizures, coma, respiratory arrest, and death."
+    },
+    {
+      "drug": "Domperidone",
+      "severity": 2,
+      "keywords": [
+        "GI motility antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the GI effects of domperidone."
+    },
+    {
+      "drug": "Hepatic Enzyme Inhibitors (cimetidine, diltiazem, erythromycin, fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased half-life",
+        "decreased clearance",
+        "respiratory depression"
+      ],
+      "evidence": "May increase the half-life and decrease the clearance of sufentanil, leading to prolonged effects and an increased risk for respiratory depression."
+    },
+    {
+      "drug": "Hepatic Enzyme Inducers (griseofulvin, mitotane, phenobarbital)",
+      "severity": 2,
+      "keywords": [
+        "decreased sufentanil levels",
+        "reduced efficacy"
+      ],
+      "evidence": "Concurrent use may decrease levels of sufentanil. Monitor clinical response and adjust doses accordingly."
+    },
+    {
+      "drug": "Drugs That Depress Cardiac Function or Reduce Vagal Tone (beta-blockers, anesthetic agents)",
+      "severity": 2,
+      "keywords": [
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "May produce bradycardia or hypotension if used concurrently with sufentanil."
+    },
+    {
+      "drug": "Ifosfamide",
+      "severity": 2,
+      "keywords": [
+        "neurotoxicity",
+        "somnolence",
+        "confusion",
+        "hallucinations",
+        "seizures",
+        "coma"
+      ],
+      "evidence": "Concurrent use may increase the risk for neurotoxicity, including somnolence, confusion, hallucinations, blurred vision, urinary incontinence, seizures, and coma."
+    },
+    {
+      "drug": "Iohexol (intrathecal)",
+      "severity": 3,
+      "keywords": [
+        "seizures"
+      ],
+      "evidence": "Concurrent use of opioids with intrathecal iohexol may increase the risk for seizures. Opioids should be withheld for 48 hours before and 24 hours after intrathecal administration of iohexol."
+    },
+    {
+      "drug": "Loperamide",
+      "severity": 1,
+      "keywords": [
+        "constipation"
+      ],
+      "evidence": "Concurrent use may increase the risk for constipation."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "anxiety",
+        "confusion",
+        "hypotension",
+        "respiratory depression",
+        "cyanosis",
+        "coma",
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for anxiety, confusion, hypotension, respiratory depression, cyanosis, and coma. MAOIs should be withheld for 14 days prior to administration of opioids. Avoid combination."
+    },
+    {
+      "drug": "Metoclopramide",
+      "severity": 2,
+      "keywords": [
+        "prokinetic antagonism"
+      ],
+      "evidence": "Concurrent use may antagonize the prokinetic effects of metoclopramide."
+    },
+    {
+      "drug": "Neuromuscular Blocking Agents (atracurium)",
+      "severity": 2,
+      "keywords": [
+        "tachycardia",
+        "bradycardia",
+        "hypotension"
+      ],
+      "evidence": "Concurrent use may increase the risk for tachycardia, bradycardia, and/or hypotension."
+    },
+    {
+      "drug": "Serotonin Receptor Antagonists (dolasetron, fluoxetine)",
+      "severity": 3,
+      "keywords": [
+        "serotonin syndrome"
+      ],
+      "evidence": "Concurrent use may increase the risk for serotonin syndrome. Avoid combination."
+    },
+    {
+      "drug": "Tramadol",
+      "severity": 3,
+      "keywords": [
+        "seizures",
+        "serotonin syndrome",
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase the risk for seizures, serotonin syndrome, urinary retention, and constipation. The risk for CNS and respiratory depression may be additive."
+    },
+    {
+      "drug": "Tricyclic Antidepressants (amitriptyline, clomipramine)",
+      "severity": 2,
+      "keywords": [
+        "urinary retention",
+        "constipation",
+        "CNS depression",
+        "respiratory depression"
+      ],
+      "evidence": "Concurrent use may increase risk for urinary retention, constipation, and CNS and respiratory depression."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": true,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "low",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": true,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.4
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 진통 (오프라벨) - 표준 용량",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "서서히 IV 투여 후 CRI 유지",
+          "evidence": "0.5–1 µg/kg 서서히 IV 투여 후 0.5–1 µg/kg/시간 IV CRI 유지. 효과에 따라 용량 조절."
+        },
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 진통 (오프라벨) - CRI 유지",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 용량; 효과에 따라 조절",
+          "evidence": "0.5–1 µg/kg/시간 IV CRI. 최대 2–4 µg/kg/시간까지 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 진통 (오프라벨) - 고용량 볼루스",
+          "value": "2.5",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "서서히 IV 투여 후 고용량 CRI 유지",
+          "evidence": "최대 2.5 µg/kg 서서히 IV 투여 후 2–4 µg/kg/시간 IV CRI 보고됨."
+        },
+        {
+          "logic_type": "linear",
+          "context": "경막외 진통 (오프라벨)",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "멸균 생리식염수로 0.2–0.36 mL/kg 용량으로 희석. 작용 발현 10~15분, 지속 1~4시간.",
+          "evidence": "경막외 투여: 0.5–1 µg/kg을 멸균 생리식염수로 희석하여 0.2–0.36 mL/kg 용량으로 투여."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 진통 (오프라벨) - 표준 용량",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "IV",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "서서히 IV 투여 후 CRI 유지",
+          "evidence": "개/고양이 공통 용량으로 기재: 0.5–1 µg/kg 서서히 IV 투여 후 0.5–1 µg/kg/시간 IV CRI."
+        },
+        {
+          "logic_type": "linear",
+          "context": "오피오이드 진통 (오프라벨) - CRI 유지",
+          "value": "0.5 - 1",
+          "unit": "mcg/kg",
+          "route": "CRI",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "시간당 용량; 효과에 따라 조절",
+          "evidence": "0.5–1 µg/kg/시간 IV CRI. 최대 2–4 µg/kg/시간까지 보고됨."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "reduce_dose",
+    "adjustment_factor": null,
+    "note": "신기능 저하 환자에서 주의 사용 권고. 제조사는 신기능 저하 시 주의를 권고하나, 제한적 PK 연구에서 약물 축적은 드물게 관찰됨. 구체적 용량 조절 기준은 명시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "reduce_dose",
+    "note": "간기능 저하 환자에서 주의 사용 권고. 수펜타닐은 주로 간에서 대사되므로 간기능 저하 시 반감기 연장 및 청소율 감소 가능. 구체적 용량 조절 기준은 명시되지 않음."
+  },
+  "contraindications": [
+    {
+      "condition": "오피오이드 과민반응",
+      "match_terms": [
+        "opioid hypersensitivity",
+        "sufentanil allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "전갈 독침 (Centruroides spp)",
+      "match_terms": [
+        "scorpion envenomation",
+        "Centruroides sting"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심폐기능 저하 노령/쇠약 환자",
+      "match_terms": [
+        "geriatric",
+        "debilitated",
+        "cardiopulmonary compromise"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 저하",
+      "match_terms": [
+        "renal failure",
+        "CKD",
+        "renal impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간기능 저하",
+      "match_terms": [
+        "hepatic failure",
+        "liver disease",
+        "hepatic impairment"
+      ],
+      "severity": "relative",
+      "action": "reduce_dose",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": "Plumb's 모노그래프에 유전적 감수성 또는 특정 품종 위험에 대한 언급 없음."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "강력한 뮤(μ) 오피오이드 수용체 작용제로 진정, 진통, 마취 효과를 나타냄. 펜타닐보다 5~7배 강력. 빠른 작용 발현(1~3분) 및 펜타닐보다 빠른 회복.",
+    "common_extra_effects": [
+      "호흡 억제",
+      "CNS 억제/진정",
+      "서맥",
+      "골격근 강직(고용량 또는 빠른 IV 투여 시)",
+      "소변 저류",
+      "변비",
+      "저혈압",
+      "무수축(드물게)",
+      "과탄산혈증(드물게)",
+      "과민반응(드물게)"
+    ],
+    "dog_mechanism": "뮤 오피오이드 수용체 작용. 개에서 IV LD50 10.1~19.5 mg/kg. 과량 투여 시 무호흡, 순환 허탈, 폐부종, 발작, 심정지 가능.",
+    "dog_extra_effects": [
+      "무호흡(과량 투여 시)",
+      "순환 허탈(과량 투여 시)",
+      "폐부종(과량 투여 시)",
+      "발작(과량 투여 시)",
+      "심정지(과량 투여 시)"
+    ],
+    "cat_mechanism": "뮤 오피오이드 수용체 작용. 이소플루란 마취 하 PK 연구 존재(반감기 ≈54분).",
+    "cat_extra_effects": [
+      "호흡 억제",
+      "CNS 억제/진정"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 오프라벨로 마취 보조 및 경막외 진통에 사용. 표준 용량: 0.5–1 µg/kg 서서히 IV 후 0.5–1 µg/kg/시간 CRI. 경막외 투여 시 멸균 생리식염수로 희석(0.2–0.36 mL/kg). 작용 발현 10~15분, 지속 1~4시간. 비만 환자는 제지방체중 기준으로 용량 계산. 결핵균 주사기(tuberculin syringe) 사용 및 이중 확인 시스템 권장. IV LD50 10.1~19.5 mg/kg.",
+    "cat": "고양이에서 오프라벨로 마취 보조에 사용. 이소플루란 마취 하 PK: 분포용적 ≈0.77 L/kg, 청소율 ≈17.6 mL/분/kg, 말단 반감기 ≈54분. 펜타닐 및 알펜타닐보다 빠른 소실 예상. 표준 용량: 0.5–1 µg/kg 서서히 IV 후 0.5–1 µg/kg/시간 CRI. 지속적 활력징후 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "개에서 오프라벨 사용. 호흡 억제 및 CNS 억제 위험. 지속적 모니터링 필수. 쇠약·노령·심폐기능 저하 환자에서 초기 감량 필요. 결핵균 주사기 및 이중 확인 시스템 사용 권장."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 오프라벨 사용. 호흡 억제 및 CNS 억제 위험. 지속적 모니터링 필수. 고양이 PK 데이터 존재하나 임상 경험 제한적."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 실온(20°C~25°C, 68°F~77°F) 보관. 산성 용액에서 가수분해 가능. DEA Schedule II(C-II) 규제 약물로 견고하게 제작된 잠금 보관함에 보관. 미사용 또는 폐기 약물은 관련 법규에 따라 처리.",
+    "forms": [
+      "수펜타닐 시트레이트 주사액 50 µg/mL (염기 기준), 1 mL·2 mL·5 mL 앰플 (Sufenta®, 제네릭, 방부제 무첨가)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "수펜타닐은 펜타닐보다 5~7배 강력한 뮤 오피오이드 수용체 작용제로, 마취 보조 및 경막외 진통에 활용됩니다. 수의학적 허가 제품은 없으며 개·고양이에서 오프라벨로 사용됩니다. DEA Schedule II 규제 약물입니다. 용량 의존적 호흡 억제 및 CNS 억제가 주요 부작용이며, 지속적인 활력징후 모니터링이 필수입니다. 과량 투여 시 날록손으로 역전 가능하나 반복 투여가 필요할 수 있습니다. 펜타닐 또는 알펜타닐과 혼동하지 않도록 주의하십시오.",
+    "indications": "마취 보조(개·고양이, 오프라벨): 0.5–1 µg/kg 서서히 IV 후 0.5–1 µg/kg/시간 CRI. 경막외 진통(개, 오프라벨): 0.5–1 µg/kg을 멸균 생리식염수로 희석하여 경막외 투여. 사람에서는 기관 삽관 환자의 일차 마취제 및 수술 후 진통제로 허가됨.",
+    "client_info": "수펜타닐은 매우 강력한 마약성 진통제로, 반드시 전문 의료진이 적절한 모니터링 장비가 갖춰진 환경에서만 사용해야 합니다. 이 약물은 DEA Schedule II 규제 약물입니다. 투여 중 호흡수, 심박수, 혈압을 지속적으로 모니터링합니다. 부작용으로 호흡 억제, 진정, 서맥이 나타날 수 있으며, 이상 증상 발생 시 즉시 수의사에게 알려주십시오."
+  },
+  "_data_quality": {
+    "overall_confidence": 68,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific PK studies for dogs",
+      "Specific renal dose adjustment thresholds",
+      "Specific hepatic dose adjustment thresholds",
+      "CYP enzyme substrate/inhibitor/inducer data",
+      "Oral bioavailability data",
+      "t_max data"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.t_max_hr",
+      "timing_profile.f_percent",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "half_life_hr (dog-specific)"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:05:23.565918+00:00",
+    "reviewer": null
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "id": "glycerin_oral",
+  "drug_identity": {
+    "name_ko": "글리세린 (경구)",
+    "name_en": "Glycerin, Oral",
+    "active_ingredient": "Glycerin",
+    "brand_names": [
+      "Osmoglyn"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적 승인 제품 없음. 인간용 제품도 전신 투여 목적으로 승인된 것 없음. 소동물에서 급성 녹내장 치료를 위해 USP 90% 글리세린을 경구 투여하는 방식으로 사용됨(extra-label).",
+    "dosage_form": [
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 90,
+        "unit": "%"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Mixed",
+    "renal_elimination_fraction": 0.1,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "글리세린은 주로 간에서 대사되며, 약 10%는 소변으로 미변화체로 배설됨."
+    },
+    "extra_information": "개와 고양이에서의 구체적인 약동학 데이터는 보고되지 않음. 인간 데이터에 기반하여 GI에서 빠르게 흡수되며, 30분 이내에 안압 감소 효과가 나타남. 최고 혈청 농도는 약 90분 이내에 도달하며, 안압 감소 효과는 5~12시간 지속됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 수의학적 종별 PK 데이터 없음; 인간 데이터 및 약리학적 기전에 근거함.",
+    "dog": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CSF pressure reduction",
+          "osmotic agent"
+        ],
+        "index": 1,
+        "evidence": "글리세린은 삼투압 증가를 통해 CSF 압력을 감소시킬 수 있으며, 뇌척수액에 간접적 영향을 미침."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "osmotic pressure",
+          "plasma osmolality",
+          "dehydration"
+        ],
+        "index": 1,
+        "evidence": "혈장 삼투압을 증가시켜 세포외액을 혈액으로 이동시킴. 탈수 및 혈액량 변화 위험 있음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "anuria contraindication",
+          "renal failure caution",
+          "urine output monitoring"
+        ],
+        "index": 1,
+        "evidence": "무뇨증 환자에서 금기이며, 만성 신부전 또는 신기능 저하 환자에서 사용을 피해야 함. 약 10%가 신장으로 배설됨."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "primarily metabolized by liver"
+        ],
+        "index": 1,
+        "evidence": "글리세린은 주로 간에서 대사됨."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "cardiac decompensation contraindication",
+          "heart failure contraindication",
+          "cardiac disease caution"
+        ],
+        "index": 1,
+        "evidence": "심한 심장 기능 저하 및 급성 폐부종 환자에서 금기. 심부전은 금기로 간주되며, 심장 질환 환자에서 주의 필요."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CSF pressure reduction",
+          "osmotic agent"
+        ],
+        "index": 1,
+        "evidence": "개와 동일한 기전으로 CSF 압력 감소 효과가 예상됨. 고양이 특이적 데이터 없음."
+      },
+      "blood": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "osmotic pressure",
+          "plasma osmolality",
+          "dehydration"
+        ],
+        "index": 1,
+        "evidence": "혈장 삼투압 증가를 통한 세포외액 이동. 고양이 특이적 데이터 없음."
+      },
+      "kidney": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "anuria contraindication",
+          "renal failure caution",
+          "urine output monitoring"
+        ],
+        "index": 1,
+        "evidence": "무뇨증 및 신기능 저하 환자에서 주의 또는 금기. 고양이 특이적 데이터 없음."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "hepatic metabolism",
+          "primarily metabolized by liver"
+        ],
+        "index": 1,
+        "evidence": "주로 간에서 대사됨. 고양이 특이적 데이터 없음."
+      },
+      "heart": {
+        "calculated_score": 35,
+        "triggered_keywords": [
+          "cardiac decompensation contraindication",
+          "heart failure contraindication",
+          "cardiac disease caution"
+        ],
+        "index": 1,
+        "evidence": "심한 심장 기능 저하 및 심부전 환자에서 금기. 고양이 특이적 데이터 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 30,
+    "t_max_hr": 1.5,
+    "half_life_hr": {
+      "min": 0.5,
+      "max": 0.75,
+      "mean": 0.625,
+      "species": "human"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "인간에서 반감기 약 30~45분. GI에서 빠르게 흡수되며 30분 이내 안압 감소 시작, 최고 혈청 농도는 약 90분 이내 도달. 안압 감소 효과는 5~12시간 지속. 경구 생체이용률 및 단백결합률은 보고되지 않음."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Carbonic Anhydrase Inhibitors (e.g., acetazolamide, dichlorphenamide)",
+      "severity": 1,
+      "keywords": [
+        "IOP reduction prolongation",
+        "additive ocular hypotensive effect"
+      ],
+      "evidence": "Concomitant administration of carbonic anhydrase inhibitors may prolong the IOP-reducing effects of glycerin. Potentially beneficial but requires monitoring."
+    },
+    {
+      "drug": "Miotic Agents, Topical",
+      "severity": 1,
+      "keywords": [
+        "IOP reduction prolongation",
+        "additive ocular hypotensive effect"
+      ],
+      "evidence": "Concomitant administration of topical miotic agents may prolong the IOP-reducing effects of glycerin. Potentially beneficial but requires monitoring."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 0.1
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 녹내장 응급 처치 - 안압(IOP) 신속 감소 (extra-label)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "단기 사용(최대 12시간 효과). 투여 후 3~4시간 동안 음수 제한 시 효과 증가. 구토 예방을 위해 45~50% 농도로 희석 권장.",
+          "evidence": "90% 용액 기준 약 1.1~2.2 mL/kg PO. 물, 우유, 또는 아이스크림으로 희석하여 투여. Extra-label 사용."
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "급성 녹내장 응급 처치 - 안압(IOP) 신속 감소 (extra-label)",
+          "value": "1 - 2",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": 2.0,
+          "duration_note": "단기 사용(최대 12시간 효과). 투여 후 3~4시간 동안 음수 제한 시 효과 증가. 구토 예방을 위해 45~50% 농도로 희석 권장.",
+          "evidence": "개와 동일한 용량 권장(Dogs & Cats 항목으로 통합 기재됨). Extra-label 사용."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "만성 신부전 또는 신기능 저하 환자에서 사용을 피해야 함. 무뇨증 환자에서는 절대 금기. 구체적인 크레아티닌 기준치는 제시되지 않음."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "unknown",
+    "note": "간 기능 저하 시 용량 조정에 대한 구체적인 정보가 제시되지 않음. 글리세린은 주로 간에서 대사되므로 심한 간 기능 저하 시 주의가 필요할 수 있음."
+  },
+  "contraindications": [
+    {
+      "condition": "글리세린 과민반응",
+      "match_terms": [
+        "hypersensitivity to glycerin",
+        "glycerin allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "무뇨증 (확립된)",
+      "match_terms": [
+        "anuria",
+        "established anuria"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 탈수",
+      "match_terms": [
+        "severe dehydration"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "심한 심장 기능 저하 / 심부전",
+      "match_terms": [
+        "severe cardiac decompensation",
+        "heart failure",
+        "cardiac decompensation"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "급성 폐부종",
+      "match_terms": [
+        "acute pulmonary edema"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "혈액-안방수 장벽 손상 (전방출혈, 포도막염)",
+      "match_terms": [
+        "hyphema",
+        "uveitis",
+        "compromised blood-aqueous barrier"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "저혈량증",
+      "match_terms": [
+        "hypovolemia"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병",
+      "match_terms": [
+        "diabetes mellitus",
+        "diabetes"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "만성 신부전 / 신기능 저하",
+      "match_terms": [
+        "chronic renal failure",
+        "compromised renal function",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "경구 투여 시 혈장 삼투압을 증가시켜 세포외 공간(안방수 포함)의 수분을 혈액으로 이동시킴으로써 안압(IOP) 및 CSF 압력을 감소시키는 삼투성 제제.",
+    "common_extra_effects": [
+      "구토 (가장 흔한 부작용)",
+      "두통 (인간)",
+      "오심 (인간)",
+      "갈증 (인간)",
+      "설사 (인간)",
+      "탈수",
+      "혈당 상승",
+      "심장 부정맥 (과다 투여 시)",
+      "비케톤성 고삼투압 혼수 (과다 투여 시)"
+    ],
+    "dog_mechanism": "혈장 삼투압 증가를 통해 안방수 및 세포외액을 혈액으로 이동시켜 안압을 감소시킴. 당뇨병 개에서 혈당 상승 위험.",
+    "dog_extra_effects": [
+      "구토",
+      "탈수",
+      "혈당 상승 (당뇨 환자에서 주의)"
+    ],
+    "cat_mechanism": "개와 동일한 삼투성 기전으로 안압 감소 효과 기대. 고양이 특이적 데이터 없음.",
+    "cat_extra_effects": [
+      "구토",
+      "탈수"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 급성 녹내장의 응급 처치로 안방천자 대신 사용 가능. 1~2 g/kg PO 투여 권장. 구토 예방을 위해 물, 우유, 또는 아이스크림으로 45~50% 농도로 희석하여 투여. 당뇨병 개에서는 혈당 상승 위험이 있으므로 주의. 투여 후 3~4시간 음수 제한 시 효과 증가(금기 사항 없는 경우). 안압 및 수화 상태 모니터링 필요.",
+    "cat": "고양이에서도 개와 동일한 용량(1~2 g/kg PO)으로 급성 녹내장 응급 처치에 사용 가능. 고양이 특이적 약동학 데이터는 없으며, 인간 및 개 데이터에 기반하여 사용. 구토 예방을 위한 희석 투여 권장. 심장 질환, 신기능 저하, 탈수 환자에서 주의."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "당뇨병, 심장 질환, 저혈량증, 혈액-안방수 장벽 손상(전방출혈, 포도막염), 신기능 저하 환자에서 주의 필요. 심한 심장 기능 저하, 무뇨증, 심한 탈수, 급성 폐부종 환자에서는 금기."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "개와 동일한 주의사항 적용. 고양이 특이적 데이터 없음. 심장 질환, 신기능 저하, 탈수 환자에서 주의."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐 용기에 실온 보관. 동결 방지.",
+    "forms": [
+      "USP 글리세린 90% 경구 용액 (수의학적 승인 제품 없음; 인간용 전신 투여 제품 없음)",
+      "국소 안과용 용액 (별도 제품)",
+      "직장 완하제용 좌약 또는 액체 (별도 제품)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "경구 글리세린은 삼투성 제제로, 급성 녹내장에서 안압(IOP)을 단기적으로(최대 12시간) 감소시키기 위해 소동물에서 사용됨. 수의학적 승인 제품은 없으며 extra-label 사용임. 가장 흔한 부작용은 구토이며, 희석 투여로 예방 가능. 심한 심장 기능 저하, 무뇨증, 심한 탈수, 급성 폐부종 환자에서는 금기. 당뇨병 환자에서 혈당 상승 위험 있음.",
+    "indications": "소동물 급성 녹내장에서 안압 신속 감소 (extra-label, 응급 처치). CSF 압력 증가 감소 고려 가능 (extra-label).",
+    "client_info": "이 약은 반려동물의 급성 녹내장 응급 처치를 위해 경구로 투여하는 삼투성 약물입니다. 구토를 줄이기 위해 물, 우유, 또는 아이스크림에 희석하여 투여합니다. 투여 후 3~4시간 동안 물을 주지 않으면 효과가 더 좋을 수 있습니다(수의사 지시에 따름). 투여 후 구토, 탈수 증상, 또는 상태 악화가 보이면 즉시 수의사에게 연락하십시오. 당뇨병이 있는 반려동물은 혈당 변화에 주의가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 55,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Compatibility/Compounding Considerations",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary-specific pharmacokinetics (dog/cat)",
+      "Oral bioavailability data",
+      "Protein binding data",
+      "CYP enzyme interactions",
+      "Specific renal dose adjustment thresholds",
+      "Hepatic dose adjustment recommendations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "metabolism_and_clearance.extra_information"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/44.jsonl",
+    "extracted_at": "2026-03-11T02:55:26.757137+00:00",
+    "reviewer": null
+  }
+}

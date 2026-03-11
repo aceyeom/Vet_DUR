@@ -1,0 +1,593 @@
+{
+  "id": "sulfadimethoxine",
+  "drug_identity": {
+    "name_ko": "설파디메톡신",
+    "name_en": "Sulfadimethoxine",
+    "active_ingredient": "Sulfadimethoxine",
+    "brand_names": [
+      "Albon",
+      "Bactrovet",
+      "Agribon",
+      "Chemiosalfa",
+      "Deltin",
+      "Di-Methox",
+      "Levosin",
+      "Risulpir",
+      "Ritarsulfa",
+      "SDM",
+      "Sulfadren",
+      "Sulfastop",
+      "Sulfasol",
+      "Sulfathox"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Antibiotic",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Inj",
+      "Susp",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      },
+      {
+        "value": 400,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 50,
+        "unit": "mg/mL"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "개에서는 간에서의 대사가 거의 이루어지지 않으며, 신장을 통한 미변화체 배설이 주요 제거 경로이다. 대부분의 다른 종에서는 간에서 아세틸설파디메톡신으로 아세틸화된 후 신장으로 배설된다. 신세뇨관에서의 재흡수로 인해 반감기가 길다."
+    },
+    "extra_information": "개: 경구 생체이용률 33%, 단백결합률 75%, 소실 반감기 13.1시간. 신세뇨관 재흡수로 인해 반감기가 연장됨. 개에서는 간 대사가 거의 없으며 미변화체로 신장 배설됨."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산출. 개와 고양이 모두 동일한 부작용 프로파일이 적용됨. 신장: 결정뇨, 혈뇨, 세뇨관 폐쇄 위험. 간: 간 기능 저하 시 주의 필요. 혈액: 골수억제, 범혈구감소증 위험. 뇌: 고용량 시 CNS 자극 및 수초 변성 보고.",
+    "dog": {
+      "brain": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "myelin degeneration",
+          "blindness",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "고용량 투여 시 CNS 자극 및 수초 변성이 보고됨. 급속 IV 주사 시 근육 약화, 실명, 운동실조, 허탈이 발생할 수 있음."
+      },
+      "blood": {
+        "calculated_score": 45,
+        "triggered_keywords": [
+          "myelosuppression",
+          "bone marrow suppression",
+          "pancytopenia",
+          "megaloblastic anemia"
+        ],
+        "index": 2,
+        "evidence": "골수억제, 과민반응(발진, 발열, 골수억제, 피부염, 비패혈성 다발관절염)이 개에서 보고됨."
+      },
+      "kidney": {
+        "calculated_score": 55,
+        "triggered_keywords": [
+          "crystalluria",
+          "hematuria",
+          "renal tubule obstruction",
+          "renal impairment"
+        ],
+        "index": 3,
+        "evidence": "결정뇨, 혈뇨, 신세뇨관 폐쇄 위험. 고용량 장기 투여, 산성 또는 고농도 소변에서 위험 증가. 신기능 저하 시 주의 필요."
+      },
+      "liver": {
+        "calculated_score": 30,
+        "triggered_keywords": [
+          "hepatic impairment",
+          "liver chemistry"
+        ],
+        "index": 2,
+        "evidence": "중증 간기능 장애 시 금기. 장기 치료 시 혈청 간 화학 패널 모니터링 권장."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "CNS stimulation",
+          "ataxia"
+        ],
+        "index": 1,
+        "evidence": "급속 IV 주사 시 운동실조, 허탈 가능. 고용량 시 CNS 자극 보고."
+      },
+      "blood": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "myelosuppression",
+          "bone marrow suppression"
+        ],
+        "index": 2,
+        "evidence": "골수억제 및 과민반응이 설폰아미드 계열에서 보고됨. 고양이 특이적 데이터는 제한적."
+      },
+      "kidney": {
+        "calculated_score": 50,
+        "triggered_keywords": [
+          "crystalluria",
+          "hematuria",
+          "renal tubule obstruction"
+        ],
+        "index": 3,
+        "evidence": "결정뇨, 혈뇨, 신세뇨관 폐쇄 위험. 충분한 수분 공급 필요."
+      },
+      "liver": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "hepatic impairment"
+        ],
+        "index": 2,
+        "evidence": "중증 간기능 장애 시 금기. 고양이 특이적 간독성 데이터는 제한적."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "심장 독성에 대한 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": 13.1,
+      "species": "dog"
+    },
+    "f_percent": 33,
+    "protein_binding_percent": 75,
+    "evidence": "개에서 경구 생체이용률 33%, 단백결합률 75%, 소실 반감기 13.1시간. 라마에서 52%, 낙타에서 약 100% 생체이용률 보고."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 직접 추출. 중증도: 금기→3, 주요→3, 중등도→2, 경미→1.",
+  "drug_interactions": [
+    {
+      "drug": "Amiodarone",
+      "severity": 2,
+      "keywords": [
+        "reduced metabolism",
+        "increased adverse effects"
+      ],
+      "evidence": "Amiodarone may reduce sulfonamide metabolism and increase the risk for adverse effects."
+    },
+    {
+      "drug": "Antacids (Aluminum-, Calcium-, Magnesium-containing)",
+      "severity": 1,
+      "keywords": [
+        "decreased bioavailability",
+        "absorption"
+      ],
+      "evidence": "Aluminum-, calcium-, and magnesium-containing antacids may decrease oral bioavailability of sulfonamides if administered concurrently."
+    },
+    {
+      "drug": "Azathioprine",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Concurrent use with azathioprine increases risk for myelosuppression."
+    },
+    {
+      "drug": "Mercaptopurine",
+      "severity": 2,
+      "keywords": [
+        "myelosuppression",
+        "bone marrow suppression"
+      ],
+      "evidence": "Concurrent use with mercaptopurine increases risk for myelosuppression."
+    },
+    {
+      "drug": "Cyclosporine",
+      "severity": 2,
+      "keywords": [
+        "nephrotoxicity",
+        "decreased cyclosporine concentration"
+      ],
+      "evidence": "Increased risk for cyclosporine nephrotoxicity; decreased cyclosporine concentration is possible."
+    },
+    {
+      "drug": "Leucovorin",
+      "severity": 2,
+      "keywords": [
+        "reduced therapeutic effect",
+        "antifolate"
+      ],
+      "evidence": "Leucovorin may reduce the therapeutic effect of sulfadimethoxine."
+    },
+    {
+      "drug": "Methotrexate",
+      "severity": 3,
+      "keywords": [
+        "potentiated toxicity",
+        "protein binding displacement",
+        "reduced renal clearance"
+      ],
+      "evidence": "Concurrent use of sulfonamides may potentiate methotrexate toxicity by interfering with plasma protein binding and/or renal clearance of methotrexate and its toxic metabolite."
+    },
+    {
+      "drug": "Pyrimethamine",
+      "severity": 2,
+      "keywords": [
+        "megaloblastic anemia",
+        "pancytopenia",
+        "antifolate"
+      ],
+      "evidence": "Concurrent use with high doses of pyrimethamine may increase the risk for megaloblastic anemia and pancytopenia through additive antifolate effects."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "prolonged prothrombin time",
+        "bleeding"
+      ],
+      "evidence": "Sulfonamides may prolong prothrombin time (PT) when used with warfarin."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": true,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": true,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "moderate",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "low",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": 2.7
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "설파디메톡신 감수성 세균 감염 및 콕시디아증 관련 세균성 장염 (FDA 승인 용량)",
+          "value": "55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "첫날 55 mg/kg, 이후 27.5 mg/kg q24h. 임상 증상 소실 후 48시간까지 치료 지속. 대부분 3~5일 치료로 충분.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "설파디메톡신 감수성 세균 감염 유지 용량 (FDA 승인 용량)",
+          "value": "27.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 증상 소실 후 48시간까지 치료 지속",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "콕시디아증 (허가 외 사용)",
+          "value": "50 - 60",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "5~20일",
+          "evidence": "허가 외 사용"
+        },
+        {
+          "logic_type": "linear",
+          "context": "콕시디아증 - 암프롤리움 병용 (허가 외 사용)",
+          "value": "25",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "암프롤리움 150 mg/kg PO와 병용, 14일",
+          "evidence": "허가 외 사용"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": true,
+      "dosage_list": [
+        {
+          "logic_type": "linear",
+          "context": "설파디메톡신 감수성 세균 감염 (FDA 승인 용량)",
+          "value": "55",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "Once",
+          "max_dose_mg_kg": null,
+          "duration_note": "첫날 55 mg/kg, 이후 27.5 mg/kg q24h. 임상 증상 소실 후 48시간까지 치료 지속.",
+          "evidence": "FDA 승인 라벨 용량"
+        },
+        {
+          "logic_type": "linear",
+          "context": "설파디메톡신 감수성 세균 감염 유지 용량 (FDA 승인 용량)",
+          "value": "27.5",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "q24h",
+          "max_dose_mg_kg": null,
+          "duration_note": "임상 증상 소실 후 48시간까지 치료 지속",
+          "evidence": "FDA 승인 라벨 용량"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "avoid",
+    "adjustment_factor": null,
+    "note": "중증 신기능 장애 시 금기. 신기능 저하 시 주의하여 사용. 결정뇨 및 신세뇨관 폐쇄 위험이 있으므로 충분한 수분 공급 필요. 소변 알칼리화(탄산수소나트륨)로 결정뇨 예방 가능."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "중증 간기능 장애 시 금기. 간기능 저하 시 주의하여 사용. 장기 치료 시 혈청 간 화학 패널 모니터링 권장."
+  },
+  "contraindications": [
+    {
+      "condition": "설폰아미드 과민반응",
+      "match_terms": [
+        "sulfonamide hypersensitivity",
+        "drug allergy sulfonamide"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "중증 신기능 장애",
+      "match_terms": [
+        "severe renal impairment",
+        "CKD",
+        "renal failure",
+        "acute kidney injury"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "중증 간기능 장애",
+      "match_terms": [
+        "severe hepatic impairment",
+        "liver failure",
+        "hepatic failure"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": null,
+        "unit": "U/L"
+      }
+    },
+    {
+      "condition": "요로 폐쇄",
+      "match_terms": [
+        "urinary obstruction",
+        "urethral obstruction"
+      ],
+      "severity": "relative",
+      "action": "avoid",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "임신",
+      "match_terms": [
+        "pregnancy",
+        "pregnant"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "설폰아미드 과민 품종 (도베르만 핀셔, 사모예드, 미니어처 슈나우저)",
+      "match_terms": [
+        "Doberman pinscher",
+        "Samoyed",
+        "miniature schnauzer"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": true,
+    "affected_breeds": [
+      "Doberman Pinscher",
+      "Samoyed",
+      "Miniature Schnauzer"
+    ],
+    "gene": null,
+    "evidence": "도베르만 핀셔, 사모예드, 미니어처 슈나우저는 설폰아미드 유발 다계통 면역복합체 질환에 고도로 취약한 것으로 알려져 있어 이들 품종에서는 주의하여 사용해야 한다."
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "설폰아미드는 엽산 생합성 경로에서 파라-아미노벤조산(PABA)과 경쟁하여 테트라하이드로엽산 합성을 억제함으로써 세균 복제를 방해하는 시간 의존적 정균제이다. 자체적으로 엽산을 합성하는 미생물에만 효과적이다.",
+    "common_extra_effects": [
+      "결정뇨",
+      "혈뇨",
+      "신세뇨관 폐쇄",
+      "과민반응 (발진, 발열, 피부염)",
+      "골수억제",
+      "설사",
+      "구토",
+      "잠재적 최기형성"
+    ],
+    "dog_mechanism": "개에서는 간 대사가 거의 이루어지지 않으며 미변화체로 신장 배설됨. 신세뇨관 재흡수로 인해 반감기가 연장됨.",
+    "dog_extra_effects": [
+      "건성각결막염(KCS)",
+      "과민반응 (발진, 피부염, 발열, 골수억제, 비패혈성 다발관절염)",
+      "국소 망막염",
+      "구토",
+      "용량 의존적 갑상선기능저하증",
+      "CNS 자극 (고용량)",
+      "수초 변성 (고용량)"
+    ],
+    "cat_mechanism": null,
+    "cat_extra_effects": [
+      "결정뇨",
+      "혈뇨",
+      "과민반응",
+      "골수억제"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 FDA 승인된 약물로 호흡기, 비뇨생식기, 장관, 연조직 감염 및 콕시디아증 치료에 사용된다. 건성각결막염(KCS) 위험이 있으므로 7일 이상 치료 시 또는 KCS 소인이 있는 품종(시추, 코커 스패니얼)에서는 기저 쉬르머 눈물 검사를 권장한다. 치료 시작 5일 이내, 이후 2~3주마다 재평가 필요. 도베르만 핀셔, 사모예드, 미니어처 슈나우저에서 설폰아미드 유발 다계통 면역복합체 질환 위험이 높으므로 주의 필요. 용량 의존적 갑상선기능저하증이 보고됨.",
+    "cat": "고양이에서 FDA 승인된 약물로 호흡기, 비뇨생식기, 장관, 연조직 감염 치료에 사용된다. 충분한 수분 공급이 결정뇨 예방에 중요하다. 고양이 특이적 약동학 데이터는 제한적이며, 개에서 보고된 부작용 프로파일을 참고하여 모니터링이 필요하다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "도베르만 핀셔, 사모예드, 미니어처 슈나우저에서 설폰아미드 과민반응 위험 증가. KCS 위험으로 인해 장기 치료 시 안과 모니터링 필요. 신기능 및 간기능 저하 시 주의 필요."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "결정뇨 및 신세뇨관 폐쇄 위험으로 충분한 수분 공급 필요. 중증 신기능 또는 간기능 장애 시 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "빛을 차단하여 15°C~30°C(59°F~86°F) 실온에서 보관. 직사광선에 노출 시 용액이 변색될 수 있음. 저온 노출로 결정이 형성된 경우 따뜻한 물에 담그거나 실온에서 보관하여 결정을 녹임. 동결 및 액제 변색은 효능에 영향을 주지 않음.",
+    "forms": [
+      "Sulfadimethoxine Injection 400 mg/mL (40%) in 250 mL vials",
+      "Sulfadimethoxine Oral Tablets 125 mg, 250 mg, 500 mg (Albon Tablets)",
+      "Sulfadimethoxine Oral Suspension 50 mg/mL (5%) in 60 mL and 473 mL bottles (Albon)",
+      "Sulfadimethoxine Oral Boluses 2.5 g, 5 g, 15 g (Albon)",
+      "Sulfadimethoxine Soluble Powder 94.6 g/107 g packet (88.4% w/w) (Albon)",
+      "Sulfadimethoxine 12.5% Concentrated Solution in 3.8 L containers (Albon)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "설파디메톡신은 장시간 작용형 설폰아미드 항균제로, 개와 고양이에서 FDA 승인된 세균 및 원충 감염 치료제이다. 첫날 55 mg/kg 부하 용량 후 27.5 mg/kg q24h 유지 용량으로 투여한다. 개에서 건성각결막염(KCS), 골수억제, 갑상선기능저하증 등의 부작용이 보고되어 있으며, 도베르만 핀셔, 사모예드, 미니어처 슈나우저에서 설폰아미드 유발 다계통 면역복합체 질환 위험이 높다. 결정뇨 예방을 위해 충분한 수분 공급이 필수적이다. 중증 신기능 또는 간기능 장애 시 금기이다.",
+    "indications": "개·고양이: 호흡기, 비뇨생식기, 장관, 연조직 감염(FDA 승인); 콕시디아증(허가 외). 말: 연쇄구균 감염에 의한 호흡기 감염(FDA 승인). 소: 운송열 복합증, 송아지 디프테리아, 세균성 폐렴, 발굽 썩음병(FDA 승인). 가금류: 콕시디아증, 가금 콜레라, 감염성 코리자(FDA 승인).",
+    "client_info": "경구 현탁액 사용 시 투여 전 잘 흔들어 사용하세요. 냉장 보관은 필요하지 않습니다. 이 약을 복용하는 동안 반려동물이 신선한 물을 충분히 마실 수 있도록 해주세요. 개의 눈이 건조해지거나, 충혈되거나, 자극받거나, 분비물이 생기면 즉시 수의사에게 연락하세요. 발진이나 피부 병변, 기력 저하, 식욕 부진, 보행 장애가 나타나도 수의사에게 알려주세요."
+  },
+  "_data_quality": {
+    "overall_confidence": 72,
+    "renal_adjustment_confidence": "medium",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "medium",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Human-labeled products",
+      "Compatibility/Compounding Considerations"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr.min",
+      "timing_profile.half_life_hr.max",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "hepatic_dose_adjustment.alt_threshold_multiplier",
+      "drug_identity.available_strengths",
+      "genetic_sensitivity.gene"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:07:19.731681+00:00",
+    "reviewer": null
+  }
+}

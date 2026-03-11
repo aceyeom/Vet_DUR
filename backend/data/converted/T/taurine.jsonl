@@ -1,0 +1,412 @@
+{
+  "id": "taurine",
+  "drug_identity": {
+    "name_ko": "타우린",
+    "name_en": "Taurine",
+    "active_ingredient": "Taurine",
+    "brand_names": [
+      "Formula V Taurine Tablets",
+      "Dyna-Taurine"
+    ],
+    "allergy_class": null,
+    "class": "Unknown",
+    "source": "kr_vet",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": null,
+    "dosage_form": [
+      "Tab",
+      "Cap",
+      "Oral Liquid"
+    ],
+    "available_strengths": [
+      {
+        "value": 250,
+        "unit": "mg"
+      },
+      {
+        "value": 375,
+        "unit": "mg/mL"
+      },
+      {
+        "value": 125,
+        "unit": "mg"
+      },
+      {
+        "value": 500,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "타우린은 메티오닌으로부터 생체 내 합성되며, 시스테인설핀산 탈카르복실효소(CSAD)와 비타민 B6가 합성에 관여한다. 과잉 타우린은 신장을 통해 빠르게 배설되며, 결핍 시 신세뇨관 재흡수를 통해 요중 배설이 감소한다."
+    },
+    "extra_information": "고양이는 CSAD 활성이 낮고 담즙산 포합에 타우린을 거의 독점적으로 사용하므로 타우린 결핍에 특히 취약하다. 과잉 타우린은 신장에서 신속히 배설되나, 결핍 상태에서는 재흡수를 통해 요중 배설이 감소한다."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 타우린은 아미노산 영양소로 독성이 낮으며, 심장·신경·신장에 대한 부담 근거가 제한적이다.",
+    "dog": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "GABA-like effect",
+          "neuronal membrane stabilization",
+          "seizure"
+        ],
+        "index": 1,
+        "evidence": "타우린은 GABA 유사 효과를 통해 신경막을 안정화하며 항경련 보조제로 사용될 수 있으나, 뇌 독성 근거는 없다."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "platelet aggregation reduction"
+        ],
+        "index": 1,
+        "evidence": "타우린은 칼슘 플럭스 조절을 통해 혈소판 응집을 감소시킬 수 있다."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal excretion",
+          "reabsorption"
+        ],
+        "index": 1,
+        "evidence": "과잉 타우린은 신장을 통해 빠르게 배설된다. 신독성 근거는 없으나 신장이 주요 배설 경로이다."
+      },
+      "liver": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "bile acid conjugation",
+          "hepatic lipidosis"
+        ],
+        "index": 1,
+        "evidence": "타우린은 담즙산 포합에 중요하며, 간지방증 보조 치료로 사용이 제안되나 임상 근거는 제한적이다."
+      },
+      "heart": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "positive inotropic",
+          "cardiac function",
+          "DCM",
+          "ionic currents"
+        ],
+        "index": 2,
+        "evidence": "타우린은 심장 기능에 양성 변력 효과를 가지며, 확장성 심근병증(DCM) 치료에 사용된다. 심장 독성 근거는 없다."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "GABA-like effect",
+          "neuronal membrane stabilization",
+          "seizure",
+          "CNS development"
+        ],
+        "index": 1,
+        "evidence": "타우린은 CNS 정상 발달에 중요하며 GABA 유사 효과를 가진다. 뇌 독성 근거는 없다."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "platelet aggregation reduction"
+        ],
+        "index": 1,
+        "evidence": "타우린은 혈소판 응집 감소 효과가 있다."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal excretion",
+          "reabsorption"
+        ],
+        "index": 1,
+        "evidence": "과잉 타우린은 신장을 통해 배설된다. 신독성 근거는 없다."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "bile acid conjugation",
+          "hepatopathy"
+        ],
+        "index": 1,
+        "evidence": "고양이는 담즙산 포합에 타우린을 거의 독점적으로 사용하며, 간질환 보조 치료로 사용이 제안된다."
+      },
+      "heart": {
+        "calculated_score": 25,
+        "triggered_keywords": [
+          "positive inotropic",
+          "cardiac function",
+          "DCM",
+          "taurine deficiency cardiomyopathy"
+        ],
+        "index": 2,
+        "evidence": "고양이에서 타우린 결핍성 DCM 예방 및 치료에 효과가 입증되어 있다. 심장 독성 근거는 없다."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": null,
+    "t_max_hr": null,
+    "half_life_hr": {
+      "min": null,
+      "max": null,
+      "mean": null,
+      "species": "unknown"
+    },
+    "f_percent": null,
+    "protein_binding_percent": null,
+    "evidence": "모노그래프에 약동학 관련 구체적 정보가 기재되어 있지 않다. 과잉 타우린은 신장에서 신속히 배설되며, 결핍 시 재흡수가 증가한다고만 기술되어 있다."
+  },
+  "_ddi_note": "Plumb's 약물 상호작용 섹션에서 추출. 모노그래프에 '상호작용 없음'으로 명시되어 있어 약물 상호작용 목록이 비어 있다.",
+  "drug_interactions": [],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": false,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "none",
+    "hepatotoxic": "none",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": false,
+    "washout_period_days": null
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "weight_band",
+          "context": "확장성 심근병증(DCM) - 체중 25 kg 미만 (extra-label)",
+          "value": "500 - 1000",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg이 아닌 마리당 용량. 체중 25 kg 미만 개에 적용.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 500–1000 mg/dog PO q8–12h for dogs <25 kg"
+        },
+        {
+          "logic_type": "weight_band",
+          "context": "확장성 심근병증(DCM) - 체중 25 kg 초과 (extra-label)",
+          "value": "1000 - 2000",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q8h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg이 아닌 마리당 용량. 체중 25 kg 초과 개에 적용.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 1–2 g/dog PO q8–12h for dogs >25 kg"
+        },
+        {
+          "logic_type": "linear",
+          "context": "확장성 심근병증(DCM) - 심에코 개선 (extra-label, English cocker spaniel)",
+          "value": "30 - 100",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": 100.0,
+          "duration_note": "1일 총량 기준. English cocker spaniel에서 심에코 좌심실 측정치 주관적 개선 보고.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 30–100 mg/kg/day PO in English cocker spaniels"
+        },
+        {
+          "logic_type": "linear",
+          "context": "항경련 보조 치료 (extra-label)",
+          "value": "22",
+          "unit": "mg/kg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": null,
+          "evidence": "Plumb's Veterinary Drug Handbook: 22 mg/kg PO BID for adjunctive antiepileptic use"
+        }
+      ]
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "타우린 결핍 관련 DCM 보조 치료 (extra-label)",
+          "value": "250",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "q12h",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg이 아닌 마리당 용량.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 250 mg/cat PO q12h"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "항경련 보조 치료 (extra-label)",
+          "value": "100 - 400",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "SID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg이 아닌 마리당 용량.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 100–400 mg/cat PO SID"
+        },
+        {
+          "logic_type": "fixed",
+          "context": "간질환 보조 치료 (extra-label, 일화적 근거)",
+          "value": "250 - 500",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "mg/kg이 아닌 마리당 용량. 임상 연구 없음; 일부 in vitro 데이터만 존재.",
+          "evidence": "Plumb's Veterinary Drug Handbook: 250–500 mg/cat PO BID anecdotally for hepatopathies"
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "모노그래프에 신기능 저하 시 용량 조절에 대한 명시적 권고가 없다. 과잉 타우린은 신장을 통해 배설되므로 중증 신부전 시 주의가 필요할 수 있으나 구체적 근거는 없다."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": false,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "none",
+    "note": "모노그래프에 간기능 저하 시 용량 조절에 대한 명시적 권고가 없다. 타우린은 간질환 보조 치료로 오히려 사용이 제안된다."
+  },
+  "contraindications": [
+    {
+      "condition": "타우린 결핍의 적절한 진단 없이 사용",
+      "match_terms": [
+        "taurine deficiency undiagnosed"
+      ],
+      "severity": "caution",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "타우린은 담즙산 포합, 칼슘 플럭스 조절, 혈소판 응집 억제, 신경막 안정화, 심장 기능 조절(양성 변력 효과, 이온 전류 조절)에 관여하는 필수 아미노산이다. GABA 유사 효과를 통해 CNS에도 작용한다.",
+    "common_extra_effects": [
+      "경미한 위장관 불편감",
+      "구토 (공복 투여 시)"
+    ],
+    "dog_mechanism": "메티오닌으로부터 CSAD 및 비타민 B6를 통해 합성되며, 담즙산 포합 및 심장 기능 조절에 중요하다.",
+    "dog_extra_effects": [
+      "경미한 위장관 불편감"
+    ],
+    "cat_mechanism": "고양이는 CSAD 활성이 낮아 타우린 결핍에 특히 취약하며, 담즙산 포합에 타우린을 거의 독점적으로 사용한다.",
+    "cat_extra_effects": [
+      "경미한 위장관 불편감"
+    ]
+  },
+  "species_notes": {
+    "dog": "개에서 타우린 결핍성 DCM은 아메리칸 코커 스패니얼, 골든 리트리버 등 감수성 품종에서 보고된다. 타우린(± 카르니틴) 보충이 권장되며, 타우린 결핍이 없는 경우에도 보조 치료로 유용할 수 있다. 전혈 타우린 농도 측정이 혈장보다 선호된다.",
+    "cat": "고양이에서 타우린 결핍은 망막 변성 및 DCM을 유발할 수 있으나, 현대적인 상업용 고양이 사료 급여 시 드물다. 타우린 반응성 DCM에서 임상적 개선은 보통 2주 이내, 심에코 개선은 4주 이상 소요될 수 있다. 타우린은 고양이에서 간질환 및 항경련 보조 치료로도 사용이 제안된다."
+  },
+  "precautions": {
+    "dog": {
+      "status": 1,
+      "evidence": "타우린은 안전하나 적절한 진단의 대체제로 사용해서는 안 된다. 공복 투여 시 경미한 위장관 불편감이 발생할 수 있다."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "타우린은 안전하나 적절한 진단의 대체제로 사용해서는 안 된다. 공복 투여 시 경미한 위장관 불편감이 발생할 수 있다."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "달리 표시되지 않는 한 실온 보관. 빛과 습기로부터 보호.",
+    "forms": [
+      "타우린 정제 250 mg (Formula V Taurine Tablets, 고양이용)",
+      "타우린 액체 375 mg/4 mL (Dyna-Taurine, 개·고양이용)",
+      "인체용 OTC 제품 125–500 mg (다양한 경구 제형)"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "타우린은 개와 고양이의 타우린 결핍성 확장성 심근병증(DCM) 예방 및 보조 치료에 주로 사용되는 아미노산 영양소이다. 독성이 낮고 비용이 저렴하여 고양이 DCM에서 타우린 결핍 검사 결과와 무관하게 일상적 보충이 권장된다. 항경련 보조 치료, 간지방증 등 다양한 적응증이 제안되나 과학적 근거는 제한적이다. 약물 상호작용은 보고되지 않았다.",
+    "indications": "【승인 적응증】 없음 (영양 보충제로 분류). 【오프라벨 적응증】 ① 개·고양이 타우린 결핍성 확장성 심근병증(DCM) 예방 및 보조 치료 ② 고양이 망막 변성 예방 ③ 개·고양이 항경련 보조 치료 ④ 고양이 간질환(간지방증 등) 보조 치료 (일화적 근거만 존재)",
+    "client_info": "이 약은 대부분 잘 견디지만 구토를 유발할 수 있습니다. 공복에 투여 후 구토하거나 불편해 보이면 다음 용량은 음식이나 간식과 함께 주세요. 구토가 지속되면 수의사에게 연락하십시오. 분말 형태의 경우 사료에 섞어 급여할 수 있습니다. 정기적인 추적 검사를 빠짐없이 받으시기 바랍니다. 타우린 반응성 심근병증의 경우 임상적 개선은 보통 2주 이내에 나타나며, 심에코 개선은 4주 이상 걸릴 수 있습니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 52,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "low",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Laboratory Considerations",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Detailed Pharmacokinetics (half-life, Tmax, bioavailability, protein binding)",
+      "CYP metabolism data",
+      "Renal dose adjustment",
+      "Hepatic dose adjustment",
+      "Genetic sensitivity"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "timing_profile.onset_min",
+      "timing_profile.t_max_hr",
+      "timing_profile.half_life_hr",
+      "timing_profile.f_percent",
+      "timing_profile.protein_binding_percent",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "renal_dose_adjustment.creatinine_threshold_dog_mg_dL",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "species_flags.washout_period_days"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/45.jsonl",
+    "extracted_at": "2026-03-11T03:14:05.383050+00:00",
+    "reviewer": null
+  }
+}

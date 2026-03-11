@@ -1,0 +1,616 @@
+{
+  "id": "glipizide",
+  "drug_identity": {
+    "name_ko": "글리피지드",
+    "name_en": "Glipizide",
+    "active_ingredient": "Glipizide",
+    "brand_names": [
+      "Glucotrol",
+      "Glucotrol XL"
+    ],
+    "allergy_class": "sulfonamide",
+    "class": "Unknown",
+    "source": "human_offlabel",
+    "formulary_status": "active",
+    "has_reversal": false,
+    "reversal_agent": null,
+    "reversal_evidence": null,
+    "off_label_note": "수의학적으로 허가된 제품 없음. 고양이의 비케톤성 제2형 당뇨병에 오프라벨로 사용되며, 인슐린 치료가 불가능한 경우에 한해 제한적으로 권장됨.",
+    "dosage_form": [
+      "Tab"
+    ],
+    "available_strengths": [
+      {
+        "value": 2.5,
+        "unit": "mg"
+      },
+      {
+        "value": 5.0,
+        "unit": "mg"
+      },
+      {
+        "value": 10.0,
+        "unit": "mg"
+      }
+    ]
+  },
+  "metabolism_and_clearance": {
+    "primary_metabolic_organ": "Liver",
+    "clearance_organ": "Kidney",
+    "renal_elimination_fraction": null,
+    "cyp_profile": {
+      "substrates": [],
+      "inhibitors": [],
+      "inducers": [],
+      "pathway_evidence": "간에서 비활성 대사산물로 1차 생체변환 후 신장으로 배설됨. 구체적인 CYP 효소 경로는 Plumb's에 명시되지 않음."
+    },
+    "extra_information": "고양이에서 경피(transdermal) 투여는 경구 투여에 비해 흡수가 불충분한 것으로 보이며, 장기 사용에 대한 추가 연구가 필요함. 인슐린 농도에 대한 효과는 단기적이며, 약 15분에 최고조에 달하고 약 60분 후 기저치로 돌아옴."
+  },
+  "organ_burden_logic": {
+    "note": "키워드 기반 점수 산정. 주로 인체 PK 데이터 및 고양이 임상 보고에 근거함. 수의학적 종별 PK 연구 자료 제한적.",
+    "dog": {
+      "brain": {
+        "calculated_score": 0,
+        "triggered_keywords": [],
+        "index": -1,
+        "evidence": "개에서의 뇌 관련 부담에 대한 직접적인 언급 없음."
+      },
+      "blood": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypoglycemia",
+          "myelosuppression"
+        ],
+        "index": 1,
+        "evidence": "개에서 글리피지드 사용은 권장되지 않으나, 인체에서 골수억제 및 저혈당 보고 있음."
+      },
+      "kidney": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "renal elimination"
+        ],
+        "index": 1,
+        "evidence": "비활성 대사산물이 신장으로 배설됨. 개에서 직접적인 신독성 언급 없음."
+      },
+      "liver": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "liver biotransformation"
+        ],
+        "index": 1,
+        "evidence": "간에서 1차 생체변환이 이루어짐. 개에서 직접적인 간독성 언급 없음."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "cardiovascular mortality"
+        ],
+        "index": -1,
+        "evidence": "인체에서 경구 혈당강하제 사용 시 심혈관 사망률 증가 보고 있으나, 개에서 직접적인 언급 없음."
+      }
+    },
+    "cat": {
+      "brain": {
+        "calculated_score": 10,
+        "triggered_keywords": [
+          "hypoglycemia",
+          "seizures"
+        ],
+        "index": 1,
+        "evidence": "저혈당 발생 시 발작, 허탈 등 신경계 증상 가능."
+      },
+      "blood": {
+        "calculated_score": 20,
+        "triggered_keywords": [
+          "hypoglycemia",
+          "myelosuppression"
+        ],
+        "index": 2,
+        "evidence": "저혈당이 주요 부작용으로 보고됨. 인체에서 골수억제 보고 있음."
+      },
+      "kidney": {
+        "calculated_score": 15,
+        "triggered_keywords": [
+          "renal elimination",
+          "renal dysfunction caution"
+        ],
+        "index": 2,
+        "evidence": "비활성 대사산물이 신장으로 배설되며, 신기능 장애 시 주의 사용 권고."
+      },
+      "liver": {
+        "calculated_score": 40,
+        "triggered_keywords": [
+          "cholestatic jaundice",
+          "elevated liver enzymes",
+          "hepatic adverse effects",
+          "ALT"
+        ],
+        "index": 3,
+        "evidence": "고양이의 약 8%에서 담즙정체성 황달 및 간효소 상승 보고. ALT 500 IU/L 초과 시 투약 중단 권고. 간에서 1차 생체변환."
+      },
+      "heart": {
+        "calculated_score": 5,
+        "triggered_keywords": [
+          "cardiovascular mortality"
+        ],
+        "index": -1,
+        "evidence": "인체에서 경구 혈당강하제 사용 시 심혈관 사망률 증가 보고 있으나, 고양이에서 직접적인 언급 없음."
+      }
+    }
+  },
+  "timing_profile": {
+    "onset_min": 15,
+    "t_max_hr": 0.25,
+    "half_life_hr": {
+      "min": 2.0,
+      "max": 4.0,
+      "mean": 3.0,
+      "species": "human"
+    },
+    "f_percent": 90,
+    "protein_binding_percent": null,
+    "evidence": "인체에서 경구 투여 후 빠르고 거의 완전하게 흡수됨. 절대 생체이용률 80~100%. 혈장 단백질에 고도로 결합. 반감기 약 2~4시간(인체). 고양이에서 인슐린 농도에 대한 효과는 약 15분에 최고조, 약 60분 후 기저치로 복귀."
+  },
+  "_ddi_note": "Plumb's Drug Interactions 섹션에서 추출. 중증도: 금기/심각→3, 주요→3, 중등도→2, 경미→1. MAOI 상호작용은 저혈당 강화 효과로 중증도 3 적용.",
+  "drug_interactions": [
+    {
+      "drug": "Azole Antifungals (fluconazole, itraconazole, ketoconazole)",
+      "severity": 2,
+      "keywords": [
+        "increased plasma levels",
+        "hypoglycemia risk"
+      ],
+      "evidence": "아졸계 항진균제는 글리피지드의 혈장 농도를 증가시킬 수 있어 저혈당 위험이 높아질 수 있음."
+    },
+    {
+      "drug": "Beta-Adrenergic Receptor Antagonists (atenolol, propranolol)",
+      "severity": 2,
+      "keywords": [
+        "potentiate hypoglycemic effect",
+        "mask hypoglycemia signs"
+      ],
+      "evidence": "베타차단제는 글리피지드의 저혈당 효과를 강화할 수 있으며, 저혈당 증상을 가릴 수 있음."
+    },
+    {
+      "drug": "Chloramphenicol",
+      "severity": 2,
+      "keywords": [
+        "plasma protein displacement",
+        "increased free drug"
+      ],
+      "evidence": "클로람페니콜은 혈장 단백질로부터 글리피지드를 치환시켜 유리형 약물 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Cimetidine",
+      "severity": 2,
+      "keywords": [
+        "potentiate hypoglycemic effect"
+      ],
+      "evidence": "시메티딘은 글리피지드의 저혈당 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Corticosteroids",
+      "severity": 2,
+      "keywords": [
+        "reduced efficacy",
+        "hyperglycemia"
+      ],
+      "evidence": "코르티코스테로이드는 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Thiazide Diuretics",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "티아지드계 이뇨제는 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Ethanol",
+      "severity": 2,
+      "keywords": [
+        "disulfiram-like reaction",
+        "anorexia",
+        "nausea",
+        "vomiting"
+      ],
+      "evidence": "글리피지드 투여 48~72시간 이내 알코올 섭취 시 디설피람 유사 반응(식욕부진, 오심, 구토) 보고됨(인체)."
+    },
+    {
+      "drug": "Fluoroquinolones (ciprofloxacin, enrofloxacin)",
+      "severity": 2,
+      "keywords": [
+        "hypoglycemia risk",
+        "hyperglycemia risk",
+        "dysglycemia"
+      ],
+      "evidence": "플루오로퀴놀론계 항생제는 저혈당 또는 고혈당 위험을 증가시킬 수 있음."
+    },
+    {
+      "drug": "Isoniazid",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "이소니아지드는 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Monoamine Oxidase Inhibitors (MAOIs; amitraz, linezolid, selegiline)",
+      "severity": 3,
+      "keywords": [
+        "potentiate hypoglycemic effect",
+        "severe hypoglycemia"
+      ],
+      "evidence": "MAOI는 글리피지드의 저혈당 효과를 강화할 수 있으며, 심각한 저혈당 위험이 있음."
+    },
+    {
+      "drug": "Niacin",
+      "severity": 1,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "나이아신은 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Phenothiazines (acepromazine, chlorpromazine)",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "페노티아진계 약물은 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Probenecid",
+      "severity": 2,
+      "keywords": [
+        "potentiate hypoglycemic effect"
+      ],
+      "evidence": "프로베네시드는 글리피지드의 저혈당 효과를 강화할 수 있음."
+    },
+    {
+      "drug": "Sulfonamides",
+      "severity": 2,
+      "keywords": [
+        "plasma protein displacement",
+        "increased free drug"
+      ],
+      "evidence": "설폰아미드계 약물은 혈장 단백질로부터 글리피지드를 치환시켜 유리형 약물 농도를 증가시킬 수 있음."
+    },
+    {
+      "drug": "Sympathomimetic Agents",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic efficacy"
+      ],
+      "evidence": "교감신경 흥분제는 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Thyroid Agents",
+      "severity": 2,
+      "keywords": [
+        "reduced hypoglycemic effect"
+      ],
+      "evidence": "갑상선 제제는 글리피지드의 혈당강하 효과를 감소시킬 수 있음."
+    },
+    {
+      "drug": "Warfarin",
+      "severity": 2,
+      "keywords": [
+        "plasma protein displacement"
+      ],
+      "evidence": "와파린은 혈장 단백질로부터 글리피지드를 치환시킬 수 있음."
+    }
+  ],
+  "additive_risks": {
+    "nephrotoxic": false,
+    "hepatotoxic": true,
+    "gi_ulcer": false,
+    "bleeding": false,
+    "sedation": false,
+    "qt_prolongation": false
+  },
+  "risk_flags": {
+    "nephrotoxic": "low",
+    "hepatotoxic": "moderate",
+    "gi_ulcer": "none",
+    "bleeding": "none",
+    "qt_prolongation": "none"
+  },
+  "species_flags": {
+    "species_contraindicated": [
+      "dog_all"
+    ],
+    "mdr1_sensitive": false,
+    "serotonin_syndrome_risk": false,
+    "electrolyte_effect": null,
+    "narrow_therapeutic_index": true,
+    "washout_period_days": 0.6
+  },
+  "dosage_and_kinetics": {
+    "dog": {
+      "is_approved": false,
+      "dosage_list": []
+    },
+    "cat": {
+      "is_approved": false,
+      "dosage_list": [
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 (비케톤성, 오프라벨) - 초기 용량",
+          "value": "2.5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 후 반응 불충분하고 부작용 없을 시 5 mg BID로 증량 가능. 4~6주 후 반응 없으면 인슐린 치료로 전환. 반응 있을 경우 12주간 지속 평가.",
+          "evidence": "오프라벨. 초기 권장 용량 2.5 mg/마리(mg/kg 아님) PO BID, 식사와 함께 투여."
+        },
+        {
+          "logic_type": "fixed",
+          "context": "당뇨병 (비케톤성, 오프라벨) - 증량 용량",
+          "value": "5",
+          "unit": "mg",
+          "route": "PO",
+          "frequency": "BID",
+          "max_dose_mg_kg": null,
+          "duration_note": "2주 후 반응 불충분하고 부작용 없을 시 증량. 정상혈당 또는 저혈당 발생 시 감량 또는 중단 후 1주 후 혈당 재평가.",
+          "evidence": "오프라벨. 초기 용량에 반응 불충분 시 5 mg/마리(mg/kg 아님) PO BID로 증량."
+        }
+      ]
+    }
+  },
+  "renal_dose_adjustment": {
+    "creatinine_threshold_dog_mg_dL": null,
+    "creatinine_threshold_cat_mg_dL": null,
+    "adjustment_type": "unknown",
+    "adjustment_factor": null,
+    "note": "신기능 장애 시 주의 사용 권고되나, 구체적인 용량 조절 기준은 Plumb's에 명시되지 않음. 비활성 대사산물이 신장으로 배설되므로 신기능 저하 시 모니터링 강화 필요."
+  },
+  "hepatic_dose_adjustment": {
+    "applies": true,
+    "alt_threshold_multiplier": null,
+    "adjustment_type": "avoid",
+    "note": "간기능 장애 시 주의 사용 권고. ALT 500 IU/L 초과 또는 황달, 기력저하, 식욕부진, 구토 발생 시 투약 중단. 황달 소실 후 저용량으로 재시작 가능하나 재발 시 영구 중단."
+  },
+  "contraindications": [
+    {
+      "condition": "글리피지드 과민반응",
+      "match_terms": [
+        "hypersensitivity to glipizide",
+        "sulfonamide allergy"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "절대적 인슐린 결핍",
+      "match_terms": [
+        "absolute insulin deficiency",
+        "type I diabetes"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "당뇨병성 케톤증 또는 케톤산증",
+      "match_terms": [
+        "diabetic ketosis",
+        "diabetic ketoacidosis",
+        "DKA"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "간기능 장애 (ALT 500 IU/L 초과)",
+      "match_terms": [
+        "hepatic dysfunction",
+        "elevated liver enzymes",
+        "cholestatic jaundice"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": "alt",
+        "threshold": 500.0,
+        "unit": "IU/L"
+      }
+    },
+    {
+      "condition": "신기능 장애",
+      "match_terms": [
+        "renal dysfunction",
+        "renal impairment",
+        "CKD"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": "creatinine",
+        "threshold": null,
+        "unit": "mg/dL"
+      }
+    },
+    {
+      "condition": "부신 또는 뇌하수체 기능부전 (미치료)",
+      "match_terms": [
+        "adrenal insufficiency",
+        "pituitary insufficiency",
+        "hypoadrenocorticism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "갑상선 기능 이상",
+      "match_terms": [
+        "thyroid dysfunction",
+        "hypothyroidism",
+        "hyperthyroidism"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "지속적 구토, 고열, 영양불량 또는 쇠약 상태",
+      "match_terms": [
+        "prolonged vomiting",
+        "high fever",
+        "malnourishment",
+        "debilitating condition"
+      ],
+      "severity": "relative",
+      "action": "monitor",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    },
+    {
+      "condition": "개 (모든 품종)",
+      "match_terms": [
+        "dog",
+        "canine"
+      ],
+      "severity": "absolute",
+      "action": "contraindicated",
+      "lab_trigger": {
+        "marker": null,
+        "threshold": null,
+        "unit": null
+      }
+    }
+  ],
+  "genetic_sensitivity": {
+    "has_genetic_risk": false,
+    "affected_breeds": [],
+    "gene": null,
+    "evidence": null
+  },
+  "effects_and_mechanisms": {
+    "common_mechanism": "제2세대 설폰요소계 약물로, 췌장 베타세포를 자극하여 내인성 인슐린 분비를 증가시킴. 또한 말초 조직의 인슐린 감수성 향상 및 간의 기저 포도당 생성 감소 등 췌장 외 효과도 있음.",
+    "common_extra_effects": [
+      "저혈당(hypoglycemia)",
+      "식욕부진(anorexia)",
+      "구토(vomiting)",
+      "담즙정체성 황달(cholestatic jaundice)",
+      "간효소 상승(elevated liver enzymes)",
+      "아밀로이드 침착 증가(increased amyloid deposit formation)",
+      "알레르기성 피부 반응(allergic skin reactions, 인체)",
+      "골수억제(myelosuppression, 인체)"
+    ],
+    "dog_mechanism": null,
+    "dog_extra_effects": [],
+    "cat_mechanism": "고양이에서 기존 췌장 베타세포 기능이 있는 경우 인슐린 분비 자극. 효과는 단기적이며 약 15분에 최고조, 60분 후 기저치로 복귀.",
+    "cat_extra_effects": [
+      "구토(vomiting, 약 15%)",
+      "식욕부진(anorexia)",
+      "저혈당(hypoglycemia)",
+      "담즙정체성 황달(cholestatic jaundice, 약 8%)",
+      "간효소 상승(elevated liver enzymes)",
+      "아밀로이드 침착 증가로 인한 베타세포 추가 손상"
+    ]
+  },
+  "species_notes": {
+    "dog": "글리피지드는 개에서 사용이 권장되지 않음. 개는 고혈당 발현 시점에 이미 절대적 또는 상대적 인슐린 결핍 상태인 경우가 대부분이므로 글리피지드의 효과를 기대하기 어려움.",
+    "cat": "고양이의 비케톤성 제2형 당뇨병에서 기존 베타세포 기능이 있는 경우 오프라벨로 사용 가능. 약 30~40%의 고양이에서 효과적이나 사전에 반응 예측 불가. 인슐린 치료가 우선 권장되며, 글리피지드는 보호자가 인슐린 투여를 거부하는 경우에 한해 식이요법과 병행하여 사용. 효과 발현까지 4~8주 소요될 수 있음. 간독성 및 저혈당 모니터링 필수."
+  },
+  "precautions": {
+    "dog": {
+      "status": 2,
+      "evidence": "개에서 글리피지드 사용은 금기. 개는 고혈당 발현 시 이미 인슐린 결핍 상태가 대부분이어서 효과 없음."
+    },
+    "cat": {
+      "status": 1,
+      "evidence": "고양이에서 오프라벨 사용 가능하나 간독성, 저혈당, GI 부작용 위험으로 면밀한 모니터링 필요. 케톤산증, 절대적 인슐린 결핍, 간기능 장애 시 금기."
+    }
+  },
+  "storage_and_forms": {
+    "storage": "밀폐된 차광 용기에 실온(controlled room temperature) 보관.",
+    "forms": [
+      "Glipizide 경구정 5 mg, 10 mg (제네릭, Rx)",
+      "Glipizide 서방형 경구정 2.5 mg, 5 mg, 10 mg (Glucotrol XL, 제네릭, Rx) - 수의학에서 일반적으로 사용하지 않음",
+      "글리피지드/메트포르민 복합 고정용량 제제"
+    ]
+  },
+  "section_1_2_10": {
+    "highlights": "글리피지드는 제2세대 설폰요소계 경구 혈당강하제로, 고양이의 비케톤성 제2형 당뇨병에 오프라벨로 제한적 사용이 가능합니다. 개에서는 사용이 권장되지 않습니다. 인슐린 치료가 우선이며, 보호자가 인슐린 투여를 거부하는 경우에만 고려합니다. 약 30~40%의 고양이에서만 효과적이며, 효과 발현까지 4~8주가 소요될 수 있습니다. 간독성(약 8%), 저혈당, GI 부작용(약 15%) 모니터링이 필수적입니다. ALT 500 IU/L 초과 또는 황달 발생 시 즉시 중단해야 합니다.",
+    "indications": "【승인 적응증】 없음 (수의학적 허가 제품 없음). 【오프라벨 적응증】 고양이의 비케톤성 제2형 당뇨병 (기존 췌장 베타세포 기능이 있고, 신체 상태 양호하며, 면밀한 모니터링이 가능하고, 보호자가 인슐린 투여를 거부하는 경우에 한함). 식이요법과 병행 사용 필수.",
+    "client_info": "이 약은 수의사의 지시에 따라 반드시 식사와 함께 투여하세요. 투약 시작 후 약 15%의 고양이에서 구토가 발생할 수 있으나, 대부분 수일 내에 호전됩니다. 이 약의 효과를 판단하려면 1~2개월이 걸릴 수 있습니다. 드물게 피부, 잇몸, 눈의 황달(황색 변색)이 나타날 수 있으며, 이 경우 즉시 동물병원에 연락하세요. 혈당이 너무 낮아지는 저혈당 증상(발작, 허탈, 뒷다리 약화 또는 마비, 근육 경련, 비틀거림, 무기력, 우울)에 주의하세요. 저혈당 증상이 나타나면 즉시 동물병원에 연락하세요. 정기적인 혈액검사와 소변검사가 필요합니다."
+  },
+  "_data_quality": {
+    "overall_confidence": 62,
+    "renal_adjustment_confidence": "low",
+    "hepatic_adjustment_confidence": "medium",
+    "organ_burden_confidence": "low",
+    "ddi_source": "plumbs_direct",
+    "plumbs_sections_found": [
+      "Uses/Indications",
+      "Pharmacology/Actions",
+      "Pharmacokinetics",
+      "Contraindications/Precautions/Warnings",
+      "Adverse Effects",
+      "Reproductive/Nursing Safety",
+      "Overdose/Acute Toxicity",
+      "Drug Interactions",
+      "Dosages",
+      "Monitoring",
+      "Client Information",
+      "Chemistry/Synonyms",
+      "Storage/Stability",
+      "Dosage Forms/Regulatory Status"
+    ],
+    "missing_sections": [
+      "Veterinary PK studies (cat/dog specific)",
+      "Renal dose adjustment specifics",
+      "CYP enzyme profile",
+      "Protein binding percentage (numeric)",
+      "Reversal agent information"
+    ],
+    "requires_pmc_rag": true,
+    "pmc_rag_fields": [
+      "cyp_profile.substrates",
+      "cyp_profile.inhibitors",
+      "cyp_profile.inducers",
+      "timing_profile.protein_binding_percent",
+      "renal_dose_adjustment.creatinine_threshold_cat_mg_dL",
+      "renal_dose_adjustment.adjustment_factor",
+      "metabolism_and_clearance.renal_elimination_fraction",
+      "organ_burden_logic.cat.blood.index",
+      "organ_burden_logic.dog.brain.index"
+    ]
+  },
+  "_extraction_metadata": {
+    "model_used": "claude-sonnet-4-6",
+    "extraction_pass": 1,
+    "source_file": "plumbs_output/44.jsonl",
+    "extracted_at": "2026-03-11T02:50:21.627556+00:00",
+    "reviewer": null
+  }
+}
