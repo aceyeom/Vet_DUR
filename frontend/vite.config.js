@@ -12,7 +12,13 @@ export default defineConfig({
       protocol: 'ws',
       host: 'localhost',
       port: 5173
-    }
+    },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+    },
   },
   build: {
     outDir: 'dist',
