@@ -69,6 +69,61 @@ export async function listDrugsApi({ drugClass, source, limit = 20, offset = 0 }
   return apiFetch(`/api/drugs?${params}`);
 }
 
+// ── Breed / Condition / Allergy lists ────────────────────────────
+
+/**
+ * Fetch all breeds from the drug database genetic_sensitivity data.
+ * @param {'dog'|'cat'|null} species
+ * @returns {Promise<Array<{breed: string, mdr1: boolean}>>}
+ */
+export async function getBreedsApi(species = null) {
+  const params = new URLSearchParams();
+  if (species) params.set('species', species);
+  const data = await apiFetch(`/api/breeds?${params}`);
+  return data?.breeds ?? [];
+}
+
+/**
+ * Fetch all condition match_terms from the drug contraindications data.
+ * @returns {Promise<string[]>}
+ */
+export async function getConditionsApi() {
+  const data = await apiFetch('/api/conditions');
+  return data?.conditions ?? [];
+}
+
+/**
+ * Fetch all allergy classes from the drug identity data.
+ * @returns {Promise<string[]>}
+ */
+export async function getAllergiesApi() {
+  const data = await apiFetch('/api/allergies');
+  return data?.allergies ?? [];
+}
+
+/**
+ * Send an EMR screenshot to the backend for patient data extraction via Claude vision.
+ * @param {File} imageFile
+ * @returns {Promise<object|null>}  Extracted patient data object, or null on failure
+ */
+export async function extractPatientFromImageApi(imageFile) {
+  const url = `${BASE_URL}/api/ocr/extract-patient`;
+  const formData = new FormData();
+  formData.append('image', imageFile);
+  try {
+    const res = await fetch(url, { method: 'POST', body: formData });
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new Error(`API ${res.status}: ${text}`);
+    }
+    const data = await res.json();
+    return data?.data ?? null;
+  } catch (err) {
+    if (import.meta.env.DEV) console.warn(`[NuvoVet API] OCR extract`, err.message);
+    return null;
+  }
+}
+
 // ── Health check ─────────────────────────────────────────────────
 
 /**

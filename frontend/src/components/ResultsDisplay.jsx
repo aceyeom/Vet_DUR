@@ -3,7 +3,7 @@ import {
   AlertTriangle, AlertCircle, Info, CheckCircle, ChevronDown, ChevronUp,
   BookOpen, FlaskConical, Globe, HelpCircle, Dna, ArrowLeft,
   Check, Lightbulb, FileText, Clock, Pill, Flag, Printer, Download,
-  Mail, Send
+  Mail, Send, Save
 } from 'lucide-react';
 import { SeverityBadge } from './SeverityBadge';
 import { DRUG_SOURCE } from '../data/drugDatabase';
@@ -111,12 +111,12 @@ function SeverityBanner({ results, drugs = [] }) {
 }
 
 // ── Patient Summary Panel (left panel) ────────────────────────
+// NOTE: Severity breakdown (critical/moderate/minor counts) is shown only in
+// the SeverityBanner (main content area) to avoid duplication. This panel
+// shows patient info, drug count, interaction count, organ load, and confidence.
 function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog' }) {
   const { t, lang } = useI18n();
   const { interactions, drugFlags, confidenceScore } = results;
-  const criticalCount = interactions.filter(i => i.severity.label === 'Critical').length;
-  const moderateCount = interactions.filter(i => i.severity.label === 'Moderate').length;
-  const minorCount = interactions.filter(i => i.severity.label === 'Minor' || i.severity.label === 'Unknown').length;
 
   return (
     <div className="space-y-3">
@@ -172,6 +172,7 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
         </div>
       )}
 
+      {/* Scan summary — drug count + interaction count only (severity breakdown is in the banner above) */}
       <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
         <h3 className="typo-section-header mb-3">{t.results.scanSummary}</h3>
         <div className="space-y-2">
@@ -183,17 +184,11 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
             <span className="typo-label">{t.results.interactions}</span>
             <span className="typo-score font-semibold text-slate-900">{interactions.length}</span>
           </div>
-          <div className="border-t border-slate-100 pt-2">
-            <span className="typo-label block mb-1.5">{t.results.severity}</span>
-            <div className="flex flex-wrap gap-1">
-              {criticalCount > 0 && <span className="text-[11px] font-semibold text-red-700 bg-red-100 px-2 py-0.5 rounded-full">{criticalCount} {t.results.critical}</span>}
-              {moderateCount > 0 && <span className="text-[11px] font-semibold text-amber-700 bg-amber-100 px-2 py-0.5 rounded-full">{moderateCount} {t.results.moderate}</span>}
-              {minorCount > 0 && <span className="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-full">{minorCount} {t.results.minor}</span>}
-              {interactions.length === 0 && <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">{t.results.noInteractions}</span>}
-            </div>
-          </div>
         </div>
       </div>
+
+      {/* Cumulative Organ Load — prominent, always expanded (core differentiator) */}
+      <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} species={species} />
 
       {/* Confidence Provenance */}
       <ConfidenceProvenance
@@ -201,9 +196,6 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
         drugs={drugs}
         species={species}
       />
-
-      {/* Cumulative Organ Load */}
-      <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} species={species} />
     </div>
   );
 }
@@ -212,27 +204,63 @@ function ClassChip({ label }) {
   return <span className="text-[10px] font-medium text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">{label}</span>;
 }
 
-// ── Why Dangerous Panel (expandable, severity 2+3 only) ─────────
+// ── Why Dangerous Panel ──────────────────────────────────────────
+// Critical (severity 3): always fully visible — no toggle required.
+// Moderate (severity 2): toggleable.
 function WhyDangerousPanel({ interaction, t }) {
-  const [open, setOpen] = useState(false);
   const severityLabel = interaction.severity?.label;
   const isCritical = severityLabel === 'Critical';
+  // Critical is always open; Moderate starts collapsed
+  const [open, setOpen] = useState(isCritical);
 
+  if (isCritical) {
+    // Always-expanded — no toggle button
+    return (
+      <div className="px-4 pb-3 border-t border-slate-100/50 space-y-3">
+        <p className={`text-[11px] font-semibold flex items-center gap-1.5 text-red-600`}>
+          <AlertTriangle size={11} className="text-red-500" />
+          {t.results.whyDangerous}
+        </p>
+        <div className="bg-red-50/70 border border-red-200 rounded-lg px-3.5 py-3">
+          <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
+            {t.results.mechanismSection}
+          </p>
+          <p className="text-[12px] text-slate-700 leading-relaxed">
+            {interaction.mechanism || <span className="text-slate-400 italic">기전 상세 정보를 현재 데이터베이스에서 확인할 수 없습니다. / Mechanism detail not available in current database.</span>}
+          </p>
+        </div>
+        <div className="flex items-start gap-2 bg-red-100 border border-red-300 rounded-lg px-3 py-2.5">
+          <AlertTriangle size={13} className="text-red-600 shrink-0 mt-0.5" />
+          <p className="text-[12px] font-semibold text-red-800">{t.results.actionContraindicated}</p>
+        </div>
+        {interaction.literatureSummary && (
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
+              {t.results.clinicalSignificance}
+            </p>
+            <p className="text-[12px] text-slate-600 leading-relaxed bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+              {interaction.literatureSummary}
+            </p>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Moderate — toggleable
   return (
     <div className="px-4 pb-3 border-t border-slate-100/50">
       <button
         onClick={(e) => { e.stopPropagation(); setOpen(!open); }}
-        className={`flex items-center gap-1.5 text-[11px] font-semibold transition-colors ${isCritical ? 'text-red-600 hover:text-red-700' : 'text-amber-700 hover:text-amber-800'}`}
+        className="flex items-center gap-1.5 text-[11px] font-semibold text-amber-700 hover:text-amber-800 transition-colors"
       >
-        <AlertTriangle size={11} className={isCritical ? 'text-red-500' : 'text-amber-500'} />
+        <AlertTriangle size={11} className="text-amber-500" />
         {t.results.whyDangerous}
         {open ? <ChevronUp size={10} /> : <ChevronDown size={10} />}
       </button>
-
       {open && (
         <div className="mt-2.5 space-y-3 animate-fade-in">
-          {/* Mechanism section */}
-          <div className={`rounded-lg border px-3.5 py-3 ${isCritical ? 'bg-red-50/70 border-red-200' : 'bg-amber-50/50 border-amber-200'}`}>
+          <div className="bg-amber-50/50 border border-amber-200 rounded-lg px-3.5 py-3">
             <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
               {t.results.mechanismSection}
             </p>
@@ -240,28 +268,16 @@ function WhyDangerousPanel({ interaction, t }) {
               {interaction.mechanism || <span className="text-slate-400 italic">기전 상세 정보를 현재 데이터베이스에서 확인할 수 없습니다. / Mechanism detail not available in current database.</span>}
             </p>
           </div>
-
-          {/* Critical: explicit contraindication action */}
-          {isCritical && (
-            <div className="flex items-start gap-2 bg-red-100 border border-red-300 rounded-lg px-3 py-2.5">
-              <AlertTriangle size={13} className="text-red-600 shrink-0 mt-0.5" />
-              <p className="text-[12px] font-semibold text-red-800">{t.results.actionContraindicated}</p>
-            </div>
-          )}
-
-          {/* Clinical significance / evidence */}
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
-              {t.results.clinicalSignificance}
-            </p>
-            {interaction.literatureSummary ? (
+          {interaction.literatureSummary && (
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
+                {t.results.clinicalSignificance}
+              </p>
               <p className="text-[12px] text-slate-600 leading-relaxed bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
                 {interaction.literatureSummary}
               </p>
-            ) : (
-              <p className="text-[12px] text-slate-400 italic">{t.results.sourceNotAvailable}</p>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -549,7 +565,7 @@ function ResultsActionBar({ results, patientInfo, drugs, species, lang, t }) {
 }
 
 // ── Main Results Display ────────────────────────────────────────
-export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, isFullSystem = false, drugs = [], species = 'dog' }) {
+export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, isFullSystem = false, drugs = [], species = 'dog', onUpdatePatientRecord }) {
   const { t, lang } = useI18n();
   if (!results) return null;
 
@@ -676,8 +692,17 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
               t={t}
             />
 
-            <div className="flex gap-3 no-print">
+            <div className="flex gap-3 no-print flex-wrap">
               <button onClick={onBack} className="flex-1 px-4 py-2.5 text-[13px] font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors shadow-sm">{t.results.backToMeds}</button>
+              {onUpdatePatientRecord && (
+                <button
+                  onClick={onUpdatePatientRecord}
+                  className="flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-medium text-slate-700 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors shadow-sm"
+                >
+                  <Save size={13} />
+                  {t.results.updatePatientRecord}
+                </button>
+              )}
               <button onClick={onNewAnalysis} className="flex-1 px-4 py-2.5 text-[13px] font-medium text-white bg-slate-900 rounded-lg hover:bg-slate-800 transition-colors shadow-sm">{t.results.newAnalysis}</button>
             </div>
 

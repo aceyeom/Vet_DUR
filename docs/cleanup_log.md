@@ -88,6 +88,101 @@ backend (FastAPI + database) to replace localStorage. When implemented:
 
 ---
 
+---
+
+## Full System Revamp (2026-03-14)
+
+### Task 1 — Design and Layout Overhaul
+
+| Change | File | Reason |
+|---|---|---|
+| Removed emoji icons (🐕 🐈) from species toggle buttons | `FullSystem.jsx` | Task 1: No cartoon/emoji icons. Use text labels only. |
+| EMR import button moved to top of patient section, styled as prominent secondary action (full-width dashed border) | `FullSystem.jsx` | Task 1: Must be visually distinct, reads as time-saving shortcut. |
+| Layout restructured into 3 clear sections with dividers: Patient Details → Prescription → Run DUR | `FullSystem.jsx` | Task 1: Clear visual hierarchy between sections. |
+
+### Task 2 — Patient Entry Form Rebuild
+
+| Change | File | Reason |
+|---|---|---|
+| "Returning patient?" search field added at top of patient section (with owner_phone search) | `FullSystem.jsx` | Task 2: Returning patient lookup before animal type selection. |
+| Species toggle is now text-only ("개 / Canine", "고양이 / Feline") | `FullSystem.jsx` | Task 2: Text only, no icons. |
+| Breed, Weight, Sex fields revealed via CSS transition after species selection | `FullSystem.jsx` | Task 2: Smooth reveal after species select. |
+| Breed selector queries backend `GET /api/breeds?species=` with MDR1 warning indicator | `FullSystem.jsx`, `api.js`, `backend/main.py` | Task 2: Backend-populated, MDR1-sensitive breeds flagged. |
+| Additional details (Age, Allergies, Conditions, Creatinine, ALT) collapsed under "추가 환자 정보 입력" text link | `FullSystem.jsx` | Task 2: Not in the way for quick entries. |
+| Allergy suggestions populated from `GET /api/allergies` | `FullSystem.jsx`, `api.js`, `backend/main.py` | Task 2: allergy_class values from drug_identity. |
+| Condition suggestions populated from `GET /api/conditions` | `FullSystem.jsx`, `api.js`, `backend/main.py` | Task 2: match_terms from contraindications[]. |
+
+### Task 3 — Number Input Fix
+
+| Change | File | Reason |
+|---|---|---|
+| All number inputs (weight, age, creatinine, ALT) converted to `type="text" inputMode="decimal"` | `FullSystem.jsx` | Task 3: Prevents browser native snap-to-0 and "08" bug. |
+| Validation on blur only — empty string stored during editing | `FullSystem.jsx`, `DrugInput.jsx` | Task 3: No coerce while mid-edit. |
+| Dose input on drug cards uses same pattern | `DrugInput.jsx` | Task 3: Consistent across all number inputs. |
+| `DecimalInput` helper component created | `FullSystem.jsx` | Task 3: Reusable decimal input with proper state handling. |
+
+### Task 4 — Drug Prescription Tab Reorganization
+
+| Change | File | Reason |
+|---|---|---|
+| Removed "Often Prescribed Drugs" / "Frequently Prescribed" chip section | `DrugInput.jsx` | Task 4: No local drug browsing chips. |
+| Removed `COMMON_DRUG_SET`, `TOP_15_COMMON`, `rankDrugs` import from DrugInput | `DrugInput.jsx` | Task 4: No frontend drug catalog — all search is backend-only. |
+| Removed `listDrugsApi`, `searchDrugs` (local) from DrugInput | `DrugInput.jsx` | Task 4: Backend-only search on every keystroke (300ms debounce). |
+| Drug search is now full-width, the primary element, with a search icon | `DrugInput.jsx` | Task 4: Drug search as the clear primary element. |
+| Search results in clean dropdown: drug name + Korean name + drug class | `DrugInput.jsx` | Task 4: Matches spec. |
+| Selected drugs displayed as stacked drug cards (not chips) | `DrugInput.jsx` | Task 4: Each card shows name, optional dose input, remove button. |
+| Dose input hint: "선택 입력 — 입력 시 정밀 분석 적용" | `DrugInput.jsx` | Task 4: Optional dose field explains its purpose. |
+| `createUnknownDrug` still supported via "Add as unknown" option | `DrugInput.jsx` | Preserved unknown drug handling. |
+
+### Task 5 — Results Page Cleanup
+
+| Change | File | Reason |
+|---|---|---|
+| Removed severity breakdown (critical/moderate/minor counts) from PatientSummaryPanel | `ResultsDisplay.jsx` | Task 5: Duplicate — already shown in SeverityBanner above. |
+| OrganLoadIndicator accordion removed — always fully expanded | `OrganLoadIndicator.jsx` | Task 5: Must display fully expanded at all times. |
+| `WhyDangerousPanel` for Critical severity: always-expanded, no toggle button | `ResultsDisplay.jsx` | Task 5: Severity 3 alerts immediately readable without interaction. |
+| `WhyDangerousPanel` for Moderate: still collapsible | `ResultsDisplay.jsx` | Task 5: Severity 2 remains toggleable. |
+| OrganLoadIndicator moved before ConfidenceProvenance in sidebar | `ResultsDisplay.jsx` | Task 5: Organ load is a core differentiator — more prominent. |
+
+### Task 6 — Patient History and Saved Profiles
+
+| Change | File | Reason |
+|---|---|---|
+| `patientStorage.ts` created — localStorage under `nuvovet_patients` key | `frontend/src/lib/patientStorage.ts` | Task 6: New patient profile schema with visit_history. |
+| Old `nuvovet_patients_v1` localStorage key replaced by `nuvovet_patients` | `FullSystem.jsx`, `patientStorage.ts` | Task 6: New schema with UUID, owner_phone, visit_history. |
+| `Patients.jsx` page created — searchable/sortable patient list with detail view | `frontend/src/pages/Patients.jsx` | Task 6: Patient history view. |
+| `/patients` route added to App.jsx | `App.jsx` | Task 6: Patient history accessible from navigation. |
+| "Patients" link added to FullSystem header | `FullSystem.jsx` | Task 6: Main navigation link to patient history. |
+| "Save patient profile" checkbox at bottom of patient entry form | `FullSystem.jsx` | Task 6: Unchecked by default; saves when DUR runs if checked. |
+| "Update patient record" button in results page | `ResultsDisplay.jsx` | Task 6: Save visit after reviewing results. |
+| Patient detail view: inline editable fields, visit history, delete with confirmation | `Patients.jsx` | Task 6: Full profile editing. |
+
+### Task 7 — EMR Screenshot Import (Functional)
+
+| Change | File | Reason |
+|---|---|---|
+| `EMRImportModal.jsx` rebuilt as functional component with drag-drop | `frontend/src/components/EMRImportModal.jsx` | Task 7: Replaced placeholder with working implementation. |
+| `POST /api/ocr/extract-patient` endpoint added | `backend/main.py` | Task 7: Accepts multipart image, calls Claude vision API. |
+| `anthropic` and `python-multipart` added to requirements.txt | `backend/requirements.txt` | Task 7: Required for Claude API and file uploads. |
+| `extractPatientFromImageApi()` added to api.js | `frontend/src/lib/api.js` | Task 7: Frontend API client for OCR endpoint. |
+| Import banner shows after successful import with field highlights | `FullSystem.jsx` | Task 7: "Data imported from screenshot — please review." |
+| `current_drugs` from OCR automatically added to prescription tab | `FullSystem.jsx`, `EMRImportModal.jsx` | Task 7: Drugs from screenshot auto-added. |
+| Graceful error handling: API failure shows error in modal | `EMRImportModal.jsx` | Task 7: Never crashes the form. |
+| ANTHROPIC_API_KEY warning logged on startup if missing | `backend/main.py` | Task 7: Startup warning, does not prevent app from starting. |
+
+---
+
+## TODO — Patient profiles backend migration
+
+Patient profiles are stored in `localStorage` under `nuvovet_patients`.
+This is a temporary measure.
+
+**Action required (future):** Migrate patient profiles from localStorage to the backend
+(FastAPI + database) for persistence across devices and sessions.
+See `patientStorage.ts` for the data schema.
+
+---
+
 ## Drug search — cap removal (2026-03-13)
 
 The browse-mode drug list was previously limited to 50 drugs via a hard-coded

@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import { Activity, ChevronDown, ChevronUp, AlertTriangle } from 'lucide-react';
+import React from 'react';
+import { Activity, AlertTriangle } from 'lucide-react';
 import { useI18n } from '../i18n';
 
 /**
  * Cumulative Organ Load Score
  *
- * Sums renal and hepatic elimination burden across all drugs in the
- * prescription and displays a single organ-load indicator.  When the
- * patient has elevated creatinine (flaggedLabs), the component escalates
- * to a critical flag — not just "this drug is renally cleared" but
- * "this entire prescription places 78 % cumulative load on an already
- * compromised kidney."
+ * Always expanded — all five organ scores visible without any interaction required.
+ * This is one of NuvoVet's core differentiators and must be prominently displayed.
+ *
+ * Removed: accordion/collapse toggle (Task 5)
  */
 
 function getOrganLoads(drugs, species) {
@@ -29,7 +27,6 @@ function getOrganLoads(drugs, species) {
         ? Math.max((1 - renal) * 0.5, 0)
         : 0;
 
-    // Dose scaling modifier
     const prescribedDose = drug.dosePerKg ?? 0;
     const standardDose = drug.defaultDose?.[species] ?? null;
     let doseModifier = 1.0;
@@ -84,7 +81,6 @@ function getHepaticRisk(hepaticPct) {
 }
 
 function OrganBar({ label, pct, barColor, textColor, labelRight }) {
-  // Bar fills proportionally — cap visual at 200 % for layout
   const visualWidth = Math.min((pct / 200) * 100, 100);
   return (
     <div>
@@ -106,7 +102,6 @@ function OrganBar({ label, pct, barColor, textColor, labelRight }) {
 
 export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' }) {
   const { t } = useI18n();
-  const [expanded, setExpanded] = useState(false);
 
   if (drugs.length === 0) return null;
 
@@ -115,7 +110,7 @@ export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' })
   const elevatedCreatinine = patientInfo?.flaggedLabs?.some(
     (lab) =>
       (lab.key?.toLowerCase().includes('creatinine') || lab.key?.toLowerCase().includes('bun')) &&
-      lab.status === 'high'
+      lab.status === 'high',
   );
 
   const renalRisk = getRenalRisk(renal, elevatedCreatinine);
@@ -124,11 +119,8 @@ export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' })
 
   return (
     <div className={`rounded-xl border overflow-hidden shadow-sm ${renalRisk.bg}`}>
-      {/* Header */}
-      <button
-        onClick={() => setExpanded((v) => !v)}
-        className="w-full px-4 py-3 flex items-center justify-between text-left"
-      >
+      {/* Header — no toggle, always visible */}
+      <div className="px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Activity size={14} className={renalRisk.text} />
           <span className="text-[12px] font-semibold text-slate-700 uppercase tracking-wider">
@@ -141,13 +133,10 @@ export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' })
             </span>
           )}
         </div>
-        <div className="flex items-center gap-2">
-          <span className={`text-[12px] font-mono font-semibold ${renalRisk.text}`}>
-            {renal}% {t.results.renalShort}
-          </span>
-          {expanded ? <ChevronUp size={13} className="text-slate-400" /> : <ChevronDown size={13} className="text-slate-400" />}
-        </div>
-      </button>
+        <span className={`text-[12px] font-mono font-semibold ${renalRisk.text}`}>
+          {renal}% {t.results.renalShort}
+        </span>
+      </div>
 
       {/* Critical banner */}
       {isCritical && (
@@ -159,7 +148,7 @@ export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' })
         </div>
       )}
 
-      {/* Bars (always visible) */}
+      {/* Organ burden bars — always visible */}
       <div className="px-4 pb-3 space-y-2.5">
         <OrganBar
           label={t.results.renalEliminationBurden}
@@ -177,48 +166,46 @@ export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' })
         />
       </div>
 
-      {/* Per-drug breakdown */}
-      {expanded && (
-        <div className="px-4 pb-3 border-t border-slate-100 pt-3 animate-fade-in">
-          <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">
-            {t.results.perDrugContribution}
-          </p>
-          <div className="space-y-1.5">
-            {contributions.map((c, i) => (
-              <div key={i} className="flex flex-col gap-0.5 py-1 border-b border-slate-50 last:border-0">
-                <div className="flex items-center gap-2 text-[11px]">
-                  <span className="font-medium text-slate-700 w-32 truncate shrink-0">{c.drugName}</span>
-                  <span className="text-slate-400 font-mono">
-                    {t.results.renalShort} <span className="text-slate-600 font-semibold">{c.scaledRenal}%</span>
-                  </span>
-                  <span className="text-slate-300">·</span>
-                  <span className="text-slate-400 font-mono">
-                    {t.results.hepaticShort} <span className="text-slate-600 font-semibold">{c.scaledHepatic}%</span>
-                  </span>
-                  {c.doseScalingApplied && c.doseModifier !== 1.0 && (
-                    <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${c.doseModifier > 1 ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'}`}>
-                      ×{c.doseModifier}
-                    </span>
-                  )}
-                </div>
+      {/* Per-drug breakdown — always expanded */}
+      <div className="px-4 pb-3 border-t border-slate-100 pt-3">
+        <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mb-2">
+          {t.results.perDrugContribution}
+        </p>
+        <div className="space-y-1.5">
+          {contributions.map((c, i) => (
+            <div key={i} className="flex flex-col gap-0.5 py-1 border-b border-slate-50 last:border-0">
+              <div className="flex items-center gap-2 text-[11px]">
+                <span className="font-medium text-slate-700 w-32 truncate shrink-0">{c.drugName}</span>
+                <span className="text-slate-400 font-mono">
+                  {t.results.renalShort} <span className="text-slate-600 font-semibold">{c.scaledRenal}%</span>
+                </span>
+                <span className="text-slate-300">·</span>
+                <span className="text-slate-400 font-mono">
+                  {t.results.hepaticShort} <span className="text-slate-600 font-semibold">{c.scaledHepatic}%</span>
+                </span>
                 {c.doseScalingApplied && c.doseModifier !== 1.0 && (
-                  <div className="text-[10px] text-slate-400 pl-[9.5rem]">
-                    {t.results.doseScalingApplied}: {c.baseRenal}% → {c.scaledRenal}%
-                  </div>
-                )}
-                {!c.doseScalingApplied && (
-                  <div className="text-[10px] text-slate-400 pl-[9.5rem]">
-                    {t.results.doseScalingNotApplied}
-                  </div>
+                  <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${c.doseModifier > 1 ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'}`}>
+                    ×{c.doseModifier}
+                  </span>
                 )}
               </div>
-            ))}
-          </div>
-          <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">
-            {t.results.organLoadFootnote}
-          </p>
+              {c.doseScalingApplied && c.doseModifier !== 1.0 && (
+                <div className="text-[10px] text-slate-400 pl-[9.5rem]">
+                  {t.results.doseScalingApplied}: {c.baseRenal}% → {c.scaledRenal}%
+                </div>
+              )}
+              {!c.doseScalingApplied && (
+                <div className="text-[10px] text-slate-400 pl-[9.5rem]">
+                  {t.results.doseScalingNotApplied}
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-      )}
+        <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">
+          {t.results.organLoadFootnote}
+        </p>
+      </div>
     </div>
   );
 }

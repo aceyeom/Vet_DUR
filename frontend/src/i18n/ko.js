@@ -315,6 +315,7 @@ const ko = {
     expand: '펼치기',
     collapse: '접기',
     exportPDF: 'PDF 내보내기',
+    updatePatientRecord: '환자 기록 업데이트',
   },
 
   // ── PK 타임라인 ───────────────────────────────────────────────
@@ -475,6 +476,19 @@ const ko = {
     savePatient: '환자 정보 저장',
     patientSaved: '환자 정보가 저장되었습니다',
     refinedBadge: '추가 정보로 업데이트됨',
+    // New fields — Task 1/2/6/7
+    patientsNav: '환자 목록',
+    sectionPatient: '환자 정보',
+    sectionPatientHint: '환자를 검색하거나 새로 입력하세요.',
+    sectionDrugs: '처방 약물',
+    sectionDrugsHint: '약물을 검색하여 처방을 추가하세요.',
+    returningPatient: '기존 환자',
+    patientNameLabel: '환자 이름',
+    ownerPhoneLabel: '보호자 연락처',
+    addPatientDetails: '추가 환자 정보 입력',
+    saveProfileLabel: '이 환자 프로필 저장',
+    importBannerTitle: '스크린샷에서 데이터를 가져왔습니다 — 검사 전에 확인해 주세요.',
+    importBannerDesc: '파란색으로 강조된 필드가 자동으로 입력되었습니다.',
   },
 
   // ── 접근 신청 모달 ────────────────────────────────────────────

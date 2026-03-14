@@ -314,6 +314,7 @@ const en = {
     expand: 'Expand',
     collapse: 'Collapse',
     exportPDF: 'Export PDF',
+    updatePatientRecord: 'Update patient record',
   },
 
   // ── PK Timeline ────────────────────────────────────────────────
@@ -474,6 +475,19 @@ const en = {
     savePatient: 'Save patient',
     patientSaved: 'Patient saved',
     refinedBadge: 'Updated with patient data',
+    // New fields — Task 1/2/6/7
+    patientsNav: 'Patients',
+    sectionPatient: 'Patient Details',
+    sectionPatientHint: 'Search for a returning patient or enter new details.',
+    sectionDrugs: 'Prescription',
+    sectionDrugsHint: 'Search and add medications to the prescription.',
+    returningPatient: 'Returning patient?',
+    patientNameLabel: 'Patient name',
+    ownerPhoneLabel: 'Owner phone',
+    addPatientDetails: 'Add patient details',
+    saveProfileLabel: 'Save this patient profile',
+    importBannerTitle: 'Data imported from screenshot — please review before running the check.',
+    importBannerDesc: 'Fields highlighted in blue were auto-populated.',
   },
 
   // ── Request Access Modal ───────────────────────────────────────
