@@ -13,9 +13,10 @@ import { useI18n } from '../i18n';
  * compromised kidney."
  */
 
-function getOrganLoads(drugs) {
+function getOrganLoads(drugs, species) {
   let renalLoad = 0;
   let hepaticLoad = 0;
+  const contributions = [];
 
   drugs.forEach((drug) => {
     const renal = drug.renalElimination ?? 0;
@@ -28,13 +29,39 @@ function getOrganLoads(drugs) {
         ? Math.max((1 - renal) * 0.5, 0)
         : 0;
 
-    renalLoad += renal;
-    hepaticLoad += hepatic;
+    // Dose scaling modifier
+    const prescribedDose = drug.dosePerKg ?? 0;
+    const standardDose = drug.defaultDose?.[species] ?? null;
+    let doseModifier = 1.0;
+    let doseScalingApplied = false;
+
+    if (prescribedDose > 0 && standardDose != null && standardDose > 0) {
+      doseModifier = Math.min(Math.max(prescribedDose / standardDose, 0.5), 2.0);
+      doseScalingApplied = true;
+    }
+
+    const scaledRenal = renal * doseModifier;
+    const scaledHepatic = hepatic * doseModifier;
+
+    renalLoad += scaledRenal;
+    hepaticLoad += scaledHepatic;
+
+    contributions.push({
+      drugId: drug.id,
+      drugName: drug.name,
+      baseRenal: Math.round(renal * 100),
+      baseHepatic: Math.round(hepatic * 100),
+      doseModifier: Math.round(doseModifier * 100) / 100,
+      scaledRenal: Math.round(scaledRenal * 100),
+      scaledHepatic: Math.round(scaledHepatic * 100),
+      doseScalingApplied,
+    });
   });
 
   return {
     renal: Math.round(renalLoad * 100),
     hepatic: Math.round(hepaticLoad * 100),
+    contributions,
   };
 }
 
@@ -77,13 +104,13 @@ function OrganBar({ label, pct, barColor, textColor, labelRight }) {
   );
 }
 
-export function OrganLoadIndicator({ drugs = [], patientInfo }) {
+export function OrganLoadIndicator({ drugs = [], patientInfo, species = 'dog' }) {
   const { t } = useI18n();
   const [expanded, setExpanded] = useState(false);
 
   if (drugs.length === 0) return null;
 
-  const { renal, hepatic } = getOrganLoads(drugs);
+  const { renal, hepatic, contributions } = getOrganLoads(drugs, species);
 
   const elevatedCreatinine = patientInfo?.flaggedLabs?.some(
     (lab) =>
@@ -157,29 +184,35 @@ export function OrganLoadIndicator({ drugs = [], patientInfo }) {
             {t.results.perDrugContribution}
           </p>
           <div className="space-y-1.5">
-            {drugs.map((drug, i) => {
-              const r = Math.round((drug.renalElimination ?? 0) * 100);
-              const h =
-                drug.hepaticElimination != null
-                  ? Math.round(drug.hepaticElimination * 100)
-                  : drug.pk?.primaryElimination === 'hepatic'
-                  ? Math.round(Math.max(1 - (drug.renalElimination ?? 0), 0) * 100)
-                  : drug.pk?.primaryElimination === 'mixed'
-                  ? Math.round(Math.max((1 - (drug.renalElimination ?? 0)) * 0.5, 0) * 100)
-                  : 0;
-              return (
-                <div key={i} className="flex items-center gap-2 text-[11px]">
-                  <span className="font-medium text-slate-700 w-32 truncate shrink-0">{drug.name}</span>
+            {contributions.map((c, i) => (
+              <div key={i} className="flex flex-col gap-0.5 py-1 border-b border-slate-50 last:border-0">
+                <div className="flex items-center gap-2 text-[11px]">
+                  <span className="font-medium text-slate-700 w-32 truncate shrink-0">{c.drugName}</span>
                   <span className="text-slate-400 font-mono">
-                    {t.results.renalShort} <span className="text-slate-600 font-semibold">{r}%</span>
+                    {t.results.renalShort} <span className="text-slate-600 font-semibold">{c.scaledRenal}%</span>
                   </span>
                   <span className="text-slate-300">·</span>
                   <span className="text-slate-400 font-mono">
-                    {t.results.hepaticShort} <span className="text-slate-600 font-semibold">{h}%</span>
+                    {t.results.hepaticShort} <span className="text-slate-600 font-semibold">{c.scaledHepatic}%</span>
                   </span>
+                  {c.doseScalingApplied && c.doseModifier !== 1.0 && (
+                    <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${c.doseModifier > 1 ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'}`}>
+                      ×{c.doseModifier}
+                    </span>
+                  )}
                 </div>
-              );
-            })}
+                {c.doseScalingApplied && c.doseModifier !== 1.0 && (
+                  <div className="text-[10px] text-slate-400 pl-[9.5rem]">
+                    {t.results.doseScalingApplied}: {c.baseRenal}% → {c.scaledRenal}%
+                  </div>
+                )}
+                {!c.doseScalingApplied && (
+                  <div className="text-[10px] text-slate-400 pl-[9.5rem]">
+                    {t.results.doseScalingNotApplied}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
           <p className="text-[10px] text-slate-400 mt-2 leading-relaxed">
             {t.results.organLoadFootnote}

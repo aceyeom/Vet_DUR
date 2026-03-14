@@ -9,10 +9,10 @@ import {
   calculateDoseMetrics,
   DOSE_UNIT_ENUM,
   ROUTE_ENUM,
-  TREATMENT_CATEGORY_ENUM,
 } from '../data/emrSchema';
 import { listDrugsApi, getDrugByIdApi } from '../lib/api';
 import { useI18n } from '../i18n';
+import { COMMON_DRUG_SET, TOP_15_COMMON, rankDrugs } from '../lib/commonDrugs';
 
 // ── Species-Specific Toxicity Hardstops ─────────────────────────
 // These are absolute species contraindications — separate from the
@@ -292,7 +292,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
         <div className="ml-6">
           <DoseCalculator drug={drug} species={species} weight={weight} lang={lang} />
 
-          {/* EMR-style prescription line fields */}
+          {/* EMR-style prescription line fields — row 1: dose fields */}
           <div className="mt-2.5 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px]">
             <label className="flex flex-col gap-1">
               <span className="text-slate-400">{t.drugInput.dosePerKg}</span>
@@ -344,6 +344,7 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
             </label>
           </div>
 
+          {/* Row 2: route only */}
           <div className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px]">
             <label className="flex flex-col gap-1">
               <span className="text-slate-400">{t.drugInput.route}</span>
@@ -356,59 +357,6 @@ function DrugCard({ drug, index, onRemove, onUpdateDrug, species, weight, t, lan
                   <option key={route} value={route}>{route}</option>
                 ))}
               </select>
-            </label>
-
-            <label className="flex flex-col gap-1">
-              <span className="text-slate-400">{t.drugInput.folderName}</span>
-              <input
-                type="text"
-                value={lineItem.folderName}
-                onChange={(e) => handleLineChange('folderName', e.target.value)}
-                className="px-2 py-1.5 border border-slate-200 rounded-md text-[11px] focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-              />
-            </label>
-
-            <label className="flex flex-col gap-1">
-              <span className="text-slate-400">{t.drugInput.treatmentCategory}</span>
-              <select
-                value={lineItem.treatmentCategory}
-                onChange={(e) => handleLineChange('treatmentCategory', e.target.value)}
-                className="px-2 py-1.5 border border-slate-200 rounded-md text-[11px] bg-white focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-              >
-                {TREATMENT_CATEGORY_ENUM.map((cat) => (
-                  <option key={cat} value={cat}>{cat}</option>
-                ))}
-              </select>
-            </label>
-
-            <label className="flex flex-col gap-1">
-              <span className="text-slate-400">{t.drugInput.sellingPrice}</span>
-              <input
-                type="number"
-                min="0"
-                step="100"
-                value={lineItem.sellingPrice}
-                onChange={(e) => handleLineChange('sellingPrice', Math.max(0, Number(e.target.value) || 0))}
-                className="px-2 py-1.5 border border-slate-200 rounded-md text-[11px] focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-              />
-            </label>
-          </div>
-
-          <div className="mt-2 flex items-center justify-between text-[10px] text-slate-500 bg-slate-50 border border-slate-100 rounded-md px-2.5 py-2">
-            <span>
-              {t.drugInput.calculatedDose}: <span className="font-semibold text-slate-700">{lineItem.calculatedDose_mg.toFixed(2)} mg</span>
-            </span>
-            <span>
-              {t.drugInput.totalDose}: <span className="font-semibold text-slate-700">{lineItem.totalDose_mg.toFixed(2)} mg</span>
-            </span>
-            <label className="inline-flex items-center gap-1.5 text-slate-500">
-              <input
-                type="checkbox"
-                checked={lineItem.vatApplicable}
-                onChange={(e) => handleLineChange('vatApplicable', e.target.checked)}
-                className="rounded border-slate-300"
-              />
-              {t.drugInput.vat}
             </label>
           </div>
         </div>
@@ -438,6 +386,9 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   const [browseDrugList, setBrowseDrugList] = useState([]);
   const [browseLoading, setBrowseLoading] = useState(false);
   const [browseError, setBrowseError] = useState(null);
+  // Pagination state
+  const [browsePage, setBrowsePage] = useState(0);
+  const [browseTotal, setBrowseTotal] = useState(0);
   const inputRef = useRef(null);
   const dropdownRef = useRef(null);
   const debounceRef = useRef(null);
@@ -464,13 +415,17 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
     let cancelled = false;
     setBrowseLoading(true);
     setBrowseError(null);
-    listDrugsApi({ limit: 50 }).then((data) => {
+    setBrowsePage(0);
+    setBrowseDrugList([]);
+    listDrugsApi({ limit: 20, offset: 0 }).then((data) => {
       if (cancelled) return;
       if (!data || !data.results) {
         setBrowseError('Could not load drug list from server.');
         setBrowseDrugList([]);
+        setBrowseTotal(0);
       } else {
         setBrowseDrugList(data.results);
+        setBrowseTotal(data.total ?? data.results.length);
       }
       setBrowseLoading(false);
     }).catch(() => {
@@ -481,6 +436,11 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
     });
     return () => { cancelled = true; };
   }, [showSearch, demoMode, searchFn]);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setBrowsePage(0);
+  }, [activeClassFilter, activeRouteFilter]);
 
   // ── Browse mode: filter loaded API drugs by class/route ────────
   const browseDrugs = useMemo(() => {
@@ -506,6 +466,9 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
 
     // Exclude already-added drugs
     filtered = filtered.filter(d => !drugs.some(ex => ex.id === d.id));
+
+    // Sort by common drug ranking
+    filtered = rankDrugs(filtered, query);
 
     return filtered;
   }, [query, demoMode, searchFn, browseDrugList, activeClassFilter, activeRouteFilter, drugs]);
@@ -604,6 +567,24 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
     resetSearch();
   };
 
+  // ── Show more: load next page and append ───────────────────────
+  const handleShowMore = async () => {
+    if (browseLoading) return;
+    setBrowseLoading(true);
+    try {
+      const data = await listDrugsApi({ limit: 20, offset: browseDrugList.length });
+      if (data && data.results) {
+        setBrowseDrugList(prev => [...prev, ...data.results]);
+        setBrowseTotal(data.total ?? browseTotal);
+        setBrowsePage(p => p + 1);
+      }
+    } catch (_) {
+      // silently ignore load-more errors
+    } finally {
+      setBrowseLoading(false);
+    }
+  };
+
   const resetSearch = () => {
     setQuery('');
     setResults([]);
@@ -615,6 +596,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
     setActiveRouteFilter('all');
     setShowFilters(false);
     setBrowseError(null);
+    setBrowsePage(0);
   };
 
   const handleConfirmUnknown = () => {
@@ -660,7 +642,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
       {/* ── Add Button or Search Panel ── */}
       {!showSearch ? (
         <button
-          onClick={() => setShowSearch(true)}
+          onClick={() => { setShowSearch(true); setBrowsePage(0); }}
           className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-slate-900 text-white text-[13px] font-medium rounded-lg hover:bg-slate-800 transition-all duration-200"
         >
           <Plus size={15} />
@@ -865,7 +847,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
           {/* ── Browse mode (no search text → show API drug list) ── */}
           {!selectedProduct && query.trim().length === 0 && showSearch && !demoMode && searchFn && (
             <div className="border-t border-slate-100">
-              {browseLoading ? (
+              {browseLoading && browseDrugList.length === 0 ? (
                 <div className="px-4 py-6 text-center flex items-center justify-center gap-2 text-slate-400">
                   <Loader2 size={14} className="animate-spin" />
                   <span className="text-[12px]">Loading drugs…</span>
@@ -875,67 +857,120 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
                   <p className="text-[12px] text-red-500 font-medium">{browseError}</p>
                   <p className="text-[11px] text-slate-400 mt-1">Please check that the backend is running.</p>
                 </div>
-              ) : browseDrugs && browseDrugs.length > 0 ? (
-                <div className="max-h-64 overflow-y-auto">
-                  <div className="px-3 pt-2 pb-1">
-                    <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                      {activeClassFilter !== 'all' || activeRouteFilter !== 'all'
-                        ? t.drugInput.filteredResults
-                        : t.drugInput.allAvailableDrugs
-                      }
-                      <span className="ml-1 text-slate-300">({browseDrugs.length})</span>
-                    </span>
-                  </div>
-                  {browseDrugs.map((drug) => (
-                    <button
-                      key={drug.id}
-                      onClick={() => handleSelectBrowseDrug(drug)}
-                      className="w-full text-left px-3 py-2 hover:bg-slate-50 transition-colors border-b border-slate-50 last:border-0"
-                    >
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-7 h-7 rounded-md bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0">
-                          <RouteIcon route={drug.route} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-1.5">
-                            <span className="text-[12px] font-semibold text-slate-800 truncate">
-                              {lang === 'ko' && drug.nameKr ? drug.nameKr : drug.name}
-                            </span>
-                            {lang === 'ko' && drug.name && (
-                              <span className="text-[10px] text-slate-400 truncate">{drug.name}</span>
-                            )}
-                          </div>
-                          <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
-                            <span className="text-[10px] text-slate-400">
-                              {lang === 'ko' ? (t.drugClasses[drug.class?.toLowerCase()?.replace(/ /g, '_')] || drug.class) : drug.class}
-                            </span>
-                            <span className="text-[10px] text-slate-300">·</span>
-                            <span className="text-[10px] text-slate-400">
-                              {lang === 'ko' ? (t.routes[drug.route] || drug.route) : drug.route}
-                            </span>
-                            {(drug.dosageForms || []).length > 0 && (
-                              <>
-                                <span className="text-[10px] text-slate-300">·</span>
-                                <span className="text-[10px] text-slate-400">{drug.dosageForms[0]}</span>
-                              </>
-                            )}
-                          </div>
-                        </div>
-                        <div className="flex items-center gap-1 shrink-0">
-                          {(drug.availableStrengths || []).length > 0 && (
-                            <span className="text-[10px] text-slate-500 bg-slate-50 px-1.5 py-0.5 rounded">
-                              {drug.availableStrengths[0].value}{drug.availableStrengths[0].unit}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
               ) : (
-                <div className="px-4 py-6 text-center">
-                  <p className="text-[12px] text-slate-400">{t.drugInput.noMatchFound}</p>
-                  <p className="text-[11px] text-slate-300 mt-1">{t.drugInput.tryDifferentSearch}</p>
+                <div className="max-h-96 overflow-y-auto">
+                  {/* ── Frequently prescribed chips (empty search, focused) ── */}
+                  <div className="px-3 pt-2.5 pb-1">
+                    <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                      {t.drugInput.frequentlyPrescribed}
+                    </span>
+                    <div className="flex flex-wrap gap-1.5 mt-1.5">
+                      {TOP_15_COMMON.map((id) => {
+                        const found = browseDrugList.find(d => d.id === id);
+                        const alreadyAdded = drugs.some(ex => ex.id === id);
+                        if (alreadyAdded) return null;
+                        return (
+                          <button
+                            key={id}
+                            onClick={() => found ? handleSelectBrowseDrug(found) : null}
+                            disabled={!found}
+                            className={`px-2.5 py-1 text-[11px] font-medium rounded-full border transition-all ${
+                              found
+                                ? 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100 hover:border-slate-300 cursor-pointer'
+                                : 'bg-slate-50 text-slate-400 border-slate-100 cursor-default'
+                            }`}
+                          >
+                            {found ? (lang === 'ko' && found.nameKr ? found.nameKr : found.name) : id}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* ── Full browse list ── */}
+                  {browseDrugs && browseDrugs.length > 0 ? (
+                    <>
+                      <div className="px-3 pt-2 pb-1">
+                        <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
+                          {activeClassFilter !== 'all' || activeRouteFilter !== 'all'
+                            ? t.drugInput.filteredResults
+                            : t.drugInput.allAvailableDrugs
+                          }
+                          <span className="ml-1 text-slate-300">({browseDrugs.length})</span>
+                        </span>
+                      </div>
+                      {browseDrugs.map((drug) => (
+                        <button
+                          key={drug.id}
+                          onClick={() => handleSelectBrowseDrug(drug)}
+                          className="w-full text-left px-3 py-2 hover:bg-slate-50 transition-colors border-b border-slate-50 last:border-0"
+                        >
+                          <div className="flex items-center gap-2.5">
+                            <div className="w-7 h-7 rounded-md bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0">
+                              <RouteIcon route={drug.route} />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-1.5">
+                                <span className="text-[12px] font-semibold text-slate-800 truncate">
+                                  {lang === 'ko' && drug.nameKr ? drug.nameKr : drug.name}
+                                </span>
+                                {lang === 'ko' && drug.name && (
+                                  <span className="text-[10px] text-slate-400 truncate">{drug.name}</span>
+                                )}
+                              </div>
+                              <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
+                                <span className="text-[10px] text-slate-400">
+                                  {lang === 'ko' ? (t.drugClasses[drug.class?.toLowerCase()?.replace(/ /g, '_')] || drug.class) : drug.class}
+                                </span>
+                                <span className="text-[10px] text-slate-300">·</span>
+                                <span className="text-[10px] text-slate-400">
+                                  {lang === 'ko' ? (t.routes[drug.route] || drug.route) : drug.route}
+                                </span>
+                                {(drug.dosageForms || []).length > 0 && (
+                                  <>
+                                    <span className="text-[10px] text-slate-300">·</span>
+                                    <span className="text-[10px] text-slate-400">{drug.dosageForms[0]}</span>
+                                  </>
+                                )}
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-1 shrink-0">
+                              {(drug.availableStrengths || []).length > 0 && (
+                                <span className="text-[10px] text-slate-500 bg-slate-50 px-1.5 py-0.5 rounded">
+                                  {drug.availableStrengths[0].value}{drug.availableStrengths[0].unit}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        </button>
+                      ))}
+
+                      {/* ── Show more button ── */}
+                      {browseDrugList.length < browseTotal && (
+                        <div className="px-3 py-2.5 border-t border-slate-50">
+                          <button
+                            onClick={handleShowMore}
+                            disabled={browseLoading}
+                            className="w-full flex items-center justify-center gap-1.5 py-2 text-[11px] font-medium text-slate-500 hover:text-slate-700 hover:bg-slate-50 rounded-md transition-colors disabled:opacity-50"
+                          >
+                            {browseLoading ? (
+                              <>
+                                <Loader2 size={12} className="animate-spin" />
+                                <span>Loading…</span>
+                              </>
+                            ) : (
+                              t.drugInput.showMore
+                            )}
+                          </button>
+                        </div>
+                      )}
+                    </>
+                  ) : !browseLoading && (
+                    <div className="px-4 py-6 text-center">
+                      <p className="text-[12px] text-slate-400">{t.drugInput.noMatchFound}</p>
+                      <p className="text-[11px] text-slate-300 mt-1">{t.drugInput.tryDifferentSearch}</p>
+                    </div>
+                  )}
                 </div>
               )}
             </div>

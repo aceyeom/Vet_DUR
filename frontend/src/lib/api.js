@@ -58,10 +58,11 @@ export async function getDrugByIdApi(id) {
 
 /**
  * Fetch a page of drugs with optional class/source filter.
+ * Default limit is 20 (initial load); call again with offset to paginate.
  * @param {object} options
  * @returns {Promise<{results: Array, total: number}>}
  */
-export async function listDrugsApi({ drugClass, source, limit = 50, offset = 0 } = {}) {
+export async function listDrugsApi({ drugClass, source, limit = 20, offset = 0 } = {}) {
   const params = new URLSearchParams({ limit, offset });
   if (drugClass) params.set('drug_class', drugClass);
   if (source) params.set('source', source);

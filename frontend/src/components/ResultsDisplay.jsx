@@ -203,7 +203,7 @@ function PatientSummaryPanel({ results, patientInfo, drugs = [], species = 'dog'
       />
 
       {/* Cumulative Organ Load */}
-      <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} />
+      <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} species={species} />
     </div>
   );
 }
@@ -212,10 +212,67 @@ function ClassChip({ label }) {
   return <span className="text-[10px] font-medium text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">{label}</span>;
 }
 
+// ── Why Dangerous Panel (expandable, severity 2+3 only) ─────────
+function WhyDangerousPanel({ interaction, t }) {
+  const [open, setOpen] = useState(false);
+  const severityLabel = interaction.severity?.label;
+  const isCritical = severityLabel === 'Critical';
+
+  return (
+    <div className="px-4 pb-3 border-t border-slate-100/50">
+      <button
+        onClick={(e) => { e.stopPropagation(); setOpen(!open); }}
+        className={`flex items-center gap-1.5 text-[11px] font-semibold transition-colors ${isCritical ? 'text-red-600 hover:text-red-700' : 'text-amber-700 hover:text-amber-800'}`}
+      >
+        <AlertTriangle size={11} className={isCritical ? 'text-red-500' : 'text-amber-500'} />
+        {t.results.whyDangerous}
+        {open ? <ChevronUp size={10} /> : <ChevronDown size={10} />}
+      </button>
+
+      {open && (
+        <div className="mt-2.5 space-y-3 animate-fade-in">
+          {/* Mechanism section */}
+          <div className={`rounded-lg border px-3.5 py-3 ${isCritical ? 'bg-red-50/70 border-red-200' : 'bg-amber-50/50 border-amber-200'}`}>
+            <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
+              {t.results.mechanismSection}
+            </p>
+            <p className="text-[12px] text-slate-700 leading-relaxed">
+              {interaction.mechanism || <span className="text-slate-400 italic">기전 상세 정보를 현재 데이터베이스에서 확인할 수 없습니다. / Mechanism detail not available in current database.</span>}
+            </p>
+          </div>
+
+          {/* Critical: explicit contraindication action */}
+          {isCritical && (
+            <div className="flex items-start gap-2 bg-red-100 border border-red-300 rounded-lg px-3 py-2.5">
+              <AlertTriangle size={13} className="text-red-600 shrink-0 mt-0.5" />
+              <p className="text-[12px] font-semibold text-red-800">{t.results.actionContraindicated}</p>
+            </div>
+          )}
+
+          {/* Clinical significance / evidence */}
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-wider mb-1.5 text-slate-500">
+              {t.results.clinicalSignificance}
+            </p>
+            {interaction.literatureSummary ? (
+              <p className="text-[12px] text-slate-600 leading-relaxed bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                {interaction.literatureSummary}
+              </p>
+            ) : (
+              <p className="text-[12px] text-slate-400 italic">{t.results.sourceNotAvailable}</p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Interaction Card ────────────────────────────────────────────
-function InteractionCard({ interaction, index, acknowledged, noted, onAcknowledge, onNote, isFullSystem }) {
+function InteractionCard({ interaction, index, acknowledged, noted, onAcknowledge, onNote, isFullSystem, wasRefined }) {
   const { t } = useI18n();
   const isMinor = interaction.severity?.label === 'Minor' || interaction.severity?.label === 'Unknown';
+  const isSignificant = interaction.severity?.label === 'Critical' || interaction.severity?.label === 'Moderate';
   const [expanded, setExpanded] = useState(isMinor ? false : index === 0);
   const [showLiterature, setShowLiterature] = useState(false);
   const severityLabel = interaction.severity?.label;
@@ -241,6 +298,11 @@ function InteractionCard({ interaction, index, acknowledged, noted, onAcknowledg
       >
         <SeverityBadge severity={interaction.severity} />
         <span className="typo-drug-name text-[13px] flex-1 text-left min-w-0 break-words">{interaction.drugA} + {interaction.drugB}</span>
+        {wasRefined && (
+          <span className="text-[9px] font-medium text-purple-600 bg-purple-50 border border-purple-100 px-1.5 py-0.5 rounded-full shrink-0">
+            {t.results.refinedAlert}
+          </span>
+        )}
         <span className="text-[11px] text-slate-400 shrink-0 hidden sm:block">{interaction.rule}</span>
         <ChevronDown size={12} className="text-slate-400 shrink-0" />
       </button>
@@ -267,6 +329,11 @@ function InteractionCard({ interaction, index, acknowledged, noted, onAcknowledg
               {interaction.drugAClass && <ClassChip label={interaction.drugAClass} />}
               <span className="text-slate-300 text-[10px]">+</span>
               {interaction.drugBClass && <ClassChip label={interaction.drugBClass} />}
+              {wasRefined && (
+                <span className="text-[9px] font-medium text-purple-600 bg-purple-50 border border-purple-100 px-1.5 py-0.5 rounded-full">
+                  ✦ {t.results.refinedAlert}
+                </span>
+              )}
             </div>
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -283,6 +350,11 @@ function InteractionCard({ interaction, index, acknowledged, noted, onAcknowledg
             <h4 className="typo-section-header text-[11px] mb-1.5">{t.results.whatHappens.toUpperCase()}</h4>
             <p className="typo-body leading-relaxed">{interaction.mechanism}</p>
           </div>
+
+          {/* "Why is this dangerous?" — severity Moderate + Critical only */}
+          {isSignificant && (
+            <WhyDangerousPanel interaction={interaction} t={t} />
+          )}
 
           {/* PK Timeline */}
           {interaction.drugAData && interaction.drugBData && (
@@ -311,32 +383,36 @@ function InteractionCard({ interaction, index, acknowledged, noted, onAcknowledg
             </div>
           </div>
 
-          {/* Literature */}
-          {(interaction.literature?.length > 0 || interaction.literatureSummary) && (
-            <div className="px-4 pb-3">
-              <button
-                onClick={(e) => { e.stopPropagation(); setShowLiterature(!showLiterature); }}
-                className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 hover:text-slate-700 transition-colors"
-              >
-                <BookOpen size={11} />
-                {t.results.evidenceRefs}
-                {showLiterature ? <ChevronUp size={10} /> : <ChevronDown size={10} />}
-              </button>
-              {showLiterature && (
-                <div className="mt-2 space-y-2 animate-fade-in">
-                  {interaction.literatureSummary && (
-                    <p className="typo-body bg-slate-50/80 px-3 py-2 rounded-lg border border-slate-100">{interaction.literatureSummary}</p>
-                  )}
-                  {interaction.literature.map((ref, i) => (
+          {/* Literature — per-interaction evidence only, no shared static list */}
+          <div className="px-4 pb-3">
+            <button
+              onClick={(e) => { e.stopPropagation(); setShowLiterature(!showLiterature); }}
+              className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 hover:text-slate-700 transition-colors"
+            >
+              <BookOpen size={11} />
+              {t.results.evidenceRefs}
+              {showLiterature ? <ChevronUp size={10} /> : <ChevronDown size={10} />}
+            </button>
+            {showLiterature && (
+              <div className="mt-2 space-y-2 animate-fade-in">
+                {interaction.literatureSummary ? (
+                  <p className="typo-body bg-slate-50/80 px-3 py-2 rounded-lg border border-slate-100">{interaction.literatureSummary}</p>
+                ) : null}
+                {(interaction.literature || []).length > 0 ? (
+                  interaction.literature.map((ref, i) => (
                     <div key={i} className="text-[11px] text-slate-500 px-2.5 py-1.5 bg-slate-50 rounded">
                       <p className="font-medium text-slate-600">{ref.title}</p>
                       <p className="typo-label">{ref.source}</p>
                     </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
+                  ))
+                ) : (
+                  !interaction.literatureSummary && (
+                    <p className="text-[11px] text-slate-400 italic px-1">{t.results.sourceNotAvailable}</p>
+                  )
+                )}
+              </div>
+            )}
+          </div>
 
           {/* Acknowledgment row — Full System only */}
           {isFullSystem && (
@@ -552,6 +628,7 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
                       onAcknowledge={() => setAcknowledged(prev => ({ ...prev, [i]: !prev[i] }))}
                       onNote={() => setNoted(prev => ({ ...prev, [i]: !prev[i] }))}
                       isFullSystem={isFullSystem}
+                      wasRefined={!!results.wasRefined}
                     />
                   ))}
                 </div>
