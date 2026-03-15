@@ -726,11 +726,15 @@ export default function FullSystem() {
   // ── UI state ───────────────────────────────────────────────────
   const [showEMRModal, setShowEMRModal] = useState(false);
   const [showPatientModal, setShowPatientModal] = useState(false);
-  const [saveProfileChecked, setSaveProfileChecked] = useState(false);
+  const [dontSavePatientChecked, setDontSavePatientChecked] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [importBanner, setImportBanner] = useState(false);
   const [importedFields, setImportedFields] = useState(new Set());
   const [patientTab, setPatientTab] = useState('new'); // 'new' | 'existing'
+  const [leftPanelWidth, setLeftPanelWidth] = useState(460);
+  const [isResizingPanels, setIsResizingPanels] = useState(false);
+  const [missingRequired, setMissingRequired] = useState({ species: false, weight: false, drugs: false });
+  const [validationShakeTick, setValidationShakeTick] = useState(0);
 
   // ── Flow state ─────────────────────────────────────────────────
   const [step, setStep] = useState('input');
@@ -743,6 +747,7 @@ export default function FullSystem() {
 
   const pollRef = useRef(null);
   const debounceRef = useRef(null);
+  const inputPanelsRef = useRef(null);
 
   // ── Backend polling ────────────────────────────────────────────
   useEffect(() => {
@@ -757,6 +762,30 @@ export default function FullSystem() {
     getConditionsApi().then(setConditionSuggestions).catch(() => {});
     getAllergiesApi().then(setAllergySuggestions).catch(() => {});
   }, []);
+
+  useEffect(() => {
+    if (!isResizingPanels) return;
+
+    const onMouseMove = (e) => {
+      const container = inputPanelsRef.current;
+      if (!container) return;
+
+      const rect = container.getBoundingClientRect();
+      const maxWidth = Math.max(540, rect.width - 420);
+      const nextWidth = e.clientX - rect.left;
+      const clamped = Math.min(Math.max(nextWidth, 380), maxWidth);
+      setLeftPanelWidth(clamped);
+    };
+
+    const onMouseUp = () => setIsResizingPanels(false);
+
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+    };
+  }, [isResizingPanels]);
 
   // ── Auto-rerun on patient detail changes ───────────────────────
   useEffect(() => {
@@ -790,6 +819,10 @@ export default function FullSystem() {
   };
   const weightKg = getWeightKg();
   const canRun = species && weightKg > 0 && drugs.length > 0;
+  const isSpeciesMissing = !species;
+  const isWeightMissing = !(weightKg > 0);
+  const isDrugsMissing = drugs.length === 0;
+  const shakeClass = validationShakeTick % 2 === 0 ? 'animate-field-shake-a' : 'animate-field-shake-b';
   const isIntactFemale = sex === 'Intact Female' || sex === 'Female intact';
 
   const SPECIES_OPTIONS = [
@@ -872,8 +905,12 @@ export default function FullSystem() {
   };
 
   const handleRunAnalysis = () => {
-    if (!canRun) return;
-    if (saveProfileChecked) handleSavePatient();
+    if (!canRun) {
+      setMissingRequired({ species: isSpeciesMissing, weight: isWeightMissing, drugs: isDrugsMissing });
+      setValidationShakeTick(v => v + 1);
+      return;
+    }
+    if (!dontSavePatientChecked) handleSavePatient();
     setStep('analyzing');
   };
 
@@ -935,8 +972,17 @@ export default function FullSystem() {
     setConditions([]); setAllergies([]); setRenalStatus('Unknown'); setHeptaticStatus('Unknown');
     setCreatinine(''); setAlt('');
     setDrugs([]); setResults(null); setStep('input');
-    setSaveProfileChecked(false); setImportBanner(false); setImportedFields(new Set()); setSaveSuccess(false);
+    setDontSavePatientChecked(false); setImportBanner(false); setImportedFields(new Set()); setSaveSuccess(false);
+    setMissingRequired({ species: false, weight: false, drugs: false });
   };
+
+  useEffect(() => {
+    setMissingRequired(prev => ({
+      species: prev.species && isSpeciesMissing,
+      weight: prev.weight && isWeightMissing,
+      drugs: prev.drugs && isDrugsMissing,
+    }));
+  }, [isSpeciesMissing, isWeightMissing, isDrugsMissing]);
 
   // ── Render ─────────────────────────────────────────────────────
   return (
@@ -1023,10 +1069,14 @@ export default function FullSystem() {
 
         {/* INPUT — Two-panel layout */}
         {step === 'input' && (
-          <div className="flex-1 overflow-hidden flex flex-col lg:flex-row">
+          <div
+            ref={inputPanelsRef}
+            className="flex-1 overflow-hidden flex flex-col lg:grid"
+            style={{ gridTemplateColumns: `${leftPanelWidth}px 10px minmax(0, 1fr)` }}
+          >
 
             {/* ── LEFT PANEL: Patient Information ── */}
-            <div className="w-full lg:w-[460px] lg:shrink-0 lg:border-r border-b lg:border-b-0 border-slate-200 flex flex-col overflow-hidden bg-white">
+            <div className="w-full lg:shrink-0 border-b lg:border-b-0 border-slate-200 flex flex-col overflow-hidden bg-white">
 
               {/* Tab bar */}
               <div className="shrink-0 border-b border-slate-200 flex items-stretch bg-white">
@@ -1078,6 +1128,15 @@ export default function FullSystem() {
                       </div>
                     )}
 
+                    {/* Auto-save policy (opt-out) */}
+                    <label className="flex items-center gap-3 cursor-pointer group px-1 py-1">
+                      <input type="checkbox" checked={dontSavePatientChecked} onChange={e => setDontSavePatientChecked(e.target.checked)}
+                        className="w-4 h-4 rounded border-slate-300 text-slate-800 focus:ring-slate-500" />
+                      <span className="text-sm text-slate-600 group-hover:text-slate-800 transition-colors">
+                        Don't save this patient
+                      </span>
+                    </label>
+
                     {/* ── IDENTIFICATION card ── */}
                     <div className="rounded-xl border border-slate-200 overflow-hidden">
                       <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
@@ -1125,14 +1184,16 @@ export default function FullSystem() {
                       <div className="px-4 py-4 space-y-3.5 bg-white">
 
                         {/* Species */}
-                        <div className="space-y-1.5">
-                          <label className="block text-[11px] font-semibold text-slate-600">Species</label>
+                        <div className={`space-y-1.5 ${missingRequired.species ? shakeClass : ''}`}>
+                          <label className={`block text-[11px] font-semibold ${missingRequired.species ? 'text-red-600' : 'text-slate-600'}`}>Species</label>
                           <div className="grid grid-cols-2 gap-2">
                             {SPECIES_OPTIONS.map((sp) => (
                               <button key={sp.value} onClick={() => setSpecies(sp.value)}
                                 className={`py-2.5 px-3 rounded-lg border-2 font-medium text-[12px] transition-all text-left ${
                                   species === sp.value
                                     ? 'border-slate-800 bg-slate-800 text-white shadow-sm'
+                                    : missingRequired.species
+                                    ? 'border-red-300 bg-red-50 text-red-700 hover:border-red-400 hover:bg-red-50'
                                     : 'border-slate-200 bg-white text-slate-600 hover:border-slate-400 hover:bg-slate-50'
                                 } ${fieldHighlight('species')}`}>
                                 {sp.label}
@@ -1198,17 +1259,18 @@ export default function FullSystem() {
                               </select>
                             </div>
                           </div>
-                          <div className="space-y-1">
-                            <label className="block text-[11px] font-semibold text-slate-600">{t.fullSystem.weightLabel}</label>
+                          <div className={`space-y-1 ${missingRequired.weight ? shakeClass : ''}`}>
+                            <label className={`block text-[11px] font-semibold ${missingRequired.weight ? 'text-red-600' : 'text-slate-600'}`}>{t.fullSystem.weightLabel}</label>
                             <div className="flex gap-1.5">
                               <DecimalInput value={weight} onChange={setWeight} placeholder={t.fullSystem.weightPlaceholder} min={0.001} max={200}
-                                className={`flex-1 min-w-0 px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('weight')}`} />
+                                className={`flex-1 min-w-0 px-3 py-2.5 text-sm border rounded-lg focus:outline-none focus:ring-2 bg-white placeholder:text-slate-300 ${missingRequired.weight ? 'border-red-300 focus:ring-red-100' : 'border-slate-200 focus:ring-slate-900/10'} ${fieldHighlight('weight')}`} />
                               <select value={weightUnit} onChange={e => setWeightUnit(e.target.value)}
-                                className="px-2 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none bg-white text-slate-600 shrink-0">
+                                className={`px-2 py-2.5 text-sm border rounded-lg focus:outline-none bg-white text-slate-600 shrink-0 ${missingRequired.weight ? 'border-red-300' : 'border-slate-200'}`}>
                                 <option value="kg">kg</option>
                                 <option value="g">g</option>
                               </select>
                             </div>
+                            {missingRequired.weight && <p className="text-[11px] text-red-600">Enter a valid weight</p>}
                           </div>
                         </div>
 
@@ -1274,15 +1336,6 @@ export default function FullSystem() {
                       </div>
                     </div>
 
-                    {/* Save profile checkbox */}
-                    <label className="flex items-center gap-3 cursor-pointer group px-1">
-                      <input type="checkbox" checked={saveProfileChecked} onChange={e => setSaveProfileChecked(e.target.checked)}
-                        className="w-4 h-4 rounded border-slate-300 text-slate-800 focus:ring-slate-500" />
-                      <span className="text-sm text-slate-600 group-hover:text-slate-800 transition-colors">
-                        {t.fullSystem.saveProfileLabel}
-                      </span>
-                    </label>
-
                   </div>
                 </div>
               )}
@@ -1298,6 +1351,15 @@ export default function FullSystem() {
 
             </div>
 
+            {/* Resizable divider */}
+            <div
+              onMouseDown={() => setIsResizingPanels(true)}
+              className="hidden lg:flex items-stretch justify-center bg-white border-r border-slate-200 cursor-col-resize select-none group"
+              title="Drag to resize panels"
+            >
+              <div className="w-1 my-2 rounded-full bg-slate-200 group-hover:bg-slate-400 transition-colors" />
+            </div>
+
             {/* ── RIGHT PANEL: Drug Prescription ── */}
             <div className="flex-1 overflow-y-auto bg-slate-50/30">
               <div className="px-7 py-6 space-y-5">
@@ -1307,21 +1369,26 @@ export default function FullSystem() {
                   <p className="text-[12px] text-slate-400 mt-0.5">Select drugs, configure dose</p>
                 </div>
 
-                <DrugInput
-                  drugs={drugs}
-                  onAddDrug={handleAddDrug}
-                  onRemoveDrug={handleRemoveDrug}
-                  onUpdateDrug={handleUpdateDrug}
-                  species={species || 'dog'}
-                  weight={weightKg}
-                  searchFn={searchDrugsApi}
-                />
+                <div className={`${missingRequired.drugs ? `rounded-xl border border-red-300 bg-red-50/30 p-1 ${shakeClass}` : ''}`}>
+                  <DrugInput
+                    drugs={drugs}
+                    onAddDrug={handleAddDrug}
+                    onRemoveDrug={handleRemoveDrug}
+                    onUpdateDrug={handleUpdateDrug}
+                    species={species || 'dog'}
+                    weight={weightKg}
+                    searchFn={searchDrugsApi}
+                  />
+                </div>
+                {missingRequired.drugs && (
+                  <p className="-mt-3 text-[11px] text-red-600">Add at least one drug to run DUR</p>
+                )}
 
                 <div className="border-t border-slate-200 pt-5 space-y-3">
                   <button
                     onClick={handleRunAnalysis}
-                    disabled={!canRun}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-4 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
+                    aria-disabled={!canRun}
+                    className={`w-full flex items-center justify-center gap-2 px-4 py-4 text-white text-sm font-semibold rounded-xl transition-all duration-200 shadow-sm ${canRun ? 'bg-slate-900 hover:bg-slate-800' : 'bg-slate-700 hover:bg-slate-700'}`}
                   >
                     <Zap size={15} />
                     {t.fullSystem.runDurCheck}

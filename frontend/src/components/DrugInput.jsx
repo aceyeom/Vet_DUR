@@ -77,7 +77,7 @@ function getDoseStatus(doseNum, range) {
 }
 
 // ── Drug Card ───────────────────────────────────────────────────
-function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
+function DrugCard({ drug, species, weight, onRemove, onUpdateDrug, collapseSignal }) {
   const hardstop = checkHardstop(drug, species);
 
   // Formulation state
@@ -106,6 +106,11 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
 
   // Expanded state
   const [expanded, setExpanded] = useState(true);
+
+  // Auto-collapse when adding a new drug from search
+  useEffect(() => {
+    setExpanded(false);
+  }, [collapseSignal]);
 
   // Compute dose info
   const doseNum = parseFloat(dosePerKg) || 0;
@@ -143,18 +148,18 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
 
       {/* Hardstop banner */}
       {hardstop && (
-        <div className="flex items-start gap-2 px-4 py-2.5 bg-red-100 border-b border-red-200">
+        <div className="flex items-start gap-2 px-3.5 py-2 bg-red-100 border-b border-red-200">
           <Ban size={13} className="text-red-600 shrink-0 mt-0.5" />
           <p className="text-[12px] text-red-800 leading-relaxed font-medium">{hardstop}</p>
         </div>
       )}
 
       {/* Drug header */}
-      <div className="flex items-start gap-3 px-4 pt-3.5 pb-2">
+      <div className="flex items-start gap-2.5 px-3.5 pt-2.5 pb-1.5">
         <div className="mt-0.5"><SourceIcon source={drug.source} /></div>
         <div className="flex-1 min-w-0">
-          <p className="text-[14px] font-semibold text-slate-900 leading-tight">{drug.name}</p>
-          <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+          <p className="text-[13px] font-semibold text-slate-900 leading-tight">{drug.name}</p>
+          <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
             {drug.nameKr && <span className="text-[11px] text-slate-400">{drug.nameKr}</span>}
             {drug.class && <span className="text-[10px] font-medium text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">{drug.class}</span>}
             {drug.activeSubstance && drug.activeSubstance !== drug.name && (
@@ -164,11 +169,11 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
         </div>
         <div className="flex items-center gap-1 shrink-0">
           <button onClick={() => setExpanded(v => !v)}
-            className="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
+            className="p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
             {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
           </button>
           <button onClick={() => onRemove(drug.id)}
-            className="p-1.5 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
+            className="p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-colors">
             <X size={14} />
           </button>
         </div>
@@ -176,7 +181,7 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
 
       {/* Dose summary bar (always visible) */}
       {!expanded && (doseNum > 0 || totalDoseMg) && (
-        <div className={`px-4 pb-3 flex items-center gap-3 text-[12px] ${doseStatus === 'above' ? 'text-red-700' : doseStatus === 'below' ? 'text-orange-700' : 'text-slate-600'}`}>
+        <div className={`px-3.5 pb-2.5 flex items-center gap-2.5 text-[11px] ${doseStatus === 'above' ? 'text-red-700' : doseStatus === 'below' ? 'text-orange-700' : 'text-slate-600'}`}>
           {doseNum > 0 && <span className="font-semibold">{doseNum} mg/kg</span>}
           {totalDoseMg && <span>= <span className="font-semibold">{totalDoseMg.toFixed(2)} mg</span></span>}
           {doseStatus === 'above' && <span className="font-medium">↑ Above range</span>}
@@ -186,85 +191,87 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
 
       {/* Expanded content */}
       {expanded && (
-        <div className="px-4 pb-4 space-y-3 border-t border-slate-100 pt-3">
+        <div className="px-3.5 pb-3 pt-2.5 border-t border-slate-100">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_220px] gap-3">
 
-          {/* Formulations */}
-          {strengths.length > 0 && (
-            <div>
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Formulation</label>
-              <div className="flex flex-wrap gap-1.5">
-                {strengths.map((s, idx) => (
-                  <button key={idx} onClick={() => setSelectedStrengthIdx(idx)}
-                    className={`px-2.5 py-1 text-[12px] font-medium rounded-lg border transition-all ${
-                      selectedStrengthIdx === idx
-                        ? 'bg-slate-800 text-white border-slate-800'
-                        : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
-                    }`}>
-                    {s.value} {s.unit}
-                  </button>
-                ))}
-                {drug.dosageForms?.length > 0 && (
-                  <span className="px-2 py-1 text-[11px] text-slate-400 bg-slate-50 rounded-lg border border-slate-100">
-                    {drug.dosageForms.join(', ')}
-                  </span>
-                )}
+            {/* Left: regimen controls (compact) */}
+            <div className="space-y-2.5">
+              {strengths.length > 0 && (
+                <div>
+                  <label className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Formulation</label>
+                  <div className="flex flex-wrap gap-1">
+                    {strengths.map((s, idx) => (
+                      <button key={idx} onClick={() => setSelectedStrengthIdx(idx)}
+                        className={`px-2 py-0.5 text-[11px] font-medium rounded-md border transition-all ${
+                          selectedStrengthIdx === idx
+                            ? 'bg-slate-800 text-white border-slate-800'
+                            : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                        }`}>
+                        {s.value} {s.unit}
+                      </button>
+                    ))}
+                    {drug.dosageForms?.length > 0 && (
+                      <span className="px-1.5 py-0.5 text-[10px] text-slate-400 bg-slate-50 rounded-md border border-slate-100">
+                        {drug.dosageForms.join(', ')}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <label className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Route</label>
+                  <select value={route} onChange={e => setRoute(e.target.value)}
+                    className="w-full px-2.5 py-1.5 text-[12px] border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
+                    {ROUTE_OPTIONS.map(r => <option key={r}>{r}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Frequency</label>
+                  <select value={freq} onChange={e => setFreq(e.target.value)}
+                    className="w-full px-2.5 py-1.5 text-[12px] border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
+                    {FREQ_OPTIONS.map(f => <option key={f}>{f}</option>)}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">Duration (days)</label>
+                <input
+                  type="number"
+                  value={duration}
+                  onChange={e => setDuration(parseInt(e.target.value) || 1)}
+                  min={1}
+                  max={365}
+                  className="w-full px-2.5 py-1.5 text-[12px] border border-slate-200 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700"
+                />
               </div>
             </div>
-          )}
 
-          {/* Route */}
-          <div>
-            <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Route</label>
-            <select value={route} onChange={e => setRoute(e.target.value)}
-              className="w-full px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
-              {ROUTE_OPTIONS.map(r => <option key={r}>{r}</option>)}
-            </select>
-          </div>
-
-          {/* Dose input + calculation summary */}
-          <div>
-            <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Dose</label>
-            <div className="flex gap-3 items-start">
-              {/* Dose input */}
-              <div className="flex-1 space-y-1">
-                <div className="flex items-center gap-2">
-                  <DoseInput
-                    value={dosePerKg}
-                    onChange={(v) => setDosePerKg(v)}
-                    placeholder={range ? `${range[0]}–${range[1]} mg/kg` : 'mg/kg'}
-                    className={`w-full px-3 py-2.5 text-sm border rounded-lg focus:outline-none focus:ring-2 bg-white placeholder:text-slate-300 transition-all ${inputBorderClass}`}
-                  />
-                  <span className="text-[12px] text-slate-400 shrink-0">mg/kg</span>
-                </div>
-                {/* Warning messages */}
-                {doseStatus === 'above' && range && (
-                  <p className="text-[11px] text-red-600 font-medium flex items-center gap-1">
-                    <AlertTriangle size={11} />
-                    Exceeds recommended range ({range[0]}–{range[1]} mg/kg)
-                  </p>
-                )}
-                {doseStatus === 'below' && range && (
-                  <p className="text-[11px] text-orange-600 font-medium flex items-center gap-1">
-                    <AlertTriangle size={11} />
-                    Below recommended range ({range[0]}–{range[1]} mg/kg)
-                  </p>
-                )}
-                {range && !doseStatus && (
-                  <p className="text-[11px] text-slate-400">Recommended: {range[0]}–{range[1]} mg/kg</p>
-                )}
+            {/* Right: dose-related info */}
+            <div className="rounded-lg border border-slate-200 bg-slate-50/70 p-2.5 space-y-2">
+              <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-widest">Dose</label>
+              <div className="flex items-center gap-1.5">
+                <DoseInput
+                  value={dosePerKg}
+                  onChange={(v) => setDosePerKg(v)}
+                  placeholder={range ? `${range[0]}–${range[1]}` : 'mg/kg'}
+                  className={`w-full px-2.5 py-1.5 text-[12px] border rounded-md focus:outline-none focus:ring-2 bg-white placeholder:text-slate-300 transition-all ${inputBorderClass}`}
+                />
+                <span className="text-[10px] text-slate-400 shrink-0">mg/kg</span>
               </div>
 
-              {/* Dose calculation summary box */}
-              {(totalDoseMg || doseNum > 0) && (
-                <div className={`rounded-xl p-3 min-w-[110px] text-center border ${
+              {(totalDoseMg || doseNum > 0) ? (
+                <div className={`rounded-md p-2 text-center border ${
                   doseStatus === 'above' ? 'bg-red-50 border-red-200' :
                   doseStatus === 'below' ? 'bg-orange-50 border-orange-200' :
                   doseStatus === 'within' ? 'bg-emerald-50 border-emerald-200' :
-                  'bg-slate-50 border-slate-200'
+                  'bg-white border-slate-200'
                 }`}>
                   {totalDoseMg != null ? (
                     <>
-                      <div className={`text-[18px] font-bold leading-tight ${
+                      <div className={`text-[15px] font-bold leading-tight ${
                         doseStatus === 'above' ? 'text-red-700' :
                         doseStatus === 'below' ? 'text-orange-700' :
                         doseStatus === 'within' ? 'text-emerald-700' :
@@ -272,44 +279,34 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
                       }`}>
                         {totalDoseMg.toFixed(totalDoseMg < 1 ? 3 : totalDoseMg < 10 ? 2 : 1)} mg
                       </div>
-                      <div className="text-[10px] text-slate-400 mt-0.5">Total dose</div>
+                      <div className="text-[9px] text-slate-400">Total dose</div>
                       {tabletsNeeded && (
-                        <>
-                          <div className="text-[13px] font-semibold text-slate-700 mt-1.5">{tabletsNeeded} tabs</div>
-                          <div className="text-[10px] text-slate-400">× {selectedStrength.value} {selectedStrength.unit}</div>
-                        </>
+                        <div className="text-[11px] font-semibold text-slate-600 mt-0.5">
+                          {tabletsNeeded} tabs × {selectedStrength.value} {selectedStrength.unit}
+                        </div>
                       )}
                     </>
                   ) : (
-                    <div className="text-[11px] text-slate-400">Enter weight to calculate</div>
+                    <div className="text-[10px] text-slate-400">Enter weight to calculate</div>
                   )}
                 </div>
+              ) : null}
+
+              {doseStatus === 'above' && range && (
+                <p className="text-[10px] text-red-600 font-medium flex items-center gap-1">
+                  <AlertTriangle size={10} /> Above {range[0]}–{range[1]} mg/kg
+                </p>
+              )}
+              {doseStatus === 'below' && range && (
+                <p className="text-[10px] text-orange-600 font-medium flex items-center gap-1">
+                  <AlertTriangle size={10} /> Below {range[0]}–{range[1]} mg/kg
+                </p>
+              )}
+              {range && !doseStatus && (
+                <p className="text-[10px] text-slate-400">Recommended: {range[0]}–{range[1]} mg/kg</p>
               )}
             </div>
           </div>
-
-          {/* Frequency + Duration */}
-          <div className="grid grid-cols-2 gap-2">
-            <div>
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Frequency</label>
-              <select value={freq} onChange={e => setFreq(e.target.value)}
-                className="w-full px-2.5 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
-                {FREQ_OPTIONS.map(f => <option key={f}>{f}</option>)}
-              </select>
-            </div>
-            <div>
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Duration (days)</label>
-              <input
-                type="number"
-                value={duration}
-                onChange={e => setDuration(parseInt(e.target.value) || 1)}
-                min={1}
-                max={365}
-                className="w-full px-2.5 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700"
-              />
-            </div>
-          </div>
-
         </div>
       )}
     </div>
@@ -339,6 +336,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   const [showDropdown, setShowDropdown] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [filters, setFilters] = useState({ class: null, source: null, form: null, hasReversal: false });
+  const [collapseSignal, setCollapseSignal] = useState(0);
   const debounceRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -423,6 +421,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   const handleAddDrug = (drug) => {
     if (selectedIds.has(drug.id)) return;
     onAddDrug(drug);
+    setCollapseSignal(v => v + 1);
     setQuery(''); setResults([]); setShowDropdown(false);
     inputRef.current?.focus();
   };
@@ -430,7 +429,10 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   const handleAddUnknown = () => {
     if (!query.trim()) return;
     const unknown = createUnknownDrug(query.trim());
-    if (!selectedIds.has(unknown.id)) onAddDrug(unknown);
+    if (!selectedIds.has(unknown.id)) {
+      onAddDrug(unknown);
+      setCollapseSignal(v => v + 1);
+    }
     setQuery(''); setResults([]); setShowDropdown(false);
   };
 
@@ -642,6 +644,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
               weight={weight}
               onRemove={onRemoveDrug}
               onUpdateDrug={onUpdateDrug}
+              collapseSignal={collapseSignal}
             />
           ))}
         </div>
