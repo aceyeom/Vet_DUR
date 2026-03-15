@@ -5,7 +5,7 @@
  * Callers receive null / empty arrays when the backend is unreachable.
  *
  * Environment variable:
- *   VITE_API_URL  (default: http://localhost:8000)
+ *   VITE_API_URL  (default: https://nuvovet-systems.onrender.com)
  */
 
 const BASE_URL = import.meta.env.VITE_API_URL || 'https://nuvovet-systems.onrender.com';
