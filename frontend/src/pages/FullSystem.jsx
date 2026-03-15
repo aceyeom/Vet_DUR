@@ -324,7 +324,7 @@ function LoadPatientModal({ onClose, onSelect }) {
             <select value={filterSpecies} onChange={e => setFilterSpecies(e.target.value)}
               className="text-xs border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-600 focus:outline-none">
               <option value="">All species</option>
-              {['dog','cat','rabbit','hamster','guinea pig','ferret','bird','turtle/tortoise','other'].map(s => (
+              {['dog','cat'].map(s => (
                 <option key={s} value={s}>{speciesLabel(s)}</option>
               ))}
             </select>
@@ -448,7 +448,7 @@ function PatientEditPanel({ patient, drugs, results, onUpdate }) {
       <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-sm space-y-0.5 divide-y divide-slate-100/80">
         <Field label="Name" value={patient.name} fieldKey="name" />
         <Field label="Species" value={patient.species} fieldKey="species"
-          options={['dog','cat','rabbit','hamster','guinea pig','ferret','bird','turtle/tortoise','other']} />
+          options={['dog','cat']} />
         {patient.breed && <Field label="Breed" value={patient.breed} fieldKey="breed" />}
         <Field label="Weight" value={patient.weight ? `${patient.weight} kg` : ''} fieldKey="weight" type="number" />
         {patient.sex && <Field label="Sex" value={patient.sex} fieldKey="sex" options={['Male intact','Male neutered','Female intact','Female spayed','Unknown']} />}
@@ -499,9 +499,6 @@ function PatientEditPanel({ patient, drugs, results, onUpdate }) {
         ))}
       </div>
 
-      <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
-        <OrganLoadIndicator drugs={drugs} patientInfo={patient} species={patient.species} />
-      </div>
     </div>
   );
 }
@@ -585,6 +582,11 @@ function DosageSummaryPanel({ results, drugs, species, patientInfo, onUpdateDrug
       {drugs.length === 0 && (
         <p className="text-[12px] text-slate-400 text-center py-4">No drugs selected</p>
       )}
+
+      {/* Cumulative Organ Load */}
+      <div className="bg-white border border-slate-200 rounded-xl p-3 shadow-sm">
+        <OrganLoadIndicator drugs={drugs} patientInfo={patientInfo} species={species} />
+      </div>
 
       {/* Dose alerts in center-column context */}
       {drugs.some(d => d.doseStatus === 'above' || d.doseStatus === 'below') && (
@@ -699,15 +701,8 @@ export default function FullSystem() {
   const isIntactFemale = sex === 'Intact Female' || sex === 'Female intact';
 
   const SPECIES_OPTIONS = [
-    { value: 'dog',            label: '개 / Canine' },
-    { value: 'cat',            label: '고양이 / Feline' },
-    { value: 'rabbit',         label: '토끼 / Rabbit' },
-    { value: 'hamster',        label: '햄스터 / Hamster' },
-    { value: 'guinea pig',     label: '기니피그 / Guinea Pig' },
-    { value: 'ferret',         label: '페릿 / Ferret' },
-    { value: 'bird',           label: '조류 / Bird' },
-    { value: 'turtle/tortoise',label: '거북이 / Turtle' },
-    { value: 'other',          label: '기타 / Other' },
+    { value: 'dog', label: '개 / Canine' },
+    { value: 'cat', label: '고양이 / Feline' },
   ];
 
   const SEX_OPTIONS = [
@@ -939,8 +934,8 @@ export default function FullSystem() {
           <div className="flex-1 overflow-hidden flex flex-col lg:flex-row">
 
             {/* ── LEFT PANEL: Patient Information ── */}
-            <div className="w-full lg:w-[400px] lg:shrink-0 lg:border-r border-b lg:border-b-0 border-slate-200 overflow-y-auto bg-white">
-              <div className="px-5 py-5 space-y-5">
+            <div className="w-full lg:w-[460px] lg:shrink-0 lg:border-r border-b lg:border-b-0 border-slate-200 overflow-y-auto bg-white">
+              <div className="px-7 py-6 space-y-5">
 
                 {/* Panel header */}
                 <div className="flex items-center justify-between">
@@ -1183,7 +1178,7 @@ export default function FullSystem() {
 
             {/* ── RIGHT PANEL: Drug Prescription ── */}
             <div className="flex-1 overflow-y-auto bg-slate-50/30">
-              <div className="px-5 py-5 space-y-5">
+              <div className="px-7 py-6 space-y-5">
 
                 <div>
                   <h2 className="text-sm font-semibold text-slate-900">{t.fullSystem.sectionDrugs}</h2>
@@ -1228,7 +1223,7 @@ export default function FullSystem() {
           <div className="flex-1 overflow-hidden flex flex-col lg:flex-row">
 
             {/* Left column — Editable Patient Summary */}
-            <div className="w-full lg:w-[270px] lg:shrink-0 overflow-y-auto border-b lg:border-b-0 lg:border-r border-slate-200 bg-white order-2 lg:order-1">
+            <div className="w-full lg:w-[300px] lg:shrink-0 overflow-y-auto border-b lg:border-b-0 lg:border-r border-slate-200 bg-white order-2 lg:order-1">
               <PatientEditPanel
                 patient={patientInfo}
                 drugs={drugs}
@@ -1253,7 +1248,7 @@ export default function FullSystem() {
             </div>
 
             {/* Right column — Dosage Summary & Organ Load */}
-            <div className="w-full lg:w-[260px] lg:shrink-0 overflow-y-auto border-t lg:border-t-0 lg:border-l border-slate-200 bg-white order-3">
+            <div className="w-full lg:w-[300px] lg:shrink-0 overflow-y-auto border-t lg:border-t-0 lg:border-l border-slate-200 bg-white order-3">
               <DosageSummaryPanel
                 results={results}
                 drugs={drugs}
