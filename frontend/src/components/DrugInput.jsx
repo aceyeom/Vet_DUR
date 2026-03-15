@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
   Search, X, AlertTriangle, Globe, FlaskConical, HelpCircle,
-  Pill, Ban, Loader2, ChevronDown, ChevronUp,
+  Pill, Ban, Loader2, ChevronDown, ChevronUp, SlidersHorizontal,
 } from 'lucide-react';
 import { createUnknownDrug } from '../data/drugDatabase';
 import { useI18n } from '../i18n';
+import { listDrugsApi } from '../lib/api';
 
 // ── Species-Specific Toxicity Hardstops ─────────────────────────
 const SPECIES_HARDSTOPS = {
@@ -315,6 +316,20 @@ function DrugCard({ drug, species, weight, onRemove, onUpdateDrug }) {
   );
 }
 
+// ── Filter constants ─────────────────────────────────────────────
+const DRUG_CLASSES = [
+  'NSAID', 'Antibiotic', 'Corticosteroid', 'Sedative', 'Analgesic',
+  'Antiemetic', 'GI Protectant', 'Antiparasitic', 'Cardiac', 'Diuretic',
+  'Anticonvulsant', 'Antifungal', 'ACE Inhibitor', 'Immunosuppressant',
+  'Antidepressant', 'Bronchodilator', 'Thyroid', 'Hormone', 'Antineoplastic Agent',
+];
+const SOURCE_OPTIONS = [
+  { value: 'kr_vet',         label: 'KR Vet',    desc: 'Registered veterinary drug' },
+  { value: 'human_offlabel', label: 'Off-label',  desc: 'Human drug, off-label use' },
+  { value: 'foreign',        label: 'Imported',   desc: 'Foreign / imported drug' },
+];
+const FORM_OPTIONS = ['Tab', 'Inj', 'Cap', 'Susp', 'Drop', 'Oint', 'Topical', 'Ophthalmic'];
+
 // ── Main DrugInput Component ────────────────────────────────────
 export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, species = 'dog', weight = 0, searchFn }) {
   const { t } = useI18n();
@@ -322,25 +337,85 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [filters, setFilters] = useState({ class: null, source: null, form: null, hasReversal: false });
   const debounceRef = useRef(null);
   const inputRef = useRef(null);
 
   const selectedIds = new Set(drugs.map((d) => d.id));
+  const activeFilterCount = [filters.class, filters.source, filters.form, filters.hasReversal].filter(Boolean).length;
+  const hasActiveFilters = activeFilterCount > 0;
+
+  // Apply client-side filters to a result array
+  const applyFilters = (items, f) => {
+    const cf = f || filters;
+    let out = items || [];
+    if (cf.class)       out = out.filter(d => d.class === cf.class);
+    if (cf.source)      out = out.filter(d => d.source === cf.source);
+    if (cf.form)        out = out.filter(d => Array.isArray(d.dosageForms) && d.dosageForms.includes(cf.form));
+    if (cf.hasReversal) out = out.filter(d => d.hasReversal);
+    return out;
+  };
+
+  const doSearch = useCallback(async (q, cf) => {
+    const hasFilters = cf && [cf.class, cf.source, cf.form, cf.hasReversal].some(Boolean);
+    if (!q.trim() && !hasFilters) {
+      setResults([]); setShowDropdown(false); setLoading(false); return;
+    }
+    setLoading(true);
+    try {
+      let raw;
+      if (q.trim()) {
+        raw = await searchFn(q.trim(), species, 30);
+        raw = raw || [];
+      } else {
+        // browse mode — no text query, use list endpoint with class/source
+        const data = await listDrugsApi({
+          drugClass: cf?.class || undefined,
+          source: cf?.source || undefined,
+          limit: 50,
+        });
+        raw = data?.results || [];
+      }
+      setResults(applyFilters(raw, cf));
+      setShowDropdown(true);
+    } catch {
+      setResults([]);
+    } finally {
+      setLoading(false);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchFn, species]);
+
+  const scheduleSearch = (q, cf) => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => doSearch(q, cf), 280);
+  };
 
   const handleQueryChange = useCallback((e) => {
     const val = e.target.value;
     setQuery(val);
-    if (debounceRef.current) clearTimeout(debounceRef.current);
-    if (!val.trim()) { setResults([]); setShowDropdown(false); setLoading(false); return; }
-    setLoading(true);
-    debounceRef.current = setTimeout(async () => {
-      try {
-        const res = await searchFn(val, species, 20);
-        if (res) { setResults(res); setShowDropdown(true); }
-      } catch { setResults([]); }
-      finally { setLoading(false); }
-    }, 300);
-  }, [searchFn, species]);
+    scheduleSearch(val, filters);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters, doSearch]);
+
+  const handleFilterToggle = (key, val) => {
+    const newF = { ...filters, [key]: filters[key] === val ? null : val };
+    setFilters(newF);
+    scheduleSearch(query, newF);
+  };
+
+  const toggleReversal = () => {
+    const newF = { ...filters, hasReversal: !filters.hasReversal };
+    setFilters(newF);
+    scheduleSearch(query, newF);
+  };
+
+  const clearFilters = () => {
+    const newF = { class: null, source: null, form: null, hasReversal: false };
+    setFilters(newF);
+    scheduleSearch(query, newF);
+  };
 
   useEffect(() => () => { if (debounceRef.current) clearTimeout(debounceRef.current); }, []);
 
@@ -358,8 +433,10 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
     setQuery(''); setResults([]); setShowDropdown(false);
   };
 
+  const sourceLabel = (src) => SOURCE_OPTIONS.find(s => s.value === src)?.label || src;
+
   return (
-    <div className="space-y-3">
+    <div className="space-y-2.5">
       {/* Search input */}
       <div className="relative">
         <div className="relative">
@@ -369,7 +446,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
             type="text"
             value={query}
             onChange={handleQueryChange}
-            onFocus={() => { if (results.length > 0) setShowDropdown(true); }}
+            onFocus={() => { if (results.length > 0 || hasActiveFilters) setShowDropdown(true); }}
             onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
             placeholder={t.drugInput.searchPlaceholder}
             className="w-full pl-10 pr-4 py-3 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-300 bg-white placeholder:text-slate-300 transition-all"
@@ -382,7 +459,9 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
           <div className="absolute z-20 top-full left-0 right-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden max-h-72 overflow-y-auto">
             {results.length === 0 && !loading && (
               <div className="px-4 py-3 space-y-2">
-                <p className="text-[12px] text-slate-400">{t.drugInput.noMatchFound}</p>
+                <p className="text-[12px] text-slate-400">
+                  {hasActiveFilters ? 'No drugs match your current filters' : t.drugInput.noMatchFound}
+                </p>
                 {query.trim() && (
                   <button onMouseDown={(e) => { e.preventDefault(); handleAddUnknown(); }}
                     className="text-[12px] text-slate-600 font-medium hover:text-slate-900 transition-colors">
@@ -410,6 +489,9 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
                       <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                         {drug.class && <span className="text-[10px] font-medium text-slate-400">{drug.class}</span>}
                         {range && <span className="text-[10px] text-slate-400">{range[0]}–{range[1]} mg/kg</span>}
+                        {drug.hasReversal && (
+                          <span className="text-[10px] text-violet-600 font-medium">↩ Reversal</span>
+                        )}
                         {hardstop && (
                           <span className="flex items-center gap-1 text-[10px] text-red-600 font-medium">
                             <AlertTriangle size={10} /> Species contraindication
@@ -432,6 +514,158 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
         )}
       </div>
 
+      {/* ── Filter toggle bar ────────────────────────────────── */}
+      <div className="flex items-center gap-2 flex-wrap">
+        <button
+          onClick={() => setFilterOpen(v => !v)}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium rounded-lg border transition-all ${
+            filterOpen || hasActiveFilters
+              ? 'bg-slate-800 text-white border-slate-800'
+              : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300 hover:text-slate-700'
+          }`}
+        >
+          <SlidersHorizontal size={12} />
+          Filters
+          {activeFilterCount > 0 && (
+            <span className="ml-0.5 bg-white/25 text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none">
+              {activeFilterCount}
+            </span>
+          )}
+        </button>
+
+        {/* Active filter chips */}
+        {filters.class && (
+          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-blue-50 text-blue-700 border border-blue-200 rounded-full">
+            {filters.class}
+            <button onClick={() => handleFilterToggle('class', filters.class)} className="hover:opacity-70"><X size={10} /></button>
+          </span>
+        )}
+        {filters.source && (
+          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">
+            {sourceLabel(filters.source)}
+            <button onClick={() => handleFilterToggle('source', filters.source)} className="hover:opacity-70"><X size={10} /></button>
+          </span>
+        )}
+        {filters.form && (
+          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-violet-50 text-violet-700 border border-violet-200 rounded-full">
+            {filters.form}
+            <button onClick={() => handleFilterToggle('form', filters.form)} className="hover:opacity-70"><X size={10} /></button>
+          </span>
+        )}
+        {filters.hasReversal && (
+          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+            Has Reversal
+            <button onClick={toggleReversal} className="hover:opacity-70"><X size={10} /></button>
+          </span>
+        )}
+        {activeFilterCount > 1 && (
+          <button onClick={clearFilters} className="text-[11px] text-slate-400 hover:text-slate-600 transition-colors">
+            Clear all
+          </button>
+        )}
+      </div>
+
+      {/* ── Filter panel ─────────────────────────────────────── */}
+      {filterOpen && (
+        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-4">
+
+          {/* Drug Class */}
+          <div className="space-y-2">
+            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Drug Class</p>
+            <div className="flex flex-wrap gap-1.5">
+              {DRUG_CLASSES.map((cls) => (
+                <button key={cls}
+                  onClick={() => handleFilterToggle('class', cls)}
+                  className={`px-2.5 py-1 text-[11px] font-medium rounded-full border transition-all ${
+                    filters.class === cls
+                      ? 'bg-slate-800 text-white border-slate-800'
+                      : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-800'
+                  }`}
+                >
+                  {cls}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="border-t border-slate-100" />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            {/* Source */}
+            <div className="space-y-2">
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Source</p>
+              <div className="flex flex-col gap-1.5">
+                {SOURCE_OPTIONS.map((opt) => (
+                  <button key={opt.value}
+                    onClick={() => handleFilterToggle('source', opt.value)}
+                    className={`flex items-center gap-2 px-3 py-2 text-[12px] font-medium rounded-lg border transition-all text-left ${
+                      filters.source === opt.value
+                        ? 'bg-slate-800 text-white border-slate-800'
+                        : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                    }`}
+                  >
+                    <SourceIcon source={opt.value} />
+                    <span>{opt.label}</span>
+                    <span className={`text-[10px] ml-auto truncate ${
+                      filters.source === opt.value ? 'text-slate-400' : 'text-slate-400'
+                    }`}>{opt.desc}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Dosage Form + Special */}
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dosage Form</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {FORM_OPTIONS.map((form) => (
+                    <button key={form}
+                      onClick={() => handleFilterToggle('form', form)}
+                      className={`px-2.5 py-1 text-[11px] font-medium rounded-lg border transition-all ${
+                        filters.form === form
+                          ? 'bg-slate-800 text-white border-slate-800'
+                          : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                      }`}
+                    >
+                      {form}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Special</p>
+                <label className="flex items-center gap-2.5 cursor-pointer group">
+                  <input
+                    type="checkbox"
+                    checked={filters.hasReversal}
+                    onChange={toggleReversal}
+                    className="w-3.5 h-3.5 rounded border-slate-300 text-slate-800 focus:ring-slate-500"
+                  />
+                  <span className="text-[12px] text-slate-600 group-hover:text-slate-800 transition-colors">
+                    Has reversal agent
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          {hasActiveFilters && (
+            <div className="pt-1 border-t border-slate-100 flex justify-between items-center">
+              <span className="text-[11px] text-slate-400">
+                {activeFilterCount} filter{activeFilterCount > 1 ? 's' : ''} active
+                {!query.trim() && ' — browsing all matching drugs'}
+              </span>
+              <button onClick={clearFilters} className="text-[11px] text-slate-500 hover:text-red-500 transition-colors font-medium">
+                ✕ Clear all
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* Selected drug cards */}
       {drugs.length > 0 && (
         <div className="space-y-3">
@@ -448,7 +682,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
         </div>
       )}
 
-      {drugs.length === 0 && !query && (
+      {drugs.length === 0 && !query && !hasActiveFilters && (
         <p className="text-center text-[13px] text-slate-400 py-6">
           {t.fullSystem.addMoreDrugs || 'Search and add drugs to start your prescription'}
         </p>
