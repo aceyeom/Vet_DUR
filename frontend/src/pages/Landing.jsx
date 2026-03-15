@@ -489,128 +489,213 @@ export default function Landing() {
 
       <SectionDivider />
 
-      {/* ─── DUR Engine Features ────────────────────────────────── */}
-      <section className="bg-white">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
-        <RevealSection>
-          <div className="text-center mb-12">
-            <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">{t.landing.howItWorks}</p>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-              {t.landing.howItWorksTitle}
-            </h2>
-            <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-              {t.landing.howItWorksDesc}
-            </p>
-          </div>
-        </RevealSection>
+      {/* ─── Clinical-grade interaction screening ───────────────── */}
+      <section className="bg-white overflow-hidden">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-start">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <FeatureCard
-            icon={Dna}
-            title={t.landing.featureCYP}
-            description={t.landing.featureCYPDesc}
-            delay={0}
-          />
-          <FeatureCard
-            icon={ShieldCheck}
-            title={t.landing.featureDDI}
-            description={t.landing.featureDDIDesc}
-            delay={100}
-          />
-          <FeatureCard
-            icon={Layers}
-            title={t.landing.featureSpecies}
-            description={t.landing.featureSpeciesDesc}
-            delay={200}
-          />
-          <FeatureCard
-            icon={FlaskConical}
-            title={t.landing.featureOffLabel}
-            description={t.landing.featureOffLabelDesc}
-            iconColor="text-amber-600"
-            delay={300}
-          />
-          <FeatureCard
-            icon={Globe}
-            title={t.landing.featureForeign}
-            description={t.landing.featureForeignDesc}
-            iconColor="text-blue-600"
-            delay={400}
-          />
-          <FeatureCard
-            icon={AlertTriangle}
-            title={t.landing.featureUnknown}
-            description={t.landing.featureUnknownDesc}
-            iconColor="text-slate-500"
-            delay={500}
-          />
+            {/* Left: bold text + pipeline flow */}
+            <div>
+              <RevealSection>
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">
+                  Drug Resolution Pipeline
+                </p>
+                <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-5">
+                  Clinical-grade<br />
+                  <span className="text-slate-300">interaction</span><br />
+                  screening.
+                </h2>
+                <p className="text-sm text-slate-500 leading-relaxed mb-10 max-w-sm">
+                  Every drug input passes through a six-stage resolution pipeline — classifying it by origin, applying species-specific pharmacokinetics, then running pairwise interaction checks with dual-source evidence from Plumb's formulary and PMC literature.
+                </p>
+              </RevealSection>
+
+              {/* Vertical pipeline flow */}
+              <div className="relative pl-9">
+                {/* Vertical connector line */}
+                <div className="absolute left-3.5 top-3 bottom-3 w-px bg-gradient-to-b from-slate-200 via-slate-300 to-transparent" />
+
+                {[
+                  { label: 'Drug Substance Normalization', sub: 'Three-tier model: active ingredient → drug class → allergy class', accent: 'bg-slate-900 text-white', delay: 0 },
+                  { label: 'Six-Case Origin Classification', sub: 'KR Vet approved · Human off-label · Foreign · Unknown · Multi-drug · Species-specific', accent: 'bg-indigo-600 text-white', delay: 80 },
+                  { label: 'CYP Enzyme Profiling', sub: 'Substrate/inhibitor/inducer analysis across CYP3A4, CYP2D6, CYP1A2, CYP2C9', accent: 'bg-violet-600 text-white', delay: 160 },
+                  { label: 'Pairwise Interaction Matrix', sub: 'Every drug pair checked — DDI, QT stacking, bleeding, serotonin syndrome', accent: 'bg-slate-700 text-white', delay: 240 },
+                  { label: 'Species & Organ Adjustments', sub: 'Canine vs. feline PK parameters, renal/hepatic dose scaling, MDR1 breed flags', accent: 'bg-slate-600 text-white', delay: 320 },
+                  { label: 'Confidence-scored Result', sub: 'Severity classification with source citation and data-quality confidence score', accent: 'bg-emerald-600 text-white', delay: 400 },
+                ].map(({ label, sub, accent, delay }, i) => (
+                  <PipelineItem key={i} number={i + 1} label={label} sublabel={sub} delay={delay} />
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Substance resolution live demo */}
+            <RevealSection delay={200}>
+              <div className="space-y-3">
+                {/* Mini pipeline visual */}
+                <div className="bg-slate-950 rounded-2xl p-5 text-white overflow-hidden">
+                  <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">Substance Resolution — Live</p>
+
+                  {/* Input drug */}
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-2 h-2 bg-slate-500 rounded-full" />
+                    <div className="text-[11px] text-slate-400">Drug input</div>
+                  </div>
+                  <div className="bg-slate-800 rounded-lg px-3 py-2.5 mb-3 ml-5">
+                    <span className="text-sm font-semibold text-white">Metronidazole 250mg</span>
+                    <span className="ml-2 text-[10px] text-amber-400 font-medium">Human off-label</span>
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="ml-5 text-slate-600 text-xs mb-3">↓ Normalize</div>
+
+                  {/* Resolved */}
+                  <div className="grid grid-cols-3 gap-1.5 ml-5 mb-3">
+                    {[
+                      { label: 'Substance', val: 'Metronidazole', color: 'text-blue-300' },
+                      { label: 'Class', val: 'Nitroimidazole', color: 'text-violet-300' },
+                      { label: 'Allergy', val: 'Metronidazole', color: 'text-amber-300' },
+                    ].map(({ label, val, color }) => (
+                      <div key={label} className="bg-slate-800/60 rounded-md px-2 py-1.5">
+                        <div className="text-[9px] text-slate-500 uppercase tracking-wider">{label}</div>
+                        <div className={`text-[11px] font-semibold mt-0.5 ${color}`}>{val}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Arrow */}
+                  <div className="ml-5 text-slate-600 text-xs mb-3">↓ CYP check: CYP3A4 inhibitor</div>
+
+                  {/* Interaction found */}
+                  <div className="ml-5 bg-amber-900/50 border border-amber-600/40 rounded-lg px-3 py-2.5">
+                    <div className="text-[9px] font-bold text-amber-400 uppercase tracking-wider mb-1">Interaction detected</div>
+                    <div className="text-[11px] text-amber-200 font-medium">Metronidazole + Ketoconazole</div>
+                    <div className="text-[10px] text-amber-300/80 mt-0.5">CYP3A4 inhibition → Moderate</div>
+                  </div>
+                </div>
+
+                {/* Confidence scoring */}
+                <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Confidence Breakdown</p>
+                  {[
+                    { label: 'Substance match', pct: 95, color: 'bg-emerald-500' },
+                    { label: 'CYP profile coverage', pct: 88, color: 'bg-emerald-500' },
+                    { label: 'Species data (dog)', pct: 82, color: 'bg-amber-500' },
+                    { label: 'Literature source', pct: 74, color: 'bg-amber-500' },
+                  ].map(({ label, pct, color }) => (
+                    <div key={label} className="flex items-center gap-3 mb-2 last:mb-0">
+                      <span className="text-[11px] text-slate-500 w-36 shrink-0">{label}</span>
+                      <div className="flex-1 h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div className={`h-full rounded-full ${color}`} style={{ width: `${pct}%`, transition: 'width 1.2s ease-out' }} />
+                      </div>
+                      <span className="text-[11px] font-semibold text-slate-700 w-7 text-right">{pct}%</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Species adjustment callout */}
+                <div className="bg-violet-50 border border-violet-200 rounded-xl p-4">
+                  <div className="flex items-start gap-3">
+                    <Dna size={16} className="text-violet-600 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-[12px] font-semibold text-violet-900">Species-specific adjustment</p>
+                      <p className="text-[11px] text-violet-700 mt-0.5 leading-relaxed">
+                        Feline glucuronidation deficit → dose frequency halved. MDR1 breed flag applied for Collie/Sheltie.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </RevealSection>
+          </div>
         </div>
-      </div>
       </section>
 
       <SectionDivider />
 
-      {/* ─── Clinical Informatics — 5 Real Features ─────────────── */}
-      <section className="bg-gradient-to-b from-[#f5f7fb] via-indigo-50/30 to-[#f5f7fb]">
-      <div className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
-        <RevealSection>
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-slate-900 rounded-full text-xs text-white mb-4">
-              <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-              {t.landing.clinicalFeaturesLabel}
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mb-3">
-              {t.landing.clinicalFeaturesTitle}
-            </h2>
-            <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
-              {t.landing.clinicalFeaturesDesc}
-            </p>
-          </div>
-        </RevealSection>
+      {/* ─── Clinical Informatics ─────────────────────────────────── */}
+      <section className="bg-[#f5f7fb] overflow-hidden">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          <ClinicalFeatureCard
-            icon={ShieldCheck}
-            title={t.landing.featureDDI}
-            description={t.landing.featureDDIDesc}
-            demo={DDIDemo}
-            iconColor="text-red-600"
-            delay={0}
-          />
-          <ClinicalFeatureCard
-            icon={Activity}
-            title={t.landing.featureOrganLoad}
-            description={t.landing.featureOrganLoadDesc}
-            demo={OrganLoadDemo}
-            iconColor="text-red-500"
-            delay={100}
-          />
-          <ClinicalFeatureCard
-            icon={Layers}
-            title={t.landing.featureSpeciesBreed}
-            description={t.landing.featureSpeciesBreedDesc}
-            demo={SpeciesBreedDemo}
-            iconColor="text-violet-600"
-            delay={200}
-          />
-          <ClinicalFeatureCard
-            icon={Scale}
-            title={t.landing.featureDosing}
-            description={t.landing.featureDosingDesc}
-            demo={DosingDemo}
-            iconColor="text-blue-600"
-            delay={300}
-          />
-          <ClinicalFeatureCard
-            icon={RefreshCcw}
-            title={t.landing.featureWashout}
-            description={t.landing.featureWashoutDesc}
-            demo={WashoutDemo}
-            iconColor="text-amber-600"
-            delay={400}
-          />
+          {/* Billboard header — bold scale contrast */}
+          <RevealSection>
+            <div className="mb-12 lg:mb-16">
+              <p className="text-xs font-semibold text-indigo-500 uppercase tracking-widest mb-5">Clinical Informatics</p>
+              <div className="flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-8 mb-5">
+                <div className="text-[72px] sm:text-[100px] lg:text-[120px] font-black text-slate-900 leading-none tracking-tight select-none" aria-hidden>
+                  6
+                </div>
+                <div className="pb-2">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 leading-tight">
+                    independent engines.<br />
+                    <span className="text-slate-400">One complete prescription review.</span>
+                  </h2>
+                </div>
+              </div>
+              <p className="text-base text-slate-500 max-w-xl leading-relaxed">
+                Substance normalization, off-label drug handling, pairwise interaction checks across all drug types, real-time DUR scanning — running in parallel on every submission.
+              </p>
+            </div>
+          </RevealSection>
+
+          {/* Asymmetric feature layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
+
+            {/* Primary feature — DDI + live demo (spans 3 cols) */}
+            <div className="lg:col-span-3">
+              <ClinicalFeatureCard
+                icon={ShieldCheck}
+                title="Multi-drug interaction check"
+                description="Every drug pair evaluated for CYP enzyme conflicts, duplicate class contraindications, QT interval stacking, bleeding risk amplification, and serotonin syndrome — with a 3-tier severity classification and evidence-backed recommendation."
+                demo={DDIDemo}
+                iconColor="text-red-600"
+                delay={0}
+              />
+            </div>
+
+            {/* Secondary features stacked (spans 2 cols) */}
+            <div className="lg:col-span-2 flex flex-col gap-4">
+              <ClinicalFeatureCard
+                icon={Activity}
+                title="Cumulative organ load"
+                description="Hepatic and renal elimination burden summed across the full regimen. Escalates to critical when combined organ load exceeds safe thresholds."
+                demo={OrganLoadDemo}
+                iconColor="text-red-500"
+                delay={100}
+              />
+              <ClinicalFeatureCard
+                icon={Layers}
+                title="Species & breed safety"
+                description="Absolute contraindications fire before the scan. MDR1-sensitive breeds flagged per drug. Feline and canine PK parameters applied throughout."
+                demo={SpeciesBreedDemo}
+                iconColor="text-violet-600"
+                delay={200}
+              />
+            </div>
+
+            {/* Bottom row — two equal features */}
+            <div className="lg:col-span-2">
+              <ClinicalFeatureCard
+                icon={Scale}
+                title="Weight-adjusted dosing"
+                description="Recommended dose calculated from patient weight with renal/hepatic adjustment factors. Dose overrides flagged when outside evidence range."
+                demo={DosingDemo}
+                iconColor="text-blue-600"
+                delay={300}
+              />
+            </div>
+            <div className="lg:col-span-3">
+              <ClinicalFeatureCard
+                icon={RefreshCcw}
+                title="Washout & timing advisor"
+                description="Half-life-based washout calculations for serotonergic drugs and narrow-therapeutic-index agents. Warns when new drugs are started before washout window closes."
+                demo={WashoutDemo}
+                iconColor="text-amber-600"
+                delay={400}
+              />
+            </div>
+
+          </div>
         </div>
-      </div>
       </section>
 
       <SectionDivider />
