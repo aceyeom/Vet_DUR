@@ -565,7 +565,7 @@ function ResultsActionBar({ results, patientInfo, drugs, species, lang, t }) {
 }
 
 // ── Main Results Display ────────────────────────────────────────
-export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, isFullSystem = false, drugs = [], species = 'dog', onUpdatePatientRecord }) {
+export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, isFullSystem = false, drugs = [], species = 'dog', onUpdatePatientRecord, hideSidebar = false }) {
   const { t, lang } = useI18n();
   if (!results) return null;
 
@@ -616,16 +616,18 @@ export function ResultsDisplay({ results, onBack, onNewAnalysis, patientInfo, is
           </div>
         </div>
 
-        {/* Two-panel layout */}
-        <div className="flex flex-col lg:flex-row gap-5">
-          {/* Left sidebar — patient summary */}
+        {/* Layout: two-panel normally, or single-column when hideSidebar=true (three-col layout in FullSystem) */}
+        <div className={`flex gap-5 ${hideSidebar ? 'flex-col' : 'flex-col lg:flex-row'}`}>
+          {/* Left sidebar — patient summary (hidden when parent manages the layout) */}
+          {!hideSidebar && (
           <div className="w-full lg:w-72 xl:w-80 lg:shrink-0">
             <div className="lg:sticky lg:top-20">
               <PatientSummaryPanel results={results} patientInfo={patientInfo} drugs={drugs} species={species} />
             </div>
           </div>
+          )}
 
-          {/* Right main content */}
+          {/* Main content */}
           <div className="flex-1 min-w-0 space-y-5">
             {/* Prominent severity banner */}
             <SeverityBanner results={results} drugs={drugs} />

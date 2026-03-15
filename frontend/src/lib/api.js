@@ -10,11 +10,26 @@
 
 const BASE_URL = import.meta.env.VITE_API_URL || 'https://nuvovet-systems.onrender.com';
 
+// Module-level auth token — set by AuthContext on login/logout
+let _authToken = null;
+
+try {
+  _authToken = localStorage.getItem('nuvovet_token');
+} catch {
+  // localStorage unavailable (e.g. SSR or sandboxed context)
+}
+
+export function setAuthToken(token) {
+  _authToken = token;
+}
+
 async function apiFetch(path, options = {}) {
   const url = `${BASE_URL}${path}`;
+  const headers = { 'Content-Type': 'application/json' };
+  if (_authToken) headers['Authorization'] = `Bearer ${_authToken}`;
   try {
     const res = await fetch(url, {
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       ...options,
     });
     if (!res.ok) {

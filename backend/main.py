@@ -14,11 +14,13 @@ from typing import Optional, List, Dict, Any
 
 from fastapi import FastAPI, HTTPException, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
+from auth import router as auth_router, init_db
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("nuvovet")
 
 app = FastAPI(title="NuvoVet DUR API", version="1.0.0")
+app.include_router(auth_router)
 
 # ── CORS ──────────────────────────────────────────────────────────
 app.add_middleware(
@@ -391,6 +393,8 @@ def _map_drug(raw: dict) -> dict:
 
 @app.on_event("startup")
 async def startup_event():
+    logger.info("Initialising user database...")
+    init_db()
     logger.info("Loading drug database...")
     get_drug_db()
     logger.info("Drug database ready.")
