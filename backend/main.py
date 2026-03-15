@@ -7,11 +7,12 @@ Maps the JSONL schema to the frontend Drug contract consumed by durEngine.js.
 import os
 import json
 import re
+import base64
 import logging
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 
 logging.basicConfig(level=logging.INFO)
@@ -393,6 +394,11 @@ async def startup_event():
     logger.info("Loading drug database...")
     get_drug_db()
     logger.info("Drug database ready.")
+    if not _ANTHROPIC_API_KEY:
+        logger.warning(
+            "ANTHROPIC_API_KEY is not set — the /api/ocr/extract-patient endpoint will return 503. "
+            "Set ANTHROPIC_API_KEY in your environment to enable EMR screenshot import."
+        )
 
 
 # ── Endpoints ─────────────────────────────────────────────────────
@@ -495,6 +501,203 @@ def list_drugs(
             logger.warning(f"Skipping {raw.get('id')}: {e}")
 
     return {"results": results, "total": total, "offset": offset, "limit": limit}
+
+
+@app.get("/api/breeds")
+def list_breeds(
+    species: Optional[str] = Query(default=None, description="Filter by species: dog | cat"),
+):
+    """
+    Return all breeds found in genetic_sensitivity.affected_breeds across the drug database,
+    deduplicated and sorted alphabetically.  Each entry includes an mdr1 flag if the breed
+    appears in a drug where mdr1_sensitive is true.
+    """
+    db = get_drug_db()
+    breed_mdr1: Dict[str, bool] = {}
+
+    for raw in db.values():
+        genetic = raw.get("genetic_sensitivity") or {}
+        sp_flags = raw.get("species_flags") or {}
+        is_mdr1 = bool(sp_flags.get("mdr1_sensitive"))
+        affected = genetic.get("affected_breeds") or []
+
+        # Species filter: skip if this drug only applies to the other species
+        if species:
+            dosage = raw.get("dosage_and_kinetics") or {}
+            has_species = bool(dosage.get(species))
+            if not has_species:
+                pass  # Still include breeds since breed list is species-agnostic
+
+        for breed in affected:
+            if not isinstance(breed, str) or not breed.strip():
+                continue
+            breed = breed.strip()
+            if breed not in breed_mdr1:
+                breed_mdr1[breed] = False
+            if is_mdr1:
+                breed_mdr1[breed] = True
+
+    results = sorted(
+        [{"breed": b, "mdr1": m} for b, m in breed_mdr1.items()],
+        key=lambda x: x["breed"].lower(),
+    )
+    return {"breeds": results, "total": len(results)}
+
+
+@app.get("/api/conditions")
+def list_conditions():
+    """
+    Return all unique match_terms from contraindications[] across the drug database.
+    These are the exact strings the DUR engine matches against patient conditions.
+    """
+    db = get_drug_db()
+    terms: set[str] = set()
+
+    for raw in db.values():
+        contras = raw.get("contraindications") or []
+        for c in contras:
+            if not isinstance(c, dict):
+                continue
+            for term in (c.get("match_terms") or []):
+                if isinstance(term, str) and term.strip():
+                    terms.add(term.strip())
+
+    sorted_terms = sorted(terms, key=str.lower)
+    return {"conditions": sorted_terms, "total": len(sorted_terms)}
+
+
+@app.get("/api/allergies")
+def list_allergies():
+    """
+    Return all unique allergy_class values from drug_identity across the drug database.
+    """
+    db = get_drug_db()
+    classes: set[str] = set()
+
+    for raw in db.values():
+        identity = raw.get("drug_identity") or {}
+        allergy_class = identity.get("allergy_class")
+        if isinstance(allergy_class, str) and allergy_class.strip():
+            classes.add(allergy_class.strip())
+
+    sorted_classes = sorted(classes, key=str.lower)
+    return {"allergies": sorted_classes, "total": len(sorted_classes)}
+
+
+# ── OCR Patient Extraction ────────────────────────────────────────
+
+_ANTHROPIC_API_KEY: Optional[str] = os.environ.get("ANTHROPIC_API_KEY")
+
+_OCR_EXTRACTION_PROMPT = """You are extracting structured patient data from a veterinary EMR screenshot. Return a JSON object with exactly these fields and no others. If a field cannot be found in the image, return null for that field. Do not guess or infer values that are not visible in the image.
+
+{
+  "patient_name": "string | null",
+  "species": "dog | cat | null",
+  "breed": "string | null",
+  "weight_kg": "float | null",
+  "sex": "string | null",
+  "age_years": "float | null",
+  "conditions": ["string"] | [],
+  "allergies": ["string"] | [],
+  "current_drugs": ["string"] | [],
+  "creatinine_mg_dL": "float | null",
+  "alt_u_L": "float | null",
+  "owner_phone": "string | null"
+}
+
+Return only valid JSON. No explanation, no markdown, no commentary."""
+
+
+@app.post("/api/ocr/extract-patient")
+async def ocr_extract_patient(image: UploadFile = File(...)):
+    """
+    Accept a PNG/JPG/WEBP image, pass it to the Claude claude-haiku-4-5-20251001 vision model
+    for structured patient data extraction, and return the parsed JSON.
+    The image is not stored anywhere — processed and discarded immediately.
+    """
+    if not _ANTHROPIC_API_KEY:
+        raise HTTPException(
+            status_code=503,
+            detail="OCR feature unavailable: ANTHROPIC_API_KEY not configured on the server.",
+        )
+
+    # Validate file type
+    allowed_types = {"image/png", "image/jpeg", "image/webp"}
+    content_type = image.content_type or ""
+    if content_type not in allowed_types:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unsupported image type '{content_type}'. Use PNG, JPEG, or WEBP.",
+        )
+
+    # Read image bytes
+    image_bytes = await image.read()
+    if len(image_bytes) > 20 * 1024 * 1024:  # 20 MB limit
+        raise HTTPException(status_code=413, detail="Image too large. Maximum 20 MB.")
+
+    image_b64 = base64.standard_b64encode(image_bytes).decode("utf-8")
+
+    # Map content type to Anthropic media_type
+    media_type_map = {
+        "image/png": "image/png",
+        "image/jpeg": "image/jpeg",
+        "image/webp": "image/webp",
+    }
+    media_type = media_type_map.get(content_type, "image/jpeg")
+
+    try:
+        import anthropic as anthropic_sdk
+        client = anthropic_sdk.Anthropic(api_key=_ANTHROPIC_API_KEY)
+
+        message = client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1024,
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "image",
+                            "source": {
+                                "type": "base64",
+                                "media_type": media_type,
+                                "data": image_b64,
+                            },
+                        },
+                        {
+                            "type": "text",
+                            "text": _OCR_EXTRACTION_PROMPT,
+                        },
+                    ],
+                }
+            ],
+        )
+
+        raw_text = message.content[0].text.strip()
+
+        # Strip markdown code fences if present
+        if raw_text.startswith("```"):
+            lines = raw_text.split("\n")
+            raw_text = "\n".join(
+                l for l in lines
+                if not l.startswith("```")
+            ).strip()
+
+        extracted = json.loads(raw_text)
+        return {"ok": True, "data": extracted}
+
+    except json.JSONDecodeError as e:
+        logger.warning(f"OCR JSON parse error: {e}")
+        raise HTTPException(
+            status_code=422,
+            detail="Could not parse extracted data from image. Please fill in the form manually.",
+        )
+    except Exception as e:
+        logger.error(f"OCR extraction error: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Could not extract data from this screenshot. Please fill in the form manually.",
+        )
 
 
 if __name__ == "__main__":
