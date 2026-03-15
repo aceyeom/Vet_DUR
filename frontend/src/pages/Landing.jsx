@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import { SeverityBadge } from '../components/SeverityBadge';
 import { OrganLoadIndicator } from '../components/OrganLoadIndicator';
-import { NuvovetLogo, NuvovetWordmark } from '../components/NuvovetLogo';
+import { NuvovetLogo } from '../components/NuvovetLogo';
 import { MolecularBackground } from '../components/MolecularBackground';
 import { RequestAccessModal } from '../components/RequestAccessModal';
 import { useI18n, LangToggle } from '../i18n';
@@ -398,7 +398,9 @@ export default function Landing() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_3px_rgba(15,23,42,0.07),0_3px_10px_rgba(15,23,42,0.04)]">
         <div className="max-w-5xl mx-auto px-5 sm:px-8 h-[62px] flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <NuvovetWordmark />
+            <span className="text-[22px] font-black tracking-[-0.045em] text-slate-900 leading-none select-none">
+              buvonet
+            </span>
           </div>
           <div className="flex items-center gap-4">
             <LangToggle />
