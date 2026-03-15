@@ -2,20 +2,21 @@
 NuvoVet Authentication Module
 
 Handles user registration, login, and session management via JWT.
-Uses SQLite for persistent user storage and passlib[bcrypt] for password hashing.
+Uses a JSON file for persistent user storage and bcrypt for password hashing.
 """
 
 import os
-import sqlite3
+import json
+import threading
 import logging
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
 
+import bcrypt
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel
-from passlib.context import CryptContext
 from jose import JWTError, jwt
 
 logger = logging.getLogger("nuvovet.auth")
@@ -28,52 +29,42 @@ SECRET_KEY = os.environ.get(
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_DAYS = 7
 
-DB_PATH = Path(__file__).parent / "data" / "users.db"
-DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+USERS_PATH = Path(__file__).parent / "data" / "users.json"
+USERS_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-# ── Password hashing ──────────────────────────────────────────────
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Thread lock for safe concurrent file writes
+_lock = threading.Lock()
 
 # ── JWT bearer ────────────────────────────────────────────────────
 security = HTTPBearer(auto_error=False)
 
 
-# ── Database helpers ──────────────────────────────────────────────
+# ── JSON user store helpers ───────────────────────────────────────
 
-def _get_conn() -> sqlite3.Connection:
-    conn = sqlite3.connect(str(DB_PATH))
-    conn.row_factory = sqlite3.Row
-    return conn
+def _load_users() -> dict:
+    if not USERS_PATH.exists():
+        return {}
+    with open(USERS_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _save_users(users: dict) -> None:
+    with _lock:
+        with open(USERS_PATH, "w", encoding="utf-8") as f:
+            json.dump(users, f, indent=2)
 
 
 def init_db() -> None:
-    """Create the users table and seed the default admin account."""
-    conn = _get_conn()
-    try:
-        conn.execute("""
-            CREATE TABLE IF NOT EXISTS users (
-                id            INTEGER PRIMARY KEY AUTOINCREMENT,
-                username      TEXT    UNIQUE NOT NULL,
-                password_hash TEXT    NOT NULL,
-                created_at    TEXT    NOT NULL DEFAULT (datetime('now'))
-            )
-        """)
-        conn.commit()
-
-        # Seed admin/admin on first run
-        existing = conn.execute(
-            "SELECT id FROM users WHERE username = ?", ("admin",)
-        ).fetchone()
-        if not existing:
-            hashed = pwd_context.hash("admin")
-            conn.execute(
-                "INSERT INTO users (username, password_hash) VALUES (?, ?)",
-                ("admin", hashed),
-            )
-            conn.commit()
-            logger.info("Seeded default admin account (username: admin, password: admin)")
-    finally:
-        conn.close()
+    """Seed the default admin account if users.json doesn't exist yet."""
+    users = _load_users()
+    if "admin" not in users:
+        hashed = bcrypt.hashpw(b"admin", bcrypt.gensalt(12)).decode()
+        users["admin"] = {
+            "password_hash": hashed,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+        _save_users(users)
+        logger.info("Seeded default admin account (username: admin, password: admin)")
 
 
 # ── Pydantic models ───────────────────────────────────────────────
@@ -135,19 +126,14 @@ def login(req: LoginRequest):
     if not username or not req.password:
         raise HTTPException(status_code=400, detail="Username and password are required")
 
-    conn = _get_conn()
-    try:
-        user = conn.execute(
-            "SELECT * FROM users WHERE username = ?", (username,)
-        ).fetchone()
-    finally:
-        conn.close()
+    users = _load_users()
+    user = users.get(username)
 
-    if not user or not pwd_context.verify(req.password, user["password_hash"]):
+    if not user or not bcrypt.checkpw(req.password.encode(), user["password_hash"].encode()):
         raise HTTPException(status_code=401, detail="Invalid username or password")
 
-    token = create_access_token(user["username"])
-    return TokenResponse(access_token=token, username=user["username"])
+    token = create_access_token(username)
+    return TokenResponse(access_token=token, username=username)
 
 
 @router.post("/signup", response_model=TokenResponse)
@@ -160,20 +146,16 @@ def signup(req: SignupRequest):
     if not req.password or len(req.password) < 6:
         raise HTTPException(status_code=400, detail="Password must be at least 6 characters")
 
-    password_hash = pwd_context.hash(req.password)
+    users = _load_users()
+    if username in users:
+        raise HTTPException(status_code=409, detail="Username already exists")
 
-    conn = _get_conn()
-    try:
-        try:
-            conn.execute(
-                "INSERT INTO users (username, password_hash) VALUES (?, ?)",
-                (username, password_hash),
-            )
-            conn.commit()
-        except sqlite3.IntegrityError:
-            raise HTTPException(status_code=409, detail="Username already exists")
-    finally:
-        conn.close()
+    password_hash = bcrypt.hashpw(req.password.encode(), bcrypt.gensalt(12)).decode()
+    users[username] = {
+        "password_hash": password_hash,
+        "created_at": datetime.now(timezone.utc).isoformat(),
+    }
+    _save_users(users)
 
     token = create_access_token(username)
     return TokenResponse(access_token=token, username=username)

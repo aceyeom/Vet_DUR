@@ -46,7 +46,7 @@ export const BREED_DATA = {
       breed: 'Golden Retriever',
       demonstrates: 'NSAID gastroprotection in chronic pain management',
       profile: {
-        name: 'donghyun',
+        name: 'Billy',
         age: '7y 4m',
         sex: 'Male Neutered',
         weight: 32.5,
@@ -73,7 +73,7 @@ export const BREED_DATA = {
       breed: 'Shetland Sheepdog',
       demonstrates: 'MDR1 mutation + renal compromise drug safety',
       profile: {
-        name: 'donghyun',
+        name: 'Max',
         age: '4y 2m',
         sex: 'Male Neutered',
         weight: 5.2,
@@ -100,7 +100,7 @@ export const BREED_DATA = {
       breed: 'French Bulldog',
       demonstrates: 'Corticosteroid + antifungal CYP3A4 interaction',
       profile: {
-        name: 'donghyun',
+        name: 'Luna',
         age: '3y 8m',
         sex: 'Female Spayed',
         weight: 11.8,
@@ -127,7 +127,7 @@ export const BREED_DATA = {
       breed: 'Dachshund',
       demonstrates: 'Serotonin syndrome risk in multimodal pain therapy',
       profile: {
-        name: 'donghyun',
+        name: 'Charlie',
         age: '9y 1m',
         sex: 'Male Intact',
         weight: 9.4,
@@ -156,7 +156,7 @@ export const BREED_DATA = {
       breed: 'Domestic Shorthair',
       demonstrates: 'Thyroid + renal drug management in senior cats',
       profile: {
-        name: 'donghyun',
+        name: 'Bella',
         age: '11y 6m',
         sex: 'Female Spayed',
         weight: 4.8,
@@ -183,7 +183,7 @@ export const BREED_DATA = {
       breed: 'Persian',
       demonstrates: 'Cardiac polypharmacy with electrolyte risk',
       profile: {
-        name: 'donghyun',
+        name: 'Luna',
         age: '6y 0m',
         sex: 'Female Spayed',
         weight: 3.9,

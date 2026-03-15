@@ -399,7 +399,7 @@ export default function Landing() {
         <div className="max-w-5xl mx-auto px-5 sm:px-8 h-[62px] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <span className="text-[22px] font-black tracking-[-0.045em] text-slate-900 leading-none select-none">
-              buvonet
+              nuvovet
             </span>
           </div>
           <div className="flex items-center gap-4">
