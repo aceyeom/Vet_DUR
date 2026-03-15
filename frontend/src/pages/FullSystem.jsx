@@ -603,6 +603,97 @@ function DosageSummaryPanel({ results, drugs, species, patientInfo, onUpdateDrug
   );
 }
 
+// ── Existing Patient inline browser ────────────────────────────────
+function ExistingPatientPanel({ onSelect }) {
+  const [query, setQuery] = useState('');
+  const [sortBy, setSortBy] = useState('last_visit');
+  const [filterSpecies, setFilterSpecies] = useState('');
+  const [patients, setPatients] = useState([]);
+
+  useEffect(() => {
+    let all = getAllPatients();
+    if (filterSpecies) all = all.filter(p => p.species === filterSpecies);
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      all = all.filter(p =>
+        p.name?.toLowerCase().includes(q) ||
+        (p.owner_phone || '').toLowerCase().includes(q) ||
+        (p.id || '').toLowerCase().includes(q)
+      );
+    }
+    setPatients(sortPatients(all, sortBy));
+  }, [query, sortBy, filterSpecies]);
+
+  return (
+    <div className="space-y-4">
+      <div>
+        <h2 className="text-sm font-semibold text-slate-900">Load Existing Patient</h2>
+        <p className="text-[12px] text-slate-400 mt-0.5">Select a patient to pre-fill the form</p>
+      </div>
+
+      <div className="relative">
+        <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+        <input
+          type="text"
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+          placeholder="Search by name, owner, ID..."
+          autoFocus
+          className="w-full pl-9 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+        />
+      </div>
+
+      <div className="flex items-center gap-2">
+        <select value={filterSpecies} onChange={e => setFilterSpecies(e.target.value)}
+          className="text-xs border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-600 focus:outline-none">
+          <option value="">All species</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+        </select>
+        <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+          className="text-xs border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-600 focus:outline-none">
+          <option value="last_visit">Recent visit</option>
+          <option value="name">Name A–Z</option>
+          <option value="species">Species</option>
+        </select>
+        <span className="text-[11px] text-slate-400 ml-auto">
+          {patients.length} patient{patients.length !== 1 ? 's' : ''}
+        </span>
+      </div>
+
+      <div className="space-y-2">
+        {patients.length === 0 ? (
+          <div className="py-12 text-center text-sm text-slate-400 bg-slate-50 rounded-xl border border-slate-100">
+            {query || filterSpecies ? 'No patients match your search' : 'No saved patients yet'}
+          </div>
+        ) : (
+          patients.map((p) => {
+            const lastDate = p.visit_history?.[0]?.date || p.updated_at;
+            return (
+              <button key={p.id} onClick={() => onSelect(p)}
+                className="w-full text-left px-4 py-3 bg-white border border-slate-200 rounded-xl hover:border-slate-400 hover:shadow-sm transition-all flex items-center gap-3 group">
+                <div className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-lg">
+                  {p.species === 'dog' ? '🐕' : '🐈'}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-slate-900 group-hover:text-slate-700">{p.name}</p>
+                  <p className="text-[11px] text-slate-400 mt-0.5 capitalize">
+                    {p.species}{p.breed ? ` · ${p.breed}` : ''}{p.weight_kg ? ` · ${p.weight_kg} kg` : ''}
+                  </p>
+                </div>
+                <div className="text-right shrink-0 flex flex-col items-end gap-0.5">
+                  {lastDate && <p className="text-[11px] text-slate-400">{lastDate.split('T')[0]}</p>}
+                  <ChevronRight size={14} className="text-slate-300 group-hover:text-slate-500 transition-colors" />
+                </div>
+              </button>
+            );
+          })
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ── Full System Main ──────────────────────────────────────────────
 export default function FullSystem() {
   const navigate = useNavigate();
@@ -639,6 +730,7 @@ export default function FullSystem() {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [importBanner, setImportBanner] = useState(false);
   const [importedFields, setImportedFields] = useState(new Set());
+  const [patientTab, setPatientTab] = useState('new'); // 'new' | 'existing'
 
   // ── Flow state ─────────────────────────────────────────────────
   const [step, setStep] = useState('input');
@@ -934,246 +1026,276 @@ export default function FullSystem() {
           <div className="flex-1 overflow-hidden flex flex-col lg:flex-row">
 
             {/* ── LEFT PANEL: Patient Information ── */}
-            <div className="w-full lg:w-[460px] lg:shrink-0 lg:border-r border-b lg:border-b-0 border-slate-200 overflow-y-auto bg-white">
-              <div className="px-7 py-6 space-y-5">
+            <div className="w-full lg:w-[460px] lg:shrink-0 lg:border-r border-b lg:border-b-0 border-slate-200 flex flex-col overflow-hidden bg-white">
 
-                {/* Panel header */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h2 className="text-sm font-semibold text-slate-900">{t.fullSystem.sectionPatient}</h2>
-                    <p className="text-[12px] text-slate-400 mt-0.5">Patient information</p>
-                  </div>
-                  <button
-                    onClick={() => setShowPatientModal(true)}
-                    className="flex items-center gap-1.5 px-3 py-2 text-[12px] font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-lg hover:bg-slate-100 hover:border-slate-300 transition-all"
-                  >
-                    <Users size={13} />
-                    Load Patient
-                  </button>
-                </div>
-
-                {/* EMR Import */}
+              {/* Tab bar */}
+              <div className="shrink-0 border-b border-slate-200 flex items-stretch bg-white">
+                <button
+                  onClick={() => setPatientTab('new')}
+                  className={`relative flex items-center gap-2 px-5 py-3.5 text-[13px] font-medium transition-colors border-b-2 -mb-px ${
+                    patientTab === 'new'
+                      ? 'text-slate-900 border-slate-900'
+                      : 'text-slate-400 border-transparent hover:text-slate-600 hover:border-slate-300'
+                  }`}
+                >
+                  <UserPlus size={13} />
+                  New Patient
+                </button>
+                <button
+                  onClick={() => setPatientTab('existing')}
+                  className={`relative flex items-center gap-2 px-5 py-3.5 text-[13px] font-medium transition-colors border-b-2 -mb-px ${
+                    patientTab === 'existing'
+                      ? 'text-slate-900 border-slate-900'
+                      : 'text-slate-400 border-transparent hover:text-slate-600 hover:border-slate-300'
+                  }`}
+                >
+                  <Users size={13} />
+                  Existing Patient
+                </button>
+                <div className="flex-1" />
                 <button
                   onClick={() => setShowEMRModal(true)}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-slate-700 border-2 border-dashed border-slate-200 rounded-xl hover:border-slate-300 hover:bg-slate-50 transition-all bg-white"
+                  className="flex items-center gap-1.5 px-4 text-[12px] font-medium text-slate-400 hover:text-slate-700 hover:bg-slate-50 transition-colors border-b-2 border-transparent -mb-px"
                 >
-                  <Camera size={15} className="text-slate-400" />
-                  {t.fullSystem.importFromEMR}
+                  <Camera size={13} />
+                  EMR
                 </button>
-
-                {importBanner && (
-                  <div className="flex items-start gap-3 px-4 py-3 bg-indigo-50 border border-indigo-200 rounded-xl">
-                    <AlertCircle size={15} className="text-indigo-500 shrink-0 mt-0.5" />
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-indigo-800">{t.fullSystem.importBannerTitle}</p>
-                      <p className="text-[12px] text-indigo-600 mt-0.5">{t.fullSystem.importBannerDesc}</p>
-                    </div>
-                    <button onClick={() => setImportBanner(false)} className="text-indigo-400 hover:text-indigo-600"><X size={14} /></button>
-                  </div>
-                )}
-
-                {/* ── IDENTIFICATION ── */}
-                <div className="space-y-3">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Identification</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">Patient Name</label>
-                      <input type="text" value={patientName} onChange={e => setPatientName(e.target.value)}
-                        placeholder="e.g. 뽀삐"
-                        className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all ${fieldHighlight('name')}`} />
-                    </div>
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">Patient ID</label>
-                      <input type="text" value={patientId || ''} onChange={e => setPatientId(e.target.value)}
-                        placeholder="Auto-generated"
-                        className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all" />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">Owner Name</label>
-                      <input type="text" value={ownerName} onChange={e => setOwnerName(e.target.value)}
-                        placeholder="Owner name"
-                        className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all" />
-                    </div>
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">Owner Contact</label>
-                      <input type="text" value={ownerContact} onChange={e => setOwnerContact(e.target.value)}
-                        placeholder="010-0000-0000"
-                        className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all ${fieldHighlight('phone')}`} />
-                    </div>
-                  </div>
-                </div>
-
-                {/* ── SIGNALMENT ── */}
-                <div className="space-y-3">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Signalment</p>
-
-                  {/* Species */}
-                  <div className="space-y-1.5">
-                    <label className="block text-[11px] font-semibold text-slate-500">Species</label>
-                    <div className="grid grid-cols-2 gap-2">
-                      {SPECIES_OPTIONS.map((sp) => (
-                        <button key={sp.value} onClick={() => setSpecies(sp.value)}
-                          className={`py-2.5 px-3 rounded-lg border-2 font-medium text-[12px] transition-all text-left ${
-                            species === sp.value
-                              ? 'border-slate-800 bg-slate-800 text-white shadow-sm'
-                              : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50'
-                          } ${fieldHighlight('species')}`}>
-                          {sp.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Breed (conditional) */}
-                  {species && (
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">Breed</label>
-                      <div className={fieldHighlight('breed') || ''}>
-                        <BreedInput value={breed} onChange={setBreed} species={species} />
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Sex */}
-                  <div className="space-y-1.5">
-                    <label className="block text-[11px] font-semibold text-slate-500">Sex</label>
-                    <div className="grid grid-cols-2 gap-2">
-                      {SEX_OPTIONS.map((opt) => (
-                        <button key={opt.value} onClick={() => setSex(sex === opt.value ? 'Unknown' : opt.value)}
-                          className={`px-3 py-2 text-[12px] rounded-lg border transition-all ${
-                            sex === opt.value ? 'bg-slate-800 text-white border-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
-                          } ${fieldHighlight('sex')}`}>
-                          {opt.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Reproductive status — only for intact females */}
-                  {isIntactFemale && (
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">Reproductive Status</label>
-                      <div className="grid grid-cols-3 gap-2">
-                        {['None','Pregnant','Lactating'].map(s => (
-                          <button key={s} onClick={() => setReproductiveStatus(s)}
-                            className={`py-2 px-2 text-[11px] rounded-lg border transition-all font-medium ${
-                              reproductiveStatus === s ? 'bg-violet-800 text-white border-violet-800' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
-                            }`}>
-                            {s}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Age */}
-                  <div className="space-y-1">
-                    <label className="block text-[11px] font-semibold text-slate-500">Age</label>
-                    <div className="flex gap-2">
-                      <DecimalInput value={ageNum} onChange={setAgeNum} placeholder="e.g. 3" min={0} max={30}
-                        className={`flex-1 px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('age')}`} />
-                      <select value={ageUnit} onChange={e => setAgeUnit(e.target.value)}
-                        className="px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none bg-white text-slate-600">
-                        <option value="years">yrs</option>
-                        <option value="months">mo</option>
-                        <option value="weeks">wks</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Weight */}
-                  <div className="space-y-1">
-                    <label className="block text-[11px] font-semibold text-slate-500">{t.fullSystem.weightLabel}</label>
-                    <div className="flex gap-2">
-                      <DecimalInput value={weight} onChange={setWeight} placeholder={t.fullSystem.weightPlaceholder} min={0.001} max={200}
-                        className={`flex-1 px-3 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('weight')}`} />
-                      <select value={weightUnit} onChange={e => setWeightUnit(e.target.value)}
-                        className="px-3 py-2.5 text-sm border border-slate-200 rounded-xl focus:outline-none bg-white text-slate-600">
-                        <option value="kg">kg</option>
-                        <option value="g">g</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                {/* ── CLINICAL ── */}
-                <div className="space-y-3">
-                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Clinical</p>
-
-                  <div className="space-y-1.5">
-                    <label className="block text-[11px] font-semibold text-slate-500">Known Conditions / Diseases</label>
-                    <TagInput items={conditions} onAdd={(c) => setConditions(p => [...p, c])} onRemove={(c) => setConditions(p => p.filter(x => x !== c))}
-                      placeholder="e.g. CKD, Diabetes..."
-                      chipClass="bg-red-50 text-red-700 border border-red-100"
-                      suggestions={conditionSuggestions} />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="block text-[11px] font-semibold text-slate-500">Known Allergies</label>
-                    <TagInput items={allergies} onAdd={(a) => setAllergies(p => [...p, a])} onRemove={(a) => setAllergies(p => p.filter(x => x !== a))}
-                      placeholder="e.g. Penicillin, NSAIDs..."
-                      chipClass="bg-amber-50 text-amber-700 border border-amber-100"
-                      suggestions={allergySuggestions} />
-                  </div>
-
-                  {/* Renal status */}
-                  <div className="space-y-1">
-                    <label className="block text-[11px] font-semibold text-slate-500">
-                      Renal Status
-                      <span className="ml-1 text-slate-300 font-normal text-[10px]">(default: Unknown)</span>
-                    </label>
-                    <select value={renalStatus} onChange={e => setRenalStatus(e.target.value)}
-                      className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
-                      {RENAL_OPTIONS.map(o => <option key={o}>{o}</option>)}
-                    </select>
-                  </div>
-
-                  {/* Hepatic status */}
-                  <div className="space-y-1">
-                    <label className="block text-[11px] font-semibold text-slate-500">
-                      Hepatic Status
-                      <span className="ml-1 text-slate-300 font-normal text-[10px]">(default: Unknown)</span>
-                    </label>
-                    <select value={hepaticStatus} onChange={e => setHeptaticStatus(e.target.value)}
-                      className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
-                      {HEPATIC_OPTIONS.map(o => <option key={o}>{o}</option>)}
-                    </select>
-                  </div>
-
-                  {/* Lab values */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">
-                        {t.fullSystem.creatinineLabel}
-                        <span className="ml-1 text-slate-300 font-normal">{t.fullSystem.creatinineUnit}</span>
-                      </label>
-                      <DecimalInput value={creatinine} onChange={setCreatinine} placeholder="e.g. 1.2" min={0}
-                        className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('creatinine')}`} />
-                      {creatinine && creatVal > 1.4 && <p className="text-[11px] text-amber-600 font-medium">{t.fullSystem.creatinineIrisHint}</p>}
-                    </div>
-                    <div className="space-y-1">
-                      <label className="block text-[11px] font-semibold text-slate-500">
-                        {t.fullSystem.altLabel}
-                        <span className="ml-1 text-slate-300 font-normal">{t.fullSystem.altUnit}</span>
-                      </label>
-                      <DecimalInput value={alt} onChange={setAlt} placeholder="e.g. 45" min={0}
-                        className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('alt')}`} />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Save profile checkbox */}
-                <label className="flex items-center gap-3 cursor-pointer group">
-                  <input type="checkbox" checked={saveProfileChecked} onChange={e => setSaveProfileChecked(e.target.checked)}
-                    className="w-4 h-4 rounded border-slate-300 text-slate-800 focus:ring-slate-500" />
-                  <span className="text-sm text-slate-600 group-hover:text-slate-800 transition-colors">
-                    {t.fullSystem.saveProfileLabel}
-                  </span>
-                </label>
-
               </div>
+
+              {/* ── NEW PATIENT form ── */}
+              {patientTab === 'new' && (
+                <div className="flex-1 overflow-y-auto">
+                  <div className="px-7 py-6 space-y-4">
+
+                    {importBanner && (
+                      <div className="flex items-start gap-3 px-4 py-3 bg-indigo-50 border border-indigo-200 rounded-xl">
+                        <AlertCircle size={15} className="text-indigo-500 shrink-0 mt-0.5" />
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-indigo-800">{t.fullSystem.importBannerTitle}</p>
+                          <p className="text-[12px] text-indigo-600 mt-0.5">{t.fullSystem.importBannerDesc}</p>
+                        </div>
+                        <button onClick={() => setImportBanner(false)} className="text-indigo-400 hover:text-indigo-600"><X size={14} /></button>
+                      </div>
+                    )}
+
+                    {/* ── IDENTIFICATION card ── */}
+                    <div className="rounded-xl border border-slate-200 overflow-hidden">
+                      <div className="px-4 py-2.5 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Identification</span>
+                        <span className="text-[10px] text-slate-300">Patient &amp; owner</span>
+                      </div>
+                      <div className="px-4 py-4 space-y-3 bg-white">
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">Patient Name</label>
+                            <input type="text" value={patientName} onChange={e => setPatientName(e.target.value)}
+                              placeholder="e.g. 뽀삐"
+                              className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all ${fieldHighlight('name')}`} />
+                          </div>
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">Patient ID</label>
+                            <input type="text" value={patientId || ''} onChange={e => setPatientId(e.target.value)}
+                              placeholder="Auto-generated"
+                              className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all" />
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">Owner Name</label>
+                            <input type="text" value={ownerName} onChange={e => setOwnerName(e.target.value)}
+                              placeholder="Owner name"
+                              className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all" />
+                          </div>
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">Owner Contact</label>
+                            <input type="text" value={ownerContact} onChange={e => setOwnerContact(e.target.value)}
+                              placeholder="010-0000-0000"
+                              className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 transition-all ${fieldHighlight('phone')}`} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* ── SIGNALMENT card (prominent) ── */}
+                    <div className="rounded-xl border-2 border-slate-800 overflow-hidden shadow-sm">
+                      <div className="px-4 py-3 bg-slate-800 flex items-center justify-between">
+                        <span className="text-[11px] font-bold text-white uppercase tracking-widest">Signalment</span>
+                        <span className="text-[10px] text-slate-400">Required for DUR analysis</span>
+                      </div>
+                      <div className="px-4 py-4 space-y-3.5 bg-white">
+
+                        {/* Species */}
+                        <div className="space-y-1.5">
+                          <label className="block text-[11px] font-semibold text-slate-600">Species</label>
+                          <div className="grid grid-cols-2 gap-2">
+                            {SPECIES_OPTIONS.map((sp) => (
+                              <button key={sp.value} onClick={() => setSpecies(sp.value)}
+                                className={`py-2.5 px-3 rounded-lg border-2 font-medium text-[12px] transition-all text-left ${
+                                  species === sp.value
+                                    ? 'border-slate-800 bg-slate-800 text-white shadow-sm'
+                                    : 'border-slate-200 bg-white text-slate-600 hover:border-slate-400 hover:bg-slate-50'
+                                } ${fieldHighlight('species')}`}>
+                                {sp.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Breed */}
+                        {species && (
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-600">Breed</label>
+                            <div className={fieldHighlight('breed') || ''}>
+                              <BreedInput value={breed} onChange={setBreed} species={species} />
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Sex */}
+                        <div className="space-y-1.5">
+                          <label className="block text-[11px] font-semibold text-slate-600">Sex</label>
+                          <div className="grid grid-cols-2 gap-2">
+                            {SEX_OPTIONS.map((opt) => (
+                              <button key={opt.value} onClick={() => setSex(sex === opt.value ? 'Unknown' : opt.value)}
+                                className={`px-3 py-2 text-[12px] rounded-lg border transition-all ${
+                                  sex === opt.value ? 'bg-slate-800 text-white border-slate-800' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400'
+                                } ${fieldHighlight('sex')}`}>
+                                {opt.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Reproductive status */}
+                        {isIntactFemale && (
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-600">Reproductive Status</label>
+                            <div className="grid grid-cols-3 gap-2">
+                              {['None','Pregnant','Lactating'].map(s => (
+                                <button key={s} onClick={() => setReproductiveStatus(s)}
+                                  className={`py-2 px-2 text-[11px] rounded-lg border transition-all font-medium ${
+                                    reproductiveStatus === s ? 'bg-violet-800 text-white border-violet-800' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                                  }`}>
+                                  {s}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Age + Weight side by side */}
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-600">Age</label>
+                            <div className="flex gap-1.5">
+                              <DecimalInput value={ageNum} onChange={setAgeNum} placeholder="e.g. 3" min={0} max={30}
+                                className={`flex-1 min-w-0 px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('age')}`} />
+                              <select value={ageUnit} onChange={e => setAgeUnit(e.target.value)}
+                                className="px-2 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none bg-white text-slate-600 shrink-0">
+                                <option value="years">yr</option>
+                                <option value="months">mo</option>
+                                <option value="weeks">wk</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-600">{t.fullSystem.weightLabel}</label>
+                            <div className="flex gap-1.5">
+                              <DecimalInput value={weight} onChange={setWeight} placeholder={t.fullSystem.weightPlaceholder} min={0.001} max={200}
+                                className={`flex-1 min-w-0 px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('weight')}`} />
+                              <select value={weightUnit} onChange={e => setWeightUnit(e.target.value)}
+                                className="px-2 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none bg-white text-slate-600 shrink-0">
+                                <option value="kg">kg</option>
+                                <option value="g">g</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    {/* ── CLINICAL card ── */}
+                    <div className="rounded-xl border border-slate-200 overflow-hidden">
+                      <div className="px-4 py-2.5 bg-slate-50/80 border-b border-slate-100 flex items-center justify-between">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Clinical</span>
+                        <span className="text-[10px] text-slate-300">Conditions, labs &amp; organ status</span>
+                      </div>
+                      <div className="px-4 py-4 space-y-3.5 bg-white">
+                        <div className="space-y-1.5">
+                          <label className="block text-[11px] font-semibold text-slate-500">Known Conditions / Diseases</label>
+                          <TagInput items={conditions} onAdd={(c) => setConditions(p => [...p, c])} onRemove={(c) => setConditions(p => p.filter(x => x !== c))}
+                            placeholder="e.g. CKD, Diabetes..."
+                            chipClass="bg-red-50 text-red-700 border border-red-100"
+                            suggestions={conditionSuggestions} />
+                        </div>
+                        <div className="space-y-1.5">
+                          <label className="block text-[11px] font-semibold text-slate-500">Known Allergies</label>
+                          <TagInput items={allergies} onAdd={(a) => setAllergies(p => [...p, a])} onRemove={(a) => setAllergies(p => p.filter(x => x !== a))}
+                            placeholder="e.g. Penicillin, NSAIDs..."
+                            chipClass="bg-amber-50 text-amber-700 border border-amber-100"
+                            suggestions={allergySuggestions} />
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">Renal Status</label>
+                            <select value={renalStatus} onChange={e => setRenalStatus(e.target.value)}
+                              className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
+                              {RENAL_OPTIONS.map(o => <option key={o}>{o}</option>)}
+                            </select>
+                          </div>
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">Hepatic Status</label>
+                            <select value={hepaticStatus} onChange={e => setHeptaticStatus(e.target.value)}
+                              className="w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white text-slate-700">
+                              {HEPATIC_OPTIONS.map(o => <option key={o}>{o}</option>)}
+                            </select>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">
+                              {t.fullSystem.creatinineLabel}
+                              <span className="ml-1 text-slate-300 font-normal">{t.fullSystem.creatinineUnit}</span>
+                            </label>
+                            <DecimalInput value={creatinine} onChange={setCreatinine} placeholder="e.g. 1.2" min={0}
+                              className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('creatinine')}`} />
+                            {creatinine && creatVal > 1.4 && <p className="text-[11px] text-amber-600 font-medium">{t.fullSystem.creatinineIrisHint}</p>}
+                          </div>
+                          <div className="space-y-1">
+                            <label className="block text-[11px] font-semibold text-slate-500">
+                              {t.fullSystem.altLabel}
+                              <span className="ml-1 text-slate-300 font-normal">{t.fullSystem.altUnit}</span>
+                            </label>
+                            <DecimalInput value={alt} onChange={setAlt} placeholder="e.g. 45" min={0}
+                              className={`w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-900/10 bg-white placeholder:text-slate-300 ${fieldHighlight('alt')}`} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Save profile checkbox */}
+                    <label className="flex items-center gap-3 cursor-pointer group px-1">
+                      <input type="checkbox" checked={saveProfileChecked} onChange={e => setSaveProfileChecked(e.target.checked)}
+                        className="w-4 h-4 rounded border-slate-300 text-slate-800 focus:ring-slate-500" />
+                      <span className="text-sm text-slate-600 group-hover:text-slate-800 transition-colors">
+                        {t.fullSystem.saveProfileLabel}
+                      </span>
+                    </label>
+
+                  </div>
+                </div>
+              )}
+
+              {/* ── EXISTING PATIENT inline browser ── */}
+              {patientTab === 'existing' && (
+                <div className="flex-1 overflow-y-auto px-7 py-6">
+                  <ExistingPatientPanel
+                    onSelect={(p) => { handleSelectPatient(p); setPatientTab('new'); }}
+                  />
+                </div>
+              )}
+
             </div>
 
             {/* ── RIGHT PANEL: Drug Prescription ── */}
