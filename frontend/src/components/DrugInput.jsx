@@ -395,6 +395,7 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
   const handleQueryChange = useCallback((e) => {
     const val = e.target.value;
     setQuery(val);
+    if (val.trim()) setFilterOpen(false); // hide filters when typing
     scheduleSearch(val, filters);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters, doSearch]);
@@ -437,25 +438,43 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
 
   return (
     <div className="space-y-2.5">
-      {/* Search input */}
+
+      {/* ── Search + filter unified ──────────────────────────── */}
       <div className="relative">
-        <div className="relative">
-          <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+        {/* Search bar with embedded filter button */}
+        <div className={`flex items-center border border-slate-200 bg-white transition-all focus-within:ring-2 focus-within:ring-slate-900/10 focus-within:border-slate-300 ${filterOpen ? 'rounded-t-xl' : 'rounded-xl'}`}>
+          <Search size={15} className="shrink-0 ml-3.5 text-slate-400 pointer-events-none" />
           <input
             ref={inputRef}
             type="text"
             value={query}
             onChange={handleQueryChange}
-            onFocus={() => { if (results.length > 0 || hasActiveFilters) setShowDropdown(true); }}
+            onFocus={() => { if (!filterOpen && (results.length > 0 || hasActiveFilters)) setShowDropdown(true); }}
             onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
             placeholder={t.drugInput.searchPlaceholder}
-            className="w-full pl-10 pr-4 py-3 text-sm border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-300 bg-white placeholder:text-slate-300 transition-all"
+            className="flex-1 px-3 py-2.5 text-sm bg-transparent focus:outline-none placeholder:text-slate-300"
           />
-          {loading && <Loader2 size={15} className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 animate-spin" />}
+          {loading && <Loader2 size={14} className="shrink-0 mr-2 text-slate-400 animate-spin" />}
+          <div className="w-px h-5 bg-slate-200 shrink-0" />
+          <button
+            onMouseDown={(e) => { e.preventDefault(); setFilterOpen(v => !v); setShowDropdown(false); }}
+            className={`flex items-center gap-1.5 px-3 py-2.5 text-[12px] font-medium transition-colors rounded-r-xl ${
+              filterOpen || hasActiveFilters
+                ? 'text-slate-900 bg-slate-50'
+                : 'text-slate-400 hover:text-slate-600 hover:bg-slate-50/80'
+            }`}
+          >
+            <SlidersHorizontal size={13} />
+            {activeFilterCount > 0 && (
+              <span className="w-4 h-4 rounded-full bg-slate-800 text-white text-[9px] font-bold flex items-center justify-center leading-none">
+                {activeFilterCount}
+              </span>
+            )}
+          </button>
         </div>
 
-        {/* Dropdown */}
-        {showDropdown && (
+        {/* Dropdown results */}
+        {showDropdown && !filterOpen && (
           <div className="absolute z-20 top-full left-0 right-0 mt-1 bg-white border border-slate-200 rounded-xl shadow-lg overflow-hidden max-h-72 overflow-y-auto">
             {results.length === 0 && !loading && (
               <div className="px-4 py-3 space-y-2">
@@ -512,159 +531,105 @@ export function DrugInput({ drugs, onAddDrug, onRemoveDrug, onUpdateDrug, specie
             )}
           </div>
         )}
-      </div>
 
-      {/* ── Filter toggle bar ────────────────────────────────── */}
-      <div className="flex items-center gap-2 flex-wrap">
-        <button
-          onClick={() => setFilterOpen(v => !v)}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium rounded-lg border transition-all ${
-            filterOpen || hasActiveFilters
-              ? 'bg-slate-800 text-white border-slate-800'
-              : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300 hover:text-slate-700'
-          }`}
-        >
-          <SlidersHorizontal size={12} />
-          Filters
-          {activeFilterCount > 0 && (
-            <span className="ml-0.5 bg-white/25 text-[10px] font-bold px-1.5 py-0.5 rounded-full leading-none">
-              {activeFilterCount}
-            </span>
-          )}
-        </button>
+        {/* ── Compact filter panel — attached below search bar ── */}
+        {filterOpen && (
+          <div className="border border-slate-200 border-t-0 rounded-b-xl bg-white overflow-hidden shadow-sm">
 
-        {/* Active filter chips */}
-        {filters.class && (
-          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-blue-50 text-blue-700 border border-blue-200 rounded-full">
-            {filters.class}
-            <button onClick={() => handleFilterToggle('class', filters.class)} className="hover:opacity-70"><X size={10} /></button>
-          </span>
-        )}
-        {filters.source && (
-          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">
-            {sourceLabel(filters.source)}
-            <button onClick={() => handleFilterToggle('source', filters.source)} className="hover:opacity-70"><X size={10} /></button>
-          </span>
-        )}
-        {filters.form && (
-          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-violet-50 text-violet-700 border border-violet-200 rounded-full">
-            {filters.form}
-            <button onClick={() => handleFilterToggle('form', filters.form)} className="hover:opacity-70"><X size={10} /></button>
-          </span>
-        )}
-        {filters.hasReversal && (
-          <span className="inline-flex items-center gap-1 px-2 py-1 text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
-            Has Reversal
-            <button onClick={toggleReversal} className="hover:opacity-70"><X size={10} /></button>
-          </span>
-        )}
-        {activeFilterCount > 1 && (
-          <button onClick={clearFilters} className="text-[11px] text-slate-400 hover:text-slate-600 transition-colors">
-            Clear all
-          </button>
-        )}
-      </div>
-
-      {/* ── Filter panel ─────────────────────────────────────── */}
-      {filterOpen && (
-        <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-4">
-
-          {/* Drug Class */}
-          <div className="space-y-2">
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Drug Class</p>
-            <div className="flex flex-wrap gap-1.5">
-              {DRUG_CLASSES.map((cls) => (
-                <button key={cls}
-                  onClick={() => handleFilterToggle('class', cls)}
-                  className={`px-2.5 py-1 text-[11px] font-medium rounded-full border transition-all ${
-                    filters.class === cls
-                      ? 'bg-slate-800 text-white border-slate-800'
-                      : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-800'
-                  }`}
-                >
-                  {cls}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="border-t border-slate-100" />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-            {/* Source */}
-            <div className="space-y-2">
-              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Source</p>
-              <div className="flex flex-col gap-1.5">
-                {SOURCE_OPTIONS.map((opt) => (
-                  <button key={opt.value}
-                    onClick={() => handleFilterToggle('source', opt.value)}
-                    className={`flex items-center gap-2 px-3 py-2 text-[12px] font-medium rounded-lg border transition-all text-left ${
-                      filters.source === opt.value
-                        ? 'bg-slate-800 text-white border-slate-800'
-                        : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
-                    }`}
-                  >
-                    <SourceIcon source={opt.value} />
-                    <span>{opt.label}</span>
-                    <span className={`text-[10px] ml-auto truncate ${
-                      filters.source === opt.value ? 'text-slate-400' : 'text-slate-400'
-                    }`}>{opt.desc}</span>
-                  </button>
-                ))}
+            {/* Active chips */}
+            {hasActiveFilters && (
+              <div className="flex items-center gap-1.5 flex-wrap px-3 py-2 bg-slate-50/60 border-b border-slate-100">
+                {filters.class && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-blue-50 text-blue-700 border border-blue-200 rounded-full">
+                    {filters.class}
+                    <button onClick={() => handleFilterToggle('class', filters.class)}><X size={9} /></button>
+                  </span>
+                )}
+                {filters.source && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">
+                    {sourceLabel(filters.source)}
+                    <button onClick={() => handleFilterToggle('source', filters.source)}><X size={9} /></button>
+                  </span>
+                )}
+                {filters.form && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-violet-50 text-violet-700 border border-violet-200 rounded-full">
+                    {filters.form}
+                    <button onClick={() => handleFilterToggle('form', filters.form)}><X size={9} /></button>
+                  </span>
+                )}
+                {filters.hasReversal && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-200 rounded-full">
+                    Has Reversal
+                    <button onClick={toggleReversal}><X size={9} /></button>
+                  </span>
+                )}
+                <button onClick={clearFilters} className="text-[10px] text-slate-400 hover:text-red-500 ml-auto transition-colors">Clear all</button>
               </div>
-            </div>
+            )}
 
-            {/* Dosage Form + Special */}
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Dosage Form</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {FORM_OPTIONS.map((form) => (
-                    <button key={form}
-                      onClick={() => handleFilterToggle('form', form)}
-                      className={`px-2.5 py-1 text-[11px] font-medium rounded-lg border transition-all ${
-                        filters.form === form
+            <div className="p-3 space-y-2.5">
+              {/* Drug Class */}
+              <div>
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Drug Class</p>
+                <div className="flex flex-wrap gap-1">
+                  {DRUG_CLASSES.map((cls) => (
+                    <button key={cls} onClick={() => handleFilterToggle('class', cls)}
+                      className={`px-2 py-0.5 text-[10px] font-medium rounded-full border transition-all ${
+                        filters.class === cls
                           ? 'bg-slate-800 text-white border-slate-800'
-                          : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
-                      }`}
-                    >
-                      {form}
-                    </button>
+                          : 'bg-white text-slate-500 border-slate-200 hover:border-slate-400 hover:text-slate-700'
+                      }`}>{cls}</button>
                   ))}
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Special</p>
-                <label className="flex items-center gap-2.5 cursor-pointer group">
-                  <input
-                    type="checkbox"
-                    checked={filters.hasReversal}
-                    onChange={toggleReversal}
-                    className="w-3.5 h-3.5 rounded border-slate-300 text-slate-800 focus:ring-slate-500"
-                  />
-                  <span className="text-[12px] text-slate-600 group-hover:text-slate-800 transition-colors">
-                    Has reversal agent
-                  </span>
-                </label>
+              <div className="border-t border-slate-100" />
+
+              <div className="grid grid-cols-2 gap-3">
+                {/* Source */}
+                <div>
+                  <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Source</p>
+                  <div className="flex flex-col gap-1">
+                    {SOURCE_OPTIONS.map((opt) => (
+                      <button key={opt.value} onClick={() => handleFilterToggle('source', opt.value)}
+                        className={`flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-medium rounded-lg border transition-all text-left ${
+                          filters.source === opt.value
+                            ? 'bg-slate-800 text-white border-slate-800'
+                            : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                        }`}>
+                        <SourceIcon source={opt.value} />
+                        <span>{opt.label}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Form + Reversal */}
+                <div className="space-y-2.5">
+                  <div>
+                    <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1.5">Form</p>
+                    <div className="flex flex-wrap gap-1">
+                      {FORM_OPTIONS.map((form) => (
+                        <button key={form} onClick={() => handleFilterToggle('form', form)}
+                          className={`px-2 py-0.5 text-[10px] font-medium rounded-lg border transition-all ${
+                            filters.form === form
+                              ? 'bg-slate-800 text-white border-slate-800'
+                              : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300'
+                          }`}>{form}</button>
+                      ))}
+                    </div>
+                  </div>
+                  <label className="flex items-center gap-2 cursor-pointer group">
+                    <input type="checkbox" checked={filters.hasReversal} onChange={toggleReversal}
+                      className="w-3 h-3 rounded border-slate-300 text-slate-800 focus:ring-slate-500" />
+                    <span className="text-[11px] text-slate-500 group-hover:text-slate-700">Has reversal agent</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
-
-          {hasActiveFilters && (
-            <div className="pt-1 border-t border-slate-100 flex justify-between items-center">
-              <span className="text-[11px] text-slate-400">
-                {activeFilterCount} filter{activeFilterCount > 1 ? 's' : ''} active
-                {!query.trim() && ' — browsing all matching drugs'}
-              </span>
-              <button onClick={clearFilters} className="text-[11px] text-slate-500 hover:text-red-500 transition-colors font-medium">
-                ✕ Clear all
-              </button>
-            </div>
-          )}
-        </div>
-      )}
+        )}
+      </div>
 
       {/* Selected drug cards */}
       {drugs.length > 0 && (

@@ -528,8 +528,8 @@ function DosageSummaryPanel({ results, drugs, species, patientInfo, onUpdateDrug
         const indicator = { within: '●', below: '↓', above: '↑' };
 
         return (
-          <div key={drug.id} className={`rounded-xl border p-3 shadow-sm ${status ? statusColors[status] : 'bg-white border-slate-200'}`}>
-            <div className="flex items-start justify-between gap-2 mb-2">
+          <div key={drug.id} className={`rounded-xl border px-3 py-2.5 shadow-sm ${status ? statusColors[status] : 'bg-white border-slate-200'}`}>
+            <div className="flex items-start justify-between gap-2 mb-1.5">
               <p className="text-[13px] font-semibold text-slate-900 leading-tight">{drug.name}</p>
               {status && (
                 <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded-full border ${statusColors[status]}`}>
@@ -560,12 +560,12 @@ function DosageSummaryPanel({ results, drugs, species, patientInfo, onUpdateDrug
             )}
 
             {status === 'below' && range && (
-              <p className="mt-2 text-[11px] font-medium text-orange-700">
+              <p className="mt-1.5 text-[11px] font-medium text-orange-700">
                 Below recommended range ({range[0]}–{range[1]} mg/kg)
               </p>
             )}
             {status === 'above' && range && (
-              <p className="mt-2 text-[11px] font-medium text-red-700">
+              <p className="mt-1.5 text-[11px] font-medium text-red-700">
                 Exceeds recommended range ({range[0]}–{range[1]} mg/kg)
               </p>
             )}
@@ -1370,7 +1370,7 @@ export default function FullSystem() {
             </div>
 
             {/* Right column — Dosage Summary & Organ Load */}
-            <div className="w-full lg:w-[300px] lg:shrink-0 overflow-y-auto border-t lg:border-t-0 lg:border-l border-slate-200 bg-white order-3">
+            <div className="w-full lg:w-[320px] lg:shrink-0 overflow-y-auto border-t lg:border-t-0 lg:border-l border-slate-200 bg-white order-3">
               <DosageSummaryPanel
                 results={results}
                 drugs={drugs}
